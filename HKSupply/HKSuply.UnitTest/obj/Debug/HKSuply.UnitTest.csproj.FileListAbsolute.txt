@@ -1,0 +1,7 @@
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HKSuply.UnitTest.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HKSuply.UnitTest.pdb
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HKSupply.exe
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HKSupply.pdb
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.csprojResolveAssemblyReference.cache
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.pdb
