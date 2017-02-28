@@ -1,0 +1,30 @@
+﻿2017-02-28 08:39:52,002 ERROR [8] HKSupply.Services.Implementations.EFUser.GetUserByIdPassword - El valor no puede ser nulo.
+Nombre del parámetro: UserId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: UserId
+   en HKSupply.Services.Implementations.EFUser.GetUserByIdPassword(String UserId, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 29
+2017-02-28 08:39:52,035 ERROR [8] HKSupply.Services.Implementations.EFUser.GetUserByIdPassword - El valor no puede ser nulo.
+Nombre del parámetro: Password
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: Password
+   en HKSupply.Services.Implementations.EFUser.GetUserByIdPassword(String UserId, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 31
+2017-02-28 08:40:37,763 ERROR [14] HKSupply.Services.Implementations.EFUser.GetUserByIdPassword - El valor no puede ser nulo.
+Nombre del parámetro: UserId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: UserId
+   en HKSupply.Services.Implementations.EFUser.GetUserByIdPassword(String UserId, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 29
+2017-02-28 08:40:40,312 ERROR [14] HKSupply.Services.Implementations.EFUser.GetUserByIdPassword - El valor no puede ser nulo.
+Nombre del parámetro: Password
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: Password
+   en HKSupply.Services.Implementations.EFUser.GetUserByIdPassword(String UserId, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 31
+2017-02-28 08:41:27,974 ERROR [13] HKSupply.Services.Implementations.EFUser.GetUserByIdPassword - El valor no puede ser nulo.
+Nombre del parámetro: UserId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: UserId
+   en HKSupply.Services.Implementations.EFUser.GetUserByIdPassword(String UserId, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 29
+2017-02-28 08:41:27,997 ERROR [13] HKSupply.Services.Implementations.EFUser.GetUserByIdPassword - El valor no puede ser nulo.
+Nombre del parámetro: Password
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: Password
+   en HKSupply.Services.Implementations.EFUser.GetUserByIdPassword(String UserId, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 31

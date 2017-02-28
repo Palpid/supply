@@ -1,4 +1,6 @@
-﻿using HKSupply.Exceptions;
+﻿using HKSupply.DB;
+using HKSupply.Exceptions;
+using HKSupply.Helpers;
 using HKSupply.Helpers.Mocking;
 using HKSupply.Models;
 using HKSupply.Services.Implementations;
@@ -6,11 +8,14 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace HKSupply
 {
@@ -23,38 +28,239 @@ namespace HKSupply
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MockData.InitData();
 
-            //Roles
-            var rolADO = new ADORol();
-            var nuevoRol = new Rol 
+            //InitDBData();
+
+            //************ Test log4net ************//
+            var userEF = new EFUser();
+            try
             {
-                RolId = "ROLTEST",
-                Descripcion = "Rol de Test",
-                Activo = true,
-                Observaciones = null
-            };
+                var user = userEF.GetUserByLoginPassword(null, "xx"); //ArgumentNullException
+            }
+            catch (ArgumentNullException anex) {}
 
-            var createdRol = rolADO.AltaRol(nuevoRol);
-            bool res = rolADO.DesactivarRol("ROLTEST", "Desactivamos rol");
-
-            //Usuario
-            var usuarioADO = new ADOUsuario();
-            var nuevoUsuario = new Usuario 
+            try
             {
-                UsuarioId = "usuario.test",
-                Nombre = "Usuario Test",
-                Password = "usutestpwd",
-                UserRol = MockData.RolesList.FirstOrDefault(r => r.RolId.Equals("OPERATOR")),
-                Activo = true,
-                LastLogout = null,
-                Observaciones = "Observaciones usuario test"
-            };
-
-            var createdUser = usuarioADO.AltaUsuario(nuevoUsuario);
-            bool resDesUsu = usuarioADO.DesactivarUsuario(nuevoUsuario.UsuarioId, "Desactivamos usuario test");
+                var user = userEF.GetUserByLoginPassword("XX", null); //ArgumentNullException
+            }
+            catch (ArgumentNullException anex){}
 
 
+            try
+            {
+                var user = userEF.GetUserByLoginPassword("XX", "XX");
+            }
+            catch (NonexistentUserException neuex){}
+
+
+
+            //using (var db = new HKSupplyContext())
+            //{
+            //    //Load all user and his related role
+            //    var users = db.Users.Include("UserRol").ToList();
+            //    var user2 = db.Users.Include(r => r.UserRol).ToList();
+            //}
+
+            //Encriptar el password
+        
+            //string pass = "miPassword";
+            //string hash = PasswordHelper.GetHash(pass);
+            //Console.WriteLine(hash);
+            //bool isValid = PasswordHelper.ValidatePass("miPassword2", hash);
+            //Console.WriteLine(isValid ? "válida" : "no válida");
+            //isValid = PasswordHelper.ValidatePass("miPassword", hash);
+            //Console.WriteLine(isValid ? "válida" : "no válida");
+            
         }
+
+        private void InitDBData()
+        {
+            try
+            {
+                //Entity Framework
+
+                //***** Role *****//
+                using (var db = new HKSupplyContext())
+                {
+
+                    var roleAdmin = new Role
+                    {
+                        RoleId = "ADMIN",
+                        Description = "Application Administrator",
+                        Enabled = true,
+                        Remarks = null
+                    };
+
+                    var roleOperator = new Role
+                    {
+                        RoleId = "OPERATOR",
+                        Description = "Operator",
+                        Enabled = true,
+                        Remarks = null
+                    };
+
+                    db.Roles.Add(roleAdmin);
+                    db.Roles.Add(roleOperator);
+                    db.SaveChanges();
+
+                    //var query = from b in db.Roles
+                    //            orderby b.RoleId
+                    //            select b;
+                    //foreach (var item in query)
+                    //{
+                    //    MessageBox.Show(item.Description);
+                    //}
+                                        
+                    //*****users *****//
+                    
+                    var userAdmin = new User
+                    {
+                        UserLogin = "admin",
+                        Name = "Administrator",
+                        Password = PasswordHelper.GetHash("adminpwd"),
+                        UserRol = roleAdmin,
+                        Enabled = true,
+                        LastLogout = null,
+                        Remarks = null
+                    };
+
+                    var userMario = new User
+                    {
+                        UserLogin = "m.ruz",
+                        Name = "Mario Ruz Martínez",
+                        Password = PasswordHelper.GetHash("mariopwd"),
+                        UserRol = roleAdmin,
+                        Enabled = true,
+                        LastLogout = null,
+                        Remarks = null
+                    };
+
+                    var userOp1 = new User
+                    {
+                        UserLogin = "operator1",
+                        Name = "Operator 1",
+                        Password = PasswordHelper.GetHash("op1pwd"),
+                        UserRol = roleOperator,
+                        Enabled = true,
+                        LastLogout = null,
+                        Remarks = null
+                    };
+
+                    db.Users.Add(userAdmin);
+                    db.Users.Add(userMario);
+                    db.Users.Add(userOp1);
+                    
+                    db.SaveChanges();
+
+                    //var queryUser = from u in db.Users
+                    //                orderby u.UserLogin
+                    //                select u;
+
+                    //foreach (var item in queryUser)
+                    //{
+                    //    MessageBox.Show(item.UserLogin);
+                    //}
+                    
+                    //***** Functionalities *****//
+                    var funcUM = new Functionality
+                    {
+                        FunctionalityName = "User Management",
+                        Category = "Masters",
+                        Read = true,
+                        New = true,
+                        Modify = true,
+                        //RoleId = roleAdmin.RoleId,
+                        Role = roleAdmin,
+                    };
+
+                    var funcRM = new Functionality
+                    {
+                        FunctionalityName = "Role Management",
+                        Category = "Masters",
+                        Read = true,
+                        New = true,
+                        Modify = true,
+                        //RoleId = roleAdmin.RoleId,
+                        Role = roleAdmin,
+                    };
+
+                    var funcFM = new Functionality
+                    {
+                        FunctionalityName = "Functionality Management",
+                        Category = "Masters",
+                        Read = true,
+                        New = true,
+                        Modify = true,
+                        //RoleId = roleAdmin.RoleId,
+                        Role = roleAdmin,
+                    };
+
+                    var funcMMA = new Functionality
+                    {
+                        FunctionalityName = "Materials Management",
+                        Category = "Masters",
+                        Read = true,
+                        New = true,
+                        Modify = true,
+                        //RoleId = roleAdmin.RoleId,
+                        Role = roleAdmin,
+                    };
+
+                    var funcMMO = new Functionality
+                    {
+                        FunctionalityName = "Materials Management",
+                        Category = "Masters",
+                        Read = true,
+                        New = false,
+                        Modify = false,
+                        //RoleId = roleOperator.RoleId,
+                        Role = roleOperator,
+                    };
+
+
+                    db.Functionalities.Add(funcUM);
+                    db.Functionalities.Add(funcRM);
+                    db.Functionalities.Add(funcFM);
+                    db.Functionalities.Add(funcMMA);
+                    db.Functionalities.Add(funcMMO);
+                    db.SaveChanges();
+
+                    //var queryFunc = from f in db.Functionalities
+                    //                orderby f.FunctionalityName
+                    //                select f;
+
+                    //foreach (var item in queryFunc)
+                    //{
+                    //    MessageBox.Show(item.FunctionalityName);
+                    //}
+
+
+                }
+
+            }
+            catch (DbEntityValidationException e)
+            {
+                foreach (var eve in e.EntityValidationErrors)
+                {
+                    Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
+                        eve.Entry.Entity.GetType().Name, eve.Entry.State);
+                    foreach (var ve in eve.ValidationErrors)
+                    {
+                        Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
+                            ve.PropertyName, ve.ErrorMessage);
+                    }
+                }
+                throw;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        
+        }
+
+        
     }
+
+
 }

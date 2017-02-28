@@ -1,7 +1,15 @@
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HKSuply.UnitTest.dll.config
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HKSuply.UnitTest.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HKSuply.UnitTest.pdb
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\EntityFramework.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\EntityFramework.SqlServer.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HKSupply.pdb
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\EntityFramework.xml
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\EntityFramework.SqlServer.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.csprojResolveAssemblyReference.cache
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.pdb
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\log4net.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\log4net.xml
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\log4net.config

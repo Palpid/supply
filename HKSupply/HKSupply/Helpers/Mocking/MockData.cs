@@ -10,12 +10,9 @@ namespace HKSupply.Helpers.Mocking
     public static class MockData
     {
         #region Public Properties
-        //public List<Rol> RolesList = new List<Rol>();
-        //public List<Usuario> UsuariosList = new List<Usuario>();
-        //public List<Funcionalidad> FuncionalidadesList = new List<Funcionalidad>();
-        public static List<Rol> RolesList = new List<Rol>();
-        public static List<Usuario> UsuariosList = new List<Usuario>();
-        public static List<Funcionalidad> FuncionalidadesList = new List<Funcionalidad>();
+        public static List<Role> RolesList = new List<Role>();
+        public static List<User> UsersList = new List<User>();
+        public static List<Functionality> FunctionalitiesList = new List<Functionality>();
         #endregion
 
         #region Constructor
@@ -32,11 +29,12 @@ namespace HKSupply.Helpers.Mocking
             try
             {
                 RolesList.Clear();
-                UsuariosList.Clear();
-                FuncionalidadesList.Clear();
+                UsersList.Clear();
+                FunctionalitiesList.Clear();
 
                 InitRolesList();
                 InitUsuariosList();
+                InitFuncionalidadesList();
             }
             catch(Exception ex)
             {
@@ -52,20 +50,20 @@ namespace HKSupply.Helpers.Mocking
         {
             try
             {
-                RolesList.Add(new Rol 
+                RolesList.Add(new Role 
                 {
-                    RolId = "ADMIN",
-                    Descripcion = "Administrador aplicación",
-                    Activo = true,
-                    Observaciones = null
+                    RoleId = "ADMIN",
+                    Description = "Administrador aplicación",
+                    Enabled = true,
+                    Remarks = null
                 });
 
-                RolesList.Add(new Rol 
+                RolesList.Add(new Role 
                 {
-                    RolId = "OPERATOR",
-                    Descripcion = "Operador",
-                    Activo = true,
-                    Observaciones = null
+                    RoleId = "OPERATOR",
+                    Description = "Operador",
+                    Enabled = true,
+                    Remarks = null
                 });
             }
             catch (Exception ex)
@@ -78,40 +76,40 @@ namespace HKSupply.Helpers.Mocking
         {
             try
             {
-                var adminRol = RolesList.FirstOrDefault(r => r.RolId.Equals("ADMIN"));
-                var operatorRol = RolesList.FirstOrDefault(r => r.RolId.Equals("OPERATOR"));
+                var adminRol = RolesList.FirstOrDefault(r => r.RoleId.Equals("ADMIN"));
+                var operatorRol = RolesList.FirstOrDefault(r => r.RoleId.Equals("OPERATOR"));
 
-                UsuariosList.Add(new Usuario 
+                UsersList.Add(new User 
                 {
-                    UsuarioId = "admin",
-                    Nombre = "Administrador",
+                    UserLogin = "admin",
+                    Name = "Administrador",
                     Password = "adminpwd",
                     UserRol = adminRol,
-                    Activo = true,
+                    Enabled = true,
                     LastLogout = null,
-                    Observaciones = null
+                    Remarks = null
                 });
 
-                UsuariosList.Add(new Usuario
+                UsersList.Add(new User
                 {
-                    UsuarioId = "m.ruz",
-                    Nombre = "Mario Ruz Martínez",
+                    UserLogin = "m.ruz",
+                    Name = "Mario Ruz Martínez",
                     Password = "mariopwd",
                     UserRol = adminRol,
-                    Activo = true,
+                    Enabled = true,
                     LastLogout = null,
-                    Observaciones = null
+                    Remarks = null
                 });
 
-                UsuariosList.Add(new Usuario
+                UsersList.Add(new User
                 {
-                    UsuarioId = "operador1",
-                    Nombre = "Operador 1",
+                    UserLogin = "operador1",
+                    Name = "Operador 1",
                     Password = "op1pwd",
                     UserRol = adminRol,
-                    Activo = true,
+                    Enabled = true,
                     LastLogout = null,
-                    Observaciones = null
+                    Remarks = null
                 });
             }
             catch (Exception ex)
@@ -119,6 +117,60 @@ namespace HKSupply.Helpers.Mocking
                 throw ex;
             }
 
+        }
+
+        private static void InitFuncionalidadesList()
+        {
+            try
+            {
+                var adminRol = RolesList.FirstOrDefault(r => r.RoleId.Equals("ADMIN"));
+                var operatorRol = RolesList.FirstOrDefault(r => r.RoleId.Equals("OPERATOR"));
+
+                FunctionalitiesList.Add(new Functionality 
+                {
+                    FunctionalityName = "MantenimientoUsuarios",
+                    Read = true,
+                    Modify = true,
+                    Role = adminRol
+                });
+
+                FunctionalitiesList.Add(new Functionality
+                {
+                    FunctionalityName = "MantenimientoRoles",
+                    Read = true,
+                    Modify = true,
+                    Role = adminRol
+                });
+
+                FunctionalitiesList.Add(new Functionality
+                {
+                    FunctionalityName = "MantenimientoFuncionalidades",
+                    Read = true,
+                    Modify = true,
+                    Role = adminRol
+                });
+
+                FunctionalitiesList.Add(new Functionality
+                {
+                    FunctionalityName = "MantenimientoArticulos",
+                    Read = true,
+                    Modify = true,
+                    Role = adminRol
+                });
+
+                FunctionalitiesList.Add(new Functionality
+                {
+                    FunctionalityName = "MantenimientoArticulos",
+                    Read = true,
+                    Modify = false,
+                    Role = operatorRol
+                });
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         #endregion
