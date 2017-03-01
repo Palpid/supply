@@ -1,0 +1,4 @@
+C:\Git\Supply\HKSupply\CustomControls\bin\Debug\CustomControls.dll
+C:\Git\Supply\HKSupply\CustomControls\bin\Debug\CustomControls.pdb
+C:\Git\Supply\HKSupply\CustomControls\obj\Debug\CustomControls.dll
+C:\Git\Supply\HKSupply\CustomControls\obj\Debug\CustomControls.pdb

@@ -13,6 +13,7 @@ namespace HKSupply.DB
         public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Functionality> Functionalities { get; set; }
+        public DbSet<FunctionalityRole> FunctionalitiesRole { get; set; }
 
         public HKSupplyContext()
             : base("name=SqlExpressConn")

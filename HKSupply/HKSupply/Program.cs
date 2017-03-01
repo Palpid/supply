@@ -1,4 +1,5 @@
-﻿using log4net;
+﻿using HKSupply.Forms;
+using log4net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,13 @@ namespace HKSupply
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Application.Run(new Form1());
+
+            Login frmLogin = new Login();
+            frmLogin.ShowDialog();
+
+            if (frmLogin.DialogResult == DialogResult.OK)
+                Application.Run(new Main());
         }
     }
 }

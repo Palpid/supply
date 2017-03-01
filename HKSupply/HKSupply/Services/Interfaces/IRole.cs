@@ -7,7 +7,7 @@ using HKSupply.Models;
 
 namespace HKSupply.Services.Interfaces
 {
-    interface IRole
+    public interface IRole
     {
         Role GetRoleById(string roleId);
         Role NewRole(Role newRole);

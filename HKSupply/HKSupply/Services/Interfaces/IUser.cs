@@ -7,7 +7,7 @@ using HKSupply.Models;
 
 namespace HKSupply.Services.Interfaces
 {
-    interface IUser
+    public interface IUser
     {
         User GetUserByLoginPassword(string UserLogin, string Password);
         User NewUser(User newUser);

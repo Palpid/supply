@@ -12,11 +12,12 @@ namespace HKSupply.Models
     [Table("FUNCTIONALITIES")]
     public class Functionality
     {
-        [Column("ID")]
+        [Column("FUNCTIONALITY_ID")]
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int FunctionalityId { get; set; }
 
         [Column("FUNCTIONALITY_NAME", TypeName = "VARCHAR")]
+        [Index("IX_FUNCTIONALITYNAME_UNIQUE", IsUnique = true)]
         [StringLength(50)]
         [Required]
         public string FunctionalityName { get; set; }
@@ -26,28 +27,11 @@ namespace HKSupply.Models
         [Required]
         public string Category { get; set; }
 
-        [Column("READ")]
-        [DefaultValue(false)]
+        [Column("FORM_NAME", TypeName="VARCHAR")]
+        [StringLength(50)]
         [Required]
-        public bool Read { get; set; }
+        public string FormName { get; set; }
 
-        [Column("NEW")]
-        [DefaultValue(false)]
-        [Required]
-        public bool New { get; set; }
-
-        [Column("MODIFY")]
-        [DefaultValue(false)]
-        [Required]
-        public bool Modify { get; set; }
-
-        [Column("ROLE_ID", TypeName = "VARCHAR")]
-        [StringLength(20)]
-        [Required]
-        public string RoleId { get; set; }
-
-        [ForeignKey("RoleId")]
-        public Role Role { get; set; }
 
         public override bool Equals(object obj)
         {
@@ -61,7 +45,7 @@ namespace HKSupply.Models
 
         public override int GetHashCode()
         {
-            return FunctionalityName.GetHashCode();
+            return FunctionalityId.GetHashCode();
         }
     }
 }

@@ -56,8 +56,13 @@ namespace HKSupply.Services.Implementations
             }
             catch (NonexistentUserException neuex)
             {
-                _log.Error(neuex.Message, neuex);
+                _log.Info(neuex.Message, neuex);
                 throw neuex;
+            }
+            catch(InvalidPasswordException ipex)
+            {
+                _log.Info(ipex.Message, ipex);
+                throw ipex;
             }
             catch (Exception ex)
             {

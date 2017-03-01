@@ -17,9 +17,10 @@ namespace HKSuply.UnitTest
         {
             var functionalityEF = new EFFunctionality();
 
+            //by Id
             try
             {
-                var functionality = functionalityEF.GetFunctionalityByIdRol(null, ""); //ArgumentNullException
+                var functionality = functionalityEF.GetFunctionalityById(0); //ArgumentNullException
             }
             catch (ArgumentNullException anex)
             {
@@ -28,16 +29,7 @@ namespace HKSuply.UnitTest
 
             try
             {
-                var functionality = functionalityEF.GetFunctionalityByIdRol("", null); //ArgumentNullException
-            }
-            catch (ArgumentNullException anex)
-            {
-                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException));
-            }
-
-            try
-            {
-                var functionality = functionalityEF.GetFunctionalityByIdRol("XX", "XX"); //NoExisteFuncionalidadException
+                var functionality = functionalityEF.GetFunctionalityById(150000); //NoExisteFuncionalidadException
             }
             catch (NonexistentFunctionalityException nefex)
             {
@@ -48,9 +40,8 @@ namespace HKSuply.UnitTest
             {
                 using (var db = new HKSupplyContext())
                 {
-                    var expectedValue = db.Functionalities.FirstOrDefault(f => f.FunctionalityName.Equals("User Management")
-                        && f.Role.RoleId.Equals("ADMIN"));
-                    var functionality = functionalityEF.GetFunctionalityByIdRol("User Management", "ADMIN"); //OK
+                    var expectedValue = db.Functionalities.FirstOrDefault(f => f.FunctionalityId.Equals(1));
+                    var functionality = functionalityEF.GetFunctionalityById(1); //OK
                     Assert.AreEqual(true, functionality.Equals(expectedValue));
                 }
                 
@@ -60,7 +51,104 @@ namespace HKSuply.UnitTest
                 throw ex;
             }
 
+            //by Name
+            try
+            {
+                var functionality = functionalityEF.GetFunctionalityByName(null); //ArgumentNullException
+            }
+            catch (ArgumentNullException anex)
+            {
+                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException)); //Es una tontería y siempre dará true, pero así no tengo el warnning
+            }
+
+            try
+            {
+                var functionality = functionalityEF.GetFunctionalityByName("XX"); //NoExisteFuncionalidadException
+            }
+            catch (NonexistentFunctionalityException nefex)
+            {
+                Assert.IsTrue(nefex.GetType() == typeof(NonexistentFunctionalityException));
+            }
+
+            try
+            {
+                using (var db = new HKSupplyContext())
+                {
+                    var expectedValue = db.Functionalities.FirstOrDefault(f => f.FunctionalityId.Equals(1));
+                    var functionality = functionalityEF.GetFunctionalityByName(expectedValue.FunctionalityName); //OK
+                    Assert.AreEqual(true, functionality.Equals(expectedValue));
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
         }
+
+        //[TestMethod]
+        //public void GetRoleFunctionalities()
+        //{
+        //    var functionalityEF = new EFFunctionality();
+
+        //    try
+        //    {
+        //        var functionalities = functionalityEF.GetFunctionalitiesByRol(null); //ArgumentNullException
+        //    }
+        //    catch (ArgumentNullException anex)
+        //    {
+        //        Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException));
+        //    }
+
+        //    try
+        //    {
+
+        //        var functionalities = functionalityEF.GetFunctionalitiesByRol("XXX");  //Empty list. No error
+        //        Assert.IsTrue(true);
+
+        //        var roleFunctionalities = functionalityEF.GetFunctionalitiesByRol("ADMIN");
+        //        Assert.IsTrue(roleFunctionalities.Count() > 0);
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+
+        //}
+
+        //[TestMethod]
+        //public void GetCategoriesRoles()
+        //{
+        //    var functionalityEF = new EFFunctionality();
+
+        //    try
+        //    {
+        //        var categories = functionalityEF.GetFunctionalitiesCategoriesRole(null); //ArgumentNullException
+        //    }
+        //    catch (ArgumentNullException anex)
+        //    {
+        //        Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException));
+        //    }
+
+        //    try
+        //    {
+
+        //        var categories = functionalityEF.GetFunctionalitiesCategoriesRole("XXX");  //Empty list. No error
+        //        Assert.IsTrue(true);
+
+        //        var rolecategories = functionalityEF.GetFunctionalitiesCategoriesRole("ADMIN");
+        //        Assert.IsTrue(rolecategories.Count() > 0);
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+
+        //}
 
         [TestMethod]
         public void NewFunctionality()
@@ -78,8 +166,7 @@ namespace HKSuply.UnitTest
 
             try
             {
-                var functionality = functionalityEF.GetFunctionalityByIdRol("Materials Management", "OPERATOR");
-
+                var functionality = functionalityEF.GetFunctionalityById(1);
                 var newFunc = functionalityEF.NewFunctionality(functionality); //NewExistingFunctionalityException
             }
             catch (NewExistingFunctionalityException afeex)
@@ -95,10 +182,7 @@ namespace HKSuply.UnitTest
                     {
                         FunctionalityName = "TestFunctionality",
                         Category = "TEST",
-                        Read = false,
-                        New = false,
-                        Modify = false,
-                        RoleId = "OPERATOR",
+                        FormName = "frmTest"
                     };
                     var newFunc = functionalityEF.NewFunctionality(func); //ok
                     Assert.AreEqual(true, newFunc.Equals(func));
@@ -131,10 +215,7 @@ namespace HKSuply.UnitTest
                 {
                     FunctionalityName = "XX",
                     Category = "XX",
-                    Read = true,
-                    New = true,
-                    Modify = true,
-                    Role = new Role { RoleId = "XX" }
+                    FormName = "XX"
                 };
                 
                 var modFunctionality = functionalityEF.ModifyFunctionality(functionality); //NonexistentFunctionalityException
@@ -146,10 +227,10 @@ namespace HKSuply.UnitTest
 
             try
             {
-                var expectedValue = functionalityEF.GetFunctionalityByIdRol("Materials Management", "OPERATOR");
-                expectedValue.Read = true;
-                expectedValue.New = true;
-                expectedValue.Modify = true;
+                var expectedValue = functionalityEF.GetFunctionalityById(1);
+
+                expectedValue.Category = expectedValue.Category + "_X";
+                expectedValue.FormName = expectedValue.FormName + "_X";
 
                 var modFunctionality = functionalityEF.ModifyFunctionality(expectedValue); //NoExisteFuncionalidadException
                 Assert.AreEqual(true, modFunctionality.Equals(expectedValue));

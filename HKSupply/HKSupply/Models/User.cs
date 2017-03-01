@@ -45,6 +45,9 @@ namespace HKSupply.Models
         [Required]
         public bool Enabled { get; set; }
 
+        [Column("LAST_LOGIN")]
+        public DateTime? LastLogin { get; set; }
+
         [Column("LAST_LOGOUT")]
         public DateTime? LastLogout { get; set; }
 

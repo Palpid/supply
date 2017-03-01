@@ -1,5 +1,6 @@
 ﻿using HKSupply.DB;
 using HKSupply.Exceptions;
+using HKSupply.Forms;
 using HKSupply.Helpers;
 using HKSupply.Helpers.Mocking;
 using HKSupply.Models;
@@ -32,25 +33,25 @@ namespace HKSupply
             //InitDBData();
 
             //************ Test log4net ************//
-            var userEF = new EFUser();
-            try
-            {
-                var user = userEF.GetUserByLoginPassword(null, "xx"); //ArgumentNullException
-            }
-            catch (ArgumentNullException anex) {}
+            //var userEF = new EFUser();
+            //try
+            //{
+            //    var user = userEF.GetUserByLoginPassword(null, "xx"); //ArgumentNullException
+            //}
+            //catch (ArgumentNullException anex) {}
 
-            try
-            {
-                var user = userEF.GetUserByLoginPassword("XX", null); //ArgumentNullException
-            }
-            catch (ArgumentNullException anex){}
+            //try
+            //{
+            //    var user = userEF.GetUserByLoginPassword("XX", null); //ArgumentNullException
+            //}
+            //catch (ArgumentNullException anex){}
 
 
-            try
-            {
-                var user = userEF.GetUserByLoginPassword("XX", "XX");
-            }
-            catch (NonexistentUserException neuex){}
+            //try
+            //{
+            //    var user = userEF.GetUserByLoginPassword("XX", "XX");
+            //}
+            //catch (NonexistentUserException neuex){}
 
 
 
@@ -120,6 +121,7 @@ namespace HKSupply
                         Password = PasswordHelper.GetHash("adminpwd"),
                         UserRol = roleAdmin,
                         Enabled = true,
+                        LastLogin = null,
                         LastLogout = null,
                         Remarks = null
                     };
@@ -131,6 +133,7 @@ namespace HKSupply
                         Password = PasswordHelper.GetHash("mariopwd"),
                         UserRol = roleAdmin,
                         Enabled = true,
+                        LastLogin = null,
                         LastLogout = null,
                         Remarks = null
                     };
@@ -142,6 +145,7 @@ namespace HKSupply
                         Password = PasswordHelper.GetHash("op1pwd"),
                         UserRol = roleOperator,
                         Enabled = true,
+                        LastLogin = null,
                         LastLogout = null,
                         Remarks = null
                     };
@@ -162,59 +166,34 @@ namespace HKSupply
                     //}
                     
                     //***** Functionalities *****//
+                    
                     var funcUM = new Functionality
                     {
-                        FunctionalityName = "User Management",
+                        FunctionalityName = "UserManagement",
                         Category = "Masters",
-                        Read = true,
-                        New = true,
-                        Modify = true,
-                        //RoleId = roleAdmin.RoleId,
-                        Role = roleAdmin,
+                        FormName = "frmUserManagement"
                     };
 
                     var funcRM = new Functionality
                     {
-                        FunctionalityName = "Role Management",
+                        FunctionalityName = "RoleManagement",
                         Category = "Masters",
-                        Read = true,
-                        New = true,
-                        Modify = true,
-                        //RoleId = roleAdmin.RoleId,
-                        Role = roleAdmin,
+                        FormName = "frmRoleManagement"
                     };
 
                     var funcFM = new Functionality
                     {
-                        FunctionalityName = "Functionality Management",
+                        FunctionalityName = "FunctionalityManagement",
                         Category = "Masters",
-                        Read = true,
-                        New = true,
-                        Modify = true,
-                        //RoleId = roleAdmin.RoleId,
-                        Role = roleAdmin,
+                        FormName = "frmFunctionalityManagement"
                     };
 
                     var funcMMA = new Functionality
                     {
-                        FunctionalityName = "Materials Management",
+                        FunctionalityName = "MaterialsManagement",
                         Category = "Masters",
-                        Read = true,
-                        New = true,
-                        Modify = true,
-                        //RoleId = roleAdmin.RoleId,
-                        Role = roleAdmin,
-                    };
+                        FormName = "frmMaterialsManagement"
 
-                    var funcMMO = new Functionality
-                    {
-                        FunctionalityName = "Materials Management",
-                        Category = "Masters",
-                        Read = true,
-                        New = false,
-                        Modify = false,
-                        //RoleId = roleOperator.RoleId,
-                        Role = roleOperator,
                     };
 
 
@@ -222,7 +201,6 @@ namespace HKSupply
                     db.Functionalities.Add(funcRM);
                     db.Functionalities.Add(funcFM);
                     db.Functionalities.Add(funcMMA);
-                    db.Functionalities.Add(funcMMO);
                     db.SaveChanges();
 
                     //var queryFunc = from f in db.Functionalities
@@ -234,6 +212,66 @@ namespace HKSupply
                     //    MessageBox.Show(item.FunctionalityName);
                     //}
 
+                    //***** Functionalities Role *****//
+                    var adminRole = db.Roles.FirstOrDefault(r => r.RoleId.Equals("ADMIN"));
+                    var opRole = db.Roles.FirstOrDefault(r => r.RoleId.Equals("OPERATOR"));
+
+                    var funcUserManagement = db.Functionalities.FirstOrDefault(f => f.FunctionalityName.Equals("UserManagement"));
+                    var funcRoleManagement = db.Functionalities.FirstOrDefault(f => f.FunctionalityName.Equals("RoleManagement"));
+                    var funcFunctionalityManagement = db.Functionalities.FirstOrDefault(f => f.FunctionalityName.Equals("FunctionalityManagement"));
+                    var funcMaterialsManagement = db.Functionalities.FirstOrDefault(f => f.FunctionalityName.Equals("MaterialsManagement"));
+
+                    var fr1 = new FunctionalityRole 
+                    { 
+                        RoleId = adminRole.RoleId,
+                        FunctionalityId = funcUserManagement.FunctionalityId,
+                        Read = true,
+                        New = true,
+                        Modify = true,
+                    };
+
+                    var fr2 = new FunctionalityRole
+                    {
+                        RoleId = adminRole.RoleId,
+                        FunctionalityId = funcRoleManagement.FunctionalityId,
+                        Read = true,
+                        New = true,
+                        Modify = true,
+                    };
+
+                    var fr3 = new FunctionalityRole
+                    {
+                        RoleId = adminRole.RoleId,
+                        FunctionalityId = funcFunctionalityManagement.FunctionalityId,
+                        Read = true,
+                        New = true,
+                        Modify = true,
+                    };
+
+                    var fr4 = new FunctionalityRole
+                    {
+                        RoleId = adminRole.RoleId,
+                        FunctionalityId = funcMaterialsManagement.FunctionalityId,
+                        Read = true,
+                        New = true,
+                        Modify = true,
+                    };
+
+                    var fr5 = new FunctionalityRole
+                    {
+                        RoleId = opRole.RoleId,
+                        FunctionalityId = funcMaterialsManagement.FunctionalityId,
+                        Read = true,
+                        New = false,
+                        Modify = false,
+                    };
+
+                    db.FunctionalitiesRole.Add(fr1);
+                    db.FunctionalitiesRole.Add(fr2);
+                    db.FunctionalitiesRole.Add(fr3);
+                    db.FunctionalitiesRole.Add(fr4);
+                    db.FunctionalitiesRole.Add(fr5);
+                    db.SaveChanges();
 
                 }
 
@@ -257,6 +295,12 @@ namespace HKSupply
                 throw ex;
             }
         
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Main frm = new Main();
+            frm.Show();
         }
 
         

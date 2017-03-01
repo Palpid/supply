@@ -64,9 +64,11 @@
     <Compile Include="DB\HKSupplyContext.cs" />
     <Compile Include="Exceptions\InvalidPasswordException.cs" />
     <Compile Include="Exceptions\NewExistingFunctionalityException.cs" />
+    <Compile Include="Exceptions\NewExistingFunctionalityRoleException.cs" />
     <Compile Include="Exceptions\NewExistingRoleException.cs" />
     <Compile Include="Exceptions\NewExistingUserException.cs" />
     <Compile Include="Exceptions\NonexistentFunctionalityException.cs" />
+    <Compile Include="Exceptions\NonexistentFunctionalityRoleException.cs" />
     <Compile Include="Exceptions\NonexistentRoleException.cs" />
     <Compile Include="Exceptions\NonexistentUserException.cs" />
     <Compile Include="Form1.cs">
@@ -75,14 +77,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\GlobalSetting.cs" />
     <Compile Include="Helpers\Mocking\MockData.cs" />
     <Compile Include="Helpers\PasswordHelper.cs" />
-    <Compile Include="Migrations\201702271100440_InitialCreate.cs" />
-    <Compile Include="Migrations\201702271100440_InitialCreate.Designer.cs">
-      <DependentUpon>201702271100440_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Functionality.cs" />
+    <Compile Include="Models\FunctionalityRole.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
@@ -92,20 +103,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HKSupplyRes.resx</DependentUpon>
     </Compile>
-    <Compile Include="Services\Implementations\ADOFunctionality.cs" />
-    <Compile Include="Services\Implementations\ADORole.cs" />
-    <Compile Include="Services\Implementations\ADOUser.cs" />
     <Compile Include="Services\Implementations\EFFunctionality.cs" />
+    <Compile Include="Services\Implementations\EFFunctionalityRole.cs" />
     <Compile Include="Services\Implementations\EFRole.cs" />
     <Compile Include="Services\Implementations\EFUser.cs" />
     <Compile Include="Services\Interfaces\IFunctionality.cs" />
+    <Compile Include="Services\Interfaces\IFunctionalityRole.cs" />
     <Compile Include="Services\Interfaces\IRole.cs" />
     <Compile Include="Services\Interfaces\IUser.cs" />
+    <Compile Include="Styles\AppStyles.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702271100440_InitialCreate.resx">
-      <DependentUpon>201702271100440_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -140,6 +154,17 @@
     <None Include="log4net.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Images\etnia_logo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomControls\CustomControls.csproj">
+      <Project>{acfd25c3-ffa5-4f88-9df7-7e2361b60be3}</Project>
+      <Name>CustomControls</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

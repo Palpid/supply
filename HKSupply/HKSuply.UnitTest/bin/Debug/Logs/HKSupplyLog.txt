@@ -1,0 +1,125 @@
+﻿2017-03-01 10:38:04,776 ERROR [13] HKSupply.Services.Implementations.EFFunctionality.GetFunctionalityById - El valor no puede ser nulo.
+Nombre del parámetro: functionalityName
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: functionalityName
+   en HKSupply.Services.Implementations.EFFunctionality.GetFunctionalityById(Int32 functionalityId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 27
+2017-03-01 10:38:19,270 ERROR [13] HKSupply.Services.Implementations.EFFunctionality.GetFunctionalityById - Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityException'.
+HKSupply.Exceptions.NonexistentFunctionalityException: Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityException'.
+   en HKSupply.Services.Implementations.EFFunctionality.GetFunctionalityById(Int32 functionalityId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 37
+2017-03-01 10:39:03,808 ERROR [13] HKSupply.Services.Implementations.EFFunctionality.GetFunctionalityByName - El valor no puede ser nulo.
+Nombre del parámetro: functionalityName
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: functionalityName
+   en HKSupply.Services.Implementations.EFFunctionality.GetFunctionalityByName(String functionalityName) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 65
+2017-03-01 10:39:06,598 ERROR [13] HKSupply.Services.Implementations.EFFunctionality.GetFunctionalityByName - Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityException'.
+HKSupply.Exceptions.NonexistentFunctionalityException: Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityException'.
+   en HKSupply.Services.Implementations.EFFunctionality.GetFunctionalityByName(String functionalityName) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 75
+2017-03-01 10:40:01,196 ERROR [10] HKSupply.Services.Implementations.EFFunctionality.NewFunctionality - El valor no puede ser nulo.
+System.ArgumentNullException: El valor no puede ser nulo.
+   en HKSupply.Services.Implementations.EFFunctionality.NewFunctionality(Functionality newFunctionality) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 103
+2017-03-01 10:40:18,535 ERROR [10] HKSupply.Services.Implementations.EFFunctionality.NewFunctionality - Se produjo una excepción de tipo 'HKSupply.Exceptions.NewExistingFunctionalityException'.
+HKSupply.Exceptions.NewExistingFunctionalityException: Se produjo una excepción de tipo 'HKSupply.Exceptions.NewExistingFunctionalityException'.
+   en HKSupply.Services.Implementations.EFFunctionality.NewFunctionality(Functionality newFunctionality) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 110
+2017-03-01 10:41:31,186 ERROR [14] HKSupply.Services.Implementations.EFFunctionality.ModifyFunctionality - El valor no puede ser nulo.
+System.ArgumentNullException: El valor no puede ser nulo.
+   en HKSupply.Services.Implementations.EFFunctionality.ModifyFunctionality(Functionality modFunctionality) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 153
+2017-03-01 10:41:32,656 ERROR [14] HKSupply.Services.Implementations.EFFunctionality.ModifyFunctionality - Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityException'.
+HKSupply.Exceptions.NonexistentFunctionalityException: Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityException'.
+   en HKSupply.Services.Implementations.EFFunctionality.ModifyFunctionality(Functionality modFunctionality) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 160
+2017-03-01 10:41:53,321 ERROR [11] HKSupply.Services.Implementations.EFFunctionality.ModifyFunctionality - El valor no puede ser nulo.
+System.ArgumentNullException: El valor no puede ser nulo.
+   en HKSupply.Services.Implementations.EFFunctionality.ModifyFunctionality(Functionality modFunctionality) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 153
+2017-03-01 10:42:03,551 ERROR [11] HKSupply.Services.Implementations.EFFunctionality.ModifyFunctionality - Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityException'.
+HKSupply.Exceptions.NonexistentFunctionalityException: Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityException'.
+   en HKSupply.Services.Implementations.EFFunctionality.ModifyFunctionality(Functionality modFunctionality) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 160
+2017-03-01 10:51:56,739 ERROR [12] HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole - El valor no puede ser nulo.
+Nombre del parámetro: functionalityId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: functionalityId
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole(Int32 functionalityId, String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 24
+2017-03-01 10:51:59,487 ERROR [12] HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole - El valor no puede ser nulo.
+Nombre del parámetro: roleId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: roleId
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole(Int32 functionalityId, String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 27
+2017-03-01 10:52:11,063 ERROR [12] HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole - Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityRoleException'.
+HKSupply.Exceptions.NonexistentFunctionalityRoleException: Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityRoleException'.
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole(Int32 functionalityId, String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 36
+2017-03-01 10:52:27,555 ERROR [10] HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole - El valor no puede ser nulo.
+Nombre del parámetro: functionalityId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: functionalityId
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole(Int32 functionalityId, String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 24
+2017-03-01 10:52:30,326 ERROR [10] HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole - El valor no puede ser nulo.
+Nombre del parámetro: roleId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: roleId
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole(Int32 functionalityId, String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 27
+2017-03-01 10:52:50,085 ERROR [10] HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole - Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityRoleException'.
+HKSupply.Exceptions.NonexistentFunctionalityRoleException: Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityRoleException'.
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole(Int32 functionalityId, String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 36
+2017-03-01 10:54:16,912 ERROR [10] HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole - El valor no puede ser nulo.
+Nombre del parámetro: functionalityId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: functionalityId
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole(Int32 functionalityId, String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 24
+2017-03-01 10:54:53,400 ERROR [12] HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole - El valor no puede ser nulo.
+Nombre del parámetro: functionalityId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: functionalityId
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole(Int32 functionalityId, String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 24
+2017-03-01 10:54:56,485 ERROR [12] HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole - El valor no puede ser nulo.
+Nombre del parámetro: roleId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: roleId
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole(Int32 functionalityId, String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 27
+2017-03-01 10:55:00,574 ERROR [12] HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole - Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityRoleException'.
+HKSupply.Exceptions.NonexistentFunctionalityRoleException: Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityRoleException'.
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole(Int32 functionalityId, String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 36
+2017-03-01 10:56:13,100 ERROR [13] HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole - El valor no puede ser nulo.
+Nombre del parámetro: functionalityId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: functionalityId
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole(Int32 functionalityId, String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 24
+2017-03-01 10:56:13,146 ERROR [13] HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole - El valor no puede ser nulo.
+Nombre del parámetro: roleId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: roleId
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole(Int32 functionalityId, String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 27
+2017-03-01 10:56:14,685 ERROR [13] HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole - Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityRoleException'.
+HKSupply.Exceptions.NonexistentFunctionalityRoleException: Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityRoleException'.
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalityRole(Int32 functionalityId, String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 38
+2017-03-01 11:03:36,431 ERROR [12] HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalitiesRole - El valor no puede ser nulo.
+Nombre del parámetro: roleId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: roleId
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalitiesRole(String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 66
+2017-03-01 11:04:47,378 ERROR [12] HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalitiesRole - El valor no puede ser nulo.
+Nombre del parámetro: roleId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: roleId
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.GetFunctionalitiesRole(String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 66
+2017-03-01 11:15:13,451 ERROR [12] HKSupply.Services.Implementations.EFIFunctionalityRole.NewFunctionalityRole - El valor no puede ser nulo.
+Nombre del parámetro: newFunctionalityRole
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: newFunctionalityRole
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.NewFunctionalityRole(FunctionalityRole newFunctionalityRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 97
+2017-03-01 11:15:27,004 ERROR [12] HKSupply.Services.Implementations.EFIFunctionalityRole.NewFunctionalityRole - Se produjo una excepción de tipo 'HKSupply.Exceptions.NewExistingFunctionalityRoleException'.
+HKSupply.Exceptions.NewExistingFunctionalityRoleException: Se produjo una excepción de tipo 'HKSupply.Exceptions.NewExistingFunctionalityRoleException'.
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.NewFunctionalityRole(FunctionalityRole newFunctionalityRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 106
+2017-03-01 11:27:26,971 ERROR [10] HKSupply.Services.Implementations.EFIFunctionalityRole.ModifyFunctionalityRole - El valor no puede ser nulo.
+Nombre del parámetro: modFunctionalityRole
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: modFunctionalityRole
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.ModifyFunctionalityRole(FunctionalityRole modFunctionalityRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 139
+2017-03-01 11:27:32,409 ERROR [10] HKSupply.Services.Implementations.EFIFunctionalityRole.ModifyFunctionalityRole - Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityRoleException'.
+HKSupply.Exceptions.NonexistentFunctionalityRoleException: Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityRoleException'.
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.ModifyFunctionalityRole(FunctionalityRole modFunctionalityRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 148
+2017-03-01 11:29:52,320 ERROR [13] HKSupply.Services.Implementations.EFIFunctionalityRole.ModifyFunctionalityRole - El valor no puede ser nulo.
+Nombre del parámetro: modFunctionalityRole
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: modFunctionalityRole
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.ModifyFunctionalityRole(FunctionalityRole modFunctionalityRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 139
+2017-03-01 11:29:55,902 ERROR [13] HKSupply.Services.Implementations.EFIFunctionalityRole.ModifyFunctionalityRole - Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityRoleException'.
+HKSupply.Exceptions.NonexistentFunctionalityRoleException: Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityRoleException'.
+   en HKSupply.Services.Implementations.EFIFunctionalityRole.ModifyFunctionalityRole(FunctionalityRole modFunctionalityRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIFunctionalityRole.cs:línea 148

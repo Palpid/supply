@@ -7,9 +7,10 @@ using HKSupply.Models;
 
 namespace HKSupply.Services.Interfaces
 {
-    interface IFunctionality
+    public interface IFunctionality
     {
-        Functionality GetFunctionalityByIdRol(string functionalityName, string roleId);
+        Functionality GetFunctionalityById(int functionalityId);
+        Functionality GetFunctionalityByName(string functionalityName);
         Functionality NewFunctionality(Functionality newFunctionality);
         Functionality ModifyFunctionality(Functionality modFunctionality);
     }

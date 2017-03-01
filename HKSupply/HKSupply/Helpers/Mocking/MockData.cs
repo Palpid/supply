@@ -129,41 +129,42 @@ namespace HKSupply.Helpers.Mocking
                 FunctionalitiesList.Add(new Functionality 
                 {
                     FunctionalityName = "MantenimientoUsuarios",
-                    Read = true,
-                    Modify = true,
-                    Role = adminRol
+                    //TODO
+                    //Read = true,
+                    //Modify = true,
+                    //Role = adminRol
                 });
 
                 FunctionalitiesList.Add(new Functionality
                 {
                     FunctionalityName = "MantenimientoRoles",
-                    Read = true,
-                    Modify = true,
-                    Role = adminRol
+                    //Read = true,
+                    //Modify = true,
+                    //Role = adminRol
                 });
 
                 FunctionalitiesList.Add(new Functionality
                 {
                     FunctionalityName = "MantenimientoFuncionalidades",
-                    Read = true,
-                    Modify = true,
-                    Role = adminRol
+                    //Read = true,
+                    //Modify = true,
+                    //Role = adminRol
                 });
 
                 FunctionalitiesList.Add(new Functionality
                 {
                     FunctionalityName = "MantenimientoArticulos",
-                    Read = true,
-                    Modify = true,
-                    Role = adminRol
+                    //Read = true,
+                    //Modify = true,
+                    //Role = adminRol
                 });
 
                 FunctionalitiesList.Add(new Functionality
                 {
                     FunctionalityName = "MantenimientoArticulos",
-                    Read = true,
-                    Modify = false,
-                    Role = operatorRol
+                    //Read = true,
+                    //Modify = false,
+                    //Role = operatorRol
                 });
 
             }

@@ -30,10 +30,6 @@ namespace HKSupply.Models
         [Column("REMARKS", TypeName = "VARCHAR")]
         public string Remarks { get; set; }
 
-        public ICollection<Functionality> Functionalities { get; set; }
-
-        public ICollection<User> Users { get; set; }
-
         public override bool Equals(object obj)
         {
             if (obj == null)
