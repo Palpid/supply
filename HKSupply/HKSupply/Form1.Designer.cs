@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
+            this.stackView1 = new CustomControls.StackView();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(12, 93);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(59, 27);
             this.button1.TabIndex = 0;
@@ -41,22 +42,38 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // stackView1
+            // 
+            this.stackView1.AutoSize = true;
+            this.stackView1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.stackView1.Location = new System.Drawing.Point(0, 0);
+            this.stackView1.Name = "stackView1";
+            this.stackView1.Size = new System.Drawing.Size(384, 41);
+            this.stackView1.TabIndex = 1;
+            this.stackView1.EditButtonClick += new System.EventHandler(this.stackView1_EditButtonClick);
+            this.stackView1.NewButtonClick += new System.EventHandler(this.stackView1_NewButtonClick);
+            this.stackView1.SaveButtonClick += new System.EventHandler(this.stackView1_SaveButtonClick);
+            this.stackView1.CancelButtonClick += new System.EventHandler(this.stackView1_CancelButtonClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(384, 261);
+            this.Controls.Add(this.stackView1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button button1;
+        private CustomControls.StackView stackView1;
     }
 }
 

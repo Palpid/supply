@@ -142,6 +142,8 @@ namespace HKSupply.Forms
                 {
                     var user = GlobalSetting.UserCont.GetUserByLoginPassword(txtLogin.Text, txtPassword.Text);
                     GlobalSetting.LoggedUser = user;
+                    var functionalitiesRoles = GlobalSetting.FunctionalityRoleCont.GetFunctionalitiesRole(GlobalSetting.LoggedUser.RoleId);
+                    GlobalSetting.FunctionalitiesRoles = functionalitiesRoles;
                     
                     DialogResult = DialogResult.OK;
                     

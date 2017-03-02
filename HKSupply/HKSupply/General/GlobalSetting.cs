@@ -12,13 +12,14 @@ namespace HKSupply.General
     public sealed class GlobalSetting
     {
         #region Private Members
-        static EFRole _roleEF ;
-        static EFUser _userEF;
-        static EFFunctionality _functionalityEF;
-        static EFFunctionalityRole _functionalityRoleEF;
+        static EFRole _roleEF = new EFRole();
+        static EFUser _userEF = new EFUser();
+        static EFFunctionality _functionalityEF = new EFFunctionality();
+        static EFFunctionalityRole _functionalityRoleEF = new EFFunctionalityRole();
 
         static User _loggedUser;
-
+        static IEnumerable<FunctionalityRole> _functionalitiesRoles;
+        
         #endregion
 
         #region Public Properties
@@ -72,6 +73,12 @@ namespace HKSupply.General
         {
             get { return _loggedUser; }
             set { _loggedUser = value; }
+        }
+
+        public static IEnumerable<FunctionalityRole> FunctionalitiesRoles 
+        {
+            get { return _functionalitiesRoles; }
+            set { _functionalitiesRoles = value; }
         }
         #endregion
         

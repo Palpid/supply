@@ -303,6 +303,26 @@ namespace HKSupply
             frm.Show();
         }
 
+        private void stackView1_EditButtonClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("Edit Button");
+        }
+
+        private void stackView1_NewButtonClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("New Button");
+        }
+
+        private void stackView1_SaveButtonClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("Save Button");
+        }
+        private void stackView1_CancelButtonClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("Cancel Button");
+        }
+
+
         
     }
 

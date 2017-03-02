@@ -9,6 +9,7 @@ namespace HKSupply.Services.Interfaces
 {
     public interface IRole
     {
+        IEnumerable<Role> GetAllRoles();
         Role GetRoleById(string roleId);
         Role NewRole(Role newRole);
         bool DisableRole(string roleId, string remarks);

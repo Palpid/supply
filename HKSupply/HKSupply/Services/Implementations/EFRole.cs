@@ -19,6 +19,21 @@ namespace HKSupply.Services.Implementations
 
         #region Public Methods
 
+        public IEnumerable<Role> GetAllRoles()
+        {
+            try
+            {
+                using (var db = new HKSupplyContext())
+                {
+                    return db.Roles.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public Role GetRoleById(string roleId)
         {
             try
