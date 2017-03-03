@@ -36,7 +36,7 @@ namespace HKSupply.Services.Implementations
                 {
                     var user = db.Users
                         .Include(r => r.UserRol)
-                        .Where(u => u.UserLogin.Equals(UserLogin))
+                        .Where(u => u.UserLogin.Equals(UserLogin) && u.Enabled.Equals(true))
                         .FirstOrDefault();
 
                     if (user == null)

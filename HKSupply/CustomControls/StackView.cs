@@ -41,6 +41,7 @@ namespace CustomControls
         private readonly bool _read;
         private readonly bool _new;
         private readonly bool _modify;
+        private ToolbarStates _currentState;
 
         private static Bitmap mailBmp;
         private static Bitmap calendarBmp;
@@ -227,6 +228,13 @@ namespace CustomControls
 
         #endregion
 
+        #region Public properties
+        public ToolbarStates CurrentState 
+        {
+            get { return _currentState; }
+        }
+        #endregion
+
         #region Constructor
 
         // Static constructor to initialize
@@ -340,43 +348,44 @@ namespace CustomControls
                 {
                     ((ToolStripButton)item).Checked = false;
                 }
-                //ADD.MRM
                 else
                 {
                     switch (item.Name)
                     {
                         case "editStackButton":
-                            this.OnEditButtonClick(EventArgs.Empty); 
+                            this.OnEditButtonClick(EventArgs.Empty);
+                            ConfigureByState(ToolbarStates.Edit);
                             break;
                         case "newStackButton":
-                            this.OnNewButtonClick(EventArgs.Empty); //MRM
+                            this.OnNewButtonClick(EventArgs.Empty); 
+                            ConfigureByState(ToolbarStates.New);
                             break;
                         case "saveStackButton":
-                            this.OnSaveButtonClick(EventArgs.Empty); //MRM
+                            this.Validate(); //Los toolstrip por defecto no lanzan los validate de los objetos cuando se pulsa en ellos
+                            this.OnSaveButtonClick(EventArgs.Empty); 
                             break;
                         case "cancelStackButton":
-                            this.OnCancelButtonClick(EventArgs.Empty); //MRM
+                            this.OnCancelButtonClick(EventArgs.Empty); 
                             break;
                     }
                 }
-                //END.MRM
             }
-            //this.OnEditButtonClick(EventArgs.Empty); //MRM
         }
 
         #endregion
         private void ConfigureActions()
         {
             if (_read == true && _new == false && _modify == false)
-                ConfigureByState(CustomControls.StackView.ToolbarStates.OnlyRead);
+                ConfigureByState(ToolbarStates.OnlyRead);
             else if (_read == true && _new == true && _modify == true)
-                ConfigureByState(CustomControls.StackView.ToolbarStates.OnlyEditNew);
+                ConfigureByState(ToolbarStates.OnlyEditNew);
             else if (_read == true && _new == false && _modify == true)
-                ConfigureByState(CustomControls.StackView.ToolbarStates.OnlyEdit);
+                ConfigureByState(ToolbarStates.OnlyEdit);
         }
 
         private void ConfigureByState(ToolbarStates state)
         {
+            _currentState = state;
             switch (state)
             {
                 case ToolbarStates.OnlyRead:
@@ -449,7 +458,12 @@ namespace CustomControls
 
         #endregion
 
- 
+        #region Public members
+        public void RestoreInitState()
+        {
+            ConfigureActions();
+        }
+        #endregion
 
     }
 

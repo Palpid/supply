@@ -31,7 +31,7 @@ namespace HKSupply.Services.Implementations
                     var functionalityRole = db.FunctionalitiesRole
                         .Include(r => r.Role)
                         .Include(f => f.Functionality)
-                        .Where(fr => fr.FunctionalityId.Equals(functionalityId) && fr.RoleId.Equals(roleId))
+                        .Where(fr => fr.FunctionalityId.Equals(functionalityId) && fr.RoleId.Equals(roleId) && fr.Role.Enabled.Equals(true))
                         .FirstOrDefault();
 
                     if (functionalityRole == null)
@@ -70,7 +70,7 @@ namespace HKSupply.Services.Implementations
                     var functionalitiesList = db.FunctionalitiesRole
                         .Include(r => r.Role)
                         .Include(f => f.Functionality)
-                        .Where(fr => fr.RoleId.Equals(roleId))
+                        .Where(fr => fr.RoleId.Equals(roleId) && fr.Role.Enabled.Equals(true))
                         .ToList();
 
                     return functionalitiesList;
@@ -98,17 +98,12 @@ namespace HKSupply.Services.Implementations
 
                 using (var db = new HKSupplyContext())
                 {
-                    //var categories = db.Functionalities
-                    //    //.Where(f => f.RoleId.Equals(roleId))
-                    //    .Select(f => f.Category)
-                    //    .Distinct()
-                    //    .ToList();
-
                     var categories = db.FunctionalitiesRole
-                        .Join(db.Functionalities,
-                        fr => fr.FunctionalityId,
-                        f => f.FunctionalityId,
-                        (fr, f) => new { FunctionalitiesRole = fr, Functionalities = f })
+                        .Join(
+                            db.Functionalities,
+                            fr => fr.FunctionalityId,
+                            f => f.FunctionalityId,
+                            (fr, f) => new { FunctionalitiesRole = fr, Functionalities = f })
                         .Select(f => f.Functionalities.Category)
                         .Distinct()
                         .ToList();

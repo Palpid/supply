@@ -82,7 +82,7 @@ namespace HKSupply.Services.Implementations
                     var role = db.Roles.FirstOrDefault(r => r.RoleId.Equals(newRole.RoleId));
                     
                     if (role != null)
-                        throw new NewExistingRoleException();
+                        throw new NewExistingRoleException("AA");
                     db.Roles.Add(newRole);
                     db.SaveChanges();
 
@@ -97,7 +97,7 @@ namespace HKSupply.Services.Implementations
             }
             catch (NewExistingRoleException areex)
             {
-                _log.Error(areex.Message, areex);
+                _log.Info(areex.Message, areex);
                 throw areex;
             }
             catch (NonexistentRoleException nerex)
@@ -167,5 +167,43 @@ namespace HKSupply.Services.Implementations
         }
 
         #endregion
+
+
+        public bool UpdateRoles(IEnumerable<Role> rolesToUpdate)
+        {
+            try
+            {
+                if (rolesToUpdate == null)
+                    throw new ArgumentException("rolesToUpdate");
+
+                using (var db = new HKSupplyContext())
+                {
+                    foreach (var role in rolesToUpdate)
+                    {
+                        var roleToUpdate = db.Roles.FirstOrDefault(r => r.RoleId.Equals(role.RoleId));
+                        if (roleToUpdate != null)
+                        {
+                            roleToUpdate.Description = role.Description;
+                            roleToUpdate.Enabled = role.Enabled;
+                            roleToUpdate.Remarks = role.Remarks;
+                        }
+                    }
+
+                    db.SaveChanges();
+                    return true;
+                }
+
+            }
+            catch (ArgumentNullException nrex)
+            {
+                _log.Error(nrex.Message, nrex);
+                throw nrex;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
+            }
+        }
     }
 }

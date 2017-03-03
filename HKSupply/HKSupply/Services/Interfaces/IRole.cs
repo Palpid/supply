@@ -13,5 +13,6 @@ namespace HKSupply.Services.Interfaces
         Role GetRoleById(string roleId);
         Role NewRole(Role newRole);
         bool DisableRole(string roleId, string remarks);
+        bool UpdateRoles(IEnumerable<Role> rolesToUpdate);
     }
 }

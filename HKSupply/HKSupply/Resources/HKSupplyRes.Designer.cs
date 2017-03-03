@@ -61,6 +61,24 @@ namespace HKSupply.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a This is not a valid value for this column.
+        /// </summary>
+        internal static string CellDataError {
+            get {
+                return ResourceManager.GetString("CellDataError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a This field is required.
+        /// </summary>
+        internal static string FieldRequired {
+            get {
+                return ResourceManager.GetString("FieldRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Form not found.
         /// </summary>
         internal static string FormNotFound {
@@ -115,6 +133,15 @@ namespace HKSupply.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a No pending changes.
+        /// </summary>
+        internal static string NoPendingChanges {
+            get {
+                return ResourceManager.GetString("NoPendingChanges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a {1} can&apos;t be null.
         /// </summary>
         internal static string NullArgument {
@@ -138,6 +165,15 @@ namespace HKSupply.Resources {
         internal static string PasswordMandatory {
             get {
                 return ResourceManager.GetString("PasswordMandatory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Save changes?.
+        /// </summary>
+        internal static string SaveChanges {
+            get {
+                return ResourceManager.GetString("SaveChanges", resourceCulture);
             }
         }
         

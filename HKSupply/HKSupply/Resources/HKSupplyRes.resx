@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CellDataError" xml:space="preserve">
+    <value>This is not a valid value for this column</value>
+  </data>
+  <data name="FieldRequired" xml:space="preserve">
+    <value>This field is required</value>
+  </data>
   <data name="FormNotFound" xml:space="preserve">
     <value>Form not found</value>
   </data>
@@ -135,6 +141,9 @@
   <data name="LoginMandatory" xml:space="preserve">
     <value>Login mandatory</value>
   </data>
+  <data name="NoPendingChanges" xml:space="preserve">
+    <value>No pending changes</value>
+  </data>
   <data name="NullArgument" xml:space="preserve">
     <value>{1} can't be null</value>
   </data>
@@ -143,6 +152,9 @@
   </data>
   <data name="PasswordMandatory" xml:space="preserve">
     <value>Password mandatory</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>Save changes?</value>
   </data>
   <data name="SignIn" xml:space="preserve">
     <value>Sign in</value>
