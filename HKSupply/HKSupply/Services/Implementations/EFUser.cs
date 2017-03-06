@@ -22,6 +22,22 @@ namespace HKSupply.Services.Implementations
 
         
         #region Public Methods
+        public IEnumerable<User> GetAllUsers()
+        {
+            try
+            {
+                using (var db = new HKSupplyContext())
+                {
+                    return db.Users.Include(r => r.UserRole).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
+            }
+        }
+
         public User GetUserByLoginPassword(string UserLogin, string Password)
         {
             
@@ -35,7 +51,7 @@ namespace HKSupply.Services.Implementations
                 using (var db = new HKSupplyContext())
                 {
                     var user = db.Users
-                        .Include(r => r.UserRol)
+                        .Include(r => r.UserRole)
                         .Where(u => u.UserLogin.Equals(UserLogin) && u.Enabled.Equals(true))
                         .FirstOrDefault();
 
@@ -167,5 +183,46 @@ namespace HKSupply.Services.Implementations
             }
         }
         #endregion
+
+
+
+        public bool UpdateUsers(IEnumerable<User> usersToUpdate)
+        {
+            try
+            {
+                if (usersToUpdate == null)
+                    throw new ArgumentException("usersToUpdate");
+
+                using (var db = new HKSupplyContext())
+                {
+                    foreach (var user in usersToUpdate)
+                    {
+                        var userToUpdate = db.Users.FirstOrDefault(u => u.Id.Equals(user.Id));
+                        if (userToUpdate != null)
+                        {
+                            //userToUpdate.Password = role.Description;
+                            userToUpdate.Name = user.Name;
+                            userToUpdate.RoleId = user.RoleId;
+                            userToUpdate.Enabled = user.Enabled;
+                            userToUpdate.Remarks = user.Remarks;
+                        }
+                    }
+
+                    db.SaveChanges();
+                    return true;
+                }
+
+            }
+            catch (ArgumentNullException nrex)
+            {
+                _log.Error(nrex.Message, nrex);
+                throw nrex;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
+            }
+        }
     }
 }

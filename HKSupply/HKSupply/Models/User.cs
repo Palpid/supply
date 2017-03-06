@@ -38,7 +38,7 @@ namespace HKSupply.Models
         public string RoleId { get; set; }
 
         [ForeignKey("RoleId")]
-        public Role UserRol { get; set; }
+        public Role UserRole { get; set; }
 
         [Column("ENABLED")]
         [DefaultValue(true)]

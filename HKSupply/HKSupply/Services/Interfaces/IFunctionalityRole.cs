@@ -9,10 +9,12 @@ namespace HKSupply.Services.Interfaces
 {
     public interface IFunctionalityRole
     {
+        IEnumerable<FunctionalityRole> GetAllFunctionalitiesRole();
         FunctionalityRole GetFunctionalityRole(int functionalityId, string roleId);
         IEnumerable<FunctionalityRole> GetFunctionalitiesRole(string roleId);
         IEnumerable<string> GetFunctionalitiesCategoriesRole(string roleId);
         FunctionalityRole NewFunctionalityRole(FunctionalityRole newFunctionalityRole);
         FunctionalityRole ModifyFunctionalityRole(FunctionalityRole modFunctionalityRole);
+        bool UpdateFunctionalitiesRoles(IEnumerable<FunctionalityRole> functionalitiesRolesToUpdate);
     }
 }

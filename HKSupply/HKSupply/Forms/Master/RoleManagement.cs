@@ -19,7 +19,7 @@ namespace HKSupply.Forms.Master
     {
 
         #region Enums
-        private enum eRole
+        private enum eRoleColumns
         {
             roleId,
             Description,
@@ -50,7 +50,7 @@ namespace HKSupply.Forms.Master
         private void RoleManagement_Load(object sender, EventArgs e)
         {
             ConfigureActionsStackView();
-            ConfigureRolesGrid();
+            SetupRolesGrid();
             LoadAllRoles();
         }
 
@@ -164,10 +164,10 @@ namespace HKSupply.Forms.Master
                 if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
                 {
                     Role tmpRole = new Role();
-                    tmpRole.RoleId = grdRoles.Rows[e.RowIndex].Cells[(int)eRole.roleId].Value.ToString();
-                    tmpRole.Description = (grdRoles.Rows[e.RowIndex].Cells[(int)eRole.Description].Value ?? string.Empty).ToString();
-                    tmpRole.Enabled = (bool)grdRoles.Rows[e.RowIndex].Cells[(int)eRole.Enabled].Value;
-                    tmpRole.Remarks = (grdRoles.Rows[e.RowIndex].Cells[(int)eRole.Remarks].Value ?? String.Empty).ToString();
+                    tmpRole.RoleId = grdRoles.Rows[e.RowIndex].Cells[(int)eRoleColumns.roleId].Value.ToString();
+                    tmpRole.Description = (grdRoles.Rows[e.RowIndex].Cells[(int)eRoleColumns.Description].Value ?? string.Empty).ToString();
+                    tmpRole.Enabled = (bool)grdRoles.Rows[e.RowIndex].Cells[(int)eRoleColumns.Enabled].Value;
+                    tmpRole.Remarks = (grdRoles.Rows[e.RowIndex].Cells[(int)eRoleColumns.Remarks].Value ?? String.Empty).ToString();
                     AddModifiedRolesToList(tmpRole);
                 }
 
@@ -182,7 +182,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                if (e.ColumnIndex == (int)eRole.Description)
+                if (e.ColumnIndex == (int)eRoleColumns.Description)
                 {
                     if (string.IsNullOrEmpty(e.FormattedValue.ToString()))
                     {
@@ -233,7 +233,7 @@ namespace HKSupply.Forms.Master
 
         }
 
-        private void ConfigureRolesGrid()
+        private void SetupRolesGrid()
         {
             try
             {
@@ -250,12 +250,12 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                grdRoles.Columns[(int)eRole.roleId].Width = 100;
-                grdRoles.Columns[(int)eRole.Description].Width = 200;
-                grdRoles.Columns[(int)eRole.Enabled].Width = 100;
-                grdRoles.Columns[(int)eRole.Remarks].Width = 300;
+                grdRoles.Columns[(int)eRoleColumns.roleId].Width = 100;
+                grdRoles.Columns[(int)eRoleColumns.Description].Width = 200;
+                grdRoles.Columns[(int)eRoleColumns.Enabled].Width = 100;
+                grdRoles.Columns[(int)eRoleColumns.Remarks].Width = 300;
 
-                grdRoles.Columns[(int)eRole.roleId].DefaultCellStyle.ForeColor = Color.Black;
+                grdRoles.Columns[(int)eRoleColumns.roleId].DefaultCellStyle.ForeColor = Color.Black;
 
                 grdRoles.ColumnHeadersDefaultCellStyle.BackColor = AppStyles.EtniaRed;
                 grdRoles.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
@@ -275,7 +275,7 @@ namespace HKSupply.Forms.Master
             {
                 _modifiedRoles.Clear();
                 _createdRoles.Clear();
-                IEnumerable<Role> appRoles = GlobalSetting.RoleCont.GetAllRoles();
+                IEnumerable<Role> appRoles = GlobalSetting.RoleCont.GetRoles();
                 grdRoles.DataSource = appRoles;
                 grdRoles.ReadOnly = true;
 
@@ -292,8 +292,8 @@ namespace HKSupply.Forms.Master
             try
             {
                 grdRoles.ReadOnly = false;
-                grdRoles.Columns[(int)eRole.roleId].ReadOnly = true; //make the id column readonly
-                grdRoles.Columns[(int)eRole.roleId].DefaultCellStyle.ForeColor = Color.Gray;
+                grdRoles.Columns[(int)eRoleColumns.roleId].ReadOnly = true; //make the id column readonly
+                grdRoles.Columns[(int)eRoleColumns.roleId].DefaultCellStyle.ForeColor = Color.Gray;
             }
             catch (Exception ex)
             {
@@ -424,8 +424,6 @@ namespace HKSupply.Forms.Master
             }
             catch (NewExistingRoleException nerex)
             {
-                //AKI
-                //MessageBox.Show(resManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 MessageBox.Show(nerex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }

@@ -35,7 +35,7 @@ namespace HKSupply.Models
 
         public override bool Equals(object obj)
         {
-            if (obj == null)
+            if (obj == null || obj == DBNull.Value)
                 return false;
 
             Functionality funcionalidad = (Functionality)obj;

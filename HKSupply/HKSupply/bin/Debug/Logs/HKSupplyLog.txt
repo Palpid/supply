@@ -1,54 +1,21 @@
-﻿2017-03-03 09:18:23,631 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentUserException'.
-HKSupply.Exceptions.NonexistentUserException: Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentUserException'.
-   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 43
-2017-03-03 09:29:46,100 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
+﻿2017-03-06 12:59:04,814 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
 HKSupply.Exceptions.InvalidPasswordException: Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 46
-2017-03-03 09:32:06,533 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 62
+2017-03-06 13:02:29,059 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
 HKSupply.Exceptions.InvalidPasswordException: Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 46
-2017-03-03 09:35:26,874 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 62
+2017-03-06 13:19:28,604 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
 HKSupply.Exceptions.InvalidPasswordException: Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 46
-2017-03-03 10:19:17,699 INFO [10] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 62
+2017-03-06 13:20:44,923 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
 HKSupply.Exceptions.InvalidPasswordException: Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 46
-2017-03-03 10:42:11,134 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 62
+2017-03-06 13:29:45,341 INFO [10] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
 HKSupply.Exceptions.InvalidPasswordException: Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 46
-2017-03-03 10:48:44,253 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 62
+2017-03-06 14:47:40,195 INFO [10] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
 HKSupply.Exceptions.InvalidPasswordException: Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 46
-2017-03-03 11:22:08,848 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 62
+2017-03-06 16:03:18,031 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
 HKSupply.Exceptions.InvalidPasswordException: Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 46
-2017-03-03 11:30:30,977 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-HKSupply.Exceptions.InvalidPasswordException: Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 46
-2017-03-03 11:33:11,454 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-HKSupply.Exceptions.InvalidPasswordException: Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 46
-2017-03-03 11:49:04,528 INFO [10] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-HKSupply.Exceptions.InvalidPasswordException: Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 46
-2017-03-03 12:05:23,518 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-HKSupply.Exceptions.InvalidPasswordException: Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 46
-2017-03-03 12:27:09,183 INFO [10] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-HKSupply.Exceptions.InvalidPasswordException: Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 46
-2017-03-03 12:34:13,692 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-HKSupply.Exceptions.InvalidPasswordException: Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 46
-2017-03-03 12:47:49,680 ERROR [9] HKSupply.Services.Implementations.EFRole.NewRole - Se produjo una excepción de tipo 'HKSupply.Exceptions.NewExistingRoleException'.
-HKSupply.Exceptions.NewExistingRoleException: Se produjo una excepción de tipo 'HKSupply.Exceptions.NewExistingRoleException'.
-   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 85
-2017-03-03 12:56:46,232 INFO [9] HKSupply.Services.Implementations.EFRole.NewRole - AA
-HKSupply.Exceptions.NewExistingRoleException: AA
-   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 85
-2017-03-03 13:09:48,765 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-HKSupply.Exceptions.InvalidPasswordException: Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 46
-2017-03-03 13:32:39,091 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-HKSupply.Exceptions.InvalidPasswordException: Se produjo una excepción de tipo 'HKSupply.Exceptions.InvalidPasswordException'.
-   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 46
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 62

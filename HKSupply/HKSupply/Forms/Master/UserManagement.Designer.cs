@@ -1,6 +1,6 @@
 ﻿namespace HKSupply.Forms.Master
 {
-    partial class RoleManagement
+    partial class UserManagement
     {
         /// <summary>
         /// Required designer variable.
@@ -28,38 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grdRoles = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.grdRoles)).BeginInit();
+            this.grdUsers = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.grdUsers)).BeginInit();
             this.SuspendLayout();
             // 
-            // grdRoles
+            // grdUsers
             // 
-            this.grdRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdRoles.Location = new System.Drawing.Point(16, 62);
-            this.grdRoles.Margin = new System.Windows.Forms.Padding(4);
-            this.grdRoles.Name = "grdRoles";
-            this.grdRoles.ReadOnly = true;
-            this.grdRoles.Size = new System.Drawing.Size(1183, 522);
-            this.grdRoles.TabIndex = 0;
+            this.grdUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdUsers.Location = new System.Drawing.Point(16, 62);
+            this.grdUsers.Name = "grdUsers";
+            this.grdUsers.RowTemplate.Height = 24;
+            this.grdUsers.Size = new System.Drawing.Size(1183, 522);
+            this.grdUsers.TabIndex = 0;
             // 
-            // RoleManagement
+            // UserManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1215, 598);
-            this.Controls.Add(this.grdRoles);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "RoleManagement";
-            this.Text = "Role Management";
-            this.Load += new System.EventHandler(this.RoleManagement_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.grdRoles)).EndInit();
+            this.Controls.Add(this.grdUsers);
+            this.Name = "UserManagement";
+            this.Text = "User Management";
+            this.Load += new System.EventHandler(this.UserManagement_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grdUsers)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView grdRoles;
+        private System.Windows.Forms.DataGridView grdUsers;
     }
 }

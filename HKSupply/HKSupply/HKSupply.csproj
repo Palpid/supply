@@ -89,11 +89,29 @@
     <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Master\FunctionalityManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\FunctionalityManagement.Designer.cs">
+      <DependentUpon>FunctionalityManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\FunctionalityRoleManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\FunctionalityRoleManagement.Designer.cs">
+      <DependentUpon>FunctionalityRoleManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Master\RoleManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Master\RoleManagement.Designer.cs">
       <DependentUpon>RoleManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\UserManagement.Designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="General\GlobalSetting.cs" />
     <Compile Include="Helpers\Mocking\MockData.cs" />
@@ -127,8 +145,17 @@
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\FunctionalityManagement.resx">
+      <DependentUpon>FunctionalityManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\FunctionalityRoleManagement.resx">
+      <DependentUpon>FunctionalityRoleManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\RoleManagement.resx">
       <DependentUpon>RoleManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\UserManagement.resx">
+      <DependentUpon>UserManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

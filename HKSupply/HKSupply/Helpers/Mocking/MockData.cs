@@ -84,7 +84,7 @@ namespace HKSupply.Helpers.Mocking
                     UserLogin = "admin",
                     Name = "Administrador",
                     Password = "adminpwd",
-                    UserRol = adminRol,
+                    UserRole = adminRol,
                     Enabled = true,
                     LastLogout = null,
                     Remarks = null
@@ -95,7 +95,7 @@ namespace HKSupply.Helpers.Mocking
                     UserLogin = "m.ruz",
                     Name = "Mario Ruz Martínez",
                     Password = "mariopwd",
-                    UserRol = adminRol,
+                    UserRole = adminRol,
                     Enabled = true,
                     LastLogout = null,
                     Remarks = null
@@ -106,7 +106,7 @@ namespace HKSupply.Helpers.Mocking
                     UserLogin = "operador1",
                     Name = "Operador 1",
                     Password = "op1pwd",
-                    UserRol = adminRol,
+                    UserRole = adminRol,
                     Enabled = true,
                     LastLogout = null,
                     Remarks = null

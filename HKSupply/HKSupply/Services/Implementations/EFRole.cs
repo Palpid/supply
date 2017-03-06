@@ -19,13 +19,21 @@ namespace HKSupply.Services.Implementations
 
         #region Public Methods
 
-        public IEnumerable<Role> GetAllRoles()
+        public IEnumerable<Role> GetRoles(bool all = true)
         {
             try
             {
                 using (var db = new HKSupplyContext())
                 {
-                    return db.Roles.ToList();
+                    if (all)
+                    {
+                        return db.Roles.ToList();
+                    }
+                    else
+                    {
+                        return db.Roles.Where(r => r.Enabled.Equals(true)).ToList();
+                    }
+                    
                 }
             }
             catch (Exception ex)
@@ -82,7 +90,7 @@ namespace HKSupply.Services.Implementations
                     var role = db.Roles.FirstOrDefault(r => r.RoleId.Equals(newRole.RoleId));
                     
                     if (role != null)
-                        throw new NewExistingRoleException("AA");
+                        throw new NewExistingRoleException();
                     db.Roles.Add(newRole);
                     db.SaveChanges();
 

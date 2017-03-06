@@ -16,6 +16,28 @@ namespace HKSupply.Services.Implementations
     {
         ILog _log = LogManager.GetLogger(typeof(EFUser));
 
+        public IEnumerable<FunctionalityRole> GetAllFunctionalitiesRole()
+        {
+            try
+            {
+                using (var db = new HKSupplyContext())
+                {
+                    var functionalitiesList = db.FunctionalitiesRole
+                        .Include(r => r.Role)
+                        .Include(f => f.Functionality)
+                        .ToList();
+
+                    return functionalitiesList;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
+            }
+        }
+
         public FunctionalityRole GetFunctionalityRole(int functionalityId, string roleId)
         {
             try
@@ -212,5 +234,45 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+
+
+        public bool UpdateFunctionalitiesRoles(IEnumerable<FunctionalityRole> functionalitiesRolesToUpdate)
+        {
+            try
+            {
+                if (functionalitiesRolesToUpdate == null)
+                    throw new ArgumentException("functionalitiesRolesToUpdate");
+
+                using (var db = new HKSupplyContext())
+                {
+                    foreach (var funcRole in functionalitiesRolesToUpdate)
+                    {
+                        var funcRoleToUpdate = db.FunctionalitiesRole.FirstOrDefault(fr => fr.FunctionalityId.Equals(funcRole.FunctionalityId) &&
+                            fr.RoleId.Equals(funcRole.RoleId));
+
+                        if (funcRoleToUpdate != null)
+                        {
+                            funcRoleToUpdate.Read = funcRole.Read;
+                            funcRoleToUpdate.New = funcRole.New;
+                            funcRoleToUpdate.Modify = funcRole.Modify;
+                        }
+                    }
+
+                    db.SaveChanges();
+                    return true;
+                }
+
+            }
+            catch (ArgumentNullException nrex)
+            {
+                _log.Error(nrex.Message, nrex);
+                throw nrex;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
+            }
+        }
     }
 }
