@@ -37,6 +37,9 @@ namespace HKSupply.Forms.Master
         #region Private members
         ResourceManager resManager = new ResourceManager("HKSupply.Resources.HKSupplyRes", typeof(RoleManagement).Assembly);
 
+        ToolStripMenuItem tsiChangePassword = new ToolStripMenuItem();
+        private DataGridViewCellEventArgs mouseLocation;
+
         CustomControls.StackView actionsStackView;
 
         List<Role> _roleList;
@@ -59,6 +62,7 @@ namespace HKSupply.Forms.Master
             LoadRoles();
             SetupUsersGrid();
             LoadAllUsers();
+            AddContextMenu();
         }
 
         #region Action toolbar events
@@ -135,6 +139,7 @@ namespace HKSupply.Forms.Master
 
                 if (res == true)
                 {
+                    SetupUsersGrid();
                     LoadAllUsers();
                     ConfigureRolesColorsStyles();
                     actionsStackView.RestoreInitState();
@@ -151,7 +156,9 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                MessageBox.Show("Cancel Button");
+                LoadAllUsers();
+                SetupUsersGrid();
+                actionsStackView.RestoreInitState();
             }
             catch (Exception ex)
             {
@@ -211,7 +218,6 @@ namespace HKSupply.Forms.Master
 
         }
 
-        //-----------------------------------------------------------------------------------------
         void grdUsers_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (grdUsers.Columns[e.ColumnIndex].Index == (int)eUserColumns.Password)
@@ -233,7 +239,11 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        //-----------------------------------------------------------------------------------------
+        private void grdUsers_CellMouseEnter(object sender,
+            DataGridViewCellEventArgs location)
+        {
+            mouseLocation = location;
+        }
 
         private void grdUsers_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
@@ -241,6 +251,23 @@ namespace HKSupply.Forms.Master
             MessageBox.Show(resManager.GetString("CellDataError"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+        private void tsiChangePassword_Click(object sender, EventArgs args)
+        {
+            try
+            {
+                //grdUsers.Rows[mouseLocation.RowIndex].Cells[mouseLocation.ColumnIndex].Style.BackColor = Color.Red;
+
+                int id = (int)grdUsers.Rows[mouseLocation.RowIndex].Cells[(int)eUserColumns.Id].Value;
+                User user = GlobalSetting.UserCont.GetUserById(id);
+                Form frm = new ChangePassword(user);
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
         #endregion
 
         #endregion
@@ -277,8 +304,7 @@ namespace HKSupply.Forms.Master
                 //Events
                 grdUsers.CellValueChanged += grdUsers_CellValueChanged;
                 grdUsers.CellValidating += grdUsers_CellValidating;
-
-                //aki test
+                grdUsers.CellMouseEnter +=grdUsers_CellMouseEnter;
                 grdUsers.CellFormatting += new DataGridViewCellFormattingEventHandler(grdUsers_CellFormatting);
                 grdUsers.EditingControlShowing += new DataGridViewEditingControlShowingEventHandler(grdUsers_EditingControlShowing);
 
@@ -306,6 +332,7 @@ namespace HKSupply.Forms.Master
                 columnPassword.HeaderText = eUserColumns.Password.ToString();
                 columnPassword.Width = 120;
                 columnPassword.DataPropertyName = eUserColumns.Password.ToString();
+                columnPassword.Visible = false;
 
                 grdUsers.Columns.Add(columnPassword);
 
@@ -460,12 +487,40 @@ namespace HKSupply.Forms.Master
                 _createdUsers.Add(new User());
                 grdUsers.DataSource = null;
                 grdUsers.Rows.Clear();
+                SetupUsersGrid();
                 grdUsers.DataSource = _createdUsers;
                 grdUsers.ReadOnly = false;
+
+                //make columns readonly
+                grdUsers.Columns[(int)eUserColumns.Id].ReadOnly = true;
+                grdUsers.Columns[(int)eUserColumns.Id].DefaultCellStyle.ForeColor = Color.Gray;
+
+                //show password column
+                grdUsers.Columns[(int)eUserColumns.Password].Visible = true;
+
+                //Hide some columns
+                grdUsers.Columns[(int)eUserColumns.LastLogin].Visible = false;
+                grdUsers.Columns[(int)eUserColumns.LastLogout].Visible = false;
+                
+
+
             }
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        private void AddContextMenu()
+        {
+            tsiChangePassword.Text = resManager.GetString("ResetPassword");
+            tsiChangePassword.Click += new EventHandler(tsiChangePassword_Click);
+            ContextMenuStrip strip = new ContextMenuStrip();
+            foreach (DataGridViewColumn column in grdUsers.Columns)
+            {
+
+                column.ContextMenuStrip = strip;
+                column.ContextMenuStrip.Items.Add(tsiChangePassword);
             }
         }
 
@@ -545,9 +600,16 @@ namespace HKSupply.Forms.Master
             {
                 foreach (var user in _createdUsers)
                 {
-                    if (string.IsNullOrEmpty(user.Password) || string.IsNullOrEmpty(user.Name))
+                    if (string.IsNullOrEmpty(user.UserLogin) || string.IsNullOrEmpty(user.Password) || string.IsNullOrEmpty(user.Name))
                     {
                         MessageBox.Show(resManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+
+                    if (user.UserLogin.IndexOf(" ") > 0)
+                    {
+                        //MessageBox.Show(resManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Invalid Login", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -575,7 +637,9 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                GlobalSetting.UserCont.NewUser(_createdUsers.FirstOrDefault());
+                User user = _createdUsers.FirstOrDefault().Clone();
+                user.Password = PasswordHelper.GetHash(user.Password);
+                GlobalSetting.UserCont.NewUser(user);
                return true;
             }
             catch (NewExistingUserException neuex)
@@ -589,5 +653,9 @@ namespace HKSupply.Forms.Master
             }
         }
         #endregion
+
+       
+
+
     }
 }

@@ -107,7 +107,7 @@ namespace HKSupply.Forms
             }
         }
 
-        private bool IsValidFrom()
+        private bool IsValidForm()
         {
             try
             {
@@ -138,7 +138,7 @@ namespace HKSupply.Forms
         {
             try
             {
-                if (IsValidFrom())
+                if (IsValidForm())
                 {
                     var user = GlobalSetting.UserCont.GetUserByLoginPassword(txtLogin.Text, txtPassword.Text);
                     GlobalSetting.LoggedUser = user;

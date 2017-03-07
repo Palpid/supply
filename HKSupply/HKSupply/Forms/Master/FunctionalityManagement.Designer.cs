@@ -42,7 +42,7 @@
             this.grdFunctionalities.Margin = new System.Windows.Forms.Padding(4);
             this.grdFunctionalities.Name = "grdFunctionalities";
             this.grdFunctionalities.ReadOnly = true;
-            this.grdFunctionalities.Size = new System.Drawing.Size(1183, 523);
+            this.grdFunctionalities.Size = new System.Drawing.Size(1183, 522);
             this.grdFunctionalities.TabIndex = 1;
             // 
             // FunctionalityManagement

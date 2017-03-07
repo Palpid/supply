@@ -38,6 +38,43 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        public User GetUserById(int userId)
+        {
+            try
+            {
+                if (userId == 0)
+                    throw new ArgumentNullException("userId");
+
+                using (var db = new HKSupplyContext())
+                {
+                    var user = db.Users
+                        .Include(r => r.UserRole)
+                        .Where(u => u.Id.Equals(userId))
+                        .FirstOrDefault();
+
+                    if (user == null)
+                        throw new NonexistentUserException();
+
+                    return user;
+                }
+            }
+            catch (ArgumentNullException anex)
+            {
+                _log.Error(anex.Message, anex);
+                throw anex;
+            }
+            catch (NonexistentUserException neuex)
+            {
+                _log.Info(neuex.Message, neuex);
+                throw neuex;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
+            }
+        }
+
         public User GetUserByLoginPassword(string UserLogin, string Password)
         {
             
@@ -184,6 +221,34 @@ namespace HKSupply.Services.Implementations
         }
         #endregion
 
+        public bool ChangePassword(int userId, string password)
+        {
+            try
+            {
+                if (userId == 0)
+                    throw new ArgumentNullException("userId");
+
+                using (var db = new HKSupplyContext())
+                {
+                    var user = db.Users
+                        .Include(r => r.UserRole)
+                        .Where(u => u.Id.Equals(userId))
+                        .FirstOrDefault();
+
+                    if (user == null)
+                        throw new NonexistentUserException();
+
+                    user.Password = password;
+                    db.SaveChanges();
+                    return true;
+                }
+            }
+            catch (ArgumentNullException anex)
+            {
+                _log.Error(anex.Message, anex);
+                throw anex;
+            }
+        }
 
 
         public bool UpdateUsers(IEnumerable<User> usersToUpdate)
@@ -224,5 +289,6 @@ namespace HKSupply.Services.Implementations
                 throw ex;
             }
         }
+
     }
 }

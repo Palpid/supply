@@ -47,19 +47,42 @@ namespace HKSupply.Forms
 
                 CustomToolStripMenuItem menuItem = (CustomToolStripMenuItem)sender;
 
-                Assembly frmAssembly = Assembly.LoadFile(Application.ExecutablePath);
-                foreach (Type type in frmAssembly.GetTypes())
+                //if is already open, activate it
+                foreach (Form form in Application.OpenForms)
                 {
-                    if (type.BaseType == typeof(Form))
+                    if (form.Name == menuItem.FormName)
                     {
-                        if (type.Name == menuItem.FormName)
-                        {
-                            found = true;
+                        found = true;
+                        form.Activate();
+                        form.Dock = DockStyle.Fill;
+                        //form.WindowState = FormWindowState.Maximized;
 
-                            Form frmShow = (Form)frmAssembly.CreateInstance(type.ToString());
-                            frmShow.MdiParent = this;
-                            frmShow.WindowState = FormWindowState.Maximized;
-                            frmShow.Show();
+                    }
+                    //else
+                    //{
+                    //    if (form.Name != "Main")
+                    //        form.WindowState = FormWindowState.Normal;
+                    //}
+                }
+
+                //if not, open it
+                if (found == false)
+                {
+                    Assembly frmAssembly = Assembly.LoadFile(Application.ExecutablePath);
+                    foreach (Type type in frmAssembly.GetTypes())
+                    {
+                        if (type.BaseType == typeof(Form))
+                        {
+                            if (type.Name == menuItem.FormName)
+                            {
+                                found = true;
+
+                                Form frmShow = (Form)frmAssembly.CreateInstance(type.ToString());
+                                frmShow.MdiParent = this;
+                                frmShow.Dock = DockStyle.Fill;
+                                frmShow.Show();
+                                frmShow.WindowState = FormWindowState.Maximized;
+                            }
                         }
                     }
                 }

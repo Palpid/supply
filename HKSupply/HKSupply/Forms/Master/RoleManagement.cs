@@ -144,7 +144,9 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                MessageBox.Show("Cancel Button");
+                LoadAllRoles();
+                SetupRolesGrid();
+                actionsStackView.RestoreInitState();
             }
             catch (Exception ex)
             {

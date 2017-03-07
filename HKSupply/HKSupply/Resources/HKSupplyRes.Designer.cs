@@ -133,6 +133,24 @@ namespace HKSupply.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a New Password.
+        /// </summary>
+        internal static string NewPassword {
+            get {
+                return ResourceManager.GetString("NewPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a New Password Mandatory.
+        /// </summary>
+        internal static string NewPasswordMandatory {
+            get {
+                return ResourceManager.GetString("NewPasswordMandatory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a No pending changes.
         /// </summary>
         internal static string NoPendingChanges {
@@ -151,6 +169,33 @@ namespace HKSupply.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Old Password.
+        /// </summary>
+        internal static string OldPassword {
+            get {
+                return ResourceManager.GetString("OldPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Incorrect Old Password.
+        /// </summary>
+        internal static string OldPasswordError {
+            get {
+                return ResourceManager.GetString("OldPasswordError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Old Password Mandatory.
+        /// </summary>
+        internal static string OldPasswordMandatory {
+            get {
+                return ResourceManager.GetString("OldPasswordMandatory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Password.
         /// </summary>
         internal static string Password {
@@ -160,11 +205,65 @@ namespace HKSupply.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Password changed successfully.
+        /// </summary>
+        internal static string PasswordChangedSuccessfully {
+            get {
+                return ResourceManager.GetString("PasswordChangedSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Password mandatory.
         /// </summary>
         internal static string PasswordMandatory {
             get {
                 return ResourceManager.GetString("PasswordMandatory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Repeat Password.
+        /// </summary>
+        internal static string RepeatPassword {
+            get {
+                return ResourceManager.GetString("RepeatPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Repeat Password Incorrect.
+        /// </summary>
+        internal static string RepeatPasswordError {
+            get {
+                return ResourceManager.GetString("RepeatPasswordError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Repeat Password Mandatory.
+        /// </summary>
+        internal static string RepeatPasswordMandatory {
+            get {
+                return ResourceManager.GetString("RepeatPasswordMandatory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Reset Password.
+        /// </summary>
+        internal static string ResetPassword {
+            get {
+                return ResourceManager.GetString("ResetPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Save.
+        /// </summary>
+        internal static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
             }
         }
         

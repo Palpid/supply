@@ -51,6 +51,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -89,6 +90,12 @@
     <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Master\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Master\FunctionalityManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,8 +121,10 @@
       <DependentUpon>UserManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="General\GlobalSetting.cs" />
+    <Compile Include="Helpers\CustomExtensions.cs" />
     <Compile Include="Helpers\Mocking\MockData.cs" />
     <Compile Include="Helpers\PasswordHelper.cs" />
+    <Compile Include="Models\Customers.cs" />
     <Compile Include="Models\Functionality.cs" />
     <Compile Include="Models\FunctionalityRole.cs" />
     <Compile Include="Models\Role.cs" />
@@ -144,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\FunctionalityManagement.resx">
       <DependentUpon>FunctionalityManagement.cs</DependentUpon>
