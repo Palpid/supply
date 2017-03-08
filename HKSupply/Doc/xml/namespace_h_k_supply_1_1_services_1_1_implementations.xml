@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_h_k_supply_1_1_services_1_1_implementations" kind="namespace" language="C#">
+    <compoundname>HKSupply::Services::Implementations</compoundname>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer" prot="public">HKSupply::Services::Implementations::EFCustomer</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality" prot="public">HKSupply::Services::Implementations::EFFunctionality</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role" prot="public">HKSupply::Services::Implementations::EFFunctionalityRole</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role" prot="public">HKSupply::Services::Implementations::EFRole</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user" prot="public">HKSupply::Services::Implementations::EFUser</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Services/Implementations/EFCustomer.cs" line="17" column="1"/>
+  </compounddef>
+</doxygen>

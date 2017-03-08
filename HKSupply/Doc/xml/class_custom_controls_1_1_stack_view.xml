@@ -1,0 +1,756 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_custom_controls_1_1_stack_view" kind="class" language="C#" prot="public">
+    <compoundname>CustomControls::StackView</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UserControl</basecompoundref>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_custom_controls_1_1_stack_view_1ad33a71dff7cc2c25851d7cd5d75fb3c8" prot="public" static="no">
+        <name>ToolbarStates</name>
+        <enumvalue id="class_custom_controls_1_1_stack_view_1ad33a71dff7cc2c25851d7cd5d75fb3c8a94e0b3cd0db6a39fad24d0ff351d84b3" prot="public">
+          <name>OnlyRead</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_custom_controls_1_1_stack_view_1ad33a71dff7cc2c25851d7cd5d75fb3c8a470c033766986f184236ddae97ba49cb" prot="public">
+          <name>OnlyEdit</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_custom_controls_1_1_stack_view_1ad33a71dff7cc2c25851d7cd5d75fb3c8ad9cfc7ec1efcc42119f4489d81f45c4b" prot="public">
+          <name>OnlyEditNew</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_custom_controls_1_1_stack_view_1ad33a71dff7cc2c25851d7cd5d75fb3c8a7dce122004969d56ae2e0245cb754d35" prot="public">
+          <name>Edit</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_custom_controls_1_1_stack_view_1ad33a71dff7cc2c25851d7cd5d75fb3c8a03c2e7e41ffc181a4e84080b4710e81e" prot="public">
+          <name>New</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="19" column="1" bodyfile="CustomControls/StackView.cs" bodystart="18" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a1dc0159f0a29006aa690c17c088467d0" prot="private" static="yes" mutable="no">
+        <type>Color</type>
+        <definition>Color CustomControls.StackView.ETNIA_RED</definition>
+        <argsstring></argsstring>
+        <name>ETNIA_RED</name>
+        <initializer>= Color.FromArgb(221, 34, 29)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="29" column="1" bodyfile="CustomControls/StackView.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a7fb0957ea3e61510ed6280c636790f93" prot="private" static="yes" mutable="no">
+        <type>Bitmap</type>
+        <definition>Bitmap CustomControls.StackView.mailBmp</definition>
+        <argsstring></argsstring>
+        <name>mailBmp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="46" column="1" bodyfile="CustomControls/StackView.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1ac34d715866ad03985f07b76789aa27c2" prot="private" static="yes" mutable="no">
+        <type>Bitmap</type>
+        <definition>Bitmap CustomControls.StackView.calendarBmp</definition>
+        <argsstring></argsstring>
+        <name>calendarBmp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="47" column="1" bodyfile="CustomControls/StackView.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1ac66188a42d64146c2afdae7580c71f10" prot="private" static="yes" mutable="no">
+        <type>Bitmap</type>
+        <definition>Bitmap CustomControls.StackView.contactsBmp</definition>
+        <argsstring></argsstring>
+        <name>contactsBmp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="48" column="1" bodyfile="CustomControls/StackView.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a29154e8690cbfdbc61bd97fc673ad2ad" prot="private" static="yes" mutable="no">
+        <type>Bitmap</type>
+        <definition>Bitmap CustomControls.StackView.tasksBmp</definition>
+        <argsstring></argsstring>
+        <name>tasksBmp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="49" column="1" bodyfile="CustomControls/StackView.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a9ebbc4c9adba498e38dbb4ec6862c6b8" prot="private" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string CustomControls.StackView.mailBmpEnc</definition>
+        <argsstring></argsstring>
+        <name>mailBmpEnc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="51" column="1" bodyfile="CustomControls/StackView.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a7d791e491faf3d2b01edea1ec5128867" prot="private" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string CustomControls.StackView.calendarBmpEnc</definition>
+        <argsstring></argsstring>
+        <name>calendarBmpEnc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="95" column="1" bodyfile="CustomControls/StackView.cs" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a7c6d069aa1b005430b8d7e9c75ed34ac" prot="private" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string CustomControls.StackView.contactsBmpEnc</definition>
+        <argsstring></argsstring>
+        <name>contactsBmpEnc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="140" column="1" bodyfile="CustomControls/StackView.cs" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a9b43efee30334e1d4e27604398dafbc5" prot="private" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string CustomControls.StackView.tasksBmpEnc</definition>
+        <argsstring></argsstring>
+        <name>tasksBmpEnc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="185" column="1" bodyfile="CustomControls/StackView.cs" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="event">
+      <memberdef kind="event" id="class_custom_controls_1_1_stack_view_1a63d3aaa67d3d681a55e44abfdc1e18a8" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>EventHandler</type>
+        <definition>EventHandler CustomControls.StackView.EditButtonClick</definition>
+        <argsstring></argsstring>
+        <name>EditButtonClick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="33" column="1" bodyfile="CustomControls/StackView.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_custom_controls_1_1_stack_view_1af19003ef6d5198e763c656b624c3fbbc" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>EventHandler</type>
+        <definition>EventHandler CustomControls.StackView.NewButtonClick</definition>
+        <argsstring></argsstring>
+        <name>NewButtonClick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="34" column="1" bodyfile="CustomControls/StackView.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_custom_controls_1_1_stack_view_1a6086b716160faebc479c3a407092a7d5" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>EventHandler</type>
+        <definition>EventHandler CustomControls.StackView.SaveButtonClick</definition>
+        <argsstring></argsstring>
+        <name>SaveButtonClick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="35" column="1" bodyfile="CustomControls/StackView.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_custom_controls_1_1_stack_view_1a19d78699d1abcd1c49f4941b58f76800" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>EventHandler</type>
+        <definition>EventHandler CustomControls.StackView.CancelButtonClick</definition>
+        <argsstring></argsstring>
+        <name>CancelButtonClick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="36" column="1" bodyfile="CustomControls/StackView.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1acb294de8677c0bb269634dcb2b595f8c" prot="private" static="no" mutable="no">
+        <type>readonly bool</type>
+        <definition>readonly bool CustomControls.StackView._read</definition>
+        <argsstring></argsstring>
+        <name>_read</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="41" column="1" bodyfile="CustomControls/StackView.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1ad5b6d7319fd11b27e88b36a1623ccf25" prot="private" static="no" mutable="no">
+        <type>readonly bool</type>
+        <definition>readonly bool CustomControls.StackView._new</definition>
+        <argsstring></argsstring>
+        <name>_new</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="42" column="1" bodyfile="CustomControls/StackView.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1ab502b86c791f6c45cc55cc427831f528" prot="private" static="no" mutable="no">
+        <type>readonly bool</type>
+        <definition>readonly bool CustomControls.StackView._modify</definition>
+        <argsstring></argsstring>
+        <name>_modify</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="43" column="1" bodyfile="CustomControls/StackView.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a84ef493f63a4cd63b7132812da2fe51c" prot="private" static="no" mutable="no">
+        <type>ToolbarStates</type>
+        <definition>ToolbarStates CustomControls.StackView._currentState</definition>
+        <argsstring></argsstring>
+        <name>_currentState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="44" column="1" bodyfile="CustomControls/StackView.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a218138aa7a0ba15ec4fdee8969adde0d" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer CustomControls.StackView.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Variable del diseñador requerida. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.Designer.cs" line="8" column="1" bodyfile="CustomControls/StackView.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1ae1d96fc117ca1a52bdcc9ea2326dc45e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStrip</type>
+        <definition>System.Windows.Forms.ToolStrip CustomControls.StackView.stackStrip</definition>
+        <argsstring></argsstring>
+        <name>stackStrip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.Designer.cs" line="141" column="1" bodyfile="CustomControls/StackView.Designer.cs" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1aa815b0e1df9d70a54b2b580549a83a39" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton CustomControls.StackView.editStackButton</definition>
+        <argsstring></argsstring>
+        <name>editStackButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.Designer.cs" line="142" column="1" bodyfile="CustomControls/StackView.Designer.cs" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1afad5f308ad02493e4f9537f3c37b99ab" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton CustomControls.StackView.newStackButton</definition>
+        <argsstring></argsstring>
+        <name>newStackButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.Designer.cs" line="143" column="1" bodyfile="CustomControls/StackView.Designer.cs" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a5c2d7a663d11126f915752e373f7cdb8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton CustomControls.StackView.saveStackButton</definition>
+        <argsstring></argsstring>
+        <name>saveStackButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.Designer.cs" line="144" column="1" bodyfile="CustomControls/StackView.Designer.cs" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1aa4ed7d20d4a9242eb3e597c8e8ee81b7" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton CustomControls.StackView.cancelStackButton</definition>
+        <argsstring></argsstring>
+        <name>cancelStackButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.Designer.cs" line="145" column="1" bodyfile="CustomControls/StackView.Designer.cs" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_custom_controls_1_1_stack_view_1a71200adab4464290b2df815e233b5bf9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>ToolbarStates</type>
+        <definition>ToolbarStates CustomControls.StackView.CurrentState</definition>
+        <argsstring></argsstring>
+        <name>CurrentState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="232" column="1" bodyfile="CustomControls/StackView.cs" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1abd2f5b98f5a195c12211a1931e004723" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>static</type>
+        <definition>static CustomControls.StackView.StackView</definition>
+        <argsstring>()</argsstring>
+        <name>StackView</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="242" column="1" bodyfile="CustomControls/StackView.cs" bodystart="242" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1ad9556c5d97740344368c736285c7315b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void CustomControls.StackView.CreateBitmaps</definition>
+        <argsstring>()</argsstring>
+        <name>CreateBitmaps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="305" column="1" bodyfile="CustomControls/StackView.cs" bodystart="305" bodyend="311"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a32c8b9ffad70f400fe19eeab16250d19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CustomControls.StackView.StackView</definition>
+        <argsstring>()</argsstring>
+        <name>StackView</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="248" column="1" bodyfile="CustomControls/StackView.cs" bodystart="248" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1af1226e4d40a4f58799de5b48de95c275" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CustomControls.StackView.StackView</definition>
+        <argsstring>(bool read, bool create, bool modify)</argsstring>
+        <name>StackView</name>
+        <param>
+          <type>bool</type>
+          <declname>read</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>create</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>modify</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="260" column="1" bodyfile="CustomControls/StackView.cs" bodystart="260" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a40e9b83536de3aa4a3fd7e40bfce0246" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CustomControls.StackView.InitializeGeneralStyle</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeGeneralStyle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="286" column="1" bodyfile="CustomControls/StackView.cs" bodystart="286" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1aa6ee6db47352fbb47bc1292ea7f58611" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CustomControls.StackView.RestoreInitState</definition>
+        <argsstring>()</argsstring>
+        <name>RestoreInitState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="462" column="1" bodyfile="CustomControls/StackView.cs" bodystart="462" bodyend="465"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a8ca24094119e4fa7610b6bffef425aff" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CustomControls.StackView.InitializeImages</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeImages</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="294" column="1" bodyfile="CustomControls/StackView.cs" bodystart="294" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a6a0ef7f36b029aa0423e2d314dc4e621" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CustomControls.StackView.StackView_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>StackView_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="328" column="1" bodyfile="CustomControls/StackView.cs" bodystart="328" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a734a9613c693db4ce740bf72c19eb17c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CustomControls.StackView.stackButton_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>stackButton_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="340" column="1" bodyfile="CustomControls/StackView.cs" bodystart="340" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a624f0e3bcc231c49817ec6f1fb5f1a34" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CustomControls.StackView.ConfigureActions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="376" column="1" bodyfile="CustomControls/StackView.cs" bodystart="376" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1ae28ccadd560e52e85fa00aecc560709d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CustomControls.StackView.ConfigureByState</definition>
+        <argsstring>(ToolbarStates state)</argsstring>
+        <name>ConfigureByState</name>
+        <param>
+          <type>ToolbarStates</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="386" column="1" bodyfile="CustomControls/StackView.cs" bodystart="386" bodyend="417"/>
+      </memberdef>
+      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a21df994dece9a697985769528a2fd65f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CustomControls.StackView.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Método necesario para admitir el Diseñador. No se puede modificar el contenido del método con el editor de código. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.Designer.cs" line="29" column="1" bodyfile="CustomControls/StackView.Designer.cs" bodystart="29" bodyend="137"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-static-func">
+      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1af154dbcbfc3cf290f0bfc932e2d59c6f" prot="package" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Bitmap</type>
+        <definition>static Bitmap CustomControls.StackView.DeserializeFromBase64</definition>
+        <argsstring>(string data)</argsstring>
+        <name>DeserializeFromBase64</name>
+        <param>
+          <type>string</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="315" column="1" bodyfile="CustomControls/StackView.cs" bodystart="315" bodyend="326"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a19b739e8edd30f174bfe870081ecfed3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CustomControls.StackView.OnEditButtonClick</definition>
+        <argsstring>(EventArgs e)</argsstring>
+        <name>OnEditButtonClick</name>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="423" column="1" bodyfile="CustomControls/StackView.cs" bodystart="423" bodyend="430"/>
+      </memberdef>
+      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a11ce82dee60bdffc83f7d3ebdf10b17a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CustomControls.StackView.OnNewButtonClick</definition>
+        <argsstring>(EventArgs e)</argsstring>
+        <name>OnNewButtonClick</name>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="432" column="1" bodyfile="CustomControls/StackView.cs" bodystart="432" bodyend="439"/>
+      </memberdef>
+      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a77a46c2d55bf40ed18bcfe90dcaf3805" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CustomControls.StackView.OnSaveButtonClick</definition>
+        <argsstring>(EventArgs e)</argsstring>
+        <name>OnSaveButtonClick</name>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="441" column="1" bodyfile="CustomControls/StackView.cs" bodystart="441" bodyend="448"/>
+      </memberdef>
+      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a48997386c95398640506e1e5ada5f0dd" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CustomControls.StackView.OnCancelButtonClick</definition>
+        <argsstring>(EventArgs e)</argsstring>
+        <name>OnCancelButtonClick</name>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="450" column="1" bodyfile="CustomControls/StackView.cs" bodystart="450" bodyend="457"/>
+      </memberdef>
+      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a227a09aebaaa2cc577a4bfa50cb08967" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void CustomControls.StackView.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Limpiar los recursos que se estén utilizando. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true si los recursos administrados se deben eliminar; false en caso contrario.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.Designer.cs" line="14" column="1" bodyfile="CustomControls/StackView.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="173">
+        <label>CustomControls.StackView</label>
+        <link refid="class_custom_controls_1_1_stack_view"/>
+        <childnode refid="174" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="174">
+        <label>UserControl</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="175">
+        <label>CustomControls.StackView</label>
+        <link refid="class_custom_controls_1_1_stack_view"/>
+        <childnode refid="176" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="176">
+        <label>UserControl</label>
+      </node>
+    </collaborationgraph>
+    <location file="CustomControls/StackView.cs" line="16" column="1" bodyfile="CustomControls/StackView.cs" bodystart="15" bodyend="468"/>
+    <listofallmembers>
+      <member refid="class_custom_controls_1_1_stack_view_1a84ef493f63a4cd63b7132812da2fe51c" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>_currentState</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1ab502b86c791f6c45cc55cc427831f528" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>_modify</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1ad5b6d7319fd11b27e88b36a1623ccf25" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>_new</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1acb294de8677c0bb269634dcb2b595f8c" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>_read</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1ac34d715866ad03985f07b76789aa27c2" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>calendarBmp</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a7d791e491faf3d2b01edea1ec5128867" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>calendarBmpEnc</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a19d78699d1abcd1c49f4941b58f76800" prot="public" virt="non-virtual"><scope>CustomControls::StackView</scope><name>CancelButtonClick</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1aa4ed7d20d4a9242eb3e597c8e8ee81b7" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>cancelStackButton</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a218138aa7a0ba15ec4fdee8969adde0d" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>components</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a624f0e3bcc231c49817ec6f1fb5f1a34" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>ConfigureActions</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1ae28ccadd560e52e85fa00aecc560709d" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>ConfigureByState</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1ac66188a42d64146c2afdae7580c71f10" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>contactsBmp</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a7c6d069aa1b005430b8d7e9c75ed34ac" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>contactsBmpEnc</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1ad9556c5d97740344368c736285c7315b" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>CreateBitmaps</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a71200adab4464290b2df815e233b5bf9" prot="public" virt="non-virtual"><scope>CustomControls::StackView</scope><name>CurrentState</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1af154dbcbfc3cf290f0bfc932e2d59c6f" prot="package" virt="non-virtual"><scope>CustomControls::StackView</scope><name>DeserializeFromBase64</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a227a09aebaaa2cc577a4bfa50cb08967" prot="protected" virt="non-virtual"><scope>CustomControls::StackView</scope><name>Dispose</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a63d3aaa67d3d681a55e44abfdc1e18a8" prot="public" virt="non-virtual"><scope>CustomControls::StackView</scope><name>EditButtonClick</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1aa815b0e1df9d70a54b2b580549a83a39" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>editStackButton</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a1dc0159f0a29006aa690c17c088467d0" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>ETNIA_RED</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a21df994dece9a697985769528a2fd65f" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>InitializeComponent</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a40e9b83536de3aa4a3fd7e40bfce0246" prot="public" virt="non-virtual"><scope>CustomControls::StackView</scope><name>InitializeGeneralStyle</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a8ca24094119e4fa7610b6bffef425aff" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>InitializeImages</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a7fb0957ea3e61510ed6280c636790f93" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>mailBmp</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a9ebbc4c9adba498e38dbb4ec6862c6b8" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>mailBmpEnc</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1af19003ef6d5198e763c656b624c3fbbc" prot="public" virt="non-virtual"><scope>CustomControls::StackView</scope><name>NewButtonClick</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1afad5f308ad02493e4f9537f3c37b99ab" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>newStackButton</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a48997386c95398640506e1e5ada5f0dd" prot="protected" virt="virtual"><scope>CustomControls::StackView</scope><name>OnCancelButtonClick</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a19b739e8edd30f174bfe870081ecfed3" prot="protected" virt="virtual"><scope>CustomControls::StackView</scope><name>OnEditButtonClick</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a11ce82dee60bdffc83f7d3ebdf10b17a" prot="protected" virt="virtual"><scope>CustomControls::StackView</scope><name>OnNewButtonClick</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a77a46c2d55bf40ed18bcfe90dcaf3805" prot="protected" virt="virtual"><scope>CustomControls::StackView</scope><name>OnSaveButtonClick</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1aa6ee6db47352fbb47bc1292ea7f58611" prot="public" virt="non-virtual"><scope>CustomControls::StackView</scope><name>RestoreInitState</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a6086b716160faebc479c3a407092a7d5" prot="public" virt="non-virtual"><scope>CustomControls::StackView</scope><name>SaveButtonClick</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a5c2d7a663d11126f915752e373f7cdb8" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>saveStackButton</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a734a9613c693db4ce740bf72c19eb17c" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>stackButton_Click</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1ae1d96fc117ca1a52bdcc9ea2326dc45e" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>stackStrip</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1abd2f5b98f5a195c12211a1931e004723" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>StackView</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a32c8b9ffad70f400fe19eeab16250d19" prot="public" virt="non-virtual"><scope>CustomControls::StackView</scope><name>StackView</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1af1226e4d40a4f58799de5b48de95c275" prot="public" virt="non-virtual"><scope>CustomControls::StackView</scope><name>StackView</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a6a0ef7f36b029aa0423e2d314dc4e621" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>StackView_Load</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a29154e8690cbfdbc61bd97fc673ad2ad" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>tasksBmp</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a9b43efee30334e1d4e27604398dafbc5" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>tasksBmpEnc</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1ad33a71dff7cc2c25851d7cd5d75fb3c8" prot="public" virt="non-virtual"><scope>CustomControls::StackView</scope><name>ToolbarStates</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

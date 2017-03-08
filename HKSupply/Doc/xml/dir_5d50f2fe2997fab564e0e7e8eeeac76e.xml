@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_5d50f2fe2997fab564e0e7e8eeeac76e" kind="dir">
+    <compoundname>CustomControls</compoundname>
+    <innerdir refid="dir_64050a0c2da4cb6bbb79e5a29efee0d8">CustomControls/obj</innerdir>
+    <innerdir refid="dir_0f8831170ef4143ff94c202b77f8dad2">CustomControls/Properties</innerdir>
+    <innerfile refid="_custom_tool_strip_menu_item_8cs">CustomToolStripMenuItem.cs</innerfile>
+    <innerfile refid="_custom_tool_strip_menu_item_8_designer_8cs">CustomToolStripMenuItem.Designer.cs</innerfile>
+    <innerfile refid="_stack_view_8cs">StackView.cs</innerfile>
+    <innerfile refid="_stack_view_8_designer_8cs">StackView.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="CustomControls/"/>
+  </compounddef>
+</doxygen>

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HKSupply.Exceptions
 {
+    /// <summary>
+    /// Custom Exception: Usuario no existente en el sistema
+    /// </summary>
     [Serializable()]
     public class NonexistentUserException : System.Exception
     {

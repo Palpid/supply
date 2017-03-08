@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_2842df661c91fd653ac1cef3c187bca2" kind="dir">
+    <compoundname>HKSupply/Forms/Master</compoundname>
+    <innerfile refid="_change_password_8cs">ChangePassword.cs</innerfile>
+    <innerfile refid="_change_password_8_designer_8cs">ChangePassword.Designer.cs</innerfile>
+    <innerfile refid="_functionality_management_8cs">FunctionalityManagement.cs</innerfile>
+    <innerfile refid="_functionality_management_8_designer_8cs">FunctionalityManagement.Designer.cs</innerfile>
+    <innerfile refid="_functionality_role_management_8cs">FunctionalityRoleManagement.cs</innerfile>
+    <innerfile refid="_functionality_role_management_8_designer_8cs">FunctionalityRoleManagement.Designer.cs</innerfile>
+    <innerfile refid="_role_management_8cs">RoleManagement.cs</innerfile>
+    <innerfile refid="_role_management_8_designer_8cs">RoleManagement.Designer.cs</innerfile>
+    <innerfile refid="_user_management_8cs">UserManagement.cs</innerfile>
+    <innerfile refid="_user_management_8_designer_8cs">UserManagement.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Forms/Master/"/>
+  </compounddef>
+</doxygen>

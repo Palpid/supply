@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_6bb1436a373406886221f2bc1c3b053d" kind="dir">
+    <compoundname>HKSupply/Exceptions</compoundname>
+    <innerfile refid="_invalid_password_exception_8cs">InvalidPasswordException.cs</innerfile>
+    <innerfile refid="_new_existing_functionality_exception_8cs">NewExistingFunctionalityException.cs</innerfile>
+    <innerfile refid="_new_existing_functionality_role_exception_8cs">NewExistingFunctionalityRoleException.cs</innerfile>
+    <innerfile refid="_new_existing_role_exception_8cs">NewExistingRoleException.cs</innerfile>
+    <innerfile refid="_new_existing_user_exception_8cs">NewExistingUserException.cs</innerfile>
+    <innerfile refid="_nonexistent_functionality_exception_8cs">NonexistentFunctionalityException.cs</innerfile>
+    <innerfile refid="_nonexistent_functionality_role_exception_8cs">NonexistentFunctionalityRoleException.cs</innerfile>
+    <innerfile refid="_nonexistent_role_exception_8cs">NonexistentRoleException.cs</innerfile>
+    <innerfile refid="_nonexistent_user_exception_8cs">NonexistentUserException.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Exceptions/"/>
+  </compounddef>
+</doxygen>

@@ -12,6 +12,18 @@ using System.Drawing.Drawing2D;
 
 namespace CustomControls
 {
+    /// <summary>
+    /// Custom control, botonera de acciones para los formulario
+    /// </summary>
+    /// <remarks>
+    /// Acciones:
+    /// - Editar
+    /// - Nuevo
+    /// - Guardar
+    /// - Cancelar
+    /// 
+    /// En función de los permisos que tenga el usuario en cada pantalla mostrará las acciones correspondientess
+    /// </remarks>
     public partial class StackView : UserControl
     {
         #region enums
@@ -383,6 +395,10 @@ namespace CustomControls
                 ConfigureByState(ToolbarStates.OnlyEdit);
         }
 
+        /// <summary>
+        /// Muestra los botones correspondientes en función de cada estado.
+        /// </summary>
+        /// <param name="state"></param>
         private void ConfigureByState(ToolbarStates state)
         {
             _currentState = state;
@@ -459,6 +475,9 @@ namespace CustomControls
         #endregion
 
         #region Public members
+        /// <summary>
+        /// Restaura la botonera a su estado inicial con los permisos que se han indicado en el constructor
+        /// </summary>
         public void RestoreInitState()
         {
             ConfigureActions();
@@ -467,6 +486,9 @@ namespace CustomControls
 
     }
 
+    /// <summary>
+    /// tabla de colores para el toolstrip que compone la botonera
+    /// </summary>
     internal class CustomProfessionalColors : ProfessionalColorTable
     {
         private static Color ETNIA_RED = Color.FromArgb(221, 34, 29);
@@ -482,6 +504,9 @@ namespace CustomControls
         public override Color MenuStripGradientEnd { get { return ETNIA_RED; } }
     }
 
+    /// <summary>
+    /// Render para el toolstrip
+    /// </summary>
     internal class StackRenderer : ToolStripProfessionalRenderer
     {
         private static Bitmap titleBarGripBmp;

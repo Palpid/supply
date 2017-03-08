@@ -341,7 +341,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _roleList = GlobalSetting.RoleCont.GetRoles(false).ToList();
+                _roleList = GlobalSetting.RoleService.GetRoles(false).ToList();
             }
             catch (Exception ex)
             {
@@ -353,7 +353,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _functionalityList = GlobalSetting.FunctionalityCont.GetAllFunctionalities().ToList();
+                _functionalityList = GlobalSetting.FunctionalityService.GetAllFunctionalities().ToList();
             }
             catch (Exception ex)
             {
@@ -368,7 +368,7 @@ namespace HKSupply.Forms.Master
             {
                 _modifiedFunctionalityRole.Clear();
                 _createdFunctionalityRole.Clear();
-                IEnumerable<FunctionalityRole> funcRoles = GlobalSetting.FunctionalityRoleCont.GetAllFunctionalitiesRole();
+                IEnumerable<FunctionalityRole> funcRoles = GlobalSetting.FunctionalityRoleService.GetAllFunctionalitiesRole();
                 grdFuncRoles.DataSource = funcRoles;
                 grdFuncRoles.ReadOnly = true;
 
@@ -499,7 +499,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                return GlobalSetting.FunctionalityRoleCont.UpdateFunctionalitiesRoles(_modifiedFunctionalityRole);
+                return GlobalSetting.FunctionalityRoleService.UpdateFunctionalitiesRoles(_modifiedFunctionalityRole);
             }
             catch (Exception ex)
             {
@@ -511,7 +511,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                GlobalSetting.FunctionalityRoleCont.NewFunctionalityRole(_createdFunctionalityRole.FirstOrDefault());
+                GlobalSetting.FunctionalityRoleService.NewFunctionalityRole(_createdFunctionalityRole.FirstOrDefault());
                 return true;
             }
             catch (NewExistingFunctionalityRoleException nefrex)

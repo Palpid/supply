@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_05343976d266eeb157c752e3ab88e8ce" kind="dir">
+    <compoundname>HKSupply/DB</compoundname>
+    <innerfile refid="_h_k_supply_context_8cs">HKSupplyContext.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/DB/"/>
+  </compounddef>
+</doxygen>

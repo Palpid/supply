@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_8b85be3ef76b7403c163f109ea22cd50" kind="dir">
+    <compoundname>HKSupply/Services/Interfaces</compoundname>
+    <innerfile refid="_i_customer_8cs">ICustomer.cs</innerfile>
+    <innerfile refid="_i_functionality_8cs">IFunctionality.cs</innerfile>
+    <innerfile refid="_i_functionality_role_8cs">IFunctionalityRole.cs</innerfile>
+    <innerfile refid="_i_role_8cs">IRole.cs</innerfile>
+    <innerfile refid="_i_user_8cs">IUser.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Services/Interfaces/"/>
+  </compounddef>
+</doxygen>

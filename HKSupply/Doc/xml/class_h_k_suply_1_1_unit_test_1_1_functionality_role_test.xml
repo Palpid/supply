@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_suply_1_1_unit_test_1_1_functionality_role_test" kind="class" language="C#" prot="public">
+    <compoundname>HKSuply::UnitTest::FunctionalityRoleTest</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_functionality_role_test_1a6be3df22cff2086d466362562a424849" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSuply.UnitTest.FunctionalityRoleTest.GetFunctionalityRole</definition>
+        <argsstring>()</argsstring>
+        <name>GetFunctionalityRole</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSuply.UnitTest/FunctionalityRoleTest.cs" line="16" column="1" bodyfile="HKSuply.UnitTest/FunctionalityRoleTest.cs" bodystart="16" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_functionality_role_test_1a2939d4000f716e0577656a9526322edb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSuply.UnitTest.FunctionalityRoleTest.GetFunctionalitiesRole</definition>
+        <argsstring>()</argsstring>
+        <name>GetFunctionalitiesRole</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSuply.UnitTest/FunctionalityRoleTest.cs" line="65" column="1" bodyfile="HKSuply.UnitTest/FunctionalityRoleTest.cs" bodystart="65" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_functionality_role_test_1a044c261bef5cd0575d11799bd86961af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSuply.UnitTest.FunctionalityRoleTest.NewFunctionalityRole</definition>
+        <argsstring>()</argsstring>
+        <name>NewFunctionalityRole</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSuply.UnitTest/FunctionalityRoleTest.cs" line="96" column="1" bodyfile="HKSuply.UnitTest/FunctionalityRoleTest.cs" bodystart="96" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_functionality_role_test_1a7fd10863dba59d604f1bf79382901267" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSuply.UnitTest.FunctionalityRoleTest.ModifyFunctionalityRole</definition>
+        <argsstring>()</argsstring>
+        <name>ModifyFunctionalityRole</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSuply.UnitTest/FunctionalityRoleTest.cs" line="148" column="1" bodyfile="HKSuply.UnitTest/FunctionalityRoleTest.cs" bodystart="148" bodyend="199"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSuply.UnitTest/FunctionalityRoleTest.cs" line="14" column="1" bodyfile="HKSuply.UnitTest/FunctionalityRoleTest.cs" bodystart="13" bodyend="200"/>
+    <listofallmembers>
+      <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_role_test_1a2939d4000f716e0577656a9526322edb" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::FunctionalityRoleTest</scope><name>GetFunctionalitiesRole</name></member>
+      <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_role_test_1a6be3df22cff2086d466362562a424849" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::FunctionalityRoleTest</scope><name>GetFunctionalityRole</name></member>
+      <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_role_test_1a7fd10863dba59d604f1bf79382901267" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::FunctionalityRoleTest</scope><name>ModifyFunctionalityRole</name></member>
+      <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_role_test_1a044c261bef5cd0575d11799bd86961af" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::FunctionalityRoleTest</scope><name>NewFunctionalityRole</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_unit_test_project_1_1_unit_test1" kind="class" language="C#" prot="public">
+    <compoundname>UnitTestProject::UnitTest1</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_unit_test_project_1_1_unit_test1_1a1cd53bf019a6a5ac0422147c8b1434da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnitTestProject.UnitTest1.TestMethod1</definition>
+        <argsstring>()</argsstring>
+        <name>TestMethod1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="UnitTestProject/UnitTest1.cs" line="10" column="1" bodyfile="UnitTestProject/UnitTest1.cs" bodystart="10" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="UnitTestProject/UnitTest1.cs" line="8" column="1" bodyfile="UnitTestProject/UnitTest1.cs" bodystart="7" bodyend="13"/>
+    <listofallmembers>
+      <member refid="class_unit_test_project_1_1_unit_test1_1a1cd53bf019a6a5ac0422147c8b1434da" prot="public" virt="non-virtual"><scope>UnitTestProject::UnitTest1</scope><name>TestMethod1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

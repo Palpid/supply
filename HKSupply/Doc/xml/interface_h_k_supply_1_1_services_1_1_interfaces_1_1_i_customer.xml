@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer" kind="interface" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Interfaces::ICustomer</compoundname>
+    <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFCustomer</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a4eae770f8e05c2a16b30d11ca2b6a3e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.ICustomer.NewCustomer</definition>
+        <argsstring>(Customer newCustomer)</argsstring>
+        <name>NewCustomer</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1a8caba8c3706d212709d73ff4e2e94e1e">NewCustomer</reimplementedby>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_customer" kindref="compound">Customer</ref></type>
+          <declname>newCustomer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/ICustomer.cs" line="12" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a2f446e665b10feef3e8373887a138048" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.ICustomer.UpdateCustomer</definition>
+        <argsstring>(Customer updateCustomer, bool newVer=false)</argsstring>
+        <name>UpdateCustomer</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1af7bd47be2eff71310dd5ad5e4157bfa4">UpdateCustomer</reimplementedby>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_customer" kindref="compound">Customer</ref></type>
+          <declname>updateCustomer</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>newVer</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/ICustomer.cs" line="13" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a0ce0dce4e042cf94014fbc1487bf7789" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_customer" kindref="compound">Customer</ref></type>
+        <definition>Customer HKSupply.Services.Interfaces.ICustomer.GetCustomerById</definition>
+        <argsstring>(string idCustomer)</argsstring>
+        <name>GetCustomerById</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1a88c703ed6108d30abbed42876d524fb3">GetCustomerById</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>idCustomer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/ICustomer.cs" line="14" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="78">
+        <label>HKSupply.Services.Interfaces.ICustomer</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer"/>
+      </node>
+      <node id="79">
+        <label>HKSupply.Services.Implementations.EFCustomer</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer"/>
+        <childnode refid="78" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="HKSupply/Services/Interfaces/ICustomer.cs" line="11" column="1" bodyfile="HKSupply/Services/Interfaces/ICustomer.cs" bodystart="10" bodyend="15"/>
+    <listofallmembers>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a0ce0dce4e042cf94014fbc1487bf7789" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ICustomer</scope><name>GetCustomerById</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a4eae770f8e05c2a16b30d11ca2b6a3e8" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ICustomer</scope><name>NewCustomer</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a2f446e665b10feef3e8373887a138048" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ICustomer</scope><name>UpdateCustomer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

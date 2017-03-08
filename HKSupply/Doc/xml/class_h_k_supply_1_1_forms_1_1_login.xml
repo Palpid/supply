@@ -1,0 +1,345 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_login" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Login</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_login_1ae859ece7eaa65739968d374f7d7946f4" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int HKSupply.Forms.Login.MSG_TIME</definition>
+        <argsstring></argsstring>
+        <name>MSG_TIME</name>
+        <initializer>= 2000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Login.cs" line="20" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_login_1ac1f65a6d03467829193621e117c6dc60" prot="private" static="no" mutable="no">
+        <type>ResourceManager</type>
+        <definition>ResourceManager HKSupply.Forms.Login.resManager</definition>
+        <argsstring></argsstring>
+        <name>resManager</name>
+        <initializer>= new ResourceManager(&quot;HKSupply.Resources.HKSupplyRes&quot;, typeof(<ref refid="class_h_k_supply_1_1_forms_1_1_login" kindref="compound">Login</ref>).Assembly)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Login.cs" line="24" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_login_1a1aa36f8af2efb7235bc1722f72ba18c4" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Login.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Login.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Login.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_login_1a903c96b14e86457617ba13a645fa2ad1" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Login.lblLogin</definition>
+        <argsstring></argsstring>
+        <name>lblLogin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Login.Designer.cs" line="133" column="1" bodyfile="HKSupply/Forms/Login.Designer.cs" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_login_1a15182ae2cb3aaae60af9f15d02e22361" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Login.txtLogin</definition>
+        <argsstring></argsstring>
+        <name>txtLogin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Login.Designer.cs" line="134" column="1" bodyfile="HKSupply/Forms/Login.Designer.cs" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_login_1ad499da74bd0cbf31f3aafa5963b5a0e5" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.PictureBox</type>
+        <definition>System.Windows.Forms.PictureBox HKSupply.Forms.Login.pbLogo</definition>
+        <argsstring></argsstring>
+        <name>pbLogo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Login.Designer.cs" line="135" column="1" bodyfile="HKSupply/Forms/Login.Designer.cs" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_login_1a2106f688900d32876bfc70ffc30b75fb" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Login.txtPassword</definition>
+        <argsstring></argsstring>
+        <name>txtPassword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Login.Designer.cs" line="136" column="1" bodyfile="HKSupply/Forms/Login.Designer.cs" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_login_1a00a9276b39c8c9b40c598c0925b033b4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Login.lblPassword</definition>
+        <argsstring></argsstring>
+        <name>lblPassword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Login.Designer.cs" line="137" column="1" bodyfile="HKSupply/Forms/Login.Designer.cs" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_login_1a7ddafe51ff0ccb02f7fe74f2e689b9df" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HKSupply.Forms.Login.btnSignIn</definition>
+        <argsstring></argsstring>
+        <name>btnSignIn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Login.Designer.cs" line="138" column="1" bodyfile="HKSupply/Forms/Login.Designer.cs" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_login_1aa7d3c250d1d26dafed182ffb837d1e1b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Login.lblMsgBar</definition>
+        <argsstring></argsstring>
+        <name>lblMsgBar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Login.Designer.cs" line="139" column="1" bodyfile="HKSupply/Forms/Login.Designer.cs" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_login_1a33626de2bec03b4dfb7f667f42798e3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Login.Login</definition>
+        <argsstring>()</argsstring>
+        <name>Login</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Login.cs" line="28" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="28" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_login_1aa0578919fe391b57f95d3f740ca922bc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Login.Login_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>Login_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Login.cs" line="36" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="36" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_login_1a58a0386690bbe15bc0db3a2d3d39c4fb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Login.InitializeFormStyles</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeFormStyles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Login.cs" line="52" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="52" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_login_1ad0eee1e18ba4e6e421099b65007fb98d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Login.InitializeTexts</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeTexts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Login.cs" line="77" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="77" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_login_1a56e897e5aed24b516f633fc4a182da3b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async void</type>
+        <definition>async void HKSupply.Forms.Login.ShowMessage</definition>
+        <argsstring>(string msg)</argsstring>
+        <name>ShowMessage</name>
+        <param>
+          <type>string</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Login.cs" line="95" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="95" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_login_1a4855300f252aa90c8693ca2a708b7ad0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Login.IsValidForm</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Login.cs" line="110" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="110" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_login_1a3b40d6bd633de59f8918244d783e7fe0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Login.btnSignIn_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnSignIn_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Login.cs" line="137" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="137" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_login_1ad400fb751e97b0b67ae2130beca7521f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Login.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Login.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Login.Designer.cs" bodystart="29" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_login_1a0c20fcbe198d2635836e7c7c6eebee31" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Login.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Login.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Login.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="98">
+        <label>Form</label>
+      </node>
+      <node id="97">
+        <label>HKSupply.Forms.Login</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_login"/>
+        <childnode refid="98" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="100">
+        <label>Form</label>
+      </node>
+      <node id="99">
+        <label>HKSupply.Forms.Login</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_login"/>
+        <childnode refid="100" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Login.cs" line="18" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="17" bodyend="173"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_login_1a7ddafe51ff0ccb02f7fe74f2e689b9df" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>btnSignIn</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_login_1a3b40d6bd633de59f8918244d783e7fe0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>btnSignIn_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_login_1a1aa36f8af2efb7235bc1722f72ba18c4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_login_1a0c20fcbe198d2635836e7c7c6eebee31" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_login_1ad400fb751e97b0b67ae2130beca7521f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_login_1a58a0386690bbe15bc0db3a2d3d39c4fb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>InitializeFormStyles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_login_1ad0eee1e18ba4e6e421099b65007fb98d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>InitializeTexts</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_login_1a4855300f252aa90c8693ca2a708b7ad0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>IsValidForm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_login_1a903c96b14e86457617ba13a645fa2ad1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>lblLogin</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_login_1aa7d3c250d1d26dafed182ffb837d1e1b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>lblMsgBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_login_1a00a9276b39c8c9b40c598c0925b033b4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>lblPassword</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_login_1a33626de2bec03b4dfb7f667f42798e3a" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>Login</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_login_1aa0578919fe391b57f95d3f740ca922bc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>Login_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_login_1ae859ece7eaa65739968d374f7d7946f4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>MSG_TIME</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_login_1ad499da74bd0cbf31f3aafa5963b5a0e5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>pbLogo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_login_1ac1f65a6d03467829193621e117c6dc60" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>resManager</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_login_1a56e897e5aed24b516f633fc4a182da3b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>ShowMessage</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_login_1a15182ae2cb3aaae60af9f15d02e22361" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>txtLogin</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_login_1a2106f688900d32876bfc70ffc30b75fb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>txtPassword</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

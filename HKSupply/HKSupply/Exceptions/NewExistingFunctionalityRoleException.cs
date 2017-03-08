@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HKSupply.Exceptions
 {
+    /// <summary>
+    /// Custom Exception: dar de alta una funcionalidad-role ya existente en el sistema
+    /// </summary>
     [Serializable()]
     public class NewExistingFunctionalityRoleException : System.Exception
     {

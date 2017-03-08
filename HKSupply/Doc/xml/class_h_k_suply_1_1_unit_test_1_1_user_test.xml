@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_suply_1_1_unit_test_1_1_user_test" kind="class" language="C#" prot="public">
+    <compoundname>HKSuply::UnitTest::UserTest</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_user_test_1a0d33d16a2e9761ccdf686fc6398bd599" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSuply.UnitTest.UserTest.GetUser</definition>
+        <argsstring>()</argsstring>
+        <name>GetUser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSuply.UnitTest/UserTest.cs" line="17" column="1" bodyfile="HKSuply.UnitTest/UserTest.cs" bodystart="17" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_user_test_1a38a60511778b95f7cd2c256697cc4e6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSuply.UnitTest.UserTest.NewUser</definition>
+        <argsstring>()</argsstring>
+        <name>NewUser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSuply.UnitTest/UserTest.cs" line="68" column="1" bodyfile="HKSuply.UnitTest/UserTest.cs" bodystart="68" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_user_test_1acc37fae05da85affd3a422b32bcd0700" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSuply.UnitTest.UserTest.DisableUser</definition>
+        <argsstring>()</argsstring>
+        <name>DisableUser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSuply.UnitTest/UserTest.cs" line="119" column="1" bodyfile="HKSuply.UnitTest/UserTest.cs" bodystart="119" bodyend="153"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSuply.UnitTest/UserTest.cs" line="15" column="1" bodyfile="HKSuply.UnitTest/UserTest.cs" bodystart="14" bodyend="290"/>
+    <listofallmembers>
+      <member refid="class_h_k_suply_1_1_unit_test_1_1_user_test_1acc37fae05da85affd3a422b32bcd0700" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::UserTest</scope><name>DisableUser</name></member>
+      <member refid="class_h_k_suply_1_1_unit_test_1_1_user_test_1a0d33d16a2e9761ccdf686fc6398bd599" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::UserTest</scope><name>GetUser</name></member>
+      <member refid="class_h_k_suply_1_1_unit_test_1_1_user_test_1a38a60511778b95f7cd2c256697cc4e6f" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::UserTest</scope><name>NewUser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

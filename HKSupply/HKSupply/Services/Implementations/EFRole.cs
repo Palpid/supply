@@ -12,6 +12,9 @@ using System.Threading.Tasks;
 
 namespace HKSupply.Services.Implementations
 {
+    /// <summary>
+    /// Controlador Entity Framework para Role
+    /// </summary>
     public class EFRole : IRole
     {
 
@@ -19,6 +22,11 @@ namespace HKSupply.Services.Implementations
 
         #region Public Methods
 
+        /// <summary>
+        /// Obtener la colección de roles del sistema.
+        /// </summary>
+        /// <param name="all">Para indicar si se quieren todos o sólo los activos</param>
+        /// <returns></returns>
         public IEnumerable<Role> GetRoles(bool all = true)
         {
             try
@@ -42,6 +50,11 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Obtener un rol dado su Id
+        /// </summary>
+        /// <param name="roleId"></param>
+        /// <returns></returns>
         public Role GetRoleById(string roleId)
         {
             try
@@ -78,6 +91,11 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Dar de alta un rol en el sistema
+        /// </summary>
+        /// <param name="newRole"></param>
+        /// <returns></returns>
         public Role NewRole(Role newRole)
         {
             try
@@ -132,6 +150,12 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Deshabilitar un rol
+        /// </summary>
+        /// <param name="roleId"></param>
+        /// <param name="remarks"></param>
+        /// <returns></returns>
         public bool DisableRole(string roleId, string remarks)
         {
             try
@@ -176,7 +200,17 @@ namespace HKSupply.Services.Implementations
 
         #endregion
 
-
+        /// <summary>
+        /// Modificar una colección de roles
+        /// </summary>
+        /// <param name="rolesToUpdate"></param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Los campos que se actualizan son los siguientes:
+        /// - Description
+        /// - Enabled
+        /// - Remarks
+        /// </remarks>
         public bool UpdateRoles(IEnumerable<Role> rolesToUpdate)
         {
             try

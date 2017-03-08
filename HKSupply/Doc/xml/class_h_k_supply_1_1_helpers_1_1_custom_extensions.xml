@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_helpers_1_1_custom_extensions" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Helpers::CustomExtensions</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1a9610f835b92947f6dfb1dff43d674e75" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>static T HKSupply.Helpers.CustomExtensions.Clone&lt; T &gt;</definition>
+        <argsstring>(this T source)</argsstring>
+        <name>Clone&lt; T &gt;</name>
+        <param>
+          <type>this T</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CustomExtensions.cs" line="14" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="14" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Helpers/CustomExtensions.cs" line="12" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="11" bodyend="24"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1a9610f835b92947f6dfb1dff43d674e75" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CustomExtensions</scope><name>Clone&lt; T &gt;</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

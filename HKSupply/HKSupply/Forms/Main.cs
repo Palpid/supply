@@ -108,9 +108,9 @@ namespace HKSupply.Forms
             try
             {
                 //Get role categories
-                IEnumerable<string> categoriesList = GlobalSetting.FunctionalityRoleCont.GetFunctionalitiesCategoriesRole(GlobalSetting.LoggedUser.RoleId);
+                IEnumerable<string> categoriesList = GlobalSetting.FunctionalityRoleService.GetFunctionalitiesCategoriesRole(GlobalSetting.LoggedUser.RoleId);
                 //Get role menu list
-                IEnumerable<FunctionalityRole> menuList = GlobalSetting.FunctionalityRoleCont.GetFunctionalitiesRole(GlobalSetting.LoggedUser.RoleId);
+                IEnumerable<FunctionalityRole> menuList = GlobalSetting.FunctionalityRoleService.GetFunctionalitiesRole(GlobalSetting.LoggedUser.RoleId);
 
                 foreach (string category in categoriesList)
                 {

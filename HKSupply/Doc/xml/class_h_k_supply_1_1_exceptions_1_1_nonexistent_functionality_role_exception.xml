@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_exceptions_1_1_nonexistent_functionality_role_exception" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Exceptions::NonexistentFunctionalityRoleException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Exception</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_nonexistent_functionality_role_exception_1a740f50e5b485c0eb268d313c62b855d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NonexistentFunctionalityRoleException.NonexistentFunctionalityRoleException</definition>
+        <argsstring>()</argsstring>
+        <name>NonexistentFunctionalityRoleException</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NonexistentFunctionalityRoleException.cs" line="15" column="1" bodyfile="HKSupply/Exceptions/NonexistentFunctionalityRoleException.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_nonexistent_functionality_role_exception_1a18ae6c3bbed13d776fbb7407c8c0f839" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NonexistentFunctionalityRoleException.NonexistentFunctionalityRoleException</definition>
+        <argsstring>(string message)</argsstring>
+        <name>NonexistentFunctionalityRoleException</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NonexistentFunctionalityRoleException.cs" line="16" column="1" bodyfile="HKSupply/Exceptions/NonexistentFunctionalityRoleException.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_nonexistent_functionality_role_exception_1a67c9cb11b716effbea92f6daf598e28f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NonexistentFunctionalityRoleException.NonexistentFunctionalityRoleException</definition>
+        <argsstring>(string message, System.Exception inner)</argsstring>
+        <name>NonexistentFunctionalityRoleException</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>System.Exception</type>
+          <declname>inner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NonexistentFunctionalityRoleException.cs" line="17" column="1" bodyfile="HKSupply/Exceptions/NonexistentFunctionalityRoleException.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_nonexistent_functionality_role_exception_1a1c0eef709cc0b2418bc628dfd1199dd1" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NonexistentFunctionalityRoleException.NonexistentFunctionalityRoleException</definition>
+        <argsstring>(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)</argsstring>
+        <name>NonexistentFunctionalityRoleException</name>
+        <param>
+          <type>System.Runtime.Serialization.SerializationInfo</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>System.Runtime.Serialization.StreamingContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NonexistentFunctionalityRoleException.cs" line="20" column="1" bodyfile="HKSupply/Exceptions/NonexistentFunctionalityRoleException.cs" bodystart="20" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Custom Exception: funcionalidad-role no existente en el sistema </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="128">
+        <label>System::Exception</label>
+      </node>
+      <node id="127">
+        <label>HKSupply.Exceptions.NonexistentFunctionalityRoleException</label>
+        <link refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_functionality_role_exception"/>
+        <childnode refid="128" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="130">
+        <label>System::Exception</label>
+      </node>
+      <node id="129">
+        <label>HKSupply.Exceptions.NonexistentFunctionalityRoleException</label>
+        <link refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_functionality_role_exception"/>
+        <childnode refid="130" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Exceptions/NonexistentFunctionalityRoleException.cs" line="14" column="1" bodyfile="HKSupply/Exceptions/NonexistentFunctionalityRoleException.cs" bodystart="13" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_functionality_role_exception_1a740f50e5b485c0eb268d313c62b855d8" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::NonexistentFunctionalityRoleException</scope><name>NonexistentFunctionalityRoleException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_functionality_role_exception_1a18ae6c3bbed13d776fbb7407c8c0f839" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::NonexistentFunctionalityRoleException</scope><name>NonexistentFunctionalityRoleException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_functionality_role_exception_1a67c9cb11b716effbea92f6daf598e28f" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::NonexistentFunctionalityRoleException</scope><name>NonexistentFunctionalityRoleException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_functionality_role_exception_1a1c0eef709cc0b2418bc628dfd1199dd1" prot="protected" virt="non-virtual"><scope>HKSupply::Exceptions::NonexistentFunctionalityRoleException</scope><name>NonexistentFunctionalityRoleException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

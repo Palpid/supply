@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_exceptions_1_1_new_existing_role_exception" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Exceptions::NewExistingRoleException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Exception</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_new_existing_role_exception_1a692c7be2466e86f3c97927a261971492" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NewExistingRoleException.NewExistingRoleException</definition>
+        <argsstring>()</argsstring>
+        <name>NewExistingRoleException</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NewExistingRoleException.cs" line="15" column="1" bodyfile="HKSupply/Exceptions/NewExistingRoleException.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_new_existing_role_exception_1a3a48fc075f0377064ce7394fd9123f2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NewExistingRoleException.NewExistingRoleException</definition>
+        <argsstring>(string message)</argsstring>
+        <name>NewExistingRoleException</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NewExistingRoleException.cs" line="16" column="1" bodyfile="HKSupply/Exceptions/NewExistingRoleException.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_new_existing_role_exception_1a5d31e75345337147a74a40e9b2d657b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NewExistingRoleException.NewExistingRoleException</definition>
+        <argsstring>(string message, System.Exception inner)</argsstring>
+        <name>NewExistingRoleException</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>System.Exception</type>
+          <declname>inner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NewExistingRoleException.cs" line="17" column="1" bodyfile="HKSupply/Exceptions/NewExistingRoleException.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_new_existing_role_exception_1ae2c332b45921778b7d21a4915135b29a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NewExistingRoleException.NewExistingRoleException</definition>
+        <argsstring>(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)</argsstring>
+        <name>NewExistingRoleException</name>
+        <param>
+          <type>System.Runtime.Serialization.SerializationInfo</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>System.Runtime.Serialization.StreamingContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NewExistingRoleException.cs" line="20" column="1" bodyfile="HKSupply/Exceptions/NewExistingRoleException.cs" bodystart="20" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Custom Exception: dar de alta un rol ya existente en el sistema </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="115">
+        <label>HKSupply.Exceptions.NewExistingRoleException</label>
+        <link refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_role_exception"/>
+        <childnode refid="116" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="116">
+        <label>System::Exception</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="117">
+        <label>HKSupply.Exceptions.NewExistingRoleException</label>
+        <link refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_role_exception"/>
+        <childnode refid="118" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="118">
+        <label>System::Exception</label>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Exceptions/NewExistingRoleException.cs" line="14" column="1" bodyfile="HKSupply/Exceptions/NewExistingRoleException.cs" bodystart="13" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_role_exception_1a692c7be2466e86f3c97927a261971492" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::NewExistingRoleException</scope><name>NewExistingRoleException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_role_exception_1a3a48fc075f0377064ce7394fd9123f2e" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::NewExistingRoleException</scope><name>NewExistingRoleException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_role_exception_1a5d31e75345337147a74a40e9b2d657b6" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::NewExistingRoleException</scope><name>NewExistingRoleException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_role_exception_1ae2c332b45921778b7d21a4915135b29a" prot="protected" virt="non-virtual"><scope>HKSupply::Exceptions::NewExistingRoleException</scope><name>NewExistingRoleException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

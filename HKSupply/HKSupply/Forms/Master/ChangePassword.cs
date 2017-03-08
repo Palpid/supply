@@ -215,7 +215,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                return GlobalSetting.UserCont.ChangePassword(_userChangePassword.Id, PasswordHelper.GetHash(txtNewPassword.Text));
+                return GlobalSetting.UserService.ChangePassword(_userChangePassword.Id, PasswordHelper.GetHash(txtNewPassword.Text));
                  
             }
             catch (Exception ex)

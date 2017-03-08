@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_h_k_supply_1_1_models" kind="namespace" language="C#">
+    <compoundname>HKSupply::Models</compoundname>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_customer" prot="public">HKSupply::Models::Customer</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_customer_history" prot="public">HKSupply::Models::CustomerHistory</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_functionality" prot="public">HKSupply::Models::Functionality</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_functionality_role" prot="public">HKSupply::Models::FunctionalityRole</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_role" prot="public">HKSupply::Models::Role</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_user" prot="public">HKSupply::Models::User</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/Customer.cs" line="11" column="1"/>
+  </compounddef>
+</doxygen>

@@ -9,6 +9,17 @@ using System.Threading.Tasks;
 
 namespace HKSupply.General
 {
+    /// <summary>
+    /// Objeto para guardar valores globales accesibles desde toda la aplicación. 
+    /// </summary>
+    /// <remarks>
+    /// Objetos que incluye:
+    /// - Usuario logado
+    /// Controlador para acceso a datos para Role
+    /// Controlador para acceso a datos para User
+    /// Controlador para acceso a datos para Functionality
+    /// Controlador para acceso a datos para Functionality Role
+    /// </remarks>
     public sealed class GlobalSetting
     {
         #region Private Members
@@ -23,7 +34,7 @@ namespace HKSupply.General
         #endregion
 
         #region Public Properties
-        public static IRole RoleCont 
+        public static IRole RoleService 
         {
             get 
             {
@@ -35,7 +46,7 @@ namespace HKSupply.General
 
         }
         
-        public static IUser UserCont 
+        public static IUser UserService 
         {
             get 
             {
@@ -47,7 +58,7 @@ namespace HKSupply.General
             }
         }
         
-        public static IFunctionality FunctionalityCont 
+        public static IFunctionality FunctionalityService 
         {
             get 
             {
@@ -58,7 +69,7 @@ namespace HKSupply.General
             }
         }
         
-        public static IFunctionalityRole FunctionalityRoleCont 
+        public static IFunctionalityRole FunctionalityRoleService 
         {
             get 
             {

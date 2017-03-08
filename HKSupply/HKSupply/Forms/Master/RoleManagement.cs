@@ -277,7 +277,7 @@ namespace HKSupply.Forms.Master
             {
                 _modifiedRoles.Clear();
                 _createdRoles.Clear();
-                IEnumerable<Role> appRoles = GlobalSetting.RoleCont.GetRoles();
+                IEnumerable<Role> appRoles = GlobalSetting.RoleService.GetRoles();
                 grdRoles.DataSource = appRoles;
                 grdRoles.ReadOnly = true;
 
@@ -409,7 +409,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                return GlobalSetting.RoleCont.UpdateRoles(_modifiedRoles);
+                return GlobalSetting.RoleService.UpdateRoles(_modifiedRoles);
             }
             catch (Exception ex)
             {
@@ -421,7 +421,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                GlobalSetting.RoleCont.NewRole(_createdRoles.FirstOrDefault());
+                GlobalSetting.RoleService.NewRole(_createdRoles.FirstOrDefault());
                 return true;
             }
             catch (NewExistingRoleException nerex)

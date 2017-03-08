@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_h_k_supply_1_1_services" kind="namespace" language="C#">
+    <compoundname>HKSupply::Services</compoundname>
+    <innernamespace refid="namespace_h_k_supply_1_1_services_1_1_implementations">HKSupply::Services::Implementations</innernamespace>
+    <innernamespace refid="namespace_h_k_supply_1_1_services_1_1_interfaces">HKSupply::Services::Interfaces</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="[generated]" line="1" column="1"/>
+  </compounddef>
+</doxygen>

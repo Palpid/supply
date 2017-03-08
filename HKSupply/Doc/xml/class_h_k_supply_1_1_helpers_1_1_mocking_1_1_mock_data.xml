@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_helpers_1_1_mocking_1_1_mock_data" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Helpers::Mocking::MockData</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_mocking_1_1_mock_data_1a562723638801c8777acb345b5a2e76af" prot="public" static="yes" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref> &gt;</type>
+        <definition>List&lt;Role&gt; HKSupply.Helpers.Mocking.MockData.RolesList</definition>
+        <argsstring></argsstring>
+        <name>RolesList</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/Mocking/MockData.cs" line="13" column="1" bodyfile="HKSupply/Helpers/Mocking/MockData.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_mocking_1_1_mock_data_1a6811de3d54debc7624ee3767f71b955f" prot="public" static="yes" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_user" kindref="compound">User</ref> &gt;</type>
+        <definition>List&lt;User&gt; HKSupply.Helpers.Mocking.MockData.UsersList</definition>
+        <argsstring></argsstring>
+        <name>UsersList</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_models_1_1_user" kindref="compound">User</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/Mocking/MockData.cs" line="14" column="1" bodyfile="HKSupply/Helpers/Mocking/MockData.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_mocking_1_1_mock_data_1a6995f76023fc90393046d5d465725687" prot="public" static="yes" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_functionality" kindref="compound">Functionality</ref> &gt;</type>
+        <definition>List&lt;Functionality&gt; HKSupply.Helpers.Mocking.MockData.FunctionalitiesList</definition>
+        <argsstring></argsstring>
+        <name>FunctionalitiesList</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_models_1_1_functionality" kindref="compound">Functionality</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/Mocking/MockData.cs" line="15" column="1" bodyfile="HKSupply/Helpers/Mocking/MockData.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_mocking_1_1_mock_data_1ae59d90b75ea1e0bb2da4ae42801c3881" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Helpers.Mocking.MockData.InitData</definition>
+        <argsstring>()</argsstring>
+        <name>InitData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/Mocking/MockData.cs" line="27" column="1" bodyfile="HKSupply/Helpers/Mocking/MockData.cs" bodystart="27" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_mocking_1_1_mock_data_1a46a7e8a94c5acfcddade138b1400a268" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Helpers.Mocking.MockData.InitRolesList</definition>
+        <argsstring>()</argsstring>
+        <name>InitRolesList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/Mocking/MockData.cs" line="49" column="1" bodyfile="HKSupply/Helpers/Mocking/MockData.cs" bodystart="49" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_mocking_1_1_mock_data_1a8aeb7fa1cec69e6f53e1862cbc7dbf8a" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Helpers.Mocking.MockData.InitUsuariosList</definition>
+        <argsstring>()</argsstring>
+        <name>InitUsuariosList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/Mocking/MockData.cs" line="75" column="1" bodyfile="HKSupply/Helpers/Mocking/MockData.cs" bodystart="75" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_mocking_1_1_mock_data_1a09c617c1a72cb8cd4b8624accf35cc54" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Helpers.Mocking.MockData.InitFuncionalidadesList</definition>
+        <argsstring>()</argsstring>
+        <name>InitFuncionalidadesList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/Mocking/MockData.cs" line="122" column="1" bodyfile="HKSupply/Helpers/Mocking/MockData.cs" bodystart="122" bodyend="175"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Helpers/Mocking/MockData.cs" line="11" column="1" bodyfile="HKSupply/Helpers/Mocking/MockData.cs" bodystart="10" bodyend="179"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_mocking_1_1_mock_data_1a6995f76023fc90393046d5d465725687" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::Mocking::MockData</scope><name>FunctionalitiesList</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_mocking_1_1_mock_data_1ae59d90b75ea1e0bb2da4ae42801c3881" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::Mocking::MockData</scope><name>InitData</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_mocking_1_1_mock_data_1a09c617c1a72cb8cd4b8624accf35cc54" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::Mocking::MockData</scope><name>InitFuncionalidadesList</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_mocking_1_1_mock_data_1a46a7e8a94c5acfcddade138b1400a268" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::Mocking::MockData</scope><name>InitRolesList</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_mocking_1_1_mock_data_1a8aeb7fa1cec69e6f53e1862cbc7dbf8a" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::Mocking::MockData</scope><name>InitUsuariosList</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_mocking_1_1_mock_data_1a562723638801c8777acb345b5a2e76af" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::Mocking::MockData</scope><name>RolesList</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_mocking_1_1_mock_data_1a6811de3d54debc7624ee3767f71b955f" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::Mocking::MockData</scope><name>UsersList</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

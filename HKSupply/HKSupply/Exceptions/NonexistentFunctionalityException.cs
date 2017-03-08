@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HKSupply.Exceptions
 {
+    /// <summary>
+    /// Custom Exception: funcionalidad no existente en el sistema
+    /// </summary>
     [Serializable()]
     public class NonexistentFunctionalityException : System.Exception
     {

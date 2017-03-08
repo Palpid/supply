@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_h_k_supply_1_1_services_1_1_interfaces" kind="namespace" language="C#">
+    <compoundname>HKSupply::Services::Interfaces</compoundname>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer" prot="public">HKSupply::Services::Interfaces::ICustomer</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality" prot="public">HKSupply::Services::Interfaces::IFunctionality</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_role" prot="public">HKSupply::Services::Interfaces::IFunctionalityRole</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role" prot="public">HKSupply::Services::Interfaces::IRole</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user" prot="public">HKSupply::Services::Interfaces::IUser</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Services/Interfaces/ICustomer.cs" line="9" column="1"/>
+  </compounddef>
+</doxygen>

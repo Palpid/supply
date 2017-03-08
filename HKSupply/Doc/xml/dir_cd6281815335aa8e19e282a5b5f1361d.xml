@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_cd6281815335aa8e19e282a5b5f1361d" kind="dir">
+    <compoundname>HKSupply/Migrations</compoundname>
+    <innerfile refid="201703081042226___customer_8cs">201703081042226_Customer.cs</innerfile>
+    <innerfile refid="201703081042226___customer_8_designer_8cs">201703081042226_Customer.Designer.cs</innerfile>
+    <innerfile refid="201703081123445___object_version_8cs">201703081123445_ObjectVersion.cs</innerfile>
+    <innerfile refid="201703081123445___object_version_8_designer_8cs">201703081123445_ObjectVersion.Designer.cs</innerfile>
+    <innerfile refid="201703081126231___object_version__2_8cs">201703081126231_ObjectVersion_2.cs</innerfile>
+    <innerfile refid="201703081126231___object_version__2_8_designer_8cs">201703081126231_ObjectVersion_2.Designer.cs</innerfile>
+    <innerfile refid="_configuration_8cs">Configuration.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Migrations/"/>
+  </compounddef>
+</doxygen>

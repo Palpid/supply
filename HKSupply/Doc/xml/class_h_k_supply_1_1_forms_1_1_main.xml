@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_main" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Main</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_main_1a707717236394f035eacf36bb1fd93944" prot="private" static="no" mutable="no">
+        <type>ResourceManager</type>
+        <definition>ResourceManager HKSupply.Forms.Main.resManager</definition>
+        <argsstring></argsstring>
+        <name>resManager</name>
+        <initializer>= new ResourceManager(&quot;HKSupply.Resources.HKSupplyRes&quot;, typeof(<ref refid="class_h_k_supply_1_1_forms_1_1_login" kindref="compound">Login</ref>).Assembly)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.cs" line="23" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_main_1a5b0e3037bf3c9d073a56a835b7eaba18" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Main.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Main.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_main_1a69a9bfa39c9fad29c1bb9e6b2729cdf3" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.MenuStrip</type>
+        <definition>System.Windows.Forms.MenuStrip HKSupply.Forms.Main.msMainMenu</definition>
+        <argsstring></argsstring>
+        <name>msMainMenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.Designer.cs" line="63" column="1" bodyfile="HKSupply/Forms/Main.Designer.cs" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_main_1a8fc09b23fbe14bc676f790d28bb0e9c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Main.Main</definition>
+        <argsstring>()</argsstring>
+        <name>Main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.cs" line="27" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_main_1ae322c78605a4993241d8cf837cc2e6fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Main.ChildClick</definition>
+        <argsstring>(object sender, System.EventArgs e)</argsstring>
+        <name>ChildClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.cs" line="41" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="41" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_main_1a0d4a749a7d048530921b890b19271d4c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Main.Main_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>Main_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.cs" line="36" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_main_1a26dcfed0701edf835698f329dc3175ce" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Main.InitializeMainMenu</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeMainMenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.cs" line="105" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="105" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_main_1a35ed58dcbd1a313e381734c0bde9cc1f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Main.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Main.Designer.cs" bodystart="29" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_main_1a99fe43d79c789818b37bb46db1dfa795" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Main.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Main.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="101">
+        <label>HKSupply.Forms.Main</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_main"/>
+        <childnode refid="102" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="102">
+        <label>Form</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="103">
+        <label>HKSupply.Forms.Main</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_main"/>
+        <childnode refid="104" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>Form</label>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Main.cs" line="21" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="20" bodyend="145"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_main_1ae322c78605a4993241d8cf837cc2e6fc" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Main</scope><name>ChildClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_main_1a5b0e3037bf3c9d073a56a835b7eaba18" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Main</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_main_1a99fe43d79c789818b37bb46db1dfa795" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Main</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_main_1a35ed58dcbd1a313e381734c0bde9cc1f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Main</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_main_1a26dcfed0701edf835698f329dc3175ce" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Main</scope><name>InitializeMainMenu</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_main_1a8fc09b23fbe14bc676f790d28bb0e9c7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Main</scope><name>Main</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_main_1a0d4a749a7d048530921b890b19271d4c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Main</scope><name>Main_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_main_1a69a9bfa39c9fad29c1bb9e6b2729cdf3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Main</scope><name>msMainMenu</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_main_1a707717236394f035eacf36bb1fd93944" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Main</scope><name>resManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

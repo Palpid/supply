@@ -258,7 +258,7 @@ namespace HKSupply.Forms.Master
                 //grdUsers.Rows[mouseLocation.RowIndex].Cells[mouseLocation.ColumnIndex].Style.BackColor = Color.Red;
 
                 int id = (int)grdUsers.Rows[mouseLocation.RowIndex].Cells[(int)eUserColumns.Id].Value;
-                User user = GlobalSetting.UserCont.GetUserById(id);
+                User user = GlobalSetting.UserService.GetUserById(id);
                 Form frm = new ChangePassword(user);
                 frm.ShowDialog();
             }
@@ -429,7 +429,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _roleList = GlobalSetting.RoleCont.GetRoles(false).ToList();
+                _roleList = GlobalSetting.RoleService.GetRoles(false).ToList();
             }
             catch (Exception ex)
             {
@@ -444,7 +444,7 @@ namespace HKSupply.Forms.Master
             {
                 _modifiedUsers.Clear();
                 _createdUsers.Clear();
-                IEnumerable<User> users = GlobalSetting.UserCont.GetAllUsers();
+                IEnumerable<User> users = GlobalSetting.UserService.GetAllUsers();
                 grdUsers.DataSource = users;
                 grdUsers.ReadOnly = true;
 
@@ -625,7 +625,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                return GlobalSetting.UserCont.UpdateUsers(_modifiedUsers);
+                return GlobalSetting.UserService.UpdateUsers(_modifiedUsers);
             }
             catch (Exception ex)
             {
@@ -639,7 +639,7 @@ namespace HKSupply.Forms.Master
             {
                 User user = _createdUsers.FirstOrDefault().Clone();
                 user.Password = PasswordHelper.GetHash(user.Password);
-                GlobalSetting.UserCont.NewUser(user);
+                GlobalSetting.UserService.NewUser(user);
                return true;
             }
             catch (NewExistingUserException neuex)

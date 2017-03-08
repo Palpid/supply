@@ -12,10 +12,17 @@ using System.Text;
 using System.Threading.Tasks;
 namespace HKSupply.Services.Implementations
 {
+    /// <summary>
+    /// Controlador Entity Framework para Functionality Role
+    /// </summary>
     public class EFFunctionalityRole : IFunctionalityRole
     {
         ILog _log = LogManager.GetLogger(typeof(EFUser));
 
+        /// <summary>
+        /// Obtener todas las funcionalidades-roles de la base de datos
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<FunctionalityRole> GetAllFunctionalitiesRole()
         {
             try
@@ -38,6 +45,12 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Obtener un FunctionalityRole dado una funciolidad y un rol
+        /// </summary>
+        /// <param name="functionalityId"></param>
+        /// <param name="roleId"></param>
+        /// <returns></returns>
         public FunctionalityRole GetFunctionalityRole(int functionalityId, string roleId)
         {
             try
@@ -111,6 +124,11 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Obtener la colección de todos las cartegorías de un rol en concreto
+        /// </summary>
+        /// <param name="roleId"></param>
+        /// <returns></returns>
         public IEnumerable<string> GetFunctionalitiesCategoriesRole(string roleId)
         {
             try
@@ -146,6 +164,11 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Dar de alta un FunctionalityRole
+        /// </summary>
+        /// <param name="newFunctionalityRole"></param>
+        /// <returns></returns>
         public FunctionalityRole NewFunctionalityRole(FunctionalityRole newFunctionalityRole)
         {
             try
@@ -188,6 +211,17 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Modificar un FunctionalityRole
+        /// </summary>
+        /// <param name="modFunctionalityRole"></param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Los campos que se actualizan son los siguientes:
+        /// - Read
+        /// - New
+        /// - Modify
+        /// </remarks>
         public FunctionalityRole ModifyFunctionalityRole(FunctionalityRole modFunctionalityRole)
         {
             try
@@ -235,7 +269,11 @@ namespace HKSupply.Services.Implementations
         }
 
 
-
+        /// <summary>
+        /// Modificar una colección de FunctionalityRole
+        /// </summary>
+        /// <param name="functionalitiesRolesToUpdate"></param>
+        /// <returns></returns>
         public bool UpdateFunctionalitiesRoles(IEnumerable<FunctionalityRole> functionalitiesRolesToUpdate)
         {
             try

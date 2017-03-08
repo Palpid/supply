@@ -32,6 +32,8 @@ namespace HKSupply
 
             //InitDBData();
 
+            CustomerDBTest();
+
             //************ Test log4net ************//
             //var userEF = new EFUser();
             //try
@@ -295,6 +297,49 @@ namespace HKSupply
                 throw ex;
             }
         
+        }
+
+        private void CustomerDBTest()
+        {
+            try
+            {
+                var customerService = new EFCustomer();
+
+                //Customer newCust = new Customer();
+                //newCust.idCustomer = "Customer01";
+                //newCust.CustName = "Customer 01";
+                //newCust.Active = true;
+                //newCust.VATNum = "0101010101";
+                //newCust.ShipingAddress = "Customer 01 Shiping Address";
+                //newCust.BillingAddress = "Customer 01 Billing Address";
+                //newCust.ContactName = "Customer 01 Contact Name";
+                //newCust.ContactPhone = "111223344";
+                //newCust.idIncoterm = 1;
+                //newCust.idPaymentTerms = 2;
+                //newCust.Currency = "euro";
+
+                //var res = customerService.NewCustomer(newCust);
+
+                Customer customer;
+                customer = customerService.GetCustomerById("Customer01");
+                customer.ContactPhone = "5555667788";
+                customer.ShippingAddress += " X";
+                customer.BillingAddress += " X";
+
+                customerService.UpdateCustomer(customer);
+
+                customer = customerService.GetCustomerById("Customer01");
+                customer.ContactPhone = "999112233";
+                customer.ShippingAddress += " X";
+                customer.BillingAddress += " X";
+
+                customerService.UpdateCustomer(customer);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

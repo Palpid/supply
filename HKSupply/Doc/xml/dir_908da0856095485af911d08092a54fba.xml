@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_908da0856095485af911d08092a54fba" kind="dir">
+    <compoundname>HKSupply</compoundname>
+    <innerdir refid="dir_05343976d266eeb157c752e3ab88e8ce">HKSupply/DB</innerdir>
+    <innerdir refid="dir_6bb1436a373406886221f2bc1c3b053d">HKSupply/Exceptions</innerdir>
+    <innerdir refid="dir_9526147bc1e8ec6e35c7db0b834d201e">HKSupply/Forms</innerdir>
+    <innerdir refid="dir_e03d18e421a06fbd686981c2cd51819f">HKSupply/General</innerdir>
+    <innerdir refid="dir_36353312a6b3e6903b3a5080647b7429">HKSupply/Helpers</innerdir>
+    <innerdir refid="dir_cd6281815335aa8e19e282a5b5f1361d">HKSupply/Migrations</innerdir>
+    <innerdir refid="dir_35493f3c7ecc97732dbab86b3754cc02">HKSupply/Models</innerdir>
+    <innerdir refid="dir_8884ad4c6249556019815b82dba64ab5">HKSupply/obj</innerdir>
+    <innerdir refid="dir_7dfd0243e8acdebfd8164a0b9d1443da">HKSupply/Properties</innerdir>
+    <innerdir refid="dir_52fd3c5ce36479227bc46a6a91d60854">HKSupply/Resources</innerdir>
+    <innerdir refid="dir_36b05a10854b835d051b4f0294cd5756">HKSupply/Services</innerdir>
+    <innerdir refid="dir_a4272b6644c7197877c6435e7ba72dc0">HKSupply/Styles</innerdir>
+    <innerfile refid="_form1_8cs">Form1.cs</innerfile>
+    <innerfile refid="_form1_8_designer_8cs">Form1.Designer.cs</innerfile>
+    <innerfile refid="_program_8cs">Program.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/"/>
+  </compounddef>
+</doxygen>

@@ -318,7 +318,7 @@ namespace HKSupply.Forms.Master
             {
                 _modifiedFunctionalities.Clear();
                 _createdFunctionalities.Clear();
-                IEnumerable<Functionality> appFunctionalities = GlobalSetting.FunctionalityCont.GetAllFunctionalities();
+                IEnumerable<Functionality> appFunctionalities = GlobalSetting.FunctionalityService.GetAllFunctionalities();
                 grdFunctionalities.DataSource = appFunctionalities;
                 grdFunctionalities.ReadOnly = true;
                 
@@ -456,7 +456,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                return GlobalSetting.FunctionalityCont.UpdateFunctionalities(_modifiedFunctionalities);
+                return GlobalSetting.FunctionalityService.UpdateFunctionalities(_modifiedFunctionalities);
                 
             }
             catch (Exception ex)
@@ -470,7 +470,7 @@ namespace HKSupply.Forms.Master
 
             try
             {
-                GlobalSetting.FunctionalityCont.NewFunctionality(_createdFunctionalities.FirstOrDefault());
+                GlobalSetting.FunctionalityService.NewFunctionality(_createdFunctionalities.FirstOrDefault());
                 return true;
             }
             catch (NewExistingFunctionalityException nefex)

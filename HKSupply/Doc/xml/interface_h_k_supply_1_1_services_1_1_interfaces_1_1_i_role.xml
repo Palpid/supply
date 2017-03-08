@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role" kind="interface" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Interfaces::IRole</compoundname>
+    <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFRole</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1a921bacd80020de3cf811705857c9eb7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref> &gt;</type>
+        <definition>IEnumerable&lt;Role&gt; HKSupply.Services.Interfaces.IRole.GetRoles</definition>
+        <argsstring>(bool all=true)</argsstring>
+        <name>GetRoles</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_1a7fd2f7f9bae498128f23ad0659e3ec4a">GetRoles</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>all</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IRole.cs" line="12" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1ad83423359435ae70026a1daac5bd07ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref></type>
+        <definition>Role HKSupply.Services.Interfaces.IRole.GetRoleById</definition>
+        <argsstring>(string roleId)</argsstring>
+        <name>GetRoleById</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_1ad4eb9194531a9215c4f1a20ab0d9aa54">GetRoleById</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>roleId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IRole.cs" line="13" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1a7fea1e910bcd64d8e99da8bf4438e50f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref></type>
+        <definition>Role HKSupply.Services.Interfaces.IRole.NewRole</definition>
+        <argsstring>(Role newRole)</argsstring>
+        <name>NewRole</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_1a549317ad8c8fb3353382a8cd36fa1b22">NewRole</reimplementedby>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref></type>
+          <declname>newRole</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IRole.cs" line="14" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1a4f5e4bf501b1affbae4d3d39dbb837b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.IRole.DisableRole</definition>
+        <argsstring>(string roleId, string remarks)</argsstring>
+        <name>DisableRole</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_1adf253e840ea77e23fd7c10899f316f21">DisableRole</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>roleId</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>remarks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IRole.cs" line="15" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1a0960468c3fb4db4f09b3175106ee7753" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.IRole.UpdateRoles</definition>
+        <argsstring>(IEnumerable&lt; Role &gt; rolesToUpdate)</argsstring>
+        <name>UpdateRoles</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_1a2d880fce95c33f7581f2e3310ca943ed">UpdateRoles</reimplementedby>
+        <param>
+          <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref> &gt;</type>
+          <declname>rolesToUpdate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IRole.cs" line="16" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="91">
+        <label>HKSupply.Services.Interfaces.IRole</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role"/>
+      </node>
+      <node id="92">
+        <label>HKSupply.Services.Implementations.EFRole</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role"/>
+        <childnode refid="91" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="HKSupply/Services/Interfaces/IRole.cs" line="11" column="1" bodyfile="HKSupply/Services/Interfaces/IRole.cs" bodystart="10" bodyend="17"/>
+    <listofallmembers>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1a4f5e4bf501b1affbae4d3d39dbb837b5" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IRole</scope><name>DisableRole</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1ad83423359435ae70026a1daac5bd07ae" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IRole</scope><name>GetRoleById</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1a921bacd80020de3cf811705857c9eb7e" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IRole</scope><name>GetRoles</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1a7fea1e910bcd64d8e99da8bf4438e50f" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IRole</scope><name>NewRole</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1a0960468c3fb4db4f09b3175106ee7753" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IRole</scope><name>UpdateRoles</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

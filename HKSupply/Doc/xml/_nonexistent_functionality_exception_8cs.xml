@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_nonexistent_functionality_exception_8cs" kind="file" language="C#">
+    <compoundname>NonexistentFunctionalityException.cs</compoundname>
+    <innerclass refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_functionality_exception" prot="public">HKSupply::Exceptions::NonexistentFunctionalityException</innerclass>
+    <innernamespace refid="namespace_h_k_supply_1_1_exceptions">HKSupply::Exceptions</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_system" kindref="compound">System</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_system" kindref="compound">System</ref>.Collections.Generic;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_system" kindref="compound">System</ref>.Linq;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_system" kindref="compound">System</ref>.Text;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_system" kindref="compound">System</ref>.Threading.Tasks;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_h_k_supply" kindref="compound">HKSupply</ref>.Exceptions</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>[Serializable()]</highlight></codeline>
+<codeline lineno="13" refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_functionality_exception" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_functionality_exception" kindref="compound">NonexistentFunctionalityException</ref><sp/>:<sp/><ref refid="namespace_system" kindref="compound">System</ref>.Exception</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_functionality_exception" kindref="compound">NonexistentFunctionalityException</ref>()<sp/>:<sp/>base()<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_functionality_exception" kindref="compound">NonexistentFunctionalityException</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>message)<sp/>:<sp/>base(message)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_functionality_exception" kindref="compound">NonexistentFunctionalityException</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>message,<sp/><ref refid="namespace_system" kindref="compound">System</ref>.Exception<sp/>inner)<sp/>:<sp/>base(message,<sp/>inner)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>constructor<sp/>is<sp/>needed<sp/>for<sp/>serialization<sp/>when<sp/>an<sp/>exception<sp/>propagates<sp/>from<sp/>a<sp/>remoting<sp/>server<sp/>to<sp/>the<sp/>client.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_functionality_exception" kindref="compound">NonexistentFunctionalityException</ref>(<ref refid="namespace_system" kindref="compound">System</ref>.Runtime.Serialization.SerializationInfo<sp/>info,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_system" kindref="compound">System</ref>.Runtime.Serialization.StreamingContext<sp/>context)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="HKSupply/Exceptions/NonexistentFunctionalityException.cs"/>
+  </compounddef>
+</doxygen>

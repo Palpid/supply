@@ -140,9 +140,9 @@ namespace HKSupply.Forms
             {
                 if (IsValidForm())
                 {
-                    var user = GlobalSetting.UserCont.GetUserByLoginPassword(txtLogin.Text, txtPassword.Text);
+                    var user = GlobalSetting.UserService.GetUserByLoginPassword(txtLogin.Text, txtPassword.Text);
                     GlobalSetting.LoggedUser = user;
-                    var functionalitiesRoles = GlobalSetting.FunctionalityRoleCont.GetFunctionalitiesRole(GlobalSetting.LoggedUser.RoleId);
+                    var functionalitiesRoles = GlobalSetting.FunctionalityRoleService.GetFunctionalitiesRole(GlobalSetting.LoggedUser.RoleId);
                     GlobalSetting.FunctionalitiesRoles = functionalitiesRoles;
                     
                     DialogResult = DialogResult.OK;

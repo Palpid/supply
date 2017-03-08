@@ -1,0 +1,599 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Master::FunctionalityManagement</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1ac63f5d57d4d17cef2bf87da16851e323" prot="private" static="no">
+        <name>eFunctionalityColumns</name>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1ac63f5d57d4d17cef2bf87da16851e323ac3f58233dd1bf15f21888b60538aaf02" prot="private">
+          <name>FunctionalityId</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1ac63f5d57d4d17cef2bf87da16851e323aba6a5a85d2b5c091aa9d935e00828591" prot="private">
+          <name>FunctionalityName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1ac63f5d57d4d17cef2bf87da16851e323a3adbdb3ac060038aa0e6e6c138ef9873" prot="private">
+          <name>Category</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1ac63f5d57d4d17cef2bf87da16851e323ade36e6993e16365b5c2ac4cc65ca54a8" prot="private">
+          <name>FormName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="22" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="21" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a0a264a4e5da21db86a8c0285e3dfdef1" prot="private" static="no" mutable="no">
+        <type>ResourceManager</type>
+        <definition>ResourceManager HKSupply.Forms.Master.FunctionalityManagement.resManager</definition>
+        <argsstring></argsstring>
+        <name>resManager</name>
+        <initializer>= new ResourceManager(&quot;HKSupply.Resources.HKSupplyRes&quot;, typeof(<ref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management" kindref="compound">RoleManagement</ref>).Assembly)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="31" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a06b529001e5e9bf27cc588184616aee0" prot="private" static="no" mutable="no">
+        <type><ref refid="class_custom_controls_1_1_stack_view" kindref="compound">CustomControls.StackView</ref></type>
+        <definition>CustomControls.StackView HKSupply.Forms.Master.FunctionalityManagement.actionsStackView</definition>
+        <argsstring></argsstring>
+        <name>actionsStackView</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="33" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a32055b5717ce34566b7d40534c506407" prot="private" static="no" mutable="no">
+        <type>List&lt; KeyValuePair&lt; string, string &gt; &gt;</type>
+        <definition>List&lt;KeyValuePair&lt;string, string&gt; &gt; HKSupply.Forms.Master.FunctionalityManagement._categoryList</definition>
+        <argsstring></argsstring>
+        <name>_categoryList</name>
+        <initializer>= new List&lt;KeyValuePair&lt;string, string&gt;&gt;() 
+        { 
+            new KeyValuePair&lt;string, string&gt;(&quot;Masters&quot;, &quot;Masters&quot;), 
+            new KeyValuePair&lt;string, string&gt;(&quot;Others&quot;, &quot;Others&quot;),
+            new KeyValuePair&lt;string, string&gt;(&quot;Help&quot;, &quot;Help&quot;) 
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="35" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1aaecf2dcfd3ef87d453932cbfff47ae7b" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_functionality" kindref="compound">Functionality</ref> &gt;</type>
+        <definition>List&lt;Functionality&gt; HKSupply.Forms.Master.FunctionalityManagement._modifiedFunctionalities</definition>
+        <argsstring></argsstring>
+        <name>_modifiedFunctionalities</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_models_1_1_functionality" kindref="compound">Functionality</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="42" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a82173e7664101e16214d2896ce8068b2" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_functionality" kindref="compound">Functionality</ref> &gt;</type>
+        <definition>List&lt;Functionality&gt; HKSupply.Forms.Master.FunctionalityManagement._createdFunctionalities</definition>
+        <argsstring></argsstring>
+        <name>_createdFunctionalities</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_models_1_1_functionality" kindref="compound">Functionality</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="43" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1ac51faa9025e280344552445c4e26179e" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Master.FunctionalityManagement.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1aaee652c5d30053d977868d2553d4445f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridView</type>
+        <definition>System.Windows.Forms.DataGridView HKSupply.Forms.Master.FunctionalityManagement.grdFunctionalities</definition>
+        <argsstring></argsstring>
+        <name>grdFunctionalities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.Designer.cs" line="64" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.Designer.cs" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a7e646d0235dca575f485cc2af18801e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Master.FunctionalityManagement.FunctionalityManagement</definition>
+        <argsstring>()</argsstring>
+        <name>FunctionalityManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="47" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="47" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a6920955194b6bd1317d554cde93319b8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.FunctionalityManagement.FunctionalityManagement_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>FunctionalityManagement_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="54" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="54" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a3d72cc9c48dd79d936535dbb386ca304" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.FunctionalityManagement.actionsStackView_EditButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_EditButtonClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="63" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="63" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a124bbeebef7a1f06573a032342571c8f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.FunctionalityManagement.actionsStackView_NewButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_NewButtonClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="77" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="77" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a775ec1a63caa9faf229f704d14bd11a5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.FunctionalityManagement.actionsStackView_SaveButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_SaveButtonClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="91" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="91" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a7bcf668b3f862d8ee0c60ef08e2075ff" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.FunctionalityManagement.actionsStackView_CancelButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_CancelButtonClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="147" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="147" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1adf2a602878061611e6cf52912b86b1fc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.FunctionalityManagement.grdFunctionalities_CellValueChanged</definition>
+        <argsstring>(object sender, DataGridViewCellEventArgs e)</argsstring>
+        <name>grdFunctionalities_CellValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataGridViewCellEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="166" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="166" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1ab021909e83e02889bdc161842bbf9d12" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.FunctionalityManagement.grdFunctionalities_CellValidating</definition>
+        <argsstring>(object sender, DataGridViewCellValidatingEventArgs e)</argsstring>
+        <name>grdFunctionalities_CellValidating</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataGridViewCellValidatingEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="187" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="187" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a53c75eb2c41b9dcd9a697f44ba1f9363" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.FunctionalityManagement.grdRoles_DataError</definition>
+        <argsstring>(object sender, DataGridViewDataErrorEventArgs e)</argsstring>
+        <name>grdRoles_DataError</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataGridViewDataErrorEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="210" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="210" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a5c2909260f97b980620f3a81bf9aaa5a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.FunctionalityManagement.ConfigureActionsStackView</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackView</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="222" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="222" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a8808a452a2c505588a5e6e73e72b7740" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.FunctionalityManagement.SetupFunctionalitiesGrid</definition>
+        <argsstring>()</argsstring>
+        <name>SetupFunctionalitiesGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="245" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="245" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1aea3bc524fa6a20bfbf265bfe8c943df1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.FunctionalityManagement.ConfigureRolesGridStyles</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRolesGridStyles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="298" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="298" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a07c4a63649f8d0702f862ea9458273bb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.FunctionalityManagement.LoadAllFunctionalities</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAllFunctionalities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="315" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="315" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1ab9037abbbde671c794fba7695d169fd6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.FunctionalityManagement.ConfigureActionsStackViewEditing</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackViewEditing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="333" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="333" bodyend="345"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1ad2b90f2f7373e68641faf766c6f67297" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.FunctionalityManagement.ConfigureActionsStackViewCreating</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackViewCreating</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="347" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="347" bodyend="367"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a795d2fb5c2614f583e20f47dc303335d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.FunctionalityManagement.AddModifiedFunctionalityToList</definition>
+        <argsstring>(Functionality modifiedFunctionality)</argsstring>
+        <name>AddModifiedFunctionalityToList</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_functionality" kindref="compound">Functionality</ref></type>
+          <declname>modifiedFunctionality</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="369" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="369" bodyend="390"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1aff3334361892458e7dbe31e98cb11feb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.FunctionalityManagement.AddCreatedFunctionalityToList</definition>
+        <argsstring>(Functionality createdFunctionality)</argsstring>
+        <name>AddCreatedFunctionalityToList</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_functionality" kindref="compound">Functionality</ref></type>
+          <declname>createdFunctionality</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="392" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="392" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1aab68742bcad1c3a62120015d4aa49197" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.FunctionalityManagement.IsValidModifiedRoles</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidModifiedRoles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="415" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="415" bodyend="433"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a2f34485bf49a7834c9b1fa6b8a835bc3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.FunctionalityManagement.IsValidCreatedRoles</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidCreatedRoles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="435" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="435" bodyend="453"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a1fc2383479783ab19d5db27f6a14baf3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.FunctionalityManagement.UpdateRoles</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateRoles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="455" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="455" bodyend="466"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a960e305584a43f5f4b3dba9e731d58d9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.FunctionalityManagement.CreateRol</definition>
+        <argsstring>()</argsstring>
+        <name>CreateRol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="468" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="468" bodyend="485"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a50403e894ab4cb4e231d92e1e022ac7c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.FunctionalityManagement.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.Designer.cs" bodystart="29" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a36e30f6560cd85f1d5369dadd79487d4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.FunctionalityManagement.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/FunctionalityManagement.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="57">
+        <label>Form</label>
+      </node>
+      <node id="56">
+        <label>HKSupply.Forms.Master.FunctionalityManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management"/>
+        <childnode refid="57" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="59">
+        <label>Form</label>
+      </node>
+      <node id="58">
+        <label>HKSupply.Forms.Master.FunctionalityManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management"/>
+        <childnode refid="59" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Master/FunctionalityManagement.cs" line="19" column="1" bodyfile="HKSupply/Forms/Master/FunctionalityManagement.cs" bodystart="18" bodyend="487"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a32055b5717ce34566b7d40534c506407" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>_categoryList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a82173e7664101e16214d2896ce8068b2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>_createdFunctionalities</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1aaecf2dcfd3ef87d453932cbfff47ae7b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>_modifiedFunctionalities</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a06b529001e5e9bf27cc588184616aee0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>actionsStackView</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a7bcf668b3f862d8ee0c60ef08e2075ff" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>actionsStackView_CancelButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a3d72cc9c48dd79d936535dbb386ca304" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>actionsStackView_EditButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a124bbeebef7a1f06573a032342571c8f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>actionsStackView_NewButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a775ec1a63caa9faf229f704d14bd11a5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>actionsStackView_SaveButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1aff3334361892458e7dbe31e98cb11feb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>AddCreatedFunctionalityToList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a795d2fb5c2614f583e20f47dc303335d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>AddModifiedFunctionalityToList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1ac51faa9025e280344552445c4e26179e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a5c2909260f97b980620f3a81bf9aaa5a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>ConfigureActionsStackView</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1ad2b90f2f7373e68641faf766c6f67297" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>ConfigureActionsStackViewCreating</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1ab9037abbbde671c794fba7695d169fd6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>ConfigureActionsStackViewEditing</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1aea3bc524fa6a20bfbf265bfe8c943df1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>ConfigureRolesGridStyles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a960e305584a43f5f4b3dba9e731d58d9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>CreateRol</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a36e30f6560cd85f1d5369dadd79487d4" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1ac63f5d57d4d17cef2bf87da16851e323" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>eFunctionalityColumns</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a7e646d0235dca575f485cc2af18801e8" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>FunctionalityManagement</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a6920955194b6bd1317d554cde93319b8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>FunctionalityManagement_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1aaee652c5d30053d977868d2553d4445f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>grdFunctionalities</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1ab021909e83e02889bdc161842bbf9d12" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>grdFunctionalities_CellValidating</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1adf2a602878061611e6cf52912b86b1fc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>grdFunctionalities_CellValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a53c75eb2c41b9dcd9a697f44ba1f9363" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>grdRoles_DataError</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a50403e894ab4cb4e231d92e1e022ac7c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a2f34485bf49a7834c9b1fa6b8a835bc3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>IsValidCreatedRoles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1aab68742bcad1c3a62120015d4aa49197" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>IsValidModifiedRoles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a07c4a63649f8d0702f862ea9458273bb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>LoadAllFunctionalities</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a0a264a4e5da21db86a8c0285e3dfdef1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>resManager</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a8808a452a2c505588a5e6e73e72b7740" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>SetupFunctionalitiesGrid</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a1fc2383479783ab19d5db27f6a14baf3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::FunctionalityManagement</scope><name>UpdateRoles</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

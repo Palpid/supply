@@ -13,11 +13,18 @@ using System.Threading.Tasks;
 
 namespace HKSupply.Services.Implementations
 {
+    /// <summary>
+    /// Controlador Entity Framework para Functionality
+    /// </summary>
     public class EFFunctionality : IFunctionality
     {
 
         ILog _log = LogManager.GetLogger(typeof(EFUser));
 
+        /// <summary>
+        /// Obtener todas las funcionalidades de la base de datos
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<Functionality> GetAllFunctionalities()
         {
             try
@@ -34,6 +41,11 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Obtener una funcionalidad a través de un Id
+        /// </summary>
+        /// <param name="functionalityId"></param>
+        /// <returns></returns>
         public Functionality GetFunctionalityById(int functionalityId)
         {
             try
@@ -72,6 +84,11 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Obtener una funcionalidad por su nombre
+        /// </summary>
+        /// <param name="functionalityName"></param>
+        /// <returns></returns>
         public Functionality GetFunctionalityByName(string functionalityName)
         {
             try
@@ -110,6 +127,11 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Dar de alta una funcionalidad
+        /// </summary>
+        /// <param name="newFunctionality"></param>
+        /// <returns></returns>
         public Functionality NewFunctionality(Functionality newFunctionality)
         {
             try
@@ -160,6 +182,16 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Modificar una funcionalidad
+        /// </summary>
+        /// <param name="modFunctionality"></param>
+        /// <returns>Objeto Functionality con la funcioliadad modificada</returns>
+        /// <remarks>
+        /// Modifica los campos:
+        /// - Category
+        /// - FormName
+        /// </remarks>
         public Functionality ModifyFunctionality(Functionality modFunctionality)
         {
             try
@@ -197,6 +229,11 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Modificar un enumerable de funcionalidades
+        /// </summary>
+        /// <param name="functionalitiesToUpdate"></param>
+        /// <returns>bool</returns>
         public bool UpdateFunctionalities(IEnumerable<Functionality> functionalitiesToUpdate)
         {
             try

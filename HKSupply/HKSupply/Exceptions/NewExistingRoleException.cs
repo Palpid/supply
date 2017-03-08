@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HKSupply.Exceptions
 {
+    /// <summary>
+    /// Custom Exception: dar de alta un rol ya existente en el sistema
+    /// </summary>
     [Serializable()]
     public class NewExistingRoleException : System.Exception
     {

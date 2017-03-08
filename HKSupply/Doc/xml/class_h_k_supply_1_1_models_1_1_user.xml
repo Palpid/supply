@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_user" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::User</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_user_1a02e00589ab7bb27c4173f7855e0e8050" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.User.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/User.cs" line="17" column="1" bodyfile="HKSupply/Models/User.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_user_1ae40491b88829110d5840f205f046bbc1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.User.UserLogin</definition>
+        <argsstring></argsstring>
+        <name>UserLogin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/User.cs" line="23" column="1" bodyfile="HKSupply/Models/User.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_user_1a3f8a8a968733495182ed49af9170f613" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.User.Password</definition>
+        <argsstring></argsstring>
+        <name>Password</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/User.cs" line="28" column="1" bodyfile="HKSupply/Models/User.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_user_1ac7284de399f20c1ed232caae7c20620e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.User.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/User.cs" line="33" column="1" bodyfile="HKSupply/Models/User.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_user_1a7bde19a172a7c4942b1f9ad7307d6722" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.User.RoleId</definition>
+        <argsstring></argsstring>
+        <name>RoleId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/User.cs" line="38" column="1" bodyfile="HKSupply/Models/User.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_user_1aa0733f43797c5f8b6bd91e23a2613b90" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref></type>
+        <definition>Role HKSupply.Models.User.UserRole</definition>
+        <argsstring></argsstring>
+        <name>UserRole</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/User.cs" line="41" column="1" bodyfile="HKSupply/Models/User.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_user_1ac2fb577af717342e21a9ac4d49283477" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Models.User.Enabled</definition>
+        <argsstring></argsstring>
+        <name>Enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/User.cs" line="46" column="1" bodyfile="HKSupply/Models/User.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_user_1ad73610de042dfdb05a48503dab3c43b4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime HKSupply.Models.User.LastLogin</definition>
+        <argsstring></argsstring>
+        <name>LastLogin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/User.cs" line="49" column="1" bodyfile="HKSupply/Models/User.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_user_1a8b7622cd2a564e0c11ae2ea3eb7fdadc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime HKSupply.Models.User.LastLogout</definition>
+        <argsstring></argsstring>
+        <name>LastLogout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/User.cs" line="52" column="1" bodyfile="HKSupply/Models/User.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_user_1a147c1d1d721f15b477caaf2b6ce75321" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.User.Remarks</definition>
+        <argsstring></argsstring>
+        <name>Remarks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/User.cs" line="55" column="1" bodyfile="HKSupply/Models/User.cs" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_user_1a24e2282b6384346f60d42ae98dfc849f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.User.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/User.cs" line="57" column="1" bodyfile="HKSupply/Models/User.cs" bodystart="57" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_user_1a79d46e0361441e50d049d6b729db4906" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.User.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/User.cs" line="67" column="1" bodyfile="HKSupply/Models/User.cs" bodystart="67" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/User.cs" line="14" column="1" bodyfile="HKSupply/Models/User.cs" bodystart="13" bodyend="71"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_user_1ac2fb577af717342e21a9ac4d49283477" prot="public" virt="non-virtual"><scope>HKSupply::Models::User</scope><name>Enabled</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_user_1a24e2282b6384346f60d42ae98dfc849f" prot="public" virt="non-virtual"><scope>HKSupply::Models::User</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_user_1a79d46e0361441e50d049d6b729db4906" prot="public" virt="non-virtual"><scope>HKSupply::Models::User</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_user_1a02e00589ab7bb27c4173f7855e0e8050" prot="public" virt="non-virtual"><scope>HKSupply::Models::User</scope><name>Id</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_user_1ad73610de042dfdb05a48503dab3c43b4" prot="public" virt="non-virtual"><scope>HKSupply::Models::User</scope><name>LastLogin</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_user_1a8b7622cd2a564e0c11ae2ea3eb7fdadc" prot="public" virt="non-virtual"><scope>HKSupply::Models::User</scope><name>LastLogout</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_user_1ac7284de399f20c1ed232caae7c20620e" prot="public" virt="non-virtual"><scope>HKSupply::Models::User</scope><name>Name</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_user_1a3f8a8a968733495182ed49af9170f613" prot="public" virt="non-virtual"><scope>HKSupply::Models::User</scope><name>Password</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_user_1a147c1d1d721f15b477caaf2b6ce75321" prot="public" virt="non-virtual"><scope>HKSupply::Models::User</scope><name>Remarks</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_user_1a7bde19a172a7c4942b1f9ad7307d6722" prot="public" virt="non-virtual"><scope>HKSupply::Models::User</scope><name>RoleId</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_user_1ae40491b88829110d5840f205f046bbc1" prot="public" virt="non-virtual"><scope>HKSupply::Models::User</scope><name>UserLogin</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_user_1aa0733f43797c5f8b6bd91e23a2613b90" prot="public" virt="non-virtual"><scope>HKSupply::Models::User</scope><name>UserRole</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

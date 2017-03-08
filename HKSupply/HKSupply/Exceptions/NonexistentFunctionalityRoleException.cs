@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HKSupply.Exceptions
 {
+    /// <summary>
+    /// Custom Exception: funcionalidad-role no existente en el sistema
+    /// </summary>
     [Serializable()]
     public class NonexistentFunctionalityRoleException : System.Exception
     {

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_a4272b6644c7197877c6435e7ba72dc0" kind="dir">
+    <compoundname>HKSupply/Styles</compoundname>
+    <innerfile refid="_app_styles_8cs">AppStyles.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Styles/"/>
+  </compounddef>
+</doxygen>

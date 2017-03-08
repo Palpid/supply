@@ -15,6 +15,9 @@ using System.Threading.Tasks;
 
 namespace HKSupply.Services.Implementations
 {
+    /// <summary>
+    /// Controlador Entity Framework para user
+    /// </summary>
     public class EFUser : IUser
     {
 
@@ -22,6 +25,10 @@ namespace HKSupply.Services.Implementations
 
         
         #region Public Methods
+        /// <summary>
+        /// Obtener la colección de usuarios del sistema
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<User> GetAllUsers()
         {
             try
@@ -38,6 +45,11 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Obtener un usuario dado su id
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
         public User GetUserById(int userId)
         {
             try
@@ -75,6 +87,12 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Obtener un usuario dado un login y password
+        /// </summary>
+        /// <param name="UserLogin"></param>
+        /// <param name="Password"></param>
+        /// <returns></returns>
         public User GetUserByLoginPassword(string UserLogin, string Password)
         {
             
@@ -124,6 +142,11 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Dar de alta un usuario en el sistema
+        /// </summary>
+        /// <param name="newUser"></param>
+        /// <returns></returns>
         public User NewUser(User newUser)
         {
             try
@@ -181,6 +204,12 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Deshabilitar un usuario
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="remarks"></param>
+        /// <returns></returns>
         public bool DisableUser(string userId, string remarks)
         {
             try
@@ -221,6 +250,12 @@ namespace HKSupply.Services.Implementations
         }
         #endregion
 
+        /// <summary>
+        /// Modidificar un password de un usuario
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public bool ChangePassword(int userId, string password)
         {
             try
@@ -250,7 +285,18 @@ namespace HKSupply.Services.Implementations
             }
         }
 
-
+        /// <summary>
+        /// Modificar una colección de usuarios.
+        /// </summary>
+        /// <param name="usersToUpdate"></param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Los campos que se modifican son los siguientes:
+        /// - Name
+        /// - RoleId
+        /// - Enabled
+        /// - Remarks
+        /// </remarks>
         public bool UpdateUsers(IEnumerable<User> usersToUpdate)
         {
             try

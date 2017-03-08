@@ -96,6 +96,12 @@
     <Compile Include="Forms\Master\ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Master\CustomerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\CustomerManagement.Designer.cs">
+      <DependentUpon>CustomerManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Master\FunctionalityManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,7 +130,21 @@
     <Compile Include="Helpers\CustomExtensions.cs" />
     <Compile Include="Helpers\Mocking\MockData.cs" />
     <Compile Include="Helpers\PasswordHelper.cs" />
-    <Compile Include="Models\Customers.cs" />
+    <Compile Include="Migrations\201703081042226_Customer.cs" />
+    <Compile Include="Migrations\201703081042226_Customer.Designer.cs">
+      <DependentUpon>201703081042226_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703081123445_ObjectVersion.cs" />
+    <Compile Include="Migrations\201703081123445_ObjectVersion.Designer.cs">
+      <DependentUpon>201703081123445_ObjectVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703081126231_ObjectVersion_2.cs" />
+    <Compile Include="Migrations\201703081126231_ObjectVersion_2.Designer.cs">
+      <DependentUpon>201703081126231_ObjectVersion_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\CustomerHistory.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Functionality.cs" />
     <Compile Include="Models\FunctionalityRole.cs" />
     <Compile Include="Models\Role.cs" />
@@ -136,10 +156,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HKSupplyRes.resx</DependentUpon>
     </Compile>
+    <Compile Include="Services\Implementations\EFCustomer.cs" />
     <Compile Include="Services\Implementations\EFFunctionality.cs" />
     <Compile Include="Services\Implementations\EFFunctionalityRole.cs" />
     <Compile Include="Services\Implementations\EFRole.cs" />
     <Compile Include="Services\Implementations\EFUser.cs" />
+    <Compile Include="Services\Interfaces\ICustomer.cs" />
     <Compile Include="Services\Interfaces\IFunctionality.cs" />
     <Compile Include="Services\Interfaces\IFunctionalityRole.cs" />
     <Compile Include="Services\Interfaces\IRole.cs" />
@@ -157,6 +179,9 @@
     <EmbeddedResource Include="Forms\Master\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\CustomerManagement.resx">
+      <DependentUpon>CustomerManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\FunctionalityManagement.resx">
       <DependentUpon>FunctionalityManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +193,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\UserManagement.resx">
       <DependentUpon>UserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703081042226_Customer.resx">
+      <DependentUpon>201703081042226_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703081123445_ObjectVersion.resx">
+      <DependentUpon>201703081123445_ObjectVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703081126231_ObjectVersion_2.resx">
+      <DependentUpon>201703081126231_ObjectVersion_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -216,6 +250,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HKSupply.Exceptions
 {
+    /// <summary>
+    /// Custom Exception para una contraseña incorrecta
+    /// </summary>
     [Serializable()]
     public class InvalidPasswordException : System.Exception
     {
