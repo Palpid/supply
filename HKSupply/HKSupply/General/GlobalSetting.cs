@@ -4,6 +4,7 @@ using HKSupply.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,7 +31,8 @@ namespace HKSupply.General
 
         static User _loggedUser;
         static IEnumerable<FunctionalityRole> _functionalitiesRoles;
-        
+
+        static ResourceManager _resManager = new ResourceManager(typeof(HKSupply.Resources.HKSupplyRes));
         #endregion
 
         #region Public Properties
@@ -90,6 +92,11 @@ namespace HKSupply.General
         {
             get { return _functionalitiesRoles; }
             set { _functionalitiesRoles = value; }
+        }
+
+        public static ResourceManager ResManager 
+        {
+            get { return _resManager; }
         }
         #endregion
         

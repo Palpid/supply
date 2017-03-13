@@ -16,7 +16,7 @@ using System.Windows.Forms;
 
 namespace HKSupply.Forms.Master
 {
-    public partial class UserManagement : Form
+    public partial class UserManagement : Form, IActionsStackView
     {
         #region Enums
         private enum eUserColumns
@@ -35,7 +35,6 @@ namespace HKSupply.Forms.Master
         #endregion
 
         #region Private members
-        ResourceManager resManager = new ResourceManager("HKSupply.Resources.HKSupplyRes", typeof(RoleManagement).Assembly);
 
         ToolStripMenuItem tsiChangePassword = new ToolStripMenuItem();
         private DataGridViewCellEventArgs mouseLocation;
@@ -55,19 +54,9 @@ namespace HKSupply.Forms.Master
         }
         #endregion
 
-        #region Form Events
-        private void UserManagement_Load(object sender, EventArgs e)
-        {
-            ConfigureActionsStackView();
-            LoadRoles();
-            SetupUsersGrid();
-            LoadAllUsers();
-            AddContextMenu();
-        }
+        #region Action toolbar
 
-        #region Action toolbar events
-
-        private void actionsStackView_EditButtonClick(object sender, EventArgs e)
+        public void actionsStackView_EditButtonClick(object sender, EventArgs e)
         {
             try
             {
@@ -76,12 +65,12 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
-        private void actionsStackView_NewButtonClick(object sender, EventArgs e)
+        public void actionsStackView_NewButtonClick(object sender, EventArgs e)
         {
             try
             {
@@ -90,12 +79,12 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
-        private void actionsStackView_SaveButtonClick(object sender, EventArgs e)
+        public void actionsStackView_SaveButtonClick(object sender, EventArgs e)
         {
             try
             {
@@ -103,7 +92,7 @@ namespace HKSupply.Forms.Master
                 //indicamos que ha dejado de editar el grid, por si modifica una celda y sin salir pulsa sobre guardar
                 grdUsers.EndEdit();
 
-                DialogResult result = MessageBox.Show(resManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
 
                 if (result != DialogResult.Yes)
                     return;
@@ -112,7 +101,7 @@ namespace HKSupply.Forms.Master
                 {
                     if (_modifiedUsers.Count() == 0)
                     {
-                        MessageBox.Show(resManager.GetString("NoPendingChanges"), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -139,7 +128,7 @@ namespace HKSupply.Forms.Master
 
                 if (res == true)
                 {
-                    SetupUsersGrid();
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
                     LoadAllUsers();
                     ConfigureRolesColorsStyles();
                     actionsStackView.RestoreInitState();
@@ -148,17 +137,41 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
-        private void actionsStackView_CancelButtonClick(object sender, EventArgs e)
+        
+        public void actionsStackView_CancelButtonClick(object sender, EventArgs e)
         {
             try
             {
                 LoadAllUsers();
-                SetupUsersGrid();
+                ConfigureRolesColorsStyles();
                 actionsStackView.RestoreInitState();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        public void ConfigureActionsStackView()
+        {
+            try
+            {
+                var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
+
+                //CustomControls.StackView actionsStackView = new CustomControls.StackView(actions.Read, actions.New, actions.Modify);
+                actionsStackView = new CustomControls.StackView(actions.Read, actions.New, actions.Modify);
+                actionsStackView.EditButtonClick += actionsStackView_EditButtonClick;
+                actionsStackView.NewButtonClick += actionsStackView_NewButtonClick;
+                actionsStackView.SaveButtonClick += actionsStackView_SaveButtonClick;
+                actionsStackView.CancelButtonClick += actionsStackView_CancelButtonClick;
+
+                Controls.Add(actionsStackView);
+
             }
             catch (Exception ex)
             {
@@ -166,8 +179,27 @@ namespace HKSupply.Forms.Master
             }
 
         }
-
         #endregion
+
+        #region Form Events
+        private void UserManagement_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                ConfigureActionsStackView();
+                LoadRoles();
+                SetupUsersGrid();
+                LoadAllUsers();
+                AddContextMenu();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
+
+        
 
         #region Grid events
 
@@ -191,7 +223,7 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -205,7 +237,7 @@ namespace HKSupply.Forms.Master
                     case (int)eUserColumns.Name:
                         if (string.IsNullOrEmpty(e.FormattedValue.ToString()))
                         {
-                            MessageBox.Show(resManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(GlobalSetting.ResManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             e.Cancel = true;
                         }
                         break;
@@ -213,21 +245,29 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
         void grdUsers_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (grdUsers.Columns[e.ColumnIndex].Index == (int)eUserColumns.Password)
+            try
             {
-                if (e.Value != null)
+                if (grdUsers.Columns[e.ColumnIndex].Index == (int)eUserColumns.Password)
                 {
-                    e.Value = "********";
-                    e.FormattingApplied = true;
+                    if (e.Value != null)
+                    {
+                        e.Value = "********";
+                        e.FormattingApplied = true;
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         void grdUsers_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
@@ -248,7 +288,7 @@ namespace HKSupply.Forms.Master
         private void grdUsers_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             //show this message when the user enter incorrect value in a cell
-            MessageBox.Show(resManager.GetString("CellDataError"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(GlobalSetting.ResManager.GetString("CellDataError"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void tsiChangePassword_Click(object sender, EventArgs args)
@@ -264,7 +304,7 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -273,29 +313,6 @@ namespace HKSupply.Forms.Master
         #endregion
 
         #region Private Methods
-
-        private void ConfigureActionsStackView()
-        {
-            try
-            {
-                var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
-
-                //CustomControls.StackView actionsStackView = new CustomControls.StackView(actions.Read, actions.New, actions.Modify);
-                actionsStackView = new CustomControls.StackView(actions.Read, actions.New, actions.Modify);
-                actionsStackView.EditButtonClick += actionsStackView_EditButtonClick;
-                actionsStackView.NewButtonClick += actionsStackView_NewButtonClick;
-                actionsStackView.SaveButtonClick += actionsStackView_SaveButtonClick;
-                actionsStackView.CancelButtonClick += actionsStackView_CancelButtonClick;
-
-                Controls.Add(actionsStackView);
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-        }
 
         private void SetupUsersGrid()
         {
@@ -349,6 +366,7 @@ namespace HKSupply.Forms.Master
                 columnRoleId.HeaderText = eUserColumns.RoleId.ToString();
                 columnRoleId.DataPropertyName = eUserColumns.RoleId.ToString();
                 columnRoleId.Width = 200;
+                columnRoleId.DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox;
 
                 columnRoleId.DataSource = _roleList;
                 columnRoleId.ValueMember = "RoleId";
@@ -513,7 +531,7 @@ namespace HKSupply.Forms.Master
 
         private void AddContextMenu()
         {
-            tsiChangePassword.Text = resManager.GetString("ResetPassword");
+            tsiChangePassword.Text = GlobalSetting.ResManager.GetString("ResetPassword");
             tsiChangePassword.Click += new EventHandler(tsiChangePassword_Click);
             ContextMenuStrip strip = new ContextMenuStrip();
             foreach (DataGridViewColumn column in grdUsers.Columns)
@@ -582,7 +600,7 @@ namespace HKSupply.Forms.Master
                 {
                     if (string.IsNullOrEmpty(user.Password) || string.IsNullOrEmpty(user.Name))
                     {
-                        MessageBox.Show(resManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(GlobalSetting.ResManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -602,7 +620,7 @@ namespace HKSupply.Forms.Master
                 {
                     if (string.IsNullOrEmpty(user.UserLogin) || string.IsNullOrEmpty(user.Password) || string.IsNullOrEmpty(user.Name))
                     {
-                        MessageBox.Show(resManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(GlobalSetting.ResManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
 
@@ -641,11 +659,6 @@ namespace HKSupply.Forms.Master
                 user.Password = PasswordHelper.GetHash(user.Password);
                 GlobalSetting.UserService.NewUser(user);
                return true;
-            }
-            catch (NewExistingUserException neuex)
-            {
-                MessageBox.Show(neuex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
             }
             catch (Exception ex)
             {

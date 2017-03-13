@@ -320,20 +320,35 @@ namespace HKSupply
 
                 //var res = customerService.NewCustomer(newCust);
 
-                Customer customer;
-                customer = customerService.GetCustomerById("Customer01");
-                customer.ContactPhone = "5555667788";
-                customer.ShippingAddress += " X";
-                customer.BillingAddress += " X";
+                //Customer customer;
+                //customer = customerService.GetCustomerById("Customer01");
+                //customer.ContactPhone = "5555667788";
+                //customer.ShippingAddress += " X";
+                //customer.BillingAddress += " X";
 
-                customerService.UpdateCustomer(customer);
+                //customerService.UpdateCustomer(customer);
 
-                customer = customerService.GetCustomerById("Customer01");
-                customer.ContactPhone = "999112233";
-                customer.ShippingAddress += " X";
-                customer.BillingAddress += " X";
+                //customer = customerService.GetCustomerById("Customer01");
+                //customer.ContactPhone = "999112233";
+                //customer.ShippingAddress += " X";
+                //customer.BillingAddress += " X";
 
-                customerService.UpdateCustomer(customer);
+                //customerService.UpdateCustomer(customer);
+
+                Customer newCust2 = new Customer();
+                newCust2.IdCustomer = "Customer02";
+                newCust2.CustName = "Customer 02";
+                newCust2.Active = true;
+                newCust2.VATNum = "0202020202";
+                newCust2.ShippingAddress = "Customer 02 Shiping Address";
+                newCust2.BillingAddress = "Customer 02 Billing Address";
+                newCust2.ContactName = "Customer 02 Contact Name";
+                newCust2.ContactPhone = "444332211";
+                newCust2.IdIncoterm = 3;
+                newCust2.IdPaymentTerms = 4;
+                newCust2.Currency = "US dolar";
+
+                var res = customerService.NewCustomer(newCust2);
 
             }
             catch (Exception ex)

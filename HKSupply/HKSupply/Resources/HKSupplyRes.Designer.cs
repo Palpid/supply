@@ -70,6 +70,15 @@ namespace HKSupply.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Database Server Connection Error.
+        /// </summary>
+        internal static string DBServerConnectionError {
+            get {
+                return ResourceManager.GetString("DBServerConnectionError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a This field is required.
         /// </summary>
         internal static string FieldRequired {
@@ -84,6 +93,24 @@ namespace HKSupply.Resources {
         internal static string FormNotFound {
             get {
                 return ResourceManager.GetString("FormNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Functionality Already Exist.
+        /// </summary>
+        internal static string FunctionalityAlreadyExist {
+            get {
+                return ResourceManager.GetString("FunctionalityAlreadyExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Functionality-Role Already Exist.
+        /// </summary>
+        internal static string FunctionalityRoleAlreadyExist {
+            get {
+                return ResourceManager.GetString("FunctionalityRoleAlreadyExist", resourceCulture);
             }
         }
         
@@ -151,6 +178,24 @@ namespace HKSupply.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a No Functionality Exist.
+        /// </summary>
+        internal static string NoFunctionalityExist {
+            get {
+                return ResourceManager.GetString("NoFunctionalityExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a No Functionality-Role Exist.
+        /// </summary>
+        internal static string NoFunctionalityRoleExist {
+            get {
+                return ResourceManager.GetString("NoFunctionalityRoleExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a No pending changes.
         /// </summary>
         internal static string NoPendingChanges {
@@ -160,7 +205,16 @@ namespace HKSupply.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a {1} can&apos;t be null.
+        ///   Busca una cadena traducida similar a No Role Exist.
+        /// </summary>
+        internal static string NoRoleExist {
+            get {
+                return ResourceManager.GetString("NoRoleExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a {0} can&apos;t be null.
         /// </summary>
         internal static string NullArgument {
             get {
@@ -259,6 +313,15 @@ namespace HKSupply.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Role Already Exist.
+        /// </summary>
+        internal static string RoleAlreadyExist {
+            get {
+                return ResourceManager.GetString("RoleAlreadyExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Save.
         /// </summary>
         internal static string Save {
@@ -273,6 +336,15 @@ namespace HKSupply.Resources {
         internal static string SaveChanges {
             get {
                 return ResourceManager.GetString("SaveChanges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Save Successfully.
+        /// </summary>
+        internal static string SaveSuccessfully {
+            get {
+                return ResourceManager.GetString("SaveSuccessfully", resourceCulture);
             }
         }
         

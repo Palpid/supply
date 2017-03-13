@@ -1,5 +1,6 @@
 ﻿using HKSupply.DB;
 using HKSupply.Exceptions;
+using HKSupply.General;
 using HKSupply.Helpers;
 using HKSupply.Models;
 using HKSupply.Services.Interfaces;
@@ -8,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Validation;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -65,7 +67,7 @@ namespace HKSupply.Services.Implementations
                         .FirstOrDefault();
 
                     if (user == null)
-                        throw new NonexistentUserException();
+                        throw new NonexistentUserException(GlobalSetting.ResManager.GetString("InvalidUser"));
 
                     return user;
                 }
@@ -79,6 +81,26 @@ namespace HKSupply.Services.Implementations
             {
                 _log.Info(neuex.Message, neuex);
                 throw neuex;
+            }
+            catch (SqlException sqlex)
+            {
+                for (int i = 0; i < sqlex.Errors.Count; i++)
+                {
+                    _log.Error("Index #" + i + "\n" +
+                        "Message: " + sqlex.Errors[i].Message + "\n" +
+                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                        "Source: " + sqlex.Errors[i].Source + "\n" +
+                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                    switch (sqlex.Errors[i].Number)
+                    {
+                        case -1: //connection broken
+                        case -2: //timeout
+                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                    }
+                }
+                throw sqlex;
             }
             catch (Exception ex)
             {
@@ -111,10 +133,10 @@ namespace HKSupply.Services.Implementations
                         .FirstOrDefault();
 
                     if (user == null)
-                        throw new NonexistentUserException();
+                        throw new NonexistentUserException(GlobalSetting.ResManager.GetString("InvalidUser"));
 
                     if (PasswordHelper.ValidatePass(Password, user.Password) == false)
-                        throw new InvalidPasswordException();
+                        throw new InvalidPasswordException(GlobalSetting.ResManager.GetString("InvalidPassword"));
 
                     return user;
                 }
@@ -134,6 +156,26 @@ namespace HKSupply.Services.Implementations
             {
                 _log.Info(ipex.Message, ipex);
                 throw ipex;
+            }
+            catch (SqlException sqlex)
+            {
+                for (int i = 0; i < sqlex.Errors.Count; i++)
+                {
+                    _log.Error("Index #" + i + "\n" +
+                        "Message: " + sqlex.Errors[i].Message + "\n" +
+                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                        "Source: " + sqlex.Errors[i].Source + "\n" +
+                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                    switch (sqlex.Errors[i].Number)
+                    {
+                        case -1: //connection broken
+                        case -2: //timeout
+                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                    }
+                }
+                throw sqlex;
             }
             catch (Exception ex)
             {
@@ -159,7 +201,7 @@ namespace HKSupply.Services.Implementations
                     var user = db.Users.FirstOrDefault(u => u.UserLogin.Equals(newUser.UserLogin));
 
                     if (user != null)
-                        throw new NewExistingUserException();
+                        throw new NewExistingUserException(GlobalSetting.ResManager.GetString("InvalidUser"));
 
                     db.Users.Add(newUser);
                     db.SaveChanges();
@@ -197,6 +239,26 @@ namespace HKSupply.Services.Implementations
                 }
                 throw e;
             }
+            catch (SqlException sqlex)
+            {
+                for (int i = 0; i < sqlex.Errors.Count; i++)
+                {
+                    _log.Error("Index #" + i + "\n" +
+                        "Message: " + sqlex.Errors[i].Message + "\n" +
+                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                        "Source: " + sqlex.Errors[i].Source + "\n" +
+                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                    switch (sqlex.Errors[i].Number)
+                    {
+                        case -1: //connection broken
+                        case -2: //timeout
+                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                    }
+                }
+                throw sqlex;
+            }
             catch (Exception ex)
             {
                 _log.Error(ex.Message, ex);
@@ -222,7 +284,7 @@ namespace HKSupply.Services.Implementations
                     var user = db.Users.FirstOrDefault(u => u.UserLogin.Equals(userId));
 
                     if (user== null)
-                        throw new NonexistentUserException();
+                        throw new NonexistentUserException(GlobalSetting.ResManager.GetString("InvalidUser"));
 
                     user.Enabled = false;
                     user.Remarks = remarks;
@@ -241,6 +303,26 @@ namespace HKSupply.Services.Implementations
             {
                 _log.Error(neuex.Message, neuex);
                 throw neuex;
+            }
+            catch (SqlException sqlex)
+            {
+                for (int i = 0; i < sqlex.Errors.Count; i++)
+                {
+                    _log.Error("Index #" + i + "\n" +
+                        "Message: " + sqlex.Errors[i].Message + "\n" +
+                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                        "Source: " + sqlex.Errors[i].Source + "\n" +
+                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                    switch (sqlex.Errors[i].Number)
+                    {
+                        case -1: //connection broken
+                        case -2: //timeout
+                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                    }
+                }
+                throw sqlex;
             }
             catch (Exception ex)
             {
@@ -271,7 +353,7 @@ namespace HKSupply.Services.Implementations
                         .FirstOrDefault();
 
                     if (user == null)
-                        throw new NonexistentUserException();
+                        throw new NonexistentUserException(GlobalSetting.ResManager.GetString("InvalidUser"));
 
                     user.Password = password;
                     db.SaveChanges();
@@ -282,6 +364,31 @@ namespace HKSupply.Services.Implementations
             {
                 _log.Error(anex.Message, anex);
                 throw anex;
+            }
+            catch (SqlException sqlex)
+            {
+                for (int i = 0; i < sqlex.Errors.Count; i++)
+                {
+                    _log.Error("Index #" + i + "\n" +
+                        "Message: " + sqlex.Errors[i].Message + "\n" +
+                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                        "Source: " + sqlex.Errors[i].Source + "\n" +
+                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                    switch (sqlex.Errors[i].Number)
+                    {
+                        case -1: //connection broken
+                        case -2: //timeout
+                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                    }
+                }
+                throw sqlex;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
             }
         }
 
@@ -311,7 +418,6 @@ namespace HKSupply.Services.Implementations
                         var userToUpdate = db.Users.FirstOrDefault(u => u.Id.Equals(user.Id));
                         if (userToUpdate != null)
                         {
-                            //userToUpdate.Password = role.Description;
                             userToUpdate.Name = user.Name;
                             userToUpdate.RoleId = user.RoleId;
                             userToUpdate.Enabled = user.Enabled;
@@ -328,6 +434,26 @@ namespace HKSupply.Services.Implementations
             {
                 _log.Error(nrex.Message, nrex);
                 throw nrex;
+            }
+            catch (SqlException sqlex)
+            {
+                for (int i = 0; i < sqlex.Errors.Count; i++)
+                {
+                    _log.Error("Index #" + i + "\n" +
+                        "Message: " + sqlex.Errors[i].Message + "\n" +
+                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                        "Source: " + sqlex.Errors[i].Source + "\n" +
+                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                    switch (sqlex.Errors[i].Number)
+                    {
+                        case -1: //connection broken
+                        case -2: //timeout
+                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                    }
+                }
+                throw sqlex;
             }
             catch (Exception ex)
             {

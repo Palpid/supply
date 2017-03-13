@@ -1,60 +1,6 @@
-﻿2017-03-08 12:46:18,641 ERROR [9] HKSupply.Services.Implementations.EFCustomer.UpdateCustomer - Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.
-System.Data.Entity.Infrastructure.DbUpdateConcurrencyException: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions. ---> System.Data.Entity.Core.OptimisticConcurrencyException: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.
-   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.ValidateRowsAffected(Int64 rowsAffected, UpdateCommand source)
-   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
-   en System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
-   en System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
-   en System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
-   en System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
-   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
-   en System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
-   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
-   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
-   en System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
-   en System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   en System.Data.Entity.Internal.InternalContext.SaveChanges()
-   --- Fin del seguimiento de la pila de la excepción interna ---
-   en System.Data.Entity.Internal.InternalContext.SaveChanges()
-   en System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
-   en System.Data.Entity.DbContext.SaveChanges()
-   en HKSupply.Services.Implementations.EFCustomer.UpdateCustomer(Customer updateCustomer, Boolean newVer) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFCustomer.cs:línea 90
-2017-03-08 12:54:33,855 ERROR [9] HKSupply.Services.Implementations.EFCustomer.UpdateCustomer - Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.
-System.Data.Entity.Infrastructure.DbUpdateConcurrencyException: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions. ---> System.Data.Entity.Core.OptimisticConcurrencyException: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.
-   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.ValidateRowsAffected(Int64 rowsAffected, UpdateCommand source)
-   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
-   en System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
-   en System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
-   en System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
-   en System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
-   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
-   en System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
-   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
-   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
-   en System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
-   en System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   en System.Data.Entity.Internal.InternalContext.SaveChanges()
-   --- Fin del seguimiento de la pila de la excepción interna ---
-   en System.Data.Entity.Internal.InternalContext.SaveChanges()
-   en System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
-   en System.Data.Entity.DbContext.SaveChanges()
-   en HKSupply.Services.Implementations.EFCustomer.UpdateCustomer(Customer updateCustomer, Boolean newVer) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFCustomer.cs:línea 91
-2017-03-08 14:46:25,327 ERROR [9] HKSupply.Services.Implementations.EFCustomer.UpdateCustomer - Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.
-System.Data.Entity.Infrastructure.DbUpdateConcurrencyException: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions. ---> System.Data.Entity.Core.OptimisticConcurrencyException: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.
-   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.ValidateRowsAffected(Int64 rowsAffected, UpdateCommand source)
-   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
-   en System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
-   en System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
-   en System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
-   en System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
-   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
-   en System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
-   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
-   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
-   en System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
-   en System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   en System.Data.Entity.Internal.InternalContext.SaveChanges()
-   --- Fin del seguimiento de la pila de la excepción interna ---
-   en System.Data.Entity.Internal.InternalContext.SaveChanges()
-   en System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
-   en System.Data.Entity.DbContext.SaveChanges()
-   en HKSupply.Services.Implementations.EFCustomer.UpdateCustomer(Customer updateCustomer, Boolean newVer) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFCustomer.cs:línea 97
+﻿2017-03-13 12:43:57,678 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid Password
+HKSupply.Exceptions.InvalidPasswordException: Invalid Password
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 139
+2017-03-13 13:26:59,707 ERROR [9] HKSupply.Services.Implementations.EFCustomer.NewCustomer - Customer already exist
+System.Exception: Customer already exist
+   en HKSupply.Services.Implementations.EFCustomer.NewCustomer(Customer newCustomer) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFCustomer.cs:línea 40

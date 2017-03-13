@@ -12,7 +12,7 @@ namespace HKSupply.Exceptions
     [Serializable()]
     public class InvalidPasswordException : System.Exception
     {
-                public InvalidPasswordException() : base() { }
+        public InvalidPasswordException() : base() { }
         public InvalidPasswordException(string message) : base(message) { }
         public InvalidPasswordException(string message, System.Exception inner) : base(message, inner) { }
 

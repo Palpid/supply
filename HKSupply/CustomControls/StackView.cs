@@ -365,12 +365,12 @@ namespace CustomControls
                     switch (item.Name)
                     {
                         case "editStackButton":
-                            this.OnEditButtonClick(EventArgs.Empty);
                             ConfigureByState(ToolbarStates.Edit);
+                            this.OnEditButtonClick(EventArgs.Empty);
                             break;
                         case "newStackButton":
-                            this.OnNewButtonClick(EventArgs.Empty); 
                             ConfigureByState(ToolbarStates.New);
+                            this.OnNewButtonClick(EventArgs.Empty); 
                             break;
                         case "saveStackButton":
                             this.Validate(); //Los toolstrip por defecto no lanzan los validate de los objetos cuando se pulsa en ellos

@@ -120,11 +120,20 @@
   <data name="CellDataError" xml:space="preserve">
     <value>This is not a valid value for this column</value>
   </data>
+  <data name="DBServerConnectionError" xml:space="preserve">
+    <value>Database Server Connection Error</value>
+  </data>
   <data name="FieldRequired" xml:space="preserve">
     <value>This field is required</value>
   </data>
   <data name="FormNotFound" xml:space="preserve">
     <value>Form not found</value>
+  </data>
+  <data name="FunctionalityAlreadyExist" xml:space="preserve">
+    <value>Functionality Already Exist</value>
+  </data>
+  <data name="FunctionalityRoleAlreadyExist" xml:space="preserve">
+    <value>Functionality-Role Already Exist</value>
   </data>
   <data name="InvalidLogin" xml:space="preserve">
     <value>Invalid login</value>
@@ -147,11 +156,20 @@
   <data name="NewPasswordMandatory" xml:space="preserve">
     <value>New Password Mandatory</value>
   </data>
+  <data name="NoFunctionalityExist" xml:space="preserve">
+    <value>No Functionality Exist</value>
+  </data>
+  <data name="NoFunctionalityRoleExist" xml:space="preserve">
+    <value>No Functionality-Role Exist</value>
+  </data>
   <data name="NoPendingChanges" xml:space="preserve">
     <value>No pending changes</value>
   </data>
+  <data name="NoRoleExist" xml:space="preserve">
+    <value>No Role Exist</value>
+  </data>
   <data name="NullArgument" xml:space="preserve">
-    <value>{1} can't be null</value>
+    <value>{0} can't be null</value>
   </data>
   <data name="OldPassword" xml:space="preserve">
     <value>Old Password</value>
@@ -183,11 +201,17 @@
   <data name="ResetPassword" xml:space="preserve">
     <value>Reset Password</value>
   </data>
+  <data name="RoleAlreadyExist" xml:space="preserve">
+    <value>Role Already Exist</value>
+  </data>
   <data name="Save" xml:space="preserve">
     <value>Save</value>
   </data>
   <data name="SaveChanges" xml:space="preserve">
     <value>Save changes?</value>
+  </data>
+  <data name="SaveSuccessfully" xml:space="preserve">
+    <value>Save Successfully</value>
   </data>
   <data name="SignIn" xml:space="preserve">
     <value>Sign in</value>

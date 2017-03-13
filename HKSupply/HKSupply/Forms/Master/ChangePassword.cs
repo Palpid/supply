@@ -32,7 +32,6 @@ namespace HKSupply.Forms.Master
         #endregion
 
         #region Private members
-        ResourceManager resManager = new ResourceManager("HKSupply.Resources.HKSupplyRes", typeof(Login).Assembly);
 
         User _userChangePassword;
         eMode _currentMode = eMode.User;
@@ -63,7 +62,7 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -75,7 +74,7 @@ namespace HKSupply.Forms.Master
                 {
                     if (Save())
                     {
-                        MessageBox.Show(resManager.GetString("PasswordChangedSuccessfully")); 
+                        MessageBox.Show(GlobalSetting.ResManager.GetString("PasswordChangedSuccessfully")); 
                         Close();
                     }
                 
@@ -83,7 +82,7 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -133,10 +132,10 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                lblOldPassword.Text = resManager.GetString("OldPassword");
-                lblNewPassword.Text = resManager.GetString("NewPassword");
-                lblRepeatPassword.Text = resManager.GetString("RepeatPassword");
-                btnSave.Text = resManager.GetString("Save");
+                lblOldPassword.Text = GlobalSetting.ResManager.GetString("OldPassword");
+                lblNewPassword.Text = GlobalSetting.ResManager.GetString("NewPassword");
+                lblRepeatPassword.Text = GlobalSetting.ResManager.GetString("RepeatPassword");
+                btnSave.Text = GlobalSetting.ResManager.GetString("Save");
 
                 txtOldPassword.Text = string.Empty;
                 txtNewPassword.Text = string.Empty;
@@ -172,13 +171,13 @@ namespace HKSupply.Forms.Master
                 {
                     if (string.IsNullOrEmpty(txtOldPassword.Text))
                     {
-                        ShowMessage(resManager.GetString("OldPasswordMandatory"));
+                        ShowMessage(GlobalSetting.ResManager.GetString("OldPasswordMandatory"));
                         return false;
                     }
 
                     if (PasswordHelper.ValidatePass(txtOldPassword.Text, _userChangePassword.Password) == false)
                     {
-                        ShowMessage(resManager.GetString("OldPasswordError"));
+                        ShowMessage(GlobalSetting.ResManager.GetString("OldPasswordError"));
                         return false;
                     }
 
@@ -187,19 +186,19 @@ namespace HKSupply.Forms.Master
 
                 if (string.IsNullOrEmpty(txtNewPassword.Text))
                 {
-                    ShowMessage(resManager.GetString("NewPasswordMandatory"));
+                    ShowMessage(GlobalSetting.ResManager.GetString("NewPasswordMandatory"));
                     return false;
                 }
 
                 if (string.IsNullOrEmpty(txtRepeatPassword.Text))
                 {
-                    ShowMessage(resManager.GetString("RepeatPasswordMandatory"));
+                    ShowMessage(GlobalSetting.ResManager.GetString("RepeatPasswordMandatory"));
                     return false;
                 }
 
                 if (txtNewPassword.Text != txtRepeatPassword.Text)
                 {
-                    ShowMessage(resManager.GetString("RepeatPasswordError"));
+                    ShowMessage(GlobalSetting.ResManager.GetString("RepeatPasswordError"));
                     return false;
                 }
 

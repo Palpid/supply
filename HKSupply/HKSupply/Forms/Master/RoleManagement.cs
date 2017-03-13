@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace HKSupply.Forms.Master
 {
-    public partial class RoleManagement : Form
+    public partial class RoleManagement : Form, IActionsStackView
     {
 
         #region Enums
@@ -29,7 +29,6 @@ namespace HKSupply.Forms.Master
         #endregion
 
         #region Private members
-        ResourceManager resManager = new ResourceManager("HKSupply.Resources.HKSupplyRes", typeof(RoleManagement).Assembly);
 
         CustomControls.StackView actionsStackView;
 
@@ -44,19 +43,9 @@ namespace HKSupply.Forms.Master
         }
         #endregion
 
+        #region Action toolbar
 
-        #region Form Events
-
-        private void RoleManagement_Load(object sender, EventArgs e)
-        {
-            ConfigureActionsStackView();
-            SetupRolesGrid();
-            LoadAllRoles();
-        }
-
-        #region Action toolbar events
-
-        private void actionsStackView_EditButtonClick(object sender, EventArgs e)
+        public void actionsStackView_EditButtonClick(object sender, EventArgs e)
         {
             try
             {
@@ -65,12 +54,12 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
-        private void actionsStackView_NewButtonClick(object sender, EventArgs e)
+        public void actionsStackView_NewButtonClick(object sender, EventArgs e)
         {
             try
             {
@@ -79,12 +68,12 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
-        private void actionsStackView_SaveButtonClick(object sender, EventArgs e)
+        public void actionsStackView_SaveButtonClick(object sender, EventArgs e)
         {
             try
             {
@@ -92,7 +81,7 @@ namespace HKSupply.Forms.Master
                 //indicamos que ha dejado de editar el grid, por si modifica una celda y sin salir pulsa sobre guardar
                 grdRoles.EndEdit();
 
-                DialogResult result = MessageBox.Show(resManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
 
                 if (result != DialogResult.Yes)
                     return;
@@ -101,7 +90,7 @@ namespace HKSupply.Forms.Master
                 {
                     if (_modifiedRoles.Count() == 0)
                     {
-                        MessageBox.Show(resManager.GetString("NoPendingChanges"), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -128,6 +117,7 @@ namespace HKSupply.Forms.Master
 
                 if (res == true)
                 {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
                     LoadAllRoles();
                     ConfigureRolesGridDefaultStyles();
                     actionsStackView.RestoreInitState();
@@ -136,11 +126,12 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
-        private void actionsStackView_CancelButtonClick(object sender, EventArgs e)
+        
+        public void actionsStackView_CancelButtonClick(object sender, EventArgs e)
         {
             try
             {
@@ -150,69 +141,12 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
-        #endregion
-
-        #region Grid events
-
-        private void grdRoles_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
-                {
-                    Role tmpRole = new Role();
-                    tmpRole.RoleId = grdRoles.Rows[e.RowIndex].Cells[(int)eRoleColumns.roleId].Value.ToString();
-                    tmpRole.Description = (grdRoles.Rows[e.RowIndex].Cells[(int)eRoleColumns.Description].Value ?? string.Empty).ToString();
-                    tmpRole.Enabled = (bool)grdRoles.Rows[e.RowIndex].Cells[(int)eRoleColumns.Enabled].Value;
-                    tmpRole.Remarks = (grdRoles.Rows[e.RowIndex].Cells[(int)eRoleColumns.Remarks].Value ?? String.Empty).ToString();
-                    AddModifiedRolesToList(tmpRole);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        private void grdRoles_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
-        {
-            try
-            {
-                if (e.ColumnIndex == (int)eRoleColumns.Description)
-                {
-                    if (string.IsNullOrEmpty(e.FormattedValue.ToString()))
-                    {
-                        MessageBox.Show(resManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        e.Cancel = true;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-        }
-
-        private void grdRoles_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-            //show this message when the user enter incorrect value in a cell
-            MessageBox.Show(resManager.GetString("CellDataError"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        #endregion
-
-        #endregion
-
-        #region Private Methods
-
-        private void ConfigureActionsStackView()
+        public void ConfigureActionsStackView()
         {
             try
             {
@@ -234,6 +168,82 @@ namespace HKSupply.Forms.Master
             }
 
         }
+
+        #endregion
+
+        #region Form Events
+
+        private void RoleManagement_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                ConfigureActionsStackView();
+                SetupRolesGrid();
+                LoadAllRoles();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
+
+        
+
+        #region Grid events
+
+        private void grdRoles_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
+                {
+                    Role tmpRole = new Role();
+                    tmpRole.RoleId = grdRoles.Rows[e.RowIndex].Cells[(int)eRoleColumns.roleId].Value.ToString();
+                    tmpRole.Description = (grdRoles.Rows[e.RowIndex].Cells[(int)eRoleColumns.Description].Value ?? string.Empty).ToString();
+                    tmpRole.Enabled = (bool)grdRoles.Rows[e.RowIndex].Cells[(int)eRoleColumns.Enabled].Value;
+                    tmpRole.Remarks = (grdRoles.Rows[e.RowIndex].Cells[(int)eRoleColumns.Remarks].Value ?? String.Empty).ToString();
+                    AddModifiedRolesToList(tmpRole);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void grdRoles_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            try
+            {
+                if (e.ColumnIndex == (int)eRoleColumns.Description)
+                {
+                    if (string.IsNullOrEmpty(e.FormattedValue.ToString()))
+                    {
+                        MessageBox.Show(GlobalSetting.ResManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        e.Cancel = true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void grdRoles_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            //show this message when the user enter incorrect value in a cell
+            MessageBox.Show(GlobalSetting.ResManager.GetString("CellDataError"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        #endregion
+
+        #endregion
+
+        #region Private Methods
 
         private void SetupRolesGrid()
         {
@@ -373,7 +383,7 @@ namespace HKSupply.Forms.Master
                 {
                     if (string.IsNullOrEmpty(rol.Description))
                     {
-                        MessageBox.Show(resManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(GlobalSetting.ResManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -393,7 +403,7 @@ namespace HKSupply.Forms.Master
                 {
                     if (string.IsNullOrEmpty(rol.Description) || string.IsNullOrEmpty(rol.RoleId))
                     {
-                        MessageBox.Show(resManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(GlobalSetting.ResManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -423,11 +433,6 @@ namespace HKSupply.Forms.Master
             {
                 GlobalSetting.RoleService.NewRole(_createdRoles.FirstOrDefault());
                 return true;
-            }
-            catch (NewExistingRoleException nerex)
-            {
-                MessageBox.Show(nerex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
             }
             catch (Exception ex)
             {

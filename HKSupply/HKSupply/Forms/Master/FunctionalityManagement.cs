@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace HKSupply.Forms.Master
 {
-    public partial class FunctionalityManagement : Form
+    public partial class FunctionalityManagement : Form, IActionsStackView
     {
         #region Enums
         private enum eFunctionalityColumns
@@ -28,7 +28,6 @@ namespace HKSupply.Forms.Master
         #endregion
 
         #region Private members
-        ResourceManager resManager = new ResourceManager("HKSupply.Resources.HKSupplyRes", typeof(RoleManagement).Assembly);
 
         CustomControls.StackView actionsStackView;
 
@@ -50,17 +49,9 @@ namespace HKSupply.Forms.Master
         }
         #endregion
 
-        #region Form Events
-        private void FunctionalityManagement_Load(object sender, EventArgs e)
-        {
-            ConfigureActionsStackView();
-            SetupFunctionalitiesGrid();
-            LoadAllFunctionalities();
-        }
+        #region Action toolbar
 
-        #region Action toolbar events
-
-        private void actionsStackView_EditButtonClick(object sender, EventArgs e)
+        public void actionsStackView_EditButtonClick(object sender, EventArgs e)
         {
             try
             {
@@ -69,12 +60,12 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
-        private void actionsStackView_NewButtonClick(object sender, EventArgs e)
+        public void actionsStackView_NewButtonClick(object sender, EventArgs e)
         {
             try
             {
@@ -83,12 +74,12 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
-        private void actionsStackView_SaveButtonClick(object sender, EventArgs e)
+        public void actionsStackView_SaveButtonClick(object sender, EventArgs e)
         {
             try
             {
@@ -96,7 +87,7 @@ namespace HKSupply.Forms.Master
                 //indicamos que ha dejado de editar el grid, por si modifica una celda y sin salir pulsa sobre guardar
                 grdFunctionalities.EndEdit();
 
-                DialogResult result = MessageBox.Show(resManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
 
                 if (result != DialogResult.Yes)
                     return;
@@ -105,7 +96,7 @@ namespace HKSupply.Forms.Master
                 {
                     if (_modifiedFunctionalities.Count() == 0)
                     {
-                        MessageBox.Show(resManager.GetString("NoPendingChanges"), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -132,6 +123,7 @@ namespace HKSupply.Forms.Master
 
                 if (res == true)
                 {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
                     LoadAllFunctionalities();
                     ConfigureRolesGridStyles();
                     actionsStackView.RestoreInitState();
@@ -140,11 +132,12 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
-        private void actionsStackView_CancelButtonClick(object sender, EventArgs e)
+        
+        public void actionsStackView_CancelButtonClick(object sender, EventArgs e)
         {
             try
             {
@@ -154,72 +147,12 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
-        #endregion
-
-        #region Grid events
-
-        private void grdFunctionalities_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
-                {
-                    Functionality tmpFunctionality = new Functionality();
-                    tmpFunctionality.FunctionalityId = (int)grdFunctionalities.Rows[e.RowIndex].Cells[(int)eFunctionalityColumns.FunctionalityId].Value;
-                    tmpFunctionality.FunctionalityName = (grdFunctionalities.Rows[e.RowIndex].Cells[(int)eFunctionalityColumns.FunctionalityName].Value ?? string.Empty).ToString();
-                    tmpFunctionality.Category = grdFunctionalities.Rows[e.RowIndex].Cells[(int)eFunctionalityColumns.Category].Value.ToString();
-                    tmpFunctionality.FormName = (grdFunctionalities.Rows[e.RowIndex].Cells[(int)eFunctionalityColumns.FormName].Value ?? String.Empty).ToString();
-                    AddModifiedFunctionalityToList(tmpFunctionality);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        private void grdFunctionalities_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
-        {
-            try
-            {
-                switch (e.ColumnIndex)
-                {
-                    case (int)eFunctionalityColumns.FunctionalityName:
-                    case (int)eFunctionalityColumns.FormName:
-                        if (string.IsNullOrEmpty(e.FormattedValue.ToString()))
-                        {
-                            MessageBox.Show(resManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            e.Cancel = true;
-                        }
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-        }
-
-        private void grdRoles_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-            //show this message when the user enter incorrect value in a cell
-            MessageBox.Show(resManager.GetString("CellDataError"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        #endregion
-
-        #endregion
-
-        #region Private Methods
-
-        private void ConfigureActionsStackView()
+        public void ConfigureActionsStackView()
         {
             try
             {
@@ -241,6 +174,76 @@ namespace HKSupply.Forms.Master
             }
 
         }
+
+        #endregion
+
+        #region Form Events
+        private void FunctionalityManagement_Load(object sender, EventArgs e)
+        {
+            ConfigureActionsStackView();
+            SetupFunctionalitiesGrid();
+            LoadAllFunctionalities();
+        }
+
+        
+
+        #region Grid events
+
+        private void grdFunctionalities_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
+                {
+                    Functionality tmpFunctionality = new Functionality();
+                    tmpFunctionality.FunctionalityId = (int)grdFunctionalities.Rows[e.RowIndex].Cells[(int)eFunctionalityColumns.FunctionalityId].Value;
+                    tmpFunctionality.FunctionalityName = (grdFunctionalities.Rows[e.RowIndex].Cells[(int)eFunctionalityColumns.FunctionalityName].Value ?? string.Empty).ToString();
+                    tmpFunctionality.Category = grdFunctionalities.Rows[e.RowIndex].Cells[(int)eFunctionalityColumns.Category].Value.ToString();
+                    tmpFunctionality.FormName = (grdFunctionalities.Rows[e.RowIndex].Cells[(int)eFunctionalityColumns.FormName].Value ?? String.Empty).ToString();
+                    AddModifiedFunctionalityToList(tmpFunctionality);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void grdFunctionalities_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            try
+            {
+                switch (e.ColumnIndex)
+                {
+                    case (int)eFunctionalityColumns.FunctionalityName:
+                    case (int)eFunctionalityColumns.FormName:
+                        if (string.IsNullOrEmpty(e.FormattedValue.ToString()))
+                        {
+                            MessageBox.Show(GlobalSetting.ResManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            e.Cancel = true;
+                        }
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void grdRoles_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            //show this message when the user enter incorrect value in a cell
+            MessageBox.Show(GlobalSetting.ResManager.GetString("CellDataError"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        #endregion
+
+        #endregion
+
+        #region Private Methods
 
         private void SetupFunctionalitiesGrid()
         {
@@ -273,6 +276,7 @@ namespace HKSupply.Forms.Master
                 columnCategory.HeaderText = eFunctionalityColumns.Category.ToString();
                 columnCategory.Width = 200;
                 columnCategory.DataPropertyName = eFunctionalityColumns.Category.ToString();
+                columnCategory.DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox;
 
                 columnCategory.DataSource = _categoryList;
                 columnCategory.ValueMember = "Value";
@@ -420,7 +424,7 @@ namespace HKSupply.Forms.Master
                 {
                     if (string.IsNullOrEmpty(func.FunctionalityName) || string.IsNullOrEmpty(func.FormName))
                     {
-                        MessageBox.Show(resManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(GlobalSetting.ResManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -440,7 +444,7 @@ namespace HKSupply.Forms.Master
                 {
                     if (string.IsNullOrEmpty(func.FunctionalityName) || string.IsNullOrEmpty(func.FormName))
                     {
-                        MessageBox.Show(resManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(GlobalSetting.ResManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -472,11 +476,6 @@ namespace HKSupply.Forms.Master
             {
                 GlobalSetting.FunctionalityService.NewFunctionality(_createdFunctionalities.FirstOrDefault());
                 return true;
-            }
-            catch (NewExistingFunctionalityException nefex)
-            {
-                MessageBox.Show(nefex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
             }
             catch (Exception ex)
             {

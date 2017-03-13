@@ -63,10 +63,10 @@ namespace HKSupply.Models
             Customer customer = (Customer)obj;
 
             bool res = (
-                idVer == customer.idVer &&
-                idSubVer == customer.idSubVer &&
+                idVer == customer.IdVer &&
+                idSubVer == customer.IdSubVer &&
                 Timestamp == customer.Timestamp &&
-                idCustomer == customer.idCustomer &&
+                idCustomer == customer.IdCustomer &&
                 CustName == customer.CustName &&
                 Active == customer.Active &&
                 VATNum == customer.VATNum &&
@@ -74,8 +74,8 @@ namespace HKSupply.Models
                 BillingAddress == customer.BillingAddress &&
                 ContactName == customer.ContactName &&
                 ContactPhone == customer.ContactPhone &&
-                idIncoterm == customer.idIncoterm &&
-                idPaymentTerms == customer.idPaymentTerms &&
+                idIncoterm == customer.IdIncoterm &&
+                idPaymentTerms == customer.IdPaymentTerms &&
                 Currency == customer.Currency);
 
             return res;
@@ -108,10 +108,10 @@ namespace HKSupply.Models
         {
             CustomerHistory ch = new CustomerHistory();
 
-            ch.idVer = c.idVer;
-            ch.idSubVer = c.idSubVer;
+            ch.idVer = c.IdVer;
+            ch.idSubVer = c.IdSubVer;
             ch.Timestamp = c.Timestamp;
-            ch.idCustomer = c.idCustomer;
+            ch.idCustomer = c.IdCustomer;
             ch.CustName = c.CustName;
             ch.Active = c.Active;
             ch.VATNum = c.VATNum;
@@ -119,8 +119,8 @@ namespace HKSupply.Models
             ch.BillingAddress = c.BillingAddress;
             ch.ContactName = c.ContactName;
             ch.ContactPhone = c.ContactPhone;
-            ch.idIncoterm = c.idIncoterm;
-            ch.idPaymentTerms = c.idPaymentTerms;
+            ch.idIncoterm = c.IdIncoterm;
+            ch.idPaymentTerms = c.IdPaymentTerms;
             ch.Currency = c.Currency;
 
             return ch;

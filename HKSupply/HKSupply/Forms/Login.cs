@@ -20,10 +20,6 @@ namespace HKSupply.Forms
         private const int MSG_TIME = 2000;
         #endregion
 
-        #region Private members
-       ResourceManager resManager = new ResourceManager("HKSupply.Resources.HKSupplyRes", typeof(Login).Assembly);
-        #endregion
-
         #region  Constructor
         public Login()
         {
@@ -39,15 +35,14 @@ namespace HKSupply.Forms
             {
                 InitializeFormStyles();
                 InitializeTexts();
+                txtPassword.KeyDown +=txtPassword_KeyDown;
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
-
-
 
         private void InitializeFormStyles()
         {
@@ -78,9 +73,9 @@ namespace HKSupply.Forms
         {
             try
             {
-                lblLogin.Text = resManager.GetString("Login");
-                lblPassword.Text = resManager.GetString("Password");
-                btnSignIn.Text = resManager.GetString("SignIn");
+                lblLogin.Text = GlobalSetting.ResManager.GetString("Login");
+                lblPassword.Text = GlobalSetting.ResManager.GetString("Password");
+                btnSignIn.Text = GlobalSetting.ResManager.GetString("SignIn");
 
                 txtLogin.Text = string.Empty;
                 txtPassword.Text = string.Empty;
@@ -113,13 +108,13 @@ namespace HKSupply.Forms
             {
                 if (string.IsNullOrEmpty(txtLogin.Text))
                 {
-                    ShowMessage(resManager.GetString("LoginMandatory"));
+                    ShowMessage(GlobalSetting.ResManager.GetString("LoginMandatory"));
                     return false;
                 }
 
                 if (string.IsNullOrEmpty(txtPassword.Text))
                 {
-                    ShowMessage(resManager.GetString("PasswordMandatory"));
+                    ShowMessage(GlobalSetting.ResManager.GetString("PasswordMandatory"));
                     return false;
                 }
 
@@ -134,6 +129,14 @@ namespace HKSupply.Forms
         #endregion
 
         #region Form events
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSignIn_Click(this, new EventArgs());
+            }
+        }
+
         private void btnSignIn_Click(object sender, EventArgs e)
         {
             try
@@ -147,26 +150,11 @@ namespace HKSupply.Forms
                     
                     DialogResult = DialogResult.OK;
                     
-                    //Main frm = new Main();
-                    //frm.Show();
-                    
                 }
-            }
-            catch (ArgumentNullException anex)
-            {
-                throw anex;
-            }
-            catch (NonexistentUserException)
-            {
-                ShowMessage(resManager.GetString("InvalidUser"));
-            }
-            catch (InvalidPasswordException)
-            {
-                ShowMessage(resManager.GetString("InvalidPassword"));
             }
             catch (Exception ex)
             {
-                throw ex;
+                ShowMessage(ex.Message);
             }
         }
         #endregion

@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DB\HKSupplyContext.cs" />
+    <Compile Include="Exceptions\DBServerConnectionException.cs" />
     <Compile Include="Exceptions\InvalidPasswordException.cs" />
     <Compile Include="Exceptions\NewExistingFunctionalityException.cs" />
     <Compile Include="Exceptions\NewExistingFunctionalityRoleException.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\IActionsStackView.cs" />
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>

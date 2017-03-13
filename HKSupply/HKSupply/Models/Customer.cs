@@ -13,16 +13,16 @@ namespace HKSupply.Models
     public class Customer
     {
         [Column("ID_VER", Order = 1), Key]
-        public int idVer { get; set; }
+        public int IdVer { get; set; }
 
         [Column("ID_SUBVER", Order = 2), Key]
-        public int idSubVer { get; set; }
+        public int IdSubVer { get; set; }
 
         [Column("TIMESTAMP")]
         public DateTime Timestamp { get; set; }
 
         [Column("ID_CUSTOMER", Order = 0), Key]
-        public string idCustomer { get; set; }
+        public string IdCustomer { get; set; }
 
         [Column("CUST_NAME")]
         public string CustName { get; set; }
@@ -46,10 +46,10 @@ namespace HKSupply.Models
         public string ContactPhone { get; set; }
 
         [Column("ID_INCOTERM")]
-        public int idIncoterm { get; set; }
+        public int IdIncoterm { get; set; }
 
         [Column("IDPAYMENTTERMS")]
-        public int idPaymentTerms { get; set; }
+        public int IdPaymentTerms { get; set; }
 
         [Column("CURRENCY")]
         public string Currency { get; set; }
@@ -63,10 +63,10 @@ namespace HKSupply.Models
             Customer customer = (Customer)obj;
 
             bool res = (
-                idVer == customer.idVer &&
-                idSubVer == customer.idVer &&
+                IdVer == customer.IdVer &&
+                IdSubVer == customer.IdSubVer &&
                 Timestamp == customer.Timestamp &&
-                idCustomer == customer.idCustomer &&
+                IdCustomer == customer.IdCustomer &&
                 CustName == customer.CustName &&
                 Active == customer.Active &&
                 VATNum == customer.VATNum &&
@@ -74,8 +74,8 @@ namespace HKSupply.Models
                 BillingAddress == customer.BillingAddress &&
                 ContactName == customer.ContactName &&
                 ContactPhone == customer.ContactPhone &&
-                idIncoterm == customer.idIncoterm &&
-                idPaymentTerms == customer.idPaymentTerms &&
+                IdIncoterm == customer.IdIncoterm &&
+                IdPaymentTerms == customer.IdPaymentTerms &&
                 Currency == customer.Currency);
 
             return res;
@@ -85,10 +85,10 @@ namespace HKSupply.Models
         public override int GetHashCode()
         {
             int hashCode =
-                idVer.GetHashCode() +
-                idSubVer.GetHashCode() +
+                IdVer.GetHashCode() +
+                IdSubVer.GetHashCode() +
                 Timestamp.GetHashCode() +
-                idCustomer.GetHashCode() +
+                IdCustomer.GetHashCode() +
                 CustName.GetHashCode() +
                 Active.GetHashCode() +
                 VATNum.GetHashCode() +
@@ -96,8 +96,8 @@ namespace HKSupply.Models
                 BillingAddress.GetHashCode() +
                 ContactName.GetHashCode() +
                 ContactPhone.GetHashCode() +
-                idIncoterm.GetHashCode() +
-                idPaymentTerms.GetHashCode() +
+                IdIncoterm.GetHashCode() +
+                IdPaymentTerms.GetHashCode() +
                 Currency.GetHashCode();
 
             return hashCode;

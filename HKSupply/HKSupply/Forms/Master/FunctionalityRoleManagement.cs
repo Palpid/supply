@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace HKSupply.Forms.Master
 {
-    public partial class FunctionalityRoleManagement : Form
+    public partial class FunctionalityRoleManagement : Form, IActionsStackView
     {
         #region Enums
         private enum eFunctionalityRoleColumns
@@ -31,7 +31,6 @@ namespace HKSupply.Forms.Master
         #endregion
 
         #region Private members
-        ResourceManager resManager = new ResourceManager("HKSupply.Resources.HKSupplyRes", typeof(RoleManagement).Assembly);
 
         CustomControls.StackView actionsStackView;
 
@@ -49,19 +48,9 @@ namespace HKSupply.Forms.Master
         }
         #endregion
 
-        #region Form Events
-        private void FunctionalityRoleManagement_Load(object sender, EventArgs e)
-        {
-            ConfigureActionsStackView();
-            LoadRoles();
-            LoadFunctionalities();
-            SetupFunctionalitiesRolesGrid();
-            LoadAllFunctionalitiesRoles();
-        }
+        #region Action toolbar
 
-        #region Action toolbar events
-
-        private void actionsStackView_EditButtonClick(object sender, EventArgs e)
+        public void actionsStackView_EditButtonClick(object sender, EventArgs e)
         {
             try
             {
@@ -70,12 +59,12 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
-        private void actionsStackView_NewButtonClick(object sender, EventArgs e)
+        public void actionsStackView_NewButtonClick(object sender, EventArgs e)
         {
             try
             {
@@ -84,12 +73,12 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
-        private void actionsStackView_SaveButtonClick(object sender, EventArgs e)
+        public void actionsStackView_SaveButtonClick(object sender, EventArgs e)
         {
             try
             {
@@ -97,7 +86,7 @@ namespace HKSupply.Forms.Master
                 //indicamos que ha dejado de editar el grid, por si modifica una celda y sin salir pulsa sobre guardar
                 grdFuncRoles.EndEdit();
 
-                DialogResult result = MessageBox.Show(resManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
 
                 if (result != DialogResult.Yes)
                     return;
@@ -106,7 +95,7 @@ namespace HKSupply.Forms.Master
                 {
                     if (_modifiedFunctionalityRole.Count() == 0)
                     {
-                        MessageBox.Show(resManager.GetString("NoPendingChanges"), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -133,6 +122,7 @@ namespace HKSupply.Forms.Master
 
                 if (res == true)
                 {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
                     LoadAllFunctionalitiesRoles();
                     ConfigureRolesColorsStyles();
                     actionsStackView.RestoreInitState();
@@ -141,17 +131,41 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
-        private void actionsStackView_CancelButtonClick(object sender, EventArgs e)
+        
+        public void actionsStackView_CancelButtonClick(object sender, EventArgs e)
         {
             try
             {
                 LoadAllFunctionalitiesRoles();
-                SetupFunctionalitiesRolesGrid();
+                //SetupFunctionalitiesRolesGrid();
+                ConfigureRolesColorsStyles();
                 actionsStackView.RestoreInitState();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        public void ConfigureActionsStackView()
+        {
+            try
+            {
+                var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
+
+                actionsStackView = new CustomControls.StackView(actions.Read, actions.New, actions.Modify);
+                actionsStackView.EditButtonClick += actionsStackView_EditButtonClick;
+                actionsStackView.NewButtonClick += actionsStackView_NewButtonClick;
+                actionsStackView.SaveButtonClick += actionsStackView_SaveButtonClick;
+                actionsStackView.CancelButtonClick += actionsStackView_CancelButtonClick;
+
+                Controls.Add(actionsStackView);
+
             }
             catch (Exception ex)
             {
@@ -161,6 +175,18 @@ namespace HKSupply.Forms.Master
         }
 
         #endregion
+
+        #region Form Events
+        private void FunctionalityRoleManagement_Load(object sender, EventArgs e)
+        {
+            ConfigureActionsStackView();
+            LoadRoles();
+            LoadFunctionalities();
+            SetupFunctionalitiesRolesGrid();
+            LoadAllFunctionalitiesRoles();
+        }
+
+        
 
         #region Grid events
 
@@ -183,7 +209,7 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -195,7 +221,7 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -203,7 +229,7 @@ namespace HKSupply.Forms.Master
         private void grdFuncRoles_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             //show this message when the user enter incorrect value in a cell
-            MessageBox.Show(resManager.GetString("CellDataError"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(GlobalSetting.ResManager.GetString("CellDataError"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         #endregion
@@ -211,28 +237,6 @@ namespace HKSupply.Forms.Master
         #endregion
 
         #region Private Methods
-
-        private void ConfigureActionsStackView()
-        {
-            try
-            {
-                var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
-
-                actionsStackView = new CustomControls.StackView(actions.Read, actions.New, actions.Modify);
-                actionsStackView.EditButtonClick += actionsStackView_EditButtonClick;
-                actionsStackView.NewButtonClick += actionsStackView_NewButtonClick;
-                actionsStackView.SaveButtonClick += actionsStackView_SaveButtonClick;
-                actionsStackView.CancelButtonClick += actionsStackView_CancelButtonClick;
-
-                Controls.Add(actionsStackView);
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-        }
 
         private void SetupFunctionalitiesRolesGrid()
         {
@@ -250,6 +254,7 @@ namespace HKSupply.Forms.Master
                 columnFunctionalityId.HeaderText = eFunctionalityRoleColumns.FunctionalityId.ToString();
                 columnFunctionalityId.Width = 200;
                 columnFunctionalityId.DataPropertyName = eFunctionalityRoleColumns.FunctionalityId.ToString();
+                columnFunctionalityId.DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox;
 
                 columnFunctionalityId.DataSource = _functionalityList;
                 columnFunctionalityId.ValueMember = "FunctionalityId";
@@ -262,6 +267,7 @@ namespace HKSupply.Forms.Master
                 columnRoleId.HeaderText = eFunctionalityRoleColumns.RoleId.ToString();
                 columnRoleId.DataPropertyName = eFunctionalityRoleColumns.RoleId.ToString();
                 columnRoleId.Width = 200;
+                columnRoleId.DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox;
 
                 columnRoleId.DataSource = _roleList;
                 columnRoleId.ValueMember = "RoleId";
@@ -513,11 +519,6 @@ namespace HKSupply.Forms.Master
             {
                 GlobalSetting.FunctionalityRoleService.NewFunctionalityRole(_createdFunctionalityRole.FirstOrDefault());
                 return true;
-            }
-            catch (NewExistingFunctionalityRoleException nefrex)
-            {
-                MessageBox.Show(nefrex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
             }
             catch (Exception ex)
             {

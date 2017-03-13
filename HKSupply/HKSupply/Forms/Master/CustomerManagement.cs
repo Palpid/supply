@@ -1,5 +1,6 @@
 ﻿using HKSupply.Exceptions;
 using HKSupply.General;
+using HKSupply.Helpers;
 using HKSupply.Models;
 using HKSupply.Styles;
 using System;
@@ -15,141 +16,161 @@ using System.Windows.Forms;
 
 namespace HKSupply.Forms.Master
 {
-    public partial class CustomerManagement : Form
+    public partial class CustomerManagement : Form, IActionsStackView
     {
+        #region enums
+        private enum eCustomerColumns
+        {
+            IdVer,
+            idSubVer,
+            Timestamp,
+            IdCustomer,
+            CustName,
+            Active,
+            VATNum,
+            ShippingAddress,
+            BillingAddress,
+            ContactName,
+            ContactPhone,
+            IdIncoterm,
+            IdPaymentTerms,
+            Currency,
+        }
+        #endregion
+
         #region Private members
         CustomControls.StackView actionsStackView;
 
-        Customer _customer;
+        Customer _customerUpdate;
+        Customer _customerOriginal;
+
+        List<Customer> _customersList;
+
+        string[] _nonEditingFields = { "txtIdCustomer", "txtIdVersion", "txtIdSubversion", "txtTimestamp" };
+        string[] _nonCreatingFields = { "txtIdVersion", "txtIdSubversion", "txtTimestamp" };
+        int[] _nonCreatingFieldsRows = { 1, 2, 3 };
+
         #endregion
 
         #region Constructor
         public CustomerManagement()
         {
             InitializeComponent();
+            ResetCustomerUpdate();
         }
         #endregion
 
-        #region Form Events
-
-        private void CustomerManagement_Load(object sender, System.EventArgs e)
-        {
-            ConfigureActionsStackView();
-        }
-
-        #region Action toolbar events
-
-        private void actionsStackView_EditButtonClick(object sender, EventArgs e)
+        #region Action toolbar
+        public void actionsStackView_EditButtonClick(object sender, EventArgs e)
         {
             try
             {
-                MessageBox.Show("Edit Button");
-                //ConfigureActionsStackViewEditing();
+                if (_customerOriginal == null)
+                {
+                    MessageBox.Show("No customer selected");
+                    actionsStackView.RestoreInitState();
+                }
+                else
+                {
+                    ConfigureActionsStackViewEditing();
+                }
+                
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
-        private void actionsStackView_NewButtonClick(object sender, EventArgs e)
+        public void actionsStackView_NewButtonClick(object sender, EventArgs e)
         {
             try
             {
-                MessageBox.Show("New Button");
-                //ConfigureActionsStackViewCreating();
+                //MessageBox.Show("New Button");
+                ConfigureActionsStackViewCreating();
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
-        private void actionsStackView_SaveButtonClick(object sender, EventArgs e)
+        public void actionsStackView_SaveButtonClick(object sender, EventArgs e)
         {
+            bool res = false;
+            //El toolstrip no lanza el validate, lo lanzamos a mano por si acaso hay algún elemento que lo tiene pendiente
+            Validate();
+
+            Cursor = Cursors.WaitCursor;
             try
             {
-                //bool res = false;
-                ////indicamos que ha dejado de editar el grid, por si modifica una celda y sin salir pulsa sobre guardar
-                //grdRoles.EndEdit();
+                if (_customerUpdate.Equals(_customerOriginal))
+                {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
+                    return;
+                }
 
-                //DialogResult result = MessageBox.Show(resManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
+                if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
+                {
+                    if (IsValidModifiedCustomer())
+                    {
+                        res = UpdateCustomer();
+                    }
+                }
+                else if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.New)
+                {
+                    if (IsValidCreatedCustomer())
+                    {
+                        res = CreateCustomer();
+                    }
+                }
 
-                //if (result != DialogResult.Yes)
-                //    return;
-
-                //if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
-                //{
-                //    if (_modifiedRoles.Count() == 0)
-                //    {
-                //        MessageBox.Show(resManager.GetString("NoPendingChanges"), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //    }
-                //    else
-                //    {
-                //        if (IsValidModifiedRoles())
-                //        {
-                //            if (UpdateRoles())
-                //            {
-                //                res = true;
-                //            }
-                //        }
-
-                //    }
-                //}
-                //else if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.New)
-                //{
-                //    if (IsValidCreatedRoles())
-                //    {
-                //        if (CreateRol())
-                //        {
-                //            res = true;
-                //        }
-                //    }
-                //}
-
-                //if (res == true)
-                //{
-                //    LoadAllRoles();
-                //    ConfigureRolesGridDefaultStyles();
-                //    actionsStackView.RestoreInitState();
-                //}
+                if (res == true)
+                {
+                    ActionsAfterCU();
+                }
 
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
         }
-        private void actionsStackView_CancelButtonClick(object sender, EventArgs e)
+
+        public void actionsStackView_CancelButtonClick(object sender, EventArgs e)
         {
             try
             {
-                //LoadAllRoles();
-                //SetupRolesGrid();
+                _customerOriginal = null;
+                ResetCustomerUpdate();
+                SetFormBinding();
+                tcGeneral.TabPages.Remove(tpForm);
+                tcGeneral.TabPages.Add(tpGrid);
+                btnNewVersion.Visible = false;
+                LoadCustomersList();
                 actionsStackView.RestoreInitState();
+
+                foreach (var n in _nonCreatingFieldsRows)
+                {
+                    tlpForm.RowStyles[n].SizeType = SizeType.AutoSize;
+                }
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
-        #endregion
-
-        #endregion
-
-        #region Private Methods
-        private void ConfigureActionsStackView()
+        public void ConfigureActionsStackView()
         {
             try
             {
                 var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
 
-                //CustomControls.StackView actionsStackView = new CustomControls.StackView(actions.Read, actions.New, actions.Modify);
                 actionsStackView = new CustomControls.StackView(actions.Read, actions.New, actions.Modify);
                 actionsStackView.EditButtonClick += actionsStackView_EditButtonClick;
                 actionsStackView.NewButtonClick += actionsStackView_NewButtonClick;
@@ -163,28 +184,536 @@ namespace HKSupply.Forms.Master
             {
                 throw ex;
             }
-
         }
 
-        private void SetBinding()
+        #endregion
+
+        #region Form Events
+
+        private void CustomerManagement_Load(object sender, System.EventArgs e)
         {
-            txtIdCustomer.DataBindings.Add("Text", _customer, _customer.idCustomer);
-            txtIdVersion.DataBindings.Add("Text", _customer, _customer.idVer.ToString());
-            txtIdSubversion.DataBindings.Add("Text", _customer, _customer.idSubVer.ToString());
-            txtTimestamp.DataBindings.Add("Text", _customer, _customer.Timestamp.ToString());
-            txtName.DataBindings.Add("Text", _customer, _customer.CustName);
-            chkActive.DataBindings.Add("Checked",_customer,_customer.Active.ToString());
-            txtVatNumber.DataBindings.Add("Text", _customer, _customer.VATNum);
-            txtShippingAddress.DataBindings.Add("Text", _customer, _customer.ShippingAddress);
-            txtBillingAddress.DataBindings.Add("Text", _customer, _customer.BillingAddress);
-            txtContactName.DataBindings.Add("Text", _customer, _customer.ContactName);
-            txtContactPhone.DataBindings.Add("Text", _customer, _customer.ContactPhone);
-            txtIntercom.DataBindings.Add("Text", _customer, _customer.idIncoterm.ToString());
-            txtPaymentTerms.DataBindings.Add("Text", _customer, _customer.idPaymentTerms.ToString());
-            txtCurreny.DataBindings.Add("Text", _customer, _customer.Currency);
+            try
+            {
+                ConfigureActionsStackView();
+                SetFormBinding();
+                tcGeneral.TabPages.Remove(tpForm);
+                btnNewVersion.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+
         }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Cursor = Cursors.WaitCursor;
+                LoadCustomersList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
+            
+        }
+
+        private void btnNewVersion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Cursor = Cursors.WaitCursor;
+                Validate();
+
+                if (_customerUpdate.Equals(_customerOriginal))
+                {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
+                    return;
+                }
+
+                if (UpdateCustomer(true))
+                {
+                    ActionsAfterCU();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
+        }
+
+        #region Grid events
+        private void grdCustomers_CellDoubleClick(Object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex < 0) return;
+                LoadCustomerForm(grdCustomers.Rows[e.RowIndex].Cells[(int)eCustomerColumns.IdCustomer].Value.ToString());
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void grdCustomers_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex < 0)
+                {
+                    LoadCustomersSortedList((eCustomerColumns)e.ColumnIndex);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        #endregion
+
+        #endregion
+
+
+        #region Private Methods
+
+        /// <summary>
+        /// Resetear el ovjeto customer que usamos para la actualización
+        /// </summary>
+        private void ResetCustomerUpdate()
+        {
+            _customerUpdate = new Customer
+                    {
+                        IdCustomer = string.Empty,
+                        CustName = string.Empty,
+                        Active = false,
+                        VATNum = string.Empty,
+                        ShippingAddress = string.Empty,
+                        BillingAddress = string.Empty,
+                        ContactName = string.Empty,
+                        ContactPhone = string.Empty,
+                        Currency = string.Empty
+                    };
+        }
+
+        /// <summary>
+        /// Crear los bindings de los campos del formulario
+        /// </summary>
+        private void SetFormBinding()
+        {
+            foreach (Control ctl in tlpForm.Controls)
+            {
+                if (ctl.GetType() == typeof(TextBox))
+                {
+                    ctl.DataBindings.Clear();
+                    ((TextBox)ctl).ReadOnly = true;
+                }
+                else if (ctl.GetType() == typeof(CheckBox))
+                {
+                    ctl.DataBindings.Clear();
+                    ((CheckBox)ctl).Enabled = false;
+                }
+            }
+            txtIdCustomer.DataBindings.Add("Text", _customerUpdate, "idCustomer");
+            txtIdVersion.DataBindings.Add("Text", _customerUpdate, "idVer");
+            txtIdSubversion.DataBindings.Add("Text", _customerUpdate, "idSubVer");
+            txtTimestamp.DataBindings.Add("Text", _customerUpdate, "Timestamp");
+            txtName.DataBindings.Add("Text", _customerUpdate, "CustName");
+            chkActive.DataBindings.Add("Checked",_customerUpdate,"Active");
+            txtVatNumber.DataBindings.Add("Text", _customerUpdate, "VATNum");
+            txtShippingAddress.DataBindings.Add("Text", _customerUpdate, "ShippingAddress");
+            txtBillingAddress.DataBindings.Add("Text", _customerUpdate, "BillingAddress");
+            txtContactName.DataBindings.Add("Text", _customerUpdate, "ContactName");
+            txtContactPhone.DataBindings.Add("Text", _customerUpdate, "ContactPhone");
+            txtIntercom.DataBindings.Add("Text", _customerUpdate, "idIncoterm");
+            txtPaymentTerms.DataBindings.Add("Text", _customerUpdate, "idPaymentTerms");
+            txtCurreny.DataBindings.Add("Text", _customerUpdate, "Currency");
+        }
+
+        /// <summary>
+        /// cargar la colección de Customer del sistema
+        /// </summary>
+        private void LoadCustomersList()
+        {
+            try
+            {
+                var customerService = new HKSupply.Services.Implementations.EFCustomer();
+
+                _customersList = customerService.GetCustomers();
+
+                grdCustomers.CellDoubleClick += grdCustomers_CellDoubleClick;
+                grdCustomers.CellClick +=grdCustomers_CellClick;
+                grdCustomers.DataSource = null;
+                grdCustomers.Rows.Clear();
+                grdCustomers.DataSource = _customersList;
+                grdCustomers.ReadOnly = true;
+
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void LoadCustomersSortedList(eCustomerColumns sortedColumn)
+        {
+            try
+            {
+                //linq no acepta consultas dinámicas. En el nuget hay un dynamic linq, pero no tiene tantas descargas para fiarme
+                switch (sortedColumn)
+                {
+                    case eCustomerColumns.IdVer:
+                        _customersList = _customersList.OrderBy(c => c.IdVer).ToList();
+                        break;
+                    case eCustomerColumns.idSubVer:
+                        _customersList = _customersList.OrderBy(c => c.IdSubVer).ToList();
+                        break;
+                    case eCustomerColumns.Timestamp:
+                        _customersList = _customersList.OrderBy(c => c.Timestamp).ToList();
+                        break;
+                    case eCustomerColumns.IdCustomer:
+                        _customersList = _customersList.OrderBy(c => c.IdCustomer).ToList();
+                        break;
+                    case eCustomerColumns.CustName:
+                        _customersList = _customersList.OrderBy(c => c.CustName).ToList();
+                        break;
+                    case eCustomerColumns.Active:
+                        _customersList = _customersList.OrderBy(c => c.Active).ToList();
+                        break;
+                    case eCustomerColumns.VATNum:
+                        _customersList = _customersList.OrderBy(c => c.VATNum).ToList();
+                        break;
+                    case eCustomerColumns.ShippingAddress:
+                        _customersList = _customersList.OrderBy(c => c.ShippingAddress).ToList();
+                        break;
+                    case eCustomerColumns.BillingAddress:
+                        _customersList = _customersList.OrderBy(c => c.BillingAddress).ToList();
+                        break;
+                    case eCustomerColumns.ContactName:
+                        _customersList = _customersList.OrderBy(c => c.ContactName).ToList();
+                        break;
+                    case eCustomerColumns.ContactPhone:
+                        _customersList = _customersList.OrderBy(c => c.ContactPhone).ToList();
+                        break;
+                    case eCustomerColumns.IdIncoterm:
+                        _customersList = _customersList.OrderBy(c => c.IdIncoterm).ToList();
+                        break;
+                    case eCustomerColumns.IdPaymentTerms:
+                        _customersList = _customersList.OrderBy(c => c.IdPaymentTerms).ToList();
+                        break;
+                    case eCustomerColumns.Currency:
+                        _customersList = _customersList.OrderBy(c => c.Currency).ToList();
+                        break;
+                }
+
+                grdCustomers.DataSource = null;
+                grdCustomers.Rows.Clear();
+                grdCustomers.DataSource = _customersList;
+                grdCustomers.ReadOnly = true;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        /// <summary>
+        /// Cargar los datos de un customer en concreto
+        /// </summary>
+        /// <param name="idCustomer"></param>
+        private void LoadCustomerForm(string idCustomer)
+        {
+            try
+            {
+                if (tcGeneral.TabPages.Contains(tpForm) == false)
+                    tcGeneral.TabPages.Add(tpForm);
+                tcGeneral.SelectedTab = tpForm;
+
+                var customerService = new HKSupply.Services.Implementations.EFCustomer();
+                _customerUpdate = customerService.GetCustomerById(idCustomer);
+                _customerOriginal = _customerUpdate.Clone();
+                SetFormBinding();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Actualizar los datos de un customer
+        /// </summary>
+        /// <param name="newVersion">Si es una versión nueva o una actualización de la existente</param>
+        /// <returns></returns>
+        private bool UpdateCustomer(bool newVersion = false)
+        {
+            try
+            {
+                var customerService = new HKSupply.Services.Implementations.EFCustomer();
+                return  customerService.UpdateCustomer(_customerUpdate, newVersion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Crear un nuevo Customer
+        /// </summary>
+        /// <returns></returns>
+        private bool CreateCustomer()
+        {
+            try
+            {
+                _customerOriginal = _customerUpdate.Clone();
+                var customerService = new HKSupply.Services.Implementations.EFCustomer();
+                return customerService.NewCustomer(_customerUpdate);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        /// <summary>
+        /// Mover la celda activa a la de un customer en concreto
+        /// </summary>
+        /// <param name="idCustomer"></param>
+        private void MoveGridToCustomer(string idCustomer)
+        {
+            try
+            {
+                foreach (DataGridViewRow row in grdCustomers.Rows)
+                {
+                    if (row.Cells[(int)eCustomerColumns.IdCustomer].Value.ToString() == idCustomer)
+                    {
+                        grdCustomers.CurrentCell = row.Cells[(int)eCustomerColumns.IdVer];
+                        grdCustomers.FirstDisplayedScrollingRowIndex = row.Index;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+        /// <summary>
+        /// Acciones cuando pulsamos el botón de editar
+        /// </summary>
+        private void ConfigureActionsStackViewEditing()
+        {
+            try
+            {
+                tcGeneral.TabPages.Remove(tpGrid);
+
+                btnNewVersion.Visible = true;
+
+                SetEditingFieldsEnabled();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Acciones cuando pulsamos el botón de nuevo
+        /// </summary>
+        private void ConfigureActionsStackViewCreating()
+        {
+            tcGeneral.TabPages.Remove(tpGrid);
+            if (tcGeneral.TabPages.Contains(tpForm) == false)
+                tcGeneral.TabPages.Add(tpForm);
+            
+            tcGeneral.SelectedTab = tpForm;
+
+            btnNewVersion.Visible = false;
+
+            ResetCustomerUpdate();
+            SetFormBinding();
+
+            SetCreatingFieldsEnabled();
+
+            foreach (var n in _nonCreatingFieldsRows)
+            {
+                tlpForm.RowStyles[n].SizeType = SizeType.Absolute;
+                tlpForm.RowStyles[n].Height = 0;
+            }
+
+
+        }
+
+        /// <summary>
+        /// Poner como editables los campos para el modo de edición
+        /// </summary>
+        private void SetEditingFieldsEnabled()
+        {
+            try
+            {
+                foreach (Control ctl in tlpForm.Controls)
+                {
+                    if (Array.IndexOf(_nonEditingFields, ctl.Name) < 0)
+                    {
+                        if (ctl.GetType() == typeof(TextBox))
+                        {
+                            ((TextBox)ctl).ReadOnly = false;
+                        }
+                        else if (ctl.GetType() == typeof(CheckBox))
+                        {
+                            ((CheckBox)ctl).Enabled = true;
+                        }
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Poner como editables los campos para el modo de creación
+        /// </summary>
+        private void SetCreatingFieldsEnabled()
+        {
+            try
+            {
+                foreach (Control ctl in tlpForm.Controls)
+                {
+                    if (Array.IndexOf(_nonCreatingFields, ctl.Name) < 0)
+                    {
+                        if (ctl.GetType() == typeof(TextBox))
+                        {
+                            ((TextBox)ctl).ReadOnly = false;
+                        }
+                        else if (ctl.GetType() == typeof(CheckBox))
+                        {
+                            ((CheckBox)ctl).Enabled = true;
+                        }
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Acciones después de crear o updatar
+        /// </summary>
+        private void ActionsAfterCU()
+        {
+            try
+            {
+                string id = _customerOriginal.IdCustomer;
+                _customerOriginal = null;
+                ResetCustomerUpdate();
+                SetFormBinding();
+                tcGeneral.TabPages.Remove(tpForm);
+                tcGeneral.TabPages.Add(tpGrid);
+                btnNewVersion.Visible = false;
+                LoadCustomersList();
+                MoveGridToCustomer(id);
+                actionsStackView.RestoreInitState();
+
+                foreach (var n in _nonCreatingFieldsRows)
+                {
+                    tlpForm.RowStyles[n].SizeType = SizeType.AutoSize;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #region validate data
+
+        /// <summary>
+        /// TODO
+        /// </summary>
+        /// <returns></returns>
+        private bool IsValidModifiedCustomer()
+        {
+            try
+            {
+                foreach(Control ctl in tpForm.Controls)
+                {
+                    if (ctl.GetType() == typeof(TextBox))
+                    {
+                        if (string.IsNullOrEmpty(((TextBox)ctl).Text))
+                        {
+                            MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
+                            return false;
+                        }
+                        
+                    }
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+                
+        }
+
+        /// <summary>
+        /// TODO
+        /// </summary>
+        /// <returns></returns>
+        private bool IsValidCreatedCustomer()
+        {
+            try
+            {
+                foreach (Control ctl in tlpForm.Controls)
+                {
+                    if (ctl.GetType() == typeof(TextBox))
+                    {
+                        if (string.IsNullOrEmpty(((TextBox)ctl).Text))
+                        {
+                            MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
+                            return false;
+                        }
+
+                    }
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
         #endregion
 
 
     }
+
+    
 }

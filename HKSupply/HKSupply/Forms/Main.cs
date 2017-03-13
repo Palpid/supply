@@ -20,7 +20,6 @@ namespace HKSupply.Forms
     public partial class Main : Form
     {
         #region Private members
-        ResourceManager resManager = new ResourceManager("HKSupply.Resources.HKSupplyRes", typeof(Login).Assembly);
         #endregion
 
         #region Constructor
@@ -89,12 +88,12 @@ namespace HKSupply.Forms
 
                 if (found == false)
                 {
-                    MessageBox.Show(resManager.GetString("FormNotFound"), "ERROR",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("FormNotFound"), "ERROR",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
