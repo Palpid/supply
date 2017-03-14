@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Form1.cs" line="302" column="1" bodyfile="HKSupply/Form1.cs" bodystart="302" bodyend="343"/>
+        <location file="HKSupply/Form1.cs" line="302" column="1" bodyfile="HKSupply/Form1.cs" bodystart="302" bodyend="358"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_form1_1a41c1dc427262f75aa39d286148c7df4d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Form1.cs" line="345" column="1" bodyfile="HKSupply/Form1.cs" bodystart="345" bodyend="349"/>
+        <location file="HKSupply/Form1.cs" line="360" column="1" bodyfile="HKSupply/Form1.cs" bodystart="360" bodyend="364"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_form1_1a573899129e9bc14361f92d7a96466084" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -148,7 +148,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Form1.cs" line="351" column="1" bodyfile="HKSupply/Form1.cs" bodystart="351" bodyend="354"/>
+        <location file="HKSupply/Form1.cs" line="366" column="1" bodyfile="HKSupply/Form1.cs" bodystart="366" bodyend="369"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_form1_1ae1aaab3c6771b0edac7180fea5572bc5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Form1.cs" line="356" column="1" bodyfile="HKSupply/Form1.cs" bodystart="356" bodyend="359"/>
+        <location file="HKSupply/Form1.cs" line="371" column="1" bodyfile="HKSupply/Form1.cs" bodystart="371" bodyend="374"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_form1_1af93034a73c195ec8d40295259af50fc2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -190,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Form1.cs" line="361" column="1" bodyfile="HKSupply/Form1.cs" bodystart="361" bodyend="364"/>
+        <location file="HKSupply/Form1.cs" line="376" column="1" bodyfile="HKSupply/Form1.cs" bodystart="376" bodyend="379"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_form1_1a206304f2114c516601026d2c89f2c72c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -211,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Form1.cs" line="365" column="1" bodyfile="HKSupply/Form1.cs" bodystart="365" bodyend="368"/>
+        <location file="HKSupply/Form1.cs" line="380" column="1" bodyfile="HKSupply/Form1.cs" bodystart="380" bodyend="383"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_form1_1ab1b8ca5ffbbb4319aa755ad500a8823b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -259,28 +259,28 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="51">
+      <node id="65">
         <label>Form</label>
       </node>
-      <node id="50">
+      <node id="64">
         <label>HKSupply.Form1</label>
         <link refid="class_h_k_supply_1_1_form1"/>
-        <childnode refid="51" relation="public-inheritance">
+        <childnode refid="65" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="53">
+      <node id="67">
         <label>Form</label>
       </node>
-      <node id="52">
+      <node id="66">
         <label>HKSupply.Form1</label>
         <link refid="class_h_k_supply_1_1_form1"/>
-        <childnode refid="53" relation="public-inheritance">
+        <childnode refid="67" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="HKSupply/Form1.cs" line="24" column="1" bodyfile="HKSupply/Form1.cs" bodystart="23" bodyend="372"/>
+    <location file="HKSupply/Form1.cs" line="24" column="1" bodyfile="HKSupply/Form1.cs" bodystart="23" bodyend="387"/>
     <listofallmembers>
       <member refid="class_h_k_supply_1_1_form1_1a7339d967c306718aef55fc99748e9da6" prot="private" virt="non-virtual"><scope>HKSupply::Form1</scope><name>button1</name></member>
       <member refid="class_h_k_supply_1_1_form1_1a41c1dc427262f75aa39d286148c7df4d" prot="private" virt="non-virtual"><scope>HKSupply::Form1</scope><name>button1_Click</name></member>

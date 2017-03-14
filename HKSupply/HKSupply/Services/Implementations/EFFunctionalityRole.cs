@@ -251,9 +251,6 @@ namespace HKSupply.Services.Implementations
                     db.SaveChanges();
 
                     return GetFunctionalityRole(newFunctionalityRole.FunctionalityId, newFunctionalityRole.RoleId);
-                    //return db.FunctionalitiesRole
-                    //    .Where(fr => fr.FunctionalityId.Equals(newFunctionalityRole.FunctionalityId) && fr.RoleId.Equals(newFunctionalityRole.RoleId))
-                    //    .FirstOrDefault();
                 }
             }
             catch (ArgumentNullException anex)
@@ -363,6 +360,11 @@ namespace HKSupply.Services.Implementations
                 }
                 throw sqlex;
             }
+            catch (DbEntityValidationException e)
+            {
+                _log.Error(e.Message, e);
+                throw e;
+            }
             catch (Exception ex)
             {
                 _log.Error(ex.Message, ex);
@@ -381,25 +383,68 @@ namespace HKSupply.Services.Implementations
             try
             {
                 if (functionalitiesRolesToUpdate == null)
-                    throw new ArgumentException("functionalitiesRolesToUpdate");
+                    throw new ArgumentNullException("functionalitiesRolesToUpdate");
 
                 using (var db = new HKSupplyContext())
                 {
-                    foreach (var funcRole in functionalitiesRolesToUpdate)
+                    using (var dbTran = db.Database.BeginTransaction())
                     {
-                        var funcRoleToUpdate = db.FunctionalitiesRole.FirstOrDefault(fr => fr.FunctionalityId.Equals(funcRole.FunctionalityId) &&
-                            fr.RoleId.Equals(funcRole.RoleId));
-
-                        if (funcRoleToUpdate != null)
+                        try
                         {
-                            funcRoleToUpdate.Read = funcRole.Read;
-                            funcRoleToUpdate.New = funcRole.New;
-                            funcRoleToUpdate.Modify = funcRole.Modify;
+                            foreach (var funcRole in functionalitiesRolesToUpdate)
+                            {
+                                var funcRoleToUpdate = db.FunctionalitiesRole.FirstOrDefault(fr => fr.FunctionalityId.Equals(funcRole.FunctionalityId) &&
+                                    fr.RoleId.Equals(funcRole.RoleId));
+
+                                if (funcRoleToUpdate != null)
+                                {
+                                    funcRoleToUpdate.Read = funcRole.Read;
+                                    funcRoleToUpdate.New = funcRole.New;
+                                    funcRoleToUpdate.Modify = funcRole.Modify;
+                                }
+                            }
+
+                            db.SaveChanges();
+                            dbTran.Commit();
+                            return true;
                         }
+                        catch (SqlException sqlex)
+                        {
+                            dbTran.Rollback();
+
+                            for (int i = 0; i < sqlex.Errors.Count; i++)
+                            {
+                                _log.Error("Index #" + i + "\n" +
+                                    "Message: " + sqlex.Errors[i].Message + "\n" +
+                                    "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                                    "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                                    "Source: " + sqlex.Errors[i].Source + "\n" +
+                                    "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                                switch (sqlex.Errors[i].Number)
+                                {
+                                    case -1: //connection broken
+                                    case -2: //timeout
+                                        throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                                }
+                            }
+                            throw sqlex;
+                        }
+                        catch (DbEntityValidationException e)
+                        {
+                            dbTran.Rollback();
+                            _log.Error(e.Message, e);
+                            throw e;
+                        }
+                        catch (Exception ex)
+                        {
+                            dbTran.Rollback();
+                            _log.Error(ex.Message, ex);
+                            throw ex;
+                        }
+                    
                     }
 
-                    db.SaveChanges();
-                    return true;
                 }
 
             }
@@ -408,31 +453,7 @@ namespace HKSupply.Services.Implementations
                 _log.Error(nrex.Message, nrex);
                 throw nrex;
             }
-            catch (SqlException sqlex)
-            {
-                for (int i = 0; i < sqlex.Errors.Count; i++)
-                {
-                    _log.Error("Index #" + i + "\n" +
-                        "Message: " + sqlex.Errors[i].Message + "\n" +
-                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
-                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
-                        "Source: " + sqlex.Errors[i].Source + "\n" +
-                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
-
-                    switch (sqlex.Errors[i].Number)
-                    {
-                        case -1: //connection broken
-                        case -2: //timeout
-                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
-                    }
-                }
-                throw sqlex;
-            }
-            catch (Exception ex)
-            {
-                _log.Error(ex.Message, ex);
-                throw ex;
-            }
+            
         }
     }
 }

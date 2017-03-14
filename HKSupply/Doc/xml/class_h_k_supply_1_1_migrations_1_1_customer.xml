@@ -94,34 +94,34 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="12">
+      <node id="10">
         <label>HKSupply.Migrations.Customer</label>
         <link refid="class_h_k_supply_1_1_migrations_1_1_customer"/>
-        <childnode refid="13" relation="public-inheritance">
+        <childnode refid="11" relation="public-inheritance">
         </childnode>
-        <childnode refid="14" relation="public-inheritance">
+        <childnode refid="12" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="14">
+      <node id="12">
         <label>DbMigration</label>
       </node>
-      <node id="13">
+      <node id="11">
         <label>IMigrationMetadata</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="15">
+      <node id="13">
         <label>HKSupply.Migrations.Customer</label>
         <link refid="class_h_k_supply_1_1_migrations_1_1_customer"/>
-        <childnode refid="16" relation="public-inheritance">
+        <childnode refid="14" relation="public-inheritance">
         </childnode>
-        <childnode refid="17" relation="public-inheritance">
+        <childnode refid="15" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="17">
+      <node id="15">
         <label>DbMigration</label>
       </node>
-      <node id="16">
+      <node id="14">
         <label>IMigrationMetadata</label>
       </node>
     </collaborationgraph>

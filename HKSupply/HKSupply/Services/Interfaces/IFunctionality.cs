@@ -7,6 +7,9 @@ using HKSupply.Models;
 
 namespace HKSupply.Services.Interfaces
 {
+    /// <summary>
+    /// Interface para el service de Functionality
+    /// </summary>
     public interface IFunctionality
     {
         IEnumerable<Functionality> GetAllFunctionalities();

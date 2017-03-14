@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_custom_professional_colors" kind="class" language="C#" prot="package">
+    <compoundname>HKSupply::Forms::CustomProfessionalColors</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ProfessionalColorTable</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a3ac0fd08492a9b59edbc720a3cd55279" prot="private" static="yes" mutable="no">
+        <type>Color</type>
+        <definition>Color HKSupply.Forms.CustomProfessionalColors.ETNIA_RED</definition>
+        <argsstring></argsstring>
+        <name>ETNIA_RED</name>
+        <initializer>= Color.FromArgb(221, 34, 29)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.cs" line="200" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a9c76810b2e0a7d40ddaf24a29c96195a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>override Color</type>
+        <definition>override Color HKSupply.Forms.CustomProfessionalColors.ToolStripGradientBegin</definition>
+        <argsstring></argsstring>
+        <name>ToolStripGradientBegin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.cs" line="202" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a8055e98884e1afe24a6b6e91dcc79b5a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>override Color</type>
+        <definition>override Color HKSupply.Forms.CustomProfessionalColors.ToolStripGradientMiddle</definition>
+        <argsstring></argsstring>
+        <name>ToolStripGradientMiddle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.cs" line="204" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a6ab0c92c054750031dad80baf2e4f43c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>override Color</type>
+        <definition>override Color HKSupply.Forms.CustomProfessionalColors.ToolStripGradientEnd</definition>
+        <argsstring></argsstring>
+        <name>ToolStripGradientEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.cs" line="206" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1ae181b8c469ce04d67b1e85801d2eed5b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>override Color</type>
+        <definition>override Color HKSupply.Forms.CustomProfessionalColors.MenuStripGradientBegin</definition>
+        <argsstring></argsstring>
+        <name>MenuStripGradientBegin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.cs" line="208" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a9e1d38633881d20d3c527111a14927a3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>override Color</type>
+        <definition>override Color HKSupply.Forms.CustomProfessionalColors.MenuStripGradientEnd</definition>
+        <argsstring></argsstring>
+        <name>MenuStripGradientEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.cs" line="210" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>tabla de colores para el menú </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="33">
+        <label>ProfessionalColorTable</label>
+      </node>
+      <node id="32">
+        <label>HKSupply.Forms.CustomProfessionalColors</label>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="35">
+        <label>ProfessionalColorTable</label>
+      </node>
+      <node id="34">
+        <label>HKSupply.Forms.CustomProfessionalColors</label>
+        <childnode refid="35" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Main.cs" line="199" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="198" bodyend="211"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a3ac0fd08492a9b59edbc720a3cd55279" prot="private" virt="non-virtual"><scope>HKSupply::Forms::CustomProfessionalColors</scope><name>ETNIA_RED</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1ae181b8c469ce04d67b1e85801d2eed5b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::CustomProfessionalColors</scope><name>MenuStripGradientBegin</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a9e1d38633881d20d3c527111a14927a3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::CustomProfessionalColors</scope><name>MenuStripGradientEnd</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a9c76810b2e0a7d40ddaf24a29c96195a" prot="public" virt="non-virtual"><scope>HKSupply::Forms::CustomProfessionalColors</scope><name>ToolStripGradientBegin</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a6ab0c92c054750031dad80baf2e4f43c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::CustomProfessionalColors</scope><name>ToolStripGradientEnd</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a8055e98884e1afe24a6b6e91dcc79b5a" prot="public" virt="non-virtual"><scope>HKSupply::Forms::CustomProfessionalColors</scope><name>ToolStripGradientMiddle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

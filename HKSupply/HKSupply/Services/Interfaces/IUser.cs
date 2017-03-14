@@ -7,6 +7,9 @@ using HKSupply.Models;
 
 namespace HKSupply.Services.Interfaces
 {
+    /// <summary>
+    /// Interface para el service de User
+    /// </summary>
     public interface IUser
     {
         IEnumerable<User> GetAllUsers();

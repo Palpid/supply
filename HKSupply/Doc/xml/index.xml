@@ -8,7 +8,6 @@
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_change_password_1a1723ecb4bb8deaf78c0203df7b4ab83aae3afed0047b08059d0fada10f400c1e5" kind="enumvalue"><name>Admin</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_change_password_1a1723ecb4bb8deaf78c0203df7b4ab83aa8f9bfe9d1345237cb3b2b205864da075" kind="enumvalue"><name>User</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_change_password_1a5579bc42b0d23af38c6e8a4d70020a0a" kind="variable"><name>MSG_TIME</name></member>
-    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_change_password_1ad20ff7925f893f201657c7e5ad3e1d94" kind="variable"><name>resManager</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_change_password_1ad8c37dd51e39fd40fd4852aa3dd5b518" kind="variable"><name>_userChangePassword</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_change_password_1a5376fbc236e7b5d875ab8c75e2a29e0d" kind="variable"><name>_currentMode</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_change_password_1a555487963eee98aff7315e1caff4f51e" kind="variable"><name>components</name></member>
@@ -37,24 +36,6 @@
     <member refid="class_h_k_supply_1_1_migrations_1_1_configuration_1a63941de0df7a75f703007aa2d5c2b338" kind="function"><name>Configuration</name></member>
     <member refid="class_h_k_supply_1_1_migrations_1_1_configuration_1a0d2a061a055df3022c4fe022f619921a" kind="function"><name>Seed</name></member>
   </compound>
-  <compound refid="class_h_k_supply_1_1_models_1_1_customer" kind="class"><name>HKSupply::Models::Customer</name>
-    <member refid="class_h_k_supply_1_1_models_1_1_customer_1ac4578adc9b1a3705f8169db9a7108757" kind="property"><name>idVer</name></member>
-    <member refid="class_h_k_supply_1_1_models_1_1_customer_1ad2c25c0c06f546f59d4d0036ef1f08c2" kind="property"><name>idSubVer</name></member>
-    <member refid="class_h_k_supply_1_1_models_1_1_customer_1a22afbd1b11b69d47b922a08f29ac8ac7" kind="property"><name>Timestamp</name></member>
-    <member refid="class_h_k_supply_1_1_models_1_1_customer_1a51edcd11d975455737e96f741fdadf54" kind="property"><name>idCustomer</name></member>
-    <member refid="class_h_k_supply_1_1_models_1_1_customer_1afccd2194383fd74d9c0056cd1aeff041" kind="property"><name>CustName</name></member>
-    <member refid="class_h_k_supply_1_1_models_1_1_customer_1ac107c439966d40fbb00176e09e4682b5" kind="property"><name>Active</name></member>
-    <member refid="class_h_k_supply_1_1_models_1_1_customer_1aaaadc5018a79479be7d43fad413dc3b0" kind="property"><name>VATNum</name></member>
-    <member refid="class_h_k_supply_1_1_models_1_1_customer_1aa96f375cec2cf3a749f72525b1ce4f36" kind="property"><name>ShipingAddress</name></member>
-    <member refid="class_h_k_supply_1_1_models_1_1_customer_1a0ef5a3d143c02f5f01034f63616ec88b" kind="property"><name>BillingAddress</name></member>
-    <member refid="class_h_k_supply_1_1_models_1_1_customer_1a52ec06dbf5626f8fd7b46bd0189fc0f5" kind="property"><name>ContactName</name></member>
-    <member refid="class_h_k_supply_1_1_models_1_1_customer_1a575063986e551c006263f89b4ab6b522" kind="property"><name>ContactPhone</name></member>
-    <member refid="class_h_k_supply_1_1_models_1_1_customer_1aafc92abc1367162a2cfd9aafeeff3bcd" kind="property"><name>idIncoterm</name></member>
-    <member refid="class_h_k_supply_1_1_models_1_1_customer_1a63268d32fbf9d3e7ed3ad42b52e0ed3d" kind="property"><name>idPaymentTerms</name></member>
-    <member refid="class_h_k_supply_1_1_models_1_1_customer_1a60662a4e763416385919b83cfc18cadd" kind="property"><name>Currency</name></member>
-    <member refid="class_h_k_supply_1_1_models_1_1_customer_1a7e21d342fe37d5133dbaff9c32f35d05" kind="function"><name>Equals</name></member>
-    <member refid="class_h_k_supply_1_1_models_1_1_customer_1a1277096021a0d574871c50508c576f85" kind="function"><name>GetHashCode</name></member>
-  </compound>
   <compound refid="class_h_k_supply_1_1_migrations_1_1_customer" kind="class"><name>HKSupply::Migrations::Customer</name>
     <member refid="class_h_k_supply_1_1_migrations_1_1_customer_1a35db2bd1a922db26dfe54920143f9374" kind="variable"><name>Resources</name></member>
     <member refid="class_h_k_supply_1_1_migrations_1_1_customer_1a13a4cb77eafe5061a47aafda5a71d18b" kind="property"><name>Id</name></member>
@@ -62,6 +43,24 @@
     <member refid="class_h_k_supply_1_1_migrations_1_1_customer_1a2843bbb1c46aa14668d542a583b030fd" kind="property"><name>Target</name></member>
     <member refid="class_h_k_supply_1_1_migrations_1_1_customer_1a9d32a655fbb798821b0d9991eadd4a2f" kind="function"><name>Up</name></member>
     <member refid="class_h_k_supply_1_1_migrations_1_1_customer_1acc6e78c39b5f866e1b4dfec67ddd5c35" kind="function"><name>Down</name></member>
+  </compound>
+  <compound refid="class_h_k_supply_1_1_models_1_1_customer" kind="class"><name>HKSupply::Models::Customer</name>
+    <member refid="class_h_k_supply_1_1_models_1_1_customer_1ab34e7d21f94547b00f92da78e6b27d3e" kind="property"><name>IdVer</name></member>
+    <member refid="class_h_k_supply_1_1_models_1_1_customer_1a44244474fea0e42ed5c1f10749a70c43" kind="property"><name>IdSubVer</name></member>
+    <member refid="class_h_k_supply_1_1_models_1_1_customer_1a22afbd1b11b69d47b922a08f29ac8ac7" kind="property"><name>Timestamp</name></member>
+    <member refid="class_h_k_supply_1_1_models_1_1_customer_1a76d4fc74bf7e23563d7770d6d528e2c4" kind="property"><name>IdCustomer</name></member>
+    <member refid="class_h_k_supply_1_1_models_1_1_customer_1afccd2194383fd74d9c0056cd1aeff041" kind="property"><name>CustName</name></member>
+    <member refid="class_h_k_supply_1_1_models_1_1_customer_1ac107c439966d40fbb00176e09e4682b5" kind="property"><name>Active</name></member>
+    <member refid="class_h_k_supply_1_1_models_1_1_customer_1aaaadc5018a79479be7d43fad413dc3b0" kind="property"><name>VATNum</name></member>
+    <member refid="class_h_k_supply_1_1_models_1_1_customer_1a159313a290173e77bddbbd66c3e34193" kind="property"><name>ShippingAddress</name></member>
+    <member refid="class_h_k_supply_1_1_models_1_1_customer_1a0ef5a3d143c02f5f01034f63616ec88b" kind="property"><name>BillingAddress</name></member>
+    <member refid="class_h_k_supply_1_1_models_1_1_customer_1a52ec06dbf5626f8fd7b46bd0189fc0f5" kind="property"><name>ContactName</name></member>
+    <member refid="class_h_k_supply_1_1_models_1_1_customer_1a575063986e551c006263f89b4ab6b522" kind="property"><name>ContactPhone</name></member>
+    <member refid="class_h_k_supply_1_1_models_1_1_customer_1a8ccc8450071011896a398a23746dcf53" kind="property"><name>IdIncoterm</name></member>
+    <member refid="class_h_k_supply_1_1_models_1_1_customer_1ad3c837372e9634b1450b73ac3516bd37" kind="property"><name>IdPaymentTerms</name></member>
+    <member refid="class_h_k_supply_1_1_models_1_1_customer_1a60662a4e763416385919b83cfc18cadd" kind="property"><name>Currency</name></member>
+    <member refid="class_h_k_supply_1_1_models_1_1_customer_1a7e21d342fe37d5133dbaff9c32f35d05" kind="function"><name>Equals</name></member>
+    <member refid="class_h_k_supply_1_1_models_1_1_customer_1a1277096021a0d574871c50508c576f85" kind="function"><name>GetHashCode</name></member>
   </compound>
   <compound refid="class_h_k_supply_1_1_models_1_1_customer_history" kind="class"><name>HKSupply::Models::CustomerHistory</name>
     <member refid="class_h_k_supply_1_1_models_1_1_customer_history_1a3b2a2930ccd291e381383ffe21fc32ae" kind="property"><name>idVer</name></member>
@@ -82,6 +81,95 @@
     <member refid="class_h_k_supply_1_1_models_1_1_customer_history_1a9ce1510ea0fc18dfb2797f758fbcb88e" kind="function"><name>GetHashCode</name></member>
     <member refid="class_h_k_supply_1_1_models_1_1_customer_history_1a1d54538a20700d9fd1b68cf979830fad" kind="function"><name>operator CustomerHistory</name></member>
   </compound>
+  <compound refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management" kind="class"><name>HKSupply::Forms::Master::CustomerManagement</name>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00" kind="enum"><name>eCustomerColumns</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00ab9426500aac054f24e1431ab62538230" kind="enumvalue"><name>IdVer</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00adb21ef4cadde8f54f2721737845b6f48" kind="enumvalue"><name>idSubVer</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00aa3d5de3eac8bb00ae86fd1a1005f1500" kind="enumvalue"><name>Timestamp</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00a0d7d94163bb3982782b0c7e8527d2363" kind="enumvalue"><name>IdCustomer</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00add365f9d939db31f83d51249bb59284b" kind="enumvalue"><name>CustName</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00a4d3d769b812b6faa6b76e1a8abaece2d" kind="enumvalue"><name>Active</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00a2e8391d7b17d3d7fcf8377074cdc8b41" kind="enumvalue"><name>VATNum</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00a47e10f3f35c5ac1ee92867d68301aba5" kind="enumvalue"><name>ShippingAddress</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00a7fa63fd0a5388002f87f7796e4d725f7" kind="enumvalue"><name>BillingAddress</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00a2ba76cdda483cc8397b63a781f22cea4" kind="enumvalue"><name>ContactName</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00a500af8ac099a855d1391d6e205bb2a97" kind="enumvalue"><name>ContactPhone</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00ace7a8d33307ce37e20b50401977a7f8e" kind="enumvalue"><name>IdIncoterm</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00a20a3d6f2db37019fbc47f07ebef192d1" kind="enumvalue"><name>IdPaymentTerms</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00a386c339d37e737a436499d423a77df0c" kind="enumvalue"><name>Currency</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a010c8a784b9b9585338b236a30cb3d12" kind="variable"><name>actionsStackView</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a99154a0c1fc4f82b541b9febe274d62a" kind="variable"><name>_customerUpdate</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1aae52d95a77761d002f6dc44d50806f9b" kind="variable"><name>_customerOriginal</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a724aaeb0f9f5f322251f9e876f343352" kind="variable"><name>_customersList</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1ad8162f974bdceca37b9873e677bcdc08" kind="variable"><name>_nonEditingFields</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a96f89f44270042f4cafcd9267cf4b1ff" kind="variable"><name>_nonCreatingFields</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1adf0c48a237c6aa12bdf4d16698d8a78c" kind="variable"><name>_nonCreatingFieldsRows</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a289a7ab100a19bf951554704e89d9f83" kind="variable"><name>_sortDescending</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a6fdf2341ea3b02b491eac31f22d970a8" kind="variable"><name>components</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a09dea9574b66e584ba7c237b755a6c5a" kind="variable"><name>tcGeneral</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a45772218be2d90563e65b0369c9f09ba" kind="variable"><name>tpGrid</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a63b2b82267897aa61ceb8189360e3ece" kind="variable"><name>tpForm</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1ac2588f8a9e719c58b3da9feb3c5361ff" kind="variable"><name>grdCustomers</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a5b1685254a5343bca9a8edcb46456725" kind="variable"><name>tlpForm</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a5a96d314661bee739475a0f26311b4e0" kind="variable"><name>txtIdVersion</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a0c6172b36d085c5b25afc18478dfe38c" kind="variable"><name>label1</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a7ff3ac8541bad563afb81b180a185415" kind="variable"><name>label2</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a3322e8fe89dbae0fa6dbffc72aa268f1" kind="variable"><name>txtIdCustomer</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a82ecf0c207999c80b29a3ac07275a6a8" kind="variable"><name>label13</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a599490cf8c23e4a55f63e6db357220ce" kind="variable"><name>label12</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a12fc44a3508dfa9a8668c59f58f97bd0" kind="variable"><name>label11</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a46e555677debcede67bc27ec5e7d6ebc" kind="variable"><name>label9</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a9118e887a0f20085a1aeecf9b0bce305" kind="variable"><name>label8</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a33393d0e816c5856c1f493d7eecbd3bc" kind="variable"><name>label7</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a47e3f4463ec8deb86d78d2b932875201" kind="variable"><name>label6</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a21991db93ad81406ad10fc46aacdb424" kind="variable"><name>label5</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1af22a2a877d070aa48fdeeabd5797402c" kind="variable"><name>label4</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a8acc654f0ac7e65ad8b7d06f35cce653" kind="variable"><name>label3</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a06257c7f8c870eb3d59c0384b6e79019" kind="variable"><name>label10</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a8022b18c61968040425b4b26ea843fe4" kind="variable"><name>label14</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1ac8839d7889480ee600ef509aaac14930" kind="variable"><name>txtPaymentTerms</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a2fb58d811dc17e5bb91519d5e7862527" kind="variable"><name>txtIntercom</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1aef107df19907ea92229a969a8dd3cd5d" kind="variable"><name>txtContactPhone</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1aa25e2aa670f3a19a750f26e4c1a978cd" kind="variable"><name>txtContactName</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1af13136a5f5797f7fc3e771e0cae9277e" kind="variable"><name>txtBillingAddress</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a42d761ad77a8346e212af949e4ae8122" kind="variable"><name>txtShippingAddress</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a8560f9d4e1ae4fd4dc7e4d8d957106a6" kind="variable"><name>txtVatNumber</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a4344631e2b8dc77e649388f22eb77447" kind="variable"><name>txtName</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a7e77a9c357927d77aaf7c8f7e4d179a7" kind="variable"><name>txtTimestamp</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a01630d844972b5090594f07dc655d2a7" kind="variable"><name>txtIdSubversion</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a3b5e106e8a1292714b1db1b202fdb79e" kind="variable"><name>txtCurreny</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1ac457a0954f522f82b06b6a3657168019" kind="variable"><name>chkActive</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1abadf5406b30d7388c6d3fcbc9f9cb76e" kind="variable"><name>btnLoad</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a2b2718044d9b59ee5009e710d2f6d1a9" kind="variable"><name>btnNewVersion</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a87001a2e277cf809afaead8db9a69340" kind="function"><name>CustomerManagement</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a3f43cfeb43b387ecaed7c55e2e18e100" kind="function"><name>actionsStackView_EditButtonClick</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1abc0dcd4189499ba45709340d6fcead00" kind="function"><name>actionsStackView_NewButtonClick</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a995afa91b41c02399fb9d20b5b20bbb9" kind="function"><name>actionsStackView_SaveButtonClick</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1aad8235c651699d44b7670e79d9ea9d7b" kind="function"><name>actionsStackView_CancelButtonClick</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1aeeb0dd460b047375cad59b4e6053636b" kind="function"><name>ConfigureActionsStackView</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a54d6be3d14d201360daf4d4543d84e19" kind="function"><name>CustomerManagement_Load</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1ab708966f8f4c7c3d98acec51d09123dc" kind="function"><name>btnLoad_Click</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1abe180f2500cab0889a3d8c9500214e36" kind="function"><name>btnNewVersion_Click</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a57203c96c2966205352c774583defccc" kind="function"><name>grdCustomers_CellDoubleClick</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a6ae1e76343bbfe34d166db61a645ad49" kind="function"><name>grdCustomers_CellClick</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a73753c1b63b955380eccb2dffd83343d" kind="function"><name>ResetCustomerUpdate</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a159faa7d0532897a7a157a86cc0a02d1" kind="function"><name>SetFormBinding</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1aa129f52e387d91dddbd1e83c5f26995d" kind="function"><name>LoadCustomersList</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a5c2b24c3bc686e25705f369ad33810e0" kind="function"><name>LoadCustomersSortedList</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a040c209a2918e70f3f315e888bb3a590" kind="function"><name>LoadCustomerForm</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a203778fa4801185e19f634202a4d8f46" kind="function"><name>UpdateCustomer</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a8ba2c44681ed7f56c3ac44b296d60388" kind="function"><name>CreateCustomer</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a5fe7b404c27f132ff53620724379ddad" kind="function"><name>MoveGridToCustomer</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a73ef446ea921c3d2429bf920e79ecc3c" kind="function"><name>ConfigureActionsStackViewEditing</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a852cff913c2451e23e9df5238832efab" kind="function"><name>ConfigureActionsStackViewCreating</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a60343e422c887040c9e43351cd8db9ac" kind="function"><name>SetEditingFieldsEnabled</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a4dacff91d56e2f040de37dda0a9ef90a" kind="function"><name>SetCreatingFieldsEnabled</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a2a5d46b08186e32bc2ac636000897bd7" kind="function"><name>ActionsAfterCU</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a26790ea0ebf3e96341e3e43819d46831" kind="function"><name>IsValidModifiedCustomer</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a02a3fcce7fae3e0a1a392ea3b77f74ef" kind="function"><name>IsValidCreatedCustomer</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a659a36d70c3c8cc878f7412c98c784b9" kind="function"><name>InitializeComponent</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a3ecb762babe54f6e25edb87033beb8f6" kind="function"><name>Dispose</name></member>
+  </compound>
   <compound refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions" kind="class"><name>HKSupply::Helpers::CustomExtensions</name>
     <member refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1a9610f835b92947f6dfb1dff43d674e75" kind="function"><name>Clone&lt; T &gt;</name></member>
   </compound>
@@ -93,6 +181,14 @@
     <member refid="class_custom_controls_1_1_custom_professional_colors_1ab38d57b72fe2baf734e10dadd980aaea" kind="property"><name>MenuStripGradientBegin</name></member>
     <member refid="class_custom_controls_1_1_custom_professional_colors_1ab4939afbf92547c8101b45356197ac1a" kind="property"><name>MenuStripGradientEnd</name></member>
   </compound>
+  <compound refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors" kind="class"><name>HKSupply::Forms::CustomProfessionalColors</name>
+    <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a3ac0fd08492a9b59edbc720a3cd55279" kind="variable"><name>ETNIA_RED</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a9c76810b2e0a7d40ddaf24a29c96195a" kind="property"><name>ToolStripGradientBegin</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a8055e98884e1afe24a6b6e91dcc79b5a" kind="property"><name>ToolStripGradientMiddle</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a6ab0c92c054750031dad80baf2e4f43c" kind="property"><name>ToolStripGradientEnd</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1ae181b8c469ce04d67b1e85801d2eed5b" kind="property"><name>MenuStripGradientBegin</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a9e1d38633881d20d3c527111a14927a3" kind="property"><name>MenuStripGradientEnd</name></member>
+  </compound>
   <compound refid="class_custom_controls_1_1_custom_tool_strip_menu_item" kind="class"><name>CustomControls::CustomToolStripMenuItem</name>
     <member refid="class_custom_controls_1_1_custom_tool_strip_menu_item_1a857317bf9a042cc91097cb98da03943e" kind="variable"><name>_formName</name></member>
     <member refid="class_custom_controls_1_1_custom_tool_strip_menu_item_1a4e19246de371fd01849814a7f7538963" kind="variable"><name>components</name></member>
@@ -101,11 +197,18 @@
     <member refid="class_custom_controls_1_1_custom_tool_strip_menu_item_1a09da84511dccda9f78441c82ff2f4508" kind="function"><name>Dispose</name></member>
     <member refid="class_custom_controls_1_1_custom_tool_strip_menu_item_1a6997d6d70634b5942a9c5ee08e5632de" kind="function"><name>InitializeComponent</name></member>
   </compound>
+  <compound refid="class_h_k_supply_1_1_exceptions_1_1_d_b_server_connection_exception" kind="class"><name>HKSupply::Exceptions::DBServerConnectionException</name>
+    <member refid="class_h_k_supply_1_1_exceptions_1_1_d_b_server_connection_exception_1a8efd53ee8ccf6dcc8ef29d074fc8d183" kind="function"><name>DBServerConnectionException</name></member>
+    <member refid="class_h_k_supply_1_1_exceptions_1_1_d_b_server_connection_exception_1a7b3040b56aef6f2ebbf97508beaa79b0" kind="function"><name>DBServerConnectionException</name></member>
+    <member refid="class_h_k_supply_1_1_exceptions_1_1_d_b_server_connection_exception_1ace664805be2e431a477d1b11864f71b3" kind="function"><name>DBServerConnectionException</name></member>
+    <member refid="class_h_k_supply_1_1_exceptions_1_1_d_b_server_connection_exception_1a4c0c86363505626ea8f398064a525c6a" kind="function"><name>DBServerConnectionException</name></member>
+  </compound>
   <compound refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer" kind="class"><name>HKSupply::Services::Implementations::EFCustomer</name>
     <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1ad2554c4f7f433e8c784264323ac45077" kind="variable"><name>_log</name></member>
     <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1a8caba8c3706d212709d73ff4e2e94e1e" kind="function"><name>NewCustomer</name></member>
     <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1af7bd47be2eff71310dd5ad5e4157bfa4" kind="function"><name>UpdateCustomer</name></member>
     <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1a88c703ed6108d30abbed42876d524fb3" kind="function"><name>GetCustomerById</name></member>
+    <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1a2688e050817d243a2c424293b2922005" kind="function"><name>GetCustomers</name></member>
   </compound>
   <compound refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality" kind="class"><name>HKSupply::Services::Implementations::EFFunctionality</name>
     <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_1aa6bc0ccd628eb9873f3fe37b6f735a2f" kind="variable"><name>_log</name></member>
@@ -174,7 +277,6 @@
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1ac63f5d57d4d17cef2bf87da16851e323aba6a5a85d2b5c091aa9d935e00828591" kind="enumvalue"><name>FunctionalityName</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1ac63f5d57d4d17cef2bf87da16851e323a3adbdb3ac060038aa0e6e6c138ef9873" kind="enumvalue"><name>Category</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1ac63f5d57d4d17cef2bf87da16851e323ade36e6993e16365b5c2ac4cc65ca54a8" kind="enumvalue"><name>FormName</name></member>
-    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a0a264a4e5da21db86a8c0285e3dfdef1" kind="variable"><name>resManager</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a06b529001e5e9bf27cc588184616aee0" kind="variable"><name>actionsStackView</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a32055b5717ce34566b7d40534c506407" kind="variable"><name>_categoryList</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1aaecf2dcfd3ef87d453932cbfff47ae7b" kind="variable"><name>_modifiedFunctionalities</name></member>
@@ -182,15 +284,15 @@
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1ac51faa9025e280344552445c4e26179e" kind="variable"><name>components</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1aaee652c5d30053d977868d2553d4445f" kind="variable"><name>grdFunctionalities</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a7e646d0235dca575f485cc2af18801e8" kind="function"><name>FunctionalityManagement</name></member>
-    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a6920955194b6bd1317d554cde93319b8" kind="function"><name>FunctionalityManagement_Load</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a3d72cc9c48dd79d936535dbb386ca304" kind="function"><name>actionsStackView_EditButtonClick</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a124bbeebef7a1f06573a032342571c8f" kind="function"><name>actionsStackView_NewButtonClick</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a775ec1a63caa9faf229f704d14bd11a5" kind="function"><name>actionsStackView_SaveButtonClick</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a7bcf668b3f862d8ee0c60ef08e2075ff" kind="function"><name>actionsStackView_CancelButtonClick</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a5c2909260f97b980620f3a81bf9aaa5a" kind="function"><name>ConfigureActionsStackView</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a6920955194b6bd1317d554cde93319b8" kind="function"><name>FunctionalityManagement_Load</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1adf2a602878061611e6cf52912b86b1fc" kind="function"><name>grdFunctionalities_CellValueChanged</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1ab021909e83e02889bdc161842bbf9d12" kind="function"><name>grdFunctionalities_CellValidating</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a53c75eb2c41b9dcd9a697f44ba1f9363" kind="function"><name>grdRoles_DataError</name></member>
-    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a5c2909260f97b980620f3a81bf9aaa5a" kind="function"><name>ConfigureActionsStackView</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a8808a452a2c505588a5e6e73e72b7740" kind="function"><name>SetupFunctionalitiesGrid</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1aea3bc524fa6a20bfbf265bfe8c943df1" kind="function"><name>ConfigureRolesGridStyles</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a07c4a63649f8d0702f862ea9458273bb" kind="function"><name>LoadAllFunctionalities</name></member>
@@ -225,7 +327,6 @@
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1a3518de6d6a956fd66b2b69b1a36b5e38a7f090bbab1cc7f9c08bf4e54d932d3c0" kind="enumvalue"><name>Modify</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1a3518de6d6a956fd66b2b69b1a36b5e38ae7e0038bb30579a3120d266861982881" kind="enumvalue"><name>Functionality</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1a3518de6d6a956fd66b2b69b1a36b5e38abbbabdbe1b262f75d99d62880b953be1" kind="enumvalue"><name>Role</name></member>
-    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1a8ab6d5428407572726733ee1b44831a8" kind="variable"><name>resManager</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1a30fb99e6640ffcae4918cd2eb272aaf0" kind="variable"><name>actionsStackView</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1ae12c2c627d262e1e99ee292b4a31e09a" kind="variable"><name>_roleList</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1ad54680392deac43e76257737f476dde2" kind="variable"><name>_functionalityList</name></member>
@@ -234,15 +335,15 @@
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1a43637822761e464cdfa10b250044a1ce" kind="variable"><name>components</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1af2acbe9a3f2103a7940f94aca7988007" kind="variable"><name>grdFuncRoles</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1a1df0e8c09996430100c92a4fb7efd233" kind="function"><name>FunctionalityRoleManagement</name></member>
-    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1a265e2f56e09829d4d38fde0be594edb4" kind="function"><name>FunctionalityRoleManagement_Load</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1ad8f36ecae11021e4d8d2f5b06de7b881" kind="function"><name>actionsStackView_EditButtonClick</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1a3bed94c9724e4256dd85fcc8d4c2f276" kind="function"><name>actionsStackView_NewButtonClick</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1a8aed80ca8eb88d632fa3501141f4399d" kind="function"><name>actionsStackView_SaveButtonClick</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1a00fc25391f0a3d782823871e2d897b4b" kind="function"><name>actionsStackView_CancelButtonClick</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1adcf6dece3abda929fb54cec2bec5a708" kind="function"><name>ConfigureActionsStackView</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1a265e2f56e09829d4d38fde0be594edb4" kind="function"><name>FunctionalityRoleManagement_Load</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1a07cedde9c3a5737ee709a0ddac4fdab3" kind="function"><name>grdFuncRoles_CellValueChanged</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1a8cc59c5997e712ca8dcf21bc00c174fd" kind="function"><name>grdFuncRoles_CellValidating</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1a95a194b198c3afa24f2de783a9d5fb3c" kind="function"><name>grdFuncRoles_DataError</name></member>
-    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1adcf6dece3abda929fb54cec2bec5a708" kind="function"><name>ConfigureActionsStackView</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1ad39f6e845975dbec85276dee77527716" kind="function"><name>SetupFunctionalitiesRolesGrid</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1ade13f4abafe4cfee1f28e5f95674547b" kind="function"><name>ConfigureRolesColorsStyles</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1aa27a37da1b203b763e8ddf6a7f136758" kind="function"><name>LoadRoles</name></member>
@@ -260,15 +361,20 @@
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1a9a7c00e015e462fba8baf1e25be79413" kind="function"><name>Dispose</name></member>
   </compound>
   <compound refid="class_h_k_suply_1_1_unit_test_1_1_functionality_role_test" kind="class"><name>HKSuply::UnitTest::FunctionalityRoleTest</name>
+    <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_role_test_1ac133f39d498aea4477fca5c33a68fdcc" kind="function"><name>GetAllFunctionalitiesRole</name></member>
     <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_role_test_1a6be3df22cff2086d466362562a424849" kind="function"><name>GetFunctionalityRole</name></member>
     <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_role_test_1a2939d4000f716e0577656a9526322edb" kind="function"><name>GetFunctionalitiesRole</name></member>
+    <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_role_test_1aa181b9200ffbd3b2a39d7c4eea17d546" kind="function"><name>GetFunctionalitiesCategoriesRole</name></member>
     <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_role_test_1a044c261bef5cd0575d11799bd86961af" kind="function"><name>NewFunctionalityRole</name></member>
     <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_role_test_1a7fd10863dba59d604f1bf79382901267" kind="function"><name>ModifyFunctionalityRole</name></member>
+    <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_role_test_1a162e2ece0babea12354c0930f4c77079" kind="function"><name>UpdateFunctionalitiesRoles</name></member>
   </compound>
   <compound refid="class_h_k_suply_1_1_unit_test_1_1_functionality_test" kind="class"><name>HKSuply::UnitTest::FunctionalityTest</name>
+    <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_test_1aa8ac51031a1978bb946cc4e2a469b4e3" kind="function"><name>GetAllFunctionalities</name></member>
     <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_test_1a7c1c4dbb73d76537cee7110a85011bdb" kind="function"><name>GetFunctionality</name></member>
     <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_test_1ac8505a9a8bb7353e45e84ab7ee68c8fb" kind="function"><name>NewFunctionality</name></member>
     <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_test_1a7c1c86aff37c2c7d23c8c48e10df6425" kind="function"><name>UpdateFunctionality</name></member>
+    <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_test_1a641458694dcecd6b3abb008797715491" kind="function"><name>UpdateFunctionalities</name></member>
   </compound>
   <compound refid="class_h_k_supply_1_1_general_1_1_global_setting" kind="class"><name>HKSupply::General::GlobalSetting</name>
     <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1a79a3bc6d8275c878c1cccca8d92e5eec" kind="variable"><name>_roleEF</name></member>
@@ -277,6 +383,7 @@
     <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1adbf30e1b37fde444c6c83a6f03624d15" kind="variable"><name>_functionalityRoleEF</name></member>
     <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1a2e37a0e6c8802b563c1d2f1e6bfe9500" kind="variable"><name>_loggedUser</name></member>
     <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1a3ea29666af6dfc21fd3214aed3d7d44a" kind="variable"><name>_functionalitiesRoles</name></member>
+    <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1a2e6076e4adbcd3f6896a4add4cc3e223" kind="variable"><name>_resManager</name></member>
     <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1aa3e3a155f041d05c2d019a12cea4b28e" kind="variable"><name>lazy</name></member>
     <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1a6bfb54fe6ce82b0427c93287f3174fcc" kind="property"><name>RoleService</name></member>
     <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1afcf3f82e4605ee135bef3b76601faef8" kind="property"><name>UserService</name></member>
@@ -284,6 +391,7 @@
     <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1a6e0c94569c8e737d382725931c272390" kind="property"><name>FunctionalityRoleService</name></member>
     <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1adeb470418d2461437e6dc55fd41f78f5" kind="property"><name>LoggedUser</name></member>
     <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1adf54b9c3d32b3dac949776dee6f17eb2" kind="property"><name>FunctionalitiesRoles</name></member>
+    <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1ad2628f5f55a5a8f640cd28aa425f968f" kind="property"><name>ResManager</name></member>
     <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1afa2d235e79652e93864a33932863c1e2" kind="property"><name>Instance</name></member>
     <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1a4a700b0a81fd005720d7e1cee2acbddf" kind="function"><name>GlobalSetting</name></member>
   </compound>
@@ -295,6 +403,7 @@
     <member refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context_1a61798023df843c12bca882cb94bcda49" kind="property"><name>Customers</name></member>
     <member refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context_1a07e9712da54d17365dcc738168829127" kind="property"><name>CustomersHistory</name></member>
     <member refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context_1a3839d7dc7c09dc0805de1401ab9ed1a5" kind="function"><name>HKSupplyContext</name></member>
+    <member refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context_1a2a1188ce8fd98551e036cb87ae342132" kind="function"><name>SaveChanges</name></member>
   </compound>
   <compound refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res" kind="class"><name>HKSupply::Resources::HKSupplyRes</name>
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a5c59f0d837357a005fa18b9f61faae4b" kind="variable"><name>resourceMan</name></member>
@@ -302,8 +411,11 @@
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a6531388ff2bc98e645966281d5356120" kind="property"><name>ResourceManager</name></member>
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a217a859523d49adca21c04496208e6a2" kind="property"><name>Culture</name></member>
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a4158cf7e0bbdadfc06b91ab6cb21974b" kind="property"><name>CellDataError</name></member>
+    <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a65752defeff051523a6b683dbead740d" kind="property"><name>DBServerConnectionError</name></member>
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a98989195be9a85cae229b97a2d9a4697" kind="property"><name>FieldRequired</name></member>
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1af4aaf795856a99305137928b5ed97053" kind="property"><name>FormNotFound</name></member>
+    <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a2d366420aad0b1ee82f8667abdd38a88" kind="property"><name>FunctionalityAlreadyExist</name></member>
+    <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a9c593d9c8073d663b1887dac632bc4a2" kind="property"><name>FunctionalityRoleAlreadyExist</name></member>
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1ad9c996cff8b81240f4727cd41b6ab7d9" kind="property"><name>InvalidLogin</name></member>
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a1087a39ac432ba5d0f89e94b1c1941dd" kind="property"><name>InvalidPassword</name></member>
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a3cccd884cf3e02533ab687fca7550793" kind="property"><name>InvalidUser</name></member>
@@ -311,7 +423,10 @@
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a17469ea4cfc729c4d6b9cbfa26d387a5" kind="property"><name>LoginMandatory</name></member>
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a2a4ebcf81fea10fecf261ebd54c702b5" kind="property"><name>NewPassword</name></member>
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1ab7906137d1e57b996fdab9d7f56411bf" kind="property"><name>NewPasswordMandatory</name></member>
+    <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a5f587a2f596ea4654b6d59c2a7e6c023" kind="property"><name>NoFunctionalityExist</name></member>
+    <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a449c801ca89d32ad67f36e35a480b2f0" kind="property"><name>NoFunctionalityRoleExist</name></member>
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a317f38eb337b62044a037ba23249b3fe" kind="property"><name>NoPendingChanges</name></member>
+    <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a4bafb0ca0e7b712acb574d2761d555a2" kind="property"><name>NoRoleExist</name></member>
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a5b772a5dc48018880b64d24dd163acac" kind="property"><name>NullArgument</name></member>
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a0758caf4ce88adc9ae18ce3643be7f10" kind="property"><name>OldPassword</name></member>
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a921c12efc16a223bf652aac411453f0b" kind="property"><name>OldPasswordError</name></member>
@@ -323,15 +438,25 @@
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1ad0f8f97faf91a6133dbecd48dda9e3e1" kind="property"><name>RepeatPasswordError</name></member>
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a644b26a295778d449ac527f3c200fc97" kind="property"><name>RepeatPasswordMandatory</name></member>
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1ace3c13322ed5672ba5ffb29437e250bd" kind="property"><name>ResetPassword</name></member>
+    <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1aa2cbf8eb11a9b2e6c223797a511eef0a" kind="property"><name>RoleAlreadyExist</name></member>
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1ad45350ef8af5276ed21ba1405ad661cb" kind="property"><name>Save</name></member>
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a42436fd0d84a03316db7e8189d9a091f" kind="property"><name>SaveChanges</name></member>
+    <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a6c7cbe052b710a7d6180a88c4c71f42b" kind="property"><name>SaveSuccessfully</name></member>
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a27a00e378c9167fb8ede699b28b68d29" kind="property"><name>SignIn</name></member>
     <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1aeca84938740571ae11209c4869575939" kind="function"><name>HKSupplyRes</name></member>
+  </compound>
+  <compound refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view" kind="interface"><name>HKSupply::Forms::IActionsStackView</name>
+    <member refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1ae8deb0cdeaa1b41f48e9a497acce9334" kind="function"><name>actionsStackView_EditButtonClick</name></member>
+    <member refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1a9a3873c8695cb595fe413b51be87210d" kind="function"><name>actionsStackView_NewButtonClick</name></member>
+    <member refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1a31fb0c34c49bb46661a612f1916f7c2e" kind="function"><name>actionsStackView_SaveButtonClick</name></member>
+    <member refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1aa9fb7f15cdbc1fb6fdc19b522327a34a" kind="function"><name>actionsStackView_CancelButtonClick</name></member>
+    <member refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1a1a01439762b8cc84888acc2c7b7230d2" kind="function"><name>ConfigureActionsStackView</name></member>
   </compound>
   <compound refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer" kind="interface"><name>HKSupply::Services::Interfaces::ICustomer</name>
     <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a4eae770f8e05c2a16b30d11ca2b6a3e8" kind="function"><name>NewCustomer</name></member>
     <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a2f446e665b10feef3e8373887a138048" kind="function"><name>UpdateCustomer</name></member>
     <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a0ce0dce4e042cf94014fbc1487bf7789" kind="function"><name>GetCustomerById</name></member>
+    <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a9191f24189f44e76aad505edfdf7e057" kind="function"><name>GetCustomers</name></member>
   </compound>
   <compound refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality" kind="interface"><name>HKSupply::Services::Interfaces::IFunctionality</name>
     <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_1aa1f16fee3ce5743db02605b4fd2184fc" kind="function"><name>GetAllFunctionalities</name></member>
@@ -374,7 +499,6 @@
   </compound>
   <compound refid="class_h_k_supply_1_1_forms_1_1_login" kind="class"><name>HKSupply::Forms::Login</name>
     <member refid="class_h_k_supply_1_1_forms_1_1_login_1ae859ece7eaa65739968d374f7d7946f4" kind="variable"><name>MSG_TIME</name></member>
-    <member refid="class_h_k_supply_1_1_forms_1_1_login_1ac1f65a6d03467829193621e117c6dc60" kind="variable"><name>resManager</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_login_1a1aa36f8af2efb7235bc1722f72ba18c4" kind="variable"><name>components</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_login_1a903c96b14e86457617ba13a645fa2ad1" kind="variable"><name>lblLogin</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_login_1a15182ae2cb3aaae60af9f15d02e22361" kind="variable"><name>txtLogin</name></member>
@@ -389,18 +513,20 @@
     <member refid="class_h_k_supply_1_1_forms_1_1_login_1ad0eee1e18ba4e6e421099b65007fb98d" kind="function"><name>InitializeTexts</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_login_1a56e897e5aed24b516f633fc4a182da3b" kind="function"><name>ShowMessage</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_login_1a4855300f252aa90c8693ca2a708b7ad0" kind="function"><name>IsValidForm</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_login_1a863e4c2fea19bad6401a41144aa2d853" kind="function"><name>txtPassword_KeyDown</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_login_1a3b40d6bd633de59f8918244d783e7fe0" kind="function"><name>btnSignIn_Click</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_login_1ad400fb751e97b0b67ae2130beca7521f" kind="function"><name>InitializeComponent</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_login_1a0c20fcbe198d2635836e7c7c6eebee31" kind="function"><name>Dispose</name></member>
   </compound>
   <compound refid="class_h_k_supply_1_1_forms_1_1_main" kind="class"><name>HKSupply::Forms::Main</name>
-    <member refid="class_h_k_supply_1_1_forms_1_1_main_1a707717236394f035eacf36bb1fd93944" kind="variable"><name>resManager</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_main_1a5b0e3037bf3c9d073a56a835b7eaba18" kind="variable"><name>components</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_main_1a69a9bfa39c9fad29c1bb9e6b2729cdf3" kind="variable"><name>msMainMenu</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_main_1a8fc09b23fbe14bc676f790d28bb0e9c7" kind="function"><name>Main</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_main_1ae322c78605a4993241d8cf837cc2e6fc" kind="function"><name>ChildClick</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_main_1a0d4a749a7d048530921b890b19271d4c" kind="function"><name>Main_Load</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_main_1a26dcfed0701edf835698f329dc3175ce" kind="function"><name>InitializeMainMenu</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_main_1a36fe2fb3cc78caaf3b14e9eb9f9e482f" kind="function"><name>SetMenuStyle</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_main_1a2bb372b69a7ae0b9a973768112cb7d91" kind="function"><name>SetBackgroundColor</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_main_1a35ed58dcbd1a313e381734c0bde9cc1f" kind="function"><name>InitializeComponent</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_main_1a99fe43d79c789818b37bb46db1dfa795" kind="function"><name>Dispose</name></member>
   </compound>
@@ -506,22 +632,21 @@
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a0ec7f3aa6a0ea7c1891c51b8ec3fa3a1ab5a7adde1af5c87d7fd797b6245c2a39" kind="enumvalue"><name>Description</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a0ec7f3aa6a0ea7c1891c51b8ec3fa3a1a00d23a76e43b46dae9ec7aa9dcbebb32" kind="enumvalue"><name>Enabled</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a0ec7f3aa6a0ea7c1891c51b8ec3fa3a1a231bc72756b5e6de492aaaa1577f61b1" kind="enumvalue"><name>Remarks</name></member>
-    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a216035f385ae485b697385ce8bf2dd81" kind="variable"><name>resManager</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a62a5bc6f994e9ce736b9d554d8112e6f" kind="variable"><name>actionsStackView</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1ac3c5b4dcceb88e38b50390b16b83e86c" kind="variable"><name>_modifiedRoles</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a95f8238dbfc06ba7132daa5a32327f50" kind="variable"><name>_createdRoles</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a5327fe3795c6333c16f44ce3c4ffe5fb" kind="variable"><name>components</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1acc57625e8dd54327e7a49b846800ff2b" kind="variable"><name>grdRoles</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1ab55687c20cf8f38cc4c2c478783f1224" kind="function"><name>RoleManagement</name></member>
-    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a49f2b67ebc44c175fd4b3d8289c5fd39" kind="function"><name>RoleManagement_Load</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a029527589b55752c810c410fb7b7ec73" kind="function"><name>actionsStackView_EditButtonClick</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a9cee7b3dda5de12cd3612ad66b27e302" kind="function"><name>actionsStackView_NewButtonClick</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a6f9ce17d9dbd5e01886e7ffebb428cac" kind="function"><name>actionsStackView_SaveButtonClick</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a9651949eef33db6a0600a919bb30f8e8" kind="function"><name>actionsStackView_CancelButtonClick</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a022e071b082ef46f206426f75db34fa8" kind="function"><name>ConfigureActionsStackView</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a49f2b67ebc44c175fd4b3d8289c5fd39" kind="function"><name>RoleManagement_Load</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a3450b22b578ae9d45d63cfc0a4ff1e0e" kind="function"><name>grdRoles_CellValueChanged</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1abbf9cbf8936c2cca1a25a2610615da1e" kind="function"><name>grdRoles_CellValidating</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a8e6ddd309e227a948b22dd0f20a79544" kind="function"><name>grdRoles_DataError</name></member>
-    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a022e071b082ef46f206426f75db34fa8" kind="function"><name>ConfigureActionsStackView</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a503287b2deb5a4ce6ed0f93284125bf5" kind="function"><name>SetupRolesGrid</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a90056abd3975eb45ef03c749c934a999" kind="function"><name>ConfigureRolesGridDefaultStyles</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1ad6f335c19c4942205e1ea1b2187307a2" kind="function"><name>LoadAllRoles</name></member>
@@ -537,9 +662,11 @@
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1aec6f44de37a82c49e6166b2d83e65885" kind="function"><name>Dispose</name></member>
   </compound>
   <compound refid="class_h_k_suply_1_1_unit_test_1_1_role_test" kind="class"><name>HKSuply::UnitTest::RoleTest</name>
+    <member refid="class_h_k_suply_1_1_unit_test_1_1_role_test_1aa9d71210dc474e284fe04b9bd38a122b" kind="function"><name>GetAllRoles</name></member>
     <member refid="class_h_k_suply_1_1_unit_test_1_1_role_test_1a8a280b4286b4071e13440d7c7f179e13" kind="function"><name>GetRole</name></member>
     <member refid="class_h_k_suply_1_1_unit_test_1_1_role_test_1ad7e762c47c24c111dac35a0539f1325a" kind="function"><name>NewRole</name></member>
     <member refid="class_h_k_suply_1_1_unit_test_1_1_role_test_1ad1920b59b54f4b79a8aefb62060d6375" kind="function"><name>DisableRole</name></member>
+    <member refid="class_h_k_suply_1_1_unit_test_1_1_role_test_1a515e4f6d1342bc184a49a94d6d97835d" kind="function"><name>UpdateRoles</name></member>
   </compound>
   <compound refid="class_h_k_supply_1_1_properties_1_1_settings" kind="class"><name>HKSupply::Properties::Settings</name>
     <member refid="class_h_k_supply_1_1_properties_1_1_settings_1afba79753b33b733131349225543aa49d" kind="variable"><name>defaultInstance</name></member>
@@ -643,7 +770,6 @@
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1abbf0bb26b6781213773c2e4f4b1b2849a4934d2367dcd44d97e2d6e26dca48c0a" kind="enumvalue"><name>LastLogin</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1abbf0bb26b6781213773c2e4f4b1b2849a8619aa83f3e0c9df681c47b3901c12a7" kind="enumvalue"><name>LastLogout</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1abbf0bb26b6781213773c2e4f4b1b2849a231bc72756b5e6de492aaaa1577f61b1" kind="enumvalue"><name>Remarks</name></member>
-    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a034520773f2bee589ab345b2fd42d9ee" kind="variable"><name>resManager</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a24fbb0dc892b19f8a48f71f25a32c510" kind="variable"><name>tsiChangePassword</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1ae837d6de4838dae2f96161893dd83dad" kind="variable"><name>mouseLocation</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1aa62caa31962ce8e0056bf0ab3643c249" kind="variable"><name>actionsStackView</name></member>
@@ -653,11 +779,12 @@
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1aab5bda54114a0e98164ec4d546283338" kind="variable"><name>components</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a0a1df9b563aecffa095ac490c07428c1" kind="variable"><name>grdUsers</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a794584c3e6635a1224774139fcbcae80" kind="function"><name>UserManagement</name></member>
-    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a139a3c3ca3c07817f0f03c291e28f017" kind="function"><name>UserManagement_Load</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a6af4060ab989941e08d01b4dfa674ada" kind="function"><name>actionsStackView_EditButtonClick</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a1fa53bdd2a95798e874167e333294520" kind="function"><name>actionsStackView_NewButtonClick</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1abbad8b29b95cc3352c4a55f7cfbf2742" kind="function"><name>actionsStackView_SaveButtonClick</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a812df0823003cc8a80516aee863190a9" kind="function"><name>actionsStackView_CancelButtonClick</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a276207364c74bbbfd746980cdd9b9f7d" kind="function"><name>ConfigureActionsStackView</name></member>
+    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a139a3c3ca3c07817f0f03c291e28f017" kind="function"><name>UserManagement_Load</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a34e50b51046ba60c275bfa2ae00c684a" kind="function"><name>grdUsers_CellValueChanged</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a1b1900a24b1d5d7f55ac7e5b1d6fca34" kind="function"><name>grdUsers_CellValidating</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1abb8e473265dff365f2f153eda23f335f" kind="function"><name>grdUsers_CellFormatting</name></member>
@@ -665,7 +792,6 @@
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a9bf8868a4a85362ac67431be4a8c67dd" kind="function"><name>grdUsers_CellMouseEnter</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a2385fac5927bca557173b76f66379347" kind="function"><name>grdUsers_DataError</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a6e30150f982fb6b758b8a661ea882b0d" kind="function"><name>tsiChangePassword_Click</name></member>
-    <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a276207364c74bbbfd746980cdd9b9f7d" kind="function"><name>ConfigureActionsStackView</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1ade29738af3c9aceecf8caf5686973ea3" kind="function"><name>SetupUsersGrid</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a772475755ca76fec9e2c8556a46a8a98" kind="function"><name>ConfigureRolesColorsStyles</name></member>
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a98d3c4cec2685541488b8cad73e1fba3" kind="function"><name>LoadRoles</name></member>
@@ -683,9 +809,12 @@
     <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a785e8f8b502b3ac465677f0817b29023" kind="function"><name>Dispose</name></member>
   </compound>
   <compound refid="class_h_k_suply_1_1_unit_test_1_1_user_test" kind="class"><name>HKSuply::UnitTest::UserTest</name>
+    <member refid="class_h_k_suply_1_1_unit_test_1_1_user_test_1a3b155a2e3f798000decc5cd9bb7ff5bc" kind="function"><name>GetAllUser</name></member>
     <member refid="class_h_k_suply_1_1_unit_test_1_1_user_test_1a0d33d16a2e9761ccdf686fc6398bd599" kind="function"><name>GetUser</name></member>
     <member refid="class_h_k_suply_1_1_unit_test_1_1_user_test_1a38a60511778b95f7cd2c256697cc4e6f" kind="function"><name>NewUser</name></member>
     <member refid="class_h_k_suply_1_1_unit_test_1_1_user_test_1acc37fae05da85affd3a422b32bcd0700" kind="function"><name>DisableUser</name></member>
+    <member refid="class_h_k_suply_1_1_unit_test_1_1_user_test_1ac77e49a4ff678e5325e0634aa8425f09" kind="function"><name>ChangePassword</name></member>
+    <member refid="class_h_k_suply_1_1_unit_test_1_1_user_test_1a8e2c7128da98aa8edb6541a4c037c56d" kind="function"><name>UpdateUsers</name></member>
   </compound>
   <compound refid="namespace_custom_controls" kind="namespace"><name>CustomControls</name>
   </compound>
@@ -755,6 +884,8 @@
   </compound>
   <compound refid="namespace_system_1_1_data_1_1_entity_1_1_validation" kind="namespace"><name>System::Data::Entity::Validation</name>
   </compound>
+  <compound refid="namespace_system_1_1_data_1_1_sql_client" kind="namespace"><name>System::Data::SqlClient</name>
+  </compound>
   <compound refid="namespace_system_1_1_diagnostics" kind="namespace"><name>System::Diagnostics</name>
   </compound>
   <compound refid="namespace_system_1_1_drawing" kind="namespace"><name>System::Drawing</name>
@@ -764,6 +895,8 @@
   <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
   </compound>
   <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq_1_1_dynamic" kind="namespace"><name>System::Linq::Dynamic</name>
   </compound>
   <compound refid="namespace_system_1_1_reflection" kind="namespace"><name>System::Reflection</name>
   </compound>
@@ -835,6 +968,8 @@
   </compound>
   <compound refid="_h_k_supply_context_8cs" kind="file"><name>HKSupplyContext.cs</name>
   </compound>
+  <compound refid="_d_b_server_connection_exception_8cs" kind="file"><name>DBServerConnectionException.cs</name>
+  </compound>
   <compound refid="_invalid_password_exception_8cs" kind="file"><name>InvalidPasswordException.cs</name>
   </compound>
   <compound refid="_new_existing_functionality_exception_8cs" kind="file"><name>NewExistingFunctionalityException.cs</name>
@@ -857,6 +992,8 @@
   </compound>
   <compound refid="_form1_8_designer_8cs" kind="file"><name>Form1.Designer.cs</name>
   </compound>
+  <compound refid="_i_actions_stack_view_8cs" kind="file"><name>IActionsStackView.cs</name>
+  </compound>
   <compound refid="_login_8cs" kind="file"><name>Login.cs</name>
   </compound>
   <compound refid="_login_8_designer_8cs" kind="file"><name>Login.Designer.cs</name>
@@ -868,6 +1005,10 @@
   <compound refid="_change_password_8cs" kind="file"><name>ChangePassword.cs</name>
   </compound>
   <compound refid="_change_password_8_designer_8cs" kind="file"><name>ChangePassword.Designer.cs</name>
+  </compound>
+  <compound refid="_customer_management_8cs" kind="file"><name>CustomerManagement.cs</name>
+  </compound>
+  <compound refid="_customer_management_8_designer_8cs" kind="file"><name>CustomerManagement.Designer.cs</name>
   </compound>
   <compound refid="_functionality_management_8cs" kind="file"><name>FunctionalityManagement.cs</name>
   </compound>

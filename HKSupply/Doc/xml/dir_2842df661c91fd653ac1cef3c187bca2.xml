@@ -4,6 +4,8 @@
     <compoundname>HKSupply/Forms/Master</compoundname>
     <innerfile refid="_change_password_8cs">ChangePassword.cs</innerfile>
     <innerfile refid="_change_password_8_designer_8cs">ChangePassword.Designer.cs</innerfile>
+    <innerfile refid="_customer_management_8cs">CustomerManagement.cs</innerfile>
+    <innerfile refid="_customer_management_8_designer_8cs">CustomerManagement.Designer.cs</innerfile>
     <innerfile refid="_functionality_management_8cs">FunctionalityManagement.cs</innerfile>
     <innerfile refid="_functionality_management_8_designer_8cs">FunctionalityManagement.Designer.cs</innerfile>
     <innerfile refid="_functionality_role_management_8cs">FunctionalityRoleManagement.cs</innerfile>

@@ -84,24 +84,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="132">
+      <node id="157">
         <label>System::Exception</label>
       </node>
-      <node id="131">
+      <node id="156">
         <label>HKSupply.Exceptions.NonexistentRoleException</label>
         <link refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_role_exception"/>
-        <childnode refid="132" relation="public-inheritance">
+        <childnode refid="157" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="134">
+      <node id="159">
         <label>System::Exception</label>
       </node>
-      <node id="133">
+      <node id="158">
         <label>HKSupply.Exceptions.NonexistentRoleException</label>
         <link refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_role_exception"/>
-        <childnode refid="134" relation="public-inheritance">
+        <childnode refid="159" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

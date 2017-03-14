@@ -1,5 +1,10 @@
 \hypertarget{class_custom_controls_1_1_stack_view}{}\section{Custom\+Controls.\+Stack\+View Class Reference}
 \label{class_custom_controls_1_1_stack_view}\index{Custom\+Controls.\+Stack\+View@{Custom\+Controls.\+Stack\+View}}
+
+
+Custom control, botonera de acciones para los formulario  
+
+
 Inheritance diagram for Custom\+Controls.\+Stack\+View\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -28,9 +33,8 @@ enum {\bfseries Toolbar\+States} \{ \newline
 \mbox{\Hypertarget{class_custom_controls_1_1_stack_view_a40e9b83536de3aa4a3fd7e40bfce0246}\label{class_custom_controls_1_1_stack_view_a40e9b83536de3aa4a3fd7e40bfce0246}} 
 void {\bfseries Initialize\+General\+Style} ()
 \item 
-\mbox{\Hypertarget{class_custom_controls_1_1_stack_view_aa6ee6db47352fbb47bc1292ea7f58611}\label{class_custom_controls_1_1_stack_view_aa6ee6db47352fbb47bc1292ea7f58611}} 
-void {\bfseries Restore\+Init\+State} ()
-\end{DoxyCompactItemize}
+void \hyperlink{class_custom_controls_1_1_stack_view_aa6ee6db47352fbb47bc1292ea7f58611}{Restore\+Init\+State} ()
+\begin{DoxyCompactList}\small\item\em Restaura la botonera a su estado inicial con los permisos que se han indicado en el constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -71,6 +75,19 @@ Event\+Handler {\bfseries Cancel\+Button\+Click}
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+Custom control, botonera de acciones para los formulario 
+
+Acciones\+:
+\begin{DoxyItemize}
+\item Editar
+\item Nuevo
+\item Guardar
+\item Cancelar
+\end{DoxyItemize}
+
+En función de los permisos que tenga el usuario en cada pantalla mostrará las acciones correspondientess 
+
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_custom_controls_1_1_stack_view_a227a09aebaaa2cc577a4bfa50cb08967}\label{class_custom_controls_1_1_stack_view_a227a09aebaaa2cc577a4bfa50cb08967}} 
 \index{Custom\+Controls\+::\+Stack\+View@{Custom\+Controls\+::\+Stack\+View}!Dispose@{Dispose}}
@@ -87,6 +104,16 @@ Limpiar los recursos que se estén utilizando.
 {\em disposing} & true si los recursos administrados se deben eliminar; false en caso contrario.\\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_custom_controls_1_1_stack_view_aa6ee6db47352fbb47bc1292ea7f58611}\label{class_custom_controls_1_1_stack_view_aa6ee6db47352fbb47bc1292ea7f58611}} 
+\index{Custom\+Controls\+::\+Stack\+View@{Custom\+Controls\+::\+Stack\+View}!Restore\+Init\+State@{Restore\+Init\+State}}
+\index{Restore\+Init\+State@{Restore\+Init\+State}!Custom\+Controls\+::\+Stack\+View@{Custom\+Controls\+::\+Stack\+View}}
+\subsubsection{\texorpdfstring{Restore\+Init\+State()}{RestoreInitState()}}
+{\footnotesize\ttfamily void Custom\+Controls.\+Stack\+View.\+Restore\+Init\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restaura la botonera a su estado inicial con los permisos que se han indicado en el constructor 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

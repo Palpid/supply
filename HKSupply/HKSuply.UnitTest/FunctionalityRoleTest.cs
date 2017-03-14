@@ -6,6 +6,7 @@ using HKSupply.Helpers.Mocking;
 using HKSupply.Exceptions;
 using HKSupply.Models;
 using HKSupply.DB;
+using HKSupply.General;
 
 namespace HKSuply.UnitTest
 {
@@ -13,35 +14,50 @@ namespace HKSuply.UnitTest
     public class FunctionalityRoleTest
     {
         [TestMethod]
+        public void GetAllFunctionalitiesRole()
+        {
+            try
+            {
+                var functionalitiesRole = GlobalSetting.FunctionalityRoleService.GetAllFunctionalitiesRole();
+                Assert.IsTrue(true);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        [TestMethod]
         public void GetFunctionalityRole()
         {
-            var functionalityRoleEF = new EFFunctionalityRole();
-
             try
             {
-                var functionalityRole = functionalityRoleEF.GetFunctionalityRole(0, "XX"); //ArgumentNullException
+                var functionalityRole = GlobalSetting.FunctionalityRoleService.GetFunctionalityRole(0, "XX"); //ArgumentNullException
+                Assert.Fail("Expected exception");
             }
-            catch (ArgumentNullException anex)
+            catch (ArgumentNullException)
             {
-                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException)); //Es una tontería y siempre dará true, pero así no tengo el warnning
-            }
-
-            try
-            {
-                var functionalityRole = functionalityRoleEF.GetFunctionalityRole(1, null); //ArgumentNullException
-            }
-            catch (ArgumentNullException anex)
-            {
-                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException)); //Es una tontería y siempre dará true, pero así no tengo el warnning
+                Assert.IsTrue(true);
             }
 
             try
             {
-                var functionalityRole = functionalityRoleEF.GetFunctionalityRole(1, "XX"); //NonexistentFunctionalityRoleException
+                var functionalityRole = GlobalSetting.FunctionalityRoleService.GetFunctionalityRole(1, null); //ArgumentNullException
+                Assert.Fail("Expected exception");
             }
-            catch (NonexistentFunctionalityRoleException nefex)
+            catch (ArgumentNullException)
             {
-                Assert.IsTrue(nefex.GetType() == typeof(NonexistentFunctionalityRoleException));
+                Assert.IsTrue(true);
+            }
+
+            try
+            {
+                var functionalityRole = GlobalSetting.FunctionalityRoleService.GetFunctionalityRole(1, "XX"); //NonexistentFunctionalityRoleException
+                Assert.Fail("Expected exception");
+            }
+            catch (NonexistentFunctionalityRoleException)
+            {
+                Assert.IsTrue(true);
             }
 
             try
@@ -49,14 +65,14 @@ namespace HKSuply.UnitTest
                 using (var db = new HKSupplyContext())
                 {
                     var expectedValue = db.FunctionalitiesRole.FirstOrDefault(f => f.FunctionalityId.Equals(1) && f.RoleId.Equals("ADMIN"));
-                    var functionalityRole = functionalityRoleEF.GetFunctionalityRole(expectedValue.FunctionalityId, expectedValue.RoleId); //OK
+                    var functionalityRole = GlobalSetting.FunctionalityRoleService.GetFunctionalityRole(expectedValue.FunctionalityId, expectedValue.RoleId); //OK
                     Assert.AreEqual(true, functionalityRole.Equals(expectedValue));
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
 
         }
@@ -64,15 +80,14 @@ namespace HKSuply.UnitTest
         [TestMethod]
         public void GetFunctionalitiesRole()
         {
-            var functionalityRoleEF = new EFFunctionalityRole();
-
             try
             {
-                var functionalities = functionalityRoleEF.GetFunctionalitiesRole(null); //ArgumentNullException
+                var functionalities = GlobalSetting.FunctionalityRoleService.GetFunctionalitiesRole(null); //ArgumentNullException
+                Assert.Fail("Expected exception");
             }
-            catch (ArgumentNullException anex)
+            catch (ArgumentNullException)
             {
-                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException)); //Es una tontería y siempre dará true, pero así no tengo el warnning
+                Assert.IsTrue(true);
             }
 
             try
@@ -80,40 +95,69 @@ namespace HKSuply.UnitTest
                 using (var db = new HKSupplyContext())
                 {
                     var expectedValue = db.FunctionalitiesRole.Where(f => f.RoleId.Equals("ADMIN")).ToList();
-                    var functionalities = functionalityRoleEF.GetFunctionalitiesRole("ADMIN"); //ArgumentNullException
+                    var functionalities = GlobalSetting.FunctionalityRoleService.GetFunctionalitiesRole("ADMIN"); //ok
 
                     Assert.IsTrue(expectedValue.Count() == functionalities.Count());
                 }
                 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
         }
 
         [TestMethod]
+        public void GetFunctionalitiesCategoriesRole()
+        {
+            try
+            {
+                var functionalities = GlobalSetting.FunctionalityRoleService.GetFunctionalitiesCategoriesRole(null); //ArgumentNullException
+                Assert.Fail("Expected exception");
+            }
+            catch (ArgumentNullException)
+            {
+                Assert.IsTrue(true);
+            }
+
+            try
+            {
+                using (var db = new HKSupplyContext())
+                {
+                    var functionalities = GlobalSetting.FunctionalityRoleService.GetFunctionalitiesCategoriesRole("ADMIN"); //ok
+                    Assert.IsTrue(true);
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+        [TestMethod]
         public void NewFunctionalityRole()
         {
-            var functionalityRoleEF = new EFFunctionalityRole();
+            try
+            {
+                var functionalityRole = GlobalSetting.FunctionalityRoleService.NewFunctionalityRole(null); //ArgumentNullException
+                Assert.Fail("Expected exception");
+            }
+            catch (ArgumentNullException)
+            {
+                Assert.IsTrue(true); 
+            }
 
             try
             {
-                var functionalityRole = functionalityRoleEF.NewFunctionalityRole(null); //ArgumentNullException
+                var existing = GlobalSetting.FunctionalityRoleService.GetFunctionalityRole(1, "ADMIN");
+                var functionalityRole = GlobalSetting.FunctionalityRoleService.NewFunctionalityRole(existing); //NewExistingFunctionalityRoleException
+                Assert.Fail("Expected exception");
             }
-            catch (ArgumentNullException anex)
+            catch(NewExistingFunctionalityRoleException)
             {
-                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException)); 
-            }
-
-            try
-            {
-                var existing = functionalityRoleEF.GetFunctionalityRole(1, "ADMIN");
-                var functionalityRole = functionalityRoleEF.NewFunctionalityRole(existing);
-            }
-            catch(NewExistingFunctionalityRoleException nefre)
-            {
-                 Assert.IsTrue(nefre.GetType() == typeof(NewExistingFunctionalityRoleException)); 
+                 Assert.IsTrue(true); 
             }
 
             try
@@ -132,59 +176,61 @@ namespace HKSuply.UnitTest
                         Modify = false,
                     };
 
-                    var functionalityRole = functionalityRoleEF.NewFunctionalityRole(fr);
+                    var functionalityRole = GlobalSetting.FunctionalityRoleService.NewFunctionalityRole(fr);
 
                     Assert.AreEqual(true, functionalityRole.Equals(fr));
                 }
                 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
         }
 
         [TestMethod]
         public void ModifyFunctionalityRole()
         {
-            var functionalityRoleEF = new EFFunctionalityRole();
             try
             {
-                var func = functionalityRoleEF.ModifyFunctionalityRole(null);
+                var func = GlobalSetting.FunctionalityRoleService.ModifyFunctionalityRole(null);
+                Assert.Fail("Expected exception");
             }
-            catch (ArgumentNullException anex)
+            catch (ArgumentNullException)
             {
-                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException)); 
+                Assert.IsTrue(true); 
             }
 
             try
             {
                 var fr = new FunctionalityRole 
                 {
-                    RoleId = "XX",
+                    RoleId = "XXXXXX",
                     FunctionalityId = 1,
                     Read = false,
                     New = false,
                     Modify = false,
                 };
 
-                var func = functionalityRoleEF.ModifyFunctionalityRole(fr);
+                var func = GlobalSetting.FunctionalityRoleService.ModifyFunctionalityRole(fr);
+                Assert.Fail("Expected exception");
             }
-            catch (NonexistentFunctionalityRoleException nfrex)
+            catch (NonexistentFunctionalityRoleException)
             {
-                Assert.IsTrue(nfrex.GetType() == typeof(NonexistentFunctionalityRoleException));
+                Assert.IsTrue(true);
             }
 
             try
             {
                 using (var db = new HKSupplyContext())
                 {
-                    var funcUserManagement = db.Functionalities.FirstOrDefault(f => f.FunctionalityName.Equals("MaterialsManagement"));
-                    var fr = functionalityRoleEF.GetFunctionalityRole(funcUserManagement.FunctionalityId, "OPERATOR");
+                    var funcMatManagement = GlobalSetting.FunctionalityService.GetFunctionalityByName("Materials Management");
+
+                    var fr = GlobalSetting.FunctionalityRoleService.GetFunctionalityRole(funcMatManagement.FunctionalityId, "OPERATOR");
                     fr.Read = true;
                     fr.New = false;
                     fr.Modify = true;
-                    var func = functionalityRoleEF.ModifyFunctionalityRole(fr); //OK
+                    var func = GlobalSetting.FunctionalityRoleService.ModifyFunctionalityRole(fr); //OK
 
                     Assert.AreEqual(true, func.Equals(fr));
                 }
@@ -196,6 +242,38 @@ namespace HKSuply.UnitTest
             }
 
 
+        }
+
+        [TestMethod]
+        public void UpdateFunctionalitiesRoles()
+        {
+            bool res = false;
+            try
+            {
+                res = GlobalSetting.FunctionalityRoleService.UpdateFunctionalitiesRoles(null);  //ArgumentNullException
+                Assert.Fail("Expected exception");
+            }
+            catch (ArgumentNullException)
+            {
+                Assert.IsTrue(true);
+            }
+
+            try
+            {
+
+                var funcMatManagement = GlobalSetting.FunctionalityService.GetFunctionalityByName("Materials Management");
+
+                var all = GlobalSetting.FunctionalityRoleService.GetAllFunctionalitiesRole();
+                var frmo = all.Where(f => f.FunctionalityId.Equals(funcMatManagement.FunctionalityId) && f.RoleId.Equals("OPERATOR")).ToList();
+                frmo.FirstOrDefault().Modify = false;
+
+                res = GlobalSetting.FunctionalityRoleService.UpdateFunctionalitiesRoles(frmo);
+                Assert.AreEqual(true, res);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

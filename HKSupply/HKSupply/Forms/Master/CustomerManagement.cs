@@ -9,6 +9,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Dynamic;
 using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,6 +50,8 @@ namespace HKSupply.Forms.Master
         string[] _nonEditingFields = { "txtIdCustomer", "txtIdVersion", "txtIdSubversion", "txtTimestamp" };
         string[] _nonCreatingFields = { "txtIdVersion", "txtIdSubversion", "txtTimestamp" };
         int[] _nonCreatingFieldsRows = { 1, 2, 3 };
+
+        bool _sortDescending = true;
 
         #endregion
 
@@ -127,6 +130,7 @@ namespace HKSupply.Forms.Master
 
                 if (res == true)
                 {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
                     ActionsAfterCU();
                 }
 
@@ -267,12 +271,11 @@ namespace HKSupply.Forms.Master
             }
         }
 
-
         private void grdCustomers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                if (e.RowIndex < 0)
+                if (e.RowIndex < 0 && e.ColumnIndex > -1)
                 {
                     LoadCustomersSortedList((eCustomerColumns)e.ColumnIndex);
                 }
@@ -285,7 +288,6 @@ namespace HKSupply.Forms.Master
         #endregion
 
         #endregion
-
 
         #region Private Methods
 
@@ -359,6 +361,8 @@ namespace HKSupply.Forms.Master
                 grdCustomers.Rows.Clear();
                 grdCustomers.DataSource = _customersList;
                 grdCustomers.ReadOnly = true;
+                //Para poder cambiar el color del header cuando se filtra hay que desactivar los efectos visuales del header que coge por defecto
+                grdCustomers.EnableHeadersVisualStyles = false; 
 
             }
             catch(Exception ex)
@@ -367,62 +371,31 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        /// <summary>
+        /// Ordenar el grid según la columna 
+        /// </summary>
+        /// <param name="sortedColumn">Columna por la que se quiere ordenar</param>
+        /// <remarks>
+        /// Alterna entre el orden ascendente y descendente.
+        /// OK, no es muy correcto porque se controla con una sola variable la ordenación (ascendente o descendente) 
+        /// de todas las columnas, pero así es más fácil y en el peor de los casos el usuario pulsará dos veces 
+        /// sobre la misma columna para tener el orden que quiere.
+        /// </remarks>
         private void LoadCustomersSortedList(eCustomerColumns sortedColumn)
         {
             try
             {
-                //linq no acepta consultas dinámicas. En el nuget hay un dynamic linq, pero no tiene tantas descargas para fiarme
-                switch (sortedColumn)
-                {
-                    case eCustomerColumns.IdVer:
-                        _customersList = _customersList.OrderBy(c => c.IdVer).ToList();
-                        break;
-                    case eCustomerColumns.idSubVer:
-                        _customersList = _customersList.OrderBy(c => c.IdSubVer).ToList();
-                        break;
-                    case eCustomerColumns.Timestamp:
-                        _customersList = _customersList.OrderBy(c => c.Timestamp).ToList();
-                        break;
-                    case eCustomerColumns.IdCustomer:
-                        _customersList = _customersList.OrderBy(c => c.IdCustomer).ToList();
-                        break;
-                    case eCustomerColumns.CustName:
-                        _customersList = _customersList.OrderBy(c => c.CustName).ToList();
-                        break;
-                    case eCustomerColumns.Active:
-                        _customersList = _customersList.OrderBy(c => c.Active).ToList();
-                        break;
-                    case eCustomerColumns.VATNum:
-                        _customersList = _customersList.OrderBy(c => c.VATNum).ToList();
-                        break;
-                    case eCustomerColumns.ShippingAddress:
-                        _customersList = _customersList.OrderBy(c => c.ShippingAddress).ToList();
-                        break;
-                    case eCustomerColumns.BillingAddress:
-                        _customersList = _customersList.OrderBy(c => c.BillingAddress).ToList();
-                        break;
-                    case eCustomerColumns.ContactName:
-                        _customersList = _customersList.OrderBy(c => c.ContactName).ToList();
-                        break;
-                    case eCustomerColumns.ContactPhone:
-                        _customersList = _customersList.OrderBy(c => c.ContactPhone).ToList();
-                        break;
-                    case eCustomerColumns.IdIncoterm:
-                        _customersList = _customersList.OrderBy(c => c.IdIncoterm).ToList();
-                        break;
-                    case eCustomerColumns.IdPaymentTerms:
-                        _customersList = _customersList.OrderBy(c => c.IdPaymentTerms).ToList();
-                        break;
-                    case eCustomerColumns.Currency:
-                        _customersList = _customersList.OrderBy(c => c.Currency).ToList();
-                        break;
-                }
+                string order = _sortDescending ? " ASC" : " DESC";
+                _customersList = _customersList.OrderBy(sortedColumn.ToString() + order).ToList();
+
+                _sortDescending = !_sortDescending; //See Remarks
 
                 grdCustomers.DataSource = null;
                 grdCustomers.Rows.Clear();
                 grdCustomers.DataSource = _customersList;
                 grdCustomers.ReadOnly = true;
-
+                grdCustomers.Columns[(int)sortedColumn].HeaderCell.Style.BackColor = Color.Tomato;
+                grdCustomers.Columns[(int)sortedColumn].HeaderText += "*";
             }
             catch (Exception ex)
             {

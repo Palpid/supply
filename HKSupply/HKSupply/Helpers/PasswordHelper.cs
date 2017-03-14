@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace HKSupply.Helpers
 {
+    /// <summary>
+    /// Clase de ayuda para la gestíón de password, conseguir el hash y validar un password
+    /// </summary>
     public class PasswordHelper
     {
         private static readonly Random random = new Random();

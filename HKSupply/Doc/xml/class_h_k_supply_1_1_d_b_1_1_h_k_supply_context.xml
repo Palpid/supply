@@ -97,34 +97,48 @@
         </inbodydescription>
         <location file="HKSupply/DB/HKSupplyContext.cs" line="23" column="1" bodyfile="HKSupply/DB/HKSupplyContext.cs" bodystart="23" bodyend="27"/>
       </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context_1a2a1188ce8fd98551e036cb87ae342132" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.DB.HKSupplyContext.SaveChanges</definition>
+        <argsstring>()</argsstring>
+        <name>SaveChanges</name>
+        <briefdescription>
+<para>Override del método original para que concatene todos los errres del entity validation </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/DB/HKSupplyContext.cs" line="33" column="1" bodyfile="HKSupply/DB/HKSupplyContext.cs" bodystart="33" bodyend="56"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Contexto de base de datos Entity Framework </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="72">
+      <node id="90">
         <label>HKSupply.DB.HKSupplyContext</label>
         <link refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context"/>
-        <childnode refid="73" relation="public-inheritance">
+        <childnode refid="91" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="73">
+      <node id="91">
         <label>DbContext</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="74">
+      <node id="92">
         <label>HKSupply.DB.HKSupplyContext</label>
         <link refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context"/>
-        <childnode refid="75" relation="public-inheritance">
+        <childnode refid="93" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="75">
+      <node id="93">
         <label>DbContext</label>
       </node>
     </collaborationgraph>
-    <location file="HKSupply/DB/HKSupplyContext.cs" line="15" column="1" bodyfile="HKSupply/DB/HKSupplyContext.cs" bodystart="14" bodyend="29"/>
+    <location file="HKSupply/DB/HKSupplyContext.cs" line="15" column="1" bodyfile="HKSupply/DB/HKSupplyContext.cs" bodystart="14" bodyend="58"/>
     <listofallmembers>
       <member refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context_1a61798023df843c12bca882cb94bcda49" prot="public" virt="non-virtual"><scope>HKSupply::DB::HKSupplyContext</scope><name>Customers</name></member>
       <member refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context_1a07e9712da54d17365dcc738168829127" prot="public" virt="non-virtual"><scope>HKSupply::DB::HKSupplyContext</scope><name>CustomersHistory</name></member>
@@ -132,6 +146,7 @@
       <member refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context_1ad7edaaaf095a352171c4903fb774a482" prot="public" virt="non-virtual"><scope>HKSupply::DB::HKSupplyContext</scope><name>FunctionalitiesRole</name></member>
       <member refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context_1a3839d7dc7c09dc0805de1401ab9ed1a5" prot="public" virt="non-virtual"><scope>HKSupply::DB::HKSupplyContext</scope><name>HKSupplyContext</name></member>
       <member refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context_1aa13a9d69d5f081b45c75059370ae3201" prot="public" virt="non-virtual"><scope>HKSupply::DB::HKSupplyContext</scope><name>Roles</name></member>
+      <member refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context_1a2a1188ce8fd98551e036cb87ae342132" prot="public" virt="non-virtual"><scope>HKSupply::DB::HKSupplyContext</scope><name>SaveChanges</name></member>
       <member refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context_1a2b7cfcd66fb7b707906ec3da46ee099f" prot="public" virt="non-virtual"><scope>HKSupply::DB::HKSupplyContext</scope><name>Users</name></member>
     </listofallmembers>
   </compounddef>

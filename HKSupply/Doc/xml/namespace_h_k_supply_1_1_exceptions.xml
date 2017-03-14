@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="namespace_h_k_supply_1_1_exceptions" kind="namespace" language="C#">
     <compoundname>HKSupply::Exceptions</compoundname>
+    <innerclass refid="class_h_k_supply_1_1_exceptions_1_1_d_b_server_connection_exception" prot="public">HKSupply::Exceptions::DBServerConnectionException</innerclass>
     <innerclass refid="class_h_k_supply_1_1_exceptions_1_1_invalid_password_exception" prot="public">HKSupply::Exceptions::InvalidPasswordException</innerclass>
     <innerclass refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_functionality_exception" prot="public">HKSupply::Exceptions::NewExistingFunctionalityException</innerclass>
     <innerclass refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_functionality_role_exception" prot="public">HKSupply::Exceptions::NewExistingFunctionalityRoleException</innerclass>
@@ -15,6 +16,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="HKSupply/Exceptions/InvalidPasswordException.cs" line="8" column="1"/>
+    <location file="HKSupply/Exceptions/DBServerConnectionException.cs" line="8" column="1"/>
   </compounddef>
 </doxygen>

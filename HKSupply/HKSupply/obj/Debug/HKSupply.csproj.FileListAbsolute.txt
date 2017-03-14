@@ -8,6 +8,7 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\EntityFramework.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\EntityFramework.SqlServer.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\log4net.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Log4Slack.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\System.Linq.Dynamic.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CustomControls.pdb
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\EntityFramework.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\EntityFramework.SqlServer.xml

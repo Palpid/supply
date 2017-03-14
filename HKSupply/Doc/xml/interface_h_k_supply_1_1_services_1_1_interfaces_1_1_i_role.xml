@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Interfaces/IRole.cs" line="12" column="1"/>
+        <location file="HKSupply/Services/Interfaces/IRole.cs" line="15" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1ad83423359435ae70026a1daac5bd07ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref></type>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Interfaces/IRole.cs" line="13" column="1"/>
+        <location file="HKSupply/Services/Interfaces/IRole.cs" line="16" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1a7fea1e910bcd64d8e99da8bf4438e50f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref></type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Interfaces/IRole.cs" line="14" column="1"/>
+        <location file="HKSupply/Services/Interfaces/IRole.cs" line="17" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1a4f5e4bf501b1affbae4d3d39dbb837b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Interfaces/IRole.cs" line="15" column="1"/>
+        <location file="HKSupply/Services/Interfaces/IRole.cs" line="18" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1a0960468c3fb4db4f09b3175106ee7753" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -97,26 +97,26 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Interfaces/IRole.cs" line="16" column="1"/>
+        <location file="HKSupply/Services/Interfaces/IRole.cs" line="19" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Interface para el service de Role </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="91">
+      <node id="116">
         <label>HKSupply.Services.Interfaces.IRole</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role"/>
       </node>
-      <node id="92">
+      <node id="117">
         <label>HKSupply.Services.Implementations.EFRole</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role"/>
-        <childnode refid="91" relation="public-inheritance">
+        <childnode refid="116" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="HKSupply/Services/Interfaces/IRole.cs" line="11" column="1" bodyfile="HKSupply/Services/Interfaces/IRole.cs" bodystart="10" bodyend="17"/>
+    <location file="HKSupply/Services/Interfaces/IRole.cs" line="14" column="1" bodyfile="HKSupply/Services/Interfaces/IRole.cs" bodystart="13" bodyend="20"/>
     <listofallmembers>
       <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1a4f5e4bf501b1affbae4d3d39dbb837b5" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IRole</scope><name>DisableRole</name></member>
       <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1ad83423359435ae70026a1daac5bd07ae" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IRole</scope><name>GetRoleById</name></member>

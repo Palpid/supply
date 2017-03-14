@@ -7,6 +7,7 @@ using HKSupply.Exceptions;
 using HKSupply.Models;
 using HKSupply.DB;
 using HKSupply.Helpers;
+using HKSupply.General;
 
 namespace HKSuply.UnitTest
 {
@@ -14,36 +15,75 @@ namespace HKSuply.UnitTest
     public class UserTest
     {
         [TestMethod]
+        public void GetAllUser()
+        {
+            try
+            {
+                var users = GlobalSetting.UserService.GetAllUsers();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        [TestMethod]
         public void GetUser()
         {
-            var userEF = new EFUser();
+            try
+            {
+                var user = GlobalSetting.UserService.GetUserByLoginPassword(null, "xx"); //ArgumentNullException
+                Assert.Fail("Expected exception");
+            }
+            catch (ArgumentNullException)
+            {
+                Assert.IsTrue(true);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
 
             try
             {
-                var user = userEF.GetUserByLoginPassword(null, "xx"); //ArgumentNullException
+                var user = GlobalSetting.UserService.GetUserByLoginPassword("XX", null); //ArgumentNullException
+                Assert.Fail("Expected exception");
             }
-            catch (ArgumentNullException anex)
+            catch (ArgumentNullException)
             {
-                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException)); //Es una tontería y siempre dará true, pero así no tengo el warnning
+                Assert.IsTrue(true);
+            }
+            catch (Exception)
+            {
+                throw;
             }
 
             try
             {
-                var user = userEF.GetUserByLoginPassword("XX", null); //ArgumentNullException
+                var user = GlobalSetting.UserService.GetUserByLoginPassword("XXXXXXX", "XX"); //NonexistentUserException
+                Assert.Fail("Expected exception");
             }
-            catch (ArgumentNullException anex)
+            catch (NonexistentUserException)
             {
-                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException));
+                Assert.IsTrue(true);
             }
-
+            catch (Exception)
+            {
+                throw;
+            }
 
             try
             {
-                var user = userEF.GetUserByLoginPassword("XX", "XX"); 
+                var user = GlobalSetting.UserService.GetUserByLoginPassword("admin", "xx"); //InvalidPasswordException
+                Assert.Fail("Expected exception");
             }
-            catch (NonexistentUserException neuex)
+            catch (InvalidPasswordException)
             {
-                Assert.IsTrue(neuex.GetType() == typeof(NonexistentUserException));
+                Assert.IsTrue(true);
+            }
+            catch (Exception)
+            {
+                throw;
             }
 
             try
@@ -51,14 +91,14 @@ namespace HKSuply.UnitTest
                 using (var db = new HKSupplyContext())
                 {
                     var expectedValue = db.Users.FirstOrDefault(u => u.UserLogin.Equals("admin"));
-                    var usuario = userEF.GetUserByLoginPassword("admin", "adminpwd"); //OK
+                    var usuario = GlobalSetting.UserService.GetUserByLoginPassword("admin", "adminpwd"); //OK
                     Assert.AreEqual(true, usuario.Equals(expectedValue));
                 }
                 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
 
 
@@ -67,15 +107,18 @@ namespace HKSuply.UnitTest
         [TestMethod]
         public void NewUser()
         {
-            var userEF = new EFUser();
-
             try
             {
-                userEF.NewUser(null);
+                GlobalSetting.UserService.NewUser(null);
+                Assert.Fail("Expected exception");
             }
-            catch (ArgumentNullException anex)
+            catch (ArgumentNullException)
             {
-                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException)); //Es una tontería y siempre dará true, pero así no tengo el warnning
+                Assert.IsTrue(true); 
+            }
+            catch (Exception)
+            {
+                throw;
             }
 
             try
@@ -83,13 +126,18 @@ namespace HKSuply.UnitTest
                 using (var db = new HKSupplyContext())
                 {
                     var user = db.Users.FirstOrDefault(u => u.UserLogin.Equals("admin"));
-                    userEF.NewUser(user); //NewExistingUserException
+                    GlobalSetting.UserService.NewUser(user); //NewExistingUserException
+                    Assert.Fail("Expected exception");
                 }
                 
             }
-            catch (NewExistingUserException auxex)
+            catch (NewExistingUserException)
             {
-                Assert.IsTrue(auxex.GetType() == typeof(NewExistingUserException));
+                Assert.IsTrue(true);
+            }
+            catch (Exception)
+            {
+                throw;
             }
 
             try
@@ -105,187 +153,152 @@ namespace HKSuply.UnitTest
                     Remarks = "Test user remarks"
                 };
 
-                var user = userEF.NewUser(newuser);
+                var user = GlobalSetting.UserService.NewUser(newuser);
                 Assert.AreEqual(true, user.Equals(newuser));
                                
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
         }
 
         [TestMethod]
         public void DisableUser()
         {
-            var userEF = new EFUser();
-
             bool res = false;
 
             try
             {
-                res = userEF.DisableUser(null, null);
+                res = GlobalSetting.UserService.DisableUser(null, null);
+                Assert.Fail("Expected exception");
             }
-            catch (ArgumentNullException anex)
+            catch (ArgumentNullException)
             {
-                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException));
+                Assert.IsTrue(true);
             }
-
-            try
+            catch (Exception)
             {
-                res = userEF.DisableUser("xx", "xx");
-            }
-            catch (NonexistentUserException neuex)
-            {
-                Assert.IsTrue(neuex.GetType() == typeof(NonexistentUserException));
+                throw;
             }
 
             try
             {
-                res = userEF.DisableUser("operator1", "Disable opertor 1");
+                res = GlobalSetting.UserService.DisableUser("XXXXXXXXX", "remarks xx");
+                Assert.Fail("Expected exception");
+            }
+            catch (NonexistentUserException)
+            {
+                Assert.IsTrue(true);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            try
+            {
+                res = GlobalSetting.UserService.DisableUser("operator1", "Disable opertor 1");
                 Assert.AreEqual(true, res);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
 
         }
-        #region v1 "ADO"
-        /*
-        [TestMethod]
-        public void GetUser()
-        {
-            MockData.InitData();
-            var usuarioADO = new ADOUser();
-
-            try
-            {
-                var usuario = usuarioADO.GetUserByIdPassword(null, "xx"); //ArgumentNullException
-            }
-            catch (ArgumentNullException anex)
-            {
-                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException)); //Es una tontería y siempre dará true, pero así no tengo el warnning
-            }
-
-            try
-            {
-                var usuario = usuarioADO.GetUserByIdPassword("XX", null); //ArgumentNullException
-            }
-            catch (ArgumentNullException anex)
-            {
-                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException)); 
-            }
-
-
-            try
-            {
-                var usuario = usuarioADO.GetUserByIdPassword("XX", "XX"); //NoExisteUsuarioException
-            }
-            catch (NonexistentUserException neuex)
-            {
-                Assert.IsTrue(neuex.GetType() == typeof(NonexistentUserException)); 
-            }
-
-            try
-            {
-
-                var expectedValue = MockData.UsersList.FirstOrDefault(u => u.UserLogin.Equals("admin"));
-                var usuario = usuarioADO.GetUserByIdPassword("admin", "adminpwd"); //OK
-                Assert.AreEqual(true, usuario.Equals(expectedValue));
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-            
-        }
 
         [TestMethod]
-        public void NewUser()
-        {
-            MockData.InitData();
-            var usuarioADO = new ADOUser();
-
-            try
-            {
-                usuarioADO.NewUser(null);
-            }
-            catch (ArgumentNullException anex)
-            {
-                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException)); //Es una tontería y siempre dará true, pero así no tengo el warnning
-            }
-
-            try
-            {
-                var usuario = MockData.UsersList.FirstOrDefault(u => u.UserLogin.Equals("admin"));
-                usuarioADO.NewUser(usuario); //AltaUsuarioExistenteException
-            }
-            catch (NewExistingUserException auxex)
-            {
-                Assert.IsTrue(auxex.GetType() == typeof(NewExistingUserException));
-            }
-
-            try
-            {
-                var rol = MockData.RolesList.FirstOrDefault(r => r.RoleId.Equals("OPERATOR"));
-                var nuevoUsuario = new User
-                {
-                    UserLogin = "usuario.test",
-                    Name = "Usuario de Test",
-                    Password = "usutestpwd",
-                    UserRol = rol,
-                    Enabled = true,
-                    LastLogout = null,
-                    Remarks = "Observaciones usuario de test"
-                };
-
-                var usuario = usuarioADO.NewUser(nuevoUsuario);
-                Assert.AreEqual(true, usuario.Equals(nuevoUsuario));
-            }
-            catch (Exception ex) 
-            {
-                throw ex; 
-            }
-        }
-        
-        [TestMethod]
-        public void DisableUser()
-        {
-            MockData.InitData();
-            var usuarioADO = new ADOUser();
+        public void ChangePassword()
+        { 
+            var userEF = new EFUser();
             bool res = false;
 
             try
             {
-                res = usuarioADO.DesactivarUsuario(null, null);
+                res = userEF.ChangePassword(0, "XX"); //ArgumentNullException
+                Assert.Fail("Expected exception");
             }
-            catch (ArgumentNullException anex)
+            catch (ArgumentNullException)
             {
-                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException));
+                Assert.IsTrue(true);
             }
-
-            try
+            catch (Exception)
             {
-                res = usuarioADO.DesactivarUsuario("xx", "xx");
-            }
-            catch (NonexistentUserException neuex)
-            {
-                Assert.IsTrue(neuex.GetType() == typeof(NonexistentUserException));
+                throw;
             }
 
             try
             {
-                res = usuarioADO.DesactivarUsuario("operador1", "Desactivamos operador 1");
+                res = userEF.ChangePassword(1, null); //ArgumentNullException
+                Assert.Fail("Expected exception");
             }
-            catch (Exception ex)
+            catch (ArgumentNullException)
             {
-                throw ex;
+                Assert.IsTrue(true);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            try
+            {
+                res = userEF.ChangePassword(-1, "xx"); //NonexistentUserException
+                Assert.Fail("Expected exception");
+            }
+            catch (NonexistentUserException)
+            {
+                Assert.IsTrue(true);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            try
+            {
+                res = userEF.ChangePassword(1, PasswordHelper.GetHash("adminpwd")); //ok
+                Assert.AreEqual(true, res);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        
+        }
+
+        [TestMethod]
+        public void UpdateUsers()
+        {
+            bool res = false;
+
+            try
+            {
+                res = GlobalSetting.UserService.UpdateUsers(null); //ArgumentNullException
+                Assert.Fail("Expected exception");
+            }
+            catch (ArgumentNullException)
+            {
+                Assert.IsTrue(true);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            try
+            {
+                var users = GlobalSetting.UserService.GetAllUsers();
+                users = users.Where(u => u.UserLogin.Contains("operator")).ToList();
+                res = GlobalSetting.UserService.UpdateUsers(users); //OK
+                Assert.AreEqual(true, res);
+            }
+            catch (Exception)
+            {
+                throw;
             }
 
         }
-         */
-        #endregion
     }
 }

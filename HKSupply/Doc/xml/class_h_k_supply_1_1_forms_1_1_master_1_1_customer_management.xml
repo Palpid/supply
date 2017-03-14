@@ -1,0 +1,1323 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Master::CustomerManagement</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+    <basecompoundref refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view" prot="public" virt="non-virtual">HKSupply.Forms.IActionsStackView</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00" prot="private" static="no">
+        <name>eCustomerColumns</name>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00ab9426500aac054f24e1431ab62538230" prot="private">
+          <name>IdVer</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00adb21ef4cadde8f54f2721737845b6f48" prot="private">
+          <name>idSubVer</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00aa3d5de3eac8bb00ae86fd1a1005f1500" prot="private">
+          <name>Timestamp</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00a0d7d94163bb3982782b0c7e8527d2363" prot="private">
+          <name>IdCustomer</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00add365f9d939db31f83d51249bb59284b" prot="private">
+          <name>CustName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00a4d3d769b812b6faa6b76e1a8abaece2d" prot="private">
+          <name>Active</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00a2e8391d7b17d3d7fcf8377074cdc8b41" prot="private">
+          <name>VATNum</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00a47e10f3f35c5ac1ee92867d68301aba5" prot="private">
+          <name>ShippingAddress</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00a7fa63fd0a5388002f87f7796e4d725f7" prot="private">
+          <name>BillingAddress</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00a2ba76cdda483cc8397b63a781f22cea4" prot="private">
+          <name>ContactName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00a500af8ac099a855d1391d6e205bb2a97" prot="private">
+          <name>ContactPhone</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00ace7a8d33307ce37e20b50401977a7f8e" prot="private">
+          <name>IdIncoterm</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00a20a3d6f2db37019fbc47f07ebef192d1" prot="private">
+          <name>IdPaymentTerms</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00a386c339d37e737a436499d423a77df0c" prot="private">
+          <name>Currency</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="24" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="23" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a010c8a784b9b9585338b236a30cb3d12" prot="private" static="no" mutable="no">
+        <type><ref refid="class_custom_controls_1_1_stack_view" kindref="compound">CustomControls.StackView</ref></type>
+        <definition>CustomControls.StackView HKSupply.Forms.Master.CustomerManagement.actionsStackView</definition>
+        <argsstring></argsstring>
+        <name>actionsStackView</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="43" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a99154a0c1fc4f82b541b9febe274d62a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_customer" kindref="compound">Customer</ref></type>
+        <definition>Customer HKSupply.Forms.Master.CustomerManagement._customerUpdate</definition>
+        <argsstring></argsstring>
+        <name>_customerUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="45" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1aae52d95a77761d002f6dc44d50806f9b" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_customer" kindref="compound">Customer</ref></type>
+        <definition>Customer HKSupply.Forms.Master.CustomerManagement._customerOriginal</definition>
+        <argsstring></argsstring>
+        <name>_customerOriginal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="46" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a724aaeb0f9f5f322251f9e876f343352" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_customer" kindref="compound">Customer</ref> &gt;</type>
+        <definition>List&lt;Customer&gt; HKSupply.Forms.Master.CustomerManagement._customersList</definition>
+        <argsstring></argsstring>
+        <name>_customersList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="48" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1ad8162f974bdceca37b9873e677bcdc08" prot="private" static="no" mutable="no">
+        <type>string []</type>
+        <definition>string [] HKSupply.Forms.Master.CustomerManagement._nonEditingFields</definition>
+        <argsstring></argsstring>
+        <name>_nonEditingFields</name>
+        <initializer>= { &quot;txtIdCustomer&quot;, &quot;txtIdVersion&quot;, &quot;txtIdSubversion&quot;, &quot;txtTimestamp&quot; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="50" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a96f89f44270042f4cafcd9267cf4b1ff" prot="private" static="no" mutable="no">
+        <type>string []</type>
+        <definition>string [] HKSupply.Forms.Master.CustomerManagement._nonCreatingFields</definition>
+        <argsstring></argsstring>
+        <name>_nonCreatingFields</name>
+        <initializer>= { &quot;txtIdVersion&quot;, &quot;txtIdSubversion&quot;, &quot;txtTimestamp&quot; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="51" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1adf0c48a237c6aa12bdf4d16698d8a78c" prot="private" static="no" mutable="no">
+        <type>int []</type>
+        <definition>int [] HKSupply.Forms.Master.CustomerManagement._nonCreatingFieldsRows</definition>
+        <argsstring></argsstring>
+        <name>_nonCreatingFieldsRows</name>
+        <initializer>= { 1, 2, 3 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="52" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a289a7ab100a19bf951554704e89d9f83" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.CustomerManagement._sortDescending</definition>
+        <argsstring></argsstring>
+        <name>_sortDescending</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="54" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a6fdf2341ea3b02b491eac31f22d970a8" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Master.CustomerManagement.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a09dea9574b66e584ba7c237b755a6c5a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TabControl</type>
+        <definition>System.Windows.Forms.TabControl HKSupply.Forms.Master.CustomerManagement.tcGeneral</definition>
+        <argsstring></argsstring>
+        <name>tcGeneral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="435" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="435" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a45772218be2d90563e65b0369c9f09ba" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TabPage</type>
+        <definition>System.Windows.Forms.TabPage HKSupply.Forms.Master.CustomerManagement.tpGrid</definition>
+        <argsstring></argsstring>
+        <name>tpGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="436" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="436" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a63b2b82267897aa61ceb8189360e3ece" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TabPage</type>
+        <definition>System.Windows.Forms.TabPage HKSupply.Forms.Master.CustomerManagement.tpForm</definition>
+        <argsstring></argsstring>
+        <name>tpForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="437" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="437" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1ac2588f8a9e719c58b3da9feb3c5361ff" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridView</type>
+        <definition>System.Windows.Forms.DataGridView HKSupply.Forms.Master.CustomerManagement.grdCustomers</definition>
+        <argsstring></argsstring>
+        <name>grdCustomers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="438" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="438" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a5b1685254a5343bca9a8edcb46456725" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TableLayoutPanel</type>
+        <definition>System.Windows.Forms.TableLayoutPanel HKSupply.Forms.Master.CustomerManagement.tlpForm</definition>
+        <argsstring></argsstring>
+        <name>tlpForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="439" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="439" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a5a96d314661bee739475a0f26311b4e0" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.CustomerManagement.txtIdVersion</definition>
+        <argsstring></argsstring>
+        <name>txtIdVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="440" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="440" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a0c6172b36d085c5b25afc18478dfe38c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.CustomerManagement.label1</definition>
+        <argsstring></argsstring>
+        <name>label1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="441" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="441" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a7ff3ac8541bad563afb81b180a185415" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.CustomerManagement.label2</definition>
+        <argsstring></argsstring>
+        <name>label2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="442" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="442" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a3322e8fe89dbae0fa6dbffc72aa268f1" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.CustomerManagement.txtIdCustomer</definition>
+        <argsstring></argsstring>
+        <name>txtIdCustomer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="443" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="443" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a82ecf0c207999c80b29a3ac07275a6a8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.CustomerManagement.label13</definition>
+        <argsstring></argsstring>
+        <name>label13</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="444" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="444" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a599490cf8c23e4a55f63e6db357220ce" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.CustomerManagement.label12</definition>
+        <argsstring></argsstring>
+        <name>label12</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="445" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="445" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a12fc44a3508dfa9a8668c59f58f97bd0" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.CustomerManagement.label11</definition>
+        <argsstring></argsstring>
+        <name>label11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="446" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="446" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a46e555677debcede67bc27ec5e7d6ebc" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.CustomerManagement.label9</definition>
+        <argsstring></argsstring>
+        <name>label9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="447" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="447" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a9118e887a0f20085a1aeecf9b0bce305" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.CustomerManagement.label8</definition>
+        <argsstring></argsstring>
+        <name>label8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="448" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="448" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a33393d0e816c5856c1f493d7eecbd3bc" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.CustomerManagement.label7</definition>
+        <argsstring></argsstring>
+        <name>label7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="449" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="449" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a47e3f4463ec8deb86d78d2b932875201" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.CustomerManagement.label6</definition>
+        <argsstring></argsstring>
+        <name>label6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="450" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="450" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a21991db93ad81406ad10fc46aacdb424" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.CustomerManagement.label5</definition>
+        <argsstring></argsstring>
+        <name>label5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="451" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="451" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1af22a2a877d070aa48fdeeabd5797402c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.CustomerManagement.label4</definition>
+        <argsstring></argsstring>
+        <name>label4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="452" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="452" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a8acc654f0ac7e65ad8b7d06f35cce653" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.CustomerManagement.label3</definition>
+        <argsstring></argsstring>
+        <name>label3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="453" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="453" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a06257c7f8c870eb3d59c0384b6e79019" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.CustomerManagement.label10</definition>
+        <argsstring></argsstring>
+        <name>label10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="454" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="454" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a8022b18c61968040425b4b26ea843fe4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.CustomerManagement.label14</definition>
+        <argsstring></argsstring>
+        <name>label14</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="455" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="455" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1ac8839d7889480ee600ef509aaac14930" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.CustomerManagement.txtPaymentTerms</definition>
+        <argsstring></argsstring>
+        <name>txtPaymentTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="456" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="456" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a2fb58d811dc17e5bb91519d5e7862527" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.CustomerManagement.txtIntercom</definition>
+        <argsstring></argsstring>
+        <name>txtIntercom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="457" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="457" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1aef107df19907ea92229a969a8dd3cd5d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.CustomerManagement.txtContactPhone</definition>
+        <argsstring></argsstring>
+        <name>txtContactPhone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="458" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="458" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1aa25e2aa670f3a19a750f26e4c1a978cd" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.CustomerManagement.txtContactName</definition>
+        <argsstring></argsstring>
+        <name>txtContactName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="459" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="459" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1af13136a5f5797f7fc3e771e0cae9277e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.CustomerManagement.txtBillingAddress</definition>
+        <argsstring></argsstring>
+        <name>txtBillingAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="460" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="460" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a42d761ad77a8346e212af949e4ae8122" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.CustomerManagement.txtShippingAddress</definition>
+        <argsstring></argsstring>
+        <name>txtShippingAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="461" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="461" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a8560f9d4e1ae4fd4dc7e4d8d957106a6" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.CustomerManagement.txtVatNumber</definition>
+        <argsstring></argsstring>
+        <name>txtVatNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="462" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="462" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a4344631e2b8dc77e649388f22eb77447" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.CustomerManagement.txtName</definition>
+        <argsstring></argsstring>
+        <name>txtName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="463" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="463" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a7e77a9c357927d77aaf7c8f7e4d179a7" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.CustomerManagement.txtTimestamp</definition>
+        <argsstring></argsstring>
+        <name>txtTimestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="464" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="464" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a01630d844972b5090594f07dc655d2a7" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.CustomerManagement.txtIdSubversion</definition>
+        <argsstring></argsstring>
+        <name>txtIdSubversion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="465" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="465" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a3b5e106e8a1292714b1db1b202fdb79e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.CustomerManagement.txtCurreny</definition>
+        <argsstring></argsstring>
+        <name>txtCurreny</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="466" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="466" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1ac457a0954f522f82b06b6a3657168019" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.CheckBox</type>
+        <definition>System.Windows.Forms.CheckBox HKSupply.Forms.Master.CustomerManagement.chkActive</definition>
+        <argsstring></argsstring>
+        <name>chkActive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="467" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="467" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1abadf5406b30d7388c6d3fcbc9f9cb76e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HKSupply.Forms.Master.CustomerManagement.btnLoad</definition>
+        <argsstring></argsstring>
+        <name>btnLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="468" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="468" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a2b2718044d9b59ee5009e710d2f6d1a9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HKSupply.Forms.Master.CustomerManagement.btnNewVersion</definition>
+        <argsstring></argsstring>
+        <name>btnNewVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="469" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="469" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a87001a2e277cf809afaead8db9a69340" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Master.CustomerManagement.CustomerManagement</definition>
+        <argsstring>()</argsstring>
+        <name>CustomerManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="59" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="59" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a3f43cfeb43b387ecaed7c55e2e18e100" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.actionsStackView_EditButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_EditButtonClick</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1ae8deb0cdeaa1b41f48e9a497acce9334">actionsStackView_EditButtonClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="67" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="67" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1abc0dcd4189499ba45709340d6fcead00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.actionsStackView_NewButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_NewButtonClick</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1a9a3873c8695cb595fe413b51be87210d">actionsStackView_NewButtonClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="88" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="88" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a995afa91b41c02399fb9d20b5b20bbb9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.actionsStackView_SaveButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_SaveButtonClick</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1a31fb0c34c49bb46661a612f1916f7c2e">actionsStackView_SaveButtonClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="101" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="101" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1aad8235c651699d44b7670e79d9ea9d7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.actionsStackView_CancelButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_CancelButtonClick</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1aa9fb7f15cdbc1fb6fdc19b522327a34a">actionsStackView_CancelButtonClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="148" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="148" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1aeeb0dd460b047375cad59b4e6053636b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.ConfigureActionsStackView</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackView</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1a1a01439762b8cc84888acc2c7b7230d2">ConfigureActionsStackView</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="172" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="172" bodyend="191"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a54d6be3d14d201360daf4d4543d84e19" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.CustomerManagement_Load</definition>
+        <argsstring>(object sender, System.EventArgs e)</argsstring>
+        <name>CustomerManagement_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="197" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="197" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1ab708966f8f4c7c3d98acec51d09123dc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.btnLoad_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnLoad_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="214" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="214" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1abe180f2500cab0889a3d8c9500214e36" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.btnNewVersion_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnNewVersion_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="232" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="232" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a57203c96c2966205352c774583defccc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.grdCustomers_CellDoubleClick</definition>
+        <argsstring>(Object sender, DataGridViewCellEventArgs e)</argsstring>
+        <name>grdCustomers_CellDoubleClick</name>
+        <param>
+          <type>Object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataGridViewCellEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="261" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="261" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a6ae1e76343bbfe34d166db61a645ad49" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.grdCustomers_CellClick</definition>
+        <argsstring>(object sender, DataGridViewCellEventArgs e)</argsstring>
+        <name>grdCustomers_CellClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataGridViewCellEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="274" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="274" bodyend="287"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a73753c1b63b955380eccb2dffd83343d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.ResetCustomerUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>ResetCustomerUpdate</name>
+        <briefdescription>
+<para>Resetear el ovjeto customer que usamos para la actualización </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="297" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="297" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a159faa7d0532897a7a157a86cc0a02d1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.SetFormBinding</definition>
+        <argsstring>()</argsstring>
+        <name>SetFormBinding</name>
+        <briefdescription>
+<para>Crear los bindings de los campos del formulario </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="316" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="316" bodyend="345"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1aa129f52e387d91dddbd1e83c5f26995d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.LoadCustomersList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadCustomersList</name>
+        <briefdescription>
+<para>cargar la colección de Customer del sistema </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="350" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="350" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a5c2b24c3bc686e25705f369ad33810e0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.LoadCustomersSortedList</definition>
+        <argsstring>(eCustomerColumns sortedColumn)</argsstring>
+        <name>LoadCustomersSortedList</name>
+        <param>
+          <type>eCustomerColumns</type>
+          <declname>sortedColumn</declname>
+        </param>
+        <briefdescription>
+<para>Ordenar el grid según la columna </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sortedColumn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Columna por la que se quiere ordenar</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para><para>Alterna entre el orden ascendente y descendente. OK, no es muy correcto porque se controla con una sola variable la ordenación (ascendente o descendente) de todas las columnas, pero así es más fácil y en el peor de los casos el usuario pulsará dos veces sobre la misma columna para tener el orden que quiere. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="384" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="384" bodyend="404"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a040c209a2918e70f3f315e888bb3a590" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.LoadCustomerForm</definition>
+        <argsstring>(string idCustomer)</argsstring>
+        <name>LoadCustomerForm</name>
+        <param>
+          <type>string</type>
+          <declname>idCustomer</declname>
+        </param>
+        <briefdescription>
+<para>Cargar los datos de un customer en concreto </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idCustomer</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="411" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="411" bodyend="428"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a203778fa4801185e19f634202a4d8f46" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.CustomerManagement.UpdateCustomer</definition>
+        <argsstring>(bool newVersion=false)</argsstring>
+        <name>UpdateCustomer</name>
+        <param>
+          <type>bool</type>
+          <declname>newVersion</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Actualizar los datos de un customer </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newVersion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Si es una versión nueva o una actualización de la existente</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="435" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="435" bodyend="446"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a8ba2c44681ed7f56c3ac44b296d60388" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.CustomerManagement.CreateCustomer</definition>
+        <argsstring>()</argsstring>
+        <name>CreateCustomer</name>
+        <briefdescription>
+<para>Crear un nuevo Customer </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="452" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="452" bodyend="464"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a5fe7b404c27f132ff53620724379ddad" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.MoveGridToCustomer</definition>
+        <argsstring>(string idCustomer)</argsstring>
+        <name>MoveGridToCustomer</name>
+        <param>
+          <type>string</type>
+          <declname>idCustomer</declname>
+        </param>
+        <briefdescription>
+<para>Mover la celda activa a la de un customer en concreto </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idCustomer</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="471" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="471" bodyend="489"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a73ef446ea921c3d2429bf920e79ecc3c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.ConfigureActionsStackViewEditing</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackViewEditing</name>
+        <briefdescription>
+<para>Acciones cuando pulsamos el botón de editar </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="494" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="494" bodyend="508"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a852cff913c2451e23e9df5238832efab" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.ConfigureActionsStackViewCreating</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackViewCreating</name>
+        <briefdescription>
+<para>Acciones cuando pulsamos el botón de nuevo </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="513" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="513" bodyend="535"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a60343e422c887040c9e43351cd8db9ac" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.SetEditingFieldsEnabled</definition>
+        <argsstring>()</argsstring>
+        <name>SetEditingFieldsEnabled</name>
+        <briefdescription>
+<para>Poner como editables los campos para el modo de edición </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="540" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="540" bodyend="564"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a4dacff91d56e2f040de37dda0a9ef90a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.SetCreatingFieldsEnabled</definition>
+        <argsstring>()</argsstring>
+        <name>SetCreatingFieldsEnabled</name>
+        <briefdescription>
+<para>Poner como editables los campos para el modo de creación </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="569" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="569" bodyend="593"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a2a5d46b08186e32bc2ac636000897bd7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.ActionsAfterCU</definition>
+        <argsstring>()</argsstring>
+        <name>ActionsAfterCU</name>
+        <briefdescription>
+<para>Acciones después de crear o updatar </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="598" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="598" bodyend="622"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a26790ea0ebf3e96341e3e43819d46831" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.CustomerManagement.IsValidModifiedCustomer</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidModifiedCustomer</name>
+        <briefdescription>
+<para>TODO </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="630" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="630" bodyend="654"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a02a3fcce7fae3e0a1a392ea3b77f74ef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.CustomerManagement.IsValidCreatedCustomer</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidCreatedCustomer</name>
+        <briefdescription>
+<para>TODO </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="660" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="660" bodyend="683"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a659a36d70c3c8cc878f7412c98c784b9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CustomerManagement.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="29" bodyend="431"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a3ecb762babe54f6e25edb87033beb8f6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.CustomerManagement.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CustomerManagement.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="21">
+        <label>Form</label>
+      </node>
+      <node id="22">
+        <label>IActionsStackView</label>
+        <link refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view"/>
+      </node>
+      <node id="20">
+        <label>HKSupply.Forms.Master.CustomerManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management"/>
+        <childnode refid="21" relation="public-inheritance">
+        </childnode>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="24">
+        <label>Form</label>
+      </node>
+      <node id="25">
+        <label>IActionsStackView</label>
+        <link refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view"/>
+      </node>
+      <node id="23">
+        <label>HKSupply.Forms.Master.CustomerManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management"/>
+        <childnode refid="24" relation="public-inheritance">
+        </childnode>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Master/CustomerManagement.cs" line="21" column="1" bodyfile="HKSupply/Forms/Master/CustomerManagement.cs" bodystart="20" bodyend="689"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1aae52d95a77761d002f6dc44d50806f9b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>_customerOriginal</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a724aaeb0f9f5f322251f9e876f343352" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>_customersList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a99154a0c1fc4f82b541b9febe274d62a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>_customerUpdate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a96f89f44270042f4cafcd9267cf4b1ff" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>_nonCreatingFields</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1adf0c48a237c6aa12bdf4d16698d8a78c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>_nonCreatingFieldsRows</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1ad8162f974bdceca37b9873e677bcdc08" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>_nonEditingFields</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a289a7ab100a19bf951554704e89d9f83" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>_sortDescending</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a2a5d46b08186e32bc2ac636000897bd7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>ActionsAfterCU</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a010c8a784b9b9585338b236a30cb3d12" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>actionsStackView</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1aad8235c651699d44b7670e79d9ea9d7b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>actionsStackView_CancelButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a3f43cfeb43b387ecaed7c55e2e18e100" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>actionsStackView_EditButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1abc0dcd4189499ba45709340d6fcead00" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>actionsStackView_NewButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a995afa91b41c02399fb9d20b5b20bbb9" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>actionsStackView_SaveButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1abadf5406b30d7388c6d3fcbc9f9cb76e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>btnLoad</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1ab708966f8f4c7c3d98acec51d09123dc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>btnLoad_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a2b2718044d9b59ee5009e710d2f6d1a9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>btnNewVersion</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1abe180f2500cab0889a3d8c9500214e36" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>btnNewVersion_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1ac457a0954f522f82b06b6a3657168019" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>chkActive</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a6fdf2341ea3b02b491eac31f22d970a8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1aeeb0dd460b047375cad59b4e6053636b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>ConfigureActionsStackView</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a852cff913c2451e23e9df5238832efab" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>ConfigureActionsStackViewCreating</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a73ef446ea921c3d2429bf920e79ecc3c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>ConfigureActionsStackViewEditing</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a8ba2c44681ed7f56c3ac44b296d60388" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>CreateCustomer</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a87001a2e277cf809afaead8db9a69340" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>CustomerManagement</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a54d6be3d14d201360daf4d4543d84e19" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>CustomerManagement_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a3ecb762babe54f6e25edb87033beb8f6" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a77f74658ddae6e3bf2fbc78e4321ab00" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>eCustomerColumns</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1ac2588f8a9e719c58b3da9feb3c5361ff" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>grdCustomers</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a6ae1e76343bbfe34d166db61a645ad49" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>grdCustomers_CellClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a57203c96c2966205352c774583defccc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>grdCustomers_CellDoubleClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a659a36d70c3c8cc878f7412c98c784b9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a02a3fcce7fae3e0a1a392ea3b77f74ef" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>IsValidCreatedCustomer</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a26790ea0ebf3e96341e3e43819d46831" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>IsValidModifiedCustomer</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a0c6172b36d085c5b25afc18478dfe38c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>label1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a06257c7f8c870eb3d59c0384b6e79019" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>label10</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a12fc44a3508dfa9a8668c59f58f97bd0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>label11</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a599490cf8c23e4a55f63e6db357220ce" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>label12</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a82ecf0c207999c80b29a3ac07275a6a8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>label13</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a8022b18c61968040425b4b26ea843fe4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>label14</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a7ff3ac8541bad563afb81b180a185415" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>label2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a8acc654f0ac7e65ad8b7d06f35cce653" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>label3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1af22a2a877d070aa48fdeeabd5797402c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>label4</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a21991db93ad81406ad10fc46aacdb424" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>label5</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a47e3f4463ec8deb86d78d2b932875201" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>label6</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a33393d0e816c5856c1f493d7eecbd3bc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>label7</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a9118e887a0f20085a1aeecf9b0bce305" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>label8</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a46e555677debcede67bc27ec5e7d6ebc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>label9</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a040c209a2918e70f3f315e888bb3a590" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>LoadCustomerForm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1aa129f52e387d91dddbd1e83c5f26995d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>LoadCustomersList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a5c2b24c3bc686e25705f369ad33810e0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>LoadCustomersSortedList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a5fe7b404c27f132ff53620724379ddad" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>MoveGridToCustomer</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a73753c1b63b955380eccb2dffd83343d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>ResetCustomerUpdate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a4dacff91d56e2f040de37dda0a9ef90a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>SetCreatingFieldsEnabled</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a60343e422c887040c9e43351cd8db9ac" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>SetEditingFieldsEnabled</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a159faa7d0532897a7a157a86cc0a02d1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>SetFormBinding</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a09dea9574b66e584ba7c237b755a6c5a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>tcGeneral</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a5b1685254a5343bca9a8edcb46456725" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>tlpForm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a63b2b82267897aa61ceb8189360e3ece" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>tpForm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a45772218be2d90563e65b0369c9f09ba" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>tpGrid</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1af13136a5f5797f7fc3e771e0cae9277e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>txtBillingAddress</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1aa25e2aa670f3a19a750f26e4c1a978cd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>txtContactName</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1aef107df19907ea92229a969a8dd3cd5d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>txtContactPhone</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a3b5e106e8a1292714b1db1b202fdb79e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>txtCurreny</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a3322e8fe89dbae0fa6dbffc72aa268f1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>txtIdCustomer</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a01630d844972b5090594f07dc655d2a7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>txtIdSubversion</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a5a96d314661bee739475a0f26311b4e0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>txtIdVersion</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a2fb58d811dc17e5bb91519d5e7862527" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>txtIntercom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a4344631e2b8dc77e649388f22eb77447" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>txtName</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1ac8839d7889480ee600ef509aaac14930" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>txtPaymentTerms</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a42d761ad77a8346e212af949e4ae8122" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>txtShippingAddress</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a7e77a9c357927d77aaf7c8f7e4d179a7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>txtTimestamp</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a8560f9d4e1ae4fd4dc7e4d8d957106a6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>txtVatNumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a203778fa4801185e19f634202a4d8f46" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CustomerManagement</scope><name>UpdateCustomer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

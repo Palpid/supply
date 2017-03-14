@@ -229,14 +229,7 @@ namespace HKSupply.Services.Implementations
             }
             catch (DbEntityValidationException e)
             {
-                foreach (var eve in e.EntityValidationErrors)
-                {
-                    _log.Error("Entity of type \"" + eve.Entry.Entity.GetType().Name +"\" in state \"" + eve.Entry.State + "\" has the following validation errors:");
-                    foreach (var ve in eve.ValidationErrors)
-                    {
-                        _log.Error("- Property: \"" + ve.PropertyName + "\", Error: \"" + ve.ErrorMessage + "\"");
-                    }
-                }
+                _log.Error(e.Message, e);
                 throw e;
             }
             catch (SqlException sqlex)
@@ -344,6 +337,8 @@ namespace HKSupply.Services.Implementations
             {
                 if (userId == 0)
                     throw new ArgumentNullException("userId");
+                if (string.IsNullOrEmpty(password))
+                    throw new ArgumentNullException("password");
 
                 using (var db = new HKSupplyContext())
                 {
@@ -365,6 +360,11 @@ namespace HKSupply.Services.Implementations
                 _log.Error(anex.Message, anex);
                 throw anex;
             }
+            catch (NonexistentUserException neuex)
+            {
+                _log.Info(neuex.Message, neuex);
+                throw;
+            }
             catch (SqlException sqlex)
             {
                 for (int i = 0; i < sqlex.Errors.Count; i++)
@@ -384,6 +384,11 @@ namespace HKSupply.Services.Implementations
                     }
                 }
                 throw sqlex;
+            }
+            catch (DbEntityValidationException e)
+            {
+                _log.Error(e.Message, e);
+                throw e;
             }
             catch (Exception ex)
             {
@@ -409,24 +414,66 @@ namespace HKSupply.Services.Implementations
             try
             {
                 if (usersToUpdate == null)
-                    throw new ArgumentException("usersToUpdate");
+                    throw new ArgumentNullException("usersToUpdate");
 
                 using (var db = new HKSupplyContext())
                 {
-                    foreach (var user in usersToUpdate)
+                    using (var dbTrans = db.Database.BeginTransaction())
                     {
-                        var userToUpdate = db.Users.FirstOrDefault(u => u.Id.Equals(user.Id));
-                        if (userToUpdate != null)
+                        try
                         {
-                            userToUpdate.Name = user.Name;
-                            userToUpdate.RoleId = user.RoleId;
-                            userToUpdate.Enabled = user.Enabled;
-                            userToUpdate.Remarks = user.Remarks;
+                            foreach (var user in usersToUpdate)
+                            {
+                                var userToUpdate = db.Users.FirstOrDefault(u => u.Id.Equals(user.Id));
+                                if (userToUpdate != null)
+                                {
+                                    userToUpdate.Name = user.Name;
+                                    userToUpdate.RoleId = user.RoleId;
+                                    userToUpdate.Enabled = user.Enabled;
+                                    userToUpdate.Remarks = user.Remarks;
+                                }
+                            }
+
+                            db.SaveChanges();
+                            dbTrans.Commit();
+                            return true;
+                        }
+                        catch (SqlException sqlex)
+                        {
+                            dbTrans.Rollback();
+
+                            for (int i = 0; i < sqlex.Errors.Count; i++)
+                            {
+                                _log.Error("Index #" + i + "\n" +
+                                    "Message: " + sqlex.Errors[i].Message + "\n" +
+                                    "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                                    "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                                    "Source: " + sqlex.Errors[i].Source + "\n" +
+                                    "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                                switch (sqlex.Errors[i].Number)
+                                {
+                                    case -1: //connection broken
+                                    case -2: //timeout
+                                        throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                                }
+                            }
+                            throw sqlex;
+                        }
+                        catch (DbEntityValidationException e)
+                        {
+                            dbTrans.Rollback();
+                            _log.Error(e.Message, e);
+                            throw e;
+                        }
+                        catch (Exception ex)
+                        {
+                            dbTrans.Rollback();
+                            _log.Error(ex.Message, ex);
+                            throw ex;
                         }
                     }
-
-                    db.SaveChanges();
-                    return true;
+                    
                 }
 
             }
@@ -435,31 +482,7 @@ namespace HKSupply.Services.Implementations
                 _log.Error(nrex.Message, nrex);
                 throw nrex;
             }
-            catch (SqlException sqlex)
-            {
-                for (int i = 0; i < sqlex.Errors.Count; i++)
-                {
-                    _log.Error("Index #" + i + "\n" +
-                        "Message: " + sqlex.Errors[i].Message + "\n" +
-                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
-                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
-                        "Source: " + sqlex.Errors[i].Source + "\n" +
-                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
-
-                    switch (sqlex.Errors[i].Number)
-                    {
-                        case -1: //connection broken
-                        case -2: //timeout
-                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
-                    }
-                }
-                throw sqlex;
-            }
-            catch (Exception ex)
-            {
-                _log.Error(ex.Message, ex);
-                throw ex;
-            }
+            
         }
 
     }

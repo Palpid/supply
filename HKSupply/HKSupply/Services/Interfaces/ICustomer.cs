@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace HKSupply.Services.Interfaces
 {
+    /// <summary>
+    /// Interface para el sevice de Customer
+    /// </summary>
     public interface ICustomer
     {
         bool NewCustomer(Customer newCustomer);

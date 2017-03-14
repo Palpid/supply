@@ -6,6 +6,7 @@ using HKSupply.Exceptions;
 using HKSupply.Helpers.Mocking;
 using HKSupply.Models;
 using HKSupply.DB;
+using HKSupply.General;
 
 
 namespace HKSuply.UnitTest
@@ -14,26 +15,48 @@ namespace HKSuply.UnitTest
     public class RoleTest
     {
         [TestMethod]
+        public void GetAllRoles()
+        {
+            try
+            {
+                var roles = GlobalSetting.RoleService.GetRoles();
+                Assert.IsTrue(true);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        [TestMethod]
         public void GetRole()
         {
-            var roleEF = new EFRole();
+            try
+            {
+                var rol = GlobalSetting.RoleService.GetRoleById(null); //ArgumentNullException
+                Assert.Fail("Expected exception");
+            }
+            catch (ArgumentNullException)
+            {
+                Assert.IsTrue(true);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
 
             try
             {
-                var rol = roleEF.GetRoleById(null); //ArgumentNullException
+                var rol = GlobalSetting.RoleService.GetRoleById("XXXXXXXX"); //NonexistentRoleException
+                Assert.Fail("Expected exception");
             }
-            catch (ArgumentNullException anex)
+            catch (NonexistentRoleException)
             {
-                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException)); //Es una tontería y siempre dará true, pero así no tengo el warnning
+                Assert.IsTrue(true);
             }
-
-            try
+            catch (Exception)
             {
-                var rol = roleEF.GetRoleById("XX"); //NonexistentRoleException
-            }
-            catch (NonexistentRoleException nerex)
-            {
-                Assert.IsTrue(nerex.GetType() == typeof(NonexistentRoleException));
+                throw;
             }
 
             try
@@ -41,29 +64,32 @@ namespace HKSuply.UnitTest
                 using (var db = new HKSupplyContext())
                 {
                     var expectedValue = db.Roles.FirstOrDefault(r => r.RoleId.Equals("ADMIN"));  
-                    var rol = roleEF.GetRoleById("ADMIN");
+                    var rol = GlobalSetting.RoleService.GetRoleById("ADMIN");
                     Assert.AreEqual(true, rol.Equals(expectedValue));
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
         }
 
         [TestMethod]
         public void NewRole()
         {
-            var roleEF = new EFRole();
-
             try
             {
-                var newRole = roleEF.NewRole(null);
+                var newRole = GlobalSetting.RoleService.NewRole(null);
+                Assert.Fail("Expected exception");
             }
-            catch (ArgumentNullException anex)
+            catch (ArgumentNullException)
             {
-                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException));
+                Assert.IsTrue(true);
+            }
+            catch (Exception)
+            {
+                throw;
             }
 
             try
@@ -71,13 +97,39 @@ namespace HKSuply.UnitTest
                 using (var db = new HKSupplyContext())
                 {
                     var role = db.Roles.FirstOrDefault(r => r.RoleId.Equals("ADMIN"));
-                    var newRole = roleEF.NewRole(role);
+                    var newRole = GlobalSetting.RoleService.NewRole(role);
+                    Assert.Fail("Expected exception");
                 }
                 
             }
-            catch (NewExistingRoleException areex)
+            catch (NewExistingRoleException)
             {
-                Assert.IsTrue(areex.GetType() == typeof(NewExistingRoleException));
+                Assert.IsTrue(true);
+            }
+
+            try
+            {
+                using (var db = new HKSupplyContext())
+                {
+                    Role newRole = new Role
+                    {
+                        RoleId = "ROLTEST",
+                        Description = null,
+                        Enabled = true,
+                        Remarks = "test role for unit test"
+                    };
+
+                    var role = GlobalSetting.RoleService.NewRole(newRole);
+                }
+
+            }
+            catch (Exception e)
+            {
+                //No se puede capturar el DbEntityValidationException desde aquí al no haber contexto de EF
+                if (e.GetType().Name.Equals("DbEntityValidationException"))
+                    Assert.IsTrue(true);
+                else
+                    throw e;
             }
 
             try
@@ -92,14 +144,14 @@ namespace HKSuply.UnitTest
                         Remarks = "test role for unit test"
                     };
 
-                    var role = roleEF.NewRole(newRole);
+                    var role = GlobalSetting.RoleService.NewRole(newRole); //OK
                     Assert.AreEqual(true, role.Equals(newRole));
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
         }
 
@@ -113,19 +165,21 @@ namespace HKSuply.UnitTest
             try
             {
                 res = roleEF.DisableRole(null, null);
+                Assert.Fail("Expected exception");
             }
-            catch (ArgumentNullException anex)
+            catch (ArgumentNullException)
             {
-                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException));
+                Assert.IsTrue(true);
             }
 
             try
             {
-                res = roleEF.DisableRole("XXXX", "");
+                res = roleEF.DisableRole("XXXXXXX", "");
+                Assert.Fail("Expected exception");
             }
-            catch (NonexistentRoleException nerex)
+            catch (NonexistentRoleException)
             {
-                Assert.IsTrue(nerex.GetType() == typeof(NonexistentRoleException));
+                Assert.IsTrue(true);
             }
 
             try
@@ -133,135 +187,44 @@ namespace HKSuply.UnitTest
                 res = roleEF.DisableRole("ROLTEST", ""); //OK
                 Assert.AreEqual(true, res);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
 
         }
 
-        #region V1 "ADO"
-        /*
         [TestMethod]
-        public void GetRole()
+        public void UpdateRoles()
         {
-            MockData.InitData();
-            var rolADO = new ADORole();
-
-            try
-            {
-                var rol = rolADO.GetRoleById(null); //ArgumentNullException
-            }
-            catch (ArgumentNullException anex)
-            {
-                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException)); //Es una tontería y siempre dará true, pero así no tengo el warnning
-            }
-
-            try
-            {
-                var rol = rolADO.GetRoleById("XX"); //NoExisteRolException
-            }
-            catch (NonexistentRoleException nerex)
-            {
-                Assert.IsTrue(nerex.GetType() == typeof(NonexistentRoleException));
-            }
-
-            try
-            {
-                var expectedValue = MockData.RolesList.FirstOrDefault(r => r.RoleId.Equals("ADMIN"));
-                var rol = rolADO.GetRoleById("ADMIN");
-                Assert.AreEqual(true, rol.Equals(expectedValue));
-
-            }
-            catch(Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        [TestMethod]
-        public void NewRole()
-        {
-            MockData.InitData();
-            var rolADO = new ADORole();
-
-            try
-            {
-                var alta = rolADO.NewRole(null);
-            }
-            catch (ArgumentNullException anex)
-            {
-                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException));
-            }
-
-            try
-            {
-                var rol = MockData.RolesList.FirstOrDefault(r => r.RoleId.Equals("ADMIN"));
-                var alta = rolADO.NewRole(rol);
-            }
-            catch (NewExistingRoleException areex)
-            {
-                Assert.IsTrue(areex.GetType() == typeof(NewExistingRoleException));
-            }
-
-            try
-            {
-                Role nuevoRol = new Role
-                {
-                    RoleId = "ROLTEST",
-                    Description = "Rol de test",
-                    Enabled = true,
-                    Remarks = "Rol de test para las pruebas unitarias"
-                };
-
-                var rol = rolADO.NewRole(nuevoRol); //OK
-                Assert.AreEqual(true, rol.Equals(nuevoRol));
-            }
-            catch( Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-
-        [TestMethod]
-        public void DisableRole()
-        {
-            MockData.InitData();
-
             bool res = false;
-            var rolADO = new ADORole();
 
             try
             {
-                res = rolADO.DisableRole(null, null); 
+                res = GlobalSetting.RoleService.UpdateRoles(null); //ArgumentNullException
+                Assert.Fail("Expected exception");
             }
-            catch (ArgumentNullException anex)
+            catch (ArgumentNullException)
             {
-                Assert.IsTrue(anex.GetType() == typeof(ArgumentNullException)); 
+                Assert.IsTrue(true);
             }
-
-            try
+            catch (Exception)
             {
-                res = rolADO.DisableRole("XXXX", "");
-            }
-            catch (NonexistentRoleException nerex)
-            {
-                Assert.IsTrue(nerex.GetType() == typeof(NonexistentRoleException));
+                throw;
             }
 
             try
             {
-                res = rolADO.DisableRole("ADMIN", ""); //OK
+                var roles = GlobalSetting.RoleService.GetRoles();
+                roles = roles.Where(r => r.RoleId.Equals("XX")).ToList();
+                res = GlobalSetting.RoleService.UpdateRoles(roles); //OK
                 Assert.AreEqual(true, res);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
-
         }
-        */
-        #endregion
+
     }
 }

@@ -3,6 +3,7 @@
   <compounddef id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management" kind="class" language="C#" prot="public">
     <compoundname>HKSupply::Forms::Master::UserManagement</compoundname>
     <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+    <basecompoundref refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view" prot="public" virt="non-virtual">HKSupply.Forms.IActionsStackView</basecompoundref>
       <sectiondef kind="private-type">
       <memberdef kind="enum" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1abbf0bb26b6781213773c2e4f4b1b2849" prot="private" static="no">
         <name>eUserColumns</name>
@@ -86,20 +87,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a034520773f2bee589ab345b2fd42d9ee" prot="private" static="no" mutable="no">
-        <type>ResourceManager</type>
-        <definition>ResourceManager HKSupply.Forms.Master.UserManagement.resManager</definition>
-        <argsstring></argsstring>
-        <name>resManager</name>
-        <initializer>= new ResourceManager(&quot;HKSupply.Resources.HKSupplyRes&quot;, typeof(<ref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management" kindref="compound">RoleManagement</ref>).Assembly)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="38" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="38" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a24fbb0dc892b19f8a48f71f25a32c510" prot="private" static="no" mutable="no">
         <type>ToolStripMenuItem</type>
         <definition>ToolStripMenuItem HKSupply.Forms.Master.UserManagement.tsiChangePassword</definition>
@@ -112,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="40" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="40" bodyend="-1"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="39" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1ae837d6de4838dae2f96161893dd83dad" prot="private" static="no" mutable="no">
         <type>DataGridViewCellEventArgs</type>
@@ -125,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="41" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="41" bodyend="-1"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="40" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1aa62caa31962ce8e0056bf0ab3643c249" prot="private" static="no" mutable="no">
         <type><ref refid="class_custom_controls_1_1_stack_view" kindref="compound">CustomControls.StackView</ref></type>
@@ -138,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="43" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="43" bodyend="-1"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="42" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a187e2d4c8a2c49717cbbdfde1df8246f" prot="private" static="no" mutable="no">
         <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref> &gt;</type>
@@ -151,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="45" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="45" bodyend="-1"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="44" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a7fcbee76dc0ae29e92cde4a33f3fef38" prot="private" static="no" mutable="no">
         <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_user" kindref="compound">User</ref> &gt;</type>
@@ -165,7 +152,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="47" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="47" bodyend="-1"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="46" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a6752a1ac8f2a8800ef27c889c54d7402" prot="private" static="no" mutable="no">
         <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_user" kindref="compound">User</ref> &gt;</type>
@@ -179,7 +166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="48" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="48" bodyend="-1"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="47" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1aab5bda54114a0e98164ec4d546283338" prot="private" static="no" mutable="no">
         <type>System.ComponentModel.IContainer</type>
@@ -206,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.Designer.cs" line="65" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.Designer.cs" bodystart="65" bodyend="-1"/>
+        <location file="HKSupply/Forms/Master/UserManagement.Designer.cs" line="66" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.Designer.cs" bodystart="66" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -221,7 +208,109 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="52" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="52" bodyend="55"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="51" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a6af4060ab989941e08d01b4dfa674ada" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.UserManagement.actionsStackView_EditButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_EditButtonClick</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1ae8deb0cdeaa1b41f48e9a497acce9334">actionsStackView_EditButtonClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="59" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="59" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a1fa53bdd2a95798e874167e333294520" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.UserManagement.actionsStackView_NewButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_NewButtonClick</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1a9a3873c8695cb595fe413b51be87210d">actionsStackView_NewButtonClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="73" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="73" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1abbad8b29b95cc3352c4a55f7cfbf2742" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.UserManagement.actionsStackView_SaveButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_SaveButtonClick</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1a31fb0c34c49bb46661a612f1916f7c2e">actionsStackView_SaveButtonClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="87" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="87" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a812df0823003cc8a80516aee863190a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.UserManagement.actionsStackView_CancelButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_CancelButtonClick</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1aa9fb7f15cdbc1fb6fdc19b522327a34a">actionsStackView_CancelButtonClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="145" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="145" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a276207364c74bbbfd746980cdd9b9f7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.UserManagement.ConfigureActionsStackView</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackView</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1a1a01439762b8cc84888acc2c7b7230d2">ConfigureActionsStackView</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="160" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="160" bodyend="181"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -244,91 +333,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="59" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="59" bodyend="66"/>
-      </memberdef>
-      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a6af4060ab989941e08d01b4dfa674ada" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void HKSupply.Forms.Master.UserManagement.actionsStackView_EditButtonClick</definition>
-        <argsstring>(object sender, EventArgs e)</argsstring>
-        <name>actionsStackView_EditButtonClick</name>
-        <param>
-          <type>object</type>
-          <declname>sender</declname>
-        </param>
-        <param>
-          <type>EventArgs</type>
-          <declname>e</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="70" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="70" bodyend="82"/>
-      </memberdef>
-      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a1fa53bdd2a95798e874167e333294520" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void HKSupply.Forms.Master.UserManagement.actionsStackView_NewButtonClick</definition>
-        <argsstring>(object sender, EventArgs e)</argsstring>
-        <name>actionsStackView_NewButtonClick</name>
-        <param>
-          <type>object</type>
-          <declname>sender</declname>
-        </param>
-        <param>
-          <type>EventArgs</type>
-          <declname>e</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="84" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="84" bodyend="96"/>
-      </memberdef>
-      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1abbad8b29b95cc3352c4a55f7cfbf2742" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void HKSupply.Forms.Master.UserManagement.actionsStackView_SaveButtonClick</definition>
-        <argsstring>(object sender, EventArgs e)</argsstring>
-        <name>actionsStackView_SaveButtonClick</name>
-        <param>
-          <type>object</type>
-          <declname>sender</declname>
-        </param>
-        <param>
-          <type>EventArgs</type>
-          <declname>e</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="98" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="98" bodyend="154"/>
-      </memberdef>
-      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a812df0823003cc8a80516aee863190a9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void HKSupply.Forms.Master.UserManagement.actionsStackView_CancelButtonClick</definition>
-        <argsstring>(object sender, EventArgs e)</argsstring>
-        <name>actionsStackView_CancelButtonClick</name>
-        <param>
-          <type>object</type>
-          <declname>sender</declname>
-        </param>
-        <param>
-          <type>EventArgs</type>
-          <declname>e</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="155" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="155" bodyend="168"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="185" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="185" bodyend="200"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a34e50b51046ba60c275bfa2ae00c684a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -349,7 +354,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="174" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="174" bodyend="196"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="206" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="206" bodyend="228"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a1b1900a24b1d5d7f55ac7e5b1d6fca34" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -370,7 +375,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="198" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="198" bodyend="219"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="230" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="230" bodyend="251"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1abb8e473265dff365f2f153eda23f335f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -391,7 +396,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="221" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="221" bodyend="231"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="253" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="253" bodyend="271"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a6ccfedb7ca40ef7520cba702f5a188bf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -412,7 +417,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="233" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="233" bodyend="240"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="273" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="273" bodyend="280"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a9bf8868a4a85362ac67431be4a8c67dd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -433,7 +438,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="242" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="242" bodyend="246"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="282" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="282" bodyend="286"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a2385fac5927bca557173b76f66379347" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -454,7 +459,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="248" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="248" bodyend="252"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="288" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="288" bodyend="292"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a6e30150f982fb6b758b8a661ea882b0d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -475,20 +480,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="254" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="254" bodyend="270"/>
-      </memberdef>
-      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a276207364c74bbbfd746980cdd9b9f7d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void HKSupply.Forms.Master.UserManagement.ConfigureActionsStackView</definition>
-        <argsstring>()</argsstring>
-        <name>ConfigureActionsStackView</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="277" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="277" bodyend="298"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="294" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="294" bodyend="310"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1ade29738af3c9aceecf8caf5686973ea3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -501,7 +493,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="300" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="300" bodyend="409"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="317" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="317" bodyend="427"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a772475755ca76fec9e2c8556a46a8a98" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -514,7 +506,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="411" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="411" bodyend="426"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="429" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="429" bodyend="444"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a98d3c4cec2685541488b8cad73e1fba3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -527,7 +519,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="428" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="428" bodyend="438"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="446" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="446" bodyend="456"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1abc773861969b4eeff619dc5c62eb9818" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -540,7 +532,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="441" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="441" bodyend="457"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="459" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="459" bodyend="475"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1ab563285c0b66d59c238ed433642635ee" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -553,7 +545,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="459" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="459" bodyend="481"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="477" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="477" bodyend="499"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a6c7d2e75e63d385aa229a27e1bd27b45" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -566,7 +558,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="483" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="483" bodyend="512"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="501" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="501" bodyend="530"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a4bf16e4e24544506c8266c4c3ad8f613" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -579,7 +571,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="514" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="514" bodyend="525"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="532" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="532" bodyend="543"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a390ea16f382302d18b53c97c7caba6cc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -596,7 +588,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="527" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="527" bodyend="550"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="545" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="545" bodyend="568"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a441f5c87c7e165401fb8afcb5ff429f2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -613,7 +605,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="552" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="552" bodyend="575"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="570" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="570" bodyend="593"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a69c7fe68df9da8e0e71f5fa8c9bfcbfa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -626,7 +618,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="577" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="577" bodyend="595"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="595" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="595" bodyend="613"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1ad5601b144498b13926f5a911752a01da" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -639,7 +631,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="597" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="597" bodyend="622"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="615" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="615" bodyend="640"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a931416345a91aa67124b8fe697df1e39" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -652,7 +644,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="624" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="624" bodyend="634"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="642" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="642" bodyend="652"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1ac21340548a4b2645cb9d14529bd36d06" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -665,7 +657,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.cs" line="636" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="636" bodyend="654"/>
+        <location file="HKSupply/Forms/Master/UserManagement.cs" line="654" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="654" bodyend="667"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a5e22dc9638a59f6b3413939a69438a62" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -678,7 +670,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/UserManagement.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.Designer.cs" bodystart="29" bodyend="61"/>
+        <location file="HKSupply/Forms/Master/UserManagement.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.Designer.cs" bodystart="29" bodyend="62"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -713,42 +705,54 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="182">
+      <node id="209">
         <label>Form</label>
       </node>
-      <node id="181">
+      <node id="210">
+        <label>IActionsStackView</label>
+        <link refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view"/>
+      </node>
+      <node id="208">
         <label>HKSupply.Forms.Master.UserManagement</label>
         <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management"/>
-        <childnode refid="182" relation="public-inheritance">
+        <childnode refid="209" relation="public-inheritance">
+        </childnode>
+        <childnode refid="210" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="184">
+      <node id="212">
         <label>Form</label>
       </node>
-      <node id="183">
+      <node id="213">
+        <label>IActionsStackView</label>
+        <link refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view"/>
+      </node>
+      <node id="211">
         <label>HKSupply.Forms.Master.UserManagement</label>
         <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management"/>
-        <childnode refid="184" relation="public-inheritance">
+        <childnode refid="212" relation="public-inheritance">
+        </childnode>
+        <childnode refid="213" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="HKSupply/Forms/Master/UserManagement.cs" line="20" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="19" bodyend="660"/>
+    <location file="HKSupply/Forms/Master/UserManagement.cs" line="20" column="1" bodyfile="HKSupply/Forms/Master/UserManagement.cs" bodystart="19" bodyend="673"/>
     <listofallmembers>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a6752a1ac8f2a8800ef27c889c54d7402" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>_createdUsers</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a7fcbee76dc0ae29e92cde4a33f3fef38" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>_modifiedUsers</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a187e2d4c8a2c49717cbbdfde1df8246f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>_roleList</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1aa62caa31962ce8e0056bf0ab3643c249" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>actionsStackView</name></member>
-      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a812df0823003cc8a80516aee863190a9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>actionsStackView_CancelButtonClick</name></member>
-      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a6af4060ab989941e08d01b4dfa674ada" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>actionsStackView_EditButtonClick</name></member>
-      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a1fa53bdd2a95798e874167e333294520" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>actionsStackView_NewButtonClick</name></member>
-      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1abbad8b29b95cc3352c4a55f7cfbf2742" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>actionsStackView_SaveButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a812df0823003cc8a80516aee863190a9" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>actionsStackView_CancelButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a6af4060ab989941e08d01b4dfa674ada" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>actionsStackView_EditButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a1fa53bdd2a95798e874167e333294520" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>actionsStackView_NewButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1abbad8b29b95cc3352c4a55f7cfbf2742" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>actionsStackView_SaveButtonClick</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a4bf16e4e24544506c8266c4c3ad8f613" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>AddContextMenu</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a441f5c87c7e165401fb8afcb5ff429f2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>AddCreatedUserToList</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a390ea16f382302d18b53c97c7caba6cc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>AddModifiedUserToList</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1aab5bda54114a0e98164ec4d546283338" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>components</name></member>
-      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a276207364c74bbbfd746980cdd9b9f7d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>ConfigureActionsStackView</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a276207364c74bbbfd746980cdd9b9f7d" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>ConfigureActionsStackView</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a6c7d2e75e63d385aa229a27e1bd27b45" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>ConfigureActionsStackViewCreating</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1ab563285c0b66d59c238ed433642635ee" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>ConfigureActionsStackViewEditing</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a772475755ca76fec9e2c8556a46a8a98" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>ConfigureRolesColorsStyles</name></member>
@@ -768,7 +772,6 @@
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1abc773861969b4eeff619dc5c62eb9818" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>LoadAllUsers</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a98d3c4cec2685541488b8cad73e1fba3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>LoadRoles</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1ae837d6de4838dae2f96161893dd83dad" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>mouseLocation</name></member>
-      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a034520773f2bee589ab345b2fd42d9ee" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>resManager</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1ade29738af3c9aceecf8caf5686973ea3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>SetupUsersGrid</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a24fbb0dc892b19f8a48f71f25a32c510" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>tsiChangePassword</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a6e30150f982fb6b758b8a661ea882b0d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::UserManagement</scope><name>tsiChangePassword_Click</name></member>

@@ -14,14 +14,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Program.cs" line="17" column="1" bodyfile="HKSupply/Program.cs" bodystart="17" bodyend="31"/>
+        <location file="HKSupply/Program.cs" line="17" column="1" bodyfile="HKSupply/Program.cs" bodystart="17" bodyend="32"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="HKSupply/Program.cs" line="12" column="1" bodyfile="HKSupply/Program.cs" bodystart="11" bodyend="32"/>
+    <location file="HKSupply/Program.cs" line="12" column="1" bodyfile="HKSupply/Program.cs" bodystart="11" bodyend="33"/>
     <listofallmembers>
       <member refid="class_h_k_supply_1_1_program_1a10021fe5acc01977b7fc762bdc75ac1e" prot="private" virt="non-virtual"><scope>HKSupply::Program</scope><name>Main</name></member>
     </listofallmembers>

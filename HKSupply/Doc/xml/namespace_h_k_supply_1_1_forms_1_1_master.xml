@@ -3,6 +3,7 @@
   <compounddef id="namespace_h_k_supply_1_1_forms_1_1_master" kind="namespace" language="C#">
     <compoundname>HKSupply::Forms::Master</compoundname>
     <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_change_password" prot="public">HKSupply::Forms::Master::ChangePassword</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management" prot="public">HKSupply::Forms::Master::CustomerManagement</innerclass>
     <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management" prot="public">HKSupply::Forms::Master::FunctionalityManagement</innerclass>
     <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management" prot="public">HKSupply::Forms::Master::FunctionalityRoleManagement</innerclass>
     <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management" prot="public">HKSupply::Forms::Master::RoleManagement</innerclass>

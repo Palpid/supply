@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace HKSupply.Services.Interfaces
 {
+    /// <summary>
+    /// Interface para el service de Functionality - Role
+    /// </summary>
     public interface IFunctionalityRole
     {
         IEnumerable<FunctionalityRole> GetAllFunctionalitiesRole();

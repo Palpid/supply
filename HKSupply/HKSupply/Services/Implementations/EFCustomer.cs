@@ -55,6 +55,8 @@ namespace HKSupply.Services.Implementations
                         }
                         catch (SqlException sqlex)
                         {
+                            dbTrans.Rollback();
+
                             for (int i = 0; i < sqlex.Errors.Count; i++)
                             {
                                 _log.Error("Index #" + i + "\n" +
@@ -127,6 +129,8 @@ namespace HKSupply.Services.Implementations
                         }
                         catch (SqlException sqlex)
                         {
+                            dbTrans.Rollback();
+
                             for (int i = 0; i < sqlex.Errors.Count; i++)
                             {
                                 _log.Error("Index #" + i + "\n" +

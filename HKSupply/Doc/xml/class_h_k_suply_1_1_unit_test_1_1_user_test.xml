@@ -3,6 +3,19 @@
   <compounddef id="class_h_k_suply_1_1_unit_test_1_1_user_test" kind="class" language="C#" prot="public">
     <compoundname>HKSuply::UnitTest::UserTest</compoundname>
       <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_user_test_1a3b155a2e3f798000decc5cd9bb7ff5bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSuply.UnitTest.UserTest.GetAllUser</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllUser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSuply.UnitTest/UserTest.cs" line="18" column="1" bodyfile="HKSuply.UnitTest/UserTest.cs" bodystart="18" bodyend="28"/>
+      </memberdef>
       <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_user_test_1a0d33d16a2e9761ccdf686fc6398bd599" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void HKSuply.UnitTest.UserTest.GetUser</definition>
@@ -14,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSuply.UnitTest/UserTest.cs" line="17" column="1" bodyfile="HKSuply.UnitTest/UserTest.cs" bodystart="17" bodyend="65"/>
+        <location file="HKSuply.UnitTest/UserTest.cs" line="31" column="1" bodyfile="HKSuply.UnitTest/UserTest.cs" bodystart="31" bodyend="105"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_user_test_1a38a60511778b95f7cd2c256697cc4e6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -27,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSuply.UnitTest/UserTest.cs" line="68" column="1" bodyfile="HKSuply.UnitTest/UserTest.cs" bodystart="68" bodyend="116"/>
+        <location file="HKSuply.UnitTest/UserTest.cs" line="108" column="1" bodyfile="HKSuply.UnitTest/UserTest.cs" bodystart="108" bodyend="164"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_user_test_1acc37fae05da85affd3a422b32bcd0700" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -40,18 +53,47 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSuply.UnitTest/UserTest.cs" line="119" column="1" bodyfile="HKSuply.UnitTest/UserTest.cs" bodystart="119" bodyend="153"/>
+        <location file="HKSuply.UnitTest/UserTest.cs" line="167" column="1" bodyfile="HKSuply.UnitTest/UserTest.cs" bodystart="167" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_user_test_1ac77e49a4ff678e5325e0634aa8425f09" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSuply.UnitTest.UserTest.ChangePassword</definition>
+        <argsstring>()</argsstring>
+        <name>ChangePassword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSuply.UnitTest/UserTest.cs" line="212" column="1" bodyfile="HKSuply.UnitTest/UserTest.cs" bodystart="212" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_user_test_1a8e2c7128da98aa8edb6541a4c037c56d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSuply.UnitTest.UserTest.UpdateUsers</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateUsers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSuply.UnitTest/UserTest.cs" line="272" column="1" bodyfile="HKSuply.UnitTest/UserTest.cs" bodystart="272" bodyend="302"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="HKSuply.UnitTest/UserTest.cs" line="15" column="1" bodyfile="HKSuply.UnitTest/UserTest.cs" bodystart="14" bodyend="290"/>
+    <location file="HKSuply.UnitTest/UserTest.cs" line="16" column="1" bodyfile="HKSuply.UnitTest/UserTest.cs" bodystart="15" bodyend="303"/>
     <listofallmembers>
+      <member refid="class_h_k_suply_1_1_unit_test_1_1_user_test_1ac77e49a4ff678e5325e0634aa8425f09" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::UserTest</scope><name>ChangePassword</name></member>
       <member refid="class_h_k_suply_1_1_unit_test_1_1_user_test_1acc37fae05da85affd3a422b32bcd0700" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::UserTest</scope><name>DisableUser</name></member>
+      <member refid="class_h_k_suply_1_1_unit_test_1_1_user_test_1a3b155a2e3f798000decc5cd9bb7ff5bc" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::UserTest</scope><name>GetAllUser</name></member>
       <member refid="class_h_k_suply_1_1_unit_test_1_1_user_test_1a0d33d16a2e9761ccdf686fc6398bd599" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::UserTest</scope><name>GetUser</name></member>
       <member refid="class_h_k_suply_1_1_unit_test_1_1_user_test_1a38a60511778b95f7cd2c256697cc4e6f" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::UserTest</scope><name>NewUser</name></member>
+      <member refid="class_h_k_suply_1_1_unit_test_1_1_user_test_1a8e2c7128da98aa8edb6541a4c037c56d" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::UserTest</scope><name>UpdateUsers</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

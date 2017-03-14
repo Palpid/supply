@@ -34,7 +34,16 @@ namespace HKSupply.Forms
 
         private void Main_Load(object sender, EventArgs e)
         {
-            InitializeMainMenu();
+            try
+            {
+                SetBackgroundColor();
+                SetMenuStyle();
+                InitializeMainMenu();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public void ChildClick(object sender, System.EventArgs e)
@@ -120,7 +129,6 @@ namespace HKSupply.Forms
 
                     foreach (FunctionalityRole submenu in categoryMenu)
                     {
-                        //ToolStripMenuItem SSMenu = new ToolStripMenuItem(submenu.Functionality.FunctionalityName, null, ChildClick);
                         CustomToolStripMenuItem SSMenu = new CustomToolStripMenuItem(submenu.Functionality.FunctionalityName, null, ChildClick, null);
                         SSMenu.FormName = submenu.Functionality.FormName;  //"Form1";
                         MnuStripItem.DropDownItems.Add(SSMenu);
@@ -136,10 +144,69 @@ namespace HKSupply.Forms
             
         }
 
+        /// <summary>
+        /// Cambiar el estilo dle menú
+        /// </summary>
+        private void SetMenuStyle()
+        {
+            try
+            {
+                msMainMenu.Renderer = new ToolStripProfessionalRenderer(new CustomProfessionalColors());
+                msMainMenu.Font = new Font("Brandon", 9);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Cambiar el color de fondo
+        /// </summary>
+        /// <remarks>Al ser un mdi parent parece ser que se tiene que hacer así, no se puede directamente</remarks>
+        private void SetBackgroundColor()
+        {
+            try
+            {
+                //Pintar de blanco el fondo del mdi parent
+                MdiClient chld;
+                foreach (Control ctrl in this.Controls)
+                {
+                    try
+                    {
+                        chld = (MdiClient)ctrl;
+                        chld.BackColor = Color.White;
+                    }
+                    catch (InvalidCastException)
+                    {
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         #endregion
 
-       
+    }
 
+    /// <summary>
+    /// tabla de colores para el menú
+    /// </summary>
+    internal class CustomProfessionalColors : ProfessionalColorTable
+    {
+        private static Color ETNIA_RED = Color.FromArgb(221, 34, 29);
 
+        public override Color ToolStripGradientBegin { get { return Color.White; } }
+
+        public override Color ToolStripGradientMiddle { get { return Color.White; } }
+
+        public override Color ToolStripGradientEnd { get { return Color.White; } }
+
+        public override Color MenuStripGradientBegin { get { return Color.White; } }
+
+        public override Color MenuStripGradientEnd { get { return Color.White; } }
     }
 }

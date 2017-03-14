@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="19" column="1" bodyfile="CustomControls/StackView.cs" bodystart="18" bodyend="25"/>
+        <location file="CustomControls/StackView.cs" line="31" column="1" bodyfile="CustomControls/StackView.cs" bodystart="30" bodyend="37"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-attrib">
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="29" column="1" bodyfile="CustomControls/StackView.cs" bodystart="29" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="41" column="1" bodyfile="CustomControls/StackView.cs" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a7fb0957ea3e61510ed6280c636790f93" prot="private" static="yes" mutable="no">
         <type>Bitmap</type>
@@ -76,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="46" column="1" bodyfile="CustomControls/StackView.cs" bodystart="46" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="58" column="1" bodyfile="CustomControls/StackView.cs" bodystart="58" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1ac34d715866ad03985f07b76789aa27c2" prot="private" static="yes" mutable="no">
         <type>Bitmap</type>
@@ -89,7 +89,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="47" column="1" bodyfile="CustomControls/StackView.cs" bodystart="47" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="59" column="1" bodyfile="CustomControls/StackView.cs" bodystart="59" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1ac66188a42d64146c2afdae7580c71f10" prot="private" static="yes" mutable="no">
         <type>Bitmap</type>
@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="48" column="1" bodyfile="CustomControls/StackView.cs" bodystart="48" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="60" column="1" bodyfile="CustomControls/StackView.cs" bodystart="60" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a29154e8690cbfdbc61bd97fc673ad2ad" prot="private" static="yes" mutable="no">
         <type>Bitmap</type>
@@ -115,7 +115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="49" column="1" bodyfile="CustomControls/StackView.cs" bodystart="49" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="61" column="1" bodyfile="CustomControls/StackView.cs" bodystart="61" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a9ebbc4c9adba498e38dbb4ec6862c6b8" prot="private" static="yes" mutable="no">
         <type>string</type>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="51" column="1" bodyfile="CustomControls/StackView.cs" bodystart="51" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="63" column="1" bodyfile="CustomControls/StackView.cs" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a7d791e491faf3d2b01edea1ec5128867" prot="private" static="yes" mutable="no">
         <type>string</type>
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="95" column="1" bodyfile="CustomControls/StackView.cs" bodystart="95" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="107" column="1" bodyfile="CustomControls/StackView.cs" bodystart="107" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a7c6d069aa1b005430b8d7e9c75ed34ac" prot="private" static="yes" mutable="no">
         <type>string</type>
@@ -154,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="140" column="1" bodyfile="CustomControls/StackView.cs" bodystart="140" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="152" column="1" bodyfile="CustomControls/StackView.cs" bodystart="152" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a9b43efee30334e1d4e27604398dafbc5" prot="private" static="yes" mutable="no">
         <type>string</type>
@@ -167,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="185" column="1" bodyfile="CustomControls/StackView.cs" bodystart="185" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="197" column="1" bodyfile="CustomControls/StackView.cs" bodystart="197" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="event">
@@ -182,7 +182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="33" column="1" bodyfile="CustomControls/StackView.cs" bodystart="33" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="45" column="1" bodyfile="CustomControls/StackView.cs" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="event" id="class_custom_controls_1_1_stack_view_1af19003ef6d5198e763c656b624c3fbbc" prot="public" static="no" add="no" remove="no" raise="no">
         <type>EventHandler</type>
@@ -195,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="34" column="1" bodyfile="CustomControls/StackView.cs" bodystart="34" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="46" column="1" bodyfile="CustomControls/StackView.cs" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="event" id="class_custom_controls_1_1_stack_view_1a6086b716160faebc479c3a407092a7d5" prot="public" static="no" add="no" remove="no" raise="no">
         <type>EventHandler</type>
@@ -208,7 +208,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="35" column="1" bodyfile="CustomControls/StackView.cs" bodystart="35" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="47" column="1" bodyfile="CustomControls/StackView.cs" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="event" id="class_custom_controls_1_1_stack_view_1a19d78699d1abcd1c49f4941b58f76800" prot="public" static="no" add="no" remove="no" raise="no">
         <type>EventHandler</type>
@@ -221,7 +221,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="36" column="1" bodyfile="CustomControls/StackView.cs" bodystart="36" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="48" column="1" bodyfile="CustomControls/StackView.cs" bodystart="48" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -236,7 +236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="41" column="1" bodyfile="CustomControls/StackView.cs" bodystart="41" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="53" column="1" bodyfile="CustomControls/StackView.cs" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1ad5b6d7319fd11b27e88b36a1623ccf25" prot="private" static="no" mutable="no">
         <type>readonly bool</type>
@@ -249,7 +249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="42" column="1" bodyfile="CustomControls/StackView.cs" bodystart="42" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="54" column="1" bodyfile="CustomControls/StackView.cs" bodystart="54" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1ab502b86c791f6c45cc55cc427831f528" prot="private" static="no" mutable="no">
         <type>readonly bool</type>
@@ -262,7 +262,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="43" column="1" bodyfile="CustomControls/StackView.cs" bodystart="43" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="55" column="1" bodyfile="CustomControls/StackView.cs" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a84ef493f63a4cd63b7132812da2fe51c" prot="private" static="no" mutable="no">
         <type>ToolbarStates</type>
@@ -275,7 +275,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="44" column="1" bodyfile="CustomControls/StackView.cs" bodystart="44" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="56" column="1" bodyfile="CustomControls/StackView.cs" bodystart="56" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a218138aa7a0ba15ec4fdee8969adde0d" prot="private" static="no" mutable="no">
         <type>System.ComponentModel.IContainer</type>
@@ -369,7 +369,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="232" column="1" bodyfile="CustomControls/StackView.cs" bodystart="233" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="244" column="1" bodyfile="CustomControls/StackView.cs" bodystart="245" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-func">
@@ -384,7 +384,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="242" column="1" bodyfile="CustomControls/StackView.cs" bodystart="242" bodyend="246"/>
+        <location file="CustomControls/StackView.cs" line="254" column="1" bodyfile="CustomControls/StackView.cs" bodystart="254" bodyend="258"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1ad9556c5d97740344368c736285c7315b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -397,7 +397,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="305" column="1" bodyfile="CustomControls/StackView.cs" bodystart="305" bodyend="311"/>
+        <location file="CustomControls/StackView.cs" line="317" column="1" bodyfile="CustomControls/StackView.cs" bodystart="317" bodyend="323"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -412,7 +412,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="248" column="1" bodyfile="CustomControls/StackView.cs" bodystart="248" bodyend="258"/>
+        <location file="CustomControls/StackView.cs" line="260" column="1" bodyfile="CustomControls/StackView.cs" bodystart="260" bodyend="270"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1af1226e4d40a4f58799de5b48de95c275" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -437,7 +437,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="260" column="1" bodyfile="CustomControls/StackView.cs" bodystart="260" bodyend="278"/>
+        <location file="CustomControls/StackView.cs" line="272" column="1" bodyfile="CustomControls/StackView.cs" bodystart="272" bodyend="290"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a40e9b83536de3aa4a3fd7e40bfce0246" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -450,7 +450,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="286" column="1" bodyfile="CustomControls/StackView.cs" bodystart="286" bodyend="290"/>
+        <location file="CustomControls/StackView.cs" line="298" column="1" bodyfile="CustomControls/StackView.cs" bodystart="298" bodyend="302"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1aa6ee6db47352fbb47bc1292ea7f58611" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -458,12 +458,12 @@
         <argsstring>()</argsstring>
         <name>RestoreInitState</name>
         <briefdescription>
-        </briefdescription>
+<para>Restaura la botonera a su estado inicial con los permisos que se han indicado en el constructor </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="462" column="1" bodyfile="CustomControls/StackView.cs" bodystart="462" bodyend="465"/>
+        <location file="CustomControls/StackView.cs" line="481" column="1" bodyfile="CustomControls/StackView.cs" bodystart="481" bodyend="484"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -478,7 +478,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="294" column="1" bodyfile="CustomControls/StackView.cs" bodystart="294" bodyend="300"/>
+        <location file="CustomControls/StackView.cs" line="306" column="1" bodyfile="CustomControls/StackView.cs" bodystart="306" bodyend="312"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a6a0ef7f36b029aa0423e2d314dc4e621" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -499,7 +499,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="328" column="1" bodyfile="CustomControls/StackView.cs" bodystart="328" bodyend="336"/>
+        <location file="CustomControls/StackView.cs" line="340" column="1" bodyfile="CustomControls/StackView.cs" bodystart="340" bodyend="348"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a734a9613c693db4ce740bf72c19eb17c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -520,7 +520,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="340" column="1" bodyfile="CustomControls/StackView.cs" bodystart="340" bodyend="373"/>
+        <location file="CustomControls/StackView.cs" line="352" column="1" bodyfile="CustomControls/StackView.cs" bodystart="352" bodyend="385"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a624f0e3bcc231c49817ec6f1fb5f1a34" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -533,7 +533,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="376" column="1" bodyfile="CustomControls/StackView.cs" bodystart="376" bodyend="384"/>
+        <location file="CustomControls/StackView.cs" line="388" column="1" bodyfile="CustomControls/StackView.cs" bodystart="388" bodyend="396"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1ae28ccadd560e52e85fa00aecc560709d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -545,12 +545,20 @@
           <declname>state</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Muestra los botones correspondientes en función de cada estado. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="386" column="1" bodyfile="CustomControls/StackView.cs" bodystart="386" bodyend="417"/>
+        <location file="CustomControls/StackView.cs" line="402" column="1" bodyfile="CustomControls/StackView.cs" bodystart="402" bodyend="433"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a21df994dece9a697985769528a2fd65f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -582,7 +590,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="315" column="1" bodyfile="CustomControls/StackView.cs" bodystart="315" bodyend="326"/>
+        <location file="CustomControls/StackView.cs" line="327" column="1" bodyfile="CustomControls/StackView.cs" bodystart="327" bodyend="338"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -601,7 +609,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="423" column="1" bodyfile="CustomControls/StackView.cs" bodystart="423" bodyend="430"/>
+        <location file="CustomControls/StackView.cs" line="439" column="1" bodyfile="CustomControls/StackView.cs" bodystart="439" bodyend="446"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a11ce82dee60bdffc83f7d3ebdf10b17a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -618,7 +626,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="432" column="1" bodyfile="CustomControls/StackView.cs" bodystart="432" bodyend="439"/>
+        <location file="CustomControls/StackView.cs" line="448" column="1" bodyfile="CustomControls/StackView.cs" bodystart="448" bodyend="455"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a77a46c2d55bf40ed18bcfe90dcaf3805" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -635,7 +643,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="441" column="1" bodyfile="CustomControls/StackView.cs" bodystart="441" bodyend="448"/>
+        <location file="CustomControls/StackView.cs" line="457" column="1" bodyfile="CustomControls/StackView.cs" bodystart="457" bodyend="464"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a48997386c95398640506e1e5ada5f0dd" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -652,7 +660,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="450" column="1" bodyfile="CustomControls/StackView.cs" bodystart="450" bodyend="457"/>
+        <location file="CustomControls/StackView.cs" line="466" column="1" bodyfile="CustomControls/StackView.cs" bodystart="466" bodyend="473"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a227a09aebaaa2cc577a4bfa50cb08967" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override void</type>
@@ -681,32 +689,34 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Custom control, botonera de acciones para los formulario </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para>Acciones:<itemizedlist>
+<listitem><para>Editar</para></listitem><listitem><para>Nuevo</para></listitem><listitem><para>Guardar</para></listitem><listitem><para>Cancelar</para></listitem></itemizedlist>
+</para><para>En función de los permisos que tenga el usuario en cada pantalla mostrará las acciones correspondientess </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="173">
+      <node id="200">
         <label>CustomControls.StackView</label>
         <link refid="class_custom_controls_1_1_stack_view"/>
-        <childnode refid="174" relation="public-inheritance">
+        <childnode refid="201" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="174">
+      <node id="201">
         <label>UserControl</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="175">
+      <node id="202">
         <label>CustomControls.StackView</label>
         <link refid="class_custom_controls_1_1_stack_view"/>
-        <childnode refid="176" relation="public-inheritance">
+        <childnode refid="203" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="176">
+      <node id="203">
         <label>UserControl</label>
       </node>
     </collaborationgraph>
-    <location file="CustomControls/StackView.cs" line="16" column="1" bodyfile="CustomControls/StackView.cs" bodystart="15" bodyend="468"/>
+    <location file="CustomControls/StackView.cs" line="28" column="1" bodyfile="CustomControls/StackView.cs" bodystart="27" bodyend="487"/>
     <listofallmembers>
       <member refid="class_custom_controls_1_1_stack_view_1a84ef493f63a4cd63b7132812da2fe51c" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>_currentState</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1ab502b86c791f6c45cc55cc427831f528" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>_modify</name></member>

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Interfaces/IFunctionality.cs" line="12" column="1"/>
+        <location file="HKSupply/Services/Interfaces/IFunctionality.cs" line="15" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_1a7652aa4269664c60c38868ca5691b39e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_h_k_supply_1_1_models_1_1_functionality" kindref="compound">Functionality</ref></type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Interfaces/IFunctionality.cs" line="13" column="1"/>
+        <location file="HKSupply/Services/Interfaces/IFunctionality.cs" line="16" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_1a8b71832d394e3900a477c05c346489df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_h_k_supply_1_1_models_1_1_functionality" kindref="compound">Functionality</ref></type>
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Interfaces/IFunctionality.cs" line="14" column="1"/>
+        <location file="HKSupply/Services/Interfaces/IFunctionality.cs" line="17" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_1ac11ba1039efa6437e0669e9617ea5c9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_h_k_supply_1_1_models_1_1_functionality" kindref="compound">Functionality</ref></type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Interfaces/IFunctionality.cs" line="15" column="1"/>
+        <location file="HKSupply/Services/Interfaces/IFunctionality.cs" line="18" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_1a31203a06c78db03a2c9a69c0fa1a0865" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_h_k_supply_1_1_models_1_1_functionality" kindref="compound">Functionality</ref></type>
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Interfaces/IFunctionality.cs" line="16" column="1"/>
+        <location file="HKSupply/Services/Interfaces/IFunctionality.cs" line="19" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_1a7408965d17ce5d8a6fea11ac392ed451" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -106,26 +106,26 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Interfaces/IFunctionality.cs" line="17" column="1"/>
+        <location file="HKSupply/Services/Interfaces/IFunctionality.cs" line="20" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Interface para el service de Functionality </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="82">
+      <node id="107">
         <label>HKSupply.Services.Implementations.EFFunctionality</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality"/>
-        <childnode refid="81" relation="public-inheritance">
+        <childnode refid="106" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="81">
+      <node id="106">
         <label>HKSupply.Services.Interfaces.IFunctionality</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality"/>
       </node>
     </inheritancegraph>
-    <location file="HKSupply/Services/Interfaces/IFunctionality.cs" line="11" column="1" bodyfile="HKSupply/Services/Interfaces/IFunctionality.cs" bodystart="10" bodyend="18"/>
+    <location file="HKSupply/Services/Interfaces/IFunctionality.cs" line="14" column="1" bodyfile="HKSupply/Services/Interfaces/IFunctionality.cs" bodystart="13" bodyend="21"/>
     <listofallmembers>
       <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_1aa1f16fee3ce5743db02605b4fd2184fc" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IFunctionality</scope><name>GetAllFunctionalities</name></member>
       <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_1a7652aa4269664c60c38868ca5691b39e" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IFunctionality</scope><name>GetFunctionalityById</name></member>

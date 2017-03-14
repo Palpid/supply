@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['iactionsstackview',['IActionsStackView',['../interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view.html',1,'HKSupply::Forms']]],
   ['icustomer',['ICustomer',['../interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer.html',1,'HKSupply::Services::Interfaces']]],
   ['ifunctionality',['IFunctionality',['../interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality.html',1,'HKSupply::Services::Interfaces']]],
   ['ifunctionalityrole',['IFunctionalityRole',['../interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_role.html',1,'HKSupply::Services::Interfaces']]],

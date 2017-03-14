@@ -84,24 +84,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="111">
+      <node id="136">
         <label>HKSupply.Exceptions.NewExistingFunctionalityRoleException</label>
         <link refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_functionality_role_exception"/>
-        <childnode refid="112" relation="public-inheritance">
+        <childnode refid="137" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="112">
+      <node id="137">
         <label>System::Exception</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="113">
+      <node id="138">
         <label>HKSupply.Exceptions.NewExistingFunctionalityRoleException</label>
         <link refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_functionality_role_exception"/>
-        <childnode refid="114" relation="public-inheritance">
+        <childnode refid="139" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="114">
+      <node id="139">
         <label>System::Exception</label>
       </node>
     </collaborationgraph>

@@ -7,6 +7,9 @@ using HKSupply.Models;
 
 namespace HKSupply.Services.Interfaces
 {
+    /// <summary>
+    /// Interface para el service de Role
+    /// </summary>
     public interface IRole
     {
         IEnumerable<Role> GetRoles(bool all = true);

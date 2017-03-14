@@ -70,6 +70,19 @@
         </inbodydescription>
         <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="66" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="66" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a65752defeff051523a6b683dbead740d" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Resources.HKSupplyRes.DBServerConnectionError</definition>
+        <argsstring></argsstring>
+        <name>DBServerConnectionError</name>
+        <briefdescription>
+<para>Busca una cadena traducida similar a Database Server Connection Error. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="75" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="75" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a98989195be9a85cae229b97a2d9a4697" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
         <definition>string HKSupply.Resources.HKSupplyRes.FieldRequired</definition>
@@ -81,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="75" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="75" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="84" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="84" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1af4aaf795856a99305137928b5ed97053" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -94,7 +107,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="84" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="84" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="93" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a2d366420aad0b1ee82f8667abdd38a88" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Resources.HKSupplyRes.FunctionalityAlreadyExist</definition>
+        <argsstring></argsstring>
+        <name>FunctionalityAlreadyExist</name>
+        <briefdescription>
+<para>Busca una cadena traducida similar a Functionality Already Exist. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="102" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a9c593d9c8073d663b1887dac632bc4a2" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Resources.HKSupplyRes.FunctionalityRoleAlreadyExist</definition>
+        <argsstring></argsstring>
+        <name>FunctionalityRoleAlreadyExist</name>
+        <briefdescription>
+<para>Busca una cadena traducida similar a Functionality-Role Already Exist. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="111" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="111" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1ad9c996cff8b81240f4727cd41b6ab7d9" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -107,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="93" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="93" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="120" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="120" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a1087a39ac432ba5d0f89e94b1c1941dd" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -120,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="102" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="102" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="129" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="129" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a3cccd884cf3e02533ab687fca7550793" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -133,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="111" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="111" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="138" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="138" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1ab187a43f244a62f0d468e3667e2252bd" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -146,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="120" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="120" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="147" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="147" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a17469ea4cfc729c4d6b9cbfa26d387a5" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -159,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="129" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="129" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="156" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="156" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a2a4ebcf81fea10fecf261ebd54c702b5" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -172,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="138" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="138" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="165" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="165" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1ab7906137d1e57b996fdab9d7f56411bf" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -185,7 +224,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="147" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="147" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="174" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a5f587a2f596ea4654b6d59c2a7e6c023" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Resources.HKSupplyRes.NoFunctionalityExist</definition>
+        <argsstring></argsstring>
+        <name>NoFunctionalityExist</name>
+        <briefdescription>
+<para>Busca una cadena traducida similar a No Functionality Exist. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="183" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a449c801ca89d32ad67f36e35a480b2f0" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Resources.HKSupplyRes.NoFunctionalityRoleExist</definition>
+        <argsstring></argsstring>
+        <name>NoFunctionalityRoleExist</name>
+        <briefdescription>
+<para>Busca una cadena traducida similar a No Functionality-Role Exist. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="192" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="192" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a317f38eb337b62044a037ba23249b3fe" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -198,7 +263,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="156" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="156" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="201" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a4bafb0ca0e7b712acb574d2761d555a2" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Resources.HKSupplyRes.NoRoleExist</definition>
+        <argsstring></argsstring>
+        <name>NoRoleExist</name>
+        <briefdescription>
+<para>Busca una cadena traducida similar a No Role Exist. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="210" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="210" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a5b772a5dc48018880b64d24dd163acac" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -206,12 +284,12 @@
         <argsstring></argsstring>
         <name>NullArgument</name>
         <briefdescription>
-<para>Busca una cadena traducida similar a {1} can't be null. </para>        </briefdescription>
+<para>Busca una cadena traducida similar a {0} can't be null. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="165" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="165" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="219" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="219" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a0758caf4ce88adc9ae18ce3643be7f10" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -224,7 +302,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="174" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="174" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="228" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="228" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a921c12efc16a223bf652aac411453f0b" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -237,7 +315,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="183" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="183" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="237" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="237" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1ae6e71005be8825bd32d7bc1b46850d4c" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -250,7 +328,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="192" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="192" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="246" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="246" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a10c0eb3df5360b399ad7ad951b6af796" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -263,7 +341,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="201" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="201" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="255" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="255" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a2ed2ad3f7e7728f032995001a53d7f7e" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -276,7 +354,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="210" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="210" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="264" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="264" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a046f56633147586518340e19601a2094" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -289,7 +367,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="219" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="219" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="273" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="273" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1aa7de1c67f4c5caf524e2f67c92731226" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -302,7 +380,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="228" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="228" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="282" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="282" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1ad0f8f97faf91a6133dbecd48dda9e3e1" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -315,7 +393,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="237" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="237" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="291" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="291" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a644b26a295778d449ac527f3c200fc97" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -328,7 +406,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="246" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="246" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="300" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="300" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1ace3c13322ed5672ba5ffb29437e250bd" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -341,7 +419,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="255" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="255" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="309" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1aa2cbf8eb11a9b2e6c223797a511eef0a" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Resources.HKSupplyRes.RoleAlreadyExist</definition>
+        <argsstring></argsstring>
+        <name>RoleAlreadyExist</name>
+        <briefdescription>
+<para>Busca una cadena traducida similar a Role Already Exist. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="318" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="318" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1ad45350ef8af5276ed21ba1405ad661cb" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -354,7 +445,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="264" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="264" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="327" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="327" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a42436fd0d84a03316db7e8189d9a091f" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -367,7 +458,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="273" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="273" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="336" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a6c7cbe052b710a7d6180a88c4c71f42b" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Resources.HKSupplyRes.SaveSuccessfully</definition>
+        <argsstring></argsstring>
+        <name>SaveSuccessfully</name>
+        <briefdescription>
+<para>Busca una cadena traducida similar a Save Successfully. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="345" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="345" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a27a00e378c9167fb8ede699b28b68d29" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -380,7 +484,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="282" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="282" bodyend="-1"/>
+        <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="354" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="354" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="package-func">
@@ -402,12 +506,15 @@
 <para>Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="25" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="25" bodyend="287"/>
+    <location file="HKSupply/Resources/HKSupplyRes.Designer.cs" line="25" column="1" bodyfile="HKSupply/Resources/HKSupplyRes.Designer.cs" bodystart="25" bodyend="359"/>
     <listofallmembers>
       <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a4158cf7e0bbdadfc06b91ab6cb21974b" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>CellDataError</name></member>
       <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a217a859523d49adca21c04496208e6a2" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>Culture</name></member>
+      <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a65752defeff051523a6b683dbead740d" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>DBServerConnectionError</name></member>
       <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a98989195be9a85cae229b97a2d9a4697" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>FieldRequired</name></member>
       <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1af4aaf795856a99305137928b5ed97053" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>FormNotFound</name></member>
+      <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a2d366420aad0b1ee82f8667abdd38a88" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>FunctionalityAlreadyExist</name></member>
+      <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a9c593d9c8073d663b1887dac632bc4a2" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>FunctionalityRoleAlreadyExist</name></member>
       <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1aeca84938740571ae11209c4869575939" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>HKSupplyRes</name></member>
       <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1ad9c996cff8b81240f4727cd41b6ab7d9" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>InvalidLogin</name></member>
       <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a1087a39ac432ba5d0f89e94b1c1941dd" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>InvalidPassword</name></member>
@@ -416,7 +523,10 @@
       <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a17469ea4cfc729c4d6b9cbfa26d387a5" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>LoginMandatory</name></member>
       <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a2a4ebcf81fea10fecf261ebd54c702b5" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>NewPassword</name></member>
       <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1ab7906137d1e57b996fdab9d7f56411bf" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>NewPasswordMandatory</name></member>
+      <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a5f587a2f596ea4654b6d59c2a7e6c023" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>NoFunctionalityExist</name></member>
+      <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a449c801ca89d32ad67f36e35a480b2f0" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>NoFunctionalityRoleExist</name></member>
       <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a317f38eb337b62044a037ba23249b3fe" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>NoPendingChanges</name></member>
+      <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a4bafb0ca0e7b712acb574d2761d555a2" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>NoRoleExist</name></member>
       <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a5b772a5dc48018880b64d24dd163acac" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>NullArgument</name></member>
       <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a0758caf4ce88adc9ae18ce3643be7f10" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>OldPassword</name></member>
       <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a921c12efc16a223bf652aac411453f0b" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>OldPasswordError</name></member>
@@ -431,8 +541,10 @@
       <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a69369e466098e01f27cfa38703bf8dd2" prot="private" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>resourceCulture</name></member>
       <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a5c59f0d837357a005fa18b9f61faae4b" prot="private" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>resourceMan</name></member>
       <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a6531388ff2bc98e645966281d5356120" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>ResourceManager</name></member>
+      <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1aa2cbf8eb11a9b2e6c223797a511eef0a" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>RoleAlreadyExist</name></member>
       <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1ad45350ef8af5276ed21ba1405ad661cb" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>Save</name></member>
       <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a42436fd0d84a03316db7e8189d9a091f" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>SaveChanges</name></member>
+      <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a6c7cbe052b710a7d6180a88c4c71f42b" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>SaveSuccessfully</name></member>
       <member refid="class_h_k_supply_1_1_resources_1_1_h_k_supply_res_1a27a00e378c9167fb8ede699b28b68d29" prot="package" virt="non-virtual"><scope>HKSupply::Resources::HKSupplyRes</scope><name>SignIn</name></member>
     </listofallmembers>
   </compounddef>
