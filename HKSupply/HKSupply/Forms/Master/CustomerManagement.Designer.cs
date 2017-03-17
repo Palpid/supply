@@ -63,11 +63,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.chkActive = new System.Windows.Forms.CheckBox();
+            this.gbFilter = new System.Windows.Forms.GroupBox();
+            this.cmbColFilter = new System.Windows.Forms.ComboBox();
+            this.txtFilter = new System.Windows.Forms.TextBox();
             this.tcGeneral.SuspendLayout();
             this.tpGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdCustomers)).BeginInit();
             this.tpForm.SuspendLayout();
             this.tlpForm.SuspendLayout();
+            this.gbFilter.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcGeneral
@@ -85,6 +89,7 @@
             // 
             // tpGrid
             // 
+            this.tpGrid.Controls.Add(this.gbFilter);
             this.tpGrid.Controls.Add(this.btnLoad);
             this.tpGrid.Controls.Add(this.grdCustomers);
             this.tpGrid.Location = new System.Drawing.Point(4, 25);
@@ -98,7 +103,7 @@
             // btnLoad
             // 
             this.btnLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLoad.Location = new System.Drawing.Point(1066, 6);
+            this.btnLoad.Location = new System.Drawing.Point(1066, 69);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(102, 29);
             this.btnLoad.TabIndex = 1;
@@ -112,10 +117,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grdCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdCustomers.Location = new System.Drawing.Point(6, 44);
+            this.grdCustomers.Location = new System.Drawing.Point(6, 104);
             this.grdCustomers.Name = "grdCustomers";
             this.grdCustomers.RowTemplate.Height = 24;
-            this.grdCustomers.Size = new System.Drawing.Size(1163, 443);
+            this.grdCustomers.Size = new System.Drawing.Size(1163, 383);
             this.grdCustomers.TabIndex = 0;
             // 
             // tpForm
@@ -409,6 +414,34 @@
             this.chkActive.TabIndex = 8;
             this.chkActive.UseVisualStyleBackColor = true;
             // 
+            // gbFilter
+            // 
+            this.gbFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbFilter.Controls.Add(this.txtFilter);
+            this.gbFilter.Controls.Add(this.cmbColFilter);
+            this.gbFilter.Location = new System.Drawing.Point(6, 6);
+            this.gbFilter.Name = "gbFilter";
+            this.gbFilter.Size = new System.Drawing.Size(1162, 52);
+            this.gbFilter.TabIndex = 2;
+            this.gbFilter.TabStop = false;
+            // 
+            // cmbColFilter
+            // 
+            this.cmbColFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbColFilter.FormattingEnabled = true;
+            this.cmbColFilter.Location = new System.Drawing.Point(6, 17);
+            this.cmbColFilter.Name = "cmbColFilter";
+            this.cmbColFilter.Size = new System.Drawing.Size(205, 24);
+            this.cmbColFilter.TabIndex = 0;
+            // 
+            // txtFilter
+            // 
+            this.txtFilter.Location = new System.Drawing.Point(223, 18);
+            this.txtFilter.Name = "txtFilter";
+            this.txtFilter.Size = new System.Drawing.Size(257, 22);
+            this.txtFilter.TabIndex = 1;
+            // 
             // CustomerManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -426,6 +459,8 @@
             this.tpForm.ResumeLayout(false);
             this.tlpForm.ResumeLayout(false);
             this.tlpForm.PerformLayout();
+            this.gbFilter.ResumeLayout(false);
+            this.gbFilter.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -467,5 +502,8 @@
         private System.Windows.Forms.CheckBox chkActive;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnNewVersion;
+        private System.Windows.Forms.GroupBox gbFilter;
+        private System.Windows.Forms.ComboBox cmbColFilter;
+        private System.Windows.Forms.TextBox txtFilter;
     }
 }

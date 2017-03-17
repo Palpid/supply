@@ -92,6 +92,9 @@ namespace HKSupply.Forms.Master
                 //indicamos que ha dejado de editar el grid, por si modifica una celda y sin salir pulsa sobre guardar
                 grdUsers.EndEdit();
 
+                if (IsValidUsers() == false)
+                    return;
+
                 DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
 
                 if (result != DialogResult.Yes)
@@ -105,24 +108,17 @@ namespace HKSupply.Forms.Master
                     }
                     else
                     {
-                        if (IsValidModifiedUsers())
+                        if (UpdateUsers())
                         {
-                            if (UpdateUsers())
-                            {
-                                res = true;
-                            }
+                            res = true;
                         }
-
                     }
                 }
                 else if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.New)
                 {
-                    if (IsValidCreatedRoles())
+                    if (CreateUser())
                     {
-                        if (CreateUser())
-                        {
-                            res = true;
-                        }
+                        res = true;
                     }
                 }
 
@@ -211,9 +207,9 @@ namespace HKSupply.Forms.Master
                 {
                     User tmpUser = new User();
                     tmpUser.Id = (int)grdUsers.Rows[e.RowIndex].Cells[(int)eUserColumns.Id].Value;
-                    tmpUser.UserLogin = grdUsers.Rows[e.RowIndex].Cells[(int)eUserColumns.UserLogin].Value.ToString();
+                    tmpUser.UserLogin = (grdUsers.Rows[e.RowIndex].Cells[(int)eUserColumns.UserLogin].Value.ToString() ?? string.Empty).ToString();
                     tmpUser.Password = grdUsers.Rows[e.RowIndex].Cells[(int)eUserColumns.Password].Value.ToString();
-                    tmpUser.Name = grdUsers.Rows[e.RowIndex].Cells[(int)eUserColumns.Name].Value.ToString();
+                    tmpUser.Name = (grdUsers.Rows[e.RowIndex].Cells[(int)eUserColumns.Name].Value ?? string.Empty).ToString();
                     tmpUser.RoleId = grdUsers.Rows[e.RowIndex].Cells[(int)eUserColumns.RoleId].Value.ToString();
                     tmpUser.Enabled = (bool)grdUsers.Rows[e.RowIndex].Cells[(int)eUserColumns.Enabled].Value;
                     tmpUser.Remarks = (grdUsers.Rows[e.RowIndex].Cells[(int)eUserColumns.Remarks].Value ?? string.Empty).ToString();
@@ -585,6 +581,23 @@ namespace HKSupply.Forms.Master
                     user.Remarks = createdUser.Remarks;
                 }
 
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private bool IsValidUsers()
+        {
+            try
+            {
+                if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
+                    return IsValidModifiedUsers();
+                else if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.New)
+                    return IsValidCreatedRoles();
+
+                return false;
             }
             catch (Exception ex)
             {

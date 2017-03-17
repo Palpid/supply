@@ -115,6 +115,15 @@ namespace HKSupply.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Invalid ID.
+        /// </summary>
+        internal static string InvalidId {
+            get {
+                return ResourceManager.GetString("InvalidId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Invalid login.
         /// </summary>
         internal static string InvalidLogin {
@@ -210,6 +219,15 @@ namespace HKSupply.Resources {
         internal static string NoRoleExist {
             get {
                 return ResourceManager.GetString("NoRoleExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a No Role Exist.
+        /// </summary>
+        internal static string NoStoreExist {
+            get {
+                return ResourceManager.GetString("NoStoreExist", resourceCulture);
             }
         }
         
@@ -354,6 +372,15 @@ namespace HKSupply.Resources {
         internal static string SignIn {
             get {
                 return ResourceManager.GetString("SignIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Store Already Exist.
+        /// </summary>
+        internal static string StoreAlreadyExist {
+            get {
+                return ResourceManager.GetString("StoreAlreadyExist", resourceCulture);
             }
         }
     }

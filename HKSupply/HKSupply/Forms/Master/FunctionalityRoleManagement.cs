@@ -86,6 +86,9 @@ namespace HKSupply.Forms.Master
                 //indicamos que ha dejado de editar el grid, por si modifica una celda y sin salir pulsa sobre guardar
                 grdFuncRoles.EndEdit();
 
+                if (IsValidFunctionalitiesRoles() == false)
+                    return;
+
                 DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
 
                 if (result != DialogResult.Yes)
@@ -99,24 +102,17 @@ namespace HKSupply.Forms.Master
                     }
                     else
                     {
-                        if (IsValidModifiedFunctionalitiesRoles())
+                        if (UpdateFunctionalitiesRoles())
                         {
-                            if (UpdateUsers())
-                            {
-                                res = true;
-                            }
+                            res = true;
                         }
-
                     }
                 }
                 else if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.New)
                 {
-                    if (IsValidCreatedRoles())
+                    if (CreateFunctionalityRoles())
                     {
-                        if (CreateUser())
-                        {
-                            res = true;
-                        }
+                        res = true;
                     }
                 }
 
@@ -477,6 +473,23 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private bool IsValidFunctionalitiesRoles()
+        {
+            try
+            {
+                if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
+                    return IsValidModifiedFunctionalitiesRoles();
+                else if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.New)
+                    return IsValidCreatedFunctionalitiesRoles();
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         private bool IsValidModifiedFunctionalitiesRoles()
         {
             try
@@ -489,7 +502,7 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private bool IsValidCreatedRoles()
+        private bool IsValidCreatedFunctionalitiesRoles()
         {
             try
             {
@@ -501,7 +514,7 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private bool UpdateUsers()
+        private bool UpdateFunctionalitiesRoles()
         {
             try
             {
@@ -513,7 +526,7 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private bool CreateUser()
+        private bool CreateFunctionalityRoles()
         {
             try
             {

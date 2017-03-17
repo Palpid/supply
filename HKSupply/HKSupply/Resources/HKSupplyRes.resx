@@ -135,6 +135,9 @@
   <data name="FunctionalityRoleAlreadyExist" xml:space="preserve">
     <value>Functionality-Role Already Exist</value>
   </data>
+  <data name="InvalidId" xml:space="preserve">
+    <value>Invalid ID</value>
+  </data>
   <data name="InvalidLogin" xml:space="preserve">
     <value>Invalid login</value>
   </data>
@@ -166,6 +169,9 @@
     <value>No pending changes</value>
   </data>
   <data name="NoRoleExist" xml:space="preserve">
+    <value>No Role Exist</value>
+  </data>
+  <data name="NoStoreExist" xml:space="preserve">
     <value>No Role Exist</value>
   </data>
   <data name="NullArgument" xml:space="preserve">
@@ -215,5 +221,8 @@
   </data>
   <data name="SignIn" xml:space="preserve">
     <value>Sign in</value>
+  </data>
+  <data name="StoreAlreadyExist" xml:space="preserve">
+    <value>Store Already Exist</value>
   </data>
 </root>

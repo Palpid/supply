@@ -37,6 +37,13 @@ namespace HKSupply.Forms.Master
             IdPaymentTerms,
             Currency,
         }
+
+        private enum eCustomerColumnsFilter
+        {
+            IdCustomer,
+            CustName,
+            VATNum,
+        }
         #endregion
 
         #region Private members
@@ -104,6 +111,14 @@ namespace HKSupply.Forms.Master
             //El toolstrip no lanza el validate, lo lanzamos a mano por si acaso hay algún elemento que lo tiene pendiente
             Validate();
 
+            if (IsValidCustomer() == false)
+                return;
+
+            DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
+
+            if (result != DialogResult.Yes)
+                return;
+
             Cursor = Cursors.WaitCursor;
             try
             {
@@ -115,17 +130,11 @@ namespace HKSupply.Forms.Master
 
                 if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
                 {
-                    if (IsValidModifiedCustomer())
-                    {
-                        res = UpdateCustomer();
-                    }
+                    res = UpdateCustomer();
                 }
                 else if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.New)
                 {
-                    if (IsValidCreatedCustomer())
-                    {
-                        res = CreateCustomer();
-                    }
+                    res = CreateCustomer();
                 }
 
                 if (res == true)
@@ -202,6 +211,7 @@ namespace HKSupply.Forms.Master
                 SetFormBinding();
                 tcGeneral.TabPages.Remove(tpForm);
                 btnNewVersion.Visible = false;
+                LoadComboFilters();
             }
             catch (Exception ex)
             {
@@ -292,7 +302,7 @@ namespace HKSupply.Forms.Master
         #region Private Methods
 
         /// <summary>
-        /// Resetear el ovjeto customer que usamos para la actualización
+        /// Resetear el objeto customer que usamos para la actualización
         /// </summary>
         private void ResetCustomerUpdate()
         {
@@ -344,9 +354,22 @@ namespace HKSupply.Forms.Master
             txtCurreny.DataBindings.Add("Text", _customerUpdate, "Currency");
         }
 
+        private void LoadComboFilters()
+        {
+            try
+            {
+                cmbColFilter.DataSource = Enum.GetNames(typeof(eCustomerColumnsFilter));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         /// <summary>
         /// cargar la colección de Customer del sistema
         /// </summary>
+        /// <remarks>Filtramos si es necesario</remarks>
         private void LoadCustomersList()
         {
             try
@@ -354,6 +377,13 @@ namespace HKSupply.Forms.Master
                 var customerService = new HKSupply.Services.Implementations.EFCustomer();
 
                 _customersList = customerService.GetCustomers();
+
+                //Filtramos si es necesario
+                if (cmbColFilter.SelectedIndex > -1 && string.IsNullOrEmpty(txtFilter.Text) == false)
+                {
+                    //Lo pasamos antes a minúsculas todo, ya que el Contains es case sensitive, 
+                    _customersList = _customersList.Where(cmbColFilter.SelectedItem.ToString() + ".ToLower().Contains(@0)", txtFilter.Text.ToLower()).ToList();
+                }
 
                 grdCustomers.CellDoubleClick += grdCustomers_CellDoubleClick;
                 grdCustomers.CellClick +=grdCustomers_CellClick;
@@ -623,8 +653,25 @@ namespace HKSupply.Forms.Master
 
         #region validate data
 
+        private bool IsValidCustomer()
+        {
+            try
+            {
+                if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
+                    return IsValidModifiedCustomer();
+                else if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.New)
+                    return IsValidCreatedCustomer();
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         /// <summary>
-        /// TODO
+        /// 
         /// </summary>
         /// <returns></returns>
         private bool IsValidModifiedCustomer()

@@ -19,6 +19,9 @@ namespace HKSupply.DB
         public DbSet<FunctionalityRole> FunctionalitiesRole { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<CustomerHistory> CustomersHistory { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<SupplierHistory> SuppliersHistory { get; set; }
+        public DbSet<Store> Stores { get; set; }
 
         public HKSupplyContext()
             : base("name=SqlExpressConn")
@@ -27,7 +30,7 @@ namespace HKSupply.DB
         }
 
         /// <summary>
-        /// Override del método original para que concatene todos los errres del entity validation
+        /// Override del método original para que concatene todos los erroes del entity validation
         /// </summary>
         /// <returns></returns>
         public override int SaveChanges()

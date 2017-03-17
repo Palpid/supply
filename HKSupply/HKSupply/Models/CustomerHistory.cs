@@ -13,10 +13,10 @@ namespace HKSupply.Models
     public class CustomerHistory 
     {
         [Column("ID_VER", Order = 1), Key]
-        public int idVer { get; set; }
+        public int IdVer { get; set; }
 
         [Column("ID_SUBVER", Order = 2), Key]
-        public int idSubVer { get; set; }
+        public int IdSubVer { get; set; }
 
         [Column("TIMESTAMP")]
         public DateTime Timestamp { get; set; }
@@ -34,7 +34,7 @@ namespace HKSupply.Models
         public string VATNum { get; set; }
 
         [Column("SHIPING_ADDRESS")]
-        public string ShipingAddress { get; set; }
+        public string ShippingAddress { get; set; }
 
         [Column("BILLING_ADDRESS")]
         public string BillingAddress { get; set; }
@@ -46,10 +46,10 @@ namespace HKSupply.Models
         public string ContactPhone { get; set; }
 
         [Column("ID_INCOTERM")]
-        public int idIncoterm { get; set; }
+        public int IdIncoterm { get; set; }
 
         [Column("IDPAYMENTTERMS")]
-        public int idPaymentTerms { get; set; }
+        public int IdPaymentTerms { get; set; }
 
         [Column("CURRENCY")]
         public string Currency { get; set; }
@@ -63,19 +63,19 @@ namespace HKSupply.Models
             Customer customer = (Customer)obj;
 
             bool res = (
-                idVer == customer.IdVer &&
-                idSubVer == customer.IdSubVer &&
+                IdVer == customer.IdVer &&
+                IdSubVer == customer.IdSubVer &&
                 Timestamp == customer.Timestamp &&
                 idCustomer == customer.IdCustomer &&
                 CustName == customer.CustName &&
                 Active == customer.Active &&
                 VATNum == customer.VATNum &&
-                ShipingAddress == customer.ShippingAddress &&
+                ShippingAddress == customer.ShippingAddress &&
                 BillingAddress == customer.BillingAddress &&
                 ContactName == customer.ContactName &&
                 ContactPhone == customer.ContactPhone &&
-                idIncoterm == customer.IdIncoterm &&
-                idPaymentTerms == customer.IdPaymentTerms &&
+                IdIncoterm == customer.IdIncoterm &&
+                IdPaymentTerms == customer.IdPaymentTerms &&
                 Currency == customer.Currency);
 
             return res;
@@ -85,19 +85,19 @@ namespace HKSupply.Models
         public override int GetHashCode()
         {
             int hashCode =
-                idVer.GetHashCode() +
-                idSubVer.GetHashCode() +
+                IdVer.GetHashCode() +
+                IdSubVer.GetHashCode() +
                 Timestamp.GetHashCode() +
                 idCustomer.GetHashCode() +
                 CustName.GetHashCode() +
                 Active.GetHashCode() +
                 VATNum.GetHashCode() +
-                ShipingAddress.GetHashCode() +
+                ShippingAddress.GetHashCode() +
                 BillingAddress.GetHashCode() +
                 ContactName.GetHashCode() +
                 ContactPhone.GetHashCode() +
-                idIncoterm.GetHashCode() +
-                idPaymentTerms.GetHashCode() +
+                IdIncoterm.GetHashCode() +
+                IdPaymentTerms.GetHashCode() +
                 Currency.GetHashCode();
 
             return hashCode;
@@ -108,19 +108,19 @@ namespace HKSupply.Models
         {
             CustomerHistory ch = new CustomerHistory();
 
-            ch.idVer = c.IdVer;
-            ch.idSubVer = c.IdSubVer;
+            ch.IdVer = c.IdVer;
+            ch.IdSubVer = c.IdSubVer;
             ch.Timestamp = c.Timestamp;
             ch.idCustomer = c.IdCustomer;
             ch.CustName = c.CustName;
             ch.Active = c.Active;
             ch.VATNum = c.VATNum;
-            ch.ShipingAddress = c.ShippingAddress;
+            ch.ShippingAddress = c.ShippingAddress;
             ch.BillingAddress = c.BillingAddress;
             ch.ContactName = c.ContactName;
             ch.ContactPhone = c.ContactPhone;
-            ch.idIncoterm = c.IdIncoterm;
-            ch.idPaymentTerms = c.IdPaymentTerms;
+            ch.IdIncoterm = c.IdIncoterm;
+            ch.IdPaymentTerms = c.IdPaymentTerms;
             ch.Currency = c.Currency;
 
             return ch;

@@ -72,10 +72,12 @@
     <Compile Include="Exceptions\NewExistingFunctionalityException.cs" />
     <Compile Include="Exceptions\NewExistingFunctionalityRoleException.cs" />
     <Compile Include="Exceptions\NewExistingRoleException.cs" />
+    <Compile Include="Exceptions\NewExistingStoreException.cs" />
     <Compile Include="Exceptions\NewExistingUserException.cs" />
     <Compile Include="Exceptions\NonexistentFunctionalityException.cs" />
     <Compile Include="Exceptions\NonexistentFunctionalityRoleException.cs" />
     <Compile Include="Exceptions\NonexistentRoleException.cs" />
+    <Compile Include="Exceptions\NonexistentStoreException.cs" />
     <Compile Include="Exceptions\NonexistentUserException.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -126,6 +128,18 @@
     <Compile Include="Forms\Master\RoleManagement.Designer.cs">
       <DependentUpon>RoleManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Master\StoreManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\StoreManagement.Designer.cs">
+      <DependentUpon>StoreManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\SupplierManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\SupplierManagement.Designer.cs">
+      <DependentUpon>SupplierManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Master\UserManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,12 +162,23 @@
     <Compile Include="Migrations\201703081126231_ObjectVersion_2.Designer.cs">
       <DependentUpon>201703081126231_ObjectVersion_2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703161530406_Supplier.cs" />
+    <Compile Include="Migrations\201703161530406_Supplier.Designer.cs">
+      <DependentUpon>201703161530406_Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703161637578_Store.cs" />
+    <Compile Include="Migrations\201703161637578_Store.Designer.cs">
+      <DependentUpon>201703161637578_Store.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CustomerHistory.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Functionality.cs" />
     <Compile Include="Models\FunctionalityRole.cs" />
     <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\Store.cs" />
+    <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Models\SupplierHistory.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -166,11 +191,15 @@
     <Compile Include="Services\Implementations\EFFunctionality.cs" />
     <Compile Include="Services\Implementations\EFFunctionalityRole.cs" />
     <Compile Include="Services\Implementations\EFRole.cs" />
+    <Compile Include="Services\Implementations\EFStore.cs" />
+    <Compile Include="Services\Implementations\EFSupplier.cs" />
     <Compile Include="Services\Implementations\EFUser.cs" />
     <Compile Include="Services\Interfaces\ICustomer.cs" />
     <Compile Include="Services\Interfaces\IFunctionality.cs" />
     <Compile Include="Services\Interfaces\IFunctionalityRole.cs" />
     <Compile Include="Services\Interfaces\IRole.cs" />
+    <Compile Include="Services\Interfaces\IStore.cs" />
+    <Compile Include="Services\Interfaces\ISupplier.cs" />
     <Compile Include="Services\Interfaces\IUser.cs" />
     <Compile Include="Styles\AppStyles.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -197,6 +226,12 @@
     <EmbeddedResource Include="Forms\Master\RoleManagement.resx">
       <DependentUpon>RoleManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\StoreManagement.resx">
+      <DependentUpon>StoreManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\SupplierManagement.resx">
+      <DependentUpon>SupplierManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\UserManagement.resx">
       <DependentUpon>UserManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +243,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703081126231_ObjectVersion_2.resx">
       <DependentUpon>201703081126231_ObjectVersion_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703161530406_Supplier.resx">
+      <DependentUpon>201703161530406_Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703161637578_Store.resx">
+      <DependentUpon>201703161637578_Store.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
