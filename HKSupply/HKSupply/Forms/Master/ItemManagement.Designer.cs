@@ -1,6 +1,6 @@
 ﻿namespace HKSupply.Forms.Master
 {
-    partial class CustomerManagement
+    partial class ItemManagement
     {
         /// <summary>
         /// Required designer variable.
@@ -31,24 +31,25 @@
             this.tcGeneral = new System.Windows.Forms.TabControl();
             this.tpGrid = new System.Windows.Forms.TabPage();
             this.gbFilter = new System.Windows.Forms.GroupBox();
+            this.chkFilter = new System.Windows.Forms.CheckBox();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.cmbColFilter = new System.Windows.Forms.ComboBox();
             this.btnLoad = new System.Windows.Forms.Button();
-            this.grdCustomers = new System.Windows.Forms.DataGridView();
+            this.grdItems = new System.Windows.Forms.DataGridView();
             this.tpForm = new System.Windows.Forms.TabPage();
             this.btnNewVersion = new System.Windows.Forms.Button();
             this.tlpForm = new System.Windows.Forms.TableLayoutPanel();
-            this.txtPaymentTerms = new System.Windows.Forms.TextBox();
-            this.txtIntercom = new System.Windows.Forms.TextBox();
-            this.txtContactPhone = new System.Windows.Forms.TextBox();
-            this.txtContactName = new System.Windows.Forms.TextBox();
-            this.txtBillingAddress = new System.Windows.Forms.TextBox();
-            this.txtShippingAddress = new System.Windows.Forms.TextBox();
-            this.txtVatNumber = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtCategoryName = new System.Windows.Forms.TextBox();
+            this.txtSize = new System.Windows.Forms.TextBox();
+            this.txtMmFront = new System.Windows.Forms.TextBox();
+            this.txtRetired = new System.Windows.Forms.TextBox();
+            this.txtLanched = new System.Windows.Forms.TextBox();
+            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.txtModel = new System.Windows.Forms.TextBox();
+            this.txtItemName = new System.Windows.Forms.TextBox();
             this.txtTimestamp = new System.Windows.Forms.TextBox();
             this.txtIdSubversion = new System.Windows.Forms.TextBox();
-            this.txtCurreny = new System.Windows.Forms.TextBox();
+            this.txtCaliber = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -62,15 +63,14 @@
             this.txtIdVersion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtIdCustomer = new System.Windows.Forms.TextBox();
+            this.txtItemCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.chkActive = new System.Windows.Forms.CheckBox();
-            this.chkFilter = new System.Windows.Forms.CheckBox();
             this.tcGeneral.SuspendLayout();
             this.tpGrid.SuspendLayout();
             this.gbFilter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdCustomers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdItems)).BeginInit();
             this.tpForm.SuspendLayout();
             this.tlpForm.SuspendLayout();
             this.SuspendLayout();
@@ -86,13 +86,13 @@
             this.tcGeneral.Name = "tcGeneral";
             this.tcGeneral.SelectedIndex = 0;
             this.tcGeneral.Size = new System.Drawing.Size(1183, 522);
-            this.tcGeneral.TabIndex = 0;
+            this.tcGeneral.TabIndex = 1;
             // 
             // tpGrid
             // 
             this.tpGrid.Controls.Add(this.gbFilter);
             this.tpGrid.Controls.Add(this.btnLoad);
-            this.tpGrid.Controls.Add(this.grdCustomers);
+            this.tpGrid.Controls.Add(this.grdItems);
             this.tpGrid.Location = new System.Drawing.Point(4, 25);
             this.tpGrid.Name = "tpGrid";
             this.tpGrid.Padding = new System.Windows.Forms.Padding(3);
@@ -113,6 +113,15 @@
             this.gbFilter.Size = new System.Drawing.Size(1162, 52);
             this.gbFilter.TabIndex = 2;
             this.gbFilter.TabStop = false;
+            // 
+            // chkFilter
+            // 
+            this.chkFilter.AutoSize = true;
+            this.chkFilter.Location = new System.Drawing.Point(486, 21);
+            this.chkFilter.Name = "chkFilter";
+            this.chkFilter.Size = new System.Drawing.Size(18, 17);
+            this.chkFilter.TabIndex = 3;
+            this.chkFilter.UseVisualStyleBackColor = true;
             // 
             // txtFilter
             // 
@@ -141,17 +150,17 @@
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
-            // grdCustomers
+            // grdItems
             // 
-            this.grdCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.grdItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grdCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdCustomers.Location = new System.Drawing.Point(6, 104);
-            this.grdCustomers.Name = "grdCustomers";
-            this.grdCustomers.RowTemplate.Height = 24;
-            this.grdCustomers.Size = new System.Drawing.Size(1163, 383);
-            this.grdCustomers.TabIndex = 0;
+            this.grdItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdItems.Location = new System.Drawing.Point(6, 104);
+            this.grdItems.Name = "grdItems";
+            this.grdItems.RowTemplate.Height = 24;
+            this.grdItems.Size = new System.Drawing.Size(1163, 383);
+            this.grdItems.TabIndex = 0;
             // 
             // tpForm
             // 
@@ -182,17 +191,17 @@
             this.tlpForm.ColumnCount = 2;
             this.tlpForm.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
             this.tlpForm.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.42857F));
-            this.tlpForm.Controls.Add(this.txtPaymentTerms, 1, 12);
-            this.tlpForm.Controls.Add(this.txtIntercom, 1, 11);
-            this.tlpForm.Controls.Add(this.txtContactPhone, 1, 10);
-            this.tlpForm.Controls.Add(this.txtContactName, 1, 9);
-            this.tlpForm.Controls.Add(this.txtBillingAddress, 1, 8);
-            this.tlpForm.Controls.Add(this.txtShippingAddress, 1, 7);
-            this.tlpForm.Controls.Add(this.txtVatNumber, 1, 6);
-            this.tlpForm.Controls.Add(this.txtName, 1, 4);
+            this.tlpForm.Controls.Add(this.txtCategoryName, 1, 12);
+            this.tlpForm.Controls.Add(this.txtSize, 1, 11);
+            this.tlpForm.Controls.Add(this.txtMmFront, 1, 10);
+            this.tlpForm.Controls.Add(this.txtRetired, 1, 9);
+            this.tlpForm.Controls.Add(this.txtLanched, 1, 8);
+            this.tlpForm.Controls.Add(this.txtStatus, 1, 7);
+            this.tlpForm.Controls.Add(this.txtModel, 1, 6);
+            this.tlpForm.Controls.Add(this.txtItemName, 1, 4);
             this.tlpForm.Controls.Add(this.txtTimestamp, 1, 3);
             this.tlpForm.Controls.Add(this.txtIdSubversion, 1, 2);
-            this.tlpForm.Controls.Add(this.txtCurreny, 1, 13);
+            this.tlpForm.Controls.Add(this.txtCaliber, 1, 13);
             this.tlpForm.Controls.Add(this.label14, 0, 13);
             this.tlpForm.Controls.Add(this.label13, 0, 12);
             this.tlpForm.Controls.Add(this.label12, 0, 11);
@@ -206,7 +215,7 @@
             this.tlpForm.Controls.Add(this.txtIdVersion, 1, 1);
             this.tlpForm.Controls.Add(this.label1, 0, 0);
             this.tlpForm.Controls.Add(this.label2, 0, 1);
-            this.tlpForm.Controls.Add(this.txtIdCustomer, 1, 0);
+            this.tlpForm.Controls.Add(this.txtItemCode, 1, 0);
             this.tlpForm.Controls.Add(this.label3, 0, 2);
             this.tlpForm.Controls.Add(this.label10, 0, 9);
             this.tlpForm.Controls.Add(this.chkActive, 1, 5);
@@ -231,61 +240,61 @@
             this.tlpForm.Size = new System.Drawing.Size(776, 487);
             this.tlpForm.TabIndex = 0;
             // 
-            // txtPaymentTerms
+            // txtCategoryName
             // 
-            this.txtPaymentTerms.Location = new System.Drawing.Point(224, 347);
-            this.txtPaymentTerms.Name = "txtPaymentTerms";
-            this.txtPaymentTerms.Size = new System.Drawing.Size(549, 22);
-            this.txtPaymentTerms.TabIndex = 7;
+            this.txtCategoryName.Location = new System.Drawing.Point(224, 347);
+            this.txtCategoryName.Name = "txtCategoryName";
+            this.txtCategoryName.Size = new System.Drawing.Size(549, 22);
+            this.txtCategoryName.TabIndex = 7;
             // 
-            // txtIntercom
+            // txtSize
             // 
-            this.txtIntercom.Location = new System.Drawing.Point(224, 319);
-            this.txtIntercom.Name = "txtIntercom";
-            this.txtIntercom.Size = new System.Drawing.Size(549, 22);
-            this.txtIntercom.TabIndex = 7;
+            this.txtSize.Location = new System.Drawing.Point(224, 319);
+            this.txtSize.Name = "txtSize";
+            this.txtSize.Size = new System.Drawing.Size(549, 22);
+            this.txtSize.TabIndex = 7;
             // 
-            // txtContactPhone
+            // txtMmFront
             // 
-            this.txtContactPhone.Location = new System.Drawing.Point(224, 291);
-            this.txtContactPhone.Name = "txtContactPhone";
-            this.txtContactPhone.Size = new System.Drawing.Size(549, 22);
-            this.txtContactPhone.TabIndex = 7;
+            this.txtMmFront.Location = new System.Drawing.Point(224, 291);
+            this.txtMmFront.Name = "txtMmFront";
+            this.txtMmFront.Size = new System.Drawing.Size(549, 22);
+            this.txtMmFront.TabIndex = 7;
             // 
-            // txtContactName
+            // txtRetired
             // 
-            this.txtContactName.Location = new System.Drawing.Point(224, 263);
-            this.txtContactName.Name = "txtContactName";
-            this.txtContactName.Size = new System.Drawing.Size(549, 22);
-            this.txtContactName.TabIndex = 7;
+            this.txtRetired.Location = new System.Drawing.Point(224, 263);
+            this.txtRetired.Name = "txtRetired";
+            this.txtRetired.Size = new System.Drawing.Size(549, 22);
+            this.txtRetired.TabIndex = 7;
             // 
-            // txtBillingAddress
+            // txtLanched
             // 
-            this.txtBillingAddress.Location = new System.Drawing.Point(224, 234);
-            this.txtBillingAddress.Name = "txtBillingAddress";
-            this.txtBillingAddress.Size = new System.Drawing.Size(549, 22);
-            this.txtBillingAddress.TabIndex = 7;
+            this.txtLanched.Location = new System.Drawing.Point(224, 234);
+            this.txtLanched.Name = "txtLanched";
+            this.txtLanched.Size = new System.Drawing.Size(549, 22);
+            this.txtLanched.TabIndex = 7;
             // 
-            // txtShippingAddress
+            // txtStatus
             // 
-            this.txtShippingAddress.Location = new System.Drawing.Point(224, 205);
-            this.txtShippingAddress.Name = "txtShippingAddress";
-            this.txtShippingAddress.Size = new System.Drawing.Size(549, 22);
-            this.txtShippingAddress.TabIndex = 6;
+            this.txtStatus.Location = new System.Drawing.Point(224, 205);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(549, 22);
+            this.txtStatus.TabIndex = 6;
             // 
-            // txtVatNumber
+            // txtModel
             // 
-            this.txtVatNumber.Location = new System.Drawing.Point(224, 176);
-            this.txtVatNumber.Name = "txtVatNumber";
-            this.txtVatNumber.Size = new System.Drawing.Size(549, 22);
-            this.txtVatNumber.TabIndex = 6;
+            this.txtModel.Location = new System.Drawing.Point(224, 176);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(549, 22);
+            this.txtModel.TabIndex = 6;
             // 
-            // txtName
+            // txtItemName
             // 
-            this.txtName.Location = new System.Drawing.Point(224, 118);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(549, 22);
-            this.txtName.TabIndex = 5;
+            this.txtItemName.Location = new System.Drawing.Point(224, 118);
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.Size = new System.Drawing.Size(549, 22);
+            this.txtItemName.TabIndex = 5;
             // 
             // txtTimestamp
             // 
@@ -301,12 +310,12 @@
             this.txtIdSubversion.Size = new System.Drawing.Size(549, 22);
             this.txtIdSubversion.TabIndex = 4;
             // 
-            // txtCurreny
+            // txtCaliber
             // 
-            this.txtCurreny.Location = new System.Drawing.Point(224, 375);
-            this.txtCurreny.Name = "txtCurreny";
-            this.txtCurreny.Size = new System.Drawing.Size(549, 22);
-            this.txtCurreny.TabIndex = 4;
+            this.txtCaliber.Location = new System.Drawing.Point(224, 375);
+            this.txtCaliber.Name = "txtCaliber";
+            this.txtCaliber.Size = new System.Drawing.Size(549, 22);
+            this.txtCaliber.TabIndex = 4;
             // 
             // label14
             // 
@@ -314,7 +323,7 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(193, 20);
             this.label14.TabIndex = 3;
-            this.label14.Text = "Currency";
+            this.label14.Text = "Caliber";
             // 
             // label13
             // 
@@ -322,7 +331,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(193, 20);
             this.label13.TabIndex = 2;
-            this.label13.Text = "Payment Terms";
+            this.label13.Text = "Category Name";
             // 
             // label12
             // 
@@ -330,7 +339,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(193, 20);
             this.label12.TabIndex = 2;
-            this.label12.Text = "Intercom";
+            this.label12.Text = "Size";
             // 
             // label11
             // 
@@ -338,7 +347,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(193, 20);
             this.label11.TabIndex = 2;
-            this.label11.Text = "Contact Phone";
+            this.label11.Text = "Front (mm)";
             // 
             // label9
             // 
@@ -346,7 +355,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(193, 29);
             this.label9.TabIndex = 1;
-            this.label9.Text = "Billing Address";
+            this.label9.Text = "Launched";
             // 
             // label8
             // 
@@ -354,7 +363,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(193, 29);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Shipping Address";
+            this.label8.Text = "Status";
             // 
             // label7
             // 
@@ -362,7 +371,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(193, 29);
             this.label7.TabIndex = 1;
-            this.label7.Text = "VAT Number";
+            this.label7.Text = "Model";
             // 
             // label6
             // 
@@ -378,7 +387,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(193, 29);
             this.label5.TabIndex = 1;
-            this.label5.Text = "Name";
+            this.label5.Text = "Item Name";
             // 
             // label4
             // 
@@ -401,7 +410,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(193, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Id Custumer";
+            this.label1.Text = "Item Code";
             // 
             // label2
             // 
@@ -411,12 +420,12 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Id Version";
             // 
-            // txtIdCustomer
+            // txtItemCode
             // 
-            this.txtIdCustomer.Location = new System.Drawing.Point(224, 3);
-            this.txtIdCustomer.Name = "txtIdCustomer";
-            this.txtIdCustomer.Size = new System.Drawing.Size(549, 22);
-            this.txtIdCustomer.TabIndex = 2;
+            this.txtItemCode.Location = new System.Drawing.Point(224, 3);
+            this.txtItemCode.Name = "txtItemCode";
+            this.txtItemCode.Size = new System.Drawing.Size(549, 22);
+            this.txtItemCode.TabIndex = 2;
             // 
             // label3
             // 
@@ -432,7 +441,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(193, 20);
             this.label10.TabIndex = 5;
-            this.label10.Text = "Contact name";
+            this.label10.Text = "Retired";
             // 
             // chkActive
             // 
@@ -444,31 +453,20 @@
             this.chkActive.TabIndex = 8;
             this.chkActive.UseVisualStyleBackColor = true;
             // 
-            // chkFilter
-            // 
-            this.chkFilter.AutoSize = true;
-            this.chkFilter.Location = new System.Drawing.Point(486, 21);
-            this.chkFilter.Name = "chkFilter";
-            this.chkFilter.Size = new System.Drawing.Size(18, 17);
-            this.chkFilter.TabIndex = 3;
-            this.chkFilter.UseVisualStyleBackColor = true;
-            // 
-            // CustomerManagement
+            // ItemManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1215, 598);
             this.Controls.Add(this.tcGeneral);
-            this.Name = "CustomerManagement";
-            this.Text = "Customer Management";
-            this.Load += new System.EventHandler(this.CustomerManagement_Load);
+            this.Name = "ItemManagement";
+            this.Text = "Item Management";
+            this.Load += new System.EventHandler(this.ItemManagement_Load);
             this.tcGeneral.ResumeLayout(false);
             this.tpGrid.ResumeLayout(false);
             this.gbFilter.ResumeLayout(false);
             this.gbFilter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdCustomers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdItems)).EndInit();
             this.tpForm.ResumeLayout(false);
             this.tlpForm.ResumeLayout(false);
             this.tlpForm.PerformLayout();
@@ -480,13 +478,27 @@
 
         private System.Windows.Forms.TabControl tcGeneral;
         private System.Windows.Forms.TabPage tpGrid;
+        private System.Windows.Forms.GroupBox gbFilter;
+        private System.Windows.Forms.CheckBox chkFilter;
+        private System.Windows.Forms.TextBox txtFilter;
+        private System.Windows.Forms.ComboBox cmbColFilter;
+        private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.DataGridView grdItems;
         private System.Windows.Forms.TabPage tpForm;
-        private System.Windows.Forms.DataGridView grdCustomers;
+        private System.Windows.Forms.Button btnNewVersion;
         private System.Windows.Forms.TableLayoutPanel tlpForm;
-        private System.Windows.Forms.TextBox txtIdVersion;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtIdCustomer;
+        private System.Windows.Forms.TextBox txtCategoryName;
+        private System.Windows.Forms.TextBox txtSize;
+        private System.Windows.Forms.TextBox txtMmFront;
+        private System.Windows.Forms.TextBox txtRetired;
+        private System.Windows.Forms.TextBox txtLanched;
+        private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.TextBox txtModel;
+        private System.Windows.Forms.TextBox txtItemName;
+        private System.Windows.Forms.TextBox txtTimestamp;
+        private System.Windows.Forms.TextBox txtIdSubversion;
+        private System.Windows.Forms.TextBox txtCaliber;
+        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -496,26 +508,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtIdVersion;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtItemCode;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtPaymentTerms;
-        private System.Windows.Forms.TextBox txtIntercom;
-        private System.Windows.Forms.TextBox txtContactPhone;
-        private System.Windows.Forms.TextBox txtContactName;
-        private System.Windows.Forms.TextBox txtBillingAddress;
-        private System.Windows.Forms.TextBox txtShippingAddress;
-        private System.Windows.Forms.TextBox txtVatNumber;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtTimestamp;
-        private System.Windows.Forms.TextBox txtIdSubversion;
-        private System.Windows.Forms.TextBox txtCurreny;
         private System.Windows.Forms.CheckBox chkActive;
-        private System.Windows.Forms.Button btnLoad;
-        private System.Windows.Forms.Button btnNewVersion;
-        private System.Windows.Forms.GroupBox gbFilter;
-        private System.Windows.Forms.ComboBox cmbColFilter;
-        private System.Windows.Forms.TextBox txtFilter;
-        private System.Windows.Forms.CheckBox chkFilter;
     }
 }

@@ -211,7 +211,6 @@ namespace HKSupply.Services.Implementations
             }
         }
 
-
         public List<Customer> GetCustomers()
         {
             try

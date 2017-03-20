@@ -42,8 +42,23 @@ namespace HKSupply.Forms.Master
         {
             IdCustomer,
             CustName,
+            Active,
             VATNum,
         }
+
+        private enum eCustomerColumnsFilterType
+        {
+            Text = 0,
+            CheckBox = 1,
+        }
+
+        private Dictionary<string, int> _filterDic = new Dictionary<string, int>() 
+        { 
+            {eCustomerColumns.IdCustomer.ToString(), (int)eCustomerColumnsFilterType.Text },
+            {eCustomerColumns.CustName.ToString(), (int)eCustomerColumnsFilterType.Text },
+            {eCustomerColumns.Active.ToString(), (int)eCustomerColumnsFilterType.CheckBox },
+            {eCustomerColumns.VATNum.ToString(), (int)eCustomerColumnsFilterType.Text }
+        };
         #endregion
 
         #region Private members
@@ -217,8 +232,6 @@ namespace HKSupply.Forms.Master
             {
                 MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
-
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
@@ -266,6 +279,27 @@ namespace HKSupply.Forms.Master
                 Cursor = Cursors.Default;
             }
         }
+
+        private void cmbColFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbColFilter.SelectedIndex == -1)
+                {
+                    txtFilter.Visible = false;
+                    chkFilter.Visible = false;
+                    return;
+                }
+
+                var type = _filterDic[((eCustomerColumnsFilter)cmbColFilter.SelectedIndex).ToString()];
+                ShowFilterField((eCustomerColumnsFilterType)type);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         #region Grid events
         private void grdCustomers_CellDoubleClick(Object sender, DataGridViewCellEventArgs e)
@@ -354,11 +388,45 @@ namespace HKSupply.Forms.Master
             txtCurreny.DataBindings.Add("Text", _customerUpdate, "Currency");
         }
 
+        /// <summary>
+        /// Cargar el combo con los campos que se puede filtrar
+        /// </summary>
         private void LoadComboFilters()
         {
             try
             {
                 cmbColFilter.DataSource = Enum.GetNames(typeof(eCustomerColumnsFilter));
+                cmbColFilter.SelectedIndexChanged += cmbColFilter_SelectedIndexChanged;
+                cmbColFilter.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Mostrar el campo de filtro en función del tipo del campo (text, boolen...)
+        /// </summary>
+        /// <param name="type"></param>
+        private void ShowFilterField(eCustomerColumnsFilterType type)
+        {
+            try
+            {
+                txtFilter.Location = new Point(223, 14);
+                chkFilter.Location = new Point(223, 18);
+
+                switch (type)
+                {
+                    case eCustomerColumnsFilterType.Text:
+                        txtFilter.Visible = true;
+                        chkFilter.Visible = false;
+                        break;
+                    case eCustomerColumnsFilterType.CheckBox:
+                        txtFilter.Visible = false;
+                        chkFilter.Visible = true;
+                        break;
+                }
             }
             catch (Exception ex)
             {
@@ -369,20 +437,27 @@ namespace HKSupply.Forms.Master
         /// <summary>
         /// cargar la colección de Customer del sistema
         /// </summary>
-        /// <remarks>Filtramos si es necesario</remarks>
+        /// <remarks></remarks>
         private void LoadCustomersList()
         {
             try
             {
-                var customerService = new HKSupply.Services.Implementations.EFCustomer();
-
-                _customersList = customerService.GetCustomers();
+                _customersList = GlobalSetting.CustomerService.GetCustomers();
 
                 //Filtramos si es necesario
-                if (cmbColFilter.SelectedIndex > -1 && string.IsNullOrEmpty(txtFilter.Text) == false)
+                //MRM.Notes: Ahora obtenemos todo de la bbdd y sobre esa colección filtramos. Si al final se implanta esto se tendría que hacer la llamada
+                //a la bbdd con las condiciones y que la propia consulta filtre
+                //Columnas tipo Texto
+                if ((eCustomerColumnsFilter)cmbColFilter.SelectedIndex != eCustomerColumnsFilter.Active &&  
+                    cmbColFilter.SelectedIndex > -1 && string.IsNullOrEmpty(txtFilter.Text) == false)
                 {
                     //Lo pasamos antes a minúsculas todo, ya que el Contains es case sensitive, 
                     _customersList = _customersList.Where(cmbColFilter.SelectedItem.ToString() + ".ToLower().Contains(@0)", txtFilter.Text.ToLower()).ToList();
+                }
+                //Columnas bit
+                if ((eCustomerColumnsFilter)cmbColFilter.SelectedIndex == eCustomerColumnsFilter.Active)
+                {
+                    _customersList = _customersList.Where(cmbColFilter.SelectedItem.ToString() + " = @0", chkFilter.Checked).ToList();
                 }
 
                 grdCustomers.CellDoubleClick += grdCustomers_CellDoubleClick;
@@ -446,8 +521,7 @@ namespace HKSupply.Forms.Master
                     tcGeneral.TabPages.Add(tpForm);
                 tcGeneral.SelectedTab = tpForm;
 
-                var customerService = new HKSupply.Services.Implementations.EFCustomer();
-                _customerUpdate = customerService.GetCustomerById(idCustomer);
+                _customerUpdate = GlobalSetting.CustomerService.GetCustomerById(idCustomer);
                 _customerOriginal = _customerUpdate.Clone();
                 SetFormBinding();
             }
@@ -466,8 +540,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                var customerService = new HKSupply.Services.Implementations.EFCustomer();
-                return  customerService.UpdateCustomer(_customerUpdate, newVersion);
+                return GlobalSetting.CustomerService.UpdateCustomer(_customerUpdate, newVersion);
             }
             catch (Exception ex)
             {
@@ -484,8 +557,7 @@ namespace HKSupply.Forms.Master
             try
             {
                 _customerOriginal = _customerUpdate.Clone();
-                var customerService = new HKSupply.Services.Implementations.EFCustomer();
-                return customerService.NewCustomer(_customerUpdate);
+                return GlobalSetting.CustomerService.NewCustomer(_customerUpdate);
             }
             catch (Exception ex)
             {

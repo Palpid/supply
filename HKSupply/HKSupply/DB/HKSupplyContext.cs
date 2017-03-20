@@ -22,11 +22,25 @@ namespace HKSupply.DB
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<SupplierHistory> SuppliersHistory { get; set; }
         public DbSet<Store> Stores { get; set; }
+        public DbSet<Item> Items { get; set; }
+        public DbSet<ItemHistory> ItemsHistory { get; set; }
 
         public HKSupplyContext()
             : base("name=SqlExpressConn")
         {
 
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            //Set precision 
+            modelBuilder.Entity<Item>().Property(x => x.MmFront).HasPrecision(19, 6);
+            modelBuilder.Entity<Item>().Property(x => x.Caliber).HasPrecision(19, 6);
+
+            modelBuilder.Entity<ItemHistory>().Property(x => x.MmFront).HasPrecision(19,6);
+            modelBuilder.Entity<ItemHistory>().Property(x => x.Caliber).HasPrecision(19, 6);
+
+            base.OnModelCreating(modelBuilder);
         }
 
         /// <summary>

@@ -1,5 +1,5 @@
-﻿using HKSupply.General;
-using HKSupply.Helpers;
+﻿using HKSupply.Helpers;
+using HKSupply.General;
 using HKSupply.Models;
 using System;
 using System.Collections.Generic;
@@ -14,37 +14,37 @@ using System.Windows.Forms;
 
 namespace HKSupply.Forms.Master
 {
-    public partial class SupplierManagement : Form, IActionsStackView
+    public partial class ItemManagement : Form, IActionsStackView
     {
+        #region Enums
 
-        #region enums
-        private enum eSupplierColumns
+        private enum eItemColumns
         {
             IdVer,
-            idSubVer,
+            IdSubVer,
             Timestamp,
-            IdSupplier,
-            SupplierName,
+            ItemCode,
+            ItemName,
+            Model,
             Active,
-            VATNum,
-            ShippingAddress,
-            BillingAddress,
-            ContactName,
-            ContactPhone,
-            IdIncoterm,
-            IdPaymentTerms,
-            Currency,
+            IdStatus,
+            Launched,
+            Retired,
+            MmFront,
+            Size,
+            CategoryName,
+            Caliber,
         }
 
-        private enum eSupplierColumnsFilter
+        private enum eItemColumnsFilter
         {
-            IdSupplier,
-            SupplierName,
+            ItemCode,
+            ItemName,
+            Model,
             Active,
-            VATNum,
         }
 
-        private enum eSupplierColumnsFilterType
+        private enum eColumnsFilterType
         {
             Text = 0,
             CheckBox = 1,
@@ -52,23 +52,24 @@ namespace HKSupply.Forms.Master
 
         private Dictionary<string, int> _filterDic = new Dictionary<string, int>() 
         { 
-            {eSupplierColumnsFilter.IdSupplier.ToString(), (int)eSupplierColumnsFilterType.Text },
-            {eSupplierColumnsFilter.SupplierName.ToString(), (int)eSupplierColumnsFilterType.Text },
-            {eSupplierColumnsFilter.Active.ToString(), (int)eSupplierColumnsFilterType.CheckBox },
-            {eSupplierColumnsFilter.VATNum.ToString(), (int)eSupplierColumnsFilterType.Text }
+            {eItemColumns.ItemCode.ToString(), (int)eColumnsFilterType.Text },
+            {eItemColumns.ItemName.ToString(), (int)eColumnsFilterType.Text },
+            {eItemColumns.Model.ToString(), (int)eColumnsFilterType.Text },
+            {eItemColumns.Active.ToString(), (int)eColumnsFilterType.CheckBox }
         };
 
         #endregion
 
-        #region Private members
+        #region Private Members
+
         CustomControls.StackView actionsStackView;
 
-        Supplier _supplierUpdate;
-        Supplier _supplierOriginal;
+        Item _itemUpdate;
+        Item _itemOriginal;
 
-        List<Supplier> _suppliersList;
+        List<Item> _itemsList;
 
-        string[] _nonEditingFields = { "txtIdSupplier", "txtIdVersion", "txtIdSubversion", "txtTimestamp" };
+        string[] _nonEditingFields = { "txtItemCode", "txtIdVersion", "txtIdSubversion", "txtTimestamp" };
         string[] _nonCreatingFields = { "txtIdVersion", "txtIdSubversion", "txtTimestamp" };
         int[] _nonCreatingFieldsRows = { 1, 2, 3 };
 
@@ -77,10 +78,10 @@ namespace HKSupply.Forms.Master
         #endregion
 
         #region Constructor
-        public SupplierManagement()
+        public ItemManagement()
         {
             InitializeComponent();
-            ResetSupplierUpdate();
+            ResetItemUpdate();
         }
         #endregion
 
@@ -89,9 +90,9 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                if (_supplierOriginal == null)
+                if (_itemOriginal == null)
                 {
-                    MessageBox.Show("No supplier selected");
+                    MessageBox.Show("No item selected");
                     actionsStackView.RestoreInitState();
                 }
                 else
@@ -115,56 +116,62 @@ namespace HKSupply.Forms.Master
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }   
         }
 
         public void actionsStackView_SaveButtonClick(object sender, EventArgs e)
         {
-            bool res = false;
-            //El toolstrip no lanza el validate, lo lanzamos a mano por si acaso hay algún elemento que lo tiene pendiente
-            Validate();
-
-            if (IsValidSupplier() == false)
-                return;
-
-            DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
-
-            if (result != DialogResult.Yes)
-                return;
-
-            Cursor = Cursors.WaitCursor;
             try
             {
-                if (_supplierUpdate.Equals(_supplierOriginal))
-                {
-                    MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
+                bool res = false;
+                //El toolstrip no lanza el validate, lo lanzamos a mano por si acaso hay algún elemento que lo tiene pendiente
+                Validate();
+
+                if (IsValidItem() == false)
                     return;
-                }
 
-                if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
+                DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
+
+                if (result != DialogResult.Yes)
+                    return;
+
+                Cursor = Cursors.WaitCursor;
+                try
                 {
-                    res = UpdateSupplier();
+                    if (_itemUpdate.Equals(_itemOriginal))
+                    {
+                        MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
+                        return;
+                    }
+
+                    if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
+                    {
+                        res = UpdateItem();
+                    }
+                    else if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.New)
+                    {
+                        res = CreateItem();
+                    }
+
+                    if (res == true)
+                    {
+                        MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
+                        ActionsAfterCU();
+                    }
 
                 }
-                else if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.New)
+                catch (Exception ex)
                 {
-                    res = CreateSupplier();
+                    MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-                if (res == true)
+                finally
                 {
-                    MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
-                    ActionsAfterCU();
+                    Cursor = Cursors.Default;
                 }
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                Cursor = Cursors.Default;
             }
         }
 
@@ -172,13 +179,13 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _supplierOriginal = null;
-                ResetSupplierUpdate();
+                _itemOriginal = null;
+                ResetItemUpdate();
                 SetFormBinding();
                 tcGeneral.TabPages.Remove(tpForm);
                 tcGeneral.TabPages.Add(tpGrid);
                 btnNewVersion.Visible = false;
-                LoadSuppliersList();
+                LoadItemsList();
                 actionsStackView.RestoreInitState();
 
                 foreach (var n in _nonCreatingFieldsRows)
@@ -212,11 +219,11 @@ namespace HKSupply.Forms.Master
                 throw ex;
             }
         }
-
         #endregion
 
         #region Form Events
-        private void SupplierManagement_Load(object sender, EventArgs e)
+
+        private void ItemManagement_Load(object sender, EventArgs e)
         {
             try
             {
@@ -230,7 +237,6 @@ namespace HKSupply.Forms.Master
             {
                 MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
@@ -238,7 +244,7 @@ namespace HKSupply.Forms.Master
             try
             {
                 Cursor = Cursors.WaitCursor;
-                LoadSuppliersList();
+                LoadItemsList();
             }
             catch (Exception ex)
             {
@@ -257,13 +263,13 @@ namespace HKSupply.Forms.Master
                 Cursor = Cursors.WaitCursor;
                 Validate();
 
-                if (_supplierUpdate.Equals(_supplierOriginal))
+                if (_itemUpdate.Equals(_itemOriginal))
                 {
                     MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
                     return;
                 }
 
-                if (UpdateSupplier(true))
+                if (UpdateItem(true))
                 {
                     ActionsAfterCU();
                 }
@@ -289,22 +295,8 @@ namespace HKSupply.Forms.Master
                     return;
                 }
 
-                var type = _filterDic[((eSupplierColumnsFilter)cmbColFilter.SelectedIndex).ToString()];
-                ShowFilterField((eSupplierColumnsFilterType)type);
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        #region Grid events
-        private void grdSuppliers_CellDoubleClick(Object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (e.RowIndex < 0) return;
-                LoadSupplierForm(grdSuppliers.Rows[e.RowIndex].Cells[(int)eSupplierColumns.IdSupplier].Value.ToString());
+                var type = _filterDic[((eItemColumnsFilter)cmbColFilter.SelectedIndex).ToString()];
+                ShowFilterField((eColumnsFilterType)type);
             }
             catch (Exception ex)
             {
@@ -312,13 +304,27 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void grdSuppliers_CellClick(object sender, DataGridViewCellEventArgs e)
+        #region Grid events
+        private void grdItems_CellDoubleClick(Object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex < 0) return;
+                LoadItemForm(grdItems.Rows[e.RowIndex].Cells[(int)eItemColumns.ItemCode].Value.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void grdItems_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
                 if (e.RowIndex < 0 && e.ColumnIndex > -1)
                 {
-                    LoadSupplierSortedList((eSupplierColumns)e.ColumnIndex);
+                    LoadItemsSortedList((eItemColumns)e.ColumnIndex);
                 }
             }
             catch (Exception ex)
@@ -333,21 +339,20 @@ namespace HKSupply.Forms.Master
         #region Private Methods
 
         /// <summary>
-        /// Resetear el objeto supplier que usamos para la actualización
+        /// Resetear el objeto item que usamos para la actualización
         /// </summary>
-        private void ResetSupplierUpdate()
+        private void ResetItemUpdate()
         {
-            _supplierUpdate = new Supplier
+            _itemUpdate = new Item
             {
-                IdSupplier = string.Empty,
-                SupplierName = string.Empty,
+                ItemCode = string.Empty,
+                ItemName = string.Empty,
+                Model = string.Empty,
                 Active = false,
-                VATNum = string.Empty,
-                ShippingAddress = string.Empty,
-                BillingAddress = string.Empty,
-                ContactName = string.Empty,
-                ContactPhone = string.Empty,
-                Currency = string.Empty
+                Launched = new DateTime(),
+                Retired = new DateTime(),
+                Size = string.Empty,
+                CategoryName = string.Empty,
             };
         }
 
@@ -369,20 +374,20 @@ namespace HKSupply.Forms.Master
                     ((CheckBox)ctl).Enabled = false;
                 }
             }
-            txtIdSupplier.DataBindings.Add("Text", _supplierUpdate, "IdSupplier");
-            txtIdVersion.DataBindings.Add("Text", _supplierUpdate, "idVer");
-            txtIdSubversion.DataBindings.Add("Text", _supplierUpdate, "idSubVer");
-            txtTimestamp.DataBindings.Add("Text", _supplierUpdate, "Timestamp");
-            txtName.DataBindings.Add("Text", _supplierUpdate, "SupplierName");
-            chkActive.DataBindings.Add("Checked", _supplierUpdate, "Active");
-            txtVatNumber.DataBindings.Add("Text", _supplierUpdate, "VATNum");
-            txtShippingAddress.DataBindings.Add("Text", _supplierUpdate, "ShippingAddress");
-            txtBillingAddress.DataBindings.Add("Text", _supplierUpdate, "BillingAddress");
-            txtContactName.DataBindings.Add("Text", _supplierUpdate, "ContactName");
-            txtContactPhone.DataBindings.Add("Text", _supplierUpdate, "ContactPhone");
-            txtIntercom.DataBindings.Add("Text", _supplierUpdate, "IdIncoterm");
-            txtPaymentTerms.DataBindings.Add("Text", _supplierUpdate, "IdPaymentTerms");
-            txtCurreny.DataBindings.Add("Text", _supplierUpdate, "Currency");
+            txtItemCode.DataBindings.Add("Text", _itemUpdate, "ItemCode");
+            txtIdVersion.DataBindings.Add("Text", _itemUpdate, "idVer");
+            txtIdSubversion.DataBindings.Add("Text", _itemUpdate, "idSubVer");
+            txtTimestamp.DataBindings.Add("Text", _itemUpdate, "Timestamp");
+            txtItemName.DataBindings.Add("Text", _itemUpdate, "ItemName");
+            chkActive.DataBindings.Add("Checked", _itemUpdate, "Active");
+            txtModel.DataBindings.Add("Text", _itemUpdate, "Model");
+            txtStatus.DataBindings.Add("Text", _itemUpdate, "IdStatus");
+            txtLanched.DataBindings.Add("Text", _itemUpdate, "Launched");
+            txtRetired.DataBindings.Add("Text", _itemUpdate, "Retired");
+            txtMmFront.DataBindings.Add("Text", _itemUpdate, "MmFront");
+            txtSize.DataBindings.Add("Text", _itemUpdate, "Size");
+            txtCategoryName.DataBindings.Add("Text", _itemUpdate, "CategoryName");
+            txtCaliber.DataBindings.Add("Text", _itemUpdate, "Caliber");
         }
 
         /// <summary>
@@ -392,7 +397,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                cmbColFilter.DataSource = Enum.GetNames(typeof(eSupplierColumnsFilter));
+                cmbColFilter.DataSource = Enum.GetNames(typeof(eItemColumnsFilter));
                 cmbColFilter.SelectedIndexChanged += cmbColFilter_SelectedIndexChanged;
                 cmbColFilter.SelectedIndex = -1;
             }
@@ -406,7 +411,7 @@ namespace HKSupply.Forms.Master
         /// Mostrar el campo de filtro en función del tipo del campo (text, boolen...)
         /// </summary>
         /// <param name="type"></param>
-        private void ShowFilterField(eSupplierColumnsFilterType type)
+        private void ShowFilterField(eColumnsFilterType type)
         {
             try
             {
@@ -415,11 +420,11 @@ namespace HKSupply.Forms.Master
 
                 switch (type)
                 {
-                    case eSupplierColumnsFilterType.Text:
+                    case eColumnsFilterType.Text:
                         txtFilter.Visible = true;
                         chkFilter.Visible = false;
                         break;
-                    case eSupplierColumnsFilterType.CheckBox:
+                    case eColumnsFilterType.CheckBox:
                         txtFilter.Visible = false;
                         chkFilter.Visible = true;
                         break;
@@ -432,37 +437,40 @@ namespace HKSupply.Forms.Master
         }
 
         /// <summary>
-        /// cargar la colección de Suppliers del sistema
+        /// cargar la colección de Customer del sistema
         /// </summary>
-        /// <remarks>Filtramos si es necesario</remarks>
-        private void LoadSuppliersList()
+        /// <remarks></remarks>
+        private void LoadItemsList()
         {
             try
             {
-                _suppliersList = GlobalSetting.SupplierService.GetSuppliers();
+                _itemsList = GlobalSetting.ItemService.GetItems();
 
                 //Filtramos si es necesario
+                //MRM.Notes: Ahora obtenemos todo de la bbdd y sobre esa colección filtramos. Si al final se implanta esto se tendría que hacer la llamada
+                //a la bbdd con las condiciones y que la propia consulta filtre
                 //Columnas tipo Texto
-                if ((eSupplierColumnsFilter)cmbColFilter.SelectedIndex != eSupplierColumnsFilter.Active && 
+                if ((eItemColumnsFilter)cmbColFilter.SelectedIndex != eItemColumnsFilter.Active &&
                     cmbColFilter.SelectedIndex > -1 && string.IsNullOrEmpty(txtFilter.Text) == false)
                 {
                     //Lo pasamos antes a minúsculas todo, ya que el Contains es case sensitive, 
-                    _suppliersList = _suppliersList.Where(cmbColFilter.SelectedItem.ToString() + ".ToLower().Contains(@0)", txtFilter.Text.ToLower()).ToList();
+                    _itemsList = _itemsList.Where(cmbColFilter.SelectedItem.ToString() + ".ToLower().Contains(@0)", txtFilter.Text.ToLower()).ToList();
                 }
                 //Columnas bit
-                if ((eSupplierColumnsFilter)cmbColFilter.SelectedIndex == eSupplierColumnsFilter.Active)
+                if ((eItemColumnsFilter)cmbColFilter.SelectedIndex == eItemColumnsFilter.Active)
                 {
-                    _suppliersList = _suppliersList.Where(cmbColFilter.SelectedItem.ToString() + " = @0", chkFilter.Checked).ToList();
+                    _itemsList = _itemsList.Where(cmbColFilter.SelectedItem.ToString() + " = @0", chkFilter.Checked).ToList();
                 }
 
-                grdSuppliers.CellDoubleClick += grdSuppliers_CellDoubleClick;
-                grdSuppliers.CellClick += grdSuppliers_CellClick;
-                grdSuppliers.DataSource = null;
-                grdSuppliers.Rows.Clear();
-                grdSuppliers.DataSource = _suppliersList;
-                grdSuppliers.ReadOnly = true;
+                grdItems.CellDoubleClick += grdItems_CellDoubleClick;
+                grdItems.CellClick += grdItems_CellClick;
+                grdItems.DataSource = null;
+                grdItems.Rows.Clear();
+                grdItems.DataSource = _itemsList;
+                grdItems.ReadOnly = true;
                 //Para poder cambiar el color del header cuando se filtra hay que desactivar los efectos visuales del header que coge por defecto
-                grdSuppliers.EnableHeadersVisualStyles = false;
+                grdItems.EnableHeadersVisualStyles = false;
+
             }
             catch (Exception ex)
             {
@@ -480,21 +488,21 @@ namespace HKSupply.Forms.Master
         /// de todas las columnas, pero así es más fácil y en el peor de los casos el usuario pulsará dos veces 
         /// sobre la misma columna para tener el orden que quiere.
         /// </remarks>
-        private void LoadSupplierSortedList(eSupplierColumns sortedColumn)
+        private void LoadItemsSortedList(eItemColumns sortedColumn)
         {
             try
             {
                 string order = _sortDescending ? " ASC" : " DESC";
-                _suppliersList = _suppliersList.OrderBy(sortedColumn.ToString() + order).ToList();
+                _itemsList = _itemsList.OrderBy(sortedColumn.ToString() + order).ToList();
 
                 _sortDescending = !_sortDescending; //See Remarks
 
-                grdSuppliers.DataSource = null;
-                grdSuppliers.Rows.Clear();
-                grdSuppliers.DataSource = _suppliersList;
-                grdSuppliers.ReadOnly = true;
-                grdSuppliers.Columns[(int)sortedColumn].HeaderCell.Style.BackColor = Color.Tomato;
-                grdSuppliers.Columns[(int)sortedColumn].HeaderText += "*";
+                grdItems.DataSource = null;
+                grdItems.Rows.Clear();
+                grdItems.DataSource = _itemsList;
+                grdItems.ReadOnly = true;
+                grdItems.Columns[(int)sortedColumn].HeaderCell.Style.BackColor = Color.Tomato;
+                grdItems.Columns[(int)sortedColumn].HeaderText += "*";
             }
             catch (Exception ex)
             {
@@ -503,10 +511,10 @@ namespace HKSupply.Forms.Master
         }
 
         /// <summary>
-        /// Cargar los datos de un suppliers en concreto
+        /// Cargar los datos de un customer en concreto
         /// </summary>
-        /// <param name="idSupplier"></param>
-        private void LoadSupplierForm(string idSupplier)
+        /// <param name="itemCode"></param>
+        private void LoadItemForm(string itemCode)
         {
             try
             {
@@ -514,8 +522,8 @@ namespace HKSupply.Forms.Master
                     tcGeneral.TabPages.Add(tpForm);
                 tcGeneral.SelectedTab = tpForm;
 
-                _supplierUpdate = GlobalSetting.SupplierService.GetSupplierById(idSupplier);
-                _supplierOriginal = _supplierUpdate.Clone();
+                _itemUpdate = GlobalSetting.ItemService.GetItemByItemCode(itemCode);
+                _itemOriginal = _itemUpdate.Clone();
                 SetFormBinding();
             }
             catch (Exception ex)
@@ -525,16 +533,15 @@ namespace HKSupply.Forms.Master
         }
 
         /// <summary>
-        /// Actualizar los datos de un supplier
+        /// Actualizar los datos de un item
         /// </summary>
         /// <param name="newVersion">Si es una versión nueva o una actualización de la existente</param>
         /// <returns></returns>
-        private bool UpdateSupplier(bool newVersion = false)
+        private bool UpdateItem(bool newVersion = false)
         {
             try
             {
-
-                return GlobalSetting.SupplierService.UpdateSupplier(_supplierUpdate, newVersion);
+                return GlobalSetting.ItemService.UpdateItem(_itemUpdate, newVersion);
             }
             catch (Exception ex)
             {
@@ -543,15 +550,15 @@ namespace HKSupply.Forms.Master
         }
 
         /// <summary>
-        /// Crear un nuevo Supplier
+        /// Crear un nuevo item
         /// </summary>
         /// <returns></returns>
-        private bool CreateSupplier()
+        private bool CreateItem()
         {
             try
             {
-                _supplierOriginal = _supplierUpdate.Clone();
-                return GlobalSetting.SupplierService.NewSupplier(_supplierUpdate);
+                _itemOriginal = _itemUpdate.Clone();
+                return GlobalSetting.ItemService.newItem(_itemUpdate);
             }
             catch (Exception ex)
             {
@@ -560,19 +567,19 @@ namespace HKSupply.Forms.Master
         }
 
         /// <summary>
-        /// Mover la celda activa a la de un supplier en concreto
+        /// Mover la celda activa a la de un customer en concreto
         /// </summary>
-        /// <param name="idSupplier"></param>
-        private void MoveGridToSupplier(string idSupplier)
+        /// <param name="itemCode"></param>
+        private void MoveGridToItem(string itemCode)
         {
             try
             {
-                foreach (DataGridViewRow row in grdSuppliers.Rows)
+                foreach (DataGridViewRow row in grdItems.Rows)
                 {
-                    if (row.Cells[(int)eSupplierColumns.IdSupplier].Value.ToString() == idSupplier)
+                    if (row.Cells[(int)eItemColumns.ItemCode].Value.ToString() == itemCode)
                     {
-                        grdSuppliers.CurrentCell = row.Cells[(int)eSupplierColumns.IdVer];
-                        grdSuppliers.FirstDisplayedScrollingRowIndex = row.Index;
+                        grdItems.CurrentCell = row.Cells[(int)eItemColumns.IdVer];
+                        grdItems.FirstDisplayedScrollingRowIndex = row.Index;
                     }
                 }
             }
@@ -602,7 +609,6 @@ namespace HKSupply.Forms.Master
             }
         }
 
-
         /// <summary>
         /// Acciones cuando pulsamos el botón de nuevo
         /// </summary>
@@ -616,7 +622,7 @@ namespace HKSupply.Forms.Master
 
             btnNewVersion.Visible = false;
 
-            ResetSupplierUpdate();
+            ResetItemUpdate();
             SetFormBinding();
 
             SetCreatingFieldsEnabled();
@@ -695,15 +701,15 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                string id = _supplierOriginal.IdSupplier;
-                _supplierOriginal = null;
-                ResetSupplierUpdate();
+                string itemCode = _itemOriginal.ItemCode;
+                _itemOriginal = null;
+                ResetItemUpdate();
                 SetFormBinding();
                 tcGeneral.TabPages.Remove(tpForm);
                 tcGeneral.TabPages.Add(tpGrid);
                 btnNewVersion.Visible = false;
-                LoadSuppliersList();
-                MoveGridToSupplier(id);
+                LoadItemsList();
+                MoveGridToItem(itemCode);
                 actionsStackView.RestoreInitState();
 
                 foreach (var n in _nonCreatingFieldsRows)
@@ -719,14 +725,14 @@ namespace HKSupply.Forms.Master
 
         #region validate data
 
-        private bool IsValidSupplier()
+        private bool IsValidItem()
         {
             try
             {
                 if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
-                    return IsValidModifiedSupplier();
+                    return IsValidModifiedItem();
                 else if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.New)
-                    return IsValidCreatedSupplier();
+                    return IsValidCreatedItem();
 
                 return false;
             }
@@ -740,7 +746,7 @@ namespace HKSupply.Forms.Master
         /// 
         /// </summary>
         /// <returns></returns>
-        private bool IsValidModifiedSupplier()
+        private bool IsValidModifiedItem()
         {
             try
             {
@@ -770,7 +776,7 @@ namespace HKSupply.Forms.Master
         /// TODO
         /// </summary>
         /// <returns></returns>
-        private bool IsValidCreatedSupplier()
+        private bool IsValidCreatedItem()
         {
             try
             {
@@ -794,6 +800,7 @@ namespace HKSupply.Forms.Master
                 throw ex;
             }
         }
+
         #endregion
 
         #endregion

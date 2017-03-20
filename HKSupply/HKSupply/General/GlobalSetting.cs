@@ -23,6 +23,7 @@ namespace HKSupply.General
     /// Controlador para acceso a datos para Customer
     /// Controlador para acceso a datos para Supplier
     /// Controlador para acceso a datos para Store
+    /// Controlador para acceso a datos para Item
     /// </remarks>
     public sealed class GlobalSetting
     {
@@ -34,6 +35,7 @@ namespace HKSupply.General
         static EFCustomer _customerEF = new EFCustomer();
         static EFSupplier _supplierEF = new EFSupplier();
         static EFStore _storeEF = new EFStore();
+        static EFItem _itemEF = new EFItem();
 
         static User _loggedUser;
         static IEnumerable<FunctionalityRole> _functionalitiesRoles;
@@ -118,6 +120,18 @@ namespace HKSupply.General
                     return new EFStore();
                 else
                     return _storeEF;
+            }
+        }
+
+        public static IItem ItemService 
+        {
+            get 
+            {
+                if (_itemEF == null)
+                    return new EFItem();
+                else
+                    return _itemEF;
+            
             }
         }
 

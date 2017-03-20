@@ -55,11 +55,130 @@ namespace CustomControls
         private readonly bool _modify;
         private ToolbarStates _currentState;
 
-        private static Bitmap mailBmp;
-        private static Bitmap calendarBmp;
-        private static Bitmap contactsBmp;
-        private static Bitmap tasksBmp;
+        //private static Bitmap mailBmp;
+        //private static Bitmap calendarBmp;
+        //private static Bitmap contactsBmp;
+        //private static Bitmap tasksBmp;
+        
+        private static Image savePng;
+        private static Image cancelPng;
+        private static Image editPng;
+        private static Image newPng;
 
+        #region png base 64
+        
+
+        private static string savePngEnc64 = @"iVBORw0KGgoAAAANSUhEUgAAAB" +
+            "gAAAAYCAYAAADgdz34AAAE3UlEQVR42rWVa2wUVRTHz53Z97MvRExq5KNp" + 
+            "NDHRBBM1bdNiC7VQEBHxgegHSJRHWyulLTNLH0Zogoii1je+kWobkRaQWt" +
+            "m2tIB9kfhdvlATQ9vthrqP2es5985ud4v96GTP3Htn7pzfOf977l0G//PF" + 
+            "6FZbU3OvoqhPxWJR8PmzoLB0Dfi9PlBVBWcw/ElTFIWGABx/PCEMb8ATCQ" + 
+            "iFw3C+92eYnZ4G1aJCdnb29w2NjX8IwM4dO7Spqb80m83G8vPvhl2vN3G3" + 
+            "w87MIDgzA5EgHAse44psAVseno+wN5s1mAuFOE31+/36ofbDAfHhy9tf0s" + 
+            "LhsEYRrlhxF1Q36DB3K3p7qmyhz8wH1BIky2OHVq2RAGKOx+MJHDn6lgRs" + 
+            "3/aiho0myFlZsE9r4VluRyoD6SkF4dInS2WGIvGZ8D+s5UADhGZnOb10u9" +
+            "362+8ck4Btz7+QAWg82MZzvM5MgNkh0VF2xrlsE3hD46FbEfaGJgE03+1x" + 
+            "6+8ePy4Bz219VkMoAYAA+wNtiyTipnNzgZNPxGLLvtdlg0OBRgKIaZhB4L" +
+            "0P3peArVueERlQan6sojq9lXuctswM+NIZUG8+GmftBwkwIyRyuVx6x0cf" + 
+            "SsCWzU9nSFR7oJU7bdYMAE9mIn4ENAHms2jcYEeaFyQiwMeffiIBm5/cpI" +
+            "Epkc/vh+qmNgjNR4GldM/s8DSpTKiQ6GhLQ6qKnE5n4LMTn0vApg0bZQaY" +
+            "ms/nh91NrSJNtuCHpelPHpmQn6QyM6A5x1obIBzCDPBTBOgnvvxCAjasr9" +
+            "KYlAgsVisUV2zEXayCBY1asYPFrlIEJ5FICO8GtkbcgLgRh4RhQN/pThzH" +
+            "xRwHZvDVN19LwPrKdak1SNedLSrTRWWbXr588bcOh0P/9uR3ElC5tiIlUb" +
+            "JQ/rOfPl5qjtl32O36yc5TElBRvub2DHCSIg84jjIxKZM47Ehxs0w5I5lQ" +
+            "HjzvEoykS2ZgR0Bn148SUL768SQAkofanppqyMvLEwEtddG7zlOd0N/XJ9" +
+            "YDD0vwejziHfYD3ad/koDSouJkmYqx1Wrlu/buYTPTM3D9+p8iuvz8fLhn" +
+            "5UrhVxxEeBmGwS6c/wUGgkGOABbHBXY6HCID9KGfOdsrAYWPPpYhEdJ5zW" +
+            "u1bHBwEM71nuX4ISsuKYHKdZVif9EYTbS/9ffDyPAIR5lYLBYT35IfGwLO" +
+            "9V2QgEdWPZzaaKJUsTTr9tfDEAJ6z/QARgrFpSVQVlYGFCUZPaMWo4ffr1" +
+            "wVpUtj1B4sFgv9CQV+DV6UgFUPPpSZgd3O6+r3sYGLQejt6RFSFBYXQUlp" +
+            "KTkRY4yWo7FLg0MwPjaWWmQsz+Qm1YOXhiTggfvur1ZUtT0JwBLju6v3sm" +
+            "BwALq7u0S1lJWVQ2FRIZBjkgYhAjAyPAzXJiYQwEWdWlEirD6C6VfHxyTA" +
+            "5XS5li9b9oPP611tniOw89VXRCt2LMoRiUSEpctDEV+5fBmujU8IaamUSR" +
+            "66/r558/CNqRv1ybq3oRXdecfyZlwcb05OjrK28gnc7U6abcGAVHSq0nEQ" +
+            "x8jxmUFrjeP45ORkdGJ8PEJZyv9psVdi07OzHaG5uY70I8CNlo2mFhQUWK" +
+            "uqqty5ubkqLpqKJaeQA4yYm/uC1sEIhUKx0dHR+a6urghmpKT5MtBm0ML/" +
+            "ArBlxEPZ/ksHAAAAAElFTkSuQmCC";
+        
+        private static string cancelPngEnc64 = @"iVBORw0KGgoAAAANSUhEUgAA" +
+            "ABgAAAAYCAYAAADgdz34AAADHklEQVR42rWVX0iTURjGn21sOl1KhtKIGi" +
+            "YIda033XmlFxpW9Mf+meSdddWdNyKRUREVTuzPyqTC20gpLWpFdaX3gTRt" +
+            "iWiahrY5t7nZcz7fzc/TRAt84eE75+zb8/vOe95zjgVbHBatv486Te3M8N" +
+            "tGsUxNUk+pL5kAZ4sBXy1g97CTk0FOeTFs0oJJY9QLID4KnGfziRngdgMB" +
+            "Hz0OsJNNJddRQpN5LEp9pS4CkQmghM2JFKC+CXh8W/6wpJksrdPO9JvKEz" +
+            "8Uj4BzfHSnAE13AW+DvGg1JVVXcp3xGBWUWbykrgMX+OhIA+4TcEpyZvvP" + 
+            "ihmnRgVwUwd0mgDGDGw22FtbgcVFxNva+OnJtW5WK+zNzVywbMRbWjj1BH" + 
+            "7IGryibumADgJOmkrLVlYG1+Cg0Y91dSHS2LgKobnT54OjocHohsrLkRga" +
+            "wpQABqg7OqCdgDrJpzHocMDV34+sigrjhSghIQVhuGieJeZRvx+hqip+Rc" +
+            "wABKjXVLsOINF73AxQ7Zwc5Pf1wSmQCCEqnGIeoflcdTUsCwtGXwFGqDfK" +
+            "WQcwZ95jUiXm3ZfMzUVBby9yBZKKMM1na2pgDYfTY9Myg7dUpw7gqnuPCk" +
+            "CPhMuF3YEA7EVFRj8+NYWxkhLYQqE1703LDN5R93TADQKOYLXOU2HhghYy" +
+            "53mSllTMM13TXJNlU3X9lDL1Uw90wDUCDmNlo6UBNHfTPF/MZ/1+41kg6Z" +
+            "ojZMJUXQrwjXpPPdQBVwk4hNXtrsx30Xy7mM/Q/DtzrmIP12SHQH4RMi4Q" +
+            "BVC7+QPVpQOuEFCr8iuAPFbHXhoZuaX5KPsOqZYYq6uY1VUokBGC59lPAT" +
+            "5S3TrgMgEHBWBM2ONB6cAAfg8PI1hXB4epWgwIq8vT04NtpaUYrqykcxCz" +
+            "AvgE46xeC+Ch4FUJiJkqSdWIncpC5ojKB7mkP4OVO+Ez9UwD1F/icX1C/p" +
+            "BeB4nlDOb62JKYq3mqffBcO67dvB0CPMOdVmz+Lsg0tgjjJI1MaheOijP7" +
+            "WV28kO2F+Pu22kxbLTKPiXgww5WZitSl78a/x4aX/pbEH2Ceaij62q1HAA" +
+            "AAAElFTkSuQmCC";
+
+        private static string editPngEnc64 = @"iVBORw0KGgoAAAANSUhEUgAAAB" +
+            "gAAAAYCAYAAADgdz34AAAFCUlEQVR42q2Va2xTZRjHn+f00N3ILtlaJiuw" +
+            "rAJuwW0gEDUSEwhRTMyEQCCIEzVELhGBjWvYTECHyz6QTAN+IaIfNEQhEa" +
+            "IJ4+IYhouJQEcHGzvdSrdurN2t13Pa057H9/TmWjbCB5/k3M/7/z23930R" +
+            "/kdrXbdiWbY//TynKNcpHN65sKXFivGPGo1GX1dX9wURJY9CBHwO8ZC3Gz" +
+            "cvaFsf+q04z2eyo1eWB0GW35g41jg2Ni6IkgQch4RRY/pJ9yqMIPIUvaoD" + 
+            "wwEnKea1ODDohJrGNNpqG8XpPh+EeP5CEmB83NUtBVQABwnBiUc8oqhu5F" +
+            "kJixBs3wCi2woffKWBXnsAZvJ22J8JZOrE80kAl8stBIKBiNfcJBFA/FnV" +
+            "ZlegMIrmraAR79InjRyaHomgSHY6vV8OiyJvWntIrkoCuD0eIRhgAI6bPE" +
+            "WRADCRIv+jI5ghXoHaExxdujmCotcBJz73U2G+xrb6kLxmcIS6JgJKPCpA" +
+            "lhMp4SZJU7zoUt8PkOb6GY7/mgmnzwng97ngaPUorHytAFbudHzYZaOL7L" +
+            "exJIDX67WoAC7udbQWTxU56LyCvONbOntDh0eab0IgINH2d57gprczYaSg" +
+            "iSqXfbqc6f3DDm8ywOezyHEAF6nCf7AYIOS+T9DfiLeFmbSjvgUDLKVVSw" +
+            "eodoMGh7JqAAtW06JFi15lenfU7k0C+Hw+IRQKRT1l3qemiBUQlMcNIDjy" + 
+            "4aN9F8Ht9sLr85zQsEWG4bSN4J5eDYWFhTB//vwFTO9BvNMSAL/fb4kAWJ" +
+            "ETXRS7V2QXhKzHYNiTQdV7r6o9T2UGNzbv8II/YzlZue2ois+ZM4f0ev08" + 
+            "RVGEpwGiKISjgIT36pwAJQhBaxNIQYTN+1uhS7CDIV+EkztHgc8ph3v+Xa" + 
+            "DTvwAlJSWRCNLT0+cygOUpgCiKlnA4nBwBAgWsx9k5BNvrr8GtO1bKmy7j" + 
+            "yc+GSV9owGvOXZBXMIuMRiMWFxdDWloa8Tw/BUCSLIoKUCdarMgB23fEgw" + 
+            "sPNF6HP1p7IUOrUPM2J5bNzaHfrdswM9eoek6lpaWYlZWl6kwNkBggrCiR" + 
+            "zlEBkv0MaMVb1HTKjD+eH2DvCY59PErLF/N4rrOaKKMUWc6hoqKCcnNzYx" +
+            "FzpNVOmwIQCAhqBPG1aMD8E/zZ8j00nBpQHYPatS54f2UYzpqrYJwqoaio" + 
+            "CCorK0Gn0wETjK7K/DTIy82ZHMB62qL+qKbI73qCQ9ZWEDr/pqPNV3HVK2" +
+            "Owb4MEF8xvkuBeqnYMlZeXo06vB6/HQ6xBkKUG/rpxs3Xvnt3vBYNB15QA" +
+            "FgENCm3osLaAZ+QBiX4XLpzVB53D88A0sopmz56NBoOBsrOzsb/fDqwxWG" +
+            "vqsKPD3F5TU7vK6XQOJLaTFICgsA1HbdFT3xyAsiI2WPaDop0LmpwloDe8" + 
+            "DPoZM0Cr1bJJ5oGenh7IL8iHF41GuHz5knX3nj0rhG6hN2m/So1A3dEeW6" + 
+            "20es0a3Lx+GWzctIVyZ7yErP3UXQ/Yd2ITEm19ffTwYScuXbIYzOb7toMH" +
+            "D75lMrV3pu50yYBg0EIsRaZ7d0nD81hRUZlY7KJ7DarFJLYoosXSQ0MOB0" +
+            "qSv6vu8OF3OzoedMMklgoQKFrk5CU6Jh4DAANA72MbtLVdu93U+PU6Vod+" +
+            "mMImAorq6+u/jL+LC6eamsJgKAyDQ47xc7+cafC43Q54hqWqcPD8RrHjmf" +
+            "YvaouoLYYI+sEAAAAASUVORK5CYII=";
+
+        private static string newPngEnc64 = @"iVBORw0KGgoAAAANSUhEUgAAABg" + 
+            "AAAAYCAYAAADgdz34AAAC80lEQVR42q2W70tTURjHn+O9m3NFwQqbjWSsR" +
+            "rYg6FUE6RCt7I1Ehr1ab4IIol71LvoXhN4FgYKuIGi4kHQFvVBfCFtbsdi" +
+            "cDpcYY2NuVyTnft17T8+9bWOTw/SWDxzO9znnufuc5znn3jMCDZbL5UYII" +
+            "Q+wETiAUUphfn7+9+Tk5KPp6WmBFUP2AGaxu6U82zBH98TVfLVfXFyEiYm" +
+            "JIK7putfr3WoJyGazcxg4hCujtSwadaNf64PBIHg8HprP50MKZGpqaqslA" +
+            "LubBylPzaLRKPh8PigUCkoLGY3GG2NjYwITsLm5qQCGtJSoUqkoECpJkhp" +
+            "jMBhmnE7nMBOQyWQ0Axgx/s7OzitMQDqd1lwihgXMZjMbkEqlDiWDrq4uN" + 
+            "iCZTB4KwGKxsAEbGxvKMf2vEuHpDXR3d7MB6+vrmjMokRwk2z7hO02JRR4" +
+            "EAz3lt1qtbEAikdC8yWvUDTHplarPcffhPHkYsNlsbEA8HtecwQp9DWvyG" +
+            "1VbyR1wtD312+12NiAWi/0DYByzeIuaIOA2OMhjf09PDxsQiUT2BYiwS4u" +
+            "QrQN+Ui/8oj5Vnyb9YCXDP1bl9/eEYgJEuZRqAoTD4X33wM+/gCLJ1v2yl" +
+            "IeSuK1qPX8M2rmj9TmZis2AUCikfk1bZTAnuagIhVbvQYMmtAkQCAT2LdF" +
+            "X+SUV6EodIEIRy1ZSNQd64KG9XIYdgarT9FsTYGlpSfMxXZY9sCp9VLWtb" +
+            "RAc3N3AtatO9ibj7aT5FEWlD7Ai/d3ks1w/XOJG/b29vWzAwsKC5hstXJ6" +
+            "B5cpnFWDXOeGybsTf19fXDMBLm0PjTSbT846OjifV8b2NZTRS/sJ9L80aF" +
+            "OeifqBwAQbGBUF4JqK5XC6JuN3uMzg3igty4ILMqI+jNqJWHtKh5lFztQU" +
+            "p/ySqCSi9JEEFsnziJM5JJ0RrnKP6DI6nle3BmHcKgEfHhM5xnFAO8ZEGg" +
+            "B61DjVfzYKv/rBYLZGIYxWUZdRF1Luo86h3UG+jFv4A7gWzwtP8PLUAAAA" +
+            "ASUVORK5CYII=";
+
+        #endregion
+
+        /*      Imágenes bmp base64.No se utilizan
         private static string mailBmpEnc = @"Qk32BgAAAAAAADYAAAAoAAAA" +
             "GAAAABgAAAABABgAAAAAAAAAAADEDgAAxA4AAAAAAAAAAAAA7u7u7u7u" +
             "7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u" +
@@ -237,7 +356,7 @@ namespace CustomControls
             "u7u7u5ObnfKa1eaOxcpyrcJWkboiW4+Pj7u7u7u7u7u7u7u7u7u7u7u7" +
             "u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7" +
             "u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u";
-
+*/
         #endregion
 
         #region Public properties
@@ -305,10 +424,14 @@ namespace CustomControls
         // ToolStripButton control.
         private void InitializeImages()
         {
-            this.editStackButton.Image = mailBmp;
-            this.newStackButton.Image = calendarBmp;
-            this.saveStackButton.Image = contactsBmp;
-            this.cancelStackButton.Image = tasksBmp;
+            //this.editStackButton.Image = mailBmp;
+            //this.newStackButton.Image = calendarBmp;
+            //this.saveStackButton.Image = contactsBmp;
+            //this.cancelStackButton.Image = tasksBmp;
+            this.editStackButton.Image = editPng;
+            this.newStackButton.Image = newPng;
+            this.saveStackButton.Image = savePng;
+            this.cancelStackButton.Image = cancelPng;
         }
 
         // This utility method creates bitmaps for all the icons.
@@ -316,15 +439,20 @@ namespace CustomControls
         // to decode the Base64 image data.
         private static void CreateBitmaps()
         {
-            mailBmp = DeserializeFromBase64(mailBmpEnc);
-            calendarBmp = DeserializeFromBase64(calendarBmpEnc);
-            contactsBmp = DeserializeFromBase64(contactsBmpEnc);
-            tasksBmp = DeserializeFromBase64(tasksBmpEnc);
+            //mailBmp = DeserializeFromBase64(mailBmpEnc);
+            //calendarBmp = DeserializeFromBase64(calendarBmpEnc);
+            //contactsBmp = DeserializeFromBase64(contactsBmpEnc);
+            //tasksBmp = DeserializeFromBase64(tasksBmpEnc);
+
+            editPng = DeserializeFromBase64Png(editPngEnc64);
+            newPng = DeserializeFromBase64Png(newPngEnc64);
+            savePng = DeserializeFromBase64Png(savePngEnc64);
+            cancelPng = DeserializeFromBase64Png(cancelPngEnc64);
         }
 
         // This utility method cretes a bitmap from 
         // a Base64-encoded string. 
-        internal static Bitmap DeserializeFromBase64(string data)
+        internal static Bitmap DeserializeFromBase64Bmp(string data)
         {
             // Decode the string and create a memory stream 
             // on the decoded string data.
@@ -335,6 +463,20 @@ namespace CustomControls
             Bitmap b = new Bitmap(stream);
 
             return b;
+        }
+
+        internal static Image DeserializeFromBase64Png(string data)
+        {
+            // Decode the string and create a memory stream 
+            // on the decoded string data.
+            MemoryStream stream =
+                new MemoryStream(Convert.FromBase64String(data));
+
+            // Create a new bitmap from the stream.
+            //Bitmap b = new Bitmap(stream);
+            Image i = Image.FromStream(stream);
+
+            return i;
         }
 
         private void StackView_Load(object sender, EventArgs e)
@@ -524,18 +666,17 @@ namespace CustomControls
 
         static StackRenderer()
         {
-            titleBarGripBmp = StackView.DeserializeFromBase64(titleBarGripEnc);
+            titleBarGripBmp = StackView.DeserializeFromBase64Bmp(titleBarGripEnc);
         }
 
         public StackRenderer()
         {
         }
 
-        //MRM
         public StackRenderer(ProfessionalColorTable professionalColorTable)
             : base(professionalColorTable)
         {
-            titleBarGripBmp = StackView.DeserializeFromBase64(titleBarGripEnc);
+            titleBarGripBmp = StackView.DeserializeFromBase64Bmp(titleBarGripEnc);
         }
 
 
@@ -590,7 +731,6 @@ namespace CustomControls
             //Original (Windows XP style)
             //Color gradientBegin = Color.FromArgb(203, 225, 252);
             //Color gradientEnd = Color.FromArgb(125, 165, 224);
-            //MRM
             Color gradientBegin = Color.FromArgb(221, 34, 29);
             Color gradientEnd = Color.FromArgb(221, 34, 29);
 
@@ -600,7 +740,7 @@ namespace CustomControls
                 //Original (Windows XP style)
                 //gradientBegin = Color.FromArgb(254, 128, 62);
                 //gradientEnd = Color.FromArgb(255, 223, 154);
-                //MRM is not a state button, same color in both (pressed and unpressed)
+                //MRM: Is not a state button, same color in both (pressed and unpressed)
                 gradientBegin = Color.FromArgb(221, 34, 24);
                 gradientEnd = Color.FromArgb(229, 85, 78);
             }

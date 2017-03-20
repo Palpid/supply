@@ -122,6 +122,12 @@
     <Compile Include="Forms\Master\FunctionalityRoleManagement.Designer.cs">
       <DependentUpon>FunctionalityRoleManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Master\ItemManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\ItemManagement.Designer.cs">
+      <DependentUpon>ItemManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Master\RoleManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,11 +176,17 @@
     <Compile Include="Migrations\201703161637578_Store.Designer.cs">
       <DependentUpon>201703161637578_Store.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703201426591_items.cs" />
+    <Compile Include="Migrations\201703201426591_items.Designer.cs">
+      <DependentUpon>201703201426591_items.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CustomerHistory.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Functionality.cs" />
     <Compile Include="Models\FunctionalityRole.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ItemHistory.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Store.cs" />
     <Compile Include="Models\Supplier.cs" />
@@ -190,6 +202,7 @@
     <Compile Include="Services\Implementations\EFCustomer.cs" />
     <Compile Include="Services\Implementations\EFFunctionality.cs" />
     <Compile Include="Services\Implementations\EFFunctionalityRole.cs" />
+    <Compile Include="Services\Implementations\EFItem.cs" />
     <Compile Include="Services\Implementations\EFRole.cs" />
     <Compile Include="Services\Implementations\EFStore.cs" />
     <Compile Include="Services\Implementations\EFSupplier.cs" />
@@ -197,6 +210,7 @@
     <Compile Include="Services\Interfaces\ICustomer.cs" />
     <Compile Include="Services\Interfaces\IFunctionality.cs" />
     <Compile Include="Services\Interfaces\IFunctionalityRole.cs" />
+    <Compile Include="Services\Interfaces\IItem.cs" />
     <Compile Include="Services\Interfaces\IRole.cs" />
     <Compile Include="Services\Interfaces\IStore.cs" />
     <Compile Include="Services\Interfaces\ISupplier.cs" />
@@ -222,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\FunctionalityRoleManagement.resx">
       <DependentUpon>FunctionalityRoleManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\ItemManagement.resx">
+      <DependentUpon>ItemManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\RoleManagement.resx">
       <DependentUpon>RoleManagement.cs</DependentUpon>
@@ -249,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703161637578_Store.resx">
       <DependentUpon>201703161637578_Store.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703201426591_items.resx">
+      <DependentUpon>201703201426591_items.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
