@@ -11,6 +11,7 @@ using System.Linq.Dynamic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CustomControls;
 
 namespace HKSupply.Forms.Master
 {
@@ -232,6 +233,12 @@ namespace HKSupply.Forms.Master
                 tcGeneral.TabPages.Remove(tpForm);
                 btnNewVersion.Visible = false;
                 LoadComboFilters();
+
+                //TODO Mejor llevarlo a otro lado y meter el texto el resources.
+                lblDatesRemarks.Text = "* For dates" + Environment.NewLine + "Press Delete to set empty value";
+                ndtpLaunched.ValueChanged += ndtpLaunched_ValueChanged;
+                ndtpRetired.ValueChanged += ndtpRetired_ValueChanged;
+                
             }
             catch (Exception ex)
             {
@@ -304,7 +311,55 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        /// <summary>
+        /// No queremos la parte de la hora que te pone el control por defecto
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void ndtpRetired_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ndtpRetired.Value != null)
+                {
+                    DateTime tmp = (DateTime)ndtpRetired.Value;
+                    ndtpRetired.Value = new DateTime(tmp.Year, tmp.Month, tmp.Day, 0, 0, 0);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// No queremos la parte de la hora que te pone el control por defecto
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void ndtpLaunched_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ndtpLaunched.Value != null)
+                {
+                    DateTime tmp = (DateTime)ndtpLaunched.Value;
+                    ndtpLaunched.Value = new DateTime(tmp.Year, tmp.Month, tmp.Day, 0, 0, 0);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         #region Grid events
+
+        /// <summary>
+        /// Cargamos los datos del registro de la fila que se hace doble click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void grdItems_CellDoubleClick(Object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -318,6 +373,11 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        /// <summary>
+        /// Ordenamos si ha pulsado sobre algún header de columna
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void grdItems_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -343,17 +403,18 @@ namespace HKSupply.Forms.Master
         /// </summary>
         private void ResetItemUpdate()
         {
-            _itemUpdate = new Item
-            {
-                ItemCode = string.Empty,
-                ItemName = string.Empty,
-                Model = string.Empty,
-                Active = false,
-                Launched = new DateTime(),
-                Retired = new DateTime(),
-                Size = string.Empty,
-                CategoryName = string.Empty,
-            };
+            _itemUpdate = new Item();
+            //_itemUpdate = new Item
+            //{
+            //    ItemCode = string.Empty,
+            //    ItemName = string.Empty,
+            //    Model = string.Empty,
+            //    Active = false,
+            //    Launched = new DateTime(),
+            //    Retired = new DateTime(),
+            //    Size = string.Empty,
+            //    CategoryName = string.Empty,
+            //};
         }
 
         /// <summary>
@@ -361,33 +422,52 @@ namespace HKSupply.Forms.Master
         /// </summary>
         private void SetFormBinding()
         {
-            foreach (Control ctl in tlpForm.Controls)
+            try
             {
-                if (ctl.GetType() == typeof(TextBox))
+
+                foreach (Control ctl in tlpForm.Controls)
                 {
-                    ctl.DataBindings.Clear();
-                    ((TextBox)ctl).ReadOnly = true;
+                    if (ctl.GetType() == typeof(TextBox))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((TextBox)ctl).ReadOnly = true;
+                    }
+                    else if (ctl.GetType() == typeof(CheckBox))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((CheckBox)ctl).Enabled = false;
+                    }
+                    else if (ctl.GetType() == typeof(NullableDateTimePicker))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((NullableDateTimePicker)ctl).Enabled = false;
+                    }
                 }
-                else if (ctl.GetType() == typeof(CheckBox))
-                {
-                    ctl.DataBindings.Clear();
-                    ((CheckBox)ctl).Enabled = false;
-                }
+
+                //NullableDateTimePicker
+                //Nota: El "OnPropertyChanged" es necesario para que el binding sea en los dos sentidos.
+                ndtpLaunched.DataBindings.Add("Value", _itemUpdate, "Launched", true, DataSourceUpdateMode.OnPropertyChanged);
+                ndtpRetired.DataBindings.Add("Value", _itemUpdate, "Retired", true, DataSourceUpdateMode.OnPropertyChanged);
+                //TextBox
+                txtItemCode.DataBindings.Add("Text", _itemUpdate, "ItemCode");
+                txtIdVersion.DataBindings.Add("Text", _itemUpdate, "idVer");
+                txtIdSubversion.DataBindings.Add("Text", _itemUpdate, "idSubVer");
+                txtTimestamp.DataBindings.Add("Text", _itemUpdate, "Timestamp");
+                txtItemName.DataBindings.Add("Text", _itemUpdate, "ItemName");
+                txtModel.DataBindings.Add("Text", _itemUpdate, "Model");
+                txtStatus.DataBindings.Add("Text", _itemUpdate, "IdStatus");
+                txtMmFront.DataBindings.Add("Text", _itemUpdate, "MmFront");
+                txtSize.DataBindings.Add("Text", _itemUpdate, "Size");
+                txtCategoryName.DataBindings.Add("Text", _itemUpdate, "CategoryName");
+                txtCaliber.DataBindings.Add("Text", _itemUpdate, "Caliber");
+                //CheckBox
+                chkActive.DataBindings.Add("Checked", _itemUpdate, "Active");
+
             }
-            txtItemCode.DataBindings.Add("Text", _itemUpdate, "ItemCode");
-            txtIdVersion.DataBindings.Add("Text", _itemUpdate, "idVer");
-            txtIdSubversion.DataBindings.Add("Text", _itemUpdate, "idSubVer");
-            txtTimestamp.DataBindings.Add("Text", _itemUpdate, "Timestamp");
-            txtItemName.DataBindings.Add("Text", _itemUpdate, "ItemName");
-            chkActive.DataBindings.Add("Checked", _itemUpdate, "Active");
-            txtModel.DataBindings.Add("Text", _itemUpdate, "Model");
-            txtStatus.DataBindings.Add("Text", _itemUpdate, "IdStatus");
-            txtLanched.DataBindings.Add("Text", _itemUpdate, "Launched");
-            txtRetired.DataBindings.Add("Text", _itemUpdate, "Retired");
-            txtMmFront.DataBindings.Add("Text", _itemUpdate, "MmFront");
-            txtSize.DataBindings.Add("Text", _itemUpdate, "Size");
-            txtCategoryName.DataBindings.Add("Text", _itemUpdate, "CategoryName");
-            txtCaliber.DataBindings.Add("Text", _itemUpdate, "Caliber");
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         /// <summary>
@@ -453,7 +533,7 @@ namespace HKSupply.Forms.Master
                 if ((eItemColumnsFilter)cmbColFilter.SelectedIndex != eItemColumnsFilter.Active &&
                     cmbColFilter.SelectedIndex > -1 && string.IsNullOrEmpty(txtFilter.Text) == false)
                 {
-                    //Lo pasamos antes a minúsculas todo, ya que el Contains es case sensitive, 
+                    //Lo pasamos antes a minúsculas todo, ya que el Contains es case sensitive 
                     _itemsList = _itemsList.Where(cmbColFilter.SelectedItem.ToString() + ".ToLower().Contains(@0)", txtFilter.Text.ToLower()).ToList();
                 }
                 //Columnas bit
@@ -468,7 +548,7 @@ namespace HKSupply.Forms.Master
                 grdItems.Rows.Clear();
                 grdItems.DataSource = _itemsList;
                 grdItems.ReadOnly = true;
-                //Para poder cambiar el color del header cuando se filtra hay que desactivar los efectos visuales del header que coge por defecto
+                //Para poder cambiar el color del header cuando se ordena hay que desactivar los efectos visuales del header que coge por defecto
                 grdItems.EnableHeadersVisualStyles = false;
 
             }
@@ -655,6 +735,10 @@ namespace HKSupply.Forms.Master
                         {
                             ((CheckBox)ctl).Enabled = true;
                         }
+                        else if (ctl.GetType() == typeof(NullableDateTimePicker))
+                        {
+                            ((NullableDateTimePicker)ctl).Enabled = true;
+                        }
                     }
 
                 }
@@ -683,6 +767,10 @@ namespace HKSupply.Forms.Master
                         else if (ctl.GetType() == typeof(CheckBox))
                         {
                             ((CheckBox)ctl).Enabled = true;
+                        }
+                        else if (ctl.GetType() == typeof(NullableDateTimePicker))
+                        {
+                            ((NullableDateTimePicker)ctl).Enabled = true;
                         }
                     }
 
@@ -743,7 +831,7 @@ namespace HKSupply.Forms.Master
         }
 
         /// <summary>
-        /// 
+        /// TODO Implementar las validaciones reales.
         /// </summary>
         /// <returns></returns>
         private bool IsValidModifiedItem()
@@ -773,7 +861,7 @@ namespace HKSupply.Forms.Master
         }
 
         /// <summary>
-        /// TODO
+        /// TODO Implementar las validaciones reales.
         /// </summary>
         /// <returns></returns>
         private bool IsValidCreatedItem()
@@ -789,7 +877,6 @@ namespace HKSupply.Forms.Master
                             MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
                             return false;
                         }
-
                     }
                 }
 

@@ -20,6 +20,7 @@ namespace HKSupply.Forms
     public partial class Main : Form
     {
         #region Private members
+        System.Drawing.Icon _gIcon = new Icon(@"Resources\Images\etnia_icon.ico");
         #endregion
 
         #region Constructor
@@ -36,13 +37,29 @@ namespace HKSupply.Forms
         {
             try
             {
+                this.Icon = _gIcon;
                 SetBackgroundColor();
                 SetMenuStyle();
                 InitializeMainMenu();
+
+                msMainMenu.ItemAdded += msMainMenu_ItemAdded;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Para eliminar el icono del hijo dentro del menu strip cuando está maximizado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void msMainMenu_ItemAdded(object sender, ToolStripItemEventArgs e)
+        {
+            if (e != null && e.Item != null && e.Item.GetType().Name == "SystemMenuItem")
+            {
+                this.msMainMenu.Items.RemoveAt(0);
             }
         }
 
@@ -87,6 +104,7 @@ namespace HKSupply.Forms
 
                                 Form frmShow = (Form)frmAssembly.CreateInstance(type.ToString());
                                 frmShow.MdiParent = this;
+                                frmShow.ShowIcon = false;
                                 frmShow.Dock = DockStyle.Fill;
                                 frmShow.Show();
                                 frmShow.WindowState = FormWindowState.Maximized;

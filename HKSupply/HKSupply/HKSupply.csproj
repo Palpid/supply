@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>etnia_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
@@ -180,6 +183,10 @@
     <Compile Include="Migrations\201703201426591_items.Designer.cs">
       <DependentUpon>201703201426591_items.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703210811583_items_2.cs" />
+    <Compile Include="Migrations\201703210811583_items_2.Designer.cs">
+      <DependentUpon>201703210811583_items_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CustomerHistory.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -270,6 +277,9 @@
     <EmbeddedResource Include="Migrations\201703201426591_items.resx">
       <DependentUpon>201703201426591_items.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703210811583_items_2.resx">
+      <DependentUpon>201703210811583_items_2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -305,6 +315,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="etnia_icon.ico" />
+    <Content Include="Resources\Images\etnia_icon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\etnia_logo.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

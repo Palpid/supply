@@ -39,11 +39,10 @@
             this.tpForm = new System.Windows.Forms.TabPage();
             this.btnNewVersion = new System.Windows.Forms.Button();
             this.tlpForm = new System.Windows.Forms.TableLayoutPanel();
+            this.ndtpLaunched = new CustomControls.NullableDateTimePicker();
             this.txtCategoryName = new System.Windows.Forms.TextBox();
             this.txtSize = new System.Windows.Forms.TextBox();
             this.txtMmFront = new System.Windows.Forms.TextBox();
-            this.txtRetired = new System.Windows.Forms.TextBox();
-            this.txtLanched = new System.Windows.Forms.TextBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.txtModel = new System.Windows.Forms.TextBox();
             this.txtItemName = new System.Windows.Forms.TextBox();
@@ -67,6 +66,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.chkActive = new System.Windows.Forms.CheckBox();
+            this.ndtpRetired = new CustomControls.NullableDateTimePicker();
+            this.lblDatesRemarks = new System.Windows.Forms.Label();
             this.tcGeneral.SuspendLayout();
             this.tpGrid.SuspendLayout();
             this.gbFilter.SuspendLayout();
@@ -155,6 +156,7 @@
             this.grdItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdItems.BackgroundColor = System.Drawing.Color.White;
             this.grdItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdItems.Location = new System.Drawing.Point(6, 104);
             this.grdItems.Name = "grdItems";
@@ -191,11 +193,10 @@
             this.tlpForm.ColumnCount = 2;
             this.tlpForm.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
             this.tlpForm.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.42857F));
+            this.tlpForm.Controls.Add(this.ndtpRetired, 1, 9);
             this.tlpForm.Controls.Add(this.txtCategoryName, 1, 12);
             this.tlpForm.Controls.Add(this.txtSize, 1, 11);
             this.tlpForm.Controls.Add(this.txtMmFront, 1, 10);
-            this.tlpForm.Controls.Add(this.txtRetired, 1, 9);
-            this.tlpForm.Controls.Add(this.txtLanched, 1, 8);
             this.tlpForm.Controls.Add(this.txtStatus, 1, 7);
             this.tlpForm.Controls.Add(this.txtModel, 1, 6);
             this.tlpForm.Controls.Add(this.txtItemName, 1, 4);
@@ -219,10 +220,13 @@
             this.tlpForm.Controls.Add(this.label3, 0, 2);
             this.tlpForm.Controls.Add(this.label10, 0, 9);
             this.tlpForm.Controls.Add(this.chkActive, 1, 5);
+            this.tlpForm.Controls.Add(this.ndtpLaunched, 1, 8);
+            this.tlpForm.Controls.Add(this.lblDatesRemarks, 1, 14);
             this.tlpForm.Dock = System.Windows.Forms.DockStyle.Left;
             this.tlpForm.Location = new System.Drawing.Point(3, 3);
             this.tlpForm.Name = "tlpForm";
-            this.tlpForm.RowCount = 14;
+            this.tlpForm.RowCount = 15;
+            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -239,6 +243,15 @@
             this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpForm.Size = new System.Drawing.Size(776, 487);
             this.tlpForm.TabIndex = 0;
+            // 
+            // ndtpLaunched
+            // 
+            this.ndtpLaunched.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ndtpLaunched.Location = new System.Drawing.Point(224, 234);
+            this.ndtpLaunched.Name = "ndtpLaunched";
+            this.ndtpLaunched.Size = new System.Drawing.Size(200, 22);
+            this.ndtpLaunched.TabIndex = 2;
+            this.ndtpLaunched.Value = new System.DateTime(2017, 3, 21, 9, 42, 32, 514);
             // 
             // txtCategoryName
             // 
@@ -260,20 +273,6 @@
             this.txtMmFront.Name = "txtMmFront";
             this.txtMmFront.Size = new System.Drawing.Size(549, 22);
             this.txtMmFront.TabIndex = 7;
-            // 
-            // txtRetired
-            // 
-            this.txtRetired.Location = new System.Drawing.Point(224, 263);
-            this.txtRetired.Name = "txtRetired";
-            this.txtRetired.Size = new System.Drawing.Size(549, 22);
-            this.txtRetired.TabIndex = 7;
-            // 
-            // txtLanched
-            // 
-            this.txtLanched.Location = new System.Drawing.Point(224, 234);
-            this.txtLanched.Name = "txtLanched";
-            this.txtLanched.Size = new System.Drawing.Size(549, 22);
-            this.txtLanched.TabIndex = 7;
             // 
             // txtStatus
             // 
@@ -453,10 +452,28 @@
             this.chkActive.TabIndex = 8;
             this.chkActive.UseVisualStyleBackColor = true;
             // 
+            // ndtpRetired
+            // 
+            this.ndtpRetired.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ndtpRetired.Location = new System.Drawing.Point(224, 263);
+            this.ndtpRetired.Name = "ndtpRetired";
+            this.ndtpRetired.Size = new System.Drawing.Size(200, 22);
+            this.ndtpRetired.TabIndex = 3;
+            this.ndtpRetired.Value = new System.DateTime(2017, 3, 21, 9, 42, 32, 514);
+            // 
+            // lblDatesRemarks
+            // 
+            this.lblDatesRemarks.Location = new System.Drawing.Point(224, 400);
+            this.lblDatesRemarks.Name = "lblDatesRemarks";
+            this.lblDatesRemarks.Size = new System.Drawing.Size(169, 37);
+            this.lblDatesRemarks.TabIndex = 9;
+            this.lblDatesRemarks.Text = "DatesRemarks";
+            // 
             // ItemManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1215, 598);
             this.Controls.Add(this.tcGeneral);
             this.Name = "ItemManagement";
@@ -490,8 +507,6 @@
         private System.Windows.Forms.TextBox txtCategoryName;
         private System.Windows.Forms.TextBox txtSize;
         private System.Windows.Forms.TextBox txtMmFront;
-        private System.Windows.Forms.TextBox txtRetired;
-        private System.Windows.Forms.TextBox txtLanched;
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.TextBox txtItemName;
@@ -515,5 +530,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.CheckBox chkActive;
+        private CustomControls.NullableDateTimePicker ndtpLaunched;
+        private CustomControls.NullableDateTimePicker ndtpRetired;
+        private System.Windows.Forms.Label lblDatesRemarks;
     }
 }

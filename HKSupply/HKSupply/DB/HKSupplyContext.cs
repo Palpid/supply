@@ -61,7 +61,7 @@ namespace HKSupply.DB
                         .Select(x => x.ErrorMessage);
 
                 //Unimos los errores en un solo string
-                var fullErrorMessage = string.Join("; ", errorMessages);
+                var fullErrorMessage = string.Join("; " + Environment.NewLine, errorMessages);
 
                 //Combinamos la excepción original con el mensaje que hemos creado
                 var exceptionMessage = string.Concat(ex.Message, " The validation errors are: ", fullErrorMessage);

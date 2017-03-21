@@ -21,6 +21,7 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.ChangePassword.r
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.CustomerManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.FunctionalityManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.FunctionalityRoleManagement.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.ItemManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.RoleManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.StoreManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.SupplierManagement.resources
@@ -30,9 +31,11 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.ObjectVersion.reso
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.ObjectVersion_2.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.Supplier.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.Store.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.items.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.items_2.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Properties.Resources.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Resources.HKSupplyRes.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.csproj.GenerateResource.Cache
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
-C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.items.resources
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\etnia_icon.ico

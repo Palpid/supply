@@ -88,17 +88,17 @@ namespace HKSupply.Models
                 IdVer.GetHashCode() +
                 IdSubVer.GetHashCode() +
                 Timestamp.GetHashCode() +
-                IdCustomer.GetHashCode() +
-                CustName.GetHashCode() +
+                (IdCustomer ?? string.Empty).GetHashCode() +
+                (CustName ?? string.Empty).GetHashCode() +
                 Active.GetHashCode() +
-                VATNum.GetHashCode() +
-                ShippingAddress.GetHashCode() +
-                BillingAddress.GetHashCode() +
-                ContactName.GetHashCode() +
-                ContactPhone.GetHashCode() +
+                (VATNum ?? string.Empty).GetHashCode() +
+                (ShippingAddress ?? string.Empty).GetHashCode() +
+                (BillingAddress ?? string.Empty).GetHashCode() +
+                (ContactName ?? string.Empty).GetHashCode() +
+                (ContactPhone ?? string.Empty).GetHashCode() +
                 IdIncoterm.GetHashCode() +
                 IdPaymentTerms.GetHashCode() +
-                Currency.GetHashCode();
+                (Currency ?? string.Empty).GetHashCode();
 
             return hashCode;
         }

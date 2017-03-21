@@ -51,7 +51,7 @@
             this.MainMenuStrip = this.msMainMenu;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Main";
-            this.Text = "etnia Barcelona";
+            this.Text = "Etnia Barcelona";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);

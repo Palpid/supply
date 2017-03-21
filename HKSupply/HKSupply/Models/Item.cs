@@ -37,10 +37,10 @@ namespace HKSupply.Models
         public int IdStatus { get; set; }
 
         [Column("LAUNCHED")]
-        public DateTime Launched{ get; set; }
+        public DateTime? Launched{ get; set; }
 
         [Column("RETIRED")]
-        public DateTime Retired { get; set; }
+        public DateTime? Retired { get; set; }
 
         [Column("MM_FRONT", TypeName = "NUMERIC")]
         public decimal MmFront { get; set; }
@@ -88,16 +88,16 @@ namespace HKSupply.Models
                 IdVer.GetHashCode() +
                 IdSubVer.GetHashCode() +
                 Timestamp.GetHashCode() +
-                ItemCode.GetHashCode() +
-                ItemName.GetHashCode() +
-                Model.GetHashCode() +
+                (ItemCode ?? string.Empty).GetHashCode() +
+                (ItemName ?? string.Empty).GetHashCode() +
+                (Model ?? string.Empty).GetHashCode() +
                 Active.GetHashCode() +
                 IdStatus.GetHashCode() +
-                Launched.GetHashCode() +
-                Retired.GetHashCode() +
+                (Launched ?? new DateTime()).GetHashCode() +
+                (Retired ?? new DateTime()).GetHashCode() +
                 MmFront.GetHashCode() +
-                Size.GetHashCode() +
-                CategoryName.GetHashCode() +
+                (Size ?? string.Empty).GetHashCode() +
+                (CategoryName ?? string.Empty).GetHashCode() +
                 Caliber.GetHashCode();  
 
             return hashCode;

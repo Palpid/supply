@@ -37,10 +37,10 @@ namespace HKSupply.Models
         public int IdStatus { get; set; }
 
         [Column("LAUNCHED")]
-        public DateTime Launched { get; set; }
+        public DateTime? Launched { get; set; }
 
         [Column("RETIRED")]
-        public DateTime Retired { get; set; }
+        public DateTime? Retired { get; set; }
 
         [Column("MM_FRONT", TypeName = "NUMERIC")]
         public decimal MmFront { get; set; }
