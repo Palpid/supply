@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CustomControls;
+using HKSupply.Styles;
 
 namespace HKSupply.Forms.Master
 {
@@ -75,6 +76,8 @@ namespace HKSupply.Forms.Master
         int[] _nonCreatingFieldsRows = { 1, 2, 3 };
 
         bool _sortDescending = true;
+
+        List<ModelLinqFiltering> _multiFilters;
 
         #endregion
 
@@ -230,6 +233,7 @@ namespace HKSupply.Forms.Master
             {
                 ConfigureActionsStackView();
                 SetFormBinding();
+                InitializeFormStyles();
                 tcGeneral.TabPages.Remove(tpForm);
                 btnNewVersion.Visible = false;
                 LoadComboFilters();
@@ -288,6 +292,26 @@ namespace HKSupply.Forms.Master
             finally
             {
                 Cursor = Cursors.Default;
+            }
+        }
+
+        private void btnMultiFilters_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DynamicFilters frm = new DynamicFilters();
+                frm.InitData(new Item(), _multiFilters);
+                frm.ShowDialog();
+                if (frm.DialogResult == DialogResult.OK)
+                {
+                    _multiFilters = frm.FilterList;
+                    btnMultiFilters.Text += " *";
+                    LoadItemsList(_multiFilters);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -471,6 +495,42 @@ namespace HKSupply.Forms.Master
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        private void InitializeFormStyles()
+        {
+            try
+            {
+                //Multi Filter button
+                btnMultiFilters.BackColor = AppStyles.EtniaRed;
+                btnMultiFilters.FlatStyle = FlatStyle.Flat;
+                btnMultiFilters.FlatAppearance.BorderColor = AppStyles.EtniaRed;
+                btnMultiFilters.FlatAppearance.BorderSize = 1;
+                btnMultiFilters.ForeColor = Color.White;
+
+                //Load button
+                btnLoad.BackColor = AppStyles.EtniaRed;
+                btnLoad.FlatStyle = FlatStyle.Flat;
+                btnLoad.FlatAppearance.BorderColor = AppStyles.EtniaRed;
+                btnLoad.FlatAppearance.BorderSize = 1;
+                btnLoad.ForeColor = Color.White;
+
+                //New Version button
+                btnNewVersion.BackColor = AppStyles.EtniaRed;
+                btnNewVersion.FlatStyle = FlatStyle.Flat;
+                btnNewVersion.FlatAppearance.BorderColor = AppStyles.EtniaRed;
+                btnNewVersion.FlatAppearance.BorderSize = 1;
+                btnNewVersion.ForeColor = Color.White;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        /// <summary>
         /// Cargar el combo con los campos que se puede filtrar
         /// </summary>
         private void LoadComboFilters()
@@ -480,6 +540,19 @@ namespace HKSupply.Forms.Master
                 cmbColFilter.DataSource = Enum.GetNames(typeof(eItemColumnsFilter));
                 cmbColFilter.SelectedIndexChanged += cmbColFilter_SelectedIndexChanged;
                 cmbColFilter.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void ResetMultiFilter()
+        {
+            try
+            {
+                _multiFilters = null;
+                btnMultiFilters.Text = btnMultiFilters.Text.Replace(" *", "");
             }
             catch (Exception ex)
             {
@@ -524,6 +597,9 @@ namespace HKSupply.Forms.Master
         {
             try
             {
+                //borramos por si habían indicado filtros
+                ResetMultiFilter();
+
                 _itemsList = GlobalSetting.ItemService.GetItems();
 
                 //Filtramos si es necesario
@@ -551,6 +627,36 @@ namespace HKSupply.Forms.Master
                 //Para poder cambiar el color del header cuando se ordena hay que desactivar los efectos visuales del header que coge por defecto
                 grdItems.EnableHeadersVisualStyles = false;
 
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        //aki test
+        private void LoadItemsList(List<ModelLinqFiltering> filters)
+        {
+            try
+            {
+                string filterString = string.Empty;
+
+                _itemsList = GlobalSetting.ItemService.GetItems();
+
+                //montamos el string con los filtros
+                foreach (var filter in filters)
+                    filterString += filter.GetLinqFilterString();
+
+                _itemsList = _itemsList.Where(filterString).ToList();
+
+                grdItems.CellDoubleClick += grdItems_CellDoubleClick;
+                grdItems.CellClick += grdItems_CellClick;
+                grdItems.DataSource = null;
+                grdItems.Rows.Clear();
+                grdItems.DataSource = _itemsList;
+                grdItems.ReadOnly = true;
+                //Para poder cambiar el color del header cuando se ordena hay que desactivar los efectos visuales del header que coge por defecto
+                grdItems.EnableHeadersVisualStyles = false;
             }
             catch (Exception ex)
             {

@@ -31,6 +31,7 @@
             this.tcGeneral = new System.Windows.Forms.TabControl();
             this.tpGrid = new System.Windows.Forms.TabPage();
             this.gbFilter = new System.Windows.Forms.GroupBox();
+            this.btnMultiFilters = new System.Windows.Forms.Button();
             this.chkFilter = new System.Windows.Forms.CheckBox();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.cmbColFilter = new System.Windows.Forms.ComboBox();
@@ -39,7 +40,7 @@
             this.tpForm = new System.Windows.Forms.TabPage();
             this.btnNewVersion = new System.Windows.Forms.Button();
             this.tlpForm = new System.Windows.Forms.TableLayoutPanel();
-            this.ndtpLaunched = new CustomControls.NullableDateTimePicker();
+            this.ndtpRetired = new CustomControls.NullableDateTimePicker();
             this.txtCategoryName = new System.Windows.Forms.TextBox();
             this.txtSize = new System.Windows.Forms.TextBox();
             this.txtMmFront = new System.Windows.Forms.TextBox();
@@ -66,7 +67,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.chkActive = new System.Windows.Forms.CheckBox();
-            this.ndtpRetired = new CustomControls.NullableDateTimePicker();
+            this.ndtpLaunched = new CustomControls.NullableDateTimePicker();
             this.lblDatesRemarks = new System.Windows.Forms.Label();
             this.tcGeneral.SuspendLayout();
             this.tpGrid.SuspendLayout();
@@ -106,6 +107,7 @@
             // 
             this.gbFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbFilter.Controls.Add(this.btnMultiFilters);
             this.gbFilter.Controls.Add(this.chkFilter);
             this.gbFilter.Controls.Add(this.txtFilter);
             this.gbFilter.Controls.Add(this.cmbColFilter);
@@ -114,6 +116,17 @@
             this.gbFilter.Size = new System.Drawing.Size(1162, 52);
             this.gbFilter.TabIndex = 2;
             this.gbFilter.TabStop = false;
+            // 
+            // btnMultiFilters
+            // 
+            this.btnMultiFilters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMultiFilters.Location = new System.Drawing.Point(1054, 14);
+            this.btnMultiFilters.Name = "btnMultiFilters";
+            this.btnMultiFilters.Size = new System.Drawing.Size(102, 29);
+            this.btnMultiFilters.TabIndex = 4;
+            this.btnMultiFilters.Text = "Multi Filter";
+            this.btnMultiFilters.UseVisualStyleBackColor = true;
+            this.btnMultiFilters.Click += new System.EventHandler(this.btnMultiFilters_Click);
             // 
             // chkFilter
             // 
@@ -244,14 +257,14 @@
             this.tlpForm.Size = new System.Drawing.Size(776, 487);
             this.tlpForm.TabIndex = 0;
             // 
-            // ndtpLaunched
+            // ndtpRetired
             // 
-            this.ndtpLaunched.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.ndtpLaunched.Location = new System.Drawing.Point(224, 234);
-            this.ndtpLaunched.Name = "ndtpLaunched";
-            this.ndtpLaunched.Size = new System.Drawing.Size(200, 22);
-            this.ndtpLaunched.TabIndex = 2;
-            this.ndtpLaunched.Value = new System.DateTime(2017, 3, 21, 9, 42, 32, 514);
+            this.ndtpRetired.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ndtpRetired.Location = new System.Drawing.Point(224, 263);
+            this.ndtpRetired.Name = "ndtpRetired";
+            this.ndtpRetired.Size = new System.Drawing.Size(200, 22);
+            this.ndtpRetired.TabIndex = 3;
+            this.ndtpRetired.Value = new System.DateTime(2017, 3, 21, 9, 42, 32, 514);
             // 
             // txtCategoryName
             // 
@@ -452,14 +465,14 @@
             this.chkActive.TabIndex = 8;
             this.chkActive.UseVisualStyleBackColor = true;
             // 
-            // ndtpRetired
+            // ndtpLaunched
             // 
-            this.ndtpRetired.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.ndtpRetired.Location = new System.Drawing.Point(224, 263);
-            this.ndtpRetired.Name = "ndtpRetired";
-            this.ndtpRetired.Size = new System.Drawing.Size(200, 22);
-            this.ndtpRetired.TabIndex = 3;
-            this.ndtpRetired.Value = new System.DateTime(2017, 3, 21, 9, 42, 32, 514);
+            this.ndtpLaunched.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ndtpLaunched.Location = new System.Drawing.Point(224, 234);
+            this.ndtpLaunched.Name = "ndtpLaunched";
+            this.ndtpLaunched.Size = new System.Drawing.Size(200, 22);
+            this.ndtpLaunched.TabIndex = 2;
+            this.ndtpLaunched.Value = new System.DateTime(2017, 3, 21, 9, 42, 32, 514);
             // 
             // lblDatesRemarks
             // 
@@ -533,5 +546,6 @@
         private CustomControls.NullableDateTimePicker ndtpLaunched;
         private CustomControls.NullableDateTimePicker ndtpRetired;
         private System.Windows.Forms.Label lblDatesRemarks;
+        private System.Windows.Forms.Button btnMultiFilters;
     }
 }

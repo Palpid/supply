@@ -39,3 +39,4 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.csproj.GenerateResource.Cache
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\etnia_icon.ico
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.DynamicFilters.resources
