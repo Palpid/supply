@@ -35,16 +35,53 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Helpers/CustomExtensions.cs" line="22" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="22" bodyend="31"/>
+        <location file="HKSupply/Helpers/CustomExtensions.cs" line="23" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="23" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1aa6fc08aa8e4ab65d734d75323a13067b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Helpers.CustomExtensions.RemoveRow</definition>
+        <argsstring>(this TableLayoutPanel panel, int rowIndex)</argsstring>
+        <name>RemoveRow</name>
+        <param>
+          <type>this TableLayoutPanel</type>
+          <declname>panel</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rowIndex</declname>
+        </param>
+        <briefdescription>
+<para>Eliminar una fila de un TableLayoutPanel y todos los controles que contenga </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>panel</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rowIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CustomExtensions.cs" line="39" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="39" bodyend="59"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Extensiones personalizadas </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="HKSupply/Helpers/CustomExtensions.cs" line="15" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="14" bodyend="32"/>
+    <location file="HKSupply/Helpers/CustomExtensions.cs" line="16" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="15" bodyend="60"/>
     <listofallmembers>
       <member refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1a9610f835b92947f6dfb1dff43d674e75" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CustomExtensions</scope><name>Clone&lt; T &gt;</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1aa6fc08aa8e4ab65d734d75323a13067b" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CustomExtensions</scope><name>RemoveRow</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

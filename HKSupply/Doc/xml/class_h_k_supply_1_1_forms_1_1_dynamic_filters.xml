@@ -1,0 +1,824 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_dynamic_filters" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::DynamicFilters</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a389c5248934daffb29d3ea60b8d18df7" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.Forms.DynamicFilters.CMB_FIELD_NAME</definition>
+        <argsstring></argsstring>
+        <name>CMB_FIELD_NAME</name>
+        <initializer>= &quot;cmbField_&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="20" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1ae65487e24ce54bad41ab95bc60da3a2e" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.Forms.DynamicFilters.CMB_CONDITION_NAME</definition>
+        <argsstring></argsstring>
+        <name>CMB_CONDITION_NAME</name>
+        <initializer>= &quot;cmbCondition_&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="21" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1aab97204a539846d2be6607e98c7d14cd" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.Forms.DynamicFilters.TXT_FILTER_NAME</definition>
+        <argsstring></argsstring>
+        <name>TXT_FILTER_NAME</name>
+        <initializer>= &quot;txtFilter_&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="23" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1afe96ffd8f4851a276ec652ce9012b59a" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.Forms.DynamicFilters.CHK_FILTER_NAME</definition>
+        <argsstring></argsstring>
+        <name>CHK_FILTER_NAME</name>
+        <initializer>= &quot;chkFilter_&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="24" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1af6a4e2cefb66722089b3fdbf59142b9e" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.Forms.DynamicFilters.DATETIMEPICKER_FILTER_NAME</definition>
+        <argsstring></argsstring>
+        <name>DATETIMEPICKER_FILTER_NAME</name>
+        <initializer>= &quot;dateTimePickerFilter_&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="25" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1ab384286ca60304ab664ba52f0812ef4e" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.Forms.DynamicFilters.CMB_UNION_NAME</definition>
+        <argsstring></argsstring>
+        <name>CMB_UNION_NAME</name>
+        <initializer>= &quot;cmbUnion_&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="27" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1acae64dd95dd276804ed291e67579825b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.DynamicFilters._isRowCreating</definition>
+        <argsstring></argsstring>
+        <name>_isRowCreating</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="31" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a845b20bb56b9b73d58b4369de94bdd9d" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; string, string &gt;</type>
+        <definition>Dictionary&lt;string, string&gt; HKSupply.Forms.DynamicFilters._objectPropertiesDic</definition>
+        <argsstring></argsstring>
+        <name>_objectPropertiesDic</name>
+        <initializer>= new Dictionary&lt;string, string&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="33" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a1409e2e7b95cb3a3ff0cd0bc34ba3626" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; string, string &gt;</type>
+        <definition>Dictionary&lt;string, string&gt; HKSupply.Forms.DynamicFilters._objectPropertiesTypesDic</definition>
+        <argsstring></argsstring>
+        <name>_objectPropertiesTypesDic</name>
+        <initializer>= new Dictionary&lt;string, string&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="34" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a240d975aaffd280daedca818b54be574" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; string, string &gt;</type>
+        <definition>Dictionary&lt;string, string&gt; HKSupply.Forms.DynamicFilters._stringConditionDic</definition>
+        <argsstring></argsstring>
+        <name>_stringConditionDic</name>
+        <initializer>= new Dictionary&lt;string, string&gt;() 
+        { 
+            { &quot;=&quot;, &quot;=&quot; },
+            { &quot;!=&quot;, &quot;!=&quot; },
+            { &quot;Contains&quot;, &quot;Contains&quot; },
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="36" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a2930af5cc44409590103c64105004fb3" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; string, string &gt;</type>
+        <definition>Dictionary&lt;string, string&gt; HKSupply.Forms.DynamicFilters._numberConditionDic</definition>
+        <argsstring></argsstring>
+        <name>_numberConditionDic</name>
+        <initializer>= new Dictionary&lt;string, string&gt;() 
+        { 
+            { &quot;=&quot;, &quot;=&quot; },
+            { &quot;!=&quot;, &quot;!=&quot; },
+            { &quot;&gt;&quot;, &quot;&gt;&quot; },
+            { &quot;&lt;&quot;, &quot;&lt;&quot; },
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="43" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a6f3ac533df03f4aa9b011e19c58eda3f" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; string, string &gt;</type>
+        <definition>Dictionary&lt;string, string&gt; HKSupply.Forms.DynamicFilters._unionDic</definition>
+        <argsstring></argsstring>
+        <name>_unionDic</name>
+        <initializer>= new Dictionary&lt;string, string&gt;() 
+        { 
+            { &quot;&quot;, &quot;&quot; },
+            { &quot;OR&quot;, &quot;OR&quot; },
+            { &quot;AND&quot;, &quot;AND&quot; },
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="51" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1ab776f51a062dd835d2b46333916bb1a8" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_forms_1_1_model_linq_filtering" kindref="compound">ModelLinqFiltering</ref> &gt;</type>
+        <definition>List&lt;ModelLinqFiltering&gt; HKSupply.Forms.DynamicFilters._filterList</definition>
+        <argsstring></argsstring>
+        <name>_filterList</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_forms_1_1_model_linq_filtering" kindref="compound">ModelLinqFiltering</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="58" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a7bb2e194f275d2ae5585fb6742ed9b9d" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_forms_1_1_model_linq_filtering" kindref="compound">ModelLinqFiltering</ref> &gt;</type>
+        <definition>List&lt;ModelLinqFiltering&gt; HKSupply.Forms.DynamicFilters._prefilters</definition>
+        <argsstring></argsstring>
+        <name>_prefilters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="59" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a50da2558b43c30e858182ba5e7a1fd68" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.DynamicFilters.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/DynamicFilters.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1ae81dac3ee64acbc6df61af6b30460bc8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TableLayoutPanel</type>
+        <definition>System.Windows.Forms.TableLayoutPanel HKSupply.Forms.DynamicFilters.tlpFilters</definition>
+        <argsstring></argsstring>
+        <name>tlpFilters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.Designer.cs" line="135" column="1" bodyfile="HKSupply/Forms/DynamicFilters.Designer.cs" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1ad467b9d46f21fcc3e4d58a3f9c9225bd" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.DynamicFilters.lblColumn1Header</definition>
+        <argsstring></argsstring>
+        <name>lblColumn1Header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.Designer.cs" line="136" column="1" bodyfile="HKSupply/Forms/DynamicFilters.Designer.cs" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1af729056709ec284c9f3951b58407bc20" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.DynamicFilters.lblColumn2Header</definition>
+        <argsstring></argsstring>
+        <name>lblColumn2Header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.Designer.cs" line="137" column="1" bodyfile="HKSupply/Forms/DynamicFilters.Designer.cs" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a1c244ca4cae311551150280c4f461343" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.DynamicFilters.lblColumn3Header</definition>
+        <argsstring></argsstring>
+        <name>lblColumn3Header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.Designer.cs" line="138" column="1" bodyfile="HKSupply/Forms/DynamicFilters.Designer.cs" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a77345cbb70a1e694afd8b7ae1f4784f8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.DynamicFilters.lblColumn4Header</definition>
+        <argsstring></argsstring>
+        <name>lblColumn4Header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.Designer.cs" line="139" column="1" bodyfile="HKSupply/Forms/DynamicFilters.Designer.cs" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a23df27bbbd6eac763092c1528a6540f9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HKSupply.Forms.DynamicFilters.btnFilter</definition>
+        <argsstring></argsstring>
+        <name>btnFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.Designer.cs" line="140" column="1" bodyfile="HKSupply/Forms/DynamicFilters.Designer.cs" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a7b0d4402fc028c3401ab569dc0ce150e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_forms_1_1_model_linq_filtering" kindref="compound">ModelLinqFiltering</ref> &gt;</type>
+        <definition>List&lt;ModelLinqFiltering&gt; HKSupply.Forms.DynamicFilters.FilterList</definition>
+        <argsstring></argsstring>
+        <name>FilterList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="64" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1ac01814fbaa8e060543241291d0990ea0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.DynamicFilters.DynamicFilters</definition>
+        <argsstring>()</argsstring>
+        <name>DynamicFilters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="71" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="71" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a3fb309c2a83dbe6c5826c25007c5336f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.DynamicFilters.InitData</definition>
+        <argsstring>(object objectToFilter, List&lt; ModelLinqFiltering &gt; filters)</argsstring>
+        <name>InitData</name>
+        <param>
+          <type>object</type>
+          <declname>objectToFilter</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="class_h_k_supply_1_1_forms_1_1_model_linq_filtering" kindref="compound">ModelLinqFiltering</ref> &gt;</type>
+          <declname>filters</declname>
+        </param>
+        <briefdescription>
+<para>Iniciar los datos necesarios para montar la pantalla antes del show. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>objectToFilter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objeto sobre el que se hara el filtro</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Si queremos cargar unos filtros en la pantalla al abrirla</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para><para>Se tiene que llamar desde el formulario que instancia éste</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="193" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="193" bodyend="240"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a843326dc6546bfc394a951c5ec63cdff" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.DynamicFilters.DynamicFilters_Shown</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DynamicFilters_Shown</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="81" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="81" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1aed19d2364cd75895f8438241eec0a502" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.DynamicFilters.DynamicFilters_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DynamicFilters_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="101" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="101" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a1a72b66cd290b395a91c74397422236a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.DynamicFilters.cmbUnion_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmbUnion_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="114" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="114" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a1bde185b257bc810925b21fe380302a1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.DynamicFilters.cmbField_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmbField_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="139" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="139" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a829a7e849fa5730838b3b8aada87072e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.DynamicFilters.btnFilter_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnFilter_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="158" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="158" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a393c288d1b0ca01c74fe8aafe20b7cbe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.DynamicFilters.tlpFilters_CellPaint</definition>
+        <argsstring>(object sender, TableLayoutCellPaintEventArgs e)</argsstring>
+        <name>tlpFilters_CellPaint</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>TableLayoutCellPaintEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Pintar las celdas del table layout panel </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="176" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="176" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a82a602965089333366f78be1194d37fc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.DynamicFilters.InitializeFormStyles</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeFormStyles</name>
+        <briefdescription>
+<para>Inicializar algunos estilos del formulario </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="248" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="248" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a26096d1a2c0b889f8e7417e1011059b4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.DynamicFilters.AddRowFilter</definition>
+        <argsstring>()</argsstring>
+        <name>AddRowFilter</name>
+        <briefdescription>
+<para>Agregar una fila al TableLayoutPanel </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="281" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="281" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a79375437814a922f57cabcc7d48bedf6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.DynamicFilters.RemoveRowsFilter</definition>
+        <argsstring>(int index)</argsstring>
+        <name>RemoveRowsFilter</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Eliminar filas a partir de un índice dado </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para><para>Hay que empezar a eliminar por la última</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="362" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="362" bodyend="376"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a755edc67723debcb6ecf2a4dac4a0eda" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.DynamicFilters.LoadPreFilter</definition>
+        <argsstring>(List&lt; ModelLinqFiltering &gt; filters)</argsstring>
+        <name>LoadPreFilter</name>
+        <param>
+          <type>List&lt; <ref refid="class_h_k_supply_1_1_forms_1_1_model_linq_filtering" kindref="compound">ModelLinqFiltering</ref> &gt;</type>
+          <declname>filters</declname>
+        </param>
+        <briefdescription>
+<para>Cargar los filtros que se han pasado desde otro formulario </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filters</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="382" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="382" bodyend="422"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a33190f8d6ec0a1b1c7c0d32cf9316661" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.DynamicFilters.SetCmbConditionSource</definition>
+        <argsstring>(string number, string type)</argsstring>
+        <name>SetCmbConditionSource</name>
+        <param>
+          <type>string</type>
+          <declname>number</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Asignar el datasource del combo de condición en función del tipo de campo seleccionado </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>number</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="429" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="429" bodyend="490"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1aef6a264b945299c010b0c0fccdbdb5b3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.DynamicFilters.GetFilters</definition>
+        <argsstring>()</argsstring>
+        <name>GetFilters</name>
+        <briefdescription>
+<para>Obtener los filtros que han indicado en la pantalla </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="495" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="495" bodyend="558"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1ab152ad0844808d24a8fdb97af34e7456" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ComboBox</type>
+        <definition>ComboBox HKSupply.Forms.DynamicFilters.GetCmbRow</definition>
+        <argsstring>(string name)</argsstring>
+        <name>GetCmbRow</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="560" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="560" bodyend="570"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1afb44708fa77151ad38b476bea1394052" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TextBox</type>
+        <definition>TextBox HKSupply.Forms.DynamicFilters.GetTxtRow</definition>
+        <argsstring>(string name)</argsstring>
+        <name>GetTxtRow</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="572" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="572" bodyend="582"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a33219be55e06f2165f02d7b44a25c69f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>CheckBox</type>
+        <definition>CheckBox HKSupply.Forms.DynamicFilters.GetChkRow</definition>
+        <argsstring>(string name)</argsstring>
+        <name>GetChkRow</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="584" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="584" bodyend="594"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1ad38344218f0f5a30d745ba49fd49ca6e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_custom_controls_1_1_nullable_date_time_picker" kindref="compound">NullableDateTimePicker</ref></type>
+        <definition>NullableDateTimePicker HKSupply.Forms.DynamicFilters.GetNullDateRow</definition>
+        <argsstring>(string name)</argsstring>
+        <name>GetNullDateRow</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="596" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="596" bodyend="606"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1ab68a42444d61ecddb65af9f70be6b3b1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.DynamicFilters.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/DynamicFilters.Designer.cs" bodystart="29" bodyend="131"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a02f9f684c77b0ed2ba2aca58c0b87ec3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.DynamicFilters.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/DynamicFilters.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="45">
+        <label>Form</label>
+      </node>
+      <node id="44">
+        <label>HKSupply.Forms.DynamicFilters</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters"/>
+        <childnode refid="45" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="47">
+        <label>Form</label>
+      </node>
+      <node id="46">
+        <label>HKSupply.Forms.DynamicFilters</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters"/>
+        <childnode refid="47" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/DynamicFilters.cs" line="18" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="17" bodyend="609"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1ab776f51a062dd835d2b46333916bb1a8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>_filterList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1acae64dd95dd276804ed291e67579825b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>_isRowCreating</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a2930af5cc44409590103c64105004fb3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>_numberConditionDic</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a845b20bb56b9b73d58b4369de94bdd9d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>_objectPropertiesDic</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a1409e2e7b95cb3a3ff0cd0bc34ba3626" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>_objectPropertiesTypesDic</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a7bb2e194f275d2ae5585fb6742ed9b9d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>_prefilters</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a240d975aaffd280daedca818b54be574" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>_stringConditionDic</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a6f3ac533df03f4aa9b011e19c58eda3f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>_unionDic</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a26096d1a2c0b889f8e7417e1011059b4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>AddRowFilter</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a23df27bbbd6eac763092c1528a6540f9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>btnFilter</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a829a7e849fa5730838b3b8aada87072e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>btnFilter_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1afe96ffd8f4851a276ec652ce9012b59a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>CHK_FILTER_NAME</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1ae65487e24ce54bad41ab95bc60da3a2e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>CMB_CONDITION_NAME</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a389c5248934daffb29d3ea60b8d18df7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>CMB_FIELD_NAME</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1ab384286ca60304ab664ba52f0812ef4e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>CMB_UNION_NAME</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a1bde185b257bc810925b21fe380302a1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>cmbField_SelectedIndexChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a1a72b66cd290b395a91c74397422236a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>cmbUnion_SelectedIndexChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a50da2558b43c30e858182ba5e7a1fd68" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1af6a4e2cefb66722089b3fdbf59142b9e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>DATETIMEPICKER_FILTER_NAME</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a02f9f684c77b0ed2ba2aca58c0b87ec3" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1ac01814fbaa8e060543241291d0990ea0" prot="public" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>DynamicFilters</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1aed19d2364cd75895f8438241eec0a502" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>DynamicFilters_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a843326dc6546bfc394a951c5ec63cdff" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>DynamicFilters_Shown</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a7b0d4402fc028c3401ab569dc0ce150e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>FilterList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a33219be55e06f2165f02d7b44a25c69f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>GetChkRow</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1ab152ad0844808d24a8fdb97af34e7456" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>GetCmbRow</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1aef6a264b945299c010b0c0fccdbdb5b3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>GetFilters</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1ad38344218f0f5a30d745ba49fd49ca6e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>GetNullDateRow</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1afb44708fa77151ad38b476bea1394052" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>GetTxtRow</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a3fb309c2a83dbe6c5826c25007c5336f" prot="public" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>InitData</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1ab68a42444d61ecddb65af9f70be6b3b1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a82a602965089333366f78be1194d37fc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>InitializeFormStyles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1ad467b9d46f21fcc3e4d58a3f9c9225bd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>lblColumn1Header</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1af729056709ec284c9f3951b58407bc20" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>lblColumn2Header</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a1c244ca4cae311551150280c4f461343" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>lblColumn3Header</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a77345cbb70a1e694afd8b7ae1f4784f8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>lblColumn4Header</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a755edc67723debcb6ecf2a4dac4a0eda" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>LoadPreFilter</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a79375437814a922f57cabcc7d48bedf6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>RemoveRowsFilter</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a33190f8d6ec0a1b1c7c0d32cf9316661" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>SetCmbConditionSource</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1ae81dac3ee64acbc6df61af6b30460bc8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>tlpFilters</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1a393c288d1b0ca01c74fe8aafe20b7cbe" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>tlpFilters_CellPaint</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters_1aab97204a539846d2be6607e98c7d14cd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::DynamicFilters</scope><name>TXT_FILTER_NAME</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

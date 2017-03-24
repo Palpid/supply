@@ -259,24 +259,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="65">
+      <node id="81">
         <label>Form</label>
       </node>
-      <node id="64">
+      <node id="80">
         <label>HKSupply.Form1</label>
         <link refid="class_h_k_supply_1_1_form1"/>
-        <childnode refid="65" relation="public-inheritance">
+        <childnode refid="81" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="67">
+      <node id="83">
         <label>Form</label>
       </node>
-      <node id="66">
+      <node id="82">
         <label>HKSupply.Form1</label>
         <link refid="class_h_k_supply_1_1_form1"/>
-        <childnode refid="67" relation="public-inheritance">
+        <childnode refid="83" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

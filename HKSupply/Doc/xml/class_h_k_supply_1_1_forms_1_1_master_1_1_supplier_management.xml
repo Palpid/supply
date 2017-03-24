@@ -1,0 +1,1542 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Master::SupplierManagement</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+    <basecompoundref refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view" prot="public" virt="non-virtual">HKSupply.Forms.IActionsStackView</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a48fe107c4f02b16ff90a9a364fa62784" prot="private" static="no">
+        <name>eSupplierColumns</name>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a48fe107c4f02b16ff90a9a364fa62784ab9426500aac054f24e1431ab62538230" prot="private">
+          <name>IdVer</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a48fe107c4f02b16ff90a9a364fa62784adb21ef4cadde8f54f2721737845b6f48" prot="private">
+          <name>idSubVer</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a48fe107c4f02b16ff90a9a364fa62784aa3d5de3eac8bb00ae86fd1a1005f1500" prot="private">
+          <name>Timestamp</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a48fe107c4f02b16ff90a9a364fa62784a4bc987f13fed78b051d8e72249033a0f" prot="private">
+          <name>IdSupplier</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a48fe107c4f02b16ff90a9a364fa62784ac4c5bf17a02d551052f006002cf42a3c" prot="private">
+          <name>SupplierName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a48fe107c4f02b16ff90a9a364fa62784a4d3d769b812b6faa6b76e1a8abaece2d" prot="private">
+          <name>Active</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a48fe107c4f02b16ff90a9a364fa62784a2e8391d7b17d3d7fcf8377074cdc8b41" prot="private">
+          <name>VATNum</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a48fe107c4f02b16ff90a9a364fa62784a47e10f3f35c5ac1ee92867d68301aba5" prot="private">
+          <name>ShippingAddress</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a48fe107c4f02b16ff90a9a364fa62784a7fa63fd0a5388002f87f7796e4d725f7" prot="private">
+          <name>BillingAddress</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a48fe107c4f02b16ff90a9a364fa62784a2ba76cdda483cc8397b63a781f22cea4" prot="private">
+          <name>ContactName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a48fe107c4f02b16ff90a9a364fa62784a500af8ac099a855d1391d6e205bb2a97" prot="private">
+          <name>ContactPhone</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a48fe107c4f02b16ff90a9a364fa62784ace7a8d33307ce37e20b50401977a7f8e" prot="private">
+          <name>IdIncoterm</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a48fe107c4f02b16ff90a9a364fa62784a20a3d6f2db37019fbc47f07ebef192d1" prot="private">
+          <name>IdPaymentTerms</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a48fe107c4f02b16ff90a9a364fa62784a386c339d37e737a436499d423a77df0c" prot="private">
+          <name>Currency</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="22" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="21" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1adcbe13a24bb900e470db1dd777fec925" prot="private" static="no">
+        <name>eSupplierColumnsFilter</name>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1adcbe13a24bb900e470db1dd777fec925a4bc987f13fed78b051d8e72249033a0f" prot="private">
+          <name>IdSupplier</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1adcbe13a24bb900e470db1dd777fec925ac4c5bf17a02d551052f006002cf42a3c" prot="private">
+          <name>SupplierName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1adcbe13a24bb900e470db1dd777fec925a4d3d769b812b6faa6b76e1a8abaece2d" prot="private">
+          <name>Active</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1adcbe13a24bb900e470db1dd777fec925a2e8391d7b17d3d7fcf8377074cdc8b41" prot="private">
+          <name>VATNum</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="40" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="39" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aa0e38abef886f63f0ad0f2b6c03cfbf4" prot="private" static="no">
+        <name>eSupplierColumnsFilterType</name>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aa0e38abef886f63f0ad0f2b6c03cfbf4a9dffbf69ffba8bc38bc4e01abf4b1675" prot="private">
+          <name>Text</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aa0e38abef886f63f0ad0f2b6c03cfbf4a7ea0f1332ade5b23b34502a3bfe715a2" prot="private">
+          <name>CheckBox</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="48" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="47" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aedcc96dc8d860bf79538c53b2ee3285f" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; string, int &gt;</type>
+        <definition>Dictionary&lt;string, int&gt; HKSupply.Forms.Master.SupplierManagement._filterDic</definition>
+        <argsstring></argsstring>
+        <name>_filterDic</name>
+        <initializer>= new Dictionary&lt;string, int&gt;() 
+        { 
+            {eSupplierColumnsFilter.IdSupplier.ToString(), (int)eSupplierColumnsFilterType.Text },
+            {eSupplierColumnsFilter.SupplierName.ToString(), (int)eSupplierColumnsFilterType.Text },
+            {eSupplierColumnsFilter.Active.ToString(), (int)eSupplierColumnsFilterType.CheckBox },
+            {eSupplierColumnsFilter.VATNum.ToString(), (int)eSupplierColumnsFilterType.Text }
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="53" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aadc2862e90cc0a4ef89b5667c42eddf7" prot="private" static="no" mutable="no">
+        <type><ref refid="class_custom_controls_1_1_stack_view" kindref="compound">CustomControls.StackView</ref></type>
+        <definition>CustomControls.StackView HKSupply.Forms.Master.SupplierManagement.actionsStackView</definition>
+        <argsstring></argsstring>
+        <name>actionsStackView</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="64" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ab896e823cba5882ffc577134d5d91b81" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supplier" kindref="compound">Supplier</ref></type>
+        <definition>Supplier HKSupply.Forms.Master.SupplierManagement._supplierUpdate</definition>
+        <argsstring></argsstring>
+        <name>_supplierUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="66" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a087e239dd7313668634c78473cdd8d70" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supplier" kindref="compound">Supplier</ref></type>
+        <definition>Supplier HKSupply.Forms.Master.SupplierManagement._supplierOriginal</definition>
+        <argsstring></argsstring>
+        <name>_supplierOriginal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="67" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a2c5d605219c5724262ccdce4efb609e7" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier" kindref="compound">Supplier</ref> &gt;</type>
+        <definition>List&lt;Supplier&gt; HKSupply.Forms.Master.SupplierManagement._suppliersList</definition>
+        <argsstring></argsstring>
+        <name>_suppliersList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="69" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a7cf0eed0edde0302c8ffc490e23e81ad" prot="private" static="no" mutable="no">
+        <type>string []</type>
+        <definition>string [] HKSupply.Forms.Master.SupplierManagement._nonEditingFields</definition>
+        <argsstring></argsstring>
+        <name>_nonEditingFields</name>
+        <initializer>= { &quot;txtIdSupplier&quot;, &quot;txtIdVersion&quot;, &quot;txtIdSubversion&quot;, &quot;txtTimestamp&quot; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="71" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a0f64947e7e7098e1f231a49598fe63c8" prot="private" static="no" mutable="no">
+        <type>string []</type>
+        <definition>string [] HKSupply.Forms.Master.SupplierManagement._nonCreatingFields</definition>
+        <argsstring></argsstring>
+        <name>_nonCreatingFields</name>
+        <initializer>= { &quot;txtIdVersion&quot;, &quot;txtIdSubversion&quot;, &quot;txtTimestamp&quot; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="72" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a0883b6b553530fd9cbc161f124fbbb24" prot="private" static="no" mutable="no">
+        <type>int []</type>
+        <definition>int [] HKSupply.Forms.Master.SupplierManagement._nonCreatingFieldsRows</definition>
+        <argsstring></argsstring>
+        <name>_nonCreatingFieldsRows</name>
+        <initializer>= { 1, 2, 3 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="73" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a51504e48278619f16f8597163b7ea1b0" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.SupplierManagement._sortDescending</definition>
+        <argsstring></argsstring>
+        <name>_sortDescending</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="75" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a6d2b17916c7af2bea3cc6affc8852975" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Master.SupplierManagement.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aa34b6a04f7c11745e1a85c18477c1d10" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TabControl</type>
+        <definition>System.Windows.Forms.TabControl HKSupply.Forms.Master.SupplierManagement.tcGeneral</definition>
+        <argsstring></argsstring>
+        <name>tcGeneral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="480" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="480" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a21c70e783cc2884010bbed39725b2374" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TabPage</type>
+        <definition>System.Windows.Forms.TabPage HKSupply.Forms.Master.SupplierManagement.tpGrid</definition>
+        <argsstring></argsstring>
+        <name>tpGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="481" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="481" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a385649ac170165e08a677d279face811" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HKSupply.Forms.Master.SupplierManagement.btnLoad</definition>
+        <argsstring></argsstring>
+        <name>btnLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="482" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="482" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a8ca438b683f923b330671d2156743162" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridView</type>
+        <definition>System.Windows.Forms.DataGridView HKSupply.Forms.Master.SupplierManagement.grdSuppliers</definition>
+        <argsstring></argsstring>
+        <name>grdSuppliers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="483" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="483" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a064249668950ebfc3483d4b015c4cf0f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TabPage</type>
+        <definition>System.Windows.Forms.TabPage HKSupply.Forms.Master.SupplierManagement.tpForm</definition>
+        <argsstring></argsstring>
+        <name>tpForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="484" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="484" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a5233d12d89e8d69429577b79f406bb69" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HKSupply.Forms.Master.SupplierManagement.btnNewVersion</definition>
+        <argsstring></argsstring>
+        <name>btnNewVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="485" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="485" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aca1e8996458cb865b0c20211eef2b6bd" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TableLayoutPanel</type>
+        <definition>System.Windows.Forms.TableLayoutPanel HKSupply.Forms.Master.SupplierManagement.tlpForm</definition>
+        <argsstring></argsstring>
+        <name>tlpForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="486" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="486" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a982573a7c64785e69a0248f94b7bb1d3" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.SupplierManagement.txtPaymentTerms</definition>
+        <argsstring></argsstring>
+        <name>txtPaymentTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="487" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="487" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aa2592d06e10519c4cff69c1c93087a62" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.SupplierManagement.txtIntercom</definition>
+        <argsstring></argsstring>
+        <name>txtIntercom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="488" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="488" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a0c96fca36be36e960fee77819b7f3664" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.SupplierManagement.txtContactPhone</definition>
+        <argsstring></argsstring>
+        <name>txtContactPhone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="489" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="489" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aa178fdc95b70eba4756b2cd3ad9b6278" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.SupplierManagement.txtContactName</definition>
+        <argsstring></argsstring>
+        <name>txtContactName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="490" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="490" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ad01a81cf04ec4cd06c8c7c089ec08fc5" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.SupplierManagement.txtBillingAddress</definition>
+        <argsstring></argsstring>
+        <name>txtBillingAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="491" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="491" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a4fcd0c59ebe4a222606be3cfdd3d079c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.SupplierManagement.txtShippingAddress</definition>
+        <argsstring></argsstring>
+        <name>txtShippingAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="492" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="492" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a09b0f3d630388d31a0fe6e1894b11b0d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.SupplierManagement.txtVatNumber</definition>
+        <argsstring></argsstring>
+        <name>txtVatNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="493" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="493" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ada952611dcf562faaaa7f1ad750aaab5" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.SupplierManagement.txtName</definition>
+        <argsstring></argsstring>
+        <name>txtName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="494" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="494" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1abbe8e8615daa1ccb68638ac74d7a5f76" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.SupplierManagement.txtTimestamp</definition>
+        <argsstring></argsstring>
+        <name>txtTimestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="495" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="495" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a0ee84b87fcea75a112ae333315cc8f85" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.SupplierManagement.txtIdSubversion</definition>
+        <argsstring></argsstring>
+        <name>txtIdSubversion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="496" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="496" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a096553529698818e81ed9154f5cde22c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.SupplierManagement.txtCurreny</definition>
+        <argsstring></argsstring>
+        <name>txtCurreny</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="497" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="497" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a0cc111e4c042a5868e9a22fe304d4341" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.SupplierManagement.label14</definition>
+        <argsstring></argsstring>
+        <name>label14</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="498" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="498" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a3adf9099c0915d7d00d6b0562972ebc0" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.SupplierManagement.label13</definition>
+        <argsstring></argsstring>
+        <name>label13</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="499" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="499" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ab32f071a40ff587569a513fde8e7316c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.SupplierManagement.label12</definition>
+        <argsstring></argsstring>
+        <name>label12</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="500" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="500" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a0bfc2595b47388f27a342e1d5f0ec9a5" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.SupplierManagement.label11</definition>
+        <argsstring></argsstring>
+        <name>label11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="501" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="501" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ae406ec2f2673014b300d3d672ab13cb9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.SupplierManagement.label9</definition>
+        <argsstring></argsstring>
+        <name>label9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="502" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="502" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1add9c66d2527bd878a3e51ed4de5ea896" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.SupplierManagement.label8</definition>
+        <argsstring></argsstring>
+        <name>label8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="503" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="503" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1afd8be76792445b406c64666e80354762" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.SupplierManagement.label7</definition>
+        <argsstring></argsstring>
+        <name>label7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="504" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="504" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a5dc1da6a4a6526719329002520cc3deb" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.SupplierManagement.label6</definition>
+        <argsstring></argsstring>
+        <name>label6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="505" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="505" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a87082ffd1ea1fdb4558a144fa17aece9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.SupplierManagement.label5</definition>
+        <argsstring></argsstring>
+        <name>label5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="506" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="506" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aa2ad15b53384185fd35460cd693751f9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.SupplierManagement.label4</definition>
+        <argsstring></argsstring>
+        <name>label4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="507" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="507" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a6dc427929dcbeae0e1813ed4a63e7e64" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.SupplierManagement.txtIdVersion</definition>
+        <argsstring></argsstring>
+        <name>txtIdVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="508" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="508" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a7ef38821a65a0b691a0df8e0a3b9917e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.SupplierManagement.label1</definition>
+        <argsstring></argsstring>
+        <name>label1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="509" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="509" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ac7900209d5139f911289c365724683da" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.SupplierManagement.label2</definition>
+        <argsstring></argsstring>
+        <name>label2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="510" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="510" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a86e619075668fc4982f7d115e39cf64d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.SupplierManagement.txtIdSupplier</definition>
+        <argsstring></argsstring>
+        <name>txtIdSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="511" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="511" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a26a1dce4606430b51aca3f2311e99140" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.SupplierManagement.label3</definition>
+        <argsstring></argsstring>
+        <name>label3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="512" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="512" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a022b7a128ac042b6400a7bbba2413817" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.Forms.Master.SupplierManagement.label10</definition>
+        <argsstring></argsstring>
+        <name>label10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="513" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="513" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1acae62469ce21441b7b90fc422a227123" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.CheckBox</type>
+        <definition>System.Windows.Forms.CheckBox HKSupply.Forms.Master.SupplierManagement.chkActive</definition>
+        <argsstring></argsstring>
+        <name>chkActive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="514" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="514" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a6e568dfb4b24ab401afc8cae6aa0fc92" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox HKSupply.Forms.Master.SupplierManagement.gbFilter</definition>
+        <argsstring></argsstring>
+        <name>gbFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="515" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="515" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a20cd705d7561d80a5877ebd565adad16" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.Forms.Master.SupplierManagement.txtFilter</definition>
+        <argsstring></argsstring>
+        <name>txtFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="516" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="516" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a2b6080dd5b7be341da3be9fcee5b88cf" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ComboBox</type>
+        <definition>System.Windows.Forms.ComboBox HKSupply.Forms.Master.SupplierManagement.cmbColFilter</definition>
+        <argsstring></argsstring>
+        <name>cmbColFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="517" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="517" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a0e8abbe739eaa0892d35b887c8f57783" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.CheckBox</type>
+        <definition>System.Windows.Forms.CheckBox HKSupply.Forms.Master.SupplierManagement.chkFilter</definition>
+        <argsstring></argsstring>
+        <name>chkFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="518" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="518" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a582f3490ba318348b038954edbbe35fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Master.SupplierManagement.SupplierManagement</definition>
+        <argsstring>()</argsstring>
+        <name>SupplierManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="80" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="80" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aaf36a1454800bebf5643ef97aef0b392" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.actionsStackView_EditButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_EditButtonClick</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1ae8deb0cdeaa1b41f48e9a497acce9334">actionsStackView_EditButtonClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="88" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="88" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ae7e48c41376deac783ad8ee182c585ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.actionsStackView_NewButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_NewButtonClick</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1a9a3873c8695cb595fe413b51be87210d">actionsStackView_NewButtonClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="109" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="109" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a089d87f1eef008c0313ff970b173dff3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.actionsStackView_SaveButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_SaveButtonClick</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1a31fb0c34c49bb46661a612f1916f7c2e">actionsStackView_SaveButtonClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="121" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="121" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a0c38d36d2bf825744763acecfa4b7f1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.actionsStackView_CancelButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_CancelButtonClick</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1aa9fb7f15cdbc1fb6fdc19b522327a34a">actionsStackView_CancelButtonClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="171" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="171" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a1f350e08a1376078c3b0a707b67545d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.ConfigureActionsStackView</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackView</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1a1a01439762b8cc84888acc2c7b7230d2">ConfigureActionsStackView</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="195" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="195" bodyend="214"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a60b2cc2bdb7fbd4c87303dda10a0bb40" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.SupplierManagement_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SupplierManagement_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="219" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="219" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a601ab29fecb49ea3ceff0116c5b09976" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.btnLoad_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnLoad_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="236" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="236" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a369e240b06c212100367e69ab009cfc4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.btnNewVersion_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnNewVersion_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="253" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="253" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a66e26cd290d7a5d519adfeed12e55d04" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.cmbColFilter_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmbColFilter_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="281" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="281" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a476ad61c077223bcf2c9b3a16e460fc7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.grdSuppliers_CellDoubleClick</definition>
+        <argsstring>(Object sender, DataGridViewCellEventArgs e)</argsstring>
+        <name>grdSuppliers_CellDoubleClick</name>
+        <param>
+          <type>Object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataGridViewCellEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="302" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="302" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aec5a80c17025fd9e8212f97f8afde66f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.grdSuppliers_CellClick</definition>
+        <argsstring>(object sender, DataGridViewCellEventArgs e)</argsstring>
+        <name>grdSuppliers_CellClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataGridViewCellEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="315" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="315" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a7f1051917e5ef45437e751fd5e7ac881" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.ResetSupplierUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>ResetSupplierUpdate</name>
+        <briefdescription>
+<para>Resetear el objeto supplier que usamos para la actualización </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="338" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="338" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a4cbe5c4b6e5171842f8a0a861d01ad82" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.SetFormBinding</definition>
+        <argsstring>()</argsstring>
+        <name>SetFormBinding</name>
+        <briefdescription>
+<para>Crear los bindings de los campos del formulario </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="357" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="357" bodyend="386"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a3cc08960cb15dda67cc6c110251ed42e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.LoadComboFilters</definition>
+        <argsstring>()</argsstring>
+        <name>LoadComboFilters</name>
+        <briefdescription>
+<para>Cargar el combo con los campos que se puede filtrar </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="391" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="391" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a00cc2a2308d435c234e0ff92655b830d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.ShowFilterField</definition>
+        <argsstring>(eSupplierColumnsFilterType type)</argsstring>
+        <name>ShowFilterField</name>
+        <param>
+          <type>eSupplierColumnsFilterType</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Mostrar el campo de filtro en función del tipo del campo (text, boolen...) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="409" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="409" bodyend="432"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a36c61fb21a1ae3a02ee472b0c0e2c5e0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.LoadSuppliersList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadSuppliersList</name>
+        <briefdescription>
+<para>cargar la colección de Suppliers del sistema </para>        </briefdescription>
+        <detaileddescription>
+<para>Filtramos si es necesario</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="438" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="438" bodyend="471"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1af7f5764f228858a3181a42622f8ce6ac" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.LoadSupplierSortedList</definition>
+        <argsstring>(eSupplierColumns sortedColumn)</argsstring>
+        <name>LoadSupplierSortedList</name>
+        <param>
+          <type>eSupplierColumns</type>
+          <declname>sortedColumn</declname>
+        </param>
+        <briefdescription>
+<para>Ordenar el grid según la columna </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sortedColumn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Columna por la que se quiere ordenar</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para><para>Alterna entre el orden ascendente y descendente. OK, no es muy correcto porque se controla con una sola variable la ordenación (ascendente o descendente) de todas las columnas, pero así es más fácil y en el peor de los casos el usuario pulsará dos veces sobre la misma columna para tener el orden que quiere. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="483" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="483" bodyend="503"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a8aee4774152deca252e94b4f1db7de44" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.LoadSupplierForm</definition>
+        <argsstring>(string idSupplier)</argsstring>
+        <name>LoadSupplierForm</name>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <briefdescription>
+<para>Cargar los datos de un suppliers en concreto </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idSupplier</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="509" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="509" bodyend="525"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a8e2d16a89c6460e74a2ac24512fcb0cd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.SupplierManagement.UpdateSupplier</definition>
+        <argsstring>(bool newVersion=false)</argsstring>
+        <name>UpdateSupplier</name>
+        <param>
+          <type>bool</type>
+          <declname>newVersion</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Actualizar los datos de un supplier </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newVersion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Si es una versión nueva o una actualización de la existente</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="532" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="532" bodyend="543"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a68d5c742c544bc1a6eaab744a6c2c1c3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.SupplierManagement.CreateSupplier</definition>
+        <argsstring>()</argsstring>
+        <name>CreateSupplier</name>
+        <briefdescription>
+<para>Crear un nuevo Supplier </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="549" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="549" bodyend="560"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aefa7f8472b615e1ad4005320b9dc8255" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.MoveGridToSupplier</definition>
+        <argsstring>(string idSupplier)</argsstring>
+        <name>MoveGridToSupplier</name>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <briefdescription>
+<para>Mover la celda activa a la de un supplier en concreto </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idSupplier</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="566" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="566" bodyend="584"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a3af339c300895c0fb7feef960526e81f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.ConfigureActionsStackViewEditing</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackViewEditing</name>
+        <briefdescription>
+<para>Acciones cuando pulsamos el botón de editar </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="589" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="589" bodyend="603"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ac358f50a25af15f1407cc72e6f17c1e5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.ConfigureActionsStackViewCreating</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackViewCreating</name>
+        <briefdescription>
+<para>Acciones cuando pulsamos el botón de nuevo </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="609" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="609" bodyend="631"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1abdf32454b2a3d976b86e4dfcc6a24fb4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.SetEditingFieldsEnabled</definition>
+        <argsstring>()</argsstring>
+        <name>SetEditingFieldsEnabled</name>
+        <briefdescription>
+<para>Poner como editables los campos para el modo de edición </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="636" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="636" bodyend="660"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aa1e916f6cfea9501ec9718e263de0393" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.SetCreatingFieldsEnabled</definition>
+        <argsstring>()</argsstring>
+        <name>SetCreatingFieldsEnabled</name>
+        <briefdescription>
+<para>Poner como editables los campos para el modo de creación </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="665" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="665" bodyend="689"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a17e3d043bb0ed2ccca2f5f4c7dd16d38" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.ActionsAfterCU</definition>
+        <argsstring>()</argsstring>
+        <name>ActionsAfterCU</name>
+        <briefdescription>
+<para>Acciones después de crear o updatar </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="694" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="694" bodyend="718"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aa459a75f998b8a221ea4dc01da606793" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.SupplierManagement.IsValidSupplier</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="722" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="722" bodyend="737"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ae70d57e5e4abec11a15a1b3d4ebd90ef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.SupplierManagement.IsValidModifiedSupplier</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidModifiedSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="743" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="743" bodyend="767"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ac0706c44f9f85eabeadd62b4c705513c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.SupplierManagement.IsValidCreatedSupplier</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidCreatedSupplier</name>
+        <briefdescription>
+<para>TODO </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="773" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="773" bodyend="796"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a370c1a8ab82e211dcb01a1e0c55c2862" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierManagement.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="29" bodyend="476"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a0f812e9b8d22eda4e3ad8e6a9ad6c553" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.SupplierManagement.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierManagement.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="294">
+        <label>HKSupply.Forms.Master.SupplierManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management"/>
+        <childnode refid="295" relation="public-inheritance">
+        </childnode>
+        <childnode refid="296" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="295">
+        <label>Form</label>
+      </node>
+      <node id="296">
+        <label>IActionsStackView</label>
+        <link refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="297">
+        <label>HKSupply.Forms.Master.SupplierManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management"/>
+        <childnode refid="298" relation="public-inheritance">
+        </childnode>
+        <childnode refid="299" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="298">
+        <label>Form</label>
+      </node>
+      <node id="299">
+        <label>IActionsStackView</label>
+        <link refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view"/>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Master/SupplierManagement.cs" line="18" column="1" bodyfile="HKSupply/Forms/Master/SupplierManagement.cs" bodystart="17" bodyend="800"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aedcc96dc8d860bf79538c53b2ee3285f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>_filterDic</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a0f64947e7e7098e1f231a49598fe63c8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>_nonCreatingFields</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a0883b6b553530fd9cbc161f124fbbb24" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>_nonCreatingFieldsRows</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a7cf0eed0edde0302c8ffc490e23e81ad" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>_nonEditingFields</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a51504e48278619f16f8597163b7ea1b0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>_sortDescending</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a087e239dd7313668634c78473cdd8d70" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>_supplierOriginal</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a2c5d605219c5724262ccdce4efb609e7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>_suppliersList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ab896e823cba5882ffc577134d5d91b81" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>_supplierUpdate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a17e3d043bb0ed2ccca2f5f4c7dd16d38" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>ActionsAfterCU</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aadc2862e90cc0a4ef89b5667c42eddf7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>actionsStackView</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a0c38d36d2bf825744763acecfa4b7f1f" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>actionsStackView_CancelButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aaf36a1454800bebf5643ef97aef0b392" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>actionsStackView_EditButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ae7e48c41376deac783ad8ee182c585ff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>actionsStackView_NewButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a089d87f1eef008c0313ff970b173dff3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>actionsStackView_SaveButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a385649ac170165e08a677d279face811" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>btnLoad</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a601ab29fecb49ea3ceff0116c5b09976" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>btnLoad_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a5233d12d89e8d69429577b79f406bb69" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>btnNewVersion</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a369e240b06c212100367e69ab009cfc4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>btnNewVersion_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1acae62469ce21441b7b90fc422a227123" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>chkActive</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a0e8abbe739eaa0892d35b887c8f57783" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>chkFilter</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a2b6080dd5b7be341da3be9fcee5b88cf" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>cmbColFilter</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a66e26cd290d7a5d519adfeed12e55d04" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>cmbColFilter_SelectedIndexChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a6d2b17916c7af2bea3cc6affc8852975" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a1f350e08a1376078c3b0a707b67545d5" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>ConfigureActionsStackView</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ac358f50a25af15f1407cc72e6f17c1e5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>ConfigureActionsStackViewCreating</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a3af339c300895c0fb7feef960526e81f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>ConfigureActionsStackViewEditing</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a68d5c742c544bc1a6eaab744a6c2c1c3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>CreateSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a0f812e9b8d22eda4e3ad8e6a9ad6c553" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a48fe107c4f02b16ff90a9a364fa62784" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>eSupplierColumns</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1adcbe13a24bb900e470db1dd777fec925" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>eSupplierColumnsFilter</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aa0e38abef886f63f0ad0f2b6c03cfbf4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>eSupplierColumnsFilterType</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a6e568dfb4b24ab401afc8cae6aa0fc92" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>gbFilter</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a8ca438b683f923b330671d2156743162" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>grdSuppliers</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aec5a80c17025fd9e8212f97f8afde66f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>grdSuppliers_CellClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a476ad61c077223bcf2c9b3a16e460fc7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>grdSuppliers_CellDoubleClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a370c1a8ab82e211dcb01a1e0c55c2862" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ac0706c44f9f85eabeadd62b4c705513c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>IsValidCreatedSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ae70d57e5e4abec11a15a1b3d4ebd90ef" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>IsValidModifiedSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aa459a75f998b8a221ea4dc01da606793" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>IsValidSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a7ef38821a65a0b691a0df8e0a3b9917e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>label1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a022b7a128ac042b6400a7bbba2413817" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>label10</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a0bfc2595b47388f27a342e1d5f0ec9a5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>label11</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ab32f071a40ff587569a513fde8e7316c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>label12</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a3adf9099c0915d7d00d6b0562972ebc0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>label13</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a0cc111e4c042a5868e9a22fe304d4341" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>label14</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ac7900209d5139f911289c365724683da" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>label2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a26a1dce4606430b51aca3f2311e99140" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>label3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aa2ad15b53384185fd35460cd693751f9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>label4</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a87082ffd1ea1fdb4558a144fa17aece9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>label5</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a5dc1da6a4a6526719329002520cc3deb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>label6</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1afd8be76792445b406c64666e80354762" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>label7</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1add9c66d2527bd878a3e51ed4de5ea896" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>label8</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ae406ec2f2673014b300d3d672ab13cb9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>label9</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a3cc08960cb15dda67cc6c110251ed42e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>LoadComboFilters</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a8aee4774152deca252e94b4f1db7de44" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>LoadSupplierForm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a36c61fb21a1ae3a02ee472b0c0e2c5e0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>LoadSuppliersList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1af7f5764f228858a3181a42622f8ce6ac" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>LoadSupplierSortedList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aefa7f8472b615e1ad4005320b9dc8255" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>MoveGridToSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a7f1051917e5ef45437e751fd5e7ac881" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>ResetSupplierUpdate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aa1e916f6cfea9501ec9718e263de0393" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>SetCreatingFieldsEnabled</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1abdf32454b2a3d976b86e4dfcc6a24fb4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>SetEditingFieldsEnabled</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a4cbe5c4b6e5171842f8a0a861d01ad82" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>SetFormBinding</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a00cc2a2308d435c234e0ff92655b830d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>ShowFilterField</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a582f3490ba318348b038954edbbe35fc" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>SupplierManagement</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a60b2cc2bdb7fbd4c87303dda10a0bb40" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>SupplierManagement_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aa34b6a04f7c11745e1a85c18477c1d10" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>tcGeneral</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aca1e8996458cb865b0c20211eef2b6bd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>tlpForm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a064249668950ebfc3483d4b015c4cf0f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>tpForm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a21c70e783cc2884010bbed39725b2374" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>tpGrid</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ad01a81cf04ec4cd06c8c7c089ec08fc5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>txtBillingAddress</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aa178fdc95b70eba4756b2cd3ad9b6278" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>txtContactName</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a0c96fca36be36e960fee77819b7f3664" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>txtContactPhone</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a096553529698818e81ed9154f5cde22c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>txtCurreny</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a20cd705d7561d80a5877ebd565adad16" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>txtFilter</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a0ee84b87fcea75a112ae333315cc8f85" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>txtIdSubversion</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a86e619075668fc4982f7d115e39cf64d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>txtIdSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a6dc427929dcbeae0e1813ed4a63e7e64" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>txtIdVersion</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aa2592d06e10519c4cff69c1c93087a62" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>txtIntercom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ada952611dcf562faaaa7f1ad750aaab5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>txtName</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a982573a7c64785e69a0248f94b7bb1d3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>txtPaymentTerms</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a4fcd0c59ebe4a222606be3cfdd3d079c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>txtShippingAddress</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1abbe8e8615daa1ccb68638ac74d7a5f76" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>txtTimestamp</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a09b0f3d630388d31a0fe6e1894b11b0d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>txtVatNumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a8e2d16a89c6460e74a2ac24512fcb0cd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierManagement</scope><name>UpdateSupplier</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -6,6 +6,8 @@
     <innerdir refid="dir_0f8831170ef4143ff94c202b77f8dad2">CustomControls/Properties</innerdir>
     <innerfile refid="_custom_tool_strip_menu_item_8cs">CustomToolStripMenuItem.cs</innerfile>
     <innerfile refid="_custom_tool_strip_menu_item_8_designer_8cs">CustomToolStripMenuItem.Designer.cs</innerfile>
+    <innerfile refid="_nullable_date_time_picker_8cs">NullableDateTimePicker.cs</innerfile>
+    <innerfile refid="_nullable_date_time_picker_8_designer_8cs">NullableDateTimePicker.Designer.cs</innerfile>
     <innerfile refid="_stack_view_8cs">StackView.cs</innerfile>
     <innerfile refid="_stack_view_8_designer_8cs">StackView.Designer.cs</innerfile>
     <briefdescription>

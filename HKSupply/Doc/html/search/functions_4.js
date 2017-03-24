@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['newfunctionality',['NewFunctionality',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality.html#a43852b181d280c78c7c00b9d11c6d6c4',1,'HKSupply::Services::Implementations::EFFunctionality']]],
-  ['newfunctionalityrole',['NewFunctionalityRole',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role.html#a07805a2c9809f3771b7ae34deb15b94b',1,'HKSupply::Services::Implementations::EFFunctionalityRole']]],
-  ['newrole',['NewRole',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role.html#a549317ad8c8fb3353382a8cd36fa1b22',1,'HKSupply::Services::Implementations::EFRole']]],
-  ['newuser',['NewUser',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user.html#a12abd287dc0491eed772d88b17fc9618',1,'HKSupply::Services::Implementations::EFUser']]]
+  ['modifyfunctionality',['ModifyFunctionality',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality.html#ae4f83037cd6ef526f55de1a2ba442cc6',1,'HKSupply::Services::Implementations::EFFunctionality']]],
+  ['modifyfunctionalityrole',['ModifyFunctionalityRole',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role.html#a69bbb7f8593ea4e0e70ce96625cf80e4',1,'HKSupply::Services::Implementations::EFFunctionalityRole']]]
 ];

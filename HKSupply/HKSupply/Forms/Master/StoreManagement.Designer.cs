@@ -37,6 +37,7 @@
             this.grdStores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdStores.BackgroundColor = System.Drawing.Color.White;
             this.grdStores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdStores.Location = new System.Drawing.Point(16, 62);
             this.grdStores.Margin = new System.Windows.Forms.Padding(4);

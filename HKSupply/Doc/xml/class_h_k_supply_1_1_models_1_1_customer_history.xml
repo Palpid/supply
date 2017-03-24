@@ -3,11 +3,11 @@
   <compounddef id="class_h_k_supply_1_1_models_1_1_customer_history" kind="class" language="C#" prot="public">
     <compoundname>HKSupply::Models::CustomerHistory</compoundname>
       <sectiondef kind="property">
-      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_history_1a3b2a2930ccd291e381383ffe21fc32ae" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_history_1adc9862f74bd7e4097520ab8e42162f52" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>int</type>
-        <definition>int HKSupply.Models.CustomerHistory.idVer</definition>
+        <definition>int HKSupply.Models.CustomerHistory.IdVer</definition>
         <argsstring></argsstring>
-        <name>idVer</name>
+        <name>IdVer</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -16,11 +16,11 @@
         </inbodydescription>
         <location file="HKSupply/Models/CustomerHistory.cs" line="16" column="1" bodyfile="HKSupply/Models/CustomerHistory.cs" bodystart="16" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_history_1a1ba896f87c699a567c00d94f103de757" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_history_1a6c531db8c25e1d19fef8d57f448f2c89" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>int</type>
-        <definition>int HKSupply.Models.CustomerHistory.idSubVer</definition>
+        <definition>int HKSupply.Models.CustomerHistory.IdSubVer</definition>
         <argsstring></argsstring>
-        <name>idSubVer</name>
+        <name>IdSubVer</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -94,11 +94,11 @@
         </inbodydescription>
         <location file="HKSupply/Models/CustomerHistory.cs" line="34" column="1" bodyfile="HKSupply/Models/CustomerHistory.cs" bodystart="34" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_history_1a070235e24d0fec344a2a62a2ea07fc4a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_history_1a3ea941a1239344f09b77ed4bc7ecd972" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
-        <definition>string HKSupply.Models.CustomerHistory.ShipingAddress</definition>
+        <definition>string HKSupply.Models.CustomerHistory.ShippingAddress</definition>
         <argsstring></argsstring>
-        <name>ShipingAddress</name>
+        <name>ShippingAddress</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -146,11 +146,11 @@
         </inbodydescription>
         <location file="HKSupply/Models/CustomerHistory.cs" line="46" column="1" bodyfile="HKSupply/Models/CustomerHistory.cs" bodystart="46" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_history_1a6b809f3d0b5fe9d8190ae0da6eec755d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_history_1ad433272caf547b443cf40c597e8cb15f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>int</type>
-        <definition>int HKSupply.Models.CustomerHistory.idIncoterm</definition>
+        <definition>int HKSupply.Models.CustomerHistory.IdIncoterm</definition>
         <argsstring></argsstring>
-        <name>idIncoterm</name>
+        <name>IdIncoterm</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -159,11 +159,11 @@
         </inbodydescription>
         <location file="HKSupply/Models/CustomerHistory.cs" line="49" column="1" bodyfile="HKSupply/Models/CustomerHistory.cs" bodystart="49" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_history_1a270736531e1daea68584ede06d30ae9d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_history_1a01b1ba2b3b0301c42bd12591ebc17646" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>int</type>
-        <definition>int HKSupply.Models.CustomerHistory.idPaymentTerms</definition>
+        <definition>int HKSupply.Models.CustomerHistory.IdPaymentTerms</definition>
         <argsstring></argsstring>
-        <name>idPaymentTerms</name>
+        <name>IdPaymentTerms</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -252,12 +252,12 @@
       <member refid="class_h_k_supply_1_1_models_1_1_customer_history_1a7b1d5ad2746e1733fecebb4744187e22" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerHistory</scope><name>Equals</name></member>
       <member refid="class_h_k_supply_1_1_models_1_1_customer_history_1a9ce1510ea0fc18dfb2797f758fbcb88e" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerHistory</scope><name>GetHashCode</name></member>
       <member refid="class_h_k_supply_1_1_models_1_1_customer_history_1a1f546896f5080cdee0652f053600f051" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerHistory</scope><name>idCustomer</name></member>
-      <member refid="class_h_k_supply_1_1_models_1_1_customer_history_1a6b809f3d0b5fe9d8190ae0da6eec755d" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerHistory</scope><name>idIncoterm</name></member>
-      <member refid="class_h_k_supply_1_1_models_1_1_customer_history_1a270736531e1daea68584ede06d30ae9d" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerHistory</scope><name>idPaymentTerms</name></member>
-      <member refid="class_h_k_supply_1_1_models_1_1_customer_history_1a1ba896f87c699a567c00d94f103de757" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerHistory</scope><name>idSubVer</name></member>
-      <member refid="class_h_k_supply_1_1_models_1_1_customer_history_1a3b2a2930ccd291e381383ffe21fc32ae" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerHistory</scope><name>idVer</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_history_1ad433272caf547b443cf40c597e8cb15f" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerHistory</scope><name>IdIncoterm</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_history_1a01b1ba2b3b0301c42bd12591ebc17646" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerHistory</scope><name>IdPaymentTerms</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_history_1a6c531db8c25e1d19fef8d57f448f2c89" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerHistory</scope><name>IdSubVer</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_history_1adc9862f74bd7e4097520ab8e42162f52" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerHistory</scope><name>IdVer</name></member>
       <member refid="class_h_k_supply_1_1_models_1_1_customer_history_1a1d54538a20700d9fd1b68cf979830fad" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerHistory</scope><name>operator CustomerHistory</name></member>
-      <member refid="class_h_k_supply_1_1_models_1_1_customer_history_1a070235e24d0fec344a2a62a2ea07fc4a" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerHistory</scope><name>ShipingAddress</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_history_1a3ea941a1239344f09b77ed4bc7ecd972" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerHistory</scope><name>ShippingAddress</name></member>
       <member refid="class_h_k_supply_1_1_models_1_1_customer_history_1a58e5e7fcc5efb1ae4b1883870e766007" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerHistory</scope><name>Timestamp</name></member>
       <member refid="class_h_k_supply_1_1_models_1_1_customer_history_1a800f04c7eb0959c9c47028c47a3f18c5" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerHistory</scope><name>VATNum</name></member>
     </listofallmembers>

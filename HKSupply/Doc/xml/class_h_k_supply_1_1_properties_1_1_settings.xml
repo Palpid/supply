@@ -39,22 +39,22 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="193">
+      <node id="259">
         <label>global::SystemConfiguration::ApplicationSettingsBase</label>
       </node>
-      <node id="192">
+      <node id="258">
         <label>HKSupply.Properties.Settings</label>
-        <childnode refid="193" relation="public-inheritance">
+        <childnode refid="259" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="195">
+      <node id="261">
         <label>global::SystemConfiguration::ApplicationSettingsBase</label>
       </node>
-      <node id="194">
+      <node id="260">
         <label>HKSupply.Properties.Settings</label>
-        <childnode refid="195" relation="public-inheritance">
+        <childnode refid="261" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

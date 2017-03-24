@@ -4,7 +4,6 @@
     <compoundname>AssemblyInfo.cs</compoundname>
     <innernamespace refid="namespace_system_1_1_reflection">System::Reflection</innernamespace>
     <innernamespace refid="namespace_system_1_1_runtime_1_1_compiler_services">System::Runtime::CompilerServices</innernamespace>
-    <innernamespace refid="namespace_system_1_1_runtime_1_1_interop_services">System::Runtime::InteropServices</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

@@ -5,7 +5,10 @@
     <innerfile refid="_i_customer_8cs">ICustomer.cs</innerfile>
     <innerfile refid="_i_functionality_8cs">IFunctionality.cs</innerfile>
     <innerfile refid="_i_functionality_role_8cs">IFunctionalityRole.cs</innerfile>
+    <innerfile refid="_i_item_8cs">IItem.cs</innerfile>
     <innerfile refid="_i_role_8cs">IRole.cs</innerfile>
+    <innerfile refid="_i_store_8cs">IStore.cs</innerfile>
+    <innerfile refid="_i_supplier_8cs">ISupplier.cs</innerfile>
     <innerfile refid="_i_user_8cs">IUser.cs</innerfile>
     <briefdescription>
     </briefdescription>

@@ -111,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/RoleManagement.Designer.cs" line="66" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.Designer.cs" bodystart="66" bodyend="-1"/>
+        <location file="HKSupply/Forms/Master/RoleManagement.Designer.cs" line="67" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.Designer.cs" bodystart="67" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -192,7 +192,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="76" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="76" bodyend="132"/>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="76" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="76" bodyend="128"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a9651949eef33db6a0600a919bb30f8e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -214,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="134" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="134" bodyend="147"/>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="130" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="130" bodyend="143"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a022e071b082ef46f206426f75db34fa8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -228,7 +228,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="149" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="149" bodyend="170"/>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="145" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="145" bodyend="166"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -251,7 +251,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="176" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="176" bodyend="189"/>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="172" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="172" bodyend="185"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a3450b22b578ae9d45d63cfc0a4ff1e0e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -272,7 +272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="195" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="195" bodyend="214"/>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="190" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="190" bodyend="209"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1abbf9cbf8936c2cca1a25a2610615da1e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -293,7 +293,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="216" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="216" bodyend="234"/>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="211" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="211" bodyend="229"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a8e6ddd309e227a948b22dd0f20a79544" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -314,7 +314,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="236" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="236" bodyend="240"/>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="231" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="231" bodyend="235"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a503287b2deb5a4ce6ed0f93284125bf5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -327,7 +327,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="248" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="248" bodyend="259"/>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="243" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="243" bodyend="254"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a90056abd3975eb45ef03c749c934a999" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -340,7 +340,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="261" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="261" bodyend="280"/>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="256" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="256" bodyend="275"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1ad6f335c19c4942205e1ea1b2187307a2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -353,7 +353,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="284" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="284" bodyend="300"/>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="279" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="279" bodyend="295"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1af66e05cf00d970abd87d99e78ef3bc99" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -366,7 +366,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="302" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="302" bodyend="314"/>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="297" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="297" bodyend="309"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a90c9eadf67a890c458a7603784ce36e6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -379,7 +379,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="316" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="316" bodyend="330"/>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="311" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="311" bodyend="325"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a0c0ec5a82c4a8edaa4a0dd72b4e61ead" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -396,7 +396,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="332" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="332" bodyend="353"/>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="327" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="327" bodyend="348"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a0760d22efdb02e94ed0bd5c35886ba93" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -413,7 +413,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="355" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="355" bodyend="376"/>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="350" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="350" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1ae4279f647df9789a1b337381ba23bf9f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.RoleManagement.IsValidRoles</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidRoles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="373" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="373" bodyend="388"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a16fdd83f7d1ec89c228098a414551e57" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -426,7 +439,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="378" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="378" bodyend="396"/>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="390" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="390" bodyend="408"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a2c8021d13641f6c913944a6dbf18f1fc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -439,7 +452,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="398" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="398" bodyend="416"/>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="410" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="410" bodyend="428"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a01a8bb51cbff3ee48603e84f9bdb1142" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -452,20 +465,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="418" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="418" bodyend="428"/>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="430" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="430" bodyend="440"/>
       </memberdef>
-      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a51b204f49ec0a578e61ee92b70e206f8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a90487d909800dc4ff1f027d748228b2f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
-        <definition>bool HKSupply.Forms.Master.RoleManagement.CreateRol</definition>
+        <definition>bool HKSupply.Forms.Master.RoleManagement.CreateRole</definition>
         <argsstring>()</argsstring>
-        <name>CreateRol</name>
+        <name>CreateRole</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="430" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="430" bodyend="441"/>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="442" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="442" bodyend="453"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1afa4e2913bf8dccc7927bc6ad3a67e643" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -478,7 +491,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Master/RoleManagement.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.Designer.cs" bodystart="29" bodyend="62"/>
+        <location file="HKSupply/Forms/Master/RoleManagement.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.Designer.cs" bodystart="29" bodyend="63"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -513,40 +526,40 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="184">
+      <node id="250">
         <label>HKSupply.Forms.Master.RoleManagement</label>
         <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management"/>
-        <childnode refid="185" relation="public-inheritance">
+        <childnode refid="251" relation="public-inheritance">
         </childnode>
-        <childnode refid="186" relation="public-inheritance">
+        <childnode refid="252" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="185">
+      <node id="251">
         <label>Form</label>
       </node>
-      <node id="186">
+      <node id="252">
         <label>IActionsStackView</label>
         <link refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="187">
+      <node id="253">
         <label>HKSupply.Forms.Master.RoleManagement</label>
         <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management"/>
-        <childnode refid="188" relation="public-inheritance">
+        <childnode refid="254" relation="public-inheritance">
         </childnode>
-        <childnode refid="189" relation="public-inheritance">
+        <childnode refid="255" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="188">
+      <node id="254">
         <label>Form</label>
       </node>
-      <node id="189">
+      <node id="255">
         <label>IActionsStackView</label>
         <link refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view"/>
       </node>
     </collaborationgraph>
-    <location file="HKSupply/Forms/Master/RoleManagement.cs" line="19" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="18" bodyend="443"/>
+    <location file="HKSupply/Forms/Master/RoleManagement.cs" line="19" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="18" bodyend="455"/>
     <listofallmembers>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a95f8238dbfc06ba7132daa5a32327f50" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>_createdRoles</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1ac3c5b4dcceb88e38b50390b16b83e86c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>_modifiedRoles</name></member>
@@ -562,7 +575,7 @@
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a90c9eadf67a890c458a7603784ce36e6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>ConfigureActionsStackViewCreating</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1af66e05cf00d970abd87d99e78ef3bc99" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>ConfigureActionsStackViewEditing</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a90056abd3975eb45ef03c749c934a999" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>ConfigureRolesGridDefaultStyles</name></member>
-      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a51b204f49ec0a578e61ee92b70e206f8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>CreateRol</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a90487d909800dc4ff1f027d748228b2f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>CreateRole</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1aec6f44de37a82c49e6166b2d83e65885" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>Dispose</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a0ec7f3aa6a0ea7c1891c51b8ec3fa3a1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>eRoleColumns</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1acc57625e8dd54327e7a49b846800ff2b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>grdRoles</name></member>
@@ -572,6 +585,7 @@
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1afa4e2913bf8dccc7927bc6ad3a67e643" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>InitializeComponent</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a2c8021d13641f6c913944a6dbf18f1fc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>IsValidCreatedRoles</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a16fdd83f7d1ec89c228098a414551e57" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>IsValidModifiedRoles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1ae4279f647df9789a1b337381ba23bf9f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>IsValidRoles</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1ad6f335c19c4942205e1ea1b2187307a2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>LoadAllRoles</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1ab55687c20cf8f38cc4c2c478783f1224" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>RoleManagement</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a49f2b67ebc44c175fd4b3d8289c5fd39" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>RoleManagement_Load</name></member>

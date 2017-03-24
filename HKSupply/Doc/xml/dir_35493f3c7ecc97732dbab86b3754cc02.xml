@@ -6,7 +6,12 @@
     <innerfile refid="_customer_history_8cs">CustomerHistory.cs</innerfile>
     <innerfile refid="_functionality_8cs">Functionality.cs</innerfile>
     <innerfile refid="_functionality_role_8cs">FunctionalityRole.cs</innerfile>
+    <innerfile refid="_item_8cs">Item.cs</innerfile>
+    <innerfile refid="_item_history_8cs">ItemHistory.cs</innerfile>
     <innerfile refid="_role_8cs">Role.cs</innerfile>
+    <innerfile refid="_store_8cs">Store.cs</innerfile>
+    <innerfile refid="_supplier_8cs">Supplier.cs</innerfile>
+    <innerfile refid="_supplier_history_8cs">SupplierHistory.cs</innerfile>
     <innerfile refid="_user_8cs">User.cs</innerfile>
     <briefdescription>
     </briefdescription>

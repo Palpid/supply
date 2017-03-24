@@ -4,6 +4,7 @@
     <compoundname>HKSupply/Helpers</compoundname>
     <innerdir refid="dir_26015335ab3bf8b7d296fb1142bca043">HKSupply/Helpers/Mocking</innerdir>
     <innerfile refid="_custom_extensions_8cs">CustomExtensions.cs</innerfile>
+    <innerfile refid="_m_d_i_client_support_8cs">MDIClientSupport.cs</innerfile>
     <innerfile refid="_password_helper_8cs">PasswordHelper.cs</innerfile>
     <briefdescription>
     </briefdescription>

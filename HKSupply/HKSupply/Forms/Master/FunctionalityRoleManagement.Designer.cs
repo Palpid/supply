@@ -37,6 +37,7 @@
             this.grdFuncRoles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdFuncRoles.BackgroundColor = System.Drawing.Color.White;
             this.grdFuncRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdFuncRoles.Location = new System.Drawing.Point(16, 62);
             this.grdFuncRoles.Name = "grdFuncRoles";

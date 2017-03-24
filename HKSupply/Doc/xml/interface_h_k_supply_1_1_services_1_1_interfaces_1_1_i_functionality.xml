@@ -114,13 +114,13 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="107">
+      <node id="126">
         <label>HKSupply.Services.Implementations.EFFunctionality</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality"/>
-        <childnode refid="106" relation="public-inheritance">
+        <childnode refid="125" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="106">
+      <node id="125">
         <label>HKSupply.Services.Interfaces.IFunctionality</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality"/>
       </node>

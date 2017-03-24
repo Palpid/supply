@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_model_linq_filtering" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::ModelLinqFiltering</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1a869a28c06ec53fab6fd778bade36ea48" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.ModelLinqFiltering.PropertyName</definition>
+        <argsstring></argsstring>
+        <name>PropertyName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="616" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="616" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1aa017ef3e2d3751c84df6887132b49715" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.ModelLinqFiltering.PropertyType</definition>
+        <argsstring></argsstring>
+        <name>PropertyType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="617" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="617" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1a05bec8b82b848ed91399514fc34b5fde" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.ModelLinqFiltering.Condition</definition>
+        <argsstring></argsstring>
+        <name>Condition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="618" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="618" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1ab1063badeec96c88372aac2b1d57886b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.ModelLinqFiltering.Filter</definition>
+        <argsstring></argsstring>
+        <name>Filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="619" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="619" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1a900fece0760e7e0c290c4ccc3f2e84dd" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime HKSupply.Forms.ModelLinqFiltering.DateFilter</definition>
+        <argsstring></argsstring>
+        <name>DateFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="620" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="620" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1a8e717b94e0d388959d8b9d1e38a9fdb5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.ModelLinqFiltering.Union</definition>
+        <argsstring></argsstring>
+        <name>Union</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="621" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="621" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1acae6326ecf09c74070e6d5155c7eb067" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string HKSupply.Forms.ModelLinqFiltering.GetLinqFilterString</definition>
+        <argsstring>()</argsstring>
+        <name>GetLinqFilterString</name>
+        <briefdescription>
+<para>Obtener el string del where de linq </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="627" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="627" bodyend="646"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1a66694e21272523c30da7198388f59b0f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.ModelLinqFiltering.IsValidData</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidData</name>
+        <briefdescription>
+<para>Validar los datos que ha indicado el usuario para filtrar. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="652" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="652" bodyend="736"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1ab5dc64d4de7341f56ce1cc4e947a6cd9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string HKSupply.Forms.ModelLinqFiltering.GetCondition</definition>
+        <argsstring>()</argsstring>
+        <name>GetCondition</name>
+        <briefdescription>
+<para>Obtener la condición en el formato correcto según su tipo </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para><para>Para las cadenas, es case sensitive, lo pasamos a ´minúsculas, tanto el campo a filtrar como el texto introducido por el usuario </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="746" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="746" bodyend="790"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Clase que representa una filtro dynámico de linq sobre una propiedad de un modelo. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Forms/DynamicFilters.cs" line="615" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="614" bodyend="791"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1a05bec8b82b848ed91399514fc34b5fde" prot="public" virt="non-virtual"><scope>HKSupply::Forms::ModelLinqFiltering</scope><name>Condition</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1a900fece0760e7e0c290c4ccc3f2e84dd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::ModelLinqFiltering</scope><name>DateFilter</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1ab1063badeec96c88372aac2b1d57886b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::ModelLinqFiltering</scope><name>Filter</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1ab5dc64d4de7341f56ce1cc4e947a6cd9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::ModelLinqFiltering</scope><name>GetCondition</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1acae6326ecf09c74070e6d5155c7eb067" prot="public" virt="non-virtual"><scope>HKSupply::Forms::ModelLinqFiltering</scope><name>GetLinqFilterString</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1a66694e21272523c30da7198388f59b0f" prot="public" virt="non-virtual"><scope>HKSupply::Forms::ModelLinqFiltering</scope><name>IsValidData</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1a869a28c06ec53fab6fd778bade36ea48" prot="public" virt="non-virtual"><scope>HKSupply::Forms::ModelLinqFiltering</scope><name>PropertyName</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1aa017ef3e2d3751c84df6887132b49715" prot="public" virt="non-virtual"><scope>HKSupply::Forms::ModelLinqFiltering</scope><name>PropertyType</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1a8e717b94e0d388959d8b9d1e38a9fdb5" prot="public" virt="non-virtual"><scope>HKSupply::Forms::ModelLinqFiltering</scope><name>Union</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

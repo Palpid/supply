@@ -3,6 +3,8 @@
   <compounddef id="dir_9526147bc1e8ec6e35c7db0b834d201e" kind="dir">
     <compoundname>HKSupply/Forms</compoundname>
     <innerdir refid="dir_2842df661c91fd653ac1cef3c187bca2">HKSupply/Forms/Master</innerdir>
+    <innerfile refid="_dynamic_filters_8cs">DynamicFilters.cs</innerfile>
+    <innerfile refid="_dynamic_filters_8_designer_8cs">DynamicFilters.Designer.cs</innerfile>
     <innerfile refid="_i_actions_stack_view_8cs">IActionsStackView.cs</innerfile>
     <innerfile refid="_login_8cs">Login.cs</innerfile>
     <innerfile refid="_login_8_designer_8cs">Login.Designer.cs</innerfile>

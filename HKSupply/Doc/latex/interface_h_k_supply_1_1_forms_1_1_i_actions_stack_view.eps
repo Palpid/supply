@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 24.169184
+%%BoundingBox: 0 0 500 271.903323
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,13 +19,13 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 20.687500 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 1.838889 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 2 def
-/cols 5 def
+/rows 9 def
+/cols 2 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
 
@@ -177,7 +177,10 @@ boxfont setfont
 (HKSupply.Forms.Master.CustomerManagement) cw
 (HKSupply.Forms.Master.FunctionalityManagement) cw
 (HKSupply.Forms.Master.FunctionalityRoleManagement) cw
+(HKSupply.Forms.Master.ItemManagement) cw
 (HKSupply.Forms.Master.RoleManagement) cw
+(HKSupply.Forms.Master.StoreManagement) cw
+(HKSupply.Forms.Master.SupplierManagement) cw
 (HKSupply.Forms.Master.UserManagement) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
@@ -190,26 +193,35 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (HKSupply.Forms.IActionsStackView) 2.000000 1.000000 box
- (HKSupply.Forms.Master.CustomerManagement) 0.000000 0.000000 box
- (HKSupply.Forms.Master.FunctionalityManagement) 1.000000 0.000000 box
- (HKSupply.Forms.Master.FunctionalityRoleManagement) 2.000000 0.000000 box
- (HKSupply.Forms.Master.RoleManagement) 3.000000 0.000000 box
- (HKSupply.Forms.Master.UserManagement) 4.000000 0.000000 box
+ (HKSupply.Forms.IActionsStackView) 0.000000 8.000000 box
+ (HKSupply.Forms.Master.CustomerManagement) 1.000000 7.000000 box
+ (HKSupply.Forms.Master.FunctionalityManagement) 1.000000 6.000000 box
+ (HKSupply.Forms.Master.FunctionalityRoleManagement) 1.000000 5.000000 box
+ (HKSupply.Forms.Master.ItemManagement) 1.000000 4.000000 box
+ (HKSupply.Forms.Master.RoleManagement) 1.000000 3.000000 box
+ (HKSupply.Forms.Master.StoreManagement) 1.000000 2.000000 box
+ (HKSupply.Forms.Master.SupplierManagement) 1.000000 1.000000 box
+ (HKSupply.Forms.Master.UserManagement) 1.000000 0.000000 box
 
 % ----- relations -----
 
 solid
-1 2.000000 0.250000 out
+1 0.000000 7.250000 out
 solid
-0.000000 4.000000 1.000000 conn
+0 0.000000 7.500000 hedge
 solid
-0 0.000000 0.750000 in
+0 0.000000 6.500000 hedge
 solid
-0 1.000000 0.750000 in
+0 0.000000 5.500000 hedge
 solid
-0 2.000000 0.750000 in
+0 0.000000 4.500000 hedge
 solid
-0 3.000000 0.750000 in
+0 0.000000 3.500000 hedge
 solid
-0 4.000000 0.750000 in
+0 0.000000 2.500000 hedge
+solid
+0 0.000000 1.500000 hedge
+solid
+0 0.000000 0.500000 hedge
+solid
+0.000000 8.000000 0.500000 vedge

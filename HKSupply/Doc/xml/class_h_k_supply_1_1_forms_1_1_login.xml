@@ -305,24 +305,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="123">
+      <node id="173">
         <label>Form</label>
       </node>
-      <node id="122">
+      <node id="172">
         <label>HKSupply.Forms.Login</label>
         <link refid="class_h_k_supply_1_1_forms_1_1_login"/>
-        <childnode refid="123" relation="public-inheritance">
+        <childnode refid="173" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="125">
+      <node id="175">
         <label>Form</label>
       </node>
-      <node id="124">
+      <node id="174">
         <label>HKSupply.Forms.Login</label>
         <link refid="class_h_k_supply_1_1_forms_1_1_login"/>
-        <childnode refid="125" relation="public-inheritance">
+        <childnode refid="175" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

@@ -136,14 +136,14 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="109">
+      <node id="128">
         <label>HKSupply.Services.Interfaces.IFunctionalityRole</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_role"/>
       </node>
-      <node id="110">
+      <node id="129">
         <label>HKSupply.Services.Implementations.EFFunctionalityRole</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role"/>
-        <childnode refid="109" relation="public-inheritance">
+        <childnode refid="128" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

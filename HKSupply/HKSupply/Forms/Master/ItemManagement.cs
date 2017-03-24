@@ -71,8 +71,10 @@ namespace HKSupply.Forms.Master
 
         List<Item> _itemsList;
 
-        string[] _nonEditingFields = { "txtItemCode", "txtIdVersion", "txtIdSubversion", "txtTimestamp" };
-        string[] _nonCreatingFields = { "txtIdVersion", "txtIdSubversion", "txtTimestamp" };
+        //string[] _nonEditingFields = { "txtItemCode", "txtIdVersion", "txtIdSubversion", "txtTimestamp" };
+        //string[] _nonCreatingFields = { "txtIdVersion", "txtIdSubversion", "txtTimestamp" };
+        string[] _nonEditingFields;
+        string[] _nonCreatingFields;
         int[] _nonCreatingFieldsRows = { 1, 2, 3 };
 
         bool _sortDescending = true;
@@ -216,7 +218,6 @@ namespace HKSupply.Forms.Master
                 actionsStackView.CancelButtonClick += actionsStackView_CancelButtonClick;
 
                 Controls.Add(actionsStackView);
-
             }
             catch (Exception ex)
             {
@@ -232,16 +233,19 @@ namespace HKSupply.Forms.Master
             try
             {
                 ConfigureActionsStackView();
+                SetEvents();
                 SetFormBinding();
                 InitializeFormStyles();
                 tcGeneral.TabPages.Remove(tpForm);
                 btnNewVersion.Visible = false;
                 LoadComboFilters();
 
+                _nonEditingFields = new string[] { txtItemCode.Name, txtIdVersion.Name, txtIdSubversion.Name, txtTimestamp.Name };
+
+                _nonCreatingFields = new string[] { txtIdVersion.Name, txtIdSubversion.Name, txtTimestamp.Name };
+
                 //TODO Mejor llevarlo a otro lado y meter el texto el resources.
                 lblDatesRemarks.Text = "* For dates" + Environment.NewLine + "Press Delete to set empty value";
-                ndtpLaunched.ValueChanged += ndtpLaunched_ValueChanged;
-                ndtpRetired.ValueChanged += ndtpRetired_ValueChanged;
                 
             }
             catch (Exception ex)
@@ -299,6 +303,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
+                Cursor = Cursors.WaitCursor;
                 DynamicFilters frm = new DynamicFilters();
                 frm.InitData(new Item(), _multiFilters);
                 frm.ShowDialog();
@@ -312,6 +317,10 @@ namespace HKSupply.Forms.Master
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
             }
         }
 
@@ -423,22 +432,25 @@ namespace HKSupply.Forms.Master
         #region Private Methods
 
         /// <summary>
+        /// Establecer los eventos de los objetos del formulario
+        /// </summary>
+        private void SetEvents()
+        {
+            ndtpLaunched.ValueChanged += ndtpLaunched_ValueChanged;
+            ndtpRetired.ValueChanged += ndtpRetired_ValueChanged;
+
+            cmbColFilter.SelectedIndexChanged += cmbColFilter_SelectedIndexChanged;
+
+            grdItems.CellDoubleClick += grdItems_CellDoubleClick;
+            grdItems.CellClick += grdItems_CellClick;
+        }
+
+        /// <summary>
         /// Resetear el objeto item que usamos para la actualización
         /// </summary>
         private void ResetItemUpdate()
         {
             _itemUpdate = new Item();
-            //_itemUpdate = new Item
-            //{
-            //    ItemCode = string.Empty,
-            //    ItemName = string.Empty,
-            //    Model = string.Empty,
-            //    Active = false,
-            //    Launched = new DateTime(),
-            //    Retired = new DateTime(),
-            //    Size = string.Empty,
-            //    CategoryName = string.Empty,
-            //};
         }
 
         /// <summary>
@@ -495,7 +507,7 @@ namespace HKSupply.Forms.Master
         }
 
         /// <summary>
-        /// 
+        /// Inicializar algunos estilos del formulario
         /// </summary>
         private void InitializeFormStyles()
         {
@@ -522,6 +534,9 @@ namespace HKSupply.Forms.Master
                 btnNewVersion.FlatAppearance.BorderSize = 1;
                 btnNewVersion.ForeColor = Color.White;
 
+                //Grid
+                //Para poder cambiar el color del header cuando se ordena hay que desactivar los efectos visuales del header que coge por defecto
+                grdItems.EnableHeadersVisualStyles = false;
             }
             catch (Exception ex)
             {
@@ -538,7 +553,6 @@ namespace HKSupply.Forms.Master
             try
             {
                 cmbColFilter.DataSource = Enum.GetNames(typeof(eItemColumnsFilter));
-                cmbColFilter.SelectedIndexChanged += cmbColFilter_SelectedIndexChanged;
                 cmbColFilter.SelectedIndex = -1;
             }
             catch (Exception ex)
@@ -590,7 +604,7 @@ namespace HKSupply.Forms.Master
         }
 
         /// <summary>
-        /// cargar la colección de Customer del sistema
+        /// cargar la colección de Items del sistema
         /// </summary>
         /// <remarks></remarks>
         private void LoadItemsList()
@@ -618,14 +632,7 @@ namespace HKSupply.Forms.Master
                     _itemsList = _itemsList.Where(cmbColFilter.SelectedItem.ToString() + " = @0", chkFilter.Checked).ToList();
                 }
 
-                grdItems.CellDoubleClick += grdItems_CellDoubleClick;
-                grdItems.CellClick += grdItems_CellClick;
-                grdItems.DataSource = null;
-                grdItems.Rows.Clear();
-                grdItems.DataSource = _itemsList;
-                grdItems.ReadOnly = true;
-                //Para poder cambiar el color del header cuando se ordena hay que desactivar los efectos visuales del header que coge por defecto
-                grdItems.EnableHeadersVisualStyles = false;
+                SetGridSource();
 
             }
             catch (Exception ex)
@@ -634,7 +641,10 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        //aki test
+        /// <summary>
+        /// Cargar la colección de items que cumplen los filtros indicados por el usuario
+        /// </summary>
+        /// <param name="filters"></param>
         private void LoadItemsList(List<ModelLinqFiltering> filters)
         {
             try
@@ -649,14 +659,26 @@ namespace HKSupply.Forms.Master
 
                 _itemsList = _itemsList.Where(filterString).ToList();
 
-                grdItems.CellDoubleClick += grdItems_CellDoubleClick;
-                grdItems.CellClick += grdItems_CellClick;
+                SetGridSource();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Asignar el datasource al grid
+        /// </summary>
+        private void SetGridSource()
+        {
+            try
+            {
                 grdItems.DataSource = null;
                 grdItems.Rows.Clear();
                 grdItems.DataSource = _itemsList;
                 grdItems.ReadOnly = true;
-                //Para poder cambiar el color del header cuando se ordena hay que desactivar los efectos visuales del header que coge por defecto
-                grdItems.EnableHeadersVisualStyles = false;
             }
             catch (Exception ex)
             {
@@ -683,10 +705,7 @@ namespace HKSupply.Forms.Master
 
                 _sortDescending = !_sortDescending; //See Remarks
 
-                grdItems.DataSource = null;
-                grdItems.Rows.Clear();
-                grdItems.DataSource = _itemsList;
-                grdItems.ReadOnly = true;
+                SetGridSource();
                 grdItems.Columns[(int)sortedColumn].HeaderCell.Style.BackColor = Color.Tomato;
                 grdItems.Columns[(int)sortedColumn].HeaderText += "*";
             }
@@ -773,7 +792,6 @@ namespace HKSupply.Forms.Master
             {
                 throw ex;
             }
-
         }
 
         /// <summary>
@@ -879,7 +897,6 @@ namespace HKSupply.Forms.Master
                             ((NullableDateTimePicker)ctl).Enabled = true;
                         }
                     }
-
                 }
             }
             catch (Exception ex)
@@ -902,7 +919,10 @@ namespace HKSupply.Forms.Master
                 tcGeneral.TabPages.Remove(tpForm);
                 tcGeneral.TabPages.Add(tpGrid);
                 btnNewVersion.Visible = false;
-                LoadItemsList();
+                if (_multiFilters == null)
+                    LoadItemsList();
+                else
+                    LoadItemsList(_multiFilters);
                 MoveGridToItem(itemCode);
                 actionsStackView.RestoreInitState();
 
@@ -953,17 +973,14 @@ namespace HKSupply.Forms.Master
                             MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
                             return false;
                         }
-
                     }
                 }
-
                 return true;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-
         }
 
         /// <summary>
@@ -985,7 +1002,6 @@ namespace HKSupply.Forms.Master
                         }
                     }
                 }
-
                 return true;
             }
             catch (Exception ex)

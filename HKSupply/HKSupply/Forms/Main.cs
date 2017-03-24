@@ -1,5 +1,6 @@
 ﻿using CustomControls;
 using HKSupply.General;
+using HKSupply.Helpers;
 using HKSupply.Models;
 using HKSupply.Services.Implementations;
 using HKSupply.Services.Interfaces;
@@ -37,6 +38,8 @@ namespace HKSupply.Forms
         {
             try
             {
+                this.SetBevel(false);//quitar el border 3d del mdi container
+
                 this.Icon = _gIcon;
                 SetBackgroundColor();
                 SetMenuStyle();
@@ -215,16 +218,10 @@ namespace HKSupply.Forms
     /// </summary>
     internal class CustomProfessionalColors : ProfessionalColorTable
     {
-        private static Color ETNIA_RED = Color.FromArgb(221, 34, 29);
-
         public override Color ToolStripGradientBegin { get { return Color.White; } }
-
         public override Color ToolStripGradientMiddle { get { return Color.White; } }
-
         public override Color ToolStripGradientEnd { get { return Color.White; } }
-
         public override Color MenuStripGradientBegin { get { return Color.White; } }
-
         public override Color MenuStripGradientEnd { get { return Color.White; } }
     }
 }

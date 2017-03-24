@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="494" column="1" bodyfile="CustomControls/StackView.cs" bodystart="494" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="636" column="1" bodyfile="CustomControls/StackView.cs" bodystart="636" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="property">
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="496" column="1" bodyfile="CustomControls/StackView.cs" bodystart="496" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="638" column="1" bodyfile="CustomControls/StackView.cs" bodystart="638" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_custom_controls_1_1_custom_professional_colors_1ab456d5c56deb8bbb7145a3535e1b9d51" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>override Color</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="498" column="1" bodyfile="CustomControls/StackView.cs" bodystart="498" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="640" column="1" bodyfile="CustomControls/StackView.cs" bodystart="640" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_custom_controls_1_1_custom_professional_colors_1a4e1903b0ccf36313d3518fb88bd6a388" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>override Color</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="500" column="1" bodyfile="CustomControls/StackView.cs" bodystart="500" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="642" column="1" bodyfile="CustomControls/StackView.cs" bodystart="642" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_custom_controls_1_1_custom_professional_colors_1ab38d57b72fe2baf734e10dadd980aaea" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>override Color</type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="502" column="1" bodyfile="CustomControls/StackView.cs" bodystart="502" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="644" column="1" bodyfile="CustomControls/StackView.cs" bodystart="644" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_custom_controls_1_1_custom_professional_colors_1ab4939afbf92547c8101b45356197ac1a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>override Color</type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="504" column="1" bodyfile="CustomControls/StackView.cs" bodystart="504" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="646" column="1" bodyfile="CustomControls/StackView.cs" bodystart="646" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -110,7 +110,7 @@
         <label>ProfessionalColorTable</label>
       </node>
     </collaborationgraph>
-    <location file="CustomControls/StackView.cs" line="493" column="1" bodyfile="CustomControls/StackView.cs" bodystart="492" bodyend="505"/>
+    <location file="CustomControls/StackView.cs" line="635" column="1" bodyfile="CustomControls/StackView.cs" bodystart="634" bodyend="647"/>
     <listofallmembers>
       <member refid="class_custom_controls_1_1_custom_professional_colors_1a3746a6f24a63ca98f91bed0faa8768ea" prot="private" virt="non-virtual"><scope>CustomControls::CustomProfessionalColors</scope><name>ETNIA_RED</name></member>
       <member refid="class_custom_controls_1_1_custom_professional_colors_1ab38d57b72fe2baf734e10dadd980aaea" prot="public" virt="non-virtual"><scope>CustomControls::CustomProfessionalColors</scope><name>MenuStripGradientBegin</name></member>

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/General/GlobalSetting.cs" line="27" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="27" bodyend="-1"/>
+        <location file="HKSupply/General/GlobalSetting.cs" line="31" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_global_setting_1abbfafe465e8a432c02df22d394283108" prot="private" static="yes" mutable="no">
         <type><ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user" kindref="compound">EFUser</ref></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/General/GlobalSetting.cs" line="28" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="28" bodyend="-1"/>
+        <location file="HKSupply/General/GlobalSetting.cs" line="32" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_global_setting_1abb641e8417ad87d914ce07ef7032e7c5" prot="private" static="yes" mutable="no">
         <type><ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality" kindref="compound">EFFunctionality</ref></type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/General/GlobalSetting.cs" line="29" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="29" bodyend="-1"/>
+        <location file="HKSupply/General/GlobalSetting.cs" line="33" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_global_setting_1adbf30e1b37fde444c6c83a6f03624d15" prot="private" static="yes" mutable="no">
         <type><ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role" kindref="compound">EFFunctionalityRole</ref></type>
@@ -57,7 +57,63 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/General/GlobalSetting.cs" line="30" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="30" bodyend="-1"/>
+        <location file="HKSupply/General/GlobalSetting.cs" line="34" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_global_setting_1ad70f302caec2154e0293a467e4eca78f" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer" kindref="compound">EFCustomer</ref></type>
+        <definition>EFCustomer HKSupply.General.GlobalSetting._customerEF</definition>
+        <argsstring></argsstring>
+        <name>_customerEF</name>
+        <initializer>= new <ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer" kindref="compound">EFCustomer</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/GlobalSetting.cs" line="35" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_global_setting_1a81a1046a0dc905132d2c41fce42bdaac" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier" kindref="compound">EFSupplier</ref></type>
+        <definition>EFSupplier HKSupply.General.GlobalSetting._supplierEF</definition>
+        <argsstring></argsstring>
+        <name>_supplierEF</name>
+        <initializer>= new <ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier" kindref="compound">EFSupplier</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/GlobalSetting.cs" line="36" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_global_setting_1a2610ac3ea0d4bf9599cc66d8b546ab7f" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_store" kindref="compound">EFStore</ref></type>
+        <definition>EFStore HKSupply.General.GlobalSetting._storeEF</definition>
+        <argsstring></argsstring>
+        <name>_storeEF</name>
+        <initializer>= new <ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_store" kindref="compound">EFStore</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/GlobalSetting.cs" line="37" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_global_setting_1acb14e46ac2926a5f2ded759c7f0ec498" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item" kindref="compound">EFItem</ref></type>
+        <definition>EFItem HKSupply.General.GlobalSetting._itemEF</definition>
+        <argsstring></argsstring>
+        <name>_itemEF</name>
+        <initializer>= new <ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item" kindref="compound">EFItem</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/GlobalSetting.cs" line="38" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_global_setting_1a2e37a0e6c8802b563c1d2f1e6bfe9500" prot="private" static="yes" mutable="no">
         <type><ref refid="class_h_k_supply_1_1_models_1_1_user" kindref="compound">User</ref></type>
@@ -70,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/General/GlobalSetting.cs" line="32" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="32" bodyend="-1"/>
+        <location file="HKSupply/General/GlobalSetting.cs" line="40" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_global_setting_1a3ea29666af6dfc21fd3214aed3d7d44a" prot="private" static="yes" mutable="no">
         <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_functionality_role" kindref="compound">FunctionalityRole</ref> &gt;</type>
@@ -83,7 +139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/General/GlobalSetting.cs" line="33" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="33" bodyend="-1"/>
+        <location file="HKSupply/General/GlobalSetting.cs" line="41" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_global_setting_1a2e6076e4adbcd3f6896a4add4cc3e223" prot="private" static="yes" mutable="no">
         <type>ResourceManager</type>
@@ -97,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/General/GlobalSetting.cs" line="35" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="35" bodyend="-1"/>
+        <location file="HKSupply/General/GlobalSetting.cs" line="43" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_global_setting_1aa3e3a155f041d05c2d019a12cea4b28e" prot="private" static="yes" mutable="no">
         <type>readonly Lazy&lt; <ref refid="class_h_k_supply_1_1_general_1_1_global_setting" kindref="compound">GlobalSetting</ref> &gt;</type>
@@ -112,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/General/GlobalSetting.cs" line="103" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="103" bodyend="-1"/>
+        <location file="HKSupply/General/GlobalSetting.cs" line="156" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="156" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="property">
@@ -127,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/General/GlobalSetting.cs" line="39" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="40" bodyend="-1"/>
+        <location file="HKSupply/General/GlobalSetting.cs" line="47" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_general_1_1_global_setting_1afcf3f82e4605ee135bef3b76601faef8" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type><ref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user" kindref="compound">IUser</ref></type>
@@ -140,7 +196,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/General/GlobalSetting.cs" line="51" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="52" bodyend="-1"/>
+        <location file="HKSupply/General/GlobalSetting.cs" line="59" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="60" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_general_1_1_global_setting_1aa4423c9bf929f499c03e32ebee39d7bc" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type><ref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality" kindref="compound">IFunctionality</ref></type>
@@ -153,7 +209,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/General/GlobalSetting.cs" line="63" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="64" bodyend="-1"/>
+        <location file="HKSupply/General/GlobalSetting.cs" line="71" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="72" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_general_1_1_global_setting_1a6e0c94569c8e737d382725931c272390" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type><ref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_role" kindref="compound">IFunctionalityRole</ref></type>
@@ -166,7 +222,59 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/General/GlobalSetting.cs" line="74" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="75" bodyend="-1"/>
+        <location file="HKSupply/General/GlobalSetting.cs" line="82" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_general_1_1_global_setting_1a694384f2be73de19119d9722579f742f" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer" kindref="compound">ICustomer</ref></type>
+        <definition>ICustomer HKSupply.General.GlobalSetting.CustomerService</definition>
+        <argsstring></argsstring>
+        <name>CustomerService</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/GlobalSetting.cs" line="93" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_general_1_1_global_setting_1ab6ca756b10bf1cb8c022b162a43bef8c" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier" kindref="compound">ISupplier</ref></type>
+        <definition>ISupplier HKSupply.General.GlobalSetting.SupplierService</definition>
+        <argsstring></argsstring>
+        <name>SupplierService</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/GlobalSetting.cs" line="104" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_general_1_1_global_setting_1a5fb4e65a18fcf26a585aebcda8225347" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_store" kindref="compound">IStore</ref></type>
+        <definition>IStore HKSupply.General.GlobalSetting.StoreService</definition>
+        <argsstring></argsstring>
+        <name>StoreService</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/GlobalSetting.cs" line="115" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_general_1_1_global_setting_1a5c0b451aac13d5dff603d07d07a83ce8" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item" kindref="compound">IItem</ref></type>
+        <definition>IItem HKSupply.General.GlobalSetting.ItemService</definition>
+        <argsstring></argsstring>
+        <name>ItemService</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/GlobalSetting.cs" line="126" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="127" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_general_1_1_global_setting_1adeb470418d2461437e6dc55fd41f78f5" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type><ref refid="class_h_k_supply_1_1_models_1_1_user" kindref="compound">User</ref></type>
@@ -179,7 +287,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/General/GlobalSetting.cs" line="85" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="86" bodyend="-1"/>
+        <location file="HKSupply/General/GlobalSetting.cs" line="138" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="139" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_general_1_1_global_setting_1adf54b9c3d32b3dac949776dee6f17eb2" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_functionality_role" kindref="compound">FunctionalityRole</ref> &gt;</type>
@@ -192,7 +300,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/General/GlobalSetting.cs" line="91" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="92" bodyend="-1"/>
+        <location file="HKSupply/General/GlobalSetting.cs" line="144" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="145" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_general_1_1_global_setting_1ad2628f5f55a5a8f640cd28aa425f968f" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>ResourceManager</type>
@@ -205,7 +313,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/General/GlobalSetting.cs" line="97" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="98" bodyend="-1"/>
+        <location file="HKSupply/General/GlobalSetting.cs" line="150" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="151" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_general_1_1_global_setting_1afa2d235e79652e93864a33932863c1e2" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type><ref refid="class_h_k_supply_1_1_general_1_1_global_setting" kindref="compound">GlobalSetting</ref></type>
@@ -218,7 +326,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/General/GlobalSetting.cs" line="106" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="106" bodyend="-1"/>
+        <location file="HKSupply/General/GlobalSetting.cs" line="159" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="159" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -233,33 +341,41 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/General/GlobalSetting.cs" line="108" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="108" bodyend="111"/>
+        <location file="HKSupply/General/GlobalSetting.cs" line="161" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="161" bodyend="164"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Objeto para guardar valores globales accesibles desde toda la aplicación. </para>    </briefdescription>
     <detaileddescription>
 <para>Objetos que incluye:<itemizedlist>
-<listitem><para>Usuario logado Controlador para acceso a datos para Role Controlador para acceso a datos para User Controlador para acceso a datos para Functionality Controlador para acceso a datos para Functionality Role </para></listitem></itemizedlist>
+<listitem><para>Usuario logado Controlador para acceso a datos para Role Controlador para acceso a datos para User Controlador para acceso a datos para Functionality Controlador para acceso a datos para Functionality Role Controlador para acceso a datos para Customer Controlador para acceso a datos para Supplier Controlador para acceso a datos para Store Controlador para acceso a datos para Item </para></listitem></itemizedlist>
 </para>    </detaileddescription>
-    <location file="HKSupply/General/GlobalSetting.cs" line="25" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="24" bodyend="112"/>
+    <location file="HKSupply/General/GlobalSetting.cs" line="29" column="1" bodyfile="HKSupply/General/GlobalSetting.cs" bodystart="28" bodyend="165"/>
     <listofallmembers>
+      <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1ad70f302caec2154e0293a467e4eca78f" prot="private" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>_customerEF</name></member>
       <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1a3ea29666af6dfc21fd3214aed3d7d44a" prot="private" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>_functionalitiesRoles</name></member>
       <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1abb641e8417ad87d914ce07ef7032e7c5" prot="private" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>_functionalityEF</name></member>
       <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1adbf30e1b37fde444c6c83a6f03624d15" prot="private" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>_functionalityRoleEF</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1acb14e46ac2926a5f2ded759c7f0ec498" prot="private" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>_itemEF</name></member>
       <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1a2e37a0e6c8802b563c1d2f1e6bfe9500" prot="private" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>_loggedUser</name></member>
       <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1a2e6076e4adbcd3f6896a4add4cc3e223" prot="private" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>_resManager</name></member>
       <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1a79a3bc6d8275c878c1cccca8d92e5eec" prot="private" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>_roleEF</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1a2610ac3ea0d4bf9599cc66d8b546ab7f" prot="private" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>_storeEF</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1a81a1046a0dc905132d2c41fce42bdaac" prot="private" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>_supplierEF</name></member>
       <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1abbfafe465e8a432c02df22d394283108" prot="private" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>_userEF</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1a694384f2be73de19119d9722579f742f" prot="public" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>CustomerService</name></member>
       <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1adf54b9c3d32b3dac949776dee6f17eb2" prot="public" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>FunctionalitiesRoles</name></member>
       <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1a6e0c94569c8e737d382725931c272390" prot="public" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>FunctionalityRoleService</name></member>
       <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1aa4423c9bf929f499c03e32ebee39d7bc" prot="public" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>FunctionalityService</name></member>
       <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1a4a700b0a81fd005720d7e1cee2acbddf" prot="public" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>GlobalSetting</name></member>
       <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1afa2d235e79652e93864a33932863c1e2" prot="public" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>Instance</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1a5c0b451aac13d5dff603d07d07a83ce8" prot="public" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>ItemService</name></member>
       <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1aa3e3a155f041d05c2d019a12cea4b28e" prot="private" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>lazy</name></member>
       <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1adeb470418d2461437e6dc55fd41f78f5" prot="public" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>LoggedUser</name></member>
       <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1ad2628f5f55a5a8f640cd28aa425f968f" prot="public" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>ResManager</name></member>
       <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1a6bfb54fe6ce82b0427c93287f3174fcc" prot="public" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>RoleService</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1a5fb4e65a18fcf26a585aebcda8225347" prot="public" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>StoreService</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1ab6ca756b10bf1cb8c022b162a43bef8c" prot="public" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>SupplierService</name></member>
       <member refid="class_h_k_supply_1_1_general_1_1_global_setting_1afcf3f82e4605ee135bef3b76601faef8" prot="public" virt="non-virtual"><scope>HKSupply::General::GlobalSetting</scope><name>UserService</name></member>
     </listofallmembers>
   </compounddef>

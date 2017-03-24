@@ -238,25 +238,25 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="60">
+      <node id="76">
         <label>HKSupply.Services.Implementations.EFUser</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user"/>
-        <childnode refid="61" relation="public-inheritance">
+        <childnode refid="77" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="61">
+      <node id="77">
         <label>IUser</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="62">
+      <node id="78">
         <label>HKSupply.Services.Implementations.EFUser</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user"/>
-        <childnode refid="63" relation="public-inheritance">
+        <childnode refid="79" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="63">
+      <node id="79">
         <label>IUser</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user"/>
       </node>

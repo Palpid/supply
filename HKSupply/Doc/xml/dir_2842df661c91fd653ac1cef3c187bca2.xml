@@ -10,8 +10,14 @@
     <innerfile refid="_functionality_management_8_designer_8cs">FunctionalityManagement.Designer.cs</innerfile>
     <innerfile refid="_functionality_role_management_8cs">FunctionalityRoleManagement.cs</innerfile>
     <innerfile refid="_functionality_role_management_8_designer_8cs">FunctionalityRoleManagement.Designer.cs</innerfile>
+    <innerfile refid="_item_management_8cs">ItemManagement.cs</innerfile>
+    <innerfile refid="_item_management_8_designer_8cs">ItemManagement.Designer.cs</innerfile>
     <innerfile refid="_role_management_8cs">RoleManagement.cs</innerfile>
     <innerfile refid="_role_management_8_designer_8cs">RoleManagement.Designer.cs</innerfile>
+    <innerfile refid="_store_management_8cs">StoreManagement.cs</innerfile>
+    <innerfile refid="_store_management_8_designer_8cs">StoreManagement.Designer.cs</innerfile>
+    <innerfile refid="_supplier_management_8cs">SupplierManagement.cs</innerfile>
+    <innerfile refid="_supplier_management_8_designer_8cs">SupplierManagement.Designer.cs</innerfile>
     <innerfile refid="_user_management_8cs">UserManagement.cs</innerfile>
     <innerfile refid="_user_management_8_designer_8cs">UserManagement.Designer.cs</innerfile>
     <briefdescription>

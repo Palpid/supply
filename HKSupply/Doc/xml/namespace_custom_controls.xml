@@ -4,6 +4,7 @@
     <compoundname>CustomControls</compoundname>
     <innerclass refid="class_custom_controls_1_1_custom_professional_colors" prot="package">CustomControls::CustomProfessionalColors</innerclass>
     <innerclass refid="class_custom_controls_1_1_custom_tool_strip_menu_item" prot="public">CustomControls::CustomToolStripMenuItem</innerclass>
+    <innerclass refid="class_custom_controls_1_1_nullable_date_time_picker" prot="public">CustomControls::NullableDateTimePicker</innerclass>
     <innerclass refid="class_custom_controls_1_1_stack_renderer" prot="package">CustomControls::StackRenderer</innerclass>
     <innerclass refid="class_custom_controls_1_1_stack_view" prot="public">CustomControls::StackView</innerclass>
     <briefdescription>

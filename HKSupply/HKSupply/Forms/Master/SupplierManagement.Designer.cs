@@ -30,6 +30,10 @@
         {
             this.tcGeneral = new System.Windows.Forms.TabControl();
             this.tpGrid = new System.Windows.Forms.TabPage();
+            this.gbFilter = new System.Windows.Forms.GroupBox();
+            this.chkFilter = new System.Windows.Forms.CheckBox();
+            this.txtFilter = new System.Windows.Forms.TextBox();
+            this.cmbColFilter = new System.Windows.Forms.ComboBox();
             this.btnLoad = new System.Windows.Forms.Button();
             this.grdSuppliers = new System.Windows.Forms.DataGridView();
             this.tpForm = new System.Windows.Forms.TabPage();
@@ -63,16 +67,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.chkActive = new System.Windows.Forms.CheckBox();
-            this.gbFilter = new System.Windows.Forms.GroupBox();
-            this.txtFilter = new System.Windows.Forms.TextBox();
-            this.cmbColFilter = new System.Windows.Forms.ComboBox();
-            this.chkFilter = new System.Windows.Forms.CheckBox();
             this.tcGeneral.SuspendLayout();
             this.tpGrid.SuspendLayout();
+            this.gbFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdSuppliers)).BeginInit();
             this.tpForm.SuspendLayout();
             this.tlpForm.SuspendLayout();
-            this.gbFilter.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcGeneral
@@ -101,6 +101,44 @@
             this.tpGrid.Text = "List";
             this.tpGrid.UseVisualStyleBackColor = true;
             // 
+            // gbFilter
+            // 
+            this.gbFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbFilter.Controls.Add(this.chkFilter);
+            this.gbFilter.Controls.Add(this.txtFilter);
+            this.gbFilter.Controls.Add(this.cmbColFilter);
+            this.gbFilter.Location = new System.Drawing.Point(6, 6);
+            this.gbFilter.Name = "gbFilter";
+            this.gbFilter.Size = new System.Drawing.Size(1162, 52);
+            this.gbFilter.TabIndex = 3;
+            this.gbFilter.TabStop = false;
+            // 
+            // chkFilter
+            // 
+            this.chkFilter.AutoSize = true;
+            this.chkFilter.Location = new System.Drawing.Point(486, 21);
+            this.chkFilter.Name = "chkFilter";
+            this.chkFilter.Size = new System.Drawing.Size(18, 17);
+            this.chkFilter.TabIndex = 2;
+            this.chkFilter.UseVisualStyleBackColor = true;
+            // 
+            // txtFilter
+            // 
+            this.txtFilter.Location = new System.Drawing.Point(223, 18);
+            this.txtFilter.Name = "txtFilter";
+            this.txtFilter.Size = new System.Drawing.Size(257, 22);
+            this.txtFilter.TabIndex = 1;
+            // 
+            // cmbColFilter
+            // 
+            this.cmbColFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbColFilter.FormattingEnabled = true;
+            this.cmbColFilter.Location = new System.Drawing.Point(6, 17);
+            this.cmbColFilter.Name = "cmbColFilter";
+            this.cmbColFilter.Size = new System.Drawing.Size(205, 24);
+            this.cmbColFilter.TabIndex = 0;
+            // 
             // btnLoad
             // 
             this.btnLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -117,6 +155,7 @@
             this.grdSuppliers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdSuppliers.BackgroundColor = System.Drawing.Color.White;
             this.grdSuppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdSuppliers.Location = new System.Drawing.Point(6, 104);
             this.grdSuppliers.Name = "grdSuppliers";
@@ -415,44 +454,6 @@
             this.chkActive.TabIndex = 8;
             this.chkActive.UseVisualStyleBackColor = true;
             // 
-            // gbFilter
-            // 
-            this.gbFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbFilter.Controls.Add(this.chkFilter);
-            this.gbFilter.Controls.Add(this.txtFilter);
-            this.gbFilter.Controls.Add(this.cmbColFilter);
-            this.gbFilter.Location = new System.Drawing.Point(6, 6);
-            this.gbFilter.Name = "gbFilter";
-            this.gbFilter.Size = new System.Drawing.Size(1162, 52);
-            this.gbFilter.TabIndex = 3;
-            this.gbFilter.TabStop = false;
-            // 
-            // txtFilter
-            // 
-            this.txtFilter.Location = new System.Drawing.Point(223, 18);
-            this.txtFilter.Name = "txtFilter";
-            this.txtFilter.Size = new System.Drawing.Size(257, 22);
-            this.txtFilter.TabIndex = 1;
-            // 
-            // cmbColFilter
-            // 
-            this.cmbColFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbColFilter.FormattingEnabled = true;
-            this.cmbColFilter.Location = new System.Drawing.Point(6, 17);
-            this.cmbColFilter.Name = "cmbColFilter";
-            this.cmbColFilter.Size = new System.Drawing.Size(205, 24);
-            this.cmbColFilter.TabIndex = 0;
-            // 
-            // chkFilter
-            // 
-            this.chkFilter.AutoSize = true;
-            this.chkFilter.Location = new System.Drawing.Point(486, 21);
-            this.chkFilter.Name = "chkFilter";
-            this.chkFilter.Size = new System.Drawing.Size(18, 17);
-            this.chkFilter.TabIndex = 2;
-            this.chkFilter.UseVisualStyleBackColor = true;
-            // 
             // SupplierManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -464,12 +465,12 @@
             this.Load += new System.EventHandler(this.SupplierManagement_Load);
             this.tcGeneral.ResumeLayout(false);
             this.tpGrid.ResumeLayout(false);
+            this.gbFilter.ResumeLayout(false);
+            this.gbFilter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdSuppliers)).EndInit();
             this.tpForm.ResumeLayout(false);
             this.tlpForm.ResumeLayout(false);
             this.tlpForm.PerformLayout();
-            this.gbFilter.ResumeLayout(false);
-            this.gbFilter.PerformLayout();
             this.ResumeLayout(false);
 
         }

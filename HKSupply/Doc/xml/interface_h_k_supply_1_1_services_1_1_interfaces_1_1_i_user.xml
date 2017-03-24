@@ -144,14 +144,14 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="119">
+      <node id="169">
         <label>HKSupply.Services.Interfaces.IUser</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user"/>
       </node>
-      <node id="120">
+      <node id="170">
         <label>HKSupply.Services.Implementations.EFUser</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user"/>
-        <childnode refid="119" relation="public-inheritance">
+        <childnode refid="169" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

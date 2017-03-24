@@ -120,7 +120,12 @@ namespace HKSupply.Forms
                 Int32.TryParse(cmb.Name.Replace(CMB_UNION_NAME, ""), out number);
                 //Agregamos una nueva fila sí ha seleccionado un valor en el combo de "union" y es la última fila
                 if (cmb.SelectedIndex > 0 && (number + 1 == tlpFilters.RowCount))
+                {
                     AddRowFilter();
+                    //hay que posicionarlo después de que se pinte o no lo hace.
+                    ComboBox c = GetCmbRow(CMB_FIELD_NAME + (tlpFilters.RowCount-1).ToString());
+                    c.SelectedIndex = -1;
+                }
                 else if (cmb.SelectedIndex == 0)
                     RemoveRowsFilter(number);
 
@@ -233,6 +238,7 @@ namespace HKSupply.Forms
             }
 
         }
+
         #endregion
 
         #region Private Methods
@@ -644,8 +650,19 @@ namespace HKSupply.Forms
         /// Validar los datos que ha indicado el usuario para filtrar.
         /// </summary>
         /// <returns></returns>
+        /// <remarks>
+        /// Con los números con decimales tengo un "problema", si los parseo desde un string
+        /// el decimal lo marca el caracter "," pero en el teclado numérico es el "." 
+        /// Al parsear tengo que cambiar el punt (".") por coma(","), pero después para que lo coja
+        /// el linq tiene que ser punto ("."), así que hay que hacer el juego de reemplazar dos veces
+        /// mientras no encuentre algo mejor.
+        /// </remarks>
         public bool IsValidData()
         {
+            ///El separador decimal varía entre punto (".") y coma(",") según la cultura. Para trabajar con ello usaremos InvariantCulture
+            var culture = System.Globalization.CultureInfo.InvariantCulture;
+            var style = System.Globalization.NumberStyles.Number | System.Globalization.NumberStyles.AllowCurrencySymbol;
+
             //Validamos que estén todos los datos
             if (string.IsNullOrEmpty(PropertyName) == false &&
                 string.IsNullOrEmpty(PropertyType) == false &&
@@ -669,31 +686,31 @@ namespace HKSupply.Forms
 
                     case "Decimal":
                         Decimal dectmp;
-                        if (Decimal.TryParse(Filter, out dectmp) == false)
+                        if (Decimal.TryParse(Filter, style, culture, out dectmp) == false)
                             return false;
                         else
                         {
-                            Filter = dectmp.ToString();
+                            Filter = dectmp.ToString(culture);
                             return true;
                         }
 
                     case "Double":
                         Double doubletmp;
-                        if (Double.TryParse(Filter, out doubletmp) == false)
+                        if (Double.TryParse(Filter, style, culture, out doubletmp) == false)
                             return false;
                         else
                         {
-                            Filter = doubletmp.ToString();
+                            Filter = doubletmp.ToString(culture);
                             return true;
                         }
 
                     case "Single":
                         Single singletmp;
-                        if (Single.TryParse(Filter, out singletmp) == false)
+                        if (Single.TryParse(Filter, style, culture, out singletmp) == false)
                             return false;
                         else
                         {
-                            Filter = singletmp.ToString();
+                            Filter = singletmp.ToString(culture);
                             return true;
                         }
 

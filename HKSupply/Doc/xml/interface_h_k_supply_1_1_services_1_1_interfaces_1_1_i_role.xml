@@ -105,14 +105,14 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="116">
+      <node id="138">
         <label>HKSupply.Services.Interfaces.IRole</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role"/>
       </node>
-      <node id="117">
+      <node id="139">
         <label>HKSupply.Services.Implementations.EFRole</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role"/>
-        <childnode refid="116" relation="public-inheritance">
+        <childnode refid="138" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

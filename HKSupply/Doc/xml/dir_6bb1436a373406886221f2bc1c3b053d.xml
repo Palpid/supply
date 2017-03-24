@@ -7,10 +7,12 @@
     <innerfile refid="_new_existing_functionality_exception_8cs">NewExistingFunctionalityException.cs</innerfile>
     <innerfile refid="_new_existing_functionality_role_exception_8cs">NewExistingFunctionalityRoleException.cs</innerfile>
     <innerfile refid="_new_existing_role_exception_8cs">NewExistingRoleException.cs</innerfile>
+    <innerfile refid="_new_existing_store_exception_8cs">NewExistingStoreException.cs</innerfile>
     <innerfile refid="_new_existing_user_exception_8cs">NewExistingUserException.cs</innerfile>
     <innerfile refid="_nonexistent_functionality_exception_8cs">NonexistentFunctionalityException.cs</innerfile>
     <innerfile refid="_nonexistent_functionality_role_exception_8cs">NonexistentFunctionalityRoleException.cs</innerfile>
     <innerfile refid="_nonexistent_role_exception_8cs">NonexistentRoleException.cs</innerfile>
+    <innerfile refid="_nonexistent_store_exception_8cs">NonexistentStoreException.cs</innerfile>
     <innerfile refid="_nonexistent_user_exception_8cs">NonexistentUserException.cs</innerfile>
     <briefdescription>
     </briefdescription>

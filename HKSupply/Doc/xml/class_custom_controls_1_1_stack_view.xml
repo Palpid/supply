@@ -65,63 +65,11 @@
         </inbodydescription>
         <location file="CustomControls/StackView.cs" line="41" column="1" bodyfile="CustomControls/StackView.cs" bodystart="41" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a7fb0957ea3e61510ed6280c636790f93" prot="private" static="yes" mutable="no">
-        <type>Bitmap</type>
-        <definition>Bitmap CustomControls.StackView.mailBmp</definition>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1ae43024347903b8df9006d6089e0c5964" prot="private" static="yes" mutable="no">
+        <type>Image</type>
+        <definition>Image CustomControls.StackView.savePng</definition>
         <argsstring></argsstring>
-        <name>mailBmp</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="58" column="1" bodyfile="CustomControls/StackView.cs" bodystart="58" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1ac34d715866ad03985f07b76789aa27c2" prot="private" static="yes" mutable="no">
-        <type>Bitmap</type>
-        <definition>Bitmap CustomControls.StackView.calendarBmp</definition>
-        <argsstring></argsstring>
-        <name>calendarBmp</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="59" column="1" bodyfile="CustomControls/StackView.cs" bodystart="59" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1ac66188a42d64146c2afdae7580c71f10" prot="private" static="yes" mutable="no">
-        <type>Bitmap</type>
-        <definition>Bitmap CustomControls.StackView.contactsBmp</definition>
-        <argsstring></argsstring>
-        <name>contactsBmp</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="60" column="1" bodyfile="CustomControls/StackView.cs" bodystart="60" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a29154e8690cbfdbc61bd97fc673ad2ad" prot="private" static="yes" mutable="no">
-        <type>Bitmap</type>
-        <definition>Bitmap CustomControls.StackView.tasksBmp</definition>
-        <argsstring></argsstring>
-        <name>tasksBmp</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="61" column="1" bodyfile="CustomControls/StackView.cs" bodystart="61" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a9ebbc4c9adba498e38dbb4ec6862c6b8" prot="private" static="yes" mutable="no">
-        <type>string</type>
-        <definition>string CustomControls.StackView.mailBmpEnc</definition>
-        <argsstring></argsstring>
-        <name>mailBmpEnc</name>
+        <name>savePng</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -130,44 +78,137 @@
         </inbodydescription>
         <location file="CustomControls/StackView.cs" line="63" column="1" bodyfile="CustomControls/StackView.cs" bodystart="63" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a7d791e491faf3d2b01edea1ec5128867" prot="private" static="yes" mutable="no">
-        <type>string</type>
-        <definition>string CustomControls.StackView.calendarBmpEnc</definition>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1ac4ee406fca7db73c2ffa2fdcc714b2c3" prot="private" static="yes" mutable="no">
+        <type>Image</type>
+        <definition>Image CustomControls.StackView.cancelPng</definition>
         <argsstring></argsstring>
-        <name>calendarBmpEnc</name>
+        <name>cancelPng</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="107" column="1" bodyfile="CustomControls/StackView.cs" bodystart="107" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="64" column="1" bodyfile="CustomControls/StackView.cs" bodystart="64" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a7c6d069aa1b005430b8d7e9c75ed34ac" prot="private" static="yes" mutable="no">
-        <type>string</type>
-        <definition>string CustomControls.StackView.contactsBmpEnc</definition>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a8d99793172e81aaa5a42d3ca90f43759" prot="private" static="yes" mutable="no">
+        <type>Image</type>
+        <definition>Image CustomControls.StackView.editPng</definition>
         <argsstring></argsstring>
-        <name>contactsBmpEnc</name>
+        <name>editPng</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="152" column="1" bodyfile="CustomControls/StackView.cs" bodystart="152" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="65" column="1" bodyfile="CustomControls/StackView.cs" bodystart="65" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a9b43efee30334e1d4e27604398dafbc5" prot="private" static="yes" mutable="no">
-        <type>string</type>
-        <definition>string CustomControls.StackView.tasksBmpEnc</definition>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a8ed1b0caf8725ed0eb38049f98a6bb28" prot="private" static="yes" mutable="no">
+        <type>Image</type>
+        <definition>Image CustomControls.StackView.newPng</definition>
         <argsstring></argsstring>
-        <name>tasksBmpEnc</name>
+        <name>newPng</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="197" column="1" bodyfile="CustomControls/StackView.cs" bodystart="197" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="66" column="1" bodyfile="CustomControls/StackView.cs" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a9242374a0a4f7b0cba64f3a5b6cc20c2" prot="private" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string CustomControls.StackView.savePngEnc64</definition>
+        <argsstring></argsstring>
+        <name>savePngEnc64</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="71" column="1" bodyfile="CustomControls/StackView.cs" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1aa596212947a8de7b0fdb41164ffdd697" prot="private" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string CustomControls.StackView.cancelPngEnc64</definition>
+        <argsstring></argsstring>
+        <name>cancelPngEnc64</name>
+        <initializer>= @&quot;iVBORw0KGgoAAAANSUhEUgAA&quot; +
+            &quot;ABgAAAAYCAYAAADgdz34AAADHklEQVR42rWVX0iTURjGn21sOl1KhtKIGi&quot; +
+            &quot;YIda033XmlFxpW9Mf+meSdddWdNyKRUREVTuzPyqTC20gpLWpFdaX3gTRt&quot; +
+            &quot;iWiahrY5t7nZcz7fzc/TRAt84eE75+zb8/vOe95zjgVbHBatv486Te3M8N&quot; +
+            &quot;tGsUxNUk+pL5kAZ4sBXy1g97CTk0FOeTFs0oJJY9QLID4KnGfziRngdgMB&quot; +
+            &quot;Hz0OsJNNJddRQpN5LEp9pS4CkQmghM2JFKC+CXh8W/6wpJksrdPO9JvKEz&quot; +
+            &quot;8Uj4BzfHSnAE13AW+DvGg1JVVXcp3xGBWUWbykrgMX+OhIA+4TcEpyZvvP&quot; + 
+            &quot;ihmnRgVwUwd0mgDGDGw22FtbgcVFxNva+OnJtW5WK+zNzVywbMRbWjj1BH&quot; + 
+            &quot;7IGryibumADgJOmkrLVlYG1+Cg0Y91dSHS2LgKobnT54OjocHohsrLkRga&quot; +
+            &quot;wpQABqg7OqCdgDrJpzHocMDV34+sigrjhSghIQVhuGieJeZRvx+hqip+Rc&quot; +
+            &quot;wABKjXVLsOINF73AxQ7Zwc5Pf1wSmQCCEqnGIeoflcdTUsCwtGXwFGqDfK&quot; +
+            &quot;WQcwZ95jUiXm3ZfMzUVBby9yBZKKMM1na2pgDYfTY9Myg7dUpw7gqnuPCk&quot; +
+            &quot;CPhMuF3YEA7EVFRj8+NYWxkhLYQqE1703LDN5R93TADQKOYLXOU2HhghYy&quot; +
+            &quot;53mSllTMM13TXJNlU3X9lDL1Uw90wDUCDmNlo6UBNHfTPF/MZ/1+41kg6Z&quot; +
+            &quot;ojZMJUXQrwjXpPPdQBVwk4hNXtrsx30Xy7mM/Q/DtzrmIP12SHQH4RMi4Q&quot; +
+            &quot;BVC7+QPVpQOuEFCr8iuAPFbHXhoZuaX5KPsOqZYYq6uY1VUokBGC59lPAT&quot; +
+            &quot;5S3TrgMgEHBWBM2ONB6cAAfg8PI1hXB4epWgwIq8vT04NtpaUYrqykcxCz&quot; +
+            &quot;AvgE46xeC+Ch4FUJiJkqSdWIncpC5ojKB7mkP4OVO+Ez9UwD1F/icX1C/p&quot; +
+            &quot;BeB4nlDOb62JKYq3mqffBcO67dvB0CPMOdVmz+Lsg0tgjjJI1MaheOijP7&quot; +
+            &quot;WV28kO2F+Pu22kxbLTKPiXgww5WZitSl78a/x4aX/pbEH2Ceaij62q1HAA&quot; +
+            &quot;AAAElFTkSuQmCC&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="103" column="1" bodyfile="CustomControls/StackView.cs" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1aee10d565b6f4e68cd13f52934996b58f" prot="private" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string CustomControls.StackView.editPngEnc64</definition>
+        <argsstring></argsstring>
+        <name>editPngEnc64</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="125" column="1" bodyfile="CustomControls/StackView.cs" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_stack_view_1a3f91c207247350d6ad7507d86f467718" prot="private" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string CustomControls.StackView.newPngEnc64</definition>
+        <argsstring></argsstring>
+        <name>newPngEnc64</name>
+        <initializer>= @&quot;iVBORw0KGgoAAAANSUhEUgAAABg&quot; + 
+            &quot;AAAAYCAYAAADgdz34AAAC80lEQVR42q2W70tTURjHn+O9m3NFwQqbjWSsR&quot; +
+            &quot;rYg6FUE6RCt7I1Ehr1ab4IIol71LvoXhN4FgYKuIGi4kHQFvVBfCFtbsdi&quot; +
+            &quot;cDpcYY2NuVyTnft17T8+9bWOTw/SWDxzO9znnufuc5znn3jMCDZbL5UYII&quot; +
+            &quot;Q+wETiAUUphfn7+9+Tk5KPp6WmBFUP2AGaxu6U82zBH98TVfLVfXFyEiYm&quot; +
+            &quot;JIK7putfr3WoJyGazcxg4hCujtSwadaNf64PBIHg8HprP50MKZGpqaqslA&quot; +
+            &quot;LubBylPzaLRKPh8PigUCkoLGY3GG2NjYwITsLm5qQCGtJSoUqkoECpJkhp&quot; +
+            &quot;jMBhmnE7nMBOQyWQ0Axgx/s7OzitMQDqd1lwihgXMZjMbkEqlDiWDrq4uN&quot; + 
+            &quot;iCZTB4KwGKxsAEbGxvKMf2vEuHpDXR3d7MB6+vrmjMokRwk2z7hO02JRR4&quot; +
+            &quot;EAz3lt1qtbEAikdC8yWvUDTHplarPcffhPHkYsNlsbEA8HtecwQp9DWvyG&quot; +
+            &quot;1VbyR1wtD312+12NiAWi/0DYByzeIuaIOA2OMhjf09PDxsQiUT2BYiwS4u&quot; +
+            &quot;QrQN+Ui/8oj5Vnyb9YCXDP1bl9/eEYgJEuZRqAoTD4X33wM+/gCLJ1v2yl&quot; +
+            &quot;IeSuK1qPX8M2rmj9TmZis2AUCikfk1bZTAnuagIhVbvQYMmtAkQCAT2LdF&quot; +
+            &quot;X+SUV6EodIEIRy1ZSNQd64KG9XIYdgarT9FsTYGlpSfMxXZY9sCp9VLWtb&quot; +
+            &quot;RAc3N3AtatO9ibj7aT5FEWlD7Ai/d3ks1w/XOJG/b29vWzAwsKC5hstXJ6&quot; +
+            &quot;B5cpnFWDXOeGybsTf19fXDMBLm0PjTSbT846OjifV8b2NZTRS/sJ9L80aF&quot; +
+            &quot;OeifqBwAQbGBUF4JqK5XC6JuN3uMzg3igty4ILMqI+jNqJWHtKh5lFztQU&quot; +
+            &quot;p/ySqCSi9JEEFsnziJM5JJ0RrnKP6DI6nle3BmHcKgEfHhM5xnFAO8ZEGg&quot; +
+            &quot;B61DjVfzYKv/rBYLZGIYxWUZdRF1Luo86h3UG+jFv4A7gWzwtP8PLUAAAA&quot; +
+            &quot;ASUVORK5CYII=&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="158" column="1" bodyfile="CustomControls/StackView.cs" bodystart="158" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="event">
@@ -369,7 +410,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="244" column="1" bodyfile="CustomControls/StackView.cs" bodystart="245" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="363" column="1" bodyfile="CustomControls/StackView.cs" bodystart="364" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-func">
@@ -384,7 +425,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="254" column="1" bodyfile="CustomControls/StackView.cs" bodystart="254" bodyend="258"/>
+        <location file="CustomControls/StackView.cs" line="373" column="1" bodyfile="CustomControls/StackView.cs" bodystart="373" bodyend="377"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1ad9556c5d97740344368c736285c7315b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -397,7 +438,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="317" column="1" bodyfile="CustomControls/StackView.cs" bodystart="317" bodyend="323"/>
+        <location file="CustomControls/StackView.cs" line="440" column="1" bodyfile="CustomControls/StackView.cs" bodystart="440" bodyend="451"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -412,7 +453,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="260" column="1" bodyfile="CustomControls/StackView.cs" bodystart="260" bodyend="270"/>
+        <location file="CustomControls/StackView.cs" line="379" column="1" bodyfile="CustomControls/StackView.cs" bodystart="379" bodyend="389"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1af1226e4d40a4f58799de5b48de95c275" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -437,7 +478,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="272" column="1" bodyfile="CustomControls/StackView.cs" bodystart="272" bodyend="290"/>
+        <location file="CustomControls/StackView.cs" line="391" column="1" bodyfile="CustomControls/StackView.cs" bodystart="391" bodyend="409"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a40e9b83536de3aa4a3fd7e40bfce0246" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -450,7 +491,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="298" column="1" bodyfile="CustomControls/StackView.cs" bodystart="298" bodyend="302"/>
+        <location file="CustomControls/StackView.cs" line="417" column="1" bodyfile="CustomControls/StackView.cs" bodystart="417" bodyend="421"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1aa6ee6db47352fbb47bc1292ea7f58611" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -463,7 +504,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="481" column="1" bodyfile="CustomControls/StackView.cs" bodystart="481" bodyend="484"/>
+        <location file="CustomControls/StackView.cs" line="623" column="1" bodyfile="CustomControls/StackView.cs" bodystart="623" bodyend="626"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -478,7 +519,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="306" column="1" bodyfile="CustomControls/StackView.cs" bodystart="306" bodyend="312"/>
+        <location file="CustomControls/StackView.cs" line="425" column="1" bodyfile="CustomControls/StackView.cs" bodystart="425" bodyend="435"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a6a0ef7f36b029aa0423e2d314dc4e621" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -499,7 +540,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="340" column="1" bodyfile="CustomControls/StackView.cs" bodystart="340" bodyend="348"/>
+        <location file="CustomControls/StackView.cs" line="482" column="1" bodyfile="CustomControls/StackView.cs" bodystart="482" bodyend="490"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a734a9613c693db4ce740bf72c19eb17c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -520,7 +561,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="352" column="1" bodyfile="CustomControls/StackView.cs" bodystart="352" bodyend="385"/>
+        <location file="CustomControls/StackView.cs" line="494" column="1" bodyfile="CustomControls/StackView.cs" bodystart="494" bodyend="527"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a624f0e3bcc231c49817ec6f1fb5f1a34" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -533,7 +574,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="388" column="1" bodyfile="CustomControls/StackView.cs" bodystart="388" bodyend="396"/>
+        <location file="CustomControls/StackView.cs" line="530" column="1" bodyfile="CustomControls/StackView.cs" bodystart="530" bodyend="538"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1ae28ccadd560e52e85fa00aecc560709d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -558,7 +599,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="402" column="1" bodyfile="CustomControls/StackView.cs" bodystart="402" bodyend="433"/>
+        <location file="CustomControls/StackView.cs" line="544" column="1" bodyfile="CustomControls/StackView.cs" bodystart="544" bodyend="575"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a21df994dece9a697985769528a2fd65f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -575,11 +616,11 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="package-static-func">
-      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1af154dbcbfc3cf290f0bfc932e2d59c6f" prot="package" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1ad97642357307fa6ab4d8183bbd8a7872" prot="package" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Bitmap</type>
-        <definition>static Bitmap CustomControls.StackView.DeserializeFromBase64</definition>
+        <definition>static Bitmap CustomControls.StackView.DeserializeFromBase64Bmp</definition>
         <argsstring>(string data)</argsstring>
-        <name>DeserializeFromBase64</name>
+        <name>DeserializeFromBase64Bmp</name>
         <param>
           <type>string</type>
           <declname>data</declname>
@@ -590,7 +631,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="327" column="1" bodyfile="CustomControls/StackView.cs" bodystart="327" bodyend="338"/>
+        <location file="CustomControls/StackView.cs" line="455" column="1" bodyfile="CustomControls/StackView.cs" bodystart="455" bodyend="466"/>
+      </memberdef>
+      <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1ab596e4e9daa4f8037a272c6c1f01dc48" prot="package" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Image</type>
+        <definition>static Image CustomControls.StackView.DeserializeFromBase64Png</definition>
+        <argsstring>(string data)</argsstring>
+        <name>DeserializeFromBase64Png</name>
+        <param>
+          <type>string</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="468" column="1" bodyfile="CustomControls/StackView.cs" bodystart="468" bodyend="480"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -609,7 +667,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="439" column="1" bodyfile="CustomControls/StackView.cs" bodystart="439" bodyend="446"/>
+        <location file="CustomControls/StackView.cs" line="581" column="1" bodyfile="CustomControls/StackView.cs" bodystart="581" bodyend="588"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a11ce82dee60bdffc83f7d3ebdf10b17a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -626,7 +684,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="448" column="1" bodyfile="CustomControls/StackView.cs" bodystart="448" bodyend="455"/>
+        <location file="CustomControls/StackView.cs" line="590" column="1" bodyfile="CustomControls/StackView.cs" bodystart="590" bodyend="597"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a77a46c2d55bf40ed18bcfe90dcaf3805" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -643,7 +701,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="457" column="1" bodyfile="CustomControls/StackView.cs" bodystart="457" bodyend="464"/>
+        <location file="CustomControls/StackView.cs" line="599" column="1" bodyfile="CustomControls/StackView.cs" bodystart="599" bodyend="606"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a48997386c95398640506e1e5ada5f0dd" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -660,7 +718,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="466" column="1" bodyfile="CustomControls/StackView.cs" bodystart="466" bodyend="473"/>
+        <location file="CustomControls/StackView.cs" line="608" column="1" bodyfile="CustomControls/StackView.cs" bodystart="608" bodyend="615"/>
       </memberdef>
       <memberdef kind="function" id="class_custom_controls_1_1_stack_view_1a227a09aebaaa2cc577a4bfa50cb08967" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override void</type>
@@ -695,55 +753,56 @@
 <listitem><para>Editar</para></listitem><listitem><para>Nuevo</para></listitem><listitem><para>Guardar</para></listitem><listitem><para>Cancelar</para></listitem></itemizedlist>
 </para><para>En función de los permisos que tenga el usuario en cada pantalla mostrará las acciones correspondientess </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="200">
+      <node id="266">
         <label>CustomControls.StackView</label>
         <link refid="class_custom_controls_1_1_stack_view"/>
-        <childnode refid="201" relation="public-inheritance">
+        <childnode refid="267" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="201">
+      <node id="267">
         <label>UserControl</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="202">
+      <node id="268">
         <label>CustomControls.StackView</label>
         <link refid="class_custom_controls_1_1_stack_view"/>
-        <childnode refid="203" relation="public-inheritance">
+        <childnode refid="269" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="203">
+      <node id="269">
         <label>UserControl</label>
       </node>
     </collaborationgraph>
-    <location file="CustomControls/StackView.cs" line="28" column="1" bodyfile="CustomControls/StackView.cs" bodystart="27" bodyend="487"/>
+    <location file="CustomControls/StackView.cs" line="28" column="1" bodyfile="CustomControls/StackView.cs" bodystart="27" bodyend="629"/>
     <listofallmembers>
       <member refid="class_custom_controls_1_1_stack_view_1a84ef493f63a4cd63b7132812da2fe51c" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>_currentState</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1ab502b86c791f6c45cc55cc427831f528" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>_modify</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1ad5b6d7319fd11b27e88b36a1623ccf25" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>_new</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1acb294de8677c0bb269634dcb2b595f8c" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>_read</name></member>
-      <member refid="class_custom_controls_1_1_stack_view_1ac34d715866ad03985f07b76789aa27c2" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>calendarBmp</name></member>
-      <member refid="class_custom_controls_1_1_stack_view_1a7d791e491faf3d2b01edea1ec5128867" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>calendarBmpEnc</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1a19d78699d1abcd1c49f4941b58f76800" prot="public" virt="non-virtual"><scope>CustomControls::StackView</scope><name>CancelButtonClick</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1ac4ee406fca7db73c2ffa2fdcc714b2c3" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>cancelPng</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1aa596212947a8de7b0fdb41164ffdd697" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>cancelPngEnc64</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1aa4ed7d20d4a9242eb3e597c8e8ee81b7" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>cancelStackButton</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1a218138aa7a0ba15ec4fdee8969adde0d" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>components</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1a624f0e3bcc231c49817ec6f1fb5f1a34" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>ConfigureActions</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1ae28ccadd560e52e85fa00aecc560709d" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>ConfigureByState</name></member>
-      <member refid="class_custom_controls_1_1_stack_view_1ac66188a42d64146c2afdae7580c71f10" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>contactsBmp</name></member>
-      <member refid="class_custom_controls_1_1_stack_view_1a7c6d069aa1b005430b8d7e9c75ed34ac" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>contactsBmpEnc</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1ad9556c5d97740344368c736285c7315b" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>CreateBitmaps</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1a71200adab4464290b2df815e233b5bf9" prot="public" virt="non-virtual"><scope>CustomControls::StackView</scope><name>CurrentState</name></member>
-      <member refid="class_custom_controls_1_1_stack_view_1af154dbcbfc3cf290f0bfc932e2d59c6f" prot="package" virt="non-virtual"><scope>CustomControls::StackView</scope><name>DeserializeFromBase64</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1ad97642357307fa6ab4d8183bbd8a7872" prot="package" virt="non-virtual"><scope>CustomControls::StackView</scope><name>DeserializeFromBase64Bmp</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1ab596e4e9daa4f8037a272c6c1f01dc48" prot="package" virt="non-virtual"><scope>CustomControls::StackView</scope><name>DeserializeFromBase64Png</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1a227a09aebaaa2cc577a4bfa50cb08967" prot="protected" virt="non-virtual"><scope>CustomControls::StackView</scope><name>Dispose</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1a63d3aaa67d3d681a55e44abfdc1e18a8" prot="public" virt="non-virtual"><scope>CustomControls::StackView</scope><name>EditButtonClick</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a8d99793172e81aaa5a42d3ca90f43759" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>editPng</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1aee10d565b6f4e68cd13f52934996b58f" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>editPngEnc64</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1aa815b0e1df9d70a54b2b580549a83a39" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>editStackButton</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1a1dc0159f0a29006aa690c17c088467d0" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>ETNIA_RED</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1a21df994dece9a697985769528a2fd65f" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>InitializeComponent</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1a40e9b83536de3aa4a3fd7e40bfce0246" prot="public" virt="non-virtual"><scope>CustomControls::StackView</scope><name>InitializeGeneralStyle</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1a8ca24094119e4fa7610b6bffef425aff" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>InitializeImages</name></member>
-      <member refid="class_custom_controls_1_1_stack_view_1a7fb0957ea3e61510ed6280c636790f93" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>mailBmp</name></member>
-      <member refid="class_custom_controls_1_1_stack_view_1a9ebbc4c9adba498e38dbb4ec6862c6b8" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>mailBmpEnc</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1af19003ef6d5198e763c656b624c3fbbc" prot="public" virt="non-virtual"><scope>CustomControls::StackView</scope><name>NewButtonClick</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a8ed1b0caf8725ed0eb38049f98a6bb28" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>newPng</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a3f91c207247350d6ad7507d86f467718" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>newPngEnc64</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1afad5f308ad02493e4f9537f3c37b99ab" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>newStackButton</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1a48997386c95398640506e1e5ada5f0dd" prot="protected" virt="virtual"><scope>CustomControls::StackView</scope><name>OnCancelButtonClick</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1a19b739e8edd30f174bfe870081ecfed3" prot="protected" virt="virtual"><scope>CustomControls::StackView</scope><name>OnEditButtonClick</name></member>
@@ -751,6 +810,8 @@
       <member refid="class_custom_controls_1_1_stack_view_1a77a46c2d55bf40ed18bcfe90dcaf3805" prot="protected" virt="virtual"><scope>CustomControls::StackView</scope><name>OnSaveButtonClick</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1aa6ee6db47352fbb47bc1292ea7f58611" prot="public" virt="non-virtual"><scope>CustomControls::StackView</scope><name>RestoreInitState</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1a6086b716160faebc479c3a407092a7d5" prot="public" virt="non-virtual"><scope>CustomControls::StackView</scope><name>SaveButtonClick</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1ae43024347903b8df9006d6089e0c5964" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>savePng</name></member>
+      <member refid="class_custom_controls_1_1_stack_view_1a9242374a0a4f7b0cba64f3a5b6cc20c2" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>savePngEnc64</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1a5c2d7a663d11126f915752e373f7cdb8" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>saveStackButton</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1a734a9613c693db4ce740bf72c19eb17c" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>stackButton_Click</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1ae1d96fc117ca1a52bdcc9ea2326dc45e" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>stackStrip</name></member>
@@ -758,8 +819,6 @@
       <member refid="class_custom_controls_1_1_stack_view_1a32c8b9ffad70f400fe19eeab16250d19" prot="public" virt="non-virtual"><scope>CustomControls::StackView</scope><name>StackView</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1af1226e4d40a4f58799de5b48de95c275" prot="public" virt="non-virtual"><scope>CustomControls::StackView</scope><name>StackView</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1a6a0ef7f36b029aa0423e2d314dc4e621" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>StackView_Load</name></member>
-      <member refid="class_custom_controls_1_1_stack_view_1a29154e8690cbfdbc61bd97fc673ad2ad" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>tasksBmp</name></member>
-      <member refid="class_custom_controls_1_1_stack_view_1a9b43efee30334e1d4e27604398dafbc5" prot="private" virt="non-virtual"><scope>CustomControls::StackView</scope><name>tasksBmpEnc</name></member>
       <member refid="class_custom_controls_1_1_stack_view_1ad33a71dff7cc2c25851d7cd5d75fb3c8" prot="public" virt="non-virtual"><scope>CustomControls::StackView</scope><name>ToolbarStates</name></member>
     </listofallmembers>
   </compounddef>

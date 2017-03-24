@@ -207,26 +207,26 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="53">
+      <node id="57">
         <label>IFunctionalityRole</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_role"/>
       </node>
-      <node id="52">
+      <node id="56">
         <label>HKSupply.Services.Implementations.EFFunctionalityRole</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role"/>
-        <childnode refid="53" relation="public-inheritance">
+        <childnode refid="57" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="55">
+      <node id="59">
         <label>IFunctionalityRole</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_role"/>
       </node>
-      <node id="54">
+      <node id="58">
         <label>HKSupply.Services.Implementations.EFFunctionalityRole</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role"/>
-        <childnode refid="55" relation="public-inheritance">
+        <childnode refid="59" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

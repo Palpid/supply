@@ -7,6 +7,7 @@ var searchData=
   ['getfunctionalitybyid',['GetFunctionalityById',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality.html#a0aa6fc75b8f1ddf6532f39a84bc50ad9',1,'HKSupply::Services::Implementations::EFFunctionality']]],
   ['getfunctionalitybyname',['GetFunctionalityByName',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality.html#a655784ce048904e9f27a827ccf2a7a79',1,'HKSupply::Services::Implementations::EFFunctionality']]],
   ['getfunctionalityrole',['GetFunctionalityRole',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role.html#a1900a194c92ba75d17fe42830190895f',1,'HKSupply::Services::Implementations::EFFunctionalityRole']]],
+  ['getlinqfilterstring',['GetLinqFilterString',['../class_h_k_supply_1_1_forms_1_1_model_linq_filtering.html#acae6326ecf09c74070e6d5155c7eb067',1,'HKSupply::Forms::ModelLinqFiltering']]],
   ['getrolebyid',['GetRoleById',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role.html#ad4eb9194531a9215c4f1a20ab0d9aa54',1,'HKSupply::Services::Implementations::EFRole']]],
   ['getroles',['GetRoles',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role.html#a7fd2f7f9bae498128f23ad0659e3ec4a',1,'HKSupply::Services::Implementations::EFRole']]],
   ['getuserbyid',['GetUserById',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user.html#a322969baaacbf15223b17f8117dd1545',1,'HKSupply::Services::Implementations::EFUser']]],

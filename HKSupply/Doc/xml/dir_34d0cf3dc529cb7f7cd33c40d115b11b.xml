@@ -5,7 +5,10 @@
     <innerfile refid="_e_f_customer_8cs">EFCustomer.cs</innerfile>
     <innerfile refid="_e_f_functionality_8cs">EFFunctionality.cs</innerfile>
     <innerfile refid="_e_f_functionality_role_8cs">EFFunctionalityRole.cs</innerfile>
+    <innerfile refid="_e_f_item_8cs">EFItem.cs</innerfile>
     <innerfile refid="_e_f_role_8cs">EFRole.cs</innerfile>
+    <innerfile refid="_e_f_store_8cs">EFStore.cs</innerfile>
+    <innerfile refid="_e_f_supplier_8cs">EFSupplier.cs</innerfile>
     <innerfile refid="_e_f_user_8cs">EFUser.cs</innerfile>
     <briefdescription>
     </briefdescription>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['modifyfunctionality',['ModifyFunctionality',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality.html#ae4f83037cd6ef526f55de1a2ba442cc6',1,'HKSupply::Services::Implementations::EFFunctionality']]],
-  ['modifyfunctionalityrole',['ModifyFunctionalityRole',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role.html#a69bbb7f8593ea4e0e70ce96625cf80e4',1,'HKSupply::Services::Implementations::EFFunctionalityRole']]]
+  ['initdata',['InitData',['../class_h_k_supply_1_1_forms_1_1_dynamic_filters.html#a3fb309c2a83dbe6c5826c25007c5336f',1,'HKSupply::Forms::DynamicFilters']]],
+  ['isvaliddata',['IsValidData',['../class_h_k_supply_1_1_forms_1_1_model_linq_filtering.html#a66694e21272523c30da7198388f59b0f',1,'HKSupply::Forms::ModelLinqFiltering']]]
 ];

@@ -83,14 +83,14 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="103">
+      <node id="122">
         <label>HKSupply.Services.Interfaces.ICustomer</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer"/>
       </node>
-      <node id="104">
+      <node id="123">
         <label>HKSupply.Services.Implementations.EFCustomer</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer"/>
-        <childnode refid="103" relation="public-inheritance">
+        <childnode refid="122" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

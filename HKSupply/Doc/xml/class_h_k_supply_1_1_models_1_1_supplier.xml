@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_supplier" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::Supplier</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_1a41cc34e0300a309f805f2d4fa514f0d4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.Supplier.IdVer</definition>
+        <argsstring></argsstring>
+        <name>IdVer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supplier.cs" line="15" column="1" bodyfile="HKSupply/Models/Supplier.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_1a58258c76947d901e802f66221745cc2e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.Supplier.IdSubVer</definition>
+        <argsstring></argsstring>
+        <name>IdSubVer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supplier.cs" line="18" column="1" bodyfile="HKSupply/Models/Supplier.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_1ae4387cfe9cd8e517945293026cfedfff" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime HKSupply.Models.Supplier.Timestamp</definition>
+        <argsstring></argsstring>
+        <name>Timestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supplier.cs" line="21" column="1" bodyfile="HKSupply/Models/Supplier.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_1a7c9ff1aef204c91c705c40e11f1264d0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supplier.IdSupplier</definition>
+        <argsstring></argsstring>
+        <name>IdSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supplier.cs" line="24" column="1" bodyfile="HKSupply/Models/Supplier.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_1a3a3595e3680379dcedabd6288b92f1d3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supplier.SupplierName</definition>
+        <argsstring></argsstring>
+        <name>SupplierName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supplier.cs" line="27" column="1" bodyfile="HKSupply/Models/Supplier.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_1a1e442e2c3f391606a3c303f9e86e135c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Models.Supplier.Active</definition>
+        <argsstring></argsstring>
+        <name>Active</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supplier.cs" line="30" column="1" bodyfile="HKSupply/Models/Supplier.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_1a9b5260c2780176ed686d14b1210b9558" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supplier.VATNum</definition>
+        <argsstring></argsstring>
+        <name>VATNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supplier.cs" line="33" column="1" bodyfile="HKSupply/Models/Supplier.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_1ab765a1c38ddac7aff4cd9c46b529b51b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supplier.ShippingAddress</definition>
+        <argsstring></argsstring>
+        <name>ShippingAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supplier.cs" line="36" column="1" bodyfile="HKSupply/Models/Supplier.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_1aa93f31a4cb853acf2d9e7f1d784849ad" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supplier.BillingAddress</definition>
+        <argsstring></argsstring>
+        <name>BillingAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supplier.cs" line="39" column="1" bodyfile="HKSupply/Models/Supplier.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_1ad20341adc619c07e05537cdb8db059e5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supplier.ContactName</definition>
+        <argsstring></argsstring>
+        <name>ContactName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supplier.cs" line="42" column="1" bodyfile="HKSupply/Models/Supplier.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_1a9deb74cae3643174e463fce1aa619f8f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supplier.ContactPhone</definition>
+        <argsstring></argsstring>
+        <name>ContactPhone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supplier.cs" line="45" column="1" bodyfile="HKSupply/Models/Supplier.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_1a4219a14258ebdd2c9c3a01fab8f26b50" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.Supplier.IdIncoterm</definition>
+        <argsstring></argsstring>
+        <name>IdIncoterm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supplier.cs" line="48" column="1" bodyfile="HKSupply/Models/Supplier.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_1ad34530d0191bafb6dc54f9a10cefd3ed" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.Supplier.IdPaymentTerms</definition>
+        <argsstring></argsstring>
+        <name>IdPaymentTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supplier.cs" line="51" column="1" bodyfile="HKSupply/Models/Supplier.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_1a71458cebf8965dd25a681cbfdaa26456" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supplier.Currency</definition>
+        <argsstring></argsstring>
+        <name>Currency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supplier.cs" line="54" column="1" bodyfile="HKSupply/Models/Supplier.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_supplier_1ab87f03e0a94f090e84b2bfb9224d1a35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.Supplier.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supplier.cs" line="57" column="1" bodyfile="HKSupply/Models/Supplier.cs" bodystart="57" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_supplier_1a78b73e8b0cdf8d483c685691f4a07e64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.Supplier.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supplier.cs" line="84" column="1" bodyfile="HKSupply/Models/Supplier.cs" bodystart="84" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/Supplier.cs" line="13" column="1" bodyfile="HKSupply/Models/Supplier.cs" bodystart="12" bodyend="105"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_1a1e442e2c3f391606a3c303f9e86e135c" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supplier</scope><name>Active</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_1aa93f31a4cb853acf2d9e7f1d784849ad" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supplier</scope><name>BillingAddress</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_1ad20341adc619c07e05537cdb8db059e5" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supplier</scope><name>ContactName</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_1a9deb74cae3643174e463fce1aa619f8f" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supplier</scope><name>ContactPhone</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_1a71458cebf8965dd25a681cbfdaa26456" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supplier</scope><name>Currency</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_1ab87f03e0a94f090e84b2bfb9224d1a35" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supplier</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_1a78b73e8b0cdf8d483c685691f4a07e64" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supplier</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_1a4219a14258ebdd2c9c3a01fab8f26b50" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supplier</scope><name>IdIncoterm</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_1ad34530d0191bafb6dc54f9a10cefd3ed" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supplier</scope><name>IdPaymentTerms</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_1a58258c76947d901e802f66221745cc2e" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supplier</scope><name>IdSubVer</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_1a7c9ff1aef204c91c705c40e11f1264d0" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supplier</scope><name>IdSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_1a41cc34e0300a309f805f2d4fa514f0d4" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supplier</scope><name>IdVer</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_1ab765a1c38ddac7aff4cd9c46b529b51b" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supplier</scope><name>ShippingAddress</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_1a3a3595e3680379dcedabd6288b92f1d3" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supplier</scope><name>SupplierName</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_1ae4387cfe9cd8e517945293026cfedfff" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supplier</scope><name>Timestamp</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_1a9b5260c2780176ed686d14b1210b9558" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supplier</scope><name>VATNum</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Implementations/EFCustomer.cs" line="215" column="1" bodyfile="HKSupply/Services/Implementations/EFCustomer.cs" bodystart="215" bodyend="249"/>
+        <location file="HKSupply/Services/Implementations/EFCustomer.cs" line="214" column="1" bodyfile="HKSupply/Services/Implementations/EFCustomer.cs" bodystart="214" bodyend="248"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -99,30 +99,30 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="45">
+      <node id="49">
         <label>ICustomer</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer"/>
       </node>
-      <node id="44">
+      <node id="48">
         <label>HKSupply.Services.Implementations.EFCustomer</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer"/>
-        <childnode refid="45" relation="public-inheritance">
+        <childnode refid="49" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="47">
+      <node id="51">
         <label>ICustomer</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer"/>
       </node>
-      <node id="46">
+      <node id="50">
         <label>HKSupply.Services.Implementations.EFCustomer</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer"/>
-        <childnode refid="47" relation="public-inheritance">
+        <childnode refid="51" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="HKSupply/Services/Implementations/EFCustomer.cs" line="21" column="1" bodyfile="HKSupply/Services/Implementations/EFCustomer.cs" bodystart="20" bodyend="250"/>
+    <location file="HKSupply/Services/Implementations/EFCustomer.cs" line="21" column="1" bodyfile="HKSupply/Services/Implementations/EFCustomer.cs" bodystart="20" bodyend="249"/>
     <listofallmembers>
       <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1ad2554c4f7f433e8c784264323ac45077" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFCustomer</scope><name>_log</name></member>
       <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1a88c703ed6108d30abbed42876d524fb3" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFCustomer</scope><name>GetCustomerById</name></member>

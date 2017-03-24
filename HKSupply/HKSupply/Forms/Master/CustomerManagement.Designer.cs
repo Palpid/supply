@@ -31,6 +31,7 @@
             this.tcGeneral = new System.Windows.Forms.TabControl();
             this.tpGrid = new System.Windows.Forms.TabPage();
             this.gbFilter = new System.Windows.Forms.GroupBox();
+            this.chkFilter = new System.Windows.Forms.CheckBox();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.cmbColFilter = new System.Windows.Forms.ComboBox();
             this.btnLoad = new System.Windows.Forms.Button();
@@ -66,7 +67,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.chkActive = new System.Windows.Forms.CheckBox();
-            this.chkFilter = new System.Windows.Forms.CheckBox();
             this.tcGeneral.SuspendLayout();
             this.tpGrid.SuspendLayout();
             this.gbFilter.SuspendLayout();
@@ -114,6 +114,15 @@
             this.gbFilter.TabIndex = 2;
             this.gbFilter.TabStop = false;
             // 
+            // chkFilter
+            // 
+            this.chkFilter.AutoSize = true;
+            this.chkFilter.Location = new System.Drawing.Point(486, 21);
+            this.chkFilter.Name = "chkFilter";
+            this.chkFilter.Size = new System.Drawing.Size(18, 17);
+            this.chkFilter.TabIndex = 3;
+            this.chkFilter.UseVisualStyleBackColor = true;
+            // 
             // txtFilter
             // 
             this.txtFilter.Location = new System.Drawing.Point(223, 18);
@@ -146,6 +155,7 @@
             this.grdCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdCustomers.BackgroundColor = System.Drawing.Color.White;
             this.grdCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdCustomers.Location = new System.Drawing.Point(6, 104);
             this.grdCustomers.Name = "grdCustomers";
@@ -443,15 +453,6 @@
             this.chkActive.Size = new System.Drawing.Size(549, 23);
             this.chkActive.TabIndex = 8;
             this.chkActive.UseVisualStyleBackColor = true;
-            // 
-            // chkFilter
-            // 
-            this.chkFilter.AutoSize = true;
-            this.chkFilter.Location = new System.Drawing.Point(486, 21);
-            this.chkFilter.Name = "chkFilter";
-            this.chkFilter.Size = new System.Drawing.Size(18, 17);
-            this.chkFilter.TabIndex = 3;
-            this.chkFilter.UseVisualStyleBackColor = true;
             // 
             // CustomerManagement
             // 

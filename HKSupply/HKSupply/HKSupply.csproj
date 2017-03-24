@@ -163,6 +163,7 @@
     </Compile>
     <Compile Include="General\GlobalSetting.cs" />
     <Compile Include="Helpers\CustomExtensions.cs" />
+    <Compile Include="Helpers\MDIClientSupport.cs" />
     <Compile Include="Helpers\Mocking\MockData.cs" />
     <Compile Include="Helpers\PasswordHelper.cs" />
     <Compile Include="Migrations\201703081042226_Customer.cs" />

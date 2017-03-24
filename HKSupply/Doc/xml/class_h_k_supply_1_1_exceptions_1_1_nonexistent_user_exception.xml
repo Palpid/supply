@@ -84,24 +84,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="160">
+      <node id="222">
         <label>HKSupply.Exceptions.NonexistentUserException</label>
         <link refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_user_exception"/>
-        <childnode refid="161" relation="public-inheritance">
+        <childnode refid="223" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="161">
+      <node id="223">
         <label>System::Exception</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="162">
+      <node id="224">
         <label>HKSupply.Exceptions.NonexistentUserException</label>
         <link refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_user_exception"/>
-        <childnode refid="163" relation="public-inheritance">
+        <childnode refid="225" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="163">
+      <node id="225">
         <label>System::Exception</label>
       </node>
     </collaborationgraph>
