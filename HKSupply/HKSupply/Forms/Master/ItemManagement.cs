@@ -313,6 +313,22 @@ namespace HKSupply.Forms.Master
                     btnMultiFilters.Text += " *";
                     LoadItemsList(_multiFilters);
                 }
+
+                //Test con User
+                //frm.InitData(new User(), _multiFilters);
+                //frm.ShowDialog();
+                //if (frm.DialogResult == DialogResult.OK)
+                //{
+                //    _multiFilters = frm.FilterList;
+
+                //    var users = GlobalSetting.UserService.GetAllUsers();
+                //    //montamos el string con los filtros
+                //    string filterString = string.Empty;
+                //    foreach (var filter in _multiFilters)
+                //        filterString += filter.GetLinqFilterString();
+                //    users = users.Where(filterString).ToList();
+
+                //}
             }
             catch (Exception ex)
             {

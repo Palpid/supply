@@ -1,6 +1,7 @@
 ﻿using CustomControls;
 using HKSupply.Styles;
 using HKSupply.Helpers;
+using HKSupply.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,6 +39,7 @@ namespace HKSupply.Forms
             { "=", "=" },
             { "!=", "!=" },
             { "Contains", "Contains" },
+            { "NotContains", "Not Contains" },
         };
 
         private Dictionary<string, string> _numberConditionDic = new Dictionary<string, string>() 
@@ -51,8 +53,8 @@ namespace HKSupply.Forms
         private Dictionary<string, string> _unionDic = new Dictionary<string, string>() 
         { 
             { "", "" },
-            { "OR", "OR" },
             { "AND", "AND" },
+            { "OR", "OR" },
         };
 
         private List<ModelLinqFiltering> _filterList = new List<ModelLinqFiltering>();
@@ -194,6 +196,92 @@ namespace HKSupply.Forms
         {
             try
             {
+                LoadObjectPropertiesToDic(objectToFilter, null);
+
+                if (filters == null)
+
+                    AddRowFilter(); //Agregamos la primera fila en blanco si no han indicado algún prefiltro
+                else
+                    _prefilters = filters; //cargamos los filtros que se han recibido
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        //Original
+        //public void InitData(object objectToFilter, List<ModelLinqFiltering> filters)
+        //{
+        //    try
+        //    {
+        //        Type type = default(Type);
+        //        Type propertyType = default(Type);
+        //        PropertyInfo[] propertyInfo = null;
+
+        //        type = objectToFilter.GetType();
+
+        //        propertyInfo = type.GetProperties(BindingFlags.GetProperty |
+        //                                          BindingFlags.Public |
+        //                                          BindingFlags.NonPublic |
+        //                                          BindingFlags.Instance);
+        //        // Recorremos todas las propiedades 
+        //        for (int propertyInfoIndex = 0; propertyInfoIndex <= propertyInfo.Length - 1; propertyInfoIndex++)
+        //        {
+        //            propertyType = propertyInfo[propertyInfoIndex].PropertyType;
+        //            //Obtenemos el tipo en el caso de las nullable
+        //            if (propertyType.IsGenericType &&
+        //                propertyType.GetGenericTypeDefinition() == typeof(Nullable<>))
+        //            {
+        //                propertyType = propertyType.GetGenericArguments()[0];
+        //            }
+
+        //            //Controlamos que no sea un tipo complejo para no agregarlo a los diccionarios
+        //            //[Nota: el string es un tipo complejo]
+        //            if ((propertyType.IsClass && !propertyType.IsValueType &&
+        //                 !propertyType.IsPrimitive && propertyType.FullName != "System.String"
+        //                ) == false)
+        //            {
+        //                //Guardamos en un diccionario los nombres de las propiedades para montar los combos 
+        //                //y en otro la propiedad y el tipo
+        //                _objectPropertiesDic.Add(propertyInfo[propertyInfoIndex].Name, propertyInfo[propertyInfoIndex].Name);
+        //                _objectPropertiesTypesDic.Add(propertyInfo[propertyInfoIndex].Name, propertyType.Name);
+        //            }
+        //        }
+
+        //        if (filters == null)
+        //        {
+        //            //Agregamos la primera fila en blanco si no han indicado algún prefiltro
+        //            AddRowFilter();
+        //        }
+        //        else
+        //        {
+        //            //cargamos los filtros que se han recibido
+        //            _prefilters = filters;
+        //        }
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+
+        //}
+
+        /// <summary>
+        /// Obtenemos las propiedades y su tipo del objeto que hemos recibido para poder montar toda la pantalla
+        /// </summary>
+        /// <param name="objectToFilter">Objeto sobre el que se desea filtrar</param>
+        /// <param name="propertyName">Si se llama de forma recursiva, nombre de la propiedad padre</param>
+        /// <remarks>El método es recursivo, si alguno de los tipos es complejo se llama al método con ese tipo</remarks>
+        private void LoadObjectPropertiesToDic(object objectToFilter, string propertyName)
+        {
+            try
+            {
+                propertyName = propertyName == null ? string.Empty : propertyName + ".";
+
                 Type type = default(Type);
                 Type propertyType = default(Type);
                 PropertyInfo[] propertyInfo = null;
@@ -214,29 +302,35 @@ namespace HKSupply.Forms
                     {
                         propertyType = propertyType.GetGenericArguments()[0];
                     }
-                    //Guardamos en un diccionario los nombres de las propiedades para montar los combos 
-                    //y en otro la propiedad y el tipo
-                    _objectPropertiesDic.Add(propertyInfo[propertyInfoIndex].Name, propertyInfo[propertyInfoIndex].Name);
-                    _objectPropertiesTypesDic.Add(propertyInfo[propertyInfoIndex].Name, propertyType.Name);
-                }
 
-                if (filters == null)
-                {
-                    //Agregamos la primera fila en blanco si no han indicado algún prefiltro
-                    AddRowFilter();
+                    //Si es un tipo complejo, creamos una instancia suya y la recorremos de forma recursiva
+                    //[Nota: el string es un tipo complejo y no nos interesa]
+                    if ((propertyType.IsClass && !propertyType.IsValueType &&
+                         !propertyType.IsPrimitive && propertyType.FullName != typeof(System.String).FullName
+                        ) == true)
+                    {
+                        LoadObjectPropertiesToDic(
+                            Activator.CreateInstance(propertyType),
+                            propertyInfo[propertyInfoIndex].Name);
+                    }
+                    else
+                    {
+                        //Guardamos en un diccionario los nombres de las propiedades para montar los combos 
+                        //y en otro la propiedad y el tipo
+                        _objectPropertiesDic.Add(
+                            propertyName + propertyInfo[propertyInfoIndex].Name,
+                            propertyName + propertyInfo[propertyInfoIndex].Name);
+
+                        _objectPropertiesTypesDic.Add(
+                            propertyName + propertyInfo[propertyInfoIndex].Name,
+                            propertyType.Name);
+                    }
                 }
-                else
-                {
-                    //cargamos los filtros que se han recibido
-                    _prefilters = filters;
-                }
-                
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw ex;
             }
-
         }
 
         #endregion
@@ -766,6 +860,11 @@ namespace HKSupply.Forms
                     case "Contains":
                         conditionString = string.Format(".ToLower().Contains(\"{0}\")", Filter.ToLower());
                         break;
+
+                    case "NotContains":
+                        conditionString = string.Format(".ToLower().Contains(\"{0}\") == false", Filter.ToLower());
+                        break;
+
                     default:
                         switch(PropertyType)
                         {
