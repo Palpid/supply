@@ -99,7 +99,7 @@ namespace HKSupply.Forms
                     Assembly frmAssembly = Assembly.LoadFile(Application.ExecutablePath);
                     foreach (Type type in frmAssembly.GetTypes())
                     {
-                        if (type.BaseType == typeof(Form))
+                        if (type.BaseType == typeof(Form) || type.BaseType == typeof(RibbonFormBase))
                         {
                             if (type.Name == menuItem.FormName)
                             {

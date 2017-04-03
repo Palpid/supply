@@ -28,42 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grdUsers = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.grdUsers)).BeginInit();
+            this.xgrdUsers = new DevExpress.XtraGrid.GridControl();
+            this.rootGridViewUsers = new DevExpress.XtraGrid.Views.Grid.GridView();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdUsers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rootGridViewUsers)).BeginInit();
             this.SuspendLayout();
             // 
-            // grdUsers
+            // ribbonControl
             // 
-            this.grdUsers.AllowUserToAddRows = false;
-            this.grdUsers.AllowUserToDeleteRows = false;
-            this.grdUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ribbonControl.ExpandCollapseItem.Id = 0;
+            // 
+            // xgrdUsers
+            // 
+            this.xgrdUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grdUsers.BackgroundColor = System.Drawing.Color.White;
-            this.grdUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdUsers.Location = new System.Drawing.Point(16, 62);
-            this.grdUsers.Name = "grdUsers";
-            this.grdUsers.RowTemplate.Height = 24;
-            this.grdUsers.Size = new System.Drawing.Size(1183, 522);
-            this.grdUsers.TabIndex = 0;
+            this.xgrdUsers.Location = new System.Drawing.Point(12, 186);
+            this.xgrdUsers.MainView = this.rootGridViewUsers;
+            this.xgrdUsers.MenuManager = this.ribbonControl;
+            this.xgrdUsers.Name = "xgrdUsers";
+            this.xgrdUsers.Size = new System.Drawing.Size(898, 504);
+            this.xgrdUsers.TabIndex = 2;
+            this.xgrdUsers.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.rootGridViewUsers});
+            // 
+            // rootGridViewUsers
+            // 
+            this.rootGridViewUsers.GridControl = this.xgrdUsers;
+            this.rootGridViewUsers.Name = "rootGridViewUsers";
             // 
             // UserManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1215, 598);
-            this.Controls.Add(this.grdUsers);
+            this.ClientSize = new System.Drawing.Size(922, 737);
+            this.Controls.Add(this.xgrdUsers);
             this.Name = "UserManagement";
             this.Text = "User Management";
             this.Load += new System.EventHandler(this.UserManagement_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.grdUsers)).EndInit();
+            this.Controls.SetChildIndex(this.ribbonControl, 0);
+            this.Controls.SetChildIndex(this.ribbonStatusBar, 0);
+            this.Controls.SetChildIndex(this.xgrdUsers, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rootGridViewUsers)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView grdUsers;
+        private DevExpress.XtraGrid.GridControl xgrdUsers;
+        private DevExpress.XtraGrid.Views.Grid.GridView rootGridViewUsers;
     }
 }

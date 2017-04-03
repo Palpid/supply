@@ -1,23 +1,29 @@
-﻿using HKSupply.Exceptions;
+﻿using DevExpress.Utils;
+using DevExpress.Utils.Menu;
+using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid.Menu;
+using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraGrid.Views.Grid;
 using HKSupply.General;
 using HKSupply.Helpers;
 using HKSupply.Models;
-using HKSupply.Styles;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HKSupply.Forms.Master
 {
-    public partial class UserManagement : Form, IActionsStackView
+    public partial class UserManagement : RibbonFormBase
     {
+
         #region Enums
         private enum eUserColumns
         {
@@ -26,7 +32,6 @@ namespace HKSupply.Forms.Master
             Password,
             Name,
             RoleId,
-            UserRole,
             Enabled,
             LastLogin,
             LastLogout,
@@ -34,63 +39,94 @@ namespace HKSupply.Forms.Master
         }
         #endregion
 
-        #region Private members
-
-        ToolStripMenuItem tsiChangePassword = new ToolStripMenuItem();
-        private DataGridViewCellEventArgs mouseLocation;
-
-        CustomControls.StackView actionsStackView;
+        #region Private Members
 
         List<Role> _roleList;
 
         List<User> _modifiedUsers = new List<User>();
         List<User> _createdUsers = new List<User>();
+        
         #endregion
 
         #region Constructor
         public UserManagement()
         {
             InitializeComponent();
+
+            ConfigureRibbonActions();
+            LoadRoles();
+            SetUpGrdUsers();
         }
         #endregion
 
-        #region Action toolbar
-
-        public void actionsStackView_EditButtonClick(object sender, EventArgs e)
+        #region Ribbon
+        private void ConfigureRibbonActions()
         {
             try
             {
-                //MessageBox.Show("Edit Button");
-                ConfigureActionsStackViewEditing();
+                var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
+                Read = actions.Read;
+                New = actions.New;
+                Modify = actions.Modify;
+                RestoreInitState();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw ex;
             }
-
         }
 
-        public void actionsStackView_NewButtonClick(object sender, EventArgs e)
+        public override void bbiCancel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            base.bbiCancel_ItemClick(sender, e);
             try
             {
-                //MessageBox.Show("New Button");
+                LoadAllUsers();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public override void bbiEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            base.bbiEdit_ItemClick(sender, e);
+
+            try
+            {
+                ConfigureRibbonActionsEditing();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public override void bbiNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            base.bbiNew_ItemClick(sender, e);
+            try
+            {
                 ConfigureActionsStackViewCreating();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
-        public void actionsStackView_SaveButtonClick(object sender, EventArgs e)
+        public override void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            base.bbiSave_ItemClick(sender, e);
+
             try
             {
                 bool res = false;
-                //indicamos que ha dejado de editar el grid, por si modifica una celda y sin salir pulsa sobre guardar
-                grdUsers.EndEdit();
+
+                //Lanzamos el validate para finalizar cualquier accion de edición, ya que este control no tiene focus nunca y no lo lanza por si mismo
+                //por si modifica una celda y sin salir pulsa sobre guardar directamente
+                Validate();
 
                 if (IsValidUsers() == false)
                     return;
@@ -100,7 +136,7 @@ namespace HKSupply.Forms.Master
                 if (result != DialogResult.Yes)
                     return;
 
-                if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
+                if (CurrentState == ActionsStates.Edit)
                 {
                     if (_modifiedUsers.Count() == 0)
                     {
@@ -108,114 +144,70 @@ namespace HKSupply.Forms.Master
                     }
                     else
                     {
-                        if (UpdateUsers())
-                        {
-                            res = true;
-                        }
+                        res = UpdateUsers();
                     }
                 }
-                else if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.New)
+                else if (CurrentState == ActionsStates.New)
                 {
-                    if (CreateUser())
-                    {
-                        res = true;
-                    }
+                    res = CreateUser();
                 }
 
                 if (res == true)
                 {
                     MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
                     LoadAllUsers();
-                    ConfigureRolesColorsStyles();
-                    actionsStackView.RestoreInitState();
+                    RestoreInitState();
+                    SetGridStylesByState();
                 }
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-        }
-        
-        public void actionsStackView_CancelButtonClick(object sender, EventArgs e)
-        {
-            try
-            {
-                LoadAllUsers();
-                ConfigureRolesColorsStyles();
-                actionsStackView.RestoreInitState();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-        }
-
-        public void ConfigureActionsStackView()
-        {
-            try
-            {
-                var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
-
-                //CustomControls.StackView actionsStackView = new CustomControls.StackView(actions.Read, actions.New, actions.Modify);
-                actionsStackView = new CustomControls.StackView(actions.Read, actions.New, actions.Modify);
-                actionsStackView.EditButtonClick += actionsStackView_EditButtonClick;
-                actionsStackView.NewButtonClick += actionsStackView_NewButtonClick;
-                actionsStackView.SaveButtonClick += actionsStackView_SaveButtonClick;
-                actionsStackView.CancelButtonClick += actionsStackView_CancelButtonClick;
-
-                Controls.Add(actionsStackView);
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
         }
         #endregion
 
         #region Form Events
+
         private void UserManagement_Load(object sender, EventArgs e)
         {
             try
             {
-                ConfigureActionsStackView();
-                LoadRoles();
-                SetupUsersGrid();
                 LoadAllUsers();
-                AddContextMenu();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
 
-        
-
-        #region Grid events
-
-        private void grdUsers_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        #region Grid Events
+        void rootGridViewUsers_CellValueChanged(object sender, CellValueChangedEventArgs e)
         {
             try
             {
-                if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
+                GridView view = sender as GridView;
+                if (CurrentState == ActionsStates.Edit)
                 {
+                    object id = view.GetRowCellValue(view.FocusedRowHandle, eUserColumns.Id.ToString());
+                    object userLogin = view.GetRowCellValue(view.FocusedRowHandle, eUserColumns.UserLogin.ToString());
+                    object password = view.GetRowCellValue(view.FocusedRowHandle, eUserColumns.Password.ToString());
+                    object name = view.GetRowCellValue(view.FocusedRowHandle, eUserColumns.Name.ToString());
+                    object roleid = view.GetRowCellValue(view.FocusedRowHandle, eUserColumns.RoleId.ToString());
+                    object enabled = view.GetRowCellValue(view.FocusedRowHandle, eUserColumns.Enabled.ToString());
+                    object remarks = view.GetRowCellValue(view.FocusedRowHandle, eUserColumns.Remarks.ToString());
+
                     User tmpUser = new User();
-                    tmpUser.Id = (int)grdUsers.Rows[e.RowIndex].Cells[(int)eUserColumns.Id].Value;
-                    tmpUser.UserLogin = (grdUsers.Rows[e.RowIndex].Cells[(int)eUserColumns.UserLogin].Value.ToString() ?? string.Empty).ToString();
-                    tmpUser.Password = grdUsers.Rows[e.RowIndex].Cells[(int)eUserColumns.Password].Value.ToString();
-                    tmpUser.Name = (grdUsers.Rows[e.RowIndex].Cells[(int)eUserColumns.Name].Value ?? string.Empty).ToString();
-                    tmpUser.RoleId = grdUsers.Rows[e.RowIndex].Cells[(int)eUserColumns.RoleId].Value.ToString();
-                    tmpUser.Enabled = (bool)grdUsers.Rows[e.RowIndex].Cells[(int)eUserColumns.Enabled].Value;
-                    tmpUser.Remarks = (grdUsers.Rows[e.RowIndex].Cells[(int)eUserColumns.Remarks].Value ?? string.Empty).ToString();
+                    tmpUser.Id = (int)id;
+                    tmpUser.UserLogin = (userLogin ?? string.Empty).ToString();
+                    tmpUser.Password = (password ?? string.Empty).ToString();
+                    tmpUser.Name = (name ?? string.Empty).ToString();
+                    tmpUser.RoleId = (roleid ?? string.Empty).ToString();
+                    tmpUser.Enabled = (bool)enabled;
+                    tmpUser.Remarks = (remarks ?? string.Empty).ToString();
                     AddModifiedUserToList(tmpUser);
                 }
-
             }
             catch (Exception ex)
             {
@@ -223,197 +215,137 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void grdUsers_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        void rootGridViewUsers_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
         {
             try
             {
-                switch (e.ColumnIndex)
+                GridView view = sender as GridView;
+                if (view.FocusedColumn.FieldName == eUserColumns.Name.ToString() ||
+                    view.FocusedColumn.FieldName == eUserColumns.UserLogin.ToString() ||
+                    view.FocusedColumn.FieldName == eUserColumns.Password.ToString())
                 {
-                    case (int)eUserColumns.Password:
-                    case (int)eUserColumns.Name:
-                        if (string.IsNullOrEmpty(e.FormattedValue.ToString()))
-                        {
-                            MessageBox.Show(GlobalSetting.ResManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            e.Cancel = true;
-                        }
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-        }
-
-        void grdUsers_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            try
-            {
-                if (grdUsers.Columns[e.ColumnIndex].Index == (int)eUserColumns.Password)
-                {
-                    if (e.Value != null)
+                    if (string.IsNullOrEmpty(e.Value as string))
                     {
-                        e.Value = "********";
-                        e.FormattingApplied = true;
+                        e.Valid = false;
+                        e.ErrorText = GlobalSetting.ResManager.GetString("FieldRequired");
                     }
                 }
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
         }
 
-        void grdUsers_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-        {
-            TextBox t = e.Control as TextBox;
-            if (t != null)
-            {
-                t.Text = (string)grdUsers.SelectedCells[0].Value;
-            }
-        }
-
-        private void grdUsers_CellMouseEnter(object sender,
-            DataGridViewCellEventArgs location)
-        {
-            mouseLocation = location;
-        }
-
-        private void grdUsers_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-            //show this message when the user enter incorrect value in a cell
-            MessageBox.Show(GlobalSetting.ResManager.GetString("CellDataError"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        private void tsiChangePassword_Click(object sender, EventArgs args)
+        void rootGridViewUsers_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
         {
             try
             {
-                //grdUsers.Rows[mouseLocation.RowIndex].Cells[mouseLocation.ColumnIndex].Style.BackColor = Color.Red;
+                GridView view = sender as GridView;
 
-                int id = (int)grdUsers.Rows[mouseLocation.RowIndex].Cells[(int)eUserColumns.Id].Value;
-                User user = GlobalSetting.UserService.GetUserById(id);
+                if (e.MenuType == GridMenuType.Row)
+                {
+                    int rowHandle = e.HitInfo.RowHandle;
+                    e.Menu.Items.Clear();
+                    e.Menu.Items.Add(CreateMenuItemChangePassword(view, rowHandle));
+
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        DXMenuItem CreateMenuItemChangePassword(GridView view, int rowHandle)
+        {
+            DXMenuItem menuItem = new DXMenuItem(GlobalSetting.ResManager.GetString("ResetPassword"),
+                new EventHandler(OnMenuItemChangePasswordClick));
+            menuItem.Tag = new RowInfo(view, rowHandle);
+            return menuItem;
+        }
+
+        void OnMenuItemChangePasswordClick(object sender, EventArgs e)
+        {
+            try
+            {
+                DXMenuItem item = sender as DXMenuItem;
+                RowInfo info = item.Tag as RowInfo;
+
+                object id = info.View.GetRowCellValue(info.RowHandle, eUserColumns.Id.ToString());
+
+                User user = GlobalSetting.UserService.GetUserById((int)id);
                 Form frm = new ChangePassword(user);
                 frm.ShowDialog();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw ex;
             }
-
         }
-        #endregion
 
         #endregion
 
-        #region Private Methods
+        #endregion
 
-        private void SetupUsersGrid()
+        #region Private Members
+        private void SetUpGrdUsers()
         {
             try
             {
+                //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
+                rootGridViewUsers.OptionsView.ColumnAutoWidth = false;
+                rootGridViewUsers.HorzScrollVisibility = ScrollVisibility.Auto;
+
+                ////Columns definition
+                GridColumn colId = new GridColumn() { Caption = "Id", Visible = false, FieldName = eUserColumns.Id.ToString(), Width = 50 };
+                GridColumn colUserLogin = new GridColumn() { Caption = "User Login", Visible = true, FieldName = eUserColumns.UserLogin.ToString(), Width = 150 };
+                GridColumn colPassword = new GridColumn() { Caption = "Password", Visible = false, FieldName = eUserColumns.Password.ToString(), Width = 100 };
+                GridColumn colName = new GridColumn() { Caption = "Name", Visible = true, FieldName = eUserColumns.Name.ToString(), Width = 200  };
+                GridColumn colRoleId = new GridColumn() { Caption = "Role", Visible = true, FieldName = eUserColumns.RoleId.ToString(), Width = 150 };
+                GridColumn colEnabled = new GridColumn() { Caption = "Enabled", Visible = true, FieldName = eUserColumns.Enabled.ToString(), Width = 50 };
+                GridColumn colLastLogin = new GridColumn() { Caption = "Last Login", Visible = true, FieldName = eUserColumns.LastLogin.ToString(), Width = 120 };
+                GridColumn colLastLogout = new GridColumn() { Caption = "Last Logout", Visible = true, FieldName = eUserColumns.LastLogout.ToString(), Width = 120 };
+                GridColumn colRemarks = new GridColumn() { Caption = "Remarks", Visible = true, FieldName = eUserColumns.Remarks.ToString(), Width = 300 };
+
+                //Format type
+                colLastLogin.DisplayFormat.FormatType = FormatType.DateTime;
+                colLastLogout.DisplayFormat.FormatType = FormatType.DateTime;
+
+                //Combobox repository for user Role
+                RepositoryItemLookUpEdit riComboRole = new RepositoryItemLookUpEdit();
+                riComboRole.DataSource = _roleList;
+                riComboRole.ValueMember = "RoleId";
+                riComboRole.DisplayMember = "Description";
+                riComboRole.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("RoleId", 40, "Item Code"));
+                riComboRole.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Description", 60, "Item Name"));
+
+                //Password repository
+                RepositoryItemTextEdit ritxtPassword = new RepositoryItemTextEdit();
+                ritxtPassword.PasswordChar = '*';
+
+
+                colRoleId.ColumnEdit = riComboRole;
+                colPassword.ColumnEdit = ritxtPassword;
+
+                //add columns to grid root view
+                rootGridViewUsers.Columns.Add(colId);
+                rootGridViewUsers.Columns.Add(colUserLogin);
+                rootGridViewUsers.Columns.Add(colPassword);
+                rootGridViewUsers.Columns.Add(colName);
+                rootGridViewUsers.Columns.Add(colRoleId);
+                rootGridViewUsers.Columns.Add(colEnabled);
+                rootGridViewUsers.Columns.Add(colLastLogin);
+                rootGridViewUsers.Columns.Add(colLastLogout);
+                rootGridViewUsers.Columns.Add(colRemarks);
+
+
                 //Events
-                grdUsers.CellValueChanged += grdUsers_CellValueChanged;
-                grdUsers.CellValidating += grdUsers_CellValidating;
-                grdUsers.CellMouseEnter +=grdUsers_CellMouseEnter;
-                grdUsers.CellFormatting += new DataGridViewCellFormattingEventHandler(grdUsers_CellFormatting);
-                grdUsers.EditingControlShowing += new DataGridViewEditingControlShowingEventHandler(grdUsers_EditingControlShowing);
-
-                //Columns
-
-                //adding Id TextBox
-                DataGridViewTextBoxColumn columnId = new DataGridViewTextBoxColumn();
-                columnId.HeaderText = eUserColumns.Id.ToString();
-                columnId.Width = 50;
-                columnId.DataPropertyName = eUserColumns.Id.ToString();
-
-                grdUsers.Columns.Add(columnId);
-
-                //adding Login TextBox
-                DataGridViewTextBoxColumn columnLogin = new DataGridViewTextBoxColumn();
-                columnLogin.HeaderText = eUserColumns.UserLogin.ToString();
-                columnLogin.Width = 120;
-                columnLogin.DataPropertyName = eUserColumns.UserLogin.ToString();
-
-                grdUsers.Columns.Add(columnLogin);
-
-
-                //Adding  Password TextBox
-                DataGridViewTextBoxColumn columnPassword = new DataGridViewTextBoxColumn();
-                columnPassword.HeaderText = eUserColumns.Password.ToString();
-                columnPassword.Width = 120;
-                columnPassword.DataPropertyName = eUserColumns.Password.ToString();
-                columnPassword.Visible = false;
-
-                grdUsers.Columns.Add(columnPassword);
-
-                //Adding  Name TextBox
-                DataGridViewTextBoxColumn columnName = new DataGridViewTextBoxColumn();
-                columnName.HeaderText = eUserColumns.Name.ToString();
-                columnName.Width = 150;
-                columnName.DataPropertyName = eUserColumns.Name.ToString();
-
-                grdUsers.Columns.Add(columnName);
-
-                //Adding  Role Id Combo
-                DataGridViewComboBoxColumn columnRoleId = new DataGridViewComboBoxColumn();
-                columnRoleId.HeaderText = eUserColumns.RoleId.ToString();
-                columnRoleId.DataPropertyName = eUserColumns.RoleId.ToString();
-                columnRoleId.Width = 200;
-                columnRoleId.DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox;
-
-                columnRoleId.DataSource = _roleList;
-                columnRoleId.ValueMember = "RoleId";
-                columnRoleId.DisplayMember = "Description";
-
-                grdUsers.Columns.Add(columnRoleId);
-
-                //Adding  Enabled CheckBox
-                DataGridViewCheckBoxColumn columnEnabled = new DataGridViewCheckBoxColumn();
-                columnEnabled.HeaderText = eUserColumns.Enabled.ToString();
-                columnEnabled.Width = 60;
-                columnEnabled.DataPropertyName = eUserColumns.Enabled.ToString();
-
-                grdUsers.Columns.Add(columnEnabled);
-
-
-                //Adding  Last Login TextBox
-                DataGridViewTextBoxColumn columnLastLogin = new DataGridViewTextBoxColumn();
-                columnLastLogin.HeaderText = eUserColumns.LastLogin.ToString();
-                columnLastLogin.Width = 100;
-                columnLastLogin.DataPropertyName = eUserColumns.LastLogin.ToString();
-
-                grdUsers.Columns.Add(columnLastLogin);
-
-                //Adding  Last Logoout TextBox
-                DataGridViewTextBoxColumn columnLastLogout = new DataGridViewTextBoxColumn();
-                columnLastLogout.HeaderText = eUserColumns.LastLogout.ToString();
-                columnLastLogout.Width = 100;
-                columnLastLogout.DataPropertyName = eUserColumns.LastLogout.ToString();
-
-                grdUsers.Columns.Add(columnLastLogout);
-
-                //Adding  remarks  TextBox
-                DataGridViewTextBoxColumn columnRemarks = new DataGridViewTextBoxColumn();
-                columnRemarks.HeaderText = eUserColumns.Remarks.ToString();
-                columnRemarks.Width = 200;
-                columnRemarks.DataPropertyName = eUserColumns.Remarks.ToString();
-
-                grdUsers.Columns.Add(columnRemarks);
-
-                //Adding  user Role
-                DataGridViewTextBoxColumn columnUserRole = new DataGridViewTextBoxColumn();
-                columnUserRole.HeaderText = eUserColumns.UserRole.ToString();
-                columnUserRole.Width = 0;
-                columnUserRole.DataPropertyName = eUserColumns.UserRole.ToString();
-                columnUserRole.Visible = false;
-
-                grdUsers.Columns.Add(columnUserRole);
-
-
-
+                rootGridViewUsers.ValidatingEditor += rootGridViewUsers_ValidatingEditor;
+                rootGridViewUsers.CellValueChanged += rootGridViewUsers_CellValueChanged;
+                if (Modify)
+                    rootGridViewUsers.PopupMenuShowing += rootGridViewUsers_PopupMenuShowing;
 
             }
             catch (Exception ex)
@@ -422,21 +354,25 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void ConfigureRolesColorsStyles()
+        private void SetColumnGridOrder()
         {
             try
             {
-                foreach (DataGridViewColumn col in grdUsers.Columns)
-                    col.DefaultCellStyle.ForeColor = Color.Black;
-
-                grdUsers.ColumnHeadersDefaultCellStyle.BackColor = AppStyles.EtniaRed;
-                grdUsers.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-                grdUsers.EnableHeadersVisualStyles = false;
+                rootGridViewUsers.Columns[eUserColumns.Id.ToString()].VisibleIndex = 0;
+                rootGridViewUsers.Columns[eUserColumns.UserLogin.ToString()].VisibleIndex = 1;
+                rootGridViewUsers.Columns[eUserColumns.Password.ToString()].VisibleIndex = 2;
+                rootGridViewUsers.Columns[eUserColumns.Name.ToString()].VisibleIndex = 3;
+                rootGridViewUsers.Columns[eUserColumns.RoleId.ToString()].VisibleIndex = 4;
+                rootGridViewUsers.Columns[eUserColumns.Enabled.ToString()].VisibleIndex = 5;
+                rootGridViewUsers.Columns[eUserColumns.LastLogin.ToString()].VisibleIndex = 6;
+                rootGridViewUsers.Columns[eUserColumns.LastLogout.ToString()].VisibleIndex = 6;
+                rootGridViewUsers.Columns[eUserColumns.Remarks.ToString()].VisibleIndex = 6;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 throw ex;
             }
+
         }
 
         private void LoadRoles()
@@ -451,7 +387,6 @@ namespace HKSupply.Forms.Master
             }
         }
 
-
         private void LoadAllUsers()
         {
             try
@@ -459,10 +394,20 @@ namespace HKSupply.Forms.Master
                 _modifiedUsers.Clear();
                 _createdUsers.Clear();
                 IEnumerable<User> users = GlobalSetting.UserService.GetAllUsers();
-                grdUsers.DataSource = users;
-                grdUsers.ReadOnly = true;
+                xgrdUsers.DataSource = users;
 
-                ConfigureRolesColorsStyles();
+                rootGridViewUsers.Columns[eUserColumns.Id.ToString()].OptionsColumn.AllowEdit = false;
+                rootGridViewUsers.Columns[eUserColumns.UserLogin.ToString()].OptionsColumn.AllowEdit = false;
+                rootGridViewUsers.Columns[eUserColumns.Password.ToString()].OptionsColumn.AllowEdit = false;
+                rootGridViewUsers.Columns[eUserColumns.Name.ToString()].OptionsColumn.AllowEdit = false;
+                rootGridViewUsers.Columns[eUserColumns.RoleId.ToString()].OptionsColumn.AllowEdit = false;
+                rootGridViewUsers.Columns[eUserColumns.Enabled.ToString()].OptionsColumn.AllowEdit = false;
+                rootGridViewUsers.Columns[eUserColumns.LastLogin.ToString()].OptionsColumn.AllowEdit = false;
+                rootGridViewUsers.Columns[eUserColumns.LastLogout.ToString()].OptionsColumn.AllowEdit = false;
+                rootGridViewUsers.Columns[eUserColumns.Remarks.ToString()].OptionsColumn.AllowEdit = false;
+
+
+                SetGridStylesByState();
             }
             catch (Exception ex)
             {
@@ -470,23 +415,28 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void ConfigureActionsStackViewEditing()
+        private void ConfigureRibbonActionsEditing()
         {
             try
             {
-                grdUsers.ReadOnly = false;
-                //make columns readonly
-                grdUsers.Columns[(int)eUserColumns.Id].ReadOnly = true;
-                grdUsers.Columns[(int)eUserColumns.Id].DefaultCellStyle.ForeColor = Color.Gray;
+                CurrentState = ActionsStates.Edit;
 
-                grdUsers.Columns[(int)eUserColumns.UserLogin].ReadOnly = true;
-                grdUsers.Columns[(int)eUserColumns.UserLogin].DefaultCellStyle.ForeColor = Color.Gray;
+                //Allow edit some columns
+                rootGridViewUsers.Columns[eUserColumns.Name.ToString()].OptionsColumn.AllowEdit = true;
+                rootGridViewUsers.Columns[eUserColumns.RoleId.ToString()].OptionsColumn.AllowEdit = true;
+                rootGridViewUsers.Columns[eUserColumns.Enabled.ToString()].OptionsColumn.AllowEdit = true;
+                rootGridViewUsers.Columns[eUserColumns.Remarks.ToString()].OptionsColumn.AllowEdit = true;
 
-                grdUsers.Columns[(int)eUserColumns.LastLogin].ReadOnly = true;
-                grdUsers.Columns[(int)eUserColumns.LastLogin].DefaultCellStyle.ForeColor = Color.Gray;
 
-                grdUsers.Columns[(int)eUserColumns.LastLogout].ReadOnly = true;
-                grdUsers.Columns[(int)eUserColumns.LastLogout].DefaultCellStyle.ForeColor = Color.Gray;
+                //no edit column
+                rootGridViewUsers.Columns[eUserColumns.Id.ToString()].OptionsColumn.AllowEdit = false;
+                rootGridViewUsers.Columns[eUserColumns.UserLogin.ToString()].OptionsColumn.AllowEdit = false;
+                rootGridViewUsers.Columns[eUserColumns.LastLogin.ToString()].OptionsColumn.AllowEdit = false;
+                rootGridViewUsers.Columns[eUserColumns.LastLogout.ToString()].OptionsColumn.AllowEdit = false;
+
+                SetGridStylesByState();
+
+
             }
             catch (Exception ex)
             {
@@ -498,26 +448,24 @@ namespace HKSupply.Forms.Master
         {
             try
             {
+
                 _createdUsers.Add(new User());
-                grdUsers.DataSource = null;
-                grdUsers.Rows.Clear();
-                SetupUsersGrid();
-                grdUsers.DataSource = _createdUsers;
-                grdUsers.ReadOnly = false;
+                xgrdUsers.DataSource = null;
+                xgrdUsers.DataSource = _createdUsers;
 
-                //make columns readonly
-                grdUsers.Columns[(int)eUserColumns.Id].ReadOnly = true;
-                grdUsers.Columns[(int)eUserColumns.Id].DefaultCellStyle.ForeColor = Color.Gray;
+                //Allow edit some columns
+                rootGridViewUsers.Columns[eUserColumns.UserLogin.ToString()].OptionsColumn.AllowEdit = true;
+                rootGridViewUsers.Columns[eUserColumns.Password.ToString()].OptionsColumn.AllowEdit = true;
+                rootGridViewUsers.Columns[eUserColumns.Name.ToString()].OptionsColumn.AllowEdit = true;
+                rootGridViewUsers.Columns[eUserColumns.RoleId.ToString()].OptionsColumn.AllowEdit = true;
+                rootGridViewUsers.Columns[eUserColumns.Enabled.ToString()].OptionsColumn.AllowEdit = true;
+                rootGridViewUsers.Columns[eUserColumns.Remarks.ToString()].OptionsColumn.AllowEdit = true;
 
-                //show password column
-                grdUsers.Columns[(int)eUserColumns.Password].Visible = true;
+                //no edit column
+                rootGridViewUsers.Columns[eUserColumns.LastLogin.ToString()].OptionsColumn.AllowEdit = false;
+                rootGridViewUsers.Columns[eUserColumns.LastLogout.ToString()].OptionsColumn.AllowEdit = false;
 
-                //Hide some columns
-                grdUsers.Columns[(int)eUserColumns.LastLogin].Visible = false;
-                grdUsers.Columns[(int)eUserColumns.LastLogout].Visible = false;
-                
-
-
+                SetGridStylesByState();
             }
             catch (Exception ex)
             {
@@ -525,16 +473,67 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void AddContextMenu()
+        private void SetGridStylesByState()
         {
-            tsiChangePassword.Text = GlobalSetting.ResManager.GetString("ResetPassword");
-            tsiChangePassword.Click += new EventHandler(tsiChangePassword_Click);
-            ContextMenuStrip strip = new ContextMenuStrip();
-            foreach (DataGridViewColumn column in grdUsers.Columns)
+            try
             {
+                SetColumnGridOrder();
 
-                column.ContextMenuStrip = strip;
-                column.ContextMenuStrip.Items.Add(tsiChangePassword);
+                switch (CurrentState)
+                {
+                    case ActionsStates.Edit:
+                        rootGridViewUsers.ClearGrouping();
+                        //hide group panel.
+                        rootGridViewUsers.OptionsView.ShowGroupPanel = false;
+                        rootGridViewUsers.OptionsCustomization.AllowGroup = false;
+                        rootGridViewUsers.OptionsCustomization.AllowColumnMoving = false;
+                        //hide columns
+                        rootGridViewUsers.Columns[eUserColumns.LastLogin.ToString()].Visible = false;
+                        rootGridViewUsers.Columns[eUserColumns.LastLogout.ToString()].Visible = false;
+                        //Change forecolor
+                        rootGridViewUsers.Columns[eUserColumns.Id.ToString()].AppearanceCell.ForeColor = Color.Gray;
+                        rootGridViewUsers.Columns[eUserColumns.UserLogin.ToString()].AppearanceCell.ForeColor = Color.Gray;
+                        rootGridViewUsers.Columns[eUserColumns.LastLogin.ToString()].AppearanceCell.ForeColor = Color.Gray;
+                        rootGridViewUsers.Columns[eUserColumns.LastLogout.ToString()].AppearanceCell.ForeColor = Color.Gray;
+
+                        break;
+                    case ActionsStates.New:
+                        rootGridViewUsers.ClearGrouping();
+                        //hide group panel.
+                        rootGridViewUsers.OptionsView.ShowGroupPanel = false;
+                        rootGridViewUsers.OptionsCustomization.AllowGroup = false;
+                        rootGridViewUsers.OptionsCustomization.AllowColumnMoving = false;
+                        //show password column
+                        rootGridViewUsers.Columns[eUserColumns.Password.ToString()].Visible = true;
+                        //hide columns
+                        rootGridViewUsers.Columns[eUserColumns.LastLogin.ToString()].Visible = false;
+                        rootGridViewUsers.Columns[eUserColumns.LastLogout.ToString()].Visible = false;
+
+                        break;
+
+                    default:
+                        //unhide group panel.
+                        rootGridViewUsers.OptionsView.ShowGroupPanel = true;
+                        rootGridViewUsers.OptionsCustomization.AllowGroup = true;
+                        rootGridViewUsers.OptionsCustomization.AllowColumnMoving = true;
+
+                        rootGridViewUsers.Columns[eUserColumns.LastLogin.ToString()].Visible = true;
+                        rootGridViewUsers.Columns[eUserColumns.LastLogout.ToString()].Visible = true;
+
+                        rootGridViewUsers.Columns[eUserColumns.Password.ToString()].Visible = false;
+
+                        rootGridViewUsers.Columns[eUserColumns.Id.ToString()].AppearanceCell.ForeColor = Color.Black;
+                        rootGridViewUsers.Columns[eUserColumns.UserLogin.ToString()].AppearanceCell.ForeColor = Color.Black;
+                        rootGridViewUsers.Columns[eUserColumns.LastLogin.ToString()].AppearanceCell.ForeColor = Color.Black;
+                        rootGridViewUsers.Columns[eUserColumns.LastLogout.ToString()].AppearanceCell.ForeColor = Color.Black;
+
+                        break;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
 
@@ -592,9 +591,9 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
+                if (CurrentState == ActionsStates.Edit)
                     return IsValidModifiedUsers();
-                else if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.New)
+                else if (CurrentState == ActionsStates.New)
                     return IsValidCreatedRoles();
 
                 return false;
@@ -671,17 +670,30 @@ namespace HKSupply.Forms.Master
                 User user = _createdUsers.FirstOrDefault().Clone();
                 user.Password = PasswordHelper.GetHash(user.Password);
                 GlobalSetting.UserService.NewUser(user);
-               return true;
+                return true;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
+
         #endregion
 
-       
+    }
 
 
+    /// <summary>
+    /// Class to store menu specific information
+    /// </summary>
+    class RowInfo
+    {
+        public RowInfo(GridView view, int rowHandle)
+        {
+            this.RowHandle = rowHandle;
+            this.View = view;
+        }
+        public GridView View;
+        public int RowHandle;
     }
 }
