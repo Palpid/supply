@@ -108,7 +108,7 @@ namespace HKSupply.Forms.Master
             base.bbiNew_ItemClick(sender, e);
             try
             {
-                ConfigureActionsStackViewCreating();
+                ConfigureRibbonActionsCreating();
             }
             catch (Exception ex)
             {
@@ -444,7 +444,7 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void ConfigureActionsStackViewCreating()
+        private void ConfigureRibbonActionsCreating()
         {
             try
             {
@@ -488,6 +488,8 @@ namespace HKSupply.Forms.Master
                         rootGridViewUsers.OptionsCustomization.AllowGroup = false;
                         rootGridViewUsers.OptionsCustomization.AllowColumnMoving = false;
                         //hide columns
+                        rootGridViewUsers.Columns[eUserColumns.Id.ToString()].Visible = false;
+                        rootGridViewUsers.Columns[eUserColumns.Password.ToString()].Visible = false;
                         rootGridViewUsers.Columns[eUserColumns.LastLogin.ToString()].Visible = false;
                         rootGridViewUsers.Columns[eUserColumns.LastLogout.ToString()].Visible = false;
                         //Change forecolor
@@ -503,9 +505,8 @@ namespace HKSupply.Forms.Master
                         rootGridViewUsers.OptionsView.ShowGroupPanel = false;
                         rootGridViewUsers.OptionsCustomization.AllowGroup = false;
                         rootGridViewUsers.OptionsCustomization.AllowColumnMoving = false;
-                        //show password column
-                        rootGridViewUsers.Columns[eUserColumns.Password.ToString()].Visible = true;
                         //hide columns
+                        rootGridViewUsers.Columns[eUserColumns.Id.ToString()].Visible = false;
                         rootGridViewUsers.Columns[eUserColumns.LastLogin.ToString()].Visible = false;
                         rootGridViewUsers.Columns[eUserColumns.LastLogout.ToString()].Visible = false;
 
@@ -517,9 +518,9 @@ namespace HKSupply.Forms.Master
                         rootGridViewUsers.OptionsCustomization.AllowGroup = true;
                         rootGridViewUsers.OptionsCustomization.AllowColumnMoving = true;
 
+                        rootGridViewUsers.Columns[eUserColumns.Id.ToString()].Visible = false;
                         rootGridViewUsers.Columns[eUserColumns.LastLogin.ToString()].Visible = true;
                         rootGridViewUsers.Columns[eUserColumns.LastLogout.ToString()].Visible = true;
-
                         rootGridViewUsers.Columns[eUserColumns.Password.ToString()].Visible = false;
 
                         rootGridViewUsers.Columns[eUserColumns.Id.ToString()].AppearanceCell.ForeColor = Color.Black;

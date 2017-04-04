@@ -28,493 +28,552 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tcGeneral = new System.Windows.Forms.TabControl();
-            this.tpGrid = new System.Windows.Forms.TabPage();
-            this.gbFilter = new System.Windows.Forms.GroupBox();
-            this.chkFilter = new System.Windows.Forms.CheckBox();
-            this.txtFilter = new System.Windows.Forms.TextBox();
-            this.cmbColFilter = new System.Windows.Forms.ComboBox();
-            this.btnLoad = new System.Windows.Forms.Button();
-            this.grdSuppliers = new System.Windows.Forms.DataGridView();
-            this.tpForm = new System.Windows.Forms.TabPage();
-            this.btnNewVersion = new System.Windows.Forms.Button();
-            this.tlpForm = new System.Windows.Forms.TableLayoutPanel();
-            this.txtPaymentTerms = new System.Windows.Forms.TextBox();
-            this.txtIntercom = new System.Windows.Forms.TextBox();
-            this.txtContactPhone = new System.Windows.Forms.TextBox();
-            this.txtContactName = new System.Windows.Forms.TextBox();
-            this.txtBillingAddress = new System.Windows.Forms.TextBox();
-            this.txtShippingAddress = new System.Windows.Forms.TextBox();
-            this.txtVatNumber = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtTimestamp = new System.Windows.Forms.TextBox();
-            this.txtIdSubversion = new System.Windows.Forms.TextBox();
-            this.txtCurreny = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtIdVersion = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtIdSupplier = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.chkActive = new System.Windows.Forms.CheckBox();
-            this.tcGeneral.SuspendLayout();
-            this.tpGrid.SuspendLayout();
-            this.gbFilter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdSuppliers)).BeginInit();
-            this.tpForm.SuspendLayout();
-            this.tlpForm.SuspendLayout();
+            this.xtcGeneral = new DevExpress.XtraTab.XtraTabControl();
+            this.xtpList = new DevExpress.XtraTab.XtraTabPage();
+            this.sbLoad = new DevExpress.XtraEditors.SimpleButton();
+            this.xgrdSuppliers = new DevExpress.XtraGrid.GridControl();
+            this.rootGridViewSuppliers = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.xtpForm = new DevExpress.XtraTab.XtraTabPage();
+            this.layoutControlForm = new DevExpress.XtraLayout.LayoutControl();
+            this.txtCurreny = new DevExpress.XtraEditors.TextEdit();
+            this.txtPaymentTerms = new DevExpress.XtraEditors.TextEdit();
+            this.txtIntercom = new DevExpress.XtraEditors.TextEdit();
+            this.txtContactPhone = new DevExpress.XtraEditors.TextEdit();
+            this.txtContactName = new DevExpress.XtraEditors.TextEdit();
+            this.txtBillingAddress = new DevExpress.XtraEditors.TextEdit();
+            this.txtShippingAddress = new DevExpress.XtraEditors.TextEdit();
+            this.txtVatNumber = new DevExpress.XtraEditors.TextEdit();
+            this.chkActive = new DevExpress.XtraEditors.CheckEdit();
+            this.txtName = new DevExpress.XtraEditors.TextEdit();
+            this.txtTimestamp = new DevExpress.XtraEditors.TextEdit();
+            this.txtIdSubversion = new DevExpress.XtraEditors.TextEdit();
+            this.txtIdVersion = new DevExpress.XtraEditors.TextEdit();
+            this.txtIdSupplier = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciIdSupplier = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.lciIdVersion = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciIdSubversion = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciTimestamp = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciActive = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciVATNumber = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciShippingAddress = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciBillingAddress = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciContactName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciContactPhone = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciIntercom = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciPaymentTerms = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciCurrency = new DevExpress.XtraLayout.LayoutControlItem();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
+            this.xtcGeneral.SuspendLayout();
+            this.xtpList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdSuppliers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rootGridViewSuppliers)).BeginInit();
+            this.xtpForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlForm)).BeginInit();
+            this.layoutControlForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCurreny.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPaymentTerms.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIntercom.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContactPhone.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContactName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBillingAddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShippingAddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVatNumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkActive.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTimestamp.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdSubversion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdVersion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdSupplier.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciIdSupplier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciIdVersion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciIdSubversion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTimestamp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciActive)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciVATNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciShippingAddress)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBillingAddress)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciContactName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciContactPhone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciIntercom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPaymentTerms)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciCurrency)).BeginInit();
             this.SuspendLayout();
             // 
-            // tcGeneral
+            // ribbonControl
             // 
-            this.tcGeneral.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ribbonControl.ExpandCollapseItem.Id = 0;
+            // 
+            // xtcGeneral
+            // 
+            this.xtcGeneral.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tcGeneral.Controls.Add(this.tpGrid);
-            this.tcGeneral.Controls.Add(this.tpForm);
-            this.tcGeneral.Location = new System.Drawing.Point(16, 62);
-            this.tcGeneral.Name = "tcGeneral";
-            this.tcGeneral.SelectedIndex = 0;
-            this.tcGeneral.Size = new System.Drawing.Size(1183, 522);
-            this.tcGeneral.TabIndex = 1;
+            this.xtcGeneral.Location = new System.Drawing.Point(12, 186);
+            this.xtcGeneral.Name = "xtcGeneral";
+            this.xtcGeneral.SelectedTabPage = this.xtpList;
+            this.xtcGeneral.Size = new System.Drawing.Size(898, 504);
+            this.xtcGeneral.TabIndex = 2;
+            this.xtcGeneral.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtpList,
+            this.xtpForm});
             // 
-            // tpGrid
+            // xtpList
             // 
-            this.tpGrid.Controls.Add(this.gbFilter);
-            this.tpGrid.Controls.Add(this.btnLoad);
-            this.tpGrid.Controls.Add(this.grdSuppliers);
-            this.tpGrid.Location = new System.Drawing.Point(4, 25);
-            this.tpGrid.Name = "tpGrid";
-            this.tpGrid.Padding = new System.Windows.Forms.Padding(3);
-            this.tpGrid.Size = new System.Drawing.Size(1175, 493);
-            this.tpGrid.TabIndex = 0;
-            this.tpGrid.Text = "List";
-            this.tpGrid.UseVisualStyleBackColor = true;
+            this.xtpList.Controls.Add(this.sbLoad);
+            this.xtpList.Controls.Add(this.xgrdSuppliers);
+            this.xtpList.Name = "xtpList";
+            this.xtpList.Size = new System.Drawing.Size(891, 470);
+            this.xtpList.Text = "List";
             // 
-            // gbFilter
+            // sbLoad
             // 
-            this.gbFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbFilter.Controls.Add(this.chkFilter);
-            this.gbFilter.Controls.Add(this.txtFilter);
-            this.gbFilter.Controls.Add(this.cmbColFilter);
-            this.gbFilter.Location = new System.Drawing.Point(6, 6);
-            this.gbFilter.Name = "gbFilter";
-            this.gbFilter.Size = new System.Drawing.Size(1162, 52);
-            this.gbFilter.TabIndex = 3;
-            this.gbFilter.TabStop = false;
+            this.sbLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.sbLoad.Location = new System.Drawing.Point(756, 3);
+            this.sbLoad.Name = "sbLoad";
+            this.sbLoad.Size = new System.Drawing.Size(132, 38);
+            this.sbLoad.TabIndex = 1;
+            this.sbLoad.Text = "Load";
+            this.sbLoad.Click += new System.EventHandler(this.sbLoad_Click);
             // 
-            // chkFilter
+            // xgrdSuppliers
             // 
-            this.chkFilter.AutoSize = true;
-            this.chkFilter.Location = new System.Drawing.Point(486, 21);
-            this.chkFilter.Name = "chkFilter";
-            this.chkFilter.Size = new System.Drawing.Size(18, 17);
-            this.chkFilter.TabIndex = 2;
-            this.chkFilter.UseVisualStyleBackColor = true;
-            // 
-            // txtFilter
-            // 
-            this.txtFilter.Location = new System.Drawing.Point(223, 18);
-            this.txtFilter.Name = "txtFilter";
-            this.txtFilter.Size = new System.Drawing.Size(257, 22);
-            this.txtFilter.TabIndex = 1;
-            // 
-            // cmbColFilter
-            // 
-            this.cmbColFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbColFilter.FormattingEnabled = true;
-            this.cmbColFilter.Location = new System.Drawing.Point(6, 17);
-            this.cmbColFilter.Name = "cmbColFilter";
-            this.cmbColFilter.Size = new System.Drawing.Size(205, 24);
-            this.cmbColFilter.TabIndex = 0;
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLoad.Location = new System.Drawing.Point(1066, 69);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(102, 29);
-            this.btnLoad.TabIndex = 1;
-            this.btnLoad.Text = "Load";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
-            // 
-            // grdSuppliers
-            // 
-            this.grdSuppliers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.xgrdSuppliers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grdSuppliers.BackgroundColor = System.Drawing.Color.White;
-            this.grdSuppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdSuppliers.Location = new System.Drawing.Point(6, 104);
-            this.grdSuppliers.Name = "grdSuppliers";
-            this.grdSuppliers.RowTemplate.Height = 24;
-            this.grdSuppliers.Size = new System.Drawing.Size(1163, 383);
-            this.grdSuppliers.TabIndex = 0;
+            this.xgrdSuppliers.Location = new System.Drawing.Point(3, 47);
+            this.xgrdSuppliers.MainView = this.rootGridViewSuppliers;
+            this.xgrdSuppliers.MenuManager = this.ribbonControl;
+            this.xgrdSuppliers.Name = "xgrdSuppliers";
+            this.xgrdSuppliers.Size = new System.Drawing.Size(885, 420);
+            this.xgrdSuppliers.TabIndex = 0;
+            this.xgrdSuppliers.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.rootGridViewSuppliers});
             // 
-            // tpForm
+            // rootGridViewSuppliers
             // 
-            this.tpForm.Controls.Add(this.btnNewVersion);
-            this.tpForm.Controls.Add(this.tlpForm);
-            this.tpForm.Location = new System.Drawing.Point(4, 25);
-            this.tpForm.Name = "tpForm";
-            this.tpForm.Padding = new System.Windows.Forms.Padding(3);
-            this.tpForm.Size = new System.Drawing.Size(1175, 493);
-            this.tpForm.TabIndex = 1;
-            this.tpForm.Text = "Form";
-            this.tpForm.UseVisualStyleBackColor = true;
+            this.rootGridViewSuppliers.GridControl = this.xgrdSuppliers;
+            this.rootGridViewSuppliers.Name = "rootGridViewSuppliers";
             // 
-            // btnNewVersion
+            // xtpForm
             // 
-            this.btnNewVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNewVersion.Location = new System.Drawing.Point(1094, 5);
-            this.btnNewVersion.Name = "btnNewVersion";
-            this.btnNewVersion.Size = new System.Drawing.Size(75, 50);
-            this.btnNewVersion.TabIndex = 1;
-            this.btnNewVersion.Text = "New Version";
-            this.btnNewVersion.UseVisualStyleBackColor = true;
-            this.btnNewVersion.Click += new System.EventHandler(this.btnNewVersion_Click);
+            this.xtpForm.Controls.Add(this.layoutControlForm);
+            this.xtpForm.Name = "xtpForm";
+            this.xtpForm.Size = new System.Drawing.Size(891, 470);
+            this.xtpForm.Text = "Form";
             // 
-            // tlpForm
+            // layoutControlForm
             // 
-            this.tlpForm.AutoScroll = true;
-            this.tlpForm.ColumnCount = 2;
-            this.tlpForm.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
-            this.tlpForm.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.42857F));
-            this.tlpForm.Controls.Add(this.txtPaymentTerms, 1, 12);
-            this.tlpForm.Controls.Add(this.txtIntercom, 1, 11);
-            this.tlpForm.Controls.Add(this.txtContactPhone, 1, 10);
-            this.tlpForm.Controls.Add(this.txtContactName, 1, 9);
-            this.tlpForm.Controls.Add(this.txtBillingAddress, 1, 8);
-            this.tlpForm.Controls.Add(this.txtShippingAddress, 1, 7);
-            this.tlpForm.Controls.Add(this.txtVatNumber, 1, 6);
-            this.tlpForm.Controls.Add(this.txtName, 1, 4);
-            this.tlpForm.Controls.Add(this.txtTimestamp, 1, 3);
-            this.tlpForm.Controls.Add(this.txtIdSubversion, 1, 2);
-            this.tlpForm.Controls.Add(this.txtCurreny, 1, 13);
-            this.tlpForm.Controls.Add(this.label14, 0, 13);
-            this.tlpForm.Controls.Add(this.label13, 0, 12);
-            this.tlpForm.Controls.Add(this.label12, 0, 11);
-            this.tlpForm.Controls.Add(this.label11, 0, 10);
-            this.tlpForm.Controls.Add(this.label9, 0, 8);
-            this.tlpForm.Controls.Add(this.label8, 0, 7);
-            this.tlpForm.Controls.Add(this.label7, 0, 6);
-            this.tlpForm.Controls.Add(this.label6, 0, 5);
-            this.tlpForm.Controls.Add(this.label5, 0, 4);
-            this.tlpForm.Controls.Add(this.label4, 0, 3);
-            this.tlpForm.Controls.Add(this.txtIdVersion, 1, 1);
-            this.tlpForm.Controls.Add(this.label1, 0, 0);
-            this.tlpForm.Controls.Add(this.label2, 0, 1);
-            this.tlpForm.Controls.Add(this.txtIdSupplier, 1, 0);
-            this.tlpForm.Controls.Add(this.label3, 0, 2);
-            this.tlpForm.Controls.Add(this.label10, 0, 9);
-            this.tlpForm.Controls.Add(this.chkActive, 1, 5);
-            this.tlpForm.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tlpForm.Location = new System.Drawing.Point(3, 3);
-            this.tlpForm.Name = "tlpForm";
-            this.tlpForm.RowCount = 14;
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.Size = new System.Drawing.Size(776, 487);
-            this.tlpForm.TabIndex = 0;
-            // 
-            // txtPaymentTerms
-            // 
-            this.txtPaymentTerms.Location = new System.Drawing.Point(224, 347);
-            this.txtPaymentTerms.Name = "txtPaymentTerms";
-            this.txtPaymentTerms.Size = new System.Drawing.Size(549, 22);
-            this.txtPaymentTerms.TabIndex = 7;
-            // 
-            // txtIntercom
-            // 
-            this.txtIntercom.Location = new System.Drawing.Point(224, 319);
-            this.txtIntercom.Name = "txtIntercom";
-            this.txtIntercom.Size = new System.Drawing.Size(549, 22);
-            this.txtIntercom.TabIndex = 7;
-            // 
-            // txtContactPhone
-            // 
-            this.txtContactPhone.Location = new System.Drawing.Point(224, 291);
-            this.txtContactPhone.Name = "txtContactPhone";
-            this.txtContactPhone.Size = new System.Drawing.Size(549, 22);
-            this.txtContactPhone.TabIndex = 7;
-            // 
-            // txtContactName
-            // 
-            this.txtContactName.Location = new System.Drawing.Point(224, 263);
-            this.txtContactName.Name = "txtContactName";
-            this.txtContactName.Size = new System.Drawing.Size(549, 22);
-            this.txtContactName.TabIndex = 7;
-            // 
-            // txtBillingAddress
-            // 
-            this.txtBillingAddress.Location = new System.Drawing.Point(224, 234);
-            this.txtBillingAddress.Name = "txtBillingAddress";
-            this.txtBillingAddress.Size = new System.Drawing.Size(549, 22);
-            this.txtBillingAddress.TabIndex = 7;
-            // 
-            // txtShippingAddress
-            // 
-            this.txtShippingAddress.Location = new System.Drawing.Point(224, 205);
-            this.txtShippingAddress.Name = "txtShippingAddress";
-            this.txtShippingAddress.Size = new System.Drawing.Size(549, 22);
-            this.txtShippingAddress.TabIndex = 6;
-            // 
-            // txtVatNumber
-            // 
-            this.txtVatNumber.Location = new System.Drawing.Point(224, 176);
-            this.txtVatNumber.Name = "txtVatNumber";
-            this.txtVatNumber.Size = new System.Drawing.Size(549, 22);
-            this.txtVatNumber.TabIndex = 6;
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(224, 118);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(549, 22);
-            this.txtName.TabIndex = 5;
-            // 
-            // txtTimestamp
-            // 
-            this.txtTimestamp.Location = new System.Drawing.Point(224, 89);
-            this.txtTimestamp.Name = "txtTimestamp";
-            this.txtTimestamp.Size = new System.Drawing.Size(549, 22);
-            this.txtTimestamp.TabIndex = 5;
-            // 
-            // txtIdSubversion
-            // 
-            this.txtIdSubversion.Location = new System.Drawing.Point(224, 60);
-            this.txtIdSubversion.Name = "txtIdSubversion";
-            this.txtIdSubversion.Size = new System.Drawing.Size(549, 22);
-            this.txtIdSubversion.TabIndex = 4;
+            this.layoutControlForm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.layoutControlForm.Controls.Add(this.txtCurreny);
+            this.layoutControlForm.Controls.Add(this.txtPaymentTerms);
+            this.layoutControlForm.Controls.Add(this.txtIntercom);
+            this.layoutControlForm.Controls.Add(this.txtContactPhone);
+            this.layoutControlForm.Controls.Add(this.txtContactName);
+            this.layoutControlForm.Controls.Add(this.txtBillingAddress);
+            this.layoutControlForm.Controls.Add(this.txtShippingAddress);
+            this.layoutControlForm.Controls.Add(this.txtVatNumber);
+            this.layoutControlForm.Controls.Add(this.chkActive);
+            this.layoutControlForm.Controls.Add(this.txtName);
+            this.layoutControlForm.Controls.Add(this.txtTimestamp);
+            this.layoutControlForm.Controls.Add(this.txtIdSubversion);
+            this.layoutControlForm.Controls.Add(this.txtIdVersion);
+            this.layoutControlForm.Controls.Add(this.txtIdSupplier);
+            this.layoutControlForm.Location = new System.Drawing.Point(6, 13);
+            this.layoutControlForm.Name = "layoutControlForm";
+            this.layoutControlForm.Root = this.layoutControlGroup1;
+            this.layoutControlForm.Size = new System.Drawing.Size(577, 437);
+            this.layoutControlForm.TabIndex = 0;
+            this.layoutControlForm.Text = "layoutControl1";
             // 
             // txtCurreny
             // 
-            this.txtCurreny.Location = new System.Drawing.Point(224, 375);
+            this.txtCurreny.Location = new System.Drawing.Point(119, 377);
+            this.txtCurreny.MenuManager = this.ribbonControl;
             this.txtCurreny.Name = "txtCurreny";
-            this.txtCurreny.Size = new System.Drawing.Size(549, 22);
-            this.txtCurreny.TabIndex = 4;
+            this.txtCurreny.Size = new System.Drawing.Size(442, 22);
+            this.txtCurreny.StyleController = this.layoutControlForm;
+            this.txtCurreny.TabIndex = 17;
             // 
-            // label14
+            // txtPaymentTerms
             // 
-            this.label14.Location = new System.Drawing.Point(3, 372);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(193, 20);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "Currency";
+            this.txtPaymentTerms.Location = new System.Drawing.Point(119, 349);
+            this.txtPaymentTerms.MenuManager = this.ribbonControl;
+            this.txtPaymentTerms.Name = "txtPaymentTerms";
+            this.txtPaymentTerms.Size = new System.Drawing.Size(442, 22);
+            this.txtPaymentTerms.StyleController = this.layoutControlForm;
+            this.txtPaymentTerms.TabIndex = 16;
             // 
-            // label13
+            // txtIntercom
             // 
-            this.label13.Location = new System.Drawing.Point(3, 344);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(193, 20);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Payment Terms";
+            this.txtIntercom.Location = new System.Drawing.Point(119, 321);
+            this.txtIntercom.MenuManager = this.ribbonControl;
+            this.txtIntercom.Name = "txtIntercom";
+            this.txtIntercom.Size = new System.Drawing.Size(442, 22);
+            this.txtIntercom.StyleController = this.layoutControlForm;
+            this.txtIntercom.TabIndex = 15;
             // 
-            // label12
+            // txtContactPhone
             // 
-            this.label12.Location = new System.Drawing.Point(3, 316);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(193, 20);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "Intercom";
+            this.txtContactPhone.Location = new System.Drawing.Point(119, 293);
+            this.txtContactPhone.MenuManager = this.ribbonControl;
+            this.txtContactPhone.Name = "txtContactPhone";
+            this.txtContactPhone.Size = new System.Drawing.Size(442, 22);
+            this.txtContactPhone.StyleController = this.layoutControlForm;
+            this.txtContactPhone.TabIndex = 14;
             // 
-            // label11
+            // txtContactName
             // 
-            this.label11.Location = new System.Drawing.Point(3, 288);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(193, 20);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Contact Phone";
+            this.txtContactName.Location = new System.Drawing.Point(119, 265);
+            this.txtContactName.MenuManager = this.ribbonControl;
+            this.txtContactName.Name = "txtContactName";
+            this.txtContactName.Size = new System.Drawing.Size(442, 22);
+            this.txtContactName.StyleController = this.layoutControlForm;
+            this.txtContactName.TabIndex = 13;
             // 
-            // label9
+            // txtBillingAddress
             // 
-            this.label9.Location = new System.Drawing.Point(3, 231);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(193, 29);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Billing Address";
+            this.txtBillingAddress.Location = new System.Drawing.Point(119, 237);
+            this.txtBillingAddress.MenuManager = this.ribbonControl;
+            this.txtBillingAddress.Name = "txtBillingAddress";
+            this.txtBillingAddress.Size = new System.Drawing.Size(442, 22);
+            this.txtBillingAddress.StyleController = this.layoutControlForm;
+            this.txtBillingAddress.TabIndex = 12;
             // 
-            // label8
+            // txtShippingAddress
             // 
-            this.label8.Location = new System.Drawing.Point(3, 202);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(193, 29);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Shipping Address";
+            this.txtShippingAddress.Location = new System.Drawing.Point(119, 209);
+            this.txtShippingAddress.MenuManager = this.ribbonControl;
+            this.txtShippingAddress.Name = "txtShippingAddress";
+            this.txtShippingAddress.Size = new System.Drawing.Size(442, 22);
+            this.txtShippingAddress.StyleController = this.layoutControlForm;
+            this.txtShippingAddress.TabIndex = 11;
             // 
-            // label7
+            // txtVatNumber
             // 
-            this.label7.Location = new System.Drawing.Point(3, 173);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(193, 29);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "VAT Number";
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(3, 144);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(193, 29);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Active";
-            // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(3, 115);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(193, 29);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Name";
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(3, 86);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(193, 29);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Timestamp";
-            // 
-            // txtIdVersion
-            // 
-            this.txtIdVersion.Location = new System.Drawing.Point(224, 32);
-            this.txtIdVersion.Name = "txtIdVersion";
-            this.txtIdVersion.Size = new System.Drawing.Size(549, 22);
-            this.txtIdVersion.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Id Supplier";
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(3, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(193, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Id Version";
-            // 
-            // txtIdSupplier
-            // 
-            this.txtIdSupplier.Location = new System.Drawing.Point(224, 3);
-            this.txtIdSupplier.Name = "txtIdSupplier";
-            this.txtIdSupplier.Size = new System.Drawing.Size(549, 22);
-            this.txtIdSupplier.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(3, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(193, 29);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Id Subversion";
-            // 
-            // label10
-            // 
-            this.label10.Location = new System.Drawing.Point(3, 260);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(193, 20);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Contact name";
+            this.txtVatNumber.Location = new System.Drawing.Point(119, 181);
+            this.txtVatNumber.MenuManager = this.ribbonControl;
+            this.txtVatNumber.Name = "txtVatNumber";
+            this.txtVatNumber.Size = new System.Drawing.Size(442, 22);
+            this.txtVatNumber.StyleController = this.layoutControlForm;
+            this.txtVatNumber.TabIndex = 10;
             // 
             // chkActive
             // 
-            this.chkActive.AutoSize = true;
-            this.chkActive.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkActive.Location = new System.Drawing.Point(224, 147);
+            this.chkActive.Location = new System.Drawing.Point(119, 156);
+            this.chkActive.MenuManager = this.ribbonControl;
             this.chkActive.Name = "chkActive";
-            this.chkActive.Size = new System.Drawing.Size(549, 23);
-            this.chkActive.TabIndex = 8;
-            this.chkActive.UseVisualStyleBackColor = true;
+            this.chkActive.Properties.Caption = "";
+            this.chkActive.Size = new System.Drawing.Size(442, 19);
+            this.chkActive.StyleController = this.layoutControlForm;
+            this.chkActive.TabIndex = 9;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(119, 128);
+            this.txtName.MenuManager = this.ribbonControl;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(442, 22);
+            this.txtName.StyleController = this.layoutControlForm;
+            this.txtName.TabIndex = 8;
+            // 
+            // txtTimestamp
+            // 
+            this.txtTimestamp.Location = new System.Drawing.Point(119, 100);
+            this.txtTimestamp.MenuManager = this.ribbonControl;
+            this.txtTimestamp.Name = "txtTimestamp";
+            this.txtTimestamp.Size = new System.Drawing.Size(442, 22);
+            this.txtTimestamp.StyleController = this.layoutControlForm;
+            this.txtTimestamp.TabIndex = 7;
+            // 
+            // txtIdSubversion
+            // 
+            this.txtIdSubversion.Location = new System.Drawing.Point(119, 72);
+            this.txtIdSubversion.MenuManager = this.ribbonControl;
+            this.txtIdSubversion.Name = "txtIdSubversion";
+            this.txtIdSubversion.Size = new System.Drawing.Size(442, 22);
+            this.txtIdSubversion.StyleController = this.layoutControlForm;
+            this.txtIdSubversion.TabIndex = 6;
+            // 
+            // txtIdVersion
+            // 
+            this.txtIdVersion.Location = new System.Drawing.Point(119, 44);
+            this.txtIdVersion.MenuManager = this.ribbonControl;
+            this.txtIdVersion.Name = "txtIdVersion";
+            this.txtIdVersion.Size = new System.Drawing.Size(442, 22);
+            this.txtIdVersion.StyleController = this.layoutControlForm;
+            this.txtIdVersion.TabIndex = 5;
+            // 
+            // txtIdSupplier
+            // 
+            this.txtIdSupplier.Location = new System.Drawing.Point(119, 16);
+            this.txtIdSupplier.MenuManager = this.ribbonControl;
+            this.txtIdSupplier.Name = "txtIdSupplier";
+            this.txtIdSupplier.Size = new System.Drawing.Size(442, 22);
+            this.txtIdSupplier.StyleController = this.layoutControlForm;
+            this.txtIdSupplier.TabIndex = 4;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciIdSupplier,
+            this.emptySpaceItem1,
+            this.lciIdVersion,
+            this.lciIdSubversion,
+            this.lciTimestamp,
+            this.lciName,
+            this.lciActive,
+            this.lciVATNumber,
+            this.lciShippingAddress,
+            this.lciBillingAddress,
+            this.lciContactName,
+            this.lciContactPhone,
+            this.lciIntercom,
+            this.lciPaymentTerms,
+            this.lciCurrency});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.OptionsItemText.TextToControlDistance = 4;
+            this.layoutControlGroup1.Size = new System.Drawing.Size(577, 437);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // lciIdSupplier
+            // 
+            this.lciIdSupplier.Control = this.txtIdSupplier;
+            this.lciIdSupplier.Location = new System.Drawing.Point(0, 0);
+            this.lciIdSupplier.Name = "lciIdSupplier";
+            this.lciIdSupplier.Size = new System.Drawing.Size(551, 28);
+            this.lciIdSupplier.Text = "Id Supplier";
+            this.lciIdSupplier.TextSize = new System.Drawing.Size(99, 16);
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 389);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(551, 22);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // lciIdVersion
+            // 
+            this.lciIdVersion.Control = this.txtIdVersion;
+            this.lciIdVersion.Location = new System.Drawing.Point(0, 28);
+            this.lciIdVersion.Name = "lciIdVersion";
+            this.lciIdVersion.Size = new System.Drawing.Size(551, 28);
+            this.lciIdVersion.Text = "Id Version";
+            this.lciIdVersion.TextSize = new System.Drawing.Size(99, 16);
+            // 
+            // lciIdSubversion
+            // 
+            this.lciIdSubversion.Control = this.txtIdSubversion;
+            this.lciIdSubversion.Location = new System.Drawing.Point(0, 56);
+            this.lciIdSubversion.Name = "lciIdSubversion";
+            this.lciIdSubversion.Size = new System.Drawing.Size(551, 28);
+            this.lciIdSubversion.Text = "Id Subversion";
+            this.lciIdSubversion.TextSize = new System.Drawing.Size(99, 16);
+            // 
+            // lciTimestamp
+            // 
+            this.lciTimestamp.Control = this.txtTimestamp;
+            this.lciTimestamp.Location = new System.Drawing.Point(0, 84);
+            this.lciTimestamp.Name = "lciTimestamp";
+            this.lciTimestamp.Size = new System.Drawing.Size(551, 28);
+            this.lciTimestamp.Text = "Timestamp";
+            this.lciTimestamp.TextSize = new System.Drawing.Size(99, 16);
+            // 
+            // lciName
+            // 
+            this.lciName.Control = this.txtName;
+            this.lciName.Location = new System.Drawing.Point(0, 112);
+            this.lciName.Name = "lciName";
+            this.lciName.Size = new System.Drawing.Size(551, 28);
+            this.lciName.Text = "Name";
+            this.lciName.TextSize = new System.Drawing.Size(99, 16);
+            // 
+            // lciActive
+            // 
+            this.lciActive.Control = this.chkActive;
+            this.lciActive.Location = new System.Drawing.Point(0, 140);
+            this.lciActive.Name = "lciActive";
+            this.lciActive.Size = new System.Drawing.Size(551, 25);
+            this.lciActive.Text = "Active";
+            this.lciActive.TextSize = new System.Drawing.Size(99, 16);
+            // 
+            // lciVATNumber
+            // 
+            this.lciVATNumber.Control = this.txtVatNumber;
+            this.lciVATNumber.Location = new System.Drawing.Point(0, 165);
+            this.lciVATNumber.Name = "lciVATNumber";
+            this.lciVATNumber.Size = new System.Drawing.Size(551, 28);
+            this.lciVATNumber.Text = "VAT Number";
+            this.lciVATNumber.TextSize = new System.Drawing.Size(99, 16);
+            // 
+            // lciShippingAddress
+            // 
+            this.lciShippingAddress.Control = this.txtShippingAddress;
+            this.lciShippingAddress.Location = new System.Drawing.Point(0, 193);
+            this.lciShippingAddress.Name = "lciShippingAddress";
+            this.lciShippingAddress.Size = new System.Drawing.Size(551, 28);
+            this.lciShippingAddress.Text = "Shipping Address";
+            this.lciShippingAddress.TextSize = new System.Drawing.Size(99, 16);
+            // 
+            // lciBillingAddress
+            // 
+            this.lciBillingAddress.Control = this.txtBillingAddress;
+            this.lciBillingAddress.Location = new System.Drawing.Point(0, 221);
+            this.lciBillingAddress.Name = "lciBillingAddress";
+            this.lciBillingAddress.Size = new System.Drawing.Size(551, 28);
+            this.lciBillingAddress.Text = "Billing Address";
+            this.lciBillingAddress.TextSize = new System.Drawing.Size(99, 16);
+            // 
+            // lciContactName
+            // 
+            this.lciContactName.Control = this.txtContactName;
+            this.lciContactName.Location = new System.Drawing.Point(0, 249);
+            this.lciContactName.Name = "lciContactName";
+            this.lciContactName.Size = new System.Drawing.Size(551, 28);
+            this.lciContactName.Text = "Contact Name";
+            this.lciContactName.TextSize = new System.Drawing.Size(99, 16);
+            // 
+            // lciContactPhone
+            // 
+            this.lciContactPhone.Control = this.txtContactPhone;
+            this.lciContactPhone.Location = new System.Drawing.Point(0, 277);
+            this.lciContactPhone.Name = "lciContactPhone";
+            this.lciContactPhone.Size = new System.Drawing.Size(551, 28);
+            this.lciContactPhone.Text = "Contact Phone";
+            this.lciContactPhone.TextSize = new System.Drawing.Size(99, 16);
+            // 
+            // lciIntercom
+            // 
+            this.lciIntercom.Control = this.txtIntercom;
+            this.lciIntercom.Location = new System.Drawing.Point(0, 305);
+            this.lciIntercom.Name = "lciIntercom";
+            this.lciIntercom.Size = new System.Drawing.Size(551, 28);
+            this.lciIntercom.Text = "Intercom";
+            this.lciIntercom.TextSize = new System.Drawing.Size(99, 16);
+            // 
+            // lciPaymentTerms
+            // 
+            this.lciPaymentTerms.Control = this.txtPaymentTerms;
+            this.lciPaymentTerms.Location = new System.Drawing.Point(0, 333);
+            this.lciPaymentTerms.Name = "lciPaymentTerms";
+            this.lciPaymentTerms.Size = new System.Drawing.Size(551, 28);
+            this.lciPaymentTerms.Text = "Payment Terms";
+            this.lciPaymentTerms.TextSize = new System.Drawing.Size(99, 16);
+            // 
+            // lciCurrency
+            // 
+            this.lciCurrency.Control = this.txtCurreny;
+            this.lciCurrency.Location = new System.Drawing.Point(0, 361);
+            this.lciCurrency.Name = "lciCurrency";
+            this.lciCurrency.Size = new System.Drawing.Size(551, 28);
+            this.lciCurrency.Text = "Currency";
+            this.lciCurrency.TextSize = new System.Drawing.Size(99, 16);
             // 
             // SupplierManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1215, 598);
-            this.Controls.Add(this.tcGeneral);
+            this.ClientSize = new System.Drawing.Size(922, 737);
+            this.Controls.Add(this.xtcGeneral);
             this.Name = "SupplierManagement";
-            this.Text = "Supplier Management";
+            this.Text = "SupplierManagement";
             this.Load += new System.EventHandler(this.SupplierManagement_Load);
-            this.tcGeneral.ResumeLayout(false);
-            this.tpGrid.ResumeLayout(false);
-            this.gbFilter.ResumeLayout(false);
-            this.gbFilter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdSuppliers)).EndInit();
-            this.tpForm.ResumeLayout(false);
-            this.tlpForm.ResumeLayout(false);
-            this.tlpForm.PerformLayout();
+            this.Controls.SetChildIndex(this.ribbonControl, 0);
+            this.Controls.SetChildIndex(this.ribbonStatusBar, 0);
+            this.Controls.SetChildIndex(this.xtcGeneral, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).EndInit();
+            this.xtcGeneral.ResumeLayout(false);
+            this.xtpList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdSuppliers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rootGridViewSuppliers)).EndInit();
+            this.xtpForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlForm)).EndInit();
+            this.layoutControlForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtCurreny.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPaymentTerms.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIntercom.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContactPhone.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContactName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBillingAddress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShippingAddress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVatNumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkActive.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTimestamp.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdSubversion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdVersion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdSupplier.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciIdSupplier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciIdVersion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciIdSubversion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTimestamp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciActive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciVATNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciShippingAddress)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBillingAddress)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciContactName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciContactPhone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciIntercom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPaymentTerms)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciCurrency)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tcGeneral;
-        private System.Windows.Forms.TabPage tpGrid;
-        private System.Windows.Forms.Button btnLoad;
-        private System.Windows.Forms.DataGridView grdSuppliers;
-        private System.Windows.Forms.TabPage tpForm;
-        private System.Windows.Forms.Button btnNewVersion;
-        private System.Windows.Forms.TableLayoutPanel tlpForm;
-        private System.Windows.Forms.TextBox txtPaymentTerms;
-        private System.Windows.Forms.TextBox txtIntercom;
-        private System.Windows.Forms.TextBox txtContactPhone;
-        private System.Windows.Forms.TextBox txtContactName;
-        private System.Windows.Forms.TextBox txtBillingAddress;
-        private System.Windows.Forms.TextBox txtShippingAddress;
-        private System.Windows.Forms.TextBox txtVatNumber;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtTimestamp;
-        private System.Windows.Forms.TextBox txtIdSubversion;
-        private System.Windows.Forms.TextBox txtCurreny;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtIdVersion;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtIdSupplier;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.CheckBox chkActive;
-        private System.Windows.Forms.GroupBox gbFilter;
-        private System.Windows.Forms.TextBox txtFilter;
-        private System.Windows.Forms.ComboBox cmbColFilter;
-        private System.Windows.Forms.CheckBox chkFilter;
+        private DevExpress.XtraTab.XtraTabControl xtcGeneral;
+        private DevExpress.XtraTab.XtraTabPage xtpList;
+        private DevExpress.XtraTab.XtraTabPage xtpForm;
+        private DevExpress.XtraGrid.GridControl xgrdSuppliers;
+        private DevExpress.XtraGrid.Views.Grid.GridView rootGridViewSuppliers;
+        private DevExpress.XtraEditors.SimpleButton sbLoad;
+        private DevExpress.XtraLayout.LayoutControl layoutControlForm;
+        private DevExpress.XtraEditors.TextEdit txtIdSupplier;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem lciIdSupplier;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraEditors.TextEdit txtIdSubversion;
+        private DevExpress.XtraEditors.TextEdit txtIdVersion;
+        private DevExpress.XtraLayout.LayoutControlItem lciIdVersion;
+        private DevExpress.XtraLayout.LayoutControlItem lciIdSubversion;
+        private DevExpress.XtraEditors.TextEdit txtName;
+        private DevExpress.XtraEditors.TextEdit txtTimestamp;
+        private DevExpress.XtraLayout.LayoutControlItem lciTimestamp;
+        private DevExpress.XtraLayout.LayoutControlItem lciName;
+        private DevExpress.XtraEditors.CheckEdit chkActive;
+        private DevExpress.XtraLayout.LayoutControlItem lciActive;
+        private DevExpress.XtraEditors.TextEdit txtBillingAddress;
+        private DevExpress.XtraEditors.TextEdit txtShippingAddress;
+        private DevExpress.XtraEditors.TextEdit txtVatNumber;
+        private DevExpress.XtraLayout.LayoutControlItem lciVATNumber;
+        private DevExpress.XtraLayout.LayoutControlItem lciShippingAddress;
+        private DevExpress.XtraLayout.LayoutControlItem lciBillingAddress;
+        private DevExpress.XtraEditors.TextEdit txtCurreny;
+        private DevExpress.XtraEditors.TextEdit txtPaymentTerms;
+        private DevExpress.XtraEditors.TextEdit txtIntercom;
+        private DevExpress.XtraEditors.TextEdit txtContactPhone;
+        private DevExpress.XtraEditors.TextEdit txtContactName;
+        private DevExpress.XtraLayout.LayoutControlItem lciContactName;
+        private DevExpress.XtraLayout.LayoutControlItem lciContactPhone;
+        private DevExpress.XtraLayout.LayoutControlItem lciIntercom;
+        private DevExpress.XtraLayout.LayoutControlItem lciPaymentTerms;
+        private DevExpress.XtraLayout.LayoutControlItem lciCurrency;
     }
 }
