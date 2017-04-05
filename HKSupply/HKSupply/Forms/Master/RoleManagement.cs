@@ -97,13 +97,7 @@ namespace HKSupply.Forms.Master
 
             try
             {
-
                 bool res = false;
-
-                //Lanzamos el validate para finalizar cualquier accion de edición, ya que este contro no tiene focus nunca y no lo lanza por si mismo
-                //por si modifica una celda y sin salir pulsa sobre guardar directamente
-                Validate();
-
 
                 if (IsValidRoles() == false)
                     return;
@@ -241,9 +235,9 @@ namespace HKSupply.Forms.Master
 
                 //Columns definition
                 GridColumn colRoleId = new GridColumn() { Caption = "Role Id", Visible = true, FieldName = eRoleColumns.RoleId.ToString() };
-                GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = "Description" };
-                GridColumn colEnabled = new GridColumn() { Caption = "Enabled", Visible = true, FieldName = "Enabled" };
-                GridColumn colRemarks = new GridColumn() { Caption = "Remarks", Visible = true, FieldName = "Remarks" };
+                GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = eRoleColumns.Description.ToString() };
+                GridColumn colEnabled = new GridColumn() { Caption = "Enabled", Visible = true, FieldName = eRoleColumns.Enabled.ToString() };
+                GridColumn colRemarks = new GridColumn() { Caption = "Remarks", Visible = true, FieldName = eRoleColumns.Remarks.ToString() };
 
                 //add columns to grid root view
                 rootGridViewRoles.Columns.Add(colRoleId);

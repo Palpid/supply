@@ -34,6 +34,7 @@
             this.xgrdSuppliers = new DevExpress.XtraGrid.GridControl();
             this.rootGridViewSuppliers = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtpForm = new DevExpress.XtraTab.XtraTabPage();
+            this.sbNewVersion = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlForm = new DevExpress.XtraLayout.LayoutControl();
             this.txtCurreny = new DevExpress.XtraEditors.TextEdit();
             this.txtPaymentTerms = new DevExpress.XtraEditors.TextEdit();
@@ -115,6 +116,8 @@
             this.xtcGeneral.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.xtcGeneral.Appearance.Options.UseTextOptions = true;
+            this.xtcGeneral.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.xtcGeneral.Location = new System.Drawing.Point(12, 186);
             this.xtcGeneral.Name = "xtcGeneral";
             this.xtcGeneral.SelectedTabPage = this.xtpList;
@@ -163,10 +166,23 @@
             // 
             // xtpForm
             // 
+            this.xtpForm.Controls.Add(this.sbNewVersion);
             this.xtpForm.Controls.Add(this.layoutControlForm);
             this.xtpForm.Name = "xtpForm";
             this.xtpForm.Size = new System.Drawing.Size(891, 470);
             this.xtpForm.Text = "Form";
+            // 
+            // sbNewVersion
+            // 
+            this.sbNewVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.sbNewVersion.Appearance.Options.UseTextOptions = true;
+            this.sbNewVersion.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.sbNewVersion.Location = new System.Drawing.Point(804, 13);
+            this.sbNewVersion.Name = "sbNewVersion";
+            this.sbNewVersion.Size = new System.Drawing.Size(74, 66);
+            this.sbNewVersion.TabIndex = 1;
+            this.sbNewVersion.Text = "New Version";
+            this.sbNewVersion.Click += new System.EventHandler(this.sbNewVersion_Click);
             // 
             // layoutControlForm
             // 
@@ -487,7 +503,7 @@
             this.ClientSize = new System.Drawing.Size(922, 737);
             this.Controls.Add(this.xtcGeneral);
             this.Name = "SupplierManagement";
-            this.Text = "SupplierManagement";
+            this.Text = "Supplier Management";
             this.Load += new System.EventHandler(this.SupplierManagement_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.ribbonStatusBar, 0);
@@ -575,5 +591,6 @@
         private DevExpress.XtraLayout.LayoutControlItem lciIntercom;
         private DevExpress.XtraLayout.LayoutControlItem lciPaymentTerms;
         private DevExpress.XtraLayout.LayoutControlItem lciCurrency;
+        private DevExpress.XtraEditors.SimpleButton sbNewVersion;
     }
 }

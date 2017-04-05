@@ -135,6 +135,12 @@
     <Compile Include="Forms\Master\CustomerManagement.Designer.cs">
       <DependentUpon>CustomerManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Master\CustomerManagement_v1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\CustomerManagement_v1.Designer.cs">
+      <DependentUpon>CustomerManagement_v1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Master\FunctionalityManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,12 @@
     </Compile>
     <Compile Include="Forms\Master\StoreManagement.Designer.cs">
       <DependentUpon>StoreManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\StoreManagement_v1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\StoreManagement_v1.Designer.cs">
+      <DependentUpon>StoreManagement_v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Master\SupplierManagement.cs">
       <SubType>Form</SubType>
@@ -303,6 +315,9 @@
     <EmbeddedResource Include="Forms\Master\CustomerManagement.resx">
       <DependentUpon>CustomerManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\CustomerManagement_v1.resx">
+      <DependentUpon>CustomerManagement_v1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\FunctionalityManagement.resx">
       <DependentUpon>FunctionalityManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -326,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\StoreManagement.resx">
       <DependentUpon>StoreManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\StoreManagement_v1.resx">
+      <DependentUpon>StoreManagement_v1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\SupplierManagement.resx">
       <DependentUpon>SupplierManagement.cs</DependentUpon>

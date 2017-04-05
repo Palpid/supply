@@ -22,6 +22,7 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Login.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Main.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.ChangePassword.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.CustomerManagement.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.CustomerManagement_v1.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.FunctionalityManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.FunctionalityManagement_v1.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.FunctionalityRoleManagement.resources
@@ -30,6 +31,7 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.ItemManagement.r
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.RoleManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.RoleManagement_v1.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.StoreManagement.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.StoreManagement_v1.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.SupplierManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.SupplierManagement_v1.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.UserManagement.resources

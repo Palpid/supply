@@ -1,10 +1,14 @@
 ﻿using DevExpress.Utils;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
+using DevExpress.XtraLayout;
+using DevExpress.XtraLayout.Utils;
 using HKSupply.General;
+using HKSupply.Helpers;
 using HKSupply.Models;
 using System;
 using System.Collections.Generic;
@@ -47,6 +51,8 @@ namespace HKSupply.Forms.Master
 
         List<Supplier> _suppliersList;
 
+        string[] _nonEditingFields = { "txtIdSupplier", "txtIdVersion", "txtIdSubversion", "txtTimestamp" };	
+
         #endregion
 
         #region Constructor
@@ -58,6 +64,7 @@ namespace HKSupply.Forms.Master
             {
                 ConfigureRibbonActions();
                 SetUpGrdSuppliers();
+                ResetSupplierUpdate();
                 SetFormBinding();
             }
             catch (Exception ex)
@@ -88,21 +95,112 @@ namespace HKSupply.Forms.Master
         public override void bbiCancel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             base.bbiCancel_ItemClick(sender, e);
+
+            try
+            {
+                _supplierOriginal = null;
+                ResetSupplierUpdate();
+                SetFormBinding();
+                xtpForm.PageVisible = false;
+                xtpList.PageVisible = true;
+                sbNewVersion.Visible = false;
+                LoadSuppliersList();
+                SetNonCreatingFieldsVisibility(LayoutVisibility.Always);
+                
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public override void bbiEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             base.bbiEdit_ItemClick(sender, e);
+
+            try
+            {
+                if (_supplierOriginal == null)
+                {
+                    MessageBox.Show("No supplier selected");
+                    RestoreInitState();
+                }
+                else
+                {
+                    ConfigureRibbonActionsEditing();
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public override void bbiNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             base.bbiNew_ItemClick(sender, e);
+
+            try
+            {
+                ConfigureRibbonActionsCreating();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public override void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             base.bbiSave_ItemClick(sender, e);
+            
+            try
+            {
+                bool res = false;
+
+                if (IsValidSupplier() == false)
+                    return;
+
+                DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
+
+                if (result != DialogResult.Yes)
+                    return;
+
+                Cursor = Cursors.WaitCursor;
+
+                if (_supplierUpdate.Equals(_supplierOriginal))
+                {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
+                    return;
+                }
+
+                if (CurrentState == ActionsStates.Edit)
+                {
+                    res = UpdateSupplier();
+
+                }
+                else if (CurrentState == ActionsStates.New)
+                {
+                    res = CreateSupplier();
+                }
+
+                if (res == true)
+                {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
+                    ActionsAfterCU();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
         }
 
         #endregion
@@ -113,7 +211,8 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-
+                xtpForm.PageVisible = false;
+                sbNewVersion.Visible = false;
             }
             catch (Exception ex)
             {
@@ -138,14 +237,45 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void sbNewVersion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Cursor = Cursors.WaitCursor;
+                Validate();
+
+                if (_supplierUpdate.Equals(_supplierOriginal))
+                {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
+                    return;
+                }
+
+                if (IsValidSupplier() == false)
+                    return;
+
+                if (UpdateSupplier(true))
+                {
+                    ActionsAfterCU();
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
+        }
+
         void rootGridViewSuppliers_DoubleClick(object sender, EventArgs e)
         {
             try
             {
                 GridView view = (GridView)sender;
                 object idSupplier = view.GetRowCellValue(view.FocusedRowHandle, eSupplierColumns.IdSupplier.ToString());
-                //if (idSupplier != null)
-                //    LoadSupplierForm(idSupplier.ToString());
+                if (idSupplier != null)
+                    LoadSupplierForm(idSupplier.ToString());
             }
             catch (Exception ex)
             {
@@ -156,6 +286,14 @@ namespace HKSupply.Forms.Master
         #endregion
 
         #region Private Methods
+
+        /// <summary>
+        /// Resetear el objeto supplier que usamos para la actualización
+        /// </summary>
+        private void ResetSupplierUpdate()
+        {
+            _supplierUpdate = new Supplier();
+        }
 
         private void SetUpGrdSuppliers()
         {
@@ -228,78 +366,272 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void LoadSupplierForm(string idSupplier)
+        {
+            try
+            {
+                _supplierUpdate = GlobalSetting.SupplierService.GetSupplierById(idSupplier);
+                _supplierOriginal = _supplierUpdate.Clone();
+                SetFormBinding();  //refresh binding 
+                xtpForm.PageVisible = true;
+                xtcGeneral.SelectedTabPage = xtpForm;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         /// <summary>
         /// Crear los bindings de los campos del formulario
         /// </summary>
         private void SetFormBinding()
         {
-            foreach (Control ctl in layoutControlForm.Controls)
+            try
             {
-                if (ctl.GetType() == typeof(TextEdit))
+                foreach (Control ctl in layoutControlForm.Controls)
                 {
-                    ctl.DataBindings.Clear();
-                    ((TextEdit)ctl).ReadOnly = true;
+                    if (ctl.GetType() == typeof(TextEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((TextEdit)ctl).ReadOnly = true;
+                    }
+                    else if (ctl.GetType() == typeof(CheckEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((CheckEdit)ctl).ReadOnly = true;
+                    }
                 }
-                else if (ctl.GetType() == typeof(CheckEdit))
-                {
-                    ctl.DataBindings.Clear();
-                    ((CheckEdit)ctl).Enabled = false;
-                }
-                //else if (ctl.GetType() == typeof(TextBox))
-                //{
-                //    ctl.DataBindings.Clear();
-                //    ((TextBox)ctl).ReadOnly = true;
-                //}
-                //else if (ctl.GetType() == typeof(CheckBox))
-                //{
-                //    ctl.DataBindings.Clear();
-                //    ((CheckBox)ctl).Enabled = false;
-                //}
+
+                txtIdSupplier.DataBindings.Add("Text", _supplierUpdate, "IdSupplier");
+                txtIdVersion.DataBindings.Add("Text", _supplierUpdate, "idVer");
+                txtIdSubversion.DataBindings.Add("Text", _supplierUpdate, "idSubVer");
+                txtTimestamp.DataBindings.Add("Text", _supplierUpdate, "Timestamp");
+                txtName.DataBindings.Add("Text", _supplierUpdate, "SupplierName");
+                chkActive.DataBindings.Add("Checked", _supplierUpdate, "Active");
+                txtVatNumber.DataBindings.Add("Text", _supplierUpdate, "VATNum");
+                txtShippingAddress.DataBindings.Add("Text", _supplierUpdate, "ShippingAddress");
+                txtBillingAddress.DataBindings.Add("Text", _supplierUpdate, "BillingAddress");
+                txtContactName.DataBindings.Add("Text", _supplierUpdate, "ContactName");
+                txtContactPhone.DataBindings.Add("Text", _supplierUpdate, "ContactPhone");
+                txtIntercom.DataBindings.Add("Text", _supplierUpdate, "IdIncoterm");
+                txtPaymentTerms.DataBindings.Add("Text", _supplierUpdate, "IdPaymentTerms");
+                txtCurreny.DataBindings.Add("Text", _supplierUpdate, "Currency");
+
             }
-
-            Binding bindingIdSupplier = new Binding("Text", _supplierUpdate, "IdSupplier");
-            bindingIdSupplier.NullValue = string.Empty;
-            Binding bindingIdVersion = new Binding("Text", _supplierUpdate, "IdVer");
-            Binding bindingIdSubVer = new Binding("Text", _supplierUpdate, "IdSubVer");
-            Binding bindingITimestamp = new Binding("Text", _supplierUpdate, "Timestamp");
-            bindingITimestamp.NullValue = string.Empty;
-            Binding bindingSupplierName = new Binding("Text", _supplierUpdate, "SupplierName");
-            bindingSupplierName.NullValue = string.Empty;
-
-            Binding bindingActive = new Binding("Checked", _supplierUpdate, "Active");
+            catch (Exception ex)
+            {
+                throw ex;
+            }
             
-            txtIdSupplier.DataBindings.Add(bindingIdSupplier);
-            txtIdVersion.DataBindings.Add(bindingIdVersion);
-            txtIdSubversion.DataBindings.Add(bindingIdSubVer);
-            txtTimestamp.DataBindings.Add(bindingITimestamp);
-            txtName.DataBindings.Add(bindingSupplierName);
-
-            chkActive.DataBindings.Add(bindingActive);
-
-            txtVatNumber.DataBindings.Add("Text", _supplierUpdate, "VATNum");
-            txtShippingAddress.DataBindings.Add("Text", _supplierUpdate, "ShippingAddress");
-            txtBillingAddress.DataBindings.Add("Text", _supplierUpdate, "BillingAddress");
-            txtContactName.DataBindings.Add("Text", _supplierUpdate, "ContactName");
-            txtContactPhone.DataBindings.Add("Text", _supplierUpdate, "ContactPhone");
-            txtIntercom.DataBindings.Add("Text", _supplierUpdate, "IdIncoterm");
-            txtPaymentTerms.DataBindings.Add("Text", _supplierUpdate, "IdPaymentTerms");
-            txtCurreny.DataBindings.Add("Text", _supplierUpdate, "Currency");
-
-            //txtIdSupplier.DataBindings.Add("Text", _supplierUpdate, "IdSupplier");
-            //txtIdVersion.DataBindings.Add("Text", _supplierUpdate, "idVer");
-            //txtIdSubversion.DataBindings.Add("Text", _supplierUpdate, "idSubVer");
-            //txtTimestamp.DataBindings.Add("Text", _supplierUpdate, "Timestamp");
-            //txtName.DataBindings.Add("Text", _supplierUpdate, "SupplierName");
-            //chkActive.DataBindings.Add("Checked", _supplierUpdate, "Active");
-            //txtVatNumber.DataBindings.Add("Text", _supplierUpdate, "VATNum");
-            //txtShippingAddress.DataBindings.Add("Text", _supplierUpdate, "ShippingAddress");
-            //txtBillingAddress.DataBindings.Add("Text", _supplierUpdate, "BillingAddress");
-            //txtContactName.DataBindings.Add("Text", _supplierUpdate, "ContactName");
-            //txtContactPhone.DataBindings.Add("Text", _supplierUpdate, "ContactPhone");
-            //txtIntercom.DataBindings.Add("Text", _supplierUpdate, "IdIncoterm");
-            //txtPaymentTerms.DataBindings.Add("Text", _supplierUpdate, "IdPaymentTerms");
-            //txtCurreny.DataBindings.Add("Text", _supplierUpdate, "Currency");
         }
+
+        private void ConfigureRibbonActionsEditing()
+        {
+            try
+            {
+                xtpList.PageVisible = true;
+                sbNewVersion.Visible = true;
+                SetEditingFieldsEnabled();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void ConfigureRibbonActionsCreating()
+        {
+            try
+            {
+                xtpList.PageVisible = false;
+                xtpForm.PageVisible = true;
+                sbNewVersion.Visible = false;
+                ResetSupplierUpdate();
+                SetFormBinding(); //refresh binding
+                SetNonCreatingFieldsVisibility(LayoutVisibility.Never);
+                SetCreatingFieldsEnabled();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Poner como editables los campos para el modo de edición
+        /// </summary>
+        private void SetEditingFieldsEnabled()
+        {
+            try
+            {
+                foreach (Control ctl in layoutControlForm.Controls)
+                {
+                    if (Array.IndexOf(_nonEditingFields, ctl.Name) < 0)
+                    {
+                        if (ctl.GetType() == typeof(TextEdit))
+                        {
+                            ((TextEdit)ctl).ReadOnly = false;
+                        }
+                        else if (ctl.GetType() == typeof(CheckEdit))
+                        {
+                            ((CheckEdit)ctl).ReadOnly = false;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void SetCreatingFieldsEnabled()
+        {
+            try
+            {
+                foreach (Control ctl in layoutControlForm.Controls)
+                {
+                    if (ctl.GetType() == typeof(TextEdit))
+                    {
+                        ((TextEdit)ctl).ReadOnly = false;
+                    }
+                    else if (ctl.GetType() == typeof(CheckEdit))
+                    {
+                        ((CheckEdit)ctl).ReadOnly = false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void SetNonCreatingFieldsVisibility(LayoutVisibility visibility)
+        {
+            try
+            {
+                lciIdVersion.Visibility = visibility;
+                lciIdSubversion.Visibility = visibility;
+                lciTimestamp.Visibility = visibility;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Mover la fila activa a la de un supplier en concreto
+        /// </summary>
+        /// <param name="idSupplier"></param>
+        private void MoveGridToSupplier(string idSupplier)
+        {
+            try
+            {
+                GridColumn column = rootGridViewSuppliers.Columns[eSupplierColumns.IdSupplier.ToString()];
+                if (column != null)
+                {
+                    // locating the row 
+                    int rhFound = rootGridViewSuppliers.LocateByDisplayText(rootGridViewSuppliers.FocusedRowHandle + 1, column, idSupplier);
+                    // focusing the cell 
+                    if (rhFound != GridControl.InvalidRowHandle)
+                    {
+                        rootGridViewSuppliers.FocusedRowHandle = rhFound;
+                        rootGridViewSuppliers.FocusedColumn = column;
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private bool IsValidSupplier()
+        {
+            try
+            {
+                foreach (Control ctl in layoutControlForm.Controls)
+                {
+                    if (ctl.GetType() == typeof(TextEdit))
+                    {
+                        if (string.IsNullOrEmpty(((TextEdit)ctl).Text))
+                        {
+                            MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
+                            return false;
+                        }
+                    }
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #region Create/Update
+
+        /// <summary>
+        /// Actualizar los datos de un supplier
+        /// </summary>
+        /// <param name="newVersion">Si es una versión nueva o una actualización de la existente</param>
+        /// <returns></returns>
+        private bool UpdateSupplier(bool newVersion = false)
+        {
+            try
+            {
+
+                return GlobalSetting.SupplierService.UpdateSupplier(_supplierUpdate, newVersion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Crear un nuevo Supplier
+        /// </summary>
+        /// <returns></returns>
+        private bool CreateSupplier()
+        {
+            try
+            {
+                _supplierOriginal = _supplierUpdate.Clone();
+                return GlobalSetting.SupplierService.NewSupplier(_supplierUpdate);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void ActionsAfterCU()
+        {
+            try
+            {
+                string id = _supplierOriginal.IdSupplier;
+                _supplierOriginal = null;
+                ResetSupplierUpdate();
+                SetFormBinding();
+                xtpForm.PageVisible = false;
+                xtpList.PageVisible = true;
+                LoadSuppliersList();
+                MoveGridToSupplier(id);
+                RestoreInitState();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
+
         #endregion
 
     }

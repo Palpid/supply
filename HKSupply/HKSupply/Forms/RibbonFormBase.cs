@@ -134,7 +134,8 @@ namespace HKSupply.Forms
         {
             try
             {
-                
+                //Lanzamos el validate para finalizar cualquier accion de edición del formulario, ya que este control no tiene focus nunca y no lo lanza por si mismo
+                Validate();
             }
             catch (Exception ex)
             {

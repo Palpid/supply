@@ -121,10 +121,6 @@ namespace HKSupply.Forms.Master
             {
                 bool res = false;
 
-                //Lanzamos el validate para finalizar cualquier accion de edición, ya que este control no tiene focus nunca y no lo lanza por si mismo
-                //por si modifica una celda y sin salir pulsa sobre guardar directamente
-                Validate();
-
                 if (IsValidFunctionalities() == false)
                     return;
 
