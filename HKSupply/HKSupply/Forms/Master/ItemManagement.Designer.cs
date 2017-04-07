@@ -28,524 +28,581 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tcGeneral = new System.Windows.Forms.TabControl();
-            this.tpGrid = new System.Windows.Forms.TabPage();
-            this.gbFilter = new System.Windows.Forms.GroupBox();
-            this.btnMultiFilters = new System.Windows.Forms.Button();
-            this.chkFilter = new System.Windows.Forms.CheckBox();
-            this.txtFilter = new System.Windows.Forms.TextBox();
-            this.cmbColFilter = new System.Windows.Forms.ComboBox();
-            this.btnLoad = new System.Windows.Forms.Button();
-            this.grdItems = new System.Windows.Forms.DataGridView();
-            this.tpForm = new System.Windows.Forms.TabPage();
-            this.btnNewVersion = new System.Windows.Forms.Button();
-            this.tlpForm = new System.Windows.Forms.TableLayoutPanel();
-            this.ndtpRetired = new CustomControls.NullableDateTimePicker();
-            this.txtCategoryName = new System.Windows.Forms.TextBox();
-            this.txtSize = new System.Windows.Forms.TextBox();
-            this.txtMmFront = new System.Windows.Forms.TextBox();
-            this.txtStatus = new System.Windows.Forms.TextBox();
-            this.txtModel = new System.Windows.Forms.TextBox();
-            this.txtItemName = new System.Windows.Forms.TextBox();
-            this.txtTimestamp = new System.Windows.Forms.TextBox();
-            this.txtIdSubversion = new System.Windows.Forms.TextBox();
-            this.txtCaliber = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtIdVersion = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtItemCode = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.chkActive = new System.Windows.Forms.CheckBox();
-            this.ndtpLaunched = new CustomControls.NullableDateTimePicker();
-            this.lblDatesRemarks = new System.Windows.Forms.Label();
-            this.tcGeneral.SuspendLayout();
-            this.tpGrid.SuspendLayout();
-            this.gbFilter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdItems)).BeginInit();
-            this.tpForm.SuspendLayout();
-            this.tlpForm.SuspendLayout();
+            this.xtcGeneral = new DevExpress.XtraTab.XtraTabControl();
+            this.xtpList = new DevExpress.XtraTab.XtraTabPage();
+            this.sbLoad = new DevExpress.XtraEditors.SimpleButton();
+            this.xgrdItems = new DevExpress.XtraGrid.GridControl();
+            this.rootGridViewItems = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.xtpForm = new DevExpress.XtraTab.XtraTabPage();
+            this.sbNewVersion = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlForm = new DevExpress.XtraLayout.LayoutControl();
+            this.txtCaliber = new DevExpress.XtraEditors.TextEdit();
+            this.txtCategoryName = new DevExpress.XtraEditors.TextEdit();
+            this.txtSize = new DevExpress.XtraEditors.TextEdit();
+            this.txtMmFront = new DevExpress.XtraEditors.TextEdit();
+            this.deRetired = new DevExpress.XtraEditors.DateEdit();
+            this.deLaunched = new DevExpress.XtraEditors.DateEdit();
+            this.txtStatus = new DevExpress.XtraEditors.TextEdit();
+            this.txtModel = new DevExpress.XtraEditors.TextEdit();
+            this.chkActive = new DevExpress.XtraEditors.CheckEdit();
+            this.txtItemName = new DevExpress.XtraEditors.TextEdit();
+            this.txtTimestamp = new DevExpress.XtraEditors.TextEdit();
+            this.txtIdSubversion = new DevExpress.XtraEditors.TextEdit();
+            this.txtIdVersion = new DevExpress.XtraEditors.TextEdit();
+            this.txtItemCode = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.lciItemCode = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.lciIdVersion = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciIdSubversion = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciTimestamp = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciItemName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciActive = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciModel = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciStatus = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciLaunched = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciMmFront = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciSize = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciCategoryName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciCaliber = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciRetired = new DevExpress.XtraLayout.LayoutControlItem();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
+            this.xtcGeneral.SuspendLayout();
+            this.xtpList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdItems)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rootGridViewItems)).BeginInit();
+            this.xtpForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlForm)).BeginInit();
+            this.layoutControlForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCaliber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCategoryName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSize.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMmFront.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deRetired.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deRetired.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deLaunched.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deLaunched.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStatus.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtModel.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkActive.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTimestamp.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdSubversion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdVersion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciItemCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciIdVersion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciIdSubversion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTimestamp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciItemName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciActive)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciModel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciLaunched)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciMmFront)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciCategoryName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciCaliber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciRetired)).BeginInit();
             this.SuspendLayout();
             // 
-            // tcGeneral
+            // ribbonControl
             // 
-            this.tcGeneral.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ribbonControl.ExpandCollapseItem.Id = 0;
+            // 
+            // xtcGeneral
+            // 
+            this.xtcGeneral.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tcGeneral.Controls.Add(this.tpGrid);
-            this.tcGeneral.Controls.Add(this.tpForm);
-            this.tcGeneral.Location = new System.Drawing.Point(16, 62);
-            this.tcGeneral.Name = "tcGeneral";
-            this.tcGeneral.SelectedIndex = 0;
-            this.tcGeneral.Size = new System.Drawing.Size(1183, 522);
-            this.tcGeneral.TabIndex = 1;
+            this.xtcGeneral.Location = new System.Drawing.Point(12, 132);
+            this.xtcGeneral.Name = "xtcGeneral";
+            this.xtcGeneral.SelectedTabPage = this.xtpList;
+            this.xtcGeneral.Size = new System.Drawing.Size(898, 558);
+            this.xtcGeneral.TabIndex = 2;
+            this.xtcGeneral.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtpList,
+            this.xtpForm});
             // 
-            // tpGrid
+            // xtpList
             // 
-            this.tpGrid.Controls.Add(this.gbFilter);
-            this.tpGrid.Controls.Add(this.btnLoad);
-            this.tpGrid.Controls.Add(this.grdItems);
-            this.tpGrid.Location = new System.Drawing.Point(4, 25);
-            this.tpGrid.Name = "tpGrid";
-            this.tpGrid.Padding = new System.Windows.Forms.Padding(3);
-            this.tpGrid.Size = new System.Drawing.Size(1175, 493);
-            this.tpGrid.TabIndex = 0;
-            this.tpGrid.Text = "List";
-            this.tpGrid.UseVisualStyleBackColor = true;
+            this.xtpList.Controls.Add(this.sbLoad);
+            this.xtpList.Controls.Add(this.xgrdItems);
+            this.xtpList.Name = "xtpList";
+            this.xtpList.Size = new System.Drawing.Size(891, 524);
+            this.xtpList.Text = "List";
             // 
-            // gbFilter
+            // sbLoad
             // 
-            this.gbFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbFilter.Controls.Add(this.btnMultiFilters);
-            this.gbFilter.Controls.Add(this.chkFilter);
-            this.gbFilter.Controls.Add(this.txtFilter);
-            this.gbFilter.Controls.Add(this.cmbColFilter);
-            this.gbFilter.Location = new System.Drawing.Point(6, 6);
-            this.gbFilter.Name = "gbFilter";
-            this.gbFilter.Size = new System.Drawing.Size(1162, 52);
-            this.gbFilter.TabIndex = 2;
-            this.gbFilter.TabStop = false;
+            this.sbLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.sbLoad.Location = new System.Drawing.Point(756, 3);
+            this.sbLoad.Name = "sbLoad";
+            this.sbLoad.Size = new System.Drawing.Size(132, 38);
+            this.sbLoad.TabIndex = 3;
+            this.sbLoad.Text = "Load";
+            this.sbLoad.Click += new System.EventHandler(this.sbLoad_Click);
             // 
-            // btnMultiFilters
+            // xgrdItems
             // 
-            this.btnMultiFilters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMultiFilters.Location = new System.Drawing.Point(1054, 14);
-            this.btnMultiFilters.Name = "btnMultiFilters";
-            this.btnMultiFilters.Size = new System.Drawing.Size(102, 29);
-            this.btnMultiFilters.TabIndex = 4;
-            this.btnMultiFilters.Text = "Multi Filter";
-            this.btnMultiFilters.UseVisualStyleBackColor = true;
-            this.btnMultiFilters.Click += new System.EventHandler(this.btnMultiFilters_Click);
-            // 
-            // chkFilter
-            // 
-            this.chkFilter.AutoSize = true;
-            this.chkFilter.Location = new System.Drawing.Point(486, 21);
-            this.chkFilter.Name = "chkFilter";
-            this.chkFilter.Size = new System.Drawing.Size(18, 17);
-            this.chkFilter.TabIndex = 3;
-            this.chkFilter.UseVisualStyleBackColor = true;
-            // 
-            // txtFilter
-            // 
-            this.txtFilter.Location = new System.Drawing.Point(223, 18);
-            this.txtFilter.Name = "txtFilter";
-            this.txtFilter.Size = new System.Drawing.Size(257, 22);
-            this.txtFilter.TabIndex = 1;
-            // 
-            // cmbColFilter
-            // 
-            this.cmbColFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbColFilter.FormattingEnabled = true;
-            this.cmbColFilter.Location = new System.Drawing.Point(6, 17);
-            this.cmbColFilter.Name = "cmbColFilter";
-            this.cmbColFilter.Size = new System.Drawing.Size(205, 24);
-            this.cmbColFilter.TabIndex = 0;
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLoad.Location = new System.Drawing.Point(1066, 69);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(102, 29);
-            this.btnLoad.TabIndex = 1;
-            this.btnLoad.Text = "Load";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
-            // 
-            // grdItems
-            // 
-            this.grdItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.xgrdItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grdItems.BackgroundColor = System.Drawing.Color.White;
-            this.grdItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdItems.Location = new System.Drawing.Point(6, 104);
-            this.grdItems.Name = "grdItems";
-            this.grdItems.RowTemplate.Height = 24;
-            this.grdItems.Size = new System.Drawing.Size(1163, 383);
-            this.grdItems.TabIndex = 0;
+            this.xgrdItems.Location = new System.Drawing.Point(3, 47);
+            this.xgrdItems.MainView = this.rootGridViewItems;
+            this.xgrdItems.MenuManager = this.ribbonControl;
+            this.xgrdItems.Name = "xgrdItems";
+            this.xgrdItems.Size = new System.Drawing.Size(885, 474);
+            this.xgrdItems.TabIndex = 2;
+            this.xgrdItems.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.rootGridViewItems});
             // 
-            // tpForm
+            // rootGridViewItems
             // 
-            this.tpForm.Controls.Add(this.btnNewVersion);
-            this.tpForm.Controls.Add(this.tlpForm);
-            this.tpForm.Location = new System.Drawing.Point(4, 25);
-            this.tpForm.Name = "tpForm";
-            this.tpForm.Padding = new System.Windows.Forms.Padding(3);
-            this.tpForm.Size = new System.Drawing.Size(1175, 493);
-            this.tpForm.TabIndex = 1;
-            this.tpForm.Text = "Form";
-            this.tpForm.UseVisualStyleBackColor = true;
+            this.rootGridViewItems.GridControl = this.xgrdItems;
+            this.rootGridViewItems.Name = "rootGridViewItems";
             // 
-            // btnNewVersion
+            // xtpForm
             // 
-            this.btnNewVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNewVersion.Location = new System.Drawing.Point(1094, 5);
-            this.btnNewVersion.Name = "btnNewVersion";
-            this.btnNewVersion.Size = new System.Drawing.Size(75, 50);
-            this.btnNewVersion.TabIndex = 1;
-            this.btnNewVersion.Text = "New Version";
-            this.btnNewVersion.UseVisualStyleBackColor = true;
-            this.btnNewVersion.Click += new System.EventHandler(this.btnNewVersion_Click);
+            this.xtpForm.Controls.Add(this.sbNewVersion);
+            this.xtpForm.Controls.Add(this.layoutControlForm);
+            this.xtpForm.Name = "xtpForm";
+            this.xtpForm.Size = new System.Drawing.Size(891, 524);
+            this.xtpForm.Text = "Form";
             // 
-            // tlpForm
+            // sbNewVersion
             // 
-            this.tlpForm.AutoScroll = true;
-            this.tlpForm.ColumnCount = 2;
-            this.tlpForm.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
-            this.tlpForm.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.42857F));
-            this.tlpForm.Controls.Add(this.ndtpRetired, 1, 9);
-            this.tlpForm.Controls.Add(this.txtCategoryName, 1, 12);
-            this.tlpForm.Controls.Add(this.txtSize, 1, 11);
-            this.tlpForm.Controls.Add(this.txtMmFront, 1, 10);
-            this.tlpForm.Controls.Add(this.txtStatus, 1, 7);
-            this.tlpForm.Controls.Add(this.txtModel, 1, 6);
-            this.tlpForm.Controls.Add(this.txtItemName, 1, 4);
-            this.tlpForm.Controls.Add(this.txtTimestamp, 1, 3);
-            this.tlpForm.Controls.Add(this.txtIdSubversion, 1, 2);
-            this.tlpForm.Controls.Add(this.txtCaliber, 1, 13);
-            this.tlpForm.Controls.Add(this.label14, 0, 13);
-            this.tlpForm.Controls.Add(this.label13, 0, 12);
-            this.tlpForm.Controls.Add(this.label12, 0, 11);
-            this.tlpForm.Controls.Add(this.label11, 0, 10);
-            this.tlpForm.Controls.Add(this.label9, 0, 8);
-            this.tlpForm.Controls.Add(this.label8, 0, 7);
-            this.tlpForm.Controls.Add(this.label7, 0, 6);
-            this.tlpForm.Controls.Add(this.label6, 0, 5);
-            this.tlpForm.Controls.Add(this.label5, 0, 4);
-            this.tlpForm.Controls.Add(this.label4, 0, 3);
-            this.tlpForm.Controls.Add(this.txtIdVersion, 1, 1);
-            this.tlpForm.Controls.Add(this.label1, 0, 0);
-            this.tlpForm.Controls.Add(this.label2, 0, 1);
-            this.tlpForm.Controls.Add(this.txtItemCode, 1, 0);
-            this.tlpForm.Controls.Add(this.label3, 0, 2);
-            this.tlpForm.Controls.Add(this.label10, 0, 9);
-            this.tlpForm.Controls.Add(this.chkActive, 1, 5);
-            this.tlpForm.Controls.Add(this.ndtpLaunched, 1, 8);
-            this.tlpForm.Controls.Add(this.lblDatesRemarks, 1, 14);
-            this.tlpForm.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tlpForm.Location = new System.Drawing.Point(3, 3);
-            this.tlpForm.Name = "tlpForm";
-            this.tlpForm.RowCount = 15;
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpForm.Size = new System.Drawing.Size(776, 487);
-            this.tlpForm.TabIndex = 0;
+            this.sbNewVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.sbNewVersion.Appearance.Options.UseTextOptions = true;
+            this.sbNewVersion.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.sbNewVersion.Location = new System.Drawing.Point(804, 13);
+            this.sbNewVersion.Name = "sbNewVersion";
+            this.sbNewVersion.Size = new System.Drawing.Size(74, 66);
+            this.sbNewVersion.TabIndex = 2;
+            this.sbNewVersion.Text = "New Version";
+            this.sbNewVersion.Click += new System.EventHandler(this.sbNewVersion_Click);
             // 
-            // ndtpRetired
+            // layoutControlForm
             // 
-            this.ndtpRetired.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.ndtpRetired.Location = new System.Drawing.Point(224, 263);
-            this.ndtpRetired.Name = "ndtpRetired";
-            this.ndtpRetired.Size = new System.Drawing.Size(200, 22);
-            this.ndtpRetired.TabIndex = 3;
-            this.ndtpRetired.Value = new System.DateTime(2017, 3, 21, 9, 42, 32, 514);
-            // 
-            // txtCategoryName
-            // 
-            this.txtCategoryName.Location = new System.Drawing.Point(224, 347);
-            this.txtCategoryName.Name = "txtCategoryName";
-            this.txtCategoryName.Size = new System.Drawing.Size(549, 22);
-            this.txtCategoryName.TabIndex = 7;
-            // 
-            // txtSize
-            // 
-            this.txtSize.Location = new System.Drawing.Point(224, 319);
-            this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(549, 22);
-            this.txtSize.TabIndex = 7;
-            // 
-            // txtMmFront
-            // 
-            this.txtMmFront.Location = new System.Drawing.Point(224, 291);
-            this.txtMmFront.Name = "txtMmFront";
-            this.txtMmFront.Size = new System.Drawing.Size(549, 22);
-            this.txtMmFront.TabIndex = 7;
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.Location = new System.Drawing.Point(224, 205);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(549, 22);
-            this.txtStatus.TabIndex = 6;
-            // 
-            // txtModel
-            // 
-            this.txtModel.Location = new System.Drawing.Point(224, 176);
-            this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(549, 22);
-            this.txtModel.TabIndex = 6;
-            // 
-            // txtItemName
-            // 
-            this.txtItemName.Location = new System.Drawing.Point(224, 118);
-            this.txtItemName.Name = "txtItemName";
-            this.txtItemName.Size = new System.Drawing.Size(549, 22);
-            this.txtItemName.TabIndex = 5;
-            // 
-            // txtTimestamp
-            // 
-            this.txtTimestamp.Location = new System.Drawing.Point(224, 89);
-            this.txtTimestamp.Name = "txtTimestamp";
-            this.txtTimestamp.Size = new System.Drawing.Size(549, 22);
-            this.txtTimestamp.TabIndex = 5;
-            // 
-            // txtIdSubversion
-            // 
-            this.txtIdSubversion.Location = new System.Drawing.Point(224, 60);
-            this.txtIdSubversion.Name = "txtIdSubversion";
-            this.txtIdSubversion.Size = new System.Drawing.Size(549, 22);
-            this.txtIdSubversion.TabIndex = 4;
+            this.layoutControlForm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.layoutControlForm.Controls.Add(this.txtCaliber);
+            this.layoutControlForm.Controls.Add(this.txtCategoryName);
+            this.layoutControlForm.Controls.Add(this.txtSize);
+            this.layoutControlForm.Controls.Add(this.txtMmFront);
+            this.layoutControlForm.Controls.Add(this.deRetired);
+            this.layoutControlForm.Controls.Add(this.deLaunched);
+            this.layoutControlForm.Controls.Add(this.txtStatus);
+            this.layoutControlForm.Controls.Add(this.txtModel);
+            this.layoutControlForm.Controls.Add(this.chkActive);
+            this.layoutControlForm.Controls.Add(this.txtItemName);
+            this.layoutControlForm.Controls.Add(this.txtTimestamp);
+            this.layoutControlForm.Controls.Add(this.txtIdSubversion);
+            this.layoutControlForm.Controls.Add(this.txtIdVersion);
+            this.layoutControlForm.Controls.Add(this.txtItemCode);
+            this.layoutControlForm.Location = new System.Drawing.Point(6, 13);
+            this.layoutControlForm.Name = "layoutControlForm";
+            this.layoutControlForm.Root = this.layoutControlGroup1;
+            this.layoutControlForm.Size = new System.Drawing.Size(577, 437);
+            this.layoutControlForm.TabIndex = 0;
+            this.layoutControlForm.Text = "layoutControl1";
             // 
             // txtCaliber
             // 
-            this.txtCaliber.Location = new System.Drawing.Point(224, 375);
+            this.txtCaliber.Location = new System.Drawing.Point(104, 265);
+            this.txtCaliber.MenuManager = this.ribbonControl;
             this.txtCaliber.Name = "txtCaliber";
-            this.txtCaliber.Size = new System.Drawing.Size(549, 22);
-            this.txtCaliber.TabIndex = 4;
+            this.txtCaliber.Size = new System.Drawing.Size(457, 22);
+            this.txtCaliber.StyleController = this.layoutControlForm;
+            this.txtCaliber.TabIndex = 17;
             // 
-            // label14
+            // txtCategoryName
             // 
-            this.label14.Location = new System.Drawing.Point(3, 372);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(193, 20);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "Caliber";
+            this.txtCategoryName.Location = new System.Drawing.Point(104, 293);
+            this.txtCategoryName.MenuManager = this.ribbonControl;
+            this.txtCategoryName.Name = "txtCategoryName";
+            this.txtCategoryName.Size = new System.Drawing.Size(457, 22);
+            this.txtCategoryName.StyleController = this.layoutControlForm;
+            this.txtCategoryName.TabIndex = 16;
             // 
-            // label13
+            // txtSize
             // 
-            this.label13.Location = new System.Drawing.Point(3, 344);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(193, 20);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Category Name";
+            this.txtSize.Location = new System.Drawing.Point(381, 237);
+            this.txtSize.MenuManager = this.ribbonControl;
+            this.txtSize.Name = "txtSize";
+            this.txtSize.Size = new System.Drawing.Size(180, 22);
+            this.txtSize.StyleController = this.layoutControlForm;
+            this.txtSize.TabIndex = 15;
             // 
-            // label12
+            // txtMmFront
             // 
-            this.label12.Location = new System.Drawing.Point(3, 316);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(193, 20);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "Size";
+            this.txtMmFront.Location = new System.Drawing.Point(104, 237);
+            this.txtMmFront.MenuManager = this.ribbonControl;
+            this.txtMmFront.Name = "txtMmFront";
+            this.txtMmFront.Size = new System.Drawing.Size(183, 22);
+            this.txtMmFront.StyleController = this.layoutControlForm;
+            this.txtMmFront.TabIndex = 14;
             // 
-            // label11
+            // deRetired
             // 
-            this.label11.Location = new System.Drawing.Point(3, 288);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(193, 20);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Front (mm)";
+            this.deRetired.EditValue = null;
+            this.deRetired.Location = new System.Drawing.Point(381, 209);
+            this.deRetired.MenuManager = this.ribbonControl;
+            this.deRetired.Name = "deRetired";
+            this.deRetired.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deRetired.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deRetired.Size = new System.Drawing.Size(180, 22);
+            this.deRetired.StyleController = this.layoutControlForm;
+            this.deRetired.TabIndex = 13;
             // 
-            // label9
+            // deLaunched
             // 
-            this.label9.Location = new System.Drawing.Point(3, 231);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(193, 29);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Launched";
+            this.deLaunched.EditValue = null;
+            this.deLaunched.Location = new System.Drawing.Point(104, 209);
+            this.deLaunched.MenuManager = this.ribbonControl;
+            this.deLaunched.Name = "deLaunched";
+            this.deLaunched.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deLaunched.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deLaunched.Size = new System.Drawing.Size(183, 22);
+            this.deLaunched.StyleController = this.layoutControlForm;
+            this.deLaunched.TabIndex = 12;
             // 
-            // label8
+            // txtStatus
             // 
-            this.label8.Location = new System.Drawing.Point(3, 202);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(193, 29);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Status";
+            this.txtStatus.Location = new System.Drawing.Point(381, 181);
+            this.txtStatus.MenuManager = this.ribbonControl;
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(180, 22);
+            this.txtStatus.StyleController = this.layoutControlForm;
+            this.txtStatus.TabIndex = 11;
             // 
-            // label7
+            // txtModel
             // 
-            this.label7.Location = new System.Drawing.Point(3, 173);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(193, 29);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Model";
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(3, 144);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(193, 29);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Active";
-            // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(3, 115);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(193, 29);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Item Name";
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(3, 86);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(193, 29);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Timestamp";
-            // 
-            // txtIdVersion
-            // 
-            this.txtIdVersion.Location = new System.Drawing.Point(224, 32);
-            this.txtIdVersion.Name = "txtIdVersion";
-            this.txtIdVersion.Size = new System.Drawing.Size(549, 22);
-            this.txtIdVersion.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Item Code";
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(3, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(193, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Id Version";
-            // 
-            // txtItemCode
-            // 
-            this.txtItemCode.Location = new System.Drawing.Point(224, 3);
-            this.txtItemCode.Name = "txtItemCode";
-            this.txtItemCode.Size = new System.Drawing.Size(549, 22);
-            this.txtItemCode.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(3, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(193, 29);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Id Subversion";
-            // 
-            // label10
-            // 
-            this.label10.Location = new System.Drawing.Point(3, 260);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(193, 20);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Retired";
+            this.txtModel.Location = new System.Drawing.Point(104, 181);
+            this.txtModel.MenuManager = this.ribbonControl;
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(183, 22);
+            this.txtModel.StyleController = this.layoutControlForm;
+            this.txtModel.TabIndex = 10;
             // 
             // chkActive
             // 
-            this.chkActive.AutoSize = true;
-            this.chkActive.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkActive.Location = new System.Drawing.Point(224, 147);
+            this.chkActive.Location = new System.Drawing.Point(104, 156);
+            this.chkActive.MenuManager = this.ribbonControl;
             this.chkActive.Name = "chkActive";
-            this.chkActive.Size = new System.Drawing.Size(549, 23);
-            this.chkActive.TabIndex = 8;
-            this.chkActive.UseVisualStyleBackColor = true;
+            this.chkActive.Properties.Caption = "";
+            this.chkActive.Size = new System.Drawing.Size(457, 19);
+            this.chkActive.StyleController = this.layoutControlForm;
+            this.chkActive.TabIndex = 9;
             // 
-            // ndtpLaunched
+            // txtItemName
             // 
-            this.ndtpLaunched.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.ndtpLaunched.Location = new System.Drawing.Point(224, 234);
-            this.ndtpLaunched.Name = "ndtpLaunched";
-            this.ndtpLaunched.Size = new System.Drawing.Size(200, 22);
-            this.ndtpLaunched.TabIndex = 2;
-            this.ndtpLaunched.Value = new System.DateTime(2017, 3, 21, 9, 42, 32, 514);
+            this.txtItemName.Location = new System.Drawing.Point(104, 128);
+            this.txtItemName.MenuManager = this.ribbonControl;
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.Size = new System.Drawing.Size(457, 22);
+            this.txtItemName.StyleController = this.layoutControlForm;
+            this.txtItemName.TabIndex = 8;
             // 
-            // lblDatesRemarks
+            // txtTimestamp
             // 
-            this.lblDatesRemarks.Location = new System.Drawing.Point(224, 400);
-            this.lblDatesRemarks.Name = "lblDatesRemarks";
-            this.lblDatesRemarks.Size = new System.Drawing.Size(169, 37);
-            this.lblDatesRemarks.TabIndex = 9;
-            this.lblDatesRemarks.Text = "DatesRemarks";
+            this.txtTimestamp.Location = new System.Drawing.Point(104, 100);
+            this.txtTimestamp.MenuManager = this.ribbonControl;
+            this.txtTimestamp.Name = "txtTimestamp";
+            this.txtTimestamp.Size = new System.Drawing.Size(457, 22);
+            this.txtTimestamp.StyleController = this.layoutControlForm;
+            this.txtTimestamp.TabIndex = 7;
+            // 
+            // txtIdSubversion
+            // 
+            this.txtIdSubversion.Location = new System.Drawing.Point(104, 72);
+            this.txtIdSubversion.MenuManager = this.ribbonControl;
+            this.txtIdSubversion.Name = "txtIdSubversion";
+            this.txtIdSubversion.Size = new System.Drawing.Size(457, 22);
+            this.txtIdSubversion.StyleController = this.layoutControlForm;
+            this.txtIdSubversion.TabIndex = 6;
+            // 
+            // txtIdVersion
+            // 
+            this.txtIdVersion.Location = new System.Drawing.Point(104, 44);
+            this.txtIdVersion.MenuManager = this.ribbonControl;
+            this.txtIdVersion.Name = "txtIdVersion";
+            this.txtIdVersion.Size = new System.Drawing.Size(457, 22);
+            this.txtIdVersion.StyleController = this.layoutControlForm;
+            this.txtIdVersion.TabIndex = 5;
+            // 
+            // txtItemCode
+            // 
+            this.txtItemCode.Location = new System.Drawing.Point(104, 16);
+            this.txtItemCode.MenuManager = this.ribbonControl;
+            this.txtItemCode.Name = "txtItemCode";
+            this.txtItemCode.Size = new System.Drawing.Size(457, 22);
+            this.txtItemCode.StyleController = this.layoutControlForm;
+            this.txtItemCode.TabIndex = 4;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.lciItemCode,
+            this.emptySpaceItem1,
+            this.lciIdVersion,
+            this.lciIdSubversion,
+            this.lciTimestamp,
+            this.lciItemName,
+            this.lciActive,
+            this.lciModel,
+            this.lciLaunched,
+            this.lciMmFront,
+            this.lciCategoryName,
+            this.lciRetired,
+            this.lciStatus,
+            this.lciCaliber,
+            this.lciSize});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.OptionsItemText.TextToControlDistance = 4;
+            this.layoutControlGroup1.Size = new System.Drawing.Size(577, 437);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // lciItemCode
+            // 
+            this.lciItemCode.Control = this.txtItemCode;
+            this.lciItemCode.Location = new System.Drawing.Point(0, 0);
+            this.lciItemCode.Name = "lciItemCode";
+            this.lciItemCode.Size = new System.Drawing.Size(551, 28);
+            this.lciItemCode.Text = "Item Code";
+            this.lciItemCode.TextSize = new System.Drawing.Size(84, 16);
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 305);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(551, 106);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // lciIdVersion
+            // 
+            this.lciIdVersion.Control = this.txtIdVersion;
+            this.lciIdVersion.Location = new System.Drawing.Point(0, 28);
+            this.lciIdVersion.Name = "lciIdVersion";
+            this.lciIdVersion.Size = new System.Drawing.Size(551, 28);
+            this.lciIdVersion.Text = "Id Version";
+            this.lciIdVersion.TextSize = new System.Drawing.Size(84, 16);
+            // 
+            // lciIdSubversion
+            // 
+            this.lciIdSubversion.Control = this.txtIdSubversion;
+            this.lciIdSubversion.Location = new System.Drawing.Point(0, 56);
+            this.lciIdSubversion.Name = "lciIdSubversion";
+            this.lciIdSubversion.Size = new System.Drawing.Size(551, 28);
+            this.lciIdSubversion.Text = "Id Subversion";
+            this.lciIdSubversion.TextSize = new System.Drawing.Size(84, 16);
+            // 
+            // lciTimestamp
+            // 
+            this.lciTimestamp.Control = this.txtTimestamp;
+            this.lciTimestamp.Location = new System.Drawing.Point(0, 84);
+            this.lciTimestamp.Name = "lciTimestamp";
+            this.lciTimestamp.Size = new System.Drawing.Size(551, 28);
+            this.lciTimestamp.Text = "Timestamp";
+            this.lciTimestamp.TextSize = new System.Drawing.Size(84, 16);
+            // 
+            // lciItemName
+            // 
+            this.lciItemName.Control = this.txtItemName;
+            this.lciItemName.Location = new System.Drawing.Point(0, 112);
+            this.lciItemName.Name = "lciItemName";
+            this.lciItemName.Size = new System.Drawing.Size(551, 28);
+            this.lciItemName.Text = "Item Name";
+            this.lciItemName.TextSize = new System.Drawing.Size(84, 16);
+            // 
+            // lciActive
+            // 
+            this.lciActive.Control = this.chkActive;
+            this.lciActive.Location = new System.Drawing.Point(0, 140);
+            this.lciActive.Name = "lciActive";
+            this.lciActive.Size = new System.Drawing.Size(551, 25);
+            this.lciActive.Text = "Active";
+            this.lciActive.TextSize = new System.Drawing.Size(84, 16);
+            // 
+            // lciModel
+            // 
+            this.lciModel.Control = this.txtModel;
+            this.lciModel.Location = new System.Drawing.Point(0, 165);
+            this.lciModel.Name = "lciModel";
+            this.lciModel.Size = new System.Drawing.Size(277, 28);
+            this.lciModel.Text = "Model";
+            this.lciModel.TextSize = new System.Drawing.Size(84, 16);
+            // 
+            // lciStatus
+            // 
+            this.lciStatus.Control = this.txtStatus;
+            this.lciStatus.Location = new System.Drawing.Point(277, 165);
+            this.lciStatus.Name = "lciStatus";
+            this.lciStatus.Size = new System.Drawing.Size(274, 28);
+            this.lciStatus.Text = "Status";
+            this.lciStatus.TextSize = new System.Drawing.Size(84, 16);
+            // 
+            // lciLaunched
+            // 
+            this.lciLaunched.Control = this.deLaunched;
+            this.lciLaunched.Location = new System.Drawing.Point(0, 193);
+            this.lciLaunched.Name = "lciLaunched";
+            this.lciLaunched.Size = new System.Drawing.Size(277, 28);
+            this.lciLaunched.Text = "Launched";
+            this.lciLaunched.TextSize = new System.Drawing.Size(84, 16);
+            // 
+            // lciMmFront
+            // 
+            this.lciMmFront.Control = this.txtMmFront;
+            this.lciMmFront.Location = new System.Drawing.Point(0, 221);
+            this.lciMmFront.Name = "lciMmFront";
+            this.lciMmFront.Size = new System.Drawing.Size(277, 28);
+            this.lciMmFront.Text = "MmFront";
+            this.lciMmFront.TextSize = new System.Drawing.Size(84, 16);
+            // 
+            // lciSize
+            // 
+            this.lciSize.Control = this.txtSize;
+            this.lciSize.Location = new System.Drawing.Point(277, 221);
+            this.lciSize.Name = "lciSize";
+            this.lciSize.Size = new System.Drawing.Size(274, 28);
+            this.lciSize.Text = "Size";
+            this.lciSize.TextSize = new System.Drawing.Size(84, 16);
+            // 
+            // lciCategoryName
+            // 
+            this.lciCategoryName.Control = this.txtCategoryName;
+            this.lciCategoryName.Location = new System.Drawing.Point(0, 277);
+            this.lciCategoryName.Name = "lciCategoryName";
+            this.lciCategoryName.Size = new System.Drawing.Size(551, 28);
+            this.lciCategoryName.Text = "CategoryName";
+            this.lciCategoryName.TextSize = new System.Drawing.Size(84, 16);
+            // 
+            // lciCaliber
+            // 
+            this.lciCaliber.Control = this.txtCaliber;
+            this.lciCaliber.Location = new System.Drawing.Point(0, 249);
+            this.lciCaliber.Name = "lciCaliber";
+            this.lciCaliber.Size = new System.Drawing.Size(551, 28);
+            this.lciCaliber.Text = "Caliber";
+            this.lciCaliber.TextSize = new System.Drawing.Size(84, 16);
+            // 
+            // lciRetired
+            // 
+            this.lciRetired.Control = this.deRetired;
+            this.lciRetired.Location = new System.Drawing.Point(277, 193);
+            this.lciRetired.Name = "lciRetired";
+            this.lciRetired.Size = new System.Drawing.Size(274, 28);
+            this.lciRetired.Text = "Retired";
+            this.lciRetired.TextSize = new System.Drawing.Size(84, 16);
             // 
             // ItemManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1215, 598);
-            this.Controls.Add(this.tcGeneral);
+            this.ClientSize = new System.Drawing.Size(922, 737);
+            this.Controls.Add(this.xtcGeneral);
             this.Name = "ItemManagement";
-            this.Text = "Item Management";
+            this.Text = "ItemManagement";
             this.Load += new System.EventHandler(this.ItemManagement_Load);
-            this.tcGeneral.ResumeLayout(false);
-            this.tpGrid.ResumeLayout(false);
-            this.gbFilter.ResumeLayout(false);
-            this.gbFilter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdItems)).EndInit();
-            this.tpForm.ResumeLayout(false);
-            this.tlpForm.ResumeLayout(false);
-            this.tlpForm.PerformLayout();
+            this.Controls.SetChildIndex(this.ribbonControl, 0);
+            this.Controls.SetChildIndex(this.ribbonStatusBar, 0);
+            this.Controls.SetChildIndex(this.xtcGeneral, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).EndInit();
+            this.xtcGeneral.ResumeLayout(false);
+            this.xtpList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdItems)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rootGridViewItems)).EndInit();
+            this.xtpForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlForm)).EndInit();
+            this.layoutControlForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtCaliber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCategoryName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSize.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMmFront.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deRetired.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deRetired.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deLaunched.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deLaunched.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStatus.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtModel.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkActive.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTimestamp.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdSubversion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdVersion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciItemCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciIdVersion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciIdSubversion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTimestamp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciItemName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciActive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciModel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciLaunched)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciMmFront)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciCategoryName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciCaliber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciRetired)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tcGeneral;
-        private System.Windows.Forms.TabPage tpGrid;
-        private System.Windows.Forms.GroupBox gbFilter;
-        private System.Windows.Forms.CheckBox chkFilter;
-        private System.Windows.Forms.TextBox txtFilter;
-        private System.Windows.Forms.ComboBox cmbColFilter;
-        private System.Windows.Forms.Button btnLoad;
-        private System.Windows.Forms.DataGridView grdItems;
-        private System.Windows.Forms.TabPage tpForm;
-        private System.Windows.Forms.Button btnNewVersion;
-        private System.Windows.Forms.TableLayoutPanel tlpForm;
-        private System.Windows.Forms.TextBox txtCategoryName;
-        private System.Windows.Forms.TextBox txtSize;
-        private System.Windows.Forms.TextBox txtMmFront;
-        private System.Windows.Forms.TextBox txtStatus;
-        private System.Windows.Forms.TextBox txtModel;
-        private System.Windows.Forms.TextBox txtItemName;
-        private System.Windows.Forms.TextBox txtTimestamp;
-        private System.Windows.Forms.TextBox txtIdSubversion;
-        private System.Windows.Forms.TextBox txtCaliber;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtIdVersion;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtItemCode;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.CheckBox chkActive;
-        private CustomControls.NullableDateTimePicker ndtpLaunched;
-        private CustomControls.NullableDateTimePicker ndtpRetired;
-        private System.Windows.Forms.Label lblDatesRemarks;
-        private System.Windows.Forms.Button btnMultiFilters;
+        private DevExpress.XtraTab.XtraTabControl xtcGeneral;
+        private DevExpress.XtraTab.XtraTabPage xtpList;
+        private DevExpress.XtraTab.XtraTabPage xtpForm;
+        private DevExpress.XtraEditors.SimpleButton sbLoad;
+        private DevExpress.XtraGrid.GridControl xgrdItems;
+        private DevExpress.XtraGrid.Views.Grid.GridView rootGridViewItems;
+        private DevExpress.XtraLayout.LayoutControl layoutControlForm;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraEditors.TextEdit txtItemName;
+        private DevExpress.XtraEditors.TextEdit txtTimestamp;
+        private DevExpress.XtraEditors.TextEdit txtIdSubversion;
+        private DevExpress.XtraEditors.TextEdit txtIdVersion;
+        private DevExpress.XtraEditors.TextEdit txtItemCode;
+        private DevExpress.XtraLayout.LayoutControlItem lciItemCode;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.LayoutControlItem lciIdVersion;
+        private DevExpress.XtraLayout.LayoutControlItem lciIdSubversion;
+        private DevExpress.XtraLayout.LayoutControlItem lciTimestamp;
+        private DevExpress.XtraLayout.LayoutControlItem lciItemName;
+        private DevExpress.XtraEditors.CheckEdit chkActive;
+        private DevExpress.XtraLayout.LayoutControlItem lciActive;
+        private DevExpress.XtraEditors.TextEdit txtStatus;
+        private DevExpress.XtraEditors.TextEdit txtModel;
+        private DevExpress.XtraLayout.LayoutControlItem lciModel;
+        private DevExpress.XtraLayout.LayoutControlItem lciStatus;
+        private DevExpress.XtraEditors.DateEdit deRetired;
+        private DevExpress.XtraEditors.DateEdit deLaunched;
+        private DevExpress.XtraLayout.LayoutControlItem lciLaunched;
+        private DevExpress.XtraLayout.LayoutControlItem lciRetired;
+        private DevExpress.XtraEditors.TextEdit txtCaliber;
+        private DevExpress.XtraEditors.TextEdit txtCategoryName;
+        private DevExpress.XtraEditors.TextEdit txtSize;
+        private DevExpress.XtraEditors.TextEdit txtMmFront;
+        private DevExpress.XtraLayout.LayoutControlItem lciMmFront;
+        private DevExpress.XtraLayout.LayoutControlItem lciSize;
+        private DevExpress.XtraLayout.LayoutControlItem lciCategoryName;
+        private DevExpress.XtraLayout.LayoutControlItem lciCaliber;
+        private DevExpress.XtraEditors.SimpleButton sbNewVersion;
     }
 }

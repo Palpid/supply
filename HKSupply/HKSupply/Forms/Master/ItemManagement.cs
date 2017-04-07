@@ -1,5 +1,12 @@
-﻿using HKSupply.Helpers;
+﻿using DevExpress.Utils;
+using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraLayout.Utils;
 using HKSupply.General;
+using HKSupply.Helpers;
 using HKSupply.Models;
 using System;
 using System.Collections.Generic;
@@ -7,19 +14,15 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Linq.Dynamic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CustomControls;
-using HKSupply.Styles;
 
 namespace HKSupply.Forms.Master
 {
-    public partial class ItemManagement : Form, IActionsStackView
+    public partial class ItemManagement : RibbonFormBase
     {
         #region Enums
-
         private enum eItemColumns
         {
             IdVer,
@@ -37,49 +40,16 @@ namespace HKSupply.Forms.Master
             CategoryName,
             Caliber,
         }
-
-        private enum eItemColumnsFilter
-        {
-            ItemCode,
-            ItemName,
-            Model,
-            Active,
-        }
-
-        private enum eColumnsFilterType
-        {
-            Text = 0,
-            CheckBox = 1,
-        }
-
-        private Dictionary<string, int> _filterDic = new Dictionary<string, int>() 
-        { 
-            {eItemColumns.ItemCode.ToString(), (int)eColumnsFilterType.Text },
-            {eItemColumns.ItemName.ToString(), (int)eColumnsFilterType.Text },
-            {eItemColumns.Model.ToString(), (int)eColumnsFilterType.Text },
-            {eItemColumns.Active.ToString(), (int)eColumnsFilterType.CheckBox }
-        };
-
         #endregion
 
         #region Private Members
-
-        CustomControls.StackView actionsStackView;
 
         Item _itemUpdate;
         Item _itemOriginal;
 
         List<Item> _itemsList;
 
-        //string[] _nonEditingFields = { "txtItemCode", "txtIdVersion", "txtIdSubversion", "txtTimestamp" };
-        //string[] _nonCreatingFields = { "txtIdVersion", "txtIdSubversion", "txtTimestamp" };
-        string[] _nonEditingFields;
-        string[] _nonCreatingFields;
-        int[] _nonCreatingFieldsRows = { 1, 2, 3 };
-
-        bool _sortDescending = true;
-
-        List<ModelLinqFiltering> _multiFilters;
+        string[] _nonEditingFields = { "txtItemCode", "txtIdVersion", "txtIdSubversion", "txtTimestamp" };	
 
         #endregion
 
@@ -87,51 +57,104 @@ namespace HKSupply.Forms.Master
         public ItemManagement()
         {
             InitializeComponent();
-            ResetItemUpdate();
+
+            try
+            {
+                ConfigureRibbonActions();
+                SetUpGrdItems();
+                SetUpTexEdit();
+                SetupDateEdit();
+                ResetItemUpdate();
+                SetFormBinding();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 
-        #region Action toolbar
-        public void actionsStackView_EditButtonClick(object sender, EventArgs e)
+        #region Ribbon
+        private void ConfigureRibbonActions()
         {
+            try
+            {
+                var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
+                Read = actions.Read;
+                New = actions.New;
+                Modify = actions.Modify;
+                RestoreInitState();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public override void bbiCancel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            base.bbiCancel_ItemClick(sender, e);
+
+            try
+            {
+                _itemOriginal = null;
+                ResetItemUpdate();
+                SetFormBinding();
+                xtpForm.PageVisible = false;
+                xtpList.PageVisible = true;
+                sbNewVersion.Visible = false;
+                LoadItemsList();
+                SetNonCreatingFieldsVisibility(LayoutVisibility.Always);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public override void bbiEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            base.bbiEdit_ItemClick(sender, e);
+
             try
             {
                 if (_itemOriginal == null)
                 {
                     MessageBox.Show("No item selected");
-                    actionsStackView.RestoreInitState();
+                    RestoreInitState();
                 }
                 else
                 {
-                    ConfigureActionsStackViewEditing();
+                    ConfigureRibbonActionsEditing();
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        public void actionsStackView_NewButtonClick(object sender, EventArgs e)
+        public override void bbiNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            base.bbiNew_ItemClick(sender, e);
+
             try
             {
-                ConfigureActionsStackViewCreating();
+                ConfigureRibbonActionsCreating();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }   
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        public void actionsStackView_SaveButtonClick(object sender, EventArgs e)
+        public override void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            base.bbiSave_ItemClick(sender, e);
             try
             {
                 bool res = false;
-                //El toolstrip no lanza el validate, lo lanzamos a mano por si acaso hay algún elemento que lo tiene pendiente
-                Validate();
 
                 if (IsValidItem() == false)
                     return;
@@ -142,88 +165,39 @@ namespace HKSupply.Forms.Master
                     return;
 
                 Cursor = Cursors.WaitCursor;
-                try
-                {
-                    if (_itemUpdate.Equals(_itemOriginal))
-                    {
-                        MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
-                        return;
-                    }
 
-                    if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
-                    {
-                        res = UpdateItem();
-                    }
-                    else if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.New)
-                    {
-                        res = CreateItem();
-                    }
-
-                    if (res == true)
-                    {
-                        MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
-                        ActionsAfterCU();
-                    }
-
-                }
-                catch (Exception ex)
+                if (_itemUpdate.Equals(_itemOriginal))
                 {
-                    MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
+                    return;
                 }
-                finally
+
+                if (CurrentState == ActionsStates.Edit)
                 {
-                    Cursor = Cursors.Default;
+                    res = UpdateItem();
                 }
+                else if (CurrentState == ActionsStates.New)
+                {
+                    res = CreateItem();
+                }
+
+                if (res == true)
+                {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
+                    ActionsAfterCU();
+                }
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
             }
         }
 
-        public void actionsStackView_CancelButtonClick(object sender, EventArgs e)
-        {
-            try
-            {
-                _itemOriginal = null;
-                ResetItemUpdate();
-                SetFormBinding();
-                tcGeneral.TabPages.Remove(tpForm);
-                tcGeneral.TabPages.Add(tpGrid);
-                btnNewVersion.Visible = false;
-                LoadItemsList();
-                actionsStackView.RestoreInitState();
-
-                foreach (var n in _nonCreatingFieldsRows)
-                {
-                    tlpForm.RowStyles[n].SizeType = SizeType.AutoSize;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        public void ConfigureActionsStackView()
-        {
-            try
-            {
-                var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
-
-                actionsStackView = new CustomControls.StackView(actions.Read, actions.New, actions.Modify);
-                actionsStackView.EditButtonClick += actionsStackView_EditButtonClick;
-                actionsStackView.NewButtonClick += actionsStackView_NewButtonClick;
-                actionsStackView.SaveButtonClick += actionsStackView_SaveButtonClick;
-                actionsStackView.CancelButtonClick += actionsStackView_CancelButtonClick;
-
-                Controls.Add(actionsStackView);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
         #endregion
 
         #region Form Events
@@ -232,29 +206,31 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                ConfigureActionsStackView();
-                SetEvents();
-                SetFormBinding();
-                InitializeFormStyles();
-                tcGeneral.TabPages.Remove(tpForm);
-                btnNewVersion.Visible = false;
-                LoadComboFilters();
-
-                _nonEditingFields = new string[] { txtItemCode.Name, txtIdVersion.Name, txtIdSubversion.Name, txtTimestamp.Name };
-
-                _nonCreatingFields = new string[] { txtIdVersion.Name, txtIdSubversion.Name, txtTimestamp.Name };
-
-                //TODO Mejor llevarlo a otro lado y meter el texto el resources.
-                lblDatesRemarks.Text = "* For dates" + Environment.NewLine + "Press Delete to set empty value";
-                
+                xtpForm.PageVisible = false;
+                //sbNewVersion.Visible = false; //TODO
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void btnLoad_Click(object sender, EventArgs e)
+        void rootGridViewItems_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+                object itemCode = view.GetRowCellValue(view.FocusedRowHandle, eItemColumns.ItemCode.ToString());
+                if (itemCode != null)
+                    LoadItemForm(itemCode.ToString());
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void sbLoad_Click(object sender, EventArgs e)
         {
             try
             {
@@ -263,7 +239,7 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -271,18 +247,27 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void btnNewVersion_Click(object sender, EventArgs e)
+        private void sbNewVersion_Click(object sender, EventArgs e)
         {
             try
             {
-                Cursor = Cursors.WaitCursor;
                 Validate();
 
                 if (_itemUpdate.Equals(_itemOriginal))
                 {
-                    MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
+                    XtraMessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
                     return;
                 }
+
+                if (IsValidItem() == false)
+                    return;
+
+                DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
+
+                if (result != DialogResult.Yes)
+                    return;
+                
+                Cursor = Cursors.WaitCursor;
 
                 if (UpdateItem(true))
                 {
@@ -291,175 +276,17 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
                 Cursor = Cursors.Default;
             }
         }
-
-        private void btnMultiFilters_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Cursor = Cursors.WaitCursor;
-                DynamicFilters frm = new DynamicFilters();
-                frm.InitData(new Item(), _multiFilters);
-                frm.ShowDialog();
-                if (frm.DialogResult == DialogResult.OK)
-                {
-                    _multiFilters = frm.FilterList;
-                    btnMultiFilters.Text += " *";
-                    LoadItemsList(_multiFilters);
-                }
-
-                //Test con User
-                //frm.InitData(new User(), _multiFilters);
-                //frm.ShowDialog();
-                //if (frm.DialogResult == DialogResult.OK)
-                //{
-                //    _multiFilters = frm.FilterList;
-
-                //    var users = GlobalSetting.UserService.GetAllUsers();
-                //    //montamos el string con los filtros
-                //    string filterString = string.Empty;
-                //    foreach (var filter in _multiFilters)
-                //        filterString += filter.GetLinqFilterString();
-                //    users = users.Where(filterString).ToList();
-
-                //}
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                Cursor = Cursors.Default;
-            }
-        }
-
-        private void cmbColFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (cmbColFilter.SelectedIndex == -1)
-                {
-                    txtFilter.Visible = false;
-                    chkFilter.Visible = false;
-                    return;
-                }
-
-                var type = _filterDic[((eItemColumnsFilter)cmbColFilter.SelectedIndex).ToString()];
-                ShowFilterField((eColumnsFilterType)type);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        /// <summary>
-        /// No queremos la parte de la hora que te pone el control por defecto
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void ndtpRetired_ValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (ndtpRetired.Value != null)
-                {
-                    DateTime tmp = (DateTime)ndtpRetired.Value;
-                    ndtpRetired.Value = new DateTime(tmp.Year, tmp.Month, tmp.Day, 0, 0, 0);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        /// <summary>
-        /// No queremos la parte de la hora que te pone el control por defecto
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void ndtpLaunched_ValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (ndtpLaunched.Value != null)
-                {
-                    DateTime tmp = (DateTime)ndtpLaunched.Value;
-                    ndtpLaunched.Value = new DateTime(tmp.Year, tmp.Month, tmp.Day, 0, 0, 0);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        #region Grid events
-
-        /// <summary>
-        /// Cargamos los datos del registro de la fila que se hace doble click
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void grdItems_CellDoubleClick(Object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (e.RowIndex < 0) return;
-                LoadItemForm(grdItems.Rows[e.RowIndex].Cells[(int)eItemColumns.ItemCode].Value.ToString());
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        /// <summary>
-        /// Ordenamos si ha pulsado sobre algún header de columna
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void grdItems_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (e.RowIndex < 0 && e.ColumnIndex > -1)
-                {
-                    LoadItemsSortedList((eItemColumns)e.ColumnIndex);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        #endregion
 
         #endregion
 
         #region Private Methods
-
-        /// <summary>
-        /// Establecer los eventos de los objetos del formulario
-        /// </summary>
-        private void SetEvents()
-        {
-            ndtpLaunched.ValueChanged += ndtpLaunched_ValueChanged;
-            ndtpRetired.ValueChanged += ndtpRetired_ValueChanged;
-
-            cmbColFilter.SelectedIndexChanged += cmbColFilter_SelectedIndexChanged;
-
-            grdItems.CellDoubleClick += grdItems_CellDoubleClick;
-            grdItems.CellClick += grdItems_CellClick;
-        }
 
         /// <summary>
         /// Resetear el objeto item que usamos para la actualización
@@ -469,52 +296,138 @@ namespace HKSupply.Forms.Master
             _itemUpdate = new Item();
         }
 
-        /// <summary>
-        /// Crear los bindings de los campos del formulario
-        /// </summary>
+        private void SetUpGrdItems()
+        {
+            try
+            {
+                //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
+                rootGridViewItems.OptionsView.ColumnAutoWidth = false;
+                rootGridViewItems.HorzScrollVisibility = ScrollVisibility.Auto;
+
+                //hacer todo el grid no editable
+                rootGridViewItems.OptionsBehavior.Editable = false;
+
+                //Columns definition
+                GridColumn colIdVer = new GridColumn() { Caption = "Version Id", Visible = true, FieldName = eItemColumns.IdVer.ToString(), Width = 70 };
+                GridColumn colIdSubVer = new GridColumn() { Caption = "Subversion Id", Visible = true, FieldName = eItemColumns.IdSubVer.ToString(), Width = 80 };
+                GridColumn colTimestamp = new GridColumn() { Caption = "Timestamp", Visible = true, FieldName = eItemColumns.Timestamp.ToString(), Width = 130 };
+                GridColumn colItemCode = new GridColumn() { Caption = "Item Code", Visible = true, FieldName = eItemColumns.ItemCode.ToString(), Width = 150 };
+                GridColumn colItemName = new GridColumn() { Caption = "Item Name", Visible = true, FieldName = eItemColumns.ItemName.ToString(), Width = 250 };
+                GridColumn colModel = new GridColumn() { Caption = "Model", Visible = true, FieldName = eItemColumns.Model.ToString(), Width = 120 };
+                GridColumn colActive = new GridColumn() { Caption = "Active", Visible = true, FieldName = eItemColumns.Active.ToString(), Width = 50 };
+                GridColumn colIdStatus = new GridColumn() { Caption = "Id Status", Visible = true, FieldName = eItemColumns.IdStatus.ToString(), Width = 60 };
+                GridColumn colLaunched = new GridColumn() { Caption = "Launched", Visible = true, FieldName = eItemColumns.Launched.ToString(), Width = 90 };
+                GridColumn colRetired = new GridColumn() { Caption = "Retired", Visible = true, FieldName = eItemColumns.Retired.ToString(), Width = 90 };
+                GridColumn colMmFront = new GridColumn() { Caption = "Front (mm)", Visible = true, FieldName = eItemColumns.MmFront.ToString(), Width = 70 };
+                GridColumn colSize = new GridColumn() { Caption = "Size", Visible = true, FieldName = eItemColumns.Size.ToString(), Width = 70 };
+                GridColumn colCategoryName = new GridColumn() { Caption = "Category Name", Visible = true, FieldName = eItemColumns.CategoryName.ToString(), Width = 90 };
+                GridColumn colCaliber = new GridColumn() { Caption = "Caliber", Visible = true, FieldName = eItemColumns.Caliber.ToString(), Width = 70 };
+
+                //Display Format
+                colMmFront.DisplayFormat.FormatType = FormatType.Numeric;
+                colMmFront.DisplayFormat.FormatString = "n2"; //2 Decimales
+                colCaliber.DisplayFormat.FormatType = FormatType.Numeric;
+                colCaliber.DisplayFormat.FormatString = "n2";
+
+                //Add columns to grid root view
+                rootGridViewItems.Columns.Add(colIdVer);
+                rootGridViewItems.Columns.Add(colIdSubVer);
+                rootGridViewItems.Columns.Add(colTimestamp);
+                rootGridViewItems.Columns.Add(colItemCode);
+                rootGridViewItems.Columns.Add(colItemName);
+                rootGridViewItems.Columns.Add(colModel);
+                rootGridViewItems.Columns.Add(colActive);
+                rootGridViewItems.Columns.Add(colIdStatus);
+                rootGridViewItems.Columns.Add(colLaunched);
+                rootGridViewItems.Columns.Add(colRetired);
+                rootGridViewItems.Columns.Add(colMmFront);
+                rootGridViewItems.Columns.Add(colSize);
+                rootGridViewItems.Columns.Add(colCategoryName);
+                rootGridViewItems.Columns.Add(colCaliber);
+
+                //Events
+                rootGridViewItems.DoubleClick += rootGridViewItems_DoubleClick;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void SetUpTexEdit()
+        {
+            try
+            {
+                txtCaliber.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                txtCaliber.Properties.Mask.EditMask = "F2"; //Dos decimales
+                txtCaliber.Properties.Mask.UseMaskAsDisplayFormat = true;
+                txtCaliber.EditValue = "0.00";
+
+                txtMmFront.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                txtMmFront.Properties.Mask.EditMask = "F2";
+                txtMmFront.Properties.Mask.UseMaskAsDisplayFormat = true;
+                txtMmFront.EditValue = "0.00";
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void SetupDateEdit()
+        {
+            try
+            {
+                //deLaunched.Properties.Buttons.
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         private void SetFormBinding()
         {
             try
             {
-
-                foreach (Control ctl in tlpForm.Controls)
+                foreach (Control ctl in layoutControlForm.Controls)
                 {
-                    if (ctl.GetType() == typeof(TextBox))
+                    if (ctl.GetType() == typeof(TextEdit))
                     {
                         ctl.DataBindings.Clear();
-                        ((TextBox)ctl).ReadOnly = true;
+                        ((TextEdit)ctl).ReadOnly = true;
                     }
-                    else if (ctl.GetType() == typeof(CheckBox))
+                    else if (ctl.GetType() == typeof(CheckEdit))
                     {
                         ctl.DataBindings.Clear();
-                        ((CheckBox)ctl).Enabled = false;
+                        ((CheckEdit)ctl).ReadOnly = true;
                     }
-                    else if (ctl.GetType() == typeof(NullableDateTimePicker))
+                    else if (ctl.GetType() == typeof(DateEdit))
                     {
                         ctl.DataBindings.Clear();
-                        ((NullableDateTimePicker)ctl).Enabled = false;
+                        ((DateEdit)ctl).ReadOnly = true;
                     }
                 }
 
-                //NullableDateTimePicker
-                //Nota: El "OnPropertyChanged" es necesario para que el binding sea en los dos sentidos.
-                ndtpLaunched.DataBindings.Add("Value", _itemUpdate, "Launched", true, DataSourceUpdateMode.OnPropertyChanged);
-                ndtpRetired.DataBindings.Add("Value", _itemUpdate, "Retired", true, DataSourceUpdateMode.OnPropertyChanged);
-                //TextBox
-                txtItemCode.DataBindings.Add("Text", _itemUpdate, "ItemCode");
-                txtIdVersion.DataBindings.Add("Text", _itemUpdate, "idVer");
-                txtIdSubversion.DataBindings.Add("Text", _itemUpdate, "idSubVer");
-                txtTimestamp.DataBindings.Add("Text", _itemUpdate, "Timestamp");
-                txtItemName.DataBindings.Add("Text", _itemUpdate, "ItemName");
-                txtModel.DataBindings.Add("Text", _itemUpdate, "Model");
-                txtStatus.DataBindings.Add("Text", _itemUpdate, "IdStatus");
-                txtMmFront.DataBindings.Add("Text", _itemUpdate, "MmFront");
-                txtSize.DataBindings.Add("Text", _itemUpdate, "Size");
-                txtCategoryName.DataBindings.Add("Text", _itemUpdate, "CategoryName");
-                txtCaliber.DataBindings.Add("Text", _itemUpdate, "Caliber");
-                //CheckBox
-                chkActive.DataBindings.Add("Checked", _itemUpdate, "Active");
-
+                //TextEdit
+                txtItemCode.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.ItemCode);
+                txtIdVersion.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdVer);
+                txtIdSubversion.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdSubVer);
+                txtTimestamp.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Timestamp);
+                txtItemName.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.ItemName);
+                txtModel.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Model);
+                txtStatus.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdStatus);
+                txtMmFront.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.MmFront);
+                txtSize.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Size);
+                txtCategoryName.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.CategoryName); ;
+                txtCaliber.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Caliber);
+                //CheckEdit
+                chkActive.DataBindings.Add<Item>(_itemUpdate, (CheckEdit chk) => chk.Checked, item => item.Active);
+                //DateEdit
+                deLaunched.DataBindings.Add<Item>(_itemUpdate, (DateEdit d) => d.EditValue, item => item.Launched);
+                deRetired.DataBindings.Add<Item>(_itemUpdate, (DateEdit d) => d.EditValue, item => item.Retired);
             }
             catch (Exception ex)
             {
@@ -522,104 +435,7 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        /// <summary>
-        /// Inicializar algunos estilos del formulario
-        /// </summary>
-        private void InitializeFormStyles()
-        {
-            try
-            {
-                //Multi Filter button
-                btnMultiFilters.BackColor = AppStyles.EtniaRed;
-                btnMultiFilters.FlatStyle = FlatStyle.Flat;
-                btnMultiFilters.FlatAppearance.BorderColor = AppStyles.EtniaRed;
-                btnMultiFilters.FlatAppearance.BorderSize = 1;
-                btnMultiFilters.ForeColor = Color.White;
-
-                //Load button
-                btnLoad.BackColor = AppStyles.EtniaRed;
-                btnLoad.FlatStyle = FlatStyle.Flat;
-                btnLoad.FlatAppearance.BorderColor = AppStyles.EtniaRed;
-                btnLoad.FlatAppearance.BorderSize = 1;
-                btnLoad.ForeColor = Color.White;
-
-                //New Version button
-                btnNewVersion.BackColor = AppStyles.EtniaRed;
-                btnNewVersion.FlatStyle = FlatStyle.Flat;
-                btnNewVersion.FlatAppearance.BorderColor = AppStyles.EtniaRed;
-                btnNewVersion.FlatAppearance.BorderSize = 1;
-                btnNewVersion.ForeColor = Color.White;
-
-                //Grid
-                //Para poder cambiar el color del header cuando se ordena hay que desactivar los efectos visuales del header que coge por defecto
-                grdItems.EnableHeadersVisualStyles = false;
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Cargar el combo con los campos que se puede filtrar
-        /// </summary>
-        private void LoadComboFilters()
-        {
-            try
-            {
-                cmbColFilter.DataSource = Enum.GetNames(typeof(eItemColumnsFilter));
-                cmbColFilter.SelectedIndex = -1;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        private void ResetMultiFilter()
-        {
-            try
-            {
-                _multiFilters = null;
-                btnMultiFilters.Text = btnMultiFilters.Text.Replace(" *", "");
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Mostrar el campo de filtro en función del tipo del campo (text, boolen...)
-        /// </summary>
-        /// <param name="type"></param>
-        private void ShowFilterField(eColumnsFilterType type)
-        {
-            try
-            {
-                txtFilter.Location = new Point(223, 14);
-                chkFilter.Location = new Point(223, 18);
-
-                switch (type)
-                {
-                    case eColumnsFilterType.Text:
-                        txtFilter.Visible = true;
-                        chkFilter.Visible = false;
-                        break;
-                    case eColumnsFilterType.CheckBox:
-                        txtFilter.Visible = false;
-                        chkFilter.Visible = true;
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
+        // <summary>
         /// cargar la colección de Items del sistema
         /// </summary>
         /// <remarks></remarks>
@@ -627,103 +443,8 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                //borramos por si habían indicado filtros
-                ResetMultiFilter();
-
                 _itemsList = GlobalSetting.ItemService.GetItems();
-
-                //Filtramos si es necesario
-                //MRM.Notes: Ahora obtenemos todo de la bbdd y sobre esa colección filtramos. Si al final se implanta esto se tendría que hacer la llamada
-                //a la bbdd con las condiciones y que la propia consulta filtre
-                //Columnas tipo Texto
-                if ((eItemColumnsFilter)cmbColFilter.SelectedIndex != eItemColumnsFilter.Active &&
-                    cmbColFilter.SelectedIndex > -1 && string.IsNullOrEmpty(txtFilter.Text) == false)
-                {
-                    //Lo pasamos antes a minúsculas todo, ya que el Contains es case sensitive 
-                    _itemsList = _itemsList.Where(cmbColFilter.SelectedItem.ToString() + ".ToLower().Contains(@0)", txtFilter.Text.ToLower()).ToList();
-                }
-                //Columnas bit
-                if ((eItemColumnsFilter)cmbColFilter.SelectedIndex == eItemColumnsFilter.Active)
-                {
-                    _itemsList = _itemsList.Where(cmbColFilter.SelectedItem.ToString() + " = @0", chkFilter.Checked).ToList();
-                }
-
-                SetGridSource();
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Cargar la colección de items que cumplen los filtros indicados por el usuario
-        /// </summary>
-        /// <param name="filters"></param>
-        private void LoadItemsList(List<ModelLinqFiltering> filters)
-        {
-            try
-            {
-                string filterString = string.Empty;
-
-                _itemsList = GlobalSetting.ItemService.GetItems();
-
-                //montamos el string con los filtros
-                foreach (var filter in filters)
-                    filterString += filter.GetLinqFilterString();
-
-                _itemsList = _itemsList.Where(filterString).ToList();
-
-                SetGridSource();
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Asignar el datasource al grid
-        /// </summary>
-        private void SetGridSource()
-        {
-            try
-            {
-                grdItems.DataSource = null;
-                grdItems.Rows.Clear();
-                grdItems.DataSource = _itemsList;
-                grdItems.ReadOnly = true;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Ordenar el grid según la columna 
-        /// </summary>
-        /// <param name="sortedColumn">Columna por la que se quiere ordenar</param>
-        /// <remarks>
-        /// Alterna entre el orden ascendente y descendente.
-        /// OK, no es muy correcto porque se controla con una sola variable la ordenación (ascendente o descendente) 
-        /// de todas las columnas, pero así es más fácil y en el peor de los casos el usuario pulsará dos veces 
-        /// sobre la misma columna para tener el orden que quiere.
-        /// </remarks>
-        private void LoadItemsSortedList(eItemColumns sortedColumn)
-        {
-            try
-            {
-                string order = _sortDescending ? " ASC" : " DESC";
-                _itemsList = _itemsList.OrderBy(sortedColumn.ToString() + order).ToList();
-
-                _sortDescending = !_sortDescending; //See Remarks
-
-                SetGridSource();
-                grdItems.Columns[(int)sortedColumn].HeaderCell.Style.BackColor = Color.Tomato;
-                grdItems.Columns[(int)sortedColumn].HeaderText += "*";
+                xgrdItems.DataSource = _itemsList;
             }
             catch (Exception ex)
             {
@@ -739,13 +460,161 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                if (tcGeneral.TabPages.Contains(tpForm) == false)
-                    tcGeneral.TabPages.Add(tpForm);
-                tcGeneral.SelectedTab = tpForm;
-
                 _itemUpdate = GlobalSetting.ItemService.GetItemByItemCode(itemCode);
                 _itemOriginal = _itemUpdate.Clone();
-                SetFormBinding();
+                SetFormBinding(); //refresh binding
+                xtpForm.PageVisible = true;
+                xtcGeneral.SelectedTabPage = xtpForm;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        
+        private void ConfigureRibbonActionsEditing()
+        {
+            try
+            {
+                xtpList.PageVisible = true;
+                //sbNewVersion.Visible = true;
+                SetEditingFieldsEnabled();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void ConfigureRibbonActionsCreating()
+        {
+            try
+            {
+                xtpList.PageVisible = false;
+                xtpForm.PageVisible = true;
+                sbNewVersion.Visible = false;
+                ResetItemUpdate();
+                SetFormBinding(); //refresh binding
+                SetNonCreatingFieldsVisibility(LayoutVisibility.Never);
+                SetCreatingFieldsEnabled();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Poner como editables los campos para el modo de edición
+        /// </summary>
+        private void SetEditingFieldsEnabled()
+        {
+            try
+            {
+                foreach (Control ctl in layoutControlForm.Controls)
+                {
+                    if (Array.IndexOf(_nonEditingFields, ctl.Name) < 0)
+                    {
+                        if (ctl.GetType() == typeof(TextEdit))
+                        {
+                            ((TextEdit)ctl).ReadOnly = false;
+                        }
+                        else if (ctl.GetType() == typeof(CheckEdit))
+                        {
+                            ((CheckEdit)ctl).ReadOnly = false;
+                        }
+                        else if (ctl.GetType() == typeof(DateEdit))
+                        {
+                            ((DateEdit)ctl).ReadOnly = false;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void SetCreatingFieldsEnabled()
+        {
+            try
+            {
+                foreach (Control ctl in layoutControlForm.Controls)
+                {
+                    if (ctl.GetType() == typeof(TextEdit))
+                    {
+                        ((TextEdit)ctl).ReadOnly = false;
+                    }
+                    else if (ctl.GetType() == typeof(CheckEdit))
+                    {
+                        ((CheckEdit)ctl).ReadOnly = false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void SetNonCreatingFieldsVisibility(LayoutVisibility visibility)
+        {
+            try
+            {
+                lciIdVersion.Visibility = visibility;
+                lciIdSubversion.Visibility = visibility;
+                lciTimestamp.Visibility = visibility;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Mover la fila activa a un item en concreto
+        /// </summary>
+        /// <param name="itemCode"></param>
+        private void MoveGridToItem(string itemCode)
+        {
+            try
+            {
+                GridColumn column = rootGridViewItems.Columns[eItemColumns.ItemCode.ToString()];
+                if (column != null)
+                {
+                    // locating the row 
+                    int rhFound = rootGridViewItems.LocateByDisplayText(rootGridViewItems.FocusedRowHandle + 1, column, itemCode);
+                    // focusing the cell 
+                    if (rhFound != GridControl.InvalidRowHandle)
+                    {
+                        rootGridViewItems.FocusedRowHandle = rhFound;
+                        rootGridViewItems.FocusedColumn = column;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private bool IsValidItem()
+        {
+            try
+            {
+                foreach (Control ctl in layoutControlForm.Controls)
+                {
+                    if (ctl.GetType() == typeof(TextEdit))
+                    {
+                        if (string.IsNullOrEmpty(((TextEdit)ctl).Text))
+                        {
+                            MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
+                            return false;
+                        }
+                    }
+                }
+                return true;
             }
             catch (Exception ex)
             {
@@ -787,143 +656,6 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        /// <summary>
-        /// Mover la celda activa a la de un customer en concreto
-        /// </summary>
-        /// <param name="itemCode"></param>
-        private void MoveGridToItem(string itemCode)
-        {
-            try
-            {
-                foreach (DataGridViewRow row in grdItems.Rows)
-                {
-                    if (row.Cells[(int)eItemColumns.ItemCode].Value.ToString() == itemCode)
-                    {
-                        grdItems.CurrentCell = row.Cells[(int)eItemColumns.IdVer];
-                        grdItems.FirstDisplayedScrollingRowIndex = row.Index;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Acciones cuando pulsamos el botón de editar
-        /// </summary>
-        private void ConfigureActionsStackViewEditing()
-        {
-            try
-            {
-                tcGeneral.TabPages.Remove(tpGrid);
-
-                btnNewVersion.Visible = true;
-
-                SetEditingFieldsEnabled();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Acciones cuando pulsamos el botón de nuevo
-        /// </summary>
-        private void ConfigureActionsStackViewCreating()
-        {
-            tcGeneral.TabPages.Remove(tpGrid);
-            if (tcGeneral.TabPages.Contains(tpForm) == false)
-                tcGeneral.TabPages.Add(tpForm);
-
-            tcGeneral.SelectedTab = tpForm;
-
-            btnNewVersion.Visible = false;
-
-            ResetItemUpdate();
-            SetFormBinding();
-
-            SetCreatingFieldsEnabled();
-
-            foreach (var n in _nonCreatingFieldsRows)
-            {
-                tlpForm.RowStyles[n].SizeType = SizeType.Absolute;
-                tlpForm.RowStyles[n].Height = 0;
-            }
-
-
-        }
-
-        /// <summary>
-        /// Poner como editables los campos para el modo de edición
-        /// </summary>
-        private void SetEditingFieldsEnabled()
-        {
-            try
-            {
-                foreach (Control ctl in tlpForm.Controls)
-                {
-                    if (Array.IndexOf(_nonEditingFields, ctl.Name) < 0)
-                    {
-                        if (ctl.GetType() == typeof(TextBox))
-                        {
-                            ((TextBox)ctl).ReadOnly = false;
-                        }
-                        else if (ctl.GetType() == typeof(CheckBox))
-                        {
-                            ((CheckBox)ctl).Enabled = true;
-                        }
-                        else if (ctl.GetType() == typeof(NullableDateTimePicker))
-                        {
-                            ((NullableDateTimePicker)ctl).Enabled = true;
-                        }
-                    }
-
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Poner como editables los campos para el modo de creación
-        /// </summary>
-        private void SetCreatingFieldsEnabled()
-        {
-            try
-            {
-                foreach (Control ctl in tlpForm.Controls)
-                {
-                    if (Array.IndexOf(_nonCreatingFields, ctl.Name) < 0)
-                    {
-                        if (ctl.GetType() == typeof(TextBox))
-                        {
-                            ((TextBox)ctl).ReadOnly = false;
-                        }
-                        else if (ctl.GetType() == typeof(CheckBox))
-                        {
-                            ((CheckBox)ctl).Enabled = true;
-                        }
-                        else if (ctl.GetType() == typeof(NullableDateTimePicker))
-                        {
-                            ((NullableDateTimePicker)ctl).Enabled = true;
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Acciones después de crear o updatar
-        /// </summary>
         private void ActionsAfterCU()
         {
             try
@@ -932,93 +664,11 @@ namespace HKSupply.Forms.Master
                 _itemOriginal = null;
                 ResetItemUpdate();
                 SetFormBinding();
-                tcGeneral.TabPages.Remove(tpForm);
-                tcGeneral.TabPages.Add(tpGrid);
-                btnNewVersion.Visible = false;
-                if (_multiFilters == null)
-                    LoadItemsList();
-                else
-                    LoadItemsList(_multiFilters);
+                xtpForm.PageVisible = false;
+                xtpList.PageVisible = true;
+                LoadItemsList();
                 MoveGridToItem(itemCode);
-                actionsStackView.RestoreInitState();
-
-                foreach (var n in _nonCreatingFieldsRows)
-                {
-                    tlpForm.RowStyles[n].SizeType = SizeType.AutoSize;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        #region validate data
-
-        private bool IsValidItem()
-        {
-            try
-            {
-                if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
-                    return IsValidModifiedItem();
-                else if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.New)
-                    return IsValidCreatedItem();
-
-                return false;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// TODO Implementar las validaciones reales.
-        /// </summary>
-        /// <returns></returns>
-        private bool IsValidModifiedItem()
-        {
-            try
-            {
-                foreach (Control ctl in tpForm.Controls)
-                {
-                    if (ctl.GetType() == typeof(TextBox))
-                    {
-                        if (string.IsNullOrEmpty(((TextBox)ctl).Text))
-                        {
-                            MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
-                            return false;
-                        }
-                    }
-                }
-                return true;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// TODO Implementar las validaciones reales.
-        /// </summary>
-        /// <returns></returns>
-        private bool IsValidCreatedItem()
-        {
-            try
-            {
-                foreach (Control ctl in tlpForm.Controls)
-                {
-                    if (ctl.GetType() == typeof(TextBox))
-                    {
-                        if (string.IsNullOrEmpty(((TextBox)ctl).Text))
-                        {
-                            MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
-                            return false;
-                        }
-                    }
-                }
-                return true;
+                RestoreInitState();
             }
             catch (Exception ex)
             {
@@ -1028,6 +678,6 @@ namespace HKSupply.Forms.Master
 
         #endregion
 
-        #endregion
     }
+
 }

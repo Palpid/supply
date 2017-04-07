@@ -343,8 +343,6 @@ namespace HKSupply.Forms.Master
 
                 //Events
                 rootGridViewSuppliers.DoubleClick += rootGridViewSuppliers_DoubleClick;
-                //rootGridViewFunctionalities.ValidatingEditor += rootGridViewFunctionalities_ValidatingEditor;
-                //rootGridViewFunctionalities.CellValueChanged += rootGridViewFunctionalities_CellValueChanged;
             }
             catch (Exception ex)
             {

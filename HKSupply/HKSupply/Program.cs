@@ -21,9 +21,9 @@ namespace HKSupply
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
-            //Application.Run(new Form1());
 
+            DevExpress.XtraEditors.WindowsFormsSettings.DefaultFont = new System.Drawing.Font("Source Sans Pro", 10);
+            
             Login frmLogin = new Login();
             frmLogin.ShowDialog();
 
