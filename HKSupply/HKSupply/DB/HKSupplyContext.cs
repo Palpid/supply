@@ -22,6 +22,14 @@ namespace HKSupply.DB
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<SupplierHistory> SuppliersHistory { get; set; }
         public DbSet<Store> Stores { get; set; }
+
+        public DbSet<Model> Models { get; set; }
+        public DbSet<EtnColor> EtnColors { get; set; }
+        public DbSet<StatusCial> StatusCial { get; set; }
+        public DbSet<StatusProd> StatusProd { get; set; }
+        public DbSet<FamilyHK> familiesHK { get; set; }
+        public DbSet<ItemGroup> ItemGroups { get; set; }
+
         public DbSet<Item> Items { get; set; }
         public DbSet<ItemHistory> ItemsHistory { get; set; }
 
@@ -34,10 +42,8 @@ namespace HKSupply.DB
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //Set precision 
-            modelBuilder.Entity<Item>().Property(x => x.MmFront).HasPrecision(19, 6);
             modelBuilder.Entity<Item>().Property(x => x.Caliber).HasPrecision(19, 6);
 
-            modelBuilder.Entity<ItemHistory>().Property(x => x.MmFront).HasPrecision(19,6);
             modelBuilder.Entity<ItemHistory>().Property(x => x.Caliber).HasPrecision(19, 6);
 
             base.OnModelCreating(modelBuilder);

@@ -20,7 +20,7 @@ namespace HKSupply.Models
         [Column("TIMESTAMP")]
         public DateTime Timestamp { get; set; }
 
-        [Column("ID_SUPPLIER", Order = 0), Key]
+        [Column("ID_SUPPLIER", Order = 0), Key, StringLength(3)]
         public string IdSupplier { get; set; }
 
         [Column("SUPPLIER_NAME")]

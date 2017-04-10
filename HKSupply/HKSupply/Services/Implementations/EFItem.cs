@@ -28,7 +28,15 @@ namespace HKSupply.Services.Implementations
             {
                 using (var db = new HKSupplyContext())
                 {
-                    return db.Items.ToList();
+                    return db.Items
+                        .Include(i => i.Model)
+                        .Include(i => i.ItemGroup)
+                        .Include(i => i.Color1)
+                        .Include(i => i.Color2)
+                        .Include(i => i.FamilyHK)
+                        .Include(i => i.StatusCial)
+                        .Include(i => i.StatusProd)
+                        .ToList();
                 }
             }
             catch (SqlException sqlex)
@@ -67,7 +75,7 @@ namespace HKSupply.Services.Implementations
 
                 using (var db = new HKSupplyContext())
                 {
-                    var item = db.Items.Where(i => i.ItemCode.Equals(itemCode)).SingleOrDefault();
+                    var item = db.Items.Where(i => i.IdItemBcn.Equals(itemCode)).SingleOrDefault();
                     return item;
                 }
             }
@@ -194,7 +202,7 @@ namespace HKSupply.Services.Implementations
                     {
                         try
                         {
-                            var tmpItem = GetItemByItemCode(newItem.ItemCode);
+                            var tmpItem = GetItemByItemCode(newItem.IdItemBcn);
                             if (tmpItem != null)
                                 throw new Exception("Item already exist");
 

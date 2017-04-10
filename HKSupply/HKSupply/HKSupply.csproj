@@ -264,14 +264,40 @@
     <Compile Include="Migrations\201703210811583_items_2.Designer.cs">
       <DependentUpon>201703210811583_items_2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704100904228_Items_3.cs" />
+    <Compile Include="Migrations\201704100904228_Items_3.Designer.cs">
+      <DependentUpon>201704100904228_Items_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704100910420_Items_3.1.cs" />
+    <Compile Include="Migrations\201704100910420_Items_3.1.Designer.cs">
+      <DependentUpon>201704100910420_Items_3.1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704101100355_Items_3.2_ItemHistory.cs" />
+    <Compile Include="Migrations\201704101100355_Items_3.2_ItemHistory.Designer.cs">
+      <DependentUpon>201704101100355_Items_3.2_ItemHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704101119002_Items_3.3.cs" />
+    <Compile Include="Migrations\201704101119002_Items_3.3.Designer.cs">
+      <DependentUpon>201704101119002_Items_3.3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704101348541_Items_3.4.cs" />
+    <Compile Include="Migrations\201704101348541_Items_3.4.Designer.cs">
+      <DependentUpon>201704101348541_Items_3.4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\EtnColor.cs" />
     <Compile Include="Models\CustomerHistory.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\FamilyHK.cs" />
     <Compile Include="Models\Functionality.cs" />
     <Compile Include="Models\FunctionalityRole.cs" />
     <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ItemGroup.cs" />
     <Compile Include="Models\ItemHistory.cs" />
+    <Compile Include="Models\Model.cs" />
     <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\StatusCial.cs" />
+    <Compile Include="Models\StatusProd.cs" />
     <Compile Include="Models\Store.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\SupplierHistory.cs" />
@@ -389,6 +415,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703210811583_items_2.resx">
       <DependentUpon>201703210811583_items_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704100904228_Items_3.resx">
+      <DependentUpon>201704100904228_Items_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704100910420_Items_3.1.resx">
+      <DependentUpon>201704100910420_Items_3.1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704101100355_Items_3.2_ItemHistory.resx">
+      <DependentUpon>201704101100355_Items_3.2_ItemHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704101119002_Items_3.3.resx">
+      <DependentUpon>201704101119002_Items_3.3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704101348541_Items_3.4.resx">
+      <DependentUpon>201704101348541_Items_3.4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

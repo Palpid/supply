@@ -928,7 +928,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                string itemCode = _itemOriginal.ItemCode;
+                string itemCode = _itemOriginal.IdItemBcn;
                 _itemOriginal = null;
                 ResetItemUpdate();
                 SetFormBinding();
