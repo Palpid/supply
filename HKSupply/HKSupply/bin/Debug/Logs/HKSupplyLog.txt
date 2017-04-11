@@ -1,18 +1,6 @@
-﻿2017-04-10 13:25:55,031 ERROR [9] HKSupply.Services.Implementations.EFItem.GetItems - A specified Include path is not valid. The EntityType 'HKSupply.DB.Item' does not declare a navigation property with the name 'DefaultSupplier'.
-System.InvalidOperationException: A specified Include path is not valid. The EntityType 'HKSupply.DB.Item' does not declare a navigation property with the name 'DefaultSupplier'.
-   en System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter.ConvertSpanPath(SpanPathInfo parentInfo, List`1 navPropNames, Int32 pos)
-   en System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter.AddSpanPath(SpanPathInfo parentInfo, List`1 navPropNames)
-   en System.Data.Entity.Core.Objects.Internal.ObjectFullSpanRewriter..ctor(DbCommandTree tree, DbExpression toRewrite, Span span, AliasGenerator aliasGenerator)
-   en System.Data.Entity.Core.Objects.Internal.ObjectSpanRewriter.TryRewrite(DbQueryCommandTree tree, Span span, MergeOption mergeOption, AliasGenerator aliasGenerator, DbExpression& newQuery, SpanIndex& spanInfo)
-   en System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
-   en System.Data.Entity.Core.Objects.EntitySqlQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
-   en System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
-   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
-   en System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
-   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
-   en System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
-   en System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
-   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
-   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
-   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
-   en HKSupply.Services.Implementations.EFItem.GetItems() en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItem.cs:línea 31
+﻿2017-04-11 10:26:38,214 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid Password
+HKSupply.Exceptions.InvalidPasswordException: Invalid Password
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 139
+2017-04-11 10:26:52,153 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid Password
+HKSupply.Exceptions.InvalidPasswordException: Invalid Password
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 139

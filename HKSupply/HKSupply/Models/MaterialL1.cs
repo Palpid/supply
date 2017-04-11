@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace HKSupply.Models
 {
-    [Table("STATUS_PROD")]
-    public class StatusProd
+    [Table("MATERIALS_L1")]
+    public class MaterialL1
     {
-        [Column("ID", TypeName = "NVARCHAR"), Key, StringLength(30)]
-        public string Id { get; set; }
-        [Column("DESCRIPTION", TypeName = "NVARCHAR"), StringLength(100), Required]
+        [Column("ID_MATERIAL_L1", TypeName = "NVARCHAR"), Key, StringLength(100)]
+        public string IdMaterialL1 { get; set; }
+        [Column("DESCRIPTION", TypeName = "NVARCHAR"), StringLength(500), Required]
         public string Description { get; set; }
 
         public override bool Equals(object obj)
@@ -22,14 +22,14 @@ namespace HKSupply.Models
             if (obj == null)
                 return false;
 
-            StatusProd statusProd = (StatusProd)obj;
+            MaterialL1 materialL1 = (MaterialL1)obj;
 
-            return (Id == statusProd.Id);
+            return (IdMaterialL1 == materialL1.IdMaterialL1);
         }
 
         public override int GetHashCode()
         {
-            return (Id == null ? 0 : Id.GetHashCode());
+            return (IdMaterialL1 == null ? 0 : IdMaterialL1.GetHashCode());
         }
     }
 }

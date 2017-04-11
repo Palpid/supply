@@ -1,9 +1,11 @@
 ﻿using DevExpress.Utils;
 using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Registrator;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraLayout;
 using DevExpress.XtraLayout.Utils;
 using HKSupply.General;
 using HKSupply.Helpers;
@@ -61,9 +63,10 @@ namespace HKSupply.Forms.Master
         Item _itemOriginal;
 
         List<Item> _itemsList;
+        List<Supplier> _supplierList;
+        List<StatusHK> _statusProdList;
 
-        //string[] _nonEditingFields = { "txtItemCode", "txtIdVersion", "txtIdSubversion", "txtTimestamp" };	
-        string[] _editingFields = { "txtIdDefaultSupplier", "txtIdFamilyHK", "txtIdStatusProd", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };	
+        string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };	
 
         #endregion
 
@@ -74,6 +77,8 @@ namespace HKSupply.Forms.Master
 
             try
             {
+                LoadSupplierList();
+                LoadStatusProdList();
                 ConfigureRibbonActions();
                 SetUpGrdItems();
                 SetUpTexEdit();
@@ -442,7 +447,14 @@ namespace HKSupply.Forms.Master
                         ctl.DataBindings.Clear();
                         ((DateEdit)ctl).ReadOnly = true;
                     }
+                    else if (ctl.GetType() == typeof(LookUpEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((LookUpEdit)ctl).ReadOnly = true;
+                    }
                 }
+
+                if (_itemUpdate.Model == null) _itemUpdate.Model = new Model(); //para evitar problemas al bindear nested properties
 
                 //TextEdit
                 txtIdVersion.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdVer);
@@ -451,7 +463,6 @@ namespace HKSupply.Forms.Master
                 txtIdPrototype.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdPrototype);
                 txtPrototypeName.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.PrototypeName);
                 txtPrototypeDescription.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.PrototypeDescription);
-                txtIdDefaultSupplier.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdDefaultSupplier);
                 //txtModel.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Model.Description);
                 txtModel.DataBindings.Add("Text", _itemUpdate, "Model.Description");//La custom extension que hice no funciona con propiedades que son clases, bindeo a la antigua
                 txtCaliber.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Caliber);
@@ -467,16 +478,61 @@ namespace HKSupply.Forms.Master
                 txtLaunchDate.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.LaunchDate);
                 txtRemovalDate.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.RemovalDate);
                 txtIdStatusCial.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdStatusCial);
-                txtIdStatusProd.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdStatusProd);
                 txtIdUserAttri1.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri1);
                 txtIdUserAttri2.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri2);
                 txtIdUserAttri3.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri3);
 
+                //LookUpEdit
+                lueIdDefaultSupplier.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdDefaultSupplier);
+                lueIdStatusProd.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdStatusProd);
+                
                 //CheckEdit
                 //chkActive.DataBindings.Add<Item>(_itemUpdate, (CheckEdit chk) => chk.Checked, item => item.Active);
                 ////DateEdit
                 //deLaunched.DataBindings.Add<Item>(_itemUpdate, (DateEdit d) => d.EditValue, item => item.Launched);
                 //deRetired.DataBindings.Add<Item>(_itemUpdate, (DateEdit d) => d.EditValue, item => item.Retired);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Cargar la colección de suppliers del sistema
+        /// </summary>
+        private void LoadSupplierList()
+        {
+            try
+            {
+                _supplierList = GlobalSetting.SupplierService.GetSuppliers();
+
+                lueIdDefaultSupplier.Properties.DataSource = _supplierList;
+                lueIdDefaultSupplier.Properties.DisplayMember = "IdSupplier";
+                lueIdDefaultSupplier.Properties.ValueMember = "IdSupplier";
+                lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdSupplier", 20, "Id Supplier"));
+                lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SupplierName", 100, "Name"));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Cargar la colección de Status Prod. del sistema
+        /// </summary>
+        private void LoadStatusProdList()
+        {
+            try
+            {
+                _statusProdList = GlobalSetting.StatusProdService.GetStatusProd();
+
+                lueIdStatusProd.Properties.DataSource = _statusProdList;
+                lueIdStatusProd.Properties.DisplayMember = "Description";
+                lueIdStatusProd.Properties.ValueMember = "Id";
+                //lueIdStatusProd.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdSupplier", 20, "Id Supplier"));
+                //lueIdStatusProd.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SupplierName", 100, "Name"));
             }
             catch (Exception ex)
             {
@@ -576,6 +632,10 @@ namespace HKSupply.Forms.Master
                         {
                             ((DateEdit)ctl).ReadOnly = false;
                         }
+                        else if (ctl.GetType() == typeof(LookUpEdit))
+                        {
+                            ((LookUpEdit)ctl).ReadOnly = false;
+                        }
                     }
                 }
             }
@@ -620,7 +680,7 @@ namespace HKSupply.Forms.Master
                 throw ex;
             }
         }
-
+        
         /// <summary>
         /// Mover la fila activa a un item en concreto
         /// </summary>

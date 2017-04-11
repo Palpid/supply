@@ -343,11 +343,11 @@ namespace HKSupply.Forms.Master
                 SupplierName = string.Empty,
                 Active = false,
                 VATNum = string.Empty,
-                ShippingAddress = string.Empty,
-                BillingAddress = string.Empty,
-                ContactName = string.Empty,
-                ContactPhone = string.Empty,
-                Currency = string.Empty
+                //ShippingAddress = string.Empty,
+                //BillingAddress = string.Empty,
+                //ContactName = string.Empty,
+                //ContactPhone = string.Empty,
+                //Currency = string.Empty
             };
         }
 

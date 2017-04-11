@@ -12,9 +12,9 @@ namespace HKSupply.Models
     [Table("COLORS")]
     public class EtnColor
     {
-        [Column("ID", TypeName = "NVARCHAR"), Key, StringLength(30)]
-        public string Id { get; set; }
-        [Column("DESCRIPTION", TypeName="NVARCHAR"), StringLength(100), Required]
+        [Column("ID_COLOR", TypeName = "NVARCHAR"), Key, StringLength(30)]
+        public string IdColor { get; set; }
+        [Column("DESCRIPTION", TypeName="NVARCHAR"), StringLength(500), Required]
         public string Description { get; set; }
 
         public override bool Equals(object obj)
@@ -24,12 +24,12 @@ namespace HKSupply.Models
 
             EtnColor color = (EtnColor)obj;
 
-            return (Id == color.Id);
+            return (IdColor == color.IdColor);
         }
 
         public override int GetHashCode()
         {
-            return (Id == null ? 0 : Id.GetHashCode());
+            return (IdColor == null ? 0 : IdColor.GetHashCode());
         }
     }
 }

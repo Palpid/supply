@@ -38,9 +38,10 @@ namespace HKSupply.Forms.Master
             BillingAddress,
             ContactName,
             ContactPhone,
+            Comments,
             IdIncoterm,
             IdPaymentTerms,
-            Currency,
+            IdDefaultCurrency,
         }
         #endregion
 
@@ -50,6 +51,9 @@ namespace HKSupply.Forms.Master
         Supplier _supplierOriginal;
 
         List<Supplier> _suppliersList;
+        List<Currency> _currenciesList;
+        List<PaymentTerms> _paymentTermsList;
+        List<Incoterm> _incotermsList;
 
         string[] _nonEditingFields = { "txtIdSupplier", "txtIdVersion", "txtIdSubversion", "txtTimestamp" };	
 
@@ -320,7 +324,7 @@ namespace HKSupply.Forms.Master
                 GridColumn colContactPhone = new GridColumn() { Caption = "Contact Phone", Visible = true, FieldName = eSupplierColumns.ContactPhone.ToString(), Width = 150 };
                 GridColumn colIdIncoterm = new GridColumn() { Caption = "Id Incoterm", Visible = true, FieldName = eSupplierColumns.IdIncoterm.ToString(), Width = 70 };
                 GridColumn colIdPaymentTerms = new GridColumn() { Caption = "Id Payment Terms", Visible = true, FieldName = eSupplierColumns.IdPaymentTerms.ToString(), Width = 100 };
-                GridColumn colCurrency = new GridColumn() { Caption = "Currency", Visible = true, FieldName = eSupplierColumns.Currency.ToString(), Width = 70 };
+                GridColumn colCurrency = new GridColumn() { Caption = "Currency", Visible = true, FieldName = eSupplierColumns.IdDefaultCurrency.ToString(), Width = 70 };
 
                 //Format type 
                 colTimestamp.DisplayFormat.FormatType = FormatType.DateTime;
@@ -343,6 +347,56 @@ namespace HKSupply.Forms.Master
 
                 //Events
                 rootGridViewSuppliers.DoubleClick += rootGridViewSuppliers_DoubleClick;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void LoadCurrenciesList()
+        {
+            try
+            {
+                _currenciesList = GlobalSetting.CurrencyService.GetCurrencies();
+
+                lueIdDefaultCurrency.Properties.DataSource = _currenciesList;
+                lueIdDefaultCurrency.Properties.DisplayMember = "IdCurrency";
+                lueIdDefaultCurrency.Properties.ValueMember = "Description";
+                //lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdSupplier", 20, "Id Supplier"));
+                //lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SupplierName", 100, "Name"));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void LoadPaymentTermsList()
+        {
+            try
+            {
+                _paymentTermsList = GlobalSetting.PaymentTermsService.GetPaymentTerms();
+
+                lueIdPaymentTerms.Properties.DataSource = _paymentTermsList;
+                lueIdPaymentTerms.Properties.DisplayMember = "IdPaymentTerms";
+                lueIdPaymentTerms.Properties.ValueMember = "Description";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void LoadIncotemrsList()
+        {
+            try
+            {
+                _incotermsList = GlobalSetting.IncotermService.GetIIncoterms();
+
+                lueIdIncoterm.Properties.DataSource = _incotermsList;
+                lueIdIncoterm.Properties.DisplayMember = "IdIncoterm";
+                lueIdIncoterm.Properties.ValueMember = "Description";
             }
             catch (Exception ex)
             {
@@ -399,22 +453,40 @@ namespace HKSupply.Forms.Master
                         ctl.DataBindings.Clear();
                         ((CheckEdit)ctl).ReadOnly = true;
                     }
+                    else if (ctl.GetType() == typeof(DateEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((DateEdit)ctl).ReadOnly = true;
+                    }
+                    else if (ctl.GetType() == typeof(LookUpEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((LookUpEdit)ctl).ReadOnly = true;
+                    }
                 }
 
-                txtIdSupplier.DataBindings.Add("Text", _supplierUpdate, "IdSupplier");
-                txtIdVersion.DataBindings.Add("Text", _supplierUpdate, "idVer");
-                txtIdSubversion.DataBindings.Add("Text", _supplierUpdate, "idSubVer");
-                txtTimestamp.DataBindings.Add("Text", _supplierUpdate, "Timestamp");
-                txtName.DataBindings.Add("Text", _supplierUpdate, "SupplierName");
-                chkActive.DataBindings.Add("Checked", _supplierUpdate, "Active");
-                txtVatNumber.DataBindings.Add("Text", _supplierUpdate, "VATNum");
-                txtShippingAddress.DataBindings.Add("Text", _supplierUpdate, "ShippingAddress");
-                txtBillingAddress.DataBindings.Add("Text", _supplierUpdate, "BillingAddress");
-                txtContactName.DataBindings.Add("Text", _supplierUpdate, "ContactName");
-                txtContactPhone.DataBindings.Add("Text", _supplierUpdate, "ContactPhone");
-                txtIntercom.DataBindings.Add("Text", _supplierUpdate, "IdIncoterm");
-                txtPaymentTerms.DataBindings.Add("Text", _supplierUpdate, "IdPaymentTerms");
-                txtCurreny.DataBindings.Add("Text", _supplierUpdate, "Currency");
+                //Textedit
+                txtIdSupplier.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.IdSupplier);
+                txtIdVersion.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.IdVer);
+                txtIdSubversion.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.IdSubVer);
+                txtTimestamp.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.Timestamp);
+                txtName.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.SupplierName);
+                txtVatNumber.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.VATNum);
+                txtShippingAddress.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.ShippingAddress);
+                txtShippingAddressZh.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.ShippingAddressZh);
+                txtBillingAddress.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.BillingAddress);
+                txtBillingAddressZh.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.BillingAddressZh);
+                txtContactName.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.ContactName);
+                txtContactNameZh.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.ContactNameZh);
+                txtContactPhone.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.ContactPhone);
+
+                //CheckEdit
+                chkActive.DataBindings.Add<Supplier>(_supplierUpdate, (CheckEdit chk) => chk.Checked, supplier => supplier.Active);
+
+                //LookUpEdit
+                lueIdIncoterm.DataBindings.Add<Supplier>(_supplierUpdate, (LookUpEdit e) => e.EditValue, supplier => supplier.IdIncoterm);
+                lueIdPaymentTerms.DataBindings.Add<Supplier>(_supplierUpdate, (LookUpEdit e) => e.EditValue, supplier => supplier.IdPaymentTerms);
+                lueIdDefaultCurrency.DataBindings.Add<Supplier>(_supplierUpdate, (LookUpEdit e) => e.EditValue, supplier => supplier.IdDefaultCurrency);
 
             }
             catch (Exception ex)

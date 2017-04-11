@@ -193,5 +193,50 @@ namespace HKSupply.Helpers
             return dataBindings.Add
                  (controlPropertyName, dataSource, bindingTargetName, true, DataSourceUpdateMode.OnPropertyChanged);
         }
+
+        /// <summary>
+        /// Extensión para hacer un binding tipado y evitar posibles errores al no depender del string para
+        /// las propiedades bindeadas entre el objeto y el source
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="dataBindings"></param>
+        /// <param name="dataSource"></param>
+        /// <param name="controlLambda"></param>
+        /// <param name="objectLambda"></param>
+        /// <returns></returns>
+        /// <remarks>Para LookUpEdit de DevExpress</remarks>
+        public static Binding Add<T>(this ControlBindingsCollection dataBindings,
+            object dataSource,
+            Expression<Func<LookUpEdit, object>> controlLambda,
+            Expression<Func<T, object>> objectLambda)
+        {
+
+            string controlPropertyName;
+            string bindingTargetName;
+
+            if (controlLambda.Body is MemberExpression)
+            {
+                controlPropertyName = ((MemberExpression)(controlLambda.Body)).Member.Name;
+            }
+            else
+            {
+                var op = ((UnaryExpression)controlLambda.Body).Operand;
+                controlPropertyName = ((MemberExpression)op).Member.Name;
+            }
+
+
+            if (objectLambda.Body is MemberExpression)
+            {
+                bindingTargetName = ((MemberExpression)(objectLambda.Body)).Member.Name;
+            }
+            else
+            {
+                var op = ((UnaryExpression)objectLambda.Body).Operand;
+                bindingTargetName = ((MemberExpression)op).Member.Name;
+            }
+
+            return dataBindings.Add
+                 (controlPropertyName, dataSource, bindingTargetName, true, DataSourceUpdateMode.OnPropertyChanged);
+        }
     }
 }

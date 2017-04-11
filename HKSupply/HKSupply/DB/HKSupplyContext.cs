@@ -26,9 +26,28 @@ namespace HKSupply.DB
         public DbSet<Model> Models { get; set; }
         public DbSet<EtnColor> EtnColors { get; set; }
         public DbSet<StatusCial> StatusCial { get; set; }
-        public DbSet<StatusProd> StatusProd { get; set; }
+        public DbSet<StatusHK> StatusProd { get; set; }
         public DbSet<FamilyHK> familiesHK { get; set; }
         public DbSet<ItemGroup> ItemGroups { get; set; }
+
+        public DbSet<UserAttrDescription> UserAttrsDescription { get; set; }
+        public DbSet<Incoterm> Incoterms { get; set; }
+        public DbSet<PaymentTerms> PaymentTerms { get; set; }
+        public DbSet<Currency> Currencies { get; set; }
+        public DbSet<EchangeRate> EchangeRates { get; set; }
+
+        public DbSet<MaterialL1> MaterialsL1 { get; set; }
+        public DbSet<MaterialL2> MaterialsL2 { get; set; }
+        public DbSet<MaterialL3> MaterialsL3 { get; set; }
+
+        public DbSet<MatTypeL1> MatsTypeL1 { get; set; }
+        public DbSet<MatTypeL2> MatsTypeL2 { get; set; }
+        public DbSet<MatTypeL3> MatsTypeL3 { get; set; }
+
+        public DbSet<HwTypeL1> HwsTypeL1 { get; set; }
+        public DbSet<HwTypeL2> HwsTypeL2 { get; set; }
+        public DbSet<HwTypeL3> HwsTypeL3 { get; set; }
+
 
         public DbSet<Item> Items { get; set; }
         public DbSet<ItemHistory> ItemsHistory { get; set; }
@@ -43,8 +62,8 @@ namespace HKSupply.DB
         {
             //Set precision 
             modelBuilder.Entity<Item>().Property(x => x.Caliber).HasPrecision(19, 6);
-
             modelBuilder.Entity<ItemHistory>().Property(x => x.Caliber).HasPrecision(19, 6);
+            modelBuilder.Entity<EchangeRate>().Property(x => x.Ratio).HasPrecision(19, 6);
 
             base.OnModelCreating(modelBuilder);
         }

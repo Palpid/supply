@@ -36,6 +36,10 @@ namespace HKSupply.General
         static EFSupplier _supplierEF = new EFSupplier();
         static EFStore _storeEF = new EFStore();
         static EFItem _itemEF = new EFItem();
+        static EFStatusProd _statusProdEF = new EFStatusProd();
+        static EFCurrency _currencyEF = new EFCurrency();
+        static EFPaymentTerms _paymentTermsEF = new EFPaymentTerms();
+        static EFIncoterm _incotermEF = new EFIncoterm();
 
         static User _loggedUser;
         static IEnumerable<FunctionalityRole> _functionalitiesRoles;
@@ -132,6 +136,50 @@ namespace HKSupply.General
                 else
                     return _itemEF;
             
+            }
+        }
+
+        public static IStatusProd StatusProdService 
+        {
+            get 
+            {
+                if (_statusProdEF == null)
+                    return new EFStatusProd();
+                else
+                    return _statusProdEF;
+            }
+        }
+
+        public static ICurrency CurrencyService 
+        {
+            get 
+            {
+                if (_currencyEF == null)
+                    return new EFCurrency();
+                else
+                    return _currencyEF;
+            }
+        }
+
+        public static IPaymentTerms PaymentTermsService
+        {
+            get 
+            {
+                if (_paymentTermsEF == null)
+                    return new EFPaymentTerms();
+                else
+                    return _paymentTermsEF;
+            }
+        }
+
+        public static IIncoterm IncotermService
+        {
+            get 
+            {
+                if (_incotermEF == null)
+                    return new EFIncoterm();
+                else
+                    return _incotermEF;
             }
         }
 

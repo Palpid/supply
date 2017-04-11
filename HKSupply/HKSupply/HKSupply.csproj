@@ -284,24 +284,102 @@
     <Compile Include="Migrations\201704101348541_Items_3.4.Designer.cs">
       <DependentUpon>201704101348541_Items_3.4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704111019546_ColorModelStatusCial_DefincionCampos.cs" />
+    <Compile Include="Migrations\201704111019546_ColorModelStatusCial_DefincionCampos.Designer.cs">
+      <DependentUpon>201704111019546_ColorModelStatusCial_DefincionCampos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111027090_ColorModelStatusCial_DefincionCampos_2.cs" />
+    <Compile Include="Migrations\201704111027090_ColorModelStatusCial_DefincionCampos_2.Designer.cs">
+      <DependentUpon>201704111027090_ColorModelStatusCial_DefincionCampos_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111032377_ColorModelStatusCial_DefincionCampos_2.1.cs" />
+    <Compile Include="Migrations\201704111032377_ColorModelStatusCial_DefincionCampos_2.1.Designer.cs">
+      <DependentUpon>201704111032377_ColorModelStatusCial_DefincionCampos_2.1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111033353_ColorModelStatusCial_DefincionCampos_2.2.cs" />
+    <Compile Include="Migrations\201704111033353_ColorModelStatusCial_DefincionCampos_2.2.Designer.cs">
+      <DependentUpon>201704111033353_ColorModelStatusCial_DefincionCampos_2.2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111035315_ColorModelStatusCial_DefincionCampos_2.3.cs" />
+    <Compile Include="Migrations\201704111035315_ColorModelStatusCial_DefincionCampos_2.3.Designer.cs">
+      <DependentUpon>201704111035315_ColorModelStatusCial_DefincionCampos_2.3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111046282_ColorModelStatusCial_DefincionCampos_2.4.cs" />
+    <Compile Include="Migrations\201704111046282_ColorModelStatusCial_DefincionCampos_2.4.Designer.cs">
+      <DependentUpon>201704111046282_ColorModelStatusCial_DefincionCampos_2.4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111132216_userAttr_Incotems_PaymentTerms_Currency_EchangeRate.cs" />
+    <Compile Include="Migrations\201704111132216_userAttr_Incotems_PaymentTerms_Currency_EchangeRate.Designer.cs">
+      <DependentUpon>201704111132216_userAttr_Incotems_PaymentTerms_Currency_EchangeRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111141186_familyHK_2.cs" />
+    <Compile Include="Migrations\201704111141186_familyHK_2.Designer.cs">
+      <DependentUpon>201704111141186_familyHK_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111230522_statusHK.cs" />
+    <Compile Include="Migrations\201704111230522_statusHK.Designer.cs">
+      <DependentUpon>201704111230522_statusHK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111247588_Materials.cs" />
+    <Compile Include="Migrations\201704111247588_Materials.Designer.cs">
+      <DependentUpon>201704111247588_Materials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111259253_MatType.cs" />
+    <Compile Include="Migrations\201704111259253_MatType.Designer.cs">
+      <DependentUpon>201704111259253_MatType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111300251_MatType2.cs" />
+    <Compile Include="Migrations\201704111300251_MatType2.Designer.cs">
+      <DependentUpon>201704111300251_MatType2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111311550_HwType.cs" />
+    <Compile Include="Migrations\201704111311550_HwType.Designer.cs">
+      <DependentUpon>201704111311550_HwType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111348344_Item_11042017.cs" />
+    <Compile Include="Migrations\201704111348344_Item_11042017.Designer.cs">
+      <DependentUpon>201704111348344_Item_11042017.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111356233_Item_11042017_2.cs" />
+    <Compile Include="Migrations\201704111356233_Item_11042017_2.Designer.cs">
+      <DependentUpon>201704111356233_Item_11042017_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111400001_Item_11042017_3.cs" />
+    <Compile Include="Migrations\201704111400001_Item_11042017_3.Designer.cs">
+      <DependentUpon>201704111400001_Item_11042017_3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Currency.cs" />
+    <Compile Include="Models\EchangeRate.cs" />
     <Compile Include="Models\EtnColor.cs" />
     <Compile Include="Models\CustomerHistory.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\FamilyHK.cs" />
     <Compile Include="Models\Functionality.cs" />
     <Compile Include="Models\FunctionalityRole.cs" />
+    <Compile Include="Models\HwTypeL1.cs" />
+    <Compile Include="Models\HwTypeL2.cs" />
+    <Compile Include="Models\HwTypeL3.cs" />
+    <Compile Include="Models\Incoterm.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ItemGroup.cs" />
     <Compile Include="Models\ItemHistory.cs" />
+    <Compile Include="Models\MaterialL1.cs" />
+    <Compile Include="Models\MaterialL2.cs" />
+    <Compile Include="Models\MaterialL3.cs" />
+    <Compile Include="Models\MatTypeL1.cs" />
+    <Compile Include="Models\MatTypeL2.cs" />
+    <Compile Include="Models\MatTypeL3.cs" />
     <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\PaymentTerms.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\StatusCial.cs" />
-    <Compile Include="Models\StatusProd.cs" />
+    <Compile Include="Models\StatusHK.cs" />
     <Compile Include="Models\Store.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\SupplierHistory.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserAttrDescription.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\HKSupplyRes.Designer.cs">
@@ -309,19 +387,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HKSupplyRes.resx</DependentUpon>
     </Compile>
+    <Compile Include="Services\Implementations\EFCurrency.cs" />
     <Compile Include="Services\Implementations\EFCustomer.cs" />
     <Compile Include="Services\Implementations\EFFunctionality.cs" />
     <Compile Include="Services\Implementations\EFFunctionalityRole.cs" />
+    <Compile Include="Services\Implementations\EFIncoterm.cs" />
     <Compile Include="Services\Implementations\EFItem.cs" />
+    <Compile Include="Services\Implementations\EFPaymentTerms.cs" />
     <Compile Include="Services\Implementations\EFRole.cs" />
+    <Compile Include="Services\Implementations\EFStatusProd.cs" />
     <Compile Include="Services\Implementations\EFStore.cs" />
     <Compile Include="Services\Implementations\EFSupplier.cs" />
     <Compile Include="Services\Implementations\EFUser.cs" />
+    <Compile Include="Services\Interfaces\ICurrency.cs" />
     <Compile Include="Services\Interfaces\ICustomer.cs" />
     <Compile Include="Services\Interfaces\IFunctionality.cs" />
     <Compile Include="Services\Interfaces\IFunctionalityRole.cs" />
+    <Compile Include="Services\Interfaces\IIncoterm.cs" />
     <Compile Include="Services\Interfaces\IItem.cs" />
+    <Compile Include="Services\Interfaces\IPaymentTerms.cs" />
     <Compile Include="Services\Interfaces\IRole.cs" />
+    <Compile Include="Services\Interfaces\IStatusProd.cs" />
     <Compile Include="Services\Interfaces\IStore.cs" />
     <Compile Include="Services\Interfaces\ISupplier.cs" />
     <Compile Include="Services\Interfaces\IUser.cs" />
@@ -430,6 +516,54 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704101348541_Items_3.4.resx">
       <DependentUpon>201704101348541_Items_3.4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111019546_ColorModelStatusCial_DefincionCampos.resx">
+      <DependentUpon>201704111019546_ColorModelStatusCial_DefincionCampos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111027090_ColorModelStatusCial_DefincionCampos_2.resx">
+      <DependentUpon>201704111027090_ColorModelStatusCial_DefincionCampos_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111032377_ColorModelStatusCial_DefincionCampos_2.1.resx">
+      <DependentUpon>201704111032377_ColorModelStatusCial_DefincionCampos_2.1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111033353_ColorModelStatusCial_DefincionCampos_2.2.resx">
+      <DependentUpon>201704111033353_ColorModelStatusCial_DefincionCampos_2.2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111035315_ColorModelStatusCial_DefincionCampos_2.3.resx">
+      <DependentUpon>201704111035315_ColorModelStatusCial_DefincionCampos_2.3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111046282_ColorModelStatusCial_DefincionCampos_2.4.resx">
+      <DependentUpon>201704111046282_ColorModelStatusCial_DefincionCampos_2.4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111132216_userAttr_Incotems_PaymentTerms_Currency_EchangeRate.resx">
+      <DependentUpon>201704111132216_userAttr_Incotems_PaymentTerms_Currency_EchangeRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111141186_familyHK_2.resx">
+      <DependentUpon>201704111141186_familyHK_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111230522_statusHK.resx">
+      <DependentUpon>201704111230522_statusHK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111247588_Materials.resx">
+      <DependentUpon>201704111247588_Materials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111259253_MatType.resx">
+      <DependentUpon>201704111259253_MatType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111300251_MatType2.resx">
+      <DependentUpon>201704111300251_MatType2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111311550_HwType.resx">
+      <DependentUpon>201704111311550_HwType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111348344_Item_11042017.resx">
+      <DependentUpon>201704111348344_Item_11042017.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111356233_Item_11042017_2.resx">
+      <DependentUpon>201704111356233_Item_11042017_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111400001_Item_11042017_3.resx">
+      <DependentUpon>201704111400001_Item_11042017_3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -12,9 +12,9 @@ namespace HKSupply.Models
     [Table("STATUS_CIAL")]
     public class StatusCial
     {
-        [Column("ID", TypeName = "NVARCHAR"), Key, StringLength(30)]
-        public string Id { get; set; }
-        [Column("DESCRIPTION", TypeName = "NVARCHAR"), StringLength(100), Required]
+        [Column("ID_STATUS_CIAL"), Key]
+        public int IdStatusCial { get; set; }
+        [Column("DESCRIPTION", TypeName = "NVARCHAR"), StringLength(500), Required]
         public string Description { get; set; }
 
         public override bool Equals(object obj)
@@ -24,12 +24,12 @@ namespace HKSupply.Models
 
             StatusCial statusCial = (StatusCial)obj;
 
-            return (Id == statusCial.Id);
+            return (IdStatusCial == statusCial.IdStatusCial);
         }
 
         public override int GetHashCode()
         {
-            return (Id == null ? 0 : Id.GetHashCode());
+            return IdStatusCial.GetHashCode();
         }
     }
 }

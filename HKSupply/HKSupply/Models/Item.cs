@@ -67,7 +67,7 @@ namespace HKSupply.Models
         [ForeignKey("IdModel")]
         public Model Model { get; set; }
 
-        [Column("ID_FAMILY_HK", TypeName = "NVARCHAR"), StringLength(30)]
+        [Column("ID_FAMILY_HK", TypeName = "NVARCHAR"), StringLength(100)]
         public string IdFamilyHK { get; set; }
         [ForeignKey("IdFamilyHK")]
         public FamilyHK FamilyHK { get; set; }
@@ -112,15 +112,15 @@ namespace HKSupply.Models
         [Column("REMOVAL_DATE")]
         public DateTime? RemovalDate { get; set; }
 
-        [Column("ID_STATUS_CIAL", TypeName = "NVARCHAR"), StringLength(30)]
-        public string IdStatusCial { get; set; }
+        [Column("ID_STATUS_CIAL")]
+        public int IdStatusCial { get; set; }
         [ForeignKey("IdStatusCial")]
         public StatusCial StatusCial { get; set; }
 
-        [Column("ID_STATUS_PROD", TypeName = "NVARCHAR"), StringLength(30)]
-        public string IdStatusProd { get; set; }
+        [Column("ID_STATUS_PROD")]
+        public int IdStatusProd { get; set; }
         [ForeignKey("IdStatusProd")]
-        public StatusProd StatusProd { get; set; }
+        public StatusHK StatusProd { get; set; }
 
         [Column("ID_USER_ATTRI_1", TypeName = "NVARCHAR"), StringLength(100)]
         public string IdUserAttri1 { get; set; }
@@ -224,8 +224,8 @@ namespace HKSupply.Models
                 (Age == null ? 0 : Age.GetHashCode()) +
                 (LaunchDate == null ? 0 : LaunchDate.GetHashCode()) +
                 (RemovalDate == null ? 0 : RemovalDate.GetHashCode()) +
-                (IdStatusCial == null ? 0 : IdStatusCial.GetHashCode()) +
-                (IdStatusProd == null ? 0 : IdStatusProd.GetHashCode()) +
+                IdStatusCial.GetHashCode() +
+                IdStatusProd.GetHashCode() +
                 (IdUserAttri1 == null ? 0 : IdUserAttri1.GetHashCode()) +
                 (IdUserAttri2 == null ? 0 : IdUserAttri2.GetHashCode()) +
                 (IdUserAttri3 == null ? 0 : IdUserAttri3.GetHashCode()) +
