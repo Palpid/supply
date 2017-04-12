@@ -18,21 +18,55 @@ namespace HKSupply.Models
         [Column("ID_SUBVER", Order = 2), Key]
         public int IdSubVer { get; set; }
 
-        [Column("TIMESTAMP")]
+        [Column("TIMESTAMP", Order = 3), Key]
         public DateTime Timestamp { get; set; }
 
-        [Column("ID_CUSTOMER", Order = 0), Key]
-        public string idCustomer { get; set; }
+        [Column("ID_CUSTOMER", TypeName = "NVARCHAR", Order = 0), Key, StringLength(100)]
+        public string IdCustomer { get; set; }
 
-        [Column("CUST_NAME")]
-        public string CustName { get; set; }
+        [Column("CUSTOMER_NAME", TypeName = "NVARCHAR"), StringLength(500)]
+        public string CustomerName { get; set; }
 
         [Column("ACTIVE")]
         public bool Active { get; set; }
 
-        [Column("VAT_NUM")]
+        [Column("VAT_NUM", TypeName = "NVARCHAR"), StringLength(100)]
         public string VATNum { get; set; }
 
+        [Column("SHIPING_ADDRESS", TypeName = "NVARCHAR"), StringLength(2500)]
+        public string ShippingAddress { get; set; }
+
+        [Column("SHIPING_ADDRESS_ZH", TypeName = "NVARCHAR"), StringLength(2500)]
+        public string ShippingAddressZh { get; set; }
+
+        [Column("BILLING_ADDRESS", TypeName = "NVARCHAR"), StringLength(2500)]
+        public string BillingAddress { get; set; }
+
+        [Column("BILLING_ADDRESS_ZH", TypeName = "NVARCHAR"), StringLength(2500)]
+        public string BillingAddressZh { get; set; }
+
+        [Column("CONTACT_NAME", TypeName = "NVARCHAR"), StringLength(100)]
+        public string ContactName { get; set; }
+
+        [Column("CONTACT_NAME_ZH", TypeName = "NVARCHAR"), StringLength(100)]
+        public string ContactNameZh { get; set; }
+
+        [Column("CONTACT_PHONE", TypeName = "NVARCHAR"), StringLength(100)]
+        public string ContactPhone { get; set; }
+
+        [Column("COMMENTS", TypeName = "NVARCHAR"), StringLength(2500)]
+        public string Comments { get; set; }
+
+        [Column("ID_INCOTERM", TypeName = "NVARCHAR"), StringLength(8)]
+        public string IdIncoterm { get; set; }
+
+        [Column("ID_PAYMENT_TERMS", TypeName = "NVARCHAR"), StringLength(4)]
+        public string IdPaymentTerms { get; set; }
+
+        [Column("ID_DEFAULT_CURRENCY", TypeName = "NVARCHAR"), StringLength(4)]
+        public string IdDefaultCurrency { get; set; }
+
+/*
         [Column("SHIPING_ADDRESS")]
         public string ShippingAddress { get; set; }
 
@@ -53,7 +87,7 @@ namespace HKSupply.Models
 
         [Column("CURRENCY")]
         public string Currency { get; set; }
-
+*/
         #region Equal
         public override bool Equals(object obj)
         {
@@ -66,17 +100,21 @@ namespace HKSupply.Models
                 IdVer == customer.IdVer &&
                 IdSubVer == customer.IdSubVer &&
                 Timestamp == customer.Timestamp &&
-                idCustomer == customer.IdCustomer &&
-                CustName == customer.CustName &&
+                IdCustomer == customer.IdCustomer &&
+                CustomerName == customer.CustomerName &&
                 Active == customer.Active &&
                 VATNum == customer.VATNum &&
                 ShippingAddress == customer.ShippingAddress &&
+                ShippingAddressZh == customer.ShippingAddressZh &&
                 BillingAddress == customer.BillingAddress &&
+                BillingAddressZh == customer.BillingAddressZh &&
                 ContactName == customer.ContactName &&
+                ContactNameZh == customer.ContactNameZh &&
                 ContactPhone == customer.ContactPhone &&
+                Comments == customer.Comments &&
                 IdIncoterm == customer.IdIncoterm &&
                 IdPaymentTerms == customer.IdPaymentTerms &&
-                Currency == customer.Currency);
+                IdDefaultCurrency == customer.IdDefaultCurrency);
 
             return res;
 
@@ -88,17 +126,21 @@ namespace HKSupply.Models
                 IdVer.GetHashCode() +
                 IdSubVer.GetHashCode() +
                 Timestamp.GetHashCode() +
-                idCustomer.GetHashCode() +
-                CustName.GetHashCode() +
+                (IdCustomer == null ? 0 : IdCustomer.GetHashCode()) +
+                (CustomerName == null ? 0 : CustomerName.GetHashCode()) +
                 Active.GetHashCode() +
-                VATNum.GetHashCode() +
-                ShippingAddress.GetHashCode() +
-                BillingAddress.GetHashCode() +
-                ContactName.GetHashCode() +
-                ContactPhone.GetHashCode() +
-                IdIncoterm.GetHashCode() +
-                IdPaymentTerms.GetHashCode() +
-                Currency.GetHashCode();
+                (VATNum == null ? 0 : VATNum.GetHashCode()) +
+                (ShippingAddress == null ? 0 : ShippingAddress.GetHashCode()) +
+                (ShippingAddressZh == null ? 0 : ShippingAddressZh.GetHashCode()) +
+                (BillingAddress == null ? 0 : BillingAddress.GetHashCode()) +
+                (BillingAddressZh == null ? 0 : BillingAddressZh.GetHashCode()) +
+                (ContactName == null ? 0 : ContactName.GetHashCode()) +
+                (ContactNameZh == null ? 0 : ContactNameZh.GetHashCode()) +
+                (ContactPhone == null ? 0 : ContactPhone.GetHashCode()) +
+                (Comments == null ? 0 : Comments.GetHashCode()) +
+                (IdIncoterm == null ? 0 : IdIncoterm.GetHashCode()) +
+                (IdPaymentTerms == null ? 0 : IdPaymentTerms.GetHashCode()) +
+                (IdDefaultCurrency == null ? 0 : IdDefaultCurrency.GetHashCode());
 
             return hashCode;
         }
@@ -111,17 +153,21 @@ namespace HKSupply.Models
             ch.IdVer = c.IdVer;
             ch.IdSubVer = c.IdSubVer;
             ch.Timestamp = c.Timestamp;
-            ch.idCustomer = c.IdCustomer;
-            ch.CustName = c.CustName;
+            ch.IdCustomer = c.IdCustomer;
+            ch.CustomerName = c.CustomerName;
             ch.Active = c.Active;
             ch.VATNum = c.VATNum;
             ch.ShippingAddress = c.ShippingAddress;
+            ch.ShippingAddressZh = c.ShippingAddressZh;
             ch.BillingAddress = c.BillingAddress;
+            ch.BillingAddressZh = c.BillingAddressZh;
             ch.ContactName = c.ContactName;
+            ch.ContactNameZh = c.ContactNameZh;
             ch.ContactPhone = c.ContactPhone;
+            ch.Comments = c.Comments;
             ch.IdIncoterm = c.IdIncoterm;
             ch.IdPaymentTerms = c.IdPaymentTerms;
-            ch.Currency = c.Currency;
+            ch.IdDefaultCurrency = c.IdDefaultCurrency;
 
             return ch;
         }

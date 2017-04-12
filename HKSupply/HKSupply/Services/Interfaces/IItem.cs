@@ -12,9 +12,9 @@ namespace HKSupply.Services.Interfaces
     /// </summary>
     public interface IItem
     {
-        List<Item> GetItems();
-        Item GetItemByItemCode(string itemCode);
+        List<Item> GetItems(string idItemGroup);
+        Item GetItem(string idItemGroup, string idPrototype, string idItemBcn);
         bool UpdateItem(Item updateItem, bool newVersion = false);
-        bool newItem(Item newItem);
+        //bool newItem(Item newItem);
     }
 }

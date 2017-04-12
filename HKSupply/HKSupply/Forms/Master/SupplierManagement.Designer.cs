@@ -36,6 +36,13 @@
             this.xtpForm = new DevExpress.XtraTab.XtraTabPage();
             this.sbNewVersion = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlForm = new DevExpress.XtraLayout.LayoutControl();
+            this.lueIdIncoterm = new DevExpress.XtraEditors.LookUpEdit();
+            this.lueIdPaymentTerms = new DevExpress.XtraEditors.LookUpEdit();
+            this.lueIdDefaultCurrency = new DevExpress.XtraEditors.LookUpEdit();
+            this.txtComments = new DevExpress.XtraEditors.TextEdit();
+            this.txtContactNameZh = new DevExpress.XtraEditors.TextEdit();
+            this.txtBillingAddressZh = new DevExpress.XtraEditors.TextEdit();
+            this.txtShippingAddressZh = new DevExpress.XtraEditors.TextEdit();
             this.txtContactPhone = new DevExpress.XtraEditors.TextEdit();
             this.txtContactName = new DevExpress.XtraEditors.TextEdit();
             this.txtBillingAddress = new DevExpress.XtraEditors.TextEdit();
@@ -60,19 +67,12 @@
             this.lciBillingAddress = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciContactName = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciContactPhone = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtShippingAddressZh = new DevExpress.XtraEditors.TextEdit();
             this.lciShippingAddressZh = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtBillingAddressZh = new DevExpress.XtraEditors.TextEdit();
             this.lciBillingAddressZh = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtContactNameZh = new DevExpress.XtraEditors.TextEdit();
             this.lciContactNameZh = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtComments = new DevExpress.XtraEditors.TextEdit();
-            this.lciComments = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lueIdDefaultCurrency = new DevExpress.XtraEditors.LookUpEdit();
             this.lciIdDefaultCurrency = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lueIdPaymentTerms = new DevExpress.XtraEditors.LookUpEdit();
+            this.lciComments = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciIdPaymentTerms = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lueIdIncoterm = new DevExpress.XtraEditors.LookUpEdit();
             this.lciIdIncoterm = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
@@ -83,6 +83,13 @@
             this.xtpForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlForm)).BeginInit();
             this.layoutControlForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lueIdIncoterm.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueIdPaymentTerms.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueIdDefaultCurrency.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtComments.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContactNameZh.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBillingAddressZh.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShippingAddressZh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContactPhone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContactName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBillingAddress.Properties)).BeginInit();
@@ -107,19 +114,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciBillingAddress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciContactName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciContactPhone)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShippingAddressZh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciShippingAddressZh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBillingAddressZh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciBillingAddressZh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtContactNameZh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciContactNameZh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtComments.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciComments)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueIdDefaultCurrency.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIdDefaultCurrency)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueIdPaymentTerms.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciComments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIdPaymentTerms)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueIdIncoterm.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIdIncoterm)).BeginInit();
             this.SuspendLayout();
             // 
@@ -228,6 +228,75 @@
             this.layoutControlForm.Size = new System.Drawing.Size(577, 437);
             this.layoutControlForm.TabIndex = 0;
             this.layoutControlForm.Text = "layoutControl1";
+            // 
+            // lueIdIncoterm
+            // 
+            this.lueIdIncoterm.Location = new System.Drawing.Point(178, 333);
+            this.lueIdIncoterm.MenuManager = this.ribbonControl;
+            this.lueIdIncoterm.Name = "lueIdIncoterm";
+            this.lueIdIncoterm.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueIdIncoterm.Size = new System.Drawing.Size(362, 22);
+            this.lueIdIncoterm.StyleController = this.layoutControlForm;
+            this.lueIdIncoterm.TabIndex = 24;
+            // 
+            // lueIdPaymentTerms
+            // 
+            this.lueIdPaymentTerms.Location = new System.Drawing.Point(178, 361);
+            this.lueIdPaymentTerms.MenuManager = this.ribbonControl;
+            this.lueIdPaymentTerms.Name = "lueIdPaymentTerms";
+            this.lueIdPaymentTerms.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueIdPaymentTerms.Size = new System.Drawing.Size(362, 22);
+            this.lueIdPaymentTerms.StyleController = this.layoutControlForm;
+            this.lueIdPaymentTerms.TabIndex = 23;
+            // 
+            // lueIdDefaultCurrency
+            // 
+            this.lueIdDefaultCurrency.Location = new System.Drawing.Point(178, 389);
+            this.lueIdDefaultCurrency.MenuManager = this.ribbonControl;
+            this.lueIdDefaultCurrency.Name = "lueIdDefaultCurrency";
+            this.lueIdDefaultCurrency.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueIdDefaultCurrency.Size = new System.Drawing.Size(362, 22);
+            this.lueIdDefaultCurrency.StyleController = this.layoutControlForm;
+            this.lueIdDefaultCurrency.TabIndex = 22;
+            // 
+            // txtComments
+            // 
+            this.txtComments.Location = new System.Drawing.Point(178, 305);
+            this.txtComments.MenuManager = this.ribbonControl;
+            this.txtComments.Name = "txtComments";
+            this.txtComments.Size = new System.Drawing.Size(362, 22);
+            this.txtComments.StyleController = this.layoutControlForm;
+            this.txtComments.TabIndex = 21;
+            // 
+            // txtContactNameZh
+            // 
+            this.txtContactNameZh.Location = new System.Drawing.Point(178, 249);
+            this.txtContactNameZh.MenuManager = this.ribbonControl;
+            this.txtContactNameZh.Name = "txtContactNameZh";
+            this.txtContactNameZh.Size = new System.Drawing.Size(362, 22);
+            this.txtContactNameZh.StyleController = this.layoutControlForm;
+            this.txtContactNameZh.TabIndex = 20;
+            // 
+            // txtBillingAddressZh
+            // 
+            this.txtBillingAddressZh.Location = new System.Drawing.Point(178, 193);
+            this.txtBillingAddressZh.MenuManager = this.ribbonControl;
+            this.txtBillingAddressZh.Name = "txtBillingAddressZh";
+            this.txtBillingAddressZh.Size = new System.Drawing.Size(362, 22);
+            this.txtBillingAddressZh.StyleController = this.layoutControlForm;
+            this.txtBillingAddressZh.TabIndex = 19;
+            // 
+            // txtShippingAddressZh
+            // 
+            this.txtShippingAddressZh.Location = new System.Drawing.Point(178, 137);
+            this.txtShippingAddressZh.MenuManager = this.ribbonControl;
+            this.txtShippingAddressZh.Name = "txtShippingAddressZh";
+            this.txtShippingAddressZh.Size = new System.Drawing.Size(362, 22);
+            this.txtShippingAddressZh.StyleController = this.layoutControlForm;
+            this.txtShippingAddressZh.TabIndex = 18;
             // 
             // txtContactPhone
             // 
@@ -466,15 +535,6 @@
             this.lciContactPhone.Text = "Contact Phone";
             this.lciContactPhone.TextSize = new System.Drawing.Size(158, 16);
             // 
-            // txtShippingAddressZh
-            // 
-            this.txtShippingAddressZh.Location = new System.Drawing.Point(178, 137);
-            this.txtShippingAddressZh.MenuManager = this.ribbonControl;
-            this.txtShippingAddressZh.Name = "txtShippingAddressZh";
-            this.txtShippingAddressZh.Size = new System.Drawing.Size(362, 22);
-            this.txtShippingAddressZh.StyleController = this.layoutControlForm;
-            this.txtShippingAddressZh.TabIndex = 18;
-            // 
             // lciShippingAddressZh
             // 
             this.lciShippingAddressZh.Control = this.txtShippingAddressZh;
@@ -483,15 +543,6 @@
             this.lciShippingAddressZh.Size = new System.Drawing.Size(530, 28);
             this.lciShippingAddressZh.Text = "Shipping Address (Chinese)";
             this.lciShippingAddressZh.TextSize = new System.Drawing.Size(158, 16);
-            // 
-            // txtBillingAddressZh
-            // 
-            this.txtBillingAddressZh.Location = new System.Drawing.Point(178, 193);
-            this.txtBillingAddressZh.MenuManager = this.ribbonControl;
-            this.txtBillingAddressZh.Name = "txtBillingAddressZh";
-            this.txtBillingAddressZh.Size = new System.Drawing.Size(362, 22);
-            this.txtBillingAddressZh.StyleController = this.layoutControlForm;
-            this.txtBillingAddressZh.TabIndex = 19;
             // 
             // lciBillingAddressZh
             // 
@@ -502,15 +553,6 @@
             this.lciBillingAddressZh.Text = "Billing Address (Chinese)";
             this.lciBillingAddressZh.TextSize = new System.Drawing.Size(158, 16);
             // 
-            // txtContactNameZh
-            // 
-            this.txtContactNameZh.Location = new System.Drawing.Point(178, 249);
-            this.txtContactNameZh.MenuManager = this.ribbonControl;
-            this.txtContactNameZh.Name = "txtContactNameZh";
-            this.txtContactNameZh.Size = new System.Drawing.Size(362, 22);
-            this.txtContactNameZh.StyleController = this.layoutControlForm;
-            this.txtContactNameZh.TabIndex = 20;
-            // 
             // lciContactNameZh
             // 
             this.lciContactNameZh.Control = this.txtContactNameZh;
@@ -519,35 +561,6 @@
             this.lciContactNameZh.Size = new System.Drawing.Size(530, 28);
             this.lciContactNameZh.Text = "Contact Name (Chinese)";
             this.lciContactNameZh.TextSize = new System.Drawing.Size(158, 16);
-            // 
-            // txtComments
-            // 
-            this.txtComments.Location = new System.Drawing.Point(178, 305);
-            this.txtComments.MenuManager = this.ribbonControl;
-            this.txtComments.Name = "txtComments";
-            this.txtComments.Size = new System.Drawing.Size(362, 22);
-            this.txtComments.StyleController = this.layoutControlForm;
-            this.txtComments.TabIndex = 21;
-            // 
-            // lciComments
-            // 
-            this.lciComments.Control = this.txtComments;
-            this.lciComments.Location = new System.Drawing.Point(0, 389);
-            this.lciComments.Name = "lciComments";
-            this.lciComments.Size = new System.Drawing.Size(530, 28);
-            this.lciComments.Text = "Comments";
-            this.lciComments.TextSize = new System.Drawing.Size(158, 16);
-            // 
-            // lueIdDefaultCurrency
-            // 
-            this.lueIdDefaultCurrency.Location = new System.Drawing.Point(178, 389);
-            this.lueIdDefaultCurrency.MenuManager = this.ribbonControl;
-            this.lueIdDefaultCurrency.Name = "lueIdDefaultCurrency";
-            this.lueIdDefaultCurrency.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueIdDefaultCurrency.Size = new System.Drawing.Size(362, 22);
-            this.lueIdDefaultCurrency.StyleController = this.layoutControlForm;
-            this.lueIdDefaultCurrency.TabIndex = 22;
             // 
             // lciIdDefaultCurrency
             // 
@@ -558,16 +571,14 @@
             this.lciIdDefaultCurrency.Text = "Default Currency";
             this.lciIdDefaultCurrency.TextSize = new System.Drawing.Size(158, 16);
             // 
-            // lueIdPaymentTerms
+            // lciComments
             // 
-            this.lueIdPaymentTerms.Location = new System.Drawing.Point(178, 361);
-            this.lueIdPaymentTerms.MenuManager = this.ribbonControl;
-            this.lueIdPaymentTerms.Name = "lueIdPaymentTerms";
-            this.lueIdPaymentTerms.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueIdPaymentTerms.Size = new System.Drawing.Size(362, 22);
-            this.lueIdPaymentTerms.StyleController = this.layoutControlForm;
-            this.lueIdPaymentTerms.TabIndex = 23;
+            this.lciComments.Control = this.txtComments;
+            this.lciComments.Location = new System.Drawing.Point(0, 389);
+            this.lciComments.Name = "lciComments";
+            this.lciComments.Size = new System.Drawing.Size(530, 28);
+            this.lciComments.Text = "Comments";
+            this.lciComments.TextSize = new System.Drawing.Size(158, 16);
             // 
             // lciIdPaymentTerms
             // 
@@ -577,17 +588,6 @@
             this.lciIdPaymentTerms.Size = new System.Drawing.Size(530, 28);
             this.lciIdPaymentTerms.Text = "Payment Terms";
             this.lciIdPaymentTerms.TextSize = new System.Drawing.Size(158, 16);
-            // 
-            // lueIdIncoterm
-            // 
-            this.lueIdIncoterm.Location = new System.Drawing.Point(178, 333);
-            this.lueIdIncoterm.MenuManager = this.ribbonControl;
-            this.lueIdIncoterm.Name = "lueIdIncoterm";
-            this.lueIdIncoterm.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueIdIncoterm.Size = new System.Drawing.Size(362, 22);
-            this.lueIdIncoterm.StyleController = this.layoutControlForm;
-            this.lueIdIncoterm.TabIndex = 24;
             // 
             // lciIdIncoterm
             // 
@@ -619,6 +619,13 @@
             this.xtpForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlForm)).EndInit();
             this.layoutControlForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lueIdIncoterm.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueIdPaymentTerms.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueIdDefaultCurrency.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtComments.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContactNameZh.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBillingAddressZh.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShippingAddressZh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContactPhone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContactName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBillingAddress.Properties)).EndInit();
@@ -643,19 +650,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciBillingAddress)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciContactName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciContactPhone)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShippingAddressZh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciShippingAddressZh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBillingAddressZh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciBillingAddressZh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtContactNameZh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciContactNameZh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtComments.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciComments)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueIdDefaultCurrency.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIdDefaultCurrency)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueIdPaymentTerms.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciComments)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIdPaymentTerms)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueIdIncoterm.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIdIncoterm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

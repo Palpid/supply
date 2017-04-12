@@ -343,14 +343,14 @@ namespace HKSupply.Forms.Master
             _customerUpdate = new Customer
                     {
                         IdCustomer = string.Empty,
-                        CustName = string.Empty,
+                        CustomerName = string.Empty,
                         Active = false,
                         VATNum = string.Empty,
-                        ShippingAddress = string.Empty,
-                        BillingAddress = string.Empty,
-                        ContactName = string.Empty,
-                        ContactPhone = string.Empty,
-                        Currency = string.Empty
+                        //ShippingAddress = string.Empty,
+                        //BillingAddress = string.Empty,
+                        //ContactName = string.Empty,
+                        //ContactPhone = string.Empty,
+                        //Currency = string.Empty
                     };
         }
 

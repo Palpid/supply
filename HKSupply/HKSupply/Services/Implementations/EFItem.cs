@@ -22,13 +22,14 @@ namespace HKSupply.Services.Implementations
     {
         ILog _log = LogManager.GetLogger(typeof(EFItem));
 
-        public List<Item> GetItems()
+        public List<Item> GetItems(string idItemGroup)
         {
             try
             {
                 using (var db = new HKSupplyContext())
                 {
                     return db.Items
+                        .Where(i => i.IdItemGroup.Equals(idItemGroup))
                         .Include(i => i.Model)
                         .Include(i => i.ItemGroup)
                         .Include(i => i.Color1)
@@ -66,16 +67,28 @@ namespace HKSupply.Services.Implementations
             }
         }
 
-        public Item GetItemByItemCode(string itemCode)
+        public Item GetItem(string idItemGroup, string idPrototype, string idItemBcn)
         {
             try
             {
-                if (itemCode == null)
+                if (idItemBcn == null)
                     throw new ArgumentNullException("itemCode");
 
                 using (var db = new HKSupplyContext())
                 {
-                    var item = db.Items.Where(i => i.IdItemBcn.Equals(itemCode)).SingleOrDefault();
+                    var item = db.Items
+                        .Where(i =>
+                            i.IdItemGroup.Equals(idItemGroup) &&
+                            i.IdPrototype.Equals(idPrototype) &&
+                            i.IdItemBcn.Equals(idItemBcn))
+                        .Include(i => i.Model)
+                        .Include(i => i.ItemGroup)
+                        .Include(i => i.Color1)
+                        .Include(i => i.Color2)
+                        .Include(i => i.FamilyHK)
+                        .Include(i => i.StatusCial)
+                        .Include(i => i.StatusProd)
+                        .SingleOrDefault();
                     return item;
                 }
             }
@@ -124,21 +137,34 @@ namespace HKSupply.Services.Implementations
                     {
                         try
                         {
-                            var item = updateItem.Clone();
+                            Item itemToUpdate = GetItem(updateItem.IdItemGroup, updateItem.IdPrototype, updateItem.IdItemBcn);
 
-                            db.Entry(updateItem).State = EntityState.Deleted;
+                            if (itemToUpdate == null)
+                                return false;
 
-                            item.IdSubVer += 1;
+                            //Hay que agregarlo al contexto actual para que lo actualice
+                            db.Items.Attach(itemToUpdate);
+
+                            itemToUpdate.IdSubVer += 1;
                             if (newVersion == true)
                             {
-                                item.IdVer += 1;
-                                item.IdSubVer = 0;
+                                itemToUpdate.IdVer += 1;
+                                itemToUpdate.IdSubVer = 0;
                             }
-                            item.Timestamp = DateTime.Now;
+                            itemToUpdate.Timestamp = DateTime.Now;
 
-                            ItemHistory itemHistory = (ItemHistory)item.Clone();
+                            //no hacemos  un "entry" en el contexto de db y lo marcamos como modificado, sino que updatamos sólo los pocos campos
+                            //que se pueden modificar de un item desde la aplicación para que EF genere el update sólo de esos campos y no de todos
+                            itemToUpdate.IdDefaultSupplier = updateItem.IdDefaultSupplier;
+                            itemToUpdate.IdFamilyHK = updateItem.IdFamilyHK;
+                            itemToUpdate.IdStatusProd = updateItem.IdStatusProd;
+                            itemToUpdate.IdUserAttri1 = updateItem.IdUserAttri1;
+                            itemToUpdate.IdUserAttri2 = updateItem.IdUserAttri2;
+                            itemToUpdate.IdUserAttri3 = updateItem.IdUserAttri3;
 
-                            db.Items.Add(item);
+                            ItemHistory itemHistory = (ItemHistory)itemToUpdate;
+                            itemHistory.User = GlobalSetting.LoggedUser.UserLogin;
+
                             db.ItemsHistory.Add(itemHistory);
                             db.SaveChanges();
 
@@ -189,81 +215,81 @@ namespace HKSupply.Services.Implementations
             }
         }
 
-        public bool newItem(Item newItem)
-        {
-            try
-            {
-                if(newItem == null)
-                    throw new ArgumentNullException("newItem ");
+        //public bool newItem(Item newItem)
+        //{
+        //    try
+        //    {
+        //        if(newItem == null)
+        //            throw new ArgumentNullException("newItem ");
 
-                using (var db = new HKSupplyContext())
-                {
-                    using (var dbTrans = db.Database.BeginTransaction())
-                    {
-                        try
-                        {
-                            var tmpItem = GetItemByItemCode(newItem.IdItemBcn);
-                            if (tmpItem != null)
-                                throw new Exception("Item already exist");
+        //        using (var db = new HKSupplyContext())
+        //        {
+        //            using (var dbTrans = db.Database.BeginTransaction())
+        //            {
+        //                try
+        //                {
+        //                    var tmpItem = GetItem(newItem.IdItemBcn);
+        //                    if (tmpItem != null)
+        //                        throw new Exception("Item already exist");
 
-                            newItem.IdVer = 1;
-                            newItem.IdSubVer = 0;
-                            newItem.Timestamp = DateTime.Now;
+        //                    newItem.IdVer = 1;
+        //                    newItem.IdSubVer = 0;
+        //                    newItem.Timestamp = DateTime.Now;
 
-                            ItemHistory itemHistory = (ItemHistory)newItem;
+        //                    ItemHistory itemHistory = (ItemHistory)newItem;
 
-                            db.Items.Add(newItem);
-                            db.ItemsHistory.Add(itemHistory);
-                            db.SaveChanges();
-                            dbTrans.Commit();
+        //                    db.Items.Add(newItem);
+        //                    db.ItemsHistory.Add(itemHistory);
+        //                    db.SaveChanges();
+        //                    dbTrans.Commit();
 
-                            return true;                           
+        //                    return true;                           
 
-                        }
-                        catch (DbEntityValidationException e)
-                        {
-                            dbTrans.Rollback();
-                            _log.Error(e.Message, e);
-                            throw e;
-                        }
-                        catch (SqlException sqlex)
-                        {
-                            dbTrans.Rollback();
+        //                }
+        //                catch (DbEntityValidationException e)
+        //                {
+        //                    dbTrans.Rollback();
+        //                    _log.Error(e.Message, e);
+        //                    throw e;
+        //                }
+        //                catch (SqlException sqlex)
+        //                {
+        //                    dbTrans.Rollback();
 
-                            for (int i = 0; i < sqlex.Errors.Count; i++)
-                            {
-                                _log.Error("Index #" + i + "\n" +
-                                    "Message: " + sqlex.Errors[i].Message + "\n" +
-                                    "Error Number: " + sqlex.Errors[i].Number + "\n" +
-                                    "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
-                                    "Source: " + sqlex.Errors[i].Source + "\n" +
-                                    "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+        //                    for (int i = 0; i < sqlex.Errors.Count; i++)
+        //                    {
+        //                        _log.Error("Index #" + i + "\n" +
+        //                            "Message: " + sqlex.Errors[i].Message + "\n" +
+        //                            "Error Number: " + sqlex.Errors[i].Number + "\n" +
+        //                            "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+        //                            "Source: " + sqlex.Errors[i].Source + "\n" +
+        //                            "Procedure: " + sqlex.Errors[i].Procedure + "\n");
 
-                                switch (sqlex.Errors[i].Number)
-                                {
-                                    case -1: //connection broken
-                                    case -2: //timeout
-                                        throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
-                                }
-                            }
-                            throw sqlex;
-                        }
-                        catch (Exception ex)
-                        {
-                            dbTrans.Rollback();
-                            _log.Error(ex.Message, ex);
-                            throw ex;
-                        }
+        //                        switch (sqlex.Errors[i].Number)
+        //                        {
+        //                            case -1: //connection broken
+        //                            case -2: //timeout
+        //                                throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+        //                        }
+        //                    }
+        //                    throw sqlex;
+        //                }
+        //                catch (Exception ex)
+        //                {
+        //                    dbTrans.Rollback();
+        //                    _log.Error(ex.Message, ex);
+        //                    throw ex;
+        //                }
 
-                    }
-                }
-            }
-            catch (ArgumentNullException anex)
-            {
-                _log.Error(anex.Message, anex);
-                throw anex;
-            }
+        //            }
+        //        }
+        //    }
+        //    catch (ArgumentNullException anex)
+        //    {
+        //        _log.Error(anex.Message, anex);
+        //        throw anex;
+        //    }
 
-        }
+        //}
     }
 }

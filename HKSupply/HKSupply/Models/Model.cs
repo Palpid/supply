@@ -12,7 +12,7 @@ namespace HKSupply.Models
      [Table("MODELS")]
     public class Model
     {
-         [Column("ID_MODEL", TypeName = "NVARCHAR"), Key, StringLength(30)]
+         [Column("ID_MODEL", TypeName = "NVARCHAR"), Key, StringLength(100)]
         public string IdModel { get; set; }
         [Column("DESCRIPTION", TypeName="NVARCHAR"), StringLength(500), Required]
         public string Description { get; set; }

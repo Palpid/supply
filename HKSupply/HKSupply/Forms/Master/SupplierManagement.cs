@@ -217,6 +217,10 @@ namespace HKSupply.Forms.Master
             {
                 xtpForm.PageVisible = false;
                 sbNewVersion.Visible = false;
+                LoadIncotemrsList();
+                LoadPaymentTermsList();
+                LoadCurrenciesList();
+
             }
             catch (Exception ex)
             {
@@ -322,8 +326,8 @@ namespace HKSupply.Forms.Master
                 GridColumn colBillingAddress = new GridColumn() { Caption = "Billing Address", Visible = true, FieldName = eSupplierColumns.BillingAddress.ToString(), Width = 300 };
                 GridColumn colContactName = new GridColumn() { Caption = "Contact Name", Visible = true, FieldName = eSupplierColumns.ContactName.ToString(), Width = 200 };
                 GridColumn colContactPhone = new GridColumn() { Caption = "Contact Phone", Visible = true, FieldName = eSupplierColumns.ContactPhone.ToString(), Width = 150 };
-                GridColumn colIdIncoterm = new GridColumn() { Caption = "Id Incoterm", Visible = true, FieldName = eSupplierColumns.IdIncoterm.ToString(), Width = 70 };
-                GridColumn colIdPaymentTerms = new GridColumn() { Caption = "Id Payment Terms", Visible = true, FieldName = eSupplierColumns.IdPaymentTerms.ToString(), Width = 100 };
+                GridColumn colIdIncoterm = new GridColumn() { Caption = "Incoterm", Visible = true, FieldName = eSupplierColumns.IdIncoterm.ToString(), Width = 70 };
+                GridColumn colIdPaymentTerms = new GridColumn() { Caption = "Payment Terms", Visible = true, FieldName = eSupplierColumns.IdPaymentTerms.ToString(), Width = 100 };
                 GridColumn colCurrency = new GridColumn() { Caption = "Currency", Visible = true, FieldName = eSupplierColumns.IdDefaultCurrency.ToString(), Width = 70 };
 
                 //Format type 
@@ -361,8 +365,8 @@ namespace HKSupply.Forms.Master
                 _currenciesList = GlobalSetting.CurrencyService.GetCurrencies();
 
                 lueIdDefaultCurrency.Properties.DataSource = _currenciesList;
-                lueIdDefaultCurrency.Properties.DisplayMember = "IdCurrency";
-                lueIdDefaultCurrency.Properties.ValueMember = "Description";
+                lueIdDefaultCurrency.Properties.DisplayMember = "Description";
+                lueIdDefaultCurrency.Properties.ValueMember = "IdCurrency";
                 //lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdSupplier", 20, "Id Supplier"));
                 //lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SupplierName", 100, "Name"));
             }
@@ -379,8 +383,8 @@ namespace HKSupply.Forms.Master
                 _paymentTermsList = GlobalSetting.PaymentTermsService.GetPaymentTerms();
 
                 lueIdPaymentTerms.Properties.DataSource = _paymentTermsList;
-                lueIdPaymentTerms.Properties.DisplayMember = "IdPaymentTerms";
-                lueIdPaymentTerms.Properties.ValueMember = "Description";
+                lueIdPaymentTerms.Properties.DisplayMember = "Description";
+                lueIdPaymentTerms.Properties.ValueMember = "IdPaymentTerms";
             }
             catch (Exception ex)
             {
@@ -479,6 +483,7 @@ namespace HKSupply.Forms.Master
                 txtContactName.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.ContactName);
                 txtContactNameZh.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.ContactNameZh);
                 txtContactPhone.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.ContactPhone);
+                txtComments.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.Comments);
 
                 //CheckEdit
                 chkActive.DataBindings.Add<Supplier>(_supplierUpdate, (CheckEdit chk) => chk.Checked, supplier => supplier.Active);
@@ -547,6 +552,10 @@ namespace HKSupply.Forms.Master
                         {
                             ((CheckEdit)ctl).ReadOnly = false;
                         }
+                        else if (ctl.GetType() == typeof(LookUpEdit))
+                        {
+                            ((LookUpEdit)ctl).ReadOnly = false;
+                        }
                     }
                 }
             }
@@ -569,6 +578,10 @@ namespace HKSupply.Forms.Master
                     else if (ctl.GetType() == typeof(CheckEdit))
                     {
                         ((CheckEdit)ctl).ReadOnly = false;
+                    }
+                    else if (ctl.GetType() == typeof(LookUpEdit))
+                    {
+                        ((LookUpEdit)ctl).ReadOnly = false;
                     }
                 }
             }
@@ -629,6 +642,14 @@ namespace HKSupply.Forms.Master
                     if (ctl.GetType() == typeof(TextEdit))
                     {
                         if (string.IsNullOrEmpty(((TextEdit)ctl).Text))
+                        {
+                            MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
+                            return false;
+                        }
+                    }
+                    else if (ctl.GetType() == typeof(LookUpEdit))
+                    {
+                        if (string.IsNullOrEmpty(((LookUpEdit)ctl).Text))
                         {
                             MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
                             return false;

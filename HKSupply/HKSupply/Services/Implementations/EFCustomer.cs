@@ -105,21 +105,38 @@ namespace HKSupply.Services.Implementations
                     {
                         try
                         {
-                            var customer = updateCustomer.Clone();
+                            //var customer = updateCustomer.Clone();
 
-                            db.Entry(updateCustomer).State = EntityState.Deleted;
+                            //db.Entry(updateCustomer).State = EntityState.Deleted;
 
-                            customer.IdSubVer += 1;
+                            //customer.IdSubVer += 1;
+                            //if (newVer == true)
+                            //{
+                            //    customer.IdVer += 1;
+                            //    customer.IdSubVer = 0;
+                            //}
+                            //customer.Timestamp = DateTime.Now;
+
+                            //CustomerHistory customerHistory = (CustomerHistory)customer;
+
+                            //db.Customers.Add(customer);
+                            //db.CustomersHistory.Add(customerHistory);
+                            //db.SaveChanges();
+
+                            updateCustomer.IdSubVer += 1;
                             if (newVer == true)
                             {
-                                customer.IdVer += 1;
-                                customer.IdSubVer = 0;
+                                updateCustomer.IdVer += 1;
+                                updateCustomer.IdSubVer = 0;
                             }
-                            customer.Timestamp = DateTime.Now;
+                            updateCustomer.Timestamp = DateTime.Now;
 
-                            CustomerHistory customerHistory = (CustomerHistory)customer;
+                            CustomerHistory customerHistory = (CustomerHistory)updateCustomer;
 
-                            db.Customers.Add(customer);
+                            //Con esto marcaremos todo el objeto como modificado y actualizará todos los campos. 
+                            //En este caso nos interesa porque la mayoría de los campos de customer se pueden modificar
+                            db.Entry(updateCustomer).State = EntityState.Modified;
+
                             db.CustomersHistory.Add(customerHistory);
                             db.SaveChanges();
 

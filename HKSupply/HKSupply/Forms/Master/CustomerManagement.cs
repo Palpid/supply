@@ -30,16 +30,17 @@ namespace HKSupply.Forms.Master
             IdSubVer,
             Timestamp,
             IdCustomer,
-            CustName,
+            CustomerName,
             Active,
             VATNum,
             ShippingAddress,
             BillingAddress,
             ContactName,
             ContactPhone,
+            Comments,
             IdIncoterm,
             IdPaymentTerms,
-            Currency,
+            IdDefaultCurrency,
         }
         #endregion
 
@@ -49,6 +50,9 @@ namespace HKSupply.Forms.Master
         Customer _customerOriginal;
 
         List<Customer> _customersList;
+        List<Currency> _currenciesList;
+        List<PaymentTerms> _paymentTermsList;
+        List<Incoterm> _incotermsList;
 
         string[] _nonEditingFields = { "txtIdCustomer", "txtIdVersion", "txtIdSubversion", "txtTimestamp" };
 
@@ -214,6 +218,9 @@ namespace HKSupply.Forms.Master
             {
                 xtpForm.PageVisible = false;
                 sbNewVersion.Visible = false;
+                LoadIncotemrsList();
+                LoadPaymentTermsList();
+                LoadCurrenciesList();
             }
             catch (Exception ex)
             {
@@ -311,17 +318,18 @@ namespace HKSupply.Forms.Master
                 GridColumn colIdVer = new GridColumn() { Caption = "Version Id", Visible = true, FieldName = eCustomerColumns.IdVer.ToString(), Width = 70 };
                 GridColumn colIdSubVer = new GridColumn() { Caption = "Subversion Id", Visible = true, FieldName = eCustomerColumns.IdSubVer.ToString(), Width = 80 };
                 GridColumn colTimestamp = new GridColumn() { Caption = "Timestamp", Visible = true, FieldName = eCustomerColumns.Timestamp.ToString(), Width = 130 };
-                GridColumn colIdSupplier = new GridColumn() { Caption = "Id Supplier", Visible = true, FieldName = eCustomerColumns.IdCustomer.ToString(), Width = 100 };
-                GridColumn colSupplierName = new GridColumn() { Caption = "Supplier Name", Visible = true, FieldName = eCustomerColumns.CustName.ToString(), Width = 200 };
+                GridColumn colIdCustomer = new GridColumn() { Caption = "Id Supplier", Visible = true, FieldName = eCustomerColumns.IdCustomer.ToString(), Width = 100 };
+                GridColumn colCustomerName = new GridColumn() { Caption = "Supplier Name", Visible = true, FieldName = eCustomerColumns.CustomerName.ToString(), Width = 200 };
                 GridColumn colActive = new GridColumn() { Caption = "Active", Visible = true, FieldName = eCustomerColumns.Active.ToString(), Width = 50 };
                 GridColumn colVATNum = new GridColumn() { Caption = "VAT Number", Visible = true, FieldName = eCustomerColumns.VATNum.ToString(), Width = 120 };
                 GridColumn colShippingAddress = new GridColumn() { Caption = "Shipping Address", Visible = true, FieldName = eCustomerColumns.ShippingAddress.ToString(), Width = 300 };
                 GridColumn colBillingAddress = new GridColumn() { Caption = "Billing Address", Visible = true, FieldName = eCustomerColumns.BillingAddress.ToString(), Width = 300 };
                 GridColumn colContactName = new GridColumn() { Caption = "Contact Name", Visible = true, FieldName = eCustomerColumns.ContactName.ToString(), Width = 200 };
                 GridColumn colContactPhone = new GridColumn() { Caption = "Contact Phone", Visible = true, FieldName = eCustomerColumns.ContactPhone.ToString(), Width = 150 };
-                GridColumn colIdIncoterm = new GridColumn() { Caption = "Id Incoterm", Visible = true, FieldName = eCustomerColumns.IdIncoterm.ToString(), Width = 70 };
-                GridColumn colIdPaymentTerms = new GridColumn() { Caption = "Id Payment Terms", Visible = true, FieldName = eCustomerColumns.IdPaymentTerms.ToString(), Width = 100 };
-                GridColumn colCurrency = new GridColumn() { Caption = "Currency", Visible = true, FieldName = eCustomerColumns.Currency.ToString(), Width = 70 };
+                GridColumn colComments = new GridColumn() { Caption = "Comments", Visible = true, FieldName = eCustomerColumns.Comments.ToString(), Width = 300 };
+                GridColumn colIdIncoterm = new GridColumn() { Caption = "Incoterm", Visible = true, FieldName = eCustomerColumns.IdIncoterm.ToString(), Width = 70 };
+                GridColumn colIdPaymentTerms = new GridColumn() { Caption = "Payment Terms", Visible = true, FieldName = eCustomerColumns.IdPaymentTerms.ToString(), Width = 100 };
+                GridColumn colCurrency = new GridColumn() { Caption = "Currency", Visible = true, FieldName = eCustomerColumns.IdDefaultCurrency.ToString(), Width = 70 };
 
                 //Format type 
                 colTimestamp.DisplayFormat.FormatType = FormatType.DateTime;
@@ -330,20 +338,71 @@ namespace HKSupply.Forms.Master
                 rootGridViewCustomers.Columns.Add(colIdVer);
                 rootGridViewCustomers.Columns.Add(colIdSubVer);
                 rootGridViewCustomers.Columns.Add(colTimestamp);
-                rootGridViewCustomers.Columns.Add(colIdSupplier);
-                rootGridViewCustomers.Columns.Add(colSupplierName);
+                rootGridViewCustomers.Columns.Add(colIdCustomer);
+                rootGridViewCustomers.Columns.Add(colCustomerName);
                 rootGridViewCustomers.Columns.Add(colActive);
                 rootGridViewCustomers.Columns.Add(colVATNum);
                 rootGridViewCustomers.Columns.Add(colShippingAddress);
                 rootGridViewCustomers.Columns.Add(colBillingAddress);
                 rootGridViewCustomers.Columns.Add(colContactName);
                 rootGridViewCustomers.Columns.Add(colContactPhone);
+                rootGridViewCustomers.Columns.Add(colComments);
                 rootGridViewCustomers.Columns.Add(colIdIncoterm);
                 rootGridViewCustomers.Columns.Add(colIdPaymentTerms);
                 rootGridViewCustomers.Columns.Add(colCurrency);
 
                 //Events
                 rootGridViewCustomers.DoubleClick += rootGridViewCustomers_DoubleClick;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void LoadCurrenciesList()
+        {
+            try
+            {
+                _currenciesList = GlobalSetting.CurrencyService.GetCurrencies();
+
+                lueIdDefaultCurrency.Properties.DataSource = _currenciesList;
+                lueIdDefaultCurrency.Properties.DisplayMember = "Description";
+                lueIdDefaultCurrency.Properties.ValueMember = "IdCurrency";
+                //lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdSupplier", 20, "Id Supplier"));
+                //lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SupplierName", 100, "Name"));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void LoadPaymentTermsList()
+        {
+            try
+            {
+                _paymentTermsList = GlobalSetting.PaymentTermsService.GetPaymentTerms();
+
+                lueIdPaymentTerms.Properties.DataSource = _paymentTermsList;
+                lueIdPaymentTerms.Properties.DisplayMember = "Description";
+                lueIdPaymentTerms.Properties.ValueMember = "IdPaymentTerms";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void LoadIncotemrsList()
+        {
+            try
+            {
+                _incotermsList = GlobalSetting.IncotermService.GetIIncoterms();
+
+                lueIdIncoterm.Properties.DataSource = _incotermsList;
+                lueIdIncoterm.Properties.DisplayMember = "IdIncoterm";
+                lueIdIncoterm.Properties.ValueMember = "Description";
             }
             catch (Exception ex)
             {
@@ -399,22 +458,51 @@ namespace HKSupply.Forms.Master
                         ctl.DataBindings.Clear();
                         ((CheckEdit)ctl).ReadOnly = true;
                     }
+                    else if (ctl.GetType() == typeof(LookUpEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((LookUpEdit)ctl).ReadOnly = true;
+                    }
                 }
 
-                txtIdCustomer.DataBindings.Add("Text", _customerUpdate, "IdCustomer");
-                txtIdVersion.DataBindings.Add("Text", _customerUpdate, "idVer");
-                txtIdSubversion.DataBindings.Add("Text", _customerUpdate, "idSubVer");
-                txtTimestamp.DataBindings.Add("Text", _customerUpdate, "Timestamp");
-                txtName.DataBindings.Add("Text", _customerUpdate, "CustName");
-                chkActive.DataBindings.Add("Checked", _customerUpdate, "Active");
-                txtVatNumber.DataBindings.Add("Text", _customerUpdate, "VATNum");
-                txtShippingAddress.DataBindings.Add("Text", _customerUpdate, "ShippingAddress");
-                txtBillingAddress.DataBindings.Add("Text", _customerUpdate, "BillingAddress");
-                txtContactName.DataBindings.Add("Text", _customerUpdate, "ContactName");
-                txtContactPhone.DataBindings.Add("Text", _customerUpdate, "ContactPhone");
-                txtIntercom.DataBindings.Add("Text", _customerUpdate, "IdIncoterm");
-                txtPaymentTerms.DataBindings.Add("Text", _customerUpdate, "IdPaymentTerms");
-                txtCurreny.DataBindings.Add("Text", _customerUpdate, "Currency");
+                //txtIdCustomer.DataBindings.Add("Text", _customerUpdate, "IdCustomer");
+                //txtIdVersion.DataBindings.Add("Text", _customerUpdate, "idVer");
+                //txtIdSubversion.DataBindings.Add("Text", _customerUpdate, "idSubVer");
+                //txtTimestamp.DataBindings.Add("Text", _customerUpdate, "Timestamp");
+                //txtName.DataBindings.Add("Text", _customerUpdate, "CustName");
+                //chkActive.DataBindings.Add("Checked", _customerUpdate, "Active");
+                //txtVatNumber.DataBindings.Add("Text", _customerUpdate, "VATNum");
+                //txtShippingAddress.DataBindings.Add("Text", _customerUpdate, "ShippingAddress");
+                //txtBillingAddress.DataBindings.Add("Text", _customerUpdate, "BillingAddress");
+                //txtContactName.DataBindings.Add("Text", _customerUpdate, "ContactName");
+                //txtContactPhone.DataBindings.Add("Text", _customerUpdate, "ContactPhone");
+                //txtIntercom.DataBindings.Add("Text", _customerUpdate, "IdIncoterm");
+                //txtPaymentTerms.DataBindings.Add("Text", _customerUpdate, "IdPaymentTerms");
+                //txtCurreny.DataBindings.Add("Text", _customerUpdate, "Currency");
+
+                //Textedit
+                txtIdCustomer.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.IdCustomer);
+                txtIdVersion.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.IdVer);
+                txtIdSubversion.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.IdSubVer);
+                txtTimestamp.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.Timestamp);
+                txtName.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.CustomerName);
+                txtVatNumber.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.VATNum);
+                txtShippingAddress.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.ShippingAddress);
+                txtShippingAddressZh.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.ShippingAddressZh);
+                txtBillingAddress.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.BillingAddress);
+                txtBillingAddressZh.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.BillingAddressZh);
+                txtContactName.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.ContactName);
+                txtContactNameZh.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.ContactNameZh);
+                txtContactPhone.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.ContactPhone);
+                txtComments.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.Comments);
+
+                //CheckEdit
+                chkActive.DataBindings.Add<Customer>(_customerUpdate, (CheckEdit chk) => chk.Checked, supplier => supplier.Active);
+
+                //LookUpEdit
+                lueIdIncoterm.DataBindings.Add<Customer>(_customerUpdate, (LookUpEdit e) => e.EditValue, supplier => supplier.IdIncoterm);
+                lueIdPaymentTerms.DataBindings.Add<Customer>(_customerUpdate, (LookUpEdit e) => e.EditValue, supplier => supplier.IdPaymentTerms);
+                lueIdDefaultCurrency.DataBindings.Add<Customer>(_customerUpdate, (LookUpEdit e) => e.EditValue, supplier => supplier.IdDefaultCurrency);
             }
             catch (Exception ex)
             {
@@ -474,6 +562,10 @@ namespace HKSupply.Forms.Master
                         {
                             ((CheckEdit)ctl).ReadOnly = false;
                         }
+                        else if (ctl.GetType() == typeof(LookUpEdit))
+                        {
+                            ((LookUpEdit)ctl).ReadOnly = false;
+                        }
                     }
                 }
             }
@@ -496,6 +588,10 @@ namespace HKSupply.Forms.Master
                     else if (ctl.GetType() == typeof(CheckEdit))
                     {
                         ((CheckEdit)ctl).ReadOnly = false;
+                    }
+                    else if (ctl.GetType() == typeof(LookUpEdit))
+                    {
+                        ((LookUpEdit)ctl).ReadOnly = false;
                     }
                 }
             }
@@ -555,6 +651,14 @@ namespace HKSupply.Forms.Master
                     if (ctl.GetType() == typeof(TextEdit))
                     {
                         if (string.IsNullOrEmpty(((TextEdit)ctl).Text))
+                        {
+                            MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
+                            return false;
+                        }
+                    }
+                    if (ctl.GetType() == typeof(LookUpEdit))
+                    {
+                        if (string.IsNullOrEmpty(((LookUpEdit)ctl).Text))
                         {
                             MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
                             return false;

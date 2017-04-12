@@ -104,23 +104,41 @@ namespace HKSupply.Services.Implementations
                     {
                         try
                         {
-                            var supplier = updateSupplier.Clone();
+                            //var supplier = updateSupplier.Clone();
 
-                            db.Entry(updateSupplier).State = EntityState.Deleted;
+                            //db.Entry(updateSupplier).State = EntityState.Deleted;
 
-                            supplier.IdSubVer += 1;
+                            //supplier.IdSubVer += 1;
+                            //if (newVer == true)
+                            //{
+                            //    supplier.IdVer += 1;
+                            //    supplier.IdSubVer = 0;
+                            //}
+                            //supplier.Timestamp = DateTime.Now;
+
+                            //SupplierHistory supplierHistory = (SupplierHistory)supplier;
+
+                            //db.Suppliers.Add(supplier);
+                            //db.SuppliersHistory.Add(supplierHistory);
+                            //db.SaveChanges();
+
+                            updateSupplier.IdSubVer += 1;
                             if (newVer == true)
                             {
-                                supplier.IdVer += 1;
-                                supplier.IdSubVer = 0;
+                                updateSupplier.IdVer += 1;
+                                updateSupplier.IdSubVer = 0;
                             }
-                            supplier.Timestamp = DateTime.Now;
+                            updateSupplier.Timestamp = DateTime.Now;
 
-                            SupplierHistory supplierHistory = (SupplierHistory)supplier;
+                            SupplierHistory supplierHistory = (SupplierHistory)updateSupplier;
 
-                            db.Suppliers.Add(supplier);
+                            //Con esto marcaremos todo el objeto como modificado y actualizará todos los campos. 
+                            //En este caso nos interesa porque la mayoría de los campos de supplier se pueden modificar
+                            db.Entry(updateSupplier).State = EntityState.Modified;
+
                             db.SuppliersHistory.Add(supplierHistory);
                             db.SaveChanges();
+
 
                             dbTrans.Commit();
                             return true;

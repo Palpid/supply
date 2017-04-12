@@ -12,9 +12,9 @@ namespace HKSupply.Models
     [Table("ITEM_GROUP")]
     public class ItemGroup
     {
-        [Column("ID", TypeName = "NVARCHAR"), Key, StringLength(30)]
+        [Column("ID_ITEM_GROUP", TypeName = "NVARCHAR"), Key, StringLength(100)]
         public string Id { get; set; }
-        [Column("DESCRIPTION", TypeName = "NVARCHAR"), StringLength(100), Required]
+        [Column("DESCRIPTION", TypeName = "NVARCHAR"), StringLength(500), Required]
         public string Description { get; set; }
 
         public override bool Equals(object obj)

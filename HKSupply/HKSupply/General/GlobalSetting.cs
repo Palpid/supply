@@ -24,6 +24,11 @@ namespace HKSupply.General
     /// Controlador para acceso a datos para Supplier
     /// Controlador para acceso a datos para Store
     /// Controlador para acceso a datos para Item
+    /// Controlador para acceso a datos para Status Prod
+    /// Controlador para acceso a datos para Currency
+    /// Controlador para acceso a datos para Payment Terms
+    /// Controlador para acceso a datos para Incoterm
+    /// Controlador para acceso a datos para User Attr Description
     /// </remarks>
     public sealed class GlobalSetting
     {
@@ -40,6 +45,7 @@ namespace HKSupply.General
         static EFCurrency _currencyEF = new EFCurrency();
         static EFPaymentTerms _paymentTermsEF = new EFPaymentTerms();
         static EFIncoterm _incotermEF = new EFIncoterm();
+        static EFUserAttrDescription _userAttrDescriptionEF = new EFUserAttrDescription();
 
         static User _loggedUser;
         static IEnumerable<FunctionalityRole> _functionalitiesRoles;
@@ -180,6 +186,17 @@ namespace HKSupply.General
                     return new EFIncoterm();
                 else
                     return _incotermEF;
+            }
+        }
+
+        public static IUserAttrDescription UserAttrDescriptionService
+        {
+            get
+            {
+                if (_userAttrDescriptionEF == null)
+                    return new EFUserAttrDescription();
+                else
+                    return _userAttrDescriptionEF;
             }
         }
 

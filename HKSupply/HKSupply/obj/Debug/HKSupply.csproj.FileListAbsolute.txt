@@ -27,8 +27,8 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.FunctionalityMan
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.FunctionalityManagement_v1.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.FunctionalityRoleManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.FunctionalityRoleManagement_v1.resources
-C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.ItemManagement.resources
-C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.ItemManagement_v1.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.ItemManagementEY.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.ItemManagementHW.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.RoleManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.RoleManagement_v1.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.StoreManagement.resources
@@ -66,9 +66,15 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.HwType.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.Item_11042017.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.Item_11042017_2.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.Item_11042017_3.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.Customers_12042017_1.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.Customers_12042017_2.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.Items_12042017_1.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.Items_12042017_2.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.Items_12042017_3.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Properties.Resources.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Resources.HKSupplyRes.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.csproj.GenerateResource.Cache
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe.licenses
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.ItemManagementMT.resources

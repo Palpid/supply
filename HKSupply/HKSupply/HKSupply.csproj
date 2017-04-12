@@ -64,6 +64,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
       <Private>True</Private>
@@ -165,17 +166,23 @@
     <Compile Include="Forms\Master\FunctionalityRoleManagement_v1.Designer.cs">
       <DependentUpon>FunctionalityRoleManagement_v1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Master\ItemManagement.cs">
+    <Compile Include="Forms\Master\ItemManagementEY.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Master\ItemManagement.Designer.cs">
-      <DependentUpon>ItemManagement.cs</DependentUpon>
+    <Compile Include="Forms\Master\ItemManagementEY.Designer.cs">
+      <DependentUpon>ItemManagementEY.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Master\ItemManagement_v1.cs">
+    <Compile Include="Forms\Master\ItemManagementHW.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Master\ItemManagement_v1.Designer.cs">
-      <DependentUpon>ItemManagement_v1.cs</DependentUpon>
+    <Compile Include="Forms\Master\ItemManagementHW.Designer.cs">
+      <DependentUpon>ItemManagementHW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\ItemManagementMT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\ItemManagementMT.Designer.cs">
+      <DependentUpon>ItemManagementMT.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Master\RoleManagement.cs">
       <SubType>Form</SubType>
@@ -348,6 +355,26 @@
     <Compile Include="Migrations\201704111400001_Item_11042017_3.Designer.cs">
       <DependentUpon>201704111400001_Item_11042017_3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704120736569_Customers_12042017_1.cs" />
+    <Compile Include="Migrations\201704120736569_Customers_12042017_1.Designer.cs">
+      <DependentUpon>201704120736569_Customers_12042017_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704120828580_Customers_12042017_2.cs" />
+    <Compile Include="Migrations\201704120828580_Customers_12042017_2.Designer.cs">
+      <DependentUpon>201704120828580_Customers_12042017_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704120909108_Items_12042017_1.cs" />
+    <Compile Include="Migrations\201704120909108_Items_12042017_1.Designer.cs">
+      <DependentUpon>201704120909108_Items_12042017_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704121018220_Items_12042017_2.cs" />
+    <Compile Include="Migrations\201704121018220_Items_12042017_2.Designer.cs">
+      <DependentUpon>201704121018220_Items_12042017_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704121041221_Items_12042017_3.cs" />
+    <Compile Include="Migrations\201704121041221_Items_12042017_3.Designer.cs">
+      <DependentUpon>201704121041221_Items_12042017_3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\EchangeRate.cs" />
@@ -399,6 +426,7 @@
     <Compile Include="Services\Implementations\EFStore.cs" />
     <Compile Include="Services\Implementations\EFSupplier.cs" />
     <Compile Include="Services\Implementations\EFUser.cs" />
+    <Compile Include="Services\Implementations\EFUserAttrDescription.cs" />
     <Compile Include="Services\Interfaces\ICurrency.cs" />
     <Compile Include="Services\Interfaces\ICustomer.cs" />
     <Compile Include="Services\Interfaces\IFunctionality.cs" />
@@ -411,6 +439,7 @@
     <Compile Include="Services\Interfaces\IStore.cs" />
     <Compile Include="Services\Interfaces\ISupplier.cs" />
     <Compile Include="Services\Interfaces\IUser.cs" />
+    <Compile Include="Services\Interfaces\IUserAttrDescription.cs" />
     <Compile Include="Styles\AppStyles.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -448,11 +477,14 @@
     <EmbeddedResource Include="Forms\Master\FunctionalityRoleManagement_v1.resx">
       <DependentUpon>FunctionalityRoleManagement_v1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Master\ItemManagement.resx">
-      <DependentUpon>ItemManagement.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Master\ItemManagementEY.resx">
+      <DependentUpon>ItemManagementEY.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Master\ItemManagement_v1.resx">
-      <DependentUpon>ItemManagement_v1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Master\ItemManagementHW.resx">
+      <DependentUpon>ItemManagementHW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\ItemManagementMT.resx">
+      <DependentUpon>ItemManagementMT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\RoleManagement.resx">
       <DependentUpon>RoleManagement.cs</DependentUpon>
@@ -564,6 +596,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704111400001_Item_11042017_3.resx">
       <DependentUpon>201704111400001_Item_11042017_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704120736569_Customers_12042017_1.resx">
+      <DependentUpon>201704120736569_Customers_12042017_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704120828580_Customers_12042017_2.resx">
+      <DependentUpon>201704120828580_Customers_12042017_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704120909108_Items_12042017_1.resx">
+      <DependentUpon>201704120909108_Items_12042017_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704121018220_Items_12042017_2.resx">
+      <DependentUpon>201704121018220_Items_12042017_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704121041221_Items_12042017_3.resx">
+      <DependentUpon>201704121041221_Items_12042017_3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

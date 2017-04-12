@@ -22,7 +22,7 @@ using System.Windows.Forms;
 
 namespace HKSupply.Forms.Master
 {
-    public partial class ItemManagement : RibbonFormBase
+    public partial class ItemManagementHW : RibbonFormBase
     {
         #region Enums
         private enum eItemColumns
@@ -43,6 +43,9 @@ namespace HKSupply.Forms.Master
             IdItemBcn,
             IdItemHK,
             ItemDescription,
+            IdHwTypeL1,
+            IdHwTypeL2,
+            IdHwTypeL3,
             Comments,
             Segment,
             Category,
@@ -65,23 +68,25 @@ namespace HKSupply.Forms.Master
         List<Item> _itemsList;
         List<Supplier> _supplierList;
         List<StatusHK> _statusProdList;
+        List<UserAttrDescription> _userAttrDescriptionList;
 
-        string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };	
+        string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "lueIdUserAttri1", "lueIdUserAttri2", "lueIdUserAttri3" };
 
         #endregion
 
         #region Constructor
-        public ItemManagement()
+        public ItemManagementHW()
         {
             InitializeComponent();
 
             try
             {
-                LoadSupplierList();
-                LoadStatusProdList();
                 ConfigureRibbonActions();
                 SetUpGrdItems();
                 SetUpTexEdit();
+                SetUpLueDefaultSupplier();
+                SetUpLueStatusProd();
+                SetUpLueUserAttributes();
                 ResetItemUpdate();
                 SetFormBinding();
             }
@@ -156,15 +161,6 @@ namespace HKSupply.Forms.Master
         public override void bbiNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             base.bbiNew_ItemClick(sender, e);
-
-            try
-            {
-                ConfigureRibbonActionsCreating();
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         public override void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -194,10 +190,6 @@ namespace HKSupply.Forms.Master
                 {
                     res = UpdateItem();
                 }
-                else if (CurrentState == ActionsStates.New)
-                {
-                    res = CreateItem();
-                }
 
                 if (res == true)
                 {
@@ -219,13 +211,13 @@ namespace HKSupply.Forms.Master
         #endregion
 
         #region Form Events
-
-        private void ItemManagement_Load(object sender, EventArgs e)
+        private void ItemManagementHW_Load(object sender, EventArgs e)
         {
             try
             {
                 xtpForm.PageVisible = false;
-                //sbNewVersion.Visible = false; //TODO
+                sbNewVersion.Visible = false; //TODO
+                SetUpLueStatusProd();
             }
             catch (Exception ex)
             {
@@ -238,7 +230,7 @@ namespace HKSupply.Forms.Master
             try
             {
                 GridView view = sender as GridView;
-                Item  item = view.GetRow(view.FocusedRowHandle) as Item;
+                Item item = view.GetRow(view.FocusedRowHandle) as Item;
                 if (item != null)
                     LoadItemForm(item);
             }
@@ -284,7 +276,7 @@ namespace HKSupply.Forms.Master
 
                 if (result != DialogResult.Yes)
                     return;
-                
+
                 Cursor = Cursors.WaitCursor;
 
                 if (UpdateItem(true))
@@ -302,6 +294,69 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        void lueIdDefaultSupplier_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyData == Keys.Delete)
+                {
+                    lueIdDefaultSupplier.EditValue = null;
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void lueIdUserAttri3_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyData == Keys.Delete)
+                {
+                    lueIdUserAttri3.EditValue = null;
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void lueIdUserAttri2_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyData == Keys.Delete)
+                {
+                    lueIdUserAttri2.EditValue = null;
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void lueIdUserAttri1_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyData == Keys.Delete)
+                {
+                    lueIdUserAttri1.EditValue = null;
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         #region Private Methods
@@ -342,9 +397,12 @@ namespace HKSupply.Forms.Master
                 GridColumn colIdItemBcn = new GridColumn() { Caption = "Item BCN", Visible = true, FieldName = eItemColumns.IdItemBcn.ToString(), Width = 160 };
                 GridColumn colIdItemHK = new GridColumn() { Caption = "Item HK", Visible = true, FieldName = eItemColumns.IdItemHK.ToString(), Width = 160 };
                 GridColumn colItemDescription = new GridColumn() { Caption = "Item Description", Visible = true, FieldName = eItemColumns.ItemDescription.ToString(), Width = 300 };
+                GridColumn colIdHwTypeL1 = new GridColumn() { Caption = "Hw Type L1", Visible = true, FieldName = eItemColumns.IdHwTypeL1.ToString(), Width = 100 };
+                GridColumn colIdHwTypeL2 = new GridColumn() { Caption = "Hw Type L2", Visible = true, FieldName = eItemColumns.IdHwTypeL2.ToString(), Width = 100 };
+                GridColumn colIdHwTypeL3 = new GridColumn() { Caption = "Hw Type L3", Visible = true, FieldName = eItemColumns.IdHwTypeL3.ToString(), Width = 100 };
 
                 GridColumn colComments = new GridColumn() { Caption = "Comments", Visible = true, FieldName = eItemColumns.Comments.ToString(), Width = 300 }; //No aparece?
-                
+
                 GridColumn colSegment = new GridColumn() { Caption = "Segment", Visible = true, FieldName = eItemColumns.Segment.ToString(), Width = 70 };
                 GridColumn colCategory = new GridColumn() { Caption = "Category", Visible = true, FieldName = eItemColumns.Category.ToString(), Width = 70 };
                 GridColumn colAge = new GridColumn() { Caption = "Age", Visible = true, FieldName = eItemColumns.Age.ToString(), Width = 70 };
@@ -381,6 +439,9 @@ namespace HKSupply.Forms.Master
                 rootGridViewItems.Columns.Add(colIdItemBcn);
                 rootGridViewItems.Columns.Add(colIdItemHK);
                 rootGridViewItems.Columns.Add(colItemDescription);
+                rootGridViewItems.Columns.Add(colIdHwTypeL1);
+                rootGridViewItems.Columns.Add(colIdHwTypeL2);
+                rootGridViewItems.Columns.Add(colIdHwTypeL3);
                 rootGridViewItems.Columns.Add(colComments);
                 rootGridViewItems.Columns.Add(colSegment);
                 rootGridViewItems.Columns.Add(colCategory);
@@ -471,6 +532,11 @@ namespace HKSupply.Forms.Master
                 txtIdItemBcn.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdItemBcn);
                 txtIdItemHK.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdItemHK);
                 txtItemDescription.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.ItemDescription);
+
+                txtIdHwTypeL1.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdHwTypeL1);
+                txtIdHwTypeL2.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdHwTypeL2);
+                txtIdHwTypeL3.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdHwTypeL3);
+
                 txtComments.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Comments);
                 txtSegment.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Segment);
                 txtCategory.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Category);
@@ -478,19 +544,17 @@ namespace HKSupply.Forms.Master
                 txtLaunchDate.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.LaunchDate);
                 txtRemovalDate.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.RemovalDate);
                 txtIdStatusCial.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdStatusCial);
-                txtIdUserAttri1.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri1);
-                txtIdUserAttri2.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri2);
-                txtIdUserAttri3.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri3);
+                txtUnit.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Unit);
+                txtDocsLink.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.DocsLink);
+                txtCreateDate.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.CreateDate);
 
                 //LookUpEdit
                 lueIdDefaultSupplier.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdDefaultSupplier);
                 lueIdStatusProd.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdStatusProd);
-                
-                //CheckEdit
-                //chkActive.DataBindings.Add<Item>(_itemUpdate, (CheckEdit chk) => chk.Checked, item => item.Active);
-                ////DateEdit
-                //deLaunched.DataBindings.Add<Item>(_itemUpdate, (DateEdit d) => d.EditValue, item => item.Launched);
-                //deRetired.DataBindings.Add<Item>(_itemUpdate, (DateEdit d) => d.EditValue, item => item.Retired);
+                lueIdUserAttri1.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdUserAttri1);
+                lueIdUserAttri2.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdUserAttri2);
+                lueIdUserAttri3.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdUserAttri3);
+
             }
             catch (Exception ex)
             {
@@ -501,7 +565,7 @@ namespace HKSupply.Forms.Master
         /// <summary>
         /// Cargar la colección de suppliers del sistema
         /// </summary>
-        private void LoadSupplierList()
+        private void SetUpLueDefaultSupplier()
         {
             try
             {
@@ -512,6 +576,11 @@ namespace HKSupply.Forms.Master
                 lueIdDefaultSupplier.Properties.ValueMember = "IdSupplier";
                 lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdSupplier", 20, "Id Supplier"));
                 lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SupplierName", 100, "Name"));
+
+                //De esta manera se activa el limpiar el combo pulsado Ctrl + Supr. Es poco intuitivo, lo controlamos por el evento
+                //lueIdDefaultSupplier.Properties.AllowNullInput = DefaultBoolean.True; 
+                lueIdDefaultSupplier.KeyDown += lueIdDefaultSupplier_KeyDown;
+
             }
             catch (Exception ex)
             {
@@ -520,9 +589,9 @@ namespace HKSupply.Forms.Master
         }
 
         /// <summary>
-        /// Cargar la colección de Status Prod. del sistema
+        /// Cargar la colección de Status Prod. del sistema y configurar el lookupEdit correspondiente
         /// </summary>
-        private void LoadStatusProdList()
+        private void SetUpLueStatusProd()
         {
             try
             {
@@ -530,7 +599,7 @@ namespace HKSupply.Forms.Master
 
                 lueIdStatusProd.Properties.DataSource = _statusProdList;
                 lueIdStatusProd.Properties.DisplayMember = "Description";
-                lueIdStatusProd.Properties.ValueMember = "Id";
+                lueIdStatusProd.Properties.ValueMember = "IdStatusProd";
                 //lueIdStatusProd.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdSupplier", 20, "Id Supplier"));
                 //lueIdStatusProd.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SupplierName", 100, "Name"));
             }
@@ -538,6 +607,35 @@ namespace HKSupply.Forms.Master
             {
                 throw ex;
             }
+        }
+
+        private void SetUpLueUserAttributes()
+        {
+            try
+            {
+                _userAttrDescriptionList = GlobalSetting.UserAttrDescriptionService.GetUserAttrsDescription();
+
+                lueIdUserAttri1.Properties.DataSource = _userAttrDescriptionList;
+                lueIdUserAttri1.Properties.DisplayMember = "Description";
+                lueIdUserAttri1.Properties.ValueMember = "IdUserAttr";
+
+                lueIdUserAttri2.Properties.DataSource = _userAttrDescriptionList;
+                lueIdUserAttri2.Properties.DisplayMember = "Description";
+                lueIdUserAttri2.Properties.ValueMember = "IdUserAttr";
+
+                lueIdUserAttri3.Properties.DataSource = _userAttrDescriptionList;
+                lueIdUserAttri3.Properties.DisplayMember = "Description";
+                lueIdUserAttri3.Properties.ValueMember = "IdUserAttr";
+
+                lueIdUserAttri1.KeyDown += lueIdUserAttri1_KeyDown;
+                lueIdUserAttri2.KeyDown += lueIdUserAttri2_KeyDown;
+                lueIdUserAttri3.KeyDown += lueIdUserAttri3_KeyDown;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
 
         // <summary>
@@ -548,7 +646,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _itemsList = GlobalSetting.ItemService.GetItems();
+                _itemsList = GlobalSetting.ItemService.GetItems("HW");
                 xgrdItems.DataSource = _itemsList;
             }
             catch (Exception ex)
@@ -576,7 +674,7 @@ namespace HKSupply.Forms.Master
                 throw ex;
             }
         }
-        
+
         private void ConfigureRibbonActionsEditing()
         {
             try
@@ -584,24 +682,6 @@ namespace HKSupply.Forms.Master
                 xtpList.PageVisible = true;
                 //sbNewVersion.Visible = true;
                 SetEditingFieldsEnabled();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        private void ConfigureRibbonActionsCreating()
-        {
-            try
-            {
-                xtpList.PageVisible = false;
-                xtpForm.PageVisible = true;
-                sbNewVersion.Visible = false;
-                ResetItemUpdate();
-                SetFormBinding(); //refresh binding
-                SetNonCreatingFieldsVisibility(LayoutVisibility.Never);
-                SetCreatingFieldsEnabled();
             }
             catch (Exception ex)
             {
@@ -680,7 +760,7 @@ namespace HKSupply.Forms.Master
                 throw ex;
             }
         }
-        
+
         /// <summary>
         /// Mover la fila activa a un item en concreto
         /// </summary>
@@ -709,21 +789,22 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        //TODO
         private bool IsValidItem()
         {
             try
             {
-                foreach (Control ctl in layoutControlForm.Controls)
-                {
-                    if (ctl.GetType() == typeof(TextEdit))
-                    {
-                        if (string.IsNullOrEmpty(((TextEdit)ctl).Text))
-                        {
-                            MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
-                            return false;
-                        }
-                    }
-                }
+                //foreach (Control ctl in layoutControlForm.Controls)
+                //{
+                //    if (ctl.GetType() == typeof(TextEdit))
+                //    {
+                //        if (string.IsNullOrEmpty(((TextEdit)ctl).Text))
+                //        {
+                //            MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
+                //            return false;
+                //        }
+                //    }
+                //}
                 return true;
             }
             catch (Exception ex)
@@ -742,23 +823,6 @@ namespace HKSupply.Forms.Master
             try
             {
                 return GlobalSetting.ItemService.UpdateItem(_itemUpdate, newVersion);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Crear un nuevo item
-        /// </summary>
-        /// <returns></returns>
-        private bool CreateItem()
-        {
-            try
-            {
-                _itemOriginal = _itemUpdate.Clone();
-                return GlobalSetting.ItemService.newItem(_itemUpdate);
             }
             catch (Exception ex)
             {
@@ -787,7 +851,5 @@ namespace HKSupply.Forms.Master
         }
 
         #endregion
-
     }
-
 }
