@@ -9,6 +9,6 @@ namespace HKSupply.Services.Interfaces
 {
     public interface IUserAttrDescription
     {
-        List<UserAttrDescription> GetUserAttrsDescription();
+        List<UserAttrDescription> GetUserAttrsDescription(string idItemGroup);
     }
 }

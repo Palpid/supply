@@ -1,0 +1,106 @@
+﻿2017-04-12 10:27:38,436 ERROR [8] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - The model backing the 'HKSupplyContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+System.InvalidOperationException: The model backing the 'HKSupplyContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   en System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   en System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   en System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   en System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   en System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   en System.Data.Entity.Internal.InternalContext.Initialize()
+   en System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   en System.Data.Entity.Internal.Linq.InternalSet`1.Include(String path)
+   en System.Data.Entity.Infrastructure.DbQuery`1.Include(String path)
+   en System.Data.Entity.QueryableExtensions.Include[T](IQueryable`1 source, String path)
+   en System.Data.Entity.QueryableExtensions.Include[T,TProperty](IQueryable`1 source, Expression`1 path)
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 130
+2017-04-12 10:28:21,931 ERROR [8] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - The model backing the 'HKSupplyContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+System.InvalidOperationException: The model backing the 'HKSupplyContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   en System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   en System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   en System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   en System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   en System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   en System.Data.Entity.Internal.InternalContext.Initialize()
+   en System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   en System.Data.Entity.Internal.Linq.InternalSet`1.Include(String path)
+   en System.Data.Entity.Infrastructure.DbQuery`1.Include(String path)
+   en System.Data.Entity.QueryableExtensions.Include[T](IQueryable`1 source, String path)
+   en System.Data.Entity.QueryableExtensions.Include[T,TProperty](IQueryable`1 source, Expression`1 path)
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 130
+2017-04-12 10:28:25,325 ERROR [8] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - The model backing the 'HKSupplyContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+System.InvalidOperationException: The model backing the 'HKSupplyContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   en System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   en System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   en System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   en System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   en System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   en System.Data.Entity.Internal.InternalContext.Initialize()
+   en System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   en System.Data.Entity.Internal.Linq.InternalSet`1.Include(String path)
+   en System.Data.Entity.Infrastructure.DbQuery`1.Include(String path)
+   en System.Data.Entity.QueryableExtensions.Include[T](IQueryable`1 source, String path)
+   en System.Data.Entity.QueryableExtensions.Include[T,TProperty](IQueryable`1 source, Expression`1 path)
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 130
+2017-04-12 12:41:04,239 ERROR [10] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - The model backing the 'HKSupplyContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+System.InvalidOperationException: The model backing the 'HKSupplyContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   en System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   en System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   en System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   en System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   en System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   en System.Data.Entity.Internal.InternalContext.Initialize()
+   en System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   en System.Data.Entity.Internal.Linq.InternalSet`1.Include(String path)
+   en System.Data.Entity.Infrastructure.DbQuery`1.Include(String path)
+   en System.Data.Entity.QueryableExtensions.Include[T](IQueryable`1 source, String path)
+   en System.Data.Entity.QueryableExtensions.Include[T,TProperty](IQueryable`1 source, Expression`1 path)
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 130
+2017-04-12 14:46:49,463 ERROR [9] HKSupply.Services.Implementations.EFItem.UpdateItem - The key field 'IdModel' cannot have a value of null. A non-null value is required for the key fields defined on type 'Model'.
+System.InvalidOperationException: The key field 'IdModel' cannot have a value of null. A non-null value is required for the key fields defined on type 'Model'.
+   en System.Data.Entity.Core.Objects.ObjectStateManager.CreateEntityKey(EntitySet entitySet, Object entity)
+   en System.Data.Entity.Core.Objects.DataClasses.EntityReference.ExtractPrincipalKey(IEntityWrapper wrappedRelatedEntity)
+   en System.Data.Entity.Core.Objects.DataClasses.EntityReference.CheckReferentialConstraintPrincipalProperty(EntityEntry ownerEntry, ReferentialConstraint constraint)
+   en System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.CheckReferentialConstraintProperties(EntityEntry ownerEntry)
+   en System.Data.Entity.Core.Objects.DataClasses.RelationshipManager.CheckReferentialConstraintProperties(EntityEntry ownerEntry)
+   en System.Data.Entity.Core.Objects.ObjectContext.AttachSingleObject(IEntityWrapper wrappedEntity, EntitySet entitySet)
+   en System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClassa.<Attach>b__9()
+   en System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   en System.Data.Entity.DbSet`1.Attach(TEntity entity)
+   en HKSupply.Services.Implementations.EFItem.UpdateItem(Item updateItem, Boolean newVersion) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItem.cs:línea 146
+2017-04-12 14:49:42,881 ERROR [9] HKSupply.Services.Implementations.EFItem.UpdateItem - The key field 'IdModel' cannot have a value of null. A non-null value is required for the key fields defined on type 'Model'.
+System.InvalidOperationException: The key field 'IdModel' cannot have a value of null. A non-null value is required for the key fields defined on type 'Model'.
+   en System.Data.Entity.Core.Objects.ObjectStateManager.CreateEntityKey(EntitySet entitySet, Object entity)
+   en System.Data.Entity.Core.Objects.DataClasses.EntityReference.ExtractPrincipalKey(IEntityWrapper wrappedRelatedEntity)
+   en System.Data.Entity.Core.Objects.DataClasses.EntityReference.CheckReferentialConstraintPrincipalProperty(EntityEntry ownerEntry, ReferentialConstraint constraint)
+   en System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.CheckReferentialConstraintProperties(EntityEntry ownerEntry)
+   en System.Data.Entity.Core.Objects.DataClasses.RelationshipManager.CheckReferentialConstraintProperties(EntityEntry ownerEntry)
+   en System.Data.Entity.Core.Objects.ObjectContext.AttachSingleObject(IEntityWrapper wrappedEntity, EntitySet entitySet)
+   en System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClassa.<Attach>b__9()
+   en System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   en System.Data.Entity.DbSet`1.Attach(TEntity entity)
+   en HKSupply.Services.Implementations.EFItem.UpdateItem(Item updateItem, Boolean newVersion) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItem.cs:línea 146
+2017-04-12 17:12:06,035 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid Password
+HKSupply.Exceptions.InvalidPasswordException: Invalid Password
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 139
+2017-04-12 17:12:12,329 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid Password
+HKSupply.Exceptions.InvalidPasswordException: Invalid Password
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 139

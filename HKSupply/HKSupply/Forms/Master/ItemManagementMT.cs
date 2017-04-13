@@ -612,7 +612,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _userAttrDescriptionList = GlobalSetting.UserAttrDescriptionService.GetUserAttrsDescription();
+                _userAttrDescriptionList = GlobalSetting.UserAttrDescriptionService.GetUserAttrsDescription("MT");
 
                 lueIdUserAttri1.Properties.DataSource = _userAttrDescriptionList;
                 lueIdUserAttri1.Properties.DisplayMember = "Description";

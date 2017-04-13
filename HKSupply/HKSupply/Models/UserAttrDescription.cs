@@ -16,6 +16,10 @@ namespace HKSupply.Models
         public string IdUserAttr{ get; set; }
         [Column("DESCRIPTION", TypeName = "NVARCHAR"), StringLength(500)]
         public string Description{ get; set; }
+        [Column("ID_ITEM_GROUP", TypeName = "NVARCHAR"), StringLength(100)]
+        public string IdItemGroup { get; set; }
+        [ForeignKey("IdItemGroup")]
+        public ItemGroup ItemGroup { get; set; }
 
         public override bool Equals(object obj)
         {

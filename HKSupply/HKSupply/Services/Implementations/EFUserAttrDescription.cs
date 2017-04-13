@@ -16,13 +16,18 @@ namespace HKSupply.Services.Implementations
     {
         ILog _log = LogManager.GetLogger(typeof(EFCurrency));
 
-        public List<Models.UserAttrDescription> GetUserAttrsDescription()
+        public List<Models.UserAttrDescription> GetUserAttrsDescription(string idItemGroup)
         {
             try
             {
+                if (idItemGroup == null)
+                    throw new ArgumentNullException("idItemGroup");
+
                 using (var db = new HKSupplyContext())
                 {
-                    return db.UserAttrsDescription.ToList();
+                    return db.UserAttrsDescription
+                        .Where(a => a.IdItemGroup.Equals(idItemGroup))
+                        .ToList();
 
                 }
             }

@@ -70,7 +70,7 @@ namespace HKSupply.Forms.Master
         List<StatusHK> _statusProdList;
         List<UserAttrDescription> _userAttrDescriptionList;
 
-        string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "lueIdUserAttri1", "lueIdUserAttri2", "lueIdUserAttri3" };	
+        string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };	
 
         #endregion
 
@@ -86,7 +86,7 @@ namespace HKSupply.Forms.Master
                 SetUpTexEdit();
                 SetUpLueDefaultSupplier();
                 SetUpLueStatusProd();
-                SetUpLueUserAttributes();
+                SetUpLabelNameUserAttributes();
                 ResetItemUpdate();
                 SetFormBinding();
             }
@@ -125,7 +125,6 @@ namespace HKSupply.Forms.Master
                 SetFormBinding();
                 xtpForm.PageVisible = false;
                 xtpList.PageVisible = true;
-                sbNewVersion.Visible = false;
                 LoadItemsList();
                 SetNonCreatingFieldsVisibility(LayoutVisibility.Always);
             }
@@ -217,7 +216,6 @@ namespace HKSupply.Forms.Master
             try
             {
                 xtpForm.PageVisible = false;
-                sbNewVersion.Visible = false; //TODO
                 SetUpLueStatusProd();
             }
             catch (Exception ex)
@@ -258,43 +256,6 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void sbNewVersion_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Validate();
-
-                if (_itemUpdate.Equals(_itemOriginal))
-                {
-                    XtraMessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
-                    return;
-                }
-
-                if (IsValidItem() == false)
-                    return;
-
-                DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
-
-                if (result != DialogResult.Yes)
-                    return;
-                
-                Cursor = Cursors.WaitCursor;
-
-                if (UpdateItem(true))
-                {
-                    ActionsAfterCU();
-                }
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                Cursor = Cursors.Default;
-            }
-        }
-
         void lueIdDefaultSupplier_KeyDown(object sender, KeyEventArgs e)
         {
             try
@@ -302,54 +263,6 @@ namespace HKSupply.Forms.Master
                 if (e.KeyData == Keys.Delete)
                 {
                     lueIdDefaultSupplier.EditValue = null;
-                    e.Handled = true;
-                }
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        void lueIdUserAttri3_KeyDown(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                if (e.KeyData == Keys.Delete)
-                {
-                    lueIdUserAttri3.EditValue = null;
-                    e.Handled = true;
-                }
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        void lueIdUserAttri2_KeyDown(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                if (e.KeyData == Keys.Delete)
-                {
-                    lueIdUserAttri2.EditValue = null;
-                    e.Handled = true;
-                }
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        void lueIdUserAttri1_KeyDown(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                if (e.KeyData == Keys.Delete)
-                {
-                    lueIdUserAttri1.EditValue = null;
                     e.Handled = true;
                 }
             }
@@ -549,13 +462,13 @@ namespace HKSupply.Forms.Master
                 txtDocsLink.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.DocsLink);
                 txtCreateDate.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.CreateDate);
 
+                txtIdUserAttri1.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri1);
+                txtIdUserAttri2.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri2);
+                txtIdUserAttri3.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri3);
+
                 //LookUpEdit
                 lueIdDefaultSupplier.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdDefaultSupplier);
                 lueIdStatusProd.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdStatusProd);
-                lueIdUserAttri1.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdUserAttri1);
-                lueIdUserAttri2.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdUserAttri2);
-                lueIdUserAttri3.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdUserAttri3);
-                
             }
             catch (Exception ex)
             {
@@ -610,27 +523,32 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void SetUpLueUserAttributes()
+        private void SetUpLabelNameUserAttributes()
         {
             try
             {
-                _userAttrDescriptionList = GlobalSetting.UserAttrDescriptionService.GetUserAttrsDescription();
+                _userAttrDescriptionList = GlobalSetting.UserAttrDescriptionService.GetUserAttrsDescription("EY");
 
-                lueIdUserAttri1.Properties.DataSource = _userAttrDescriptionList;
-                lueIdUserAttri1.Properties.DisplayMember = "Description";
-                lueIdUserAttri1.Properties.ValueMember = "IdUserAttr";
+                //TODO: hacer esto de una manera un poco mas elegante
+                lciIdUserAttri1.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals("EYATTR01")).Select(a => a.Description).SingleOrDefault();
+                lciIdUserAttri2.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals("EYATTR02")).Select(a => a.Description).SingleOrDefault();
+                lciIdUserAttri3.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals("EYATTR03")).Select(a => a.Description).SingleOrDefault();
 
-                lueIdUserAttri2.Properties.DataSource = _userAttrDescriptionList;
-                lueIdUserAttri2.Properties.DisplayMember = "Description";
-                lueIdUserAttri2.Properties.ValueMember = "IdUserAttr";
+                //lueIdUserAttri1.Properties.DataSource = _userAttrDescriptionList;
+                //lueIdUserAttri1.Properties.DisplayMember = "Description";
+                //lueIdUserAttri1.Properties.ValueMember = "IdUserAttr";
 
-                lueIdUserAttri3.Properties.DataSource = _userAttrDescriptionList;
-                lueIdUserAttri3.Properties.DisplayMember = "Description";
-                lueIdUserAttri3.Properties.ValueMember = "IdUserAttr";
+                //lueIdUserAttri2.Properties.DataSource = _userAttrDescriptionList;
+                //lueIdUserAttri2.Properties.DisplayMember = "Description";
+                //lueIdUserAttri2.Properties.ValueMember = "IdUserAttr";
 
-                lueIdUserAttri1.KeyDown += lueIdUserAttri1_KeyDown;
-                lueIdUserAttri2.KeyDown += lueIdUserAttri2_KeyDown;
-                lueIdUserAttri3.KeyDown += lueIdUserAttri3_KeyDown;
+                //lueIdUserAttri3.Properties.DataSource = _userAttrDescriptionList;
+                //lueIdUserAttri3.Properties.DisplayMember = "Description";
+                //lueIdUserAttri3.Properties.ValueMember = "IdUserAttr";
+
+                //lueIdUserAttri1.KeyDown += lueIdUserAttri1_KeyDown;
+                //lueIdUserAttri2.KeyDown += lueIdUserAttri2_KeyDown;
+                //lueIdUserAttri3.KeyDown += lueIdUserAttri3_KeyDown;
             }
             catch(Exception ex)
             {
@@ -766,22 +684,39 @@ namespace HKSupply.Forms.Master
         /// Mover la fila activa a un item en concreto
         /// </summary>
         /// <param name="itemCode"></param>
-        private void MoveGridToItem(string itemCode)
+        private void MoveGridToItem(string idPrototype, string idItemBcn)
         {
             try
             {
-                //TODO
-                //GridColumn column = rootGridViewItems.Columns[eItemColumns.ItemCode.ToString()];
-                //if (column != null)
+                //Buscar por un valor
+                GridColumn column = rootGridViewItems.Columns[eItemColumns.IdItemBcn.ToString()];
+                if (column != null)
+                {
+                    // locating the row 
+                    int rhFound = rootGridViewItems.LocateByDisplayText(rootGridViewItems.FocusedRowHandle + 1, column, idItemBcn);
+                    // focusing the cell 
+                    if (rhFound != GridControl.InvalidRowHandle)
+                    {
+                        rootGridViewItems.FocusedRowHandle = rhFound;
+                        rootGridViewItems.FocusedColumn = column;
+                    }
+                }
+
+                //Buscar por varios valores
+                //int row = GridControl.InvalidRowHandle;
+
+                //for (int i = 0; i < rootGridViewItems.RowCount; i++)
                 //{
-                //    // locating the row 
-                //    int rhFound = rootGridViewItems.LocateByDisplayText(rootGridViewItems.FocusedRowHandle + 1, column, itemCode);
-                //    // focusing the cell 
-                //    if (rhFound != GridControl.InvalidRowHandle)
+                //    if (rootGridViewItems.GetDataRow(i)[eItemColumns.IdPrototype.ToString()].Equals(idPrototype) &&
+                //        rootGridViewItems.GetDataRow(i)[eItemColumns.IdItemBcn.ToString()].Equals(idItemBcn))
                 //    {
-                //        rootGridViewItems.FocusedRowHandle = rhFound;
-                //        rootGridViewItems.FocusedColumn = column;
+                //        row = i;
                 //    }
+                //}
+
+                //if (row != GridControl.InvalidRowHandle)
+                //{
+                //    rootGridViewItems.FocusedRowHandle = row;
                 //}
             }
             catch (Exception ex)
@@ -835,14 +770,16 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                string itemCode = _itemOriginal.IdItemBcn;
+                string idPrototype = _itemOriginal.IdPrototype;
+                string idItemBcn = _itemOriginal.IdItemBcn;
+
                 _itemOriginal = null;
                 ResetItemUpdate();
                 SetFormBinding();
                 xtpForm.PageVisible = false;
                 xtpList.PageVisible = true;
                 LoadItemsList();
-                MoveGridToItem(itemCode);
+                MoveGridToItem(idPrototype, idItemBcn);
                 RestoreInitState();
             }
             catch (Exception ex)

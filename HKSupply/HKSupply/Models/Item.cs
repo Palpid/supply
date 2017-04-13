@@ -148,13 +148,6 @@ namespace HKSupply.Models
         [Column("ID_USER_ATTRI_3", TypeName = "NVARCHAR"), StringLength(100)]
         public string IdUserAttri3 { get; set; }
 
-        [ForeignKey("IdUserAttri1")]
-        public UserAttrDescription serAttri1 { get; set; }
-        [ForeignKey("IdUserAttri2")]
-        public UserAttrDescription serAttri2 { get; set; }
-        [ForeignKey("IdUserAttri3")]
-        public UserAttrDescription serAttri3 { get; set; }
-
         [Column("UNIT", TypeName = "NVARCHAR"), StringLength(2)]
         public string Unit { get; set; }
 
