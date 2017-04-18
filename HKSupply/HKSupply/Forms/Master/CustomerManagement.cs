@@ -48,14 +48,17 @@ namespace HKSupply.Forms.Master
 
         Customer _customerUpdate;
         Customer _customerOriginal;
+        CustomerHistory _customerHistory;
 
         List<Customer> _customersList;
+        List<CustomerHistory> _customerHistoryList;
         List<Currency> _currenciesList;
         List<PaymentTerms> _paymentTermsList;
         List<Incoterm> _incotermsList;
 
         string[] _nonEditingFields = { "txtIdCustomer", "txtIdVersion", "txtIdSubversion", "txtTimestamp" };
 
+        int _currentHistoryNumList;
         #endregion
 
         #region Constructor
@@ -283,11 +286,98 @@ namespace HKSupply.Forms.Master
                 GridView view = (GridView)sender;
                 object idCustomer = view.GetRowCellValue(view.FocusedRowHandle, eCustomerColumns.IdCustomer.ToString());
                 if (idCustomer != null)
+                {
                     LoadCustomerForm(idCustomer.ToString());
+                    LoadCustomerHistory(idCustomer.ToString());
+                }
             }
             catch (Exception ex)
             {
                 XtraMessageBox.Show(ex.Message, "ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void sbForward_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SetCurrentCustomerHistory(_currentHistoryNumList + 1);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void sbBackward_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SetCurrentCustomerHistory(_currentHistoryNumList - 1);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void sbSetCurrentSubversion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
+
+                if (result != DialogResult.Yes)
+                    return;
+
+                Cursor = Cursors.WaitCursor;
+
+                _customerUpdate = _customerHistory;
+                _customerUpdate.IdSubVer = _customerOriginal.IdSubVer;
+                _customerUpdate.IdVer = _customerOriginal.IdVer;
+
+                if (UpdateCustomer())
+                {
+                    ActionsAfterCU();
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
+        }
+
+        private void sbSetCurrentVersion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
+
+                if (result != DialogResult.Yes)
+                    return;
+
+                Cursor = Cursors.WaitCursor;
+
+                _customerUpdate = _customerHistory;
+                _customerUpdate.IdSubVer = _customerOriginal.IdSubVer;
+                _customerUpdate.IdVer = _customerOriginal.IdVer;
+
+                if (UpdateCustomer(true))
+                {
+                    ActionsAfterCU();
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
             }
         }
 
@@ -439,6 +529,38 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void LoadCustomerHistory(string idCustomer)
+        {
+            try
+            {
+                _customerHistoryList = GlobalSetting.CustomerService.GetCustomerHistory(idCustomer);
+                SetCurrentCustomerHistory(0);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+        private void SetCurrentCustomerHistory(int historyNum)
+        {
+            try
+            {
+                if (historyNum >= 0 && historyNum < _customerHistoryList.Count())
+                {
+                    _customerHistory = _customerHistoryList[historyNum];
+                    SetHistoryBinding();
+                    _currentHistoryNumList = historyNum;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         /// <summary>
         /// Crear los bindings de los campos del formulario
         /// </summary>
@@ -509,6 +631,64 @@ namespace HKSupply.Forms.Master
                 throw ex;
             }
 
+        }
+
+        private void SetHistoryBinding()
+        {
+            try
+            {
+                foreach (Control ctl in layoutControlHistory.Controls)
+                {
+                    if (ctl.GetType() == typeof(TextEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((TextEdit)ctl).ReadOnly = true;
+                    }
+                    else if (ctl.GetType() == typeof(CheckEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((CheckEdit)ctl).ReadOnly = true;
+                    }
+                    else if (ctl.GetType() == typeof(DateEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((DateEdit)ctl).ReadOnly = true;
+                    }
+                    else if (ctl.GetType() == typeof(LookUpEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((LookUpEdit)ctl).ReadOnly = true;
+                    }
+                }
+
+                //Textedit
+                txtHIdCustomer.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.IdCustomer);
+                txtHIdVersion.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.IdVer);
+                txtHIdSubversion.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.IdSubVer);
+                txtHTimestamp.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.Timestamp);
+                txtHName.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.CustomerName);
+                txtHVATNumber.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.VATNum);
+                txtHShippingAddress.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.ShippingAddress);
+                txtHShippingAddressZh.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.ShippingAddressZh);
+                txtHBillingAddress.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.BillingAddress);
+                txtHBillingAddressZh.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.BillingAddressZh);
+                txtHContactName.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.ContactName);
+                txtHContactNameZh.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.ContactNameZh);
+                txtHContactPhone.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.ContactPhone);
+                txtHComments.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.Comments);
+
+                txtHIdIncoterm.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.IdIncoterm);
+                txtHIdPaymentTerms.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.IdPaymentTerms);
+                txtHIdDefaultCurrency.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.IdDefaultCurrency);
+
+                //CheckEdit
+                chkHActive.DataBindings.Add<CustomerHistory>(_customerHistory, (CheckEdit chk) => chk.Checked, customer => customer.Active);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         private void ConfigureRibbonActionsEditing()

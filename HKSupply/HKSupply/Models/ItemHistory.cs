@@ -123,6 +123,9 @@ namespace HKSupply.Models
         [Column("USER"), StringLength(20)]
         public string User { get; set; }
 
+        [Column("PHOTO_URL", TypeName = "NVARCHAR"), StringLength(2500)]
+        public string PhotoUrl { get; set; }
+
 
         #region Equals
         public override bool Equals(object obj)
@@ -173,7 +176,8 @@ namespace HKSupply.Models
                 Unit == itemHistory.Unit &&
                 DocsLink == itemHistory.DocsLink &&
                 CreateDate == itemHistory.CreateDate &&
-                User == itemHistory.User
+                User == itemHistory.User &&
+                PhotoUrl == itemHistory.PhotoUrl
                 );
 
             return res;
@@ -222,7 +226,8 @@ namespace HKSupply.Models
                 (Unit == null ? 0 : Unit.GetHashCode()) +
                 (DocsLink == null ? 0 : DocsLink.GetHashCode()) +
                 CreateDate.GetHashCode() +
-                User.GetHashCode();
+                User.GetHashCode() + 
+                (PhotoUrl == null ? 0 : PhotoUrl.GetHashCode());
 
             return hashCode;
         }

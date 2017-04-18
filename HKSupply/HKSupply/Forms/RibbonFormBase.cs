@@ -120,6 +120,7 @@ namespace HKSupply.Forms
                 bbiNew.ItemClick += bbiNew_ItemClick;
                 bbiCancel.ItemClick += bbiCancel_ItemClick;
                 bbiSave.ItemClick += bbiSave_ItemClick;
+                bbiClose.ItemClick += bbiClose_ItemClick;
             }
             catch (Exception ex)
             {
@@ -172,6 +173,18 @@ namespace HKSupply.Forms
             try
             {
                 CurrentState = ActionsStates.Edit;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        void bbiClose_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                Close();
             }
             catch (Exception ex)
             {

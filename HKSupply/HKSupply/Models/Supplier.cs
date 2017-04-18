@@ -130,5 +130,31 @@ namespace HKSupply.Models
             return hashCode;
         }
         #endregion
+
+        public static implicit operator Supplier(SupplierHistory sh)
+        {
+            Supplier s = new Supplier();
+
+            s.IdVer = sh.IdVer;
+            s.IdSubVer = sh.IdSubVer;
+            s.Timestamp = sh.Timestamp;
+            s.IdSupplier = sh.IdSupplier;
+            s.SupplierName = sh.SupplierName;
+            s.Active = sh.Active;
+            s.VATNum = sh.VATNum;
+            s.ShippingAddress = sh.ShippingAddress;
+            s.ShippingAddressZh = sh.ShippingAddressZh;
+            s.BillingAddress = sh.BillingAddress;
+            s.BillingAddressZh = sh.BillingAddressZh;
+            s.ContactName = sh.ContactName;
+            s.ContactNameZh = sh.ContactNameZh;
+            s.ContactPhone = sh.ContactPhone;
+            s.Comments = sh.Comments;
+            s.IdIncoterm = sh.IdIncoterm;
+            s.IdPaymentTerms = sh.IdPaymentTerms;
+            s.IdDefaultCurrency = s.IdDefaultCurrency;
+
+            return s;
+        }
     }
 }

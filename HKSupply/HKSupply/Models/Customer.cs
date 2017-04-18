@@ -72,28 +72,7 @@ namespace HKSupply.Models
         public PaymentTerms PaymentTerms { get; set; }
         [ForeignKey("IdDefaultCurrency")]
         public Currency DefaultCurrency { get; set; }
-/*
-        [Column("SHIPING_ADDRESS")]
-        public string ShippingAddress { get; set; }
 
-        [Column("BILLING_ADDRESS")]
-        public string BillingAddress { get; set; }
-
-        [Column("CONTACT_NAME")]
-        public string ContactName { get; set; }
-
-        [Column("CONTACT_PHONE")]
-        public string ContactPhone { get; set; }
-
-        [Column("ID_INCOTERM")]
-        public int IdIncoterm { get; set; }
-
-        [Column("IDPAYMENTTERMS")]
-        public int IdPaymentTerms { get; set; }
-
-        [Column("CURRENCY")]
-        public string Currency { get; set; }
-*/
         #region Equal
         public override bool Equals(object obj)
         {
@@ -151,5 +130,31 @@ namespace HKSupply.Models
             return hashCode;
         }
         #endregion
+
+        public static implicit operator Customer(CustomerHistory ch)
+        {
+            Customer c = new Customer();
+
+            c.IdVer = ch.IdVer;
+            c.IdSubVer = ch.IdSubVer;
+            c.Timestamp = ch.Timestamp;
+            c.IdCustomer = ch.IdCustomer;
+            c.CustomerName = ch.CustomerName;
+            c.Active = ch.Active;
+            c.VATNum = ch.VATNum;
+            c.ShippingAddress = ch.ShippingAddress;
+            c.ShippingAddressZh = ch.ShippingAddressZh;
+            c.BillingAddress = ch.BillingAddress;
+            c.BillingAddressZh = ch.BillingAddressZh;
+            c.ContactName = ch.ContactName;
+            c.ContactNameZh = ch.ContactNameZh;
+            c.ContactPhone = ch.ContactPhone;
+            c.Comments = ch.Comments;
+            c.IdIncoterm = ch.IdIncoterm;
+            c.IdPaymentTerms = ch.IdPaymentTerms;
+            c.IdDefaultCurrency = ch.IdDefaultCurrency;
+
+            return c;
+        }
     }
 }

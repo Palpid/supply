@@ -57,6 +57,8 @@ namespace HKSupply.Forms.Master
             IdUserAttri1,
             IdUserAttri2,
             IdUserAttri3,
+            PhotoUrl,
+            Photo,
         }
         #endregion
 
@@ -89,6 +91,9 @@ namespace HKSupply.Forms.Master
                 SetUpLabelNameUserAttributes();
                 ResetItemUpdate();
                 SetFormBinding();
+
+                //Test
+                xgrdItems.ToolTipController = this.toolTipController1;
             }
             catch (Exception ex)
             {
@@ -331,12 +336,22 @@ namespace HKSupply.Forms.Master
                 GridColumn colIdUserAttri2 = new GridColumn() { Caption = "User Attri. 2", Visible = true, FieldName = eItemColumns.IdUserAttri2.ToString(), Width = 90 };
                 GridColumn colIdUserAttri3 = new GridColumn() { Caption = "User Attri. 3", Visible = true, FieldName = eItemColumns.IdUserAttri3.ToString(), Width = 90 };
 
+                GridColumn colPhotoUrl = new GridColumn() { Caption = "Photo URL", Visible = false, FieldName = eItemColumns.PhotoUrl.ToString(), Width = 90 };
+                GridColumn colPhoto = new GridColumn() { Caption = "Photo", Visible = true, FieldName = eItemColumns.Photo.ToString(), Width = 90 };
 
                 //Display Format
                 colTimestamp.DisplayFormat.FormatType = FormatType.DateTime;
 
                 colCaliber.DisplayFormat.FormatType = FormatType.Numeric;
                 colCaliber.DisplayFormat.FormatString = "n2";
+
+                //Photo
+                colPhoto.UnboundType = DevExpress.Data.UnboundColumnType.Object;
+                DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit pictureEdit = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+                //pictureEdit.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+                pictureEdit.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+                pictureEdit.ShowZoomSubMenu = DefaultBoolean.True;
+                colPhoto.ColumnEdit = pictureEdit;
 
                 //Add columns to grid root view
                 rootGridViewItems.Columns.Add(colIdVer);
@@ -370,12 +385,46 @@ namespace HKSupply.Forms.Master
                 rootGridViewItems.Columns.Add(colIdUserAttri2);
                 rootGridViewItems.Columns.Add(colIdUserAttri3);
 
+                rootGridViewItems.Columns.Add(colPhotoUrl);
+                rootGridViewItems.Columns.Add(colPhoto);
+
                 //Events
                 rootGridViewItems.DoubleClick += rootGridViewItems_DoubleClick;
+                rootGridViewItems.CustomUnboundColumnData += rootGridViewItems_CustomUnboundColumnData;
             }
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        Dictionary<String, Bitmap> photosCache = new Dictionary<string, Bitmap>();
+
+        void rootGridViewItems_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)
+        {
+            try
+            {
+                //DataRow dr = (e.Row as DataRowView).Row;
+                //string url = dr[eItemColumns.PhotoUrl.ToString()].ToString();
+                string url = (e.Row as Item).PhotoUrl;
+                if (photosCache.ContainsKey(url))
+                {
+                    e.Value = photosCache[url];
+                    return;
+                }
+                var request = System.Net.WebRequest.Create(url);
+                using (var response = request.GetResponse())
+                {
+                    using (var stream = response.GetResponseStream())
+                    {
+                        e.Value = Bitmap.FromStream(stream);
+                        photosCache.Add(url, (Bitmap)e.Value);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -788,6 +837,62 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        #endregion
+
+        #region test
+        private void toolTipController1_GetActiveObjectInfo(object sender, DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs e)
+        {
+            if (e.SelectedControl != xgrdItems) return;
+            ToolTipControlInfo info = null;
+
+            SuperToolTip sTooltip1 = new SuperToolTip();
+
+
+            try
+            {
+                GridView view = xgrdItems.GetViewAt(e.ControlMousePosition) as GridView;
+                if (view == null) return;
+                DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitInfo hi = view.CalcHitInfo(e.ControlMousePosition);
+
+                if (hi.HitTest == DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitTest.RowCell)
+                {
+                    //info para debug
+                    //info = new ToolTipControlInfo(DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitTest.RowIndicator.ToString() + hi.RowHandle.ToString(), "Row Handle: " + hi.RowHandle.ToString());
+
+                    ToolTipTitleItem titleItem1 = new ToolTipTitleItem();
+
+                    if (hi.Column.FieldName != eItemColumns.Photo.ToString())
+                        return;
+
+                    string url = view.GetRowCellValue(hi.RowHandle, eItemColumns.PhotoUrl.ToString()).ToString();
+                    if (photosCache.ContainsKey(url) == false)
+                    {
+                        var request = System.Net.WebRequest.Create(url);
+                        using (var response = request.GetResponse())
+                        {
+                            using (var stream = response.GetResponseStream())
+                            {
+                                Image p = Bitmap.FromStream(stream);
+                                photosCache.Add(url, (Bitmap)p);
+                            }
+                        }
+                    }
+                    Bitmap im = null;
+                    im = photosCache[url.ToString()];
+                    ToolTipItem item1 = new ToolTipItem();
+                    item1.Image = im;
+                    sTooltip1.Items.Add(item1);
+ 
+                    //END.MRM
+                }
+                info = new ToolTipControlInfo(hi.HitTest, "");
+                info.SuperTip = sTooltip1;
+            }
+            finally
+            {
+                e.Info = info;
+            }
+        }
         #endregion
 
     }

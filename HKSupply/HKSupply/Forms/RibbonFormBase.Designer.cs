@@ -38,6 +38,8 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.bbiClose = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,10 +52,11 @@
             this.bbiNew,
             this.bbiEdit,
             this.bbiCancel,
-            this.bbiSave});
+            this.bbiSave,
+            this.bbiClose});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl.MaxItemId = 20;
+            this.ribbonControl.MaxItemId = 21;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -102,7 +105,8 @@
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
-            this.ribbonPageGroup2});
+            this.ribbonPageGroup2,
+            this.ribbonPageGroup3});
             this.ribbonPage1.MergeOrder = 0;
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Home";
@@ -134,6 +138,19 @@
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
             this.ribbonStatusBar.Size = new System.Drawing.Size(922, 40);
             // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.bbiClose);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Close";
+            // 
+            // bbiClose
+            // 
+            this.bbiClose.Caption = "Close";
+            this.bbiClose.Id = 20;
+            this.bbiClose.ImageOptions.ImageUri.Uri = "Close";
+            this.bbiClose.Name = "bbiClose";
+            // 
             // RibbonFormBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -163,5 +180,7 @@
         public DevExpress.XtraBars.BarButtonItem bbiEdit;
         public DevExpress.XtraBars.BarButtonItem bbiCancel;
         public DevExpress.XtraBars.BarButtonItem bbiSave;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.BarButtonItem bbiClose;
     }
 }

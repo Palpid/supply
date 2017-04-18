@@ -109,6 +109,7 @@ namespace HKSupply.Forms
                                 frmShow.MdiParent = this;
                                 frmShow.ShowIcon = false;
                                 frmShow.Dock = DockStyle.Fill;
+                                frmShow.ControlBox = false;
                                 frmShow.Show();
                                 frmShow.WindowState = FormWindowState.Maximized;
                             }

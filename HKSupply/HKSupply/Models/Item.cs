@@ -157,6 +157,9 @@ namespace HKSupply.Models
         [Column("CREATE_DATE")]
         public DateTime CreateDate { get; set; }
 
+        [Column("PHOTO_URL", TypeName = "NVARCHAR"), StringLength(2500)]
+        public string PhotoUrl { get; set; }
+
         #region Equal
 
         public override bool Equals(object obj)
@@ -206,7 +209,8 @@ namespace HKSupply.Models
                 IdUserAttri3 == item.IdUserAttri3 &&
                 Unit == item.Unit &&
                 DocsLink == item.DocsLink &&
-                CreateDate == item.CreateDate 
+                CreateDate == item.CreateDate &&
+                PhotoUrl == item.PhotoUrl
                 );
           
             return res;
@@ -254,7 +258,8 @@ namespace HKSupply.Models
                 (IdUserAttri3 == null ? 0 : IdUserAttri3.GetHashCode()) + 
                 (Unit == null ? 0 : Unit.GetHashCode()) +
                 (DocsLink == null ? 0 : DocsLink.GetHashCode()) +
-                CreateDate.GetHashCode();
+                CreateDate.GetHashCode() + 
+                (PhotoUrl == null ? 0 : PhotoUrl.GetHashCode());
 
             return hashCode;
         }
