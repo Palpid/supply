@@ -29,6 +29,9 @@ namespace HKSupply.General
     /// Controlador para acceso a datos para Payment Terms
     /// Controlador para acceso a datos para Incoterm
     /// Controlador para acceso a datos para User Attr Description
+    /// Controlador para acceso a datos para Item Barcelona
+    /// Controlador para acceso a datos para Supplier Price List
+    /// Controlador para acceso a datos para Customer Price List
     /// </remarks>
     public sealed class GlobalSetting
     {
@@ -46,6 +49,9 @@ namespace HKSupply.General
         static EFPaymentTerms _paymentTermsEF = new EFPaymentTerms();
         static EFIncoterm _incotermEF = new EFIncoterm();
         static EFUserAttrDescription _userAttrDescriptionEF = new EFUserAttrDescription();
+        static EFItemBcn _itemBcnEF = new EFItemBcn();
+        static EFSupplierPriceList _supplierPriceListEF = new EFSupplierPriceList();
+        static EFCustomerPriceList _customerPriceListEF = new EFCustomerPriceList();
 
         static User _loggedUser;
         static IEnumerable<FunctionalityRole> _functionalitiesRoles;
@@ -197,6 +203,39 @@ namespace HKSupply.General
                     return new EFUserAttrDescription();
                 else
                     return _userAttrDescriptionEF;
+            }
+        }
+
+        public static IItemBcn ItemBcnService  
+        {
+            get 
+            {
+                if (_itemBcnEF == null)
+                    return new EFItemBcn();
+                else
+                    return _itemBcnEF;
+            }
+        }
+
+        public static ISupplierPriceList SupplierPriceListService 
+        {
+            get 
+            {
+                if (_supplierPriceListEF == null)
+                    return new EFSupplierPriceList();
+                else
+                    return _supplierPriceListEF;
+            }
+        }
+
+        public static ICustomerPriceList CustomerPriceListService
+        {
+            get 
+            {
+                if (_customerPriceListEF == null)
+                    return new EFCustomerPriceList();
+                else
+                    return _customerPriceListEF;
             }
         }
 

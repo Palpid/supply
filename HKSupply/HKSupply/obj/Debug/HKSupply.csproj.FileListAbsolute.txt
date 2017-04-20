@@ -36,6 +36,7 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.StoreManagement.
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.StoreManagement_v1.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.SupplierManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.SupplierManagement_v1.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.SupplierPriceListManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.UserManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.UserManagement_v1.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.RibbonFormBase.resources
@@ -74,11 +75,15 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.Items_12042017_2.r
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.Items_12042017_3.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.userAtt_20170413_1.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.items_20170413_1.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.itemPhoto_20160418_1.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.itemPhoto_20160418_2.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.ItemBcn_PricesList_1.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.PricesList_precision_1.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.PricesListHistoty_user_1.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Properties.Resources.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Resources.HKSupplyRes.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.csproj.GenerateResource.Cache
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe.licenses
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
-C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.itemPhoto_20160418_1.resources
-C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.itemPhoto_20160418_2.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.CustomerPriceListManagement.resources

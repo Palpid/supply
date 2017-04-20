@@ -380,6 +380,7 @@ namespace HKSupply.Forms.Master
                 Cursor = Cursors.Default;
             }
         }
+        
         #endregion
 
         #region Private Methods

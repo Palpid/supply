@@ -52,6 +52,13 @@ namespace HKSupply.DB
         public DbSet<Item> Items { get; set; }
         public DbSet<ItemHistory> ItemsHistory { get; set; }
 
+        public DbSet<ItemBcn> ItemsBcn { get; set; }
+
+        public DbSet<SupplierPriceList> SuppliersPriceList { get; set; }
+        public DbSet<SupplierPriceListHistory> SuppliersPriceListHistory { get; set; }
+        public DbSet<CustomerPriceList> CustomersPriceList { get; set; }
+        public DbSet<CustomerPriceListHistory> CustomersPriceListHistory { get; set; }
+
         public HKSupplyContext()
             : base("name=SqlExpressConn")
         {
@@ -64,6 +71,20 @@ namespace HKSupply.DB
             modelBuilder.Entity<Item>().Property(x => x.Caliber).HasPrecision(19, 6);
             modelBuilder.Entity<ItemHistory>().Property(x => x.Caliber).HasPrecision(19, 6);
             modelBuilder.Entity<EchangeRate>().Property(x => x.Ratio).HasPrecision(19, 6);
+
+            modelBuilder.Entity<SupplierPriceList>().Property(x => x.Price).HasPrecision(19, 6);
+            modelBuilder.Entity<SupplierPriceList>().Property(x => x.PriceBaseCurrency).HasPrecision(19, 6);
+            modelBuilder.Entity<SupplierPriceList>().Property(x => x.ExchangeRateUsed).HasPrecision(19, 6);
+            modelBuilder.Entity<SupplierPriceListHistory>().Property(x => x.Price).HasPrecision(19, 6);
+            modelBuilder.Entity<SupplierPriceListHistory>().Property(x => x.PriceBaseCurrency).HasPrecision(19, 6);
+            modelBuilder.Entity<SupplierPriceListHistory>().Property(x => x.ExchangeRateUsed).HasPrecision(19, 6);
+
+            modelBuilder.Entity<CustomerPriceList>().Property(x => x.Price).HasPrecision(19, 6);
+            modelBuilder.Entity<CustomerPriceList>().Property(x => x.PriceBaseCurrency).HasPrecision(19, 6);
+            modelBuilder.Entity<CustomerPriceList>().Property(x => x.ExchangeRateUsed).HasPrecision(19, 6);
+            modelBuilder.Entity<CustomerPriceListHistory>().Property(x => x.Price).HasPrecision(19, 6);
+            modelBuilder.Entity<CustomerPriceListHistory>().Property(x => x.PriceBaseCurrency).HasPrecision(19, 6);
+            modelBuilder.Entity<CustomerPriceListHistory>().Property(x => x.ExchangeRateUsed).HasPrecision(19, 6);
 
             base.OnModelCreating(modelBuilder);
         }
