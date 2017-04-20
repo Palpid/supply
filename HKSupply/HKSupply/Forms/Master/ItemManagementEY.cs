@@ -518,6 +518,9 @@ namespace HKSupply.Forms.Master
                 //LookUpEdit
                 lueIdDefaultSupplier.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdDefaultSupplier);
                 lueIdStatusProd.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdStatusProd);
+
+                //test PDF
+                PdfTestInit();
             }
             catch (Exception ex)
             {
@@ -894,6 +897,69 @@ namespace HKSupply.Forms.Master
             }
         }
         #endregion
+
+        #region PDF Test
+
+        private void PdfTestInit()
+        {
+            try
+            {
+                txtPdfPath.Text = @"C:\Users\mario.ruz\Downloads\the-art-of-unit-testing-with-examples-roy-osherove(www.ebook-dl.com)\the-art-of-unit-testing-with-examples-roy-osherove(www.ebook-dl.com).pdf";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        void sbOpenFile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                //openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                openFileDialog.Filter = "PDF files (*.pdf)|*.pdf";
+                openFileDialog.RestoreDirectory = true;
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    txtPdfPath.Text = openFileDialog.FileName;
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void sbViewPdf_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(txtPdfPath.Text) == false)
+                {
+                    PDFViewer pdfViewer = new PDFViewer();
+                    pdfViewer.pdfFile = txtPdfPath.Text;
+                    pdfViewer.ShowDialog();
+                }
+                else
+                {
+                    XtraMessageBox.Show("No file selected", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        #endregion
+
+
+
+        
 
     }
 

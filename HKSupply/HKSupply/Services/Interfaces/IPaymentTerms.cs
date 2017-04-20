@@ -10,5 +10,8 @@ namespace HKSupply.Services.Interfaces
     public interface IPaymentTerms
     {
         List<PaymentTerms> GetPaymentTerms();
+        PaymentTerms NewPaymentTerm(PaymentTerms newPaymentTerm);
+        bool UpdatePaymentTerms(IEnumerable<PaymentTerms> paymentTermsToUpdate);
+        PaymentTerms GetPaymentTermById(string idPaymentTerm);
     }
 }

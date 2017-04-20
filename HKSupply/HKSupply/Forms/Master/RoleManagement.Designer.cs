@@ -41,14 +41,14 @@
             // 
             // xgrdRoles
             // 
-            this.xgrdRoles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.xgrdRoles.Location = new System.Drawing.Point(12, 186);
+            this.xgrdRoles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xgrdRoles.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.xgrdRoles.Location = new System.Drawing.Point(0, 143);
             this.xgrdRoles.MainView = this.rootGridViewRoles;
+            this.xgrdRoles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xgrdRoles.MenuManager = this.ribbonControl;
             this.xgrdRoles.Name = "xgrdRoles";
-            this.xgrdRoles.Size = new System.Drawing.Size(898, 504);
+            this.xgrdRoles.Size = new System.Drawing.Size(790, 425);
             this.xgrdRoles.TabIndex = 2;
             this.xgrdRoles.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.rootGridViewRoles});
@@ -60,10 +60,11 @@
             // 
             // RoleManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 737);
+            this.ClientSize = new System.Drawing.Size(790, 599);
             this.Controls.Add(this.xgrdRoles);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "RoleManagement";
             this.Text = "Role Management";
             this.Load += new System.EventHandler(this.RoleManagement_Load);

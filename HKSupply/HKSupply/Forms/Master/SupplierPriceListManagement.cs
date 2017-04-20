@@ -426,8 +426,9 @@ namespace HKSupply.Forms.Master
                 colPriceBaseCurrency.DisplayFormat.FormatType = FormatType.Numeric;
                 colPriceBaseCurrency.DisplayFormat.FormatString = "F2";
 
+                colExchangeRateUsed.DisplayFormat.FormatType = FormatType.Numeric;
+                colExchangeRateUsed.DisplayFormat.FormatString = "F2";
                 
-
                 //add columns to grid root view
                 rootGridViewSuppliersPriceList.Columns.Add(colIdVer);
                 rootGridViewSuppliersPriceList.Columns.Add(colIdSubVer);
