@@ -1,3 +1,1 @@
-﻿2017-04-20 16:36:12,943 ERROR [8] HKSupply.Services.Implementations.EFIncoterm.NewIncoterm - Incoterm Already Exist
-System.Exception: Incoterm Already Exist
-   en HKSupply.Services.Implementations.EFIncoterm.NewIncoterm(Incoterm newIncoterm) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFIncoterm.cs:línea 132
+﻿

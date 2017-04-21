@@ -27,7 +27,7 @@ namespace HKSupply.DB
         public DbSet<EtnColor> EtnColors { get; set; }
         public DbSet<StatusCial> StatusCial { get; set; }
         public DbSet<StatusHK> StatusProd { get; set; }
-        public DbSet<FamilyHK> familiesHK { get; set; }
+        public DbSet<FamilyHK> FamiliesHK { get; set; }
         public DbSet<ItemGroup> ItemGroups { get; set; }
 
         public DbSet<UserAttrDescription> UserAttrsDescription { get; set; }

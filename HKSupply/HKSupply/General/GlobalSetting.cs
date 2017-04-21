@@ -26,12 +26,17 @@ namespace HKSupply.General
     /// Controlador para acceso a datos para Item
     /// Controlador para acceso a datos para Status Prod
     /// Controlador para acceso a datos para Currency
+    /// Controlador para acceso a datos para Echange Rates
     /// Controlador para acceso a datos para Payment Terms
     /// Controlador para acceso a datos para Incoterm
     /// Controlador para acceso a datos para User Attr Description
     /// Controlador para acceso a datos para Item Barcelona
     /// Controlador para acceso a datos para Supplier Price List
     /// Controlador para acceso a datos para Customer Price List
+    /// Controlador para acceso a datos para Materials (L1, L2, L3)
+    /// Controlador para acceso a datos para Mat Type (L1, L2, L3)
+    /// Controlador para acceso a datos para Hw Type (L1, L2, L3)
+    /// Controlador para acceso a datos para Family HK
     /// </remarks>
     public sealed class GlobalSetting
     {
@@ -46,12 +51,17 @@ namespace HKSupply.General
         static EFItem _itemEF = new EFItem();
         static EFStatusProd _statusProdEF = new EFStatusProd();
         static EFCurrency _currencyEF = new EFCurrency();
+        static EFEchangeRate _echangeRateEF = new EFEchangeRate();
         static EFPaymentTerms _paymentTermsEF = new EFPaymentTerms();
         static EFIncoterm _incotermEF = new EFIncoterm();
         static EFUserAttrDescription _userAttrDescriptionEF = new EFUserAttrDescription();
         static EFItemBcn _itemBcnEF = new EFItemBcn();
         static EFSupplierPriceList _supplierPriceListEF = new EFSupplierPriceList();
         static EFCustomerPriceList _customerPriceListEF = new EFCustomerPriceList();
+        static EFMaterial _materialEF = new EFMaterial();
+        static EFMatType _matTypeEF = new EFMatType();
+        static EFHwType _hwTypeEF = new EFHwType();
+        static EFFamilyHK _familyHK = new EFFamilyHK();
 
         static User _loggedUser;
         static IEnumerable<FunctionalityRole> _functionalitiesRoles;
@@ -236,6 +246,61 @@ namespace HKSupply.General
                     return new EFCustomerPriceList();
                 else
                     return _customerPriceListEF;
+            }
+        }
+
+        public static IMaterial MaterialService 
+        {
+            get 
+            {
+                if (_materialEF == null)
+                    return new EFMaterial();
+                else
+                    return _materialEF;
+            }
+        }
+
+        public static IMatType MatTypeService 
+        {
+            get 
+            {
+                if (_matTypeEF == null)
+                    return new EFMatType();
+                else
+                    return _matTypeEF;
+            }
+        }
+
+        public static IHwType HwTypeService
+        {
+            get
+            {
+                if (_hwTypeEF == null)
+                    return new EFHwType();
+                else
+                    return _hwTypeEF;
+            }
+        }
+
+        public static IFamilyHK FamilyHKService 
+        {
+            get 
+            {
+                if (_familyHK == null)
+                    return new EFFamilyHK();
+                else
+                    return _familyHK;
+            }
+        }
+
+        public static IEchangeRate EchangeRateService
+        {
+            get 
+            {
+                if (_echangeRateEF == null)
+                    return new EFEchangeRate();
+                else
+                    return _echangeRateEF;
             }
         }
 

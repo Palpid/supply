@@ -17,31 +17,30 @@ using System.Windows.Forms;
 
 namespace HKSupply.Forms.Master
 {
-    public partial class IncotermsManagement : RibbonFormBase
+    public partial class FamiliesHkManagement : RibbonFormBase
     {
         #region Enums
-        private enum eIncotermsColumns
+        private enum eFamiliesHkColumns
         {
-            IdIncoterm,
-            Description,
-            DescriptionZh
+            IdFamilyHk,
+            Description
         }
         #endregion
 
-        #region Private Methods
-        List<Incoterm> _modifiedIncoterms = new List<Incoterm>();
-        List<Incoterm> _createdIncoterms = new List<Incoterm>();
+        #region Private Members
+        List<FamilyHK> _modifiedFamiliesHk = new List<FamilyHK>();
+        List<FamilyHK> _createdFamiliesHk = new List<FamilyHK>();
         #endregion
 
         #region Constructor
-        public IncotermsManagement()
+        public FamiliesHkManagement()
         {
             InitializeComponent();
 
             try
             {
                 ConfigureRibbonActions();
-                SetUpGrdIncoterms();
+                SetUpGrdFamiliesHk();
             }
             catch (Exception ex)
             {
@@ -51,7 +50,6 @@ namespace HKSupply.Forms.Master
         #endregion
 
         #region Ribbon
-
         private void ConfigureRibbonActions()
         {
             try
@@ -74,7 +72,7 @@ namespace HKSupply.Forms.Master
 
             try
             {
-                LoadAllIncoterms();
+                LoadAllFamiliesHk();
             }
             catch (Exception ex)
             {
@@ -118,7 +116,7 @@ namespace HKSupply.Forms.Master
             {
                 bool res = false;
 
-                if (IsValidIncoterms() == false)
+                if (IsValidFamiliesHk() == false)
                     return;
 
                 DialogResult result = XtraMessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
@@ -130,24 +128,24 @@ namespace HKSupply.Forms.Master
 
                 if (CurrentState == ActionsStates.Edit)
                 {
-                    if (_modifiedIncoterms.Count() == 0)
+                    if (_modifiedFamiliesHk.Count() == 0)
                     {
                         MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        res = UpdateIncoterms();
+                        res = UpdateFamiliesHk();
                     }
                 }
                 else if (CurrentState == ActionsStates.New)
                 {
-                    res = CreateIncoterm();
+                    res = CreateFamilyHk();
                 }
 
                 if (res == true)
                 {
                     MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
-                    LoadAllIncoterms();
+                    LoadAllFamiliesHk();
                     RestoreInitState();
                 }
 
@@ -161,15 +159,14 @@ namespace HKSupply.Forms.Master
                 Cursor = Cursors.Default;
             }
         }
-
         #endregion
 
         #region Form Events
-        private void IncotermsManagement_Load(object sender, EventArgs e)
+        private void FamiliesHkManagement_Load(object sender, EventArgs e)
         {
             try
             {
-                LoadAllIncoterms();
+                LoadAllFamiliesHk();
             }
             catch (Exception ex)
             {
@@ -178,7 +175,7 @@ namespace HKSupply.Forms.Master
         }
 
         #region Grid Events
-        void rootgridViewIncoterms_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        void rootgridViewFamiliesHk_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
             try
             {
@@ -186,18 +183,16 @@ namespace HKSupply.Forms.Master
 
                 if (CurrentState == ActionsStates.Edit)
                 {
-                    Incoterm tmpIncoterm = new Incoterm();
+                    FamilyHK tmpFamilyHK = new FamilyHK();
 
-                    object idIncoterm = view.GetRowCellValue(view.FocusedRowHandle, eIncotermsColumns.IdIncoterm.ToString());
-                    object description = view.GetRowCellValue(view.FocusedRowHandle, eIncotermsColumns.Description.ToString());
-                    object descriptionZh = view.GetRowCellValue(view.FocusedRowHandle, eIncotermsColumns.DescriptionZh.ToString());
+                    object idFamilyHk = view.GetRowCellValue(view.FocusedRowHandle, eFamiliesHkColumns.IdFamilyHk.ToString());
+                    object description = view.GetRowCellValue(view.FocusedRowHandle, eFamiliesHkColumns.Description.ToString());
 
 
-                    tmpIncoterm.IdIncoterm = (idIncoterm ?? string.Empty).ToString();
-                    tmpIncoterm.Description = (description ?? string.Empty).ToString();
-                    tmpIncoterm.DescriptionZh = (descriptionZh ?? string.Empty).ToString();
+                    tmpFamilyHK.IdFamilyHk = (idFamilyHk ?? string.Empty).ToString();
+                    tmpFamilyHK.Description = (description ?? string.Empty).ToString();
 
-                    AddModifiedIncotermsToList(tmpIncoterm);
+                    AddModifiedFamilyHkToList(tmpFamilyHK);
                 }
             }
             catch (Exception ex)
@@ -206,13 +201,13 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        void rootgridViewIncoterms_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
+        void rootgridViewFamiliesHk_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
         {
             try
             {
                 GridView view = sender as GridView;
-                if (view.FocusedColumn.FieldName == eIncotermsColumns.Description.ToString() ||
-                    view.FocusedColumn.FieldName == eIncotermsColumns.IdIncoterm.ToString())
+                if (view.FocusedColumn.FieldName == eFamiliesHkColumns.Description.ToString() ||
+                    view.FocusedColumn.FieldName == eFamiliesHkColumns.IdFamilyHk.ToString())
                 {
                     if (string.IsNullOrEmpty(e.Value as string))
                     {
@@ -234,32 +229,31 @@ namespace HKSupply.Forms.Master
 
         #region Private Methods
 
-        private void SetUpGrdIncoterms()
+        
+        private void SetUpGrdFamiliesHk()
         {
             try
             {
                 //hide group panel.
-                rootgridViewIncoterms.OptionsView.ShowGroupPanel = false;
-                rootgridViewIncoterms.OptionsCustomization.AllowGroup = false;
-                rootgridViewIncoterms.OptionsCustomization.AllowColumnMoving = false;
+                rootgridViewFamiliesHk.OptionsView.ShowGroupPanel = false;
+                rootgridViewFamiliesHk.OptionsCustomization.AllowGroup = false;
+                rootgridViewFamiliesHk.OptionsCustomization.AllowColumnMoving = false;
 
                 //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
-                rootgridViewIncoterms.OptionsView.ColumnAutoWidth = false;
-                rootgridViewIncoterms.HorzScrollVisibility = ScrollVisibility.Auto;
+                rootgridViewFamiliesHk.OptionsView.ColumnAutoWidth = false;
+                rootgridViewFamiliesHk.HorzScrollVisibility = ScrollVisibility.Auto;
 
                 //Columns definition
-                GridColumn colIdIncoterm = new GridColumn() { Caption = "Id Payment Terms", Visible = true, FieldName = eIncotermsColumns.IdIncoterm.ToString(), Width = 150 };
-                GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = eIncotermsColumns.Description.ToString(), Width = 400 };
-                GridColumn colDescriptionZh = new GridColumn() { Caption = "Description (Chinese)", Visible = true, FieldName = eIncotermsColumns.DescriptionZh.ToString(), Width = 400 };
+                GridColumn colIdIdFamilyHk = new GridColumn() { Caption = "Id Family HK", Visible = true, FieldName = eFamiliesHkColumns.IdFamilyHk.ToString(), Width = 70 };
+                GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = eFamiliesHkColumns.Description.ToString(), Width = 500 };
 
                 //add columns to grid root view
-                rootgridViewIncoterms.Columns.Add(colIdIncoterm);
-                rootgridViewIncoterms.Columns.Add(colDescription);
-                rootgridViewIncoterms.Columns.Add(colDescriptionZh);
+                rootgridViewFamiliesHk.Columns.Add(colIdIdFamilyHk);
+                rootgridViewFamiliesHk.Columns.Add(colDescription);
 
                 //Events
-                rootgridViewIncoterms.ValidatingEditor += rootgridViewIncoterms_ValidatingEditor;
-                rootgridViewIncoterms.CellValueChanged += rootgridViewIncoterms_CellValueChanged;
+                rootgridViewFamiliesHk.ValidatingEditor += rootgridViewFamiliesHk_ValidatingEditor;
+                rootgridViewFamiliesHk.CellValueChanged += rootgridViewFamiliesHk_CellValueChanged;
             }
             catch (Exception ex)
             {
@@ -267,22 +261,21 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void LoadAllIncoterms()
+        private void LoadAllFamiliesHk()
         {
             try
             {
-                _modifiedIncoterms.Clear();
-                _createdIncoterms.Clear();
-                IEnumerable<Incoterm> incoterms = GlobalSetting.IncotermService.GetIIncoterms();
+                _modifiedFamiliesHk.Clear();
+                _createdFamiliesHk.Clear();
+                IEnumerable<FamilyHK> familiesHk = GlobalSetting.FamilyHKService.GetFamiliesHK();
 
-                xgrdIncoterms.DataSource = incoterms;
+                xgrdFamiliesHk.DataSource = familiesHk;
 
-                rootgridViewIncoterms.Columns[eIncotermsColumns.IdIncoterm.ToString()].OptionsColumn.AllowEdit = false;
-                rootgridViewIncoterms.Columns[eIncotermsColumns.Description.ToString()].OptionsColumn.AllowEdit = false;
-                rootgridViewIncoterms.Columns[eIncotermsColumns.DescriptionZh.ToString()].OptionsColumn.AllowEdit = false;
+                rootgridViewFamiliesHk.Columns[eFamiliesHkColumns.IdFamilyHk.ToString()].OptionsColumn.AllowEdit = false;
+                rootgridViewFamiliesHk.Columns[eFamiliesHkColumns.Description.ToString()].OptionsColumn.AllowEdit = false;
 
                 //TODO: gestion de estilos del grid
-                rootgridViewIncoterms.Columns[eIncotermsColumns.IdIncoterm.ToString()].AppearanceCell.ForeColor = Color.Black;
+                rootgridViewFamiliesHk.Columns[eFamiliesHkColumns.IdFamilyHk.ToString()].AppearanceCell.ForeColor = Color.Black;
             }
             catch (Exception ex)
             {
@@ -295,13 +288,11 @@ namespace HKSupply.Forms.Master
             try
             {
                 //Allow edit some columns
-                rootgridViewIncoterms.Columns[eIncotermsColumns.Description.ToString()].OptionsColumn.AllowEdit = true;
-                rootgridViewIncoterms.Columns[eIncotermsColumns.DescriptionZh.ToString()].OptionsColumn.AllowEdit = true;
-
+                rootgridViewFamiliesHk.Columns[eFamiliesHkColumns.Description.ToString()].OptionsColumn.AllowEdit = true;
                 //no edit column
-                rootgridViewIncoterms.Columns[eIncotermsColumns.IdIncoterm.ToString()].OptionsColumn.AllowEdit = false;
+                rootgridViewFamiliesHk.Columns[eFamiliesHkColumns.IdFamilyHk.ToString()].OptionsColumn.AllowEdit = false;
                 //TODO: gestion de estilos del grid
-                rootgridViewIncoterms.Columns[eIncotermsColumns.IdIncoterm.ToString()].AppearanceCell.ForeColor = Color.Gray;
+                rootgridViewFamiliesHk.Columns[eFamiliesHkColumns.IdFamilyHk.ToString()].AppearanceCell.ForeColor = Color.Gray;
 
             }
             catch (Exception ex)
@@ -314,13 +305,12 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _createdIncoterms.Add(new Incoterm());
-                xgrdIncoterms.DataSource = null;
-                xgrdIncoterms.DataSource = _createdIncoterms;
+                _createdFamiliesHk.Add(new FamilyHK());
+                xgrdFamiliesHk.DataSource = null;
+                xgrdFamiliesHk.DataSource = _createdFamiliesHk;
                 //Allow edit all columns
-                rootgridViewIncoterms.Columns[eIncotermsColumns.IdIncoterm.ToString()].OptionsColumn.AllowEdit = true;
-                rootgridViewIncoterms.Columns[eIncotermsColumns.Description.ToString()].OptionsColumn.AllowEdit = true;
-                rootgridViewIncoterms.Columns[eIncotermsColumns.DescriptionZh.ToString()].OptionsColumn.AllowEdit = true;
+                rootgridViewFamiliesHk.Columns[eFamiliesHkColumns.IdFamilyHk.ToString()].OptionsColumn.AllowEdit = true;
+                rootgridViewFamiliesHk.Columns[eFamiliesHkColumns.Description.ToString()].OptionsColumn.AllowEdit = true;
             }
             catch (Exception ex)
             {
@@ -328,19 +318,18 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void AddModifiedIncotermsToList(Incoterm modifiedIncoterm)
+        private void AddModifiedFamilyHkToList(FamilyHK modifiedFamilyHK)
         {
             try
             {
-                var incoterm = _modifiedIncoterms.FirstOrDefault(a => a.IdIncoterm.Equals(modifiedIncoterm.IdIncoterm));
-                if (incoterm == null)
+                var familyHk = _modifiedFamiliesHk.FirstOrDefault(a => a.IdFamilyHk.Equals(modifiedFamilyHK.IdFamilyHk));
+                if (familyHk == null)
                 {
-                    _modifiedIncoterms.Add(modifiedIncoterm);
+                    _modifiedFamiliesHk.Add(modifiedFamilyHK);
                 }
                 else
                 {
-                    incoterm.Description = modifiedIncoterm.Description;
-                    incoterm.DescriptionZh = modifiedIncoterm.DescriptionZh;
+                    familyHk.Description = modifiedFamilyHK.Description;
                 }
             }
             catch (Exception ex)
@@ -349,14 +338,14 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private bool IsValidIncoterms()
+        private bool IsValidFamiliesHk()
         {
             try
             {
                 if (CurrentState == ActionsStates.Edit)
-                    return IsValidModifiedIncoterms();
+                    return IsValidModifiedFamiliesHk();
                 else if (CurrentState == ActionsStates.New)
-                    return IsValidCreatedIncoterms();
+                    return IsValidCreatedFamiliesHk();
 
                 return false;
             }
@@ -366,13 +355,13 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private bool IsValidModifiedIncoterms()
+        private bool IsValidModifiedFamiliesHk()
         {
             try
             {
-                foreach (var incoterm in _modifiedIncoterms)
+                foreach (var familyHk in _modifiedFamiliesHk)
                 {
-                    if (string.IsNullOrEmpty(incoterm.Description))
+                    if (string.IsNullOrEmpty(familyHk.Description))
                     {
                         XtraMessageBox.Show(GlobalSetting.ResManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
@@ -386,22 +375,22 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private bool IsValidCreatedIncoterms()
+        private bool IsValidCreatedFamiliesHk()
         {
             try
             {
                 //Expresión regular, sólo letras (sin la ñ) y números
                 Regex val = new Regex("^[A-Z0-9a-z]*$");
 
-                foreach (var incoterm in _createdIncoterms)
+                foreach (var familyHk in _createdFamiliesHk)
                 {
-                    if (string.IsNullOrEmpty(incoterm.Description) || string.IsNullOrEmpty(incoterm.IdIncoterm))
+                    if (string.IsNullOrEmpty(familyHk.Description) || string.IsNullOrEmpty(familyHk.IdFamilyHk))
                     {
                         MessageBox.Show(GlobalSetting.ResManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
 
-                    if (val.IsMatch(incoterm.IdIncoterm) == false)
+                    if (val.IsMatch(familyHk.IdFamilyHk) == false)
                     {
                         MessageBox.Show(GlobalSetting.ResManager.GetString("InvalidId"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
@@ -415,11 +404,11 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private bool UpdateIncoterms()
+        private bool UpdateFamiliesHk()
         {
             try
             {
-                return GlobalSetting.IncotermService.UpdateIncoterm(_modifiedIncoterms);
+                return GlobalSetting.FamilyHKService.UpdateFamilyHK(_modifiedFamiliesHk);
             }
             catch (Exception ex)
             {
@@ -427,11 +416,11 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private bool CreateIncoterm()
+        private bool CreateFamilyHk()
         {
             try
             {
-                GlobalSetting.IncotermService.NewIncoterm(_createdIncoterms.FirstOrDefault());
+                GlobalSetting.FamilyHKService.NewFamilyHK(_createdFamiliesHk.FirstOrDefault());
                 return true;
             }
             catch (Exception ex)
@@ -441,5 +430,6 @@ namespace HKSupply.Forms.Master
         }
 
         #endregion
+
     }
 }

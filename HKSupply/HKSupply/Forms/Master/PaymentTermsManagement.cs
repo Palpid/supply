@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using HKSupply.General;
 using HKSupply.Models;
@@ -241,10 +242,14 @@ namespace HKSupply.Forms.Master
                 rootgridViewPaymentTerms.OptionsCustomization.AllowGroup = false;
                 rootgridViewPaymentTerms.OptionsCustomization.AllowColumnMoving = false;
 
+                //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
+                rootgridViewPaymentTerms.OptionsView.ColumnAutoWidth = false;
+                rootgridViewPaymentTerms.HorzScrollVisibility = ScrollVisibility.Auto;
+
                 //Columns definition
-                GridColumn colIdPaymentTerms = new GridColumn() { Caption = "Id Payment Terms", Visible = true, FieldName = ePaymentTermsColumns.IdPaymentTerms.ToString() };
-                GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = ePaymentTermsColumns.Description.ToString() };
-                GridColumn colDescriptionZh = new GridColumn() { Caption = "Description (Chinese)", Visible = true, FieldName = ePaymentTermsColumns.DescriptionZh.ToString() };
+                GridColumn colIdPaymentTerms = new GridColumn() { Caption = "Id Payment Terms", Visible = true, FieldName = ePaymentTermsColumns.IdPaymentTerms.ToString(), Width = 150 };
+                GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = ePaymentTermsColumns.Description.ToString(), Width = 300 };
+                GridColumn colDescriptionZh = new GridColumn() { Caption = "Description (Chinese)", Visible = true, FieldName = ePaymentTermsColumns.DescriptionZh.ToString(), Width = 300 };
 
                 //add columns to grid root view
                 rootgridViewPaymentTerms.Columns.Add(colIdPaymentTerms);

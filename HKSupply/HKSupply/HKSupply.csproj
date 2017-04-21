@@ -140,6 +140,12 @@
     <Compile Include="Forms\Master\ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Master\CurrenciesEchangeRatesManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\CurrenciesEchangeRatesManagement.Designer.cs">
+      <DependentUpon>CurrenciesEchangeRatesManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Master\CustomerManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,12 @@
     </Compile>
     <Compile Include="Forms\Master\CustomerPriceListManagement.Designer.cs">
       <DependentUpon>CustomerPriceListManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\FamiliesHkManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\FamiliesHkManagement.Designer.cs">
+      <DependentUpon>FamiliesHkManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Master\FunctionalityManagement.cs">
       <SubType>Form</SubType>
@@ -496,11 +508,16 @@
     <Compile Include="Services\Implementations\EFCurrency.cs" />
     <Compile Include="Services\Implementations\EFCustomer.cs" />
     <Compile Include="Services\Implementations\EFCustomerPriceList.cs" />
+    <Compile Include="Services\Implementations\EFEchangeRate.cs" />
+    <Compile Include="Services\Implementations\EFFamilyHK.cs" />
     <Compile Include="Services\Implementations\EFFunctionality.cs" />
     <Compile Include="Services\Implementations\EFFunctionalityRole.cs" />
+    <Compile Include="Services\Implementations\EFHwType.cs" />
     <Compile Include="Services\Implementations\EFIncoterm.cs" />
     <Compile Include="Services\Implementations\EFItem.cs" />
     <Compile Include="Services\Implementations\EFItemBcn.cs" />
+    <Compile Include="Services\Implementations\EFMaterial.cs" />
+    <Compile Include="Services\Implementations\EFMatType.cs" />
     <Compile Include="Services\Implementations\EFPaymentTerms.cs" />
     <Compile Include="Services\Implementations\EFRole.cs" />
     <Compile Include="Services\Implementations\EFStatusProd.cs" />
@@ -512,11 +529,16 @@
     <Compile Include="Services\Interfaces\ICurrency.cs" />
     <Compile Include="Services\Interfaces\ICustomer.cs" />
     <Compile Include="Services\Interfaces\ICustomerPriceList.cs" />
+    <Compile Include="Services\Interfaces\IEchangeRate.cs" />
+    <Compile Include="Services\Interfaces\IFamilyHK.cs" />
     <Compile Include="Services\Interfaces\IFunctionality.cs" />
     <Compile Include="Services\Interfaces\IFunctionalityRole.cs" />
+    <Compile Include="Services\Interfaces\IHwType.cs" />
     <Compile Include="Services\Interfaces\IIncoterm.cs" />
     <Compile Include="Services\Interfaces\IItem.cs" />
     <Compile Include="Services\Interfaces\IItemBcn.cs" />
+    <Compile Include="Services\Interfaces\IMaterial.cs" />
+    <Compile Include="Services\Interfaces\IMatType.cs" />
     <Compile Include="Services\Interfaces\IPaymentTerms.cs" />
     <Compile Include="Services\Interfaces\IRole.cs" />
     <Compile Include="Services\Interfaces\IStatusProd.cs" />
@@ -544,6 +566,9 @@
     <EmbeddedResource Include="Forms\Master\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\CurrenciesEchangeRatesManagement.resx">
+      <DependentUpon>CurrenciesEchangeRatesManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\CustomerManagement.resx">
       <DependentUpon>CustomerManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -552,6 +577,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\CustomerPriceListManagement.resx">
       <DependentUpon>CustomerPriceListManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\FamiliesHkManagement.resx">
+      <DependentUpon>FamiliesHkManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\FunctionalityManagement.resx">
       <DependentUpon>FunctionalityManagement.cs</DependentUpon>

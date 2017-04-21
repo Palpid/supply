@@ -14,17 +14,17 @@ using System.Threading.Tasks;
 
 namespace HKSupply.Services.Implementations
 {
-    class EFIncoterm : IIncoterm
+    public class EFFamilyHK : IFamilyHK
     {
         ILog _log = LogManager.GetLogger(typeof(EFCurrency));
 
-        public List<Incoterm> GetIIncoterms()
+        public List<FamilyHK> GetFamiliesHK()
         {
             try
             {
                 using (var db = new HKSupplyContext())
                 {
-                    return db.Incoterms.ToList();
+                    return db.FamiliesHK.ToList();
 
                 }
             }
@@ -55,22 +55,22 @@ namespace HKSupply.Services.Implementations
             }
         }
 
-        public Incoterm GetIncotermById(string idIncoterm)
+        public FamilyHK GetFamilyHKById(string idFamilyHk)
         {
             try
             {
-                if (idIncoterm == null)
-                    throw new ArgumentNullException("idIncoterm");
+                if (idFamilyHk == null)
+                    throw new ArgumentNullException("idFamilyHk");
 
                 using (var db = new HKSupplyContext())
                 {
-                    var incoterm = db.Incoterms.FirstOrDefault(a => a.IdIncoterm.Equals(idIncoterm));
+                    var familyHk = db.FamiliesHK.FirstOrDefault(a => a.IdFamilyHk.Equals(idFamilyHk));
 
-                    if (incoterm == null)
+                    if (familyHk == null)
                         //throw new NonexistentRoleException(GlobalSetting.ResManager.GetString("NoRoleExist"));
-                        throw new Exception("No Incoterm Exist");
+                        throw new Exception("No family HK Exist");
 
-                    return incoterm;
+                    return familyHk;
                 }
 
             }
@@ -111,12 +111,12 @@ namespace HKSupply.Services.Implementations
             }
         }
 
-        public Incoterm NewIncoterm(Incoterm newIncoterm)
+        public FamilyHK NewFamilyHK(FamilyHK newFamilyHK)
         {
             try
             {
-                if (newIncoterm == null)
-                    throw new ArgumentNullException("newIncoterm");
+                if (newFamilyHK == null)
+                    throw new ArgumentNullException("newFamilyHK");
 
                 using (var db = new HKSupplyContext())
                 {
@@ -124,17 +124,17 @@ namespace HKSupply.Services.Implementations
                     {
                         try
                         {
-                            var incoterm = db.Incoterms.FirstOrDefault(a => a.IdIncoterm.Equals(newIncoterm.IdIncoterm));
+                            var familiesHK = db.FamiliesHK.FirstOrDefault(a => a.IdFamilyHk.Equals(newFamilyHK.IdFamilyHk));
 
-                            if (incoterm != null)
+                            if (familiesHK != null)
                                 //throw new NewExistingRoleException(GlobalSetting.ResManager.GetString("RoleAlreadyExist"));
-                                throw new Exception("Incoterm Already Exist");
+                                throw new Exception("Families HK Already Exist");
 
-                            db.Incoterms.Add(newIncoterm);
+                            db.FamiliesHK.Add(newFamilyHK);
                             db.SaveChanges();
                             dbTrans.Commit();
 
-                            return GetIncotermById(newIncoterm.IdIncoterm);
+                            return GetFamilyHKById(newFamilyHK.IdFamilyHk);
 
                         }
                         catch (SqlException sqlex)
@@ -183,12 +183,12 @@ namespace HKSupply.Services.Implementations
             }
         }
 
-        public bool UpdateIncoterm(IEnumerable<Incoterm> incotermsToUpdate)
+        public bool UpdateFamilyHK(IEnumerable<FamilyHK> familiesHkToUpdate)
         {
             try
             {
-                if (incotermsToUpdate == null)
-                    throw new ArgumentNullException("incotermsToUpdate");
+                if (familiesHkToUpdate == null)
+                    throw new ArgumentNullException("familiesHkToUpdate");
 
                 using (var db = new HKSupplyContext())
                 {
@@ -196,13 +196,12 @@ namespace HKSupply.Services.Implementations
                     {
                         try
                         {
-                            foreach (var incoterm in incotermsToUpdate)
+                            foreach (var familyHk in familiesHkToUpdate)
                             {
-                                var incotermToUpdate = db.Incoterms.FirstOrDefault(a => a.IdIncoterm.Equals(incoterm.IdIncoterm));
-                                if (incotermToUpdate != null)
+                                var familyHkToUpdate = db.FamiliesHK.FirstOrDefault(a => a.IdFamilyHk.Equals(familyHk.IdFamilyHk));
+                                if (familyHkToUpdate != null)
                                 {
-                                    incotermToUpdate.Description = incoterm.Description;
-                                    incotermToUpdate.DescriptionZh = incoterm.DescriptionZh;
+                                    familyHkToUpdate.Description = familyHk.Description;
                                 }
                             }
 

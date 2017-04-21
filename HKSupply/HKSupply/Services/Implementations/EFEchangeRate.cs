@@ -1,6 +1,7 @@
 ﻿using HKSupply.DB;
 using HKSupply.Exceptions;
 using HKSupply.General;
+using HKSupply.Models;
 using HKSupply.Services.Interfaces;
 using log4net;
 using System;
@@ -12,18 +13,17 @@ using System.Threading.Tasks;
 
 namespace HKSupply.Services.Implementations
 {
-    public class EFCurrency : ICurrency
+    class EFEchangeRate : IEchangeRate
     {
         ILog _log = LogManager.GetLogger(typeof(EFCurrency));
 
-        public List<Models.Currency> GetCurrencies()
+        public List<EchangeRate> GetEchangeRates()
         {
             try
             {
                 using (var db = new HKSupplyContext())
                 {
-                    return db.Currencies.ToList();
-
+                    return db.EchangeRates.ToList();
                 }
             }
             catch (SqlException sqlex)
