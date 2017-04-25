@@ -25,6 +25,7 @@ namespace HKSupply.General
     /// Controlador para acceso a datos para Store
     /// Controlador para acceso a datos para Item
     /// Controlador para acceso a datos para Status Prod
+    /// Controlador para acceso a datos para Status Cial
     /// Controlador para acceso a datos para Currency
     /// Controlador para acceso a datos para Echange Rates
     /// Controlador para acceso a datos para Payment Terms
@@ -50,6 +51,7 @@ namespace HKSupply.General
         static EFStore _storeEF = new EFStore();
         static EFItem _itemEF = new EFItem();
         static EFStatusProd _statusProdEF = new EFStatusProd();
+        static EFStatusCial _statusCialEF = new EFStatusCial();
         static EFCurrency _currencyEF = new EFCurrency();
         static EFEchangeRate _echangeRateEF = new EFEchangeRate();
         static EFPaymentTerms _paymentTermsEF = new EFPaymentTerms();
@@ -169,6 +171,17 @@ namespace HKSupply.General
                     return new EFStatusProd();
                 else
                     return _statusProdEF;
+            }
+        }
+
+        public static IStatusCial StatusCialService
+        {
+            get
+            {
+                if (_statusCialEF == null)
+                    return new EFStatusCial();
+                else
+                    return _statusCialEF;
             }
         }
 

@@ -957,9 +957,167 @@ namespace HKSupply.Forms.Master
         }
         #endregion
 
+        #region New Doc Test
+        void sbViewPdfNewDoc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(txtPdfPathNewDoc.Text) == false)
+                {
+                    PDFViewer pdfViewer = new PDFViewer();
+                    pdfViewer.pdfFile = txtPdfPathNewDoc.Text;
+                    pdfViewer.ShowDialog();
+                }
+                else
+                {
+                    XtraMessageBox.Show("No file selected", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void sbOpenFileNewDoc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                openFileDialog.Filter = "PDF files (*.pdf)|*.pdf";
+                openFileDialog.Multiselect = false;
+                openFileDialog.RestoreDirectory = true;
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    txtPdfPathNewDoc.Text = openFileDialog.FileName;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void sbMoveDoc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ReadEuroCurrencyExchange();
+
+                if (string.IsNullOrEmpty(txtPdfPathNewDoc.Text) == false)
+                {
+                    //Creamos los directorios si no existen
+                    new System.IO.FileInfo(Constants.DOCS_PATH + Constants.DRAWING_PDF_FOLDER).Directory.Create();
+                    //movemos
+                    if (System.IO.File.Exists(txtPdfPathNewDoc.Text))
+                    {
+                        var fileName = System.IO.Path.GetFileName(txtPdfPathNewDoc.Text);
+                        var fileNameNoExtension = System.IO.Path.GetFileNameWithoutExtension(txtPdfPathNewDoc.Text);
+                        var extension = System.IO.Path.GetExtension(txtPdfPathNewDoc.Text);
+                        System.IO.File.Copy(txtPdfPathNewDoc.Text, Constants.DOCS_PATH + Constants.DRAWING_PDF_FOLDER + fileName, overwrite: true);
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
 
-        
+        #endregion
+
+        #region Read XML Currency Echange
+        private void ReadEuroCurrencyExchange()
+        {
+            try
+            {
+                string xmlString = "<?xml version='1.0' encoding='UTF-8'?>";
+                xmlString += "<gesmesEnvelope>";
+                xmlString += "  <gesmessubject>Reference rates</gesmessubject>";
+                xmlString += "  <gesmesSender>";
+                xmlString += "      <gesmesname>European Central Bank</gesmesname>";
+                xmlString += "  </gesmesSender>";
+                xmlString += "  <Cube>";
+                xmlString += "      <Cube2 time='2017-04-24'>";
+                xmlString += "          <Cube3 currency='USD' rate='1.0848'/>";
+                xmlString += "          <Cube3 currency='JPY' rate='119.67'/>";
+                xmlString += "      </Cube2>";
+                xmlString += "  </Cube>";
+                xmlString += "</gesmesEnvelope>";
+
+                //---------------------------------------------------------------------------------------------
+                string xmlUrl = "http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml";
+                
+                System.Xml.XmlDocument xml = new System.Xml.XmlDocument();
+                xml.Load(xmlUrl);
+
+                foreach (System.Xml.XmlNode xnode in xml)
+                {
+                    string name = xnode.Name;
+                    string value = xnode.InnerText;
+                    string nv = name + "|" + value;
+
+                    foreach (System.Xml.XmlNode xnode2 in xnode)
+                    {
+                        string name2 = xnode2.Name;
+                        string value2 = xnode2.InnerText;
+
+                        foreach (System.Xml.XmlNode xnode3 in xnode2)
+                        {
+                            string name3 = xnode3.Name;
+                            string value3 = xnode3.InnerText;
+                            var a = xnode3.Attributes;
+
+                            foreach (System.Xml.XmlNode xnode4 in xnode3)
+                            {
+                                string name4 = xnode4.Name;
+                                string value4 = xnode4.InnerText;
+                                var aa = xnode4.Attributes;
+                            }
+                        }
+                    }
+                }
+
+                //------------------------------------------------------------------------------
+                System.Xml.Linq.XElement xml2 = System.Xml.Linq.XElement.Load(xmlUrl);
+                //var cu2s = from cu2 in xml2.Descendants("Cube")
+                //           select new
+                //           {
+                //               Currency = cu2.Attribute("currency").Value,
+                //               Rate = cu2.Attribute("rate").Value,
+                //           };
+
+                //System.Xml.Linq.XNamespace ns = "http://www.gesmes.org/xml/2002-08-01";
+                System.Xml.Linq.XNamespace ns = System.Xml.Linq.XNamespace.Get("gesmes");
+                var cu3s = from cu3 in xml2.Descendants(ns + "Cube")
+                           select new
+                           {
+
+                               Currency = cu3.Name
+                               //Children = cu1.Descendants("level2")
+                           };
+
+                //------------------ Funciona si nos 3 niveles no se llaman igual (Cube)
+                System.Xml.Linq.XElement xml4 = System.Xml.Linq.XElement.Parse(xmlString);
+                var cu1s = from cu1 in xml4.Descendants("Cube3")
+                           select new
+                           {
+                               Currency = cu1.Attribute("currency").Value,
+                               Rate = cu1.Attribute("rate").Value,
+                               //Children = cu1.Descendants("level2")
+                           };
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
 
     }
 

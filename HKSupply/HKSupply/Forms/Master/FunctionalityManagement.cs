@@ -34,6 +34,7 @@ namespace HKSupply.Forms.Master
         List<KeyValuePair<string, string>> _categoryList = new List<KeyValuePair<string, string>>() 
         { 
             new KeyValuePair<string, string>("Masters", "Masters"), 
+            new KeyValuePair<string, string>("IT", "IT"),
             new KeyValuePair<string, string>("Others", "Others"),
             new KeyValuePair<string, string>("Help", "Help") 
         };

@@ -128,6 +128,7 @@ namespace HKSupply.Services.Implementations
                         .Include(r => r.Role)
                         .Include(f => f.Functionality)
                         .Where(fr => fr.RoleId.Equals(roleId) && fr.Role.Enabled.Equals(true))
+                        .OrderBy(a => a.Functionality.FunctionalityName)
                         .ToList();
 
                     return functionalitiesList;

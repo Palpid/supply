@@ -242,6 +242,12 @@
     <Compile Include="Forms\Master\RoleManagement_v1.Designer.cs">
       <DependentUpon>RoleManagement_v1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Master\StatusManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\StatusManagement.Designer.cs">
+      <DependentUpon>StatusManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Master\StoreManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +302,7 @@
     <Compile Include="Forms\RibbonFormBase.Designer.cs">
       <DependentUpon>RibbonFormBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="General\Constants.cs" />
     <Compile Include="General\GlobalSetting.cs" />
     <Compile Include="Helpers\CustomExtensions.cs" />
     <Compile Include="Helpers\MDIClientSupport.cs" />
@@ -465,6 +472,7 @@
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\CustomerPriceList.cs" />
     <Compile Include="Models\CustomerPriceListHistory.cs" />
+    <Compile Include="Models\DocType.cs" />
     <Compile Include="Models\EchangeRate.cs" />
     <Compile Include="Models\EtnColor.cs" />
     <Compile Include="Models\CustomerHistory.cs" />
@@ -478,8 +486,13 @@
     <Compile Include="Models\Incoterm.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ItemBcn.cs" />
+    <Compile Include="Models\ItemDoc.cs" />
+    <Compile Include="Models\ItemHw.cs" />
     <Compile Include="Models\ItemGroup.cs" />
     <Compile Include="Models\ItemHistory.cs" />
+    <Compile Include="Models\ItemHwHistory.cs" />
+    <Compile Include="Models\ItemMt.cs" />
+    <Compile Include="Models\ItemMtHistory.cs" />
     <Compile Include="Models\MaterialL1.cs" />
     <Compile Include="Models\MaterialL2.cs" />
     <Compile Include="Models\MaterialL3.cs" />
@@ -488,6 +501,7 @@
     <Compile Include="Models\MatTypeL3.cs" />
     <Compile Include="Models\Model.cs" />
     <Compile Include="Models\PaymentTerms.cs" />
+    <Compile Include="Models\Prototype.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\StatusCial.cs" />
     <Compile Include="Models\StatusHK.cs" />
@@ -520,6 +534,7 @@
     <Compile Include="Services\Implementations\EFMatType.cs" />
     <Compile Include="Services\Implementations\EFPaymentTerms.cs" />
     <Compile Include="Services\Implementations\EFRole.cs" />
+    <Compile Include="Services\Implementations\EFStatusCial.cs" />
     <Compile Include="Services\Implementations\EFStatusProd.cs" />
     <Compile Include="Services\Implementations\EFStore.cs" />
     <Compile Include="Services\Implementations\EFSupplier.cs" />
@@ -541,6 +556,7 @@
     <Compile Include="Services\Interfaces\IMatType.cs" />
     <Compile Include="Services\Interfaces\IPaymentTerms.cs" />
     <Compile Include="Services\Interfaces\IRole.cs" />
+    <Compile Include="Services\Interfaces\IStatusCial.cs" />
     <Compile Include="Services\Interfaces\IStatusProd.cs" />
     <Compile Include="Services\Interfaces\IStore.cs" />
     <Compile Include="Services\Interfaces\ISupplier.cs" />
@@ -616,6 +632,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\RoleManagement_v1.resx">
       <DependentUpon>RoleManagement_v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\StatusManagement.resx">
+      <DependentUpon>StatusManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\StoreManagement.resx">
       <DependentUpon>StoreManagement.cs</DependentUpon>
