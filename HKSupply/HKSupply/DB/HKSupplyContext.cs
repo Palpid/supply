@@ -49,8 +49,17 @@ namespace HKSupply.DB
         public DbSet<HwTypeL3> HwsTypeL3 { get; set; }
 
 
-        public DbSet<Item> Items { get; set; }
-        public DbSet<ItemHistory> ItemsHistory { get; set; }
+        public DbSet<ItemEy> ItemsEy { get; set; }
+        public DbSet<ItemEyHistory> ItemsEyHistory { get; set; }
+
+        public DbSet<Prototype> Prototypes { get; set; }
+        public DbSet<ItemHw> ItemsHw { get; set; }
+        public DbSet<ItemHwHistory> ItemsHwHistory { get; set; }
+        public DbSet<ItemMt> ItemsMt { get; set; }
+        public DbSet<ItemMtHistory> ItemsMtHistory { get; set; }
+        public DbSet<DocType> DocsType { get; set; }
+
+        public DbSet<ItemDoc> ItemsDoc { get; set; }
 
         public DbSet<ItemBcn> ItemsBcn { get; set; }
 
@@ -68,9 +77,11 @@ namespace HKSupply.DB
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //Set precision 
-            modelBuilder.Entity<Item>().Property(x => x.Caliber).HasPrecision(19, 6);
-            modelBuilder.Entity<ItemHistory>().Property(x => x.Caliber).HasPrecision(19, 6);
+            modelBuilder.Entity<ItemEy>().Property(x => x.Caliber).HasPrecision(19, 6);
+            modelBuilder.Entity<ItemEyHistory>().Property(x => x.Caliber).HasPrecision(19, 6);
             modelBuilder.Entity<EchangeRate>().Property(x => x.Ratio).HasPrecision(19, 6);
+
+            modelBuilder.Entity<Prototype>().Property(x => x.Caliber).HasPrecision(19, 6);
 
             modelBuilder.Entity<SupplierPriceList>().Property(x => x.Price).HasPrecision(19, 6);
             modelBuilder.Entity<SupplierPriceList>().Property(x => x.PriceBaseCurrency).HasPrecision(19, 6);

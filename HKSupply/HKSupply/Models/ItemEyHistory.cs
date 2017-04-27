@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace HKSupply.Models
 {
-    [Table("ITEMS_HISTORY")]
-    public class ItemHistory
+    [Table("ITEMS_EY_HISTORY")]
+    public class ItemEyHistory
     {
         [Column("ID_VER", Order = 0), Key]
         public int IdVer { get; set; }
@@ -21,20 +21,11 @@ namespace HKSupply.Models
         [Column("TIMESTAMP", Order = 2), Key]
         public DateTime Timestamp { get; set; }
 
-        [Column("ID_ITEM_GROUP", Order = 3, TypeName = "NVARCHAR"), Key, StringLength(100)]
-        public string IdItemGroup { get; set; }
-
-        [Column("ID_PROTOTYPE", Order = 4, TypeName = "NVARCHAR"), Key, StringLength(50)]
-        public string IdPrototype { get; set; }
-        [Column("PROTOTYPE_NAME", TypeName = "NVARCHAR"), StringLength(100)]
-        public string PrototypeName { get; set; }
-        [Column("PROTOTYPE_DESCRIPTION", TypeName = "NVARCHAR"), StringLength(100)]
-        public string PrototypeDescription { get; set; }
-        [Column("PROTOTYPE_STATUS")]
-        public int? PrototypeStatus { get; set; }
-
-        [Column("ID_ITEM_BCN", Order = 5, TypeName = "NVARCHAR"), Key, StringLength(20)]
+        [Column("ID_ITEM_BCN", Order = 3, TypeName = "NVARCHAR"), Key, StringLength(20)]
         public string IdItemBcn { get; set; }
+
+        [Column("ID_PROTOTYPE", TypeName = "NVARCHAR"), StringLength(50)]
+        public string IdPrototype { get; set; }
 
         [Column("ID_MATERIAL_L1", TypeName = "NVARCHAR"), StringLength(100)]
         public string IdMaterialL1 { get; set; }
@@ -43,19 +34,6 @@ namespace HKSupply.Models
         [Column("ID_MATERIAL_L3", TypeName = "NVARCHAR"), StringLength(100)]
         public string IdMaterialL3 { get; set; }
 
-        [Column("ID_MAT_TYPE_L1", TypeName = "NVARCHAR"), StringLength(100)]
-        public string IdMatTypeL1 { get; set; }
-        [Column("ID_MAT_TYPE_L2", TypeName = "NVARCHAR"), StringLength(100)]
-        public string IdMatTypeL2 { get; set; }
-        [Column("ID_MAT_TYPE_L3", TypeName = "NVARCHAR"), StringLength(100)]
-        public string IdMatTypeL3 { get; set; }
-
-        [Column("ID_HW_TYPE_L1", TypeName = "NVARCHAR"), StringLength(100)]
-        public string IdHwTypeL1 { get; set; }
-        [Column("ID_HW_TYPE_L2", TypeName = "NVARCHAR"), StringLength(100)]
-        public string IdHwTypeL2 { get; set; }
-        [Column("ID_HW_TYPE_L3", TypeName = "NVARCHAR"), StringLength(100)]
-        public string IdHwTypeL3 { get; set; }
 
         [Column("ID_DEFAULT_SUPPLIER", TypeName = "NVARCHAR"), StringLength(100)]
         public String IdDefaultSupplier { get; set; }
@@ -133,27 +111,17 @@ namespace HKSupply.Models
             if (obj == null || obj == DBNull.Value)
                 return false;
 
-            ItemHistory itemHistory = (ItemHistory)obj;
+            ItemEyHistory itemHistory = (ItemEyHistory)obj;
 
             bool res = (
                 IdVer == itemHistory.IdVer &&
                 IdSubVer == itemHistory.IdSubVer &&
                 Timestamp == itemHistory.Timestamp &&
-                IdItemGroup == itemHistory.IdItemGroup &&
                 IdPrototype == itemHistory.IdPrototype &&
-                PrototypeName == itemHistory.PrototypeName &&
-                PrototypeDescription == itemHistory.PrototypeDescription &&
-                PrototypeStatus == itemHistory.PrototypeStatus &&
                 IdItemBcn == itemHistory.IdItemBcn &&
                 IdMaterialL1 == itemHistory.IdMaterialL1 &&
                 IdMaterialL2 == itemHistory.IdMaterialL2 &&
                 IdMaterialL3 == itemHistory.IdMaterialL3 &&
-                IdMatTypeL1 == itemHistory.IdMatTypeL1 &&
-                IdMatTypeL2 == itemHistory.IdMatTypeL2 &&
-                IdMatTypeL3 == itemHistory.IdMatTypeL3 &&
-                IdHwTypeL1 == itemHistory.IdHwTypeL1 &&
-                IdHwTypeL2 == itemHistory.IdHwTypeL2 &&
-                IdHwTypeL3 == itemHistory.IdHwTypeL3 &&
                 IdDefaultSupplier == itemHistory.IdDefaultSupplier &&
                 IdModel == itemHistory.IdModel &&
                 IdFamilyHK == itemHistory.IdFamilyHK &&
@@ -189,21 +157,11 @@ namespace HKSupply.Models
                  IdVer.GetHashCode() +
                 IdSubVer.GetHashCode() +
                 Timestamp.GetHashCode() +
-                (IdItemGroup == null ? 0 : IdItemGroup.GetHashCode()) +
                 (IdPrototype == null ? 0 : IdPrototype.GetHashCode()) +
-                (PrototypeName == null ? 0 : PrototypeName.GetHashCode()) +
-                (PrototypeDescription == null ? 0 : PrototypeDescription.GetHashCode()) +
-                (PrototypeStatus == null ? 0 : PrototypeStatus.GetHashCode()) +
                 (IdItemBcn == null ? 0 : IdItemBcn.GetHashCode()) +
                 (IdMaterialL1 == null ? 0 : IdMaterialL1.GetHashCode()) +
                 (IdMaterialL2 == null ? 0 : IdMaterialL2.GetHashCode()) +
                 (IdMaterialL3 == null ? 0 : IdMaterialL3.GetHashCode()) +
-                (IdMatTypeL1 == null ? 0 : IdMatTypeL1.GetHashCode()) +
-                (IdMatTypeL2 == null ? 0 : IdMatTypeL2.GetHashCode()) +
-                (IdMatTypeL3 == null ? 0 : IdMatTypeL3.GetHashCode()) +
-                (IdHwTypeL1 == null ? 0 : IdHwTypeL1.GetHashCode()) +
-                (IdHwTypeL2 == null ? 0 : IdHwTypeL2.GetHashCode()) +
-                (IdHwTypeL3 == null ? 0 : IdHwTypeL3.GetHashCode()) +
                 (IdDefaultSupplier == null ? 0 : IdDefaultSupplier.GetHashCode()) +
                 (IdModel == null ? 0 : IdModel.GetHashCode()) +
                 (IdFamilyHK == null ? 0 : IdFamilyHK.GetHashCode()) +
@@ -233,27 +191,17 @@ namespace HKSupply.Models
         }
         #endregion
 
-        public static implicit operator ItemHistory(Item i)
+        public static implicit operator ItemEyHistory(ItemEy i)
         {
-            ItemHistory ih = new ItemHistory();
+            ItemEyHistory ih = new ItemEyHistory();
             ih.IdVer = i.IdVer;
             ih.IdSubVer = i.IdSubVer;
             ih.Timestamp = i.Timestamp;
-            ih.IdItemGroup = i.IdItemGroup;
             ih.IdPrototype = i.IdPrototype;
-            ih.PrototypeName = i.PrototypeName;
-            ih.PrototypeDescription = i.PrototypeDescription;
-            ih.PrototypeStatus = i.PrototypeStatus;
             ih.IdItemBcn = i.IdItemBcn;
             ih.IdMaterialL1 = i.IdMaterialL1;
             ih.IdMaterialL2 = i.IdMaterialL2;
             ih.IdMaterialL3 = i.IdMaterialL3;
-            ih.IdMatTypeL1 = i.IdMatTypeL1;
-            ih.IdMatTypeL2 = i.IdMatTypeL2;
-            ih.IdMatTypeL3 = i.IdMatTypeL3;
-            ih.IdHwTypeL1 = i.IdHwTypeL1;
-            ih.IdHwTypeL2 = i.IdHwTypeL2;
-            ih.IdHwTypeL3 = i.IdHwTypeL3;
             ih.IdDefaultSupplier = i.IdDefaultSupplier;
             ih.IdModel = i.IdModel;
             ih.IdFamilyHK = i.IdFamilyHK;
@@ -276,6 +224,7 @@ namespace HKSupply.Models
             ih.Unit = i.Unit;
             ih.DocsLink = i.DocsLink;
             ih.CreateDate = i.CreateDate;
+            ih.PhotoUrl = i.PhotoUrl;
 
             return ih;
         }

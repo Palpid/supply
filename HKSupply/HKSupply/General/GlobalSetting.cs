@@ -38,6 +38,8 @@ namespace HKSupply.General
     /// Controlador para acceso a datos para Mat Type (L1, L2, L3)
     /// Controlador para acceso a datos para Hw Type (L1, L2, L3)
     /// Controlador para acceso a datos para Family HK
+    /// Controlador para acceso a datos para Doc Type
+    /// Controlador para acceso a datos oara Item Doc
     /// </remarks>
     public sealed class GlobalSetting
     {
@@ -49,7 +51,7 @@ namespace HKSupply.General
         static EFCustomer _customerEF = new EFCustomer();
         static EFSupplier _supplierEF = new EFSupplier();
         static EFStore _storeEF = new EFStore();
-        static EFItem _itemEF = new EFItem();
+        static EFItemEy _itemEyEF = new EFItemEy();
         static EFStatusProd _statusProdEF = new EFStatusProd();
         static EFStatusCial _statusCialEF = new EFStatusCial();
         static EFCurrency _currencyEF = new EFCurrency();
@@ -63,7 +65,9 @@ namespace HKSupply.General
         static EFMaterial _materialEF = new EFMaterial();
         static EFMatType _matTypeEF = new EFMatType();
         static EFHwType _hwTypeEF = new EFHwType();
-        static EFFamilyHK _familyHK = new EFFamilyHK();
+        static EFFamilyHK _familyHKEF = new EFFamilyHK();
+        static EFDocType _docTypeEF = new EFDocType();
+        static EFItemDoc _itemDocEF = new EFItemDoc();
 
         static User _loggedUser;
         static IEnumerable<FunctionalityRole> _functionalitiesRoles;
@@ -151,14 +155,14 @@ namespace HKSupply.General
             }
         }
 
-        public static IItem ItemService 
+        public static IItemEy ItemEyService 
         {
             get 
             {
-                if (_itemEF == null)
-                    return new EFItem();
+                if (_itemEyEF == null)
+                    return new EFItemEy();
                 else
-                    return _itemEF;
+                    return _itemEyEF;
             
             }
         }
@@ -299,10 +303,10 @@ namespace HKSupply.General
         {
             get 
             {
-                if (_familyHK == null)
+                if (_familyHKEF == null)
                     return new EFFamilyHK();
                 else
-                    return _familyHK;
+                    return _familyHKEF;
             }
         }
 
@@ -314,6 +318,28 @@ namespace HKSupply.General
                     return new EFEchangeRate();
                 else
                     return _echangeRateEF;
+            }
+        }
+
+        public static IDocType DocTypeService
+        {
+            get 
+            {
+                if (_docTypeEF == null)
+                    return new EFDocType();
+                else
+                    return _docTypeEF;
+            }
+        }
+
+        public static IItemDoc ItemDocService
+        {
+            get
+            {
+                if (_itemDocEF == null)
+                    return new EFItemDoc();
+                else
+                    return _itemDocEF;
             }
         }
 

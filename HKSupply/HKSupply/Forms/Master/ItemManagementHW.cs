@@ -62,10 +62,10 @@ namespace HKSupply.Forms.Master
 
         #region Private Members
 
-        Item _itemUpdate;
-        Item _itemOriginal;
+        ItemEy _itemUpdate;
+        ItemEy _itemOriginal;
 
-        List<Item> _itemsList;
+        List<ItemEy> _itemsList;
         List<Supplier> _supplierList;
         List<StatusHK> _statusProdList;
         List<UserAttrDescription> _userAttrDescriptionList;
@@ -230,7 +230,7 @@ namespace HKSupply.Forms.Master
             try
             {
                 GridView view = sender as GridView;
-                Item item = view.GetRow(view.FocusedRowHandle) as Item;
+                ItemEy item = view.GetRow(view.FocusedRowHandle) as ItemEy;
                 if (item != null)
                     LoadItemForm(item);
             }
@@ -366,7 +366,7 @@ namespace HKSupply.Forms.Master
         /// </summary>
         private void ResetItemUpdate()
         {
-            _itemUpdate = new Item();
+            _itemUpdate = new ItemEy();
         }
 
         private void SetUpGrdItems()
@@ -518,42 +518,43 @@ namespace HKSupply.Forms.Master
                 if (_itemUpdate.Model == null) _itemUpdate.Model = new Model(); //para evitar problemas al bindear nested properties
 
                 //TextEdit
-                txtIdVersion.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdVer);
-                txtIdSubversion.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdSubVer);
-                txtTimestamp.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Timestamp);
-                txtIdPrototype.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdPrototype);
-                txtPrototypeName.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.PrototypeName);
-                txtPrototypeDescription.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.PrototypeDescription);
+                txtIdVersion.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdVer);
+                txtIdSubversion.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdSubVer);
+                txtTimestamp.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Timestamp);
+                txtIdPrototype.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdPrototype);
+                //txtPrototypeName.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.PrototypeName); //TODO
+                //txtPrototypeDescription.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.PrototypeDescription); //TODO
                 //txtModel.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Model.Description);
                 txtModel.DataBindings.Add("Text", _itemUpdate, "Model.Description");//La custom extension que hice no funciona con propiedades que son clases, bindeo a la antigua
-                txtCaliber.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Caliber);
-                txtIdColor1.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdColor1);
-                txtIdColor2.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdColor2);
-                txtIdItemBcn.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdItemBcn);
-                txtIdItemHK.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdItemHK);
-                txtItemDescription.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.ItemDescription);
+                txtCaliber.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Caliber);
+                txtIdColor1.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdColor1);
+                txtIdColor2.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdColor2);
+                txtIdItemBcn.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdItemBcn);
+                txtIdItemHK.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdItemHK);
+                txtItemDescription.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.ItemDescription);
 
-                txtIdHwTypeL1.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdHwTypeL1);
-                txtIdHwTypeL2.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdHwTypeL2);
-                txtIdHwTypeL3.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdHwTypeL3);
+                //TODO
+                //txtIdHwTypeL1.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdHwTypeL1);
+                //txtIdHwTypeL2.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdHwTypeL2);
+                //txtIdHwTypeL3.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdHwTypeL3);
 
-                txtComments.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Comments);
-                txtSegment.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Segment);
-                txtCategory.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Category);
-                txtAge.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Age);
-                txtLaunchDate.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.LaunchDate);
-                txtRemovalDate.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.RemovalDate);
-                txtIdStatusCial.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdStatusCial);
-                txtUnit.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Unit);
-                txtDocsLink.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.DocsLink);
-                txtCreateDate.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.CreateDate);
+                txtComments.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Comments);
+                txtSegment.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Segment);
+                txtCategory.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Category);
+                txtAge.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Age);
+                txtLaunchDate.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.LaunchDate);
+                txtRemovalDate.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.RemovalDate);
+                txtIdStatusCial.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdStatusCial);
+                txtUnit.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Unit);
+                txtDocsLink.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.DocsLink);
+                txtCreateDate.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.CreateDate);
 
                 //LookUpEdit
-                lueIdDefaultSupplier.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdDefaultSupplier);
-                lueIdStatusProd.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdStatusProd);
-                lueIdUserAttri1.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdUserAttri1);
-                lueIdUserAttri2.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdUserAttri2);
-                lueIdUserAttri3.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdUserAttri3);
+                lueIdDefaultSupplier.DataBindings.Add<ItemEy>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdDefaultSupplier);
+                lueIdStatusProd.DataBindings.Add<ItemEy>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdStatusProd);
+                lueIdUserAttri1.DataBindings.Add<ItemEy>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdUserAttri1);
+                lueIdUserAttri2.DataBindings.Add<ItemEy>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdUserAttri2);
+                lueIdUserAttri3.DataBindings.Add<ItemEy>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdUserAttri3);
 
             }
             catch (Exception ex)
@@ -646,7 +647,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _itemsList = GlobalSetting.ItemService.GetItems("HW");
+                _itemsList = GlobalSetting.ItemEyService.GetItems();
                 xgrdItems.DataSource = _itemsList;
             }
             catch (Exception ex)
@@ -659,7 +660,7 @@ namespace HKSupply.Forms.Master
         /// Cargar los datos de un customer en concreto
         /// </summary>
         /// <param name="item"></param>
-        private void LoadItemForm(Item item)
+        private void LoadItemForm(ItemEy item)
         {
             try
             {
@@ -822,7 +823,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                return GlobalSetting.ItemService.UpdateItem(_itemUpdate, newVersion);
+                return GlobalSetting.ItemEyService.UpdateItem(_itemUpdate, newVersion);
             }
             catch (Exception ex)
             {

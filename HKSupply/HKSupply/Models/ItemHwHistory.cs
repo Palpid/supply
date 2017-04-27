@@ -54,6 +54,10 @@ namespace HKSupply.Models
         [ForeignKey("IdFamilyHK")]
         public FamilyHK FamilyHK { get; set; }
 
+        [Column("ID_COLOR_1", TypeName = "NVARCHAR"), StringLength(30)]
+        public string IdColor1 { get; set; }
+        [Column("ID_COLOR_2", TypeName = "NVARCHAR"), StringLength(30)]
+        public string IdColor2 { get; set; }
 
         [Column("ID_ITEM_HK", TypeName = "NVARCHAR"), StringLength(20)]
         public string IdItemHK { get; set; }
@@ -124,6 +128,8 @@ namespace HKSupply.Models
                 IdHwTypeL3 == itemHwHistory.IdHwTypeL3 &&
                 IdDefaultSupplier == itemHwHistory.IdDefaultSupplier &&
                 IdFamilyHK == itemHwHistory.IdFamilyHK &&
+                IdColor1 == itemHwHistory.IdColor1 &&
+                IdColor2 == itemHwHistory.IdColor2 &&
                 IdItemHK == itemHwHistory.IdItemHK &&
                 ItemDescription == itemHwHistory.ItemDescription &&
                 Comments == itemHwHistory.Comments &&
@@ -157,6 +163,8 @@ namespace HKSupply.Models
                 (IdHwTypeL3 == null ? 0 : IdHwTypeL3.GetHashCode()) +
                 (IdDefaultSupplier == null ? 0 : IdDefaultSupplier.GetHashCode()) +
                 (IdFamilyHK == null ? 0 : IdFamilyHK.GetHashCode()) +
+                (IdColor1 == null ? 0 : IdColor1.GetHashCode()) +
+                (IdColor2 == null ? 0 : IdColor2.GetHashCode()) +
                 (IdItemHK == null ? 0 : IdItemHK.GetHashCode()) +
                 (ItemDescription == null ? 0 : ItemDescription.GetHashCode()) +
                 (Comments == null ? 0 : Comments.GetHashCode()) +
@@ -192,6 +200,8 @@ namespace HKSupply.Models
                 ihwh.IdHwTypeL3 = i.IdHwTypeL3 ;
                 ihwh.IdDefaultSupplier = i.IdDefaultSupplier;
                 ihwh.IdFamilyHK = i.IdFamilyHK ;
+                ihwh.IdColor1 = i.IdColor1;
+                ihwh.IdColor2 = i.IdColor2;
                 ihwh.IdItemHK = i.IdItemHK ;
                 ihwh.ItemDescription = i.ItemDescription ;
                 ihwh.Comments = i.Comments ;

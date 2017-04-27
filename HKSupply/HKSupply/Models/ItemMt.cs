@@ -54,6 +54,14 @@ namespace HKSupply.Models
         [ForeignKey("IdFamilyHK")]
         public FamilyHK FamilyHK { get; set; }
 
+        [Column("ID_COLOR_1", TypeName = "NVARCHAR"), StringLength(30)]
+        public string IdColor1 { get; set; }
+        [ForeignKey("IdColor1")]
+        public EtnColor Color1 { get; set; }
+        [Column("ID_COLOR_2", TypeName = "NVARCHAR"), StringLength(30)]
+        public string IdColor2 { get; set; }
+        [ForeignKey("IdColor2")]
+        public EtnColor Color2 { get; set; }
 
         [Column("ID_ITEM_HK", TypeName = "NVARCHAR"), StringLength(20)]
         public string IdItemHK { get; set; }
@@ -120,6 +128,8 @@ namespace HKSupply.Models
                 IdMatTypeL3 == itemMt.IdMatTypeL3 &&
                 IdDefaultSupplier == itemMt.IdDefaultSupplier &&
                 IdFamilyHK == itemMt.IdFamilyHK &&
+                IdColor1 == itemMt.IdColor1 &&
+                IdColor2 == itemMt.IdColor2 &&
                 IdItemHK == itemMt.IdItemHK &&
                 ItemDescription == itemMt.ItemDescription &&
                 Comments == itemMt.Comments &&
@@ -152,6 +162,8 @@ namespace HKSupply.Models
                 (IdMatTypeL3 == null ? 0 : IdMatTypeL3.GetHashCode()) +
                 (IdDefaultSupplier == null ? 0 : IdDefaultSupplier.GetHashCode()) +
                 (IdFamilyHK == null ? 0 : IdFamilyHK.GetHashCode()) +
+                (IdColor1 == null ? 0 : IdColor1.GetHashCode()) +
+                (IdColor2 == null ? 0 : IdColor2.GetHashCode()) +
                 (IdItemHK == null ? 0 : IdItemHK.GetHashCode()) +
                 (ItemDescription == null ? 0 : ItemDescription.GetHashCode()) +
                 (Comments == null ? 0 : Comments.GetHashCode()) +

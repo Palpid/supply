@@ -20,6 +20,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data.Entity;
+
 namespace HKSupply.Forms.Master
 {
     public partial class ItemManagementEY : RibbonFormBase
@@ -32,9 +34,7 @@ namespace HKSupply.Forms.Master
             Timestamp,
             IdDefaultSupplier,
             IdPrototype,
-            PrototypeName,
-            PrototypeDescription,
-            PrototypeStatus,
+            Prototype,
             IdModel,
             Model,
             Caliber,
@@ -60,20 +60,40 @@ namespace HKSupply.Forms.Master
             PhotoUrl,
             Photo,
         }
+
+        private enum eItemDocColumns
+        {
+            IdVerItem,
+            IdSubVerItem,
+            IdDocType,
+            DocType,
+            FileName,
+            FilePath,
+            CreateDate,
+            View,
+        }
         #endregion
 
         #region Private Members
 
-        Item _itemUpdate;
-        Item _itemOriginal;
+        ItemEy _itemUpdate;
+        ItemEy _itemOriginal;
+        ItemEyHistory _itemHistory;
 
-        List<Item> _itemsList;
+        List<ItemEy> _itemsList;
+        List<ItemEyHistory> _itemsHistoryList;
         List<Supplier> _supplierList;
         List<StatusHK> _statusProdList;
         List<UserAttrDescription> _userAttrDescriptionList;
+        List<DocType> _docsTypeList;
+        List<ItemDoc> _itemDocsList;
+        List<ItemDoc> _itemLastDocsList;
 
-        string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };	
+        string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };
+        
+        Dictionary<String, Bitmap> photosCache = new Dictionary<string, Bitmap>();
 
+        int _currentHistoryNumList;
         #endregion
 
         #region Constructor
@@ -85,9 +105,12 @@ namespace HKSupply.Forms.Master
             {
                 ConfigureRibbonActions();
                 SetUpGrdItems();
+                SetUpGrdLastDocs();
+                SetUpGrdDocsHistory();
                 SetUpTexEdit();
                 SetUpLueDefaultSupplier();
                 SetUpLueStatusProd();
+                SetUpLueDocType();
                 SetUpLabelNameUserAttributes();
                 ResetItemUpdate();
                 SetFormBinding();
@@ -129,6 +152,7 @@ namespace HKSupply.Forms.Master
                 ResetItemUpdate();
                 SetFormBinding();
                 xtpForm.PageVisible = false;
+                xtpDocs.PageVisible = false;
                 xtpList.PageVisible = true;
                 LoadItemsList();
                 SetNonCreatingFieldsVisibility(LayoutVisibility.Always);
@@ -184,7 +208,7 @@ namespace HKSupply.Forms.Master
 
                 Cursor = Cursors.WaitCursor;
 
-                if (_itemUpdate.Equals(_itemOriginal))
+                if (_itemUpdate.Equals(_itemOriginal) && string.IsNullOrEmpty(txtPathNewDoc.Text))
                 {
                     MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
                     return;
@@ -192,7 +216,10 @@ namespace HKSupply.Forms.Master
 
                 if (CurrentState == ActionsStates.Edit)
                 {
-                    res = UpdateItem();
+                    if(string.IsNullOrEmpty(txtPathNewDoc.Text))
+                        res = UpdateItem();
+                    else
+                        res = UpdateItemWithDoc();
                 }
 
                 if (res == true)
@@ -221,6 +248,7 @@ namespace HKSupply.Forms.Master
             try
             {
                 xtpForm.PageVisible = false;
+                xtpDocs.PageVisible = false;
                 SetUpLueStatusProd();
             }
             catch (Exception ex)
@@ -234,9 +262,13 @@ namespace HKSupply.Forms.Master
             try
             {
                 GridView view = sender as GridView;
-                Item  item = view.GetRow(view.FocusedRowHandle) as Item;
+                ItemEy  item = view.GetRow(view.FocusedRowHandle) as ItemEy;
                 if (item != null)
+                {
                     LoadItemForm(item);
+                    LoadItemHistory();
+                    LoadItemDocs();
+                }
             }
             catch (Exception ex)
             {
@@ -277,6 +309,157 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        void repButtonHistDoc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ItemDoc itemDoc = gridViewDocsHistory.GetRow(gridViewDocsHistory.FocusedRowHandle) as ItemDoc;
+
+                if (itemDoc != null)
+                {
+                    OpenDoc(Constants.DOCS_PATH + itemDoc.FilePath);
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void repButtonLastDoc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ItemDoc itemDoc = gridViewLastDocs.GetRow(gridViewDocsHistory.FocusedRowHandle) as ItemDoc;
+
+                if (itemDoc != null)
+                {
+                    OpenDoc(Constants.DOCS_PATH + itemDoc.FilePath);
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void sbViewNewDoc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(txtPathNewDoc.Text) == false)
+                {
+                    OpenDoc(txtPathNewDoc.Text);
+                }
+                else
+                {
+                    XtraMessageBox.Show("No file selected", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void sbOpenFileNewDoc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                openFileDialog.Filter = "PDF files (*.pdf)|*.pdf|JPG files(*.jpg)|*.jpg|PNG files (*.png)|*.png";
+                openFileDialog.Multiselect = false;
+                openFileDialog.RestoreDirectory = true;
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    txtPathNewDoc.Text = openFileDialog.FileName;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void toolTipController1_GetActiveObjectInfo(object sender, DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs e)
+        {
+            if (e.SelectedControl != xgrdItems) return;
+            ToolTipControlInfo info = null;
+
+            SuperToolTip sTooltip1 = new SuperToolTip();
+
+
+            try
+            {
+                GridView view = xgrdItems.GetViewAt(e.ControlMousePosition) as GridView;
+                if (view == null) return;
+                DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitInfo hi = view.CalcHitInfo(e.ControlMousePosition);
+
+                if (hi.HitTest == DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitTest.RowCell)
+                {
+                    //info para debug
+                    //info = new ToolTipControlInfo(DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitTest.RowIndicator.ToString() + hi.RowHandle.ToString(), "Row Handle: " + hi.RowHandle.ToString());
+
+                    ToolTipTitleItem titleItem1 = new ToolTipTitleItem();
+
+                    if (hi.Column.FieldName != eItemColumns.Photo.ToString())
+                        return;
+
+                    string url = view.GetRowCellValue(hi.RowHandle, eItemColumns.PhotoUrl.ToString()).ToString();
+                    if (photosCache.ContainsKey(url) == false)
+                    {
+                        var request = System.Net.WebRequest.Create(url);
+                        using (var response = request.GetResponse())
+                        {
+                            using (var stream = response.GetResponseStream())
+                            {
+                                Image p = Bitmap.FromStream(stream);
+                                photosCache.Add(url, (Bitmap)p);
+                            }
+                        }
+                    }
+                    Bitmap im = null;
+                    im = photosCache[url.ToString()];
+                    ToolTipItem item1 = new ToolTipItem();
+                    item1.Image = im;
+                    sTooltip1.Items.Add(item1);
+
+                    //END.MRM
+                }
+                info = new ToolTipControlInfo(hi.HitTest, "");
+                info.SuperTip = sTooltip1;
+            }
+            finally
+            {
+                e.Info = info;
+            }
+        }
+
+        private void sbForward_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SetCurrentItemHistory(_currentHistoryNumList + 1);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void sbBackward_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SetCurrentItemHistory(_currentHistoryNumList - 1);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         #region Private Methods
@@ -286,7 +469,9 @@ namespace HKSupply.Forms.Master
         /// </summary>
         private void ResetItemUpdate()
         {
-            _itemUpdate = new Item();
+            _itemUpdate = new ItemEy();
+            _itemDocsList = null;
+            txtPathNewDoc.Text = string.Empty;
         }
 
         private void SetUpGrdItems()
@@ -306,9 +491,11 @@ namespace HKSupply.Forms.Master
                 GridColumn colTimestamp = new GridColumn() { Caption = "Timestamp", Visible = true, FieldName = eItemColumns.Timestamp.ToString(), Width = 130 };
                 GridColumn colIdDefaultSupplier = new GridColumn() { Caption = "Default Supplier", Visible = true, FieldName = eItemColumns.IdDefaultSupplier.ToString(), Width = 110 };
                 GridColumn colIdPrototype = new GridColumn() { Caption = "Id Prototype", Visible = true, FieldName = eItemColumns.IdPrototype.ToString(), Width = 150 };
-                GridColumn colPrototypeName = new GridColumn() { Caption = "Prototype Name", Visible = true, FieldName = eItemColumns.PrototypeName.ToString(), Width = 150 };
-                GridColumn colPrototypeDescription = new GridColumn() { Caption = "Prototype Description", Visible = true, FieldName = eItemColumns.PrototypeDescription.ToString(), Width = 150 };
-                GridColumn colPrototypeStatus = new GridColumn() { Caption = "Prototype Status", Visible = true, FieldName = eItemColumns.PrototypeStatus.ToString(), Width = 150 };
+                
+                GridColumn colPrototypeName = new GridColumn() { Caption = "Prototype Name", Visible = true, FieldName = eItemColumns.Prototype.ToString() +  ".PrototypeName", Width = 150 };
+                GridColumn colPrototypeDescription = new GridColumn() { Caption = "Prototype Description", Visible = true, FieldName = eItemColumns.Prototype.ToString() + ".PrototypeDescription", Width = 150 };
+                GridColumn colPrototypeStatus = new GridColumn() { Caption = "Prototype Status", Visible = true, FieldName = eItemColumns.Prototype.ToString() + ".PrototypeStatus", Width = 150 };
+                
                 GridColumn colIdModel = new GridColumn() { Caption = "Id Model", Visible = false, FieldName = eItemColumns.IdModel.ToString(), Width = 0 };
                 GridColumn colModel = new GridColumn() { Caption = "Model", Visible = true, FieldName = eItemColumns.Model.ToString() + ".Description", Width = 120 };
                 GridColumn colCaliber = new GridColumn() { Caption = "Caliber", Visible = true, FieldName = eItemColumns.Caliber.ToString(), Width = 70 };
@@ -398,7 +585,124 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        Dictionary<String, Bitmap> photosCache = new Dictionary<string, Bitmap>();
+        private void SetUpGrdLastDocs()
+        {
+            try
+            {
+                //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
+                gridViewLastDocs.OptionsView.ColumnAutoWidth = false;
+                gridViewLastDocs.HorzScrollVisibility = ScrollVisibility.Auto;
+
+                //hacer todo el grid no editable
+                //gridViewLastDocs.OptionsBehavior.Editable = false;
+
+                //Columns definition
+                GridColumn colIdVerItem = new GridColumn() { Caption = "Item Ver", Visible = true, FieldName = eItemDocColumns.IdVerItem.ToString(), Width = 60 };
+                GridColumn colIdSubVerItem = new GridColumn() { Caption = "Item Subver", Visible = true, FieldName = eItemDocColumns.IdSubVerItem.ToString(), Width = 75 };
+                GridColumn colIdDocType = new GridColumn() { Caption = "IdDocType", Visible = false, FieldName = eItemDocColumns.IdDocType.ToString(), Width = 10 };
+                GridColumn colDocType = new GridColumn() { Caption = "Doc Type", Visible = true, FieldName = eItemDocColumns.DocType.ToString() + ".Description", Width = 100 };
+                GridColumn colFileName = new GridColumn() { Caption = "File Name", Visible = true, FieldName = eItemDocColumns.FileName.ToString(), Width = 250 };
+                GridColumn colFilePath = new GridColumn() { Caption = "FilePath", Visible = false, FieldName = eItemDocColumns.FilePath.ToString(), Width = 10 };
+                GridColumn colCreateDate = new GridColumn() { Caption = "Create Date", Visible = true, FieldName = eItemDocColumns.CreateDate.ToString(), Width = 150 };
+                GridColumn colViewButton = new GridColumn() { Caption = "View", Visible = true, FieldName = eItemDocColumns.View.ToString(), Width = 50 };
+
+                //Display Format
+                colCreateDate.DisplayFormat.FormatType = FormatType.DateTime;
+
+                //View Button
+                colViewButton.UnboundType = DevExpress.Data.UnboundColumnType.Object;
+                DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repButtonLastDoc = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+                repButtonLastDoc.Name = "btnViewLastDoc";
+                repButtonLastDoc.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+                repButtonLastDoc.Click += repButtonLastDoc_Click;
+                colViewButton.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
+                colViewButton.ColumnEdit = repButtonLastDoc;
+
+                //Only button allow to edit to allow click
+                colIdVerItem.OptionsColumn.AllowEdit = false;
+                colIdSubVerItem.OptionsColumn.AllowEdit = false;
+                colIdDocType.OptionsColumn.AllowEdit = false;
+                colDocType.OptionsColumn.AllowEdit = false;
+                colFileName.OptionsColumn.AllowEdit = false;
+                colFilePath.OptionsColumn.AllowEdit = false;
+                colCreateDate.OptionsColumn.AllowEdit = false;
+                colViewButton.OptionsColumn.AllowEdit = true;
+
+                //Add columns to grid root view
+                gridViewLastDocs.Columns.Add(colIdVerItem);
+                gridViewLastDocs.Columns.Add(colIdSubVerItem);
+                gridViewLastDocs.Columns.Add(colIdDocType);
+                gridViewLastDocs.Columns.Add(colDocType);
+                gridViewLastDocs.Columns.Add(colFileName);
+                gridViewLastDocs.Columns.Add(colFilePath);
+                gridViewLastDocs.Columns.Add(colCreateDate);
+                gridViewLastDocs.Columns.Add(colViewButton);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void SetUpGrdDocsHistory()
+        {
+            try
+            {
+                //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
+                gridViewDocsHistory.OptionsView.ColumnAutoWidth = false;
+                gridViewDocsHistory.HorzScrollVisibility = ScrollVisibility.Auto;
+
+                //hacer todo el grid no editable
+                //gridViewDocsHistory.OptionsBehavior.Editable = false;
+
+                //Columns definition
+                GridColumn colIdVerItem = new GridColumn() { Caption = "Item Ver", Visible = true, FieldName = eItemDocColumns.IdVerItem.ToString(), Width = 60 };
+                GridColumn colIdSubVerItem = new GridColumn() { Caption = "Item Subver", Visible = true, FieldName = eItemDocColumns.IdSubVerItem.ToString(), Width = 75 };
+                GridColumn colIdDocType = new GridColumn() { Caption = "IdDocType", Visible = false, FieldName = eItemDocColumns.IdDocType.ToString(), Width = 10 };
+                GridColumn colDocType = new GridColumn() { Caption = "Doc Type", Visible = true, FieldName = eItemDocColumns.DocType.ToString() + ".Description", Width = 100 };
+                GridColumn colFileName = new GridColumn() { Caption = "File Name", Visible = true, FieldName = eItemDocColumns.FileName.ToString(), Width = 280 };
+                GridColumn colFilePath = new GridColumn() { Caption = "FilePath", Visible = false, FieldName = eItemDocColumns.FilePath.ToString(), Width = 10 };
+                GridColumn colCreateDate = new GridColumn() { Caption = "Create Date", Visible = true, FieldName = eItemDocColumns.CreateDate.ToString(), Width = 120 };
+                GridColumn colViewButton = new GridColumn() { Caption = "View", Visible = true, FieldName = eItemDocColumns.View.ToString(), Width = 50 };
+
+                //Display Format
+                colCreateDate.DisplayFormat.FormatType = FormatType.DateTime;
+
+                //View Button
+                colViewButton.UnboundType = DevExpress.Data.UnboundColumnType.Object;
+                DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repButtonHistDoc = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+                repButtonHistDoc.Name = "btnViewHistoryDoc";
+                repButtonHistDoc.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+                repButtonHistDoc.Click += repButtonHistDoc_Click;
+                colViewButton.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
+                colViewButton.ColumnEdit = repButtonHistDoc;
+
+                //Only button allow to edit to allow click
+                colIdVerItem.OptionsColumn.AllowEdit = false;
+                colIdSubVerItem.OptionsColumn.AllowEdit = false;
+                colIdDocType.OptionsColumn.AllowEdit = false;
+                colDocType.OptionsColumn.AllowEdit = false;
+                colFileName.OptionsColumn.AllowEdit = false;
+                colFilePath.OptionsColumn.AllowEdit = false;
+                colCreateDate.OptionsColumn.AllowEdit = false;
+                colViewButton.OptionsColumn.AllowEdit = true;
+
+                //Add columns to grid root view
+                gridViewDocsHistory.Columns.Add(colIdVerItem);
+                gridViewDocsHistory.Columns.Add(colIdSubVerItem);
+                gridViewDocsHistory.Columns.Add(colIdDocType);
+                gridViewDocsHistory.Columns.Add(colDocType);
+                gridViewDocsHistory.Columns.Add(colFileName);
+                gridViewDocsHistory.Columns.Add(colFilePath);
+                gridViewDocsHistory.Columns.Add(colCreateDate);
+                gridViewDocsHistory.Columns.Add(colViewButton);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         void rootGridViewItems_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)
         {
@@ -406,7 +710,7 @@ namespace HKSupply.Forms.Master
             {
                 //DataRow dr = (e.Row as DataRowView).Row;
                 //string url = dr[eItemColumns.PhotoUrl.ToString()].ToString();
-                string url = (e.Row as Item).PhotoUrl;
+                string url = (e.Row as ItemEy).PhotoUrl;
                 if (photosCache.ContainsKey(url))
                 {
                     e.Value = photosCache[url];
@@ -445,6 +749,21 @@ namespace HKSupply.Forms.Master
                 txtRemovalDate.Properties.Mask.EditMask = "dd/MM/yyyy";
                 txtRemovalDate.Properties.Mask.UseMaskAsDisplayFormat = true;
 
+                //History
+
+                txtHCaliber.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                txtHCaliber.Properties.Mask.EditMask = "F2"; //Dos decimales
+                txtHCaliber.Properties.Mask.UseMaskAsDisplayFormat = true;
+                txtHCaliber.EditValue = "0.00";
+
+                txtHLaunchDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
+                txtHLaunchDate.Properties.Mask.EditMask = "dd/MM/yyyy";
+                txtHLaunchDate.Properties.Mask.UseMaskAsDisplayFormat = true;
+
+                txtHRemovalDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
+                txtHRemovalDate.Properties.Mask.EditMask = "dd/MM/yyyy";
+                txtHRemovalDate.Properties.Mask.UseMaskAsDisplayFormat = true;
+
             }
             catch (Exception ex)
             {
@@ -480,47 +799,116 @@ namespace HKSupply.Forms.Master
                     }
                 }
 
-                if (_itemUpdate.Model == null) _itemUpdate.Model = new Model(); //para evitar problemas al bindear nested properties
+                //para evitar problemas al bindear nested properties
+                if (_itemUpdate.Model == null) _itemUpdate.Model = new Model();
+                if (_itemUpdate.Prototype == null) _itemUpdate.Prototype = new Prototype(); 
 
                 //TextEdit
-                txtIdVersion.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdVer);
-                txtIdSubversion.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdSubVer);
-                txtTimestamp.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Timestamp);
-                txtIdPrototype.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdPrototype);
-                txtPrototypeName.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.PrototypeName);
-                txtPrototypeDescription.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.PrototypeDescription);
-                //txtModel.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Model.Description);
+                txtIdVersion.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdVer);
+                txtIdSubversion.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdSubVer);
+                txtTimestamp.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Timestamp);
+                txtIdPrototype.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdPrototype);
+                txtPrototypeName.DataBindings.Add("Text", _itemUpdate, "Prototype.PrototypeName");//La custom extension que hice no funciona con propiedades que son clases, bindeo a la antigua
+                txtPrototypeDescription.DataBindings.Add("Text", _itemUpdate, "Prototype.PrototypeDescription");//La custom extension que hice no funciona con propiedades que son clases, bindeo a la antigua
+                txtPrototypeStatus.DataBindings.Add("Text", _itemUpdate, "Prototype.PrototypeStatus");//La custom extension que hice no funciona con propiedades que son clases, bindeo a la antigua
                 txtModel.DataBindings.Add("Text", _itemUpdate, "Model.Description");//La custom extension que hice no funciona con propiedades que son clases, bindeo a la antigua
-                txtCaliber.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Caliber);
-                txtIdColor1.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdColor1);
-                txtIdColor2.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdColor2);
-                txtIdItemBcn.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdItemBcn);
-                txtIdItemHK.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdItemHK);
-                txtItemDescription.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.ItemDescription);
-                txtIdMaterialL1.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdMaterialL1);
-                txtIdMaterialL2.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdMaterialL2);
-                txtIdMaterialL3.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdMaterialL3);
-                txtComments.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Comments);
-                txtSegment.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Segment);
-                txtCategory.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Category);
-                txtAge.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Age);
-                txtLaunchDate.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.LaunchDate);
-                txtRemovalDate.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.RemovalDate);
-                txtIdStatusCial.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdStatusCial);
-                txtUnit.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.Unit);
-                txtDocsLink.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.DocsLink);
-                txtCreateDate.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.CreateDate);
+                txtCaliber.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Caliber);
+                txtIdColor1.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdColor1);
+                txtIdColor2.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdColor2);
+                txtIdItemBcn.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdItemBcn);
+                txtIdItemHK.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdItemHK);
+                txtItemDescription.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.ItemDescription);
+                txtIdMaterialL1.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdMaterialL1);
+                txtIdMaterialL2.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdMaterialL2);
+                txtIdMaterialL3.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdMaterialL3);
+                txtComments.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Comments);
+                txtSegment.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Segment);
+                txtCategory.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Category);
+                txtAge.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Age);
+                txtLaunchDate.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.LaunchDate);
+                txtRemovalDate.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.RemovalDate);
+                txtIdStatusCial.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdStatusCial);
+                txtUnit.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Unit);
+                txtDocsLink.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.DocsLink);
+                txtCreateDate.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.CreateDate);
 
-                txtIdUserAttri1.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri1);
-                txtIdUserAttri2.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri2);
-                txtIdUserAttri3.DataBindings.Add<Item>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri3);
+                txtIdUserAttri1.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri1);
+                txtIdUserAttri2.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri2);
+                txtIdUserAttri3.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri3);
 
                 //LookUpEdit
-                lueIdDefaultSupplier.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdDefaultSupplier);
-                lueIdStatusProd.DataBindings.Add<Item>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdStatusProd);
+                lueIdDefaultSupplier.DataBindings.Add<ItemEy>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdDefaultSupplier);
+                lueIdStatusProd.DataBindings.Add<ItemEy>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdStatusProd);
 
-                //test PDF
-                PdfTestInit();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void SetHistoryBinding()
+        {
+            try
+            {
+                foreach (Control ctl in layoutControlHistory.Controls)
+                {
+                    if (ctl.GetType() == typeof(TextEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((TextEdit)ctl).ReadOnly = true;
+                    }
+                    else if (ctl.GetType() == typeof(CheckEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((CheckEdit)ctl).ReadOnly = true;
+                    }
+                    else if (ctl.GetType() == typeof(DateEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((DateEdit)ctl).ReadOnly = true;
+                    }
+                    else if (ctl.GetType() == typeof(LookUpEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((LookUpEdit)ctl).ReadOnly = true;
+                    }
+                }
+
+                //TextEdit
+                txtHIdVersion.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdVer);
+                txtHIdSubversion.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdSubVer);
+                txtHTimestamp.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.Timestamp);
+                txtHIdPrototype.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdPrototype);
+                txtHModel.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdModel);
+                txtHCaliber.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.Caliber);
+                txtHIdColor1.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdColor1);
+                txtHIdColor2.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdColor2);
+                txtHIdItemBcn.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdItemBcn);
+                txtHIdItemHK.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdItemHK);
+                txtHItemDescription.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.ItemDescription);
+                txtHIdMaterialL1.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdMaterialL1);
+                txtHIdMaterialL2.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdMaterialL2);
+                txtHIdMaterialL3.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdMaterialL3);
+                txtHComments.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.Comments);
+                txtHSegment.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.Segment);
+                txtHCategory.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.Category);
+                txtHAge.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.Age);
+                txtHLaunchDate.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.LaunchDate);
+                txtHRemovalDate.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.RemovalDate);
+                txtHIdStatusCial.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdStatusCial);
+                txtHUnit.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.Unit);
+                txtHDocsLink.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.DocsLink);
+                txtHCreateDate.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.CreateDate);
+
+                txtHIdUserAttri1.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdUserAttri1);
+                txtHIdUserAttri2.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdUserAttri2);
+                txtHIdUserAttri3.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdUserAttri3);
+
+                //LookUpEdit
+                lueHIdDefaultSupplier.DataBindings.Add<ItemEyHistory>(_itemHistory, (LookUpEdit e) => e.EditValue, item => item.IdDefaultSupplier);
+                lueHIdStatusProd.DataBindings.Add<ItemEyHistory>(_itemHistory, (LookUpEdit e) => e.EditValue, item => item.IdStatusProd);
+            
             }
             catch (Exception ex)
             {
@@ -547,6 +935,13 @@ namespace HKSupply.Forms.Master
                 //lueIdDefaultSupplier.Properties.AllowNullInput = DefaultBoolean.True; 
                 lueIdDefaultSupplier.KeyDown += lueIdDefaultSupplier_KeyDown;
 
+                //History
+                lueHIdDefaultSupplier.Properties.DataSource = _supplierList;
+                lueHIdDefaultSupplier.Properties.DisplayMember = "IdSupplier";
+                lueHIdDefaultSupplier.Properties.ValueMember = "IdSupplier";
+                lueHIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdSupplier", 20, "Id Supplier"));
+                lueHIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SupplierName", 100, "Name"));
+
             }
             catch (Exception ex)
             {
@@ -568,6 +963,27 @@ namespace HKSupply.Forms.Master
                 lueIdStatusProd.Properties.ValueMember = "IdStatusProd";
                 //lueIdStatusProd.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdSupplier", 20, "Id Supplier"));
                 //lueIdStatusProd.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SupplierName", 100, "Name"));
+
+                lueHIdStatusProd.Properties.DataSource = _statusProdList;
+                lueHIdStatusProd.Properties.DisplayMember = "Description";
+                lueHIdStatusProd.Properties.ValueMember = "IdStatusProd";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void SetUpLueDocType()
+        {
+            try
+            {
+                _docsTypeList = GlobalSetting.DocTypeService.GetDocsType();
+
+                lueDocType.Properties.DataSource = _docsTypeList;
+                lueDocType.Properties.DisplayMember = "Description";
+                lueDocType.Properties.ValueMember = "IdDocType";
+                lueDocType.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Description", 100, "Description"));
             }
             catch (Exception ex)
             {
@@ -617,7 +1033,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _itemsList = GlobalSetting.ItemService.GetItems("EY");
+                _itemsList = GlobalSetting.ItemEyService.GetItems();
                 xgrdItems.DataSource = _itemsList;
             }
             catch (Exception ex)
@@ -630,7 +1046,7 @@ namespace HKSupply.Forms.Master
         /// Cargar los datos de un customer en concreto
         /// </summary>
         /// <param name="item"></param>
-        private void LoadItemForm(Item item)
+        private void LoadItemForm(ItemEy item)
         {
             try
             {
@@ -639,6 +1055,104 @@ namespace HKSupply.Forms.Master
                 SetFormBinding(); //refresh binding
                 xtpForm.PageVisible = true;
                 xtcGeneral.SelectedTabPage = xtpForm;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void LoadItemHistory()
+        {
+            try
+            {
+                _itemsHistoryList = GlobalSetting.ItemEyService.GetItemEyHistory(_itemUpdate.IdItemBcn);
+                SetCurrentItemHistory(0);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void SetCurrentItemHistory(int historyNum)
+        {
+            try
+            {
+                if (historyNum >= 0 && historyNum < _itemsHistoryList.Count())
+                {
+                    _itemHistory = _itemsHistoryList[historyNum];
+                    SetHistoryBinding();
+                    _currentHistoryNumList = historyNum;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void LoadItemDocs()
+        {
+            try
+            {
+                _itemDocsList = GlobalSetting.ItemDocService.GetItemsDocs(_itemUpdate.IdItemBcn, "EY"); //TODO El "EY" hardcodeado esta feo...
+                xgrdDocsHistory.DataSource = _itemDocsList;
+
+                _itemLastDocsList = GlobalSetting.ItemDocService.GetLastItemsDocs(_itemUpdate.IdItemBcn, "EY");
+                xgrdLastDocs.DataSource = _itemLastDocsList;
+
+                xtpDocs.PageVisible = true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void OpenDoc(string fullFilePath)
+        {
+            try
+            {
+                //Validamos que el fichero exista
+                if (System.IO.File.Exists(fullFilePath))
+                {
+                    string extension = System.IO.Path.GetExtension(fullFilePath);
+                    switch (extension.ToUpper())
+                    {
+                        case ".PDF":
+                            PDFViewer pdfViewer = new PDFViewer();
+                            pdfViewer.pdfFile = fullFilePath;
+			                pdfViewer.ShowDialog();
+                            break;
+                        
+                        case ".JPG":
+                        case ".PNG":
+                            using (Form form = new Form())
+                            {
+                                PictureBox pb = new PictureBox();
+                                pb.Dock = DockStyle.Fill;
+                                pb.BackgroundImageLayout = ImageLayout.Center;
+                                pb.Image = Image.FromFile(fullFilePath);
+
+                                form.Text = "Img Viewer";
+                                form.Width = 1280;
+                                form.Height = 720;
+                                form.Controls.Add(pb);
+                                form.ShowDialog();
+                            }
+                            break;
+
+                        default:
+                            XtraMessageBox.Show("File not supported.");
+                            break;
+                    }
+                }
+                else 
+                {
+                    XtraMessageBox.Show("File doesn't exist or server is down or inaccessible", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
             catch (Exception ex)
             {
@@ -793,6 +1307,21 @@ namespace HKSupply.Forms.Master
                 //        }
                 //    }
                 //}
+
+                if (string.IsNullOrEmpty(txtPathNewDoc.Text) == false)
+                {
+                    if (System.IO.File.Exists(txtPathNewDoc.Text) == false)
+                    {
+                        XtraMessageBox.Show("New doc file doesn't exist", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return false;
+                    }
+                    if (lueDocType.EditValue == null)
+                    {
+                        XtraMessageBox.Show("Select doc type", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return false;
+                    }
+                }
+
                 return true;
             }
             catch (Exception ex)
@@ -810,13 +1339,47 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                return GlobalSetting.ItemService.UpdateItem(_itemUpdate, newVersion);
+                return GlobalSetting.ItemEyService.UpdateItem(_itemUpdate, newVersion);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
+
+        private bool UpdateItemWithDoc(bool newVersion = false)
+        {
+            try
+            {
+                string fileName = System.IO.Path.GetFileName(txtPathNewDoc.Text);
+				string fileNameNoExtension = System.IO.Path.GetFileNameWithoutExtension(txtPathNewDoc.Text);
+				string extension = System.IO.Path.GetExtension(txtPathNewDoc.Text);
+
+                //Creamos los directorios si no existen
+                new System.IO.FileInfo(Constants.DOCS_PATH + _itemUpdate.IdItemBcn + "\\" + lueDocType.EditValue.ToString()+"\\").Directory.Create();
+
+                
+                ItemDoc itemDoc = new ItemDoc();
+                itemDoc.IdItemBcn = _itemUpdate.IdItemBcn;
+                itemDoc.IdItemGroup = "EY"; //TODO. Hardcodeado feo
+                itemDoc.IdDocType = lueDocType.EditValue.ToString();
+                itemDoc.FileName = fileNameNoExtension + "_" + (_itemUpdate.IdVer.ToString()) + "." + ((_itemUpdate.IdSubVer + 1).ToString()) + extension;
+                itemDoc.FilePath = _itemUpdate.IdItemBcn + "\\" + lueDocType.EditValue.ToString() + "\\" + itemDoc.FileName;
+
+                //move to file server
+                System.IO.File.Copy(txtPathNewDoc.Text, Constants.DOCS_PATH + itemDoc.FilePath, overwrite: true);
+
+                //update database
+                return GlobalSetting.ItemEyService.UpdateItemWithDoc(_itemUpdate, itemDoc, newVersion);
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
 
         private void ActionsAfterCU()
         {
@@ -829,6 +1392,7 @@ namespace HKSupply.Forms.Master
                 ResetItemUpdate();
                 SetFormBinding();
                 xtpForm.PageVisible = false;
+                xtpDocs.PageVisible = false;
                 xtpList.PageVisible = true;
                 LoadItemsList();
                 MoveGridToItem(idPrototype, idItemBcn);
@@ -843,191 +1407,7 @@ namespace HKSupply.Forms.Master
         #endregion
 
         #region test
-        private void toolTipController1_GetActiveObjectInfo(object sender, DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs e)
-        {
-            if (e.SelectedControl != xgrdItems) return;
-            ToolTipControlInfo info = null;
-
-            SuperToolTip sTooltip1 = new SuperToolTip();
-
-
-            try
-            {
-                GridView view = xgrdItems.GetViewAt(e.ControlMousePosition) as GridView;
-                if (view == null) return;
-                DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitInfo hi = view.CalcHitInfo(e.ControlMousePosition);
-
-                if (hi.HitTest == DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitTest.RowCell)
-                {
-                    //info para debug
-                    //info = new ToolTipControlInfo(DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitTest.RowIndicator.ToString() + hi.RowHandle.ToString(), "Row Handle: " + hi.RowHandle.ToString());
-
-                    ToolTipTitleItem titleItem1 = new ToolTipTitleItem();
-
-                    if (hi.Column.FieldName != eItemColumns.Photo.ToString())
-                        return;
-
-                    string url = view.GetRowCellValue(hi.RowHandle, eItemColumns.PhotoUrl.ToString()).ToString();
-                    if (photosCache.ContainsKey(url) == false)
-                    {
-                        var request = System.Net.WebRequest.Create(url);
-                        using (var response = request.GetResponse())
-                        {
-                            using (var stream = response.GetResponseStream())
-                            {
-                                Image p = Bitmap.FromStream(stream);
-                                photosCache.Add(url, (Bitmap)p);
-                            }
-                        }
-                    }
-                    Bitmap im = null;
-                    im = photosCache[url.ToString()];
-                    ToolTipItem item1 = new ToolTipItem();
-                    item1.Image = im;
-                    sTooltip1.Items.Add(item1);
- 
-                    //END.MRM
-                }
-                info = new ToolTipControlInfo(hi.HitTest, "");
-                info.SuperTip = sTooltip1;
-            }
-            finally
-            {
-                e.Info = info;
-            }
-        }
-        #endregion
-
-        #region PDF Test
-
-        private void PdfTestInit()
-        {
-            try
-            {
-                txtPdfPath.Text = @"C:\Users\mario.ruz\Downloads\the-art-of-unit-testing-with-examples-roy-osherove(www.ebook-dl.com)\the-art-of-unit-testing-with-examples-roy-osherove(www.ebook-dl.com).pdf";
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        void sbOpenFile_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                OpenFileDialog openFileDialog = new OpenFileDialog();
-                //openFileDialog.InitialDirectory = "c:\\";
-                openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                openFileDialog.Filter = "PDF files (*.pdf)|*.pdf";
-                openFileDialog.RestoreDirectory = true;
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    txtPdfPath.Text = openFileDialog.FileName;
-                }
-
-
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        void sbViewPdf_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(txtPdfPath.Text) == false)
-                {
-                    PDFViewer pdfViewer = new PDFViewer();
-                    pdfViewer.pdfFile = txtPdfPath.Text;
-                    pdfViewer.ShowDialog();
-                }
-                else
-                {
-                    XtraMessageBox.Show("No file selected", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                
-            }
-            catch(Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        #endregion
-
-        #region New Doc Test
-        void sbViewPdfNewDoc_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(txtPdfPathNewDoc.Text) == false)
-                {
-                    PDFViewer pdfViewer = new PDFViewer();
-                    pdfViewer.pdfFile = txtPdfPathNewDoc.Text;
-                    pdfViewer.ShowDialog();
-                }
-                else
-                {
-                    XtraMessageBox.Show("No file selected", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        void sbOpenFileNewDoc_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                OpenFileDialog openFileDialog = new OpenFileDialog();
-                openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                openFileDialog.Filter = "PDF files (*.pdf)|*.pdf";
-                openFileDialog.Multiselect = false;
-                openFileDialog.RestoreDirectory = true;
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    txtPdfPathNewDoc.Text = openFileDialog.FileName;
-                }
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        void sbMoveDoc_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                ReadEuroCurrencyExchange();
-
-                if (string.IsNullOrEmpty(txtPdfPathNewDoc.Text) == false)
-                {
-                    //Creamos los directorios si no existen
-                    new System.IO.FileInfo(Constants.DOCS_PATH + Constants.DRAWING_PDF_FOLDER).Directory.Create();
-                    //movemos
-                    if (System.IO.File.Exists(txtPdfPathNewDoc.Text))
-                    {
-                        var fileName = System.IO.Path.GetFileName(txtPdfPathNewDoc.Text);
-                        var fileNameNoExtension = System.IO.Path.GetFileNameWithoutExtension(txtPdfPathNewDoc.Text);
-                        var extension = System.IO.Path.GetExtension(txtPdfPathNewDoc.Text);
-                        System.IO.File.Copy(txtPdfPathNewDoc.Text, Constants.DOCS_PATH + Constants.DRAWING_PDF_FOLDER + fileName, overwrite: true);
-                    }
-
-                }
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-
+        
         #endregion
 
         #region Read XML Currency Echange

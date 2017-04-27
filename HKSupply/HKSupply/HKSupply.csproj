@@ -468,6 +468,34 @@
     <Compile Include="Migrations\201704191209177_PricesListHistoty_user_1.Designer.cs">
       <DependentUpon>201704191209177_PricesListHistoty_user_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704260712449_items_20170426_01.cs" />
+    <Compile Include="Migrations\201704260712449_items_20170426_01.Designer.cs">
+      <DependentUpon>201704260712449_items_20170426_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704260734400_items_20170426_02.cs" />
+    <Compile Include="Migrations\201704260734400_items_20170426_02.Designer.cs">
+      <DependentUpon>201704260734400_items_20170426_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704260740393_items_20170426_03.cs" />
+    <Compile Include="Migrations\201704260740393_items_20170426_03.Designer.cs">
+      <DependentUpon>201704260740393_items_20170426_03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704260805066_items_20170426_04.cs" />
+    <Compile Include="Migrations\201704260805066_items_20170426_04.Designer.cs">
+      <DependentUpon>201704260805066_items_20170426_04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704260848126_items_20170426_05.cs" />
+    <Compile Include="Migrations\201704260848126_items_20170426_05.Designer.cs">
+      <DependentUpon>201704260848126_items_20170426_05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704260849595_items_20170426_06.cs" />
+    <Compile Include="Migrations\201704260849595_items_20170426_06.Designer.cs">
+      <DependentUpon>201704260849595_items_20170426_06.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704271337550_DocType_ItemMtHw_01.cs" />
+    <Compile Include="Migrations\201704271337550_DocType_ItemMtHw_01.Designer.cs">
+      <DependentUpon>201704271337550_DocType_ItemMtHw_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\CustomerPriceList.cs" />
@@ -484,12 +512,12 @@
     <Compile Include="Models\HwTypeL2.cs" />
     <Compile Include="Models\HwTypeL3.cs" />
     <Compile Include="Models\Incoterm.cs" />
-    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ItemEy.cs" />
     <Compile Include="Models\ItemBcn.cs" />
     <Compile Include="Models\ItemDoc.cs" />
     <Compile Include="Models\ItemHw.cs" />
     <Compile Include="Models\ItemGroup.cs" />
-    <Compile Include="Models\ItemHistory.cs" />
+    <Compile Include="Models\ItemEyHistory.cs" />
     <Compile Include="Models\ItemHwHistory.cs" />
     <Compile Include="Models\ItemMt.cs" />
     <Compile Include="Models\ItemMtHistory.cs" />
@@ -522,13 +550,15 @@
     <Compile Include="Services\Implementations\EFCurrency.cs" />
     <Compile Include="Services\Implementations\EFCustomer.cs" />
     <Compile Include="Services\Implementations\EFCustomerPriceList.cs" />
+    <Compile Include="Services\Implementations\EFDocType.cs" />
     <Compile Include="Services\Implementations\EFEchangeRate.cs" />
     <Compile Include="Services\Implementations\EFFamilyHK.cs" />
     <Compile Include="Services\Implementations\EFFunctionality.cs" />
     <Compile Include="Services\Implementations\EFFunctionalityRole.cs" />
     <Compile Include="Services\Implementations\EFHwType.cs" />
     <Compile Include="Services\Implementations\EFIncoterm.cs" />
-    <Compile Include="Services\Implementations\EFItem.cs" />
+    <Compile Include="Services\Implementations\EFItemDoc.cs" />
+    <Compile Include="Services\Implementations\EFItemEy.cs" />
     <Compile Include="Services\Implementations\EFItemBcn.cs" />
     <Compile Include="Services\Implementations\EFMaterial.cs" />
     <Compile Include="Services\Implementations\EFMatType.cs" />
@@ -544,13 +574,15 @@
     <Compile Include="Services\Interfaces\ICurrency.cs" />
     <Compile Include="Services\Interfaces\ICustomer.cs" />
     <Compile Include="Services\Interfaces\ICustomerPriceList.cs" />
+    <Compile Include="Services\Interfaces\IDocType.cs" />
     <Compile Include="Services\Interfaces\IEchangeRate.cs" />
     <Compile Include="Services\Interfaces\IFamilyHK.cs" />
     <Compile Include="Services\Interfaces\IFunctionality.cs" />
     <Compile Include="Services\Interfaces\IFunctionalityRole.cs" />
     <Compile Include="Services\Interfaces\IHwType.cs" />
     <Compile Include="Services\Interfaces\IIncoterm.cs" />
-    <Compile Include="Services\Interfaces\IItem.cs" />
+    <Compile Include="Services\Interfaces\IItemDoc.cs" />
+    <Compile Include="Services\Interfaces\IItemEy.cs" />
     <Compile Include="Services\Interfaces\IItemBcn.cs" />
     <Compile Include="Services\Interfaces\IMaterial.cs" />
     <Compile Include="Services\Interfaces\IMatType.cs" />
@@ -782,6 +814,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704191209177_PricesListHistoty_user_1.resx">
       <DependentUpon>201704191209177_PricesListHistoty_user_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704260712449_items_20170426_01.resx">
+      <DependentUpon>201704260712449_items_20170426_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704260734400_items_20170426_02.resx">
+      <DependentUpon>201704260734400_items_20170426_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704260740393_items_20170426_03.resx">
+      <DependentUpon>201704260740393_items_20170426_03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704260805066_items_20170426_04.resx">
+      <DependentUpon>201704260805066_items_20170426_04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704260848126_items_20170426_05.resx">
+      <DependentUpon>201704260848126_items_20170426_05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704260849595_items_20170426_06.resx">
+      <DependentUpon>201704260849595_items_20170426_06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704271337550_DocType_ItemMtHw_01.resx">
+      <DependentUpon>201704271337550_DocType_ItemMtHw_01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

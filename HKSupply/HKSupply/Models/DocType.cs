@@ -14,8 +14,14 @@ namespace HKSupply.Models
     {
         [Column("ID_DOC_TYPE", TypeName = "NVARCHAR"), Key, StringLength(100)]
         public string IdDocType { get; set; }
-        [Column("Description", TypeName = "NVARCHAR"), StringLength(500)]
+        
+        [Column("DESCRIPTION", TypeName = "NVARCHAR"), StringLength(500)]
         public string Description { get; set; }
+        
+        [Column("ID_ITEM_GROUP", TypeName = "NVARCHAR"), StringLength(100)]
+        public string IdItemGroup { get; set; }
+        [ForeignKey("IdItemGroup")]
+        public ItemGroup ItemGroup { get; set; }
 
         #region Equals
         public override bool Equals(object obj)
@@ -26,7 +32,8 @@ namespace HKSupply.Models
             DocType docType = (DocType)obj;
             bool res = (
                 IdDocType == docType.IdDocType &&
-                Description == docType.Description);
+                Description == docType.Description &&
+                IdItemGroup == docType.IdItemGroup);
             
             return res;
         }
@@ -35,7 +42,8 @@ namespace HKSupply.Models
         {
             int hashCode =
                 (IdDocType == null ? 0 : IdDocType.GetHashCode()) +
-                (Description == null ? 0 : Description.GetHashCode());
+                (Description == null ? 0 : Description.GetHashCode()) +
+                (IdItemGroup == null ? 0 : IdItemGroup.GetHashCode());
 
             return hashCode;
         }

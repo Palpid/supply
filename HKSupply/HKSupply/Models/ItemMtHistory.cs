@@ -54,6 +54,10 @@ namespace HKSupply.Models
         [ForeignKey("IdFamilyHK")]
         public FamilyHK FamilyHK { get; set; }
 
+        [Column("ID_COLOR_1", TypeName = "NVARCHAR"), StringLength(30)]
+        public string IdColor1 { get; set; }
+        [Column("ID_COLOR_2", TypeName = "NVARCHAR"), StringLength(30)]
+        public string IdColor2 { get; set; }
 
         [Column("ID_ITEM_HK", TypeName = "NVARCHAR"), StringLength(20)]
         public string IdItemHK { get; set; }
@@ -123,6 +127,8 @@ namespace HKSupply.Models
                 IdMatTypeL3 == itemMtHistory.IdMatTypeL3 &&
                 IdDefaultSupplier == itemMtHistory.IdDefaultSupplier &&
                 IdFamilyHK == itemMtHistory.IdFamilyHK &&
+                IdColor1 == itemMtHistory.IdColor1 &&
+                IdColor2 == itemMtHistory.IdColor2 &&
                 IdItemHK == itemMtHistory.IdItemHK &&
                 ItemDescription == itemMtHistory.ItemDescription &&
                 Comments == itemMtHistory.Comments &&
@@ -156,6 +162,8 @@ namespace HKSupply.Models
                 (IdMatTypeL3 == null ? 0 : IdMatTypeL3.GetHashCode()) +
                 (IdDefaultSupplier == null ? 0 : IdDefaultSupplier.GetHashCode()) +
                 (IdFamilyHK == null ? 0 : IdFamilyHK.GetHashCode()) +
+                (IdColor1 == null ? 0 : IdColor1.GetHashCode()) +
+                (IdColor2 == null ? 0 : IdColor2.GetHashCode()) +
                 (IdItemHK == null ? 0 : IdItemHK.GetHashCode()) +
                 (ItemDescription == null ? 0 : ItemDescription.GetHashCode()) +
                 (Comments == null ? 0 : Comments.GetHashCode()) +
@@ -191,6 +199,8 @@ namespace HKSupply.Models
             imth.IdMatTypeL3 = i.IdMatTypeL3;
             imth.IdDefaultSupplier = i.IdDefaultSupplier;
             imth.IdFamilyHK = i.IdFamilyHK;
+            imth.IdColor1 = i.IdColor1;
+            imth.IdColor2 = i.IdColor2;
             imth.IdItemHK = i.IdItemHK;
             imth.ItemDescription = i.ItemDescription;
             imth.Comments = i.Comments;

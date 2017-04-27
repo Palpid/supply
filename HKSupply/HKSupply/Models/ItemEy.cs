@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace HKSupply.Models
 {
-    [Table("ITEMS")]
-    public class Item
+    [Table("ITEMS_EY")]
+    public class ItemEy
     {
         [Column("ID_VER"), Required]
         public int IdVer { get; set; }
@@ -21,22 +21,13 @@ namespace HKSupply.Models
         [Column("TIMESTAMP"), Required]
         public DateTime Timestamp { get; set; }
 
-        [Column("ID_ITEM_GROUP", Order = 0, TypeName = "NVARCHAR"), Key, StringLength(100)]
-        public string IdItemGroup { get; set; }
-        [ForeignKey("IdItemGroup")]
-        public ItemGroup ItemGroup { get; set; }
-
-        [Column("ID_PROTOTYPE", Order = 1, TypeName = "NVARCHAR"), Key, StringLength(50)]
-        public string IdPrototype { get; set; }
-        [Column("PROTOTYPE_NAME", TypeName = "NVARCHAR"), StringLength(100)]
-        public string PrototypeName { get; set; }
-        [Column("PROTOTYPE_DESCRIPTION", TypeName = "NVARCHAR"), StringLength(100)]
-        public string PrototypeDescription { get; set; }
-        [Column("PROTOTYPE_STATUS")]
-        public int? PrototypeStatus { get; set; }
-
-        [Column("ID_ITEM_BCN", Order = 2, TypeName = "NVARCHAR"), Key, StringLength(20)]
+        [Column("ID_ITEM_BCN", TypeName = "NVARCHAR"), Key, StringLength(20)]
         public string IdItemBcn { get; set; }
+
+        [Column("ID_PROTOTYPE", TypeName = "NVARCHAR"), StringLength(50)]
+        public string IdPrototype { get; set; }
+        [ForeignKey("IdPrototype")]
+        public Prototype Prototype { get; set; }
 
         [Column("ID_MATERIAL_L1", TypeName = "NVARCHAR"), StringLength(100)]
         public string IdMaterialL1 { get; set; }
@@ -51,34 +42,6 @@ namespace HKSupply.Models
         public MaterialL2 MaterialL2 { get; set; }
         [ForeignKey("IdMaterialL3")]
         public MaterialL3 MaterialL3 { get; set; }
-
-        [Column("ID_MAT_TYPE_L1", TypeName = "NVARCHAR"), StringLength(100)]
-        public string IdMatTypeL1 { get; set; }
-        [Column("ID_MAT_TYPE_L2", TypeName = "NVARCHAR"), StringLength(100)]
-        public string IdMatTypeL2 { get; set; }
-        [Column("ID_MAT_TYPE_L3", TypeName = "NVARCHAR"), StringLength(100)]
-        public string IdMatTypeL3 { get; set; }
-
-        [ForeignKey("IdMatTypeL1")]
-        public MatTypeL1 MatTypeL1 { get; set; }
-        [ForeignKey("IdMatTypeL2")]
-        public MatTypeL2 MatTypeL2 { get; set; }
-        [ForeignKey("IdMatTypeL3")]
-        public MatTypeL3 MatTypeL3 { get; set; }
-
-        [Column("ID_HW_TYPE_L1", TypeName = "NVARCHAR"), StringLength(100)]
-        public string IdHwTypeL1 { get; set; }
-        [Column("ID_HW_TYPE_L2", TypeName = "NVARCHAR"), StringLength(100)]
-        public string IdHwTypeL2 { get; set; }
-        [Column("ID_HW_TYPE_L3", TypeName = "NVARCHAR"), StringLength(100)]
-        public string IdHwTypeL3 { get; set; }
-
-        [ForeignKey("IdHwTypeL1")]
-        public HwTypeL1 HwTypeL1 { get; set; }
-        [ForeignKey("IdHwTypeL2")]
-        public HwTypeL2 HwTypeL2 { get; set; }
-        [ForeignKey("IdHwTypeL3")]
-        public HwTypeL3 HwTypeL3 { get; set; }
 
         [Column("ID_DEFAULT_SUPPLIER", TypeName = "NVARCHAR"), StringLength(100)]
         public String IdDefaultSupplier { get; set; }
@@ -167,27 +130,17 @@ namespace HKSupply.Models
             if (obj == null || obj == DBNull.Value)
                 return false;
 
-            Item item = (Item)obj;
+            ItemEy item = (ItemEy)obj;
 
             bool res = (
                 IdVer == item.IdVer &&
                 IdSubVer == item.IdSubVer &&
                 Timestamp == item.Timestamp &&
-                IdItemGroup == item.IdItemGroup &&
                 IdPrototype == item.IdPrototype &&
-                PrototypeName == item.PrototypeName &&
-                PrototypeDescription == item.PrototypeDescription &&
-                PrototypeStatus == item.PrototypeStatus &&
                 IdItemBcn == item.IdItemBcn &&
                 IdMaterialL1 == item.IdMaterialL1 &&
                 IdMaterialL2 == item.IdMaterialL2 &&
                 IdMaterialL3 == item.IdMaterialL3 &&
-                IdMatTypeL1 == item.IdMatTypeL1 &&
-                IdMatTypeL2 == item.IdMatTypeL2 &&
-                IdMatTypeL3 == item.IdMatTypeL3 &&
-                IdHwTypeL1 == item.IdHwTypeL1 &&
-                IdHwTypeL2 == item.IdHwTypeL2 &&
-                IdHwTypeL3 == item.IdHwTypeL3 &&
                 IdDefaultSupplier == item.IdDefaultSupplier &&
                 IdModel == item.IdModel &&
                 IdFamilyHK == item.IdFamilyHK &&
@@ -222,21 +175,11 @@ namespace HKSupply.Models
                 IdVer.GetHashCode() + 
                 IdSubVer.GetHashCode() + 
                 Timestamp.GetHashCode() + 
-                (IdItemGroup == null ? 0 : IdItemGroup.GetHashCode()) + 
                 (IdPrototype == null ? 0 : IdPrototype.GetHashCode()) + 
-                (PrototypeName == null ? 0 : PrototypeName.GetHashCode()) + 
-                (PrototypeDescription == null ? 0 : PrototypeDescription.GetHashCode()) + 
-                (PrototypeStatus == null ? 0 : PrototypeStatus.GetHashCode()) + 
                 (IdItemBcn == null ? 0 : IdItemBcn.GetHashCode()) + 
                 (IdMaterialL1 == null ? 0 : IdMaterialL1.GetHashCode()) + 
                 (IdMaterialL2 == null ? 0 : IdMaterialL2.GetHashCode()) + 
                 (IdMaterialL3 == null ? 0 : IdMaterialL3.GetHashCode()) + 
-                (IdMatTypeL1 == null ? 0 : IdMatTypeL1.GetHashCode()) + 
-                (IdMatTypeL2 == null ? 0 : IdMatTypeL2.GetHashCode()) + 
-                (IdMatTypeL3 == null ? 0 : IdMatTypeL3.GetHashCode()) + 
-                (IdHwTypeL1 == null ? 0 : IdHwTypeL1.GetHashCode()) + 
-                (IdHwTypeL2 == null ? 0 : IdHwTypeL2.GetHashCode()) + 
-                (IdHwTypeL3 == null ? 0 : IdHwTypeL3.GetHashCode()) + 
                 (IdDefaultSupplier == null ? 0 : IdDefaultSupplier.GetHashCode()) + 
                 (IdModel == null ? 0 : IdModel.GetHashCode()) + 
                 (IdFamilyHK == null ? 0 : IdFamilyHK.GetHashCode()) + 

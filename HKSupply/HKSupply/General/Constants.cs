@@ -9,8 +9,9 @@ namespace HKSupply.General
     public static class Constants
     {
         public const string DOCS_PATH = "C:\\Temp\\ITEM_DOCS\\";
-        public const string COLOR_PDF_FOLDER = "COLOR_PDF\\";
-        public const string DRAWING_PDF_FOLDER = "DRAWING_PDF\\";
-        public const string DRAWING_DWG_FOLDER = "DRAWING_DWG\\";
+        public const string COLOR_PDF_FOLDER = "PDFCOLOR\\";
+        public const string DRAWING_PDF_FOLDER = "PDFDRAWING\\";
+        public const string DRAWING_DWG_FOLDER = "DWGDRAWING\\";
+
     }
 }
