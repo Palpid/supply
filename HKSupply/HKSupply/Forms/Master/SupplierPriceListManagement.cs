@@ -1,5 +1,6 @@
 ﻿using DevExpress.Utils;
 using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
@@ -52,11 +53,14 @@ namespace HKSupply.Forms.Master
         List<SupplierPriceList> _suppliersPriceListList;
         List<SupplierPriceListHistory> _supplierPriceListHistoryList;
 
+        List<SupplierPriceList> _modifiedRowsList = new List<SupplierPriceList>();
+
         List<ItemBcn> _itemBcnList;
         List<Supplier> _suppliersList;
         List<Currency> _currenciesList;
 
         string[] _nonEditingFields = { "lueIdItemBcn", "lueIdSupplier", "txtIdVersion", "txtIdSubversion", "txtTimestamp" };
+        string[] _mandatoryEditingFields = { "lueIdItemBcn", "lueIdSupplier", "txtPrice", "lueIdCurrency", "txtPriceBaseCurrency", "txtExchangeRateUsed" };
 
         int _currentHistoryNumList;
 
@@ -70,8 +74,11 @@ namespace HKSupply.Forms.Master
             try
             {
                 ConfigureRibbonActions();
+                LoadCurrenciesList();
                 SetUpGrdSuppliersPriceList();
                 SetUpTextEdit();
+                SetUpSearchLueSupplier();
+                SetUpSearchLueItemBcn();
                 ResetSupplierPriceListUpdate();
                 SetFormBinding();
             }
@@ -114,7 +121,7 @@ namespace HKSupply.Forms.Master
                 sbNewVersion.Visible = false;
                 LoadSuppliersPriceList();
                 SetNonCreatingFieldsVisibility(LayoutVisibility.Always);
-
+                rootGridViewSuppliersPriceList.DoubleClick += rootGridViewSuppliersPriceList_DoubleClick;
             }
             catch (Exception ex)
             {
@@ -128,11 +135,16 @@ namespace HKSupply.Forms.Master
 
             try
             {
-                if (_supplierPriceListOriginal == null)
+                if (xtcGeneral.SelectedTabPage == xtpList && rootGridViewSuppliersPriceList.DataRowCount == 0)
                 {
-                    MessageBox.Show("No supplier price selected");
+                    MessageBox.Show("No data selected");
                     RestoreInitState();
                 }
+                //else if (_supplierPriceListOriginal == null)
+                //{
+                //    MessageBox.Show("No supplier price selected");
+                //    RestoreInitState();
+                //}
                 else
                 {
                     ConfigureRibbonActionsEditing();
@@ -177,16 +189,29 @@ namespace HKSupply.Forms.Master
 
                 Cursor = Cursors.WaitCursor;
 
-                if (_supplierPriceListUpdate.Equals(_supplierPriceListOriginal))
+                if (xtcGeneral.SelectedTabPage == xtpForm)
                 {
-                    MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
-                    return;
+                    if (_supplierPriceListUpdate.Equals(_supplierPriceListOriginal))
+                    {
+                        MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
+                        return;
+                    }
+                }
+                else if (xtcGeneral.SelectedTabPage == xtpList)
+                {
+                    if (_modifiedRowsList.Count == 0)
+                    {
+                        MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
+                        return;
+                    }
                 }
 
                 if (CurrentState == ActionsStates.Edit)
                 {
-                    res = UpdateSupplierPriceList();
-
+                    if (xtcGeneral.SelectedTabPage == xtpForm)
+                        res = UpdateSupplierPriceList(); //Actualizamos sólo uno
+                    else if (xtcGeneral.SelectedTabPage == xtpList)
+                        res = UpdateSuppliersPricesList(); //Actualizamos varios (se ha hecho desde el grid)
                 }
                 else if (CurrentState == ActionsStates.New)
                 {
@@ -223,8 +248,6 @@ namespace HKSupply.Forms.Master
                 sbNewVersion.Visible = false;
                 LoadSuppliersList();
                 LoadItemBcnList();
-                LoadCurrenciesList();
-
             }
             catch (Exception ex)
             {
@@ -267,6 +290,26 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        void rootGridViewSuppliersPriceList_CellValueChanged(object sender, CellValueChangedEventArgs e)
+        {
+            try
+            {
+                if (CurrentState == ActionsStates.Edit)
+                {
+                    GridView view = sender as GridView;
+                    SupplierPriceList supplierPriceList = view.GetRow(view.FocusedRowHandle) as SupplierPriceList;
+                    if (supplierPriceList != null)
+                    {
+                        AddModifiedRowToList(supplierPriceList);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void sbNewVersion_Click(object sender, EventArgs e)
         {
             try
@@ -280,7 +323,7 @@ namespace HKSupply.Forms.Master
                     return;
                 }
 
-                if (IsValidSupplierPriceList() == false)
+                if (IsValidSupplierPriceListForm() == false)
                     return;
 
                 if (UpdateSupplierPriceList(true))
@@ -382,6 +425,32 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        void slueSupplier_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                slueSupplier.EditValue = null;
+                e.Handled = true;
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void slueItemBcn_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                slueItemBcn.EditValue = null;
+                e.Handled = true;
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         #endregion
 
         #region Private Methods
@@ -390,6 +459,8 @@ namespace HKSupply.Forms.Master
         {
             _supplierPriceListUpdate = new SupplierPriceList();
         }
+
+        #region Setup Form Objects
 
         private void SetUpGrdSuppliersPriceList()
         {
@@ -400,7 +471,7 @@ namespace HKSupply.Forms.Master
                 rootGridViewSuppliersPriceList.HorzScrollVisibility = ScrollVisibility.Auto;
 
                 //hacer todo el grid no editable
-                rootGridViewSuppliersPriceList.OptionsBehavior.Editable = false;
+                //rootGridViewSuppliersPriceList.OptionsBehavior.Editable = false;
 
                 //Columns definition
                 GridColumn colIdVer = new GridColumn() { Caption = "Version", Visible = true, FieldName = eSupplierPriceListColumns.IdVer.ToString(), Width = 50 };
@@ -428,6 +499,48 @@ namespace HKSupply.Forms.Master
 
                 colExchangeRateUsed.DisplayFormat.FormatType = FormatType.Numeric;
                 colExchangeRateUsed.DisplayFormat.FormatString = "F2";
+
+                //Edit repositories
+                RepositoryItemLookUpEdit riComboCurrency = new RepositoryItemLookUpEdit();
+                riComboCurrency.DataSource = _currenciesList;
+                riComboCurrency.ValueMember = "IdCurrency";
+                riComboCurrency.DisplayMember = "Description";
+                riComboCurrency.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdCurrency", 40, "Currency"));
+                riComboCurrency.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Description", 60, "Description"));
+                colCurrency.ColumnEdit = riComboCurrency;
+
+                RepositoryItemTextEdit ritxt2Dec = new RepositoryItemTextEdit();
+                ritxt2Dec.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                ritxt2Dec.Mask.EditMask = "F2";
+                
+                colPrice.ColumnEdit = ritxt2Dec;
+                colPriceBaseCurrency.ColumnEdit = ritxt2Dec;
+                colExchangeRateUsed.ColumnEdit = ritxt2Dec;
+                colLeadTime.ColumnEdit = ritxt2Dec;
+
+                RepositoryItemTextEdit ritxtInt = new RepositoryItemTextEdit();
+                ritxtInt.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                ritxtInt.Mask.EditMask = "D";
+
+                colMinLot.ColumnEdit = ritxtInt;
+                colIncrLot.ColumnEdit = ritxtInt;
+
+                //no edit
+                colIdVer.OptionsColumn.AllowEdit = false;
+                colIdSubVer.OptionsColumn.AllowEdit = false;
+                colTimestamp.OptionsColumn.AllowEdit = false;
+                colIdItemBcn.OptionsColumn.AllowEdit = false;
+                colIdSupplier.OptionsColumn.AllowEdit = false;
+                colPrice.OptionsColumn.AllowEdit = false;
+                colComments.OptionsColumn.AllowEdit = false;
+                colCurrency.OptionsColumn.AllowEdit = false;
+                colPriceBaseCurrency.OptionsColumn.AllowEdit = false;
+                colExchangeRateUsed.OptionsColumn.AllowEdit = false;
+                colExchangeRateUsed.OptionsColumn.AllowEdit = false;
+                colMinLot.OptionsColumn.AllowEdit = false;
+                colIncrLot.OptionsColumn.AllowEdit = false;;
+                colLeadTime.OptionsColumn.AllowEdit = false;
+
                 
                 //add columns to grid root view
                 rootGridViewSuppliersPriceList.Columns.Add(colIdVer);
@@ -447,6 +560,8 @@ namespace HKSupply.Forms.Master
 
                 //Events
                 rootGridViewSuppliersPriceList.DoubleClick += rootGridViewSuppliersPriceList_DoubleClick;
+
+                rootGridViewSuppliersPriceList.CellValueChanged += rootGridViewSuppliersPriceList_CellValueChanged;
             }
             catch (Exception ex)
             {
@@ -526,6 +641,42 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void SetUpSearchLueSupplier()
+        {
+            try
+            {
+                var suppliers = GlobalSetting.SupplierService.GetSuppliers();
+                slueSupplier.Properties.DataSource = suppliers;
+                slueSupplier.Properties.ValueMember = "IdSupplier";
+                slueSupplier.Properties.DisplayMember = "SupplierName";
+                slueSupplier.Properties.View.Columns.AddField("IdSupplier").Visible = true;
+                slueSupplier.Properties.View.Columns.AddField("SupplierName").Visible = true;
+                slueSupplier.KeyDown += slueSupplier_KeyDown;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void SetUpSearchLueItemBcn()
+        {
+            try
+            {
+                var itemsBcn = GlobalSetting.ItemBcnService.GetItemsBcn();
+                slueItemBcn.Properties.DataSource = itemsBcn;
+                slueItemBcn.Properties.ValueMember = "IdItemBcn";
+                slueItemBcn.Properties.DisplayMember = "Description";
+                slueItemBcn.KeyDown += slueItemBcn_KeyDown;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
+
         private void LoadCurrenciesList()
         {
             try
@@ -561,6 +712,8 @@ namespace HKSupply.Forms.Master
         {
             try
             {
+                _modifiedRowsList.Clear();
+
                 _suppliersList = GlobalSetting.SupplierService.GetSuppliers();
 
                 lueIdSupplier.Properties.DataSource = _suppliersList;
@@ -581,8 +734,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _suppliersPriceListList = GlobalSetting.SupplierPriceListService.GetSuppliersPriceList();
-
+                _suppliersPriceListList = GlobalSetting.SupplierPriceListService.GetSuppliersPriceList((string)slueItemBcn.EditValue, (string)slueSupplier.EditValue);
                 xgrdSuppliersPriceList.DataSource = _suppliersPriceListList;
             }
             catch (Exception ex)
@@ -753,9 +905,40 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                xtpList.PageVisible = true;
-                sbNewVersion.Visible = true;
-                SetEditingFieldsEnabled();
+                //En función de si está en seleccionada la tab del formulario o del grid activaremos la edición de esa tab
+                if (xtcGeneral.SelectedTabPage == xtpForm)
+                {
+                    xtpList.PageVisible = false;
+                    sbNewVersion.Visible = true;
+                    SetEditingFieldsEnabled();   
+                }
+                else if (xtcGeneral.SelectedTabPage == xtpList)
+                {
+                    xtpForm.PageVisible = false;
+                    
+                    //no edit column
+                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.IdVer.ToString()].OptionsColumn.AllowEdit = false;
+                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.IdSubVer.ToString()].OptionsColumn.AllowEdit = false;
+                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.Timestamp.ToString()].OptionsColumn.AllowEdit = false;
+                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.IdItemBcn.ToString()].OptionsColumn.AllowEdit = false;
+                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.IdSupplier.ToString()].OptionsColumn.AllowEdit = false;
+                    
+                    //Allow edit some columns
+                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.Price.ToString()].OptionsColumn.AllowEdit = true;
+                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.Comments.ToString()].OptionsColumn.AllowEdit = true;
+                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.IdCurrency.ToString()].OptionsColumn.AllowEdit = true;
+                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.PriceBaseCurrency.ToString()].OptionsColumn.AllowEdit = true;
+                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.ExchangeRateUsed.ToString()].OptionsColumn.AllowEdit = true;
+                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.MinLot.ToString()].OptionsColumn.AllowEdit = true;
+                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.IncrLot.ToString()].OptionsColumn.AllowEdit = true;
+                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.LeadTime.ToString()].OptionsColumn.AllowEdit = true;
+
+                    //desuscribirse al evento del dobleclick mientras editamos el grid
+                    rootGridViewSuppliersPriceList.DoubleClick -= rootGridViewSuppliersPriceList_DoubleClick;
+
+                    sbLoad.Enabled = false;
+
+                }
             }
             catch (Exception ex)
             {
@@ -854,6 +1037,34 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void AddModifiedRowToList(SupplierPriceList modifiedRow)
+        {
+            try
+            {
+                var supplierPriceList = _modifiedRowsList.FirstOrDefault(a => a.IdSupplier.Equals(modifiedRow.IdSupplier) && a.IdItemBcn.Equals(modifiedRow.IdItemBcn));
+                if (supplierPriceList == null)
+                {
+                    _modifiedRowsList.Add(modifiedRow);
+                }
+                else
+                {
+                    supplierPriceList.Price = modifiedRow.Price;
+	                supplierPriceList.Comments = modifiedRow.Comments;
+	                supplierPriceList.IdCurrency = modifiedRow.IdCurrency;
+	                supplierPriceList.PriceBaseCurrency = modifiedRow.PriceBaseCurrency;
+	                supplierPriceList.ExchangeRateUsed = modifiedRow.ExchangeRateUsed;
+	                supplierPriceList.MinLot = modifiedRow.MinLot;
+	                supplierPriceList.IncrLot = modifiedRow.IncrLot;
+                    supplierPriceList.LeadTime = modifiedRow.LeadTime;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         /// <summary>
         /// Mover la fila activa a la de un supplier en concreto
         /// </summary>
@@ -889,25 +1100,83 @@ namespace HKSupply.Forms.Master
         {
             try
             {
+                if (xtcGeneral.SelectedTabPage == xtpList)
+                    return IsValidSupplierPriceListGrid();
+                else if (xtcGeneral.SelectedTabPage == xtpForm)
+                    return IsValidSupplierPriceListForm();
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private bool IsValidSupplierPriceListForm()
+        {
+            try
+            {
                 foreach (Control ctl in layoutControlForm.Controls)
                 {
-                    if (ctl.GetType() == typeof(TextEdit))
+                    if (Array.IndexOf(_mandatoryEditingFields, ctl.Name) < 0)
                     {
-                        if (string.IsNullOrEmpty(((TextEdit)ctl).Text))
+                        if (ctl.GetType() == typeof(TextEdit))
                         {
-                            MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
-                            return false;
+                            if (string.IsNullOrEmpty(((TextEdit)ctl).Text))
+                            {
+                                MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
+                                return false;
+                            }
                         }
-                    }
-                    else if (ctl.GetType() == typeof(LookUpEdit))
-                    {
-                        if (string.IsNullOrEmpty(((LookUpEdit)ctl).Text))
+                        else if (ctl.GetType() == typeof(LookUpEdit))
                         {
-                            MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
-                            return false;
+                            if (string.IsNullOrEmpty(((LookUpEdit)ctl).Text))
+                            {
+                                MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
+                                return false;
+                            }
                         }
                     }
                 }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private bool IsValidSupplierPriceListGrid()
+        {
+            try 
+            {
+                foreach (var spl in _modifiedRowsList)
+                {
+                    if (spl.Price <= 0)
+                    {
+                        XtraMessageBox.Show("Price Field Required", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                    }
+
+                    if(string.IsNullOrEmpty(spl.IdCurrency))
+                    {
+                        XtraMessageBox.Show("Currency Field Required", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                    }
+
+                    if (spl.PriceBaseCurrency <= 0)
+                    {
+                        XtraMessageBox.Show("Price Base Currency Field Required", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                    }
+
+                    if (spl.ExchangeRateUsed <= 0)
+                    {
+                        XtraMessageBox.Show("ExchangeRateUsed Field Required", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                    }
+                }
+
                 return true;
             }
             catch (Exception ex)
@@ -928,6 +1197,23 @@ namespace HKSupply.Forms.Master
             try
             {
                 return GlobalSetting.SupplierPriceListService.UpdateSupplierPriceList(_supplierPriceListUpdate, newVersion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Actualizar los datos de varios supplier si se ha editado desde el grid
+        /// </summary>
+        /// <param name="newVersion"></param>
+        /// <returns></returns>
+        private bool UpdateSuppliersPricesList()
+        {
+            try
+            {
+                return GlobalSetting.SupplierPriceListService.UpdateSuppliersPricesList(_modifiedRowsList);
             }
             catch (Exception ex)
             {

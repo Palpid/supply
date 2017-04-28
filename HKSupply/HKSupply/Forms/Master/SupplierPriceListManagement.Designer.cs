@@ -30,6 +30,12 @@
         {
             this.xtcGeneral = new DevExpress.XtraTab.XtraTabControl();
             this.xtpList = new DevExpress.XtraTab.XtraTabPage();
+            this.lblItemBcn = new DevExpress.XtraEditors.LabelControl();
+            this.lblSupplier = new DevExpress.XtraEditors.LabelControl();
+            this.slueItemBcn = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.slueSupplier = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.sbLoad = new DevExpress.XtraEditors.SimpleButton();
             this.xgrdSuppliersPriceList = new DevExpress.XtraGrid.GridControl();
             this.rootGridViewSuppliersPriceList = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -106,6 +112,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
             this.xtcGeneral.SuspendLayout();
             this.xtpList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.slueItemBcn.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueSupplier.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xgrdSuppliersPriceList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rootGridViewSuppliersPriceList)).BeginInit();
             this.xtpForm.SuspendLayout();
@@ -204,12 +214,68 @@
             // 
             // xtpList
             // 
+            this.xtpList.Controls.Add(this.lblItemBcn);
+            this.xtpList.Controls.Add(this.lblSupplier);
+            this.xtpList.Controls.Add(this.slueItemBcn);
+            this.xtpList.Controls.Add(this.slueSupplier);
             this.xtpList.Controls.Add(this.sbLoad);
             this.xtpList.Controls.Add(this.xgrdSuppliersPriceList);
             this.xtpList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtpList.Name = "xtpList";
             this.xtpList.Size = new System.Drawing.Size(1332, 397);
             this.xtpList.Text = "List";
+            // 
+            // lblItemBcn
+            // 
+            this.lblItemBcn.Location = new System.Drawing.Point(380, 11);
+            this.lblItemBcn.Name = "lblItemBcn";
+            this.lblItemBcn.Size = new System.Drawing.Size(22, 13);
+            this.lblItemBcn.TabIndex = 5;
+            this.lblItemBcn.Text = "Item";
+            // 
+            // lblSupplier
+            // 
+            this.lblSupplier.Location = new System.Drawing.Point(11, 11);
+            this.lblSupplier.Name = "lblSupplier";
+            this.lblSupplier.Size = new System.Drawing.Size(38, 13);
+            this.lblSupplier.TabIndex = 4;
+            this.lblSupplier.Text = "Supplier";
+            // 
+            // slueItemBcn
+            // 
+            this.slueItemBcn.Location = new System.Drawing.Point(422, 8);
+            this.slueItemBcn.MenuManager = this.ribbonControl;
+            this.slueItemBcn.Name = "slueItemBcn";
+            this.slueItemBcn.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.slueItemBcn.Properties.View = this.gridView1;
+            this.slueItemBcn.Size = new System.Drawing.Size(262, 20);
+            this.slueItemBcn.TabIndex = 3;
+            // 
+            // gridView1
+            // 
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // slueSupplier
+            // 
+            this.slueSupplier.Location = new System.Drawing.Point(65, 8);
+            this.slueSupplier.MenuManager = this.ribbonControl;
+            this.slueSupplier.Name = "slueSupplier";
+            this.slueSupplier.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.slueSupplier.Properties.View = this.searchLookUpEdit1View;
+            this.slueSupplier.Size = new System.Drawing.Size(262, 20);
+            this.slueSupplier.TabIndex = 2;
+            // 
+            // searchLookUpEdit1View
+            // 
+            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
+            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
             // sbLoad
             // 
@@ -228,12 +294,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.xgrdSuppliersPriceList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.xgrdSuppliersPriceList.Location = new System.Drawing.Point(3, 38);
+            this.xgrdSuppliersPriceList.Location = new System.Drawing.Point(3, 37);
             this.xgrdSuppliersPriceList.MainView = this.rootGridViewSuppliersPriceList;
             this.xgrdSuppliersPriceList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xgrdSuppliersPriceList.MenuManager = this.ribbonControl;
             this.xgrdSuppliersPriceList.Name = "xgrdSuppliersPriceList";
-            this.xgrdSuppliersPriceList.Size = new System.Drawing.Size(1327, 356);
+            this.xgrdSuppliersPriceList.Size = new System.Drawing.Size(1327, 357);
             this.xgrdSuppliersPriceList.TabIndex = 0;
             this.xgrdSuppliersPriceList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.rootGridViewSuppliersPriceList});
@@ -250,7 +316,7 @@
             this.xtpForm.Controls.Add(this.layoutControlForm);
             this.xtpForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtpForm.Name = "xtpForm";
-            this.xtpForm.Size = new System.Drawing.Size(1311, 382);
+            this.xtpForm.Size = new System.Drawing.Size(1332, 397);
             this.xtpForm.Text = "Form";
             // 
             // groupControlHistory
@@ -1013,6 +1079,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).EndInit();
             this.xtcGeneral.ResumeLayout(false);
             this.xtpList.ResumeLayout(false);
+            this.xtpList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.slueItemBcn.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueSupplier.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xgrdSuppliersPriceList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rootGridViewSuppliersPriceList)).EndInit();
             this.xtpForm.ResumeLayout(false);
@@ -1163,5 +1234,11 @@
         private DevExpress.XtraLayout.LayoutControlItem lciIdItemBcn;
         private DevExpress.XtraEditors.TextEdit txtUser;
         private DevExpress.XtraLayout.LayoutControlItem lciUser;
+        private DevExpress.XtraEditors.SearchLookUpEdit slueItemBcn;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.SearchLookUpEdit slueSupplier;
+        private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
+        private DevExpress.XtraEditors.LabelControl lblItemBcn;
+        private DevExpress.XtraEditors.LabelControl lblSupplier;
     }
 }

@@ -16,13 +16,13 @@ namespace HKSupply.Services.Implementations
     {
         ILog _log = LogManager.GetLogger(typeof(EFDocType));
 
-        public List<Models.DocType> GetDocsType()
+        public List<Models.DocType> GetDocsType(string idItemGroup)
         {
             try
             {
                 using (var db = new HKSupplyContext())
                 {
-                    return db.DocsType.ToList();
+                    return db.DocsType.Where(a => a.IdItemGroup.Equals(idItemGroup)).ToList();
                 }
             }
             catch (SqlException sqlex)

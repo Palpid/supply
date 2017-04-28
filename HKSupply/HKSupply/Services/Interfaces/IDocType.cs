@@ -9,6 +9,6 @@ namespace HKSupply.Services.Interfaces
 {
     public interface IDocType
     {
-        List<DocType> GetDocsType();
+        List<DocType> GetDocsType(string idItemGroup);
     }
 }

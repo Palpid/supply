@@ -8,6 +8,7 @@ using log4net;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Validation;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -166,6 +167,83 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        public bool UpdateSuppliersPricesList(IEnumerable<SupplierPriceList> pricesListToUpdate)
+        {
+            try
+            {
+                if (pricesListToUpdate == null)
+                    throw new ArgumentNullException("pricesListToUpdate");
+
+                using (var db = new HKSupplyContext())
+                {
+                    using (var dbTrans = db.Database.BeginTransaction())
+                    {
+                        try
+                        {
+                            foreach (var priceList in pricesListToUpdate)
+                            {
+                                priceList.IdSubVer += 1;
+                                priceList.Timestamp = DateTime.Now;
+
+                                SupplierPriceListHistory supplierPriceListHistory = (SupplierPriceListHistory)priceList;
+                                supplierPriceListHistory.User = GlobalSetting.LoggedUser.UserLogin;
+
+                                //Con esto marcaremos todo el objeto como modificado y actualizará todos los campos. 
+                                //En este caso nos interesa porque la mayoría de los campos de supplier se pueden modificar
+                                db.Entry(priceList).State = EntityState.Modified;
+                                db.SuppliersPriceListHistory.Add(supplierPriceListHistory);
+                            }
+
+                            db.SaveChanges();
+                            dbTrans.Commit();
+                            return true;
+                        }
+                        catch (SqlException sqlex)
+                        {
+                            dbTrans.Rollback();
+
+                            for (int i = 0; i < sqlex.Errors.Count; i++)
+                            {
+                                _log.Error("Index #" + i + "\n" +
+                                    "Message: " + sqlex.Errors[i].Message + "\n" +
+                                    "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                                    "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                                    "Source: " + sqlex.Errors[i].Source + "\n" +
+                                    "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                                switch (sqlex.Errors[i].Number)
+                                {
+                                    case -1: //connection broken
+                                    case -2: //timeout
+                                        throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                                }
+                            }
+                            throw sqlex;
+                        }
+                        catch (DbEntityValidationException e)
+                        {
+                            dbTrans.Rollback();
+                            _log.Error(e.Message, e);
+                            throw e;
+                        }
+                        catch (Exception ex)
+                        {
+                            dbTrans.Rollback();
+                            _log.Error(ex.Message, ex);
+                            throw ex;
+                        }
+                    }
+
+                }
+
+            }
+            catch (ArgumentNullException nrex)
+            {
+                _log.Error(nrex.Message, nrex);
+                throw nrex;
+            }
+        }
+
         public SupplierPriceList GetSupplierPriceList(string idItemBcn, string idSupplier)
         {
             try
@@ -214,13 +292,21 @@ namespace HKSupply.Services.Implementations
             }
         }
 
-        public List<SupplierPriceList> GetSuppliersPriceList()
+        public List<SupplierPriceList> GetSuppliersPriceList(string idItemBcn = null, string idSupplier = null)
         {
             try
             {
                 using (var db = new HKSupplyContext())
                 {
-                    return db.SuppliersPriceList.ToList();
+                    if (idItemBcn != null && idSupplier != null)
+                        return db.SuppliersPriceList.Where(a => a.IdItemBcn.Equals(idItemBcn) && a.IdSupplier.Equals(idSupplier)).ToList();
+                    else if (idItemBcn != null && idSupplier == null)
+                        return db.SuppliersPriceList.Where(a => a.IdItemBcn.Equals(idItemBcn)).ToList();
+                    else if (idItemBcn == null && idSupplier != null)
+                        return db.SuppliersPriceList.Where(a => a.IdSupplier.Equals(idSupplier)).ToList();
+                    else
+                        return db.SuppliersPriceList.ToList();
+
                 }
             }
             catch (SqlException sqlex)
@@ -294,5 +380,6 @@ namespace HKSupply.Services.Implementations
                 throw ex;
             }
         }
+
     }
 }

@@ -978,7 +978,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _docsTypeList = GlobalSetting.DocTypeService.GetDocsType();
+                _docsTypeList = GlobalSetting.DocTypeService.GetDocsType(Constants.ITEM_GROUP_EY);
 
                 lueDocType.Properties.DataSource = _docsTypeList;
                 lueDocType.Properties.DisplayMember = "Description";
@@ -995,7 +995,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _userAttrDescriptionList = GlobalSetting.UserAttrDescriptionService.GetUserAttrsDescription("EY");
+                _userAttrDescriptionList = GlobalSetting.UserAttrDescriptionService.GetUserAttrsDescription(Constants.ITEM_GROUP_EY);
 
                 //TODO: hacer esto de una manera un poco mas elegante
                 lciIdUserAttri1.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals("EYATTR01")).Select(a => a.Description).SingleOrDefault();
@@ -1097,10 +1097,10 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _itemDocsList = GlobalSetting.ItemDocService.GetItemsDocs(_itemUpdate.IdItemBcn, "EY"); //TODO El "EY" hardcodeado esta feo...
+                _itemDocsList = GlobalSetting.ItemDocService.GetItemsDocs(_itemUpdate.IdItemBcn, Constants.ITEM_GROUP_EY); 
                 xgrdDocsHistory.DataSource = _itemDocsList;
 
-                _itemLastDocsList = GlobalSetting.ItemDocService.GetLastItemsDocs(_itemUpdate.IdItemBcn, "EY");
+                _itemLastDocsList = GlobalSetting.ItemDocService.GetLastItemsDocs(_itemUpdate.IdItemBcn, Constants.ITEM_GROUP_EY);
                 xgrdLastDocs.DataSource = _itemLastDocsList;
 
                 xtpDocs.PageVisible = true;
@@ -1361,7 +1361,7 @@ namespace HKSupply.Forms.Master
                 
                 ItemDoc itemDoc = new ItemDoc();
                 itemDoc.IdItemBcn = _itemUpdate.IdItemBcn;
-                itemDoc.IdItemGroup = "EY"; //TODO. Hardcodeado feo
+                itemDoc.IdItemGroup = Constants.ITEM_GROUP_EY; 
                 itemDoc.IdDocType = lueDocType.EditValue.ToString();
                 itemDoc.FileName = fileNameNoExtension + "_" + (_itemUpdate.IdVer.ToString()) + "." + ((_itemUpdate.IdSubVer + 1).ToString()) + extension;
                 itemDoc.FilePath = _itemUpdate.IdItemBcn + "\\" + lueDocType.EditValue.ToString() + "\\" + itemDoc.FileName;
