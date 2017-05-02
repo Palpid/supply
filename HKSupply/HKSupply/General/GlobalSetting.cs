@@ -23,7 +23,8 @@ namespace HKSupply.General
     /// Controlador para acceso a datos para Customer
     /// Controlador para acceso a datos para Supplier
     /// Controlador para acceso a datos para Store
-    /// Controlador para acceso a datos para Item
+    /// Controlador para acceso a datos para Item EY
+    /// Controlador para acceso a datos para Item HW
     /// Controlador para acceso a datos para Status Prod
     /// Controlador para acceso a datos para Status Cial
     /// Controlador para acceso a datos para Currency
@@ -52,6 +53,7 @@ namespace HKSupply.General
         static EFSupplier _supplierEF = new EFSupplier();
         static EFStore _storeEF = new EFStore();
         static EFItemEy _itemEyEF = new EFItemEy();
+        static EFItemHw _itemHwEF = new EFItemHw();
         static EFStatusProd _statusProdEF = new EFStatusProd();
         static EFStatusCial _statusCialEF = new EFStatusCial();
         static EFCurrency _currencyEF = new EFCurrency();
@@ -164,6 +166,17 @@ namespace HKSupply.General
                 else
                     return _itemEyEF;
             
+            }
+        }
+
+        public static IItemHw ItemHwService
+        {
+            get 
+            {
+                if (_itemHwEF == null)
+                    return new EFItemHw();
+                else
+                    return _itemHwEF;
             }
         }
 

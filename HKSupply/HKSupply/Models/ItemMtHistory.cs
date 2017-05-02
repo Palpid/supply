@@ -49,6 +49,11 @@ namespace HKSupply.Models
         [ForeignKey("IdPrototype")]
         public Prototype Prototype { get; set; }
 
+        [Column("ID_MODEL", TypeName = "NVARCHAR"), StringLength(100)]
+        public string IdModel { get; set; }
+        [ForeignKey("IdModel")]
+        public Model Model { get; set; }
+
         [Column("ID_FAMILY_HK", TypeName = "NVARCHAR"), StringLength(100)]
         public string IdFamilyHK { get; set; }
         [ForeignKey("IdFamilyHK")]
@@ -127,6 +132,7 @@ namespace HKSupply.Models
                 IdMatTypeL3 == itemMtHistory.IdMatTypeL3 &&
                 IdDefaultSupplier == itemMtHistory.IdDefaultSupplier &&
                 IdFamilyHK == itemMtHistory.IdFamilyHK &&
+                IdModel == itemMtHistory.IdModel &&
                 IdColor1 == itemMtHistory.IdColor1 &&
                 IdColor2 == itemMtHistory.IdColor2 &&
                 IdItemHK == itemMtHistory.IdItemHK &&
@@ -161,6 +167,7 @@ namespace HKSupply.Models
                 (IdMatTypeL2 == null ? 0 : IdMatTypeL2.GetHashCode()) +
                 (IdMatTypeL3 == null ? 0 : IdMatTypeL3.GetHashCode()) +
                 (IdDefaultSupplier == null ? 0 : IdDefaultSupplier.GetHashCode()) +
+                (IdModel == null ? 0 : IdModel.GetHashCode()) + 
                 (IdFamilyHK == null ? 0 : IdFamilyHK.GetHashCode()) +
                 (IdColor1 == null ? 0 : IdColor1.GetHashCode()) +
                 (IdColor2 == null ? 0 : IdColor2.GetHashCode()) +
@@ -198,6 +205,7 @@ namespace HKSupply.Models
             imth.IdMatTypeL2 = i.IdMatTypeL2;
             imth.IdMatTypeL3 = i.IdMatTypeL3;
             imth.IdDefaultSupplier = i.IdDefaultSupplier;
+            imth.IdModel = i.IdModel;
             imth.IdFamilyHK = i.IdFamilyHK;
             imth.IdColor1 = i.IdColor1;
             imth.IdColor2 = i.IdColor2;

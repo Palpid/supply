@@ -90,6 +90,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\RowInfo.cs" />
     <Compile Include="DB\HKSupplyContext.cs" />
     <Compile Include="Exceptions\DBServerConnectionException.cs" />
     <Compile Include="Exceptions\InvalidPasswordException.cs" />
@@ -305,6 +306,7 @@
     <Compile Include="General\Constants.cs" />
     <Compile Include="General\GlobalSetting.cs" />
     <Compile Include="Helpers\CustomExtensions.cs" />
+    <Compile Include="Helpers\DocHelper.cs" />
     <Compile Include="Helpers\MDIClientSupport.cs" />
     <Compile Include="Helpers\Mocking\MockData.cs" />
     <Compile Include="Helpers\PasswordHelper.cs" />
@@ -496,6 +498,10 @@
     <Compile Include="Migrations\201704271337550_DocType_ItemMtHw_01.Designer.cs">
       <DependentUpon>201704271337550_DocType_ItemMtHw_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705020858436_itemHwMt_idmodel_01.cs" />
+    <Compile Include="Migrations\201705020858436_itemHwMt_idmodel_01.Designer.cs">
+      <DependentUpon>201705020858436_itemHwMt_idmodel_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\CustomerPriceList.cs" />
@@ -560,6 +566,7 @@
     <Compile Include="Services\Implementations\EFItemDoc.cs" />
     <Compile Include="Services\Implementations\EFItemEy.cs" />
     <Compile Include="Services\Implementations\EFItemBcn.cs" />
+    <Compile Include="Services\Implementations\EFItemHw.cs" />
     <Compile Include="Services\Implementations\EFMaterial.cs" />
     <Compile Include="Services\Implementations\EFMatType.cs" />
     <Compile Include="Services\Implementations\EFPaymentTerms.cs" />
@@ -584,6 +591,7 @@
     <Compile Include="Services\Interfaces\IItemDoc.cs" />
     <Compile Include="Services\Interfaces\IItemEy.cs" />
     <Compile Include="Services\Interfaces\IItemBcn.cs" />
+    <Compile Include="Services\Interfaces\IItemHw.cs" />
     <Compile Include="Services\Interfaces\IMaterial.cs" />
     <Compile Include="Services\Interfaces\IMatType.cs" />
     <Compile Include="Services\Interfaces\IPaymentTerms.cs" />
@@ -835,6 +843,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704271337550_DocType_ItemMtHw_01.resx">
       <DependentUpon>201704271337550_DocType_ItemMtHw_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705020858436_itemHwMt_idmodel_01.resx">
+      <DependentUpon>201705020858436_itemHwMt_idmodel_01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

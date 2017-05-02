@@ -6,6 +6,7 @@ using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Menu;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
+using HKSupply.Classes;
 using HKSupply.General;
 using HKSupply.Helpers;
 using HKSupply.Models;
@@ -679,18 +680,4 @@ namespace HKSupply.Forms.Master
 
     }
 
-
-    /// <summary>
-    /// Class to store menu specific information
-    /// </summary>
-    class RowInfo
-    {
-        public RowInfo(GridView view, int rowHandle)
-        {
-            this.RowHandle = rowHandle;
-            this.View = view;
-        }
-        public GridView View;
-        public int RowHandle;
-    }
 }

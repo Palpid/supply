@@ -21,6 +21,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Data.Entity;
+using DevExpress.Utils.Menu;
+using HKSupply.Classes;
 
 namespace HKSupply.Forms.Master
 {
@@ -317,7 +319,7 @@ namespace HKSupply.Forms.Master
 
                 if (itemDoc != null)
                 {
-                    OpenDoc(Constants.DOCS_PATH + itemDoc.FilePath);
+                    DocHelper.OpenDoc(Constants.DOCS_PATH + itemDoc.FilePath);
                 }
             }
             catch (Exception ex)
@@ -334,7 +336,7 @@ namespace HKSupply.Forms.Master
 
                 if (itemDoc != null)
                 {
-                    OpenDoc(Constants.DOCS_PATH + itemDoc.FilePath);
+                    DocHelper.OpenDoc(Constants.DOCS_PATH + itemDoc.FilePath);
                 }
             }
             catch (Exception ex)
@@ -349,7 +351,7 @@ namespace HKSupply.Forms.Master
             {
                 if (string.IsNullOrEmpty(txtPathNewDoc.Text) == false)
                 {
-                    OpenDoc(txtPathNewDoc.Text);
+                    DocHelper.OpenDoc(txtPathNewDoc.Text);
                 }
                 else
                 {
@@ -408,18 +410,19 @@ namespace HKSupply.Forms.Master
                         return;
 
                     string url = view.GetRowCellValue(hi.RowHandle, eItemColumns.PhotoUrl.ToString()).ToString();
-                    if (photosCache.ContainsKey(url) == false)
-                    {
-                        var request = System.Net.WebRequest.Create(url);
-                        using (var response = request.GetResponse())
-                        {
-                            using (var stream = response.GetResponseStream())
-                            {
-                                Image p = Bitmap.FromStream(stream);
-                                photosCache.Add(url, (Bitmap)p);
-                            }
-                        }
-                    }
+                    AddToPhotoCache(url);
+                    //if (photosCache.ContainsKey(url) == false)
+                    //{
+                    //    var request = System.Net.WebRequest.Create(url);
+                    //    using (var response = request.GetResponse())
+                    //    {
+                    //        using (var stream = response.GetResponseStream())
+                    //        {
+                    //            Image p = Bitmap.FromStream(stream);
+                    //            photosCache.Add(url, (Bitmap)p);
+                    //        }
+                    //    }
+                    //}
                     Bitmap im = null;
                     im = photosCache[url.ToString()];
                     ToolTipItem item1 = new ToolTipItem();
@@ -460,6 +463,71 @@ namespace HKSupply.Forms.Master
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        void rootGridViewItems_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)
+        {
+            try
+            {
+                //DataRow dr = (e.Row as DataRowView).Row;
+                //string url = dr[eItemColumns.PhotoUrl.ToString()].ToString();
+                string url = (e.Row as ItemEy).PhotoUrl;
+                if (photosCache.ContainsKey(url))
+                {
+                    e.Value = photosCache[url];
+                    return;
+                }
+                var request = System.Net.WebRequest.Create(url);
+                using (var response = request.GetResponse())
+                {
+                    using (var stream = response.GetResponseStream())
+                    {
+                        e.Value = Bitmap.FromStream(stream);
+                        photosCache.Add(url, (Bitmap)e.Value);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void rootGridViewItems_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+
+                if (e.MenuType == GridMenuType.Row)
+                {
+                    int rowHandle = e.HitInfo.RowHandle;
+                    e.Menu.Items.Clear();
+                    e.Menu.Items.Add(CreateMenuPriceList(view, rowHandle));
+
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void OnMenuItemViewItemPriceListClick(object sender, EventArgs e)
+        {
+            try
+            {
+                DXMenuItem item = sender as DXMenuItem;
+                RowInfo info = item.Tag as RowInfo;
+
+                ItemEy itemEy = info.View.GetRow(info.View.FocusedRowHandle) as ItemEy;
+                OpenPriceListForm(itemEy);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         #endregion
 
         #region Private Methods
@@ -473,6 +541,8 @@ namespace HKSupply.Forms.Master
             _itemDocsList = null;
             txtPathNewDoc.Text = string.Empty;
         }
+
+        #region SetUp Form Object
 
         private void SetUpGrdItems()
         {
@@ -578,13 +648,16 @@ namespace HKSupply.Forms.Master
                 //Events
                 rootGridViewItems.DoubleClick += rootGridViewItems_DoubleClick;
                 rootGridViewItems.CustomUnboundColumnData += rootGridViewItems_CustomUnboundColumnData;
+
+                rootGridViewItems.PopupMenuShowing += rootGridViewItems_PopupMenuShowing;
+
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-
+        
         private void SetUpGrdLastDocs()
         {
             try
@@ -704,33 +777,7 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        void rootGridViewItems_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)
-        {
-            try
-            {
-                //DataRow dr = (e.Row as DataRowView).Row;
-                //string url = dr[eItemColumns.PhotoUrl.ToString()].ToString();
-                string url = (e.Row as ItemEy).PhotoUrl;
-                if (photosCache.ContainsKey(url))
-                {
-                    e.Value = photosCache[url];
-                    return;
-                }
-                var request = System.Net.WebRequest.Create(url);
-                using (var response = request.GetResponse())
-                {
-                    using (var stream = response.GetResponseStream())
-                    {
-                        e.Value = Bitmap.FromStream(stream);
-                        photosCache.Add(url, (Bitmap)e.Value);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+       
 
         private void SetUpTexEdit()
         {
@@ -998,25 +1045,9 @@ namespace HKSupply.Forms.Master
                 _userAttrDescriptionList = GlobalSetting.UserAttrDescriptionService.GetUserAttrsDescription(Constants.ITEM_GROUP_EY);
 
                 //TODO: hacer esto de una manera un poco mas elegante
-                lciIdUserAttri1.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals("EYATTR01")).Select(a => a.Description).SingleOrDefault();
-                lciIdUserAttri2.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals("EYATTR02")).Select(a => a.Description).SingleOrDefault();
-                lciIdUserAttri3.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals("EYATTR03")).Select(a => a.Description).SingleOrDefault();
-
-                //lueIdUserAttri1.Properties.DataSource = _userAttrDescriptionList;
-                //lueIdUserAttri1.Properties.DisplayMember = "Description";
-                //lueIdUserAttri1.Properties.ValueMember = "IdUserAttr";
-
-                //lueIdUserAttri2.Properties.DataSource = _userAttrDescriptionList;
-                //lueIdUserAttri2.Properties.DisplayMember = "Description";
-                //lueIdUserAttri2.Properties.ValueMember = "IdUserAttr";
-
-                //lueIdUserAttri3.Properties.DataSource = _userAttrDescriptionList;
-                //lueIdUserAttri3.Properties.DisplayMember = "Description";
-                //lueIdUserAttri3.Properties.ValueMember = "IdUserAttr";
-
-                //lueIdUserAttri1.KeyDown += lueIdUserAttri1_KeyDown;
-                //lueIdUserAttri2.KeyDown += lueIdUserAttri2_KeyDown;
-                //lueIdUserAttri3.KeyDown += lueIdUserAttri3_KeyDown;
+                lciIdUserAttri1.Text = lciHIdUserAttri1.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals("EYATTR01")).Select(a => a.Description).SingleOrDefault();
+                lciIdUserAttri2.Text = lciHIdUserAttri2.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals("EYATTR02")).Select(a => a.Description).SingleOrDefault();
+                lciIdUserAttri3.Text = lciHIdUserAttri3.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals("EYATTR03")).Select(a => a.Description).SingleOrDefault();
             }
             catch(Exception ex)
             {
@@ -1024,6 +1055,8 @@ namespace HKSupply.Forms.Master
             }
 
         }
+
+        #endregion
 
         // <summary>
         /// cargar la colección de Items del sistema
@@ -1104,6 +1137,16 @@ namespace HKSupply.Forms.Master
                 xgrdLastDocs.DataSource = _itemLastDocsList;
 
                 xtpDocs.PageVisible = true;
+                gbNewDoc.Enabled = false;
+
+                //Item Image
+                //Quitamos el menú contextual ya que no nos interesa en este momento
+                peItemImage.Properties.ShowMenu = false;
+                //Cargamos la imagen de la cache.
+                AddToPhotoCache(_itemUpdate.PhotoUrl);
+                Bitmap im = null;
+                im = photosCache[_itemUpdate.PhotoUrl];
+                peItemImage.Image = im;
             }
             catch (Exception ex)
             {
@@ -1111,47 +1154,25 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void OpenDoc(string fullFilePath)
+        /// <summary>
+        /// Agregar una imagen al cache de fotos si no está ya en él
+        /// </summary>
+        /// <param name="url"></param>
+        private void AddToPhotoCache(string url)
         {
             try
             {
-                //Validamos que el fichero exista
-                if (System.IO.File.Exists(fullFilePath))
+                if (photosCache.ContainsKey(url) == false)
                 {
-                    string extension = System.IO.Path.GetExtension(fullFilePath);
-                    switch (extension.ToUpper())
+                    var request = System.Net.WebRequest.Create(url);
+                    using (var response = request.GetResponse())
                     {
-                        case ".PDF":
-                            PDFViewer pdfViewer = new PDFViewer();
-                            pdfViewer.pdfFile = fullFilePath;
-			                pdfViewer.ShowDialog();
-                            break;
-                        
-                        case ".JPG":
-                        case ".PNG":
-                            using (Form form = new Form())
-                            {
-                                PictureBox pb = new PictureBox();
-                                pb.Dock = DockStyle.Fill;
-                                pb.BackgroundImageLayout = ImageLayout.Center;
-                                pb.Image = Image.FromFile(fullFilePath);
-
-                                form.Text = "Img Viewer";
-                                form.Width = 1280;
-                                form.Height = 720;
-                                form.Controls.Add(pb);
-                                form.ShowDialog();
-                            }
-                            break;
-
-                        default:
-                            XtraMessageBox.Show("File not supported.");
-                            break;
+                        using (var stream = response.GetResponseStream())
+                        {
+                            Image p = Bitmap.FromStream(stream);
+                            photosCache.Add(url, (Bitmap)p);
+                        }
                     }
-                }
-                else 
-                {
-                    XtraMessageBox.Show("File doesn't exist or server is down or inaccessible", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
@@ -1159,13 +1180,55 @@ namespace HKSupply.Forms.Master
                 throw ex;
             }
         }
-        
+
+        #region Popup menu
+
+        DXMenuItem CreateMenuPriceList(GridView view, int rowHandle)
+        {
+            DXMenuItem menuItem = new DXMenuItem("View Item price list",
+                new EventHandler(OnMenuItemViewItemPriceListClick));
+            menuItem.Tag = new RowInfo(view, rowHandle);
+            return menuItem;
+        }
+
+        private void OpenPriceListForm(ItemEy itemEy)
+        {
+            try
+            {
+                //Check if is already open
+                HKSupply.Forms.Master.SupplierPriceListManagement priceListForm =
+                    Application.OpenForms.OfType<HKSupply.Forms.Master.SupplierPriceListManagement>()
+                    .Where(pre => pre.Name == "SupplierPriceListManagement")
+                    .SingleOrDefault<HKSupply.Forms.Master.SupplierPriceListManagement>();
+
+                if (priceListForm != null)
+                    priceListForm.Close();
+
+                priceListForm = new HKSupply.Forms.Master.SupplierPriceListManagement();
+                priceListForm.InitData(itemEy.IdDefaultSupplier, itemEy.IdItemBcn);
+
+                priceListForm.MdiParent = this.MdiParent;
+                priceListForm.ShowIcon = false;
+                priceListForm.Dock = DockStyle.Fill;
+                priceListForm.ControlBox = false;
+                priceListForm.Show();
+                priceListForm.WindowState = FormWindowState.Maximized;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
+
         private void ConfigureRibbonActionsEditing()
         {
             try
             {
                 xtpList.PageVisible = true;
-                //sbNewVersion.Visible = true;
+                gbNewDoc.Enabled = true;
                 SetEditingFieldsEnabled();
             }
             catch (Exception ex)
@@ -1406,9 +1469,7 @@ namespace HKSupply.Forms.Master
 
         #endregion
 
-        #region test
-        
-        #endregion
+
 
         #region Read XML Currency Echange
         private void ReadEuroCurrencyExchange()

@@ -81,6 +81,8 @@ namespace HKSupply.Forms.Master
                 SetUpSearchLueItemBcn();
                 ResetSupplierPriceListUpdate();
                 SetFormBinding();
+                LoadSuppliersList();
+                LoadItemBcnList();
             }
             catch (Exception ex)
             {
@@ -246,8 +248,7 @@ namespace HKSupply.Forms.Master
             {
                 xtpForm.PageVisible = false;
                 sbNewVersion.Visible = false;
-                LoadSuppliersList();
-                LoadItemBcnList();
+
             }
             catch (Exception ex)
             {
@@ -1264,6 +1265,25 @@ namespace HKSupply.Forms.Master
 
         #endregion
 
-        
+        #region Public Methods
+        public void InitData(string idSupplier, string idItemBcn)
+        {
+            try
+            {
+                slueItemBcn.EditValue = idItemBcn;
+                slueSupplier.EditValue = idSupplier;
+                Cursor = Cursors.WaitCursor;
+                LoadSuppliersPriceList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
+        }
+        #endregion
     }
 }
