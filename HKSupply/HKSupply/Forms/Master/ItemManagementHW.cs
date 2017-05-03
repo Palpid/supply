@@ -1,5 +1,6 @@
 ﻿using DevExpress.Utils;
 using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraEditors.Registrator;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Columns;
@@ -19,13 +20,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.Utils.Menu;
+using HKSupply.Classes;
 
 namespace HKSupply.Forms.Master
 {
+    /// <summary>
+    /// Pantalla de getsión para los Items EY
+    /// </summary>
+    /// <remarks>Se empezó en VS2012, después de pasar a VS2017 y poder usar C# 6.0 se han cambiado algunas cosas usando el nameof, pero no todas</remarks>
     public partial class ItemManagementHW : RibbonFormBase
     {
+        #region Constants
+        private const string PHOTO_COLUMN = "Photo";
+        private const string VIEW_COLUMN = "View";
+        #endregion
+
         #region Enums
-        private enum eItemColumns
+        /*private enum eItemColumns
         {
             IdVer,
             IdSubVer,
@@ -64,7 +76,7 @@ namespace HKSupply.Forms.Master
             FilePath,
             CreateDate,
             View,
-        }
+        }*/
 
         #endregion
 
@@ -109,6 +121,7 @@ namespace HKSupply.Forms.Master
                 SetUpPictureEditItemImage();
                 ResetItemUpdate();
                 SetFormBinding();
+                xgrdItems.ToolTipController = toolTipController1;
             }
             catch (Exception ex)
             {
@@ -200,6 +213,9 @@ namespace HKSupply.Forms.Master
                     return;
 
                 Cursor = Cursors.WaitCursor;
+
+                //Comprobamos si el usuario ha cambiado la imagen para updatarla o no
+                SetItemPhoto();
 
                 if (_itemUpdate.Equals(_itemOriginal) && string.IsNullOrEmpty(txtPathNewDoc.Text))
                 {
@@ -423,44 +439,51 @@ namespace HKSupply.Forms.Master
                 rootGridViewItems.OptionsBehavior.Editable = false;
 
                 //Columns definition
-                GridColumn colIdVer = new GridColumn() { Caption = "Version Id", Visible = true, FieldName = eItemColumns.IdVer.ToString(), Width = 70 };
-                GridColumn colIdSubVer = new GridColumn() { Caption = "Subversion Id", Visible = true, FieldName = eItemColumns.IdSubVer.ToString(), Width = 85 };
-                GridColumn colTimestamp = new GridColumn() { Caption = "Timestamp", Visible = true, FieldName = eItemColumns.Timestamp.ToString(), Width = 130 };
-                GridColumn colIdDefaultSupplier = new GridColumn() { Caption = "Default Supplier", Visible = true, FieldName = eItemColumns.IdDefaultSupplier.ToString(), Width = 110 };
-                GridColumn colIdPrototype = new GridColumn() { Caption = "Id Prototype", Visible = true, FieldName = eItemColumns.IdPrototype.ToString(), Width = 150 };
+                GridColumn colIdVer = new GridColumn() { Caption = "Version Id", Visible = true, FieldName = nameof(ItemHw.IdVer), Width = 70 };
+                GridColumn colIdSubVer = new GridColumn() { Caption = "Subversion Id", Visible = true, FieldName = nameof(ItemHw.IdSubVer), Width = 85 };
+                GridColumn colTimestamp = new GridColumn() { Caption = "Timestamp", Visible = true, FieldName = nameof(ItemHw.Timestamp), Width = 130 };
+                GridColumn colIdDefaultSupplier = new GridColumn() { Caption = "Default Supplier", Visible = true, FieldName = nameof(ItemHw.IdDefaultSupplier), Width = 110 };
+                GridColumn colIdPrototype = new GridColumn() { Caption = "Id Prototype", Visible = true, FieldName = nameof(ItemHw.IdPrototype), Width = 150 };
 
-                GridColumn colPrototypeName = new GridColumn() { Caption = "Prototype Name", Visible = true, FieldName = eItemColumns.Prototype.ToString() + ".PrototypeName", Width = 150 };
-                GridColumn colPrototypeDescription = new GridColumn() { Caption = "Prototype Description", Visible = true, FieldName = eItemColumns.Prototype.ToString() + ".PrototypeDescription", Width = 150 };
-                GridColumn colPrototypeStatus = new GridColumn() { Caption = "Prototype Status", Visible = true, FieldName = eItemColumns.Prototype.ToString() + ".PrototypeStatus", Width = 150 };
-                
-                GridColumn colIdModel = new GridColumn() { Caption = "Id Model", Visible = false, FieldName = eItemColumns.IdModel.ToString(), Width = 0 };
-                GridColumn colModel = new GridColumn() { Caption = "Model", Visible = true, FieldName = eItemColumns.Model.ToString() + ".Description", Width = 120 };
-                GridColumn colCaliber = new GridColumn() { Caption = "Caliber", Visible = true, FieldName = eItemColumns.Caliber.ToString(), Width = 70 };
-                GridColumn colIdColor1 = new GridColumn() { Caption = "Color 1", Visible = true, FieldName = eItemColumns.IdColor1.ToString(), Width = 60 };
-                GridColumn colIdColor2 = new GridColumn() { Caption = "Color 2", Visible = true, FieldName = eItemColumns.IdColor2.ToString(), Width = 60 };
-                GridColumn colIdItemBcn = new GridColumn() { Caption = "Item BCN", Visible = true, FieldName = eItemColumns.IdItemBcn.ToString(), Width = 160 };
-                GridColumn colIdItemHK = new GridColumn() { Caption = "Item HK", Visible = true, FieldName = eItemColumns.IdItemHK.ToString(), Width = 160 };
-                GridColumn colItemDescription = new GridColumn() { Caption = "Item Description", Visible = true, FieldName = eItemColumns.ItemDescription.ToString(), Width = 300 };
-                GridColumn colIdHwTypeL1 = new GridColumn() { Caption = "Hw Type L1", Visible = true, FieldName = eItemColumns.IdHwTypeL1.ToString(), Width = 100 };
-                GridColumn colIdHwTypeL2 = new GridColumn() { Caption = "Hw Type L2", Visible = true, FieldName = eItemColumns.IdHwTypeL2.ToString(), Width = 100 };
-                GridColumn colIdHwTypeL3 = new GridColumn() { Caption = "Hw Type L3", Visible = true, FieldName = eItemColumns.IdHwTypeL3.ToString(), Width = 100 };
+                GridColumn colPrototypeName = new GridColumn() { Caption = "Prototype Name", Visible = true, FieldName = nameof(ItemHw.Prototype) + "." + nameof(Prototype.PrototypeName), Width = 150 };
+                GridColumn colPrototypeDescription = new GridColumn() { Caption = "Prototype Description", Visible = true, FieldName = nameof(ItemHw.Prototype) + "." + nameof(Prototype.PrototypeDescription), Width = 150 };
+                GridColumn colPrototypeStatus = new GridColumn() { Caption = "Prototype Status", Visible = true, FieldName = nameof(ItemHw.Prototype) + "." + nameof(Prototype.PrototypeStatus), Width = 150 };
 
-                GridColumn colComments = new GridColumn() { Caption = "Comments", Visible = true, FieldName = eItemColumns.Comments.ToString(), Width = 300 }; //No aparece?
+                GridColumn colIdModel = new GridColumn() { Caption = "Id Model", Visible = false, FieldName = nameof(ItemHw.IdModel), Width = 0 };
+                GridColumn colModel = new GridColumn() { Caption = "Model", Visible = true, FieldName = nameof(ItemHw.Model) + "." + nameof(Model.Description), Width = 120 };
+                GridColumn colIdColor1 = new GridColumn() { Caption = "Color 1", Visible = true, FieldName = nameof(ItemHw.IdColor1), Width = 60 };
+                GridColumn colIdColor2 = new GridColumn() { Caption = "Color 2", Visible = true, FieldName = nameof(ItemHw.IdColor2), Width = 60 };
+                GridColumn colIdItemBcn = new GridColumn() { Caption = "Item BCN", Visible = true, FieldName = nameof(ItemHw.IdItemBcn), Width = 160 };
+                GridColumn colIdItemHK = new GridColumn() { Caption = "Item HK", Visible = true, FieldName = nameof(ItemHw.IdItemHK), Width = 160 };
+                GridColumn colItemDescription = new GridColumn() { Caption = "Item Description", Visible = true, FieldName = nameof(ItemHw.ItemDescription), Width = 300 };
 
-                GridColumn colLaunchedDate = new GridColumn() { Caption = "Launch Date", Visible = true, FieldName = eItemColumns.LaunchDate.ToString(), Width = 90 };
-                GridColumn colRemovalDate = new GridColumn() { Caption = "Removal Date", Visible = true, FieldName = eItemColumns.RemovalDate.ToString(), Width = 90 };
-                GridColumn colIdStatusCial = new GridColumn() { Caption = "Status Cial", Visible = true, FieldName = eItemColumns.IdStatusCial.ToString(), Width = 90 };
-                GridColumn colIdStatusProd = new GridColumn() { Caption = "Status Prod", Visible = true, FieldName = eItemColumns.IdStatusProd.ToString(), Width = 90 };
-                GridColumn colIdUserAttri1 = new GridColumn() { Caption = "User Attri. 1", Visible = true, FieldName = eItemColumns.IdUserAttri1.ToString(), Width = 90 };
-                GridColumn colIdUserAttri2 = new GridColumn() { Caption = "User Attri. 2", Visible = true, FieldName = eItemColumns.IdUserAttri2.ToString(), Width = 90 };
-                GridColumn colIdUserAttri3 = new GridColumn() { Caption = "User Attri. 3", Visible = true, FieldName = eItemColumns.IdUserAttri3.ToString(), Width = 90 };
+                GridColumn colIdHwTypeL1 = new GridColumn() { Caption = "Hw Type L1", Visible = true, FieldName = nameof(ItemHw.IdHwTypeL1), Width = 100 };
+                GridColumn colIdHwTypeL2 = new GridColumn() { Caption = "Hw Type L2", Visible = true, FieldName = nameof(ItemHw.IdHwTypeL2), Width = 100 };
+                GridColumn colIdHwTypeL3 = new GridColumn() { Caption = "Hw Type L3", Visible = true, FieldName = nameof(ItemHw.IdHwTypeL3), Width = 100 };
 
+                GridColumn colComments = new GridColumn() { Caption = "Comments", Visible = true, FieldName = nameof(ItemHw.Comments), Width = 300 };
+                GridColumn colLaunchedDate = new GridColumn() { Caption = "Launch Date", Visible = true, FieldName = nameof(ItemHw.LaunchDate), Width = 90 };
+                GridColumn colRemovalDate = new GridColumn() { Caption = "Removal Date", Visible = true, FieldName = nameof(ItemHw.RemovalDate), Width = 90 };
+                GridColumn colIdStatusCial = new GridColumn() { Caption = "Status Cial", Visible = true, FieldName = nameof(ItemHw.IdStatusCial), Width = 90 };
+                GridColumn colIdStatusProd = new GridColumn() { Caption = "Status Prod", Visible = true, FieldName = nameof(ItemHw.IdStatusProd), Width = 90 };
+                GridColumn colIdUserAttri1 = new GridColumn() { Caption = "User Attri. 1", Visible = true, FieldName = nameof(ItemHw.IdUserAttri1), Width = 90 };
+                GridColumn colIdUserAttri2 = new GridColumn() { Caption = "User Attri. 2", Visible = true, FieldName = nameof(ItemHw.IdUserAttri2), Width = 90 };
+                GridColumn colIdUserAttri3 = new GridColumn() { Caption = "User Attri. 3", Visible = true, FieldName = nameof(ItemHw.IdUserAttri3), Width = 90 };
+
+                GridColumn colPhotoUrl = new GridColumn() { Caption = "Photo URL", Visible = false, FieldName = nameof(ItemEy.PhotoUrl), Width = 90 };
+                GridColumn colPhoto = new GridColumn() { Caption = "Photo", Visible = true, FieldName = PHOTO_COLUMN, Width = 90 }; 
 
                 //Display Format
                 colTimestamp.DisplayFormat.FormatType = FormatType.DateTime;
 
-                colCaliber.DisplayFormat.FormatType = FormatType.Numeric;
-                colCaliber.DisplayFormat.FormatString = "n2";
+                //Photo
+                colPhoto.UnboundType = DevExpress.Data.UnboundColumnType.Object;
+                RepositoryItemPictureEdit pictureEdit = new RepositoryItemPictureEdit()
+                {
+                    SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom,
+                    ShowZoomSubMenu = DefaultBoolean.True
+                };
+                colPhoto.ColumnEdit = pictureEdit;
 
                 //Add columns to grid root view
                 rootGridViewItems.Columns.Add(colIdVer);
@@ -473,7 +496,6 @@ namespace HKSupply.Forms.Master
                 rootGridViewItems.Columns.Add(colPrototypeStatus);
                 rootGridViewItems.Columns.Add(colIdModel);
                 rootGridViewItems.Columns.Add(colModel);
-                rootGridViewItems.Columns.Add(colCaliber);
                 rootGridViewItems.Columns.Add(colIdColor1);
                 rootGridViewItems.Columns.Add(colIdColor2);
                 rootGridViewItems.Columns.Add(colIdItemBcn);
@@ -491,14 +513,91 @@ namespace HKSupply.Forms.Master
                 rootGridViewItems.Columns.Add(colIdUserAttri2);
                 rootGridViewItems.Columns.Add(colIdUserAttri3);
 
+                rootGridViewItems.Columns.Add(colPhotoUrl);
+                rootGridViewItems.Columns.Add(colPhoto);
+
                 //Events
                 rootGridViewItems.DoubleClick += rootGridViewItems_DoubleClick;
+                rootGridViewItems.CustomUnboundColumnData += RootGridViewItems_CustomUnboundColumnData;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
+
+        private void RootGridViewItems_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)
+        {
+            try
+            {
+                string img = (e.Row as ItemHw).PhotoUrl;
+
+                if (System.IO.File.Exists(Constants.DOCS_PATH + img))
+                {
+                    e.Value = Image.FromFile(Constants.DOCS_PATH + img);
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void toolTipController1_GetActiveObjectInfo(object sender, DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs e)
+        {
+            if (e.SelectedControl != xgrdItems) return;
+            ToolTipControlInfo info = null;
+
+            SuperToolTip sTooltip1 = new SuperToolTip();
+
+
+            try
+            {
+                GridView view = xgrdItems.GetViewAt(e.ControlMousePosition) as GridView;
+                if (view == null) return;
+                DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitInfo hi = view.CalcHitInfo(e.ControlMousePosition);
+
+                if (hi.HitTest == DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitTest.RowCell)
+                {
+                    //info para debug
+                    //info = new ToolTipControlInfo(DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitTest.RowIndicator.ToString() + hi.RowHandle.ToString(), "Row Handle: " + hi.RowHandle.ToString());
+
+                    ToolTipTitleItem titleItem1 = new ToolTipTitleItem();
+
+                    if (hi.Column.FieldName != PHOTO_COLUMN)
+                        return;
+
+                    //string url = view.GetRowCellValue(hi.RowHandle, nameof(ItemEy.PhotoUrl)).ToString();
+                    //AddToPhotoCache(url);
+
+                    //Bitmap im = null;
+                    //im = photosCache[url.ToString()];
+
+                    string img = view.GetRowCellValue(hi.RowHandle, nameof(ItemHw.PhotoUrl)).ToString();
+                    Image im = null;
+                    if (System.IO.File.Exists(Constants.DOCS_PATH + img))
+                    {
+                        im = Image.FromFile(Constants.DOCS_PATH + img);
+                        ToolTipItem item1 = new ToolTipItem();
+                        item1.Image = im;
+                        sTooltip1.Items.Add(item1);
+                    }
+
+
+                }
+
+                info = new ToolTipControlInfo(hi.HitTest, "");
+                info.SuperTip = sTooltip1;
+            }
+            finally
+            {
+                e.Info = info;
+            }
+        }
+
+        #region img
+
+        #endregion
 
         private void SetUpGrdLastDocs()
         {
@@ -512,25 +611,28 @@ namespace HKSupply.Forms.Master
                 //gridViewLastDocs.OptionsBehavior.Editable = false;
 
                 //Columns definition
-                GridColumn colIdVerItem = new GridColumn() { Caption = "Item Ver", Visible = true, FieldName = eItemDocColumns.IdVerItem.ToString(), Width = 60 };
-                GridColumn colIdSubVerItem = new GridColumn() { Caption = "Item Subver", Visible = true, FieldName = eItemDocColumns.IdSubVerItem.ToString(), Width = 75 };
-                GridColumn colIdDocType = new GridColumn() { Caption = "IdDocType", Visible = false, FieldName = eItemDocColumns.IdDocType.ToString(), Width = 10 };
-                GridColumn colDocType = new GridColumn() { Caption = "Doc Type", Visible = true, FieldName = eItemDocColumns.DocType.ToString() + ".Description", Width = 100 };
-                GridColumn colFileName = new GridColumn() { Caption = "File Name", Visible = true, FieldName = eItemDocColumns.FileName.ToString(), Width = 250 };
-                GridColumn colFilePath = new GridColumn() { Caption = "FilePath", Visible = false, FieldName = eItemDocColumns.FilePath.ToString(), Width = 10 };
-                GridColumn colCreateDate = new GridColumn() { Caption = "Create Date", Visible = true, FieldName = eItemDocColumns.CreateDate.ToString(), Width = 150 };
-                GridColumn colViewButton = new GridColumn() { Caption = "View", Visible = true, FieldName = eItemDocColumns.View.ToString(), Width = 50 };
+                GridColumn colIdVerItem = new GridColumn() { Caption = "Item Ver", Visible = true, FieldName = nameof(ItemDoc.IdVerItem), Width = 60 };
+                GridColumn colIdSubVerItem = new GridColumn() { Caption = "Item Subver", Visible = true, FieldName = nameof(ItemDoc.IdSubVerItem), Width = 75 };
+                GridColumn colIdDocType = new GridColumn() { Caption = "IdDocType", Visible = false, FieldName = nameof(ItemDoc.IdDocType), Width = 10 };
+                GridColumn colDocType = new GridColumn() { Caption = "Doc Type", Visible = true, FieldName = $"{nameof(ItemDoc.DocType)}.{nameof(DocType.Description)}", Width = 100 };
+                GridColumn colFileName = new GridColumn() { Caption = "File Name", Visible = true, FieldName = nameof(ItemDoc.FileName), Width = 250 };
+                GridColumn colFilePath = new GridColumn() { Caption = "FilePath", Visible = false, FieldName = nameof(ItemDoc.FilePath), Width = 10 };
+                GridColumn colCreateDate = new GridColumn() { Caption = "Create Date", Visible = true, FieldName = nameof(ItemDoc.CreateDate), Width = 150 };
+                GridColumn colViewButton = new GridColumn() { Caption = "View", Visible = true, FieldName = VIEW_COLUMN, Width = 50 };
 
                 //Display Format
                 colCreateDate.DisplayFormat.FormatType = FormatType.DateTime;
 
                 //View Button
                 colViewButton.UnboundType = DevExpress.Data.UnboundColumnType.Object;
-                DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repButtonLastDoc = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-                repButtonLastDoc.Name = "btnViewLastDoc";
-                repButtonLastDoc.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+                RepositoryItemButtonEdit repButtonLastDoc = new RepositoryItemButtonEdit()
+                {
+                    Name = "btnViewLastDoc",
+                    TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
+                }; 
                 repButtonLastDoc.Click += repButtonLastDoc_Click;
-                colViewButton.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
+
+                colViewButton.ShowButtonMode = ShowButtonModeEnum.ShowAlways;
                 colViewButton.ColumnEdit = repButtonLastDoc;
 
                 //Only button allow to edit to allow click
@@ -572,25 +674,28 @@ namespace HKSupply.Forms.Master
                 //gridViewDocsHistory.OptionsBehavior.Editable = false;
 
                 //Columns definition
-                GridColumn colIdVerItem = new GridColumn() { Caption = "Item Ver", Visible = true, FieldName = eItemDocColumns.IdVerItem.ToString(), Width = 60 };
-                GridColumn colIdSubVerItem = new GridColumn() { Caption = "Item Subver", Visible = true, FieldName = eItemDocColumns.IdSubVerItem.ToString(), Width = 75 };
-                GridColumn colIdDocType = new GridColumn() { Caption = "IdDocType", Visible = false, FieldName = eItemDocColumns.IdDocType.ToString(), Width = 10 };
-                GridColumn colDocType = new GridColumn() { Caption = "Doc Type", Visible = true, FieldName = eItemDocColumns.DocType.ToString() + ".Description", Width = 100 };
-                GridColumn colFileName = new GridColumn() { Caption = "File Name", Visible = true, FieldName = eItemDocColumns.FileName.ToString(), Width = 280 };
-                GridColumn colFilePath = new GridColumn() { Caption = "FilePath", Visible = false, FieldName = eItemDocColumns.FilePath.ToString(), Width = 10 };
-                GridColumn colCreateDate = new GridColumn() { Caption = "Create Date", Visible = true, FieldName = eItemDocColumns.CreateDate.ToString(), Width = 120 };
-                GridColumn colViewButton = new GridColumn() { Caption = "View", Visible = true, FieldName = eItemDocColumns.View.ToString(), Width = 50 };
+                GridColumn colIdVerItem = new GridColumn() { Caption = "Item Ver", Visible = true, FieldName = nameof(ItemDoc.IdVerItem), Width = 60 };
+                GridColumn colIdSubVerItem = new GridColumn() { Caption = "Item Subver", Visible = true, FieldName = nameof(ItemDoc.IdSubVerItem), Width = 75 };
+                GridColumn colIdDocType = new GridColumn() { Caption = "IdDocType", Visible = false, FieldName = nameof(ItemDoc.IdDocType), Width = 10 };
+                GridColumn colDocType = new GridColumn() { Caption = "Doc Type", Visible = true, FieldName = $"{nameof(ItemDoc.DocType)}.{nameof(DocType.Description)}", Width = 100 };
+                GridColumn colFileName = new GridColumn() { Caption = "File Name", Visible = true, FieldName = nameof(ItemDoc.FileName), Width = 280 };
+                GridColumn colFilePath = new GridColumn() { Caption = "FilePath", Visible = false, FieldName = nameof(ItemDoc.FilePath), Width = 10 };
+                GridColumn colCreateDate = new GridColumn() { Caption = "Create Date", Visible = true, FieldName = nameof(ItemDoc.CreateDate), Width = 120 };
+                GridColumn colViewButton = new GridColumn() { Caption = "View", Visible = true, FieldName = VIEW_COLUMN, Width = 50 };
 
                 //Display Format
                 colCreateDate.DisplayFormat.FormatType = FormatType.DateTime;
 
                 //View Button
                 colViewButton.UnboundType = DevExpress.Data.UnboundColumnType.Object;
-                DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repButtonHistDoc = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-                repButtonHistDoc.Name = "btnViewHistoryDoc";
-                repButtonHistDoc.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+                RepositoryItemButtonEdit repButtonHistDoc = new RepositoryItemButtonEdit()
+                {
+                    Name = "btnViewHistoryDoc",
+                    TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor,
+                };
                 repButtonHistDoc.Click += repButtonHistDoc_Click;
-                colViewButton.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
+
+                colViewButton.ShowButtonMode = ShowButtonModeEnum.ShowAlways;
                 colViewButton.ColumnEdit = repButtonHistDoc;
 
                 //Only button allow to edit to allow click
@@ -710,6 +815,8 @@ namespace HKSupply.Forms.Master
                 txtIdUserAttri2.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri2);
                 txtIdUserAttri3.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri3);
 
+                txtPhoto.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.PhotoUrl);
+
                 //LookUpEdit
                 lueIdDefaultSupplier.DataBindings.Add<ItemHw>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdDefaultSupplier);
                 lueIdStatusProd.DataBindings.Add<ItemHw>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdStatusProd);
@@ -798,10 +905,10 @@ namespace HKSupply.Forms.Master
                 _supplierList = GlobalSetting.SupplierService.GetSuppliers();
 
                 lueIdDefaultSupplier.Properties.DataSource = _supplierList;
-                lueIdDefaultSupplier.Properties.DisplayMember = "IdSupplier";
-                lueIdDefaultSupplier.Properties.ValueMember = "IdSupplier";
-                lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdSupplier", 20, "Id Supplier"));
-                lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SupplierName", 100, "Name"));
+                lueIdDefaultSupplier.Properties.DisplayMember = nameof(Supplier.IdSupplier);
+                lueIdDefaultSupplier.Properties.ValueMember = nameof(Supplier.IdSupplier); ;
+                lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Supplier.IdSupplier), 20, "Id Supplier"));
+                lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Supplier.SupplierName), 100, "Name"));
 
                 //De esta manera se activa el limpiar el combo pulsado Ctrl + Supr. Es poco intuitivo, lo controlamos por el evento
                 //lueIdDefaultSupplier.Properties.AllowNullInput = DefaultBoolean.True; 
@@ -809,10 +916,10 @@ namespace HKSupply.Forms.Master
 
                 //History
                 lueHIdDefaultSupplier.Properties.DataSource = _supplierList;
-                lueHIdDefaultSupplier.Properties.DisplayMember = "IdSupplier";
-                lueHIdDefaultSupplier.Properties.ValueMember = "IdSupplier";
-                lueHIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdSupplier", 20, "Id Supplier"));
-                lueHIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SupplierName", 100, "Name"));
+                lueHIdDefaultSupplier.Properties.DisplayMember = nameof(Supplier.IdSupplier);
+                lueHIdDefaultSupplier.Properties.ValueMember = nameof(Supplier.IdSupplier); ;
+                lueHIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Supplier.IdSupplier), 20, "Id Supplier"));
+                lueHIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Supplier.SupplierName), 100, "Name"));
 
             }
             catch (Exception ex)
@@ -831,14 +938,14 @@ namespace HKSupply.Forms.Master
                 _statusProdList = GlobalSetting.StatusProdService.GetStatusProd();
 
                 lueIdStatusProd.Properties.DataSource = _statusProdList;
-                lueIdStatusProd.Properties.DisplayMember = "Description";
-                lueIdStatusProd.Properties.ValueMember = "IdStatusProd";
+                lueIdStatusProd.Properties.DisplayMember = nameof(StatusHK.Description);
+                lueIdStatusProd.Properties.ValueMember = nameof(StatusHK.IdStatusProd);
                 //lueIdStatusProd.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdSupplier", 20, "Id Supplier"));
                 //lueIdStatusProd.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SupplierName", 100, "Name"));
 
                 lueHIdStatusProd.Properties.DataSource = _statusProdList;
-                lueHIdStatusProd.Properties.DisplayMember = "Description";
-                lueHIdStatusProd.Properties.ValueMember = "IdStatusProd";
+                lueHIdStatusProd.Properties.DisplayMember = nameof(StatusHK.Description);
+                lueHIdStatusProd.Properties.ValueMember = nameof(StatusHK.IdStatusProd);
             }
             catch (Exception ex)
             {
@@ -853,9 +960,9 @@ namespace HKSupply.Forms.Master
                 _docsTypeList = GlobalSetting.DocTypeService.GetDocsType(Constants.ITEM_GROUP_HW);
 
                 lueDocType.Properties.DataSource = _docsTypeList;
-                lueDocType.Properties.DisplayMember = "Description";
-                lueDocType.Properties.ValueMember = "IdDocType";
-                lueDocType.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Description", 100, "Description"));
+                lueDocType.Properties.DisplayMember = nameof(DocType.Description);
+                lueDocType.Properties.ValueMember = nameof(DocType.IdDocType);
+                lueDocType.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(DocType.Description), 100, "Description"));
             }
             catch (Exception ex)
             {
@@ -888,6 +995,7 @@ namespace HKSupply.Forms.Master
             {
                 //Quitamos el menú contextual. Sólo estará disponble en edición
                 peItemImage.Properties.ShowMenu = false;
+                peItemImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
                 //Events
                 peItemImage.EditValueChanged += peItemImage_EditValueChanged;
             }
@@ -902,7 +1010,6 @@ namespace HKSupply.Forms.Master
             try
             {
                 _itemImageChanged = (peItemImage.EditValue == null ? false : true );
-                Bitmap bmp = peItemImage.EditValue as Bitmap;
             }
             catch (Exception ex)
             {
@@ -992,13 +1099,11 @@ namespace HKSupply.Forms.Master
                 gbNewDoc.Enabled = false;
 
                 //Item Image
-                //Quitamos el menú contextual ya que no nos interesa en este momento
-                //peItemImage.Properties.ShowMenu = false;
-                ////Cargamos la imagen de la cache.
-                //AddToPhotoCache(_itemUpdate.PhotoUrl);
-                //Bitmap im = null;
-                //im = photosCache[_itemUpdate.PhotoUrl];
-                //peItemImage.Image = im;
+
+                if (System.IO.File.Exists(Constants.DOCS_PATH + _itemUpdate.PhotoUrl))
+                {
+                    peItemImage.Image = Image.FromFile(Constants.DOCS_PATH + _itemUpdate.PhotoUrl);
+                }
             }
             catch (Exception ex)
             {
@@ -1097,23 +1202,23 @@ namespace HKSupply.Forms.Master
         /// Mover la fila activa a un item en concreto
         /// </summary>
         /// <param name="itemCode"></param>
-        private void MoveGridToItem(string itemCode)
+        private void MoveGridToItem(string idItemBcn)
         {
             try
             {
-                //TODO
-                //GridColumn column = rootGridViewItems.Columns[eItemColumns.ItemCode.ToString()];
-                //if (column != null)
-                //{
-                //    // locating the row 
-                //    int rhFound = rootGridViewItems.LocateByDisplayText(rootGridViewItems.FocusedRowHandle + 1, column, itemCode);
-                //    // focusing the cell 
-                //    if (rhFound != GridControl.InvalidRowHandle)
-                //    {
-                //        rootGridViewItems.FocusedRowHandle = rhFound;
-                //        rootGridViewItems.FocusedColumn = column;
-                //    }
-                //}
+                GridColumn column = rootGridViewItems.Columns[nameof(ItemHw.IdItemBcn)];
+                if (column != null)
+                {
+                    // locating the row 
+                    int rhFound = rootGridViewItems.LocateByDisplayText(rootGridViewItems.FocusedRowHandle + 1, column, idItemBcn);
+                    // focusing the cell 
+                    if (rhFound != GridControl.InvalidRowHandle)
+                    {
+                        rootGridViewItems.FocusedRowHandle = rhFound;
+                        rootGridViewItems.FocusedColumn = column;
+                    }
+                }
+
             }
             catch (Exception ex)
             {
@@ -1209,12 +1314,43 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void SetItemPhoto()
+        {
+            try
+            {
+                if (_itemImageChanged)
+                {
+                    Bitmap itemImage = (Bitmap)peItemImage.EditValue;
+                    
+                    //Create directory if is necessary
+                    string folder = Constants.DOCS_PATH + _itemUpdate.IdItemBcn + "\\" + Constants.ITEM_PHOTO_FOLDER;
+                    new System.IO.FileInfo(folder).Directory.Create();
+                    //Save to server
+                    string imageFullPath = folder + "itemImg_" + (_itemUpdate.IdVer.ToString()) + "." + ((_itemUpdate.IdSubVer + 1).ToString()) + ".png";
+                    string imageRelativePath = _itemUpdate.IdItemBcn + "\\" + Constants.ITEM_PHOTO_FOLDER + "itemImg_" + (_itemUpdate.IdVer.ToString()) + "." + ((_itemUpdate.IdSubVer + 1).ToString()) + ".png";
+                    itemImage.Save(imageFullPath, System.Drawing.Imaging.ImageFormat.Png);
+
+                    _itemUpdate.PhotoUrl = imageRelativePath;
+
+                }
+                else
+                {
+                    _itemUpdate.PhotoUrl = _itemOriginal.PhotoUrl;
+                }
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         private void ActionsAfterCU()
         {
             try
             {
-                string itemCode = _itemOriginal.IdItemBcn;
+                string idItemBcn = _itemOriginal.IdItemBcn;
                 _itemOriginal = null;
+                peItemImage.EditValue = null;
                 ResetItemUpdate();
                 SetFormBinding();
                 xtpForm.PageVisible = false;
@@ -1222,7 +1358,7 @@ namespace HKSupply.Forms.Master
                 xtpList.PageVisible = true;
                 peItemImage.Properties.ShowMenu = false;
                 LoadItemsList();
-                MoveGridToItem(itemCode);
+                MoveGridToItem(idItemBcn);
                 RestoreInitState();
             }
             catch (Exception ex)

@@ -12,7 +12,7 @@ namespace HKSupply.Models
     [Table("ITEMS_BCN")]
     public class ItemBcn
     {
-        [Column("ID_ITEM_BCN", TypeName = "NVARCHAR"), Key, StringLength(20)]
+        [Column("ID_ITEM_BCN", TypeName = "NVARCHAR"), Key, StringLength(50)]
         public string IdItemBcn { get; set; }
         [Column("DESCRIPTION", TypeName = "NVARCHAR"), StringLength(500)]
         public string Description { get; set; }

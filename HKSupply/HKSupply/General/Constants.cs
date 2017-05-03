@@ -17,6 +17,7 @@ namespace HKSupply.General
         public const string COLOR_PDF_FOLDER = "PDFCOLOR\\";
         public const string DRAWING_PDF_FOLDER = "PDFDRAWING\\";
         public const string DRAWING_DWG_FOLDER = "DWGDRAWING\\";
+        public const string ITEM_PHOTO_FOLDER = "ITEMIMG\\";
 
     }
 }

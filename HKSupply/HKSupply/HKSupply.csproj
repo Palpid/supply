@@ -502,6 +502,10 @@
     <Compile Include="Migrations\201705020858436_itemHwMt_idmodel_01.Designer.cs">
       <DependentUpon>201705020858436_itemHwMt_idmodel_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705031357142_IdItemBcn_IdItemHk_changeLength_01.1.cs" />
+    <Compile Include="Migrations\201705031357142_IdItemBcn_IdItemHk_changeLength_01.1.Designer.cs">
+      <DependentUpon>201705031357142_IdItemBcn_IdItemHk_changeLength_01.1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\CustomerPriceList.cs" />
@@ -567,6 +571,7 @@
     <Compile Include="Services\Implementations\EFItemEy.cs" />
     <Compile Include="Services\Implementations\EFItemBcn.cs" />
     <Compile Include="Services\Implementations\EFItemHw.cs" />
+    <Compile Include="Services\Implementations\EFItemMt.cs" />
     <Compile Include="Services\Implementations\EFMaterial.cs" />
     <Compile Include="Services\Implementations\EFMatType.cs" />
     <Compile Include="Services\Implementations\EFPaymentTerms.cs" />
@@ -592,6 +597,7 @@
     <Compile Include="Services\Interfaces\IItemEy.cs" />
     <Compile Include="Services\Interfaces\IItemBcn.cs" />
     <Compile Include="Services\Interfaces\IItemHw.cs" />
+    <Compile Include="Services\Interfaces\IItemMt.cs" />
     <Compile Include="Services\Interfaces\IMaterial.cs" />
     <Compile Include="Services\Interfaces\IMatType.cs" />
     <Compile Include="Services\Interfaces\IPaymentTerms.cs" />
@@ -846,6 +852,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705020858436_itemHwMt_idmodel_01.resx">
       <DependentUpon>201705020858436_itemHwMt_idmodel_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705031357142_IdItemBcn_IdItemHk_changeLength_01.1.resx">
+      <DependentUpon>201705031357142_IdItemBcn_IdItemHk_changeLength_01.1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

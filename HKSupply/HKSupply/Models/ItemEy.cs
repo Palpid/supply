@@ -21,7 +21,7 @@ namespace HKSupply.Models
         [Column("TIMESTAMP"), Required]
         public DateTime Timestamp { get; set; }
 
-        [Column("ID_ITEM_BCN", TypeName = "NVARCHAR"), Key, StringLength(20)]
+        [Column("ID_ITEM_BCN", TypeName = "NVARCHAR"), Key, StringLength(50)]
         public string IdItemBcn { get; set; }
 
         [Column("ID_PROTOTYPE", TypeName = "NVARCHAR"), StringLength(50)]
@@ -70,7 +70,7 @@ namespace HKSupply.Models
         [ForeignKey("IdColor2")]
         public EtnColor Color2 { get; set; }
 
-        [Column("ID_ITEM_HK", TypeName = "NVARCHAR"), StringLength(20)]
+        [Column("ID_ITEM_HK", TypeName = "NVARCHAR"), StringLength(50)]
         public string IdItemHK { get; set; }
 
         [Column("ITEM_DESCRIPTION", TypeName = "NVARCHAR"), StringLength(100)]

@@ -157,6 +157,7 @@ namespace HKSupply.Services.Implementations
                             itemToUpdate.IdUserAttri1 = updateItem.IdUserAttri1;
                             itemToUpdate.IdUserAttri2 = updateItem.IdUserAttri2;
                             itemToUpdate.IdUserAttri3 = updateItem.IdUserAttri3;
+                            itemToUpdate.PhotoUrl = updateItem.PhotoUrl;
 
                             ItemHwHistory itemHistory = (ItemHwHistory)itemToUpdate;
                             itemHistory.User = GlobalSetting.LoggedUser.UserLogin;
@@ -216,10 +217,10 @@ namespace HKSupply.Services.Implementations
             try
             {
                 if (updateItem == null)
-                    throw new ArgumentNullException("updateItem");
+                    throw new ArgumentNullException(nameof(updateItem));
 
                 if (itemDoc == null)
-                    throw new ArgumentNullException("itemDoc");
+                    throw new ArgumentNullException(nameof(itemDoc));
 
                 using (var db = new HKSupplyContext())
                 {
@@ -251,6 +252,7 @@ namespace HKSupply.Services.Implementations
                             itemToUpdate.IdUserAttri1 = updateItem.IdUserAttri1;
                             itemToUpdate.IdUserAttri2 = updateItem.IdUserAttri2;
                             itemToUpdate.IdUserAttri3 = updateItem.IdUserAttri3;
+                            itemToUpdate.PhotoUrl = updateItem.PhotoUrl;
 
                             ItemHwHistory itemHistory = (ItemHwHistory)itemToUpdate;
                             itemHistory.User = GlobalSetting.LoggedUser.UserLogin;

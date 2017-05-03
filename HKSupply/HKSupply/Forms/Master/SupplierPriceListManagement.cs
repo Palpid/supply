@@ -502,12 +502,15 @@ namespace HKSupply.Forms.Master
                 colExchangeRateUsed.DisplayFormat.FormatString = "F2";
 
                 //Edit repositories
-                RepositoryItemLookUpEdit riComboCurrency = new RepositoryItemLookUpEdit();
-                riComboCurrency.DataSource = _currenciesList;
-                riComboCurrency.ValueMember = "IdCurrency";
-                riComboCurrency.DisplayMember = "Description";
+                RepositoryItemLookUpEdit riComboCurrency = new RepositoryItemLookUpEdit()
+                {
+                    DataSource = _currenciesList,
+                    ValueMember = "IdCurrency",
+                    DisplayMember = "Description"
+                };
                 riComboCurrency.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdCurrency", 40, "Currency"));
                 riComboCurrency.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Description", 60, "Description"));
+
                 colCurrency.ColumnEdit = riComboCurrency;
 
                 RepositoryItemTextEdit ritxt2Dec = new RepositoryItemTextEdit();
@@ -684,8 +687,8 @@ namespace HKSupply.Forms.Master
             {
                 _currenciesList = GlobalSetting.CurrencyService.GetCurrencies();
                 lueIdCurrency.Properties.DataSource = _currenciesList;
-                lueIdCurrency.Properties.DisplayMember = "Description";
-                lueIdCurrency.Properties.ValueMember = "IdCurrency";
+                lueIdCurrency.Properties.DisplayMember = nameof(Currency.Description);
+                lueIdCurrency.Properties.ValueMember = nameof(Currency.IdCurrency);
             }
             catch (Exception ex)
             {
@@ -700,8 +703,8 @@ namespace HKSupply.Forms.Master
                 _itemBcnList = GlobalSetting.ItemBcnService.GetItemsBcn();
 
                 lueIdItemBcn.Properties.DataSource = _itemBcnList;
-                lueIdItemBcn.Properties.DisplayMember = "Description";
-                lueIdItemBcn.Properties.ValueMember = "IdItemBcn";
+                lueIdItemBcn.Properties.DisplayMember = nameof(ItemBcn.Description);
+                lueIdItemBcn.Properties.ValueMember = nameof(ItemBcn.IdItemBcn);
             }
             catch (Exception ex)
             {
@@ -718,11 +721,11 @@ namespace HKSupply.Forms.Master
                 _suppliersList = GlobalSetting.SupplierService.GetSuppliers();
 
                 lueIdSupplier.Properties.DataSource = _suppliersList;
-                lueIdSupplier.Properties.DisplayMember = "SupplierName";
-                lueIdSupplier.Properties.ValueMember = "IdSupplier";
+                lueIdSupplier.Properties.DisplayMember = nameof(Supplier.SupplierName);
+                lueIdSupplier.Properties.ValueMember = nameof(Supplier.IdSupplier);
 
-                lueIdSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdSupplier", 20, "Id Supplier"));
-                lueIdSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SupplierName", 100, "Name"));
+                lueIdSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Supplier.IdSupplier), 20, "Id Supplier"));
+                lueIdSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Supplier.SupplierName), 100, "Name"));
 
             }
             catch (Exception ex)
@@ -1243,10 +1246,13 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                string idItemBcn = _supplierPriceListOriginal.IdItemBcn;
-                string idSupplier = _supplierPriceListOriginal.IdSupplier;
+
+                string idItemBcn = (_supplierPriceListOriginal == null ? string.Empty : _supplierPriceListOriginal.IdItemBcn);
+                string idSupplier = (_supplierPriceListOriginal == null ? string.Empty : _supplierPriceListOriginal.IdSupplier);
+
                 _supplierPriceListOriginal = null;
                 ResetSupplierPriceListUpdate();
+                SetUpGrdSuppliersPriceList();
                 SetFormBinding();
                 xtpForm.PageVisible = false;
                 xtpList.PageVisible = true;

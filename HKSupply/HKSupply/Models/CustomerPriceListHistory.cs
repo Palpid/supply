@@ -21,7 +21,7 @@ namespace HKSupply.Models
         [Column("TIMESTAMP", Order = 2), Key]
         public DateTime Timestamp { get; set; }
 
-        [Column("ID_ITEM_BCN", TypeName = "NVARCHAR", Order = 3), Key, StringLength(20)]
+        [Column("ID_ITEM_BCN", TypeName = "NVARCHAR", Order = 3), Key, StringLength(50)]
         public string IdItemBcn { get; set; }
 
         [Column("ID_CUSTOMER", TypeName = "NVARCHAR", Order = 4), Key, StringLength(100)]

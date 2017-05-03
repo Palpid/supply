@@ -11,6 +11,7 @@ namespace HKSupply.Services.Interfaces
     {
         bool NewCustomerPriceList(CustomerPriceList newCustomerPriceList);
         bool UpdateCustomerPriceList(CustomerPriceList updateCustomerPriceList, bool newVer = false);
+        bool UpdateCustomersPricesList(IEnumerable<CustomerPriceList> pricesListToUpdate);
         CustomerPriceList GetCustomerPriceList(string idItemBcn, string idCustomer);
         List<CustomerPriceList> GetCustomersPriceList();
         List<CustomerPriceListHistory> GetCustomerPriceListHistory(string idItemBcn, string idCustomer);

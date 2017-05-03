@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemManagementHW));
             this.xtcGeneral = new DevExpress.XtraTab.XtraTabControl();
             this.xtpList = new DevExpress.XtraTab.XtraTabPage();
@@ -100,6 +101,7 @@
             this.lciHIdUserAttri2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciHIdUserAttri3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlForm = new DevExpress.XtraLayout.LayoutControl();
+            this.txtPhoto = new DevExpress.XtraEditors.TextEdit();
             this.txtIdUserAttri2 = new DevExpress.XtraEditors.TextEdit();
             this.txtIdUserAttri3 = new DevExpress.XtraEditors.TextEdit();
             this.txtIdUserAttri1 = new DevExpress.XtraEditors.TextEdit();
@@ -158,7 +160,9 @@
             this.lciIdUserAttri1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciIdUserAttri3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciIdUserAttri2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciPhoto = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtpDocs = new DevExpress.XtraTab.XtraTabPage();
+            this.peItemImage = new DevExpress.XtraEditors.PictureEdit();
             this.gbDocsHistory = new System.Windows.Forms.GroupBox();
             this.xgrdDocsHistory = new DevExpress.XtraGrid.GridControl();
             this.gridViewDocsHistory = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -176,7 +180,7 @@
             this.gbLastDocs = new System.Windows.Forms.GroupBox();
             this.xgrdLastDocs = new DevExpress.XtraGrid.GridControl();
             this.gridViewLastDocs = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.peItemImage = new DevExpress.XtraEditors.PictureEdit();
+            this.toolTipController1 = new DevExpress.Utils.ToolTipController(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
             this.xtcGeneral.SuspendLayout();
@@ -250,6 +254,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciHIdUserAttri3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlForm)).BeginInit();
             this.layoutControlForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhoto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdUserAttri2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdUserAttri3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdUserAttri1.Properties)).BeginInit();
@@ -308,7 +313,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciIdUserAttri1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIdUserAttri3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIdUserAttri2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPhoto)).BeginInit();
             this.xtpDocs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.peItemImage.Properties)).BeginInit();
             this.gbDocsHistory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xgrdDocsHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewDocsHistory)).BeginInit();
@@ -325,7 +332,6 @@
             this.gbLastDocs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xgrdLastDocs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLastDocs)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.peItemImage.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -1102,6 +1108,7 @@
             // 
             this.layoutControlForm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.layoutControlForm.Controls.Add(this.txtPhoto);
             this.layoutControlForm.Controls.Add(this.txtIdUserAttri2);
             this.layoutControlForm.Controls.Add(this.txtIdUserAttri3);
             this.layoutControlForm.Controls.Add(this.txtIdUserAttri1);
@@ -1137,6 +1144,15 @@
             this.layoutControlForm.Size = new System.Drawing.Size(600, 456);
             this.layoutControlForm.TabIndex = 0;
             this.layoutControlForm.Text = "layoutControl1";
+            // 
+            // txtPhoto
+            // 
+            this.txtPhoto.Location = new System.Drawing.Point(120, 492);
+            this.txtPhoto.MenuManager = this.ribbonControl;
+            this.txtPhoto.Name = "txtPhoto";
+            this.txtPhoto.Size = new System.Drawing.Size(468, 20);
+            this.txtPhoto.StyleController = this.layoutControlForm;
+            this.txtPhoto.TabIndex = 53;
             // 
             // txtIdUserAttri2
             // 
@@ -1452,17 +1468,18 @@
             this.IdHwTypeL2,
             this.lciIdUserAttri1,
             this.lciIdUserAttri3,
-            this.lciIdUserAttri2});
+            this.lciIdUserAttri2,
+            this.lciPhoto});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.OptionsItemText.TextToControlDistance = 4;
-            this.layoutControlGroup1.Size = new System.Drawing.Size(600, 510);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(600, 534);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 480);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 504);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(580, 10);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
@@ -1716,6 +1733,14 @@
             this.lciIdUserAttri2.Size = new System.Drawing.Size(580, 24);
             this.lciIdUserAttri2.TextSize = new System.Drawing.Size(104, 13);
             // 
+            // lciPhoto
+            // 
+            this.lciPhoto.Control = this.txtPhoto;
+            this.lciPhoto.Location = new System.Drawing.Point(0, 480);
+            this.lciPhoto.Name = "lciPhoto";
+            this.lciPhoto.Size = new System.Drawing.Size(580, 24);
+            this.lciPhoto.TextSize = new System.Drawing.Size(104, 13);
+            // 
             // xtpDocs
             // 
             this.xtpDocs.Controls.Add(this.peItemImage);
@@ -1725,6 +1750,17 @@
             this.xtpDocs.Name = "xtpDocs";
             this.xtpDocs.Size = new System.Drawing.Size(1332, 513);
             this.xtpDocs.Text = "Docs";
+            // 
+            // peItemImage
+            // 
+            this.peItemImage.Cursor = System.Windows.Forms.Cursors.Default;
+            this.peItemImage.Location = new System.Drawing.Point(11, 308);
+            this.peItemImage.MenuManager = this.ribbonControl;
+            this.peItemImage.Name = "peItemImage";
+            this.peItemImage.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.peItemImage.Properties.ZoomAccelerationFactor = 1D;
+            this.peItemImage.Size = new System.Drawing.Size(306, 187);
+            this.peItemImage.TabIndex = 7;
             // 
             // gbDocsHistory
             // 
@@ -1906,16 +1942,9 @@
             this.gridViewLastDocs.GridControl = this.xgrdLastDocs;
             this.gridViewLastDocs.Name = "gridViewLastDocs";
             // 
-            // peItemImage
+            // toolTipController1
             // 
-            this.peItemImage.Cursor = System.Windows.Forms.Cursors.Default;
-            this.peItemImage.Location = new System.Drawing.Point(11, 308);
-            this.peItemImage.MenuManager = this.ribbonControl;
-            this.peItemImage.Name = "peItemImage";
-            this.peItemImage.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.peItemImage.Properties.ZoomAccelerationFactor = 1D;
-            this.peItemImage.Size = new System.Drawing.Size(306, 187);
-            this.peItemImage.TabIndex = 7;
+            this.toolTipController1.GetActiveObjectInfo += new DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventHandler(this.toolTipController1_GetActiveObjectInfo);
             // 
             // ItemManagementHW
             // 
@@ -2003,6 +2032,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciHIdUserAttri3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlForm)).EndInit();
             this.layoutControlForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhoto.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdUserAttri2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdUserAttri3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdUserAttri1.Properties)).EndInit();
@@ -2061,7 +2091,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciIdUserAttri1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIdUserAttri3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIdUserAttri2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPhoto)).EndInit();
             this.xtpDocs.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.peItemImage.Properties)).EndInit();
             this.gbDocsHistory.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xgrdDocsHistory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewDocsHistory)).EndInit();
@@ -2078,7 +2110,6 @@
             this.gbLastDocs.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xgrdLastDocs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLastDocs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.peItemImage.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2234,5 +2265,8 @@
         private DevExpress.XtraGrid.GridControl xgrdDocsHistory;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewDocsHistory;
         private DevExpress.XtraEditors.PictureEdit peItemImage;
+        private DevExpress.XtraEditors.TextEdit txtPhoto;
+        private DevExpress.XtraLayout.LayoutControlItem lciPhoto;
+        private DevExpress.Utils.ToolTipController toolTipController1;
     }
 }
