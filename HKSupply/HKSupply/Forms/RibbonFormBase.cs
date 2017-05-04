@@ -121,6 +121,7 @@ namespace HKSupply.Forms
                 bbiCancel.ItemClick += bbiCancel_ItemClick;
                 bbiSave.ItemClick += bbiSave_ItemClick;
                 bbiClose.ItemClick += bbiClose_ItemClick;
+                bbiPrintPreview.ItemClick += bbiPrintPreview_ItemClick;
             }
             catch (Exception ex)
             {
@@ -190,6 +191,11 @@ namespace HKSupply.Forms
             {
                 throw ex;
             }
+        }
+
+        public virtual void bbiPrintPreview_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
         }
         #endregion
 

@@ -36,6 +36,7 @@ namespace HKSupply.Services.Implementations
                         .Include(i => i.FamilyHK)
                         .Include(i => i.StatusCial)
                         .Include(i => i.StatusProd)
+                        .OrderBy(i => i.IdItemBcn)
                         .ToList();
                 }
             }
@@ -308,6 +309,91 @@ namespace HKSupply.Services.Implementations
             {
                 _log.Error(anex.Message, anex);
                 throw anex;
+            }
+        }
+
+        public bool UpdateItems(IEnumerable<ItemEy> itemsToUpdate)
+        {
+            try
+            {
+                if (itemsToUpdate == null)
+                    throw new ArgumentNullException(nameof(itemsToUpdate));
+
+                using (var db = new HKSupplyContext())
+                {
+                    using (var dbTrans = db.Database.BeginTransaction())
+                    {
+                        try
+                        {
+                            foreach (var item in itemsToUpdate)
+                            {
+                                ItemEy itemToUpdate = db.ItemsEy.Where(a => a.IdItemBcn.Equals(item.IdItemBcn)).FirstOrDefault();
+
+                                itemToUpdate.IdSubVer += 1;
+                                itemToUpdate.Timestamp = DateTime.Now;
+                                //no hacemos  un "entry" en el contexto de db y lo marcamos como modificado, sino que updatamos sólo los pocos campos
+                                //que se pueden modificar de un item desde la aplicación para que EF genere el update sólo de esos campos y no de todos
+                                itemToUpdate.IdDefaultSupplier = item.IdDefaultSupplier;
+                                itemToUpdate.IdFamilyHK = item.IdFamilyHK;
+                                itemToUpdate.IdStatusProd = item.IdStatusProd;
+                                itemToUpdate.IdUserAttri1 = item.IdUserAttri1;
+                                itemToUpdate.IdUserAttri2 = item.IdUserAttri2;
+                                itemToUpdate.IdUserAttri3 = item.IdUserAttri3;
+
+                                ItemEyHistory itemHistory = (ItemEyHistory)itemToUpdate;
+                                itemHistory.User = GlobalSetting.LoggedUser.UserLogin;
+
+                                db.ItemsEyHistory.Add(itemHistory);
+ 
+                            }
+
+                            db.SaveChanges();
+                            dbTrans.Commit();
+                            return true;
+                        }
+                        catch (SqlException sqlex)
+                        {
+                            dbTrans.Rollback();
+
+                            for (int i = 0; i < sqlex.Errors.Count; i++)
+                            {
+                                _log.Error("Index #" + i + "\n" +
+                                    "Message: " + sqlex.Errors[i].Message + "\n" +
+                                    "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                                    "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                                    "Source: " + sqlex.Errors[i].Source + "\n" +
+                                    "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                                switch (sqlex.Errors[i].Number)
+                                {
+                                    case -1: //connection broken
+                                    case -2: //timeout
+                                        throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                                }
+                            }
+                            throw sqlex;
+                        }
+                        catch (DbEntityValidationException e)
+                        {
+                            dbTrans.Rollback();
+                            _log.Error(e.Message, e);
+                            throw e;
+                        }
+                        catch (Exception ex)
+                        {
+                            dbTrans.Rollback();
+                            _log.Error(ex.Message, ex);
+                            throw ex;
+                        }
+                    }
+
+                }
+
+            }
+            catch (ArgumentNullException nrex)
+            {
+                _log.Error(nrex.Message, nrex);
+                throw nrex;
             }
         }
 

@@ -5,20 +5,13 @@ using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraGrid.Views.Grid.ViewInfo;
-using DevExpress.XtraLayout;
 using DevExpress.XtraLayout.Utils;
 using HKSupply.General;
 using HKSupply.Helpers;
 using HKSupply.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HKSupply.Forms.Master
@@ -123,6 +116,7 @@ namespace HKSupply.Forms.Master
                 sbNewVersion.Visible = false;
                 LoadSuppliersPriceList();
                 SetNonCreatingFieldsVisibility(LayoutVisibility.Always);
+                sbLoad.Enabled = true;
                 rootGridViewSuppliersPriceList.DoubleClick += rootGridViewSuppliersPriceList_DoubleClick;
             }
             catch (Exception ex)
@@ -1260,6 +1254,7 @@ namespace HKSupply.Forms.Master
                 LoadSuppliersPriceList();
                 MoveGridToSupplier(idItemBcn, idSupplier);
                 RestoreInitState();
+                sbLoad.Enabled = true;
             }
             catch (Exception ex)
             {

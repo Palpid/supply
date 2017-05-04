@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using HKSupply.Models;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace HKSupply.DB
 {
@@ -76,6 +77,8 @@ namespace HKSupply.DB
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+
             //Set precision 
             modelBuilder.Entity<ItemEy>().Property(x => x.Caliber).HasPrecision(19, 6);
             modelBuilder.Entity<ItemEyHistory>().Property(x => x.Caliber).HasPrecision(19, 6);

@@ -16,6 +16,7 @@ namespace HKSupply.Services.Interfaces
         ItemEy GetItem(string idItemBcn);
         bool UpdateItem(ItemEy updateItem, bool newVersion = false);
         bool UpdateItemWithDoc(ItemEy updateItem, ItemDoc itemDoc, bool newVersion = false);
+        bool UpdateItems(IEnumerable<ItemEy> itemsToUpdate);
         //bool newItem(Item newItem);
         List<ItemEyHistory> GetItemEyHistory(string idItemBcn);
     }

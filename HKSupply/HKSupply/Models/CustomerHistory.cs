@@ -66,55 +66,59 @@ namespace HKSupply.Models
         [Column("ID_DEFAULT_CURRENCY", TypeName = "NVARCHAR"), StringLength(4)]
         public string IdDefaultCurrency { get; set; }
 
-/*
-        [Column("SHIPING_ADDRESS")]
-        public string ShippingAddress { get; set; }
+        [Column("USER"), StringLength(20)]
+        public string User { get; set; }
 
-        [Column("BILLING_ADDRESS")]
-        public string BillingAddress { get; set; }
+        /*
+                [Column("SHIPING_ADDRESS")]
+                public string ShippingAddress { get; set; }
 
-        [Column("CONTACT_NAME")]
-        public string ContactName { get; set; }
+                [Column("BILLING_ADDRESS")]
+                public string BillingAddress { get; set; }
 
-        [Column("CONTACT_PHONE")]
-        public string ContactPhone { get; set; }
+                [Column("CONTACT_NAME")]
+                public string ContactName { get; set; }
 
-        [Column("ID_INCOTERM")]
-        public int IdIncoterm { get; set; }
+                [Column("CONTACT_PHONE")]
+                public string ContactPhone { get; set; }
 
-        [Column("IDPAYMENTTERMS")]
-        public int IdPaymentTerms { get; set; }
+                [Column("ID_INCOTERM")]
+                public int IdIncoterm { get; set; }
 
-        [Column("CURRENCY")]
-        public string Currency { get; set; }
-*/
+                [Column("IDPAYMENTTERMS")]
+                public int IdPaymentTerms { get; set; }
+
+                [Column("CURRENCY")]
+                public string Currency { get; set; }
+        */
         #region Equal
         public override bool Equals(object obj)
         {
             if (obj == null || obj == DBNull.Value)
                 return false;
 
-            Customer customer = (Customer)obj;
+            CustomerHistory customerHistory = (CustomerHistory)obj;
 
             bool res = (
-                IdVer == customer.IdVer &&
-                IdSubVer == customer.IdSubVer &&
-                Timestamp == customer.Timestamp &&
-                IdCustomer == customer.IdCustomer &&
-                CustomerName == customer.CustomerName &&
-                Active == customer.Active &&
-                VATNum == customer.VATNum &&
-                ShippingAddress == customer.ShippingAddress &&
-                ShippingAddressZh == customer.ShippingAddressZh &&
-                BillingAddress == customer.BillingAddress &&
-                BillingAddressZh == customer.BillingAddressZh &&
-                ContactName == customer.ContactName &&
-                ContactNameZh == customer.ContactNameZh &&
-                ContactPhone == customer.ContactPhone &&
-                Comments == customer.Comments &&
-                IdIncoterm == customer.IdIncoterm &&
-                IdPaymentTerms == customer.IdPaymentTerms &&
-                IdDefaultCurrency == customer.IdDefaultCurrency);
+                IdVer == customerHistory.IdVer &&
+                IdSubVer == customerHistory.IdSubVer &&
+                Timestamp == customerHistory.Timestamp &&
+                IdCustomer == customerHistory.IdCustomer &&
+                CustomerName == customerHistory.CustomerName &&
+                Active == customerHistory.Active &&
+                VATNum == customerHistory.VATNum &&
+                ShippingAddress == customerHistory.ShippingAddress &&
+                ShippingAddressZh == customerHistory.ShippingAddressZh &&
+                BillingAddress == customerHistory.BillingAddress &&
+                BillingAddressZh == customerHistory.BillingAddressZh &&
+                ContactName == customerHistory.ContactName &&
+                ContactNameZh == customerHistory.ContactNameZh &&
+                ContactPhone == customerHistory.ContactPhone &&
+                Comments == customerHistory.Comments &&
+                IdIncoterm == customerHistory.IdIncoterm &&
+                IdPaymentTerms == customerHistory.IdPaymentTerms &&
+                IdDefaultCurrency == customerHistory.IdDefaultCurrency &&
+                User == customerHistory.User);
 
             return res;
 
@@ -140,7 +144,8 @@ namespace HKSupply.Models
                 (Comments == null ? 0 : Comments.GetHashCode()) +
                 (IdIncoterm == null ? 0 : IdIncoterm.GetHashCode()) +
                 (IdPaymentTerms == null ? 0 : IdPaymentTerms.GetHashCode()) +
-                (IdDefaultCurrency == null ? 0 : IdDefaultCurrency.GetHashCode());
+                (IdDefaultCurrency == null ? 0 : IdDefaultCurrency.GetHashCode()) +
+                (User == null ? 0 : User.GetHashCode());
 
             return hashCode;
         }

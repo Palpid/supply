@@ -427,6 +427,78 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void RootGridViewItems_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)
+        {
+            try
+            {
+                string img = (e.Row as ItemMt).PhotoUrl;
+
+                if (System.IO.File.Exists(Constants.DOCS_PATH + img))
+                {
+                    e.Value = Image.FromFile(Constants.DOCS_PATH + img);
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void toolTipController1_GetActiveObjectInfo(object sender, DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs e)
+        {
+            if (e.SelectedControl != xgrdItems) return;
+            ToolTipControlInfo info = null;
+
+            SuperToolTip sTooltip1 = new SuperToolTip();
+
+
+            try
+            {
+                GridView view = xgrdItems.GetViewAt(e.ControlMousePosition) as GridView;
+                if (view == null) return;
+                DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitInfo hi = view.CalcHitInfo(e.ControlMousePosition);
+
+                if (hi.HitTest == DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitTest.RowCell)
+                {
+                    //info para debug
+                    //info = new ToolTipControlInfo(DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitTest.RowIndicator.ToString() + hi.RowHandle.ToString(), "Row Handle: " + hi.RowHandle.ToString());
+
+                    ToolTipTitleItem titleItem1 = new ToolTipTitleItem();
+
+                    if (hi.Column.FieldName != PHOTO_COLUMN)
+                        return;
+
+                    //string url = view.GetRowCellValue(hi.RowHandle, nameof(ItemEy.PhotoUrl)).ToString();
+                    //AddToPhotoCache(url);
+
+                    //Bitmap im = null;
+                    //im = photosCache[url.ToString()];
+
+                    string img = (view.GetRowCellValue(hi.RowHandle, nameof(ItemEy.PhotoUrl)) ?? string.Empty).ToString();
+
+                    if (string.IsNullOrEmpty(img)) return;
+
+                    Image im = null;
+                    if (System.IO.File.Exists(Constants.DOCS_PATH + img))
+                    {
+                        im = Image.FromFile(Constants.DOCS_PATH + img);
+                        ToolTipItem item1 = new ToolTipItem();
+                        item1.Image = im;
+                        sTooltip1.Items.Add(item1);
+                    }
+
+
+                }
+
+                info = new ToolTipControlInfo(hi.HitTest, "");
+                info.SuperTip = sTooltip1;
+            }
+            finally
+            {
+                e.Info = info;
+            }
+        }
+
         #endregion
 
         #region Private Methods
@@ -533,77 +605,6 @@ namespace HKSupply.Forms.Master
                 throw ex;
             }
         }
-
-        #region img Test
-        private void RootGridViewItems_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)
-        {
-            try
-            {
-                string img = (e.Row as ItemMt).PhotoUrl;
-
-                if (System.IO.File.Exists(Constants.DOCS_PATH + img))
-                {
-                    e.Value = Image.FromFile(Constants.DOCS_PATH + img);
-                }
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void toolTipController1_GetActiveObjectInfo(object sender, DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs e)
-        {
-            if (e.SelectedControl != xgrdItems) return;
-            ToolTipControlInfo info = null;
-
-            SuperToolTip sTooltip1 = new SuperToolTip();
-
-
-            try
-            {
-                GridView view = xgrdItems.GetViewAt(e.ControlMousePosition) as GridView;
-                if (view == null) return;
-                DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitInfo hi = view.CalcHitInfo(e.ControlMousePosition);
-
-                if (hi.HitTest == DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitTest.RowCell)
-                {
-                    //info para debug
-                    //info = new ToolTipControlInfo(DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitTest.RowIndicator.ToString() + hi.RowHandle.ToString(), "Row Handle: " + hi.RowHandle.ToString());
-
-                    ToolTipTitleItem titleItem1 = new ToolTipTitleItem();
-
-                    if (hi.Column.FieldName != PHOTO_COLUMN)
-                        return;
-
-                    //string url = view.GetRowCellValue(hi.RowHandle, nameof(ItemEy.PhotoUrl)).ToString();
-                    //AddToPhotoCache(url);
-
-                    //Bitmap im = null;
-                    //im = photosCache[url.ToString()];
-
-                    string img = view.GetRowCellValue(hi.RowHandle, nameof(ItemMt.PhotoUrl)).ToString();
-                    Image im = null;
-                    if (System.IO.File.Exists(Constants.DOCS_PATH + img))
-                    {
-                        im = Image.FromFile(Constants.DOCS_PATH + img);
-                        ToolTipItem item1 = new ToolTipItem();
-                        item1.Image = im;
-                        sTooltip1.Items.Add(item1);
-                    }
-
-
-                }
-
-                info = new ToolTipControlInfo(hi.HitTest, "");
-                info.SuperTip = sTooltip1;
-            }
-            finally
-            {
-                e.Info = info;
-            }
-        }
-        #endregion
 
         private void SetUpGrdLastDocs()
         {

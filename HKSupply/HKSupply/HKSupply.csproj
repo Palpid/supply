@@ -506,6 +506,14 @@
     <Compile Include="Migrations\201705031357142_IdItemBcn_IdItemHk_changeLength_01.1.Designer.cs">
       <DependentUpon>201705031357142_IdItemBcn_IdItemHk_changeLength_01.1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705040746209_CustomerH_SupplierH_User_01.cs" />
+    <Compile Include="Migrations\201705040746209_CustomerH_SupplierH_User_01.Designer.cs">
+      <DependentUpon>201705040746209_CustomerH_SupplierH_User_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705040832324_deleteCascadeRemove_01.cs" />
+    <Compile Include="Migrations\201705040832324_deleteCascadeRemove_01.Designer.cs">
+      <DependentUpon>201705040832324_deleteCascadeRemove_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\CustomerPriceList.cs" />
@@ -855,6 +863,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705031357142_IdItemBcn_IdItemHk_changeLength_01.1.resx">
       <DependentUpon>201705031357142_IdItemBcn_IdItemHk_changeLength_01.1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705040746209_CustomerH_SupplierH_User_01.resx">
+      <DependentUpon>201705040746209_CustomerH_SupplierH_User_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705040832324_deleteCascadeRemove_01.resx">
+      <DependentUpon>201705040832324_deleteCascadeRemove_01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

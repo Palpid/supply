@@ -117,6 +117,7 @@ namespace HKSupply.Forms.Master
                 xtpForm.PageVisible = false;
                 xtpList.PageVisible = true;
                 sbNewVersion.Visible = false;
+                sbLoad.Enabled = true;
                 LoadCustomersPriceList();
                 SetNonCreatingFieldsVisibility(LayoutVisibility.Always);
                 rootGridViewCustomersPriceList.DoubleClick += rootGridViewCustomersPriceList_DoubleClick;
@@ -1181,6 +1182,7 @@ namespace HKSupply.Forms.Master
                 xtpForm.PageVisible = false;
                 xtpList.PageVisible = true;
                 groupControlHistory.Visible = true;
+                sbLoad.Enabled = true;
                 LoadCustomersPriceList();
                 MoveGridToSupplier(idItemBcn, idCustomer);
                 RestoreInitState();
