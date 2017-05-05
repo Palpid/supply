@@ -6,7 +6,6 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\HKSupply.pdb
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CustomControls.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Data.v16.2.dll
-C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Images.v16.2.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Pdf.v16.2.Core.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Pdf.v16.2.Drawing.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Printing.v16.2.Core.dll
@@ -129,7 +128,6 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.StatusManagement
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.StoreManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.StoreManagement_v1.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.SupplierManagement.resources
-C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.SupplierManagement_v1.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.SupplierPriceListManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.UserManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.UserManagement_v1.resources

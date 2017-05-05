@@ -82,7 +82,7 @@ namespace HKSupply.Forms
                     {
                         found = true;
                         form.Activate();
-                        form.Dock = DockStyle.Fill;
+                        //form.Dock = DockStyle.Fill;
                         //form.WindowState = FormWindowState.Maximized;
 
                     }
@@ -108,8 +108,8 @@ namespace HKSupply.Forms
                                 Form frmShow = (Form)frmAssembly.CreateInstance(type.ToString());
                                 frmShow.MdiParent = this;
                                 frmShow.ShowIcon = false;
-                                frmShow.Dock = DockStyle.Fill;
-                                frmShow.ControlBox = false;
+                                //frmShow.Dock = DockStyle.Fill;
+                                //frmShow.ControlBox = false;
                                 frmShow.Show();
                                 frmShow.WindowState = FormWindowState.Maximized;
                             }

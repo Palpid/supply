@@ -365,15 +365,13 @@
             // 
             // xtcGeneral
             // 
-            this.xtcGeneral.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.xtcGeneral.Appearance.Options.UseTextOptions = true;
             this.xtcGeneral.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.xtcGeneral.Location = new System.Drawing.Point(12, 186);
+            this.xtcGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtcGeneral.Location = new System.Drawing.Point(0, 179);
             this.xtcGeneral.Name = "xtcGeneral";
             this.xtcGeneral.SelectedTabPage = this.xtpList;
-            this.xtcGeneral.Size = new System.Drawing.Size(1537, 504);
+            this.xtcGeneral.Size = new System.Drawing.Size(1561, 558);
             this.xtcGeneral.TabIndex = 2;
             this.xtcGeneral.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpList,
@@ -384,13 +382,13 @@
             this.xtpList.Controls.Add(this.sbLoad);
             this.xtpList.Controls.Add(this.xgrdSuppliers);
             this.xtpList.Name = "xtpList";
-            this.xtpList.Size = new System.Drawing.Size(1530, 470);
+            this.xtpList.Size = new System.Drawing.Size(1554, 524);
             this.xtpList.Text = "List";
             // 
             // sbLoad
             // 
             this.sbLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbLoad.Location = new System.Drawing.Point(1395, 3);
+            this.sbLoad.Location = new System.Drawing.Point(1419, 3);
             this.sbLoad.Name = "sbLoad";
             this.sbLoad.Size = new System.Drawing.Size(132, 38);
             this.sbLoad.TabIndex = 1;
@@ -406,7 +404,7 @@
             this.xgrdSuppliers.MainView = this.rootGridViewSuppliers;
             this.xgrdSuppliers.MenuManager = this.ribbonControl;
             this.xgrdSuppliers.Name = "xgrdSuppliers";
-            this.xgrdSuppliers.Size = new System.Drawing.Size(1524, 420);
+            this.xgrdSuppliers.Size = new System.Drawing.Size(1548, 474);
             this.xgrdSuppliers.TabIndex = 0;
             this.xgrdSuppliers.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.rootGridViewSuppliers});

@@ -186,6 +186,9 @@
   <data name="OldPasswordMandatory" xml:space="preserve">
     <value>Old Password Mandatory</value>
   </data>
+  <data name="OpenFileQuestion" xml:space="preserve">
+    <value>Do you want to open the file?</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>

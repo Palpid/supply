@@ -143,11 +143,17 @@ namespace HKSupply.Forms.Master
         {
             try
             {
+                //Task Buttons
                 var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
                 Read = actions.Read;
                 New = actions.New;
                 Modify = actions.Modify;
                 RestoreInitState();
+                //Print and export buttons
+                ShowPrintPreview = false;
+                ShowExportExcel = true;
+                ShowExportCsv = true;
+                ConfigurePrintExportOptions();
             }
             catch (Exception ex)
             {
@@ -279,20 +285,59 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        public override void bbiPrintPreview_ItemClick(object sender, ItemClickEventArgs e)
+        public override void bbiExportExcel_ItemClick(object sender, ItemClickEventArgs e)
         {
-            base.bbiPrintPreview_ItemClick(sender, e);
+            if (rootGridViewItems.DataRowCount == 0)
+            {
+                MessageBox.Show("No data selected");
+                return;
+            }
+            
+            //Abre el dialog de save as
+            base.bbiExportExcel_ItemClick(sender, e);
 
             try
             {
-                if (rootGridViewItems.DataRowCount == 0)
+                if (string.IsNullOrEmpty(ExportExcelFile) == false )
                 {
-                    MessageBox.Show("No data selected");
-                    return;
-                }
+                    rootGridViewItems.ExportToXlsx(ExportExcelFile);
 
-                //rootGridViewItems.ShowRibbonPrintPreview();
-                rootGridViewItems.ExportToXlsx("c:\\temp\\xx.xlsx");
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportExcelFile);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public override void bbiExportCsv_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (rootGridViewItems.DataRowCount == 0)
+            {
+                MessageBox.Show("No data selected");
+                return;
+            }
+
+            //Abre el dialog de save as
+            base.bbiExportCsv_ItemClick(sender, e);
+
+            try
+            {
+                if (string.IsNullOrEmpty(ExportCsvFile) == false)
+                {
+                    rootGridViewItems.ExportToCsv(ExportCsvFile);
+
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportCsvFile);
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -1713,7 +1758,6 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                
                 foreach (GridColumn col in rootGridViewItems.Columns)
                 {
                     switch (CurrentState)
@@ -1731,7 +1775,6 @@ namespace HKSupply.Forms.Master
                             break;
                     }
                 }
-                    
             }
             catch(Exception ex)
             {
@@ -1740,8 +1783,6 @@ namespace HKSupply.Forms.Master
         }
 
         #endregion
-
-
 
         #region Read XML Currency Echange
         private void ReadEuroCurrencyExchange()

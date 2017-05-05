@@ -9,6 +9,7 @@ namespace HKSupply.Services.Interfaces
         ItemMt GetItem(string idItemBcn);
         bool UpdateItem(ItemMt updateItem, bool newVersion = false);
         bool UpdateItemWithDoc(ItemMt updateItem, ItemDoc itemDoc, bool newVersion = false);
+        bool UpdateItems(IEnumerable<ItemMt> itemsToUpdate);
         List<ItemMtHistory> GetItemMtHistory(string idItemBcn);
     }
 }

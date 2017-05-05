@@ -268,6 +268,15 @@ namespace HKSupply.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Do you want to open the file?.
+        /// </summary>
+        internal static string OpenFileQuestion {
+            get {
+                return ResourceManager.GetString("OpenFileQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Password.
         /// </summary>
         internal static string Password {

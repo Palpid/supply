@@ -34,12 +34,14 @@
             this.bbiEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiCancel = new DevExpress.XtraBars.BarButtonItem();
             this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiClose = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiExportExcel = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiExportCsv = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.bbiClose = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,10 +55,12 @@
             this.bbiEdit,
             this.bbiCancel,
             this.bbiSave,
-            this.bbiClose});
+            this.bbiClose,
+            this.bbiExportExcel,
+            this.bbiExportCsv});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl.MaxItemId = 21;
+            this.ribbonControl.MaxItemId = 23;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -101,6 +105,27 @@
             this.bbiSave.ImageOptions.ImageUri.Uri = "Save";
             this.bbiSave.Name = "bbiSave";
             // 
+            // bbiClose
+            // 
+            this.bbiClose.Caption = "Close";
+            this.bbiClose.Id = 20;
+            this.bbiClose.ImageOptions.ImageUri.Uri = "Close";
+            this.bbiClose.Name = "bbiClose";
+            // 
+            // bbiExportExcel
+            // 
+            this.bbiExportExcel.Caption = "Export to Excel";
+            this.bbiExportExcel.Id = 21;
+            this.bbiExportExcel.ImageOptions.ImageUri.Uri = "ExportToXLSX";
+            this.bbiExportExcel.Name = "bbiExportExcel";
+            // 
+            // bbiExportCsv
+            // 
+            this.bbiExportCsv.Caption = "Export to CSV";
+            this.bbiExportCsv.Id = 22;
+            this.bbiExportCsv.ImageOptions.ImageUri.Uri = "ExportToCSV";
+            this.bbiExportCsv.Name = "bbiExportCsv";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -126,9 +151,17 @@
             // 
             this.ribbonPageGroup2.AllowTextClipping = false;
             this.ribbonPageGroup2.ItemLinks.Add(this.bbiPrintPreview);
+            this.ribbonPageGroup2.ItemLinks.Add(this.bbiExportExcel);
+            this.ribbonPageGroup2.ItemLinks.Add(this.bbiExportCsv);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.ShowCaptionButton = false;
             this.ribbonPageGroup2.Text = "Print and Export";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.bbiClose);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Close";
             // 
             // ribbonStatusBar
             // 
@@ -137,19 +170,6 @@
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
             this.ribbonStatusBar.Size = new System.Drawing.Size(922, 40);
-            // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.bbiClose);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "Close";
-            // 
-            // bbiClose
-            // 
-            this.bbiClose.Caption = "Close";
-            this.bbiClose.Id = 20;
-            this.bbiClose.ImageOptions.ImageUri.Uri = "Close";
-            this.bbiClose.Name = "bbiClose";
             // 
             // RibbonFormBase
             // 
@@ -182,5 +202,7 @@
         public DevExpress.XtraBars.BarButtonItem bbiSave;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.BarButtonItem bbiClose;
+        private DevExpress.XtraBars.BarButtonItem bbiExportExcel;
+        private DevExpress.XtraBars.BarButtonItem bbiExportCsv;
     }
 }

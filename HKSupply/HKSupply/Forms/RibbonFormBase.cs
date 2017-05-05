@@ -39,6 +39,13 @@ namespace HKSupply.Forms
         public bool New { get; set; }
         public bool Modify { get; set; }
 
+        public bool ShowPrintPreview { get; set; }
+        public bool ShowExportExcel { get; set; }
+        public bool ShowExportCsv { get; set; }
+
+        public string ExportExcelFile { get; set; }
+        public string ExportCsvFile { get; set; }
+
         public ActionsStates CurrentState 
         { 
             get { return _currentState; }
@@ -51,12 +58,14 @@ namespace HKSupply.Forms
 
         #endregion
 
-        #region Constructo
+        #region Constructor
         public RibbonFormBase()
         {
             InitializeComponent();
 
             ConfigureRibbonEvents();
+
+            ConfigurePrintExportOptions(); //Si no se ha definido lo contrario por defecto no mostramos este panel
         }
         #endregion
 
@@ -64,6 +73,18 @@ namespace HKSupply.Forms
         public void RestoreInitState()
         {
             ConfigureActions();
+        }
+
+        public void ConfigurePrintExportOptions()
+        {
+            bbiPrintPreview.Visibility = (ShowPrintPreview ? BarItemVisibility.Always : BarItemVisibility.Never);
+            bbiExportExcel.Visibility = (ShowExportExcel ? BarItemVisibility.Always : BarItemVisibility.Never);
+            bbiExportCsv.Visibility = (ShowExportCsv ? BarItemVisibility.Always : BarItemVisibility.Never);
+
+            if (ShowPrintPreview == false && ShowExportExcel == false && ShowExportCsv == false)
+                ribbonPageGroup2.Visible = false;
+            else
+                ribbonPageGroup2.Visible = true;
         }
         #endregion
 
@@ -93,6 +114,11 @@ namespace HKSupply.Forms
                     bbiNew.Visibility = BarItemVisibility.Never;
                     bbiSave.Visibility = BarItemVisibility.Never;
                     bbiCancel.Visibility = BarItemVisibility.Never;
+
+                    bbiExportExcel.Enabled = true;
+                    bbiExportCsv.Enabled = true;
+                    bbiPrintPreview.Enabled = true;
+
                     break;
                 case ActionsStates.OnlyEditNew:
                     ribbonPageGroup1.Visible = true;
@@ -100,6 +126,11 @@ namespace HKSupply.Forms
                     bbiNew.Visibility = BarItemVisibility.Always;
                     bbiSave.Visibility = BarItemVisibility.Never;
                     bbiCancel.Visibility = BarItemVisibility.Never;
+
+                    bbiExportExcel.Enabled = true;
+                    bbiExportCsv.Enabled = true;
+                    bbiPrintPreview.Enabled = true;
+
                     break;
                 case ActionsStates.Edit:
                 case ActionsStates.New:
@@ -108,6 +139,10 @@ namespace HKSupply.Forms
                     bbiNew.Visibility = BarItemVisibility.Never;
                     bbiSave.Visibility = BarItemVisibility.Always;
                     bbiCancel.Visibility = BarItemVisibility.Always;
+
+                    bbiExportExcel.Enabled = false;
+                    bbiExportCsv.Enabled = false;
+                    bbiPrintPreview.Enabled = false;
                     break;
             }
         }
@@ -121,7 +156,10 @@ namespace HKSupply.Forms
                 bbiCancel.ItemClick += bbiCancel_ItemClick;
                 bbiSave.ItemClick += bbiSave_ItemClick;
                 bbiClose.ItemClick += bbiClose_ItemClick;
+
                 bbiPrintPreview.ItemClick += bbiPrintPreview_ItemClick;
+                bbiExportExcel.ItemClick += bbiExportExcel_ItemClick;
+                bbiExportCsv.ItemClick += bbiExportCsv_ItemClick;
             }
             catch (Exception ex)
             {
@@ -132,6 +170,9 @@ namespace HKSupply.Forms
         #endregion
 
         #region Events
+
+        #region Task Buttons
+
         public virtual void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             try
@@ -193,10 +234,71 @@ namespace HKSupply.Forms
             }
         }
 
+        #endregion
+
+        #region Print and Export Buttons
+
         public virtual void bbiPrintPreview_ItemClick(object sender, ItemClickEventArgs e)
         {
 
         }
+
+        public virtual void bbiExportExcel_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog()
+                {
+                    InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                    Filter = "xlsx files (*.xlsx)|*.xlsx",
+                    FilterIndex = 1,
+                    RestoreDirectory = true,
+                };
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    ExportExcelFile = saveFileDialog.FileName;
+                }
+                else
+                {
+                    ExportExcelFile = string.Empty;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public virtual void bbiExportCsv_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog()
+                {
+                    InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                    Filter = "csv files (*.csv)|*.csv",
+                    FilterIndex = 1,
+                    RestoreDirectory = true,
+                };
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    ExportCsvFile = saveFileDialog.FileName;
+                }
+                else
+                {
+                    ExportCsvFile = string.Empty;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        #endregion
+
         #endregion
 
 

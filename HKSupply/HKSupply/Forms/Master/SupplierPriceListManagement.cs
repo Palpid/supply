@@ -13,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using DevExpress.XtraBars;
 
 namespace HKSupply.Forms.Master
 {
@@ -90,11 +91,17 @@ namespace HKSupply.Forms.Master
         {
             try
             {
+                //Task Buttons
                 var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
                 Read = actions.Read;
                 New = actions.New;
                 Modify = actions.Modify;
                 RestoreInitState();
+                //Print and export buttons
+                ShowPrintPreview = false;
+                ShowExportExcel = true;
+                ShowExportCsv = true;
+                ConfigurePrintExportOptions();
             }
             catch (Exception ex)
             {
@@ -229,6 +236,66 @@ namespace HKSupply.Forms.Master
             finally
             {
                 Cursor = Cursors.Default;
+            }
+        }
+
+        public override void bbiExportExcel_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (rootGridViewSuppliersPriceList.DataRowCount == 0)
+            {
+                MessageBox.Show("No data selected");
+                return;
+            }
+
+            //Abre el dialog de save as
+            base.bbiExportExcel_ItemClick(sender, e);
+
+            try
+            {
+                if (string.IsNullOrEmpty(ExportExcelFile) == false)
+                {
+                    rootGridViewSuppliersPriceList.ExportToXlsx(ExportExcelFile);
+
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportExcelFile);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public override void bbiExportCsv_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (rootGridViewSuppliersPriceList.DataRowCount == 0)
+            {
+                MessageBox.Show("No data selected");
+                return;
+            }
+
+            //Abre el dialog de save as
+            base.bbiExportCsv_ItemClick(sender, e);
+
+            try
+            {
+                if (string.IsNullOrEmpty(ExportCsvFile) == false)
+                {
+                    rootGridViewSuppliersPriceList.ExportToCsv(ExportCsvFile);
+
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportCsvFile);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -650,10 +717,23 @@ namespace HKSupply.Forms.Master
                 slueSupplier.Properties.View.Columns.AddField("IdSupplier").Visible = true;
                 slueSupplier.Properties.View.Columns.AddField("SupplierName").Visible = true;
                 slueSupplier.KeyDown += slueSupplier_KeyDown;
+                slueSupplier.EditValueChanged += SlueSupplier_EditValueChanged;
             }
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        private void SlueSupplier_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadSuppliersPriceList();
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -666,10 +746,23 @@ namespace HKSupply.Forms.Master
                 slueItemBcn.Properties.ValueMember = "IdItemBcn";
                 slueItemBcn.Properties.DisplayMember = "Description";
                 slueItemBcn.KeyDown += slueItemBcn_KeyDown;
+                slueItemBcn.EditValueChanged += SlueItemBcn_EditValueChanged;
             }
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        private void SlueItemBcn_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadSuppliersPriceList();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

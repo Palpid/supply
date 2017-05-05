@@ -20,6 +20,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraBars;
+
 namespace HKSupply.Forms.Master
 {
     /// <summary>
@@ -89,6 +91,7 @@ namespace HKSupply.Forms.Master
 
         List<ItemMt> _itemsList;
         List<ItemMtHistory> _itemsHistoryList;
+        List<ItemMt> _modifiedItemsMt = new List<ItemMt>();
         List<Supplier> _supplierList;
         List<StatusHK> _statusProdList;
         List<UserAttrDescription> _userAttrDescriptionList;
@@ -97,6 +100,7 @@ namespace HKSupply.Forms.Master
         List<ItemDoc> _itemLastDocsList;
 
         string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };
+        string[] _editingCols = { nameof(ItemMt.IdDefaultSupplier), nameof(ItemMt.IdUserAttri1), nameof(ItemMt.IdUserAttri2), nameof(ItemMt.IdUserAttri3), nameof(ItemMt.IdStatusProd) };
 
         int _currentHistoryNumList;
         bool _itemImageChanged = false;
@@ -110,6 +114,7 @@ namespace HKSupply.Forms.Master
             try
             {
                 ConfigureRibbonActions();
+                LoadAuxList();
                 SetUpGrdItems();
                 SetUpGrdLastDocs();
                 SetUpGrdDocsHistory();
@@ -135,11 +140,17 @@ namespace HKSupply.Forms.Master
         {
             try
             {
+                //Task Buttons
                 var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
                 Read = actions.Read;
                 New = actions.New;
                 Modify = actions.Modify;
                 RestoreInitState();
+                //Print and export buttons
+                ShowPrintPreview = false;
+                ShowExportExcel = true;
+                ShowExportCsv = true;
+                ConfigurePrintExportOptions();
             }
             catch (Exception ex)
             {
@@ -162,6 +173,10 @@ namespace HKSupply.Forms.Master
                 peItemImage.Properties.ShowMenu = false;
                 LoadItemsList();
                 SetNonCreatingFieldsVisibility(LayoutVisibility.Always);
+                SetItemGridStylesByState();
+                //suscribirse de nuevo a los eventos
+                rootGridViewItems.DoubleClick += rootGridViewItems_DoubleClick;
+                //rootGridViewItems.PopupMenuShowing += rootGridViewItems_PopupMenuShowing; //TODO
             }
             catch (Exception ex)
             {
@@ -175,11 +190,16 @@ namespace HKSupply.Forms.Master
 
             try
             {
-                if (_itemOriginal == null)
+                if (xtcGeneral.SelectedTabPage == xtpList && rootGridViewItems.DataRowCount == 0)
                 {
-                    MessageBox.Show("No item selected");
+                    MessageBox.Show("No data selected");
                     RestoreInitState();
                 }
+                //if (_itemOriginal == null)
+                //{
+                //    MessageBox.Show("No item selected");
+                //    RestoreInitState();
+                //}
                 else
                 {
                     ConfigureRibbonActionsEditing();
@@ -217,18 +237,36 @@ namespace HKSupply.Forms.Master
                 //Comprobamos si el usuario ha cambiado la imagen para updatarla o no
                 SetItemPhoto();
 
-                if (_itemUpdate.Equals(_itemOriginal) && string.IsNullOrEmpty(txtPathNewDoc.Text))
+                if (xtcGeneral.SelectedTabPage == xtpForm)
                 {
-                    MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
-                    return;
+                    if (_itemUpdate.Equals(_itemOriginal) && string.IsNullOrEmpty(txtPathNewDoc.Text))
+                    {
+                        MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
+                        return;
+                    }
+                    else if (xtcGeneral.SelectedTabPage == xtpList)
+                    {
+                        if (_modifiedItemsMt.Count == 0)
+                        {
+                            MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
+                            return;
+                        }
+                    }
                 }
 
                 if (CurrentState == ActionsStates.Edit)
                 {
-                    if (string.IsNullOrEmpty(txtPathNewDoc.Text))
-                        res = UpdateItem();
-                    else
-                        res = UpdateItemWithDoc();
+                    if (xtcGeneral.SelectedTabPage == xtpForm || xtcGeneral.SelectedTabPage == xtpDocs)
+                    {
+                        if (string.IsNullOrEmpty(txtPathNewDoc.Text))
+                            res = UpdateItem();
+                        else
+                            res = UpdateItemWithDoc();
+                    }
+                    else if (xtcGeneral.SelectedTabPage == xtpList)
+                    {
+                        res = UpdateItems(); 
+                    }
                 }
 
                 if (res == true)
@@ -245,6 +283,66 @@ namespace HKSupply.Forms.Master
             finally
             {
                 Cursor = Cursors.Default;
+            }
+        }
+
+        public override void bbiExportExcel_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (rootGridViewItems.DataRowCount == 0)
+            {
+                MessageBox.Show("No data selected");
+                return;
+            }
+
+            //Abre el dialog de save as
+            base.bbiExportExcel_ItemClick(sender, e);
+
+            try
+            {
+                if (string.IsNullOrEmpty(ExportExcelFile) == false)
+                {
+                    rootGridViewItems.ExportToXlsx(ExportExcelFile);
+
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportExcelFile);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public override void bbiExportCsv_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (rootGridViewItems.DataRowCount == 0)
+            {
+                MessageBox.Show("No data selected");
+                return;
+            }
+
+            //Abre el dialog de save as
+            base.bbiExportCsv_ItemClick(sender, e);
+
+            try
+            {
+                if (string.IsNullOrEmpty(ExportCsvFile) == false)
+                {
+                    rootGridViewItems.ExportToCsv(ExportCsvFile);
+
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportCsvFile);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -276,6 +374,26 @@ namespace HKSupply.Forms.Master
                     LoadItemForm(item);
                     LoadItemHistory();
                     LoadItemDocs();
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void RootGridViewItems_CellValueChanged(object sender, CellValueChangedEventArgs e)
+        {
+            try
+            {
+                if (CurrentState == ActionsStates.Edit)
+                {
+                    GridView view = sender as GridView;
+                    ItemMt item = view.GetRow(view.FocusedRowHandle) as ItemMt;
+                    if (item != null)
+                    {
+                        AddModifiedItemToList(item);
+                    }
                 }
             }
             catch (Exception ex)
@@ -566,6 +684,28 @@ namespace HKSupply.Forms.Master
                 };
                 colPhoto.ColumnEdit = pictureEdit;
 
+                //Edit repositories
+                RepositoryItemLookUpEdit riStatusProd = new RepositoryItemLookUpEdit()
+                {
+                    DataSource = _statusProdList,
+                    DisplayMember = nameof(StatusHK.IdStatusProd), //nameof(StatusHK.Description), //Tenemos las descripciones en blanco de momento
+                    ValueMember = nameof(StatusHK.IdStatusProd),
+                };
+
+                colIdStatusProd.ColumnEdit = riStatusProd;
+
+                RepositoryItemSearchLookUpEdit riDefaultSupplier = new RepositoryItemSearchLookUpEdit()
+                {
+                    DataSource = _supplierList,
+                    ValueMember = nameof(Supplier.IdSupplier),
+                    DisplayMember = nameof(Supplier.SupplierName),
+                    ShowClearButton = false,
+                };
+                riDefaultSupplier.View.Columns.AddField(nameof(Supplier.IdSupplier)).Visible = true;
+                riDefaultSupplier.View.Columns.AddField(nameof(Supplier.SupplierName)).Visible = true;
+
+                colIdDefaultSupplier.ColumnEdit = riDefaultSupplier;
+
                 //Add columns to grid root view
                 rootGridViewItems.Columns.Add(colIdVer);
                 rootGridViewItems.Columns.Add(colIdSubVer);
@@ -599,6 +739,7 @@ namespace HKSupply.Forms.Master
                 //Events
                 rootGridViewItems.DoubleClick += rootGridViewItems_DoubleClick;
                 rootGridViewItems.CustomUnboundColumnData += RootGridViewItems_CustomUnboundColumnData;
+                rootGridViewItems.CellValueChanged += RootGridViewItems_CellValueChanged;
             }
             catch (Exception ex)
             {
@@ -907,8 +1048,6 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _supplierList = GlobalSetting.SupplierService.GetSuppliers();
-
                 lueIdDefaultSupplier.Properties.DataSource = _supplierList;
                 lueIdDefaultSupplier.Properties.DisplayMember = nameof(Supplier.IdSupplier);
                 lueIdDefaultSupplier.Properties.ValueMember = nameof(Supplier.IdSupplier);
@@ -940,8 +1079,6 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _statusProdList = GlobalSetting.StatusProdService.GetStatusProd();
-
                 lueIdStatusProd.Properties.DataSource = _statusProdList;
                 lueIdStatusProd.Properties.DisplayMember = nameof(StatusHK.Description);
                 lueIdStatusProd.Properties.ValueMember = nameof(StatusHK.IdStatusProd);
@@ -963,8 +1100,6 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _docsTypeList = GlobalSetting.DocTypeService.GetDocsType(Constants.ITEM_GROUP_MT);
-
                 lueDocType.Properties.DataSource = _docsTypeList;
                 lueDocType.Properties.DisplayMember = nameof(DocType.Description);
                 lueDocType.Properties.ValueMember = nameof(DocType.IdDocType);
@@ -1003,6 +1138,20 @@ namespace HKSupply.Forms.Master
                 peItemImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
                 //Events
                 peItemImage.EditValueChanged += peItemImage_EditValueChanged;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void LoadAuxList()
+        {
+            try
+            {
+                _statusProdList = GlobalSetting.StatusProdService.GetStatusProd();
+                _supplierList = GlobalSetting.SupplierService.GetSuppliers();
+                _docsTypeList = GlobalSetting.DocTypeService.GetDocsType(Constants.ITEM_GROUP_EY);
             }
             catch (Exception ex)
             {
@@ -1108,10 +1257,64 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                xtpList.PageVisible = true;
-                gbNewDoc.Enabled = true;
-                SetEditingFieldsEnabled();
-                peItemImage.Properties.ShowMenu = true; //activamos el menú contextual en el picture edit
+                //En función de si está en seleccionada la tab del formulario o del grid activaremos la edición de esa tab
+                if (xtcGeneral.SelectedTabPage == xtpForm ||xtcGeneral.SelectedTabPage == xtpDocs)
+                {
+                    xtpList.PageVisible = false;
+                    gbNewDoc.Enabled = true;
+                    SetEditingFieldsEnabled();
+                    peItemImage.Properties.ShowMenu = true; //activamos el menú contextual en el picture edit
+                }
+                else if (xtcGeneral.SelectedTabPage == xtpList)
+                {
+                    xtpForm.PageVisible = false;
+                    xtpDocs.PageVisible = false;
+
+                    //Hacemos el grid editable y marcamos a mano qué columnas se puede editar
+                    rootGridViewItems.OptionsBehavior.Editable = true;
+
+                    foreach (GridColumn col in rootGridViewItems.Columns)
+                    {
+                        if (Array.IndexOf(_editingCols, col.FieldName) >= 0)
+                        {
+                            col.OptionsColumn.AllowEdit = true;
+                        }
+                        else
+                        {
+                            col.OptionsColumn.AllowEdit = false;
+                        }
+                    }
+                    //desuscribirse de los eventos mientras editamos el grid
+                    rootGridViewItems.DoubleClick -= rootGridViewItems_DoubleClick;
+                    //rootGridViewItems.PopupMenuShowing -= rootGridViewItems_PopupMenuShowing; //TODO
+
+                    //cambiar los estilos del grid
+                    SetItemGridStylesByState();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void AddModifiedItemToList(ItemMt modifiedItem)
+        {
+            try
+            {
+                var item = _modifiedItemsMt.FirstOrDefault(a => a.IdItemBcn.Equals(modifiedItem.IdItemBcn));
+                if (item == null)
+                {
+                    _modifiedItemsMt.Add(modifiedItem);
+                }
+                else
+                {
+                    item.IdDefaultSupplier = modifiedItem.IdDefaultSupplier;
+                    item.IdUserAttri1 = modifiedItem.IdUserAttri1;
+                    item.IdUserAttri2 = modifiedItem.IdUserAttri2;
+                    item.IdUserAttri3 = modifiedItem.IdUserAttri3;
+                    item.IdStatusProd = modifiedItem.IdStatusProd;
+                }
             }
             catch (Exception ex)
             {
@@ -1219,8 +1422,44 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        //TODO
         private bool IsValidItem()
+        {
+            try
+            {
+                if (xtcGeneral.SelectedTabPage == xtpList)
+                    return IsValidItemGrid();
+                else if (xtcGeneral.SelectedTabPage == xtpForm)
+                    return IsValidItemForm();
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private bool IsValidItemGrid()
+        {
+            try
+            {
+                foreach (var item in _modifiedItemsMt)
+                {
+                    if (string.IsNullOrEmpty(item.IdDefaultSupplier))
+                    {
+                        XtraMessageBox.Show("Default Supplier Field Required", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                    }
+
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private bool IsValidItemForm()
         {
             try
             {
@@ -1307,10 +1546,24 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private bool UpdateItems()
+        {
+            try
+            {
+                return GlobalSetting.ItemMtService.UpdateItems(_modifiedItemsMt);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         private void SetItemPhoto()
         {
             try
             {
+                if (xtcGeneral.SelectedTabPage == xtpList) return;
+
                 if (_itemImageChanged)
                 {
                     Bitmap itemImage = (Bitmap)peItemImage.EditValue;
@@ -1341,7 +1594,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                string itemCode = _itemOriginal.IdItemBcn;
+                string idItemBcn = (_itemOriginal == null ? string.Empty : _itemOriginal.IdItemBcn);
                 _itemOriginal = null;
                 peItemImage.EditValue = null;
                 ResetItemUpdate();
@@ -1351,8 +1604,37 @@ namespace HKSupply.Forms.Master
                 xtpList.PageVisible = true;
                 peItemImage.Properties.ShowMenu = false;
                 LoadItemsList();
-                MoveGridToItem(itemCode);
+                MoveGridToItem(idItemBcn);
+                SetItemGridStylesByState();
                 RestoreInitState();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void SetItemGridStylesByState()
+        {
+            try
+            {
+                foreach (GridColumn col in rootGridViewItems.Columns)
+                {
+                    switch (CurrentState)
+                    {
+                        case ActionsStates.Edit:
+
+                            if (Array.IndexOf(_editingCols, col.FieldName) >= 0)
+                                col.AppearanceCell.BackColor = Color.White;
+                            else
+                                col.AppearanceCell.BackColor = Color.GhostWhite;
+                            break;
+
+                        default:
+                            col.AppearanceCell.BackColor = Color.White;
+                            break;
+                    }
+                }
             }
             catch (Exception ex)
             {
