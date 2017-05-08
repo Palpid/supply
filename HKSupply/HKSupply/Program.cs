@@ -23,7 +23,11 @@ namespace HKSupply
             Application.SetCompatibleTextRenderingDefault(false);
 
             DevExpress.XtraEditors.WindowsFormsSettings.DefaultFont = new System.Drawing.Font("Source Sans Pro", 10);
-            
+
+            //Test: change culture to English
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-GB");
+            //System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-CN"); //Chinese
+
             Login frmLogin = new Login();
             frmLogin.ShowDialog();
 

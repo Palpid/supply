@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
+using DevExpress.Utils;
 using DevExpress.XtraBars;
-using System.ComponentModel.DataAnnotations;
+using DevExpress.XtraBars.Ribbon;
 
 namespace HKSupply.Forms
 {
@@ -114,60 +108,29 @@ namespace HKSupply.Forms
             switch (state)
             {
                 case ActionsStates.OnlyRead:
-                    //ribbonPageGroup1.Visible = false;
                     bbiEdit.Enabled = false;
                     bbiNew.Enabled = false;
                     bbiSave.Enabled = false;
                     bbiCancel.Enabled = false;
                     break;
                 case ActionsStates.OnlyEdit:
-                    //ribbonPageGroup1.Visible = true;
-                    //bbiEdit.Visibility = BarItemVisibility.Always;
-                    //bbiNew.Visibility = BarItemVisibility.Never;
-                    //bbiSave.Visibility = BarItemVisibility.Never;
-                    //bbiCancel.Visibility = BarItemVisibility.Never;
                     bbiEdit.Enabled = true;
                     bbiNew.Enabled = false;
                     bbiSave.Enabled = false;
                     bbiCancel.Enabled = false;
-
-                    bbiExportExcel.Enabled = true;
-                    bbiExportCsv.Enabled = true;
-                    bbiPrintPreview.Enabled = true;
-
                     break;
                 case ActionsStates.OnlyEditNew:
-                    //ribbonPageGroup1.Visible = true;
-                    //bbiEdit.Visibility = BarItemVisibility.Always;
-                    //bbiNew.Visibility = BarItemVisibility.Always;
-                    //bbiSave.Visibility = BarItemVisibility.Never;
-                    //bbiCancel.Visibility = BarItemVisibility.Never;
                     bbiEdit.Enabled = true;
                     bbiNew.Enabled = true;
                     bbiSave.Enabled = false;
                     bbiCancel.Enabled = false;
-
-                    bbiExportExcel.Enabled = true;
-                    bbiExportCsv.Enabled = true;
-                    bbiPrintPreview.Enabled = true;
-
                     break;
                 case ActionsStates.Edit:
                 case ActionsStates.New:
-                    //ribbonPageGroup1.Visible = true;
-                    //bbiEdit.Visibility = BarItemVisibility.Never;
-                    //bbiNew.Visibility = BarItemVisibility.Never;
-                    //bbiSave.Visibility = BarItemVisibility.Always;
-                    //bbiCancel.Visibility = BarItemVisibility.Always;
                     bbiEdit.Enabled = false;
                     bbiNew.Enabled = false;
                     bbiSave.Enabled = true;
                     bbiCancel.Enabled = true;
-
-
-                    bbiExportExcel.Enabled = false;
-                    bbiExportCsv.Enabled = false;
-                    bbiPrintPreview.Enabled = false;
                     break;
             }
         }
@@ -194,10 +157,14 @@ namespace HKSupply.Forms
 
         private void ConfigureRibbonStyles()
         {
-            ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
-            //ribbonControl.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
-            ribbonControl.AllowMinimizeRibbon = false;
-            ribbonControl.DrawGroupCaptions = DevExpress.Utils.DefaultBoolean.False;
+            //Cambiar a un estilo más minimalista en lugar del estilo Office 2010 de ribbon con iconos grandes
+            ribbonControl.RibbonStyle = RibbonControlStyle.OfficeUniversal;
+
+            ribbonControl.ToolbarLocation = RibbonQuickAccessToolbarLocation.Hidden;
+            ribbonControl.DrawGroupCaptions = DefaultBoolean.False;
+
+            ribbonPage1.Appearance.Font = new Font(ribbonPage1.Appearance.Font, FontStyle.Bold);
+
         }
 
         #endregion

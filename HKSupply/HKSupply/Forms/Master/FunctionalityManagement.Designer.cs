@@ -38,17 +38,23 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.ribbonPage1.Appearance.Options.UseFont = true;
             // 
             // xgrdFunctionalities
             // 
-            this.xgrdFunctionalities.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.xgrdFunctionalities.Location = new System.Drawing.Point(12, 186);
+            this.xgrdFunctionalities.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xgrdFunctionalities.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.xgrdFunctionalities.Location = new System.Drawing.Point(0, 79);
             this.xgrdFunctionalities.MainView = this.rootGridViewFunctionalities;
+            this.xgrdFunctionalities.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xgrdFunctionalities.MenuManager = this.ribbonControl;
             this.xgrdFunctionalities.Name = "xgrdFunctionalities";
-            this.xgrdFunctionalities.Size = new System.Drawing.Size(898, 504);
+            this.xgrdFunctionalities.Size = new System.Drawing.Size(790, 489);
             this.xgrdFunctionalities.TabIndex = 2;
             this.xgrdFunctionalities.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.rootGridViewFunctionalities});
@@ -60,10 +66,11 @@
             // 
             // FunctionalityManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 737);
+            this.ClientSize = new System.Drawing.Size(790, 599);
             this.Controls.Add(this.xgrdFunctionalities);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FunctionalityManagement";
             this.Text = "FunctionalityManagement";
             this.Load += new System.EventHandler(this.FunctionalityManagement_Load);

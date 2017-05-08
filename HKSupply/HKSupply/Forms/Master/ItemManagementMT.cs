@@ -174,6 +174,7 @@ namespace HKSupply.Forms.Master
                 xtpDocs.PageVisible = false;
                 xtpList.PageVisible = true;
                 peItemImage.Properties.ShowMenu = false;
+                lblEditImg.Visible = false;
                 LoadItemsList();
                 SetNonCreatingFieldsVisibility(LayoutVisibility.Always);
                 SetItemGridStylesByState();
@@ -585,11 +586,14 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                OpenFileDialog openFileDialog = new OpenFileDialog();
-                openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                openFileDialog.Filter = "PDF files (*.pdf)|*.pdf|JPG files(*.jpg)|*.jpg|PNG files (*.png)|*.png";
-                openFileDialog.Multiselect = false;
-                openFileDialog.RestoreDirectory = true;
+                OpenFileDialog openFileDialog = new OpenFileDialog()
+                {
+                    InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                    Filter = "PDF files (*.pdf)|*.pdf|JPG files(*.jpg)|*.jpg|PNG files (*.png)|*.png",
+                    Multiselect = false,
+                    RestoreDirectory = true,
+                };
+
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     txtPathNewDoc.Text = openFileDialog.FileName;
@@ -600,8 +604,6 @@ namespace HKSupply.Forms.Master
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        
 
         private void toolTipController1_GetActiveObjectInfo(object sender, DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs e)
         {
@@ -681,10 +683,15 @@ namespace HKSupply.Forms.Master
                 //hacer todo el grid no editable
                 rootGridViewItems.OptionsBehavior.Editable = false;
 
+                //Obtenemos los nombres de los atributos de usuario
+                string userAtt01 = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals(Constants.MT_USER_ATTR_01)).Select(a => a.Description).SingleOrDefault();
+                string userAtt02 = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals(Constants.MT_USER_ATTR_02)).Select(a => a.Description).SingleOrDefault();
+                string userAtt03 = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals(Constants.MT_USER_ATTR_03)).Select(a => a.Description).SingleOrDefault();
+
                 //Columns definition
-                GridColumn colIdVer = new GridColumn() { Caption = "Version Id", Visible = true, FieldName = nameof(ItemMt.IdVer), Width = 70 };
-                GridColumn colIdSubVer = new GridColumn() { Caption = "Subversion Id", Visible = true, FieldName = nameof(ItemMt.IdSubVer), Width = 85 };
-                GridColumn colTimestamp = new GridColumn() { Caption = "Timestamp", Visible = true, FieldName = nameof(ItemMt.Timestamp), Width = 130 };
+                GridColumn colIdVer = new GridColumn() { Caption = "Version Id", Visible = false, FieldName = nameof(ItemMt.IdVer), Width = 70 };
+                GridColumn colIdSubVer = new GridColumn() { Caption = "Subversion Id", Visible = false, FieldName = nameof(ItemMt.IdSubVer), Width = 85 };
+                GridColumn colTimestamp = new GridColumn() { Caption = "Timestamp", Visible = false, FieldName = nameof(ItemMt.Timestamp), Width = 130 };
                 GridColumn colIdDefaultSupplier = new GridColumn() { Caption = "Default Supplier", Visible = true, FieldName = nameof(ItemMt.IdDefaultSupplier), Width = 110 };
                 GridColumn colIdPrototype = new GridColumn() { Caption = "Id Prototype", Visible = true, FieldName = nameof(ItemMt.IdPrototype), Width = 150 };
                 GridColumn colPrototypeName = new GridColumn() { Caption = "Prototype Name", Visible = true, FieldName = nameof(ItemMt.Prototype) + "." + nameof(Prototype.PrototypeName), Width = 150 };
@@ -705,9 +712,9 @@ namespace HKSupply.Forms.Master
                 GridColumn colRemovalDate = new GridColumn() { Caption = "Removal Date", Visible = true, FieldName = nameof(ItemMt.RemovalDate), Width = 90 };
                 GridColumn colIdStatusCial = new GridColumn() { Caption = "Status Cial", Visible = true, FieldName = nameof(ItemMt.IdStatusCial), Width = 90 };
                 GridColumn colIdStatusProd = new GridColumn() { Caption = "Status Prod", Visible = true, FieldName = nameof(ItemMt.IdStatusProd), Width = 90 };
-                GridColumn colIdUserAttri1 = new GridColumn() { Caption = "User Attri. 1", Visible = true, FieldName = nameof(ItemMt.IdUserAttri1), Width = 90 };
-                GridColumn colIdUserAttri2 = new GridColumn() { Caption = "User Attri. 2", Visible = true, FieldName = nameof(ItemMt.IdUserAttri2), Width = 90 };
-                GridColumn colIdUserAttri3 = new GridColumn() { Caption = "User Attri. 3", Visible = true, FieldName = nameof(ItemMt.IdUserAttri3), Width = 90 };
+                GridColumn colIdUserAttri1 = new GridColumn() { Caption = userAtt01, Visible = true, FieldName = nameof(ItemMt.IdUserAttri1), Width = 90 };
+                GridColumn colIdUserAttri2 = new GridColumn() { Caption = userAtt02, Visible = true, FieldName = nameof(ItemMt.IdUserAttri2), Width = 90 };
+                GridColumn colIdUserAttri3 = new GridColumn() { Caption = userAtt03, Visible = true, FieldName = nameof(ItemMt.IdUserAttri3), Width = 90 };
 
                 GridColumn colPhotoUrl = new GridColumn() { Caption = "Photo URL", Visible = false, FieldName = nameof(ItemEy.PhotoUrl), Width = 90 };
                 GridColumn colPhoto = new GridColumn() { Caption = "Photo", Visible = true, FieldName = PHOTO_COLUMN, Width = 90 };
@@ -818,7 +825,7 @@ namespace HKSupply.Forms.Master
                 RepositoryItemButtonEdit repButtonLastDoc = new RepositoryItemButtonEdit()
                 {
                     Name = "btnViewLastDoc",
-                    TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor,
+                    TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor,
                 };
                 repButtonLastDoc.Click += repButtonLastDoc_Click;
 
@@ -881,7 +888,7 @@ namespace HKSupply.Forms.Master
                 RepositoryItemButtonEdit repButtonHistDoc = new RepositoryItemButtonEdit()
                 {
                     Name = "btnViewHistoryDoc",
-                    TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
+                    TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
                 };
                 repButtonHistDoc.Click += repButtonHistDoc_Click;
                 colViewButton.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
@@ -1157,12 +1164,9 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _userAttrDescriptionList = GlobalSetting.UserAttrDescriptionService.GetUserAttrsDescription(Constants.ITEM_GROUP_MT);
-
-                //TODO: hacer esto de una manera un poco mas elegante
-                lciIdUserAttri1.Text = lciHIdUserAttri1.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals("MTATTR01")).Select(a => a.Description).SingleOrDefault();
-                lciIdUserAttri2.Text = lciHIdUserAttri2.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals("MTATTR02")).Select(a => a.Description).SingleOrDefault();
-                lciIdUserAttri3.Text = lciHIdUserAttri3.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals("MTATTR03")).Select(a => a.Description).SingleOrDefault();
+                lciIdUserAttri1.Text = lciHIdUserAttri1.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals(Constants.MT_USER_ATTR_01)).Select(a => a.Description).SingleOrDefault();
+                lciIdUserAttri2.Text = lciHIdUserAttri2.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals(Constants.MT_USER_ATTR_02)).Select(a => a.Description).SingleOrDefault();
+                lciIdUserAttri3.Text = lciHIdUserAttri3.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals(Constants.MT_USER_ATTR_03)).Select(a => a.Description).SingleOrDefault();
             }
             catch (Exception ex)
             {
@@ -1175,6 +1179,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
+                lblEditImg.Visible = false; //lbl leyenda
                 //Quitamos el menú contextual. Sólo estará disponble en edición
                 peItemImage.Properties.ShowMenu = false;
                 peItemImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
@@ -1193,7 +1198,8 @@ namespace HKSupply.Forms.Master
             {
                 _statusProdList = GlobalSetting.StatusProdService.GetStatusProd();
                 _supplierList = GlobalSetting.SupplierService.GetSuppliers();
-                _docsTypeList = GlobalSetting.DocTypeService.GetDocsType(Constants.ITEM_GROUP_EY);
+                _docsTypeList = GlobalSetting.DocTypeService.GetDocsType(Constants.ITEM_GROUP_MT);
+                _userAttrDescriptionList = GlobalSetting.UserAttrDescriptionService.GetUserAttrsDescription(Constants.ITEM_GROUP_MT);
             }
             catch (Exception ex)
             {
@@ -1348,6 +1354,7 @@ namespace HKSupply.Forms.Master
                     gbNewDoc.Enabled = true;
                     SetEditingFieldsEnabled();
                     peItemImage.Properties.ShowMenu = true; //activamos el menú contextual en el picture edit
+                    lblEditImg.Visible = true;
                 }
                 else if (xtcGeneral.SelectedTabPage == xtpList)
                 {
@@ -1687,6 +1694,7 @@ namespace HKSupply.Forms.Master
                 xtpDocs.PageVisible = false;
                 xtpList.PageVisible = true;
                 peItemImage.Properties.ShowMenu = false;
+                lblEditImg.Visible = false;
                 LoadItemsList();
                 MoveGridToItem(idItemBcn);
                 SetItemGridStylesByState();
