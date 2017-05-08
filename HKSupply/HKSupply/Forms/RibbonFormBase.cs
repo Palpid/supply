@@ -39,9 +39,9 @@ namespace HKSupply.Forms
         public bool New { get; set; }
         public bool Modify { get; set; }
 
-        public bool ShowPrintPreview { get; set; }
-        public bool ShowExportExcel { get; set; }
-        public bool ShowExportCsv { get; set; }
+        public bool EnablePrintPreview { get; set; }
+        public bool EnableExportExcel { get; set; }
+        public bool EnableExportCsv { get; set; }
 
         public string ExportExcelFile { get; set; }
         public string ExportCsvFile { get; set; }
@@ -62,10 +62,9 @@ namespace HKSupply.Forms
         public RibbonFormBase()
         {
             InitializeComponent();
-
             ConfigureRibbonEvents();
-
             ConfigurePrintExportOptions(); //Si no se ha definido lo contrario por defecto no mostramos este panel
+            ConfigureRibbonStyles();
         }
         #endregion
 
@@ -77,14 +76,23 @@ namespace HKSupply.Forms
 
         public void ConfigurePrintExportOptions()
         {
-            bbiPrintPreview.Visibility = (ShowPrintPreview ? BarItemVisibility.Always : BarItemVisibility.Never);
-            bbiExportExcel.Visibility = (ShowExportExcel ? BarItemVisibility.Always : BarItemVisibility.Never);
-            bbiExportCsv.Visibility = (ShowExportCsv ? BarItemVisibility.Always : BarItemVisibility.Never);
+            //bbiPrintPreview.Visibility = (ShowPrintPreview ? BarItemVisibility.Always : BarItemVisibility.Never);
+            //bbiExportExcel.Visibility = (ShowExportExcel ? BarItemVisibility.Always : BarItemVisibility.Never);
+            //bbiExportCsv.Visibility = (ShowExportCsv ? BarItemVisibility.Always : BarItemVisibility.Never);
 
-            if (ShowPrintPreview == false && ShowExportExcel == false && ShowExportCsv == false)
-                ribbonPageGroup2.Visible = false;
-            else
-                ribbonPageGroup2.Visible = true;
+            //if (ShowPrintPreview == false && ShowExportExcel == false && ShowExportCsv == false)
+            //    ribbonPageGroup2.Visible = false;
+            //else
+            //    ribbonPageGroup2.Visible = true;
+
+            bbiPrintPreview.Enabled = EnablePrintPreview;
+            bbiExportExcel.Enabled = EnableExportExcel;
+            bbiExportCsv.Enabled = EnableExportCsv;
+        }
+
+        public void SetRibbonText(string title)
+        {
+            ribbonPage1.Text = $"Home > {title}";
         }
         #endregion
 
@@ -106,14 +114,22 @@ namespace HKSupply.Forms
             switch (state)
             {
                 case ActionsStates.OnlyRead:
-                    ribbonPageGroup1.Visible = false;
+                    //ribbonPageGroup1.Visible = false;
+                    bbiEdit.Enabled = false;
+                    bbiNew.Enabled = false;
+                    bbiSave.Enabled = false;
+                    bbiCancel.Enabled = false;
                     break;
                 case ActionsStates.OnlyEdit:
-                    ribbonPageGroup1.Visible = true;
-                    bbiEdit.Visibility = BarItemVisibility.Always;
-                    bbiNew.Visibility = BarItemVisibility.Never;
-                    bbiSave.Visibility = BarItemVisibility.Never;
-                    bbiCancel.Visibility = BarItemVisibility.Never;
+                    //ribbonPageGroup1.Visible = true;
+                    //bbiEdit.Visibility = BarItemVisibility.Always;
+                    //bbiNew.Visibility = BarItemVisibility.Never;
+                    //bbiSave.Visibility = BarItemVisibility.Never;
+                    //bbiCancel.Visibility = BarItemVisibility.Never;
+                    bbiEdit.Enabled = true;
+                    bbiNew.Enabled = false;
+                    bbiSave.Enabled = false;
+                    bbiCancel.Enabled = false;
 
                     bbiExportExcel.Enabled = true;
                     bbiExportCsv.Enabled = true;
@@ -121,11 +137,15 @@ namespace HKSupply.Forms
 
                     break;
                 case ActionsStates.OnlyEditNew:
-                    ribbonPageGroup1.Visible = true;
-                    bbiEdit.Visibility = BarItemVisibility.Always;
-                    bbiNew.Visibility = BarItemVisibility.Always;
-                    bbiSave.Visibility = BarItemVisibility.Never;
-                    bbiCancel.Visibility = BarItemVisibility.Never;
+                    //ribbonPageGroup1.Visible = true;
+                    //bbiEdit.Visibility = BarItemVisibility.Always;
+                    //bbiNew.Visibility = BarItemVisibility.Always;
+                    //bbiSave.Visibility = BarItemVisibility.Never;
+                    //bbiCancel.Visibility = BarItemVisibility.Never;
+                    bbiEdit.Enabled = true;
+                    bbiNew.Enabled = true;
+                    bbiSave.Enabled = false;
+                    bbiCancel.Enabled = false;
 
                     bbiExportExcel.Enabled = true;
                     bbiExportCsv.Enabled = true;
@@ -134,11 +154,16 @@ namespace HKSupply.Forms
                     break;
                 case ActionsStates.Edit:
                 case ActionsStates.New:
-                    ribbonPageGroup1.Visible = true;
-                    bbiEdit.Visibility = BarItemVisibility.Never;
-                    bbiNew.Visibility = BarItemVisibility.Never;
-                    bbiSave.Visibility = BarItemVisibility.Always;
-                    bbiCancel.Visibility = BarItemVisibility.Always;
+                    //ribbonPageGroup1.Visible = true;
+                    //bbiEdit.Visibility = BarItemVisibility.Never;
+                    //bbiNew.Visibility = BarItemVisibility.Never;
+                    //bbiSave.Visibility = BarItemVisibility.Always;
+                    //bbiCancel.Visibility = BarItemVisibility.Always;
+                    bbiEdit.Enabled = false;
+                    bbiNew.Enabled = false;
+                    bbiSave.Enabled = true;
+                    bbiCancel.Enabled = true;
+
 
                     bbiExportExcel.Enabled = false;
                     bbiExportCsv.Enabled = false;
@@ -165,6 +190,14 @@ namespace HKSupply.Forms
             {
                 throw ex;
             }
+        }
+
+        private void ConfigureRibbonStyles()
+        {
+            ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
+            //ribbonControl.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
+            ribbonControl.AllowMinimizeRibbon = false;
+            ribbonControl.DrawGroupCaptions = DevExpress.Utils.DefaultBoolean.False;
         }
 
         #endregion

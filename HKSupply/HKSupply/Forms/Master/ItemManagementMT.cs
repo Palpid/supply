@@ -21,6 +21,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
+using DevExpress.Utils.Menu;
+using HKSupply.Classes;
 
 namespace HKSupply.Forms.Master
 {
@@ -140,16 +142,17 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                //Task Buttons
                 var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
+                SetRibbonText($"{actions.Functionality.Category} > {actions.Functionality.FunctionalityName}");
+                //Task Buttons
                 Read = actions.Read;
                 New = actions.New;
                 Modify = actions.Modify;
                 RestoreInitState();
                 //Print and export buttons
-                ShowPrintPreview = false;
-                ShowExportExcel = true;
-                ShowExportCsv = true;
+                EnablePrintPreview = false;
+                EnableExportExcel = true;
+                EnableExportCsv = true;
                 ConfigurePrintExportOptions();
             }
             catch (Exception ex)
@@ -176,7 +179,7 @@ namespace HKSupply.Forms.Master
                 SetItemGridStylesByState();
                 //suscribirse de nuevo a los eventos
                 rootGridViewItems.DoubleClick += rootGridViewItems_DoubleClick;
-                //rootGridViewItems.PopupMenuShowing += rootGridViewItems_PopupMenuShowing; //TODO
+                rootGridViewItems.PopupMenuShowing += RootGridViewItems_PopupMenuShowing;
             }
             catch (Exception ex)
             {
@@ -402,6 +405,59 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void RootGridViewItems_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)
+        {
+            try
+            {
+                string img = (e.Row as ItemMt).PhotoUrl;
+
+                if (System.IO.File.Exists(Constants.DOCS_PATH + img))
+                {
+                    e.Value = Image.FromFile(Constants.DOCS_PATH + img);
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void RootGridViewItems_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+
+                if (e.MenuType == GridMenuType.Row)
+                {
+                    int rowHandle = e.HitInfo.RowHandle;
+                    e.Menu.Items.Clear();
+                    e.Menu.Items.Add(CreateMenuPriceList(view, rowHandle));
+
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void OnMenuItemViewItemPriceListClick(object sender, EventArgs e)
+        {
+            try
+            {
+                DXMenuItem item = sender as DXMenuItem;
+                RowInfo info = item.Tag as RowInfo;
+
+                ItemMt itemMt = info.View.GetRow(info.View.FocusedRowHandle) as ItemMt;
+                OpenPriceListForm(itemMt);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         private void sbLoad_Click(object sender, EventArgs e)
         {
             try
@@ -545,22 +601,7 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void RootGridViewItems_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)
-        {
-            try
-            {
-                string img = (e.Row as ItemMt).PhotoUrl;
-
-                if (System.IO.File.Exists(Constants.DOCS_PATH + img))
-                {
-                    e.Value = Image.FromFile(Constants.DOCS_PATH + img);
-                }
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        
 
         private void toolTipController1_GetActiveObjectInfo(object sender, DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs e)
         {
@@ -740,6 +781,7 @@ namespace HKSupply.Forms.Master
                 rootGridViewItems.DoubleClick += rootGridViewItems_DoubleClick;
                 rootGridViewItems.CustomUnboundColumnData += RootGridViewItems_CustomUnboundColumnData;
                 rootGridViewItems.CellValueChanged += RootGridViewItems_CellValueChanged;
+                rootGridViewItems.PopupMenuShowing += RootGridViewItems_PopupMenuShowing;
             }
             catch (Exception ex)
             {
@@ -1253,6 +1295,48 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        #region Popup menu
+
+        DXMenuItem CreateMenuPriceList(GridView view, int rowHandle)
+        {
+            DXMenuItem menuItem = new DXMenuItem("View Item price list",
+                new EventHandler(OnMenuItemViewItemPriceListClick));
+            menuItem.Tag = new RowInfo(view, rowHandle);
+            return menuItem;
+        }
+
+        private void OpenPriceListForm(ItemMt item)
+        {
+            try
+            {
+                //Check if is already open
+                HKSupply.Forms.Master.SupplierPriceListManagement priceListForm =
+                    Application.OpenForms.OfType<HKSupply.Forms.Master.SupplierPriceListManagement>()
+                    .Where(pre => pre.Name == "SupplierPriceListManagement")
+                    .SingleOrDefault<HKSupply.Forms.Master.SupplierPriceListManagement>();
+
+                if (priceListForm != null)
+                    priceListForm.Close();
+
+                priceListForm = new HKSupply.Forms.Master.SupplierPriceListManagement();
+                priceListForm.InitData(item.IdDefaultSupplier, item.IdItemBcn);
+
+                priceListForm.MdiParent = this.MdiParent;
+                priceListForm.ShowIcon = false;
+                //priceListForm.Dock = DockStyle.Fill;
+                //priceListForm.ControlBox = false;
+                priceListForm.Show();
+                priceListForm.WindowState = FormWindowState.Maximized;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
+
         private void ConfigureRibbonActionsEditing()
         {
             try
@@ -1286,7 +1370,7 @@ namespace HKSupply.Forms.Master
                     }
                     //desuscribirse de los eventos mientras editamos el grid
                     rootGridViewItems.DoubleClick -= rootGridViewItems_DoubleClick;
-                    //rootGridViewItems.PopupMenuShowing -= rootGridViewItems_PopupMenuShowing; //TODO
+                    rootGridViewItems.PopupMenuShowing -= RootGridViewItems_PopupMenuShowing; 
 
                     //cambiar los estilos del grid
                     SetItemGridStylesByState();

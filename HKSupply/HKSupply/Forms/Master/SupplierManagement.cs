@@ -88,16 +88,17 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                //Task Button
                 var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
+                SetRibbonText($"{actions.Functionality.Category} > {actions.Functionality.FunctionalityName}");
+                //Task Button
                 Read = actions.Read;
                 New = actions.New;
                 Modify = actions.Modify;
                 RestoreInitState();
                 //Print and export buttons
-                ShowPrintPreview = false;
-                ShowExportExcel = true;
-                ShowExportCsv = true;
+                EnablePrintPreview = false;
+                EnableExportExcel = true;
+                EnableExportCsv = true;
                 ConfigurePrintExportOptions();
             }
             catch (Exception ex)

@@ -143,16 +143,17 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                //Task Buttons
                 var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
+                SetRibbonText($"{actions.Functionality.Category} > {actions.Functionality.FunctionalityName}");
+                //Task Buttons
                 Read = actions.Read;
                 New = actions.New;
                 Modify = actions.Modify;
                 RestoreInitState();
                 //Print and export buttons
-                ShowPrintPreview = false;
-                ShowExportExcel = true;
-                ShowExportCsv = true;
+                EnablePrintPreview = false;
+                EnableExportExcel = true;
+                EnableExportCsv = true;
                 ConfigurePrintExportOptions();
             }
             catch (Exception ex)
@@ -1392,8 +1393,8 @@ namespace HKSupply.Forms.Master
 
                 priceListForm.MdiParent = this.MdiParent;
                 priceListForm.ShowIcon = false;
-                priceListForm.Dock = DockStyle.Fill;
-                priceListForm.ControlBox = false;
+                //priceListForm.Dock = DockStyle.Fill;
+                //priceListForm.ControlBox = false;
                 priceListForm.Show();
                 priceListForm.WindowState = FormWindowState.Maximized;
 
@@ -1411,7 +1412,7 @@ namespace HKSupply.Forms.Master
             try
             {
                 //En función de si está en seleccionada la tab del formulario o del grid activaremos la edición de esa tab
-                if (xtcGeneral.SelectedTabPage == xtpForm)
+                if (xtcGeneral.SelectedTabPage == xtpForm || xtcGeneral.SelectedTabPage == xtpDocs)
                 {
                     xtpList.PageVisible = false;
                     gbNewDoc.Enabled = true;

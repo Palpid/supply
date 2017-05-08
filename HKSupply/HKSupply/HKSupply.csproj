@@ -233,6 +233,12 @@
     <Compile Include="Forms\Master\PaymentTermsManagement.Designer.cs">
       <DependentUpon>PaymentTermsManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Master\PrototypeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\PrototypeManagement.Designer.cs">
+      <DependentUpon>PrototypeManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Master\RoleManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -579,6 +585,7 @@
     <Compile Include="Services\Implementations\EFMaterial.cs" />
     <Compile Include="Services\Implementations\EFMatType.cs" />
     <Compile Include="Services\Implementations\EFPaymentTerms.cs" />
+    <Compile Include="Services\Implementations\EFPrototype.cs" />
     <Compile Include="Services\Implementations\EFRole.cs" />
     <Compile Include="Services\Implementations\EFStatusCial.cs" />
     <Compile Include="Services\Implementations\EFStatusProd.cs" />
@@ -605,6 +612,7 @@
     <Compile Include="Services\Interfaces\IMaterial.cs" />
     <Compile Include="Services\Interfaces\IMatType.cs" />
     <Compile Include="Services\Interfaces\IPaymentTerms.cs" />
+    <Compile Include="Services\Interfaces\IPrototype.cs" />
     <Compile Include="Services\Interfaces\IRole.cs" />
     <Compile Include="Services\Interfaces\IStatusCial.cs" />
     <Compile Include="Services\Interfaces\IStatusProd.cs" />
@@ -676,6 +684,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\PaymentTermsManagement.resx">
       <DependentUpon>PaymentTermsManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\PrototypeManagement.resx">
+      <DependentUpon>PrototypeManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\RoleManagement.resx">
       <DependentUpon>RoleManagement.cs</DependentUpon>

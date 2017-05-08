@@ -66,6 +66,7 @@ namespace HKSupply.Forms.Master
             try
             {
                 var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
+                SetRibbonText($"{actions.Functionality.Category} > {actions.Functionality.FunctionalityName}");
                 Read = actions.Read;
                 New = actions.New;
                 Modify = actions.Modify;

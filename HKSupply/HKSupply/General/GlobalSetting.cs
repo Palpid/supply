@@ -41,7 +41,8 @@ namespace HKSupply.General
     /// Controlador para acceso a datos para Hw Type (L1, L2, L3)
     /// Controlador para acceso a datos para Family HK
     /// Controlador para acceso a datos para Doc Type
-    /// Controlador para acceso a datos oara Item Doc
+    /// Controlador para acceso a datos para Item Doc
+    /// Controlador para acceso a datos para Prototypes
     /// </remarks>
     public sealed class GlobalSetting
     {
@@ -72,6 +73,7 @@ namespace HKSupply.General
         static EFFamilyHK _familyHKEF = new EFFamilyHK();
         static EFDocType _docTypeEF = new EFDocType();
         static EFItemDoc _itemDocEF = new EFItemDoc();
+        static EFPrototype _prototypeEf = new EFPrototype();
 
         static User _loggedUser;
         static IEnumerable<FunctionalityRole> _functionalitiesRoles;
@@ -366,6 +368,17 @@ namespace HKSupply.General
                     return new EFItemDoc();
                 else
                     return _itemDocEF;
+            }
+        }
+
+        public static IPrototype PrototypeService
+        {
+            get
+            {
+                if (_prototypeEf == null)
+                    return new EFPrototype();
+                else
+                    return _prototypeEf;
             }
         }
 
