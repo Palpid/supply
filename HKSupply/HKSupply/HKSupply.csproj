@@ -510,6 +510,10 @@
     <Compile Include="Migrations\201705040832324_deleteCascadeRemove_01.Designer.cs">
       <DependentUpon>201705040832324_deleteCascadeRemove_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705100824273_items_deleteFKColors_01.cs" />
+    <Compile Include="Migrations\201705100824273_items_deleteFKColors_01.Designer.cs">
+      <DependentUpon>201705100824273_items_deleteFKColors_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\CustomerPriceList.cs" />
@@ -864,6 +868,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705040832324_deleteCascadeRemove_01.resx">
       <DependentUpon>201705040832324_deleteCascadeRemove_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705100824273_items_deleteFKColors_01.resx">
+      <DependentUpon>201705100824273_items_deleteFKColors_01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

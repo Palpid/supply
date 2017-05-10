@@ -31,8 +31,6 @@ namespace HKSupply.Services.Implementations
                     return db.ItemsHw
                         .Include(i => i.Prototype)
                         .Include(i => i.Model)
-                        .Include(i => i.Color1)
-                        .Include(i => i.Color2)
                         .Include(i => i.FamilyHK)
                         .Include(i => i.StatusCial)
                         .Include(i => i.StatusProd)
@@ -79,8 +77,6 @@ namespace HKSupply.Services.Implementations
                         .Where(i => i.IdItemBcn.Equals(idItemBcn))
                         .Include(i => i.Model)
                         .Include(i => i.Prototype)
-                        .Include(i => i.Color1)
-                        .Include(i => i.Color2)
                         .Include(i => i.FamilyHK)
                         .Include(i => i.StatusCial)
                         .Include(i => i.StatusProd)

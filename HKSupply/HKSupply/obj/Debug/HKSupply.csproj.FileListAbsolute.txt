@@ -184,6 +184,7 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.itemHwMt_idmodel_0
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.IdItemBcn_IdItemHk_changeLength_011.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.CustomerH_SupplierH_User_01.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.deleteCascadeRemove_01.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.items_deleteFKColors_01.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Properties.Resources.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Resources.HKSupplyRes.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.csproj.GenerateResource.Cache

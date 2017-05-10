@@ -47,6 +47,10 @@ namespace HKSupply.General
     public sealed class GlobalSetting
     {
         #region Private Members
+        //static string _dbEnvironment = Constants.SQL_EXPRESS_CONN; //SQL Express local
+        static string _dbEnvironment = Constants.SQL_DEV_SERVER_CONN; //SQL Server (Desarrollo)
+        //static string _dbEnvironment = Constants.SQL_PROD_SERVER_CONN; //SQL Server (Producción)
+
         static EFRole _roleEF = new EFRole();
         static EFUser _userEF = new EFUser();
         static EFFunctionality _functionalityEF = new EFFunctionality();
@@ -82,6 +86,11 @@ namespace HKSupply.General
         #endregion
 
         #region Public Properties
+        public static string DbEnvironment
+        {
+            get { return _dbEnvironment; }
+        }
+
         public static IRole RoleService 
         {
             get 

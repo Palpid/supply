@@ -69,15 +69,23 @@ namespace HKSupply.DB
         public DbSet<CustomerPriceList> CustomersPriceList { get; set; }
         public DbSet<CustomerPriceListHistory> CustomersPriceListHistory { get; set; }
 
+        //public HKSupplyContext()
+        //    : base("name=SqlExpressConn")
+        //{
+
+        //}
+
         public HKSupplyContext()
-            : base("name=SqlExpressConn")
+            : base(General.GlobalSetting.DbEnvironment)
         {
 
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            //Disable cascade delete
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+            //modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>(); //TODO: Da un error 
 
             //Set precision 
             modelBuilder.Entity<ItemEy>().Property(x => x.Caliber).HasPrecision(19, 6);

@@ -8,19 +8,24 @@ namespace HKSupply.General
 {
     public static class Constants
     {
+        //** DB CONN **//
+        public const string SQL_EXPRESS_CONN = "name=SqlExpressConn";
+        public const string SQL_DEV_SERVER_CONN = "name=SqlDevServerConn";
+        public const string SQL_PROD_SERVER_CONN = "";
+
         //** ITEM_GROUP **//
         public const string ITEM_GROUP_EY = "EY";
         public const string ITEM_GROUP_HW = "HW";
         public const string ITEM_GROUP_MT = "MT";
 
-        //Docs Folders
+        //** DOCS FOLDERS **//
         public const string DOCS_PATH = "C:\\Temp\\ITEM_DOCS\\";
         public const string COLOR_PDF_FOLDER = "PDFCOLOR\\";
         public const string DRAWING_PDF_FOLDER = "PDFDRAWING\\";
         public const string DRAWING_DWG_FOLDER = "DWGDRAWING\\";
         public const string ITEM_PHOTO_FOLDER = "ITEMIMG\\";
 
-        //User attributes
+        //** USER ATTRIBUTES **//
         public const string EY_USER_ATTR_01 = "EYATTR01";
         public const string EY_USER_ATTR_02 = "EYATTR02";
         public const string EY_USER_ATTR_03 = "EYATTR03";

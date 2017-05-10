@@ -25,6 +25,7 @@ using System.Data.Entity;
 using DevExpress.Utils.Menu;
 using HKSupply.Classes;
 using DevExpress.XtraBars;
+using System.IO;
 
 namespace HKSupply.Forms.Master
 {
@@ -706,7 +707,7 @@ namespace HKSupply.Forms.Master
                 GridColumn colIdPrototype = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("IdPrototype"), Visible = true, FieldName = nameof(ItemEy.IdPrototype), Width = 150 };
                 GridColumn colPrototypeName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("PrototypeName"), Visible = true, FieldName = nameof(ItemEy.Prototype) + "." + nameof(Prototype.PrototypeName), Width = 150 };
                 GridColumn colPrototypeDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("PrototypeDescription"), Visible = true, FieldName = nameof(ItemEy.Prototype) + "." + nameof(Prototype.PrototypeDescription), Width = 150 };
-                GridColumn colPrototypeStatus = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("PrototypeStatus"), Visible = true, FieldName = nameof(ItemEy.Prototype) + "." + nameof(Prototype.PrototypeStatus), Width = 150 };
+                GridColumn colPrototypeStatus = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("PrototypeStatus"), Visible = true, FieldName = nameof(ItemEy.Prototype) + "." + nameof(Prototype.PrototypeStatus), Width = 100 };
                 GridColumn colIdModel = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("IdModel"), Visible = false, FieldName = nameof(ItemEy.IdModel), Width = 0 };
                 GridColumn colModel = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Model"), Visible = true, FieldName = nameof(ItemEy.Model) + "." + nameof(Model.Description), Width = 120 };
                 GridColumn colFamilyHK = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("FamilyHk"), Visible = true, FieldName = nameof(ItemEy.IdFamilyHK), Width = 90 };
@@ -780,6 +781,17 @@ namespace HKSupply.Forms.Master
 
                 colIdDefaultSupplier.ColumnEdit = riDefaultSupplier;
 
+                //Alignment
+                colPrototypeStatus.AppearanceCell.Options.UseTextOptions = true;
+                colPrototypeStatus.AppearanceCell.TextOptions.HAlignment = HorzAlignment.Center;
+
+                colIdStatusCial.AppearanceCell.Options.UseTextOptions = true;
+                colIdStatusCial.AppearanceCell.TextOptions.HAlignment = HorzAlignment.Center;
+
+                colIdStatusProd.AppearanceCell.Options.UseTextOptions = true;
+                colIdStatusProd.AppearanceCell.TextOptions.HAlignment = HorzAlignment.Center;
+
+
                 //Add columns to grid root view
                 rootGridViewItems.Columns.Add(colIdVer);
                 rootGridViewItems.Columns.Add(colIdSubVer);
@@ -789,30 +801,29 @@ namespace HKSupply.Forms.Master
                 rootGridViewItems.Columns.Add(colPrototypeName);
                 rootGridViewItems.Columns.Add(colPrototypeDescription);
                 rootGridViewItems.Columns.Add(colPrototypeStatus);
+                rootGridViewItems.Columns.Add(colCaliber);
                 rootGridViewItems.Columns.Add(colIdModel);
                 rootGridViewItems.Columns.Add(colModel);
-                rootGridViewItems.Columns.Add(colFamilyHK);
-                rootGridViewItems.Columns.Add(colCaliber);
                 rootGridViewItems.Columns.Add(colIdColor1);
                 rootGridViewItems.Columns.Add(colIdColor2);
                 rootGridViewItems.Columns.Add(colIdItemBcn);
                 rootGridViewItems.Columns.Add(colIdItemHK);
                 rootGridViewItems.Columns.Add(colItemDescription);
-                rootGridViewItems.Columns.Add(colIdMaterialL1);
-                rootGridViewItems.Columns.Add(colIdMaterialL2);
-                rootGridViewItems.Columns.Add(colIdMaterialL3);
-                rootGridViewItems.Columns.Add(colComments);
+                rootGridViewItems.Columns.Add(colFamilyHK);
+                rootGridViewItems.Columns.Add(colIdStatusCial);
+                rootGridViewItems.Columns.Add(colIdStatusProd);
                 rootGridViewItems.Columns.Add(colSegment);
                 rootGridViewItems.Columns.Add(colCategory);
                 rootGridViewItems.Columns.Add(colAge);
+                rootGridViewItems.Columns.Add(colIdMaterialL1);
+                rootGridViewItems.Columns.Add(colIdMaterialL2);
+                rootGridViewItems.Columns.Add(colIdMaterialL3);
                 rootGridViewItems.Columns.Add(colLaunchedDate);
                 rootGridViewItems.Columns.Add(colRemovalDate);
-                rootGridViewItems.Columns.Add(colIdStatusCial);
-                rootGridViewItems.Columns.Add(colIdStatusProd);
                 rootGridViewItems.Columns.Add(colIdUserAttri1);
                 rootGridViewItems.Columns.Add(colIdUserAttri2);
                 rootGridViewItems.Columns.Add(colIdUserAttri3);
-
+                rootGridViewItems.Columns.Add(colComments);
                 rootGridViewItems.Columns.Add(colPhotoUrl);
                 rootGridViewItems.Columns.Add(colPhoto);
 
@@ -1828,6 +1839,102 @@ namespace HKSupply.Forms.Master
 
         #endregion
 
+        #region Test Save grid Layout
+        List<GridLayout> _layouts = new List<GridLayout>();
+        private class GridLayout
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
+            public string Layout { get; set; }
+        }
+
+        private void sbRestoreLayout_Click(object sender, EventArgs e)
+        {
+            RestoreLayaout();
+        }
+
+        private void sbSaveLayout_Click(object sender, EventArgs e)
+        {
+            SaveLayout();
+        }
+
+        private void SaveLayout()
+        {
+            try
+            {
+                DevExpress.Data.Filtering.CriteriaOperator filter;
+                //Save filter
+                filter = rootGridViewItems.ActiveFilterCriteria;
+
+                //NOTA: Si no interesa guardar los filtros se tendrían que limpiar, salvar el layout y despyués
+                //volver a cargarlos desde la variable donde hemos guardado los filtros
+
+                //save layout
+                Stream str = new MemoryStream();
+                rootGridViewItems.SaveLayoutToStream(str);
+                str.Seek(0, SeekOrigin.Begin);
+                StreamReader reader = new StreamReader(str);
+                string layoutText = reader.ReadToEnd();
+
+                GridLayout tmp = new GridLayout()
+                {
+                    Id = _layouts.Count(),
+                    Name = "Layout_" + _layouts.Count().ToString(),
+                    Layout = layoutText
+                };
+                _layouts.Add(tmp);
+
+                SetupLueLayout();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void RestoreLayaout()
+        {
+            try
+            {
+                if (lueLayouts.EditValue == null) return;
+
+                string layoutText = lueLayouts.EditValue as string;
+
+                byte[] byteArray = Encoding.ASCII.GetBytes(layoutText);
+                MemoryStream stream = new MemoryStream(byteArray);
+
+                rootGridViewItems.RestoreLayoutFromStream(stream);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void SetupLueLayout()
+        {
+            try
+            {
+                if (_layouts.Count() > 1) return;
+
+                lueLayouts.Properties.DataSource = _layouts;
+                lueLayouts.Properties.ValueMember = nameof(GridLayout.Layout);
+                lueLayouts.Properties.DisplayMember = nameof(GridLayout.Name);
+                lueLayouts.Properties.NullText = string.Empty;
+
+                lueLayouts.Properties.Columns.Add(new LookUpColumnInfo(nameof(GridLayout.Name), "Name"));
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        #endregion
+
         #region Read XML Currency Echange
         private void ReadEuroCurrencyExchange()
         {
@@ -1914,6 +2021,7 @@ namespace HKSupply.Forms.Master
                 throw ex;
             }
         }
+
         #endregion
 
 

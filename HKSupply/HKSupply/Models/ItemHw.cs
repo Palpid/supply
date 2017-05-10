@@ -61,12 +61,8 @@ namespace HKSupply.Models
 
         [Column("ID_COLOR_1", TypeName = "NVARCHAR"), StringLength(30)]
         public string IdColor1 { get; set; }
-        [ForeignKey("IdColor1")]
-        public EtnColor Color1 { get; set; }
         [Column("ID_COLOR_2", TypeName = "NVARCHAR"), StringLength(30)]
         public string IdColor2 { get; set; }
-        [ForeignKey("IdColor2")]
-        public EtnColor Color2 { get; set; }
         
         [Column("ID_ITEM_HK", TypeName = "NVARCHAR"), StringLength(50)]
         public string IdItemHK { get; set; }
