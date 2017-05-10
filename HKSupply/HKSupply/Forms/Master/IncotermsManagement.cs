@@ -20,12 +20,12 @@ namespace HKSupply.Forms.Master
     public partial class IncotermsManagement : RibbonFormBase
     {
         #region Enums
-        private enum eIncotermsColumns
+        /*private enum eIncotermsColumns
         {
             IdIncoterm,
             Description,
             DescriptionZh
-        }
+        }*/
         #endregion
 
         #region Private Methods
@@ -189,9 +189,9 @@ namespace HKSupply.Forms.Master
                 {
                     Incoterm tmpIncoterm = new Incoterm();
 
-                    object idIncoterm = view.GetRowCellValue(view.FocusedRowHandle, eIncotermsColumns.IdIncoterm.ToString());
-                    object description = view.GetRowCellValue(view.FocusedRowHandle, eIncotermsColumns.Description.ToString());
-                    object descriptionZh = view.GetRowCellValue(view.FocusedRowHandle, eIncotermsColumns.DescriptionZh.ToString());
+                    object idIncoterm = view.GetRowCellValue(view.FocusedRowHandle, nameof(Incoterm.IdIncoterm));
+                    object description = view.GetRowCellValue(view.FocusedRowHandle, nameof(Incoterm.Description));
+                    object descriptionZh = view.GetRowCellValue(view.FocusedRowHandle, nameof(Incoterm.DescriptionZh).ToString());
 
 
                     tmpIncoterm.IdIncoterm = (idIncoterm ?? string.Empty).ToString();
@@ -212,8 +212,8 @@ namespace HKSupply.Forms.Master
             try
             {
                 GridView view = sender as GridView;
-                if (view.FocusedColumn.FieldName == eIncotermsColumns.Description.ToString() ||
-                    view.FocusedColumn.FieldName == eIncotermsColumns.IdIncoterm.ToString())
+                if (view.FocusedColumn.FieldName == nameof(Incoterm.Description) ||
+                    view.FocusedColumn.FieldName == nameof(Incoterm.IdIncoterm))
                 {
                     if (string.IsNullOrEmpty(e.Value as string))
                     {
@@ -249,9 +249,9 @@ namespace HKSupply.Forms.Master
                 rootgridViewIncoterms.HorzScrollVisibility = ScrollVisibility.Auto;
 
                 //Columns definition
-                GridColumn colIdIncoterm = new GridColumn() { Caption = "Id Payment Terms", Visible = true, FieldName = eIncotermsColumns.IdIncoterm.ToString(), Width = 150 };
-                GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = eIncotermsColumns.Description.ToString(), Width = 400 };
-                GridColumn colDescriptionZh = new GridColumn() { Caption = "Description (Chinese)", Visible = true, FieldName = eIncotermsColumns.DescriptionZh.ToString(), Width = 400 };
+                GridColumn colIdIncoterm = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("IdIncoterm"), Visible = true, FieldName = nameof(Incoterm.IdIncoterm), Width = 150 };
+                GridColumn colDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Description"), Visible = true, FieldName = nameof(Incoterm.Description), Width = 400 };
+                GridColumn colDescriptionZh = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("DescriptionChinese"), Visible = true, FieldName = nameof(Incoterm.DescriptionZh), Width = 400 };
 
                 //add columns to grid root view
                 rootgridViewIncoterms.Columns.Add(colIdIncoterm);
@@ -278,12 +278,12 @@ namespace HKSupply.Forms.Master
 
                 xgrdIncoterms.DataSource = incoterms;
 
-                rootgridViewIncoterms.Columns[eIncotermsColumns.IdIncoterm.ToString()].OptionsColumn.AllowEdit = false;
-                rootgridViewIncoterms.Columns[eIncotermsColumns.Description.ToString()].OptionsColumn.AllowEdit = false;
-                rootgridViewIncoterms.Columns[eIncotermsColumns.DescriptionZh.ToString()].OptionsColumn.AllowEdit = false;
+                rootgridViewIncoterms.Columns[nameof(Incoterm.IdIncoterm)].OptionsColumn.AllowEdit = false;
+                rootgridViewIncoterms.Columns[nameof(Incoterm.Description)].OptionsColumn.AllowEdit = false;
+                rootgridViewIncoterms.Columns[nameof(Incoterm.DescriptionZh)].OptionsColumn.AllowEdit = false;
 
                 //TODO: gestion de estilos del grid
-                rootgridViewIncoterms.Columns[eIncotermsColumns.IdIncoterm.ToString()].AppearanceCell.ForeColor = Color.Black;
+                rootgridViewIncoterms.Columns[nameof(Incoterm.IdIncoterm)].AppearanceCell.ForeColor = Color.Black;
             }
             catch (Exception ex)
             {
@@ -296,13 +296,13 @@ namespace HKSupply.Forms.Master
             try
             {
                 //Allow edit some columns
-                rootgridViewIncoterms.Columns[eIncotermsColumns.Description.ToString()].OptionsColumn.AllowEdit = true;
-                rootgridViewIncoterms.Columns[eIncotermsColumns.DescriptionZh.ToString()].OptionsColumn.AllowEdit = true;
+                rootgridViewIncoterms.Columns[nameof(Incoterm.Description)].OptionsColumn.AllowEdit = true;
+                rootgridViewIncoterms.Columns[nameof(Incoterm.DescriptionZh)].OptionsColumn.AllowEdit = true;
 
                 //no edit column
-                rootgridViewIncoterms.Columns[eIncotermsColumns.IdIncoterm.ToString()].OptionsColumn.AllowEdit = false;
+                rootgridViewIncoterms.Columns[nameof(Incoterm.IdIncoterm)].OptionsColumn.AllowEdit = false;
                 //TODO: gestion de estilos del grid
-                rootgridViewIncoterms.Columns[eIncotermsColumns.IdIncoterm.ToString()].AppearanceCell.ForeColor = Color.Gray;
+                rootgridViewIncoterms.Columns[nameof(Incoterm.IdIncoterm)].AppearanceCell.ForeColor = Color.Gray;
 
             }
             catch (Exception ex)
@@ -319,9 +319,9 @@ namespace HKSupply.Forms.Master
                 xgrdIncoterms.DataSource = null;
                 xgrdIncoterms.DataSource = _createdIncoterms;
                 //Allow edit all columns
-                rootgridViewIncoterms.Columns[eIncotermsColumns.IdIncoterm.ToString()].OptionsColumn.AllowEdit = true;
-                rootgridViewIncoterms.Columns[eIncotermsColumns.Description.ToString()].OptionsColumn.AllowEdit = true;
-                rootgridViewIncoterms.Columns[eIncotermsColumns.DescriptionZh.ToString()].OptionsColumn.AllowEdit = true;
+                rootgridViewIncoterms.Columns[nameof(Incoterm.IdIncoterm)].OptionsColumn.AllowEdit = true;
+                rootgridViewIncoterms.Columns[nameof(Incoterm.Description)].OptionsColumn.AllowEdit = true;
+                rootgridViewIncoterms.Columns[nameof(Incoterm.DescriptionZh)].OptionsColumn.AllowEdit = true;
             }
             catch (Exception ex)
             {

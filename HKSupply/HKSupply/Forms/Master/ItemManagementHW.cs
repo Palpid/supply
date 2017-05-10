@@ -92,13 +92,14 @@ namespace HKSupply.Forms.Master
         List<ItemHw> _modifiedItemsHw = new List<ItemHw>();
         List<Supplier> _supplierList;
         List<StatusHK> _statusProdList;
+        List<FamilyHK> _familiesHkList;
         List<UserAttrDescription> _userAttrDescriptionList;
         List<DocType> _docsTypeList;
         List<ItemDoc> _itemDocsList;
         List<ItemDoc> _itemLastDocsList;
 
-        string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };
-        string[] _editingCols = { nameof(ItemHw.IdDefaultSupplier), nameof(ItemHw.IdUserAttri1), nameof(ItemHw.IdUserAttri2), nameof(ItemHw.IdUserAttri3), nameof(ItemHw.IdStatusProd) };
+        string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "lueIdFamilyHK", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };
+        string[] _editingCols = { nameof(ItemHw.IdDefaultSupplier), nameof(ItemHw.IdUserAttri1), nameof(ItemHw.IdUserAttri2), nameof(ItemHw.IdUserAttri3), nameof(ItemHw.IdStatusProd), nameof(ItemHw.IdFamilyHK) };
 
         int _currentHistoryNumList;
         bool _itemImageChanged = false;
@@ -120,6 +121,7 @@ namespace HKSupply.Forms.Master
                 SetUpTexEdit();
                 SetUpLueDefaultSupplier();
                 SetUpLueStatusProd();
+                SetUpLueFamiliesHk();
                 SetUpLueDocType();
                 SetUpLabelNameUserAttributes();
                 SetUpPictureEditItemImage();
@@ -175,9 +177,10 @@ namespace HKSupply.Forms.Master
                 LoadItemsList();
                 SetNonCreatingFieldsVisibility(LayoutVisibility.Always);
                 SetItemGridStylesByState();
-                //suscribirse de nuevo a los eventos
+                //suscribirse de nuevo a los eventos y hacer el grid no editable
                 rootGridViewItems.DoubleClick += rootGridViewItems_DoubleClick;
-                rootGridViewItems.PopupMenuShowing += RootGridViewItems_PopupMenuShowing; 
+                rootGridViewItems.PopupMenuShowing += RootGridViewItems_PopupMenuShowing;
+                rootGridViewItems.OptionsBehavior.Editable = false;
             }
             catch (Exception ex)
             {
@@ -193,7 +196,7 @@ namespace HKSupply.Forms.Master
             {
                 if (xtcGeneral.SelectedTabPage == xtpList && rootGridViewItems.DataRowCount == 0)
                 {
-                    MessageBox.Show("No data selected");
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
                     RestoreInitState();
                 }
                 //if (_itemOriginal == null)
@@ -291,7 +294,7 @@ namespace HKSupply.Forms.Master
         {
             if (rootGridViewItems.DataRowCount == 0)
             {
-                MessageBox.Show("No data selected");
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
                 return;
             }
 
@@ -321,7 +324,7 @@ namespace HKSupply.Forms.Master
         {
             if (rootGridViewItems.DataRowCount == 0)
             {
-                MessageBox.Show("No data selected");
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
                 return;
             }
 
@@ -558,7 +561,7 @@ namespace HKSupply.Forms.Master
                 }
                 else
                 {
-                    XtraMessageBox.Show("No file selected", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    XtraMessageBox.Show(GlobalSetting.ResManager.GetString("NoFileSelected"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
             }
@@ -678,36 +681,32 @@ namespace HKSupply.Forms.Master
                 GridColumn colIdVer = new GridColumn() { Caption = "Version Id", Visible = false, FieldName = nameof(ItemHw.IdVer), Width = 70 };
                 GridColumn colIdSubVer = new GridColumn() { Caption = "Subversion Id", Visible = false, FieldName = nameof(ItemHw.IdSubVer), Width = 85 };
                 GridColumn colTimestamp = new GridColumn() { Caption = "Timestamp", Visible = false, FieldName = nameof(ItemHw.Timestamp), Width = 130 };
-                GridColumn colIdDefaultSupplier = new GridColumn() { Caption = "Default Supplier", Visible = true, FieldName = nameof(ItemHw.IdDefaultSupplier), Width = 110 };
-                GridColumn colIdPrototype = new GridColumn() { Caption = "Id Prototype", Visible = true, FieldName = nameof(ItemHw.IdPrototype), Width = 150 };
-
-                GridColumn colPrototypeName = new GridColumn() { Caption = "Prototype Name", Visible = true, FieldName = nameof(ItemHw.Prototype) + "." + nameof(Prototype.PrototypeName), Width = 150 };
-                GridColumn colPrototypeDescription = new GridColumn() { Caption = "Prototype Description", Visible = true, FieldName = nameof(ItemHw.Prototype) + "." + nameof(Prototype.PrototypeDescription), Width = 150 };
-                GridColumn colPrototypeStatus = new GridColumn() { Caption = "Prototype Status", Visible = true, FieldName = nameof(ItemHw.Prototype) + "." + nameof(Prototype.PrototypeStatus), Width = 150 };
-
-                GridColumn colIdModel = new GridColumn() { Caption = "Id Model", Visible = false, FieldName = nameof(ItemHw.IdModel), Width = 0 };
-                GridColumn colModel = new GridColumn() { Caption = "Model", Visible = true, FieldName = nameof(ItemHw.Model) + "." + nameof(Model.Description), Width = 120 };
-                GridColumn colIdColor1 = new GridColumn() { Caption = "Color 1", Visible = true, FieldName = nameof(ItemHw.IdColor1), Width = 60 };
-                GridColumn colIdColor2 = new GridColumn() { Caption = "Color 2", Visible = true, FieldName = nameof(ItemHw.IdColor2), Width = 60 };
-                GridColumn colIdItemBcn = new GridColumn() { Caption = "Item BCN", Visible = true, FieldName = nameof(ItemHw.IdItemBcn), Width = 160 };
-                GridColumn colIdItemHK = new GridColumn() { Caption = "Item HK", Visible = true, FieldName = nameof(ItemHw.IdItemHK), Width = 160 };
-                GridColumn colItemDescription = new GridColumn() { Caption = "Item Description", Visible = true, FieldName = nameof(ItemHw.ItemDescription), Width = 300 };
-
-                GridColumn colIdHwTypeL1 = new GridColumn() { Caption = "Hw Type L1", Visible = true, FieldName = nameof(ItemHw.IdHwTypeL1), Width = 100 };
-                GridColumn colIdHwTypeL2 = new GridColumn() { Caption = "Hw Type L2", Visible = true, FieldName = nameof(ItemHw.IdHwTypeL2), Width = 100 };
-                GridColumn colIdHwTypeL3 = new GridColumn() { Caption = "Hw Type L3", Visible = true, FieldName = nameof(ItemHw.IdHwTypeL3), Width = 100 };
-
-                GridColumn colComments = new GridColumn() { Caption = "Comments", Visible = true, FieldName = nameof(ItemHw.Comments), Width = 300 };
-                GridColumn colLaunchedDate = new GridColumn() { Caption = "Launch Date", Visible = true, FieldName = nameof(ItemHw.LaunchDate), Width = 90 };
-                GridColumn colRemovalDate = new GridColumn() { Caption = "Removal Date", Visible = true, FieldName = nameof(ItemHw.RemovalDate), Width = 90 };
-                GridColumn colIdStatusCial = new GridColumn() { Caption = "Status Cial", Visible = true, FieldName = nameof(ItemHw.IdStatusCial), Width = 90 };
-                GridColumn colIdStatusProd = new GridColumn() { Caption = "Status Prod", Visible = true, FieldName = nameof(ItemHw.IdStatusProd), Width = 90 };
+                GridColumn colIdDefaultSupplier = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("DefaultSupplier"), Visible = true, FieldName = nameof(ItemHw.IdDefaultSupplier), Width = 110 };
+                GridColumn colIdPrototype = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("IdPrototype"), Visible = true, FieldName = nameof(ItemHw.IdPrototype), Width = 150 };
+                GridColumn colPrototypeName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("PrototypeName"), Visible = true, FieldName = nameof(ItemHw.Prototype) + "." + nameof(Prototype.PrototypeName), Width = 150 };
+                GridColumn colPrototypeDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("PrototypeDescription"), Visible = true, FieldName = nameof(ItemHw.Prototype) + "." + nameof(Prototype.PrototypeDescription), Width = 150 };
+                GridColumn colPrototypeStatus = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Prototype Status"), Visible = true, FieldName = nameof(ItemHw.Prototype) + "." + nameof(Prototype.PrototypeStatus), Width = 150 };
+                GridColumn colIdModel = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("IdModel"), Visible = false, FieldName = nameof(ItemHw.IdModel), Width = 0 };
+                GridColumn colModel = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Model"), Visible = true, FieldName = nameof(ItemHw.Model) + "." + nameof(Model.Description), Width = 120 };
+                GridColumn colFamilyHK = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("FamilyHk"), Visible = true, FieldName = nameof(ItemHw.IdFamilyHK), Width = 90 };
+                GridColumn colIdColor1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Color1"), Visible = true, FieldName = nameof(ItemHw.IdColor1), Width = 60 };
+                GridColumn colIdColor2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Color2"), Visible = true, FieldName = nameof(ItemHw.IdColor2), Width = 60 };
+                GridColumn colIdItemBcn = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemBCN"), Visible = true, FieldName = nameof(ItemHw.IdItemBcn), Width = 160 };
+                GridColumn colIdItemHK = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemHK"), Visible = true, FieldName = nameof(ItemHw.IdItemHK), Width = 160 };
+                GridColumn colItemDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemDescription"), Visible = true, FieldName = nameof(ItemHw.ItemDescription), Width = 300 };
+                GridColumn colIdHwTypeL1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("HwTypeL1"), Visible = true, FieldName = nameof(ItemHw.IdHwTypeL1), Width = 100 };
+                GridColumn colIdHwTypeL2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("HwTypeL2"), Visible = true, FieldName = nameof(ItemHw.IdHwTypeL2), Width = 100 };
+                GridColumn colIdHwTypeL3 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("HwTypeL3"), Visible = true, FieldName = nameof(ItemHw.IdHwTypeL3), Width = 100 };
+                GridColumn colComments = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Comments"), Visible = true, FieldName = nameof(ItemHw.Comments), Width = 300 };
+                GridColumn colLaunchedDate = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("LaunchDate"), Visible = true, FieldName = nameof(ItemHw.LaunchDate), Width = 90 };
+                GridColumn colRemovalDate = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("RemovalDate"), Visible = true, FieldName = nameof(ItemHw.RemovalDate), Width = 90 };
+                GridColumn colIdStatusCial = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("StatusCial"), Visible = true, FieldName = nameof(ItemHw.IdStatusCial), Width = 90 };
+                GridColumn colIdStatusProd = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("StatusProd"), Visible = true, FieldName = nameof(ItemHw.IdStatusProd), Width = 90 };
                 GridColumn colIdUserAttri1 = new GridColumn() { Caption = userAtt01, Visible = true, FieldName = nameof(ItemHw.IdUserAttri1), Width = 90 };
                 GridColumn colIdUserAttri2 = new GridColumn() { Caption = userAtt02, Visible = true, FieldName = nameof(ItemHw.IdUserAttri2), Width = 90 };
                 GridColumn colIdUserAttri3 = new GridColumn() { Caption = userAtt03, Visible = true, FieldName = nameof(ItemHw.IdUserAttri3), Width = 90 };
-
                 GridColumn colPhotoUrl = new GridColumn() { Caption = "Photo URL", Visible = false, FieldName = nameof(ItemEy.PhotoUrl), Width = 90 };
-                GridColumn colPhoto = new GridColumn() { Caption = "Photo", Visible = true, FieldName = PHOTO_COLUMN, Width = 90 }; 
+                GridColumn colPhoto = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Photo"), Visible = true, FieldName = PHOTO_COLUMN, Width = 90 }; 
 
                 //Display Format
                 colTimestamp.DisplayFormat.FormatType = FormatType.DateTime;
@@ -731,6 +730,16 @@ namespace HKSupply.Forms.Master
 
                 colIdStatusProd.ColumnEdit = riStatusProd;
 
+                RepositoryItemLookUpEdit riFamilyHk = new RepositoryItemLookUpEdit()
+                {
+                    DataSource = _familiesHkList,
+                    DisplayMember = nameof(FamilyHK.Description),
+                    ValueMember = nameof(FamilyHK.IdFamilyHk),
+                    NullText = string.Empty
+                };
+
+                colFamilyHK.ColumnEdit = riFamilyHk;
+
                 RepositoryItemSearchLookUpEdit riDefaultSupplier = new RepositoryItemSearchLookUpEdit()
                 {
                     DataSource = _supplierList,
@@ -753,6 +762,7 @@ namespace HKSupply.Forms.Master
                 rootGridViewItems.Columns.Add(colPrototypeDescription);
                 rootGridViewItems.Columns.Add(colPrototypeStatus);
                 rootGridViewItems.Columns.Add(colIdModel);
+                rootGridViewItems.Columns.Add(colFamilyHK);
                 rootGridViewItems.Columns.Add(colModel);
                 rootGridViewItems.Columns.Add(colIdColor1);
                 rootGridViewItems.Columns.Add(colIdColor2);
@@ -798,14 +808,14 @@ namespace HKSupply.Forms.Master
                 //gridViewLastDocs.OptionsBehavior.Editable = false;
 
                 //Columns definition
-                GridColumn colIdVerItem = new GridColumn() { Caption = "Item Ver", Visible = true, FieldName = nameof(ItemDoc.IdVerItem), Width = 60 };
-                GridColumn colIdSubVerItem = new GridColumn() { Caption = "Item Subver", Visible = true, FieldName = nameof(ItemDoc.IdSubVerItem), Width = 75 };
+                GridColumn colIdVerItem = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemVer"), Visible = true, FieldName = nameof(ItemDoc.IdVerItem), Width = 60 };
+                GridColumn colIdSubVerItem = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemSubver"), Visible = true, FieldName = nameof(ItemDoc.IdSubVerItem), Width = 75 };
                 GridColumn colIdDocType = new GridColumn() { Caption = "IdDocType", Visible = false, FieldName = nameof(ItemDoc.IdDocType), Width = 10 };
-                GridColumn colDocType = new GridColumn() { Caption = "Doc Type", Visible = true, FieldName = $"{nameof(ItemDoc.DocType)}.{nameof(DocType.Description)}", Width = 100 };
-                GridColumn colFileName = new GridColumn() { Caption = "File Name", Visible = true, FieldName = nameof(ItemDoc.FileName), Width = 250 };
+                GridColumn colDocType = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("DocType"), Visible = true, FieldName = $"{nameof(ItemDoc.DocType)}.{nameof(DocType.Description)}", Width = 100 };
+                GridColumn colFileName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("FileName"), Visible = true, FieldName = nameof(ItemDoc.FileName), Width = 250 };
                 GridColumn colFilePath = new GridColumn() { Caption = "FilePath", Visible = false, FieldName = nameof(ItemDoc.FilePath), Width = 10 };
-                GridColumn colCreateDate = new GridColumn() { Caption = "Create Date", Visible = true, FieldName = nameof(ItemDoc.CreateDate), Width = 150 };
-                GridColumn colViewButton = new GridColumn() { Caption = "View", Visible = true, FieldName = VIEW_COLUMN, Width = 50 };
+                GridColumn colCreateDate = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("CreateDate"), Visible = true, FieldName = nameof(ItemDoc.CreateDate), Width = 150 };
+                GridColumn colViewButton = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("View"), Visible = true, FieldName = VIEW_COLUMN, Width = 50 };
 
                 //Display Format
                 colCreateDate.DisplayFormat.FormatType = FormatType.DateTime;
@@ -861,14 +871,14 @@ namespace HKSupply.Forms.Master
                 //gridViewDocsHistory.OptionsBehavior.Editable = false;
 
                 //Columns definition
-                GridColumn colIdVerItem = new GridColumn() { Caption = "Item Ver", Visible = true, FieldName = nameof(ItemDoc.IdVerItem), Width = 60 };
-                GridColumn colIdSubVerItem = new GridColumn() { Caption = "Item Subver", Visible = true, FieldName = nameof(ItemDoc.IdSubVerItem), Width = 75 };
+                GridColumn colIdVerItem = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemVer"), Visible = true, FieldName = nameof(ItemDoc.IdVerItem), Width = 60 };
+                GridColumn colIdSubVerItem = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemSubver"), Visible = true, FieldName = nameof(ItemDoc.IdSubVerItem), Width = 75 };
                 GridColumn colIdDocType = new GridColumn() { Caption = "IdDocType", Visible = false, FieldName = nameof(ItemDoc.IdDocType), Width = 10 };
-                GridColumn colDocType = new GridColumn() { Caption = "Doc Type", Visible = true, FieldName = $"{nameof(ItemDoc.DocType)}.{nameof(DocType.Description)}", Width = 100 };
-                GridColumn colFileName = new GridColumn() { Caption = "File Name", Visible = true, FieldName = nameof(ItemDoc.FileName), Width = 280 };
+                GridColumn colDocType = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("DocType"), Visible = true, FieldName = $"{nameof(ItemDoc.DocType)}.{nameof(DocType.Description)}", Width = 100 };
+                GridColumn colFileName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("FileName"), Visible = true, FieldName = nameof(ItemDoc.FileName), Width = 280 };
                 GridColumn colFilePath = new GridColumn() { Caption = "FilePath", Visible = false, FieldName = nameof(ItemDoc.FilePath), Width = 10 };
-                GridColumn colCreateDate = new GridColumn() { Caption = "Create Date", Visible = true, FieldName = nameof(ItemDoc.CreateDate), Width = 120 };
-                GridColumn colViewButton = new GridColumn() { Caption = "View", Visible = true, FieldName = VIEW_COLUMN, Width = 50 };
+                GridColumn colCreateDate = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("CreateDate"), Visible = true, FieldName = nameof(ItemDoc.CreateDate), Width = 120 };
+                GridColumn colViewButton = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("View"), Visible = true, FieldName = VIEW_COLUMN, Width = 50 };
 
                 //Display Format
                 colCreateDate.DisplayFormat.FormatType = FormatType.DateTime;
@@ -1007,7 +1017,7 @@ namespace HKSupply.Forms.Master
                 //LookUpEdit
                 lueIdDefaultSupplier.DataBindings.Add<ItemHw>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdDefaultSupplier);
                 lueIdStatusProd.DataBindings.Add<ItemHw>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdStatusProd);
-
+                lueIdFamilyHK.DataBindings.Add<ItemHw>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdFamilyHK);
 
             }
             catch (Exception ex)
@@ -1073,7 +1083,7 @@ namespace HKSupply.Forms.Master
                 //LookUpEdit
                 lueHIdDefaultSupplier.DataBindings.Add<ItemHwHistory>(_itemHistory, (LookUpEdit e) => e.EditValue, item => item.IdDefaultSupplier);
                 lueHIdStatusProd.DataBindings.Add<ItemHwHistory>(_itemHistory, (LookUpEdit e) => e.EditValue, item => item.IdStatusProd);
-
+                lueHIdFamilyHK.DataBindings.Add<ItemHwHistory>(_itemHistory, (LookUpEdit e) => e.EditValue, item => item.IdFamilyHK);
             }
             catch (Exception ex)
             {
@@ -1092,8 +1102,8 @@ namespace HKSupply.Forms.Master
                 lueIdDefaultSupplier.Properties.DataSource = _supplierList;
                 lueIdDefaultSupplier.Properties.DisplayMember = nameof(Supplier.IdSupplier);
                 lueIdDefaultSupplier.Properties.ValueMember = nameof(Supplier.IdSupplier); ;
-                lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Supplier.IdSupplier), 20, "Id Supplier"));
-                lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Supplier.SupplierName), 100, "Name"));
+                lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Supplier.IdSupplier), 20, GlobalSetting.ResManager.GetString("Supplier")));
+                lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Supplier.SupplierName), 100, GlobalSetting.ResManager.GetString("Name")));
 
                 //De esta manera se activa el limpiar el combo pulsado Ctrl + Supr. Es poco intuitivo, lo controlamos por el evento
                 //lueIdDefaultSupplier.Properties.AllowNullInput = DefaultBoolean.True; 
@@ -1103,8 +1113,8 @@ namespace HKSupply.Forms.Master
                 lueHIdDefaultSupplier.Properties.DataSource = _supplierList;
                 lueHIdDefaultSupplier.Properties.DisplayMember = nameof(Supplier.IdSupplier);
                 lueHIdDefaultSupplier.Properties.ValueMember = nameof(Supplier.IdSupplier); ;
-                lueHIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Supplier.IdSupplier), 20, "Id Supplier"));
-                lueHIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Supplier.SupplierName), 100, "Name"));
+                lueHIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Supplier.IdSupplier), 20, GlobalSetting.ResManager.GetString("Supplier")));
+                lueHIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Supplier.SupplierName), 100, GlobalSetting.ResManager.GetString("Name")));
 
             }
             catch (Exception ex)
@@ -1136,6 +1146,24 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void SetUpLueFamiliesHk()
+        {
+            try
+            {
+                lueIdFamilyHK.Properties.DataSource = _familiesHkList;
+                lueIdFamilyHK.Properties.DisplayMember = nameof(FamilyHK.Description);
+                lueIdFamilyHK.Properties.ValueMember = nameof(FamilyHK.IdFamilyHk);
+
+                lueHIdFamilyHK.Properties.DataSource = _familiesHkList;
+                lueHIdFamilyHK.Properties.DisplayMember = nameof(FamilyHK.Description);
+                lueHIdFamilyHK.Properties.ValueMember = nameof(FamilyHK.IdFamilyHk);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         private void SetUpLueDocType()
         {
             try
@@ -1143,7 +1171,7 @@ namespace HKSupply.Forms.Master
                 lueDocType.Properties.DataSource = _docsTypeList;
                 lueDocType.Properties.DisplayMember = nameof(DocType.Description);
                 lueDocType.Properties.ValueMember = nameof(DocType.IdDocType);
-                lueDocType.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(DocType.Description), 100, "Description"));
+                lueDocType.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(DocType.Description), 100, GlobalSetting.ResManager.GetString("Description")));
             }
             catch (Exception ex)
             {
@@ -1200,6 +1228,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
+                _familiesHkList = GlobalSetting.FamilyHKService.GetFamiliesHK();
                 _statusProdList = GlobalSetting.StatusProdService.GetStatusProd();
                 _supplierList = GlobalSetting.SupplierService.GetSuppliers();
                 _docsTypeList = GlobalSetting.DocTypeService.GetDocsType(Constants.ITEM_GROUP_HW);
@@ -1309,7 +1338,7 @@ namespace HKSupply.Forms.Master
 
         DXMenuItem CreateMenuPriceList(GridView view, int rowHandle)
         {
-            DXMenuItem menuItem = new DXMenuItem("View Item price list",
+            DXMenuItem menuItem = new DXMenuItem(GlobalSetting.ResManager.GetString("ViewItemPriceList"),
                 new EventHandler(OnMenuItemViewItemPriceListClick));
             menuItem.Tag = new RowInfo(view, rowHandle);
             return menuItem;
@@ -1574,12 +1603,12 @@ namespace HKSupply.Forms.Master
                 {
                     if (System.IO.File.Exists(txtPathNewDoc.Text) == false)
                     {
-                        XtraMessageBox.Show("New doc file doesn't exist", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        XtraMessageBox.Show(GlobalSetting.ResManager.GetString("FileDoesntExist"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         return false;
                     }
                     if (lueDocType.EditValue == null)
                     {
-                        XtraMessageBox.Show("Select doc type", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        XtraMessageBox.Show(GlobalSetting.ResManager.GetString("SelectDocType"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         return false;
                     }
                 }
@@ -1702,6 +1731,11 @@ namespace HKSupply.Forms.Master
                 LoadItemsList();
                 MoveGridToItem(idItemBcn);
                 SetItemGridStylesByState();
+                //suscribirse de nuevo a los eventos
+                rootGridViewItems.DoubleClick += rootGridViewItems_DoubleClick;
+                rootGridViewItems.PopupMenuShowing += RootGridViewItems_PopupMenuShowing;
+                rootGridViewItems.OptionsBehavior.Editable = false;
+
                 RestoreInitState();
             }
             catch (Exception ex)

@@ -20,7 +20,7 @@ namespace HKSupply.Forms.Master
     public partial class CurrenciesEchangeRatesManagement : RibbonFormBase
     {
         #region Enums
-        private enum eCurrenciesColumns
+        /*private enum eCurrenciesColumns
         {
             IdCurrency,
             Description,
@@ -33,7 +33,7 @@ namespace HKSupply.Forms.Master
             IdCurrency1,
             IdCurrency2,
             Ratio
-        }
+        }*/
         #endregion
 
         #region Private Members
@@ -112,9 +112,9 @@ namespace HKSupply.Forms.Master
                 gridViewCurrencies.OptionsBehavior.Editable = false;
 
                 //Columns definition
-                GridColumn colIdCurrency = new GridColumn() { Caption = "Currency", Visible = true, FieldName = eCurrenciesColumns.IdCurrency.ToString(), Width = 70 };
-                GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = eCurrenciesColumns.Description.ToString(), Width = 300 };
-                GridColumn colDescriptionZh = new GridColumn() { Caption = "Description (Chinese)", Visible = true, FieldName = eCurrenciesColumns.DescriptionZh.ToString(), Width = 300 };
+                GridColumn colIdCurrency = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Currency"), Visible = true, FieldName = nameof(Currency.IdCurrency), Width = 70 };
+                GridColumn colDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Description"), Visible = true, FieldName = nameof(Currency.Description), Width = 300 };
+                GridColumn colDescriptionZh = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("DescriptionChinese"), Visible = true, FieldName = nameof(Currency.DescriptionZh), Width = 300 };
 
                 //add columns to grid root view
                 gridViewCurrencies.Columns.Add(colIdCurrency);
@@ -145,10 +145,10 @@ namespace HKSupply.Forms.Master
                 gridViewEchangeRates.OptionsBehavior.Editable = false;
 
                 //Columns definition
-                GridColumn colDate = new GridColumn() { Caption = "Date", Visible = true, FieldName = eEchangeRatesColumns.Date.ToString(), Width = 100 };
-                GridColumn colIdCurrency1 = new GridColumn() { Caption = "Currency 1", Visible = true, FieldName = eEchangeRatesColumns.IdCurrency1.ToString(), Width = 70 };
-                GridColumn colIdCurrency2 = new GridColumn() { Caption = "Currency 2", Visible = true, FieldName = eEchangeRatesColumns.IdCurrency2.ToString(), Width = 70 };
-                GridColumn colRatio = new GridColumn() { Caption = "Ratio", Visible = true, FieldName = eEchangeRatesColumns.Ratio.ToString(), Width = 100 };
+                GridColumn colDate = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Date"), Visible = true, FieldName = nameof(EchangeRate.Date), Width = 100 };
+                GridColumn colIdCurrency1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Currency1"), Visible = true, FieldName = nameof(EchangeRate.IdCurrency1), Width = 70 };
+                GridColumn colIdCurrency2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Currency2"), Visible = true, FieldName = nameof(EchangeRate.IdCurrency2), Width = 70 };
+                GridColumn colRatio = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Ratio"), Visible = true, FieldName = nameof(EchangeRate.Ratio), Width = 100 };
 
                 //Format Type
                 colRatio.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;

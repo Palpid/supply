@@ -20,7 +20,7 @@ namespace HKSupply.Forms.Master
     public partial class SupplierPriceListManagement : RibbonFormBase
     {
         #region Enums
-        private enum eSupplierPriceListColumns
+        /*private enum eSupplierPriceListColumns
         { 
             IdVer,
             IdSubVer,
@@ -35,7 +35,7 @@ namespace HKSupply.Forms.Master
             MinLot,
             IncrLot,
             LeadTime,
-        }
+        }*/
         #endregion
 
         #region Private Members
@@ -141,7 +141,7 @@ namespace HKSupply.Forms.Master
             {
                 if (xtcGeneral.SelectedTabPage == xtpList && rootGridViewSuppliersPriceList.DataRowCount == 0)
                 {
-                    MessageBox.Show("No data selected");
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
                     RestoreInitState();
                 }
                 //else if (_supplierPriceListOriginal == null)
@@ -244,7 +244,7 @@ namespace HKSupply.Forms.Master
         {
             if (rootGridViewSuppliersPriceList.DataRowCount == 0)
             {
-                MessageBox.Show("No data selected");
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
                 return;
             }
 
@@ -274,7 +274,7 @@ namespace HKSupply.Forms.Master
         {
             if (rootGridViewSuppliersPriceList.DataRowCount == 0)
             {
-                MessageBox.Show("No data selected");
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
                 return;
             }
 
@@ -327,7 +327,7 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                XtraMessageBox.Show(ex.Message, "ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -537,19 +537,19 @@ namespace HKSupply.Forms.Master
                 //rootGridViewSuppliersPriceList.OptionsBehavior.Editable = false;
 
                 //Columns definition
-                GridColumn colIdVer = new GridColumn() { Caption = "Version", Visible = true, FieldName = eSupplierPriceListColumns.IdVer.ToString(), Width = 50 };
-                GridColumn colIdSubVer = new GridColumn() { Caption = "Subversion", Visible = true, FieldName = eSupplierPriceListColumns.IdSubVer.ToString(), Width = 70 };
-                GridColumn colTimestamp = new GridColumn() { Caption = "Timestamp", Visible = true, FieldName = eSupplierPriceListColumns.Timestamp.ToString(), Width = 130 };
-                GridColumn colIdItemBcn = new GridColumn() { Caption = "Item Bcn", Visible = true, FieldName = eSupplierPriceListColumns.IdItemBcn.ToString(), Width = 200 };
-                GridColumn colIdSupplier = new GridColumn() { Caption = "Id Supplier", Visible = true, FieldName = eSupplierPriceListColumns.IdSupplier.ToString(), Width = 100 };
-                GridColumn colPrice = new GridColumn() { Caption = "Price", Visible = true, FieldName = eSupplierPriceListColumns.Price.ToString(), Width = 80 };
-                GridColumn colComments = new GridColumn() { Caption = "Comments", Visible = true, FieldName = eSupplierPriceListColumns.Comments.ToString(), Width = 300 };
-                GridColumn colCurrency = new GridColumn() { Caption = "Currency", Visible = true, FieldName = eSupplierPriceListColumns.IdCurrency.ToString(), Width = 70 };
-                GridColumn colPriceBaseCurrency = new GridColumn() { Caption = "Price Base Currency", Visible = true, FieldName = eSupplierPriceListColumns.PriceBaseCurrency.ToString(), Width = 120 };
-                GridColumn colExchangeRateUsed = new GridColumn() { Caption = "Exchange Rate Used", Visible = true, FieldName = eSupplierPriceListColumns.ExchangeRateUsed.ToString(), Width = 120 };
-                GridColumn colMinLot = new GridColumn() { Caption = "Min Lot", Visible = true, FieldName = eSupplierPriceListColumns.MinLot.ToString(), Width = 60 };
-                GridColumn colIncrLot = new GridColumn() { Caption = "Incr Lot", Visible = true, FieldName = eSupplierPriceListColumns.IncrLot.ToString(), Width = 60 };
-                GridColumn colLeadTime = new GridColumn() { Caption = "Lead Time", Visible = true, FieldName = eSupplierPriceListColumns.LeadTime.ToString(), Width = 70 };
+                GridColumn colIdVer = new GridColumn() { Caption = "Version", Visible = true, FieldName = nameof(SupplierPriceList.IdVer), Width = 50 };
+                GridColumn colIdSubVer = new GridColumn() { Caption = "Subversion", Visible = true, FieldName = nameof(SupplierPriceList.IdSubVer), Width = 70 };
+                GridColumn colTimestamp = new GridColumn() { Caption = "Timestamp", Visible = true, FieldName = nameof(SupplierPriceList.Timestamp), Width = 130 };
+                GridColumn colIdItemBcn = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemBCN"), Visible = true, FieldName = nameof(SupplierPriceList.IdItemBcn), Width = 200 };
+                GridColumn colIdSupplier = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("IdSupplier"), Visible = true, FieldName = nameof(SupplierPriceList.IdSupplier), Width = 100 };
+                GridColumn colPrice = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Price"), Visible = true, FieldName = nameof(SupplierPriceList.Price), Width = 80 };
+                GridColumn colComments = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Comments"), Visible = true, FieldName = nameof(SupplierPriceList.Comments), Width = 300 };
+                GridColumn colCurrency = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Currency"), Visible = true, FieldName = nameof(SupplierPriceList.IdCurrency), Width = 70 };
+                GridColumn colPriceBaseCurrency = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("PriceBaseCurrency"), Visible = true, FieldName = nameof(SupplierPriceList.PriceBaseCurrency), Width = 120 };
+                GridColumn colExchangeRateUsed = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ExchangeRateUsed"), Visible = true, FieldName = nameof(SupplierPriceList.ExchangeRateUsed), Width = 120 };
+                GridColumn colMinLot = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MinLot"), Visible = true, FieldName = nameof(SupplierPriceList.MinLot), Width = 60 };
+                GridColumn colIncrLot = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("IncrLot"), Visible = true, FieldName = nameof(SupplierPriceList.IncrLot), Width = 60 };
+                GridColumn colLeadTime = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("LeadTime"), Visible = true, FieldName = nameof(SupplierPriceList.LeadTime), Width = 70 };
 
                 //Format type 
                 colTimestamp.DisplayFormat.FormatType = FormatType.DateTime;
@@ -567,11 +567,11 @@ namespace HKSupply.Forms.Master
                 RepositoryItemLookUpEdit riComboCurrency = new RepositoryItemLookUpEdit()
                 {
                     DataSource = _currenciesList,
-                    ValueMember = "IdCurrency",
-                    DisplayMember = "Description"
+                    ValueMember = nameof(Currency.IdCurrency),
+                    DisplayMember = nameof(Currency.Description)
                 };
-                riComboCurrency.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdCurrency", 40, "Currency"));
-                riComboCurrency.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Description", 60, "Description"));
+                riComboCurrency.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Currency.IdCurrency), 40, GlobalSetting.ResManager.GetString("Currency")));
+                riComboCurrency.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Currency.Description), 60, GlobalSetting.ResManager.GetString("Description")));
 
                 colCurrency.ColumnEdit = riComboCurrency;
 
@@ -713,10 +713,10 @@ namespace HKSupply.Forms.Master
             {
                 var suppliers = GlobalSetting.SupplierService.GetSuppliers();
                 slueSupplier.Properties.DataSource = suppliers;
-                slueSupplier.Properties.ValueMember = "IdSupplier";
-                slueSupplier.Properties.DisplayMember = "SupplierName";
-                slueSupplier.Properties.View.Columns.AddField("IdSupplier").Visible = true;
-                slueSupplier.Properties.View.Columns.AddField("SupplierName").Visible = true;
+                slueSupplier.Properties.ValueMember = nameof(Supplier.IdSupplier);
+                slueSupplier.Properties.DisplayMember = nameof(Supplier.SupplierName);
+                slueSupplier.Properties.View.Columns.AddField(nameof(Supplier.IdSupplier)).Visible = true;
+                slueSupplier.Properties.View.Columns.AddField(nameof(Supplier.SupplierName)).Visible = true;
                 slueSupplier.KeyDown += slueSupplier_KeyDown;
                 slueSupplier.EditValueChanged += SlueSupplier_EditValueChanged;
             }
@@ -744,8 +744,8 @@ namespace HKSupply.Forms.Master
             {
                 var itemsBcn = GlobalSetting.ItemBcnService.GetItemsBcn();
                 slueItemBcn.Properties.DataSource = itemsBcn;
-                slueItemBcn.Properties.ValueMember = "IdItemBcn";
-                slueItemBcn.Properties.DisplayMember = "Description";
+                slueItemBcn.Properties.ValueMember = nameof(ItemBcn.IdItemBcn);
+                slueItemBcn.Properties.DisplayMember = nameof(ItemBcn.Description);
                 slueItemBcn.KeyDown += slueItemBcn_KeyDown;
                 slueItemBcn.EditValueChanged += SlueItemBcn_EditValueChanged;
             }
@@ -812,8 +812,8 @@ namespace HKSupply.Forms.Master
                 lueIdSupplier.Properties.DisplayMember = nameof(Supplier.SupplierName);
                 lueIdSupplier.Properties.ValueMember = nameof(Supplier.IdSupplier);
 
-                lueIdSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Supplier.IdSupplier), 20, "Id Supplier"));
-                lueIdSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Supplier.SupplierName), 100, "Name"));
+                lueIdSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Supplier.IdSupplier), 20, GlobalSetting.ResManager.GetString("IdSupplier")));
+                lueIdSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Supplier.SupplierName), 100, GlobalSetting.ResManager.GetString("Name")));
 
             }
             catch (Exception ex)
@@ -1009,21 +1009,21 @@ namespace HKSupply.Forms.Master
                     xtpForm.PageVisible = false;
                     
                     //no edit column
-                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.IdVer.ToString()].OptionsColumn.AllowEdit = false;
-                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.IdSubVer.ToString()].OptionsColumn.AllowEdit = false;
-                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.Timestamp.ToString()].OptionsColumn.AllowEdit = false;
-                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.IdItemBcn.ToString()].OptionsColumn.AllowEdit = false;
-                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.IdSupplier.ToString()].OptionsColumn.AllowEdit = false;
-                    
+                    rootGridViewSuppliersPriceList.Columns[nameof(SupplierPriceList.IdVer)].OptionsColumn.AllowEdit = false;
+                    rootGridViewSuppliersPriceList.Columns[nameof(SupplierPriceList.IdSubVer)].OptionsColumn.AllowEdit = false;
+                    rootGridViewSuppliersPriceList.Columns[nameof(SupplierPriceList.Timestamp)].OptionsColumn.AllowEdit = false;
+                    rootGridViewSuppliersPriceList.Columns[nameof(SupplierPriceList.IdItemBcn)].OptionsColumn.AllowEdit = false;
+                    rootGridViewSuppliersPriceList.Columns[nameof(SupplierPriceList.IdSupplier)].OptionsColumn.AllowEdit = false;
+
                     //Allow edit some columns
-                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.Price.ToString()].OptionsColumn.AllowEdit = true;
-                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.Comments.ToString()].OptionsColumn.AllowEdit = true;
-                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.IdCurrency.ToString()].OptionsColumn.AllowEdit = true;
-                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.PriceBaseCurrency.ToString()].OptionsColumn.AllowEdit = true;
-                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.ExchangeRateUsed.ToString()].OptionsColumn.AllowEdit = true;
-                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.MinLot.ToString()].OptionsColumn.AllowEdit = true;
-                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.IncrLot.ToString()].OptionsColumn.AllowEdit = true;
-                    rootGridViewSuppliersPriceList.Columns[eSupplierPriceListColumns.LeadTime.ToString()].OptionsColumn.AllowEdit = true;
+                    rootGridViewSuppliersPriceList.Columns[nameof(SupplierPriceList.Price)].OptionsColumn.AllowEdit = true;
+                    rootGridViewSuppliersPriceList.Columns[nameof(SupplierPriceList.Comments)].OptionsColumn.AllowEdit = true;
+                    rootGridViewSuppliersPriceList.Columns[nameof(SupplierPriceList.IdCurrency)].OptionsColumn.AllowEdit = true;
+                    rootGridViewSuppliersPriceList.Columns[nameof(SupplierPriceList.PriceBaseCurrency)].OptionsColumn.AllowEdit = true;
+                    rootGridViewSuppliersPriceList.Columns[nameof(SupplierPriceList.ExchangeRateUsed)].OptionsColumn.AllowEdit = true;
+                    rootGridViewSuppliersPriceList.Columns[nameof(SupplierPriceList.MinLot)].OptionsColumn.AllowEdit = true;
+                    rootGridViewSuppliersPriceList.Columns[nameof(SupplierPriceList.IncrLot)].OptionsColumn.AllowEdit = true;
+                    rootGridViewSuppliersPriceList.Columns[nameof(SupplierPriceList.LeadTime)].OptionsColumn.AllowEdit = true;
 
                     //desuscribirse al evento del dobleclick mientras editamos el grid
                     rootGridViewSuppliersPriceList.DoubleClick -= rootGridViewSuppliersPriceList_DoubleClick;
@@ -1169,8 +1169,8 @@ namespace HKSupply.Forms.Master
                 for (int i = 0; i < rootGridViewSuppliersPriceList.RowCount; i++)
                 {
                     if (
-                        rootGridViewSuppliersPriceList.GetRowCellValue(i, eSupplierPriceListColumns.IdItemBcn.ToString()).Equals(idItemBcn) &&
-                        rootGridViewSuppliersPriceList.GetRowCellValue(i, eSupplierPriceListColumns.IdSupplier.ToString()).Equals(idSupplier) 
+                        rootGridViewSuppliersPriceList.GetRowCellValue(i, nameof(SupplierPriceList.IdItemBcn)).Equals(idItemBcn) &&
+                        rootGridViewSuppliersPriceList.GetRowCellValue(i, nameof(SupplierPriceList.IdSupplier)).Equals(idSupplier) 
                         )
                     {
                         row = i;

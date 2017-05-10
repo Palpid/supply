@@ -137,7 +137,7 @@ namespace HKSupply.Forms.Master
             {
                 if (_customerOriginal == null)
                 {
-                    MessageBox.Show("No customer selected");
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("NoCustomerSelected"));
                     RestoreInitState();
                 }
                 else
@@ -223,7 +223,7 @@ namespace HKSupply.Forms.Master
         {
             if (rootGridViewCustomers.DataRowCount == 0)
             {
-                MessageBox.Show("No data selected");
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
                 return;
             }
 
@@ -253,7 +253,7 @@ namespace HKSupply.Forms.Master
         {
             if (rootGridViewCustomers.DataRowCount == 0)
             {
-                MessageBox.Show("No data selected");
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
                 return;
             }
 
@@ -476,18 +476,18 @@ namespace HKSupply.Forms.Master
                 GridColumn colIdVer = new GridColumn() { Caption = "Version Id", Visible = true, FieldName = eCustomerColumns.IdVer.ToString(), Width = 70 };
                 GridColumn colIdSubVer = new GridColumn() { Caption = "Subversion Id", Visible = true, FieldName = eCustomerColumns.IdSubVer.ToString(), Width = 80 };
                 GridColumn colTimestamp = new GridColumn() { Caption = "Timestamp", Visible = true, FieldName = eCustomerColumns.Timestamp.ToString(), Width = 130 };
-                GridColumn colIdCustomer = new GridColumn() { Caption = "Id Supplier", Visible = true, FieldName = eCustomerColumns.IdCustomer.ToString(), Width = 100 };
-                GridColumn colCustomerName = new GridColumn() { Caption = "Supplier Name", Visible = true, FieldName = eCustomerColumns.CustomerName.ToString(), Width = 200 };
-                GridColumn colActive = new GridColumn() { Caption = "Active", Visible = true, FieldName = eCustomerColumns.Active.ToString(), Width = 50 };
-                GridColumn colVATNum = new GridColumn() { Caption = "VAT Number", Visible = true, FieldName = eCustomerColumns.VATNum.ToString(), Width = 120 };
-                GridColumn colShippingAddress = new GridColumn() { Caption = "Shipping Address", Visible = true, FieldName = eCustomerColumns.ShippingAddress.ToString(), Width = 300 };
-                GridColumn colBillingAddress = new GridColumn() { Caption = "Billing Address", Visible = true, FieldName = eCustomerColumns.BillingAddress.ToString(), Width = 300 };
-                GridColumn colContactName = new GridColumn() { Caption = "Contact Name", Visible = true, FieldName = eCustomerColumns.ContactName.ToString(), Width = 200 };
-                GridColumn colContactPhone = new GridColumn() { Caption = "Contact Phone", Visible = true, FieldName = eCustomerColumns.ContactPhone.ToString(), Width = 150 };
-                GridColumn colComments = new GridColumn() { Caption = "Comments", Visible = true, FieldName = eCustomerColumns.Comments.ToString(), Width = 300 };
-                GridColumn colIdIncoterm = new GridColumn() { Caption = "Incoterm", Visible = true, FieldName = eCustomerColumns.IdIncoterm.ToString(), Width = 70 };
-                GridColumn colIdPaymentTerms = new GridColumn() { Caption = "Payment Terms", Visible = true, FieldName = eCustomerColumns.IdPaymentTerms.ToString(), Width = 100 };
-                GridColumn colCurrency = new GridColumn() { Caption = "Currency", Visible = true, FieldName = eCustomerColumns.IdDefaultCurrency.ToString(), Width = 70 };
+                GridColumn colIdCustomer = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("IdCustomer"), Visible = true, FieldName = eCustomerColumns.IdCustomer.ToString(), Width = 100 };
+                GridColumn colCustomerName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("CustomerName"), Visible = true, FieldName = eCustomerColumns.CustomerName.ToString(), Width = 200 };
+                GridColumn colActive = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Active"), Visible = true, FieldName = eCustomerColumns.Active.ToString(), Width = 50 };
+                GridColumn colVATNum = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("VATNumber"), Visible = true, FieldName = eCustomerColumns.VATNum.ToString(), Width = 120 };
+                GridColumn colShippingAddress = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ShippingAddress"), Visible = true, FieldName = eCustomerColumns.ShippingAddress.ToString(), Width = 300 };
+                GridColumn colBillingAddress = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("BillingAddress"), Visible = true, FieldName = eCustomerColumns.BillingAddress.ToString(), Width = 300 };
+                GridColumn colContactName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ContactName"), Visible = true, FieldName = eCustomerColumns.ContactName.ToString(), Width = 200 };
+                GridColumn colContactPhone = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ContactPhone"), Visible = true, FieldName = eCustomerColumns.ContactPhone.ToString(), Width = 150 };
+                GridColumn colComments = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Comments"), Visible = true, FieldName = eCustomerColumns.Comments.ToString(), Width = 300 };
+                GridColumn colIdIncoterm = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Incoterm"), Visible = true, FieldName = eCustomerColumns.IdIncoterm.ToString(), Width = 70 };
+                GridColumn colIdPaymentTerms = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("PaymentTerms"), Visible = true, FieldName = eCustomerColumns.IdPaymentTerms.ToString(), Width = 100 };
+                GridColumn colCurrency = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Currency"), Visible = true, FieldName = eCustomerColumns.IdDefaultCurrency.ToString(), Width = 70 };
 
                 //Format type 
                 colTimestamp.DisplayFormat.FormatType = FormatType.DateTime;
@@ -525,8 +525,8 @@ namespace HKSupply.Forms.Master
                 _currenciesList = GlobalSetting.CurrencyService.GetCurrencies();
 
                 lueIdDefaultCurrency.Properties.DataSource = _currenciesList;
-                lueIdDefaultCurrency.Properties.DisplayMember = "Description";
-                lueIdDefaultCurrency.Properties.ValueMember = "IdCurrency";
+                lueIdDefaultCurrency.Properties.DisplayMember = nameof(Currency.Description);
+                lueIdDefaultCurrency.Properties.ValueMember = nameof(Currency.IdCurrency);
                 //lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdSupplier", 20, "Id Supplier"));
                 //lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SupplierName", 100, "Name"));
             }
@@ -543,8 +543,8 @@ namespace HKSupply.Forms.Master
                 _paymentTermsList = GlobalSetting.PaymentTermsService.GetPaymentTerms();
 
                 lueIdPaymentTerms.Properties.DataSource = _paymentTermsList;
-                lueIdPaymentTerms.Properties.DisplayMember = "Description";
-                lueIdPaymentTerms.Properties.ValueMember = "IdPaymentTerms";
+                lueIdPaymentTerms.Properties.DisplayMember = nameof(PaymentTerms.Description);
+                lueIdPaymentTerms.Properties.ValueMember = nameof(PaymentTerms.IdPaymentTerms);
             }
             catch (Exception ex)
             {
@@ -559,8 +559,8 @@ namespace HKSupply.Forms.Master
                 _incotermsList = GlobalSetting.IncotermService.GetIIncoterms();
 
                 lueIdIncoterm.Properties.DataSource = _incotermsList;
-                lueIdIncoterm.Properties.DisplayMember = "IdIncoterm";
-                lueIdIncoterm.Properties.ValueMember = "Description";
+                lueIdIncoterm.Properties.DisplayMember = nameof(Incoterm.Description);
+                lueIdIncoterm.Properties.ValueMember = nameof(Incoterm.IdIncoterm);
             }
             catch (Exception ex)
             {

@@ -19,7 +19,7 @@ namespace HKSupply.Forms.Master
     public partial class ItemsLevelsManagement : RibbonFormBase
     {
         #region Enums
-
+        /*
         #region Enums Material
         private enum eMaterialL1Columns
         {
@@ -89,7 +89,7 @@ namespace HKSupply.Forms.Master
         }
 
         #endregion
-
+        */
         #endregion
 
         #region Private Members
@@ -105,7 +105,7 @@ namespace HKSupply.Forms.Master
         List<HwTypeL2> _hwTypeL2;
         List<HwTypeL3> _hwTypeL3;
         #endregion
-
+   
         #region Constructor
         public ItemsLevelsManagement()
         {
@@ -186,8 +186,8 @@ namespace HKSupply.Forms.Master
                 gridViewMaterialL1.HorzScrollVisibility = ScrollVisibility.Auto;
 
                 //Columns definition
-                GridColumn colIdMaterialL1 = new GridColumn() { Caption = "Material L1", Visible = true, FieldName = eMaterialL1Columns.IdMaterialL1.ToString(), Width = 200 };
-                GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = eMaterialL1Columns.Description.ToString(), Width = 400 };
+                GridColumn colIdMaterialL1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MaterialL1"), Visible = true, FieldName = nameof(MaterialL1.IdMaterialL1), Width = 200 };
+                GridColumn colDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Description"), Visible = true, FieldName = nameof(MaterialL1.Description), Width = 400 };
 
                 //add columns to grid root view
                 gridViewMaterialL1.Columns.Add(colIdMaterialL1);
@@ -214,9 +214,9 @@ namespace HKSupply.Forms.Master
                 gridViewMaterialL2.HorzScrollVisibility = ScrollVisibility.Auto;
 
                 //Columns definition
-                GridColumn colIdMaterialL2 = new GridColumn() { Caption = "Material L2", Visible = true, FieldName = eMaterialL2Columns.IdMaterialL2.ToString(), Width = 200 };
-                GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = eMaterialL2Columns.Description.ToString(), Width = 400 };
-                GridColumn colIdMaterialL1 = new GridColumn() { Caption = "Material L1", Visible = true, FieldName = eMaterialL2Columns.IdMaterialL1.ToString(), Width = 200 };
+                GridColumn colIdMaterialL2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MaterialL2"), Visible = true, FieldName = nameof(MaterialL2.IdMaterialL2), Width = 200 };
+                GridColumn colDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Description"), Visible = true, FieldName = nameof(MaterialL2.Description), Width = 400 };
+                GridColumn colIdMaterialL1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MaterialL1"), Visible = true, FieldName = nameof(MaterialL2.IdMaterialL1), Width = 200 };
 
                 //add columns to grid root view
                 gridViewMaterialL2.Columns.Add(colIdMaterialL2);
@@ -243,10 +243,10 @@ namespace HKSupply.Forms.Master
                 gridViewMaterialL3.HorzScrollVisibility = ScrollVisibility.Auto;
 
                 //Columns definition
-                GridColumn colIdMaterialL3 = new GridColumn() { Caption = "Material L3", Visible = true, FieldName = eMaterialL3Columns.IdMaterialL3.ToString(), Width = 200 };
-                GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = eMaterialL3Columns.Description.ToString(), Width = 400 };
-                GridColumn colIdMaterialL2 = new GridColumn() { Caption = "Material L2", Visible = true, FieldName = eMaterialL3Columns.IdMaterialL2.ToString(), Width = 200 };
-                GridColumn colIdMaterialL1 = new GridColumn() { Caption = "Material L1", Visible = true, FieldName = eMaterialL3Columns.IdMaterialL1.ToString(), Width = 200 };
+                GridColumn colIdMaterialL3 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MaterialL3"), Visible = true, FieldName = nameof(MaterialL3.IdMaterialL3), Width = 200 };
+                GridColumn colDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Description"), Visible = true, FieldName = nameof(MaterialL3.Description), Width = 400 };
+                GridColumn colIdMaterialL2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MaterialL2"), Visible = true, FieldName = nameof(MaterialL3.IdMaterialL2), Width = 200 };
+                GridColumn colIdMaterialL1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MaterialL1"), Visible = true, FieldName = nameof(MaterialL3.IdMaterialL1), Width = 200 };
                 
                 //add columns to grid root view
                 gridViewMaterialL3.Columns.Add(colIdMaterialL3);
@@ -274,8 +274,8 @@ namespace HKSupply.Forms.Master
                 gridViewMatTypeL1.HorzScrollVisibility = ScrollVisibility.Auto;
 
                 //Columns definition
-                GridColumn colIdMatTypeL1 = new GridColumn() { Caption = "Mat Type L1", Visible = true, FieldName = eMatTypeL1Columns.IdMatTypeL1.ToString(), Width = 200 };
-                GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = eMatTypeL1Columns.Description.ToString(), Width = 400 };
+                GridColumn colIdMatTypeL1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MatTypeL1"), Visible = true, FieldName = nameof(MatTypeL1.IdMatTypeL1), Width = 200 };
+                GridColumn colDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Description"), Visible = true, FieldName = nameof(MatTypeL1.Description), Width = 400 };
 
                 //add columns to grid root view
                 gridViewMatTypeL1.Columns.Add(colIdMatTypeL1);
@@ -300,9 +300,9 @@ namespace HKSupply.Forms.Master
                 gridViewMatTypeL2.HorzScrollVisibility = ScrollVisibility.Auto;
 
                 //Columns definition
-                GridColumn colIdMatTypeL2 = new GridColumn() { Caption = "Mat Type L2", Visible = true, FieldName = eMatTypeL2Columns.IdMatTypeL2.ToString(), Width = 200 };
-                GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = eMatTypeL2Columns.Description.ToString(), Width = 400 };
-                GridColumn colIdMatTypeL1 = new GridColumn() { Caption = "Mat Type L1", Visible = true, FieldName = eMatTypeL2Columns.IdMatTypeL1.ToString(), Width = 200 };
+                GridColumn colIdMatTypeL2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MatTypeL2"), Visible = true, FieldName = nameof(MatTypeL2.IdMatTypeL2), Width = 200 };
+                GridColumn colDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Description"), Visible = true, FieldName = nameof(MatTypeL2.Description), Width = 400 };
+                GridColumn colIdMatTypeL1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MatTypeL1"), Visible = true, FieldName = nameof(MatTypeL2.IdMatTypeL1), Width = 200 };
 
                 //add columns to grid root view
                 gridViewMatTypeL2.Columns.Add(colIdMatTypeL2);
@@ -328,10 +328,10 @@ namespace HKSupply.Forms.Master
                 gridViewMatTypeL3.HorzScrollVisibility = ScrollVisibility.Auto;
 
                 //Columns definition
-                GridColumn colIdMatTypeL3 = new GridColumn() { Caption = "Mat Type L3", Visible = true, FieldName = eMatTypeL3Columns.IdMatTypeL3.ToString(), Width = 200 };
-                GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = eMatTypeL3Columns.Description.ToString(), Width = 400 };
-                GridColumn colIdMatTypeL2 = new GridColumn() { Caption = "Mat Type L2", Visible = true, FieldName = eMatTypeL3Columns.IdMatTypeL2.ToString(), Width = 200 };
-                GridColumn colIdMatTypeL1 = new GridColumn() { Caption = "Mat Type L1", Visible = true, FieldName = eMatTypeL3Columns.IdMatTypeL1.ToString(), Width = 200 };
+                GridColumn colIdMatTypeL3 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MatTypeL3"), Visible = true, FieldName = nameof(MatTypeL3.IdMatTypeL3), Width = 200 };
+                GridColumn colDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Description"), Visible = true, FieldName = nameof(MatTypeL3.Description), Width = 400 };
+                GridColumn colIdMatTypeL2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MatTypeL2"), Visible = true, FieldName = nameof(MatTypeL3.IdMatTypeL2), Width = 200 };
+                GridColumn colIdMatTypeL1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MatTypeL1"), Visible = true, FieldName = nameof(MatTypeL3.IdMatTypeL1), Width = 200 };
 
                 //add columns to grid root view
                 gridViewMatTypeL3.Columns.Add(colIdMatTypeL3);
@@ -358,8 +358,8 @@ namespace HKSupply.Forms.Master
                 gridViewHwTypeL1.HorzScrollVisibility = ScrollVisibility.Auto;
 
                 //Columns definition
-                GridColumn colIdHwTypeL1 = new GridColumn() { Caption = "HW L1", Visible = true, FieldName = eHwTypeL1Columns.IdHwTypeL1.ToString(), Width = 200 };
-                GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = eMaterialL1Columns.Description.ToString(), Width = 400 };
+                GridColumn colIdHwTypeL1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("HwTypeL1"), Visible = true, FieldName = nameof(HwTypeL1.IdHwTypeL1), Width = 200 };
+                GridColumn colDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Description"), Visible = true, FieldName = nameof(HwTypeL1.Description), Width = 400 };
 
                 //add columns to grid root view
                 gridViewHwTypeL1.Columns.Add(colIdHwTypeL1);
@@ -384,9 +384,9 @@ namespace HKSupply.Forms.Master
                 gridViewHwTypeL2.HorzScrollVisibility = ScrollVisibility.Auto;
 
                 //Columns definition
-                GridColumn colIdHwTypeL2 = new GridColumn() { Caption = "HW L2", Visible = true, FieldName = eHwTypeL2Columns.IdHwTypeL2.ToString(), Width = 200 };
-                GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = eHwTypeL2Columns.Description.ToString(), Width = 400 };
-                GridColumn colIdHwTypeL1 = new GridColumn() { Caption = "HW L1", Visible = true, FieldName = eHwTypeL2Columns.IdHwTypeL1.ToString(), Width = 200 };
+                GridColumn colIdHwTypeL2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("HwTypeL2"), Visible = true, FieldName = nameof(HwTypeL2.IdHwTypeL2), Width = 200 };
+                GridColumn colDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Description"), Visible = true, FieldName = nameof(HwTypeL2.Description), Width = 400 };
+                GridColumn colIdHwTypeL1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("HwTypeL1"), Visible = true, FieldName = nameof(HwTypeL2.IdHwTypeL1), Width = 200 };
 
                 //add columns to grid root view
                 gridViewHwTypeL2.Columns.Add(colIdHwTypeL2);
@@ -412,10 +412,10 @@ namespace HKSupply.Forms.Master
                 gridViewHwTypeL3.HorzScrollVisibility = ScrollVisibility.Auto;
 
                 //Columns definition
-                GridColumn colIdHwTypeL3 = new GridColumn() { Caption = "HW L3", Visible = true, FieldName = eHwTypeL3Columns.IdHwTypeL3.ToString(), Width = 200 };
-                GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = eHwTypeL3Columns.Description.ToString(), Width = 400 };
-                GridColumn colIdHwTypeL2 = new GridColumn() { Caption = "HW L2", Visible = true, FieldName = eHwTypeL3Columns.IdHwTypeL2.ToString(), Width = 200 };
-                GridColumn colIdHwTypeL1 = new GridColumn() { Caption = "Hw L1", Visible = true, FieldName = eHwTypeL3Columns.IdHwTypeL1.ToString(), Width = 200 };
+                GridColumn colIdHwTypeL3 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("HwTypeL3"), Visible = true, FieldName = nameof(HwTypeL3.IdHwTypeL3), Width = 200 };
+                GridColumn colDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Description"), Visible = true, FieldName = nameof(HwTypeL3.Description), Width = 400 };
+                GridColumn colIdHwTypeL2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("HwTypeL2"), Visible = true, FieldName = nameof(HwTypeL3.IdHwTypeL2), Width = 200 };
+                GridColumn colIdHwTypeL1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("HwTypeL1"), Visible = true, FieldName = nameof(HwTypeL3.IdHwTypeL1), Width = 200 };
 
                 //add columns to grid root view
                 gridViewHwTypeL3.Columns.Add(colIdHwTypeL3);

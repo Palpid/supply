@@ -19,12 +19,12 @@ namespace HKSupply.Forms.Master
     public partial class PaymentTermsManagement : RibbonFormBase
     {
         #region Enums
-        private enum ePaymentTermsColumns
+        /*private enum ePaymentTermsColumns
         {
             IdPaymentTerms,
             Description,
             DescriptionZh
-        }
+        }*/
         #endregion
 
         #region Private Members
@@ -187,9 +187,9 @@ namespace HKSupply.Forms.Master
                 {
                     PaymentTerms tmpPaymentTerms = new PaymentTerms();
 
-                    object idPaymentTerms = view.GetRowCellValue(view.FocusedRowHandle, ePaymentTermsColumns.IdPaymentTerms.ToString());
-                    object description = view.GetRowCellValue(view.FocusedRowHandle, ePaymentTermsColumns.Description.ToString());
-                    object descriptionZh = view.GetRowCellValue(view.FocusedRowHandle, ePaymentTermsColumns.DescriptionZh.ToString());
+                    object idPaymentTerms = view.GetRowCellValue(view.FocusedRowHandle, nameof(PaymentTerms.IdPaymentTerms));
+                    object description = view.GetRowCellValue(view.FocusedRowHandle, nameof(PaymentTerms.Description));
+                    object descriptionZh = view.GetRowCellValue(view.FocusedRowHandle, nameof(PaymentTerms.DescriptionZh));
 
 
                     tmpPaymentTerms.IdPaymentTerms = (idPaymentTerms ?? string.Empty).ToString();
@@ -210,8 +210,8 @@ namespace HKSupply.Forms.Master
             try
             {
                 GridView view = sender as GridView;
-                if (view.FocusedColumn.FieldName == ePaymentTermsColumns.Description.ToString() ||
-                    view.FocusedColumn.FieldName == ePaymentTermsColumns.IdPaymentTerms.ToString())
+                if (view.FocusedColumn.FieldName == nameof(PaymentTerms.Description) ||
+                    view.FocusedColumn.FieldName == nameof(PaymentTerms.IdPaymentTerms))
                 {
                     if (string.IsNullOrEmpty(e.Value as string))
                     {
@@ -248,9 +248,9 @@ namespace HKSupply.Forms.Master
                 rootgridViewPaymentTerms.HorzScrollVisibility = ScrollVisibility.Auto;
 
                 //Columns definition
-                GridColumn colIdPaymentTerms = new GridColumn() { Caption = "Id Payment Terms", Visible = true, FieldName = ePaymentTermsColumns.IdPaymentTerms.ToString(), Width = 150 };
-                GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = ePaymentTermsColumns.Description.ToString(), Width = 300 };
-                GridColumn colDescriptionZh = new GridColumn() { Caption = "Description (Chinese)", Visible = true, FieldName = ePaymentTermsColumns.DescriptionZh.ToString(), Width = 300 };
+                GridColumn colIdPaymentTerms = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("IdPaymentTerms"), Visible = true, FieldName = nameof(PaymentTerms.IdPaymentTerms), Width = 150 };
+                GridColumn colDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Description"), Visible = true, FieldName = nameof(PaymentTerms.Description), Width = 300 };
+                GridColumn colDescriptionZh = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("DescriptionChinese"), Visible = true, FieldName = nameof(PaymentTerms.DescriptionZh), Width = 300 };
 
                 //add columns to grid root view
                 rootgridViewPaymentTerms.Columns.Add(colIdPaymentTerms);
@@ -279,12 +279,12 @@ namespace HKSupply.Forms.Master
 
                 xgrdPaymentTerms.DataSource = paymentTerms;
 
-                rootgridViewPaymentTerms.Columns[ePaymentTermsColumns.IdPaymentTerms.ToString()].OptionsColumn.AllowEdit = false;
-                rootgridViewPaymentTerms.Columns[ePaymentTermsColumns.Description.ToString()].OptionsColumn.AllowEdit = false;
-                rootgridViewPaymentTerms.Columns[ePaymentTermsColumns.DescriptionZh.ToString()].OptionsColumn.AllowEdit = false;
+                rootgridViewPaymentTerms.Columns[nameof(PaymentTerms.IdPaymentTerms)].OptionsColumn.AllowEdit = false;
+                rootgridViewPaymentTerms.Columns[nameof(PaymentTerms.Description)].OptionsColumn.AllowEdit = false;
+                rootgridViewPaymentTerms.Columns[nameof(PaymentTerms.DescriptionZh)].OptionsColumn.AllowEdit = false;
 
                 //TODO: gestion de estilos del grid
-                rootgridViewPaymentTerms.Columns[ePaymentTermsColumns.IdPaymentTerms.ToString()].AppearanceCell.ForeColor = Color.Black;
+                rootgridViewPaymentTerms.Columns[nameof(PaymentTerms.IdPaymentTerms)].AppearanceCell.ForeColor = Color.Black;
             }
             catch (Exception ex)
             {
@@ -297,13 +297,13 @@ namespace HKSupply.Forms.Master
             try
             {
                 //Allow edit some columns
-                rootgridViewPaymentTerms.Columns[ePaymentTermsColumns.Description.ToString()].OptionsColumn.AllowEdit = true;
-                rootgridViewPaymentTerms.Columns[ePaymentTermsColumns.DescriptionZh.ToString()].OptionsColumn.AllowEdit = true;
+                rootgridViewPaymentTerms.Columns[nameof(PaymentTerms.Description)].OptionsColumn.AllowEdit = true;
+                rootgridViewPaymentTerms.Columns[nameof(PaymentTerms.DescriptionZh)].OptionsColumn.AllowEdit = true;
 
                 //no edit column
-                rootgridViewPaymentTerms.Columns[ePaymentTermsColumns.IdPaymentTerms.ToString()].OptionsColumn.AllowEdit = false;
+                rootgridViewPaymentTerms.Columns[nameof(PaymentTerms.IdPaymentTerms)].OptionsColumn.AllowEdit = false;
                 //TODO: gestion de estilos del grid
-                rootgridViewPaymentTerms.Columns[ePaymentTermsColumns.IdPaymentTerms.ToString()].AppearanceCell.ForeColor = Color.Gray;
+                rootgridViewPaymentTerms.Columns[nameof(PaymentTerms.IdPaymentTerms)].AppearanceCell.ForeColor = Color.Gray;
 
             }
             catch (Exception ex)
@@ -320,9 +320,9 @@ namespace HKSupply.Forms.Master
                 xgrdPaymentTerms.DataSource = null;
                 xgrdPaymentTerms.DataSource = _createdPaymentTerms;
                 //Allow edit all columns
-                rootgridViewPaymentTerms.Columns[ePaymentTermsColumns.IdPaymentTerms.ToString()].OptionsColumn.AllowEdit = true;
-                rootgridViewPaymentTerms.Columns[ePaymentTermsColumns.Description.ToString()].OptionsColumn.AllowEdit = true;
-                rootgridViewPaymentTerms.Columns[ePaymentTermsColumns.DescriptionZh.ToString()].OptionsColumn.AllowEdit = true;
+                rootgridViewPaymentTerms.Columns[nameof(PaymentTerms.IdPaymentTerms)].OptionsColumn.AllowEdit = true;
+                rootgridViewPaymentTerms.Columns[nameof(PaymentTerms.Description)].OptionsColumn.AllowEdit = true;
+                rootgridViewPaymentTerms.Columns[nameof(PaymentTerms.DescriptionZh)].OptionsColumn.AllowEdit = true;
             }
             catch (Exception ex)
             {

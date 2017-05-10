@@ -20,11 +20,11 @@ namespace HKSupply.Forms.Master
     public partial class FamiliesHkManagement : RibbonFormBase
     {
         #region Enums
-        private enum eFamiliesHkColumns
+        /*private enum eFamiliesHkColumns
         {
             IdFamilyHk,
             Description
-        }
+        }*/
         #endregion
 
         #region Private Members
@@ -186,8 +186,8 @@ namespace HKSupply.Forms.Master
                 {
                     FamilyHK tmpFamilyHK = new FamilyHK();
 
-                    object idFamilyHk = view.GetRowCellValue(view.FocusedRowHandle, eFamiliesHkColumns.IdFamilyHk.ToString());
-                    object description = view.GetRowCellValue(view.FocusedRowHandle, eFamiliesHkColumns.Description.ToString());
+                    object idFamilyHk = view.GetRowCellValue(view.FocusedRowHandle, nameof(FamilyHK.IdFamilyHk));
+                    object description = view.GetRowCellValue(view.FocusedRowHandle, nameof(FamilyHK.Description));
 
 
                     tmpFamilyHK.IdFamilyHk = (idFamilyHk ?? string.Empty).ToString();
@@ -207,8 +207,8 @@ namespace HKSupply.Forms.Master
             try
             {
                 GridView view = sender as GridView;
-                if (view.FocusedColumn.FieldName == eFamiliesHkColumns.Description.ToString() ||
-                    view.FocusedColumn.FieldName == eFamiliesHkColumns.IdFamilyHk.ToString())
+                if (view.FocusedColumn.FieldName == nameof(FamilyHK.Description) ||
+                    view.FocusedColumn.FieldName == nameof(FamilyHK.IdFamilyHk))
                 {
                     if (string.IsNullOrEmpty(e.Value as string))
                     {
@@ -245,8 +245,8 @@ namespace HKSupply.Forms.Master
                 rootgridViewFamiliesHk.HorzScrollVisibility = ScrollVisibility.Auto;
 
                 //Columns definition
-                GridColumn colIdIdFamilyHk = new GridColumn() { Caption = "Id Family HK", Visible = true, FieldName = eFamiliesHkColumns.IdFamilyHk.ToString(), Width = 70 };
-                GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = eFamiliesHkColumns.Description.ToString(), Width = 500 };
+                GridColumn colIdIdFamilyHk = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("IdFamilyHk"), Visible = true, FieldName = nameof(FamilyHK.IdFamilyHk), Width = 90 };
+                GridColumn colDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Description"), Visible = true, FieldName = nameof(FamilyHK.Description), Width = 500 };
 
                 //add columns to grid root view
                 rootgridViewFamiliesHk.Columns.Add(colIdIdFamilyHk);
@@ -272,11 +272,11 @@ namespace HKSupply.Forms.Master
 
                 xgrdFamiliesHk.DataSource = familiesHk;
 
-                rootgridViewFamiliesHk.Columns[eFamiliesHkColumns.IdFamilyHk.ToString()].OptionsColumn.AllowEdit = false;
-                rootgridViewFamiliesHk.Columns[eFamiliesHkColumns.Description.ToString()].OptionsColumn.AllowEdit = false;
+                rootgridViewFamiliesHk.Columns[nameof(FamilyHK.IdFamilyHk)].OptionsColumn.AllowEdit = false;
+                rootgridViewFamiliesHk.Columns[nameof(FamilyHK.Description)].OptionsColumn.AllowEdit = false;
 
                 //TODO: gestion de estilos del grid
-                rootgridViewFamiliesHk.Columns[eFamiliesHkColumns.IdFamilyHk.ToString()].AppearanceCell.ForeColor = Color.Black;
+                rootgridViewFamiliesHk.Columns[nameof(FamilyHK.IdFamilyHk)].AppearanceCell.ForeColor = Color.Black;
             }
             catch (Exception ex)
             {
@@ -289,11 +289,11 @@ namespace HKSupply.Forms.Master
             try
             {
                 //Allow edit some columns
-                rootgridViewFamiliesHk.Columns[eFamiliesHkColumns.Description.ToString()].OptionsColumn.AllowEdit = true;
+                rootgridViewFamiliesHk.Columns[nameof(FamilyHK.Description)].OptionsColumn.AllowEdit = true;
                 //no edit column
-                rootgridViewFamiliesHk.Columns[eFamiliesHkColumns.IdFamilyHk.ToString()].OptionsColumn.AllowEdit = false;
+                rootgridViewFamiliesHk.Columns[nameof(FamilyHK.IdFamilyHk)].OptionsColumn.AllowEdit = false;
                 //TODO: gestion de estilos del grid
-                rootgridViewFamiliesHk.Columns[eFamiliesHkColumns.IdFamilyHk.ToString()].AppearanceCell.ForeColor = Color.Gray;
+                rootgridViewFamiliesHk.Columns[nameof(FamilyHK.IdFamilyHk)].AppearanceCell.ForeColor = Color.Gray;
 
             }
             catch (Exception ex)
@@ -310,8 +310,8 @@ namespace HKSupply.Forms.Master
                 xgrdFamiliesHk.DataSource = null;
                 xgrdFamiliesHk.DataSource = _createdFamiliesHk;
                 //Allow edit all columns
-                rootgridViewFamiliesHk.Columns[eFamiliesHkColumns.IdFamilyHk.ToString()].OptionsColumn.AllowEdit = true;
-                rootgridViewFamiliesHk.Columns[eFamiliesHkColumns.Description.ToString()].OptionsColumn.AllowEdit = true;
+                rootgridViewFamiliesHk.Columns[nameof(FamilyHK.IdFamilyHk)].OptionsColumn.AllowEdit = true;
+                rootgridViewFamiliesHk.Columns[nameof(FamilyHK.Description)].OptionsColumn.AllowEdit = true;
             }
             catch (Exception ex)
             {

@@ -61,11 +61,155 @@ namespace HKSupply.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Active.
+        /// </summary>
+        internal static string Active {
+            get {
+                return ResourceManager.GetString("Active", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Age.
+        /// </summary>
+        internal static string Age {
+            get {
+                return ResourceManager.GetString("Age", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Billing Address.
+        /// </summary>
+        internal static string BillingAddress {
+            get {
+                return ResourceManager.GetString("BillingAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Caliber.
+        /// </summary>
+        internal static string Caliber {
+            get {
+                return ResourceManager.GetString("Caliber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Category.
+        /// </summary>
+        internal static string Category {
+            get {
+                return ResourceManager.GetString("Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a This is not a valid value for this column.
         /// </summary>
         internal static string CellDataError {
             get {
                 return ResourceManager.GetString("CellDataError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Color 1.
+        /// </summary>
+        internal static string Color1 {
+            get {
+                return ResourceManager.GetString("Color1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Color 2.
+        /// </summary>
+        internal static string Color2 {
+            get {
+                return ResourceManager.GetString("Color2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Comments.
+        /// </summary>
+        internal static string Comments {
+            get {
+                return ResourceManager.GetString("Comments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Contact Name.
+        /// </summary>
+        internal static string ContactName {
+            get {
+                return ResourceManager.GetString("ContactName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Contact Phone.
+        /// </summary>
+        internal static string ContactPhone {
+            get {
+                return ResourceManager.GetString("ContactPhone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Create Date.
+        /// </summary>
+        internal static string CreateDate {
+            get {
+                return ResourceManager.GetString("CreateDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Currency.
+        /// </summary>
+        internal static string Currency {
+            get {
+                return ResourceManager.GetString("Currency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Currency 1.
+        /// </summary>
+        internal static string Currency1 {
+            get {
+                return ResourceManager.GetString("Currency1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Currency 2.
+        /// </summary>
+        internal static string Currency2 {
+            get {
+                return ResourceManager.GetString("Currency2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Customer Name.
+        /// </summary>
+        internal static string CustomerName {
+            get {
+                return ResourceManager.GetString("CustomerName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Date.
+        /// </summary>
+        internal static string Date {
+            get {
+                return ResourceManager.GetString("Date", resourceCulture);
             }
         }
         
@@ -79,11 +223,83 @@ namespace HKSupply.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Default Supplier.
+        /// </summary>
+        internal static string DefaultSupplier {
+            get {
+                return ResourceManager.GetString("DefaultSupplier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Description.
+        /// </summary>
+        internal static string Description {
+            get {
+                return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Description (Chinese).
+        /// </summary>
+        internal static string DescriptionChinese {
+            get {
+                return ResourceManager.GetString("DescriptionChinese", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Doc Type.
+        /// </summary>
+        internal static string DocType {
+            get {
+                return ResourceManager.GetString("DocType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Exchange Rate Used.
+        /// </summary>
+        internal static string ExchangeRateUsed {
+            get {
+                return ResourceManager.GetString("ExchangeRateUsed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Family HK.
+        /// </summary>
+        internal static string FamilyHk {
+            get {
+                return ResourceManager.GetString("FamilyHk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a This field is required.
         /// </summary>
         internal static string FieldRequired {
             get {
                 return ResourceManager.GetString("FieldRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a File doesn&apos;t exist.
+        /// </summary>
+        internal static string FileDoesntExist {
+            get {
+                return ResourceManager.GetString("FileDoesntExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a File Name.
+        /// </summary>
+        internal static string FileName {
+            get {
+                return ResourceManager.GetString("FileName", resourceCulture);
             }
         }
         
@@ -111,6 +327,123 @@ namespace HKSupply.Resources {
         internal static string FunctionalityRoleAlreadyExist {
             get {
                 return ResourceManager.GetString("FunctionalityRoleAlreadyExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Hw Type L1.
+        /// </summary>
+        internal static string HwTypeL1 {
+            get {
+                return ResourceManager.GetString("HwTypeL1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Hw Type L2.
+        /// </summary>
+        internal static string HwTypeL2 {
+            get {
+                return ResourceManager.GetString("HwTypeL2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Hw Type L3.
+        /// </summary>
+        internal static string HwTypeL3 {
+            get {
+                return ResourceManager.GetString("HwTypeL3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Id.
+        /// </summary>
+        internal static string Id {
+            get {
+                return ResourceManager.GetString("Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Id Customer.
+        /// </summary>
+        internal static string IdCustomer {
+            get {
+                return ResourceManager.GetString("IdCustomer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Id Family HK.
+        /// </summary>
+        internal static string IdFamilyHk {
+            get {
+                return ResourceManager.GetString("IdFamilyHk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Id Incoterm.
+        /// </summary>
+        internal static string IdIncoterm {
+            get {
+                return ResourceManager.GetString("IdIncoterm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Id Model.
+        /// </summary>
+        internal static string IdModel {
+            get {
+                return ResourceManager.GetString("IdModel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Id Payment Terms.
+        /// </summary>
+        internal static string IdPaymentTerms {
+            get {
+                return ResourceManager.GetString("IdPaymentTerms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Id Prototype.
+        /// </summary>
+        internal static string IdPrototype {
+            get {
+                return ResourceManager.GetString("IdPrototype", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Id Supplier.
+        /// </summary>
+        internal static string IdSupplier {
+            get {
+                return ResourceManager.GetString("IdSupplier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Incoterm.
+        /// </summary>
+        internal static string Incoterm {
+            get {
+                return ResourceManager.GetString("Incoterm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Incr Lot.
+        /// </summary>
+        internal static string IncrLot {
+            get {
+                return ResourceManager.GetString("IncrLot", resourceCulture);
             }
         }
         
@@ -151,6 +484,69 @@ namespace HKSupply.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Item BCN.
+        /// </summary>
+        internal static string ItemBCN {
+            get {
+                return ResourceManager.GetString("ItemBCN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Item Description.
+        /// </summary>
+        internal static string ItemDescription {
+            get {
+                return ResourceManager.GetString("ItemDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Item HK.
+        /// </summary>
+        internal static string ItemHK {
+            get {
+                return ResourceManager.GetString("ItemHK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Item Subver.
+        /// </summary>
+        internal static string ItemSubver {
+            get {
+                return ResourceManager.GetString("ItemSubver", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Item Ver.
+        /// </summary>
+        internal static string ItemVer {
+            get {
+                return ResourceManager.GetString("ItemVer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Launch Date.
+        /// </summary>
+        internal static string LaunchDate {
+            get {
+                return ResourceManager.GetString("LaunchDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Lead Time.
+        /// </summary>
+        internal static string LeadTime {
+            get {
+                return ResourceManager.GetString("LeadTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Login.
         /// </summary>
         internal static string Login {
@@ -169,6 +565,87 @@ namespace HKSupply.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Material L1.
+        /// </summary>
+        internal static string MaterialL1 {
+            get {
+                return ResourceManager.GetString("MaterialL1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Material L2.
+        /// </summary>
+        internal static string MaterialL2 {
+            get {
+                return ResourceManager.GetString("MaterialL2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Material L3.
+        /// </summary>
+        internal static string MaterialL3 {
+            get {
+                return ResourceManager.GetString("MaterialL3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Mat Type L1.
+        /// </summary>
+        internal static string MatTypeL1 {
+            get {
+                return ResourceManager.GetString("MatTypeL1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Mat Type L2.
+        /// </summary>
+        internal static string MatTypeL2 {
+            get {
+                return ResourceManager.GetString("MatTypeL2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Mat Type L3.
+        /// </summary>
+        internal static string MatTypeL3 {
+            get {
+                return ResourceManager.GetString("MatTypeL3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Min Lot.
+        /// </summary>
+        internal static string MinLot {
+            get {
+                return ResourceManager.GetString("MinLot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Model.
+        /// </summary>
+        internal static string Model {
+            get {
+                return ResourceManager.GetString("Model", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Name.
+        /// </summary>
+        internal static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a New Password.
         /// </summary>
         internal static string NewPassword {
@@ -183,6 +660,33 @@ namespace HKSupply.Resources {
         internal static string NewPasswordMandatory {
             get {
                 return ResourceManager.GetString("NewPasswordMandatory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a No customer selected.
+        /// </summary>
+        internal static string NoCustomerSelected {
+            get {
+                return ResourceManager.GetString("NoCustomerSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a No data selected.
+        /// </summary>
+        internal static string NoDataSelected {
+            get {
+                return ResourceManager.GetString("NoDataSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a No file selected.
+        /// </summary>
+        internal static string NoFileSelected {
+            get {
+                return ResourceManager.GetString("NoFileSelected", resourceCulture);
             }
         }
         
@@ -304,6 +808,87 @@ namespace HKSupply.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Payment Terms.
+        /// </summary>
+        internal static string PaymentTerms {
+            get {
+                return ResourceManager.GetString("PaymentTerms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Photo.
+        /// </summary>
+        internal static string Photo {
+            get {
+                return ResourceManager.GetString("Photo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Price.
+        /// </summary>
+        internal static string Price {
+            get {
+                return ResourceManager.GetString("Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Price Base Currency.
+        /// </summary>
+        internal static string PriceBaseCurrency {
+            get {
+                return ResourceManager.GetString("PriceBaseCurrency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Prototype Description.
+        /// </summary>
+        internal static string PrototypeDescription {
+            get {
+                return ResourceManager.GetString("PrototypeDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Prototype Name.
+        /// </summary>
+        internal static string PrototypeName {
+            get {
+                return ResourceManager.GetString("PrototypeName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Prototype Status.
+        /// </summary>
+        internal static string PrototypeStatus {
+            get {
+                return ResourceManager.GetString("PrototypeStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ratio.
+        /// </summary>
+        internal static string Ratio {
+            get {
+                return ResourceManager.GetString("Ratio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Removal Date.
+        /// </summary>
+        internal static string RemovalDate {
+            get {
+                return ResourceManager.GetString("RemovalDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Repeat Password.
         /// </summary>
         internal static string RepeatPassword {
@@ -376,6 +961,33 @@ namespace HKSupply.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Segment.
+        /// </summary>
+        internal static string Segment {
+            get {
+                return ResourceManager.GetString("Segment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Select doc type.
+        /// </summary>
+        internal static string SelectDocType {
+            get {
+                return ResourceManager.GetString("SelectDocType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Shipping Address.
+        /// </summary>
+        internal static string ShippingAddress {
+            get {
+                return ResourceManager.GetString("ShippingAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Sign in.
         /// </summary>
         internal static string SignIn {
@@ -385,11 +997,83 @@ namespace HKSupply.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Status.
+        /// </summary>
+        internal static string Status {
+            get {
+                return ResourceManager.GetString("Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Status Cial.
+        /// </summary>
+        internal static string StatusCial {
+            get {
+                return ResourceManager.GetString("StatusCial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Status Prod.
+        /// </summary>
+        internal static string StatusProd {
+            get {
+                return ResourceManager.GetString("StatusProd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Store Already Exist.
         /// </summary>
         internal static string StoreAlreadyExist {
             get {
                 return ResourceManager.GetString("StoreAlreadyExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Supplier.
+        /// </summary>
+        internal static string Supplier {
+            get {
+                return ResourceManager.GetString("Supplier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Supplier Name.
+        /// </summary>
+        internal static string SupplierName {
+            get {
+                return ResourceManager.GetString("SupplierName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a VAT Number.
+        /// </summary>
+        internal static string VATNumber {
+            get {
+                return ResourceManager.GetString("VATNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a View.
+        /// </summary>
+        internal static string View {
+            get {
+                return ResourceManager.GetString("View", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a View Item price list.
+        /// </summary>
+        internal static string ViewItemPriceList {
+            get {
+                return ResourceManager.GetString("ViewItemPriceList", resourceCulture);
             }
         }
     }

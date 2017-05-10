@@ -104,14 +104,14 @@ namespace HKSupply.Forms.Master
                 rootGridViewProtos.OptionsBehavior.Editable = false;
 
                 //Columns definition
-                GridColumn colIdPrototype = new GridColumn() { Caption = "Id", Visible = true, FieldName = nameof(Prototype.IdPrototype), Width = 70 };
-                GridColumn colPrototypeName = new GridColumn() { Caption = "Name", Visible = true, FieldName = nameof(Prototype.PrototypeName), Width = 150 };
-                GridColumn colIdPrototypeDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = nameof(Prototype.PrototypeDescription), Width = 200 };
-                GridColumn colPrototypeStatus = new GridColumn() { Caption = "Status", Visible = true, FieldName = nameof(Prototype.PrototypeStatus), Width = 70 };
-                GridColumn colDefaultSupplier = new GridColumn() { Caption = "Default Supplier", Visible = true, FieldName = $"{nameof(Prototype.DefaultSupplier)}.{nameof(Supplier.ContactName)}", Width = 150 };
-                GridColumn colCaliber = new GridColumn() { Caption = "Caliber", Visible = true, FieldName = nameof(Prototype.Caliber), Width = 70 };
-                GridColumn colLaunchDate = new GridColumn() { Caption = "Launch Date", Visible = true, FieldName = nameof(Prototype.LaunchDate), Width = 90 };
-                GridColumn colCreateDate = new GridColumn() { Caption = "Create Date", Visible = true, FieldName = nameof(Prototype.CreateDate), Width = 120 };
+                GridColumn colIdPrototype = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Id"), Visible = true, FieldName = nameof(Prototype.IdPrototype), Width = 70 };
+                GridColumn colPrototypeName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Name"), Visible = true, FieldName = nameof(Prototype.PrototypeName), Width = 150 };
+                GridColumn colIdPrototypeDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Description"), Visible = true, FieldName = nameof(Prototype.PrototypeDescription), Width = 200 };
+                GridColumn colPrototypeStatus = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Status"), Visible = true, FieldName = nameof(Prototype.PrototypeStatus), Width = 70 };
+                GridColumn colDefaultSupplier = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("DefaultSupplier"), Visible = true, FieldName = $"{nameof(Prototype.DefaultSupplier)}.{nameof(Supplier.ContactName)}", Width = 150 };
+                GridColumn colCaliber = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Caliber"), Visible = true, FieldName = nameof(Prototype.Caliber), Width = 70 };
+                GridColumn colLaunchDate = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("LaunchDate"), Visible = true, FieldName = nameof(Prototype.LaunchDate), Width = 90 };
+                GridColumn colCreateDate = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("CreateDate"), Visible = true, FieldName = nameof(Prototype.CreateDate), Width = 120 };
 
                 //Display Format
                 colLaunchDate.DisplayFormat.FormatType = FormatType.DateTime;
