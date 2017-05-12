@@ -52,8 +52,8 @@ namespace HKSupply.Migrations
             AddPrimaryKey("dbo.SUPPLIERS_PRICE_LIST_HISTORY", new[] { "ID_VER", "ID_SUBVER", "TIMESTAMP", "ID_ITEM_BCN", "ID_SUPPLIER" });
             CreateIndex("dbo.CUSTOMERS_PRICE_LIST", "ID_ITEM_BCN");
             CreateIndex("dbo.SUPPLIERS_PRICE_LIST", "ID_ITEM_BCN");
-            AddForeignKey("dbo.CUSTOMERS_PRICE_LIST", "ID_ITEM_BCN", "dbo.ITEMS_BCN", "ID_ITEM_BCN", cascadeDelete: true);
-            AddForeignKey("dbo.SUPPLIERS_PRICE_LIST", "ID_ITEM_BCN", "dbo.ITEMS_BCN", "ID_ITEM_BCN", cascadeDelete: true);
+            AddForeignKey("dbo.CUSTOMERS_PRICE_LIST", "ID_ITEM_BCN", "dbo.ITEMS_BCN", "ID_ITEM_BCN", cascadeDelete: false);
+            AddForeignKey("dbo.SUPPLIERS_PRICE_LIST", "ID_ITEM_BCN", "dbo.ITEMS_BCN", "ID_ITEM_BCN", cascadeDelete: false);
         }
         
         public override void Down()
@@ -103,8 +103,8 @@ namespace HKSupply.Migrations
             AddPrimaryKey("dbo.CUSTOMERS_PRICE_LIST", new[] { "ID_ITEM_BCN", "ID_CUSTOMER" });
             CreateIndex("dbo.SUPPLIERS_PRICE_LIST", "ID_ITEM_BCN");
             CreateIndex("dbo.CUSTOMERS_PRICE_LIST", "ID_ITEM_BCN");
-            AddForeignKey("dbo.SUPPLIERS_PRICE_LIST", "ID_ITEM_BCN", "dbo.ITEMS_BCN", "ID_ITEM_BCN", cascadeDelete: true);
-            AddForeignKey("dbo.CUSTOMERS_PRICE_LIST", "ID_ITEM_BCN", "dbo.ITEMS_BCN", "ID_ITEM_BCN", cascadeDelete: true);
+            AddForeignKey("dbo.SUPPLIERS_PRICE_LIST", "ID_ITEM_BCN", "dbo.ITEMS_BCN", "ID_ITEM_BCN", cascadeDelete: false);
+            AddForeignKey("dbo.CUSTOMERS_PRICE_LIST", "ID_ITEM_BCN", "dbo.ITEMS_BCN", "ID_ITEM_BCN", cascadeDelete: false);
         }
     }
 }

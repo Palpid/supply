@@ -30,8 +30,8 @@ namespace HKSupply.Migrations
             CreateIndex("dbo.ITEMS", "ID_STATUS_PROD");
             CreateIndex("dbo.ITEMS_HISTORY", "ID_FAMILY_HK");
             CreateIndex("dbo.ITEMS_HISTORY", "ID_STATUS_PROD");
-            AddForeignKey("dbo.ITEMS", "ID_STATUS_PROD", "dbo.STATUS_HK", "ID_STATUS_PROD", cascadeDelete: true);
-            AddForeignKey("dbo.ITEMS_HISTORY", "ID_STATUS_PROD", "dbo.STATUS_HK", "ID_STATUS_PROD", cascadeDelete: true);
+            AddForeignKey("dbo.ITEMS", "ID_STATUS_PROD", "dbo.STATUS_HK", "ID_STATUS_PROD", cascadeDelete: false);
+            AddForeignKey("dbo.ITEMS_HISTORY", "ID_STATUS_PROD", "dbo.STATUS_HK", "ID_STATUS_PROD", cascadeDelete: false);
             DropTable("dbo.STATUS_PROD");
         }
         

@@ -33,8 +33,8 @@ namespace HKSupply.Migrations
             AddPrimaryKey("dbo.STATUS_CIAL", "ID_STATUS_CIAL");
             CreateIndex("dbo.ITEMS", "ID_STATUS_CIAL");
             CreateIndex("dbo.ITEMS_HISTORY", "ID_STATUS_CIAL");
-            AddForeignKey("dbo.ITEMS", "ID_STATUS_CIAL", "dbo.STATUS_CIAL", "ID_STATUS_CIAL", cascadeDelete: true);
-            AddForeignKey("dbo.ITEMS_HISTORY", "ID_STATUS_CIAL", "dbo.STATUS_CIAL", "ID_STATUS_CIAL", cascadeDelete: true);
+            AddForeignKey("dbo.ITEMS", "ID_STATUS_CIAL", "dbo.STATUS_CIAL", "ID_STATUS_CIAL", cascadeDelete: false);
+            AddForeignKey("dbo.ITEMS_HISTORY", "ID_STATUS_CIAL", "dbo.STATUS_CIAL", "ID_STATUS_CIAL", cascadeDelete: false);
             AddForeignKey("dbo.ITEMS", "ID_COLOR_1", "dbo.COLORS", "ID_COLOR");
             AddForeignKey("dbo.ITEMS", "ID_COLOR_2", "dbo.COLORS", "ID_COLOR");
             AddForeignKey("dbo.ITEMS_HISTORY", "ID_COLOR_1", "dbo.COLORS", "ID_COLOR");

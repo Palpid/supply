@@ -32,6 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemManagementEY));
             this.xtcGeneral = new DevExpress.XtraTab.XtraTabControl();
             this.xtpList = new DevExpress.XtraTab.XtraTabPage();
+            this.lueLayouts = new DevExpress.XtraEditors.LookUpEdit();
+            this.sbRestoreLayout = new DevExpress.XtraEditors.SimpleButton();
+            this.sbSaveLayout = new DevExpress.XtraEditors.SimpleButton();
             this.sbLoad = new DevExpress.XtraEditors.SimpleButton();
             this.xgrdItems = new DevExpress.XtraGrid.GridControl();
             this.rootGridViewItems = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -199,13 +202,11 @@
             this.xgrdLastDocs = new DevExpress.XtraGrid.GridControl();
             this.gridViewLastDocs = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.toolTipController1 = new DevExpress.Utils.ToolTipController(this.components);
-            this.sbSaveLayout = new DevExpress.XtraEditors.SimpleButton();
-            this.sbRestoreLayout = new DevExpress.XtraEditors.SimpleButton();
-            this.lueLayouts = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
             this.xtcGeneral.SuspendLayout();
             this.xtpList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lueLayouts.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xgrdItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rootGridViewItems)).BeginInit();
             this.xtpForm.SuspendLayout();
@@ -371,7 +372,6 @@
             this.gbLastDocs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xgrdLastDocs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLastDocs)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueLayouts.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -417,6 +417,34 @@
             this.xtpList.Size = new System.Drawing.Size(1332, 577);
             this.xtpList.Text = "List";
             // 
+            // lueLayouts
+            // 
+            this.lueLayouts.Location = new System.Drawing.Point(3, 8);
+            this.lueLayouts.MenuManager = this.ribbonControl;
+            this.lueLayouts.Name = "lueLayouts";
+            this.lueLayouts.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueLayouts.Size = new System.Drawing.Size(167, 20);
+            this.lueLayouts.TabIndex = 6;
+            // 
+            // sbRestoreLayout
+            // 
+            this.sbRestoreLayout.Location = new System.Drawing.Point(192, 8);
+            this.sbRestoreLayout.Name = "sbRestoreLayout";
+            this.sbRestoreLayout.Size = new System.Drawing.Size(100, 20);
+            this.sbRestoreLayout.TabIndex = 5;
+            this.sbRestoreLayout.Text = "Restore Layout";
+            this.sbRestoreLayout.Click += new System.EventHandler(this.sbRestoreLayout_Click);
+            // 
+            // sbSaveLayout
+            // 
+            this.sbSaveLayout.Location = new System.Drawing.Point(298, 8);
+            this.sbSaveLayout.Name = "sbSaveLayout";
+            this.sbSaveLayout.Size = new System.Drawing.Size(100, 20);
+            this.sbSaveLayout.TabIndex = 4;
+            this.sbSaveLayout.Text = "Save Layout";
+            this.sbSaveLayout.Click += new System.EventHandler(this.sbSaveLayout_Click);
+            // 
             // sbLoad
             // 
             this.sbLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -456,7 +484,7 @@
             this.xtpForm.Controls.Add(this.layoutControlForm);
             this.xtpForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtpForm.Name = "xtpForm";
-            this.xtpForm.Size = new System.Drawing.Size(1332, 574);
+            this.xtpForm.Size = new System.Drawing.Size(1332, 577);
             this.xtpForm.Text = "Form";
             // 
             // gcHistory
@@ -1998,7 +2026,7 @@
             this.xtpDocs.Controls.Add(this.gbDocsHistory);
             this.xtpDocs.Controls.Add(this.gbLastDocs);
             this.xtpDocs.Name = "xtpDocs";
-            this.xtpDocs.Size = new System.Drawing.Size(1332, 574);
+            this.xtpDocs.Size = new System.Drawing.Size(1332, 577);
             this.xtpDocs.Text = "Docs";
             // 
             // peItemImage
@@ -2196,34 +2224,6 @@
             // 
             this.toolTipController1.GetActiveObjectInfo += new DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventHandler(this.toolTipController1_GetActiveObjectInfo);
             // 
-            // sbSaveLayout
-            // 
-            this.sbSaveLayout.Location = new System.Drawing.Point(298, 8);
-            this.sbSaveLayout.Name = "sbSaveLayout";
-            this.sbSaveLayout.Size = new System.Drawing.Size(100, 20);
-            this.sbSaveLayout.TabIndex = 4;
-            this.sbSaveLayout.Text = "Save Layout";
-            this.sbSaveLayout.Click += new System.EventHandler(this.sbSaveLayout_Click);
-            // 
-            // sbRestoreLayout
-            // 
-            this.sbRestoreLayout.Location = new System.Drawing.Point(192, 8);
-            this.sbRestoreLayout.Name = "sbRestoreLayout";
-            this.sbRestoreLayout.Size = new System.Drawing.Size(100, 20);
-            this.sbRestoreLayout.TabIndex = 5;
-            this.sbRestoreLayout.Text = "Restore Layout";
-            this.sbRestoreLayout.Click += new System.EventHandler(this.sbRestoreLayout_Click);
-            // 
-            // lueLayouts
-            // 
-            this.lueLayouts.Location = new System.Drawing.Point(3, 8);
-            this.lueLayouts.MenuManager = this.ribbonControl;
-            this.lueLayouts.Name = "lueLayouts";
-            this.lueLayouts.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueLayouts.Size = new System.Drawing.Size(167, 20);
-            this.lueLayouts.TabIndex = 6;
-            // 
             // ItemManagementEY
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2241,6 +2241,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).EndInit();
             this.xtcGeneral.ResumeLayout(false);
             this.xtpList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lueLayouts.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xgrdItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rootGridViewItems)).EndInit();
             this.xtpForm.ResumeLayout(false);
@@ -2406,7 +2407,6 @@
             this.gbLastDocs.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xgrdLastDocs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLastDocs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueLayouts.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

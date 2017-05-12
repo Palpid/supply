@@ -126,6 +126,7 @@ namespace HKSupply.Forms.Master
                 SetNonCreatingFieldsVisibility(LayoutVisibility.Always);
                 sbLoad.Enabled = true;
                 rootGridViewSuppliersPriceList.DoubleClick += rootGridViewSuppliersPriceList_DoubleClick;
+                rootGridViewSuppliersPriceList.OptionsBehavior.Editable = false;
             }
             catch (Exception ex)
             {
@@ -534,7 +535,7 @@ namespace HKSupply.Forms.Master
                 rootGridViewSuppliersPriceList.HorzScrollVisibility = ScrollVisibility.Auto;
 
                 //hacer todo el grid no editable
-                //rootGridViewSuppliersPriceList.OptionsBehavior.Editable = false;
+                rootGridViewSuppliersPriceList.OptionsBehavior.Editable = false;
 
                 //Columns definition
                 GridColumn colIdVer = new GridColumn() { Caption = "Version", Visible = true, FieldName = nameof(SupplierPriceList.IdVer), Width = 50 };
@@ -591,23 +592,6 @@ namespace HKSupply.Forms.Master
                 colMinLot.ColumnEdit = ritxtInt;
                 colIncrLot.ColumnEdit = ritxtInt;
 
-                //no edit
-                colIdVer.OptionsColumn.AllowEdit = false;
-                colIdSubVer.OptionsColumn.AllowEdit = false;
-                colTimestamp.OptionsColumn.AllowEdit = false;
-                colIdItemBcn.OptionsColumn.AllowEdit = false;
-                colIdSupplier.OptionsColumn.AllowEdit = false;
-                colPrice.OptionsColumn.AllowEdit = false;
-                colComments.OptionsColumn.AllowEdit = false;
-                colCurrency.OptionsColumn.AllowEdit = false;
-                colPriceBaseCurrency.OptionsColumn.AllowEdit = false;
-                colExchangeRateUsed.OptionsColumn.AllowEdit = false;
-                colExchangeRateUsed.OptionsColumn.AllowEdit = false;
-                colMinLot.OptionsColumn.AllowEdit = false;
-                colIncrLot.OptionsColumn.AllowEdit = false;;
-                colLeadTime.OptionsColumn.AllowEdit = false;
-
-                
                 //add columns to grid root view
                 rootGridViewSuppliersPriceList.Columns.Add(colIdVer);
                 rootGridViewSuppliersPriceList.Columns.Add(colIdSubVer);
@@ -1007,6 +991,8 @@ namespace HKSupply.Forms.Master
                 else if (xtcGeneral.SelectedTabPage == xtpList)
                 {
                     xtpForm.PageVisible = false;
+
+                    rootGridViewSuppliersPriceList.OptionsBehavior.Editable = true;
                     
                     //no edit column
                     rootGridViewSuppliersPriceList.Columns[nameof(SupplierPriceList.IdVer)].OptionsColumn.AllowEdit = false;
@@ -1349,6 +1335,8 @@ namespace HKSupply.Forms.Master
                 MoveGridToSupplier(idItemBcn, idSupplier);
                 RestoreInitState();
                 sbLoad.Enabled = true;
+
+                rootGridViewSuppliersPriceList.OptionsBehavior.Editable = false;
             }
             catch (Exception ex)
             {

@@ -228,7 +228,7 @@ namespace HKSupply.Migrations
             AddPrimaryKey("dbo.MODELS", "ID_MODEL");
             AddPrimaryKey("dbo.ITEMS_HISTORY", new[] { "ID_VER", "ID_SUBVER", "TIMESTAMP", "ID_ITEM_GROUP", "ID_PROTOTYPE", "ID_ITEM_BCN" });
             CreateIndex("dbo.ITEMS_HISTORY", "ID_ITEM_GROUP");
-            AddForeignKey("dbo.ITEMS_HISTORY", "ID_ITEM_GROUP", "dbo.ITEM_GROUP", "ID_ITEM_GROUP", cascadeDelete: true);
+            AddForeignKey("dbo.ITEMS_HISTORY", "ID_ITEM_GROUP", "dbo.ITEM_GROUP", "ID_ITEM_GROUP", cascadeDelete: false);
         }
     }
 }

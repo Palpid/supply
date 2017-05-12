@@ -514,6 +514,10 @@
     <Compile Include="Migrations\201705100824273_items_deleteFKColors_01.Designer.cs">
       <DependentUpon>201705100824273_items_deleteFKColors_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705111418473_protoDocs_01.cs" />
+    <Compile Include="Migrations\201705111418473_protoDocs_01.Designer.cs">
+      <DependentUpon>201705111418473_protoDocs_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\CustomerPriceList.cs" />
@@ -548,6 +552,7 @@
     <Compile Include="Models\Model.cs" />
     <Compile Include="Models\PaymentTerms.cs" />
     <Compile Include="Models\Prototype.cs" />
+    <Compile Include="Models\PrototypeDoc.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\StatusCial.cs" />
     <Compile Include="Models\StatusHK.cs" />
@@ -584,6 +589,7 @@
     <Compile Include="Services\Implementations\EFMatType.cs" />
     <Compile Include="Services\Implementations\EFPaymentTerms.cs" />
     <Compile Include="Services\Implementations\EFPrototype.cs" />
+    <Compile Include="Services\Implementations\EFPrototypeDoc.cs" />
     <Compile Include="Services\Implementations\EFRole.cs" />
     <Compile Include="Services\Implementations\EFStatusCial.cs" />
     <Compile Include="Services\Implementations\EFStatusProd.cs" />
@@ -611,6 +617,7 @@
     <Compile Include="Services\Interfaces\IMatType.cs" />
     <Compile Include="Services\Interfaces\IPaymentTerms.cs" />
     <Compile Include="Services\Interfaces\IPrototype.cs" />
+    <Compile Include="Services\Interfaces\IPrototypeDoc.cs" />
     <Compile Include="Services\Interfaces\IRole.cs" />
     <Compile Include="Services\Interfaces\IStatusCial.cs" />
     <Compile Include="Services\Interfaces\IStatusProd.cs" />
@@ -871,6 +878,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705100824273_items_deleteFKColors_01.resx">
       <DependentUpon>201705100824273_items_deleteFKColors_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111418473_protoDocs_01.resx">
+      <DependentUpon>201705111418473_protoDocs_01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

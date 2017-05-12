@@ -43,12 +43,13 @@ namespace HKSupply.General
     /// Controlador para acceso a datos para Doc Type
     /// Controlador para acceso a datos para Item Doc
     /// Controlador para acceso a datos para Prototypes
+    /// Controlador para acceso a datos para Prototypes Docs
     /// </remarks>
     public sealed class GlobalSetting
     {
         #region Private Members
-        //static string _dbEnvironment = Constants.SQL_EXPRESS_CONN; //SQL Express local
-        static string _dbEnvironment = Constants.SQL_DEV_SERVER_CONN; //SQL Server (Desarrollo)
+        static string _dbEnvironment = Constants.SQL_EXPRESS_CONN; //SQL Express local
+        //static string _dbEnvironment = Constants.SQL_DEV_SERVER_CONN; //SQL Server (Desarrollo)
         //static string _dbEnvironment = Constants.SQL_PROD_SERVER_CONN; //SQL Server (Producción)
 
         static EFRole _roleEF = new EFRole();
@@ -77,7 +78,8 @@ namespace HKSupply.General
         static EFFamilyHK _familyHKEF = new EFFamilyHK();
         static EFDocType _docTypeEF = new EFDocType();
         static EFItemDoc _itemDocEF = new EFItemDoc();
-        static EFPrototype _prototypeEf = new EFPrototype();
+        static EFPrototype _prototypeEF = new EFPrototype();
+        static EFPrototypeDoc _prototypeDocEF = new EFPrototypeDoc();
 
         static User _loggedUser;
         static IEnumerable<FunctionalityRole> _functionalitiesRoles;
@@ -384,10 +386,21 @@ namespace HKSupply.General
         {
             get
             {
-                if (_prototypeEf == null)
+                if (_prototypeEF == null)
                     return new EFPrototype();
                 else
-                    return _prototypeEf;
+                    return _prototypeEF;
+            }
+        }
+
+        public static IPrototypeDoc PrototypeDocService
+        {
+            get
+            {
+                if (_prototypeDocEF == null)
+                    return new EFPrototypeDoc();
+                else
+                    return _prototypeDocEF;
             }
         }
 

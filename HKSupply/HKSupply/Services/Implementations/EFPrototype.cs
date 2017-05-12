@@ -60,5 +60,70 @@ namespace HKSupply.Services.Implementations
                 throw ex;
             }
         }
+
+        public bool AddPrototypeDoc(PrototypeDoc doc)
+        {
+            try
+            {
+                if (doc == null)
+                    throw new ArgumentNullException(nameof(doc));
+
+                using (var db = new HKSupplyContext())
+                {
+                    using (var dbTrans = db.Database.BeginTransaction())
+                    {
+                        try
+                        {
+                           
+                            doc.CreateDate = DateTime.Now;
+                            db.PrototypesDocs.Add(doc);
+
+                            db.SaveChanges();
+                            dbTrans.Commit();
+                            return true;
+                        }
+                        catch (DbEntityValidationException e)
+                        {
+                            dbTrans.Rollback();
+                            _log.Error(e.Message, e);
+                            throw e;
+                        }
+                        catch (SqlException sqlex)
+                        {
+                            dbTrans.Rollback();
+
+                            for (int i = 0; i < sqlex.Errors.Count; i++)
+                            {
+                                _log.Error("Index #" + i + "\n" +
+                                    "Message: " + sqlex.Errors[i].Message + "\n" +
+                                    "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                                    "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                                    "Source: " + sqlex.Errors[i].Source + "\n" +
+                                    "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                                switch (sqlex.Errors[i].Number)
+                                {
+                                    case -1: //connection broken
+                                    case -2: //timeout
+                                        throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                                }
+                            }
+                            throw sqlex;
+                        }
+                        catch (Exception ex)
+                        {
+                            dbTrans.Rollback();
+                            _log.Error(ex.Message, ex);
+                            throw ex;
+                        }
+                    }
+                }
+            }
+            catch (ArgumentNullException anex)
+            {
+                _log.Error(anex.Message, anex);
+                throw anex;
+            }
+        }
     }
 }

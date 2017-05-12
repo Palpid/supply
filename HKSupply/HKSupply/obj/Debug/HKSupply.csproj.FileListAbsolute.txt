@@ -191,3 +191,4 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.csproj.GenerateResource.Cache
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe.licenses
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.protoDocs_01.resources

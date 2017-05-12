@@ -5,20 +5,13 @@ using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraGrid.Views.Grid.ViewInfo;
-using DevExpress.XtraLayout;
 using DevExpress.XtraLayout.Utils;
 using HKSupply.General;
 using HKSupply.Helpers;
 using HKSupply.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 
@@ -129,6 +122,7 @@ namespace HKSupply.Forms.Master
                 LoadCustomersPriceList();
                 SetNonCreatingFieldsVisibility(LayoutVisibility.Always);
                 rootGridViewCustomersPriceList.DoubleClick += rootGridViewCustomersPriceList_DoubleClick;
+                rootGridViewCustomersPriceList.OptionsBehavior.Editable = false;
             }
             catch (Exception ex)
             {
@@ -511,7 +505,7 @@ namespace HKSupply.Forms.Master
                 rootGridViewCustomersPriceList.HorzScrollVisibility = ScrollVisibility.Auto;
 
                 //hacer todo el grid no editable
-                //rootGridViewCustomersPriceList.OptionsBehavior.Editable = false;
+                rootGridViewCustomersPriceList.OptionsBehavior.Editable = false;
 
                 //Columns definition
                 GridColumn colIdVer = new GridColumn() { Caption = "Version", Visible = true, FieldName = nameof(CustomerPriceList.IdVer), Width = 50 };
@@ -566,22 +560,6 @@ namespace HKSupply.Forms.Master
 
                 colMinLot.ColumnEdit = ritxtInt;
                 colIncrLot.ColumnEdit = ritxtInt;
-
-                //no edit
-                colIdVer.OptionsColumn.AllowEdit = false;
-                colIdSubVer.OptionsColumn.AllowEdit = false;
-                colTimestamp.OptionsColumn.AllowEdit = false;
-                colIdItemBcn.OptionsColumn.AllowEdit = false;
-                colIdCustomer.OptionsColumn.AllowEdit = false;
-                colPrice.OptionsColumn.AllowEdit = false;
-                colComments.OptionsColumn.AllowEdit = false;
-                colCurrency.OptionsColumn.AllowEdit = false;
-                colPriceBaseCurrency.OptionsColumn.AllowEdit = false;
-                colExchangeRateUsed.OptionsColumn.AllowEdit = false;
-                colExchangeRateUsed.OptionsColumn.AllowEdit = false;
-                colMinLot.OptionsColumn.AllowEdit = false;
-                colIncrLot.OptionsColumn.AllowEdit = false; ;
-                colLeadTime.OptionsColumn.AllowEdit = false;
 
                 //add columns to grid root view
                 rootGridViewCustomersPriceList.Columns.Add(colIdVer);
@@ -920,6 +898,8 @@ namespace HKSupply.Forms.Master
                 {
                     xtpForm.PageVisible = false;
 
+                    rootGridViewCustomersPriceList.OptionsBehavior.Editable = true;
+
                     //no edit column
                     rootGridViewCustomersPriceList.Columns[nameof(CustomerPriceList.IdVer)].OptionsColumn.AllowEdit = false;
                     rootGridViewCustomersPriceList.Columns[nameof(CustomerPriceList.IdSubVer)].OptionsColumn.AllowEdit = false;
@@ -1253,6 +1233,7 @@ namespace HKSupply.Forms.Master
                 sbLoad.Enabled = true;
                 LoadCustomersPriceList();
                 MoveGridToSupplier(idItemBcn, idCustomer);
+                rootGridViewCustomersPriceList.OptionsBehavior.Editable = false;
                 RestoreInitState();
             }
             catch (Exception ex)

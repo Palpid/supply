@@ -413,9 +413,9 @@ namespace HKSupply.Forms.Master
             {
                 string img = (e.Row as ItemHw).PhotoUrl;
 
-                if (System.IO.File.Exists(Constants.DOCS_PATH + img))
+                if (System.IO.File.Exists(Constants.ITEMS_DOCS_PATH + img))
                 {
-                    e.Value = Image.FromFile(Constants.DOCS_PATH + img);
+                    e.Value = Image.FromFile(Constants.ITEMS_DOCS_PATH + img);
                 }
             }
             catch (Exception ex)
@@ -525,7 +525,7 @@ namespace HKSupply.Forms.Master
 
                 if (itemDoc != null)
                 {
-                    DocHelper.OpenDoc(Constants.DOCS_PATH + itemDoc.FilePath);
+                    DocHelper.OpenDoc(Constants.ITEMS_DOCS_PATH + itemDoc.FilePath);
                 }
             }
             catch (Exception ex)
@@ -538,11 +538,11 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                ItemDoc itemDoc = gridViewLastDocs.GetRow(gridViewDocsHistory.FocusedRowHandle) as ItemDoc;
+                ItemDoc itemDoc = gridViewLastDocs.GetRow(gridViewLastDocs.FocusedRowHandle) as ItemDoc;
 
                 if (itemDoc != null)
                 {
-                    DocHelper.OpenDoc(Constants.DOCS_PATH + itemDoc.FilePath);
+                    DocHelper.OpenDoc(Constants.ITEMS_DOCS_PATH + itemDoc.FilePath);
                 }
             }
             catch (Exception ex)
@@ -629,9 +629,9 @@ namespace HKSupply.Forms.Master
                     if (string.IsNullOrEmpty(img)) return;
 
                     Image im = null;
-                    if (System.IO.File.Exists(Constants.DOCS_PATH + img))
+                    if (System.IO.File.Exists(Constants.ITEMS_DOCS_PATH + img))
                     {
-                        im = Image.FromFile(Constants.DOCS_PATH + img);
+                        im = Image.FromFile(Constants.ITEMS_DOCS_PATH + img);
                         ToolTipItem item1 = new ToolTipItem();
                         item1.Image = im;
                         sTooltip1.Items.Add(item1);
@@ -1323,9 +1323,9 @@ namespace HKSupply.Forms.Master
 
                 //Item Image
 
-                if (System.IO.File.Exists(Constants.DOCS_PATH + _itemUpdate.PhotoUrl))
+                if (System.IO.File.Exists(Constants.ITEMS_DOCS_PATH + _itemUpdate.PhotoUrl))
                 {
-                    peItemImage.Image = Image.FromFile(Constants.DOCS_PATH + _itemUpdate.PhotoUrl);
+                    peItemImage.Image = Image.FromFile(Constants.ITEMS_DOCS_PATH + _itemUpdate.PhotoUrl);
                 }
             }
             catch (Exception ex)
@@ -1647,7 +1647,7 @@ namespace HKSupply.Forms.Master
                 string extension = System.IO.Path.GetExtension(txtPathNewDoc.Text);
 
                 //Creamos los directorios si no existen
-                new System.IO.FileInfo(Constants.DOCS_PATH + _itemUpdate.IdItemBcn + "\\" + lueDocType.EditValue.ToString() + "\\").Directory.Create();
+                new System.IO.FileInfo(Constants.ITEMS_DOCS_PATH + _itemUpdate.IdItemBcn + "\\" + lueDocType.EditValue.ToString() + "\\").Directory.Create();
 
 
                 ItemDoc itemDoc = new ItemDoc();
@@ -1658,7 +1658,7 @@ namespace HKSupply.Forms.Master
                 itemDoc.FilePath = _itemUpdate.IdItemBcn + "\\" + lueDocType.EditValue.ToString() + "\\" + itemDoc.FileName;
 
                 //move to file server
-                System.IO.File.Copy(txtPathNewDoc.Text, Constants.DOCS_PATH + itemDoc.FilePath, overwrite: true);
+                System.IO.File.Copy(txtPathNewDoc.Text, Constants.ITEMS_DOCS_PATH + itemDoc.FilePath, overwrite: true);
 
                 //update database
                 return GlobalSetting.ItemHwService.UpdateItemWithDoc(_itemUpdate, itemDoc, newVersion);
@@ -1693,7 +1693,7 @@ namespace HKSupply.Forms.Master
                     Bitmap itemImage = (Bitmap)peItemImage.EditValue;
                     
                     //Create directory if is necessary
-                    string folder = Constants.DOCS_PATH + _itemUpdate.IdItemBcn + "\\" + Constants.ITEM_PHOTO_FOLDER;
+                    string folder = Constants.ITEMS_DOCS_PATH + _itemUpdate.IdItemBcn + "\\" + Constants.ITEM_PHOTO_FOLDER;
                     new System.IO.FileInfo(folder).Directory.Create();
                     //Save to server
                     string imageFullPath = folder + "itemImg_" + (_itemUpdate.IdVer.ToString()) + "." + ((_itemUpdate.IdSubVer + 1).ToString()) + ".png";

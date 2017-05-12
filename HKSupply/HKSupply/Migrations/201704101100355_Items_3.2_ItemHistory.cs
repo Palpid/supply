@@ -56,7 +56,7 @@ namespace HKSupply.Migrations
             AddForeignKey("dbo.ITEMS_HISTORY", "ID_COLOR_1", "dbo.COLORS", "ID");
             AddForeignKey("dbo.ITEMS_HISTORY", "ID_COLOR_2", "dbo.COLORS", "ID");
             AddForeignKey("dbo.ITEMS_HISTORY", "ID_FAMILY_HK", "dbo.FAMILY_HK", "ID");
-            AddForeignKey("dbo.ITEMS_HISTORY", "ID_ITEM_GROUP", "dbo.ITEM_GROUP", "ID", cascadeDelete: true);
+            AddForeignKey("dbo.ITEMS_HISTORY", "ID_ITEM_GROUP", "dbo.ITEM_GROUP", "ID", cascadeDelete: false);
             AddForeignKey("dbo.ITEMS_HISTORY", "ID_MODEL", "dbo.MODELS", "ID");
             AddForeignKey("dbo.ITEMS_HISTORY", "ID_STATUS_CIAL", "dbo.STATUS_CIAL", "ID");
             AddForeignKey("dbo.ITEMS_HISTORY", "ID_STATUS_PROD", "dbo.STATUS_PROD", "ID");

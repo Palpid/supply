@@ -69,6 +69,8 @@ namespace HKSupply.DB
         public DbSet<CustomerPriceList> CustomersPriceList { get; set; }
         public DbSet<CustomerPriceListHistory> CustomersPriceListHistory { get; set; }
 
+        public DbSet<PrototypeDoc> PrototypesDocs { get; set; }
+
         //public HKSupplyContext()
         //    : base("name=SqlExpressConn")
         //{

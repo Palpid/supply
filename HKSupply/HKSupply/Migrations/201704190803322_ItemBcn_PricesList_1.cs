@@ -36,8 +36,8 @@ namespace HKSupply.Migrations
                     })
                 .PrimaryKey(t => new { t.ID_ITEM_BCN, t.ID_CUSTOMER })
                 .ForeignKey("dbo.CURRENCIES", t => t.ID_CURRENCY)
-                .ForeignKey("dbo.CUSTOMERS", t => t.ID_CUSTOMER, cascadeDelete: true)
-                .ForeignKey("dbo.ITEMS_BCN", t => t.ID_ITEM_BCN, cascadeDelete: true)
+                .ForeignKey("dbo.CUSTOMERS", t => t.ID_CUSTOMER, cascadeDelete: false)
+                .ForeignKey("dbo.ITEMS_BCN", t => t.ID_ITEM_BCN, cascadeDelete: false)
                 .Index(t => t.ID_ITEM_BCN)
                 .Index(t => t.ID_CUSTOMER)
                 .Index(t => t.ID_CURRENCY);
@@ -82,8 +82,8 @@ namespace HKSupply.Migrations
                     })
                 .PrimaryKey(t => new { t.ID_ITEM_BCN, t.ID_SUPPLIER })
                 .ForeignKey("dbo.CURRENCIES", t => t.ID_CURRENCY)
-                .ForeignKey("dbo.ITEMS_BCN", t => t.ID_ITEM_BCN, cascadeDelete: true)
-                .ForeignKey("dbo.SUPPLIERS", t => t.ID_SUPPLIER, cascadeDelete: true)
+                .ForeignKey("dbo.ITEMS_BCN", t => t.ID_ITEM_BCN, cascadeDelete: false)
+                .ForeignKey("dbo.SUPPLIERS", t => t.ID_SUPPLIER, cascadeDelete: false)
                 .Index(t => t.ID_ITEM_BCN)
                 .Index(t => t.ID_SUPPLIER)
                 .Index(t => t.ID_CURRENCY);

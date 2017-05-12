@@ -448,7 +448,7 @@ namespace HKSupply.Forms.Master
 
                 if (itemDoc != null)
                 {
-                    DocHelper.OpenDoc(Constants.DOCS_PATH + itemDoc.FilePath);
+                    DocHelper.OpenDoc(Constants.ITEMS_DOCS_PATH + itemDoc.FilePath);
                 }
             }
             catch (Exception ex)
@@ -461,11 +461,11 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                ItemDoc itemDoc = gridViewLastDocs.GetRow(gridViewDocsHistory.FocusedRowHandle) as ItemDoc;
+                ItemDoc itemDoc = gridViewLastDocs.GetRow(gridViewLastDocs.FocusedRowHandle) as ItemDoc;
 
                 if (itemDoc != null)
                 {
-                    DocHelper.OpenDoc(Constants.DOCS_PATH + itemDoc.FilePath);
+                    DocHelper.OpenDoc(Constants.ITEMS_DOCS_PATH + itemDoc.FilePath);
                 }
             }
             catch (Exception ex)
@@ -1743,7 +1743,7 @@ namespace HKSupply.Forms.Master
 				string extension = System.IO.Path.GetExtension(txtPathNewDoc.Text);
 
                 //Creamos los directorios si no existen
-                new System.IO.FileInfo(Constants.DOCS_PATH + _itemUpdate.IdItemBcn + "\\" + lueDocType.EditValue.ToString()+"\\").Directory.Create();
+                new System.IO.FileInfo(Constants.ITEMS_DOCS_PATH + _itemUpdate.IdItemBcn + "\\" + lueDocType.EditValue.ToString()+"\\").Directory.Create();
 
                 
                 ItemDoc itemDoc = new ItemDoc();
@@ -1754,7 +1754,7 @@ namespace HKSupply.Forms.Master
                 itemDoc.FilePath = _itemUpdate.IdItemBcn + "\\" + lueDocType.EditValue.ToString() + "\\" + itemDoc.FileName;
 
                 //move to file server
-                System.IO.File.Copy(txtPathNewDoc.Text, Constants.DOCS_PATH + itemDoc.FilePath, overwrite: true);
+                System.IO.File.Copy(txtPathNewDoc.Text, Constants.ITEMS_DOCS_PATH + itemDoc.FilePath, overwrite: true);
 
                 //update database
                 return GlobalSetting.ItemEyService.UpdateItemWithDoc(_itemUpdate, itemDoc, newVersion);
@@ -1923,7 +1923,7 @@ namespace HKSupply.Forms.Master
                 lueLayouts.Properties.DisplayMember = nameof(GridLayout.Name);
                 lueLayouts.Properties.NullText = string.Empty;
 
-                lueLayouts.Properties.Columns.Add(new LookUpColumnInfo(nameof(GridLayout.Name), "Name"));
+                lueLayouts.Properties.Columns.Add(new LookUpColumnInfo(nameof(GridLayout.Name), GlobalSetting.ResManager.GetString("Name")));
 
             }
             catch (Exception ex)

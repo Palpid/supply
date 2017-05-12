@@ -87,8 +87,8 @@ namespace HKSupply.Migrations
                 .ForeignKey("dbo.MATERIALS_L3", t => t.ID_MATERIAL_L3)
                 .ForeignKey("dbo.MODELS", t => t.ID_MODEL)
                 .ForeignKey("dbo.PROTOTYPES", t => t.ID_PROTOTYPE)
-                .ForeignKey("dbo.STATUS_CIAL", t => t.ID_STATUS_CIAL, cascadeDelete: true)
-                .ForeignKey("dbo.STATUS_HK", t => t.ID_STATUS_PROD, cascadeDelete: true)
+                .ForeignKey("dbo.STATUS_CIAL", t => t.ID_STATUS_CIAL, cascadeDelete: false)
+                .ForeignKey("dbo.STATUS_HK", t => t.ID_STATUS_PROD, cascadeDelete: false)
                 .Index(t => t.ID_PROTOTYPE)
                 .Index(t => t.ID_MATERIAL_L1)
                 .Index(t => t.ID_MATERIAL_L2)
@@ -284,8 +284,8 @@ namespace HKSupply.Migrations
             CreateIndex("dbo.ITEMS", "ID_MATERIAL_L2");
             CreateIndex("dbo.ITEMS", "ID_MATERIAL_L1");
             CreateIndex("dbo.ITEMS", "ID_ITEM_GROUP");
-            AddForeignKey("dbo.ITEMS", "ID_STATUS_PROD", "dbo.STATUS_HK", "ID_STATUS_PROD", cascadeDelete: true);
-            AddForeignKey("dbo.ITEMS", "ID_STATUS_CIAL", "dbo.STATUS_CIAL", "ID_STATUS_CIAL", cascadeDelete: true);
+            AddForeignKey("dbo.ITEMS", "ID_STATUS_PROD", "dbo.STATUS_HK", "ID_STATUS_PROD", cascadeDelete: false);
+            AddForeignKey("dbo.ITEMS", "ID_STATUS_CIAL", "dbo.STATUS_CIAL", "ID_STATUS_CIAL", cascadeDelete: false);
             AddForeignKey("dbo.ITEMS", "ID_MODEL", "dbo.MODELS", "ID_MODEL");
             AddForeignKey("dbo.ITEMS", "ID_MAT_TYPE_L3", "dbo.MAT_TYPE_L3", "ID_MAT_TYPE_L3");
             AddForeignKey("dbo.ITEMS", "ID_MAT_TYPE_L2", "dbo.MAT_TYPE_L2", "ID_MAT_TYPE_L2");
@@ -293,7 +293,7 @@ namespace HKSupply.Migrations
             AddForeignKey("dbo.ITEMS", "ID_MATERIAL_L3", "dbo.MATERIALS_L3", "ID_MATERIAL_L3");
             AddForeignKey("dbo.ITEMS", "ID_MATERIAL_L2", "dbo.MATERIALS_L2", "ID_MATERIAL_L2");
             AddForeignKey("dbo.ITEMS", "ID_MATERIAL_L1", "dbo.MATERIALS_L1", "ID_MATERIAL_L1");
-            AddForeignKey("dbo.ITEMS", "ID_ITEM_GROUP", "dbo.ITEM_GROUP", "ID_ITEM_GROUP", cascadeDelete: true);
+            AddForeignKey("dbo.ITEMS", "ID_ITEM_GROUP", "dbo.ITEM_GROUP", "ID_ITEM_GROUP", cascadeDelete: false);
             AddForeignKey("dbo.ITEMS", "ID_HW_TYPE_L3", "dbo.HWS_TYPE_L3", "ID_HW_TYPE_L3");
             AddForeignKey("dbo.ITEMS", "ID_HW_TYPE_L2", "dbo.HWS_TYPE_L2", "ID_HW_TYPE_L2");
             AddForeignKey("dbo.ITEMS", "ID_HW_TYPE_L1", "dbo.HWS_TYPE_L1", "ID_HW_TYPE_L1");

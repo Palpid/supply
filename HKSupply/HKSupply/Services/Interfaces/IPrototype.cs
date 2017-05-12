@@ -13,5 +13,6 @@ namespace HKSupply.Services.Interfaces
     public interface IPrototype
     {
         List<Prototype> GetPrototypes();
+        bool AddPrototypeDoc(PrototypeDoc doc);
     }
 }

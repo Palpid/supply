@@ -36,8 +36,8 @@ namespace HKSupply.Migrations
             AddForeignKey("dbo.ITEMS_HISTORY", "ID_COLOR_2", "dbo.COLORS", "ID_COLOR_");
             AddForeignKey("dbo.ITEMS", "ID_MODEL", "dbo.MODELS", "ID_MODEL_");
             AddForeignKey("dbo.ITEMS_HISTORY", "ID_MODEL", "dbo.MODELS", "ID_MODEL_");
-            AddForeignKey("dbo.ITEMS", "ID_STATUS_CIAL", "dbo.STATUS_CIAL", "ID_STATUS_CIAL_", cascadeDelete: true);
-            AddForeignKey("dbo.ITEMS_HISTORY", "ID_STATUS_CIAL", "dbo.STATUS_CIAL", "ID_STATUS_CIAL_", cascadeDelete: true);
+            AddForeignKey("dbo.ITEMS", "ID_STATUS_CIAL", "dbo.STATUS_CIAL", "ID_STATUS_CIAL_", cascadeDelete: false);
+            AddForeignKey("dbo.ITEMS_HISTORY", "ID_STATUS_CIAL", "dbo.STATUS_CIAL", "ID_STATUS_CIAL_", cascadeDelete: false);
 
             DropColumn("dbo.COLORS", "ID_COLOR");
             DropColumn("dbo.COLORS", "DESCRIPTION");
@@ -76,8 +76,8 @@ namespace HKSupply.Migrations
             AddPrimaryKey("dbo.STATUS_CIAL", "ID_STATUS_CIAL");
             AddPrimaryKey("dbo.MODELS", "ID_MODEL");
             AddPrimaryKey("dbo.COLORS", "ID_COLOR");
-            AddForeignKey("dbo.ITEMS_HISTORY", "ID_STATUS_CIAL", "dbo.STATUS_CIAL", "ID_STATUS_CIAL", cascadeDelete: true);
-            AddForeignKey("dbo.ITEMS", "ID_STATUS_CIAL", "dbo.STATUS_CIAL", "ID_STATUS_CIAL", cascadeDelete: true);
+            AddForeignKey("dbo.ITEMS_HISTORY", "ID_STATUS_CIAL", "dbo.STATUS_CIAL", "ID_STATUS_CIAL", cascadeDelete: false);
+            AddForeignKey("dbo.ITEMS", "ID_STATUS_CIAL", "dbo.STATUS_CIAL", "ID_STATUS_CIAL", cascadeDelete: false);
             AddForeignKey("dbo.ITEMS_HISTORY", "ID_MODEL", "dbo.MODELS", "ID_MODEL");
             AddForeignKey("dbo.ITEMS", "ID_MODEL", "dbo.MODELS", "ID_MODEL");
             AddForeignKey("dbo.ITEMS_HISTORY", "ID_COLOR_2", "dbo.COLORS", "ID_COLOR");
