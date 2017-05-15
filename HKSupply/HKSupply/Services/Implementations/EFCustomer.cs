@@ -105,21 +105,38 @@ namespace HKSupply.Services.Implementations
                     {
                         try
                         {
-                            var customer = updateCustomer.Clone();
+                            //var customer = updateCustomer.Clone();
 
-                            db.Entry(updateCustomer).State = EntityState.Deleted;
+                            //db.Entry(updateCustomer).State = EntityState.Deleted;
 
-                            customer.IdSubVer += 1;
+                            //customer.IdSubVer += 1;
+                            //if (newVer == true)
+                            //{
+                            //    customer.IdVer += 1;
+                            //    customer.IdSubVer = 0;
+                            //}
+                            //customer.Timestamp = DateTime.Now;
+
+                            //CustomerHistory customerHistory = (CustomerHistory)customer;
+
+                            //db.Customers.Add(customer);
+                            //db.CustomersHistory.Add(customerHistory);
+                            //db.SaveChanges();
+
+                            updateCustomer.IdSubVer += 1;
                             if (newVer == true)
                             {
-                                customer.IdVer += 1;
-                                customer.IdSubVer = 0;
+                                updateCustomer.IdVer += 1;
+                                updateCustomer.IdSubVer = 0;
                             }
-                            customer.Timestamp = DateTime.Now;
+                            updateCustomer.Timestamp = DateTime.Now;
 
-                            CustomerHistory customerHistory = (CustomerHistory)customer;
+                            CustomerHistory customerHistory = (CustomerHistory)updateCustomer;
 
-                            db.Customers.Add(customer);
+                            //Con esto marcaremos todo el objeto como modificado y actualizará todos los campos. 
+                            //En este caso nos interesa porque la mayoría de los campos de customer se pueden modificar
+                            db.Entry(updateCustomer).State = EntityState.Modified;
+
                             db.CustomersHistory.Add(customerHistory);
                             db.SaveChanges();
 
@@ -218,6 +235,49 @@ namespace HKSupply.Services.Implementations
                 using (var db = new HKSupplyContext())
                 {
                     return db.Customers.ToList();
+                }
+            }
+            catch (SqlException sqlex)
+            {
+                for (int i = 0; i < sqlex.Errors.Count; i++)
+                {
+                    _log.Error("Index #" + i + "\n" +
+                        "Message: " + sqlex.Errors[i].Message + "\n" +
+                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                        "Source: " + sqlex.Errors[i].Source + "\n" +
+                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                    switch (sqlex.Errors[i].Number)
+                    {
+                        case -1: //connection broken
+                        case -2: //timeout
+                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                    }
+                }
+                throw sqlex;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
+            }
+        }
+
+
+        public List<CustomerHistory> GetCustomerHistory(string idCustomer)
+        {
+            if (idCustomer == null)
+                throw new ArgumentNullException("idCustomer");
+
+            try
+            {
+                using (var db = new HKSupplyContext())
+                {
+                    return db.CustomersHistory
+                        .Where(a => a.IdCustomer.Equals(idCustomer))
+                        .OrderBy(b => b.Timestamp)
+                        .ToList();
                 }
             }
             catch (SqlException sqlex)

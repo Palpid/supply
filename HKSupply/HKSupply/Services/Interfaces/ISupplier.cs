@@ -16,5 +16,6 @@ namespace HKSupply.Services.Interfaces
         bool UpdateSupplier(Supplier updateSupplier, bool newVer = false);
         Supplier GetSupplierById(string idSupplier);
         List<Supplier> GetSuppliers();
+        List<SupplierHistory> GetSupplierHistory(string idSupplier);
     }
 }

@@ -61,7 +61,7 @@ namespace HKSupply.Models
 
         public override int GetHashCode()
         {
-            return (FunctionalityId.GetHashCode() + RoleId.GetHashCode() + Read.GetHashCode() + New.GetHashCode() + Modify.GetHashCode());
+            return (FunctionalityId.GetHashCode() + (RoleId == null? 0 : RoleId.GetHashCode()) + Read.GetHashCode() + New.GetHashCode() + Modify.GetHashCode());
         }
 
         #endregion

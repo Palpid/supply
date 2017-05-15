@@ -1,6 +1,7 @@
 ﻿using HKSupply.DB;
 using HKSupply.Exceptions;
 using HKSupply.Forms;
+using HKSupply.General;
 using HKSupply.Helpers;
 using HKSupply.Helpers.Mocking;
 using HKSupply.Models;
@@ -337,16 +338,16 @@ namespace HKSupply
 
                 Customer newCust2 = new Customer();
                 newCust2.IdCustomer = "Customer02";
-                newCust2.CustName = "Customer 02";
+                newCust2.CustomerName = "Customer 02";
                 newCust2.Active = true;
                 newCust2.VATNum = "0202020202";
-                newCust2.ShippingAddress = "Customer 02 Shiping Address";
-                newCust2.BillingAddress = "Customer 02 Billing Address";
-                newCust2.ContactName = "Customer 02 Contact Name";
-                newCust2.ContactPhone = "444332211";
-                newCust2.IdIncoterm = 3;
-                newCust2.IdPaymentTerms = 4;
-                newCust2.Currency = "US dolar";
+                //newCust2.ShippingAddress = "Customer 02 Shiping Address";
+                //newCust2.BillingAddress = "Customer 02 Billing Address";
+                //newCust2.ContactName = "Customer 02 Contact Name";
+                //newCust2.ContactPhone = "444332211";
+                //newCust2.IdIncoterm = 3;
+                //newCust2.IdPaymentTerms = 4;
+                //newCust2.Currency = "US dolar";
 
                 var res = customerService.NewCustomer(newCust2);
 

@@ -17,41 +17,58 @@ namespace HKSupply.Models
         [Column("ID_SUBVER", Order = 2), Key]
         public int IdSubVer { get; set; }
 
-        [Column("TIMESTAMP")]
+        [Column("TIMESTAMP", Order = 3), Key]
         public DateTime Timestamp { get; set; }
 
-        [Column("ID_SUPPLIER", Order = 0), Key]
+        [Column("ID_SUPPLIER", TypeName = "NVARCHAR", Order = 0), Key, StringLength(100)]
         public string IdSupplier { get; set; }
 
-        [Column("SUPPLIER_NAME")]
+        [Column("SUPPLIER_NAME", TypeName = "NVARCHAR"), StringLength(500)]
         public string SupplierName { get; set; }
 
         [Column("ACTIVE")]
         public bool Active { get; set; }
 
-        [Column("VAT_NUM")]
+        [Column("VAT_NUM", TypeName = "NVARCHAR"), StringLength(100)]
         public string VATNum { get; set; }
 
-        [Column("SHIPING_ADDRESS")]
+        [Column("SHIPING_ADDRESS", TypeName = "NVARCHAR"), StringLength(2500)]
         public string ShippingAddress { get; set; }
 
-        [Column("BILLING_ADDRESS")]
+        [Column("SHIPING_ADDRESS_ZH", TypeName = "NVARCHAR"), StringLength(2500)]
+        public string ShippingAddressZh { get; set; }
+
+        [Column("BILLING_ADDRESS", TypeName = "NVARCHAR"), StringLength(2500)]
         public string BillingAddress { get; set; }
 
-        [Column("CONTACT_NAME")]
+        [Column("BILLING_ADDRESS_ZH", TypeName = "NVARCHAR"), StringLength(2500)]
+        public string BillingAddressZh { get; set; }
+
+        [Column("CONTACT_NAME", TypeName = "NVARCHAR"), StringLength(100)]
         public string ContactName { get; set; }
 
-        [Column("CONTACT_PHONE")]
+        [Column("CONTACT_NAME_ZH", TypeName = "NVARCHAR"), StringLength(100)]
+        public string ContactNameZh { get; set; }
+
+        [Column("CONTACT_PHONE", TypeName = "NVARCHAR"), StringLength(100)]
         public string ContactPhone { get; set; }
 
-        [Column("ID_INCOTERM")]
-        public int IdIncoterm { get; set; }
+        [Column("COMMENTS", TypeName = "NVARCHAR"), StringLength(2500)]
+        public string Comments { get; set; }
 
-        [Column("IDPAYMENTTERMS")]
-        public int IdPaymentTerms { get; set; }
+        [Column("ID_INCOTERM", TypeName = "NVARCHAR"), StringLength(8)]
+        public string IdIncoterm { get; set; }
 
-        [Column("CURRENCY")]
-        public string Currency { get; set; }
+        [Column("ID_PAYMENT_TERMS", TypeName = "NVARCHAR"), StringLength(4)]
+        public string IdPaymentTerms { get; set; }
+
+        [Column("ID_DEFAULT_CURRENCY", TypeName = "NVARCHAR"), StringLength(4)]
+        public string IdDefaultCurrency { get; set; }
+
+        [Column("USER"), StringLength(20)]
+        public string User { get; set; }
+
+
 
         #region Equal
         public override bool Equals(object obj)
@@ -59,23 +76,29 @@ namespace HKSupply.Models
             if (obj == null || obj == DBNull.Value)
                 return false;
 
-            SupplierHistory customer = (SupplierHistory)obj;
+            SupplierHistory supplierHistory = (SupplierHistory)obj;
 
             bool res = (
-                IdVer == customer.IdVer &&
-                IdSubVer == customer.IdSubVer &&
-                Timestamp == customer.Timestamp &&
-                IdSupplier == customer.IdSupplier &&
-                SupplierName == customer.SupplierName &&
-                Active == customer.Active &&
-                VATNum == customer.VATNum &&
-                ShippingAddress == customer.ShippingAddress &&
-                BillingAddress == customer.BillingAddress &&
-                ContactName == customer.ContactName &&
-                ContactPhone == customer.ContactPhone &&
-                IdIncoterm == customer.IdIncoterm &&
-                IdPaymentTerms == customer.IdPaymentTerms &&
-                Currency == customer.Currency);
+                IdVer == supplierHistory.IdVer &&
+                IdSubVer == supplierHistory.IdSubVer &&
+                Timestamp == supplierHistory.Timestamp &&
+                IdSupplier == supplierHistory.IdSupplier &&
+                SupplierName == supplierHistory.SupplierName &&
+                Active == supplierHistory.Active &&
+                VATNum == supplierHistory.VATNum &&
+                ShippingAddress == supplierHistory.ShippingAddress &&
+                ShippingAddressZh == supplierHistory.ShippingAddressZh &&
+                BillingAddress == supplierHistory.BillingAddress &&
+                BillingAddressZh == supplierHistory.BillingAddressZh &&
+                ContactName == supplierHistory.ContactName &&
+                ContactNameZh == supplierHistory.ContactNameZh &&
+                ContactPhone == supplierHistory.ContactPhone &&
+                Comments == supplierHistory.Comments &&
+                IdIncoterm == supplierHistory.IdIncoterm &&
+                IdPaymentTerms == supplierHistory.IdPaymentTerms &&
+                IdDefaultCurrency == supplierHistory.IdDefaultCurrency &&
+                User == supplierHistory.User
+                );
 
             return res;
 
@@ -87,17 +110,22 @@ namespace HKSupply.Models
                 IdVer.GetHashCode() +
                 IdSubVer.GetHashCode() +
                 Timestamp.GetHashCode() +
-                IdSupplier.GetHashCode() +
-                SupplierName.GetHashCode() +
+                (IdSupplier == null ? 0 : IdSupplier.GetHashCode()) +
+                (SupplierName == null ? 0 : SupplierName.GetHashCode()) +
                 Active.GetHashCode() +
-                VATNum.GetHashCode() +
-                ShippingAddress.GetHashCode() +
-                BillingAddress.GetHashCode() +
-                ContactName.GetHashCode() +
-                ContactPhone.GetHashCode() +
-                IdIncoterm.GetHashCode() +
-                IdPaymentTerms.GetHashCode() +
-                Currency.GetHashCode();
+                (VATNum == null ? 0 : VATNum.GetHashCode()) +
+                (ShippingAddress == null ? 0 : ShippingAddress.GetHashCode()) +
+                (ShippingAddressZh == null ? 0 : ShippingAddressZh.GetHashCode()) +
+                (BillingAddress == null ? 0 : BillingAddress.GetHashCode()) +
+                (BillingAddressZh == null ? 0 : BillingAddressZh.GetHashCode()) +
+                (ContactName == null ? 0 : ContactName.GetHashCode()) +
+                (ContactNameZh == null ? 0 : ContactNameZh.GetHashCode()) +
+                (ContactPhone == null ? 0 : ContactPhone.GetHashCode()) +
+                (Comments == null ? 0 : Comments.GetHashCode()) +
+                (IdIncoterm == null ? 0 : IdIncoterm.GetHashCode()) +
+                (IdPaymentTerms == null ? 0 : IdPaymentTerms.GetHashCode()) +
+                (IdDefaultCurrency == null ? 0 : IdDefaultCurrency.GetHashCode()) +
+                (User == null ? 0: User.GetHashCode());
 
             return hashCode;
         }
@@ -107,7 +135,7 @@ namespace HKSupply.Models
         {
             SupplierHistory sh = new SupplierHistory();
 
-            sh.IdVer = s.IdVer;
+            sh.IdVer =  s.IdVer;
             sh.IdSubVer = s.IdSubVer;
             sh.Timestamp = s.Timestamp;
             sh.IdSupplier = s.IdSupplier;
@@ -115,12 +143,16 @@ namespace HKSupply.Models
             sh.Active = s.Active;
             sh.VATNum = s.VATNum;
             sh.ShippingAddress = s.ShippingAddress;
+            sh.ShippingAddressZh = s.ShippingAddressZh;
             sh.BillingAddress = s.BillingAddress;
+            sh.BillingAddressZh = s.BillingAddressZh;
             sh.ContactName = s.ContactName;
+            sh.ContactNameZh = s.ContactNameZh;
             sh.ContactPhone = s.ContactPhone;
+            sh.Comments = s.Comments;
             sh.IdIncoterm = s.IdIncoterm;
             sh.IdPaymentTerms = s.IdPaymentTerms;
-            sh.Currency = s.Currency;
+            sh.IdDefaultCurrency = s.IdDefaultCurrency;
 
             return sh;
         }

@@ -1,95 +1,114 @@
-﻿using HKSupply.Exceptions;
+﻿using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid.Views.Grid;
 using HKSupply.General;
 using HKSupply.Models;
-using HKSupply.Styles;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HKSupply.Forms.Master
 {
-    public partial class RoleManagement : Form, IActionsStackView
+    public partial class RoleManagement : RibbonFormBase
     {
-
         #region Enums
         private enum eRoleColumns
         {
-            roleId,
+            RoleId,
             Description,
             Enabled,
             Remarks
         }
         #endregion
 
-        #region Private members
-
-        CustomControls.StackView actionsStackView;
+        #region Private Members
 
         List<Role> _modifiedRoles = new List<Role>();
         List<Role> _createdRoles = new List<Role>();
+
         #endregion
 
         #region Constructor
         public RoleManagement()
         {
             InitializeComponent();
+
+            ConfigureRibbonActions();
+            SetUpGrdRoles();
         }
         #endregion
 
-        #region Action toolbar
+        #region Ribbon
 
-        public void actionsStackView_EditButtonClick(object sender, EventArgs e)
+        private void ConfigureRibbonActions()
         {
             try
             {
-                //MessageBox.Show("Edit Button");
-                ConfigureActionsStackViewEditing();
+                var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
+                SetRibbonText($"{actions.Functionality.Category} > {actions.Functionality.FunctionalityName}");
+                Read = actions.Read;
+                New = actions.New;
+                Modify = actions.Modify;
+                RestoreInitState();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw ex;
             }
-
         }
 
-        public void actionsStackView_NewButtonClick(object sender, EventArgs e)
+        public override void bbiEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) 
         {
+            base.bbiEdit_ItemClick(sender, e);
+
             try
             {
-                //MessageBox.Show("New Button");
+                ConfigureRibbonActionsEditing();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
+
+        public override void bbiNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            base.bbiNew_ItemClick(sender, e);
+
+            try
+            {
                 ConfigureActionsStackViewCreating();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
-        public void actionsStackView_SaveButtonClick(object sender, EventArgs e)
+        public override void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            base.bbiSave_ItemClick(sender, e);
+
             try
             {
                 bool res = false;
-                //indicamos que ha dejado de editar el grid, por si modifica una celda y sin salir pulsa sobre guardar
-                grdRoles.EndEdit();
 
                 if (IsValidRoles() == false)
                     return;
 
-                DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
+                DialogResult result = XtraMessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
 
                 if (result != DialogResult.Yes)
                     return;
 
-                if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
+                if (CurrentState == ActionsStates.Edit)
                 {
                     if (_modifiedRoles.Count() == 0)
                     {
@@ -97,141 +116,107 @@ namespace HKSupply.Forms.Master
                     }
                     else
                     {
-                        if (UpdateRoles())
-                        {
-                            res = true;
-                        }
+                        res = UpdateRoles(); 
                     }
                 }
-                else if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.New)
+                else if (CurrentState == ActionsStates.New)
                 {
-                    if (CreateRole())
-                    {
-                        res = true;
-                    }
+                    res = CreateRole();
                 }
 
                 if (res == true)
                 {
                     MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
                     LoadAllRoles();
-                    ConfigureRolesGridDefaultStyles();
-                    actionsStackView.RestoreInitState();
+                    RestoreInitState();
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
-        
-        public void actionsStackView_CancelButtonClick(object sender, EventArgs e)
+
+        public override void bbiCancel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            base.bbiCancel_ItemClick(sender, e);
+
             try
             {
                 LoadAllRoles();
-                SetupRolesGrid();
-                actionsStackView.RestoreInitState();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-        }
-
-        public void ConfigureActionsStackView()
-        {
-            try
-            {
-                var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
-
-                //CustomControls.StackView actionsStackView = new CustomControls.StackView(actions.Read, actions.New, actions.Modify);
-                actionsStackView = new CustomControls.StackView(actions.Read, actions.New, actions.Modify);
-                actionsStackView.EditButtonClick += actionsStackView_EditButtonClick;
-                actionsStackView.NewButtonClick += actionsStackView_NewButtonClick;
-                actionsStackView.SaveButtonClick += actionsStackView_SaveButtonClick;
-                actionsStackView.CancelButtonClick += actionsStackView_CancelButtonClick;
-
-                Controls.Add(actionsStackView);
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
         }
 
         #endregion
 
         #region Form Events
-
         private void RoleManagement_Load(object sender, EventArgs e)
         {
             try
             {
-                ConfigureActionsStackView();
-                SetupRolesGrid();
                 LoadAllRoles();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
         }
-       
 
-        #region Grid events
-
-        private void grdRoles_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        #region Grid Events
+        void rootGridViewRoles_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
         {
             try
             {
-                if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
+                GridView view = sender as GridView;
+                if (view.FocusedColumn.FieldName == eRoleColumns.Description.ToString() || 
+                    view.FocusedColumn.FieldName == eRoleColumns.RoleId.ToString())
+                {
+                    if (string.IsNullOrEmpty(e.Value as string))
+                    {
+                        e.Valid = false;
+                        e.ErrorText = GlobalSetting.ResManager.GetString("FieldRequired");
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void rootGridViewRoles_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+
+                if (CurrentState == ActionsStates.Edit)
                 {
                     Role tmpRole = new Role();
-                    tmpRole.RoleId = grdRoles.Rows[e.RowIndex].Cells[(int)eRoleColumns.roleId].Value.ToString();
-                    tmpRole.Description = (grdRoles.Rows[e.RowIndex].Cells[(int)eRoleColumns.Description].Value ?? string.Empty).ToString();
-                    tmpRole.Enabled = (bool)grdRoles.Rows[e.RowIndex].Cells[(int)eRoleColumns.Enabled].Value;
-                    tmpRole.Remarks = (grdRoles.Rows[e.RowIndex].Cells[(int)eRoleColumns.Remarks].Value ?? String.Empty).ToString();
+
+                    object roleId = view.GetRowCellValue(view.FocusedRowHandle, eRoleColumns.RoleId.ToString());
+                    object description = view.GetRowCellValue(view.FocusedRowHandle, eRoleColumns.Description.ToString());
+                    object enabled = view.GetRowCellValue(view.FocusedRowHandle, eRoleColumns.Enabled.ToString());
+                    object remarks = view.GetRowCellValue(view.FocusedRowHandle, eRoleColumns.Remarks.ToString());
+
+                    tmpRole.RoleId = (roleId ?? string.Empty).ToString();
+                    tmpRole.Description = (description ?? string.Empty).ToString();
+                    tmpRole.Enabled = (bool)enabled;
+                    tmpRole.Remarks = (remarks ?? string.Empty).ToString();
                     AddModifiedRolesToList(tmpRole);
                 }
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void grdRoles_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
-        {
-            try
-            {
-                if (e.ColumnIndex == (int)eRoleColumns.Description)
-                {
-                    if (string.IsNullOrEmpty(e.FormattedValue.ToString()))
-                    {
-                        MessageBox.Show(GlobalSetting.ResManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        e.Cancel = true;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-        }
-
-        private void grdRoles_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-            //show this message when the user enter incorrect value in a cell
-            MessageBox.Show(GlobalSetting.ResManager.GetString("CellDataError"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         #endregion
@@ -240,41 +225,36 @@ namespace HKSupply.Forms.Master
 
         #region Private Methods
 
-        private void SetupRolesGrid()
+        private void SetUpGrdRoles()
         {
             try
             {
-                grdRoles.CellValueChanged += grdRoles_CellValueChanged;
-                grdRoles.CellValidating += grdRoles_CellValidating;
+                //hide group panel.
+                rootGridViewRoles.OptionsView.ShowGroupPanel = false;
+                rootGridViewRoles.OptionsCustomization.AllowGroup = false;
+                rootGridViewRoles.OptionsCustomization.AllowColumnMoving = false;
+
+                //Columns definition
+                GridColumn colRoleId = new GridColumn() { Caption = "Role Id", Visible = true, FieldName = eRoleColumns.RoleId.ToString() };
+                GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = eRoleColumns.Description.ToString() };
+                GridColumn colEnabled = new GridColumn() { Caption = "Enabled", Visible = true, FieldName = eRoleColumns.Enabled.ToString() };
+                GridColumn colRemarks = new GridColumn() { Caption = "Remarks", Visible = true, FieldName = eRoleColumns.Remarks.ToString() };
+
+                //add columns to grid root view
+                rootGridViewRoles.Columns.Add(colRoleId);
+                rootGridViewRoles.Columns.Add(colDescription);
+                rootGridViewRoles.Columns.Add(colEnabled);
+                rootGridViewRoles.Columns.Add(colRemarks);
+
+                //Events
+                rootGridViewRoles.ValidatingEditor += rootGridViewRoles_ValidatingEditor;
+                rootGridViewRoles.CellValueChanged += rootGridViewRoles_CellValueChanged;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 throw ex;
             }
         }
-
-        private void ConfigureRolesGridDefaultStyles()
-        {
-            try
-            {
-                grdRoles.Columns[(int)eRoleColumns.roleId].Width = 100;
-                grdRoles.Columns[(int)eRoleColumns.Description].Width = 200;
-                grdRoles.Columns[(int)eRoleColumns.Enabled].Width = 100;
-                grdRoles.Columns[(int)eRoleColumns.Remarks].Width = 300;
-
-                grdRoles.Columns[(int)eRoleColumns.roleId].DefaultCellStyle.ForeColor = Color.Black;
-
-                grdRoles.ColumnHeadersDefaultCellStyle.BackColor = AppStyles.EtniaRed;
-                grdRoles.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-                grdRoles.EnableHeadersVisualStyles = false;
-            } 
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-           
-
 
         private void LoadAllRoles()
         {
@@ -282,11 +262,17 @@ namespace HKSupply.Forms.Master
             {
                 _modifiedRoles.Clear();
                 _createdRoles.Clear();
-                IEnumerable<Role> appRoles = GlobalSetting.RoleService.GetRoles();
-                grdRoles.DataSource = appRoles;
-                grdRoles.ReadOnly = true;
+                IEnumerable<Role> roles = GlobalSetting.RoleService.GetRoles();
 
-                ConfigureRolesGridDefaultStyles();
+                xgrdRoles.DataSource = roles;
+
+                rootGridViewRoles.Columns[eRoleColumns.RoleId.ToString()].OptionsColumn.AllowEdit = false;
+                rootGridViewRoles.Columns[eRoleColumns.Description.ToString()].OptionsColumn.AllowEdit = false;
+                rootGridViewRoles.Columns[eRoleColumns.Enabled.ToString()].OptionsColumn.AllowEdit = false;
+                rootGridViewRoles.Columns[eRoleColumns.Remarks.ToString()].OptionsColumn.AllowEdit = false;
+
+                //TODO: gestion de estilos del grid
+                rootGridViewRoles.Columns[eRoleColumns.RoleId.ToString()].AppearanceCell.ForeColor = Color.Black;
             }
             catch (Exception ex)
             {
@@ -294,13 +280,22 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void ConfigureActionsStackViewEditing()
+        private void ConfigureRibbonActionsEditing()
         {
             try
             {
-                grdRoles.ReadOnly = false;
-                grdRoles.Columns[(int)eRoleColumns.roleId].ReadOnly = true; //make the id column readonly
-                grdRoles.Columns[(int)eRoleColumns.roleId].DefaultCellStyle.ForeColor = Color.Gray;
+                CurrentState = ActionsStates.Edit;
+
+                //Allow edit some columns
+                rootGridViewRoles.Columns[eRoleColumns.Description.ToString()].OptionsColumn.AllowEdit = true;
+                rootGridViewRoles.Columns[eRoleColumns.Enabled.ToString()].OptionsColumn.AllowEdit = true;
+                rootGridViewRoles.Columns[eRoleColumns.Remarks.ToString()].OptionsColumn.AllowEdit = true;
+
+                //no edit column
+                rootGridViewRoles.Columns[eRoleColumns.RoleId.ToString()].OptionsColumn.AllowEdit = false;
+                //TODO: gestion de estilos del grid
+                rootGridViewRoles.Columns[eRoleColumns.RoleId.ToString()].AppearanceCell.ForeColor = Color.Gray;
+
             }
             catch (Exception ex)
             {
@@ -313,10 +308,13 @@ namespace HKSupply.Forms.Master
             try
             {
                 _createdRoles.Add(new Role());
-                grdRoles.DataSource = null;
-                grdRoles.Rows.Clear();
-                grdRoles.DataSource = _createdRoles;
-                grdRoles.ReadOnly = false;
+                xgrdRoles.DataSource = null ;
+                xgrdRoles.DataSource = _createdRoles;
+                //Allow edit all columns
+                rootGridViewRoles.Columns[eRoleColumns.RoleId.ToString()].OptionsColumn.AllowEdit = true;
+                rootGridViewRoles.Columns[eRoleColumns.Description.ToString()].OptionsColumn.AllowEdit = true;
+                rootGridViewRoles.Columns[eRoleColumns.Enabled.ToString()].OptionsColumn.AllowEdit = true;
+                rootGridViewRoles.Columns[eRoleColumns.Remarks.ToString()].OptionsColumn.AllowEdit = true;
             }
             catch (Exception ex)
             {
@@ -347,36 +345,13 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void AddCreatedRolesToList(Role createdRole)
-        {
-            try
-            {
-                var role = _createdRoles.FirstOrDefault(r => r.RoleId.Equals(createdRole.RoleId));
-                if (role == null)
-                {
-                    _createdRoles.Add(createdRole);
-                }
-                else
-                {
-                    role.Description = createdRole.Description;
-                    role.Enabled = createdRole.Enabled;
-                    role.Remarks = createdRole.Remarks;
-                }
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
         private bool IsValidRoles()
         {
             try
             {
-                if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
+                if (CurrentState == ActionsStates.Edit)
                     return IsValidModifiedRoles();
-                else if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.New)
+                else if (CurrentState == ActionsStates.New)
                     return IsValidCreatedRoles();
 
                 return false;
@@ -451,6 +426,8 @@ namespace HKSupply.Forms.Master
                 throw ex;
             }
         }
+
         #endregion
+
     }
 }

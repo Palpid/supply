@@ -1,153 +1,201 @@
-﻿using HKSupply.Exceptions;
+﻿using DevExpress.Utils;
+using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraLayout.Utils;
 using HKSupply.General;
 using HKSupply.Helpers;
 using HKSupply.Models;
-using HKSupply.Styles;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Linq.Dynamic;
-using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraBars;
 
 namespace HKSupply.Forms.Master
 {
-    public partial class CustomerManagement : Form, IActionsStackView
+    public partial class CustomerManagement : RibbonFormBase
     {
-        #region enums
+
+        #region Enums
         private enum eCustomerColumns
         {
             IdVer,
-            idSubVer,
+            IdSubVer,
             Timestamp,
             IdCustomer,
-            CustName,
+            CustomerName,
             Active,
             VATNum,
             ShippingAddress,
             BillingAddress,
             ContactName,
             ContactPhone,
+            Comments,
             IdIncoterm,
             IdPaymentTerms,
-            Currency,
+            IdDefaultCurrency,
         }
-
-        private enum eCustomerColumnsFilter
-        {
-            IdCustomer,
-            CustName,
-            Active,
-            VATNum,
-        }
-
-        private enum eCustomerColumnsFilterType
-        {
-            Text = 0,
-            CheckBox = 1,
-        }
-
-        private Dictionary<string, int> _filterDic = new Dictionary<string, int>() 
-        { 
-            {eCustomerColumns.IdCustomer.ToString(), (int)eCustomerColumnsFilterType.Text },
-            {eCustomerColumns.CustName.ToString(), (int)eCustomerColumnsFilterType.Text },
-            {eCustomerColumns.Active.ToString(), (int)eCustomerColumnsFilterType.CheckBox },
-            {eCustomerColumns.VATNum.ToString(), (int)eCustomerColumnsFilterType.Text }
-        };
         #endregion
 
-        #region Private members
-        CustomControls.StackView actionsStackView;
+        #region Private Members
 
         Customer _customerUpdate;
         Customer _customerOriginal;
+        CustomerHistory _customerHistory;
 
         List<Customer> _customersList;
+        List<CustomerHistory> _customerHistoryList;
+        List<Currency> _currenciesList;
+        List<PaymentTerms> _paymentTermsList;
+        List<Incoterm> _incotermsList;
 
         string[] _nonEditingFields = { "txtIdCustomer", "txtIdVersion", "txtIdSubversion", "txtTimestamp" };
-        string[] _nonCreatingFields = { "txtIdVersion", "txtIdSubversion", "txtTimestamp" };
-        int[] _nonCreatingFieldsRows = { 1, 2, 3 };
 
-        bool _sortDescending = true;
-
+        int _currentHistoryNumList;
         #endregion
 
         #region Constructor
         public CustomerManagement()
         {
             InitializeComponent();
-            ResetCustomerUpdate();
+
+            try
+            {
+                ConfigureRibbonActions();
+                SetUpGrdCustomers();
+                ResetCustomerUpdate();
+                SetFormBinding();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
         #endregion
 
-        #region Action toolbar
-        public void actionsStackView_EditButtonClick(object sender, EventArgs e)
+        #region Ribbon
+
+        private void ConfigureRibbonActions()
         {
+            try
+            {
+                var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
+                SetRibbonText($"{actions.Functionality.Category} > {actions.Functionality.FunctionalityName}");
+                //Task Buttons
+                Read = actions.Read;
+                New = actions.New;
+                Modify = actions.Modify;
+                RestoreInitState();
+                //Print and export buttons
+                EnablePrintPreview = false;
+                EnableExportExcel = true;
+                EnableExportCsv = true;
+                ConfigurePrintExportOptions();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public override void bbiCancel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            base.bbiCancel_ItemClick(sender, e);
+
+            try
+            {
+                _customerOriginal = null;
+                ResetCustomerUpdate();
+                SetFormBinding();
+                xtpForm.PageVisible = false;
+                xtpList.PageVisible = true;
+                sbNewVersion.Visible = false;
+                LoadCustomersList();
+                SetNonCreatingFieldsVisibility(LayoutVisibility.Always);
+
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public override void bbiEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            base.bbiEdit_ItemClick(sender, e);
+
             try
             {
                 if (_customerOriginal == null)
                 {
-                    MessageBox.Show("No customer selected");
-                    actionsStackView.RestoreInitState();
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("NoCustomerSelected"));
+                    RestoreInitState();
                 }
                 else
                 {
-                    ConfigureActionsStackViewEditing();
+                    ConfigureRibbonActionsEditing();
                 }
-                
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        public void actionsStackView_NewButtonClick(object sender, EventArgs e)
+        public override void bbiNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            base.bbiNew_ItemClick(sender, e);
+
             try
             {
-                //MessageBox.Show("New Button");
-                ConfigureActionsStackViewCreating();
+                ConfigureRibbonActionsCreating();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        public void actionsStackView_SaveButtonClick(object sender, EventArgs e)
+        public override void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            bool res = false;
-            //El toolstrip no lanza el validate, lo lanzamos a mano por si acaso hay algún elemento que lo tiene pendiente
-            Validate();
+            base.bbiSave_ItemClick(sender, e);
 
-            if (IsValidCustomer() == false)
-                return;
-
-            DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
-
-            if (result != DialogResult.Yes)
-                return;
-
-            Cursor = Cursors.WaitCursor;
             try
             {
+                bool res = false;
+
+                if (IsValidCustomer() == false)
+                    return;
+
+                DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
+
+                if (result != DialogResult.Yes)
+                    return;
+
+                Cursor = Cursors.WaitCursor;
+
                 if (_customerUpdate.Equals(_customerOriginal))
                 {
                     MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
                     return;
                 }
 
-                if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
+                if (CurrentState == ActionsStates.Edit)
                 {
                     res = UpdateCustomer();
+
                 }
-                else if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.New)
+                else if (CurrentState == ActionsStates.New)
                 {
                     res = CreateCustomer();
                 }
@@ -158,59 +206,76 @@ namespace HKSupply.Forms.Master
                     ActionsAfterCU();
                 }
 
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
                 Cursor = Cursors.Default;
             }
+
         }
 
-        public void actionsStackView_CancelButtonClick(object sender, EventArgs e)
+        public override void bbiExportExcel_ItemClick(object sender, ItemClickEventArgs e)
         {
+            if (rootGridViewCustomers.DataRowCount == 0)
+            {
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
+                return;
+            }
+
+            //Abre el dialog de save as
+            base.bbiExportExcel_ItemClick(sender, e);
+
             try
             {
-                _customerOriginal = null;
-                ResetCustomerUpdate();
-                SetFormBinding();
-                tcGeneral.TabPages.Remove(tpForm);
-                tcGeneral.TabPages.Add(tpGrid);
-                btnNewVersion.Visible = false;
-                LoadCustomersList();
-                actionsStackView.RestoreInitState();
-
-                foreach (var n in _nonCreatingFieldsRows)
+                if (string.IsNullOrEmpty(ExportExcelFile) == false)
                 {
-                    tlpForm.RowStyles[n].SizeType = SizeType.AutoSize;
+                    rootGridViewCustomers.ExportToXlsx(ExportExcelFile);
+
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportExcelFile);
+                    }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        public void ConfigureActionsStackView()
+        public override void bbiExportCsv_ItemClick(object sender, ItemClickEventArgs e)
         {
+            if (rootGridViewCustomers.DataRowCount == 0)
+            {
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
+                return;
+            }
+
+            //Abre el dialog de save as
+            base.bbiExportCsv_ItemClick(sender, e);
+
             try
             {
-                var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
+                if (string.IsNullOrEmpty(ExportCsvFile) == false)
+                {
+                    rootGridViewCustomers.ExportToCsv(ExportCsvFile);
 
-                actionsStackView = new CustomControls.StackView(actions.Read, actions.New, actions.Modify);
-                actionsStackView.EditButtonClick += actionsStackView_EditButtonClick;
-                actionsStackView.NewButtonClick += actionsStackView_NewButtonClick;
-                actionsStackView.SaveButtonClick += actionsStackView_SaveButtonClick;
-                actionsStackView.CancelButtonClick += actionsStackView_CancelButtonClick;
-
-                Controls.Add(actionsStackView);
-
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportCsvFile);
+                    }
+                }
             }
             catch (Exception ex)
             {
-                throw ex;
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -218,23 +283,23 @@ namespace HKSupply.Forms.Master
 
         #region Form Events
 
-        private void CustomerManagement_Load(object sender, System.EventArgs e)
+        private void CustomerManagement_Load(object sender, EventArgs e)
         {
             try
             {
-                ConfigureActionsStackView();
-                SetFormBinding();
-                tcGeneral.TabPages.Remove(tpForm);
-                btnNewVersion.Visible = false;
-                LoadComboFilters();
+                xtpForm.PageVisible = false;
+                sbNewVersion.Visible = false;
+                LoadIncotemrsList();
+                LoadPaymentTermsList();
+                LoadCurrenciesList();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void btnLoad_Click(object sender, EventArgs e)
+        private void sbLoad_Click(object sender, EventArgs e)
         {
             try
             {
@@ -243,16 +308,15 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
                 Cursor = Cursors.Default;
             }
-            
         }
 
-        private void btnNewVersion_Click(object sender, EventArgs e)
+        private void sbNewVersion_Click(object sender, EventArgs e)
         {
             try
             {
@@ -265,6 +329,9 @@ namespace HKSupply.Forms.Master
                     return;
                 }
 
+                if (IsValidCustomer() == false)
+                    return;
+
                 if (UpdateCustomer(true))
                 {
                     ActionsAfterCU();
@@ -272,7 +339,7 @@ namespace HKSupply.Forms.Master
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -280,78 +347,286 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void cmbColFilter_SelectedIndexChanged(object sender, EventArgs e)
+        void rootGridViewCustomers_DoubleClick(object sender, EventArgs e)
         {
             try
             {
-                if (cmbColFilter.SelectedIndex == -1)
+                GridView view = (GridView)sender;
+                object idCustomer = view.GetRowCellValue(view.FocusedRowHandle, eCustomerColumns.IdCustomer.ToString());
+                if (idCustomer != null)
                 {
-                    txtFilter.Visible = false;
-                    chkFilter.Visible = false;
+                    LoadCustomerForm(idCustomer.ToString());
+                    LoadCustomerHistory(idCustomer.ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void sbForward_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SetCurrentCustomerHistory(_currentHistoryNumList + 1);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void sbBackward_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SetCurrentCustomerHistory(_currentHistoryNumList - 1);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void sbSetCurrentSubversion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
+
+                if (result != DialogResult.Yes)
                     return;
-                }
 
-                var type = _filterDic[((eCustomerColumnsFilter)cmbColFilter.SelectedIndex).ToString()];
-                ShowFilterField((eCustomerColumnsFilterType)type);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+                Cursor = Cursors.WaitCursor;
 
+                _customerUpdate = _customerHistory;
+                _customerUpdate.IdSubVer = _customerOriginal.IdSubVer;
+                _customerUpdate.IdVer = _customerOriginal.IdVer;
 
-        #region Grid events
-        private void grdCustomers_CellDoubleClick(Object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (e.RowIndex < 0) return;
-                LoadCustomerForm(grdCustomers.Rows[e.RowIndex].Cells[(int)eCustomerColumns.IdCustomer].Value.ToString());
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void grdCustomers_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (e.RowIndex < 0 && e.ColumnIndex > -1)
+                if (UpdateCustomer())
                 {
-                    LoadCustomersSortedList((eCustomerColumns)e.ColumnIndex);
+                    ActionsAfterCU();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
             }
         }
-        #endregion
+
+        private void sbSetCurrentVersion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
+
+                if (result != DialogResult.Yes)
+                    return;
+
+                Cursor = Cursors.WaitCursor;
+
+                _customerUpdate = _customerHistory;
+                _customerUpdate.IdSubVer = _customerOriginal.IdSubVer;
+                _customerUpdate.IdVer = _customerOriginal.IdVer;
+
+                if (UpdateCustomer(true))
+                {
+                    ActionsAfterCU();
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
+        }
 
         #endregion
 
         #region Private Methods
 
         /// <summary>
-        /// Resetear el objeto customer que usamos para la actualización
+        /// Resetear el objeto supplier que usamos para la actualización
         /// </summary>
         private void ResetCustomerUpdate()
         {
-            _customerUpdate = new Customer
-                    {
-                        IdCustomer = string.Empty,
-                        CustName = string.Empty,
-                        Active = false,
-                        VATNum = string.Empty,
-                        ShippingAddress = string.Empty,
-                        BillingAddress = string.Empty,
-                        ContactName = string.Empty,
-                        ContactPhone = string.Empty,
-                        Currency = string.Empty
-                    };
+            _customerUpdate = new Customer();
+        }
+
+        private void SetUpGrdCustomers()
+        {
+            try
+            {
+                //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
+                rootGridViewCustomers.OptionsView.ColumnAutoWidth = false;
+                rootGridViewCustomers.HorzScrollVisibility = ScrollVisibility.Auto;
+
+                //hacer todo el grid no editable
+                rootGridViewCustomers.OptionsBehavior.Editable = false;
+
+                //Columns definition
+                GridColumn colIdVer = new GridColumn() { Caption = "Version Id", Visible = true, FieldName = eCustomerColumns.IdVer.ToString(), Width = 70 };
+                GridColumn colIdSubVer = new GridColumn() { Caption = "Subversion Id", Visible = true, FieldName = eCustomerColumns.IdSubVer.ToString(), Width = 80 };
+                GridColumn colTimestamp = new GridColumn() { Caption = "Timestamp", Visible = true, FieldName = eCustomerColumns.Timestamp.ToString(), Width = 130 };
+                GridColumn colIdCustomer = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("IdCustomer"), Visible = true, FieldName = eCustomerColumns.IdCustomer.ToString(), Width = 100 };
+                GridColumn colCustomerName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("CustomerName"), Visible = true, FieldName = eCustomerColumns.CustomerName.ToString(), Width = 200 };
+                GridColumn colActive = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Active"), Visible = true, FieldName = eCustomerColumns.Active.ToString(), Width = 50 };
+                GridColumn colVATNum = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("VATNumber"), Visible = true, FieldName = eCustomerColumns.VATNum.ToString(), Width = 120 };
+                GridColumn colShippingAddress = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ShippingAddress"), Visible = true, FieldName = eCustomerColumns.ShippingAddress.ToString(), Width = 300 };
+                GridColumn colBillingAddress = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("BillingAddress"), Visible = true, FieldName = eCustomerColumns.BillingAddress.ToString(), Width = 300 };
+                GridColumn colContactName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ContactName"), Visible = true, FieldName = eCustomerColumns.ContactName.ToString(), Width = 200 };
+                GridColumn colContactPhone = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ContactPhone"), Visible = true, FieldName = eCustomerColumns.ContactPhone.ToString(), Width = 150 };
+                GridColumn colComments = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Comments"), Visible = true, FieldName = eCustomerColumns.Comments.ToString(), Width = 300 };
+                GridColumn colIdIncoterm = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Incoterm"), Visible = true, FieldName = eCustomerColumns.IdIncoterm.ToString(), Width = 70 };
+                GridColumn colIdPaymentTerms = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("PaymentTerms"), Visible = true, FieldName = eCustomerColumns.IdPaymentTerms.ToString(), Width = 100 };
+                GridColumn colCurrency = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Currency"), Visible = true, FieldName = eCustomerColumns.IdDefaultCurrency.ToString(), Width = 70 };
+
+                //Format type 
+                colTimestamp.DisplayFormat.FormatType = FormatType.DateTime;
+
+                //add columns to grid root view
+                rootGridViewCustomers.Columns.Add(colIdVer);
+                rootGridViewCustomers.Columns.Add(colIdSubVer);
+                rootGridViewCustomers.Columns.Add(colTimestamp);
+                rootGridViewCustomers.Columns.Add(colIdCustomer);
+                rootGridViewCustomers.Columns.Add(colCustomerName);
+                rootGridViewCustomers.Columns.Add(colActive);
+                rootGridViewCustomers.Columns.Add(colVATNum);
+                rootGridViewCustomers.Columns.Add(colShippingAddress);
+                rootGridViewCustomers.Columns.Add(colBillingAddress);
+                rootGridViewCustomers.Columns.Add(colContactName);
+                rootGridViewCustomers.Columns.Add(colContactPhone);
+                rootGridViewCustomers.Columns.Add(colComments);
+                rootGridViewCustomers.Columns.Add(colIdIncoterm);
+                rootGridViewCustomers.Columns.Add(colIdPaymentTerms);
+                rootGridViewCustomers.Columns.Add(colCurrency);
+
+                //Events
+                rootGridViewCustomers.DoubleClick += rootGridViewCustomers_DoubleClick;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void LoadCurrenciesList()
+        {
+            try
+            {
+                _currenciesList = GlobalSetting.CurrencyService.GetCurrencies();
+
+                lueIdDefaultCurrency.Properties.DataSource = _currenciesList;
+                lueIdDefaultCurrency.Properties.DisplayMember = nameof(Currency.Description);
+                lueIdDefaultCurrency.Properties.ValueMember = nameof(Currency.IdCurrency);
+                //lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdSupplier", 20, "Id Supplier"));
+                //lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SupplierName", 100, "Name"));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void LoadPaymentTermsList()
+        {
+            try
+            {
+                _paymentTermsList = GlobalSetting.PaymentTermsService.GetPaymentTerms();
+
+                lueIdPaymentTerms.Properties.DataSource = _paymentTermsList;
+                lueIdPaymentTerms.Properties.DisplayMember = nameof(PaymentTerms.Description);
+                lueIdPaymentTerms.Properties.ValueMember = nameof(PaymentTerms.IdPaymentTerms);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void LoadIncotemrsList()
+        {
+            try
+            {
+                _incotermsList = GlobalSetting.IncotermService.GetIIncoterms();
+
+                lueIdIncoterm.Properties.DataSource = _incotermsList;
+                lueIdIncoterm.Properties.DisplayMember = nameof(Incoterm.Description);
+                lueIdIncoterm.Properties.ValueMember = nameof(Incoterm.IdIncoterm);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void LoadCustomersList()
+        {
+            try
+            {
+                _customersList = GlobalSetting.CustomerService.GetCustomers();
+                xgrdCustomers.DataSource = _customersList;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void LoadCustomerForm(string idCustomer)
+        {
+            try
+            {
+                _customerUpdate = GlobalSetting.CustomerService.GetCustomerById(idCustomer);
+                _customerOriginal = _customerUpdate.Clone();
+                SetFormBinding();  //refresh binding 
+                xtpForm.PageVisible = true;
+                xtcGeneral.SelectedTabPage = xtpForm;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void LoadCustomerHistory(string idCustomer)
+        {
+            try
+            {
+                _customerHistoryList = GlobalSetting.CustomerService.GetCustomerHistory(idCustomer);
+                SetCurrentCustomerHistory(0);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+        private void SetCurrentCustomerHistory(int historyNum)
+        {
+            try
+            {
+                if (historyNum >= 0 && historyNum < _customerHistoryList.Count())
+                {
+                    _customerHistory = _customerHistoryList[historyNum];
+                    SetHistoryBinding();
+                    _currentHistoryNumList = historyNum;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         /// <summary>
@@ -359,45 +634,156 @@ namespace HKSupply.Forms.Master
         /// </summary>
         private void SetFormBinding()
         {
-            foreach (Control ctl in tlpForm.Controls)
+            try
             {
-                if (ctl.GetType() == typeof(TextBox))
+                foreach (Control ctl in layoutControlForm.Controls)
                 {
-                    ctl.DataBindings.Clear();
-                    ((TextBox)ctl).ReadOnly = true;
+                    if (ctl.GetType() == typeof(TextEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((TextEdit)ctl).ReadOnly = true;
+                    }
+                    else if (ctl.GetType() == typeof(CheckEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((CheckEdit)ctl).ReadOnly = true;
+                    }
+                    else if (ctl.GetType() == typeof(LookUpEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((LookUpEdit)ctl).ReadOnly = true;
+                    }
                 }
-                else if (ctl.GetType() == typeof(CheckBox))
-                {
-                    ctl.DataBindings.Clear();
-                    ((CheckBox)ctl).Enabled = false;
-                }
+
+                //txtIdCustomer.DataBindings.Add("Text", _customerUpdate, "IdCustomer");
+                //txtIdVersion.DataBindings.Add("Text", _customerUpdate, "idVer");
+                //txtIdSubversion.DataBindings.Add("Text", _customerUpdate, "idSubVer");
+                //txtTimestamp.DataBindings.Add("Text", _customerUpdate, "Timestamp");
+                //txtName.DataBindings.Add("Text", _customerUpdate, "CustName");
+                //chkActive.DataBindings.Add("Checked", _customerUpdate, "Active");
+                //txtVatNumber.DataBindings.Add("Text", _customerUpdate, "VATNum");
+                //txtShippingAddress.DataBindings.Add("Text", _customerUpdate, "ShippingAddress");
+                //txtBillingAddress.DataBindings.Add("Text", _customerUpdate, "BillingAddress");
+                //txtContactName.DataBindings.Add("Text", _customerUpdate, "ContactName");
+                //txtContactPhone.DataBindings.Add("Text", _customerUpdate, "ContactPhone");
+                //txtIntercom.DataBindings.Add("Text", _customerUpdate, "IdIncoterm");
+                //txtPaymentTerms.DataBindings.Add("Text", _customerUpdate, "IdPaymentTerms");
+                //txtCurreny.DataBindings.Add("Text", _customerUpdate, "Currency");
+
+                //Textedit
+                txtIdCustomer.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.IdCustomer);
+                txtIdVersion.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.IdVer);
+                txtIdSubversion.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.IdSubVer);
+                txtTimestamp.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.Timestamp);
+                txtName.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.CustomerName);
+                txtVatNumber.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.VATNum);
+                txtShippingAddress.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.ShippingAddress);
+                txtShippingAddressZh.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.ShippingAddressZh);
+                txtBillingAddress.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.BillingAddress);
+                txtBillingAddressZh.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.BillingAddressZh);
+                txtContactName.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.ContactName);
+                txtContactNameZh.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.ContactNameZh);
+                txtContactPhone.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.ContactPhone);
+                txtComments.DataBindings.Add<Customer>(_customerUpdate, (Control c) => c.Text, supplier => supplier.Comments);
+
+                //CheckEdit
+                chkActive.DataBindings.Add<Customer>(_customerUpdate, (CheckEdit chk) => chk.Checked, supplier => supplier.Active);
+
+                //LookUpEdit
+                lueIdIncoterm.DataBindings.Add<Customer>(_customerUpdate, (LookUpEdit e) => e.EditValue, supplier => supplier.IdIncoterm);
+                lueIdPaymentTerms.DataBindings.Add<Customer>(_customerUpdate, (LookUpEdit e) => e.EditValue, supplier => supplier.IdPaymentTerms);
+                lueIdDefaultCurrency.DataBindings.Add<Customer>(_customerUpdate, (LookUpEdit e) => e.EditValue, supplier => supplier.IdDefaultCurrency);
             }
-            txtIdCustomer.DataBindings.Add("Text", _customerUpdate, "idCustomer");
-            txtIdVersion.DataBindings.Add("Text", _customerUpdate, "idVer");
-            txtIdSubversion.DataBindings.Add("Text", _customerUpdate, "idSubVer");
-            txtTimestamp.DataBindings.Add("Text", _customerUpdate, "Timestamp");
-            txtName.DataBindings.Add("Text", _customerUpdate, "CustName");
-            chkActive.DataBindings.Add("Checked",_customerUpdate,"Active");
-            txtVatNumber.DataBindings.Add("Text", _customerUpdate, "VATNum");
-            txtShippingAddress.DataBindings.Add("Text", _customerUpdate, "ShippingAddress");
-            txtBillingAddress.DataBindings.Add("Text", _customerUpdate, "BillingAddress");
-            txtContactName.DataBindings.Add("Text", _customerUpdate, "ContactName");
-            txtContactPhone.DataBindings.Add("Text", _customerUpdate, "ContactPhone");
-            txtIntercom.DataBindings.Add("Text", _customerUpdate, "idIncoterm");
-            txtPaymentTerms.DataBindings.Add("Text", _customerUpdate, "idPaymentTerms");
-            txtCurreny.DataBindings.Add("Text", _customerUpdate, "Currency");
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
 
-        /// <summary>
-        /// Cargar el combo con los campos que se puede filtrar
-        /// </summary>
-        private void LoadComboFilters()
+        private void SetHistoryBinding()
         {
             try
             {
-                cmbColFilter.DataSource = Enum.GetNames(typeof(eCustomerColumnsFilter));
-                cmbColFilter.SelectedIndexChanged += cmbColFilter_SelectedIndexChanged;
-                cmbColFilter.SelectedIndex = -1;
+                foreach (Control ctl in layoutControlHistory.Controls)
+                {
+                    if (ctl.GetType() == typeof(TextEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((TextEdit)ctl).ReadOnly = true;
+                    }
+                    else if (ctl.GetType() == typeof(CheckEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((CheckEdit)ctl).ReadOnly = true;
+                    }
+                    else if (ctl.GetType() == typeof(DateEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((DateEdit)ctl).ReadOnly = true;
+                    }
+                    else if (ctl.GetType() == typeof(LookUpEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((LookUpEdit)ctl).ReadOnly = true;
+                    }
+                }
+
+                //Textedit
+                txtHIdCustomer.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.IdCustomer);
+                txtHIdVersion.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.IdVer);
+                txtHIdSubversion.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.IdSubVer);
+                txtHTimestamp.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.Timestamp);
+                txtHName.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.CustomerName);
+                txtHVATNumber.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.VATNum);
+                txtHShippingAddress.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.ShippingAddress);
+                txtHShippingAddressZh.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.ShippingAddressZh);
+                txtHBillingAddress.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.BillingAddress);
+                txtHBillingAddressZh.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.BillingAddressZh);
+                txtHContactName.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.ContactName);
+                txtHContactNameZh.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.ContactNameZh);
+                txtHContactPhone.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.ContactPhone);
+                txtHComments.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.Comments);
+
+                txtHIdIncoterm.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.IdIncoterm);
+                txtHIdPaymentTerms.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.IdPaymentTerms);
+                txtHIdDefaultCurrency.DataBindings.Add<CustomerHistory>(_customerHistory, (Control c) => c.Text, customer => customer.IdDefaultCurrency);
+
+                //CheckEdit
+                chkHActive.DataBindings.Add<CustomerHistory>(_customerHistory, (CheckEdit chk) => chk.Checked, customer => customer.Active);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void ConfigureRibbonActionsEditing()
+        {
+            try
+            {
+                xtpList.PageVisible = true;
+                sbNewVersion.Visible = true;
+                SetEditingFieldsEnabled();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void ConfigureRibbonActionsCreating()
+        {
+            try
+            {
+                xtpList.PageVisible = false;
+                xtpForm.PageVisible = true;
+                sbNewVersion.Visible = false;
+                ResetCustomerUpdate();
+                SetFormBinding(); //refresh binding
+                SetNonCreatingFieldsVisibility(LayoutVisibility.Never);
+                SetCreatingFieldsEnabled();
             }
             catch (Exception ex)
             {
@@ -406,26 +792,29 @@ namespace HKSupply.Forms.Master
         }
 
         /// <summary>
-        /// Mostrar el campo de filtro en función del tipo del campo (text, boolen...)
+        /// Poner como editables los campos para el modo de edición
         /// </summary>
-        /// <param name="type"></param>
-        private void ShowFilterField(eCustomerColumnsFilterType type)
+        private void SetEditingFieldsEnabled()
         {
             try
             {
-                txtFilter.Location = new Point(223, 14);
-                chkFilter.Location = new Point(223, 18);
-
-                switch (type)
+                foreach (Control ctl in layoutControlForm.Controls)
                 {
-                    case eCustomerColumnsFilterType.Text:
-                        txtFilter.Visible = true;
-                        chkFilter.Visible = false;
-                        break;
-                    case eCustomerColumnsFilterType.CheckBox:
-                        txtFilter.Visible = false;
-                        chkFilter.Visible = true;
-                        break;
+                    if (Array.IndexOf(_nonEditingFields, ctl.Name) < 0)
+                    {
+                        if (ctl.GetType() == typeof(TextEdit))
+                        {
+                            ((TextEdit)ctl).ReadOnly = false;
+                        }
+                        else if (ctl.GetType() == typeof(CheckEdit))
+                        {
+                            ((CheckEdit)ctl).ReadOnly = false;
+                        }
+                        else if (ctl.GetType() == typeof(LookUpEdit))
+                        {
+                            ((LookUpEdit)ctl).ReadOnly = false;
+                        }
+                    }
                 }
             }
             catch (Exception ex)
@@ -434,73 +823,25 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        /// <summary>
-        /// cargar la colección de Customer del sistema
-        /// </summary>
-        /// <remarks></remarks>
-        private void LoadCustomersList()
+        private void SetCreatingFieldsEnabled()
         {
             try
             {
-                _customersList = GlobalSetting.CustomerService.GetCustomers();
-
-                //Filtramos si es necesario
-                //MRM.Notes: Ahora obtenemos todo de la bbdd y sobre esa colección filtramos. Si al final se implanta esto se tendría que hacer la llamada
-                //a la bbdd con las condiciones y que la propia consulta filtre
-                //Columnas tipo Texto
-                if ((eCustomerColumnsFilter)cmbColFilter.SelectedIndex != eCustomerColumnsFilter.Active &&  
-                    cmbColFilter.SelectedIndex > -1 && string.IsNullOrEmpty(txtFilter.Text) == false)
+                foreach (Control ctl in layoutControlForm.Controls)
                 {
-                    //Lo pasamos antes a minúsculas todo, ya que el Contains es case sensitive, 
-                    _customersList = _customersList.Where(cmbColFilter.SelectedItem.ToString() + ".ToLower().Contains(@0)", txtFilter.Text.ToLower()).ToList();
+                    if (ctl.GetType() == typeof(TextEdit))
+                    {
+                        ((TextEdit)ctl).ReadOnly = false;
+                    }
+                    else if (ctl.GetType() == typeof(CheckEdit))
+                    {
+                        ((CheckEdit)ctl).ReadOnly = false;
+                    }
+                    else if (ctl.GetType() == typeof(LookUpEdit))
+                    {
+                        ((LookUpEdit)ctl).ReadOnly = false;
+                    }
                 }
-                //Columnas bit
-                if ((eCustomerColumnsFilter)cmbColFilter.SelectedIndex == eCustomerColumnsFilter.Active)
-                {
-                    _customersList = _customersList.Where(cmbColFilter.SelectedItem.ToString() + " = @0", chkFilter.Checked).ToList();
-                }
-
-                grdCustomers.CellDoubleClick += grdCustomers_CellDoubleClick;
-                grdCustomers.CellClick +=grdCustomers_CellClick;
-                grdCustomers.DataSource = null;
-                grdCustomers.Rows.Clear();
-                grdCustomers.DataSource = _customersList;
-                grdCustomers.ReadOnly = true;
-                //Para poder cambiar el color del header cuando se filtra hay que desactivar los efectos visuales del header que coge por defecto
-                grdCustomers.EnableHeadersVisualStyles = false; 
-
-            }
-            catch(Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Ordenar el grid según la columna 
-        /// </summary>
-        /// <param name="sortedColumn">Columna por la que se quiere ordenar</param>
-        /// <remarks>
-        /// Alterna entre el orden ascendente y descendente.
-        /// OK, no es muy correcto porque se controla con una sola variable la ordenación (ascendente o descendente) 
-        /// de todas las columnas, pero así es más fácil y en el peor de los casos el usuario pulsará dos veces 
-        /// sobre la misma columna para tener el orden que quiere.
-        /// </remarks>
-        private void LoadCustomersSortedList(eCustomerColumns sortedColumn)
-        {
-            try
-            {
-                string order = _sortDescending ? " ASC" : " DESC";
-                _customersList = _customersList.OrderBy(sortedColumn.ToString() + order).ToList();
-
-                _sortDescending = !_sortDescending; //See Remarks
-
-                grdCustomers.DataSource = null;
-                grdCustomers.Rows.Clear();
-                grdCustomers.DataSource = _customersList;
-                grdCustomers.ReadOnly = true;
-                grdCustomers.Columns[(int)sortedColumn].HeaderCell.Style.BackColor = Color.Tomato;
-                grdCustomers.Columns[(int)sortedColumn].HeaderText += "*";
             }
             catch (Exception ex)
             {
@@ -508,28 +849,79 @@ namespace HKSupply.Forms.Master
             }
         }
 
-
-        /// <summary>
-        /// Cargar los datos de un customer en concreto
-        /// </summary>
-        /// <param name="idCustomer"></param>
-        private void LoadCustomerForm(string idCustomer)
+        private void SetNonCreatingFieldsVisibility(LayoutVisibility visibility)
         {
             try
             {
-                if (tcGeneral.TabPages.Contains(tpForm) == false)
-                    tcGeneral.TabPages.Add(tpForm);
-                tcGeneral.SelectedTab = tpForm;
-
-                _customerUpdate = GlobalSetting.CustomerService.GetCustomerById(idCustomer);
-                _customerOriginal = _customerUpdate.Clone();
-                SetFormBinding();
+                lciIdVersion.Visibility = visibility;
+                lciIdSubversion.Visibility = visibility;
+                lciTimestamp.Visibility = visibility;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
+
+        /// <summary>
+        /// Mover la fila activa a la de un supplier en concreto
+        /// </summary>
+        /// <param name="idSupplier"></param>
+        private void MoveGridToSupplier(string idSupplier)
+        {
+            try
+            {
+                GridColumn column = rootGridViewCustomers.Columns[eCustomerColumns.IdCustomer.ToString()];
+                if (column != null)
+                {
+                    // locating the row 
+                    int rhFound = rootGridViewCustomers.LocateByDisplayText(rootGridViewCustomers.FocusedRowHandle + 1, column, idSupplier);
+                    // focusing the cell 
+                    if (rhFound != GridControl.InvalidRowHandle)
+                    {
+                        rootGridViewCustomers.FocusedRowHandle = rhFound;
+                        rootGridViewCustomers.FocusedColumn = column;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private bool IsValidCustomer()
+        {
+            try
+            {
+                foreach (Control ctl in layoutControlForm.Controls)
+                {
+                    if (ctl.GetType() == typeof(TextEdit))
+                    {
+                        if (string.IsNullOrEmpty(((TextEdit)ctl).Text))
+                        {
+                            MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
+                            return false;
+                        }
+                    }
+                    if (ctl.GetType() == typeof(LookUpEdit))
+                    {
+                        if (string.IsNullOrEmpty(((LookUpEdit)ctl).Text))
+                        {
+                            MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
+                            return false;
+                        }
+                    }
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #region Create/Update
 
         /// <summary>
         /// Actualizar los datos de un customer
@@ -565,138 +957,6 @@ namespace HKSupply.Forms.Master
             }
         }
 
-
-        /// <summary>
-        /// Mover la celda activa a la de un customer en concreto
-        /// </summary>
-        /// <param name="idCustomer"></param>
-        private void MoveGridToCustomer(string idCustomer)
-        {
-            try
-            {
-                foreach (DataGridViewRow row in grdCustomers.Rows)
-                {
-                    if (row.Cells[(int)eCustomerColumns.IdCustomer].Value.ToString() == idCustomer)
-                    {
-                        grdCustomers.CurrentCell = row.Cells[(int)eCustomerColumns.IdVer];
-                        grdCustomers.FirstDisplayedScrollingRowIndex = row.Index;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-        }
-
-        /// <summary>
-        /// Acciones cuando pulsamos el botón de editar
-        /// </summary>
-        private void ConfigureActionsStackViewEditing()
-        {
-            try
-            {
-                tcGeneral.TabPages.Remove(tpGrid);
-
-                btnNewVersion.Visible = true;
-
-                SetEditingFieldsEnabled();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Acciones cuando pulsamos el botón de nuevo
-        /// </summary>
-        private void ConfigureActionsStackViewCreating()
-        {
-            tcGeneral.TabPages.Remove(tpGrid);
-            if (tcGeneral.TabPages.Contains(tpForm) == false)
-                tcGeneral.TabPages.Add(tpForm);
-            
-            tcGeneral.SelectedTab = tpForm;
-
-            btnNewVersion.Visible = false;
-
-            ResetCustomerUpdate();
-            SetFormBinding();
-
-            SetCreatingFieldsEnabled();
-
-            foreach (var n in _nonCreatingFieldsRows)
-            {
-                tlpForm.RowStyles[n].SizeType = SizeType.Absolute;
-                tlpForm.RowStyles[n].Height = 0;
-            }
-
-
-        }
-
-        /// <summary>
-        /// Poner como editables los campos para el modo de edición
-        /// </summary>
-        private void SetEditingFieldsEnabled()
-        {
-            try
-            {
-                foreach (Control ctl in tlpForm.Controls)
-                {
-                    if (Array.IndexOf(_nonEditingFields, ctl.Name) < 0)
-                    {
-                        if (ctl.GetType() == typeof(TextBox))
-                        {
-                            ((TextBox)ctl).ReadOnly = false;
-                        }
-                        else if (ctl.GetType() == typeof(CheckBox))
-                        {
-                            ((CheckBox)ctl).Enabled = true;
-                        }
-                    }
-
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Poner como editables los campos para el modo de creación
-        /// </summary>
-        private void SetCreatingFieldsEnabled()
-        {
-            try
-            {
-                foreach (Control ctl in tlpForm.Controls)
-                {
-                    if (Array.IndexOf(_nonCreatingFields, ctl.Name) < 0)
-                    {
-                        if (ctl.GetType() == typeof(TextBox))
-                        {
-                            ((TextBox)ctl).ReadOnly = false;
-                        }
-                        else if (ctl.GetType() == typeof(CheckBox))
-                        {
-                            ((CheckBox)ctl).Enabled = true;
-                        }
-                    }
-
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Acciones después de crear o updatar
-        /// </summary>
         private void ActionsAfterCU()
         {
             try
@@ -705,17 +965,11 @@ namespace HKSupply.Forms.Master
                 _customerOriginal = null;
                 ResetCustomerUpdate();
                 SetFormBinding();
-                tcGeneral.TabPages.Remove(tpForm);
-                tcGeneral.TabPages.Add(tpGrid);
-                btnNewVersion.Visible = false;
+                xtpForm.PageVisible = false;
+                xtpList.PageVisible = true;
                 LoadCustomersList();
-                MoveGridToCustomer(id);
-                actionsStackView.RestoreInitState();
-
-                foreach (var n in _nonCreatingFieldsRows)
-                {
-                    tlpForm.RowStyles[n].SizeType = SizeType.AutoSize;
-                }
+                MoveGridToSupplier(id);
+                RestoreInitState();
             }
             catch (Exception ex)
             {
@@ -723,89 +977,8 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        #region validate data
-
-        private bool IsValidCustomer()
-        {
-            try
-            {
-                if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.Edit)
-                    return IsValidModifiedCustomer();
-                else if (actionsStackView.CurrentState == CustomControls.StackView.ToolbarStates.New)
-                    return IsValidCreatedCustomer();
-
-                return false;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        private bool IsValidModifiedCustomer()
-        {
-            try
-            {
-                foreach(Control ctl in tpForm.Controls)
-                {
-                    if (ctl.GetType() == typeof(TextBox))
-                    {
-                        if (string.IsNullOrEmpty(((TextBox)ctl).Text))
-                        {
-                            MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
-                            return false;
-                        }
-                        
-                    }
-                }
-
-                return true;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-                
-        }
-
-        /// <summary>
-        /// TODO
-        /// </summary>
-        /// <returns></returns>
-        private bool IsValidCreatedCustomer()
-        {
-            try
-            {
-                foreach (Control ctl in tlpForm.Controls)
-                {
-                    if (ctl.GetType() == typeof(TextBox))
-                    {
-                        if (string.IsNullOrEmpty(((TextBox)ctl).Text))
-                        {
-                            MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
-                            return false;
-                        }
-
-                    }
-                }
-
-                return true;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
         #endregion
 
         #endregion
-
-
     }
-
-    
 }

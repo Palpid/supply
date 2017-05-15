@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65F371B9-F181-4186-939D-28AE026D49BE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HKSupply</RootNamespace>
+    <AssemblyName>HKSupply</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>etnia_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Log4Slack, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Log4Slack.1.1.9\lib\net40\Log4Slack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB\HKSupplyContext.cs" />
+    <Compile Include="Exceptions\DBServerConnectionException.cs" />
+    <Compile Include="Exceptions\InvalidPasswordException.cs" />
+    <Compile Include="Exceptions\NewExistingFunctionalityException.cs" />
+    <Compile Include="Exceptions\NewExistingFunctionalityRoleException.cs" />
+    <Compile Include="Exceptions\NewExistingRoleException.cs" />
+    <Compile Include="Exceptions\NewExistingStoreException.cs" />
+    <Compile Include="Exceptions\NewExistingUserException.cs" />
+    <Compile Include="Exceptions\NonexistentFunctionalityException.cs" />
+    <Compile Include="Exceptions\NonexistentFunctionalityRoleException.cs" />
+    <Compile Include="Exceptions\NonexistentRoleException.cs" />
+    <Compile Include="Exceptions\NonexistentStoreException.cs" />
+    <Compile Include="Exceptions\NonexistentUserException.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DynamicFilters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DynamicFilters.Designer.cs">
+      <DependentUpon>DynamicFilters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IActionsStackView.cs" />
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\CustomerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\CustomerManagement.Designer.cs">
+      <DependentUpon>CustomerManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\CustomerManagement_v1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\CustomerManagement_v1.Designer.cs">
+      <DependentUpon>CustomerManagement_v1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\FunctionalityManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\FunctionalityManagement.Designer.cs">
+      <DependentUpon>FunctionalityManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\FunctionalityManagement_v1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\FunctionalityManagement_v1.Designer.cs">
+      <DependentUpon>FunctionalityManagement_v1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\FunctionalityRoleManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\FunctionalityRoleManagement.Designer.cs">
+      <DependentUpon>FunctionalityRoleManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\FunctionalityRoleManagement_v1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\FunctionalityRoleManagement_v1.Designer.cs">
+      <DependentUpon>FunctionalityRoleManagement_v1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\ItemManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\ItemManagement.Designer.cs">
+      <DependentUpon>ItemManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\ItemManagement_v1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\ItemManagement_v1.Designer.cs">
+      <DependentUpon>ItemManagement_v1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\RoleManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\RoleManagement.Designer.cs">
+      <DependentUpon>RoleManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\RoleManagement_v1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\RoleManagement_v1.Designer.cs">
+      <DependentUpon>RoleManagement_v1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\StoreManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\StoreManagement.Designer.cs">
+      <DependentUpon>StoreManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\StoreManagement_v1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\StoreManagement_v1.Designer.cs">
+      <DependentUpon>StoreManagement_v1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\SupplierManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\SupplierManagement.Designer.cs">
+      <DependentUpon>SupplierManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\SupplierManagement_v1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\SupplierManagement_v1.Designer.cs">
+      <DependentUpon>SupplierManagement_v1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\UserManagement.Designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\UserManagement_v1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\UserManagement_v1.Designer.cs">
+      <DependentUpon>UserManagement_v1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RibbonFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RibbonFormBase.Designer.cs">
+      <DependentUpon>RibbonFormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\GlobalSetting.cs" />
+    <Compile Include="Helpers\CustomExtensions.cs" />
+    <Compile Include="Helpers\MDIClientSupport.cs" />
+    <Compile Include="Helpers\Mocking\MockData.cs" />
+    <Compile Include="Helpers\PasswordHelper.cs" />
+    <Compile Include="Migrations\201703081042226_Customer.cs" />
+    <Compile Include="Migrations\201703081042226_Customer.Designer.cs">
+      <DependentUpon>201703081042226_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703081123445_ObjectVersion.cs" />
+    <Compile Include="Migrations\201703081123445_ObjectVersion.Designer.cs">
+      <DependentUpon>201703081123445_ObjectVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703081126231_ObjectVersion_2.cs" />
+    <Compile Include="Migrations\201703081126231_ObjectVersion_2.Designer.cs">
+      <DependentUpon>201703081126231_ObjectVersion_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703161530406_Supplier.cs" />
+    <Compile Include="Migrations\201703161530406_Supplier.Designer.cs">
+      <DependentUpon>201703161530406_Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703161637578_Store.cs" />
+    <Compile Include="Migrations\201703161637578_Store.Designer.cs">
+      <DependentUpon>201703161637578_Store.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703201426591_items.cs" />
+    <Compile Include="Migrations\201703201426591_items.Designer.cs">
+      <DependentUpon>201703201426591_items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703210811583_items_2.cs" />
+    <Compile Include="Migrations\201703210811583_items_2.Designer.cs">
+      <DependentUpon>201703210811583_items_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\CustomerHistory.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Functionality.cs" />
+    <Compile Include="Models\FunctionalityRole.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ItemHistory.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\Store.cs" />
+    <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Models\SupplierHistory.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\HKSupplyRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HKSupplyRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Implementations\EFCustomer.cs" />
+    <Compile Include="Services\Implementations\EFFunctionality.cs" />
+    <Compile Include="Services\Implementations\EFFunctionalityRole.cs" />
+    <Compile Include="Services\Implementations\EFItem.cs" />
+    <Compile Include="Services\Implementations\EFRole.cs" />
+    <Compile Include="Services\Implementations\EFStore.cs" />
+    <Compile Include="Services\Implementations\EFSupplier.cs" />
+    <Compile Include="Services\Implementations\EFUser.cs" />
+    <Compile Include="Services\Interfaces\ICustomer.cs" />
+    <Compile Include="Services\Interfaces\IFunctionality.cs" />
+    <Compile Include="Services\Interfaces\IFunctionalityRole.cs" />
+    <Compile Include="Services\Interfaces\IItem.cs" />
+    <Compile Include="Services\Interfaces\IRole.cs" />
+    <Compile Include="Services\Interfaces\IStore.cs" />
+    <Compile Include="Services\Interfaces\ISupplier.cs" />
+    <Compile Include="Services\Interfaces\IUser.cs" />
+    <Compile Include="Styles\AppStyles.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DynamicFilters.resx">
+      <DependentUpon>DynamicFilters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\CustomerManagement.resx">
+      <DependentUpon>CustomerManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\CustomerManagement_v1.resx">
+      <DependentUpon>CustomerManagement_v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\FunctionalityManagement.resx">
+      <DependentUpon>FunctionalityManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\FunctionalityManagement_v1.resx">
+      <DependentUpon>FunctionalityManagement_v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\FunctionalityRoleManagement.resx">
+      <DependentUpon>FunctionalityRoleManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\FunctionalityRoleManagement_v1.resx">
+      <DependentUpon>FunctionalityRoleManagement_v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\ItemManagement.resx">
+      <DependentUpon>ItemManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\ItemManagement_v1.resx">
+      <DependentUpon>ItemManagement_v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\RoleManagement.resx">
+      <DependentUpon>RoleManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\RoleManagement_v1.resx">
+      <DependentUpon>RoleManagement_v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\StoreManagement.resx">
+      <DependentUpon>StoreManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\StoreManagement_v1.resx">
+      <DependentUpon>StoreManagement_v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\SupplierManagement.resx">
+      <DependentUpon>SupplierManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\SupplierManagement_v1.resx">
+      <DependentUpon>SupplierManagement_v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\UserManagement.resx">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\UserManagement_v1.resx">
+      <DependentUpon>UserManagement_v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RibbonFormBase.resx">
+      <DependentUpon>RibbonFormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703081042226_Customer.resx">
+      <DependentUpon>201703081042226_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703081123445_ObjectVersion.resx">
+      <DependentUpon>201703081123445_ObjectVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703081126231_ObjectVersion_2.resx">
+      <DependentUpon>201703081126231_ObjectVersion_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703161530406_Supplier.resx">
+      <DependentUpon>201703161530406_Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703161637578_Store.resx">
+      <DependentUpon>201703161637578_Store.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703201426591_items.resx">
+      <DependentUpon>201703201426591_items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703210811583_items_2.resx">
+      <DependentUpon>201703210811583_items_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Resources\HKSupplyRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HKSupplyRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="etnia_icon.ico" />
+    <Content Include="Resources\Images\etnia_icon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\etnia_logo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomControls\CustomControls.csproj">
+      <Project>{acfd25c3-ffa5-4f88-9df7-7e2361b60be3}</Project>
+      <Name>CustomControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -28,41 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grdFunctionalities = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.grdFunctionalities)).BeginInit();
+            this.xgrdFunctionalities = new DevExpress.XtraGrid.GridControl();
+            this.rootGridViewFunctionalities = new DevExpress.XtraGrid.Views.Grid.GridView();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdFunctionalities)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rootGridViewFunctionalities)).BeginInit();
             this.SuspendLayout();
             // 
-            // grdFunctionalities
+            // ribbonControl
             // 
-            this.grdFunctionalities.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.grdFunctionalities.BackgroundColor = System.Drawing.Color.White;
-            this.grdFunctionalities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdFunctionalities.Location = new System.Drawing.Point(16, 62);
-            this.grdFunctionalities.Margin = new System.Windows.Forms.Padding(4);
-            this.grdFunctionalities.Name = "grdFunctionalities";
-            this.grdFunctionalities.ReadOnly = true;
-            this.grdFunctionalities.Size = new System.Drawing.Size(1183, 522);
-            this.grdFunctionalities.TabIndex = 1;
+            this.ribbonControl.ExpandCollapseItem.Id = 0;
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.ribbonPage1.Appearance.Options.UseFont = true;
+            // 
+            // xgrdFunctionalities
+            // 
+            this.xgrdFunctionalities.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xgrdFunctionalities.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.xgrdFunctionalities.Location = new System.Drawing.Point(0, 79);
+            this.xgrdFunctionalities.MainView = this.rootGridViewFunctionalities;
+            this.xgrdFunctionalities.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.xgrdFunctionalities.MenuManager = this.ribbonControl;
+            this.xgrdFunctionalities.Name = "xgrdFunctionalities";
+            this.xgrdFunctionalities.Size = new System.Drawing.Size(790, 489);
+            this.xgrdFunctionalities.TabIndex = 2;
+            this.xgrdFunctionalities.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.rootGridViewFunctionalities});
+            // 
+            // rootGridViewFunctionalities
+            // 
+            this.rootGridViewFunctionalities.GridControl = this.xgrdFunctionalities;
+            this.rootGridViewFunctionalities.Name = "rootGridViewFunctionalities";
             // 
             // FunctionalityManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1215, 598);
-            this.Controls.Add(this.grdFunctionalities);
+            this.ClientSize = new System.Drawing.Size(790, 599);
+            this.Controls.Add(this.xgrdFunctionalities);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FunctionalityManagement";
-            this.Text = "Functionality Management";
+            this.Text = "FunctionalityManagement";
             this.Load += new System.EventHandler(this.FunctionalityManagement_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.grdFunctionalities)).EndInit();
+            this.Controls.SetChildIndex(this.ribbonControl, 0);
+            this.Controls.SetChildIndex(this.ribbonStatusBar, 0);
+            this.Controls.SetChildIndex(this.xgrdFunctionalities, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdFunctionalities)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rootGridViewFunctionalities)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView grdFunctionalities;
+        private DevExpress.XtraGrid.GridControl xgrdFunctionalities;
+        private DevExpress.XtraGrid.Views.Grid.GridView rootGridViewFunctionalities;
     }
 }

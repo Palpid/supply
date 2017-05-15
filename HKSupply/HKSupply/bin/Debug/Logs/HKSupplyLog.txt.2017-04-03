@@ -1,0 +1,12 @@
+﻿2017-04-03 11:50:40,892 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid user
+HKSupply.Exceptions.NonexistentUserException: Invalid user
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 136
+2017-04-03 11:52:27,094 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid user
+HKSupply.Exceptions.NonexistentUserException: Invalid user
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 136
+2017-04-03 11:52:36,098 INFO [9] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid user
+HKSupply.Exceptions.NonexistentUserException: Invalid user
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 136
+2017-04-03 13:11:22,097 INFO [9] HKSupply.Services.Implementations.EFRole.NewRole - Role Already Exist
+HKSupply.Exceptions.NewExistingRoleException: Role Already Exist
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 155

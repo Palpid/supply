@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using HKSupply.Models;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace HKSupply.DB
 {
@@ -22,23 +23,92 @@ namespace HKSupply.DB
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<SupplierHistory> SuppliersHistory { get; set; }
         public DbSet<Store> Stores { get; set; }
-        public DbSet<Item> Items { get; set; }
-        public DbSet<ItemHistory> ItemsHistory { get; set; }
+
+        public DbSet<Model> Models { get; set; }
+        public DbSet<EtnColor> EtnColors { get; set; }
+        public DbSet<StatusCial> StatusCial { get; set; }
+        public DbSet<StatusHK> StatusProd { get; set; }
+        public DbSet<FamilyHK> FamiliesHK { get; set; }
+        public DbSet<ItemGroup> ItemGroups { get; set; }
+
+        public DbSet<UserAttrDescription> UserAttrsDescription { get; set; }
+        public DbSet<Incoterm> Incoterms { get; set; }
+        public DbSet<PaymentTerms> PaymentTerms { get; set; }
+        public DbSet<Currency> Currencies { get; set; }
+        public DbSet<EchangeRate> EchangeRates { get; set; }
+
+        public DbSet<MaterialL1> MaterialsL1 { get; set; }
+        public DbSet<MaterialL2> MaterialsL2 { get; set; }
+        public DbSet<MaterialL3> MaterialsL3 { get; set; }
+
+        public DbSet<MatTypeL1> MatsTypeL1 { get; set; }
+        public DbSet<MatTypeL2> MatsTypeL2 { get; set; }
+        public DbSet<MatTypeL3> MatsTypeL3 { get; set; }
+
+        public DbSet<HwTypeL1> HwsTypeL1 { get; set; }
+        public DbSet<HwTypeL2> HwsTypeL2 { get; set; }
+        public DbSet<HwTypeL3> HwsTypeL3 { get; set; }
+
+
+        public DbSet<ItemEy> ItemsEy { get; set; }
+        public DbSet<ItemEyHistory> ItemsEyHistory { get; set; }
+
+        public DbSet<Prototype> Prototypes { get; set; }
+        public DbSet<ItemHw> ItemsHw { get; set; }
+        public DbSet<ItemHwHistory> ItemsHwHistory { get; set; }
+        public DbSet<ItemMt> ItemsMt { get; set; }
+        public DbSet<ItemMtHistory> ItemsMtHistory { get; set; }
+        public DbSet<DocType> DocsType { get; set; }
+
+        public DbSet<ItemDoc> ItemsDoc { get; set; }
+
+        public DbSet<ItemBcn> ItemsBcn { get; set; }
+
+        public DbSet<SupplierPriceList> SuppliersPriceList { get; set; }
+        public DbSet<SupplierPriceListHistory> SuppliersPriceListHistory { get; set; }
+        public DbSet<CustomerPriceList> CustomersPriceList { get; set; }
+        public DbSet<CustomerPriceListHistory> CustomersPriceListHistory { get; set; }
+
+        public DbSet<PrototypeDoc> PrototypesDocs { get; set; }
+
+        //public HKSupplyContext()
+        //    : base("name=SqlExpressConn")
+        //{
+
+        //}
 
         public HKSupplyContext()
-            : base("name=SqlExpressConn")
+            : base(General.GlobalSetting.DbEnvironment)
         {
 
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //Set precision 
-            modelBuilder.Entity<Item>().Property(x => x.MmFront).HasPrecision(19, 6);
-            modelBuilder.Entity<Item>().Property(x => x.Caliber).HasPrecision(19, 6);
+            //Disable cascade delete
+            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+            //modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>(); //TODO: Da un error 
 
-            modelBuilder.Entity<ItemHistory>().Property(x => x.MmFront).HasPrecision(19,6);
-            modelBuilder.Entity<ItemHistory>().Property(x => x.Caliber).HasPrecision(19, 6);
+            //Set precision 
+            modelBuilder.Entity<ItemEy>().Property(x => x.Caliber).HasPrecision(19, 6);
+            modelBuilder.Entity<ItemEyHistory>().Property(x => x.Caliber).HasPrecision(19, 6);
+            modelBuilder.Entity<EchangeRate>().Property(x => x.Ratio).HasPrecision(19, 6);
+
+            modelBuilder.Entity<Prototype>().Property(x => x.Caliber).HasPrecision(19, 6);
+
+            modelBuilder.Entity<SupplierPriceList>().Property(x => x.Price).HasPrecision(19, 6);
+            modelBuilder.Entity<SupplierPriceList>().Property(x => x.PriceBaseCurrency).HasPrecision(19, 6);
+            modelBuilder.Entity<SupplierPriceList>().Property(x => x.ExchangeRateUsed).HasPrecision(19, 6);
+            modelBuilder.Entity<SupplierPriceListHistory>().Property(x => x.Price).HasPrecision(19, 6);
+            modelBuilder.Entity<SupplierPriceListHistory>().Property(x => x.PriceBaseCurrency).HasPrecision(19, 6);
+            modelBuilder.Entity<SupplierPriceListHistory>().Property(x => x.ExchangeRateUsed).HasPrecision(19, 6);
+
+            modelBuilder.Entity<CustomerPriceList>().Property(x => x.Price).HasPrecision(19, 6);
+            modelBuilder.Entity<CustomerPriceList>().Property(x => x.PriceBaseCurrency).HasPrecision(19, 6);
+            modelBuilder.Entity<CustomerPriceList>().Property(x => x.ExchangeRateUsed).HasPrecision(19, 6);
+            modelBuilder.Entity<CustomerPriceListHistory>().Property(x => x.Price).HasPrecision(19, 6);
+            modelBuilder.Entity<CustomerPriceListHistory>().Property(x => x.PriceBaseCurrency).HasPrecision(19, 6);
+            modelBuilder.Entity<CustomerPriceListHistory>().Property(x => x.ExchangeRateUsed).HasPrecision(19, 6);
 
             base.OnModelCreating(modelBuilder);
         }

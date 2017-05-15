@@ -66,7 +66,7 @@ namespace HKSupply.Models
 
         public override int GetHashCode()
         {
-            return UserLogin.GetHashCode();
+            return (UserLogin == null ? 0 : UserLogin.GetHashCode());
         }
     }
 }
