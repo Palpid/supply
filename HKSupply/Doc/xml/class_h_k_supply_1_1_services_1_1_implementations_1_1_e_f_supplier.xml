@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFSupplier</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.ISupplier</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_1ac3d8205151f96a6f2f18d103efb74017" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFSupplier._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer" kindref="compound">EFCustomer</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplier.cs" line="21" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplier.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_1ac6007f14e02bd817674f4a67058a0d56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFSupplier.NewSupplier</definition>
+        <argsstring>(Supplier newSupplier)</argsstring>
+        <name>NewSupplier</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_1a7019d71be0f8ed67ccc25b2904742792">NewSupplier</reimplements>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supplier" kindref="compound">Supplier</ref></type>
+          <declname>newSupplier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplier.cs" line="23" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplier.cs" bodystart="23" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_1aa4fb3668e36d6d76e84840be157e3632" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFSupplier.UpdateSupplier</definition>
+        <argsstring>(Supplier updateSupplier, bool newVer=false)</argsstring>
+        <name>UpdateSupplier</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_1a7a1efffc5b5a474eb28b018c769e744b">UpdateSupplier</reimplements>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supplier" kindref="compound">Supplier</ref></type>
+          <declname>updateSupplier</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>newVer</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplier.cs" line="94" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplier.cs" bodystart="94" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_1a302b3d6f8fed58b7f804cd645a513384" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supplier" kindref="compound">Models.Supplier</ref></type>
+        <definition>Models.Supplier HKSupply.Services.Implementations.EFSupplier.GetSupplierById</definition>
+        <argsstring>(string idSupplier)</argsstring>
+        <name>GetSupplierById</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_1accc763010890f2acb72ff29919752b78">GetSupplierById</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplier.cs" line="168" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplier.cs" bodystart="168" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_1a9881ab8326a00f150795c812b0d909db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier" kindref="compound">Models.Supplier</ref> &gt;</type>
+        <definition>List&lt;Models.Supplier&gt; HKSupply.Services.Implementations.EFSupplier.GetSuppliers</definition>
+        <argsstring>()</argsstring>
+        <name>GetSuppliers</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_1a39b55b5abacb7c7b44418dc5974b3c64">GetSuppliers</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplier.cs" line="213" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplier.cs" bodystart="213" bodyend="247"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="72">
+        <label>HKSupply.Services.Implementations.EFSupplier</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier"/>
+        <childnode refid="73" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>ISupplier</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="74">
+        <label>HKSupply.Services.Implementations.EFSupplier</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier"/>
+        <childnode refid="75" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>ISupplier</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier"/>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFSupplier.cs" line="19" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplier.cs" bodystart="18" bodyend="248"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_1ac3d8205151f96a6f2f18d103efb74017" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplier</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_1a302b3d6f8fed58b7f804cd645a513384" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplier</scope><name>GetSupplierById</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_1a9881ab8326a00f150795c812b0d909db" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplier</scope><name>GetSuppliers</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_1ac6007f14e02bd817674f4a67058a0d56" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplier</scope><name>NewSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_1aa4fb3668e36d6d76e84840be157e3632" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplier</scope><name>UpdateSupplier</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

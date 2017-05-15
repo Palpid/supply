@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_exceptions_1_1_new_existing_store_exception" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Exceptions::NewExistingStoreException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Exception</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_new_existing_store_exception_1a433514f6756218860d8e426842487edf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NewExistingStoreException.NewExistingStoreException</definition>
+        <argsstring>()</argsstring>
+        <name>NewExistingStoreException</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NewExistingStoreException.cs" line="15" column="1" bodyfile="HKSupply/Exceptions/NewExistingStoreException.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_new_existing_store_exception_1a9f726cdee4a92f54c0255145a96b59b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NewExistingStoreException.NewExistingStoreException</definition>
+        <argsstring>(string message)</argsstring>
+        <name>NewExistingStoreException</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NewExistingStoreException.cs" line="16" column="1" bodyfile="HKSupply/Exceptions/NewExistingStoreException.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_new_existing_store_exception_1a990262409d3923f1548098786d837bdc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NewExistingStoreException.NewExistingStoreException</definition>
+        <argsstring>(string message, System.Exception inner)</argsstring>
+        <name>NewExistingStoreException</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>System.Exception</type>
+          <declname>inner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NewExistingStoreException.cs" line="17" column="1" bodyfile="HKSupply/Exceptions/NewExistingStoreException.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_new_existing_store_exception_1ab6a835ccea46086bd723b6700d90745d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NewExistingStoreException.NewExistingStoreException</definition>
+        <argsstring>(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)</argsstring>
+        <name>NewExistingStoreException</name>
+        <param>
+          <type>System.Runtime.Serialization.SerializationInfo</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>System.Runtime.Serialization.StreamingContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NewExistingStoreException.cs" line="20" column="1" bodyfile="HKSupply/Exceptions/NewExistingStoreException.cs" bodystart="20" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Custom Exception: dar de alta un almacén ya existente en el sistema </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="199">
+        <label>System::Exception</label>
+      </node>
+      <node id="198">
+        <label>HKSupply.Exceptions.NewExistingStoreException</label>
+        <link refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_store_exception"/>
+        <childnode refid="199" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="201">
+        <label>System::Exception</label>
+      </node>
+      <node id="200">
+        <label>HKSupply.Exceptions.NewExistingStoreException</label>
+        <link refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_store_exception"/>
+        <childnode refid="201" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Exceptions/NewExistingStoreException.cs" line="14" column="1" bodyfile="HKSupply/Exceptions/NewExistingStoreException.cs" bodystart="13" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_store_exception_1a433514f6756218860d8e426842487edf" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::NewExistingStoreException</scope><name>NewExistingStoreException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_store_exception_1a9f726cdee4a92f54c0255145a96b59b3" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::NewExistingStoreException</scope><name>NewExistingStoreException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_store_exception_1a990262409d3923f1548098786d837bdc" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::NewExistingStoreException</scope><name>NewExistingStoreException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_store_exception_1ab6a835ccea46086bd723b6700d90745d" prot="protected" virt="non-virtual"><scope>HKSupply::Exceptions::NewExistingStoreException</scope><name>NewExistingStoreException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

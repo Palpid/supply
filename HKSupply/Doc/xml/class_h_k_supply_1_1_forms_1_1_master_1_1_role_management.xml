@@ -1,0 +1,596 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Master::RoleManagement</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+    <basecompoundref refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view" prot="public" virt="non-virtual">HKSupply.Forms.IActionsStackView</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a0ec7f3aa6a0ea7c1891c51b8ec3fa3a1" prot="private" static="no">
+        <name>eRoleColumns</name>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a0ec7f3aa6a0ea7c1891c51b8ec3fa3a1a9c9df3cbec73aaa6066acdbba0d1714d" prot="private">
+          <name>roleId</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a0ec7f3aa6a0ea7c1891c51b8ec3fa3a1ab5a7adde1af5c87d7fd797b6245c2a39" prot="private">
+          <name>Description</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a0ec7f3aa6a0ea7c1891c51b8ec3fa3a1a00d23a76e43b46dae9ec7aa9dcbebb32" prot="private">
+          <name>Enabled</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a0ec7f3aa6a0ea7c1891c51b8ec3fa3a1a231bc72756b5e6de492aaaa1577f61b1" prot="private">
+          <name>Remarks</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="23" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="22" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a62a5bc6f994e9ce736b9d554d8112e6f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_custom_controls_1_1_stack_view" kindref="compound">CustomControls.StackView</ref></type>
+        <definition>CustomControls.StackView HKSupply.Forms.Master.RoleManagement.actionsStackView</definition>
+        <argsstring></argsstring>
+        <name>actionsStackView</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="33" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1ac3c5b4dcceb88e38b50390b16b83e86c" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref> &gt;</type>
+        <definition>List&lt;Role&gt; HKSupply.Forms.Master.RoleManagement._modifiedRoles</definition>
+        <argsstring></argsstring>
+        <name>_modifiedRoles</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="35" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a95f8238dbfc06ba7132daa5a32327f50" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref> &gt;</type>
+        <definition>List&lt;Role&gt; HKSupply.Forms.Master.RoleManagement._createdRoles</definition>
+        <argsstring></argsstring>
+        <name>_createdRoles</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="36" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a5327fe3795c6333c16f44ce3c4ffe5fb" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Master.RoleManagement.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1acc57625e8dd54327e7a49b846800ff2b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridView</type>
+        <definition>System.Windows.Forms.DataGridView HKSupply.Forms.Master.RoleManagement.grdRoles</definition>
+        <argsstring></argsstring>
+        <name>grdRoles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.Designer.cs" line="67" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.Designer.cs" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1ab55687c20cf8f38cc4c2c478783f1224" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Master.RoleManagement.RoleManagement</definition>
+        <argsstring>()</argsstring>
+        <name>RoleManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="40" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a029527589b55752c810c410fb7b7ec73" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.RoleManagement.actionsStackView_EditButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_EditButtonClick</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1ae8deb0cdeaa1b41f48e9a497acce9334">actionsStackView_EditButtonClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="48" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="48" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a9cee7b3dda5de12cd3612ad66b27e302" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.RoleManagement.actionsStackView_NewButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_NewButtonClick</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1a9a3873c8695cb595fe413b51be87210d">actionsStackView_NewButtonClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="62" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="62" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a6f9ce17d9dbd5e01886e7ffebb428cac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.RoleManagement.actionsStackView_SaveButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_SaveButtonClick</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1a31fb0c34c49bb46661a612f1916f7c2e">actionsStackView_SaveButtonClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="76" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="76" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a9651949eef33db6a0600a919bb30f8e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.RoleManagement.actionsStackView_CancelButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_CancelButtonClick</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1aa9fb7f15cdbc1fb6fdc19b522327a34a">actionsStackView_CancelButtonClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="130" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="130" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a022e071b082ef46f206426f75db34fa8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.RoleManagement.ConfigureActionsStackView</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackView</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1a1a01439762b8cc84888acc2c7b7230d2">ConfigureActionsStackView</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="145" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="145" bodyend="166"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a49f2b67ebc44c175fd4b3d8289c5fd39" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.RoleManagement.RoleManagement_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>RoleManagement_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="172" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="172" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a3450b22b578ae9d45d63cfc0a4ff1e0e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.RoleManagement.grdRoles_CellValueChanged</definition>
+        <argsstring>(object sender, DataGridViewCellEventArgs e)</argsstring>
+        <name>grdRoles_CellValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataGridViewCellEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="190" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="190" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1abbf9cbf8936c2cca1a25a2610615da1e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.RoleManagement.grdRoles_CellValidating</definition>
+        <argsstring>(object sender, DataGridViewCellValidatingEventArgs e)</argsstring>
+        <name>grdRoles_CellValidating</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataGridViewCellValidatingEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="211" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="211" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a8e6ddd309e227a948b22dd0f20a79544" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.RoleManagement.grdRoles_DataError</definition>
+        <argsstring>(object sender, DataGridViewDataErrorEventArgs e)</argsstring>
+        <name>grdRoles_DataError</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataGridViewDataErrorEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="231" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="231" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a503287b2deb5a4ce6ed0f93284125bf5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.RoleManagement.SetupRolesGrid</definition>
+        <argsstring>()</argsstring>
+        <name>SetupRolesGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="243" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="243" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a90056abd3975eb45ef03c749c934a999" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.RoleManagement.ConfigureRolesGridDefaultStyles</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRolesGridDefaultStyles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="256" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="256" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1ad6f335c19c4942205e1ea1b2187307a2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.RoleManagement.LoadAllRoles</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAllRoles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="279" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="279" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1af66e05cf00d970abd87d99e78ef3bc99" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.RoleManagement.ConfigureActionsStackViewEditing</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackViewEditing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="297" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="297" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a90c9eadf67a890c458a7603784ce36e6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.RoleManagement.ConfigureActionsStackViewCreating</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackViewCreating</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="311" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="311" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a0c0ec5a82c4a8edaa4a0dd72b4e61ead" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.RoleManagement.AddModifiedRolesToList</definition>
+        <argsstring>(Role modifiedRole)</argsstring>
+        <name>AddModifiedRolesToList</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref></type>
+          <declname>modifiedRole</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="327" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="327" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a0760d22efdb02e94ed0bd5c35886ba93" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.RoleManagement.AddCreatedRolesToList</definition>
+        <argsstring>(Role createdRole)</argsstring>
+        <name>AddCreatedRolesToList</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref></type>
+          <declname>createdRole</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="350" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="350" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1ae4279f647df9789a1b337381ba23bf9f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.RoleManagement.IsValidRoles</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidRoles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="373" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="373" bodyend="388"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a16fdd83f7d1ec89c228098a414551e57" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.RoleManagement.IsValidModifiedRoles</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidModifiedRoles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="390" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="390" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a2c8021d13641f6c913944a6dbf18f1fc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.RoleManagement.IsValidCreatedRoles</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidCreatedRoles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="410" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="410" bodyend="428"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a01a8bb51cbff3ee48603e84f9bdb1142" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.RoleManagement.UpdateRoles</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateRoles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="430" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="430" bodyend="440"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a90487d909800dc4ff1f027d748228b2f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.RoleManagement.CreateRole</definition>
+        <argsstring>()</argsstring>
+        <name>CreateRole</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.cs" line="442" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="442" bodyend="453"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1afa4e2913bf8dccc7927bc6ad3a67e643" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.RoleManagement.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.Designer.cs" bodystart="29" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1aec6f44de37a82c49e6166b2d83e65885" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.RoleManagement.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/RoleManagement.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="250">
+        <label>HKSupply.Forms.Master.RoleManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management"/>
+        <childnode refid="251" relation="public-inheritance">
+        </childnode>
+        <childnode refid="252" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="251">
+        <label>Form</label>
+      </node>
+      <node id="252">
+        <label>IActionsStackView</label>
+        <link refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="253">
+        <label>HKSupply.Forms.Master.RoleManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management"/>
+        <childnode refid="254" relation="public-inheritance">
+        </childnode>
+        <childnode refid="255" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="254">
+        <label>Form</label>
+      </node>
+      <node id="255">
+        <label>IActionsStackView</label>
+        <link refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view"/>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Master/RoleManagement.cs" line="19" column="1" bodyfile="HKSupply/Forms/Master/RoleManagement.cs" bodystart="18" bodyend="455"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a95f8238dbfc06ba7132daa5a32327f50" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>_createdRoles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1ac3c5b4dcceb88e38b50390b16b83e86c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>_modifiedRoles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a62a5bc6f994e9ce736b9d554d8112e6f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>actionsStackView</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a9651949eef33db6a0600a919bb30f8e8" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>actionsStackView_CancelButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a029527589b55752c810c410fb7b7ec73" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>actionsStackView_EditButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a9cee7b3dda5de12cd3612ad66b27e302" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>actionsStackView_NewButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a6f9ce17d9dbd5e01886e7ffebb428cac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>actionsStackView_SaveButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a0760d22efdb02e94ed0bd5c35886ba93" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>AddCreatedRolesToList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a0c0ec5a82c4a8edaa4a0dd72b4e61ead" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>AddModifiedRolesToList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a5327fe3795c6333c16f44ce3c4ffe5fb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a022e071b082ef46f206426f75db34fa8" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>ConfigureActionsStackView</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a90c9eadf67a890c458a7603784ce36e6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>ConfigureActionsStackViewCreating</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1af66e05cf00d970abd87d99e78ef3bc99" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>ConfigureActionsStackViewEditing</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a90056abd3975eb45ef03c749c934a999" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>ConfigureRolesGridDefaultStyles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a90487d909800dc4ff1f027d748228b2f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>CreateRole</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1aec6f44de37a82c49e6166b2d83e65885" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a0ec7f3aa6a0ea7c1891c51b8ec3fa3a1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>eRoleColumns</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1acc57625e8dd54327e7a49b846800ff2b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>grdRoles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1abbf9cbf8936c2cca1a25a2610615da1e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>grdRoles_CellValidating</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a3450b22b578ae9d45d63cfc0a4ff1e0e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>grdRoles_CellValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a8e6ddd309e227a948b22dd0f20a79544" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>grdRoles_DataError</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1afa4e2913bf8dccc7927bc6ad3a67e643" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a2c8021d13641f6c913944a6dbf18f1fc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>IsValidCreatedRoles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a16fdd83f7d1ec89c228098a414551e57" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>IsValidModifiedRoles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1ae4279f647df9789a1b337381ba23bf9f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>IsValidRoles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1ad6f335c19c4942205e1ea1b2187307a2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>LoadAllRoles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1ab55687c20cf8f38cc4c2c478783f1224" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>RoleManagement</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a49f2b67ebc44c175fd4b3d8289c5fd39" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>RoleManagement_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a503287b2deb5a4ce6ed0f93284125bf5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>SetupRolesGrid</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a01a8bb51cbff3ee48603e84f9bdb1142" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::RoleManagement</scope><name>UpdateRoles</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_00003665e338c4a270f9192c26fb051b" kind="dir">
+    <compoundname>HKSuply.UnitTest</compoundname>
+    <innerdir refid="dir_bd87b4e953eeb4ac3113fd8a5f5bc83f">HKSuply.UnitTest/obj</innerdir>
+    <innerdir refid="dir_bf1d12b83fe7f17b544f9b9507cfcaf8">HKSuply.UnitTest/Properties</innerdir>
+    <innerfile refid="_functionality_role_test_8cs">FunctionalityRoleTest.cs</innerfile>
+    <innerfile refid="_functionality_test_8cs">FunctionalityTest.cs</innerfile>
+    <innerfile refid="_role_test_8cs">RoleTest.cs</innerfile>
+    <innerfile refid="_user_test_8cs">UserTest.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSuply.UnitTest/"/>
+  </compounddef>
+</doxygen>

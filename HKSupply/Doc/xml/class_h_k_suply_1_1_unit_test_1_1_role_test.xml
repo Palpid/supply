@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_suply_1_1_unit_test_1_1_role_test" kind="class" language="C#" prot="public">
+    <compoundname>HKSuply::UnitTest::RoleTest</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_role_test_1aa9d71210dc474e284fe04b9bd38a122b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSuply.UnitTest.RoleTest.GetAllRoles</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllRoles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSuply.UnitTest/RoleTest.cs" line="18" column="1" bodyfile="HKSuply.UnitTest/RoleTest.cs" bodystart="18" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_role_test_1a8a280b4286b4071e13440d7c7f179e13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSuply.UnitTest.RoleTest.GetRole</definition>
+        <argsstring>()</argsstring>
+        <name>GetRole</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSuply.UnitTest/RoleTest.cs" line="32" column="1" bodyfile="HKSuply.UnitTest/RoleTest.cs" bodystart="32" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_role_test_1ad7e762c47c24c111dac35a0539f1325a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSuply.UnitTest.RoleTest.NewRole</definition>
+        <argsstring>()</argsstring>
+        <name>NewRole</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSuply.UnitTest/RoleTest.cs" line="79" column="1" bodyfile="HKSuply.UnitTest/RoleTest.cs" bodystart="79" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_role_test_1ad1920b59b54f4b79a8aefb62060d6375" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSuply.UnitTest.RoleTest.DisableRole</definition>
+        <argsstring>()</argsstring>
+        <name>DisableRole</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSuply.UnitTest/RoleTest.cs" line="160" column="1" bodyfile="HKSuply.UnitTest/RoleTest.cs" bodystart="160" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_role_test_1a515e4f6d1342bc184a49a94d6d97835d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSuply.UnitTest.RoleTest.UpdateRoles</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateRoles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSuply.UnitTest/RoleTest.cs" line="198" column="1" bodyfile="HKSuply.UnitTest/RoleTest.cs" bodystart="198" bodyend="227"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSuply.UnitTest/RoleTest.cs" line="16" column="1" bodyfile="HKSuply.UnitTest/RoleTest.cs" bodystart="15" bodyend="229"/>
+    <listofallmembers>
+      <member refid="class_h_k_suply_1_1_unit_test_1_1_role_test_1ad1920b59b54f4b79a8aefb62060d6375" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::RoleTest</scope><name>DisableRole</name></member>
+      <member refid="class_h_k_suply_1_1_unit_test_1_1_role_test_1aa9d71210dc474e284fe04b9bd38a122b" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::RoleTest</scope><name>GetAllRoles</name></member>
+      <member refid="class_h_k_suply_1_1_unit_test_1_1_role_test_1a8a280b4286b4071e13440d7c7f179e13" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::RoleTest</scope><name>GetRole</name></member>
+      <member refid="class_h_k_suply_1_1_unit_test_1_1_role_test_1ad7e762c47c24c111dac35a0539f1325a" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::RoleTest</scope><name>NewRole</name></member>
+      <member refid="class_h_k_suply_1_1_unit_test_1_1_role_test_1a515e4f6d1342bc184a49a94d6d97835d" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::RoleTest</scope><name>UpdateRoles</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

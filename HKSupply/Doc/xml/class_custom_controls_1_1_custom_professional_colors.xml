@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_custom_controls_1_1_custom_professional_colors" kind="class" language="C#" prot="package">
+    <compoundname>CustomControls::CustomProfessionalColors</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ProfessionalColorTable</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_custom_controls_1_1_custom_professional_colors_1a3746a6f24a63ca98f91bed0faa8768ea" prot="private" static="yes" mutable="no">
+        <type>Color</type>
+        <definition>Color CustomControls.CustomProfessionalColors.ETNIA_RED</definition>
+        <argsstring></argsstring>
+        <name>ETNIA_RED</name>
+        <initializer>= Color.FromArgb(221, 34, 29)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="636" column="1" bodyfile="CustomControls/StackView.cs" bodystart="636" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_custom_controls_1_1_custom_professional_colors_1af7be0450e663e773b64483f94ee5958c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>override Color</type>
+        <definition>override Color CustomControls.CustomProfessionalColors.ToolStripGradientBegin</definition>
+        <argsstring></argsstring>
+        <name>ToolStripGradientBegin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="638" column="1" bodyfile="CustomControls/StackView.cs" bodystart="638" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_custom_controls_1_1_custom_professional_colors_1ab456d5c56deb8bbb7145a3535e1b9d51" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>override Color</type>
+        <definition>override Color CustomControls.CustomProfessionalColors.ToolStripGradientMiddle</definition>
+        <argsstring></argsstring>
+        <name>ToolStripGradientMiddle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="640" column="1" bodyfile="CustomControls/StackView.cs" bodystart="640" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_custom_controls_1_1_custom_professional_colors_1a4e1903b0ccf36313d3518fb88bd6a388" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>override Color</type>
+        <definition>override Color CustomControls.CustomProfessionalColors.ToolStripGradientEnd</definition>
+        <argsstring></argsstring>
+        <name>ToolStripGradientEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="642" column="1" bodyfile="CustomControls/StackView.cs" bodystart="642" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_custom_controls_1_1_custom_professional_colors_1ab38d57b72fe2baf734e10dadd980aaea" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>override Color</type>
+        <definition>override Color CustomControls.CustomProfessionalColors.MenuStripGradientBegin</definition>
+        <argsstring></argsstring>
+        <name>MenuStripGradientBegin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="644" column="1" bodyfile="CustomControls/StackView.cs" bodystart="644" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_custom_controls_1_1_custom_professional_colors_1ab4939afbf92547c8101b45356197ac1a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>override Color</type>
+        <definition>override Color CustomControls.CustomProfessionalColors.MenuStripGradientEnd</definition>
+        <argsstring></argsstring>
+        <name>MenuStripGradientEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/StackView.cs" line="646" column="1" bodyfile="CustomControls/StackView.cs" bodystart="646" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>tabla de colores para el toolstrip que compone la botonera </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="28">
+        <label>CustomControls.CustomProfessionalColors</label>
+        <childnode refid="29" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>ProfessionalColorTable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="30">
+        <label>CustomControls.CustomProfessionalColors</label>
+        <childnode refid="31" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>ProfessionalColorTable</label>
+      </node>
+    </collaborationgraph>
+    <location file="CustomControls/StackView.cs" line="635" column="1" bodyfile="CustomControls/StackView.cs" bodystart="634" bodyend="647"/>
+    <listofallmembers>
+      <member refid="class_custom_controls_1_1_custom_professional_colors_1a3746a6f24a63ca98f91bed0faa8768ea" prot="private" virt="non-virtual"><scope>CustomControls::CustomProfessionalColors</scope><name>ETNIA_RED</name></member>
+      <member refid="class_custom_controls_1_1_custom_professional_colors_1ab38d57b72fe2baf734e10dadd980aaea" prot="public" virt="non-virtual"><scope>CustomControls::CustomProfessionalColors</scope><name>MenuStripGradientBegin</name></member>
+      <member refid="class_custom_controls_1_1_custom_professional_colors_1ab4939afbf92547c8101b45356197ac1a" prot="public" virt="non-virtual"><scope>CustomControls::CustomProfessionalColors</scope><name>MenuStripGradientEnd</name></member>
+      <member refid="class_custom_controls_1_1_custom_professional_colors_1af7be0450e663e773b64483f94ee5958c" prot="public" virt="non-virtual"><scope>CustomControls::CustomProfessionalColors</scope><name>ToolStripGradientBegin</name></member>
+      <member refid="class_custom_controls_1_1_custom_professional_colors_1a4e1903b0ccf36313d3518fb88bd6a388" prot="public" virt="non-virtual"><scope>CustomControls::CustomProfessionalColors</scope><name>ToolStripGradientEnd</name></member>
+      <member refid="class_custom_controls_1_1_custom_professional_colors_1ab456d5c56deb8bbb7145a3535e1b9d51" prot="public" virt="non-virtual"><scope>CustomControls::CustomProfessionalColors</scope><name>ToolStripGradientMiddle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

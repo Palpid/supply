@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Helpers::MDIClientSupport</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1afa0655c6602abcecce0336dcf34d747f" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int HKSupply.Helpers.MDIClientSupport.GWL_EXSTYLE</definition>
+        <argsstring></argsstring>
+        <name>GWL_EXSTYLE</name>
+        <initializer>= -20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/MDIClientSupport.cs" line="28" column="1" bodyfile="HKSupply/Helpers/MDIClientSupport.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a3a682d7259c4a3a8812bad2ef8b6276d" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int HKSupply.Helpers.MDIClientSupport.WS_EX_CLIENTEDGE</definition>
+        <argsstring></argsstring>
+        <name>WS_EX_CLIENTEDGE</name>
+        <initializer>= 0x200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/MDIClientSupport.cs" line="29" column="1" bodyfile="HKSupply/Helpers/MDIClientSupport.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a18aa375374a048675b5f8916f994d776" prot="private" static="no" mutable="no">
+        <type>const uint</type>
+        <definition>const uint HKSupply.Helpers.MDIClientSupport.SWP_NOSIZE</definition>
+        <argsstring></argsstring>
+        <name>SWP_NOSIZE</name>
+        <initializer>= 0x0001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/MDIClientSupport.cs" line="30" column="1" bodyfile="HKSupply/Helpers/MDIClientSupport.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a991bd690f7920172e16af04367d90ad7" prot="private" static="no" mutable="no">
+        <type>const uint</type>
+        <definition>const uint HKSupply.Helpers.MDIClientSupport.SWP_NOMOVE</definition>
+        <argsstring></argsstring>
+        <name>SWP_NOMOVE</name>
+        <initializer>= 0x0002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/MDIClientSupport.cs" line="31" column="1" bodyfile="HKSupply/Helpers/MDIClientSupport.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1ab5c207d2d694cd5de919a6f4ce250ed5" prot="private" static="no" mutable="no">
+        <type>const uint</type>
+        <definition>const uint HKSupply.Helpers.MDIClientSupport.SWP_NOZORDER</definition>
+        <argsstring></argsstring>
+        <name>SWP_NOZORDER</name>
+        <initializer>= 0x0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/MDIClientSupport.cs" line="32" column="1" bodyfile="HKSupply/Helpers/MDIClientSupport.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a3d2bfad108567fcc6ddad16e6cd8fd8b" prot="private" static="no" mutable="no">
+        <type>const uint</type>
+        <definition>const uint HKSupply.Helpers.MDIClientSupport.SWP_NOREDRAW</definition>
+        <argsstring></argsstring>
+        <name>SWP_NOREDRAW</name>
+        <initializer>= 0x0008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/MDIClientSupport.cs" line="33" column="1" bodyfile="HKSupply/Helpers/MDIClientSupport.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a3164675a7c6de13fba354d8b8855de9b" prot="private" static="no" mutable="no">
+        <type>const uint</type>
+        <definition>const uint HKSupply.Helpers.MDIClientSupport.SWP_NOACTIVATE</definition>
+        <argsstring></argsstring>
+        <name>SWP_NOACTIVATE</name>
+        <initializer>= 0x0010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/MDIClientSupport.cs" line="34" column="1" bodyfile="HKSupply/Helpers/MDIClientSupport.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a496390d2c8fa0ba776a3ae8f57c0da3b" prot="private" static="no" mutable="no">
+        <type>const uint</type>
+        <definition>const uint HKSupply.Helpers.MDIClientSupport.SWP_FRAMECHANGED</definition>
+        <argsstring></argsstring>
+        <name>SWP_FRAMECHANGED</name>
+        <initializer>= 0x0020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/MDIClientSupport.cs" line="35" column="1" bodyfile="HKSupply/Helpers/MDIClientSupport.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a22081c152c46af205ce01b2a3171a124" prot="private" static="no" mutable="no">
+        <type>const uint</type>
+        <definition>const uint HKSupply.Helpers.MDIClientSupport.SWP_SHOWWINDOW</definition>
+        <argsstring></argsstring>
+        <name>SWP_SHOWWINDOW</name>
+        <initializer>= 0x0040</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/MDIClientSupport.cs" line="36" column="1" bodyfile="HKSupply/Helpers/MDIClientSupport.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a1ea0b7942f230606c9283c105c2e339b" prot="private" static="no" mutable="no">
+        <type>const uint</type>
+        <definition>const uint HKSupply.Helpers.MDIClientSupport.SWP_HIDEWINDOW</definition>
+        <argsstring></argsstring>
+        <name>SWP_HIDEWINDOW</name>
+        <initializer>= 0x0080</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/MDIClientSupport.cs" line="37" column="1" bodyfile="HKSupply/Helpers/MDIClientSupport.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a9c885203ed94a141637767d27ce9a1cf" prot="private" static="no" mutable="no">
+        <type>const uint</type>
+        <definition>const uint HKSupply.Helpers.MDIClientSupport.SWP_NOCOPYBITS</definition>
+        <argsstring></argsstring>
+        <name>SWP_NOCOPYBITS</name>
+        <initializer>= 0x0100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/MDIClientSupport.cs" line="38" column="1" bodyfile="HKSupply/Helpers/MDIClientSupport.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1af8e081574083bc9fbebd3f6233a0df7f" prot="private" static="no" mutable="no">
+        <type>const uint</type>
+        <definition>const uint HKSupply.Helpers.MDIClientSupport.SWP_NOOWNERZORDER</definition>
+        <argsstring></argsstring>
+        <name>SWP_NOOWNERZORDER</name>
+        <initializer>= 0x0200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/MDIClientSupport.cs" line="39" column="1" bodyfile="HKSupply/Helpers/MDIClientSupport.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a03811ae93147fac854f581acea25d4c0" prot="private" static="no" mutable="no">
+        <type>const uint</type>
+        <definition>const uint HKSupply.Helpers.MDIClientSupport.SWP_NOSENDCHANGING</definition>
+        <argsstring></argsstring>
+        <name>SWP_NOSENDCHANGING</name>
+        <initializer>= 0x0400</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/MDIClientSupport.cs" line="40" column="1" bodyfile="HKSupply/Helpers/MDIClientSupport.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1aea865592908c8e914ddaece055ab07f6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int HKSupply.Helpers.MDIClientSupport.GetWindowLong</definition>
+        <argsstring>(IntPtr hWnd, int nIndex)</argsstring>
+        <name>GetWindowLong</name>
+        <param>
+          <type>IntPtr</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/MDIClientSupport.cs" line="20" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1ac4ee13f7942bb67464bfbbbe1deea38a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int HKSupply.Helpers.MDIClientSupport.SetWindowLong</definition>
+        <argsstring>(IntPtr hWnd, int nIndex, int dwNewLong)</argsstring>
+        <name>SetWindowLong</name>
+        <param>
+          <type>IntPtr</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nIndex</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dwNewLong</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/MDIClientSupport.cs" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a8f3082f3643156845443d1cb7ca09dd2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int HKSupply.Helpers.MDIClientSupport.SetWindowPos</definition>
+        <argsstring>(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags)</argsstring>
+        <name>SetWindowPos</name>
+        <param>
+          <type>IntPtr</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type>IntPtr</type>
+          <declname>hWndInsertAfter</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>X</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cy</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>uFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/MDIClientSupport.cs" line="26" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a7ba67da0e91a11e7a5ed018d2628107b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool HKSupply.Helpers.MDIClientSupport.SetBevel</definition>
+        <argsstring>(this Form form, bool show)</argsstring>
+        <name>SetBevel</name>
+        <param>
+          <type>this Form</type>
+          <declname>form</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>show</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/MDIClientSupport.cs" line="42" column="1" bodyfile="HKSupply/Helpers/MDIClientSupport.cs" bodystart="42" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Extension para quitar el borde 3d del mdi parent </para>    </briefdescription>
+    <detaileddescription>
+<para>Para quitar el borde, en el load del formulario parent poner: this.SetBevel(false); </para>    </detaileddescription>
+    <location file="HKSupply/Helpers/MDIClientSupport.cs" line="18" column="1" bodyfile="HKSupply/Helpers/MDIClientSupport.cs" bodystart="17" bodyend="73"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1aea865592908c8e914ddaece055ab07f6" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::MDIClientSupport</scope><name>GetWindowLong</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1afa0655c6602abcecce0336dcf34d747f" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::MDIClientSupport</scope><name>GWL_EXSTYLE</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a7ba67da0e91a11e7a5ed018d2628107b" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::MDIClientSupport</scope><name>SetBevel</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1ac4ee13f7942bb67464bfbbbe1deea38a" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::MDIClientSupport</scope><name>SetWindowLong</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a8f3082f3643156845443d1cb7ca09dd2" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::MDIClientSupport</scope><name>SetWindowPos</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a496390d2c8fa0ba776a3ae8f57c0da3b" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::MDIClientSupport</scope><name>SWP_FRAMECHANGED</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a1ea0b7942f230606c9283c105c2e339b" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::MDIClientSupport</scope><name>SWP_HIDEWINDOW</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a3164675a7c6de13fba354d8b8855de9b" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::MDIClientSupport</scope><name>SWP_NOACTIVATE</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a9c885203ed94a141637767d27ce9a1cf" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::MDIClientSupport</scope><name>SWP_NOCOPYBITS</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a991bd690f7920172e16af04367d90ad7" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::MDIClientSupport</scope><name>SWP_NOMOVE</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1af8e081574083bc9fbebd3f6233a0df7f" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::MDIClientSupport</scope><name>SWP_NOOWNERZORDER</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a3d2bfad108567fcc6ddad16e6cd8fd8b" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::MDIClientSupport</scope><name>SWP_NOREDRAW</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a03811ae93147fac854f581acea25d4c0" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::MDIClientSupport</scope><name>SWP_NOSENDCHANGING</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a18aa375374a048675b5f8916f994d776" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::MDIClientSupport</scope><name>SWP_NOSIZE</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1ab5c207d2d694cd5de919a6f4ce250ed5" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::MDIClientSupport</scope><name>SWP_NOZORDER</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a22081c152c46af205ce01b2a3171a124" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::MDIClientSupport</scope><name>SWP_SHOWWINDOW</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support_1a3a682d7259c4a3a8812bad2ef8b6276d" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::MDIClientSupport</scope><name>WS_EX_CLIENTEDGE</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

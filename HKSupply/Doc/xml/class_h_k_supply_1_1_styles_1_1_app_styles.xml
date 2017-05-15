@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_styles_1_1_app_styles" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Styles::AppStyles</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_styles_1_1_app_styles_1a347df759e923b18b0a13e31df07dd301" prot="public" static="yes" mutable="no">
+        <type>Color</type>
+        <definition>Color HKSupply.Styles.AppStyles.EtniaRed</definition>
+        <argsstring></argsstring>
+        <name>EtniaRed</name>
+        <initializer>= Color.FromArgb(228, 37, 24)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="12" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Styles/AppStyles.cs" line="11" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="10" bodyend="13"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1a347df759e923b18b0a13e31df07dd301" prot="public" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>EtniaRed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

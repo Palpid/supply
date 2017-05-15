@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFFunctionalityRole</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_role" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IFunctionalityRole</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a64c0c993649c1a25576825cf8069a6f5" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFFunctionalityRole._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user" kindref="compound">EFUser</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="22" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a6c0fd4aad39788ef597f701f47032a85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_functionality_role" kindref="compound">FunctionalityRole</ref> &gt;</type>
+        <definition>IEnumerable&lt;FunctionalityRole&gt; HKSupply.Services.Implementations.EFFunctionalityRole.GetAllFunctionalitiesRole</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllFunctionalitiesRole</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_role_1a5db7b5d6e33c8f79666a34ab4460fcfd">GetAllFunctionalitiesRole</reimplements>
+        <briefdescription>
+<para>Obtener todas las funcionalidades-roles de la base de datos </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="28" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="28" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a1900a194c92ba75d17fe42830190895f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_functionality_role" kindref="compound">FunctionalityRole</ref></type>
+        <definition>FunctionalityRole HKSupply.Services.Implementations.EFFunctionalityRole.GetFunctionalityRole</definition>
+        <argsstring>(int functionalityId, string roleId)</argsstring>
+        <name>GetFunctionalityRole</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_role_1a10baae97837f0bffcbb4cd5e6d9da56d">GetFunctionalityRole</reimplements>
+        <param>
+          <type>int</type>
+          <declname>functionalityId</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>roleId</declname>
+        </param>
+        <briefdescription>
+<para>Obtener un FunctionalityRole dado una funciolidad y un rol </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>functionalityId</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>roleId</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="76" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="76" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a0cec1ef9a2e1201cfffe604869e5192f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_functionality_role" kindref="compound">FunctionalityRole</ref> &gt;</type>
+        <definition>IEnumerable&lt;FunctionalityRole&gt; HKSupply.Services.Implementations.EFFunctionalityRole.GetFunctionalitiesRole</definition>
+        <argsstring>(string roleId)</argsstring>
+        <name>GetFunctionalitiesRole</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_role_1a75bfe6931c107903bfa876ca21eb032a">GetFunctionalitiesRole</reimplements>
+        <param>
+          <type>string</type>
+          <declname>roleId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="118" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="118" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a1625ffb6313337132a446f831d357453" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerable&lt; string &gt;</type>
+        <definition>IEnumerable&lt;string&gt; HKSupply.Services.Implementations.EFFunctionalityRole.GetFunctionalitiesCategoriesRole</definition>
+        <argsstring>(string roleId)</argsstring>
+        <name>GetFunctionalitiesCategoriesRole</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_role_1a9431314adb2c808619b1cde6366b68d7">GetFunctionalitiesCategoriesRole</reimplements>
+        <param>
+          <type>string</type>
+          <declname>roleId</declname>
+        </param>
+        <briefdescription>
+<para>Obtener la colección de todos las cartegorías de un rol en concreto </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>roleId</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="174" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="174" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a07805a2c9809f3771b7ae34deb15b94b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_functionality_role" kindref="compound">FunctionalityRole</ref></type>
+        <definition>FunctionalityRole HKSupply.Services.Implementations.EFFunctionalityRole.NewFunctionalityRole</definition>
+        <argsstring>(FunctionalityRole newFunctionalityRole)</argsstring>
+        <name>NewFunctionalityRole</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_role_1a8ccda5eb882dbe88c4d3f8257d6353b7">NewFunctionalityRole</reimplements>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_functionality_role" kindref="compound">FunctionalityRole</ref></type>
+          <declname>newFunctionalityRole</declname>
+        </param>
+        <briefdescription>
+<para>Dar de alta un FunctionalityRole </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newFunctionalityRole</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="234" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="234" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a69bbb7f8593ea4e0e70ce96625cf80e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_functionality_role" kindref="compound">FunctionalityRole</ref></type>
+        <definition>FunctionalityRole HKSupply.Services.Implementations.EFFunctionalityRole.ModifyFunctionalityRole</definition>
+        <argsstring>(FunctionalityRole modFunctionalityRole)</argsstring>
+        <name>ModifyFunctionalityRole</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_role_1af8f8d673b36ae48f98abfa43cfe59863">ModifyFunctionalityRole</reimplements>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_functionality_role" kindref="compound">FunctionalityRole</ref></type>
+          <declname>modFunctionalityRole</declname>
+        </param>
+        <briefdescription>
+<para>Modificar un FunctionalityRole </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>modFunctionalityRole</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para><para>Los campos que se actualizan son los siguientes:<itemizedlist>
+<listitem><para>Read</para></listitem><listitem><para>New</para></listitem><listitem><para>Modify </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="304" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="304" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a298798bba5c1a7e5a1db34803e3e4707" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFFunctionalityRole.UpdateFunctionalitiesRoles</definition>
+        <argsstring>(IEnumerable&lt; FunctionalityRole &gt; functionalitiesRolesToUpdate)</argsstring>
+        <name>UpdateFunctionalitiesRoles</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_role_1a816ae3d8bb97d20aa19d3608d96528e5">UpdateFunctionalitiesRoles</reimplements>
+        <param>
+          <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_functionality_role" kindref="compound">FunctionalityRole</ref> &gt;</type>
+          <declname>functionalitiesRolesToUpdate</declname>
+        </param>
+        <briefdescription>
+<para>Modificar una colección de FunctionalityRole </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>functionalitiesRolesToUpdate</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="381" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="381" bodyend="457"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Controlador Entity Framework para Functionality Role </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="57">
+        <label>IFunctionalityRole</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_role"/>
+      </node>
+      <node id="56">
+        <label>HKSupply.Services.Implementations.EFFunctionalityRole</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role"/>
+        <childnode refid="57" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="59">
+        <label>IFunctionalityRole</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_role"/>
+      </node>
+      <node id="58">
+        <label>HKSupply.Services.Implementations.EFFunctionalityRole</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role"/>
+        <childnode refid="59" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="21" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="20" bodyend="458"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a64c0c993649c1a25576825cf8069a6f5" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFFunctionalityRole</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a6c0fd4aad39788ef597f701f47032a85" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFFunctionalityRole</scope><name>GetAllFunctionalitiesRole</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a1625ffb6313337132a446f831d357453" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFFunctionalityRole</scope><name>GetFunctionalitiesCategoriesRole</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a0cec1ef9a2e1201cfffe604869e5192f" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFFunctionalityRole</scope><name>GetFunctionalitiesRole</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a1900a194c92ba75d17fe42830190895f" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFFunctionalityRole</scope><name>GetFunctionalityRole</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a69bbb7f8593ea4e0e70ce96625cf80e4" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFFunctionalityRole</scope><name>ModifyFunctionalityRole</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a07805a2c9809f3771b7ae34deb15b94b" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFFunctionalityRole</scope><name>NewFunctionalityRole</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a298798bba5c1a7e5a1db34803e3e4707" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFFunctionalityRole</scope><name>UpdateFunctionalitiesRoles</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_exceptions_1_1_new_existing_functionality_exception" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Exceptions::NewExistingFunctionalityException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Exception</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_new_existing_functionality_exception_1ad5529e7bb5e0ff50404ba87bf44a9029" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NewExistingFunctionalityException.NewExistingFunctionalityException</definition>
+        <argsstring>()</argsstring>
+        <name>NewExistingFunctionalityException</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NewExistingFunctionalityException.cs" line="15" column="1" bodyfile="HKSupply/Exceptions/NewExistingFunctionalityException.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_new_existing_functionality_exception_1a955fdbac911227d08700761322d1caf4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NewExistingFunctionalityException.NewExistingFunctionalityException</definition>
+        <argsstring>(string message)</argsstring>
+        <name>NewExistingFunctionalityException</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NewExistingFunctionalityException.cs" line="16" column="1" bodyfile="HKSupply/Exceptions/NewExistingFunctionalityException.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_new_existing_functionality_exception_1ad618069f35b77e231be47075550f3532" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NewExistingFunctionalityException.NewExistingFunctionalityException</definition>
+        <argsstring>(string message, System.Exception inner)</argsstring>
+        <name>NewExistingFunctionalityException</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>System.Exception</type>
+          <declname>inner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NewExistingFunctionalityException.cs" line="17" column="1" bodyfile="HKSupply/Exceptions/NewExistingFunctionalityException.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_new_existing_functionality_exception_1aab365582c771361d35fdf7bda9cd0c11" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NewExistingFunctionalityException.NewExistingFunctionalityException</definition>
+        <argsstring>(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)</argsstring>
+        <name>NewExistingFunctionalityException</name>
+        <param>
+          <type>System.Runtime.Serialization.SerializationInfo</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>System.Runtime.Serialization.StreamingContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NewExistingFunctionalityException.cs" line="20" column="1" bodyfile="HKSupply/Exceptions/NewExistingFunctionalityException.cs" bodystart="20" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Custom Exception: dar de alta una funcionalidad ya existente en el sistema </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="186">
+        <label>HKSupply.Exceptions.NewExistingFunctionalityException</label>
+        <link refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_functionality_exception"/>
+        <childnode refid="187" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="187">
+        <label>System::Exception</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="188">
+        <label>HKSupply.Exceptions.NewExistingFunctionalityException</label>
+        <link refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_functionality_exception"/>
+        <childnode refid="189" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="189">
+        <label>System::Exception</label>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Exceptions/NewExistingFunctionalityException.cs" line="14" column="1" bodyfile="HKSupply/Exceptions/NewExistingFunctionalityException.cs" bodystart="13" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_functionality_exception_1ad5529e7bb5e0ff50404ba87bf44a9029" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::NewExistingFunctionalityException</scope><name>NewExistingFunctionalityException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_functionality_exception_1a955fdbac911227d08700761322d1caf4" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::NewExistingFunctionalityException</scope><name>NewExistingFunctionalityException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_functionality_exception_1ad618069f35b77e231be47075550f3532" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::NewExistingFunctionalityException</scope><name>NewExistingFunctionalityException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_functionality_exception_1aab365582c771361d35fdf7bda9cd0c11" prot="protected" virt="non-virtual"><scope>HKSupply::Exceptions::NewExistingFunctionalityException</scope><name>NewExistingFunctionalityException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

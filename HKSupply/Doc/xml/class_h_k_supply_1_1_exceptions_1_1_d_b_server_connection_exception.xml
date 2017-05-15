@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_exceptions_1_1_d_b_server_connection_exception" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Exceptions::DBServerConnectionException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Exception</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_d_b_server_connection_exception_1a8efd53ee8ccf6dcc8ef29d074fc8d183" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.DBServerConnectionException.DBServerConnectionException</definition>
+        <argsstring>()</argsstring>
+        <name>DBServerConnectionException</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/DBServerConnectionException.cs" line="15" column="1" bodyfile="HKSupply/Exceptions/DBServerConnectionException.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_d_b_server_connection_exception_1a7b3040b56aef6f2ebbf97508beaa79b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.DBServerConnectionException.DBServerConnectionException</definition>
+        <argsstring>(string message)</argsstring>
+        <name>DBServerConnectionException</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/DBServerConnectionException.cs" line="16" column="1" bodyfile="HKSupply/Exceptions/DBServerConnectionException.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_d_b_server_connection_exception_1ace664805be2e431a477d1b11864f71b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.DBServerConnectionException.DBServerConnectionException</definition>
+        <argsstring>(string message, System.Exception inner)</argsstring>
+        <name>DBServerConnectionException</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>System.Exception</type>
+          <declname>inner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/DBServerConnectionException.cs" line="17" column="1" bodyfile="HKSupply/Exceptions/DBServerConnectionException.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_d_b_server_connection_exception_1a4c0c86363505626ea8f398064a525c6a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.DBServerConnectionException.DBServerConnectionException</definition>
+        <argsstring>(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)</argsstring>
+        <name>DBServerConnectionException</name>
+        <param>
+          <type>System.Runtime.Serialization.SerializationInfo</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>System.Runtime.Serialization.StreamingContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/DBServerConnectionException.cs" line="20" column="1" bodyfile="HKSupply/Exceptions/DBServerConnectionException.cs" bodystart="20" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Custom Exception para los errores de conexión con la base de datos </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="41">
+        <label>System::Exception</label>
+      </node>
+      <node id="40">
+        <label>HKSupply.Exceptions.DBServerConnectionException</label>
+        <link refid="class_h_k_supply_1_1_exceptions_1_1_d_b_server_connection_exception"/>
+        <childnode refid="41" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="43">
+        <label>System::Exception</label>
+      </node>
+      <node id="42">
+        <label>HKSupply.Exceptions.DBServerConnectionException</label>
+        <link refid="class_h_k_supply_1_1_exceptions_1_1_d_b_server_connection_exception"/>
+        <childnode refid="43" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Exceptions/DBServerConnectionException.cs" line="14" column="1" bodyfile="HKSupply/Exceptions/DBServerConnectionException.cs" bodystart="13" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_d_b_server_connection_exception_1a8efd53ee8ccf6dcc8ef29d074fc8d183" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::DBServerConnectionException</scope><name>DBServerConnectionException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_d_b_server_connection_exception_1a7b3040b56aef6f2ebbf97508beaa79b0" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::DBServerConnectionException</scope><name>DBServerConnectionException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_d_b_server_connection_exception_1ace664805be2e431a477d1b11864f71b3" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::DBServerConnectionException</scope><name>DBServerConnectionException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_d_b_server_connection_exception_1a4c0c86363505626ea8f398064a525c6a" prot="protected" virt="non-virtual"><scope>HKSupply::Exceptions::DBServerConnectionException</scope><name>DBServerConnectionException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

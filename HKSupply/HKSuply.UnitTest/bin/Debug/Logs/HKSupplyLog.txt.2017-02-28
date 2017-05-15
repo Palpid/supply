@@ -1,0 +1,20 @@
+﻿2017-02-28 10:50:29,989 ERROR [13] HKSupply.Services.Implementations.EFFunctionality.GetFunctionalitiesByRol - El valor no puede ser nulo.
+Nombre del parámetro: roleId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: roleId
+   en HKSupply.Services.Implementations.EFFunctionality.GetFunctionalitiesByRol(String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 69
+2017-02-28 10:53:26,210 ERROR [11] HKSupply.Services.Implementations.EFFunctionality.GetFunctionalitiesByRol - El valor no puede ser nulo.
+Nombre del parámetro: roleId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: roleId
+   en HKSupply.Services.Implementations.EFFunctionality.GetFunctionalitiesByRol(String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 69
+2017-02-28 11:10:43,239 ERROR [12] HKSupply.Services.Implementations.EFFunctionality.GetFunctionalitiesByRol - El valor no puede ser nulo.
+Nombre del parámetro: roleId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: roleId
+   en HKSupply.Services.Implementations.EFFunctionality.GetFunctionalitiesByRol(String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 69
+2017-02-28 11:11:22,792 ERROR [12] HKSupply.Services.Implementations.EFFunctionality.GetFunctionalitiesCategoriesRole - El valor no puede ser nulo.
+Nombre del parámetro: roleId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: roleId
+   en HKSupply.Services.Implementations.EFFunctionality.GetFunctionalitiesCategoriesRole(String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 98

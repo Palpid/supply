@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_migrations_1_1_configuration" kind="class" language="C#" prot="package">
+    <compoundname>HKSupply::Migrations::Configuration</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">DbMigrationsConfiguration&lt; HKSupply.DB.HKSupplyContext &gt;</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_migrations_1_1_configuration_1a63941de0df7a75f703007aa2d5c2b338" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Migrations.Configuration.Configuration</definition>
+        <argsstring>()</argsstring>
+        <name>Configuration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/Configuration.cs" line="10" column="1" bodyfile="HKSupply/Migrations/Configuration.cs" bodystart="10" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_migrations_1_1_configuration_1a0d2a061a055df3022c4fe022f619921a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Migrations.Configuration.Seed</definition>
+        <argsstring>(HKSupply.DB.HKSupplyContext context)</argsstring>
+        <name>Seed</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupply.DB.HKSupplyContext</ref></type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/Configuration.cs" line="15" column="1" bodyfile="HKSupply/Migrations/Configuration.cs" bodystart="15" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>DbMigrationsConfiguration&lt; HKSupply.DB.HKSupplyContext &gt;</label>
+      </node>
+      <node id="6">
+        <label>HKSupply.Migrations.Configuration</label>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9">
+        <label>DbMigrationsConfiguration&lt; HKSupply.DB.HKSupplyContext &gt;</label>
+      </node>
+      <node id="8">
+        <label>HKSupply.Migrations.Configuration</label>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Migrations/Configuration.cs" line="9" column="1" bodyfile="HKSupply/Migrations/Configuration.cs" bodystart="8" bodyend="30"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_migrations_1_1_configuration_1a63941de0df7a75f703007aa2d5c2b338" prot="public" virt="non-virtual"><scope>HKSupply::Migrations::Configuration</scope><name>Configuration</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1_configuration_1a0d2a061a055df3022c4fe022f619921a" prot="protected" virt="non-virtual"><scope>HKSupply::Migrations::Configuration</scope><name>Seed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_store" kind="interface" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Interfaces::IStore</compoundname>
+    <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_store" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFStore</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_store_1a9f063b0e41c6815010ca37e29ed823d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_store" kindref="compound">Store</ref> &gt;</type>
+        <definition>IEnumerable&lt;Store&gt; HKSupply.Services.Interfaces.IStore.GetAllStores</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllStores</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_store_1ae4b68dd27aa7153f55dfbfc3fb3e940f">GetAllStores</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IStore.cs" line="15" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_store_1ae14c258d604aa8c5b530642b9707de20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_store" kindref="compound">Store</ref></type>
+        <definition>Store HKSupply.Services.Interfaces.IStore.GetStoreById</definition>
+        <argsstring>(string idStore)</argsstring>
+        <name>GetStoreById</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_store_1a528ad1b9410f30aaf17eb8e7134f8f68">GetStoreById</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>idStore</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IStore.cs" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_store_1a20a00f1cd6130e4acbda7212c9f1edf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_store" kindref="compound">Store</ref></type>
+        <definition>Store HKSupply.Services.Interfaces.IStore.NewStore</definition>
+        <argsstring>(Store newStore)</argsstring>
+        <name>NewStore</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_store" kindref="compound">Store</ref></type>
+          <declname>newStore</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IStore.cs" line="17" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_store_1a9329bc091edb5e15a3ebf32222d85d5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.IStore.UpdateStore</definition>
+        <argsstring>(IEnumerable&lt; Store &gt; storesToUpdate)</argsstring>
+        <name>UpdateStore</name>
+        <param>
+          <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_store" kindref="compound">Store</ref> &gt;</type>
+          <declname>storesToUpdate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IStore.cs" line="18" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface para el sevice de Store </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="141">
+        <label>HKSupply.Services.Interfaces.IStore</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_store"/>
+      </node>
+      <node id="142">
+        <label>HKSupply.Services.Implementations.EFStore</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_store"/>
+        <childnode refid="141" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="HKSupply/Services/Interfaces/IStore.cs" line="14" column="1" bodyfile="HKSupply/Services/Interfaces/IStore.cs" bodystart="13" bodyend="19"/>
+    <listofallmembers>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_store_1a9f063b0e41c6815010ca37e29ed823d6" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IStore</scope><name>GetAllStores</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_store_1ae14c258d604aa8c5b530642b9707de20" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IStore</scope><name>GetStoreById</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_store_1a20a00f1cd6130e4acbda7212c9f1edf3" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IStore</scope><name>NewStore</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_store_1a9329bc091edb5e15a3ebf32222d85d5a" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IStore</scope><name>UpdateStore</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

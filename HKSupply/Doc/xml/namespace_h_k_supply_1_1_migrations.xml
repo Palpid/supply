@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_h_k_supply_1_1_migrations" kind="namespace" language="C#">
+    <compoundname>HKSupply::Migrations</compoundname>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_configuration" prot="package">HKSupply::Migrations::Configuration</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_customer" prot="public">HKSupply::Migrations::Customer</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1items" prot="public">HKSupply::Migrations::items</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1items__2" prot="public">HKSupply::Migrations::items_2</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_object_version" prot="public">HKSupply::Migrations::ObjectVersion</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_object_version__2" prot="public">HKSupply::Migrations::ObjectVersion_2</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_store" prot="public">HKSupply::Migrations::Store</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_supplier" prot="public">HKSupply::Migrations::Supplier</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Migrations/201703081042226_Customer.cs" line="2" column="1"/>
+  </compounddef>
+</doxygen>

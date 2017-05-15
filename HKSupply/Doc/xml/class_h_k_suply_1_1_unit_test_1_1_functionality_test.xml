@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_suply_1_1_unit_test_1_1_functionality_test" kind="class" language="C#" prot="public">
+    <compoundname>HKSuply::UnitTest::FunctionalityTest</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_functionality_test_1aa8ac51031a1978bb946cc4e2a469b4e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSuply.UnitTest.FunctionalityTest.GetAllFunctionalities</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllFunctionalities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSuply.UnitTest/FunctionalityTest.cs" line="18" column="1" bodyfile="HKSuply.UnitTest/FunctionalityTest.cs" bodystart="18" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_functionality_test_1a7c1c4dbb73d76537cee7110a85011bdb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSuply.UnitTest.FunctionalityTest.GetFunctionality</definition>
+        <argsstring>()</argsstring>
+        <name>GetFunctionality</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSuply.UnitTest/FunctionalityTest.cs" line="32" column="1" bodyfile="HKSuply.UnitTest/FunctionalityTest.cs" bodystart="32" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_functionality_test_1ac8505a9a8bb7353e45e84ab7ee68c8fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSuply.UnitTest.FunctionalityTest.NewFunctionality</definition>
+        <argsstring>()</argsstring>
+        <name>NewFunctionality</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSuply.UnitTest/FunctionalityTest.cs" line="114" column="1" bodyfile="HKSuply.UnitTest/FunctionalityTest.cs" bodystart="114" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_functionality_test_1a7c1c86aff37c2c7d23c8c48e10df6425" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSuply.UnitTest.FunctionalityTest.UpdateFunctionality</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateFunctionality</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSuply.UnitTest/FunctionalityTest.cs" line="160" column="1" bodyfile="HKSuply.UnitTest/FunctionalityTest.cs" bodystart="160" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_suply_1_1_unit_test_1_1_functionality_test_1a641458694dcecd6b3abb008797715491" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSuply.UnitTest.FunctionalityTest.UpdateFunctionalities</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateFunctionalities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSuply.UnitTest/FunctionalityTest.cs" line="208" column="1" bodyfile="HKSuply.UnitTest/FunctionalityTest.cs" bodystart="208" bodyend="234"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSuply.UnitTest/FunctionalityTest.cs" line="15" column="1" bodyfile="HKSuply.UnitTest/FunctionalityTest.cs" bodystart="14" bodyend="235"/>
+    <listofallmembers>
+      <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_test_1aa8ac51031a1978bb946cc4e2a469b4e3" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::FunctionalityTest</scope><name>GetAllFunctionalities</name></member>
+      <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_test_1a7c1c4dbb73d76537cee7110a85011bdb" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::FunctionalityTest</scope><name>GetFunctionality</name></member>
+      <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_test_1ac8505a9a8bb7353e45e84ab7ee68c8fb" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::FunctionalityTest</scope><name>NewFunctionality</name></member>
+      <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_test_1a641458694dcecd6b3abb008797715491" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::FunctionalityTest</scope><name>UpdateFunctionalities</name></member>
+      <member refid="class_h_k_suply_1_1_unit_test_1_1_functionality_test_1a7c1c86aff37c2c7d23c8c48e10df6425" prot="public" virt="non-virtual"><scope>HKSuply::UnitTest::FunctionalityTest</scope><name>UpdateFunctionality</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

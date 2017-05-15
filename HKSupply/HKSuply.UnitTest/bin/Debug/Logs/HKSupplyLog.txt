@@ -1,0 +1,366 @@
+﻿2017-03-14 09:37:01,854 ERROR [10] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - El valor no puede ser nulo.
+Nombre del parámetro: UserId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: UserId
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 124
+2017-03-14 09:37:08,697 ERROR [10] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - El valor no puede ser nulo.
+Nombre del parámetro: Password
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: Password
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 126
+2017-03-14 09:37:19,922 INFO [10] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid Password
+HKSupply.Exceptions.InvalidPasswordException: Invalid Password
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 139
+2017-03-14 09:38:17,430 ERROR [10] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - El valor no puede ser nulo.
+Nombre del parámetro: UserId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: UserId
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 124
+2017-03-14 09:38:20,614 ERROR [10] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - El valor no puede ser nulo.
+Nombre del parámetro: Password
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: Password
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 126
+2017-03-14 09:38:34,887 INFO [10] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid Password
+HKSupply.Exceptions.InvalidPasswordException: Invalid Password
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 139
+2017-03-14 09:40:28,529 ERROR [10] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - El valor no puede ser nulo.
+Nombre del parámetro: UserId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: UserId
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 124
+2017-03-14 09:40:31,225 ERROR [10] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - El valor no puede ser nulo.
+Nombre del parámetro: Password
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: Password
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 126
+2017-03-14 09:40:39,837 INFO [10] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid user
+HKSupply.Exceptions.NonexistentUserException: Invalid user
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 136
+2017-03-14 09:42:39,554 ERROR [10] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - El valor no puede ser nulo.
+Nombre del parámetro: UserId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: UserId
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 124
+2017-03-14 09:42:42,401 ERROR [10] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - El valor no puede ser nulo.
+Nombre del parámetro: Password
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: Password
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 126
+2017-03-14 09:42:49,330 INFO [10] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid user
+HKSupply.Exceptions.NonexistentUserException: Invalid user
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 136
+2017-03-14 09:43:03,014 INFO [10] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid Password
+HKSupply.Exceptions.InvalidPasswordException: Invalid Password
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 139
+2017-03-14 09:48:43,716 ERROR [10] HKSupply.Services.Implementations.EFUser.DisableUser - El valor no puede ser nulo.
+Nombre del parámetro: userId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: userId
+   en HKSupply.Services.Implementations.EFUser.DisableUser(String userId, String remarks) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 280
+2017-03-14 09:48:53,076 ERROR [10] HKSupply.Services.Implementations.EFUser.DisableUser - Invalid user
+HKSupply.Exceptions.NonexistentUserException: Invalid user
+   en HKSupply.Services.Implementations.EFUser.DisableUser(String userId, String remarks) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 287
+2017-03-14 09:57:51,188 ERROR [10] HKSupply.Services.Implementations.EFUser.ChangePassword - El valor no puede ser nulo.
+Nombre del parámetro: userId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: userId
+   en HKSupply.Services.Implementations.EFUser.ChangePassword(Int32 userId, String password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 346
+2017-03-14 09:58:06,327 ERROR [10] HKSupply.Services.Implementations.EFUser.ChangePassword - El valor no puede ser nulo.
+Nombre del parámetro: password
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: password
+   en HKSupply.Services.Implementations.EFUser.ChangePassword(Int32 userId, String password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 348
+2017-03-14 09:58:25,226 ERROR [10] HKSupply.Services.Implementations.EFUser.ChangePassword - Invalid user
+HKSupply.Exceptions.NonexistentUserException: Invalid user
+   en HKSupply.Services.Implementations.EFUser.ChangePassword(Int32 userId, String password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 358
+2017-03-14 10:01:05,847 ERROR [10] HKSupply.Services.Implementations.EFUser.ChangePassword - El valor no puede ser nulo.
+Nombre del parámetro: userId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: userId
+   en HKSupply.Services.Implementations.EFUser.ChangePassword(Int32 userId, String password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 346
+2017-03-14 10:01:59,904 ERROR [10] HKSupply.Services.Implementations.EFUser.ChangePassword - El valor no puede ser nulo.
+Nombre del parámetro: password
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: password
+   en HKSupply.Services.Implementations.EFUser.ChangePassword(Int32 userId, String password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 348
+2017-03-14 10:02:30,798 INFO [10] HKSupply.Services.Implementations.EFUser.ChangePassword - Invalid user
+HKSupply.Exceptions.NonexistentUserException: Invalid user
+   en HKSupply.Services.Implementations.EFUser.ChangePassword(Int32 userId, String password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 358
+2017-03-14 10:03:00,666 ERROR [10] HKSupply.Services.Implementations.EFUser.ChangePassword - El valor no puede ser nulo.
+Nombre del parámetro: userId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: userId
+   en HKSupply.Services.Implementations.EFUser.ChangePassword(Int32 userId, String password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 346
+2017-03-14 10:08:39,370 ERROR [10] HKSupply.Services.Implementations.EFUser.ChangePassword - El valor no puede ser nulo.
+Nombre del parámetro: userId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: userId
+   en HKSupply.Services.Implementations.EFUser.ChangePassword(Int32 userId, String password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 346
+2017-03-14 10:08:51,816 ERROR [10] HKSupply.Services.Implementations.EFUser.ChangePassword - El valor no puede ser nulo.
+Nombre del parámetro: password
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: password
+   en HKSupply.Services.Implementations.EFUser.ChangePassword(Int32 userId, String password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 348
+2017-03-14 10:09:07,510 INFO [10] HKSupply.Services.Implementations.EFUser.ChangePassword - Invalid user
+HKSupply.Exceptions.NonexistentUserException: Invalid user
+   en HKSupply.Services.Implementations.EFUser.ChangePassword(Int32 userId, String password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 358
+2017-03-14 11:57:39,798 ERROR [10] HKSupply.Services.Implementations.EFUser.UpdateUsers - usersToUpdate
+System.ArgumentException: usersToUpdate
+   en HKSupply.Services.Implementations.EFUser.UpdateUsers(IEnumerable`1 usersToUpdate) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 419
+2017-03-14 11:59:35,508 ERROR [10] HKSupply.Services.Implementations.EFUser.UpdateUsers - El valor no puede ser nulo.
+Nombre del parámetro: usersToUpdate
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: usersToUpdate
+   en HKSupply.Services.Implementations.EFUser.UpdateUsers(IEnumerable`1 usersToUpdate) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 419
+2017-03-14 12:03:51,048 ERROR [10] HKSupply.Services.Implementations.EFUser.UpdateUsers - El valor no puede ser nulo.
+Nombre del parámetro: usersToUpdate
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: usersToUpdate
+   en HKSupply.Services.Implementations.EFUser.UpdateUsers(IEnumerable`1 usersToUpdate) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 419
+2017-03-14 12:08:11,846 ERROR [10] HKSupply.Services.Implementations.EFUser.UpdateUsers - El valor no puede ser nulo.
+Nombre del parámetro: usersToUpdate
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: usersToUpdate
+   en HKSupply.Services.Implementations.EFUser.UpdateUsers(IEnumerable`1 usersToUpdate) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 419
+2017-03-14 12:13:57,660 ERROR [10] HKSupply.Services.Implementations.EFUser.UpdateUsers - El valor no puede ser nulo.
+Nombre del parámetro: usersToUpdate
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: usersToUpdate
+   en HKSupply.Services.Implementations.EFUser.UpdateUsers(IEnumerable`1 usersToUpdate) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 419
+2017-03-14 12:26:11,747 ERROR [10] HKSupply.Services.Implementations.EFRole.GetRoleById - El valor no puede ser nulo.
+Nombre del parámetro: roleId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: roleId
+   en HKSupply.Services.Implementations.EFRole.GetRoleById(String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 88
+2017-03-14 12:26:44,654 ERROR [10] HKSupply.Services.Implementations.EFRole.GetRoleById - El valor no puede ser nulo.
+Nombre del parámetro: roleId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: roleId
+   en HKSupply.Services.Implementations.EFRole.GetRoleById(String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 88
+2017-03-14 12:26:51,014 ERROR [10] HKSupply.Services.Implementations.EFRole.GetRoleById - No Role Exist
+HKSupply.Exceptions.NonexistentRoleException: No Role Exist
+   en HKSupply.Services.Implementations.EFRole.GetRoleById(String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 95
+2017-03-14 12:30:42,248 ERROR [10] HKSupply.Services.Implementations.EFRole.NewRole - El valor no puede ser nulo.
+Nombre del parámetro: newRole
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: newRole
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 148
+2017-03-14 12:31:32,613 INFO [10] HKSupply.Services.Implementations.EFRole.NewRole - Role Already Exist
+HKSupply.Exceptions.NewExistingRoleException: Role Already Exist
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 155
+2017-03-14 12:32:04,238 ERROR [10] HKSupply.Services.Implementations.EFRole.NewRole - Entity of type "Role" in state "Added" has the following validation errors:
+2017-03-14 12:32:07,943 ERROR [10] HKSupply.Services.Implementations.EFRole.NewRole - - Property: "Description", Error: "El campo Description es obligatorio."
+2017-03-14 12:33:56,314 ERROR [10] HKSupply.Services.Implementations.EFRole.NewRole - El valor no puede ser nulo.
+Nombre del parámetro: newRole
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: newRole
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 148
+2017-03-14 12:34:11,411 INFO [10] HKSupply.Services.Implementations.EFRole.NewRole - Role Already Exist
+HKSupply.Exceptions.NewExistingRoleException: Role Already Exist
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 155
+2017-03-14 12:34:36,505 ERROR [10] HKSupply.Services.Implementations.EFRole.NewRole - Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: El campo Description es obligatorio.
+System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: El campo Description es obligatorio.
+   en HKSupply.DB.HKSupplyContext.SaveChanges() en c:\Git\Supply\HKSupply\HKSupply\DB\HKSupplyContext.cs:línea 53
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 157
+2017-03-14 12:36:02,170 ERROR [10] HKSupply.Services.Implementations.EFRole.NewRole - El valor no puede ser nulo.
+Nombre del parámetro: newRole
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: newRole
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 148
+2017-03-14 12:36:04,975 INFO [10] HKSupply.Services.Implementations.EFRole.NewRole - Role Already Exist
+HKSupply.Exceptions.NewExistingRoleException: Role Already Exist
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 155
+2017-03-14 12:37:07,222 ERROR [10] HKSupply.Services.Implementations.EFRole.NewRole - Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: El campo Description es obligatorio.
+System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: El campo Description es obligatorio.
+   en HKSupply.DB.HKSupplyContext.SaveChanges() en c:\Git\Supply\HKSupply\HKSupply\DB\HKSupplyContext.cs:línea 53
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 157
+2017-03-14 12:42:21,851 ERROR [10] HKSupply.Services.Implementations.EFRole.NewRole - El valor no puede ser nulo.
+Nombre del parámetro: newRole
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: newRole
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 148
+2017-03-14 12:42:25,527 INFO [10] HKSupply.Services.Implementations.EFRole.NewRole - Role Already Exist
+HKSupply.Exceptions.NewExistingRoleException: Role Already Exist
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 155
+2017-03-14 12:43:01,195 ERROR [10] HKSupply.Services.Implementations.EFRole.NewRole - Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: El campo Description es obligatorio.
+System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: El campo Description es obligatorio.
+   en HKSupply.DB.HKSupplyContext.SaveChanges() en c:\Git\Supply\HKSupply\HKSupply\DB\HKSupplyContext.cs:línea 53
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 157
+2017-03-14 12:43:46,290 ERROR [10] HKSupply.Services.Implementations.EFRole.NewRole - El valor no puede ser nulo.
+Nombre del parámetro: newRole
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: newRole
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 148
+2017-03-14 12:43:49,351 INFO [10] HKSupply.Services.Implementations.EFRole.NewRole - Role Already Exist
+HKSupply.Exceptions.NewExistingRoleException: Role Already Exist
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 155
+2017-03-14 12:43:57,970 ERROR [10] HKSupply.Services.Implementations.EFRole.NewRole - Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: El campo Description es obligatorio.
+System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: El campo Description es obligatorio.
+   en HKSupply.DB.HKSupplyContext.SaveChanges() en c:\Git\Supply\HKSupply\HKSupply\DB\HKSupplyContext.cs:línea 53
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 157
+2017-03-14 12:49:48,678 ERROR [10] HKSupply.Services.Implementations.EFRole.NewRole - El valor no puede ser nulo.
+Nombre del parámetro: newRole
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: newRole
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 148
+2017-03-14 12:49:51,600 INFO [10] HKSupply.Services.Implementations.EFRole.NewRole - Role Already Exist
+HKSupply.Exceptions.NewExistingRoleException: Role Already Exist
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 155
+2017-03-14 12:50:05,860 ERROR [10] HKSupply.Services.Implementations.EFRole.NewRole - Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: El campo Description es obligatorio.
+System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: El campo Description es obligatorio.
+   en HKSupply.DB.HKSupplyContext.SaveChanges() en c:\Git\Supply\HKSupply\HKSupply\DB\HKSupplyContext.cs:línea 53
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 157
+2017-03-14 12:51:02,184 ERROR [10] HKSupply.Services.Implementations.EFRole.NewRole - El valor no puede ser nulo.
+Nombre del parámetro: newRole
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: newRole
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 148
+2017-03-14 12:51:06,296 INFO [10] HKSupply.Services.Implementations.EFRole.NewRole - Role Already Exist
+HKSupply.Exceptions.NewExistingRoleException: Role Already Exist
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 155
+2017-03-14 12:51:17,687 ERROR [10] HKSupply.Services.Implementations.EFRole.NewRole - Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: El campo Description es obligatorio.
+System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: El campo Description es obligatorio.
+   en HKSupply.DB.HKSupplyContext.SaveChanges() en c:\Git\Supply\HKSupply\HKSupply\DB\HKSupplyContext.cs:línea 53
+   en HKSupply.Services.Implementations.EFRole.NewRole(Role newRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 157
+2017-03-14 12:54:29,632 ERROR [10] HKSupply.Services.Implementations.EFRole.DisableRole - El valor no puede ser nulo.
+Nombre del parámetro: roleId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: roleId
+   en HKSupply.Services.Implementations.EFRole.DisableRole(String roleId, String remarks) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 221
+2017-03-14 12:54:44,540 ERROR [10] HKSupply.Services.Implementations.EFRole.DisableRole - No Role Exist
+HKSupply.Exceptions.NonexistentRoleException: No Role Exist
+   en HKSupply.Services.Implementations.EFRole.DisableRole(String roleId, String remarks) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 228
+2017-03-14 13:01:34,924 ERROR [10] HKSupply.Services.Implementations.EFRole.UpdateRoles - El valor no puede ser nulo.
+Nombre del parámetro: rolesToUpdate
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: rolesToUpdate
+   en HKSupply.Services.Implementations.EFRole.UpdateRoles(IEnumerable`1 rolesToUpdate) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 296
+2017-03-14 13:05:26,790 ERROR [10] HKSupply.Services.Implementations.EFRole.UpdateRoles - El valor no puede ser nulo.
+Nombre del parámetro: rolesToUpdate
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: rolesToUpdate
+   en HKSupply.Services.Implementations.EFRole.UpdateRoles(IEnumerable`1 rolesToUpdate) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFRole.cs:línea 296
+2017-03-14 13:17:00,230 ERROR [10] HKSupply.Services.Implementations.EFFunctionality.GetFunctionalityById - El valor no puede ser nulo.
+Nombre del parámetro: functionalityName
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: functionalityName
+   en HKSupply.Services.Implementations.EFFunctionality.GetFunctionalityById(Int32 functionalityId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 76
+2017-03-14 13:19:23,942 ERROR [10] HKSupply.Services.Implementations.EFFunctionality.GetFunctionalityById - El valor no puede ser nulo.
+Nombre del parámetro: functionalityName
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: functionalityName
+   en HKSupply.Services.Implementations.EFFunctionality.GetFunctionalityById(Int32 functionalityId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 76
+2017-03-14 13:19:31,764 ERROR [10] HKSupply.Services.Implementations.EFFunctionality.GetFunctionalityById - No Functionality Exist
+HKSupply.Exceptions.NonexistentFunctionalityException: No Functionality Exist
+   en HKSupply.Services.Implementations.EFFunctionality.GetFunctionalityById(Int32 functionalityId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 86
+2017-03-14 13:19:49,155 ERROR [10] HKSupply.Services.Implementations.EFFunctionality.GetFunctionalityByName - El valor no puede ser nulo.
+Nombre del parámetro: functionalityName
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: functionalityName
+   en HKSupply.Services.Implementations.EFFunctionality.GetFunctionalityByName(String functionalityName) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 139
+2017-03-14 13:22:32,675 ERROR [10] HKSupply.Services.Implementations.EFFunctionality.NewFunctionality - El valor no puede ser nulo.
+System.ArgumentNullException: El valor no puede ser nulo.
+   en HKSupply.Services.Implementations.EFFunctionality.NewFunctionality(Functionality newFunctionality) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 202
+2017-03-14 13:22:34,801 ERROR [10] HKSupply.Services.Implementations.EFFunctionality.NewFunctionality - Functionality Already Exist
+HKSupply.Exceptions.NewExistingFunctionalityException: Functionality Already Exist
+   en HKSupply.Services.Implementations.EFFunctionality.NewFunctionality(Functionality newFunctionality) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 209
+2017-03-14 13:32:36,151 ERROR [10] HKSupply.Services.Implementations.EFFunctionality.ModifyFunctionality - El valor no puede ser nulo.
+System.ArgumentNullException: El valor no puede ser nulo.
+   en HKSupply.Services.Implementations.EFFunctionality.ModifyFunctionality(Functionality modFunctionality) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 282
+2017-03-14 13:33:02,814 ERROR [10] HKSupply.Services.Implementations.EFFunctionality.ModifyFunctionality - No Functionality Exist
+HKSupply.Exceptions.NonexistentFunctionalityException: No Functionality Exist
+   en HKSupply.Services.Implementations.EFFunctionality.ModifyFunctionality(Functionality modFunctionality) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 289
+2017-03-14 13:50:29,201 ERROR [10] HKSupply.Services.Implementations.EFFunctionality.UpdateFunctionalities - El valor no puede ser nulo.
+Nombre del parámetro: functionalitiesToUpdate
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: functionalitiesToUpdate
+   en HKSupply.Services.Implementations.EFFunctionality.UpdateFunctionalities(IEnumerable`1 functionalitiesToUpdate) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionality.cs:línea 344
+2017-03-14 14:11:17,332 ERROR [10] HKSupply.Services.Implementations.EFFunctionalityRole.GetFunctionalityRole - El valor no puede ser nulo.
+Nombre del parámetro: functionalityId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: functionalityId
+   en HKSupply.Services.Implementations.EFFunctionalityRole.GetFunctionalityRole(Int32 functionalityId, String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionalityRole.cs:línea 81
+2017-03-14 14:11:24,354 ERROR [10] HKSupply.Services.Implementations.EFFunctionalityRole.GetFunctionalityRole - El valor no puede ser nulo.
+Nombre del parámetro: roleId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: roleId
+   en HKSupply.Services.Implementations.EFFunctionalityRole.GetFunctionalityRole(Int32 functionalityId, String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionalityRole.cs:línea 84
+2017-03-14 14:11:44,141 ERROR [10] HKSupply.Services.Implementations.EFFunctionalityRole.GetFunctionalityRole - Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityRoleException'.
+HKSupply.Exceptions.NonexistentFunctionalityRoleException: Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityRoleException'.
+   en HKSupply.Services.Implementations.EFFunctionalityRole.GetFunctionalityRole(Int32 functionalityId, String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionalityRole.cs:línea 95
+2017-03-14 14:13:14,039 ERROR [10] HKSupply.Services.Implementations.EFFunctionalityRole.GetFunctionalitiesRole - El valor no puede ser nulo.
+Nombre del parámetro: roleId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: roleId
+   en HKSupply.Services.Implementations.EFFunctionalityRole.GetFunctionalitiesRole(String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionalityRole.cs:línea 123
+2017-03-14 14:16:40,314 ERROR [10] HKSupply.Services.Implementations.EFFunctionalityRole.GetFunctionalitiesCategoriesRole - El valor no puede ser nulo.
+Nombre del parámetro: roleId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: roleId
+   en HKSupply.Services.Implementations.EFFunctionalityRole.GetFunctionalitiesCategoriesRole(String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionalityRole.cs:línea 179
+2017-03-14 14:16:44,116 ERROR [10] HKSupply.Services.Implementations.EFFunctionalityRole.GetFunctionalitiesCategoriesRole - El valor no puede ser nulo.
+Nombre del parámetro: roleId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: roleId
+   en HKSupply.Services.Implementations.EFFunctionalityRole.GetFunctionalitiesCategoriesRole(String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionalityRole.cs:línea 179
+2017-03-14 14:17:19,804 ERROR [10] HKSupply.Services.Implementations.EFFunctionalityRole.GetFunctionalitiesCategoriesRole - El valor no puede ser nulo.
+Nombre del parámetro: roleId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: roleId
+   en HKSupply.Services.Implementations.EFFunctionalityRole.GetFunctionalitiesCategoriesRole(String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionalityRole.cs:línea 179
+2017-03-14 14:19:46,502 ERROR [10] HKSupply.Services.Implementations.EFFunctionalityRole.NewFunctionalityRole - El valor no puede ser nulo.
+Nombre del parámetro: newFunctionalityRole
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: newFunctionalityRole
+   en HKSupply.Services.Implementations.EFFunctionalityRole.NewFunctionalityRole(FunctionalityRole newFunctionalityRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionalityRole.cs:línea 239
+2017-03-14 14:20:07,844 ERROR [10] HKSupply.Services.Implementations.EFFunctionalityRole.NewFunctionalityRole - Functionality-Role Already Exist
+HKSupply.Exceptions.NewExistingFunctionalityRoleException: Functionality-Role Already Exist
+   en HKSupply.Services.Implementations.EFFunctionalityRole.NewFunctionalityRole(FunctionalityRole newFunctionalityRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionalityRole.cs:línea 248
+2017-03-14 14:24:04,806 ERROR [10] HKSupply.Services.Implementations.EFFunctionalityRole.ModifyFunctionalityRole - El valor no puede ser nulo.
+Nombre del parámetro: modFunctionalityRole
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: modFunctionalityRole
+   en HKSupply.Services.Implementations.EFFunctionalityRole.ModifyFunctionalityRole(FunctionalityRole modFunctionalityRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionalityRole.cs:línea 309
+2017-03-14 14:24:21,676 ERROR [10] HKSupply.Services.Implementations.EFFunctionalityRole.ModifyFunctionalityRole - No Functionality-Role Exist
+HKSupply.Exceptions.NonexistentFunctionalityRoleException: No Functionality-Role Exist
+   en HKSupply.Services.Implementations.EFFunctionalityRole.ModifyFunctionalityRole(FunctionalityRole modFunctionalityRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionalityRole.cs:línea 318
+2017-03-14 15:07:42,446 ERROR [10] HKSupply.Services.Implementations.EFFunctionalityRole.ModifyFunctionalityRole - El valor no puede ser nulo.
+Nombre del parámetro: modFunctionalityRole
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: modFunctionalityRole
+   en HKSupply.Services.Implementations.EFFunctionalityRole.ModifyFunctionalityRole(FunctionalityRole modFunctionalityRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionalityRole.cs:línea 309
+2017-03-14 15:07:44,768 ERROR [10] HKSupply.Services.Implementations.EFFunctionalityRole.ModifyFunctionalityRole - No Functionality-Role Exist
+HKSupply.Exceptions.NonexistentFunctionalityRoleException: No Functionality-Role Exist
+   en HKSupply.Services.Implementations.EFFunctionalityRole.ModifyFunctionalityRole(FunctionalityRole modFunctionalityRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionalityRole.cs:línea 318
+2017-03-14 15:07:58,915 ERROR [10] HKSupply.Services.Implementations.EFFunctionalityRole.GetFunctionalityRole - Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityRoleException'.
+HKSupply.Exceptions.NonexistentFunctionalityRoleException: Se produjo una excepción de tipo 'HKSupply.Exceptions.NonexistentFunctionalityRoleException'.
+   en HKSupply.Services.Implementations.EFFunctionalityRole.GetFunctionalityRole(Int32 functionalityId, String roleId) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionalityRole.cs:línea 95
+2017-03-14 15:09:18,944 ERROR [10] HKSupply.Services.Implementations.EFFunctionalityRole.ModifyFunctionalityRole - El valor no puede ser nulo.
+Nombre del parámetro: modFunctionalityRole
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: modFunctionalityRole
+   en HKSupply.Services.Implementations.EFFunctionalityRole.ModifyFunctionalityRole(FunctionalityRole modFunctionalityRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionalityRole.cs:línea 309
+2017-03-14 15:09:21,108 ERROR [10] HKSupply.Services.Implementations.EFFunctionalityRole.ModifyFunctionalityRole - No Functionality-Role Exist
+HKSupply.Exceptions.NonexistentFunctionalityRoleException: No Functionality-Role Exist
+   en HKSupply.Services.Implementations.EFFunctionalityRole.ModifyFunctionalityRole(FunctionalityRole modFunctionalityRole) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionalityRole.cs:línea 318
+2017-03-14 15:18:49,365 ERROR [10] HKSupply.Services.Implementations.EFFunctionalityRole.UpdateFunctionalitiesRoles - El valor no puede ser nulo.
+Nombre del parámetro: functionalitiesRolesToUpdate
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: functionalitiesRolesToUpdate
+   en HKSupply.Services.Implementations.EFFunctionalityRole.UpdateFunctionalitiesRoles(IEnumerable`1 functionalitiesRolesToUpdate) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionalityRole.cs:línea 386
+2017-03-14 15:24:48,894 ERROR [10] HKSupply.Services.Implementations.EFFunctionalityRole.UpdateFunctionalitiesRoles - El valor no puede ser nulo.
+Nombre del parámetro: functionalitiesRolesToUpdate
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: functionalitiesRolesToUpdate
+   en HKSupply.Services.Implementations.EFFunctionalityRole.UpdateFunctionalitiesRoles(IEnumerable`1 functionalitiesRolesToUpdate) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionalityRole.cs:línea 386
+2017-03-14 15:26:34,549 ERROR [10] HKSupply.Services.Implementations.EFFunctionalityRole.UpdateFunctionalitiesRoles - El valor no puede ser nulo.
+Nombre del parámetro: functionalitiesRolesToUpdate
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: functionalitiesRolesToUpdate
+   en HKSupply.Services.Implementations.EFFunctionalityRole.UpdateFunctionalitiesRoles(IEnumerable`1 functionalitiesRolesToUpdate) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFFunctionalityRole.cs:línea 386
+2017-03-14 15:45:00,101 ERROR [10] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - El valor no puede ser nulo.
+Nombre del parámetro: UserId
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: UserId
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 124

@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_exceptions_1_1_nonexistent_store_exception" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Exceptions::NonexistentStoreException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Exception</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_nonexistent_store_exception_1ad9fd503680d33224815b67a9e0832111" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NonexistentStoreException.NonexistentStoreException</definition>
+        <argsstring>()</argsstring>
+        <name>NonexistentStoreException</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NonexistentStoreException.cs" line="15" column="1" bodyfile="HKSupply/Exceptions/NonexistentStoreException.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_nonexistent_store_exception_1a73a0da39b096e932188482518b50766e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NonexistentStoreException.NonexistentStoreException</definition>
+        <argsstring>(string message)</argsstring>
+        <name>NonexistentStoreException</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NonexistentStoreException.cs" line="16" column="1" bodyfile="HKSupply/Exceptions/NonexistentStoreException.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_nonexistent_store_exception_1a79df07a44db5493bcd945a6f339ca249" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NonexistentStoreException.NonexistentStoreException</definition>
+        <argsstring>(string message, System.Exception inner)</argsstring>
+        <name>NonexistentStoreException</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>System.Exception</type>
+          <declname>inner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NonexistentStoreException.cs" line="17" column="1" bodyfile="HKSupply/Exceptions/NonexistentStoreException.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_nonexistent_store_exception_1a73cce81f48fe6efe065b29cdea1af57b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NonexistentStoreException.NonexistentStoreException</definition>
+        <argsstring>(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)</argsstring>
+        <name>NonexistentStoreException</name>
+        <param>
+          <type>System.Runtime.Serialization.SerializationInfo</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>System.Runtime.Serialization.StreamingContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NonexistentStoreException.cs" line="20" column="1" bodyfile="HKSupply/Exceptions/NonexistentStoreException.cs" bodystart="20" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Custom Exception: Almacén no existente en el sistema </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="219">
+        <label>System::Exception</label>
+      </node>
+      <node id="218">
+        <label>HKSupply.Exceptions.NonexistentStoreException</label>
+        <link refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_store_exception"/>
+        <childnode refid="219" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="221">
+        <label>System::Exception</label>
+      </node>
+      <node id="220">
+        <label>HKSupply.Exceptions.NonexistentStoreException</label>
+        <link refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_store_exception"/>
+        <childnode refid="221" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Exceptions/NonexistentStoreException.cs" line="14" column="1" bodyfile="HKSupply/Exceptions/NonexistentStoreException.cs" bodystart="13" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_store_exception_1ad9fd503680d33224815b67a9e0832111" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::NonexistentStoreException</scope><name>NonexistentStoreException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_store_exception_1a73a0da39b096e932188482518b50766e" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::NonexistentStoreException</scope><name>NonexistentStoreException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_store_exception_1a79df07a44db5493bcd945a6f339ca249" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::NonexistentStoreException</scope><name>NonexistentStoreException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_store_exception_1a73cce81f48fe6efe065b29cdea1af57b" prot="protected" virt="non-virtual"><scope>HKSupply::Exceptions::NonexistentStoreException</scope><name>NonexistentStoreException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

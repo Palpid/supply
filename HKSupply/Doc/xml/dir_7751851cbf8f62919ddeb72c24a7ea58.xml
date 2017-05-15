@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_7751851cbf8f62919ddeb72c24a7ea58" kind="dir">
+    <compoundname>UnitTestProject</compoundname>
+    <innerdir refid="dir_73ff80c33e127c5e8ef003f76c87d1c2">UnitTestProject/obj</innerdir>
+    <innerdir refid="dir_693279e281000add7d8c78156208ac6e">UnitTestProject/Properties</innerdir>
+    <innerfile refid="_unit_test1_8cs">UnitTest1.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="UnitTestProject/"/>
+  </compounddef>
+</doxygen>

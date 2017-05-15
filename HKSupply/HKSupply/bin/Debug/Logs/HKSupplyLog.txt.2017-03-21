@@ -1,0 +1,31 @@
+﻿2017-03-21 11:01:47,251 INFO [8] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid user
+HKSupply.Exceptions.NonexistentUserException: Invalid user
+   en HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:línea 136
+2017-03-21 11:56:00,921 ERROR [10] HKSupply.Services.Implementations.EFItem.newItem - Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: El campo ItemCode debe ser una cadena con una longitud máxima de 20.; El campo ItemCode debe ser una cadena con una longitud máxima de 20.
+System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: El campo ItemCode debe ser una cadena con una longitud máxima de 20.; El campo ItemCode debe ser una cadena con una longitud máxima de 20.
+   en HKSupply.DB.HKSupplyContext.SaveChanges() en c:\Git\Supply\HKSupply\HKSupply\DB\HKSupplyContext.cs:línea 70
+   en HKSupply.Services.Implementations.EFItem.newItem(Item newItem) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItem.cs:línea 209
+2017-03-21 16:04:01,411 ERROR [9] HKSupply.Services.Implementations.EFItem.newItem - Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: El campo ItemCode debe ser una cadena con una longitud máxima de 20.; El campo CategoryName debe ser una cadena con una longitud máxima de 30.; El campo ItemCode debe ser una cadena con una longitud máxima de 20.; El campo CategoryName debe ser una cadena con una longitud máxima de 30.
+System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: El campo ItemCode debe ser una cadena con una longitud máxima de 20.; El campo CategoryName debe ser una cadena con una longitud máxima de 30.; El campo ItemCode debe ser una cadena con una longitud máxima de 20.; El campo CategoryName debe ser una cadena con una longitud máxima de 30.
+   en HKSupply.DB.HKSupplyContext.SaveChanges() en c:\Git\Supply\HKSupply\HKSupply\DB\HKSupplyContext.cs:línea 70
+   en HKSupply.Services.Implementations.EFItem.newItem(Item newItem) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItem.cs:línea 209
+2017-03-21 16:06:19,736 ERROR [9] HKSupply.Services.Implementations.EFItem.newItem - Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: El campo ItemCode debe ser una cadena con una longitud máxima de 20.; 
+El campo CategoryName debe ser una cadena con una longitud máxima de 30.; 
+El campo ItemCode debe ser una cadena con una longitud máxima de 20.; 
+El campo CategoryName debe ser una cadena con una longitud máxima de 30.
+System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: El campo ItemCode debe ser una cadena con una longitud máxima de 20.; 
+El campo CategoryName debe ser una cadena con una longitud máxima de 30.; 
+El campo ItemCode debe ser una cadena con una longitud máxima de 20.; 
+El campo CategoryName debe ser una cadena con una longitud máxima de 30.
+   en HKSupply.DB.HKSupplyContext.SaveChanges() en c:\Git\Supply\HKSupply\HKSupply\DB\HKSupplyContext.cs:línea 70
+   en HKSupply.Services.Implementations.EFItem.newItem(Item newItem) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItem.cs:línea 209
+2017-03-21 16:06:38,466 ERROR [9] HKSupply.Services.Implementations.EFItem.newItem - Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: El campo ItemCode debe ser una cadena con una longitud máxima de 20.; 
+El campo CategoryName debe ser una cadena con una longitud máxima de 30.; 
+El campo ItemCode debe ser una cadena con una longitud máxima de 20.; 
+El campo CategoryName debe ser una cadena con una longitud máxima de 30.
+System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: El campo ItemCode debe ser una cadena con una longitud máxima de 20.; 
+El campo CategoryName debe ser una cadena con una longitud máxima de 30.; 
+El campo ItemCode debe ser una cadena con una longitud máxima de 20.; 
+El campo CategoryName debe ser una cadena con una longitud máxima de 30.
+   en HKSupply.DB.HKSupplyContext.SaveChanges() en c:\Git\Supply\HKSupply\HKSupply\DB\HKSupplyContext.cs:línea 70
+   en HKSupply.Services.Implementations.EFItem.newItem(Item newItem) en c:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItem.cs:línea 209

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_7dfd0243e8acdebfd8164a0b9d1443da" kind="dir">
+    <compoundname>HKSupply/Properties</compoundname>
+    <innerfile refid="_h_k_supply_2_properties_2_assembly_info_8cs">AssemblyInfo.cs</innerfile>
+    <innerfile refid="_resources_8_designer_8cs">Resources.Designer.cs</innerfile>
+    <innerfile refid="_settings_8_designer_8cs">Settings.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Properties/"/>
+  </compounddef>
+</doxygen>

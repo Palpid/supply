@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFRole</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IRole</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_1aa4d771b64b4d7ce46ea461c8ca6cf6fc" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFRole._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role" kindref="compound">EFRole</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFRole.cs" line="24" column="1" bodyfile="HKSupply/Services/Implementations/EFRole.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_1a7fd2f7f9bae498128f23ad0659e3ec4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref> &gt;</type>
+        <definition>IEnumerable&lt;Role&gt; HKSupply.Services.Implementations.EFRole.GetRoles</definition>
+        <argsstring>(bool all=true)</argsstring>
+        <name>GetRoles</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1a921bacd80020de3cf811705857c9eb7e">GetRoles</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>all</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Obtener la colección de roles del sistema. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>all</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Para indicar si se quieren todos o sólo los activos</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFRole.cs" line="33" column="1" bodyfile="HKSupply/Services/Implementations/EFRole.cs" bodystart="33" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_1ad4eb9194531a9215c4f1a20ab0d9aa54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref></type>
+        <definition>Role HKSupply.Services.Implementations.EFRole.GetRoleById</definition>
+        <argsstring>(string roleId)</argsstring>
+        <name>GetRoleById</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1ad83423359435ae70026a1daac5bd07ae">GetRoleById</reimplements>
+        <param>
+          <type>string</type>
+          <declname>roleId</declname>
+        </param>
+        <briefdescription>
+<para>Obtener un rol dado su Id </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>roleId</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFRole.cs" line="82" column="1" bodyfile="HKSupply/Services/Implementations/EFRole.cs" bodystart="82" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_1a549317ad8c8fb3353382a8cd36fa1b22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref></type>
+        <definition>Role HKSupply.Services.Implementations.EFRole.NewRole</definition>
+        <argsstring>(Role newRole)</argsstring>
+        <name>NewRole</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1a7fea1e910bcd64d8e99da8bf4438e50f">NewRole</reimplements>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref></type>
+          <declname>newRole</declname>
+        </param>
+        <briefdescription>
+<para>Dar de alta un rol en el sistema </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newRole</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFRole.cs" line="143" column="1" bodyfile="HKSupply/Services/Implementations/EFRole.cs" bodystart="143" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_1adf253e840ea77e23fd7c10899f316f21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFRole.DisableRole</definition>
+        <argsstring>(string roleId, string remarks)</argsstring>
+        <name>DisableRole</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1a4f5e4bf501b1affbae4d3d39dbb837b5">DisableRole</reimplements>
+        <param>
+          <type>string</type>
+          <declname>roleId</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>remarks</declname>
+        </param>
+        <briefdescription>
+<para>Deshabilitar un rol </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>roleId</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>remarks</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFRole.cs" line="216" column="1" bodyfile="HKSupply/Services/Implementations/EFRole.cs" bodystart="216" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_1a2d880fce95c33f7581f2e3310ca943ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFRole.UpdateRoles</definition>
+        <argsstring>(IEnumerable&lt; Role &gt; rolesToUpdate)</argsstring>
+        <name>UpdateRoles</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role_1a0960468c3fb4db4f09b3175106ee7753">UpdateRoles</reimplements>
+        <param>
+          <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref> &gt;</type>
+          <declname>rolesToUpdate</declname>
+        </param>
+        <briefdescription>
+<para>Modificar una colección de roles </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rolesToUpdate</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para><para>Los campos que se actualizan son los siguientes:<itemizedlist>
+<listitem><para>Description</para></listitem><listitem><para>Enabled</para></listitem><listitem><para>Remarks </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFRole.cs" line="291" column="1" bodyfile="HKSupply/Services/Implementations/EFRole.cs" bodystart="291" bodyend="364"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Controlador Entity Framework para Role </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="65">
+        <label>IRole</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role"/>
+      </node>
+      <node id="64">
+        <label>HKSupply.Services.Implementations.EFRole</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role"/>
+        <childnode refid="65" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="67">
+        <label>IRole</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role"/>
+      </node>
+      <node id="66">
+        <label>HKSupply.Services.Implementations.EFRole</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role"/>
+        <childnode refid="67" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFRole.cs" line="22" column="1" bodyfile="HKSupply/Services/Implementations/EFRole.cs" bodystart="21" bodyend="365"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_1aa4d771b64b4d7ce46ea461c8ca6cf6fc" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFRole</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_1adf253e840ea77e23fd7c10899f316f21" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFRole</scope><name>DisableRole</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_1ad4eb9194531a9215c4f1a20ab0d9aa54" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFRole</scope><name>GetRoleById</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_1a7fd2f7f9bae498128f23ad0659e3ec4a" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFRole</scope><name>GetRoles</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_1a549317ad8c8fb3353382a8cd36fa1b22" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFRole</scope><name>NewRole</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_1a2d880fce95c33f7581f2e3310ca943ed" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFRole</scope><name>UpdateRoles</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

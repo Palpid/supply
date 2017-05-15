@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_form1" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Form1</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_form1_1a50744253b78a8cbb97687621c60e9f88" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Form1.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Variable del diseñador requerida. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Form1.Designer.cs" line="8" column="1" bodyfile="HKSupply/Form1.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_form1_1a7339d967c306718aef55fc99748e9da6" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HKSupply.Form1.button1</definition>
+        <argsstring></argsstring>
+        <name>button1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Form1.Designer.cs" line="75" column="1" bodyfile="HKSupply/Form1.Designer.cs" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_form1_1abcfea3e316aa392876bed17e344530dd" prot="private" static="no" mutable="no">
+        <type><ref refid="class_custom_controls_1_1_stack_view" kindref="compound">CustomControls.StackView</ref></type>
+        <definition>CustomControls.StackView HKSupply.Form1.stackView1</definition>
+        <argsstring></argsstring>
+        <name>stackView1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Form1.Designer.cs" line="76" column="1" bodyfile="HKSupply/Form1.Designer.cs" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_form1_1aabd41052ef6b1bc029c68c74374f55cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Form1.Form1</definition>
+        <argsstring>()</argsstring>
+        <name>Form1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Form1.cs" line="25" column="1" bodyfile="HKSupply/Form1.cs" bodystart="25" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_form1_1a3b3020e8d720dd662dcd19444def9855" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Form1.Form1_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>Form1_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Form1.cs" line="30" column="1" bodyfile="HKSupply/Form1.cs" bodystart="30" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_form1_1af94c3cbbdd5e9b6ac16bfd9a5c128677" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Form1.InitDBData</definition>
+        <argsstring>()</argsstring>
+        <name>InitDBData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Form1.cs" line="79" column="1" bodyfile="HKSupply/Form1.cs" bodystart="79" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_form1_1aa5542f07019e7b025f6801dbb8fcb790" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Form1.CustomerDBTest</definition>
+        <argsstring>()</argsstring>
+        <name>CustomerDBTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Form1.cs" line="302" column="1" bodyfile="HKSupply/Form1.cs" bodystart="302" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_form1_1a41c1dc427262f75aa39d286148c7df4d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Form1.button1_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>button1_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Form1.cs" line="360" column="1" bodyfile="HKSupply/Form1.cs" bodystart="360" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_form1_1a573899129e9bc14361f92d7a96466084" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Form1.stackView1_EditButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>stackView1_EditButtonClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Form1.cs" line="366" column="1" bodyfile="HKSupply/Form1.cs" bodystart="366" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_form1_1ae1aaab3c6771b0edac7180fea5572bc5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Form1.stackView1_NewButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>stackView1_NewButtonClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Form1.cs" line="371" column="1" bodyfile="HKSupply/Form1.cs" bodystart="371" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_form1_1af93034a73c195ec8d40295259af50fc2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Form1.stackView1_SaveButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>stackView1_SaveButtonClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Form1.cs" line="376" column="1" bodyfile="HKSupply/Form1.cs" bodystart="376" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_form1_1a206304f2114c516601026d2c89f2c72c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Form1.stackView1_CancelButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>stackView1_CancelButtonClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Form1.cs" line="380" column="1" bodyfile="HKSupply/Form1.cs" bodystart="380" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_form1_1ab1b8ca5ffbbb4319aa755ad500a8823b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Form1.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Método necesario para admitir el Diseñador. No se puede modificar el contenido del método con el editor de código. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Form1.Designer.cs" line="29" column="1" bodyfile="HKSupply/Form1.Designer.cs" bodystart="29" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_form1_1a406b8a9257d093c285ba546b75e81757" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Form1.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Limpiar los recursos que se estén utilizando. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true si los recursos administrados se deben eliminar; false en caso contrario.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Form1.Designer.cs" line="14" column="1" bodyfile="HKSupply/Form1.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="81">
+        <label>Form</label>
+      </node>
+      <node id="80">
+        <label>HKSupply.Form1</label>
+        <link refid="class_h_k_supply_1_1_form1"/>
+        <childnode refid="81" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="83">
+        <label>Form</label>
+      </node>
+      <node id="82">
+        <label>HKSupply.Form1</label>
+        <link refid="class_h_k_supply_1_1_form1"/>
+        <childnode refid="83" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Form1.cs" line="24" column="1" bodyfile="HKSupply/Form1.cs" bodystart="23" bodyend="387"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_form1_1a7339d967c306718aef55fc99748e9da6" prot="private" virt="non-virtual"><scope>HKSupply::Form1</scope><name>button1</name></member>
+      <member refid="class_h_k_supply_1_1_form1_1a41c1dc427262f75aa39d286148c7df4d" prot="private" virt="non-virtual"><scope>HKSupply::Form1</scope><name>button1_Click</name></member>
+      <member refid="class_h_k_supply_1_1_form1_1a50744253b78a8cbb97687621c60e9f88" prot="private" virt="non-virtual"><scope>HKSupply::Form1</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_form1_1aa5542f07019e7b025f6801dbb8fcb790" prot="private" virt="non-virtual"><scope>HKSupply::Form1</scope><name>CustomerDBTest</name></member>
+      <member refid="class_h_k_supply_1_1_form1_1a406b8a9257d093c285ba546b75e81757" prot="protected" virt="non-virtual"><scope>HKSupply::Form1</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_form1_1aabd41052ef6b1bc029c68c74374f55cd" prot="public" virt="non-virtual"><scope>HKSupply::Form1</scope><name>Form1</name></member>
+      <member refid="class_h_k_supply_1_1_form1_1a3b3020e8d720dd662dcd19444def9855" prot="private" virt="non-virtual"><scope>HKSupply::Form1</scope><name>Form1_Load</name></member>
+      <member refid="class_h_k_supply_1_1_form1_1af94c3cbbdd5e9b6ac16bfd9a5c128677" prot="private" virt="non-virtual"><scope>HKSupply::Form1</scope><name>InitDBData</name></member>
+      <member refid="class_h_k_supply_1_1_form1_1ab1b8ca5ffbbb4319aa755ad500a8823b" prot="private" virt="non-virtual"><scope>HKSupply::Form1</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_form1_1abcfea3e316aa392876bed17e344530dd" prot="private" virt="non-virtual"><scope>HKSupply::Form1</scope><name>stackView1</name></member>
+      <member refid="class_h_k_supply_1_1_form1_1a206304f2114c516601026d2c89f2c72c" prot="private" virt="non-virtual"><scope>HKSupply::Form1</scope><name>stackView1_CancelButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_form1_1a573899129e9bc14361f92d7a96466084" prot="private" virt="non-virtual"><scope>HKSupply::Form1</scope><name>stackView1_EditButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_form1_1ae1aaab3c6771b0edac7180fea5572bc5" prot="private" virt="non-virtual"><scope>HKSupply::Form1</scope><name>stackView1_NewButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_form1_1af93034a73c195ec8d40295259af50fc2" prot="private" virt="non-virtual"><scope>HKSupply::Form1</scope><name>stackView1_SaveButtonClick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

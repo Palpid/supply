@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_custom_controls_1_1_custom_tool_strip_menu_item" kind="class" language="C#" prot="public">
+    <compoundname>CustomControls::CustomToolStripMenuItem</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ToolStripMenuItem</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_custom_controls_1_1_custom_tool_strip_menu_item_1a857317bf9a042cc91097cb98da03943e" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string CustomControls.CustomToolStripMenuItem._formName</definition>
+        <argsstring></argsstring>
+        <name>_formName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/CustomToolStripMenuItem.cs" line="15" column="1" bodyfile="CustomControls/CustomToolStripMenuItem.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_controls_1_1_custom_tool_strip_menu_item_1a4e19246de371fd01849814a7f7538963" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer CustomControls.CustomToolStripMenuItem.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Variable del diseñador requerida. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/CustomToolStripMenuItem.Designer.cs" line="8" column="1" bodyfile="CustomControls/CustomToolStripMenuItem.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_custom_controls_1_1_custom_tool_strip_menu_item_1a2533ed0f2c4c4b248b1abc49e716c2a6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string CustomControls.CustomToolStripMenuItem.FormName</definition>
+        <argsstring></argsstring>
+        <name>FormName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/CustomToolStripMenuItem.cs" line="17" column="1" bodyfile="CustomControls/CustomToolStripMenuItem.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_custom_controls_1_1_custom_tool_strip_menu_item_1a3b07c5d51a0a1b0d2c1bfa23489e0454" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CustomControls.CustomToolStripMenuItem.CustomToolStripMenuItem</definition>
+        <argsstring>(string text, Image image, EventHandler onClick, string name)</argsstring>
+        <name>CustomToolStripMenuItem</name>
+        <param>
+          <type>string</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>Image</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>EventHandler</type>
+          <declname>onClick</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/CustomToolStripMenuItem.cs" line="19" column="1" bodyfile="CustomControls/CustomToolStripMenuItem.cs" bodystart="19" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_custom_controls_1_1_custom_tool_strip_menu_item_1a09da84511dccda9f78441c82ff2f4508" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void CustomControls.CustomToolStripMenuItem.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Limpiar los recursos que se estén utilizando. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true si los recursos administrados se deben eliminar; false en caso contrario.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/CustomToolStripMenuItem.Designer.cs" line="14" column="1" bodyfile="CustomControls/CustomToolStripMenuItem.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_custom_controls_1_1_custom_tool_strip_menu_item_1a6997d6d70634b5942a9c5ee08e5632de" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CustomControls.CustomToolStripMenuItem.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Método necesario para admitir el Diseñador. No se puede modificar el contenido del método con el editor de código. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomControls/CustomToolStripMenuItem.Designer.cs" line="29" column="1" bodyfile="CustomControls/CustomToolStripMenuItem.Designer.cs" bodystart="29" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="36">
+        <label>CustomControls.CustomToolStripMenuItem</label>
+        <link refid="class_custom_controls_1_1_custom_tool_strip_menu_item"/>
+        <childnode refid="37" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>ToolStripMenuItem</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="38">
+        <label>CustomControls.CustomToolStripMenuItem</label>
+        <link refid="class_custom_controls_1_1_custom_tool_strip_menu_item"/>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>ToolStripMenuItem</label>
+      </node>
+    </collaborationgraph>
+    <location file="CustomControls/CustomToolStripMenuItem.cs" line="14" column="1" bodyfile="CustomControls/CustomToolStripMenuItem.cs" bodystart="13" bodyend="28"/>
+    <listofallmembers>
+      <member refid="class_custom_controls_1_1_custom_tool_strip_menu_item_1a857317bf9a042cc91097cb98da03943e" prot="private" virt="non-virtual"><scope>CustomControls::CustomToolStripMenuItem</scope><name>_formName</name></member>
+      <member refid="class_custom_controls_1_1_custom_tool_strip_menu_item_1a4e19246de371fd01849814a7f7538963" prot="private" virt="non-virtual"><scope>CustomControls::CustomToolStripMenuItem</scope><name>components</name></member>
+      <member refid="class_custom_controls_1_1_custom_tool_strip_menu_item_1a3b07c5d51a0a1b0d2c1bfa23489e0454" prot="public" virt="non-virtual"><scope>CustomControls::CustomToolStripMenuItem</scope><name>CustomToolStripMenuItem</name></member>
+      <member refid="class_custom_controls_1_1_custom_tool_strip_menu_item_1a09da84511dccda9f78441c82ff2f4508" prot="protected" virt="non-virtual"><scope>CustomControls::CustomToolStripMenuItem</scope><name>Dispose</name></member>
+      <member refid="class_custom_controls_1_1_custom_tool_strip_menu_item_1a2533ed0f2c4c4b248b1abc49e716c2a6" prot="public" virt="non-virtual"><scope>CustomControls::CustomToolStripMenuItem</scope><name>FormName</name></member>
+      <member refid="class_custom_controls_1_1_custom_tool_strip_menu_item_1a6997d6d70634b5942a9c5ee08e5632de" prot="private" virt="non-virtual"><scope>CustomControls::CustomToolStripMenuItem</scope><name>InitializeComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

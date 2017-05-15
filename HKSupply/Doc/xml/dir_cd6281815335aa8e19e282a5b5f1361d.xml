@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_cd6281815335aa8e19e282a5b5f1361d" kind="dir">
+    <compoundname>HKSupply/Migrations</compoundname>
+    <innerfile refid="201703081042226___customer_8cs">201703081042226_Customer.cs</innerfile>
+    <innerfile refid="201703081042226___customer_8_designer_8cs">201703081042226_Customer.Designer.cs</innerfile>
+    <innerfile refid="201703081123445___object_version_8cs">201703081123445_ObjectVersion.cs</innerfile>
+    <innerfile refid="201703081123445___object_version_8_designer_8cs">201703081123445_ObjectVersion.Designer.cs</innerfile>
+    <innerfile refid="201703081126231___object_version__2_8cs">201703081126231_ObjectVersion_2.cs</innerfile>
+    <innerfile refid="201703081126231___object_version__2_8_designer_8cs">201703081126231_ObjectVersion_2.Designer.cs</innerfile>
+    <innerfile refid="201703161530406___supplier_8cs">201703161530406_Supplier.cs</innerfile>
+    <innerfile refid="201703161530406___supplier_8_designer_8cs">201703161530406_Supplier.Designer.cs</innerfile>
+    <innerfile refid="201703161637578___store_8cs">201703161637578_Store.cs</innerfile>
+    <innerfile refid="201703161637578___store_8_designer_8cs">201703161637578_Store.Designer.cs</innerfile>
+    <innerfile refid="201703201426591__items_8cs">201703201426591_items.cs</innerfile>
+    <innerfile refid="201703201426591__items_8_designer_8cs">201703201426591_items.Designer.cs</innerfile>
+    <innerfile refid="201703210811583__items__2_8cs">201703210811583_items_2.cs</innerfile>
+    <innerfile refid="201703210811583__items__2_8_designer_8cs">201703210811583_items_2.Designer.cs</innerfile>
+    <innerfile refid="_configuration_8cs">Configuration.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Migrations/"/>
+  </compounddef>
+</doxygen>

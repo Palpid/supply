@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_36b05a10854b835d051b4f0294cd5756" kind="dir">
+    <compoundname>HKSupply/Services</compoundname>
+    <innerdir refid="dir_34d0cf3dc529cb7f7cd33c40d115b11b">HKSupply/Services/Implementations</innerdir>
+    <innerdir refid="dir_8b85be3ef76b7403c163f109ea22cd50">HKSupply/Services/Interfaces</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Services/"/>
+  </compounddef>
+</doxygen>

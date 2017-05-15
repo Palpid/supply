@@ -1,0 +1,158 @@
+\hypertarget{class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role}{}\section{H\+K\+Supply.\+Services.\+Implementations.\+E\+F\+Role Class Reference}
+\label{class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role}\index{H\+K\+Supply.\+Services.\+Implementations.\+E\+F\+Role@{H\+K\+Supply.\+Services.\+Implementations.\+E\+F\+Role}}
+
+
+Controlador Entity Framework para Role  
+
+
+Inheritance diagram for H\+K\+Supply.\+Services.\+Implementations.\+E\+F\+Role\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+I\+Enumerable$<$ \hyperlink{class_h_k_supply_1_1_models_1_1_role}{Role} $>$ \hyperlink{class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_a7fd2f7f9bae498128f23ad0659e3ec4a}{Get\+Roles} (bool all=true)
+\begin{DoxyCompactList}\small\item\em Obtener la colección de roles del sistema. \end{DoxyCompactList}\item 
+\hyperlink{class_h_k_supply_1_1_models_1_1_role}{Role} \hyperlink{class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_ad4eb9194531a9215c4f1a20ab0d9aa54}{Get\+Role\+By\+Id} (string role\+Id)
+\begin{DoxyCompactList}\small\item\em Obtener un rol dado su Id \end{DoxyCompactList}\item 
+\hyperlink{class_h_k_supply_1_1_models_1_1_role}{Role} \hyperlink{class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_a549317ad8c8fb3353382a8cd36fa1b22}{New\+Role} (\hyperlink{class_h_k_supply_1_1_models_1_1_role}{Role} new\+Role)
+\begin{DoxyCompactList}\small\item\em Dar de alta un rol en el sistema \end{DoxyCompactList}\item 
+bool \hyperlink{class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_adf253e840ea77e23fd7c10899f316f21}{Disable\+Role} (string role\+Id, string remarks)
+\begin{DoxyCompactList}\small\item\em Deshabilitar un rol \end{DoxyCompactList}\item 
+bool \hyperlink{class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_a2d880fce95c33f7581f2e3310ca943ed}{Update\+Roles} (I\+Enumerable$<$ \hyperlink{class_h_k_supply_1_1_models_1_1_role}{Role} $>$ roles\+To\+Update)
+\begin{DoxyCompactList}\small\item\em Modificar una colección de roles \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controlador Entity Framework para Role 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_adf253e840ea77e23fd7c10899f316f21}\label{class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_adf253e840ea77e23fd7c10899f316f21}} 
+\index{H\+K\+Supply\+::\+Services\+::\+Implementations\+::\+E\+F\+Role@{H\+K\+Supply\+::\+Services\+::\+Implementations\+::\+E\+F\+Role}!Disable\+Role@{Disable\+Role}}
+\index{Disable\+Role@{Disable\+Role}!H\+K\+Supply\+::\+Services\+::\+Implementations\+::\+E\+F\+Role@{H\+K\+Supply\+::\+Services\+::\+Implementations\+::\+E\+F\+Role}}
+\subsubsection{\texorpdfstring{Disable\+Role()}{DisableRole()}}
+{\footnotesize\ttfamily bool H\+K\+Supply.\+Services.\+Implementations.\+E\+F\+Role.\+Disable\+Role (\begin{DoxyParamCaption}\item[{string}]{role\+Id,  }\item[{string}]{remarks }\end{DoxyParamCaption})}
+
+
+
+Deshabilitar un rol 
+
+
+\begin{DoxyParams}{Parameters}
+{\em role\+Id} & \\
+\hline
+{\em remarks} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role}{H\+K\+Supply.\+Services.\+Interfaces.\+I\+Role}.
+
+\mbox{\Hypertarget{class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_ad4eb9194531a9215c4f1a20ab0d9aa54}\label{class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_ad4eb9194531a9215c4f1a20ab0d9aa54}} 
+\index{H\+K\+Supply\+::\+Services\+::\+Implementations\+::\+E\+F\+Role@{H\+K\+Supply\+::\+Services\+::\+Implementations\+::\+E\+F\+Role}!Get\+Role\+By\+Id@{Get\+Role\+By\+Id}}
+\index{Get\+Role\+By\+Id@{Get\+Role\+By\+Id}!H\+K\+Supply\+::\+Services\+::\+Implementations\+::\+E\+F\+Role@{H\+K\+Supply\+::\+Services\+::\+Implementations\+::\+E\+F\+Role}}
+\subsubsection{\texorpdfstring{Get\+Role\+By\+Id()}{GetRoleById()}}
+{\footnotesize\ttfamily \hyperlink{class_h_k_supply_1_1_models_1_1_role}{Role} H\+K\+Supply.\+Services.\+Implementations.\+E\+F\+Role.\+Get\+Role\+By\+Id (\begin{DoxyParamCaption}\item[{string}]{role\+Id }\end{DoxyParamCaption})}
+
+
+
+Obtener un rol dado su Id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em role\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role}{H\+K\+Supply.\+Services.\+Interfaces.\+I\+Role}.
+
+\mbox{\Hypertarget{class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_a7fd2f7f9bae498128f23ad0659e3ec4a}\label{class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_a7fd2f7f9bae498128f23ad0659e3ec4a}} 
+\index{H\+K\+Supply\+::\+Services\+::\+Implementations\+::\+E\+F\+Role@{H\+K\+Supply\+::\+Services\+::\+Implementations\+::\+E\+F\+Role}!Get\+Roles@{Get\+Roles}}
+\index{Get\+Roles@{Get\+Roles}!H\+K\+Supply\+::\+Services\+::\+Implementations\+::\+E\+F\+Role@{H\+K\+Supply\+::\+Services\+::\+Implementations\+::\+E\+F\+Role}}
+\subsubsection{\texorpdfstring{Get\+Roles()}{GetRoles()}}
+{\footnotesize\ttfamily I\+Enumerable$<$\hyperlink{class_h_k_supply_1_1_models_1_1_role}{Role}$>$ H\+K\+Supply.\+Services.\+Implementations.\+E\+F\+Role.\+Get\+Roles (\begin{DoxyParamCaption}\item[{bool}]{all = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Obtener la colección de roles del sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em all} & Para indicar si se quieren todos o sólo los activos\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role}{H\+K\+Supply.\+Services.\+Interfaces.\+I\+Role}.
+
+\mbox{\Hypertarget{class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_a549317ad8c8fb3353382a8cd36fa1b22}\label{class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_a549317ad8c8fb3353382a8cd36fa1b22}} 
+\index{H\+K\+Supply\+::\+Services\+::\+Implementations\+::\+E\+F\+Role@{H\+K\+Supply\+::\+Services\+::\+Implementations\+::\+E\+F\+Role}!New\+Role@{New\+Role}}
+\index{New\+Role@{New\+Role}!H\+K\+Supply\+::\+Services\+::\+Implementations\+::\+E\+F\+Role@{H\+K\+Supply\+::\+Services\+::\+Implementations\+::\+E\+F\+Role}}
+\subsubsection{\texorpdfstring{New\+Role()}{NewRole()}}
+{\footnotesize\ttfamily \hyperlink{class_h_k_supply_1_1_models_1_1_role}{Role} H\+K\+Supply.\+Services.\+Implementations.\+E\+F\+Role.\+New\+Role (\begin{DoxyParamCaption}\item[{\hyperlink{class_h_k_supply_1_1_models_1_1_role}{Role}}]{new\+Role }\end{DoxyParamCaption})}
+
+
+
+Dar de alta un rol en el sistema 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Role} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role}{H\+K\+Supply.\+Services.\+Interfaces.\+I\+Role}.
+
+\mbox{\Hypertarget{class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_a2d880fce95c33f7581f2e3310ca943ed}\label{class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role_a2d880fce95c33f7581f2e3310ca943ed}} 
+\index{H\+K\+Supply\+::\+Services\+::\+Implementations\+::\+E\+F\+Role@{H\+K\+Supply\+::\+Services\+::\+Implementations\+::\+E\+F\+Role}!Update\+Roles@{Update\+Roles}}
+\index{Update\+Roles@{Update\+Roles}!H\+K\+Supply\+::\+Services\+::\+Implementations\+::\+E\+F\+Role@{H\+K\+Supply\+::\+Services\+::\+Implementations\+::\+E\+F\+Role}}
+\subsubsection{\texorpdfstring{Update\+Roles()}{UpdateRoles()}}
+{\footnotesize\ttfamily bool H\+K\+Supply.\+Services.\+Implementations.\+E\+F\+Role.\+Update\+Roles (\begin{DoxyParamCaption}\item[{I\+Enumerable$<$ \hyperlink{class_h_k_supply_1_1_models_1_1_role}{Role} $>$}]{roles\+To\+Update }\end{DoxyParamCaption})}
+
+
+
+Modificar una colección de roles 
+
+
+\begin{DoxyParams}{Parameters}
+{\em roles\+To\+Update} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Los campos que se actualizan son los siguientes\+:
+\begin{DoxyItemize}
+\item Description
+\item Enabled
+\item Remarks 
+\end{DoxyItemize}
+
+Implements \hyperlink{interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role}{H\+K\+Supply.\+Services.\+Interfaces.\+I\+Role}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+H\+K\+Supply/\+Services/\+Implementations/E\+F\+Role.\+cs\end{DoxyCompactItemize}

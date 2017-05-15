@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_exceptions_1_1_nonexistent_user_exception" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Exceptions::NonexistentUserException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Exception</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_nonexistent_user_exception_1a17ee4aa2a9ae792a02c1b82612816fb0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NonexistentUserException.NonexistentUserException</definition>
+        <argsstring>()</argsstring>
+        <name>NonexistentUserException</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NonexistentUserException.cs" line="15" column="1" bodyfile="HKSupply/Exceptions/NonexistentUserException.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_nonexistent_user_exception_1af1065c421ce7b33b35099c62f271835b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NonexistentUserException.NonexistentUserException</definition>
+        <argsstring>(string message)</argsstring>
+        <name>NonexistentUserException</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NonexistentUserException.cs" line="16" column="1" bodyfile="HKSupply/Exceptions/NonexistentUserException.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_nonexistent_user_exception_1a9d9fd303806bc5c901c13b1ef20bebcb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NonexistentUserException.NonexistentUserException</definition>
+        <argsstring>(string message, System.Exception inner)</argsstring>
+        <name>NonexistentUserException</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>System.Exception</type>
+          <declname>inner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NonexistentUserException.cs" line="17" column="1" bodyfile="HKSupply/Exceptions/NonexistentUserException.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_exceptions_1_1_nonexistent_user_exception_1a0545e8560fe9bfdf9fb67c0ed5c04b83" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Exceptions.NonexistentUserException.NonexistentUserException</definition>
+        <argsstring>(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)</argsstring>
+        <name>NonexistentUserException</name>
+        <param>
+          <type>System.Runtime.Serialization.SerializationInfo</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>System.Runtime.Serialization.StreamingContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Exceptions/NonexistentUserException.cs" line="20" column="1" bodyfile="HKSupply/Exceptions/NonexistentUserException.cs" bodystart="20" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Custom Exception: Usuario no existente en el sistema </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="222">
+        <label>HKSupply.Exceptions.NonexistentUserException</label>
+        <link refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_user_exception"/>
+        <childnode refid="223" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="223">
+        <label>System::Exception</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="224">
+        <label>HKSupply.Exceptions.NonexistentUserException</label>
+        <link refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_user_exception"/>
+        <childnode refid="225" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="225">
+        <label>System::Exception</label>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Exceptions/NonexistentUserException.cs" line="14" column="1" bodyfile="HKSupply/Exceptions/NonexistentUserException.cs" bodystart="13" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_user_exception_1a17ee4aa2a9ae792a02c1b82612816fb0" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::NonexistentUserException</scope><name>NonexistentUserException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_user_exception_1af1065c421ce7b33b35099c62f271835b" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::NonexistentUserException</scope><name>NonexistentUserException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_user_exception_1a9d9fd303806bc5c901c13b1ef20bebcb" prot="public" virt="non-virtual"><scope>HKSupply::Exceptions::NonexistentUserException</scope><name>NonexistentUserException</name></member>
+      <member refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_user_exception_1a0545e8560fe9bfdf9fb67c0ed5c04b83" prot="protected" virt="non-virtual"><scope>HKSupply::Exceptions::NonexistentUserException</scope><name>NonexistentUserException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,589 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Master::StoreManagement</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+    <basecompoundref refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view" prot="public" virt="non-virtual">HKSupply.Forms.IActionsStackView</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a7c41254fb5007aa5d8d046250f402da8" prot="private" static="no">
+        <name>eStoreColumns</name>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a7c41254fb5007aa5d8d046250f402da8a8082d4c021a776ebd86cc37bce1fb643" prot="private">
+          <name>IdStore</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a7c41254fb5007aa5d8d046250f402da8a49ee3087348e8d44e1feda1917443987" prot="private">
+          <name>Name</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a7c41254fb5007aa5d8d046250f402da8a4d3d769b812b6faa6b76e1a8abaece2d" prot="private">
+          <name>Active</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="21" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="20" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a19f26ea4b37b9bfdd711dc71e23e6888" prot="private" static="no" mutable="no">
+        <type><ref refid="class_custom_controls_1_1_stack_view" kindref="compound">CustomControls.StackView</ref></type>
+        <definition>CustomControls.StackView HKSupply.Forms.Master.StoreManagement.actionsStackView</definition>
+        <argsstring></argsstring>
+        <name>actionsStackView</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a39c7f746ca215da80bbea7d5e54c7b9b" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_store" kindref="compound">Store</ref> &gt;</type>
+        <definition>List&lt;Store&gt; HKSupply.Forms.Master.StoreManagement._modifiedStores</definition>
+        <argsstring></argsstring>
+        <name>_modifiedStores</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_models_1_1_store" kindref="compound">Store</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="31" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a41c9a7f63057af8e66257fcc0160fae6" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_store" kindref="compound">Store</ref> &gt;</type>
+        <definition>List&lt;Store&gt; HKSupply.Forms.Master.StoreManagement._createdStores</definition>
+        <argsstring></argsstring>
+        <name>_createdStores</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_models_1_1_store" kindref="compound">Store</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="32" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a843e24ed08c1d5024bedd262e06910e0" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Master.StoreManagement.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a24c55a72597bd1729746357998fe0561" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridView</type>
+        <definition>System.Windows.Forms.DataGridView HKSupply.Forms.Master.StoreManagement.grdStores</definition>
+        <argsstring></argsstring>
+        <name>grdStores</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.Designer.cs" line="65" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.Designer.cs" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1ab15bc4d47ba4d5d8711694e8f4812271" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Master.StoreManagement.StoreManagement</definition>
+        <argsstring>()</argsstring>
+        <name>StoreManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="36" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a3423588318d2f747206eff34fd1168fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StoreManagement.actionsStackView_EditButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_EditButtonClick</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1ae8deb0cdeaa1b41f48e9a497acce9334">actionsStackView_EditButtonClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="44" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="44" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1ad513d0db35efd5de069ee7c7f1cd9aa1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StoreManagement.actionsStackView_NewButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_NewButtonClick</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1a9a3873c8695cb595fe413b51be87210d">actionsStackView_NewButtonClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="56" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="56" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1af0af8ae26d581bc291916b5e9c8ddc5c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StoreManagement.actionsStackView_SaveButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_SaveButtonClick</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1a31fb0c34c49bb46661a612f1916f7c2e">actionsStackView_SaveButtonClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="68" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="68" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1ada75d7ab80b8363fcd8d84c0b80b426f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StoreManagement.actionsStackView_CancelButtonClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>actionsStackView_CancelButtonClick</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1aa9fb7f15cdbc1fb6fdc19b522327a34a">actionsStackView_CancelButtonClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="121" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="121" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1aeb4b46af8352b4de5baf2abd6b8105ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StoreManagement.ConfigureActionsStackView</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackView</name>
+        <reimplements refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1a1a01439762b8cc84888acc2c7b7230d2">ConfigureActionsStackView</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="135" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="135" bodyend="154"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a577e2f26152b0ccc3340dd564b822a7f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StoreManagement.StoreManagement_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>StoreManagement_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="160" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="160" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a0228c8cebf9dd3de2cd6dfafd3467f03" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StoreManagement.grdStores_CellValueChanged</definition>
+        <argsstring>(object sender, DataGridViewCellEventArgs e)</argsstring>
+        <name>grdStores_CellValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataGridViewCellEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="181" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="181" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a46d94e10f003603b26b3f0022bea362c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StoreManagement.grdStores_CellValidating</definition>
+        <argsstring>(object sender, DataGridViewCellValidatingEventArgs e)</argsstring>
+        <name>grdStores_CellValidating</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataGridViewCellValidatingEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="201" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="201" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a72a5ee8e948994eae5d7f86a92a5f127" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StoreManagement.grdStores_DataError</definition>
+        <argsstring>(object sender, DataGridViewDataErrorEventArgs e)</argsstring>
+        <name>grdStores_DataError</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataGridViewDataErrorEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="221" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="221" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a4b81ad4b1f091ff8e55d7a6621d2aa8a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StoreManagement.SetupStoreGrid</definition>
+        <argsstring>()</argsstring>
+        <name>SetupStoreGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="233" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="233" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a1329c0fb21bc4d9b69af2ae79d30f3f5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StoreManagement.ConfigureRolesGridDefaultStyles</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRolesGridDefaultStyles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="247" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="247" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1ab3aa7709739e6670aa7bbdfb6364887c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StoreManagement.LoadAllStores</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAllStores</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="267" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="267" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a248c9bbc5a70b0a6377132c63f03229b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StoreManagement.ConfigureActionsStackViewEditing</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackViewEditing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="285" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="285" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1ac2210c0c5df8b3133542157ada6ce64c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StoreManagement.ConfigureActionsStackViewCreating</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackViewCreating</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="299" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="299" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a1386cf2f646d6463f905c7c0dbc51e49" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StoreManagement.AddModifiedStoresToList</definition>
+        <argsstring>(Store modifiedStore)</argsstring>
+        <name>AddModifiedStoresToList</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_store" kindref="compound">Store</ref></type>
+          <declname>modifiedStore</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="315" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="315" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a10c80c7b7c2673b2ab59651bfd706f0e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StoreManagement.AddCreatedStoreToList</definition>
+        <argsstring>(Store createdStore)</argsstring>
+        <name>AddCreatedStoreToList</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_store" kindref="compound">Store</ref></type>
+          <declname>createdStore</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="337" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="337" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1accbaeb8067d1f87f4286d082497480f6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.StoreManagement.IsValidStores</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidStores</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="359" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="359" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a56dac3208f1367efeb8bbf9b94eb76a5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.StoreManagement.IsValidModifiedStores</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidModifiedStores</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="376" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="376" bodyend="394"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a374acd74972682da09bc4e4f3274214c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.StoreManagement.IsValidCreatedStores</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidCreatedStores</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="396" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="396" bodyend="423"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a25138f1edc003faa590a19c8604a576c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.StoreManagement.UpdateStores</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateStores</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="425" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="425" bodyend="435"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a1a7daf2b33d7ae9a53f9d247dea81b07" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.StoreManagement.CreateStore</definition>
+        <argsstring>()</argsstring>
+        <name>CreateStore</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.cs" line="437" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="437" bodyend="448"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a4f8f91b6228009ce877b87a49bb4009e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StoreManagement.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.Designer.cs" bodystart="29" bodyend="61"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1aaf2bcaa324f2ad626ac66c0d8afe78cb" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.StoreManagement.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StoreManagement.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="279">
+        <label>Form</label>
+      </node>
+      <node id="280">
+        <label>IActionsStackView</label>
+        <link refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view"/>
+      </node>
+      <node id="278">
+        <label>HKSupply.Forms.Master.StoreManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management"/>
+        <childnode refid="279" relation="public-inheritance">
+        </childnode>
+        <childnode refid="280" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="282">
+        <label>Form</label>
+      </node>
+      <node id="283">
+        <label>IActionsStackView</label>
+        <link refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view"/>
+      </node>
+      <node id="281">
+        <label>HKSupply.Forms.Master.StoreManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management"/>
+        <childnode refid="282" relation="public-inheritance">
+        </childnode>
+        <childnode refid="283" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Master/StoreManagement.cs" line="18" column="1" bodyfile="HKSupply/Forms/Master/StoreManagement.cs" bodystart="17" bodyend="454"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a41c9a7f63057af8e66257fcc0160fae6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>_createdStores</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a39c7f746ca215da80bbea7d5e54c7b9b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>_modifiedStores</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a19f26ea4b37b9bfdd711dc71e23e6888" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>actionsStackView</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1ada75d7ab80b8363fcd8d84c0b80b426f" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>actionsStackView_CancelButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a3423588318d2f747206eff34fd1168fd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>actionsStackView_EditButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1ad513d0db35efd5de069ee7c7f1cd9aa1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>actionsStackView_NewButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1af0af8ae26d581bc291916b5e9c8ddc5c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>actionsStackView_SaveButtonClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a10c80c7b7c2673b2ab59651bfd706f0e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>AddCreatedStoreToList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a1386cf2f646d6463f905c7c0dbc51e49" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>AddModifiedStoresToList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a843e24ed08c1d5024bedd262e06910e0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1aeb4b46af8352b4de5baf2abd6b8105ce" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>ConfigureActionsStackView</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1ac2210c0c5df8b3133542157ada6ce64c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>ConfigureActionsStackViewCreating</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a248c9bbc5a70b0a6377132c63f03229b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>ConfigureActionsStackViewEditing</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a1329c0fb21bc4d9b69af2ae79d30f3f5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>ConfigureRolesGridDefaultStyles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a1a7daf2b33d7ae9a53f9d247dea81b07" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>CreateStore</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1aaf2bcaa324f2ad626ac66c0d8afe78cb" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a7c41254fb5007aa5d8d046250f402da8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>eStoreColumns</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a24c55a72597bd1729746357998fe0561" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>grdStores</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a46d94e10f003603b26b3f0022bea362c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>grdStores_CellValidating</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a0228c8cebf9dd3de2cd6dfafd3467f03" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>grdStores_CellValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a72a5ee8e948994eae5d7f86a92a5f127" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>grdStores_DataError</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a4f8f91b6228009ce877b87a49bb4009e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a374acd74972682da09bc4e4f3274214c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>IsValidCreatedStores</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a56dac3208f1367efeb8bbf9b94eb76a5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>IsValidModifiedStores</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1accbaeb8067d1f87f4286d082497480f6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>IsValidStores</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1ab3aa7709739e6670aa7bbdfb6364887c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>LoadAllStores</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a4b81ad4b1f091ff8e55d7a6621d2aa8a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>SetupStoreGrid</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1ab15bc4d47ba4d5d8711694e8f4812271" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>StoreManagement</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a577e2f26152b0ccc3340dd564b822a7f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>StoreManagement_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a25138f1edc003faa590a19c8604a576c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StoreManagement</scope><name>UpdateStores</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

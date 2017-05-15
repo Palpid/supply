@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user" kind="interface" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Interfaces::IUser</compoundname>
+    <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFUser</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1ab18e28f31a3a14a63df31f17991aeb43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_user" kindref="compound">User</ref> &gt;</type>
+        <definition>IEnumerable&lt;User&gt; HKSupply.Services.Interfaces.IUser.GetAllUsers</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllUsers</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user_1a145638eeeb9e29780d17cbac23476a8d">GetAllUsers</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IUser.cs" line="15" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1a49a1d525d5ab93f26cbe66b1f22abe1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_user" kindref="compound">User</ref></type>
+        <definition>User HKSupply.Services.Interfaces.IUser.GetUserById</definition>
+        <argsstring>(int userId)</argsstring>
+        <name>GetUserById</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user_1a322969baaacbf15223b17f8117dd1545">GetUserById</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>userId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IUser.cs" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1a814c835f9375a134f01ad961e27d7314" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_user" kindref="compound">User</ref></type>
+        <definition>User HKSupply.Services.Interfaces.IUser.GetUserByLoginPassword</definition>
+        <argsstring>(string UserLogin, string Password)</argsstring>
+        <name>GetUserByLoginPassword</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user_1a69f04e0ab5ba947fc315c60abc7cdbf1">GetUserByLoginPassword</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>UserLogin</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>Password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IUser.cs" line="17" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1a0f68a7ca2668977e45d199ea21522a98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_user" kindref="compound">User</ref></type>
+        <definition>User HKSupply.Services.Interfaces.IUser.NewUser</definition>
+        <argsstring>(User newUser)</argsstring>
+        <name>NewUser</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user_1a12abd287dc0491eed772d88b17fc9618">NewUser</reimplementedby>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_user" kindref="compound">User</ref></type>
+          <declname>newUser</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IUser.cs" line="18" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1af241b1a787265f454b2d5b33a8514ff0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.IUser.DisableUser</definition>
+        <argsstring>(string userId, string remarks)</argsstring>
+        <name>DisableUser</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user_1acb2996bf9f333684786d3e2d7b702ba4">DisableUser</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>userId</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>remarks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IUser.cs" line="19" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1a437f1837393b7a306de3fecdce176c97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.IUser.ChangePassword</definition>
+        <argsstring>(int userId, string password)</argsstring>
+        <name>ChangePassword</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user_1ada8f9352d6fed7594d449aed92f452a0">ChangePassword</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>userId</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IUser.cs" line="20" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1a61282883d17b0cf41a07a93e9bd49db7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.IUser.UpdateUsers</definition>
+        <argsstring>(IEnumerable&lt; User &gt; usersToUpdate)</argsstring>
+        <name>UpdateUsers</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user_1af7bbea584cce6ec7e2b8f4b4d46c01f6">UpdateUsers</reimplementedby>
+        <param>
+          <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_user" kindref="compound">User</ref> &gt;</type>
+          <declname>usersToUpdate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IUser.cs" line="21" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface para el service de User </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="169">
+        <label>HKSupply.Services.Interfaces.IUser</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user"/>
+      </node>
+      <node id="170">
+        <label>HKSupply.Services.Implementations.EFUser</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user"/>
+        <childnode refid="169" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="HKSupply/Services/Interfaces/IUser.cs" line="14" column="1" bodyfile="HKSupply/Services/Interfaces/IUser.cs" bodystart="13" bodyend="22"/>
+    <listofallmembers>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1a437f1837393b7a306de3fecdce176c97" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IUser</scope><name>ChangePassword</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1af241b1a787265f454b2d5b33a8514ff0" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IUser</scope><name>DisableUser</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1ab18e28f31a3a14a63df31f17991aeb43" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IUser</scope><name>GetAllUsers</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1a49a1d525d5ab93f26cbe66b1f22abe1a" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IUser</scope><name>GetUserById</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1a814c835f9375a134f01ad961e27d7314" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IUser</scope><name>GetUserByLoginPassword</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1a0f68a7ca2668977e45d199ea21522a98" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IUser</scope><name>NewUser</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1a61282883d17b0cf41a07a93e9bd49db7" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IUser</scope><name>UpdateUsers</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

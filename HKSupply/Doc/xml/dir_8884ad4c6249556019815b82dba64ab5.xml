@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_8884ad4c6249556019815b82dba64ab5" kind="dir">
+    <compoundname>HKSupply/obj</compoundname>
+    <innerdir refid="dir_1949552b0aa6d33a7948d2bbd5a0c14b">HKSupply/obj/Debug</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/obj/"/>
+  </compounddef>
+</doxygen>

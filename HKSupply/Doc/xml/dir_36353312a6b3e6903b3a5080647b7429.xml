@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_36353312a6b3e6903b3a5080647b7429" kind="dir">
+    <compoundname>HKSupply/Helpers</compoundname>
+    <innerdir refid="dir_26015335ab3bf8b7d296fb1142bca043">HKSupply/Helpers/Mocking</innerdir>
+    <innerfile refid="_custom_extensions_8cs">CustomExtensions.cs</innerfile>
+    <innerfile refid="_m_d_i_client_support_8cs">MDIClientSupport.cs</innerfile>
+    <innerfile refid="_password_helper_8cs">PasswordHelper.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Helpers/"/>
+  </compounddef>
+</doxygen>
