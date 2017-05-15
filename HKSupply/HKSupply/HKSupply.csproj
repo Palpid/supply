@@ -92,6 +92,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Bom.cs" />
+    <Compile Include="Classes\ItemEyBom.cs" />
     <Compile Include="Classes\RowInfo.cs" />
     <Compile Include="DB\HKSupplyContext.cs" />
     <Compile Include="Exceptions\DBServerConnectionException.cs" />
@@ -136,6 +138,12 @@
     </Compile>
     <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\BomManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\BomManagement.Designer.cs">
+      <DependentUpon>BomManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Master\ChangePassword.cs">
       <SubType>Form</SubType>
@@ -641,6 +649,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\BomManagement.resx">
+      <DependentUpon>BomManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
