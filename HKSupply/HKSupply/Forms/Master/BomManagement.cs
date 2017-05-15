@@ -15,7 +15,7 @@ using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Grid;
-
+using DevExpress.XtraEditors.Repository;
 
 namespace HKSupply.Forms.Master
 {
@@ -84,6 +84,15 @@ namespace HKSupply.Forms.Master
         public override void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
         {
             base.bbiEdit_ItemClick(sender, e);
+
+            try
+            {
+                SetGrdBomEditColumns();
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public override void bbiSave_ItemClick(object sender, ItemClickEventArgs e)
@@ -133,6 +142,7 @@ namespace HKSupply.Forms.Master
                 GridView view = sender as GridView;
                 ItemMt itemMt = view.GetRow(view.FocusedRowHandle) as ItemMt;
                 AddRawMaterial(itemMt);
+                LoadBomTreeView();
 
             }
             catch(Exception ex)
@@ -148,6 +158,7 @@ namespace HKSupply.Forms.Master
                 GridView view = sender as GridView;
                 ItemHw itemHw = view.GetRow(view.FocusedRowHandle) as ItemHw;
                 AddHardware(itemHw);
+                LoadBomTreeView();
             }
             catch(Exception ex)
             {
@@ -169,8 +180,14 @@ namespace HKSupply.Forms.Master
                         (e.View as GridView).Columns[nameof(Classes.Bom.IdItemGroup)].Visible = false;
 
                         //Seteamos el tamaño de las columnas
+                        (e.View as GridView).Columns[nameof(Classes.Bom.IdItemBcn)].Width = 150;
+                        (e.View as GridView).Columns[nameof(Classes.Bom.Description)].Width = 500;
 
-                   
+                        (e.View as GridView).CellValueChanged += grdBomView_CellValueChanged;
+
+                        if (CurrentState == ActionsStates.Edit)
+                            SetGrdBomEditColumns();
+
                         break;
                 }
             }
@@ -180,6 +197,17 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void grdBomView_CellValueChanged(object sender, CellValueChangedEventArgs e)
+        {
+            try
+            {
+                LoadBomTreeView();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         #region Private Members
@@ -194,6 +222,8 @@ namespace HKSupply.Forms.Master
                 dockPanelItemsHw.Options.ShowCloseButton = false;
                 dockPanelItemsMt.Options.ShowCloseButton = false;
                 dockPanelGrdBom.Options.ShowCloseButton = false;
+                dockPanelTreeBom.Options.ShowCloseButton = false;
+                dockPanelPlainBom.Options.ShowCloseButton = false;
             }
             catch (Exception ex)
             {
@@ -423,7 +453,7 @@ namespace HKSupply.Forms.Master
 
         #endregion
 
-        #region BOM
+        #region Grid BOM
 
         private void AddRawMaterial(ItemMt itemMt)
         {
@@ -511,6 +541,118 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        #endregion
+
+        #region Tree Bom
+        private void LoadBomTreeView()
+        {
+            try
+            {
+                treeViewBom.Nodes.Clear();
+                treeViewBom.Nodes.Add(GetComponenteNode(_itemBom.FirstOrDefault()));
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private TreeNode GetComponenteNode(Classes.ItemEyBom item)
+        {
+            try
+            {
+                int contRawMaterialsNode = 0;
+                int contHardwareNode = 0;
+
+                TreeNode root = new TreeNode(item.ItemEy.IdItemBcn);
+                root.Name = item.ItemEy.IdItemBcn; //El Name es el key de un treeNode
+
+                TreeNode rawMatPrimasRoot = new TreeNode("Raw Materials");
+                TreeNode HardwareRoot = new TreeNode("Hardware");
+
+                root.Nodes.Add(rawMatPrimasRoot);
+                root.Nodes.Add(HardwareRoot);
+                root.Expand();
+
+                if (item.RawMaterials != null)
+                {
+                    foreach (Classes.Bom rawMaterial in item.RawMaterials)
+                    {
+                        root.Nodes[0].Nodes.Add(rawMaterial.IdItemBcn, $"{rawMaterial.IdItemBcn} : {rawMaterial.Description}");
+                        root.Nodes[0].Nodes[contRawMaterialsNode].Tag = "RawMaterials";
+                        root.Nodes[0].Nodes[contRawMaterialsNode].Nodes.Add(
+                            new TreeNode($"Quantity : {rawMaterial.Quantity.ToString()}")
+                            );
+                        contRawMaterialsNode++;
+                    }
+                    root.Nodes[0].Expand();
+                }
+
+                if (item.Hardware != null)
+                {
+                    foreach (Classes.Bom hardware in item.Hardware)
+                    {
+                        root.Nodes[1].Nodes.Add(hardware.IdItemBcn, $"{hardware.IdItemBcn} : {hardware.Description}");
+                        root.Nodes[1].Nodes[contHardwareNode].Tag = "Hardware";
+                        root.Nodes[1].Nodes[contHardwareNode].Nodes.Add(
+                            new TreeNode($"Quantity : {hardware.Quantity.ToString()}")
+                            );
+                        contHardwareNode++;
+                    }
+                    root.Nodes[1].Expand();
+                }
+
+                return root;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        #endregion
+
+        #region Test
+        private void SetGrdBomEditColumns()
+        {
+            try
+            {
+                //TODO: No itera en todos los views!   
+                foreach(GridView view in xgrdItemBom.ViewCollection)
+                {
+                    switch (view.LevelName)
+                    {
+                        case nameof(Classes.ItemEyBom.RawMaterials):
+                        case nameof(Classes.ItemEyBom.Hardware):
+
+                            view.OptionsBehavior.Editable = true;
+
+                            //Edit Columns
+                            view.Columns[nameof(Classes.Bom.Quantity)].OptionsColumn.AllowEdit = true;
+                            view.Columns[nameof(Classes.Bom.Waste)].OptionsColumn.AllowEdit = true;
+
+                            //No edit columns
+                            view.Columns[nameof(Classes.Bom.IdItemBcn)].OptionsColumn.AllowEdit = false;
+                            view.Columns[nameof(Classes.Bom.Description)].OptionsColumn.AllowEdit = false;
+
+                            //Edit repositories
+                            RepositoryItemTextEdit ritxt2Dec = new RepositoryItemTextEdit();
+                            ritxt2Dec.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                            ritxt2Dec.Mask.EditMask = "F2";
+
+                            view.Columns[nameof(Classes.Bom.Quantity)].ColumnEdit = ritxt2Dec;
+                            view.Columns[nameof(Classes.Bom.Waste)].ColumnEdit = ritxt2Dec;
+
+                            break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         #endregion
 
         #endregion
