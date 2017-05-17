@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using DevExpress.Utils;
 using DevExpress.XtraBars;
@@ -36,9 +38,12 @@ namespace HKSupply.Forms
         public bool EnablePrintPreview { get; set; }
         public bool EnableExportExcel { get; set; }
         public bool EnableExportCsv { get; set; }
+        public bool EnableLayoutOptions { get; set; }
 
         public string ExportExcelFile { get; set; }
         public string ExportCsvFile { get; set; }
+
+        public string CurrentLayout { get; set; }
 
         public ActionsStates CurrentState 
         { 
@@ -57,7 +62,8 @@ namespace HKSupply.Forms
         {
             InitializeComponent();
             ConfigureRibbonEvents();
-            ConfigurePrintExportOptions(); //Si no se ha definido lo contrario por defecto no mostramos este panel
+            ConfigurePrintExportOptions();
+            ConfigureLayoutOptions();
             ConfigureRibbonStyles();
         }
         #endregion
@@ -84,10 +90,42 @@ namespace HKSupply.Forms
             bbiExportCsv.Enabled = EnableExportCsv;
         }
 
+        public void ConfigureLayoutOptions()
+        {
+            bbiSaveLayout.Enabled = EnableLayoutOptions;
+            bsiRestoreLayout.Enabled = EnableLayoutOptions;
+        }
+
         public void SetRibbonText(string title)
         {
             ribbonPage1.Text = $"Home > {title}";
         }
+
+        public void AddRestoreLayoutItems(List<Models.Layout> layouts)
+        {
+            try
+            {
+                BarButtonItem layoutButton;
+
+                bsiRestoreLayout.ClearLinks();
+
+                //Puedem existir más de un objeto que hayamos guardado layput en un formulario, pero comparten nombre
+                var distinctLayouts = layouts.GroupBy(a => a.LayoutName).Select(group => group.First());
+
+                foreach (var layout in distinctLayouts)
+                {
+                    layoutButton = new BarButtonItem() { Caption = layout.LayoutName, Tag = layout.LayoutName };
+                    layoutButton.ItemClick += LayoutButton_ItemClick;
+                    bsiRestoreLayout.AddItem(layoutButton);
+                }
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         #endregion
 
         #region Private Functions
@@ -148,6 +186,8 @@ namespace HKSupply.Forms
                 bbiPrintPreview.ItemClick += bbiPrintPreview_ItemClick;
                 bbiExportExcel.ItemClick += bbiExportExcel_ItemClick;
                 bbiExportCsv.ItemClick += bbiExportCsv_ItemClick;
+
+                bbiSaveLayout.ItemClick += BbiSaveLayout_ItemClick;
             }
             catch (Exception ex)
             {
@@ -297,6 +337,18 @@ namespace HKSupply.Forms
             }
         }
 
+        #endregion
+
+        #region Layout
+        public virtual void BbiSaveLayout_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            
+        }
+
+        public virtual void LayoutButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            CurrentLayout = e.Item.Tag.ToString();
+        }
         #endregion
 
         #endregion

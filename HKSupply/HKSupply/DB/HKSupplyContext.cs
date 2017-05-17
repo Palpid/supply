@@ -71,6 +71,8 @@ namespace HKSupply.DB
 
         public DbSet<PrototypeDoc> PrototypesDocs { get; set; }
 
+        public DbSet<Layout> Layouts { get; set; }
+
         //public HKSupplyContext()
         //    : base("name=SqlExpressConn")
         //{

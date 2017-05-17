@@ -3,19 +3,18 @@ using HKSupply.General;
 using HKSupply.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.Data;
 using DevExpress.XtraBars;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraGrid.Views.Grid.ViewInfo;
+using HKSupply.Helpers;
 
 namespace HKSupply.Forms.Master
 {
@@ -27,6 +26,13 @@ namespace HKSupply.Forms.Master
         List<ItemHw> _itemsHwList;
 
         List<Classes.ItemEyBom> _itemBom = new List<Classes.ItemEyBom>();
+
+        List<Models.Layout> _formLayouts;
+
+        float totalQuantityMt;
+        float totalQuantityHw;
+        float totalWastageMt;
+        float totalWastageHw;
         #endregion
 
         #region Constructor
@@ -42,6 +48,7 @@ namespace HKSupply.Forms.Master
                 SetUpGrdItemsMt();
                 SetUpGrdItemsHw();
                 SetUpGrdItemBom();
+                SetUpGrdPlainBom();
             }
             catch (Exception ex)
             {
@@ -66,9 +73,14 @@ namespace HKSupply.Forms.Master
                 RestoreInitState();
                 //Print and export buttons
                 EnablePrintPreview = false;
-                EnableExportExcel = false;
-                EnableExportCsv = false;
+                EnableExportExcel = true;
+                EnableExportCsv = true;
                 ConfigurePrintExportOptions();
+                //Layout
+                EnableLayoutOptions = true;
+                ConfigureLayoutOptions();
+
+                LoadFormLayouts();
             }
             catch (Exception ex)
             {
@@ -79,6 +91,24 @@ namespace HKSupply.Forms.Master
         public override void bbiCancel_ItemClick(object sender, ItemClickEventArgs e)
         {
             base.bbiCancel_ItemClick(sender, e);
+
+            try
+            {
+
+                dockPanelItemsEy.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
+                dockPanelItemsEy.ShowSliding();
+
+                xgrdItemsEy.Enabled = true;
+
+                gridViewItemsMt.DoubleClick -= GridViewItemsMt_DoubleClick;
+                gridViewItemsHw.DoubleClick -= GridViewItemsHw_DoubleClick;
+
+                SetGrdBomDetailsNonEdit();
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public override void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
@@ -87,7 +117,16 @@ namespace HKSupply.Forms.Master
 
             try
             {
-                SetGrdBomEditColumns();
+
+                if (_itemBom == null || _itemBom.Count() == 0)
+                {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
+                    RestoreInitState();
+                }
+                else
+                {
+                    ConfigureRibbonActionsEditing();
+                }
             }
             catch(Exception ex)
             {
@@ -100,13 +139,49 @@ namespace HKSupply.Forms.Master
             base.bbiSave_ItemClick(sender, e);
         }
 
+        public override void BbiSaveLayout_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            base.BbiSaveLayout_ItemClick(sender, e);
+
+            try
+            {
+                var result = XtraInputBox.Show("Enter Layout Name", "Save Layout", string.Empty);
+                if(string.IsNullOrEmpty(result) == false)
+                {
+                    SaveLayout(result);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public override void LayoutButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            base.LayoutButton_ItemClick(sender, e);
+
+            try
+            {
+                RestoreLayaout();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         #endregion
 
         #region Form Events
+
         private void BomManagement_Load(object sender, EventArgs e)
         {
             try
             {
+                dockPanelGrdBom.Select();
+
                 LoadItemsListEy();
                 LoadItemsListMt();
                 LoadItemsListHw();
@@ -122,10 +197,16 @@ namespace HKSupply.Forms.Master
             try
             {
                 GridView view = sender as GridView;
-                ItemEy item = view.GetRow(view.FocusedRowHandle) as ItemEy;
-                if (item != null)
+
+                //Sólo agregamos si el usuario hace doble click en una fila con datos, ya que si se pulsa en el header o en un grupo el FocusedRowHandle devuelve la primera fila con datos
+                GridHitInfo hitInfo = view.CalcHitInfo((e as MouseEventArgs).Location);
+                if (hitInfo.InRowCell)
                 {
-                    LoadItemGridBom(item);
+                    ItemEy item = view.GetRow(view.FocusedRowHandle) as ItemEy;
+                    if (item != null)
+                    {
+                        LoadItemGridBom(item);
+                    }
                 }
             }
             catch (Exception ex)
@@ -134,16 +215,20 @@ namespace HKSupply.Forms.Master
             }
         }
 
-
         private void GridViewItemsMt_DoubleClick(object sender, EventArgs e)
         {
             try
             {
                 GridView view = sender as GridView;
-                ItemMt itemMt = view.GetRow(view.FocusedRowHandle) as ItemMt;
-                AddRawMaterial(itemMt);
-                LoadBomTreeView();
 
+                GridHitInfo hitInfo = view.CalcHitInfo((e as MouseEventArgs).Location);
+                if (hitInfo.InRowCell)
+                {
+                    ItemMt itemMt = view.GetRow(view.FocusedRowHandle) as ItemMt;
+                    AddRawMaterial(itemMt);
+                    LoadBomTreeView();
+                    LoadPlainBom();
+                }
             }
             catch(Exception ex)
             {
@@ -156,9 +241,15 @@ namespace HKSupply.Forms.Master
             try
             {
                 GridView view = sender as GridView;
-                ItemHw itemHw = view.GetRow(view.FocusedRowHandle) as ItemHw;
-                AddHardware(itemHw);
-                LoadBomTreeView();
+
+                GridHitInfo hitInfo = view.CalcHitInfo((e as MouseEventArgs).Location);
+                if (hitInfo.InRowCell)
+                {
+                    ItemHw itemHw = view.GetRow(view.FocusedRowHandle) as ItemHw;
+                    AddHardware(itemHw);
+                    LoadBomTreeView();
+                    LoadPlainBom();
+                }
             }
             catch(Exception ex)
             {
@@ -185,8 +276,16 @@ namespace HKSupply.Forms.Master
 
                         (e.View as GridView).CellValueChanged += grdBomView_CellValueChanged;
 
+                        //Agregamos los Summary
+                        (e.View as GridView).OptionsView.ShowFooter = true;
+                        (e.View as GridView).Columns[nameof(Classes.Bom.Quantity)].Summary.Add(SummaryItemType.Sum, nameof(Classes.Bom.Quantity), "{0}");
+                        (e.View as GridView).Columns[nameof(Classes.Bom.Wastage)].Summary.Add(SummaryItemType.Sum, nameof(Classes.Bom.Wastage), "{0}");
+
+                        //Si está en edición al pintar una nueva vista tiene que hacerla editable
                         if (CurrentState == ActionsStates.Edit)
                             SetGrdBomEditColumns();
+                        else
+                            SetGrdBomDetailsNonEdit();
 
                         break;
                 }
@@ -201,16 +300,91 @@ namespace HKSupply.Forms.Master
         {
             try
             {
+                GridView view = sender as GridView;
+                view.UpdateSummary();
+                gridViewPlainBom.UpdateSummary();
+
                 LoadBomTreeView();
+                LoadPlainBom();
             }
             catch (Exception ex)
             {
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void GridViewPlainBom_CustomSummaryCalculate(object sender, CustomSummaryEventArgs e)
+        {
+            try
+            {
+                // Get the summary ID. 
+                int summaryID = Convert.ToInt32((e.Item as GridSummaryItem).Tag);
+                GridView View = sender as GridView;
+
+                // Initialization 
+                if (e.SummaryProcess == CustomSummaryProcess.Start)
+                {
+                    totalQuantityMt = 0;
+                    totalQuantityHw = 0;
+                    totalWastageMt = 0;
+                    totalWastageHw = 0;
+                }
+
+                // Calculation 
+                if (e.SummaryProcess == CustomSummaryProcess.Calculate)
+                {
+                    string itemGroup = (string)View.GetRowCellValue(e.RowHandle, nameof(Classes.Bom.IdItemGroup));
+
+                    switch (summaryID)
+                    {
+                        case 1: //The total summary MT quantity. 
+                            if (itemGroup == Constants.ITEM_GROUP_MT)
+                                totalQuantityMt += Convert.ToSingle(e.FieldValue);
+                            break;
+                        case 2: //// The total summary HW quantity
+                            if (itemGroup == Constants.ITEM_GROUP_HW)
+                                totalQuantityHw += Convert.ToSingle(e.FieldValue); ;
+                            break;
+                        case 3: //The total summary MT Wastage. 
+                            if (itemGroup == Constants.ITEM_GROUP_MT)
+                                totalWastageMt += Convert.ToSingle(e.FieldValue); ;
+                            break;
+                        case 4: //The total summary HW Wastage. 
+                            if (itemGroup == Constants.ITEM_GROUP_HW)
+                                totalWastageHw += Convert.ToSingle(e.FieldValue); ;
+                            break;
+                    }
+                }
+
+                // Finalization 
+                if (e.SummaryProcess == CustomSummaryProcess.Finalize)
+                {
+                    switch (summaryID)
+                    {
+                        case 1:
+                            e.TotalValue = totalQuantityMt;
+                            break;
+                        case 2:
+                            e.TotalValue = totalQuantityHw;
+                            break;
+                        case 3:
+                            e.TotalValue = totalWastageMt;
+                            break;
+                        case 4:
+                            e.TotalValue = totalWastageHw;
+                            break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         #endregion
 
-        #region Private Members
+        #region Private Methods
 
         #region SetUp Form Objects
 
@@ -306,7 +480,7 @@ namespace HKSupply.Forms.Master
                 //gridViewItemsMt.Columns[nameof(ItemMt.IdMatTypeL3)].GroupIndex = 2;
 
                 //Events
-                gridViewItemsMt.DoubleClick += GridViewItemsMt_DoubleClick;
+                //gridViewItemsMt.DoubleClick += GridViewItemsMt_DoubleClick;
 
             }
             catch (Exception ex)
@@ -348,7 +522,7 @@ namespace HKSupply.Forms.Master
                 //gridViewItemsHw.Columns[nameof(ItemHw.IdHwTypeL3)].GroupIndex = 2;
 
                 //Events
-                gridViewItemsHw.DoubleClick += GridViewItemsHw_DoubleClick;
+                //gridViewItemsHw.DoubleClick += GridViewItemsHw_DoubleClick;
             }
             catch (Exception ex)
             {
@@ -386,9 +560,131 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void SetUpGrdPlainBom()
+        {
+            try
+            {
+                //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
+                gridViewPlainBom.OptionsView.ColumnAutoWidth = false;
+                gridViewPlainBom.HorzScrollVisibility = ScrollVisibility.Auto;
+
+                //Hacer todo el grid no editable
+                gridViewPlainBom.OptionsBehavior.Editable = false;
+
+                //Columns definition
+                GridColumn colIdItemGroup = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemGroup"), Visible = true, FieldName = nameof(Classes.Bom.IdItemGroup), Width = 90 };
+                GridColumn colIdItemBcn = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemBCN"), Visible = true, FieldName = nameof(Classes.Bom.IdItemBcn), Width = 200 };
+                GridColumn colDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemBCN"), Visible = true, FieldName = nameof(Classes.Bom.Description), Width = 450 };
+                GridColumn colQuantity = new GridColumn() { Caption = "Quantity", Visible = true, FieldName = nameof(Classes.Bom.Quantity), Width = 60 };
+                GridColumn colWastage = new GridColumn() { Caption = "Wastage", Visible = true, FieldName = nameof(Classes.Bom.Wastage), Width = 60 };
+
+                //Show footer for summaries
+                gridViewPlainBom.OptionsView.ShowFooter = true; 
+
+                //Summaries
+                GridColumnSummaryItem sumMtQuantity = new GridColumnSummaryItem();
+                sumMtQuantity.SummaryType = SummaryItemType.Custom;
+                sumMtQuantity.FieldName = nameof(Classes.Bom.Quantity);
+                sumMtQuantity.DisplayFormat = "MT: {0}";
+                sumMtQuantity.Tag = 1;
+
+                GridColumnSummaryItem sumHwQuantity = new GridColumnSummaryItem();
+                sumHwQuantity.SummaryType = SummaryItemType.Custom;
+                sumHwQuantity.FieldName = nameof(Classes.Bom.Quantity);
+                sumHwQuantity.DisplayFormat = "HW: {0}";
+                sumHwQuantity.Tag = 2;
+
+                GridColumnSummaryItem sumMtWastage = new GridColumnSummaryItem();
+                sumMtWastage.SummaryType = SummaryItemType.Custom;
+                sumMtWastage.FieldName = nameof(Classes.Bom.Wastage);
+                sumMtWastage.DisplayFormat = "MT: {0}";
+                sumMtWastage.Tag = 3;
+
+                GridColumnSummaryItem sumHwWastage = new GridColumnSummaryItem();
+                sumHwWastage.SummaryType = SummaryItemType.Custom;
+                sumHwWastage.FieldName = nameof(Classes.Bom.Wastage);
+                sumHwWastage.DisplayFormat = "HW: {0}";
+                sumHwWastage.Tag = 4;
+
+
+                //Add  summaries to columns
+                colQuantity.Summary.Add(sumMtQuantity);
+                colQuantity.Summary.Add(sumHwQuantity);
+                colWastage.Summary.Add(sumMtWastage);
+                colWastage.Summary.Add(sumHwWastage);
+
+                //Add columns to grid root view
+                gridViewPlainBom.Columns.Add(colIdItemGroup);
+                gridViewPlainBom.Columns.Add(colIdItemBcn);
+                gridViewPlainBom.Columns.Add(colDescription);
+                gridViewPlainBom.Columns.Add(colQuantity);
+                gridViewPlainBom.Columns.Add(colWastage);
+
+                //events
+                gridViewPlainBom.CustomSummaryCalculate += GridViewPlainBom_CustomSummaryCalculate;
+
+                xgrdItemBom.ProcessGridKey += XgrdItemBom_ProcessGridKey;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void XgrdItemBom_ProcessGridKey(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (CurrentState != ActionsStates.Edit)
+                    return;
+
+                if (e.KeyCode == Keys.Delete)
+                {
+                    DialogResult result = XtraMessageBox.Show("Delete row?", "Confirmation", MessageBoxButtons.YesNo);
+                    if (result != DialogResult.Yes)
+                        return;
+                    GridView activeView = xgrdItemBom.FocusedView as GridView;
+                    Classes.Bom bomRow = activeView.GetRow(activeView.FocusedRowHandle) as Classes.Bom;
+                    switch (activeView.LevelName)
+                    {
+                        case nameof(Classes.ItemEyBom.RawMaterials):
+                        case nameof(Classes.ItemEyBom.Hardware):
+                            if (bomRow.IdItemGroup == Constants.ITEM_GROUP_MT)
+                            {
+                                DeleteRawMaterial(bomRow);
+                            }
+                            else if (bomRow.IdItemGroup == Constants.ITEM_GROUP_HW)
+                            {
+                                DeleteHardware(bomRow);
+                            }
+                            LoadBomTreeView();
+                            LoadPlainBom();
+                            break;
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         #endregion
 
         #region Loads
+
+        private void LoadFormLayouts()
+        {
+            try
+            {
+                _formLayouts = LayoutHelper.GetFormLayouts(Name);
+                AddRestoreLayoutItems(_formLayouts);
+            }
+            catch
+            {
+                throw;
+            }
+        }
 
         private void LoadItemsListEy()
         {
@@ -440,12 +736,37 @@ namespace HKSupply.Forms.Master
 
                 _itemBom.Clear();
                 _itemBom.Add(itemEyBom);
+                xgrdItemBom.DataSource = null;
                 xgrdItemBom.DataSource = _itemBom;
 
                 dockPanelGrdBom.Select();
 
             }
             catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void LoadPlainBom()
+        {
+            try
+            {
+                xgrdPlainBom.DataSource = null;
+                List<Classes.Bom> plainBom = new List<Classes.Bom>();
+
+                var bom = _itemBom.FirstOrDefault();
+
+                foreach (var rm in bom.RawMaterials)
+                    plainBom.Add(rm);
+
+                foreach(var h in bom.Hardware)
+                    plainBom.Add(h);
+
+                xgrdPlainBom.DataSource = plainBom;
+
+            }
+            catch(Exception ex)
             {
                 throw ex;
             }
@@ -470,7 +791,7 @@ namespace HKSupply.Forms.Master
                     bom.Description = itemMt.ItemDescription;
                     bom.IdItemGroup = Constants.ITEM_GROUP_MT;
                     bom.Quantity = 0;
-                    bom.Waste = 0;
+                    bom.Wastage = 0;
                     itemEyBom.RawMaterials.Add(bom);
                     grdBomRefreshAndExpand();
                 }
@@ -498,9 +819,9 @@ namespace HKSupply.Forms.Master
                     Classes.Bom bom = new Classes.Bom();
                     bom.IdItemBcn = itemHw.IdItemBcn;
                     bom.Description = itemHw.ItemDescription;
-                    bom.IdItemGroup = Constants.ITEM_GROUP_MT;
+                    bom.IdItemGroup = Constants.ITEM_GROUP_HW;
                     bom.Quantity = 0;
-                    bom.Waste = 0;
+                    bom.Wastage = 0;
                     itemEyBom.Hardware.Add(bom);
                     grdBomRefreshAndExpand();
                 }
@@ -515,8 +836,99 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        #endregion
+        private void DeleteRawMaterial(Classes.Bom bomRow)
+        {
+            try
+            {
+                Classes.ItemEyBom itemEyBom = _itemBom.FirstOrDefault();
+                var rawMaterial = itemEyBom.RawMaterials.Where(a => a.IdItemBcn.Equals(bomRow.IdItemBcn)).FirstOrDefault();
 
+                if (rawMaterial != null)
+                {
+                    itemEyBom.RawMaterials.Remove(rawMaterial);
+                    grdBomRefreshAndExpand();
+                }
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void DeleteHardware(Classes.Bom bomRow)
+        {
+            try
+            {
+                Classes.ItemEyBom itemEyBom = _itemBom.FirstOrDefault();
+                var hardware = itemEyBom.Hardware.Where(a => a.IdItemBcn.Equals(bomRow.IdItemBcn)).FirstOrDefault();
+                if (hardware != null)
+                {
+                    itemEyBom.Hardware.Remove(hardware);
+                    grdBomRefreshAndExpand();
+                }
+
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void SetGrdBomEditColumns()
+        {
+            try
+            {
+                foreach (GridView view in xgrdItemBom.ViewCollection)
+                {
+                    switch (view.LevelName)
+                    {
+                        case nameof(Classes.ItemEyBom.RawMaterials):
+                        case nameof(Classes.ItemEyBom.Hardware):
+
+                            view.OptionsBehavior.Editable = true;
+
+                            //Edit Columns
+                            view.Columns[nameof(Classes.Bom.Quantity)].OptionsColumn.AllowEdit = true;
+                            view.Columns[nameof(Classes.Bom.Wastage)].OptionsColumn.AllowEdit = true;
+
+                            //No edit columns
+                            view.Columns[nameof(Classes.Bom.IdItemBcn)].OptionsColumn.AllowEdit = false;
+                            view.Columns[nameof(Classes.Bom.Description)].OptionsColumn.AllowEdit = false;
+
+                            //Edit repositories
+                            RepositoryItemTextEdit ritxt2Dec = new RepositoryItemTextEdit();
+                            ritxt2Dec.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                            ritxt2Dec.Mask.EditMask = "F2";
+
+                            view.Columns[nameof(Classes.Bom.Quantity)].ColumnEdit = ritxt2Dec;
+                            view.Columns[nameof(Classes.Bom.Wastage)].ColumnEdit = ritxt2Dec;
+
+                            break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void SetGrdBomDetailsNonEdit()
+        {
+            try
+            {
+                foreach (GridView view in xgrdItemBom.ViewCollection)
+                {
+                    view.OptionsBehavior.Editable = false;
+                }
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
 
         #region Grids Aux
 
@@ -549,8 +961,7 @@ namespace HKSupply.Forms.Master
             try
             {
                 treeViewBom.Nodes.Clear();
-                treeViewBom.Nodes.Add(GetComponenteNode(_itemBom.FirstOrDefault()));
-
+                treeViewBom.Nodes.Add(GetComponentNode(_itemBom.FirstOrDefault()));
             }
             catch (Exception ex)
             {
@@ -558,7 +969,7 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private TreeNode GetComponenteNode(Classes.ItemEyBom item)
+        private TreeNode GetComponentNode(Classes.ItemEyBom item)
         {
             try
             {
@@ -582,7 +993,7 @@ namespace HKSupply.Forms.Master
                         root.Nodes[0].Nodes.Add(rawMaterial.IdItemBcn, $"{rawMaterial.IdItemBcn} : {rawMaterial.Description}");
                         root.Nodes[0].Nodes[contRawMaterialsNode].Tag = "RawMaterials";
                         root.Nodes[0].Nodes[contRawMaterialsNode].Nodes.Add(
-                            new TreeNode($"Quantity : {rawMaterial.Quantity.ToString()}")
+                            new TreeNode($"Quantity : {rawMaterial.Quantity.ToString()}   Wastage : {rawMaterial.Wastage.ToString()}")
                             );
                         contRawMaterialsNode++;
                     }
@@ -596,7 +1007,7 @@ namespace HKSupply.Forms.Master
                         root.Nodes[1].Nodes.Add(hardware.IdItemBcn, $"{hardware.IdItemBcn} : {hardware.Description}");
                         root.Nodes[1].Nodes[contHardwareNode].Tag = "Hardware";
                         root.Nodes[1].Nodes[contHardwareNode].Nodes.Add(
-                            new TreeNode($"Quantity : {hardware.Quantity.ToString()}")
+                            new TreeNode($"Quantity : {hardware.Quantity.ToString()}   Wastage : {hardware.Wastage.ToString()}")
                             );
                         contHardwareNode++;
                     }
@@ -611,50 +1022,105 @@ namespace HKSupply.Forms.Master
             }
 
         }
+
         #endregion
 
-        #region Test
-        private void SetGrdBomEditColumns()
+        #region Configure Ribbon Actions
+
+        private void ConfigureRibbonActionsEditing()
         {
             try
             {
-                //TODO: No itera en todos los views!   
-                foreach(GridView view in xgrdItemBom.ViewCollection)
-                {
-                    switch (view.LevelName)
-                    {
-                        case nameof(Classes.ItemEyBom.RawMaterials):
-                        case nameof(Classes.ItemEyBom.Hardware):
+                SetGrdBomEditColumns();
 
-                            view.OptionsBehavior.Editable = true;
+                xgrdItemsEy.Enabled = false;
 
-                            //Edit Columns
-                            view.Columns[nameof(Classes.Bom.Quantity)].OptionsColumn.AllowEdit = true;
-                            view.Columns[nameof(Classes.Bom.Waste)].OptionsColumn.AllowEdit = true;
+                dockPanelItemsEy.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                dockPanelItemsEy.HideSliding();
 
-                            //No edit columns
-                            view.Columns[nameof(Classes.Bom.IdItemBcn)].OptionsColumn.AllowEdit = false;
-                            view.Columns[nameof(Classes.Bom.Description)].OptionsColumn.AllowEdit = false;
-
-                            //Edit repositories
-                            RepositoryItemTextEdit ritxt2Dec = new RepositoryItemTextEdit();
-                            ritxt2Dec.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-                            ritxt2Dec.Mask.EditMask = "F2";
-
-                            view.Columns[nameof(Classes.Bom.Quantity)].ColumnEdit = ritxt2Dec;
-                            view.Columns[nameof(Classes.Bom.Waste)].ColumnEdit = ritxt2Dec;
-
-                            break;
-                    }
-                }
+                //Suscribirse a los eventos de los grid para agregar al bom con doble click
+                gridViewItemsMt.DoubleClick += GridViewItemsMt_DoubleClick;
+                gridViewItemsHw.DoubleClick += GridViewItemsHw_DoubleClick;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
+
+        #endregion
+
+        #region Save Layout
+
+        private void SaveLayout(string name)
+        {
+            try
+            {
+                List<Models.Layout> layouts = new List<Models.Layout>();
+
+                string base64stringLayoutDockManager = LayoutHelper.SaveLayoutAsBase64String(dockManagerItemBom);
+                string base64stringLayoutDocumentManager = LayoutHelper.SaveLayoutAsBase64String(documentManagerBom.View);
+
+                int funcId = GlobalSetting.FunctionalitiesRoles.Where(fr => fr.Functionality.FormName.Equals(Name)).Select(a => a.FunctionalityId).FirstOrDefault();
+
+                Layout tmpLayout = new Models.Layout()
+                {
+                    FunctionalityId = funcId,
+                    UserLogin = GlobalSetting.LoggedUser.UserLogin,
+                    ObjectName = nameof(dockManagerItemBom),
+                    LayoutString = base64stringLayoutDockManager,
+                    LayoutName = name
+                };
+                layouts.Add(tmpLayout);
+
+                tmpLayout = new Models.Layout()
+                {
+                    FunctionalityId = funcId,
+                    UserLogin = GlobalSetting.LoggedUser.UserLogin,
+                    ObjectName = nameof(documentManagerBom),
+                    LayoutString = base64stringLayoutDocumentManager,
+                    LayoutName = name
+                };
+                layouts.Add(tmpLayout);
+
+                GlobalSetting.LayoutService.SaveLayout(layouts);
+
+                LoadFormLayouts();
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void RestoreLayaout()
+        {
+            try
+            {
+                LayoutHelper.RestoreLayoutFromBase64String(dockManagerItemBom,
+                    LayoutHelper.GetObjectLayout(
+                        _formLayouts, 
+                        CurrentLayout, 
+                        nameof(dockManagerItemBom)));
+
+                LayoutHelper.RestoreLayoutFromBase64String(documentManagerBom.View,
+                     LayoutHelper.GetObjectLayout(
+                         _formLayouts, 
+                         CurrentLayout, 
+                         nameof(documentManagerBom)));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         #endregion
 
         #endregion
+
+
+
     }
 }

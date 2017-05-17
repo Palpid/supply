@@ -42,6 +42,9 @@
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.ribbonPageGroupLayout = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.bbiSaveLayout = new DevExpress.XtraBars.BarButtonItem();
+            this.bsiRestoreLayout = new DevExpress.XtraBars.BarSubItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,9 +60,11 @@
             this.bbiSave,
             this.bbiClose,
             this.bbiExportExcel,
-            this.bbiExportCsv});
+            this.bbiExportCsv,
+            this.bbiSaveLayout,
+            this.bsiRestoreLayout});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 23;
+            this.ribbonControl.MaxItemId = 25;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -130,6 +135,7 @@
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
             this.ribbonPageGroup2,
+            this.ribbonPageGroupLayout,
             this.ribbonPageGroup3});
             this.ribbonPage1.MergeOrder = 0;
             this.ribbonPage1.Name = "ribbonPage1";
@@ -168,6 +174,27 @@
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
             this.ribbonStatusBar.Size = new System.Drawing.Size(790, 31);
             // 
+            // ribbonPageGroupLayout
+            // 
+            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiSaveLayout);
+            this.ribbonPageGroupLayout.ItemLinks.Add(this.bsiRestoreLayout);
+            this.ribbonPageGroupLayout.Name = "ribbonPageGroupLayout";
+            this.ribbonPageGroupLayout.Text = "Layout";
+            // 
+            // bbiSaveLayout
+            // 
+            this.bbiSaveLayout.Caption = "Save Layout";
+            this.bbiSaveLayout.Id = 23;
+            this.bbiSaveLayout.ImageOptions.ImageUri.Uri = "ExportFile";
+            this.bbiSaveLayout.Name = "bbiSaveLayout";
+            // 
+            // bsiRestoreLayout
+            // 
+            this.bsiRestoreLayout.Caption = "Restore Layout";
+            this.bsiRestoreLayout.Id = 24;
+            this.bsiRestoreLayout.ImageOptions.ImageUri.Uri = "SaveAndNew";
+            this.bsiRestoreLayout.Name = "bsiRestoreLayout";
+            // 
             // RibbonFormBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,5 +227,8 @@
         private DevExpress.XtraBars.BarButtonItem bbiClose;
         private DevExpress.XtraBars.BarButtonItem bbiExportExcel;
         private DevExpress.XtraBars.BarButtonItem bbiExportCsv;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupLayout;
+        private DevExpress.XtraBars.BarButtonItem bbiSaveLayout;
+        private DevExpress.XtraBars.BarSubItem bsiRestoreLayout;
     }
 }

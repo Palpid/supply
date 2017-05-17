@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
+            DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.document1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.document2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
@@ -56,11 +56,13 @@
             this.dockPanel6_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dockPanelTreeBom = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel5_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.treeViewBom = new System.Windows.Forms.TreeView();
             this.document3 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.documentManagerBom = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.document5 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
-            this.treeViewBom = new System.Windows.Forms.TreeView();
+            this.xgrdPlainBom = new DevExpress.XtraGrid.GridControl();
+            this.gridViewPlainBom = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document1)).BeginInit();
@@ -85,12 +87,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.xgrdItemBom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewItemBom)).BeginInit();
             this.dockPanelPlainBom.SuspendLayout();
+            this.dockPanel6_Container.SuspendLayout();
             this.dockPanelTreeBom.SuspendLayout();
             this.dockPanel5_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.document3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManagerBom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdPlainBom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewPlainBom)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -306,7 +311,7 @@
             this.dockPanel4_Container.Controls.Add(this.xgrdItemBom);
             this.dockPanel4_Container.Location = new System.Drawing.Point(0, 0);
             this.dockPanel4_Container.Name = "dockPanel4_Container";
-            this.dockPanel4_Container.Size = new System.Drawing.Size(1332, 608);
+            this.dockPanel4_Container.Size = new System.Drawing.Size(692, 577);
             this.dockPanel4_Container.TabIndex = 0;
             // 
             // xgrdItemBom
@@ -316,7 +321,7 @@
             this.xgrdItemBom.MainView = this.gridViewItemBom;
             this.xgrdItemBom.MenuManager = this.ribbonControl;
             this.xgrdItemBom.Name = "xgrdItemBom";
-            this.xgrdItemBom.Size = new System.Drawing.Size(1332, 608);
+            this.xgrdItemBom.Size = new System.Drawing.Size(692, 577);
             this.xgrdItemBom.TabIndex = 0;
             this.xgrdItemBom.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewItemBom});
@@ -341,6 +346,7 @@
             // 
             // dockPanel6_Container
             // 
+            this.dockPanel6_Container.Controls.Add(this.xgrdPlainBom);
             this.dockPanel6_Container.Location = new System.Drawing.Point(0, 0);
             this.dockPanel6_Container.Name = "dockPanel6_Container";
             this.dockPanel6_Container.Size = new System.Drawing.Size(692, 577);
@@ -369,6 +375,14 @@
             this.dockPanel5_Container.Size = new System.Drawing.Size(692, 577);
             this.dockPanel5_Container.TabIndex = 0;
             // 
+            // treeViewBom
+            // 
+            this.treeViewBom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeViewBom.Location = new System.Drawing.Point(0, 0);
+            this.treeViewBom.Name = "treeViewBom";
+            this.treeViewBom.Size = new System.Drawing.Size(692, 577);
+            this.treeViewBom.TabIndex = 0;
+            // 
             // document3
             // 
             this.document3.Caption = "Plain";
@@ -396,9 +410,9 @@
             this.document2,
             this.document4});
             this.tabbedView1.RootContainer.Element = null;
-            dockingContainer1.Element = this.documentGroup1;
+            dockingContainer2.Element = this.documentGroup1;
             this.tabbedView1.RootContainer.Nodes.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer[] {
-            dockingContainer1});
+            dockingContainer2});
             // 
             // document5
             // 
@@ -410,13 +424,22 @@
             this.document5.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
             this.document5.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
             // 
-            // treeViewBom
+            // xgrdPlainBom
             // 
-            this.treeViewBom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeViewBom.Location = new System.Drawing.Point(0, 0);
-            this.treeViewBom.Name = "treeViewBom";
-            this.treeViewBom.Size = new System.Drawing.Size(692, 577);
-            this.treeViewBom.TabIndex = 0;
+            this.xgrdPlainBom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xgrdPlainBom.Location = new System.Drawing.Point(0, 0);
+            this.xgrdPlainBom.MainView = this.gridViewPlainBom;
+            this.xgrdPlainBom.MenuManager = this.ribbonControl;
+            this.xgrdPlainBom.Name = "xgrdPlainBom";
+            this.xgrdPlainBom.Size = new System.Drawing.Size(692, 577);
+            this.xgrdPlainBom.TabIndex = 0;
+            this.xgrdPlainBom.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewPlainBom});
+            // 
+            // gridViewPlainBom
+            // 
+            this.gridViewPlainBom.GridControl = this.xgrdPlainBom;
+            this.gridViewPlainBom.Name = "gridViewPlainBom";
             // 
             // BomManagement
             // 
@@ -456,12 +479,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.xgrdItemBom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewItemBom)).EndInit();
             this.dockPanelPlainBom.ResumeLayout(false);
+            this.dockPanel6_Container.ResumeLayout(false);
             this.dockPanelTreeBom.ResumeLayout(false);
             this.dockPanel5_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.document3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManagerBom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.document5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdPlainBom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewPlainBom)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -500,5 +526,7 @@
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document document4;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document document5;
         private System.Windows.Forms.TreeView treeViewBom;
+        private DevExpress.XtraGrid.GridControl xgrdPlainBom;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewPlainBom;
     }
 }

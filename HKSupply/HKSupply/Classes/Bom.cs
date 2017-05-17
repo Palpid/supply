@@ -13,6 +13,6 @@ namespace HKSupply.Classes
         public string Description { get; set; }
         public string IdItemGroup { get; set; }
         public float Quantity { get; set; }
-        public float Waste { get; set; }
+        public float Wastage { get; set; } 
     }
 }

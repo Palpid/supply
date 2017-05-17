@@ -311,6 +311,7 @@
     <Compile Include="General\GlobalSetting.cs" />
     <Compile Include="Helpers\CustomExtensions.cs" />
     <Compile Include="Helpers\DocHelper.cs" />
+    <Compile Include="Helpers\LayoutHelper.cs" />
     <Compile Include="Helpers\MDIClientSupport.cs" />
     <Compile Include="Helpers\Mocking\MockData.cs" />
     <Compile Include="Helpers\PasswordHelper.cs" />
@@ -526,6 +527,22 @@
     <Compile Include="Migrations\201705111418473_protoDocs_01.Designer.cs">
       <DependentUpon>201705111418473_protoDocs_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705171004567_layout_01.cs" />
+    <Compile Include="Migrations\201705171004567_layout_01.Designer.cs">
+      <DependentUpon>201705171004567_layout_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705171048334_layout_02.cs" />
+    <Compile Include="Migrations\201705171048334_layout_02.Designer.cs">
+      <DependentUpon>201705171048334_layout_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705171106353_layout_03.cs" />
+    <Compile Include="Migrations\201705171106353_layout_03.Designer.cs">
+      <DependentUpon>201705171106353_layout_03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705171202405_layout_04.cs" />
+    <Compile Include="Migrations\201705171202405_layout_04.Designer.cs">
+      <DependentUpon>201705171202405_layout_04.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\CustomerPriceList.cs" />
@@ -551,6 +568,7 @@
     <Compile Include="Models\ItemHwHistory.cs" />
     <Compile Include="Models\ItemMt.cs" />
     <Compile Include="Models\ItemMtHistory.cs" />
+    <Compile Include="Models\Layout.cs" />
     <Compile Include="Models\MaterialL1.cs" />
     <Compile Include="Models\MaterialL2.cs" />
     <Compile Include="Models\MaterialL3.cs" />
@@ -593,6 +611,7 @@
     <Compile Include="Services\Implementations\EFItemBcn.cs" />
     <Compile Include="Services\Implementations\EFItemHw.cs" />
     <Compile Include="Services\Implementations\EFItemMt.cs" />
+    <Compile Include="Services\Implementations\EFLayout.cs" />
     <Compile Include="Services\Implementations\EFMaterial.cs" />
     <Compile Include="Services\Implementations\EFMatType.cs" />
     <Compile Include="Services\Implementations\EFPaymentTerms.cs" />
@@ -621,6 +640,7 @@
     <Compile Include="Services\Interfaces\IItemBcn.cs" />
     <Compile Include="Services\Interfaces\IItemHw.cs" />
     <Compile Include="Services\Interfaces\IItemMt.cs" />
+    <Compile Include="Services\Interfaces\ILayout.cs" />
     <Compile Include="Services\Interfaces\IMaterial.cs" />
     <Compile Include="Services\Interfaces\IMatType.cs" />
     <Compile Include="Services\Interfaces\IPaymentTerms.cs" />
@@ -892,6 +912,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705111418473_protoDocs_01.resx">
       <DependentUpon>201705111418473_protoDocs_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705171004567_layout_01.resx">
+      <DependentUpon>201705171004567_layout_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705171048334_layout_02.resx">
+      <DependentUpon>201705171048334_layout_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705171106353_layout_03.resx">
+      <DependentUpon>201705171106353_layout_03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705171202405_layout_04.resx">
+      <DependentUpon>201705171202405_layout_04.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
