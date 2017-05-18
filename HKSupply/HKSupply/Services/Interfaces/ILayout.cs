@@ -9,7 +9,9 @@ namespace HKSupply.Services.Interfaces
     public interface ILayout
     {
         IEnumerable<Layout> GetLayouts(int functionalityId, string user);
+        IEnumerable<Layout> GetLayouts(int functionalityId, string objectName, string user);
         bool SaveLayout(Layout newLayout);
         bool SaveLayout(List<Layout> layouts);
+        bool UpdateLayout(Layout updateLayout);
     }
 }

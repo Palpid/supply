@@ -6,6 +6,9 @@ using System.Windows.Forms;
 using DevExpress.Utils;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
+using HKSupply.Models;
+using HKSupply.General;
+using System.IO;
 
 namespace HKSupply.Forms
 {
@@ -26,6 +29,8 @@ namespace HKSupply.Forms
         #region Private Members
 
         private ActionsStates _currentState;
+
+        private bool isLoadingWorkspace;
 
         #endregion
 
@@ -92,8 +97,20 @@ namespace HKSupply.Forms
 
         public void ConfigureLayoutOptions()
         {
-            bbiSaveLayout.Enabled = EnableLayoutOptions;
-            bsiRestoreLayout.Enabled = EnableLayoutOptions;
+            //v1, los oculto ya que usamos el workspace manager
+            //bbiSaveLayout.Enabled = EnableLayoutOptions;
+            //bsiRestoreLayout.Enabled = EnableLayoutOptions;
+            bbiSaveLayout.Visibility = BarItemVisibility.Never;
+            bsiRestoreLayout.Visibility = BarItemVisibility.Never;
+
+            bwmiLayouts.Enabled = EnableLayoutOptions;
+
+            if (EnableLayoutOptions)
+            {
+                LoadWorkspacesLayouts();
+            }
+
+            bwmiLayouts.WorkspaceManager.TransitionType = new DevExpress.Utils.Animation.FadeTransition();
         }
 
         public void SetRibbonText(string title)
@@ -101,7 +118,7 @@ namespace HKSupply.Forms
             ribbonPage1.Text = $"Home > {title}";
         }
 
-        public void AddRestoreLayoutItems(List<Models.Layout> layouts)
+        public void AddRestoreLayoutItems(List<Layout> layouts)
         {
             try
             {
@@ -118,7 +135,6 @@ namespace HKSupply.Forms
                     layoutButton.ItemClick += LayoutButton_ItemClick;
                     bsiRestoreLayout.AddItem(layoutButton);
                 }
-
             }
             catch
             {
@@ -177,17 +193,23 @@ namespace HKSupply.Forms
         {
             try
             {
+                //Task buttons
                 bbiEdit.ItemClick += bbiEdit_ItemClick;
                 bbiNew.ItemClick += bbiNew_ItemClick;
                 bbiCancel.ItemClick += bbiCancel_ItemClick;
                 bbiSave.ItemClick += bbiSave_ItemClick;
                 bbiClose.ItemClick += bbiClose_ItemClick;
 
+                //Print and export button
                 bbiPrintPreview.ItemClick += bbiPrintPreview_ItemClick;
                 bbiExportExcel.ItemClick += bbiExportExcel_ItemClick;
                 bbiExportCsv.ItemClick += bbiExportCsv_ItemClick;
 
+                //Layouts options
                 bbiSaveLayout.ItemClick += BbiSaveLayout_ItemClick;
+
+                bwmiLayouts.Popup += BwmiLayouts_Popup;
+                bwmiLayouts.WorkspaceManager.WorkspaceCollectionChanged += WorkspaceManager_WorkspaceCollectionChanged;
             }
             catch (Exception ex)
             {
@@ -205,6 +227,81 @@ namespace HKSupply.Forms
 
             ribbonPage1.Appearance.Font = new Font(ribbonPage1.Appearance.Font, FontStyle.Bold);
 
+        }
+
+        private void SaveWorkspace(string name, string base64stringLayout)
+        {
+            try
+            {
+                if (isLoadingWorkspace) return;
+
+                int funcId = GlobalSetting.FunctionalitiesRoles.Where(fr => fr.Functionality.FormName.Equals(Name)).Select(a => a.FunctionalityId).FirstOrDefault();
+
+                Layout tmpLayout = new Layout()
+                {
+                    FunctionalityId = funcId,
+                    UserLogin = GlobalSetting.LoggedUser.UserLogin,
+                    ObjectName = nameof(bwmiLayouts),
+                    LayoutString = base64stringLayout,
+                    LayoutName = name
+                };
+
+                GlobalSetting.LayoutService.SaveLayout(tmpLayout);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void UpdateWorkspace(string name, string base64stringLayout)
+        {
+            try
+            {
+                int funcId = GlobalSetting.FunctionalitiesRoles.Where(fr => fr.Functionality.FormName.Equals(Name)).Select(a => a.FunctionalityId).FirstOrDefault();
+
+                Layout tmpLayout = new Layout()
+                {
+                    FunctionalityId = funcId,
+                    UserLogin = GlobalSetting.LoggedUser.UserLogin,
+                    ObjectName = nameof(bwmiLayouts),
+                    LayoutString = base64stringLayout,
+                    LayoutName = name
+                };
+
+                GlobalSetting.LayoutService.UpdateLayout(tmpLayout);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void LoadWorkspacesLayouts()
+        {
+            try
+            {
+                isLoadingWorkspace = true;
+
+                List<Layout> layouts = Helpers.LayoutHelper.GetRibbonWorkSpaceLayouts(Name, nameof(bwmiLayouts));
+
+                foreach (var wks in layouts)
+                {
+                    byte[] rawData = Convert.FromBase64String(wks.LayoutString);
+                    using (MemoryStream ms = new MemoryStream(rawData))
+                    {
+                        bwmiLayouts.WorkspaceManager.LoadWorkspace(wks.LayoutName, ms);
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                isLoadingWorkspace = false;
+            }
         }
 
         #endregion
@@ -349,6 +446,43 @@ namespace HKSupply.Forms
         {
             CurrentLayout = e.Item.Tag.ToString();
         }
+
+        private void BwmiLayouts_Popup(object sender, EventArgs e)
+        {
+            //ocultamos el item de gestion de workspace del propio devexpress
+            bwmiLayouts.ItemLinks[1].Visible = false;
+        }
+
+        private void WorkspaceManager_WorkspaceCollectionChanged(object sender, WorkspaceCollectionChangedEventArgs ea)
+        {
+            switch (ea.Action)
+            {
+                case WorkspaceCollectionChangedAction.WorkspaceAdded:
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        string layoutAsBase64String;
+                        bwmiLayouts.WorkspaceManager.SaveWorkspace(ea.Workspace.Name, ms);
+                        layoutAsBase64String = Convert.ToBase64String(ms.ToArray());
+                        SaveWorkspace(ea.Workspace.Name, layoutAsBase64String);
+                    }
+                    break;
+
+                case WorkspaceCollectionChangedAction.WorkspaceRemoved:
+                    //de momento no damos opción a borrar
+                    break;
+
+                case WorkspaceCollectionChangedAction.WorkspaceUpdated:
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        string layoutAsBase64String;
+                        bwmiLayouts.WorkspaceManager.SaveWorkspace(ea.Workspace.Name, ms);
+                        layoutAsBase64String = Convert.ToBase64String(ms.ToArray());
+                        UpdateWorkspace(ea.Workspace.Name, layoutAsBase64String);
+                    }
+                    break;
+            }
+        }
+
         #endregion
 
         #endregion

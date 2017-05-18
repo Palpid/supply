@@ -74,5 +74,21 @@ namespace HKSupply.Helpers
             }
         }
 
+        public static List<Models.Layout> GetRibbonWorkSpaceLayouts(string formName, string workSpaceMenuItemName)
+        {
+            try
+            {
+                return GlobalSetting.LayoutService.GetLayouts(
+                    GlobalSetting.FunctionalitiesRoles.Where(fr => fr.Functionality.FormName.Equals(formName)).Select(a => a.FunctionalityId).FirstOrDefault(),
+                    workSpaceMenuItemName,
+                    GlobalSetting.LoggedUser.UserLogin)
+                    .ToList();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
     }
 }

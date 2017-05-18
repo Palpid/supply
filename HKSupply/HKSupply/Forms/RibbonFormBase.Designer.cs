@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
             this.bbiNew = new DevExpress.XtraBars.BarButtonItem();
@@ -37,14 +38,16 @@
             this.bbiClose = new DevExpress.XtraBars.BarButtonItem();
             this.bbiExportExcel = new DevExpress.XtraBars.BarButtonItem();
             this.bbiExportCsv = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiSaveLayout = new DevExpress.XtraBars.BarButtonItem();
+            this.bsiRestoreLayout = new DevExpress.XtraBars.BarSubItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroupLayout = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.ribbonPageGroupLayout = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.bbiSaveLayout = new DevExpress.XtraBars.BarButtonItem();
-            this.bsiRestoreLayout = new DevExpress.XtraBars.BarSubItem();
+            this.bwmiLayouts = new DevExpress.XtraBars.BarWorkspaceMenuItem();
+            this.workspaceManager1 = new DevExpress.Utils.WorkspaceManager();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,9 +65,10 @@
             this.bbiExportExcel,
             this.bbiExportCsv,
             this.bbiSaveLayout,
-            this.bsiRestoreLayout});
+            this.bsiRestoreLayout,
+            this.bwmiLayouts});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 25;
+            this.ribbonControl.MaxItemId = 26;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -130,6 +134,20 @@
             this.bbiExportCsv.ImageOptions.ImageUri.Uri = "ExportToCSV";
             this.bbiExportCsv.Name = "bbiExportCsv";
             // 
+            // bbiSaveLayout
+            // 
+            this.bbiSaveLayout.Caption = "Save Layout";
+            this.bbiSaveLayout.Id = 23;
+            this.bbiSaveLayout.ImageOptions.ImageUri.Uri = "ExportFile";
+            this.bbiSaveLayout.Name = "bbiSaveLayout";
+            // 
+            // bsiRestoreLayout
+            // 
+            this.bsiRestoreLayout.Caption = "Restore Layout";
+            this.bsiRestoreLayout.Id = 24;
+            this.bsiRestoreLayout.ImageOptions.ImageUri.Uri = "SaveAndNew";
+            this.bsiRestoreLayout.Name = "bsiRestoreLayout";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -162,6 +180,14 @@
             this.ribbonPageGroup2.ShowCaptionButton = false;
             this.ribbonPageGroup2.Text = "Print and Export";
             // 
+            // ribbonPageGroupLayout
+            // 
+            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiSaveLayout);
+            this.ribbonPageGroupLayout.ItemLinks.Add(this.bsiRestoreLayout);
+            this.ribbonPageGroupLayout.ItemLinks.Add(this.bwmiLayouts);
+            this.ribbonPageGroupLayout.Name = "ribbonPageGroupLayout";
+            this.ribbonPageGroupLayout.Text = "Layout";
+            // 
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.bbiClose);
@@ -174,26 +200,18 @@
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
             this.ribbonStatusBar.Size = new System.Drawing.Size(790, 31);
             // 
-            // ribbonPageGroupLayout
+            // bwmiLayouts
             // 
-            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiSaveLayout);
-            this.ribbonPageGroupLayout.ItemLinks.Add(this.bsiRestoreLayout);
-            this.ribbonPageGroupLayout.Name = "ribbonPageGroupLayout";
-            this.ribbonPageGroupLayout.Text = "Layout";
+            this.bwmiLayouts.Caption = "Workspace Manager";
+            this.bwmiLayouts.Id = 25;
+            this.bwmiLayouts.ImageOptions.ImageUri.Uri = "ExportFile";
+            this.bwmiLayouts.Name = "bwmiLayouts";
+            this.bwmiLayouts.WorkspaceManager = this.workspaceManager1;
             // 
-            // bbiSaveLayout
+            // workspaceManager1
             // 
-            this.bbiSaveLayout.Caption = "Save Layout";
-            this.bbiSaveLayout.Id = 23;
-            this.bbiSaveLayout.ImageOptions.ImageUri.Uri = "ExportFile";
-            this.bbiSaveLayout.Name = "bbiSaveLayout";
-            // 
-            // bsiRestoreLayout
-            // 
-            this.bsiRestoreLayout.Caption = "Restore Layout";
-            this.bsiRestoreLayout.Id = 24;
-            this.bsiRestoreLayout.ImageOptions.ImageUri.Uri = "SaveAndNew";
-            this.bsiRestoreLayout.Name = "bsiRestoreLayout";
+            this.workspaceManager1.TargetControl = this;
+            this.workspaceManager1.TransitionType = pushTransition1;
             // 
             // RibbonFormBase
             // 
@@ -230,5 +248,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupLayout;
         private DevExpress.XtraBars.BarButtonItem bbiSaveLayout;
         private DevExpress.XtraBars.BarSubItem bsiRestoreLayout;
+        private DevExpress.XtraBars.BarWorkspaceMenuItem bwmiLayouts;
+        private DevExpress.Utils.WorkspaceManager workspaceManager1;
     }
 }
