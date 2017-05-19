@@ -92,8 +92,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Bom.cs" />
-    <Compile Include="Classes\ItemEyBom.cs" />
+    <Compile Include="Classes\PlainBomAux.cs" />
     <Compile Include="Classes\RowInfo.cs" />
     <Compile Include="DB\HKSupplyContext.cs" />
     <Compile Include="Exceptions\DBServerConnectionException.cs" />
@@ -547,6 +546,8 @@
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\CustomerPriceList.cs" />
     <Compile Include="Models\CustomerPriceListHistory.cs" />
+    <Compile Include="Models\DetailBomHw.cs" />
+    <Compile Include="Models\DetailBomMt.cs" />
     <Compile Include="Models\DocType.cs" />
     <Compile Include="Models\EchangeRate.cs" />
     <Compile Include="Models\EtnColor.cs" />
@@ -559,6 +560,7 @@
     <Compile Include="Models\HwTypeL2.cs" />
     <Compile Include="Models\HwTypeL3.cs" />
     <Compile Include="Models\Incoterm.cs" />
+    <Compile Include="Models\ItemBom.cs" />
     <Compile Include="Models\ItemEy.cs" />
     <Compile Include="Models\ItemBcn.cs" />
     <Compile Include="Models\ItemDoc.cs" />
