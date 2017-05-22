@@ -88,12 +88,8 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
-                SetRibbonText($"{actions.Functionality.Category} > {actions.Functionality.FunctionalityName}");
-                //Task Button
-                Read = actions.Read;
-                New = actions.New;
-                Modify = actions.Modify;
+                //Task Buttons
+                SetActions();
                 RestoreInitState();
                 //Print and export buttons
                 EnablePrintPreview = false;

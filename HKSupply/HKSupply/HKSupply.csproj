@@ -192,12 +192,6 @@
     <Compile Include="Forms\Master\FunctionalityRoleManagement.Designer.cs">
       <DependentUpon>FunctionalityRoleManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Master\FunctionalityRoleManagement_v1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Master\FunctionalityRoleManagement_v1.Designer.cs">
-      <DependentUpon>FunctionalityRoleManagement_v1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Master\IncotermsManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,12 +240,6 @@
     <Compile Include="Forms\Master\RoleManagement.Designer.cs">
       <DependentUpon>RoleManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Master\RoleManagement_v1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Master\RoleManagement_v1.Designer.cs">
-      <DependentUpon>RoleManagement_v1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Master\StatusManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,12 +251,6 @@
     </Compile>
     <Compile Include="Forms\Master\StoreManagement.Designer.cs">
       <DependentUpon>StoreManagement.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Master\StoreManagement_v1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Master\StoreManagement_v1.Designer.cs">
-      <DependentUpon>StoreManagement_v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Master\SupplierManagement.cs">
       <SubType>Form</SubType>
@@ -287,12 +269,6 @@
     </Compile>
     <Compile Include="Forms\Master\UserManagement.Designer.cs">
       <DependentUpon>UserManagement.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Master\UserManagement_v1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Master\UserManagement_v1.Designer.cs">
-      <DependentUpon>UserManagement_v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PDFViewer.cs">
       <SubType>Form</SubType>
@@ -699,9 +675,6 @@
     <EmbeddedResource Include="Forms\Master\FunctionalityRoleManagement.resx">
       <DependentUpon>FunctionalityRoleManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Master\FunctionalityRoleManagement_v1.resx">
-      <DependentUpon>FunctionalityRoleManagement_v1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\IncotermsManagement.resx">
       <DependentUpon>IncotermsManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -726,17 +699,11 @@
     <EmbeddedResource Include="Forms\Master\RoleManagement.resx">
       <DependentUpon>RoleManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Master\RoleManagement_v1.resx">
-      <DependentUpon>RoleManagement_v1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\StatusManagement.resx">
       <DependentUpon>StatusManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\StoreManagement.resx">
       <DependentUpon>StoreManagement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Master\StoreManagement_v1.resx">
-      <DependentUpon>StoreManagement_v1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\SupplierManagement.resx">
       <DependentUpon>SupplierManagement.cs</DependentUpon>
@@ -746,9 +713,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\UserManagement.resx">
       <DependentUpon>UserManagement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Master\UserManagement_v1.resx">
-      <DependentUpon>UserManagement_v1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PDFViewer.resx">
       <DependentUpon>PDFViewer.cs</DependentUpon>

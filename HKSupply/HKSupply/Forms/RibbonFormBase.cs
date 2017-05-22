@@ -74,6 +74,25 @@ namespace HKSupply.Forms
         #endregion
 
         #region Public Functions
+
+        /// <summary>
+        /// Lee las acciones que tiene permitido un formulario.
+        /// </summary>
+        /// <remarks>
+        /// No hay que llamarlo desde dentro porque el "Name" es el de "RibbonFormBase", hay que llamarlo desde los que lo herendan
+        /// para que coja su nombre
+        /// </remarks>
+        public void SetActions()
+        {
+            var actions = GlobalSetting.FunctionalitiesRoles.FirstOrDefault(fr => fr.Functionality.FormName.Equals(Name));
+            //Task Buttons
+            Read = actions.Read;
+            New = actions.New;
+            Modify = actions.Modify;
+
+            SetRibbonText($"{actions.Functionality.Category} > {actions.Functionality.FunctionalityName}");
+        }
+
         public void RestoreInitState()
         {
             ConfigureActions();
