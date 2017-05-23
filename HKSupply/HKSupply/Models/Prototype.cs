@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace HKSupply.Models
 {
+
     [Table("PROTOTYPES")]
     public class Prototype
     {

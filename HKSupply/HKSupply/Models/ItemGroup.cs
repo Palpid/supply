@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace HKSupply.Models
 {
+
     [Table("ITEM_GROUP")]
     public class ItemGroup
     {

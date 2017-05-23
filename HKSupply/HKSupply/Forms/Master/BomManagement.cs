@@ -26,6 +26,7 @@ namespace HKSupply.Forms.Master
         List<ItemHw> _itemsHwList;
 
         List<ItemBom> _itemBom = new List<ItemBom>();
+        ItemBom _itemBomOriginal;
 
         List<Models.Layout> _formLayouts;
 
@@ -90,16 +91,16 @@ namespace HKSupply.Forms.Master
 
             try
             {
+                ActionsAfterCU();
+                //dockPanelItemsEy.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
+                //dockPanelItemsEy.ShowSliding();
 
-                dockPanelItemsEy.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
-                dockPanelItemsEy.ShowSliding();
+                //xgrdItemsEy.Enabled = true;
 
-                xgrdItemsEy.Enabled = true;
+                //gridViewItemsMt.DoubleClick -= GridViewItemsMt_DoubleClick;
+                //gridViewItemsHw.DoubleClick -= GridViewItemsHw_DoubleClick;
 
-                gridViewItemsMt.DoubleClick -= GridViewItemsMt_DoubleClick;
-                gridViewItemsHw.DoubleClick -= GridViewItemsHw_DoubleClick;
-
-                SetGrdBomDetailsNonEdit();
+                //SetGrdBomDetailsNonEdit();
             }
             catch(Exception ex)
             {
@@ -133,6 +134,48 @@ namespace HKSupply.Forms.Master
         public override void bbiSave_ItemClick(object sender, ItemClickEventArgs e)
         {
             base.bbiSave_ItemClick(sender, e);
+
+            try
+            {
+
+                bool res = false;
+
+                if (IsValidBom() == false)
+                    return;
+
+                DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
+
+                if (result != DialogResult.Yes)
+                    return;
+
+                Cursor = Cursors.WaitCursor;
+
+                ItemBom itemBom = _itemBom.FirstOrDefault();
+
+                if (itemBom.Equals(_itemBomOriginal))
+                {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
+                    return;
+                }
+
+                res = EditBom(itemBom);
+
+                if (res == true)
+                {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
+                    ActionsAfterCU();
+                }
+
+
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
         }
 
         public override void BbiSaveLayout_ItemClick(object sender, ItemClickEventArgs e)
@@ -288,6 +331,12 @@ namespace HKSupply.Forms.Master
                         (e.View as GridView).Columns.Add(colDescriptionMt);
                         (e.View as GridView).Columns.Add(colUnitMt);
 
+                        //Formatos
+                        (e.View as GridView).Columns[nameof(DetailBomMt.Quantity)].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                        (e.View as GridView).Columns[nameof(DetailBomMt.Quantity)].DisplayFormat.FormatString = "n2";
+                        (e.View as GridView).Columns[nameof(DetailBomMt.Waste)].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                        (e.View as GridView).Columns[nameof(DetailBomMt.Waste)].DisplayFormat.FormatString = "n2";
+
                         //Orden de las columnas
                         (e.View as GridView).Columns[nameof(DetailBomMt.IdItemBcn)].VisibleIndex = 0;
                         (e.View as GridView).Columns[$"{nameof(DetailBomMt.Item)}.{nameof(ItemMt.ItemDescription)}"].VisibleIndex = 1;
@@ -300,8 +349,8 @@ namespace HKSupply.Forms.Master
 
                         //Agregamos los Summary
                         (e.View as GridView).OptionsView.ShowFooter = true;
-                        (e.View as GridView).Columns[nameof(DetailBomMt.Quantity)].Summary.Add(SummaryItemType.Sum, nameof(DetailBomMt.Quantity), "{0}");
-                        (e.View as GridView).Columns[nameof(DetailBomMt.Waste)].Summary.Add(SummaryItemType.Sum, nameof(DetailBomMt.Waste), "{0}");
+                        (e.View as GridView).Columns[nameof(DetailBomMt.Quantity)].Summary.Add(SummaryItemType.Sum, nameof(DetailBomMt.Quantity), "{0:n}");
+                        (e.View as GridView).Columns[nameof(DetailBomMt.Waste)].Summary.Add(SummaryItemType.Sum, nameof(DetailBomMt.Waste), "{0:n}");
 
                         //Si está en edición al pintar una nueva vista tiene que hacerla editable
                         if (CurrentState == ActionsStates.Edit)
@@ -340,6 +389,12 @@ namespace HKSupply.Forms.Master
                         (e.View as GridView).Columns.Add(colDescriptionHw);
                         (e.View as GridView).Columns.Add(colUnitHw);
 
+                        //Formatos
+                        (e.View as GridView).Columns[nameof(DetailBomHw.Quantity)].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                        (e.View as GridView).Columns[nameof(DetailBomHw.Quantity)].DisplayFormat.FormatString = "n2";
+                        (e.View as GridView).Columns[nameof(DetailBomHw.Waste)].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                        (e.View as GridView).Columns[nameof(DetailBomHw.Waste)].DisplayFormat.FormatString = "n2";
+
                         //Orden de las columnas
                         (e.View as GridView).Columns[nameof(DetailBomHw.IdItemBcn)].VisibleIndex = 0;
                         (e.View as GridView).Columns[$"{nameof(DetailBomHw.Item)}.{nameof(ItemHw.ItemDescription)}"].VisibleIndex = 1;
@@ -352,8 +407,8 @@ namespace HKSupply.Forms.Master
 
                         //Agregamos los Summary
                         (e.View as GridView).OptionsView.ShowFooter = true;
-                        (e.View as GridView).Columns[nameof(DetailBomHw.Quantity)].Summary.Add(SummaryItemType.Sum, nameof(DetailBomHw.Quantity), "{0}");
-                        (e.View as GridView).Columns[nameof(DetailBomHw.Waste)].Summary.Add(SummaryItemType.Sum, nameof(DetailBomHw.Waste), "{0}");
+                        (e.View as GridView).Columns[nameof(DetailBomHw.Quantity)].Summary.Add(SummaryItemType.Sum, nameof(DetailBomHw.Quantity), "{0:n}");
+                        (e.View as GridView).Columns[nameof(DetailBomHw.Waste)].Summary.Add(SummaryItemType.Sum, nameof(DetailBomHw.Waste), "{0:n}");
 
                         //Si está en edición al pintar una nueva vista tiene que hacerla editable
                         if (CurrentState == ActionsStates.Edit)
@@ -651,6 +706,13 @@ namespace HKSupply.Forms.Master
                 GridColumn colDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemBCN"), Visible = true, FieldName = nameof(Classes.PlainBomAux.ItemDescription), Width = 450 };
                 GridColumn colQuantity = new GridColumn() { Caption = "Quantity", Visible = true, FieldName = nameof(Classes.PlainBomAux.Quantity), Width = 60 };
                 GridColumn colWaste = new GridColumn() { Caption = "Wastage", Visible = true, FieldName = nameof(Classes.PlainBomAux.Waste), Width = 60 };
+                GridColumn colUnit = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Unit"), Visible = true, FieldName = nameof(Classes.PlainBomAux.Waste), Width = 70 };
+
+                //Format types
+                colQuantity.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                colQuantity.DisplayFormat.FormatString = "n2";
+                colWaste.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                colWaste.DisplayFormat.FormatString = "n2";
 
                 //Show footer for summaries
                 gridViewPlainBom.OptionsView.ShowFooter = true; 
@@ -810,21 +872,41 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                //TODO: cargarlo o si no existe generar uno nuevo con id = 0
+                ItemBom itemBom;
 
-                ItemBom itemBom = new ItemBom();
-                itemBom.IdBom = 0;
-                itemBom.IdItemBcn = item.IdItemBcn;
-                itemBom.Item = item;
-                itemBom.Materials = new List<DetailBomMt>();
-                itemBom.Hardwares = new List<DetailBomHw>();
+                itemBom = GlobalSetting.ItemBomService.GetItemBom(item.IdItemBcn);
+                _itemBomOriginal = GlobalSetting.ItemBomService.GetItemBom(item.IdItemBcn);
+                //_itemBomOriginal = itemBom.Clone(); //TODO: La extensión para clonar no me funciona con esta clase. Investigar! (no puede serializarlo?)
+
+                if (itemBom == null)
+                {
+                    itemBom = new ItemBom();
+                    itemBom.IdBom = 0;
+                    itemBom.IdItemBcn = item.IdItemBcn;
+                    itemBom.Item = item;
+                    itemBom.IdItemGroup = Constants.ITEM_GROUP_EY;
+                    itemBom.Materials = new List<DetailBomMt>();
+                    itemBom.Hardwares = new List<DetailBomHw>();
+
+                    _itemBomOriginal = new ItemBom();
+                    _itemBomOriginal.IdBom = 0;
+                    _itemBomOriginal.IdItemBcn = item.IdItemBcn;
+                    _itemBomOriginal.Item = item;
+                    _itemBomOriginal.IdItemGroup = Constants.ITEM_GROUP_EY;
+                    _itemBomOriginal.Materials = new List<DetailBomMt>();
+                    _itemBomOriginal.Hardwares = new List<DetailBomHw>();
+                }
 
                 _itemBom.Clear();
                 _itemBom.Add(itemBom);
                 xgrdItemBom.DataSource = null;
                 xgrdItemBom.DataSource = _itemBom;
 
+                grdBomRefreshAndExpand();
                 dockPanelGrdBom.Select();
+
+                LoadBomTreeView();
+                LoadPlainBom();
 
             }
             catch (Exception ex)
@@ -1220,6 +1302,82 @@ namespace HKSupply.Forms.Master
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        #endregion
+
+        #region CRUD
+        private bool IsValidBom()
+        {
+            try
+            {
+                ItemBom bom = _itemBom.FirstOrDefault();
+
+                foreach(var h in bom.Hardwares)
+                {
+                    if(h.Quantity <= 0)
+                    {
+                        XtraMessageBox.Show($"Quantity must be greater than Zero ({h.IdItemBcn})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                    }
+                }
+
+                foreach (var m in bom.Materials)
+                {
+                    if (m.Quantity <= 0)
+                    {
+                        XtraMessageBox.Show($"Quantity must be greater than Zero ({m.IdItemBcn})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private bool EditBom(ItemBom itemBom)
+        {
+            try
+            {
+                return GlobalSetting.ItemBomService.EditIteBom(itemBom);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void ActionsAfterCU()
+        {
+            try
+            {
+                ItemEy item = _itemBomOriginal.Item as ItemEy;
+                _itemBomOriginal = null;
+                _itemBom.Clear();
+                LoadItemGridBom(item);
+
+                //Restore de ribbon to initial states
+                RestoreInitState();
+
+
+                dockPanelItemsEy.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
+                dockPanelItemsEy.ShowSliding();
+
+                xgrdItemsEy.Enabled = true;
+
+                gridViewItemsMt.DoubleClick -= GridViewItemsMt_DoubleClick;
+                gridViewItemsHw.DoubleClick -= GridViewItemsHw_DoubleClick;
+
+                SetGrdBomDetailsNonEdit();
+            }
+            catch
+            {
+                throw;
             }
         }
 

@@ -73,6 +73,12 @@ namespace HKSupply.DB
 
         public DbSet<Layout> Layouts { get; set; }
 
+        public DbSet<ItemBom> ItemsBom { get; set; }
+        public DbSet<DetailBomHw> DetailsBomHw { get; set; }
+        public DbSet<DetailBomHwHistory> DetailsBomHwHistory { get; set; }
+        public DbSet<DetailBomMt> DetailsBomMt { get; set; }
+        public DbSet<DetailBomMtHistory> DetailsBomMtHistory { get; set; }
+
         //public HKSupplyContext()
         //    : base("name=SqlExpressConn")
         //{
@@ -111,6 +117,15 @@ namespace HKSupply.DB
             modelBuilder.Entity<CustomerPriceListHistory>().Property(x => x.Price).HasPrecision(19, 6);
             modelBuilder.Entity<CustomerPriceListHistory>().Property(x => x.PriceBaseCurrency).HasPrecision(19, 6);
             modelBuilder.Entity<CustomerPriceListHistory>().Property(x => x.ExchangeRateUsed).HasPrecision(19, 6);
+
+            modelBuilder.Entity<DetailBomHw>().Property(x => x.Quantity).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomHw>().Property(x => x.Waste).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomHwHistory>().Property(x => x.Quantity).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomHwHistory>().Property(x => x.Waste).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomMt>().Property(x => x.Quantity).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomMt>().Property(x => x.Waste).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomMtHistory>().Property(x => x.Quantity).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomMtHistory>().Property(x => x.Waste).HasPrecision(19, 6);
 
             base.OnModelCreating(modelBuilder);
         }

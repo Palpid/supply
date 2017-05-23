@@ -518,12 +518,22 @@
     <Compile Include="Migrations\201705171202405_layout_04.Designer.cs">
       <DependentUpon>201705171202405_layout_04.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705221401295_bom_20170522_01.cs" />
+    <Compile Include="Migrations\201705221401295_bom_20170522_01.Designer.cs">
+      <DependentUpon>201705221401295_bom_20170522_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705221414455_bom_20170522_02.cs" />
+    <Compile Include="Migrations\201705221414455_bom_20170522_02.Designer.cs">
+      <DependentUpon>201705221414455_bom_20170522_02.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\CustomerPriceList.cs" />
     <Compile Include="Models\CustomerPriceListHistory.cs" />
     <Compile Include="Models\DetailBomHw.cs" />
+    <Compile Include="Models\DetailBomHwHistory.cs" />
     <Compile Include="Models\DetailBomMt.cs" />
+    <Compile Include="Models\DetailBomMtHistory.cs" />
     <Compile Include="Models\DocType.cs" />
     <Compile Include="Models\EchangeRate.cs" />
     <Compile Include="Models\EtnColor.cs" />
@@ -584,6 +594,7 @@
     <Compile Include="Services\Implementations\EFFunctionalityRole.cs" />
     <Compile Include="Services\Implementations\EFHwType.cs" />
     <Compile Include="Services\Implementations\EFIncoterm.cs" />
+    <Compile Include="Services\Implementations\EFItemBom.cs" />
     <Compile Include="Services\Implementations\EFItemDoc.cs" />
     <Compile Include="Services\Implementations\EFItemEy.cs" />
     <Compile Include="Services\Implementations\EFItemBcn.cs" />
@@ -613,6 +624,7 @@
     <Compile Include="Services\Interfaces\IFunctionalityRole.cs" />
     <Compile Include="Services\Interfaces\IHwType.cs" />
     <Compile Include="Services\Interfaces\IIncoterm.cs" />
+    <Compile Include="Services\Interfaces\IItemBom.cs" />
     <Compile Include="Services\Interfaces\IItemDoc.cs" />
     <Compile Include="Services\Interfaces\IItemEy.cs" />
     <Compile Include="Services\Interfaces\IItemBcn.cs" />
@@ -890,6 +902,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705171202405_layout_04.resx">
       <DependentUpon>201705171202405_layout_04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705221401295_bom_20170522_01.resx">
+      <DependentUpon>201705221401295_bom_20170522_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705221414455_bom_20170522_02.resx">
+      <DependentUpon>201705221414455_bom_20170522_02.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

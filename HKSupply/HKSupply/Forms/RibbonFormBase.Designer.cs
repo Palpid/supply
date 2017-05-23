@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
+            DevExpress.Utils.Animation.PushTransition pushTransition2 = new DevExpress.Utils.Animation.PushTransition();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
             this.bbiNew = new DevExpress.XtraBars.BarButtonItem();
@@ -40,14 +40,14 @@
             this.bbiExportCsv = new DevExpress.XtraBars.BarButtonItem();
             this.bbiSaveLayout = new DevExpress.XtraBars.BarButtonItem();
             this.bsiRestoreLayout = new DevExpress.XtraBars.BarSubItem();
+            this.bwmiLayouts = new DevExpress.XtraBars.BarWorkspaceMenuItem();
+            this.workspaceManager1 = new DevExpress.Utils.WorkspaceManager();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupLayout = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.bwmiLayouts = new DevExpress.XtraBars.BarWorkspaceMenuItem();
-            this.workspaceManager1 = new DevExpress.Utils.WorkspaceManager();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,6 +148,19 @@
             this.bsiRestoreLayout.ImageOptions.ImageUri.Uri = "SaveAndNew";
             this.bsiRestoreLayout.Name = "bsiRestoreLayout";
             // 
+            // bwmiLayouts
+            // 
+            this.bwmiLayouts.Caption = "Workspace Manager";
+            this.bwmiLayouts.Id = 25;
+            this.bwmiLayouts.ImageOptions.ImageUri.Uri = "ExportFile";
+            this.bwmiLayouts.Name = "bwmiLayouts";
+            this.bwmiLayouts.WorkspaceManager = this.workspaceManager1;
+            // 
+            // workspaceManager1
+            // 
+            this.workspaceManager1.TargetControl = this;
+            this.workspaceManager1.TransitionType = pushTransition2;
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -199,19 +212,6 @@
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
             this.ribbonStatusBar.Size = new System.Drawing.Size(790, 31);
-            // 
-            // bwmiLayouts
-            // 
-            this.bwmiLayouts.Caption = "Workspace Manager";
-            this.bwmiLayouts.Id = 25;
-            this.bwmiLayouts.ImageOptions.ImageUri.Uri = "ExportFile";
-            this.bwmiLayouts.Name = "bwmiLayouts";
-            this.bwmiLayouts.WorkspaceManager = this.workspaceManager1;
-            // 
-            // workspaceManager1
-            // 
-            this.workspaceManager1.TargetControl = this;
-            this.workspaceManager1.TransitionType = pushTransition1;
             // 
             // RibbonFormBase
             // 

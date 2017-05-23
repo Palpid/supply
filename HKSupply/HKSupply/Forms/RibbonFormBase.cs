@@ -89,7 +89,7 @@ namespace HKSupply.Forms
             Read = actions.Read;
             New = actions.New;
             Modify = actions.Modify;
-
+            //"Breadcrumb"
             SetRibbonText($"{actions.Functionality.Category} > {actions.Functionality.FunctionalityName}");
         }
 
@@ -329,7 +329,7 @@ namespace HKSupply.Forms
 
         #region Task Buttons
 
-        public virtual void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        public virtual void bbiSave_ItemClick(object sender, ItemClickEventArgs e)
         {
             try
             {
@@ -342,7 +342,7 @@ namespace HKSupply.Forms
             }
         }
 
-        public virtual void bbiCancel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        public virtual void bbiCancel_ItemClick(object sender, ItemClickEventArgs e)
         {
             try
             {
@@ -354,7 +354,7 @@ namespace HKSupply.Forms
             }
         }
 
-        public virtual void bbiNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        public virtual void bbiNew_ItemClick(object sender, ItemClickEventArgs e)
         {
             try
             {
@@ -366,7 +366,7 @@ namespace HKSupply.Forms
             }
         }
 
-        public virtual void bbiEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        public virtual void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
         {
             try
             {

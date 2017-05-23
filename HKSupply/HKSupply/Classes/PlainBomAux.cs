@@ -18,6 +18,7 @@ namespace HKSupply.Classes
         public string ItemGroup { get; set; }
         public decimal Quantity { get; set; }
         public decimal Waste { get; set; }
+        public string Unit { get; set; }
 
         public static implicit operator PlainBomAux(DetailBomMt detailBomMt)
         {
@@ -27,7 +28,8 @@ namespace HKSupply.Classes
                 ItemDescription = detailBomMt.Item.ItemDescription,
                 ItemGroup = Constants.ITEM_GROUP_MT,
                 Quantity = detailBomMt.Quantity,
-                Waste = detailBomMt.Waste
+                Waste = detailBomMt.Waste,
+                Unit = detailBomMt.Item.Unit,
             };
 
             return aux;
@@ -41,7 +43,8 @@ namespace HKSupply.Classes
                 ItemDescription = detailBomHw.Item.IdItemBcn,
                 ItemGroup = Constants.ITEM_GROUP_HW,
                 Quantity = detailBomHw.Quantity,
-                Waste = detailBomHw.Waste
+                Waste = detailBomHw.Waste,
+                Unit = detailBomHw.Item.Unit,
             };
 
             return aux;

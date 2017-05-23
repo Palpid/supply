@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HKSupply.Models
 {
+    [Table("DETAIL_BOM_MT")]
     public class DetailBomMt
     {
         [Column("ID_BOM", Order = 0), Key]
