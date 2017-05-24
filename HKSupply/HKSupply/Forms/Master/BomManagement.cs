@@ -15,6 +15,7 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using HKSupply.Helpers;
+using System.Data.Entity;
 
 namespace HKSupply.Forms.Master
 {
@@ -32,8 +33,8 @@ namespace HKSupply.Forms.Master
 
         float totalQuantityMt;
         float totalQuantityHw;
-        float totalWastageMt;
-        float totalWastageHw;
+        float totalWasteMt;
+        float totalWasteHw;
         #endregion
 
         #region Constructor
@@ -92,15 +93,7 @@ namespace HKSupply.Forms.Master
             try
             {
                 ActionsAfterCU();
-                //dockPanelItemsEy.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
-                //dockPanelItemsEy.ShowSliding();
 
-                //xgrdItemsEy.Enabled = true;
-
-                //gridViewItemsMt.DoubleClick -= GridViewItemsMt_DoubleClick;
-                //gridViewItemsHw.DoubleClick -= GridViewItemsHw_DoubleClick;
-
-                //SetGrdBomDetailsNonEdit();
             }
             catch(Exception ex)
             {
@@ -204,6 +197,67 @@ namespace HKSupply.Forms.Master
             try
             {
                 RestoreLayaout();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public override void bbiExportCsv_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (gridViewPlainBom.DataRowCount == 0)
+            {
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
+                return;
+            }
+
+            base.bbiExportCsv_ItemClick(sender, e);
+
+            try
+            {
+                if (string.IsNullOrEmpty(ExportCsvFile) == false)
+                {
+                    gridViewPlainBom.ExportToCsv(ExportCsvFile);
+
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportCsvFile);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public override void bbiExportExcel_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            
+            if (gridViewPlainBom.DataRowCount == 0)
+            {
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
+                return;
+            }
+
+            base.bbiExportExcel_ItemClick(sender, e);
+
+            try
+            {
+                if (string.IsNullOrEmpty(ExportExcelFile) == false)
+                {
+
+                    gridViewPlainBom.OptionsPrint.PrintFooter = false;
+                    gridViewPlainBom.ExportToXlsx(ExportExcelFile);
+
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportExcelFile);
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -455,8 +509,8 @@ namespace HKSupply.Forms.Master
                 {
                     totalQuantityMt = 0;
                     totalQuantityHw = 0;
-                    totalWastageMt = 0;
-                    totalWastageHw = 0;
+                    totalWasteMt = 0;
+                    totalWasteHw = 0;
                 }
 
                 // Calculation 
@@ -474,13 +528,13 @@ namespace HKSupply.Forms.Master
                             if (itemGroup == Constants.ITEM_GROUP_HW)
                                 totalQuantityHw += Convert.ToSingle(e.FieldValue); ;
                             break;
-                        case 3: //The total summary MT Wastage. 
+                        case 3: //The total summary MT Waste. 
                             if (itemGroup == Constants.ITEM_GROUP_MT)
-                                totalWastageMt += Convert.ToSingle(e.FieldValue); ;
+                                totalWasteMt += Convert.ToSingle(e.FieldValue); ;
                             break;
-                        case 4: //The total summary HW Wastage. 
+                        case 4: //The total summary HW Waste. 
                             if (itemGroup == Constants.ITEM_GROUP_HW)
-                                totalWastageHw += Convert.ToSingle(e.FieldValue); ;
+                                totalWasteHw += Convert.ToSingle(e.FieldValue); ;
                             break;
                     }
                 }
@@ -497,10 +551,10 @@ namespace HKSupply.Forms.Master
                             e.TotalValue = totalQuantityHw;
                             break;
                         case 3:
-                            e.TotalValue = totalWastageMt;
+                            e.TotalValue = totalWasteMt;
                             break;
                         case 4:
-                            e.TotalValue = totalWastageHw;
+                            e.TotalValue = totalWasteHw;
                             break;
                     }
                 }
@@ -704,8 +758,8 @@ namespace HKSupply.Forms.Master
                 GridColumn colIdItemGroup = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemGroup"), Visible = true, FieldName = nameof(Classes.PlainBomAux.ItemGroup), Width = 90 };
                 GridColumn colIdItemBcn = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemBCN"), Visible = true, FieldName = nameof(Classes.PlainBomAux.IdItemBcn), Width = 200 };
                 GridColumn colDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemBCN"), Visible = true, FieldName = nameof(Classes.PlainBomAux.ItemDescription), Width = 450 };
-                GridColumn colQuantity = new GridColumn() { Caption = "Quantity", Visible = true, FieldName = nameof(Classes.PlainBomAux.Quantity), Width = 60 };
-                GridColumn colWaste = new GridColumn() { Caption = "Wastage", Visible = true, FieldName = nameof(Classes.PlainBomAux.Waste), Width = 60 };
+                GridColumn colQuantity = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Quantity"), Visible = true, FieldName = nameof(Classes.PlainBomAux.Quantity), Width = 60 };
+                GridColumn colWaste = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Waste"), Visible = true, FieldName = nameof(Classes.PlainBomAux.Waste), Width = 60 };
                 GridColumn colUnit = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Unit"), Visible = true, FieldName = nameof(Classes.PlainBomAux.Waste), Width = 70 };
 
                 //Format types
@@ -734,7 +788,7 @@ namespace HKSupply.Forms.Master
                     Tag = 2
                 };
 
-                GridColumnSummaryItem sumMtWastage = new GridColumnSummaryItem()
+                GridColumnSummaryItem sumMtWaste = new GridColumnSummaryItem()
                 {
                     SummaryType = SummaryItemType.Custom,
                     FieldName = nameof(Classes.PlainBomAux.Waste),
@@ -742,7 +796,7 @@ namespace HKSupply.Forms.Master
                     Tag = 3
                 };
 
-                GridColumnSummaryItem sumHwWastage = new GridColumnSummaryItem()
+                GridColumnSummaryItem sumHwWaste = new GridColumnSummaryItem()
                 {
                     SummaryType = SummaryItemType.Custom,
                     FieldName = nameof(Classes.PlainBomAux.Waste),
@@ -753,8 +807,8 @@ namespace HKSupply.Forms.Master
                 //Add  summaries to columns
                 colQuantity.Summary.Add(sumMtQuantity);
                 colQuantity.Summary.Add(sumHwQuantity);
-                colWaste.Summary.Add(sumMtWastage);
-                colWaste.Summary.Add(sumHwWastage);
+                colWaste.Summary.Add(sumMtWaste);
+                colWaste.Summary.Add(sumHwWaste);
 
                 //Add columns to grid root view
                 gridViewPlainBom.Columns.Add(colIdItemGroup);
@@ -876,7 +930,11 @@ namespace HKSupply.Forms.Master
 
                 itemBom = GlobalSetting.ItemBomService.GetItemBom(item.IdItemBcn);
                 _itemBomOriginal = GlobalSetting.ItemBomService.GetItemBom(item.IdItemBcn);
-                //_itemBomOriginal = itemBom.Clone(); //TODO: La extensión para clonar no me funciona con esta clase. Investigar! (no puede serializarlo?)
+
+                //TODO: Las extensiones para clonar no me funcionan con esta clase. Al no ser el tipo base sino el proxy que genera EF hace cosas raras
+                //_itemBomOriginal = itemBom.Clone(); 
+                //_itemBomOriginal = itemBom.DeepCopyByExpressionTree();
+
 
                 if (itemBom == null)
                 {
@@ -1182,7 +1240,7 @@ namespace HKSupply.Forms.Master
                         root.Nodes[0].Nodes.Add(rawMaterial.IdItemBcn, $"{rawMaterial.IdItemBcn} : {rawMaterial.Item.ItemDescription}");
                         root.Nodes[0].Nodes[contRawMaterialsNode].Tag = "RawMaterials";
                         root.Nodes[0].Nodes[contRawMaterialsNode].Nodes.Add(
-                            new TreeNode($"Quantity : {rawMaterial.Quantity.ToString()}   Wastage : {rawMaterial.Waste.ToString()}")
+                            new TreeNode($"Quantity : {rawMaterial.Quantity.ToString()}   Waste : {rawMaterial.Waste.ToString()}")
                             );
                         contRawMaterialsNode++;
                     }
@@ -1196,7 +1254,7 @@ namespace HKSupply.Forms.Master
                         root.Nodes[1].Nodes.Add(hardware.IdItemBcn, $"{hardware.IdItemBcn} : {hardware.Item.ItemDescription}");
                         root.Nodes[1].Nodes[contHardwareNode].Tag = "Hardware";
                         root.Nodes[1].Nodes[contHardwareNode].Nodes.Add(
-                            new TreeNode($"Quantity : {hardware.Quantity.ToString()}   Wastage : {hardware.Waste.ToString()}")
+                            new TreeNode($"Quantity : {hardware.Quantity.ToString()}   Waste : {hardware.Waste.ToString()}")
                             );
                         contHardwareNode++;
                     }

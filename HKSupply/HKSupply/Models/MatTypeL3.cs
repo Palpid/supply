@@ -12,16 +12,16 @@ namespace HKSupply.Models
     [Table("MAT_TYPE_L3")]
     public class MatTypeL3
     {
-        [Column("ID_MAT_TYPE_L3", TypeName = "NVARCHAR"), Key, StringLength(100)]
+        [Column("ID_MAT_TYPE_L3", TypeName = "NVARCHAR", Order = 0), Key, StringLength(100)]
         public string IdMatTypeL3 { get; set; }
-        [Column("ID_MAT_TYPE_L2", TypeName = "NVARCHAR"), StringLength(100), Required]
+        [Column("ID_MAT_TYPE_L2", TypeName = "NVARCHAR", Order = 1), Key, StringLength(100)]
         public string IdMatTypeL2 { get; set; }
-        [Column("ID_MAT_TYPE_L1", TypeName = "NVARCHAR"), StringLength(100), Required]
+        [Column("ID_MAT_TYPE_L1", TypeName = "NVARCHAR", Order = 2), Key, StringLength(100)]
         public string IdMatTypeL1 { get; set; }
         [Column("DESCRIPTION", TypeName = "NVARCHAR"), StringLength(500), Required]
         public string Description { get; set; }
 
-        [ForeignKey("IdMatTypeL2")]
+        [ForeignKey("IdMatTypeL2, IdMatTypeL1")]
         public MatTypeL2 MatTypeL2 { get; set; }
         [ForeignKey("IdMatTypeL1")]
         public MatTypeL1 MatTypeL1 { get; set; }

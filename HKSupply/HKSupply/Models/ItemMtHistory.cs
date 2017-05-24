@@ -34,9 +34,9 @@ namespace HKSupply.Models
 
         [ForeignKey("IdMatTypeL1")]
         public MatTypeL1 MatTypeL1 { get; set; }
-        [ForeignKey("IdMatTypeL2")]
+        [ForeignKey("IdMatTypeL2, IdMatTypeL1")]
         public MatTypeL2 MatTypeL2 { get; set; }
-        [ForeignKey("IdMatTypeL3")]
+        [ForeignKey("IdMatTypeL3, IdMatTypeL2, IdMatTypeL1")]
         public MatTypeL3 MatTypeL3 { get; set; }
 
         [Column("ID_DEFAULT_SUPPLIER", TypeName = "NVARCHAR"), StringLength(100)]

@@ -17,6 +17,7 @@ namespace HKSupply.General
         public const string ITEM_GROUP_EY = "EY";
         public const string ITEM_GROUP_HW = "HW";
         public const string ITEM_GROUP_MT = "MT";
+        public const string ITEM_GROUP_HF = "HF";
         public const string ITEM_GROUP_PROTO = "PROTO";
 
         //** DOCS FOLDERS **//
@@ -39,5 +40,9 @@ namespace HKSupply.General
         public const string MT_USER_ATTR_01 = "MTATTR01";
         public const string MT_USER_ATTR_02 = "MTATTR02";
         public const string MT_USER_ATTR_03 = "MTATTR03";
+
+        public const string HF_USER_ATTR_01 = "HFATTR01";
+        public const string HF_USER_ATTR_02 = "HFATTR02";
+        public const string HF_USER_ATTR_03 = "HFATTR03";
     }
 }

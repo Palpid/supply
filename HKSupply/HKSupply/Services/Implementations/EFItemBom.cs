@@ -22,7 +22,65 @@ namespace HKSupply.Services.Implementations
 
         public ItemBom GetItemBom(int IdBom)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (IdBom <= 0)
+                    throw new ArgumentNullException(nameof(IdBom));
+
+                using (var db = new HKSupplyContext())
+                {
+                    var bom = db.ItemsBom
+                        .Where(a => a.IdBom.Equals(IdBom))
+                        .Include(h => h.Hardwares)
+                        .Include(hi => hi.Hardwares.Select(i => i.Item))
+                        .Include(m => m.Materials)
+                        .Include(mi => mi.Materials.Select(i => i.Item))
+                        .FirstOrDefault();
+
+                    if (bom != null)
+                    {
+                        //En función del tipo cargamos el item, ya que no tiene un tipo definido para tener esta flexibilidad
+                        switch (bom.IdItemGroup)
+                        {
+                            case Constants.ITEM_GROUP_EY:
+                                bom.Item = GlobalSetting.ItemEyService.GetItem(bom.IdItemBcn);
+                                break;
+                        }
+                    }
+
+                    return bom;
+                }
+            }
+            catch (ArgumentNullException anex)
+            {
+                _log.Error(anex.Message, anex);
+                throw anex;
+            }
+            catch (SqlException sqlex)
+            {
+                for (int i = 0; i < sqlex.Errors.Count; i++)
+                {
+                    _log.Error("Index #" + i + "\n" +
+                        "Message: " + sqlex.Errors[i].Message + "\n" +
+                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                        "Source: " + sqlex.Errors[i].Source + "\n" +
+                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                    switch (sqlex.Errors[i].Number)
+                    {
+                        case -1: //connection broken
+                        case -2: //timeout
+                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                    }
+                }
+                throw sqlex;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
+            }
         }
 
         public ItemBom GetItemBom(string IdItemBcn)
@@ -106,13 +164,10 @@ namespace HKSupply.Services.Implementations
                             //Las seteo a null para que las ignore, no sé si es muy correcto, pero es la única manera que he encontrado ahora.
                             bom.Item = null;
                             foreach (var h in bom.Hardwares)
-                            {
                                 h.Item = null;
-                            }
+
                             foreach (var m in bom.Materials)
-                            {
                                 m.Item = null;
-                            }
 
 
                             if (bom.IdBom == 0)  //insert new
@@ -122,12 +177,12 @@ namespace HKSupply.Services.Implementations
                                 bom.Timestamp = DateTime.Now; 
                                 bom.CreateDate = DateTime.Now;
 
-                                //EF insertará la cabecera y los details
+                                //EF insertará la cabecera y los details (Materials, hadrwares...)
                                 db.ItemsBom.Add(bom);
                             }
                             else  //update
                             {
-                                ItemBom bomToUpdate = db.ItemsBom.Where(a => a.IdBom.Equals(bom.IdBom)).FirstOrDefault();
+                                ItemBom bomToUpdate = GetItemBom(bom.IdBom);
                                 if (bomToUpdate == null)
                                     throw new Exception("BOM error");
 
@@ -151,7 +206,7 @@ namespace HKSupply.Services.Implementations
                                 foreach (var m in detailMt)
                                     db.DetailsBomMt.Remove(m);
 
-                                //y los volvemos a insertar
+                                //e insertamos los nuevos
                                 foreach (var h in bom.Hardwares)
                                     db.DetailsBomHw.Add(h);
 
@@ -163,19 +218,21 @@ namespace HKSupply.Services.Implementations
                             //History
                             foreach (var h in bom.Hardwares)
                             {
-                                DetailBomHwHistory histHw = h;
+                                DetailBomHwHistory histHw = h.Clone();
                                 histHw.IdVer = bom.IdVer;
                                 histHw.IdSubVer = bom.IdSubVer;
                                 histHw.Timestamp = bom.Timestamp;
+
                                 db.DetailsBomHwHistory.Add(histHw);
                             }
 
                             foreach (var m in bom.Materials)
                             {
-                                DetailBomMtHistory histMt = m;
+                                DetailBomMtHistory histMt = m.Clone();
                                 histMt.IdVer = bom.IdVer;
                                 histMt.IdSubVer = bom.IdSubVer;
                                 histMt.Timestamp = bom.Timestamp;
+
                                 db.DetailsBomMtHistory.Add(histMt);
                             }
 

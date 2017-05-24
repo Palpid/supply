@@ -41,6 +41,7 @@ namespace HKSupply.Helpers
         /// <typeparam name="T"></typeparam>
         /// <param name="objSource"></param>
         /// <returns></returns>
+        /// <remarks>En pruebas</remarks>
         public static T CloneObject<T>(this T objSource)
         {
             //Get the type of source object and create a new instance of that type

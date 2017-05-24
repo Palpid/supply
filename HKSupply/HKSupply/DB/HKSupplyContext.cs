@@ -58,6 +58,9 @@ namespace HKSupply.DB
         public DbSet<ItemHwHistory> ItemsHwHistory { get; set; }
         public DbSet<ItemMt> ItemsMt { get; set; }
         public DbSet<ItemMtHistory> ItemsMtHistory { get; set; }
+        public DbSet<ItemHf> ItemsHf { get; set; }
+        public DbSet<ItemHfHistory> ItemsHfHistory { get; set; }
+
         public DbSet<DocType> DocsType { get; set; }
 
         public DbSet<ItemDoc> ItemsDoc { get; set; }
@@ -126,6 +129,9 @@ namespace HKSupply.DB
             modelBuilder.Entity<DetailBomMt>().Property(x => x.Waste).HasPrecision(19, 6);
             modelBuilder.Entity<DetailBomMtHistory>().Property(x => x.Quantity).HasPrecision(19, 6);
             modelBuilder.Entity<DetailBomMtHistory>().Property(x => x.Waste).HasPrecision(19, 6);
+
+            modelBuilder.Entity<ItemHf>().Property(x => x.Caliber).HasPrecision(19, 6);
+            modelBuilder.Entity<ItemHfHistory>().Property(x => x.Caliber).HasPrecision(19, 6);
 
             base.OnModelCreating(modelBuilder);
         }

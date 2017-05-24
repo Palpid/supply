@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace HKSupply.Services.Interfaces
 {
     /// <summary>
-    /// Interface para el sevice de Item
+    /// Interface para el sevice de ItemEy (eyewear)
     /// </summary>
     public interface IItemEy
     {

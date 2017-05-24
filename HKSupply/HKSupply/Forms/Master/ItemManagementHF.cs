@@ -29,73 +29,23 @@ using System.IO;
 
 namespace HKSupply.Forms.Master
 {
-    /// <summary>
-    /// Pantalla de getsión para los Items EY
-    /// </summary>
-    /// <remarks>Se empezó en VS2012, después de pasar a VS2017 y poder usar C# 6.0 se han cambiado algunas cosas usando el nameof, pero no todas</remarks>
-    public partial class ItemManagementEY : RibbonFormBase
+    public partial class ItemManagementHF : RibbonFormBase
     {
         #region Constants
         private const string PHOTO_COLUMN = "Photo";
         private const string VIEW_COLUMN = "View";
         #endregion
 
-        #region Enums
-        /*private enum eItemColumns
-        {
-            IdVer,
-            IdSubVer,
-            Timestamp,
-            IdDefaultSupplier,
-            IdPrototype,
-            Prototype,
-            IdModel,
-            Model,
-            Caliber,
-            IdColor1,
-            IdColor2,
-            IdItemBcn,
-            IdItemHK,
-            ItemDescription,
-            IdMaterialL1,
-            IdMaterialL2,
-            IdMaterialL3,
-            Comments,
-            Segment,
-            Category,
-            Age,
-            LaunchDate,
-            RemovalDate,
-            IdStatusCial,
-            IdStatusProd,
-            IdUserAttri1,
-            IdUserAttri2,
-            IdUserAttri3,
-            PhotoUrl,
-            Photo,
-        }
-        private enum eItemDocColumns
-        {
-            IdVerItem,
-            IdSubVerItem,
-            IdDocType,
-            DocType,
-            FileName,
-            FilePath,
-            CreateDate,
-            View,
-        }*/
-        #endregion
-
         #region Private Members
 
-        ItemEy _itemUpdate;
-        ItemEy _itemOriginal;
-        ItemEyHistory _itemHistory;
 
-        List<ItemEy> _itemsList;
-        List<ItemEyHistory> _itemsHistoryList;
-        List<ItemEy> _modifiedItemsEy = new List<ItemEy>();
+        ItemHf _itemUpdate;
+        ItemHf _itemOriginal;
+        ItemHfHistory _itemHistory;
+
+        List<ItemHf> _itemsList;
+        List<ItemHfHistory> _itemsHistoryList;
+        List<ItemHf> _modifiedItemsEy = new List<ItemHf>();
         List<Supplier> _supplierList;
         List<StatusHK> _statusProdList;
         List<FamilyHK> _familiesHkList;
@@ -105,15 +55,16 @@ namespace HKSupply.Forms.Master
         List<ItemDoc> _itemLastDocsList;
 
         string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "lueIdFamilyHK", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };
-        string[] _editingCols = { nameof(ItemEy.IdDefaultSupplier), nameof(ItemEy.IdUserAttri1), nameof(ItemEy.IdUserAttri2), nameof(ItemEy.IdUserAttri3), nameof(ItemEy.IdStatusProd), nameof(ItemEy.IdFamilyHK) };
+        string[] _editingCols = { nameof(ItemHf.IdDefaultSupplier), nameof(ItemHf.IdUserAttri1), nameof(ItemHf.IdUserAttri2), nameof(ItemHf.IdUserAttri3), nameof(ItemHf.IdStatusProd), nameof(ItemHf.IdFamilyHK) };
 
         Dictionary<String, Bitmap> photosCache = new Dictionary<string, Bitmap>();
 
         int _currentHistoryNumList;
+
         #endregion
 
         #region Constructor
-        public ItemManagementEY()
+        public ItemManagementHF()
         {
             InitializeComponent();
 
@@ -138,10 +89,12 @@ namespace HKSupply.Forms.Master
             {
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
         #endregion
 
         #region Ribbon
+
         private void ConfigureRibbonActions()
         {
             try
@@ -164,7 +117,7 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        public override void bbiCancel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        public override void bbiCancel_ItemClick(object sender, ItemClickEventArgs e)
         {
             base.bbiCancel_ItemClick(sender, e);
 
@@ -190,7 +143,7 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        public override void bbiEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        public override void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
         {
             base.bbiEdit_ItemClick(sender, e);
 
@@ -201,11 +154,6 @@ namespace HKSupply.Forms.Master
                     MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
                     RestoreInitState();
                 }
-                //if (_itemOriginal == null)
-                //{
-                //    MessageBox.Show("No item selected");
-                //    RestoreInitState();
-                //}
                 else
                 {
                     ConfigureRibbonActionsEditing();
@@ -218,12 +166,7 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        public override void bbiNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            base.bbiNew_ItemClick(sender, e);
-        }
-
-        public override void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        public override void bbiSave_ItemClick(object sender, ItemClickEventArgs e)
         {
             base.bbiSave_ItemClick(sender, e);
 
@@ -290,36 +233,6 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        public override void bbiExportExcel_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            if (rootGridViewItems.DataRowCount == 0)
-            {
-                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
-                return;
-            }
-            
-            //Abre el dialog de save as
-            base.bbiExportExcel_ItemClick(sender, e);
-
-            try
-            {
-                if (string.IsNullOrEmpty(ExportExcelFile) == false )
-                {
-                    rootGridViewItems.ExportToXlsx(ExportExcelFile);
-
-                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
-                    if (result == DialogResult.Yes)
-                    {
-                        System.Diagnostics.Process.Start(ExportExcelFile);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         public override void bbiExportCsv_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (rootGridViewItems.DataRowCount == 0)
@@ -328,7 +241,6 @@ namespace HKSupply.Forms.Master
                 return;
             }
 
-            //Abre el dialog de save as
             base.bbiExportCsv_ItemClick(sender, e);
 
             try
@@ -350,11 +262,40 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        public override void bbiExportExcel_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (rootGridViewItems.DataRowCount == 0)
+            {
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
+                return;
+            }
+
+            base.bbiExportExcel_ItemClick(sender, e);
+
+            try
+            {
+                if (string.IsNullOrEmpty(ExportExcelFile) == false)
+                {
+                    rootGridViewItems.ExportToXlsx(ExportExcelFile);
+
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportExcelFile);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         #endregion
 
         #region Form Events
 
-        private void ItemManagement_Load(object sender, EventArgs e)
+        private void ItemManagementHF_Load(object sender, EventArgs e)
         {
             try
             {
@@ -373,7 +314,7 @@ namespace HKSupply.Forms.Master
             try
             {
                 GridView view = sender as GridView;
-                ItemEy  item = view.GetRow(view.FocusedRowHandle) as ItemEy;
+                ItemHf item = view.GetRow(view.FocusedRowHandle) as ItemHf;
                 if (item != null)
                 {
                     LoadItemForm(item);
@@ -386,7 +327,7 @@ namespace HKSupply.Forms.Master
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
         private void RootGridViewItems_CellValueChanged(object sender, CellValueChangedEventArgs e)
         {
             try
@@ -394,7 +335,7 @@ namespace HKSupply.Forms.Master
                 if (CurrentState == ActionsStates.Edit)
                 {
                     GridView view = sender as GridView;
-                    ItemEy item = view.GetRow(view.FocusedRowHandle) as ItemEy;
+                    ItemHf item = view.GetRow(view.FocusedRowHandle) as ItemHf;
                     if (item != null)
                     {
                         AddModifiedItemToList(item);
@@ -540,7 +481,7 @@ namespace HKSupply.Forms.Master
                     if (hi.Column.FieldName != PHOTO_COLUMN)
                         return;
 
-                    string url = (view.GetRowCellValue(hi.RowHandle, nameof(ItemEy.PhotoUrl)) ?? string.Empty).ToString();
+                    string url = (view.GetRowCellValue(hi.RowHandle, nameof(ItemHf.PhotoPath)) ?? string.Empty).ToString();
 
                     if (string.IsNullOrEmpty(url)) return;
 
@@ -592,11 +533,9 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                //DataRow dr = (e.Row as DataRowView).Row;
-                //string url = dr[eItemColumns.PhotoUrl.ToString()].ToString();
-                ItemEy itemTemp = e.Row as ItemEy;
-                //string url = (e.Row as ItemEy).PhotoUrl;
-                string url = itemTemp.PhotoUrl;
+                ItemHf itemTemp = e.Row as ItemHf;
+
+                string url = itemTemp.PhotoPath;
                 if (string.IsNullOrEmpty(url)) return;
 
                 if (photosCache.ContainsKey(url))
@@ -658,14 +597,15 @@ namespace HKSupply.Forms.Master
                 DXMenuItem item = sender as DXMenuItem;
                 RowInfo info = item.Tag as RowInfo;
 
-                ItemEy itemEy = info.View.GetRow(info.View.FocusedRowHandle) as ItemEy;
-                OpenPriceListForm(itemEy);
+                ItemHf itemHf = info.View.GetRow(info.View.FocusedRowHandle) as ItemHf;
+                OpenPriceListForm(itemHf);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
+
 
         #endregion
 
@@ -676,7 +616,7 @@ namespace HKSupply.Forms.Master
         /// </summary>
         private void ResetItemUpdate()
         {
-            _itemUpdate = new ItemEy();
+            _itemUpdate = new ItemHf();
             _itemDocsList = null;
             txtPathNewDoc.Text = string.Empty;
         }
@@ -695,43 +635,43 @@ namespace HKSupply.Forms.Master
                 rootGridViewItems.OptionsBehavior.Editable = false;
 
                 //Obtenemos los nombres de los atributos de usuario
-                string userAtt01 = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals(Constants.EY_USER_ATTR_01)).Select(a => a.Description).SingleOrDefault();
-                string userAtt02 = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals(Constants.EY_USER_ATTR_02)).Select(a => a.Description).SingleOrDefault();
-                string userAtt03 = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals(Constants.EY_USER_ATTR_03)).Select(a => a.Description).SingleOrDefault();
+                string userAtt01 = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals(Constants.HF_USER_ATTR_01)).Select(a => a.Description).SingleOrDefault();
+                string userAtt02 = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals(Constants.HF_USER_ATTR_02)).Select(a => a.Description).SingleOrDefault();
+                string userAtt03 = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals(Constants.HF_USER_ATTR_03)).Select(a => a.Description).SingleOrDefault();
 
                 //Columns definition
-                GridColumn colIdVer = new GridColumn() { Caption = "Version Id", Visible = false, FieldName = nameof(ItemEy.IdVer), Width = 70 }; 
-                GridColumn colIdSubVer = new GridColumn() { Caption = "Subversion Id", Visible = false, FieldName = nameof(ItemEy.IdSubVer), Width = 85 };
-                GridColumn colTimestamp = new GridColumn() { Caption = "Timestamp", Visible = false, FieldName = nameof(ItemEy.Timestamp), Width = 130 };
-                GridColumn colIdDefaultSupplier = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("DefaultSupplier"), Visible = true, FieldName = nameof(ItemEy.IdDefaultSupplier), Width = 110 };
-                GridColumn colIdPrototype = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("IdPrototype"), Visible = true, FieldName = nameof(ItemEy.IdPrototype), Width = 150 };
-                GridColumn colPrototypeName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("PrototypeName"), Visible = true, FieldName = nameof(ItemEy.Prototype) + "." + nameof(Prototype.PrototypeName), Width = 150 };
-                GridColumn colPrototypeDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("PrototypeDescription"), Visible = true, FieldName = nameof(ItemEy.Prototype) + "." + nameof(Prototype.PrototypeDescription), Width = 150 };
-                GridColumn colPrototypeStatus = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("PrototypeStatus"), Visible = true, FieldName = nameof(ItemEy.Prototype) + "." + nameof(Prototype.PrototypeStatus), Width = 100 };
-                GridColumn colIdModel = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("IdModel"), Visible = false, FieldName = nameof(ItemEy.IdModel), Width = 0 };
-                GridColumn colModel = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Model"), Visible = true, FieldName = nameof(ItemEy.Model) + "." + nameof(Model.Description), Width = 120 };
-                GridColumn colFamilyHK = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("FamilyHk"), Visible = true, FieldName = nameof(ItemEy.IdFamilyHK), Width = 90 };
-                GridColumn colCaliber = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Caliber"), Visible = true, FieldName = nameof(ItemEy.Caliber), Width = 70 };
-                GridColumn colIdColor1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Color1"), Visible = true, FieldName = nameof(ItemEy.IdColor1), Width = 60 };
-                GridColumn colIdColor2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Color2"), Visible = true, FieldName = nameof(ItemEy.IdColor2), Width = 60 };
-                GridColumn colIdItemBcn = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemBCN"), Visible = true, FieldName = nameof(ItemEy.IdItemBcn), Width = 160 };
-                GridColumn colIdItemHK = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemHK"), Visible = true, FieldName = nameof(ItemEy.IdItemHK), Width = 160 };
-                GridColumn colItemDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemDescription"), Visible = true, FieldName = nameof(ItemEy.ItemDescription), Width = 300 };
-                GridColumn colIdMaterialL1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MaterialL1"), Visible = true, FieldName = nameof(ItemEy.IdMaterialL1), Width = 100 };
-                GridColumn colIdMaterialL2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MaterialL2"), Visible = true, FieldName = nameof(ItemEy.IdMaterialL2), Width = 100 };
-                GridColumn colIdMaterialL3 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MaterialL3"), Visible = true, FieldName = nameof(ItemEy.IdMaterialL3), Width = 100 };
-                GridColumn colComments = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Comments"), Visible = true, FieldName = nameof(ItemEy.Comments), Width = 300 };
-                GridColumn colSegment = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Segment"), Visible = true, FieldName = nameof(ItemEy.Segment), Width = 70 };
-                GridColumn colCategory = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Category"), Visible = true, FieldName = nameof(ItemEy.Category), Width = 70 };
-                GridColumn colAge = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Age"), Visible = true, FieldName = nameof(ItemEy.Age), Width = 70 };
-                GridColumn colLaunchedDate = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("LaunchDate"), Visible = true, FieldName = nameof(ItemEy.LaunchDate), Width = 90 };
-                GridColumn colRemovalDate = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("RemovalDate"), Visible = true, FieldName = nameof(ItemEy.RemovalDate), Width = 90 };
-                GridColumn colIdStatusCial = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("StatusCial"), Visible = true, FieldName = nameof(ItemEy.IdStatusCial), Width = 90 };
-                GridColumn colIdStatusProd = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("StatusProd"), Visible = true, FieldName = nameof(ItemEy.IdStatusProd), Width = 90 };
-                GridColumn colIdUserAttri1 = new GridColumn() { Caption = userAtt01, Visible = true, FieldName = nameof(ItemEy.IdUserAttri1), Width = 90 };
-                GridColumn colIdUserAttri2 = new GridColumn() { Caption = userAtt02, Visible = true, FieldName = nameof(ItemEy.IdUserAttri2), Width = 90 };
-                GridColumn colIdUserAttri3 = new GridColumn() { Caption = userAtt03, Visible = true, FieldName = nameof(ItemEy.IdUserAttri3), Width = 90 };
-                GridColumn colPhotoUrl = new GridColumn() { Caption = "Photo URL", Visible = false, FieldName = nameof(ItemEy.PhotoUrl), Width = 90 };
+                GridColumn colIdVer = new GridColumn() { Caption = "Version Id", Visible = false, FieldName = nameof(ItemHf.IdVer), Width = 70 };
+                GridColumn colIdSubVer = new GridColumn() { Caption = "Subversion Id", Visible = false, FieldName = nameof(ItemHf.IdSubVer), Width = 85 };
+                GridColumn colTimestamp = new GridColumn() { Caption = "Timestamp", Visible = false, FieldName = nameof(ItemHf.Timestamp), Width = 130 };
+                GridColumn colIdDefaultSupplier = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("DefaultSupplier"), Visible = true, FieldName = nameof(ItemHf.IdDefaultSupplier), Width = 110 };
+                GridColumn colIdPrototype = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("IdPrototype"), Visible = true, FieldName = nameof(ItemHf.IdPrototype), Width = 150 };
+                GridColumn colPrototypeName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("PrototypeName"), Visible = true, FieldName = nameof(ItemHf.Prototype) + "." + nameof(Prototype.PrototypeName), Width = 150 };
+                GridColumn colPrototypeDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("PrototypeDescription"), Visible = true, FieldName = nameof(ItemHf.Prototype) + "." + nameof(Prototype.PrototypeDescription), Width = 150 };
+                GridColumn colPrototypeStatus = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("PrototypeStatus"), Visible = true, FieldName = nameof(ItemHf.Prototype) + "." + nameof(Prototype.PrototypeStatus), Width = 100 };
+                GridColumn colIdModel = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("IdModel"), Visible = false, FieldName = nameof(ItemHf.IdModel), Width = 0 };
+                GridColumn colModel = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Model"), Visible = true, FieldName = nameof(ItemHf.Model) + "." + nameof(Model.Description), Width = 120 };
+                GridColumn colFamilyHK = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("FamilyHk"), Visible = true, FieldName = nameof(ItemHf.IdFamilyHK), Width = 90 };
+                GridColumn colCaliber = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Caliber"), Visible = true, FieldName = nameof(ItemHf.Caliber), Width = 70 };
+                GridColumn colIdColor1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Color1"), Visible = true, FieldName = nameof(ItemHf.IdColor1), Width = 60 };
+                GridColumn colIdColor2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Color2"), Visible = true, FieldName = nameof(ItemHf.IdColor2), Width = 60 };
+                GridColumn colIdItemBcn = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemBCN"), Visible = true, FieldName = nameof(ItemHf.IdItemBcn), Width = 160 };
+                GridColumn colIdItemHK = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemHK"), Visible = true, FieldName = nameof(ItemHf.IdItemHK), Width = 160 };
+                GridColumn colItemDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemDescription"), Visible = true, FieldName = nameof(ItemHf.ItemDescription), Width = 300 };
+                GridColumn colIdMaterialL1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MaterialL1"), Visible = true, FieldName = nameof(ItemHf.IdMaterialL1), Width = 100 };
+                GridColumn colIdMaterialL2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MaterialL2"), Visible = true, FieldName = nameof(ItemHf.IdMaterialL2), Width = 100 };
+                GridColumn colIdMaterialL3 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MaterialL3"), Visible = true, FieldName = nameof(ItemHf.IdMaterialL3), Width = 100 };
+                GridColumn colComments = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Comments"), Visible = true, FieldName = nameof(ItemHf.Comments), Width = 300 };
+                GridColumn colSegment = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Segment"), Visible = true, FieldName = nameof(ItemHf.Segment), Width = 70 };
+                GridColumn colCategory = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Category"), Visible = true, FieldName = nameof(ItemHf.Category), Width = 70 };
+                GridColumn colAge = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Age"), Visible = true, FieldName = nameof(ItemHf.Age), Width = 70 };
+                GridColumn colLaunchedDate = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("LaunchDate"), Visible = true, FieldName = nameof(ItemHf.LaunchDate), Width = 90 };
+                GridColumn colRemovalDate = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("RemovalDate"), Visible = true, FieldName = nameof(ItemHf.RemovalDate), Width = 90 };
+                GridColumn colIdStatusCial = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("StatusCial"), Visible = true, FieldName = nameof(ItemHf.IdStatusCial), Width = 90 };
+                GridColumn colIdStatusProd = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("StatusProd"), Visible = true, FieldName = nameof(ItemHf.IdStatusProd), Width = 90 };
+                GridColumn colIdUserAttri1 = new GridColumn() { Caption = userAtt01, Visible = true, FieldName = nameof(ItemHf.IdUserAttri1), Width = 90 };
+                GridColumn colIdUserAttri2 = new GridColumn() { Caption = userAtt02, Visible = true, FieldName = nameof(ItemHf.IdUserAttri2), Width = 90 };
+                GridColumn colIdUserAttri3 = new GridColumn() { Caption = userAtt03, Visible = true, FieldName = nameof(ItemHf.IdUserAttri3), Width = 90 };
+                GridColumn colPhotoPath = new GridColumn() { Caption = "Photo URL", Visible = false, FieldName = nameof(ItemHf.PhotoPath), Width = 90 };
                 GridColumn colPhoto = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Photo"), Visible = true, FieldName = PHOTO_COLUMN, Width = 90 };
 
                 //Display Format
@@ -824,7 +764,7 @@ namespace HKSupply.Forms.Master
                 rootGridViewItems.Columns.Add(colIdUserAttri2);
                 rootGridViewItems.Columns.Add(colIdUserAttri3);
                 rootGridViewItems.Columns.Add(colComments);
-                rootGridViewItems.Columns.Add(colPhotoUrl);
+                rootGridViewItems.Columns.Add(colPhotoPath);
                 rootGridViewItems.Columns.Add(colPhoto);
 
                 //Events
@@ -856,7 +796,7 @@ namespace HKSupply.Forms.Master
                 GridColumn colIdVerItem = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemVer"), Visible = true, FieldName = nameof(ItemDoc.IdVerItem), Width = 60 };
                 GridColumn colIdSubVerItem = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemSubver"), Visible = true, FieldName = nameof(ItemDoc.IdSubVerItem), Width = 75 };
                 GridColumn colIdDocType = new GridColumn() { Caption = "IdDocType", Visible = false, FieldName = nameof(ItemDoc.IdDocType), Width = 10 };
-                GridColumn colDocType = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("DocType"), Visible = true, FieldName = $"{nameof(ItemDoc.DocType)}.{nameof(DocType.Description)}" , Width = 100 };
+                GridColumn colDocType = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("DocType"), Visible = true, FieldName = $"{nameof(ItemDoc.DocType)}.{nameof(DocType.Description)}", Width = 100 };
                 GridColumn colFileName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("FileName"), Visible = true, FieldName = nameof(ItemDoc.FileName), Width = 250 };
                 GridColumn colFilePath = new GridColumn() { Caption = "FilePath", Visible = false, FieldName = nameof(ItemDoc.FilePath), Width = 10 };
                 GridColumn colCreateDate = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("CreateDate"), Visible = true, FieldName = nameof(ItemDoc.CreateDate), Width = 150 };
@@ -919,7 +859,7 @@ namespace HKSupply.Forms.Master
                 GridColumn colIdVerItem = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemVer"), Visible = true, FieldName = nameof(ItemDoc.IdVerItem), Width = 60 };
                 GridColumn colIdSubVerItem = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemSubver"), Visible = true, FieldName = nameof(ItemDoc.IdSubVerItem), Width = 75 };
                 GridColumn colIdDocType = new GridColumn() { Caption = "IdDocType", Visible = false, FieldName = nameof(ItemDoc.IdDocType), Width = 10 };
-                GridColumn colDocType = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("DocType"), Visible = true, FieldName = $"{nameof(ItemDoc.DocType)}.{nameof(DocType.Description)}" , Width = 100 };
+                GridColumn colDocType = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("DocType"), Visible = true, FieldName = $"{nameof(ItemDoc.DocType)}.{nameof(DocType.Description)}", Width = 100 };
                 GridColumn colFileName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("FileName"), Visible = true, FieldName = nameof(ItemDoc.FileName), Width = 280 };
                 GridColumn colFilePath = new GridColumn() { Caption = "FilePath", Visible = false, FieldName = nameof(ItemDoc.FilePath), Width = 10 };
                 GridColumn colCreateDate = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("CreateDate"), Visible = true, FieldName = nameof(ItemDoc.CreateDate), Width = 120 };
@@ -965,7 +905,7 @@ namespace HKSupply.Forms.Master
                 throw ex;
             }
         }
-       
+
         private void SetUpTexEdit()
         {
             try
@@ -1035,45 +975,45 @@ namespace HKSupply.Forms.Master
 
                 //para evitar problemas al bindear nested properties
                 if (_itemUpdate.Model == null) _itemUpdate.Model = new Model();
-                if (_itemUpdate.Prototype == null) _itemUpdate.Prototype = new Prototype(); 
+                if (_itemUpdate.Prototype == null) _itemUpdate.Prototype = new Prototype();
 
                 //TextEdit
-                txtIdVersion.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdVer);
-                txtIdSubversion.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdSubVer);
-                txtTimestamp.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Timestamp);
-                txtIdPrototype.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdPrototype);
+                txtIdVersion.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.IdVer);
+                txtIdSubversion.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.IdSubVer);
+                txtTimestamp.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.Timestamp);
+                txtIdPrototype.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.IdPrototype);
                 txtPrototypeName.DataBindings.Add("Text", _itemUpdate, "Prototype.PrototypeName");//La custom extension que hice no funciona con propiedades que son clases, bindeo a la antigua
                 txtPrototypeDescription.DataBindings.Add("Text", _itemUpdate, "Prototype.PrototypeDescription");//La custom extension que hice no funciona con propiedades que son clases, bindeo a la antigua
                 txtPrototypeStatus.DataBindings.Add("Text", _itemUpdate, "Prototype.PrototypeStatus");//La custom extension que hice no funciona con propiedades que son clases, bindeo a la antigua
                 txtModel.DataBindings.Add("Text", _itemUpdate, "Model.Description");//La custom extension que hice no funciona con propiedades que son clases, bindeo a la antigua
-                txtCaliber.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Caliber);
-                txtIdColor1.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdColor1);
-                txtIdColor2.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdColor2);
-                txtIdItemBcn.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdItemBcn);
-                txtIdItemHK.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdItemHK);
-                txtItemDescription.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.ItemDescription);
-                txtIdMaterialL1.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdMaterialL1);
-                txtIdMaterialL2.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdMaterialL2);
-                txtIdMaterialL3.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdMaterialL3);
-                txtComments.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Comments);
-                txtSegment.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Segment);
-                txtCategory.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Category);
-                txtAge.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Age);
-                txtLaunchDate.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.LaunchDate);
-                txtRemovalDate.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.RemovalDate);
-                txtIdStatusCial.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdStatusCial);
-                txtUnit.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Unit);
-                txtDocsLink.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.DocsLink);
-                txtCreateDate.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.CreateDate);
+                txtCaliber.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.Caliber);
+                txtIdColor1.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.IdColor1);
+                txtIdColor2.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.IdColor2);
+                txtIdItemBcn.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.IdItemBcn);
+                txtIdItemHK.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.IdItemHK);
+                txtItemDescription.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.ItemDescription);
+                txtIdMaterialL1.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.IdMaterialL1);
+                txtIdMaterialL2.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.IdMaterialL2);
+                txtIdMaterialL3.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.IdMaterialL3);
+                txtComments.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.Comments);
+                txtSegment.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.Segment);
+                txtCategory.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.Category);
+                txtAge.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.Age);
+                txtLaunchDate.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.LaunchDate);
+                txtRemovalDate.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.RemovalDate);
+                txtIdStatusCial.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.IdStatusCial);
+                txtUnit.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.Unit);
+                txtDocsLink.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.DocsLink);
+                txtCreateDate.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.CreateDate);
 
-                txtIdUserAttri1.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri1);
-                txtIdUserAttri2.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri2);
-                txtIdUserAttri3.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri3);
+                txtIdUserAttri1.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri1);
+                txtIdUserAttri2.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri2);
+                txtIdUserAttri3.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.IdUserAttri3);
 
                 //LookUpEdit
-                lueIdDefaultSupplier.DataBindings.Add<ItemEy>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdDefaultSupplier);
-                lueIdStatusProd.DataBindings.Add<ItemEy>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdStatusProd);
-                lueIdFamilyHK.DataBindings.Add<ItemEy>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdFamilyHK);
+                lueIdDefaultSupplier.DataBindings.Add<ItemHf>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdDefaultSupplier);
+                lueIdStatusProd.DataBindings.Add<ItemHf>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdStatusProd);
+                lueIdFamilyHK.DataBindings.Add<ItemHf>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdFamilyHK);
 
             }
             catch (Exception ex)
@@ -1111,40 +1051,40 @@ namespace HKSupply.Forms.Master
                 }
 
                 //TextEdit
-                txtHIdVersion.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdVer);
-                txtHIdSubversion.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdSubVer);
-                txtHTimestamp.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.Timestamp);
-                txtHIdPrototype.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdPrototype);
-                txtHModel.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdModel);
-                txtHCaliber.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.Caliber);
-                txtHIdColor1.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdColor1);
-                txtHIdColor2.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdColor2);
-                txtHIdItemBcn.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdItemBcn);
-                txtHIdItemHK.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdItemHK);
-                txtHItemDescription.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.ItemDescription);
-                txtHIdMaterialL1.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdMaterialL1);
-                txtHIdMaterialL2.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdMaterialL2);
-                txtHIdMaterialL3.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdMaterialL3);
-                txtHComments.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.Comments);
-                txtHSegment.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.Segment);
-                txtHCategory.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.Category);
-                txtHAge.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.Age);
-                txtHLaunchDate.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.LaunchDate);
-                txtHRemovalDate.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.RemovalDate);
-                txtHIdStatusCial.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdStatusCial);
-                txtHUnit.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.Unit);
-                txtHDocsLink.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.DocsLink);
-                txtHCreateDate.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.CreateDate);
+                txtHIdVersion.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.IdVer);
+                txtHIdSubversion.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.IdSubVer);
+                txtHTimestamp.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.Timestamp);
+                txtHIdPrototype.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.IdPrototype);
+                txtHModel.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.IdModel);
+                txtHCaliber.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.Caliber);
+                txtHIdColor1.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.IdColor1);
+                txtHIdColor2.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.IdColor2);
+                txtHIdItemBcn.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.IdItemBcn);
+                txtHIdItemHK.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.IdItemHK);
+                txtHItemDescription.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.ItemDescription);
+                txtHIdMaterialL1.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.IdMaterialL1);
+                txtHIdMaterialL2.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.IdMaterialL2);
+                txtHIdMaterialL3.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.IdMaterialL3);
+                txtHComments.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.Comments);
+                txtHSegment.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.Segment);
+                txtHCategory.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.Category);
+                txtHAge.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.Age);
+                txtHLaunchDate.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.LaunchDate);
+                txtHRemovalDate.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.RemovalDate);
+                txtHIdStatusCial.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.IdStatusCial);
+                txtHUnit.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.Unit);
+                txtHDocsLink.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.DocsLink);
+                txtHCreateDate.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.CreateDate);
 
-                txtHIdUserAttri1.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdUserAttri1);
-                txtHIdUserAttri2.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdUserAttri2);
-                txtHIdUserAttri3.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdUserAttri3);
+                txtHIdUserAttri1.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.IdUserAttri1);
+                txtHIdUserAttri2.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.IdUserAttri2);
+                txtHIdUserAttri3.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.IdUserAttri3);
 
                 //LookUpEdit
-                lueHIdDefaultSupplier.DataBindings.Add<ItemEyHistory>(_itemHistory, (LookUpEdit e) => e.EditValue, item => item.IdDefaultSupplier);
-                lueHIdStatusProd.DataBindings.Add<ItemEyHistory>(_itemHistory, (LookUpEdit e) => e.EditValue, item => item.IdStatusProd);
-                lueHIdFamilyHK.DataBindings.Add<ItemEyHistory>(_itemHistory, (LookUpEdit e) => e.EditValue, item => item.IdFamilyHK);
-            
+                lueHIdDefaultSupplier.DataBindings.Add<ItemHfHistory>(_itemHistory, (LookUpEdit e) => e.EditValue, item => item.IdDefaultSupplier);
+                lueHIdStatusProd.DataBindings.Add<ItemHfHistory>(_itemHistory, (LookUpEdit e) => e.EditValue, item => item.IdStatusProd);
+                lueHIdFamilyHK.DataBindings.Add<ItemHfHistory>(_itemHistory, (LookUpEdit e) => e.EditValue, item => item.IdFamilyHK);
+
             }
             catch (Exception ex)
             {
@@ -1218,7 +1158,7 @@ namespace HKSupply.Forms.Master
                 lueHIdFamilyHK.Properties.DisplayMember = nameof(FamilyHK.Description);
                 lueHIdFamilyHK.Properties.ValueMember = nameof(FamilyHK.IdFamilyHk);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -1243,11 +1183,11 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                lciIdUserAttri1.Text = lciHIdUserAttri1.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals(Constants.EY_USER_ATTR_01)).Select(a => a.Description).SingleOrDefault();
-                lciIdUserAttri2.Text = lciHIdUserAttri2.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals(Constants.EY_USER_ATTR_02)).Select(a => a.Description).SingleOrDefault();
-                lciIdUserAttri3.Text = lciHIdUserAttri3.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals(Constants.EY_USER_ATTR_03)).Select(a => a.Description).SingleOrDefault();
+                lciIdUserAttri1.Text = lciHIdUserAttri1.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals(Constants.HF_USER_ATTR_01)).Select(a => a.Description).SingleOrDefault();
+                lciIdUserAttri2.Text = lciHIdUserAttri2.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals(Constants.HF_USER_ATTR_02)).Select(a => a.Description).SingleOrDefault();
+                lciIdUserAttri3.Text = lciHIdUserAttri3.Text = _userAttrDescriptionList.Where(u => u.IdUserAttr.Equals(Constants.HF_USER_ATTR_03)).Select(a => a.Description).SingleOrDefault();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -1263,8 +1203,8 @@ namespace HKSupply.Forms.Master
                 _statusProdList = GlobalSetting.StatusProdService.GetStatusProd();
                 _familiesHkList = GlobalSetting.FamilyHKService.GetFamiliesHK();
                 _supplierList = GlobalSetting.SupplierService.GetSuppliers();
-                _docsTypeList = GlobalSetting.DocTypeService.GetDocsType(Constants.ITEM_GROUP_EY);
-                _userAttrDescriptionList = GlobalSetting.UserAttrDescriptionService.GetUserAttrsDescription(Constants.ITEM_GROUP_EY);
+                _docsTypeList = GlobalSetting.DocTypeService.GetDocsType(Constants.ITEM_GROUP_HF);
+                _userAttrDescriptionList = GlobalSetting.UserAttrDescriptionService.GetUserAttrsDescription(Constants.ITEM_GROUP_HF);
             }
             catch (Exception ex)
             {
@@ -1280,7 +1220,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _itemsList = GlobalSetting.ItemEyService.GetItems();
+                _itemsList = GlobalSetting.ItemHfService.GetItems();
                 xgrdItems.DataSource = _itemsList;
             }
             catch (Exception ex)
@@ -1293,7 +1233,7 @@ namespace HKSupply.Forms.Master
         /// Cargar los datos de un customer en concreto
         /// </summary>
         /// <param name="item"></param>
-        private void LoadItemForm(ItemEy item)
+        private void LoadItemForm(ItemHf item)
         {
             try
             {
@@ -1313,7 +1253,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _itemsHistoryList = GlobalSetting.ItemEyService.GetItemEyHistory(_itemUpdate.IdItemBcn);
+                _itemsHistoryList = GlobalSetting.ItemHfService.GetItemHfHistory(_itemUpdate.IdItemBcn);
                 SetCurrentItemHistory(0);
             }
             catch (Exception ex)
@@ -1344,10 +1284,10 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _itemDocsList = GlobalSetting.ItemDocService.GetItemsDocs(_itemUpdate.IdItemBcn, Constants.ITEM_GROUP_EY); 
+                _itemDocsList = GlobalSetting.ItemDocService.GetItemsDocs(_itemUpdate.IdItemBcn, Constants.ITEM_GROUP_HF);
                 xgrdDocsHistory.DataSource = _itemDocsList;
 
-                _itemLastDocsList = GlobalSetting.ItemDocService.GetLastItemsDocs(_itemUpdate.IdItemBcn, Constants.ITEM_GROUP_EY);
+                _itemLastDocsList = GlobalSetting.ItemDocService.GetLastItemsDocs(_itemUpdate.IdItemBcn, Constants.ITEM_GROUP_HF);
                 xgrdLastDocs.DataSource = _itemLastDocsList;
 
                 xtpDocs.PageVisible = true;
@@ -1358,14 +1298,14 @@ namespace HKSupply.Forms.Master
                 peItemImage.Properties.ShowMenu = false;
                 peItemImage.Properties.SizeMode = PictureSizeMode.Zoom;
 
-                if (string.IsNullOrEmpty(_itemUpdate.PhotoUrl)) return;
+                if (string.IsNullOrEmpty(_itemUpdate.PhotoPath)) return;
 
                 //Cargamos la imagen de la cache.
-                AddToPhotoCache(_itemUpdate.PhotoUrl);
+                AddToPhotoCache(_itemUpdate.PhotoPath);
                 Bitmap im = null;
-                if (photosCache.ContainsKey(_itemUpdate.PhotoUrl))
+                if (photosCache.ContainsKey(_itemUpdate.PhotoPath))
                 {
-                    im = photosCache[_itemUpdate.PhotoUrl];
+                    im = photosCache[_itemUpdate.PhotoPath];
                 }
                 peItemImage.Image = im;
             }
@@ -1422,7 +1362,7 @@ namespace HKSupply.Forms.Master
             return menuItem;
         }
 
-        private void OpenPriceListForm(ItemEy itemEy)
+        private void OpenPriceListForm(ItemHf ItemHf)
         {
             try
             {
@@ -1436,7 +1376,7 @@ namespace HKSupply.Forms.Master
                     priceListForm.Close();
 
                 priceListForm = new HKSupply.Forms.Master.SupplierPriceListManagement();
-                priceListForm.InitData(itemEy.IdDefaultSupplier, itemEy.IdItemBcn);
+                priceListForm.InitData(ItemHf.IdDefaultSupplier, ItemHf.IdItemBcn);
 
                 priceListForm.MdiParent = this.MdiParent;
                 priceListForm.ShowIcon = false;
@@ -1498,7 +1438,7 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void AddModifiedItemToList(ItemEy modifiedItem)
+        private void AddModifiedItemToList(ItemHf modifiedItem)
         {
             try
             {
@@ -1593,7 +1533,7 @@ namespace HKSupply.Forms.Master
                 throw ex;
             }
         }
-        
+
 
         /// <summary>
         /// Mover la fila activa a un item en concreto
@@ -1604,7 +1544,7 @@ namespace HKSupply.Forms.Master
             try
             {
                 //Buscar por un valor
-                GridColumn column = rootGridViewItems.Columns[nameof(ItemEy.IdItemBcn)];
+                GridColumn column = rootGridViewItems.Columns[nameof(ItemHf.IdItemBcn)];
                 if (column != null)
                 {
                     // locating the row 
@@ -1655,12 +1595,12 @@ namespace HKSupply.Forms.Master
                 throw ex;
             }
         }
-        
+
         private bool IsValidItemGrid()
         {
             try
             {
-                foreach(var item in _modifiedItemsEy)
+                foreach (var item in _modifiedItemsEy)
                 {
                     if (string.IsNullOrEmpty(item.IdDefaultSupplier))
                     {
@@ -1726,7 +1666,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                return GlobalSetting.ItemEyService.UpdateItem(_itemUpdate, newVersion);
+                return GlobalSetting.ItemHfService.UpdateItem(_itemUpdate, newVersion);
             }
             catch (Exception ex)
             {
@@ -1739,16 +1679,16 @@ namespace HKSupply.Forms.Master
             try
             {
                 string fileName = System.IO.Path.GetFileName(txtPathNewDoc.Text);
-				string fileNameNoExtension = System.IO.Path.GetFileNameWithoutExtension(txtPathNewDoc.Text);
-				string extension = System.IO.Path.GetExtension(txtPathNewDoc.Text);
+                string fileNameNoExtension = System.IO.Path.GetFileNameWithoutExtension(txtPathNewDoc.Text);
+                string extension = System.IO.Path.GetExtension(txtPathNewDoc.Text);
 
                 //Creamos los directorios si no existen
-                new System.IO.FileInfo(Constants.ITEMS_DOCS_PATH + _itemUpdate.IdItemBcn + "\\" + lueDocType.EditValue.ToString()+"\\").Directory.Create();
+                new System.IO.FileInfo(Constants.ITEMS_DOCS_PATH + _itemUpdate.IdItemBcn + "\\" + lueDocType.EditValue.ToString() + "\\").Directory.Create();
 
-                
+
                 ItemDoc itemDoc = new ItemDoc();
                 itemDoc.IdItemBcn = _itemUpdate.IdItemBcn;
-                itemDoc.IdItemGroup = Constants.ITEM_GROUP_EY; 
+                itemDoc.IdItemGroup = Constants.ITEM_GROUP_HF;
                 itemDoc.IdDocType = lueDocType.EditValue.ToString();
                 itemDoc.FileName = fileNameNoExtension + "_" + (_itemUpdate.IdVer.ToString()) + "." + ((_itemUpdate.IdSubVer + 1).ToString()) + extension;
                 itemDoc.FilePath = _itemUpdate.IdItemBcn + "\\" + lueDocType.EditValue.ToString() + "\\" + itemDoc.FileName;
@@ -1757,7 +1697,7 @@ namespace HKSupply.Forms.Master
                 System.IO.File.Copy(txtPathNewDoc.Text, Constants.ITEMS_DOCS_PATH + itemDoc.FilePath, overwrite: true);
 
                 //update database
-                return GlobalSetting.ItemEyService.UpdateItemWithDoc(_itemUpdate, itemDoc, newVersion);
+                return GlobalSetting.ItemHfService.UpdateItemWithDoc(_itemUpdate, itemDoc, newVersion);
 
 
             }
@@ -1771,7 +1711,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                return GlobalSetting.ItemEyService.UpdateItems(_modifiedItemsEy);
+                return GlobalSetting.ItemHfService.UpdateItems(_modifiedItemsEy);
             }
             catch (Exception ex)
             {
@@ -1801,7 +1741,7 @@ namespace HKSupply.Forms.Master
                 rootGridViewItems.OptionsBehavior.Editable = false;
 
                 RestoreInitState();
-                
+
             }
             catch (Exception ex)
             {
@@ -1831,95 +1771,6 @@ namespace HKSupply.Forms.Master
                     }
                 }
             }
-            catch(Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        #endregion
-
-        #region Read XML Currency Echange
-        private void ReadEuroCurrencyExchange()
-        {
-            try
-            {
-                string xmlString = "<?xml version='1.0' encoding='UTF-8'?>";
-                xmlString += "<gesmesEnvelope>";
-                xmlString += "  <gesmessubject>Reference rates</gesmessubject>";
-                xmlString += "  <gesmesSender>";
-                xmlString += "      <gesmesname>European Central Bank</gesmesname>";
-                xmlString += "  </gesmesSender>";
-                xmlString += "  <Cube>";
-                xmlString += "      <Cube2 time='2017-04-24'>";
-                xmlString += "          <Cube3 currency='USD' rate='1.0848'/>";
-                xmlString += "          <Cube3 currency='JPY' rate='119.67'/>";
-                xmlString += "      </Cube2>";
-                xmlString += "  </Cube>";
-                xmlString += "</gesmesEnvelope>";
-
-                //---------------------------------------------------------------------------------------------
-                string xmlUrl = "http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml";
-                
-                System.Xml.XmlDocument xml = new System.Xml.XmlDocument();
-                xml.Load(xmlUrl);
-
-                foreach (System.Xml.XmlNode xnode in xml)
-                {
-                    string name = xnode.Name;
-                    string value = xnode.InnerText;
-                    string nv = name + "|" + value;
-
-                    foreach (System.Xml.XmlNode xnode2 in xnode)
-                    {
-                        string name2 = xnode2.Name;
-                        string value2 = xnode2.InnerText;
-
-                        foreach (System.Xml.XmlNode xnode3 in xnode2)
-                        {
-                            string name3 = xnode3.Name;
-                            string value3 = xnode3.InnerText;
-                            var a = xnode3.Attributes;
-
-                            foreach (System.Xml.XmlNode xnode4 in xnode3)
-                            {
-                                string name4 = xnode4.Name;
-                                string value4 = xnode4.InnerText;
-                                var aa = xnode4.Attributes;
-                            }
-                        }
-                    }
-                }
-
-                //------------------------------------------------------------------------------
-                System.Xml.Linq.XElement xml2 = System.Xml.Linq.XElement.Load(xmlUrl);
-                //var cu2s = from cu2 in xml2.Descendants("Cube")
-                //           select new
-                //           {
-                //               Currency = cu2.Attribute("currency").Value,
-                //               Rate = cu2.Attribute("rate").Value,
-                //           };
-
-                //System.Xml.Linq.XNamespace ns = "http://www.gesmes.org/xml/2002-08-01";
-                System.Xml.Linq.XNamespace ns = System.Xml.Linq.XNamespace.Get("gesmes");
-                var cu3s = from cu3 in xml2.Descendants(ns + "Cube")
-                           select new
-                           {
-
-                               Currency = cu3.Name
-                               //Children = cu1.Descendants("level2")
-                           };
-
-                //------------------ Funciona si nos 3 niveles no se llaman igual (Cube)
-                System.Xml.Linq.XElement xml4 = System.Xml.Linq.XElement.Parse(xmlString);
-                var cu1s = from cu1 in xml4.Descendants("Cube3")
-                           select new
-                           {
-                               Currency = cu1.Attribute("currency").Value,
-                               Rate = cu1.Attribute("rate").Value,
-                               //Children = cu1.Descendants("level2")
-                           };
-            }
             catch (Exception ex)
             {
                 throw ex;
@@ -1930,5 +1781,4 @@ namespace HKSupply.Forms.Master
 
 
     }
-
 }

@@ -12,9 +12,9 @@ namespace HKSupply.Models
     [Table("MAT_TYPE_L2")]
     public class MatTypeL2
     {
-        [Column("ID_MAT_TYPE_L2", TypeName = "NVARCHAR"), Key, StringLength(100)]
+        [Column("ID_MAT_TYPE_L2", TypeName = "NVARCHAR", Order = 0), Key, StringLength(100)]
         public string IdMatTypeL2 { get; set; }
-        [Column("ID_MAT_TYPE_L1", TypeName = "NVARCHAR"), StringLength(100), Required]
+        [Column("ID_MAT_TYPE_L1", TypeName = "NVARCHAR", Order = 1), Key, StringLength(100)]
         public string IdMatTypeL1 { get; set; }
         [Column("DESCRIPTION", TypeName = "NVARCHAR"), StringLength(500), Required]
         public string Description { get; set; }

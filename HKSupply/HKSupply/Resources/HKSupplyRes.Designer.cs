@@ -871,6 +871,15 @@ namespace HKSupply.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Quantity.
+        /// </summary>
+        internal static string Quantity {
+            get {
+                return ResourceManager.GetString("Quantity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Ratio.
         /// </summary>
         internal static string Ratio {
@@ -1074,6 +1083,15 @@ namespace HKSupply.Resources {
         internal static string ViewItemPriceList {
             get {
                 return ResourceManager.GetString("ViewItemPriceList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Waste.
+        /// </summary>
+        internal static string Waste {
+            get {
+                return ResourceManager.GetString("Waste", resourceCulture);
             }
         }
     }
