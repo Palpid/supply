@@ -174,6 +174,12 @@
     <Compile Include="Forms\Master\CustomerPriceListManagement.Designer.cs">
       <DependentUpon>CustomerPriceListManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Master\DialogForms\SelectSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\DialogForms\SelectSuppliers.Designer.cs">
+      <DependentUpon>SelectSuppliers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Master\FamiliesHkManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -293,6 +299,7 @@
     <Compile Include="Helpers\CustomExtensions.cs" />
     <Compile Include="Helpers\DeepCopyByExpressionTrees.cs" />
     <Compile Include="Helpers\DocHelper.cs" />
+    <Compile Include="Helpers\EntityFrameworkHelper.cs" />
     <Compile Include="Helpers\LayoutHelper.cs" />
     <Compile Include="Helpers\MDIClientSupport.cs" />
     <Compile Include="Helpers\Mocking\MockData.cs" />
@@ -541,6 +548,22 @@
     <Compile Include="Migrations\201705241046460_MatType_20170524_01.Designer.cs">
       <DependentUpon>201705241046460_MatType_20170524_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705251427536_hwType_25042014_01.cs" />
+    <Compile Include="Migrations\201705251427536_hwType_25042014_01.Designer.cs">
+      <DependentUpon>201705251427536_hwType_25042014_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705251508254_bom_item_supplier_20170525_01.cs" />
+    <Compile Include="Migrations\201705251508254_bom_item_supplier_20170525_01.Designer.cs">
+      <DependentUpon>201705251508254_bom_item_supplier_20170525_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705261110132_detailBomMt_20170526_01.cs" />
+    <Compile Include="Migrations\201705261110132_detailBomMt_20170526_01.Designer.cs">
+      <DependentUpon>201705261110132_detailBomMt_20170526_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705261124163_detailBomMt_20170526_02.cs" />
+    <Compile Include="Migrations\201705261124163_detailBomMt_20170526_02.Designer.cs">
+      <DependentUpon>201705261124163_detailBomMt_20170526_02.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\CustomerPriceList.cs" />
@@ -696,6 +719,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\CustomerPriceListManagement.resx">
       <DependentUpon>CustomerPriceListManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\DialogForms\SelectSuppliers.resx">
+      <DependentUpon>SelectSuppliers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\FamiliesHkManagement.resx">
       <DependentUpon>FamiliesHkManagement.cs</DependentUpon>
@@ -937,6 +963,18 @@
     <EmbeddedResource Include="Migrations\201705241046460_MatType_20170524_01.resx">
       <DependentUpon>201705241046460_MatType_20170524_01.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705251427536_hwType_25042014_01.resx">
+      <DependentUpon>201705251427536_hwType_25042014_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705251508254_bom_item_supplier_20170525_01.resx">
+      <DependentUpon>201705251508254_bom_item_supplier_20170525_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705261110132_detailBomMt_20170526_01.resx">
+      <DependentUpon>201705261110132_detailBomMt_20170526_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705261124163_detailBomMt_20170526_02.resx">
+      <DependentUpon>201705261124163_detailBomMt_20170526_02.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -987,6 +1025,7 @@
       <Name>CustomControls</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <PropertyGroup>

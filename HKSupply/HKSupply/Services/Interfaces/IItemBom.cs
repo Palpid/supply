@@ -4,8 +4,8 @@ namespace HKSupply.Services.Interfaces
 {
     public interface IItemBom
     {
-        ItemBom GetItemBom(int IdBom);
-        ItemBom GetItemBom(string IdItemBcn);
+        ItemBom GetItemBom(int IdBom, bool getPoco = false);
+        ItemBom GetItemBom(string IdItemBcn, bool getPoco = false);
         bool EditIteBom(ItemBom bom);
     }
 }

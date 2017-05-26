@@ -27,11 +27,33 @@ namespace HKSupply.Models
         [Column("TIMESTAMP", Order = 4), Key]
         public DateTime Timestamp { get; set; }
 
+        [Column("LENGTH", TypeName = "NUMERIC")]
+        public decimal? Length { get; set; }
+
+        [Column("WIDTH", TypeName = "NUMERIC")]
+        public decimal? Width { get; set; }
+
+        [Column("HEIGHT", TypeName = "NUMERIC")]
+        public decimal? Height { get; set; }
+
+        [Column("DENSITY", TypeName = "NUMERIC")]
+        public decimal? Density { get; set; }
+
+        [Column("NUMBER_OF_PARTS")]
+        public int? NumberOfParts { get; set; }
+
+        [Column("COEFFICIENT1", TypeName = "NUMERIC")]
+        public decimal? Coefficient1 { get; set; }
+
+        [Column("COEFFICIENT2", TypeName = "NUMERIC")]
+        public decimal? Coefficient2 { get; set; }
+
+        [Column("SCRAP", TypeName = "NUMERIC")]
+        public decimal? Scrap { get; set; }
+
         [Column("QUANTITY", TypeName = "NUMERIC")]
         public decimal Quantity { get; set; }
-
-        [Column("WASTE", TypeName = "NUMERIC")]
-        public decimal Waste { get; set; }
+        
 
         #region Equals
         public override bool Equals(object obj)
@@ -49,8 +71,15 @@ namespace HKSupply.Models
                 IdVer == detailBomMtHistory.IdVer &&
                 IdSubVer == detailBomMtHistory.IdSubVer &&
                 Timestamp == detailBomMtHistory.Timestamp &&
-                Quantity == detailBomMtHistory.Quantity &&
-                Waste == detailBomMtHistory.Waste
+                Length == detailBomMtHistory.Length &&
+                Width == detailBomMtHistory.Width &&
+                Height == detailBomMtHistory.Height &&
+                Density == detailBomMtHistory.Density &&
+                NumberOfParts == detailBomMtHistory.NumberOfParts &&
+                Coefficient1 == detailBomMtHistory.Coefficient1 &&
+                Coefficient2 == detailBomMtHistory.Coefficient2 &&
+                Scrap == detailBomMtHistory.Scrap &&
+                Quantity == detailBomMtHistory.Quantity 
                 );
         }
 
@@ -61,9 +90,16 @@ namespace HKSupply.Models
                 (IdItemBcn == null ? 0 : IdItemBcn.GetHashCode()) +
                 IdVer.GetHashCode() + 
                 IdSubVer.GetHashCode() + 
-                Timestamp.GetHashCode() + 
-                Quantity.GetHashCode() + 
-                Waste.GetHashCode()
+                Timestamp.GetHashCode() +
+                (Length == null ? 0 : Length.GetHashCode()) +
+                (Width == null ? 0 : Width.GetHashCode()) +
+                (Height == null ? 0 : Height.GetHashCode()) +
+                (Density == null ? 0 : Density.GetHashCode()) +
+                (NumberOfParts == null ? 0 : NumberOfParts.GetHashCode()) +
+                (Coefficient1 == null ? 0 : Coefficient1.GetHashCode()) +
+                (Coefficient2 == null ? 0 : Coefficient2.GetHashCode()) +
+                (Scrap == null ? 0 : Scrap.GetHashCode()) +
+                Quantity.GetHashCode()
                 );
 
             return hashCode;
@@ -75,8 +111,15 @@ namespace HKSupply.Models
             DetailBomMtHistory detailBomMtHistory = new DetailBomMtHistory();
             detailBomMtHistory.IdBom = dbmt.IdBom;
             detailBomMtHistory.IdItemBcn = dbmt.IdItemBcn;
+            detailBomMtHistory.Length = dbmt.Length;
+            detailBomMtHistory.Width = dbmt.Width;
+            detailBomMtHistory.Height = dbmt.Height;
+            detailBomMtHistory.Density = dbmt.Density;
+            detailBomMtHistory.NumberOfParts = dbmt.NumberOfParts;
+            detailBomMtHistory.Coefficient1 = dbmt.Coefficient1;
+            detailBomMtHistory.Coefficient2 = dbmt.Coefficient2;
+            detailBomMtHistory.Scrap = dbmt.Scrap;
             detailBomMtHistory.Quantity = dbmt.Quantity;
-            detailBomMtHistory.Waste = dbmt.Waste;
 
             return detailBomMtHistory;
         }

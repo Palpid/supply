@@ -34,9 +34,9 @@ namespace HKSupply.Models
 
         [ForeignKey("IdHwTypeL1")]
         public HwTypeL1 HwTypeL1 { get; set; }
-        [ForeignKey("IdHwTypeL2")]
+        [ForeignKey("IdHwTypeL2, IdHwTypeL1")]
         public HwTypeL2 HwTypeL2 { get; set; }
-        [ForeignKey("IdHwTypeL3")]
+        [ForeignKey("IdHwTypeL3, IdHwTypeL2, IdHwTypeL1")]
         public HwTypeL3 HwTypeL3 { get; set; }
 
         [Column("ID_DEFAULT_SUPPLIER", TypeName = "NVARCHAR"), StringLength(100)]

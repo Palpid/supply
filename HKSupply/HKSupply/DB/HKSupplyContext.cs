@@ -125,10 +125,26 @@ namespace HKSupply.DB
             modelBuilder.Entity<DetailBomHw>().Property(x => x.Waste).HasPrecision(19, 6);
             modelBuilder.Entity<DetailBomHwHistory>().Property(x => x.Quantity).HasPrecision(19, 6);
             modelBuilder.Entity<DetailBomHwHistory>().Property(x => x.Waste).HasPrecision(19, 6);
+
+            modelBuilder.Entity<DetailBomMt>().Property(x => x.Length).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomMt>().Property(x => x.Width).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomMt>().Property(x => x.Height).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomMt>().Property(x => x.Density).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomMt>().Property(x => x.Coefficient1).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomMt>().Property(x => x.Coefficient2).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomMt>().Property(x => x.Scrap).HasPrecision(19, 6);
             modelBuilder.Entity<DetailBomMt>().Property(x => x.Quantity).HasPrecision(19, 6);
-            modelBuilder.Entity<DetailBomMt>().Property(x => x.Waste).HasPrecision(19, 6);
+
+
+            modelBuilder.Entity<DetailBomMtHistory>().Property(x => x.Length).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomMtHistory>().Property(x => x.Width).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomMtHistory>().Property(x => x.Height).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomMtHistory>().Property(x => x.Density).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomMtHistory>().Property(x => x.Coefficient1).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomMtHistory>().Property(x => x.Coefficient2).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomMtHistory>().Property(x => x.Scrap).HasPrecision(19, 6);
             modelBuilder.Entity<DetailBomMtHistory>().Property(x => x.Quantity).HasPrecision(19, 6);
-            modelBuilder.Entity<DetailBomMtHistory>().Property(x => x.Waste).HasPrecision(19, 6);
+            
 
             modelBuilder.Entity<ItemHf>().Property(x => x.Caliber).HasPrecision(19, 6);
             modelBuilder.Entity<ItemHfHistory>().Property(x => x.Caliber).HasPrecision(19, 6);

@@ -20,7 +20,7 @@ namespace HKSupply.Services.Implementations
     {
         ILog _log = LogManager.GetLogger(typeof(EFItemBom));
 
-        public ItemBom GetItemBom(int IdBom)
+        public ItemBom GetItemBom(int IdBom, bool getPoco = false)
         {
             try
             {
@@ -48,7 +48,18 @@ namespace HKSupply.Services.Implementations
                         }
                     }
 
-                    return bom;
+                    if (getPoco)
+                    {
+                        ItemBom pocoBom = EntityFrameworkHelper.UnProxy(db, bom);
+                        pocoBom.Item = bom.Item.DeepCopyByExpressionTree();
+                        pocoBom.Hardwares = new List<DetailBomHw>(bom.Hardwares.Select(x => x.Clone()));
+                        pocoBom.Materials = new List<DetailBomMt>(bom.Materials.Select(x => x.Clone()));
+                        return pocoBom;
+                    }
+                    else
+                    {
+                        return bom;
+                    }
                 }
             }
             catch (ArgumentNullException anex)
@@ -83,7 +94,7 @@ namespace HKSupply.Services.Implementations
             }
         }
 
-        public ItemBom GetItemBom(string IdItemBcn)
+        public ItemBom GetItemBom(string IdItemBcn, bool getPoco = false)
         {
             try
             {
@@ -111,7 +122,19 @@ namespace HKSupply.Services.Implementations
                         }
                     }
 
-                    return bom;
+                    if (getPoco)
+                    {
+                        ItemBom pocoBom = EntityFrameworkHelper.UnProxy(db, bom);
+                        pocoBom.Item = bom.Item.DeepCopyByExpressionTree();
+                        pocoBom.Hardwares = new List<DetailBomHw>(bom.Hardwares.Select(x => x.Clone()));
+                        pocoBom.Materials = new List<DetailBomMt>(bom.Materials.Select(x => x.Clone()));
+                        return pocoBom;
+                    }
+                    else
+                    {
+                        return bom;
+                    }
+                   
                 }
             }
             catch (ArgumentNullException anex)

@@ -16,11 +16,32 @@ namespace HKSupply.Models
         [ForeignKey("IdItemBcn")]
         public ItemMt Item { get; set; }
 
+        [Column("LENGTH", TypeName = "NUMERIC")]
+        public decimal? Length { get; set; }
+
+        [Column("WIDTH", TypeName = "NUMERIC")]
+        public decimal? Width { get; set; }
+
+        [Column("HEIGHT", TypeName = "NUMERIC")]
+        public decimal? Height { get; set; }
+
+        [Column("DENSITY", TypeName = "NUMERIC")]
+        public decimal? Density { get; set; }
+
+        [Column("NUMBER_OF_PARTS")]
+        public int? NumberOfParts { get; set; }
+
+        [Column("COEFFICIENT1", TypeName = "NUMERIC")]
+        public decimal? Coefficient1 { get; set; }
+
+        [Column("COEFFICIENT2", TypeName = "NUMERIC")]
+        public decimal? Coefficient2 { get; set; }
+
+        [Column("SCRAP", TypeName = "NUMERIC")]
+        public decimal? Scrap { get; set; }
+
         [Column("QUANTITY", TypeName = "NUMERIC")]
         public decimal Quantity { get; set; }
-
-        [Column("WASTE", TypeName = "NUMERIC")]
-        public decimal Waste { get; set; }
 
         #region Equal
 
@@ -34,8 +55,15 @@ namespace HKSupply.Models
             bool res = (
                 IdBom == detailBomMt.IdBom &&
                 IdItemBcn == detailBomMt.IdItemBcn &&
-                Quantity == detailBomMt.Quantity &&
-                Waste == detailBomMt.Waste
+                Length == detailBomMt.Length &&
+                Width == detailBomMt.Width &&
+                Height == detailBomMt.Height &&
+                Density == detailBomMt.Density &&
+                NumberOfParts == detailBomMt.NumberOfParts &&
+                Coefficient1 == detailBomMt.Coefficient1 &&
+                Coefficient2 == detailBomMt.Coefficient2 &&
+                Scrap == detailBomMt.Scrap &&
+                Quantity == detailBomMt.Quantity
                 );
 
             return res;
@@ -46,8 +74,15 @@ namespace HKSupply.Models
             int hashCode = (
                 IdBom.GetHashCode() + 
                 (IdItemBcn == null ? 0 : IdItemBcn.GetHashCode()) +
-                Quantity.GetHashCode() +
-                Waste.GetHashCode()
+                (Length == null ? 0 : Length.GetHashCode()) + 
+                (Width == null ? 0 : Width.GetHashCode()) + 
+                (Height == null ? 0 : Height.GetHashCode()) +
+                (Density == null ? 0 : Density.GetHashCode()) + 
+                (NumberOfParts == null ? 0 : NumberOfParts.GetHashCode()) +
+                (Coefficient1 == null ? 0 : Coefficient1.GetHashCode()) +
+                (Coefficient2 == null ? 0 : Coefficient2.GetHashCode()) +
+                (Scrap == null ? 0 : Scrap.GetHashCode()) +
+                Quantity.GetHashCode() 
                 );
             
             return hashCode;

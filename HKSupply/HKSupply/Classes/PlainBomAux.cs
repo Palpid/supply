@@ -15,6 +15,7 @@ namespace HKSupply.Classes
     {
         public string IdItemBcn { get; set; }
         public string ItemDescription { get; set; }
+        public string IdSupplier { get; set; }
         public string ItemGroup { get; set; }
         public decimal Quantity { get; set; }
         public decimal Waste { get; set; }
@@ -28,7 +29,7 @@ namespace HKSupply.Classes
                 ItemDescription = detailBomMt.Item.ItemDescription,
                 ItemGroup = Constants.ITEM_GROUP_MT,
                 Quantity = detailBomMt.Quantity,
-                Waste = detailBomMt.Waste,
+                Waste = detailBomMt.Scrap.Value,
                 Unit = detailBomMt.Item.Unit,
             };
 

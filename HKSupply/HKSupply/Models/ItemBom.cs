@@ -25,6 +25,12 @@ namespace HKSupply.Models
         [Column("ID_ITEM_BCN", TypeName = "NVARCHAR"), StringLength(50), Required, Index("IX_VER_ITEM", 3, IsUnique = true)] 
         public string IdItemBcn { get; set; }
 
+        [Column("ID_SUPPLIER", TypeName = "NVARCHAR"), StringLength(100), Required, Index("IX_VER_ITEM", 4, IsUnique = true)]
+        public string IdSupplier { get; set; }
+
+        [ForeignKey("IdSupplier")]
+        public Supplier Supplier { get; set; }
+
         /// <summary>
         /// Debido a que el item del bom puede ser de diferentes clases, lo defino como object y desde la aplicación ya controlaremos el casteo al tipo 
         /// correspondiente según su item group
@@ -104,7 +110,7 @@ namespace HKSupply.Models
                         m.IdBom == itemBom.Materials[i].IdBom &&
                         m.IdItemBcn == itemBom.Materials[i].IdItemBcn &&
                         m.Quantity == itemBom.Materials[i].Quantity &&
-                        m.Waste == itemBom.Materials[i].Waste
+                        m.Scrap == itemBom.Materials[i].Scrap
                         );
                     i++;
                 }
