@@ -459,7 +459,7 @@
   <data name="Quantity" xml:space="preserve">
     <value>Quantity</value>
   </data>
-  <data name="Waste" xml:space="preserve">
-    <value>Waste</value>
+  <data name="Scrap" xml:space="preserve">
+    <value>Scrap</value>
   </data>
 </root>

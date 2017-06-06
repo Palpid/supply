@@ -1,11 +1,15 @@
 ﻿using HKSupply.Models;
+using System.Collections.Generic;
 
 namespace HKSupply.Services.Interfaces
 {
     public interface IItemBom
     {
-        ItemBom GetItemBom(int IdBom, bool getPoco = false);
-        ItemBom GetItemBom(string IdItemBcn, bool getPoco = false);
-        bool EditIteBom(ItemBom bom);
+        ItemBom GetItemSupplierBom(int IdBom, string idSupplier, bool getPoco = false);
+        ItemBom GetItemSupplierBom(string IdItemBcn, string idSupplier, bool getPoco = false);
+        List<ItemBom> GetItemBom(string idItemBcn);
+        bool EditItemBom(ItemBom bom);
+
+        bool EditItemSuppliersBom(List<ItemBom> itemSuppliersBom);
     }
 }

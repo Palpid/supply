@@ -53,7 +53,10 @@ namespace HKSupply.Models
 
         [Column("QUANTITY", TypeName = "NUMERIC")]
         public decimal Quantity { get; set; }
-        
+
+        [Column("USER"), StringLength(20)]
+        public string User { get; set; }
+
 
         #region Equals
         public override bool Equals(object obj)
@@ -79,7 +82,8 @@ namespace HKSupply.Models
                 Coefficient1 == detailBomMtHistory.Coefficient1 &&
                 Coefficient2 == detailBomMtHistory.Coefficient2 &&
                 Scrap == detailBomMtHistory.Scrap &&
-                Quantity == detailBomMtHistory.Quantity 
+                Quantity == detailBomMtHistory.Quantity &&
+                User == detailBomMtHistory.User
                 );
         }
 
@@ -99,7 +103,8 @@ namespace HKSupply.Models
                 (Coefficient1 == null ? 0 : Coefficient1.GetHashCode()) +
                 (Coefficient2 == null ? 0 : Coefficient2.GetHashCode()) +
                 (Scrap == null ? 0 : Scrap.GetHashCode()) +
-                Quantity.GetHashCode()
+                Quantity.GetHashCode() + 
+                (User == null ? 0 : User.GetHashCode())
                 );
 
             return hashCode;

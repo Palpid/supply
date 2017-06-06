@@ -57,6 +57,10 @@ namespace HKSupply.Models
 
         public virtual List<DetailBomHw> Hardwares { get; set; }
 
+        public virtual List<DetailBomHf> HalfFinished { get; set; }
+
+        [NotMapped]
+        public List<ItemBom> HalfFinishedNM { get; set; }
 
         #region Equals
         public override bool Equals(object obj)
@@ -95,7 +99,7 @@ namespace HKSupply.Models
                         h.IdBom == itemBom.Hardwares[i].IdBom &&
                         h.IdItemBcn == itemBom.Hardwares[i].IdItemBcn &&
                         h.Quantity == itemBom.Hardwares[i].Quantity &&
-                        h.Waste == itemBom.Hardwares[i].Waste
+                        h.Scrap == itemBom.Hardwares[i].Scrap
                         );
                     i++;
                 }

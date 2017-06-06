@@ -564,10 +564,24 @@
     <Compile Include="Migrations\201705261124163_detailBomMt_20170526_02.Designer.cs">
       <DependentUpon>201705261124163_detailBomMt_20170526_02.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705301036149_detailBomHw_scrap_20170530_01.cs" />
+    <Compile Include="Migrations\201705301036149_detailBomHw_scrap_20170530_01.Designer.cs">
+      <DependentUpon>201705301036149_detailBomHw_scrap_20170530_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706060707179_detailBOMHf_20170606_01.cs" />
+    <Compile Include="Migrations\201706060707179_detailBOMHf_20170606_01.Designer.cs">
+      <DependentUpon>201706060707179_detailBOMHf_20170606_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706060713514_detailBOM_User_20170606_01.cs" />
+    <Compile Include="Migrations\201706060713514_detailBOM_User_20170606_01.Designer.cs">
+      <DependentUpon>201706060713514_detailBOM_User_20170606_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\CustomerPriceList.cs" />
     <Compile Include="Models\CustomerPriceListHistory.cs" />
+    <Compile Include="Models\DetailBomHf.cs" />
+    <Compile Include="Models\DetailBomHfHistory.cs" />
     <Compile Include="Models\DetailBomHw.cs" />
     <Compile Include="Models\DetailBomHwHistory.cs" />
     <Compile Include="Models\DetailBomMt.cs" />
@@ -974,6 +988,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705261124163_detailBomMt_20170526_02.resx">
       <DependentUpon>201705261124163_detailBomMt_20170526_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705301036149_detailBomHw_scrap_20170530_01.resx">
+      <DependentUpon>201705301036149_detailBomHw_scrap_20170530_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706060707179_detailBOMHf_20170606_01.resx">
+      <DependentUpon>201706060707179_detailBOMHf_20170606_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706060713514_detailBOM_User_20170606_01.resx">
+      <DependentUpon>201706060713514_detailBOM_User_20170606_01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

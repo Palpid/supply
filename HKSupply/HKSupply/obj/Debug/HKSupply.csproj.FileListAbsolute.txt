@@ -203,3 +203,6 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.bom_item_supplier_
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.DialogForms.SelectSuppliers.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.detailBomMt_20170526_01.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.detailBomMt_20170526_02.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.detailBomHw_scrap_20170530_01.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.detailBOMHf_20170606_01.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.detailBOM_User_20170606_01.resources

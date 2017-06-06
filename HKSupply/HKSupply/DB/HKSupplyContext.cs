@@ -82,6 +82,9 @@ namespace HKSupply.DB
         public DbSet<DetailBomMt> DetailsBomMt { get; set; }
         public DbSet<DetailBomMtHistory> DetailsBomMtHistory { get; set; }
 
+        public DbSet<DetailBomHf> DetailsBomHf { get; set; }
+        public DbSet<DetailBomHfHistory> DetailsBomHfHistory { get; set; }
+
         //public HKSupplyContext()
         //    : base("name=SqlExpressConn")
         //{
@@ -122,9 +125,9 @@ namespace HKSupply.DB
             modelBuilder.Entity<CustomerPriceListHistory>().Property(x => x.ExchangeRateUsed).HasPrecision(19, 6);
 
             modelBuilder.Entity<DetailBomHw>().Property(x => x.Quantity).HasPrecision(19, 6);
-            modelBuilder.Entity<DetailBomHw>().Property(x => x.Waste).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomHw>().Property(x => x.Scrap).HasPrecision(19, 6);
             modelBuilder.Entity<DetailBomHwHistory>().Property(x => x.Quantity).HasPrecision(19, 6);
-            modelBuilder.Entity<DetailBomHwHistory>().Property(x => x.Waste).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomHwHistory>().Property(x => x.Scrap).HasPrecision(19, 6);
 
             modelBuilder.Entity<DetailBomMt>().Property(x => x.Length).HasPrecision(19, 6);
             modelBuilder.Entity<DetailBomMt>().Property(x => x.Width).HasPrecision(19, 6);
@@ -144,10 +147,12 @@ namespace HKSupply.DB
             modelBuilder.Entity<DetailBomMtHistory>().Property(x => x.Coefficient2).HasPrecision(19, 6);
             modelBuilder.Entity<DetailBomMtHistory>().Property(x => x.Scrap).HasPrecision(19, 6);
             modelBuilder.Entity<DetailBomMtHistory>().Property(x => x.Quantity).HasPrecision(19, 6);
-            
 
             modelBuilder.Entity<ItemHf>().Property(x => x.Caliber).HasPrecision(19, 6);
             modelBuilder.Entity<ItemHfHistory>().Property(x => x.Caliber).HasPrecision(19, 6);
+
+            modelBuilder.Entity<DetailBomHf>().Property(x => x.Quantity).HasPrecision(19, 6);
+            modelBuilder.Entity<DetailBomHfHistory>().Property(x => x.Quantity).HasPrecision(19, 6);
 
             base.OnModelCreating(modelBuilder);
         }

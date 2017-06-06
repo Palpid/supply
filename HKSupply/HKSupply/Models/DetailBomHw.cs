@@ -17,11 +17,11 @@ namespace HKSupply.Models
         [ForeignKey("IdItemBcn")]
         public ItemHw Item { get; set; }
 
+        [Column("SCRAP", TypeName = "NUMERIC")]
+        public decimal Scrap { get; set; }
+
         [Column("QUANTITY", TypeName = "NUMERIC")]
         public decimal Quantity { get; set; }
-
-        [Column("WASTE", TypeName = "NUMERIC")]
-        public decimal Waste { get; set; }
 
         #region Equals
 
@@ -36,7 +36,7 @@ namespace HKSupply.Models
                 IdBom == detailBomHw.IdBom &&
                 IdItemBcn == detailBomHw.IdItemBcn &&
                 Quantity == detailBomHw.Quantity &&
-                Waste == detailBomHw.Waste
+                Scrap == detailBomHw.Scrap
                 );
 
             return res;
@@ -48,7 +48,7 @@ namespace HKSupply.Models
                 IdBom.GetHashCode() +
                 (IdItemBcn == null ? 0 : IdItemBcn.GetHashCode()) +
                 Quantity.GetHashCode() +
-                Waste.GetHashCode()
+                Scrap.GetHashCode()
                 );
             return hashCode;
         }

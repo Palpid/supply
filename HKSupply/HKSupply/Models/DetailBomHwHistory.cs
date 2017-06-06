@@ -27,11 +27,14 @@ namespace HKSupply.Models
         [Column("TIMESTAMP", Order = 4), Key]
         public DateTime Timestamp { get; set; }
 
+        [Column("SCRAP", TypeName = "NUMERIC")]
+        public decimal Scrap { get; set; }
+
         [Column("QUANTITY", TypeName = "NUMERIC")]
         public decimal Quantity { get; set; }
 
-        [Column("WASTE", TypeName = "NUMERIC")]
-        public decimal Waste { get; set; }
+        [Column("USER"), StringLength(20)]
+        public string User { get; set; }
 
         #region Equals
         public override bool Equals(object obj)
@@ -48,7 +51,8 @@ namespace HKSupply.Models
                 IdSubVer == detailBomHwHistory.IdSubVer &&
                 Timestamp == detailBomHwHistory.Timestamp &&
                 Quantity == detailBomHwHistory.Quantity &&
-                Waste == detailBomHwHistory.Waste
+                Scrap == detailBomHwHistory.Scrap &&
+                User == detailBomHwHistory.User
                 );
 
             return res;
@@ -64,7 +68,8 @@ namespace HKSupply.Models
                 IdSubVer.GetHashCode() + 
                 Timestamp.GetHashCode() + 
                 Quantity.GetHashCode() +  
-                Waste.GetHashCode()
+                Scrap.GetHashCode() +
+                (User == null ? 0 : User.GetHashCode())
                 );
 
             return hashCode;
@@ -78,7 +83,7 @@ namespace HKSupply.Models
             detailBomHwHistory.IdBom = dbhw.IdBom;
             detailBomHwHistory.IdItemBcn = dbhw.IdItemBcn;
             detailBomHwHistory.Quantity = dbhw.Quantity;
-            detailBomHwHistory.Waste = dbhw.Waste;
+            detailBomHwHistory.Scrap = dbhw.Scrap;
 
             return detailBomHwHistory;
         }
