@@ -30,8 +30,8 @@ namespace HKSupply.Forms.Master
         List<ItemHw> _itemsHwList;
 
         object _currentItem;
-        //        List<ItemBom> _itemBomList = new List<ItemBom>();
-        BindingList<ItemBom> _itemBomList = new BindingList<ItemBom>();
+        List<ItemBom> _itemBomList = new List<ItemBom>();
+        //BindingList<ItemBom> _itemBomList = new BindingList<ItemBom>();
         ItemBom _itemBomOriginal;
 
         List<Supplier> _suppliersList;
@@ -142,6 +142,11 @@ namespace HKSupply.Forms.Master
 
             try
             {
+
+                //TEST.INI!!
+                ShowHalfFinishedMessageInfo();
+                GlobalSetting.ItemBomService.EditItemSuppliersBom(_itemBomList);
+                //TEST.FIN!!
 
                 bool res = false;
 
@@ -322,6 +327,30 @@ namespace HKSupply.Forms.Master
                 if (hitInfo.InRowCell)
                 {
                     ItemEy item = view.GetRow(view.FocusedRowHandle) as ItemEy;
+                    if (item != null)
+                    {
+                        _currentItem = item;
+                        LoadItemGridBom(item);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void GridViewItemsHf_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+
+                //Sólo agregamos si el usuario hace doble click en una fila con datos, ya que si se pulsa en el header o en un grupo el FocusedRowHandle devuelve la primera fila con datos
+                GridHitInfo hitInfo = view.CalcHitInfo((e as MouseEventArgs).Location);
+                if (hitInfo.InRowCell)
+                {
+                    ItemHf item = view.GetRow(view.FocusedRowHandle) as ItemHf;
                     if (item != null)
                     {
                         _currentItem = item;
@@ -1049,7 +1078,7 @@ namespace HKSupply.Forms.Master
                 gridViewItemsHf.Columns[$"{nameof(ItemHf.Model)}.{nameof(Model.Description)}"].GroupIndex = 1;
                 gridViewItemsHf.Columns[nameof(ItemHf.IdDefaultSupplier)].GroupIndex = 2;
 
-                //gridViewItemsEy.DoubleClick += GridViewItemsEy_DoubleClick;
+                gridViewItemsHf.DoubleClick += GridViewItemsHf_DoubleClick;
 
             }
             catch (Exception ex)
@@ -1377,11 +1406,11 @@ namespace HKSupply.Forms.Master
                                             {
                                                 (rowParent as DetailBomHf).DetailItemBom.Materials.Add(new DetailBomMt());
                                             }
-                                            //activeView.RefreshData();
+                                            activeView.RefreshData();
 
-                                            activeView.BeginDataUpdate();
-                                            grdBomRefreshAndExpand();
-                                            activeView.EndDataUpdate();
+                                            //activeView.BeginDataUpdate();
+                                            //grdBomRefreshAndExpand();
+                                            //activeView.EndDataUpdate();
                                         }
 
 
@@ -1501,7 +1530,8 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void LoadItemGridBom(ItemEy item)
+        //private void LoadItemGridBom(ItemEy item)
+        private void LoadItemGridBom(object item)
         {
             try
             {
@@ -1519,47 +1549,58 @@ namespace HKSupply.Forms.Master
 
                 _itemBomList.Clear();
 
-                //_itemBomList = GlobalSetting.ItemBomService.GetItemBom(item.IdItemBcn);
-                var yy = GlobalSetting.ItemBomService.GetItemBom(item.IdItemBcn);
-                _itemBomList = new BindingList<ItemBom>(yy);
-                //new BindingList<MyObject>(orderedList.ToList())
+                string idIdItemBcn = string.Empty;
+
+                if (item.GetType() == typeof(ItemEy))
+                {
+                    idIdItemBcn = (item as ItemEy).IdItemBcn;
+                }
+                else
+                {
+                    idIdItemBcn = (item as ItemHf).IdItemBcn;
+                }
+
+
+                _itemBomList = GlobalSetting.ItemBomService.GetItemBom(idIdItemBcn);
 
 
 
-                    if (_itemBomList == null)
+                if (_itemBomList == null)
                 {
                     ItemBom itemBom = new ItemBom();
                     itemBom.IdBom = 0;
-                    itemBom.IdItemBcn = item.IdItemBcn;
+                    itemBom.IdItemBcn = idIdItemBcn;
                     itemBom.Item = item;
-                    itemBom.IdItemGroup = Constants.ITEM_GROUP_EY;
+                    itemBom.IdItemGroup = (item.GetType() == typeof(ItemEy) ? Constants.ITEM_GROUP_EY: Constants.ITEM_GROUP_HF);
                     itemBom.Materials = new List<DetailBomMt>();
                     itemBom.Hardwares = new List<DetailBomHw>();
                     itemBom.HalfFinishedNM = new List<ItemBom>();
 
                     _itemBomList.Add(itemBom);
-                    _itemBomOriginal = new ItemBom();
-                    _itemBomOriginal.IdBom = 0;
-                    _itemBomOriginal.IdItemBcn = item.IdItemBcn;
-                    _itemBomOriginal.Item = item;
-                    _itemBomOriginal.IdItemGroup = Constants.ITEM_GROUP_EY;
-                    _itemBomOriginal.Materials = new List<DetailBomMt>();
-                    _itemBomOriginal.Hardwares = new List<DetailBomHw>();
-                    _itemBomOriginal.HalfFinishedNM = new List<ItemBom>();
+
+                    //_itemBomList.Add(itemBom);
+                    //_itemBomOriginal = new ItemBom();
+                    //_itemBomOriginal.IdBom = 0;
+                    //_itemBomOriginal.IdItemBcn = item.IdItemBcn;
+                    //_itemBomOriginal.Item = item;
+                    //_itemBomOriginal.IdItemGroup = Constants.ITEM_GROUP_EY;
+                    //_itemBomOriginal.Materials = new List<DetailBomMt>();
+                    //_itemBomOriginal.Hardwares = new List<DetailBomHw>();
+                    //_itemBomOriginal.HalfFinishedNM = new List<ItemBom>();
                 }
 
                 //TEST
-                var x = GlobalSetting.ItemBomService.GetItemBom("8 AKANE BLBE/FRE");
-                var xx = _itemBomList.Where(a => a.IdSupplier.Equals("N/D")).FirstOrDefault();
-                xx.HalfFinishedNM = x;
+                ////var x = GlobalSetting.ItemBomService.GetItemBom("8 AKANE BLBE/FRE");
+                ////var xx = _itemBomList.Where(a => a.IdSupplier.Equals("N/D")).FirstOrDefault();
+                ////xx.HalfFinishedNM = x;
 
-                DetailBomHf detailBomHfTest= new DetailBomHf();
-                detailBomHfTest.IdBom = xx.IdBom;
-                detailBomHfTest.IdBom = x.Select(a => a.IdBom).FirstOrDefault();
-                detailBomHfTest.DetailItemBom = x.FirstOrDefault();
-                List<DetailBomHf> detailBomHfListTest = new List<DetailBomHf>();
-                detailBomHfListTest.Add(detailBomHfTest);
-                xx.HalfFinished = detailBomHfListTest;
+                ////DetailBomHf detailBomHfTest= new DetailBomHf();
+                ////detailBomHfTest.IdBom = xx.IdBom;
+                ////detailBomHfTest.IdBomDetail = x.Select(a => a.IdBom).FirstOrDefault();
+                ////detailBomHfTest.DetailItemBom = x.FirstOrDefault();
+                ////List<DetailBomHf> detailBomHfListTest = new List<DetailBomHf>();
+                ////detailBomHfListTest.Add(detailBomHfTest);
+                ////xx.HalfFinished = detailBomHfListTest;
 
                 xgrdItemBom.DataSource = null;
                 xgrdItemBom.DataSource = _itemBomList;
@@ -1995,6 +2036,11 @@ namespace HKSupply.Forms.Master
                         idItemBcn = (_currentItem as ItemEy).IdItemBcn;
                         idItemGroup = Constants.ITEM_GROUP_EY;
                     }
+                    else if (_currentItem.GetType() == typeof(ItemHf))
+                    {
+                        idItemBcn = (_currentItem as ItemHf).IdItemBcn;
+                        idItemGroup = Constants.ITEM_GROUP_HF;
+                    }
 
 
                     ItemBom itemBom = new ItemBom();
@@ -2170,26 +2216,79 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                ItemBom bom = _itemBomList.FirstOrDefault();
-
-                foreach(var h in bom.Hardwares)
+                foreach (var bom in _itemBomList)
                 {
-                    if(h.Quantity <= 0)
+                    foreach (var h in bom.Hardwares)
                     {
-                        XtraMessageBox.Show($"Quantity must be greater than Zero ({h.IdItemBcn})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return false;
+                        if (h.Quantity <= 0)
+                        {
+                            XtraMessageBox.Show($"Quantity must be greater than Zero ({h.IdItemBcn})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return false;
+                        }
+                    }
+
+                    foreach (var m in bom.Materials)
+                    {
+                        if (m.Quantity <= 0)
+                        {
+                            XtraMessageBox.Show($"Quantity must be greater than Zero ({m.IdItemBcn})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return false;
+                        }
                     }
                 }
+                
 
-                foreach (var m in bom.Materials)
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private bool ShowHalfFinishedMessageInfo()
+        {
+            try
+            {
+                string msg = "This change will affect the following items:" + Environment.NewLine;
+                bool find = false;
+
+                if (_currentItem.GetType() == typeof(ItemHf))
                 {
-                    if (m.Quantity <= 0)
+                    foreach (var item in _itemBomList)
                     {
-                        XtraMessageBox.Show($"Quantity must be greater than Zero ({m.IdItemBcn})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return false;
+                        using (var db = new DB.HKSupplyContext())
+                        {
+                            var list = db.ItemsBom
+                                .Join(
+                                    db.DetailsBomHf,
+                                    itemBom => itemBom.IdBom,
+                                    detail => detail.IdBom,
+                                    (itemBom, detail) => new { ItemBom = itemBom, DetailBomHf = detail }
+                                    )
+                                .Where(a => a.DetailBomHf.IdBomDetail.Equals(item.IdBom))
+                                .ToList();
+
+                            foreach (var x in list)
+                            {
+                                find = true;
+                                msg += x.ItemBom.IdItemBcn + Environment.NewLine;
+                            }
+                        }
+                    }
+
+                    if (find)
+                    {
+                        msg += Environment.NewLine + "Continue?" + Environment.NewLine;
+                        DialogResult result = MessageBox.Show(msg, "", MessageBoxButtons.YesNo);
+
+                        if (result == DialogResult.Yes)
+                            return true;
+                        else
+                            return false;
                     }
                 }
-
+                
                 return true;
             }
             catch

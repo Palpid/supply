@@ -1,1 +1,113 @@
-﻿
+﻿2017-06-07 09:08:37,583 ERROR [1] HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom(List`1 itemSuppliersBom)
+2017-06-07 09:17:59,312 ERROR [1] HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom - Type 'System.Data.Entity.DynamicProxies.ItemBom_66501C9AC46709B52B664E73E257975F86F0E7A32CDE38CAFE53A8D3F483793F' with data contract name 'ItemBom_66501C9AC46709B52B664E73E257975F86F0E7A32CDE38CAFE53A8D3F483793F:http://schemas.datacontract.org/2004/07/System.Data.Entity.DynamicProxies' is not expected. Consider using a DataContractResolver if you are using DataContractSerializer or add any types not known statically to the list of known types - for example, by using the KnownTypeAttribute attribute or by adding them to the list of known types passed to the serializer.
+System.Runtime.Serialization.SerializationException: Type 'System.Data.Entity.DynamicProxies.ItemBom_66501C9AC46709B52B664E73E257975F86F0E7A32CDE38CAFE53A8D3F483793F' with data contract name 'ItemBom_66501C9AC46709B52B664E73E257975F86F0E7A32CDE38CAFE53A8D3F483793F:http://schemas.datacontract.org/2004/07/System.Data.Entity.DynamicProxies' is not expected. Consider using a DataContractResolver if you are using DataContractSerializer or add any types not known statically to the list of known types - for example, by using the KnownTypeAttribute attribute or by adding them to the list of known types passed to the serializer.
+   at System.Runtime.Serialization.XmlObjectSerializerWriteContext.SerializeAndVerifyType(DataContract dataContract, XmlWriterDelegator xmlWriter, Object obj, Boolean verifyKnownType, RuntimeTypeHandle declaredTypeHandle, Type declaredType)
+   at System.Runtime.Serialization.XmlObjectSerializerWriteContext.SerializeWithXsiType(XmlWriterDelegator xmlWriter, Object obj, RuntimeTypeHandle objectTypeHandle, Type objectType, Int32 declaredTypeID, RuntimeTypeHandle declaredTypeHandle, Type declaredType)
+   at System.Runtime.Serialization.XmlObjectSerializerWriteContext.InternalSerialize(XmlWriterDelegator xmlWriter, Object obj, Boolean isDeclaredType, Boolean writeXsiType, Int32 declaredTypeID, RuntimeTypeHandle declaredTypeHandle)
+   at WriteDetailBomHfToXml(XmlWriterDelegator , Object , XmlObjectSerializerWriteContext , ClassDataContract )
+   at System.Runtime.Serialization.ClassDataContract.WriteXmlValue(XmlWriterDelegator xmlWriter, Object obj, XmlObjectSerializerWriteContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerWriteContext.WriteDataContractValue(DataContract dataContract, XmlWriterDelegator xmlWriter, Object obj, RuntimeTypeHandle declaredTypeHandle)
+   at System.Runtime.Serialization.XmlObjectSerializerWriteContext.SerializeWithoutXsiType(DataContract dataContract, XmlWriterDelegator xmlWriter, Object obj, RuntimeTypeHandle declaredTypeHandle)
+   at System.Runtime.Serialization.DataContractSerializer.InternalWriteObjectContent(XmlWriterDelegator writer, Object graph, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.DataContractSerializer.InternalWriteObject(XmlWriterDelegator writer, Object graph, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.XmlObjectSerializer.WriteObjectHandleExceptions(XmlWriterDelegator writer, Object graph, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.XmlObjectSerializer.WriteObject(XmlDictionaryWriter writer, Object graph)
+   at System.Runtime.Serialization.XmlObjectSerializer.WriteObject(Stream stream, Object graph)
+   at HKSupply.Helpers.CustomExtensions.Clone[T](T source)
+   at HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom(List`1 itemSuppliersBom)
+2017-06-07 09:19:34,271 ERROR [1] HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom - Operation could destabilize the runtime.
+System.Security.VerificationException: Operation could destabilize the runtime.
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at lambda_method(Closure , Object , Dictionary`2 )
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj(Object original, Boolean forceDeepCopy, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 71
+   at HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTree[T](T original, Dictionary`2 copiedReferencesDict) in C:\Git\Supply\HKSupply\HKSupply\Helpers\DeepCopyByExpressionTrees.cs:line 35
+   at HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom(List`1 itemSuppliersBom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 421
+2017-06-07 09:57:11,367 ERROR [1] HKSupply.Services.Implementations.EFItemBom.GetItemBom - Non-static field requires a target.
+System.Reflection.TargetException: Non-static field requires a target.
+   at System.Reflection.RtFieldInfo.CheckConsistency(Object target)
+   at System.Reflection.RtFieldInfo.InternalGetValue(Object obj, StackCrawlMark& stackMark)
+   at System.Reflection.RtFieldInfo.GetValue(Object obj)
+   at System.Data.Entity.Core.Objects.ELinq.QueryParameterExpression.TryGetFieldOrPropertyValue(MemberExpression me, Object instance, Object& memberValue)
+   at System.Data.Entity.Core.Objects.ELinq.QueryParameterExpression.TryEvaluatePath(Expression expression, ConstantExpression& constantExpression)
+   at System.Data.Entity.Core.Objects.ELinq.QueryParameterExpression.EvaluateParameter(Object[] arguments)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at HKSupply.Services.Implementations.EFItemBom.GetItemBom(String idItemBcn)
+2017-06-07 11:00:41,585 ERROR [1] HKSupply.Services.Implementations.EFItemBom.GetItemBom - The Include path expression must refer to a navigation property defined on the type. Use dotted paths for reference navigation properties and the Select operator for collection navigation properties.
+Parameter name: path
+System.ArgumentException: The Include path expression must refer to a navigation property defined on the type. Use dotted paths for reference navigation properties and the Select operator for collection navigation properties.
+Parameter name: path
+   at System.Data.Entity.QueryableExtensions.Include[T,TProperty](IQueryable`1 source, Expression`1 path)
+   at HKSupply.Services.Implementations.EFItemBom.GetItemBom(String idItemBcn) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 189
+2017-06-07 11:17:31,305 ERROR [1] HKSupply.Services.Implementations.EFItemBom.GetItemBom - Non-static field requires a target.
+System.Reflection.TargetException: Non-static field requires a target.
+   at System.Reflection.RtFieldInfo.CheckConsistency(Object target)
+   at System.Reflection.RtFieldInfo.InternalGetValue(Object obj, StackCrawlMark& stackMark)
+   at System.Reflection.RtFieldInfo.GetValue(Object obj)
+   at System.Data.Entity.Core.Objects.ELinq.QueryParameterExpression.TryGetFieldOrPropertyValue(MemberExpression me, Object instance, Object& memberValue)
+   at System.Data.Entity.Core.Objects.ELinq.QueryParameterExpression.TryEvaluatePath(Expression expression, ConstantExpression& constantExpression)
+   at System.Data.Entity.Core.Objects.ELinq.QueryParameterExpression.EvaluateParameter(Object[] arguments)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at HKSupply.Services.Implementations.EFItemBom.GetItemBom(String idItemBcn)

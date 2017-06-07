@@ -15,7 +15,6 @@ namespace HKSupply.Models
         [Column("ID_BOM_DETAIL", Order = 1), Key]
         public int IdBomDetail { get; set; }
 
-        [Browsable(true)]
         [ForeignKey("IdBomDetail")]
         public ItemBom DetailItemBom { get; set; }
 

@@ -16,11 +16,11 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraPdfViewer.v16.2
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraBars.v16.2.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Utils.v16.2.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraGrid.v16.2.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraTreeList.v16.2.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraLayout.v16.2.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\System.Linq.Dynamic.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Printing.v16.2.Core.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Sparkline.v16.2.Core.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraTreeList.v16.2.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Pdf.v16.2.Core.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Pdf.v16.2.Drawing.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraPrinting.v16.2.dll
@@ -38,10 +38,10 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraPdfViewer.v16.2
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraBars.v16.2.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Utils.v16.2.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraGrid.v16.2.xml
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraTreeList.v16.2.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraLayout.v16.2.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Printing.v16.2.Core.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Sparkline.v16.2.Core.xml
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraTreeList.v16.2.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Pdf.v16.2.Core.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Pdf.v16.2.Drawing.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraPrinting.v16.2.xml
@@ -72,6 +72,10 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\de\DevExpress.XtraGrid.v16.2.r
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\DevExpress.XtraGrid.v16.2.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ja\DevExpress.XtraGrid.v16.2.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ru\DevExpress.XtraGrid.v16.2.resources.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\de\DevExpress.XtraTreeList.v16.2.resources.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\DevExpress.XtraTreeList.v16.2.resources.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ja\DevExpress.XtraTreeList.v16.2.resources.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ru\DevExpress.XtraTreeList.v16.2.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\de\DevExpress.XtraLayout.v16.2.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\DevExpress.XtraLayout.v16.2.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ja\DevExpress.XtraLayout.v16.2.resources.dll
@@ -84,10 +88,6 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\de\DevExpress.Sparkline.v16.2.
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\DevExpress.Sparkline.v16.2.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ja\DevExpress.Sparkline.v16.2.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ru\DevExpress.Sparkline.v16.2.Core.resources.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\de\DevExpress.XtraTreeList.v16.2.resources.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\DevExpress.XtraTreeList.v16.2.resources.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ja\DevExpress.XtraTreeList.v16.2.resources.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ru\DevExpress.XtraTreeList.v16.2.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\de\DevExpress.Pdf.v16.2.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\DevExpress.Pdf.v16.2.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ja\DevExpress.Pdf.v16.2.Core.resources.dll

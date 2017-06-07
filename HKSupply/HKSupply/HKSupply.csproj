@@ -576,6 +576,10 @@
     <Compile Include="Migrations\201706060713514_detailBOM_User_20170606_01.Designer.cs">
       <DependentUpon>201706060713514_detailBOM_User_20170606_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706070753069_FK_detailItemHf_20170607_01.cs" />
+    <Compile Include="Migrations\201706070753069_FK_detailItemHf_20170607_01.Designer.cs">
+      <DependentUpon>201706070753069_FK_detailItemHf_20170607_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\CustomerPriceList.cs" />
@@ -997,6 +1001,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706060713514_detailBOM_User_20170606_01.resx">
       <DependentUpon>201706060713514_detailBOM_User_20170606_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706070753069_FK_detailItemHf_20170607_01.resx">
+      <DependentUpon>201706070753069_FK_detailItemHf_20170607_01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
