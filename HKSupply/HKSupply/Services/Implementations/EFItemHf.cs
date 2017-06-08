@@ -434,5 +434,63 @@ namespace HKSupply.Services.Implementations
                 throw ex;
             }
         }
+
+        public List<ItemHf> GetISupplierHfItems(string idSupplier)
+        {
+            try
+            {
+                if (idSupplier == null)
+                    throw new ArgumentNullException(nameof(idSupplier));
+
+                using (var db = new HKSupplyContext())
+                {
+                    var idItems = db.ItemsBom
+                        .Where(a => a.IdSupplier.Equals(idSupplier) && a.IdItemGroup.Equals(Constants.ITEM_GROUP_HF))
+                        .Select(b => b.IdItemBcn)
+                        .ToList();
+
+                    var items = db.ItemsHf
+                        .Where(i => idItems.Contains(i.IdItemBcn))
+                        .Include(i => i.Model)
+                        .Include(i => i.Prototype)
+                        .Include(i => i.FamilyHK)
+                        .Include(i => i.StatusCial)
+                        .Include(i => i.StatusProd)
+                        .ToList();
+
+                    return items;
+                }
+            }
+            catch (ArgumentNullException anex)
+            {
+                _log.Error(anex.Message, anex);
+                throw anex;
+            }
+            catch (SqlException sqlex)
+            {
+                for (int i = 0; i < sqlex.Errors.Count; i++)
+                {
+                    _log.Error("Index #" + i + "\n" +
+                        "Message: " + sqlex.Errors[i].Message + "\n" +
+                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                        "Source: " + sqlex.Errors[i].Source + "\n" +
+                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                    switch (sqlex.Errors[i].Number)
+                    {
+                        case -1: //connection broken
+                        case -2: //timeout
+                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                    }
+                }
+                throw sqlex;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
+            }
+        }
     }
 }

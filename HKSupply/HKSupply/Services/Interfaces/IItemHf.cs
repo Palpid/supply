@@ -14,5 +14,6 @@ namespace HKSupply.Services.Interfaces
         bool UpdateItemWithDoc(ItemHf updateItem, ItemDoc itemDoc, bool newVersion = false);
         bool UpdateItems(IEnumerable<ItemHf> itemsToUpdate);
         List<ItemHfHistory> GetItemHfHistory(string idItemBcn);
+        List<ItemHf> GetISupplierHfItems(string idSupplier);
     }
 }

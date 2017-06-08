@@ -58,7 +58,7 @@ namespace HKSupply.Services.Implementations
                         bom.HalfFinished = db.DetailsBomHf.Where(a => a.IdBom.Equals(bom.IdBom)).ToList();
                         foreach (var hf in bom.HalfFinished)
                         {
-                            hf.DetailItemBom = GetItemSupplierBom(hf.IdBomDetail, bom.IdSupplier);
+                            hf.DetailItemBom = GetItemSupplierBom(db, hf.IdBomDetail, bom.IdSupplier);
                         }
                     }
 
@@ -136,6 +136,15 @@ namespace HKSupply.Services.Implementations
                             case Constants.ITEM_GROUP_HF:
                                 bom.Item = GlobalSetting.ItemHfService.GetItem(bom.IdItemBcn);
                                 break;
+                        }
+
+                        //cargamos los half-finished
+                        bom.HalfFinished = new List<DetailBomHf>();
+                        bom.HalfFinished = null;
+                        bom.HalfFinished = db.DetailsBomHf.Where(a => a.IdBom.Equals(bom.IdBom)).ToList();
+                        foreach (var hf in bom.HalfFinished)
+                        {
+                            hf.DetailItemBom = GetItemSupplierBom(db, hf.IdBomDetail, bom.IdSupplier);
                         }
                     }
 

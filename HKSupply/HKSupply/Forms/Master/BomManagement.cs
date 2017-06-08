@@ -17,11 +17,18 @@ using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using HKSupply.Helpers;
 using System.Data.Entity;
 using System.ComponentModel;
+using DevExpress.XtraEditors.Controls;
 
 namespace HKSupply.Forms.Master
 {
     public partial class BomManagement : RibbonFormBase
     {
+
+        #region Constants
+        private const string EDIT_COLUMN = "EditHf";
+        #endregion
+
+
         #region Private Members
         List<ItemEy> _itemsEyList;
         List<ItemHf> _itemsHfList;
@@ -58,11 +65,13 @@ namespace HKSupply.Forms.Master
                 SetUpSearchLueSupplier();
                 SetUpGrdItemsEy();
                 SetUpGrdItemsHf();
-                SetUpGrdItemsMt();
-                SetUpGrdItemsHw();
-                SetUpGrdItemsHfDetail();
+                //SetUpGrdItemsMt();
+                //SetUpGrdItemsHw();
+                //SetUpGrdItemsHfDetail();
                 SetUpGrdItemBom();
                 SetUpGrdPlainBom();
+
+                
             }
             catch (Exception ex)
             {
@@ -290,6 +299,8 @@ namespace HKSupply.Forms.Master
         {
             try
             {
+                ShowAddBomSupplier(false);
+
                 dockPanelGrdBom.Select();
 
                 LoadItemsListEy();
@@ -750,6 +761,7 @@ namespace HKSupply.Forms.Master
 
                         //Events
                         (e.View as GridView).CellValueChanged += grdBomView_CellValueChanged;
+                        (e.View as GridView).ValidatingEditor += BomManagementHardwares_ValidatingEditor;
 
                         //Agregamos los Summary
                         (e.View as GridView).OptionsView.ShowFooter = true;
@@ -800,20 +812,18 @@ namespace HKSupply.Forms.Master
                         ExpandAllRows((e.View as GridView));
                         break;
 
+
                     case nameof(ItemBom.HalfFinished):
                         
                         (e.View as GridView).DetailHeight = 1000;
 
 
+                        //Ocultamos las columnas que no nos interesan
                         foreach (GridColumn col in (e.View as GridView).Columns)
                         {
+                            if (col.FieldName != nameof(DetailBomHf.Quantity))
                                 col.Visible = false;
                         }
-
-                        //Ocultamos las columnas que no nos interesan
-                        //(e.View as GridView).Columns[nameof(DetailBomHf.IdBom)].Visible = false;
-                        //(e.View as GridView).Columns[nameof(DetailBomHf.IdBomDetail)].Visible = false;
-                        //(e.View as GridView).Columns[nameof(DetailBomHf.DetailItemBom)].Visible = false;
 
                         //agregamos la columna de descripcion
                         GridColumn colIdItemHf = new GridColumn()
@@ -821,7 +831,7 @@ namespace HKSupply.Forms.Master
                             Caption = GlobalSetting.ResManager.GetString("ItemDescription"),
                             Visible = true,
                             FieldName = $"{nameof(DetailBomHf.DetailItemBom)}.{nameof(ItemBom.IdItemBcn)}",
-                            Width = 300
+                            Width = 300,
                         };
 
                         (e.View as GridView).Columns.Add(colIdItemHf);
@@ -854,6 +864,27 @@ namespace HKSupply.Forms.Master
                         };
                         (e.View as GridView).Columns.Add(ListHalfFinished);
 
+                        //Columna con el botón para editar el semielaborado
+                        GridColumn colEditHfButton = new GridColumn() { Caption = "Edit", Visible = false, FieldName = EDIT_COLUMN, Width = 50 };
+                        (e.View as GridView).Columns.Add(colEditHfButton);
+
+                        //Formats
+                        (e.View as GridView).Columns[nameof(DetailBomHf.Quantity)].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                        (e.View as GridView).Columns[nameof(DetailBomHf.Quantity)].DisplayFormat.FormatString = "n2";
+
+                        //Columns order
+                        (e.View as GridView).Columns[$"{nameof(DetailBomHf.DetailItemBom)}.{nameof(ItemBom.IdItemBcn)}"].VisibleIndex = 0;
+                        (e.View as GridView).Columns[nameof(DetailBomHf.Quantity)].VisibleIndex = 1;
+
+                        //Events
+                        (e.View as GridView).ShownEditor += BomManagementHalfFinished_ShownEditor;
+                        (e.View as GridView).ValidatingEditor += BomManagementHalfFinished_ValidatingEditor;
+
+                        if (CurrentState == ActionsStates.Edit)
+                            SetGrdBomEditColumns();
+                        else
+                            SetGrdBomDetailsNonEdit();
+
                         break;
 
                 }
@@ -863,7 +894,6 @@ namespace HKSupply.Forms.Master
                 throw ex;
             }
         }
-
 
         private void grdBomView_CellValueChanged(object sender, CellValueChangedEventArgs e)
         {
@@ -951,6 +981,21 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void RepEditHf_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var x = gridViewItemBom.GetRow(gridViewItemBom.FocusedRowHandle);
+
+                OpenEditHfBom();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
         #endregion
 
         #region Private Methods
@@ -975,11 +1020,17 @@ namespace HKSupply.Forms.Master
             {
                 dockPanelItemsEy.Options.ShowCloseButton = false;
                 dockPanelItemsHf.Options.ShowCloseButton = false;
-                dockPanelItemsHw.Options.ShowCloseButton = false;
-                dockPanelItemsMt.Options.ShowCloseButton = false;
+                //dockPanelItemsHw.Options.ShowCloseButton = false;
+                //dockPanelItemsMt.Options.ShowCloseButton = false;
                 dockPanelGrdBom.Options.ShowCloseButton = false;
                 dockPanelTreeBom.Options.ShowCloseButton = false;
                 dockPanelPlainBom.Options.ShowCloseButton = false;
+
+                dockPanelItemsHw.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+                dockPanelItemsMt.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+                dockPanelItemsHfDetail.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+                panelContainer1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+
             }
             catch (Exception ex)
             {
@@ -1237,6 +1288,8 @@ namespace HKSupply.Forms.Master
                 //Events
                 xgrdItemBom.ViewRegistered += XgrdItemBom_ViewRegistered;
 
+                gridViewItemBom.PopupMenuShowing += GridViewItemBom_PopupMenuShowing;
+
                 //Hide group panel
                 gridViewItemBom.OptionsView.ShowGroupPanel = false;
 
@@ -1433,6 +1486,87 @@ namespace HKSupply.Forms.Master
                             }
 
                             break;
+
+
+                        case nameof(ItemBom.Hardwares):
+
+                            if (activeView.FocusedRowHandle == activeView.RowCount - 1)
+                            {
+                                BeginInvoke(new MethodInvoker(delegate
+                                {
+                                    if (activeView.ValidateEditor())
+                                    {
+                                        activeView.CloseEditor();
+
+                                        DetailBomHw row = activeView.GetRow(activeView.FocusedRowHandle) as DetailBomHw;
+                                        BaseView parent = activeView.ParentView;
+                                        var rowParent = parent.GetRow(activeView.SourceRowHandle);
+
+                                        if (row.Quantity > 0 && string.IsNullOrEmpty(row.IdItemBcn) == false)
+                                        {
+                                            if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
+                                            {
+                                                (rowParent as ItemBom).Hardwares.Add(new DetailBomHw());
+                                            }
+                                            //else if (rowParent.GetType().BaseType == typeof(DetailBomHf) || rowParent.GetType() == typeof(DetailBomHf))
+                                            //{
+                                            //    (rowParent as DetailBomHf).DetailItemBom.Materials.Add(new DetailBomMt());
+                                            //}
+                                            activeView.RefreshData();
+
+                                            //activeView.BeginDataUpdate();
+                                            //grdBomRefreshAndExpand();
+                                            //activeView.EndDataUpdate();
+                                        }
+
+                                    }
+                                }));
+
+                            }
+
+                            break;
+
+                        case nameof(ItemBom.HalfFinished):
+
+                            if (activeView.FocusedRowHandle == activeView.RowCount - 1)
+                            {
+                                BeginInvoke(new MethodInvoker(delegate
+                                {
+                                    if (activeView.ValidateEditor())
+                                    {
+                                        activeView.CloseEditor();
+
+                                        DetailBomHf row = activeView.GetRow(activeView.FocusedRowHandle) as DetailBomHf;
+                                        BaseView parent = activeView.ParentView;
+                                        var rowParent = parent.GetRow(activeView.SourceRowHandle);
+
+                                        if (row.Quantity > 0 && row.DetailItemBom != null)
+                                        {
+                                            if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
+                                            {
+                                                DetailBomHf tmpDetHf = new DetailBomHf()
+                                                {
+                                                    IdBom = (rowParent as ItemBom).IdBom,
+                                                };
+                                                (rowParent as ItemBom).HalfFinished.Add(tmpDetHf);
+                                            }
+                                            //else if (rowParent.GetType().BaseType == typeof(DetailBomHf) || rowParent.GetType() == typeof(DetailBomHf))
+                                            //{
+                                            //    (rowParent as DetailBomHf).DetailItemBom.Materials.Add(new DetailBomMt());
+                                            //}
+                                            activeView.RefreshData();
+
+                                            //activeView.BeginDataUpdate();
+                                            //grdBomRefreshAndExpand();
+                                            //activeView.EndDataUpdate();
+                                        }
+
+                                    }
+                                }));
+
+                            }
+
+                            break;
                     }
 
 
@@ -1547,6 +1681,8 @@ namespace HKSupply.Forms.Master
                 //_itemBomOriginal = itemBom.Clone(); 
                 //_itemBomOriginal = itemBom.DeepCopyByExpressionTree();
 
+                Cursor = Cursors.WaitCursor;
+
                 _itemBomList.Clear();
 
                 string idIdItemBcn = string.Empty;
@@ -1605,9 +1741,6 @@ namespace HKSupply.Forms.Master
                 xgrdItemBom.DataSource = null;
                 xgrdItemBom.DataSource = _itemBomList;
 
-                treeListBom.DataSource = null;
-                treeListBom.DataSource = _itemBomList;
-
                 grdBomRefreshAndExpand();
                 dockPanelGrdBom.Select();
 
@@ -1618,6 +1751,10 @@ namespace HKSupply.Forms.Master
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
             }
         }
 
@@ -1850,20 +1987,73 @@ namespace HKSupply.Forms.Master
                         case nameof(DetailBomHf.DetailItemBom) + "." + nameof(ItemBom.Hardwares):
                         case nameof(ItemBom.Hardwares):
 
+                            //Specific Edit repositories
+                            RepositoryItemSearchLookUpEdit riItemsHw = new RepositoryItemSearchLookUpEdit()
+                            {
+                                DataSource = _itemsHwList,
+                                ValueMember = nameof(ItemHw.IdItemBcn),
+                                DisplayMember = nameof(ItemHw.IdItemBcn),
+                                ShowClearButton = false,
+                                NullText = "Select Item",
+                            };
+                            riItemsHw.View.Columns.AddField(nameof(ItemHw.IdItemBcn)).Visible = true;
+                            riItemsHw.View.Columns.AddField(nameof(ItemHw.ItemDescription)).Visible = true;
+
+
                             view.OptionsBehavior.Editable = true;
 
                             //Edit Columns
-                            view.Columns[nameof(DetailBomHw.Quantity)].OptionsColumn.AllowEdit = true;
-                            view.Columns[nameof(DetailBomHw.Scrap)].OptionsColumn.AllowEdit = true;
+                            //view.Columns[nameof(DetailBomHw.Quantity)].OptionsColumn.AllowEdit = true;
+                            //view.Columns[nameof(DetailBomHw.Scrap)].OptionsColumn.AllowEdit = true;
+                            //view.Columns[nameof(DetailBomHw.IdItemBcn)].OptionsColumn.AllowEdit = true;
 
                             //No edit columns
-                            view.Columns[nameof(DetailBomHw.IdItemBcn)].OptionsColumn.AllowEdit = false;
                             view.Columns[$"{nameof(DetailBomHw.Item)}.{nameof(ItemHw.ItemDescription)}"].OptionsColumn.AllowEdit = false;
                             view.Columns[$"{nameof(DetailBomHw.Item)}.{nameof(ItemHw.Unit)}"].OptionsColumn.AllowEdit = false;
 
                             //Edit repositories
                             view.Columns[nameof(DetailBomHw.Quantity)].ColumnEdit = ritxt2Dec;
                             view.Columns[nameof(DetailBomHw.Scrap)].ColumnEdit = ritxt2Dec;
+
+                            view.Columns[nameof(DetailBomHw.IdItemBcn)].ColumnEdit = riItemsHw;
+
+                            break;
+
+
+                        case (nameof(ItemBom.HalfFinished)):
+
+                            //Specific Edit repositories
+                            var idsHf = _itemsHfList.Select(a => a.IdItemBcn).ToList();
+
+                            RepositoryItemSearchLookUpEdit riItemsHf = new RepositoryItemSearchLookUpEdit()
+                            {
+                                DataSource = idsHf,
+                                //ValueMember = nameof(ItemHw.IdItemBcn),
+                                //DisplayMember = nameof(ItemHw.IdItemBcn),
+                                ShowClearButton = false,
+                                NullText = "Select Item",
+                            };
+                            //riItemsHf.View.Columns.AddField(nameof(ItemHw.IdItemBcn)).Visible = true;
+                            //riItemsHf.View.Columns.AddField(nameof(ItemHw.ItemDescription)).Visible = true;
+
+                            RepositoryItemButtonEdit repEditHf = new RepositoryItemButtonEdit()
+                            {
+                                Name = "btnEditHf",
+                                TextEditStyle = TextEditStyles.HideTextEditor,
+                            };
+                            repEditHf.Buttons[0].Kind = ButtonPredefines.Glyph;
+                            //repEditHf.Buttons[0].Image = System.Drawing.Image.FromFile(@"Resources\Images\Edit_16x16.png");
+                            repEditHf.Buttons[0].Image = DevExpress.Images.ImageResourceCache.Default.GetImage("images/edit/edit_16x16.png");
+                            repEditHf.Click += RepEditHf_Click;
+
+
+                            view.OptionsBehavior.Editable = true;
+
+                            view.Columns[nameof(DetailBomHf.Quantity)].ColumnEdit = ritxt2Dec;
+                            view.Columns[$"{nameof(DetailBomHf.DetailItemBom)}.{nameof(ItemBom.IdItemBcn)}"].ColumnEdit = riItemsHf;
+                            view.Columns[EDIT_COLUMN].ColumnEdit = repEditHf;
+                            view.Columns[EDIT_COLUMN].Visible = true;
+
 
                             break;
                     }
@@ -1874,6 +2064,7 @@ namespace HKSupply.Forms.Master
                 throw ex;
             }
         }
+
 
         private void SetGrdBomDetailsNonEdit()
         {
@@ -2079,7 +2270,7 @@ namespace HKSupply.Forms.Master
         }
         #endregion
 
-        #region Dynamic Form
+        #region Dialog Form
 
         private List<string> OpenSelectSuppliersForm()
         {
@@ -2110,6 +2301,29 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void OpenEditHfBom()
+        {
+            try
+            {
+                using (DialogForms.EditHfBom form = new DialogForms.EditHfBom())
+                {
+                    //form.InitData(_currentItem, "listItemBom");
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        MessageBox.Show("KO");
+                    }
+                    else
+                    {
+                        MessageBox.Show("KO");
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
 
 
         #endregion
@@ -2121,6 +2335,8 @@ namespace HKSupply.Forms.Master
             try
             {
                 SetGrdBomEditColumns();
+
+                ShowAddBomSupplier(true);
 
                 xgrdItemsEy.Enabled = false;
                 xgrdItemsHf.Enabled = false;
@@ -2339,6 +2555,144 @@ namespace HKSupply.Forms.Master
             catch
             {
                 throw;
+            }
+        }
+
+        #endregion
+
+        #region Aux
+
+        private void ShowAddBomSupplier(bool show)
+        {
+            try
+            {
+                lblSupplier.Visible = slueSupplier.Visible = sbAddBomSupplier.Visible = show;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        #endregion
+
+
+        #region PopupMenu
+        private void GridViewItemBom_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
+        {
+            try
+            {
+                if (CurrentState != ActionsStates.Edit)
+                    return;
+
+                GridView view = sender as GridView;
+
+                if (e.MenuType == GridMenuType.Row)
+                {
+
+                    var row = view.GetRow(view.FocusedRowHandle);
+
+                    if (row.GetType() == typeof(ItemBom))
+                    {
+                        int rowHandle = e.HitInfo.RowHandle;
+                        e.Menu.Items.Clear();
+
+                        if ((row as ItemBom).Materials == null || (row as ItemBom).Materials.Count() == 0)
+                            e.Menu.Items.Add(CreateMenuItemAddINewLineMaterial(view, rowHandle));
+
+                        if ((row as ItemBom).Hardwares == null || (row as ItemBom).Hardwares.Count() == 0)
+                            e.Menu.Items.Add(CreateMenuItemAddINewLineHardware(view, rowHandle));
+
+                        if ((row as ItemBom).HalfFinished == null || (row as ItemBom).HalfFinished.Count() == 0)
+                            e.Menu.Items.Add(CreateMenuItemAddINewLineHalfFinished(view, rowHandle));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        DevExpress.Utils.Menu.DXMenuItem CreateMenuItemAddINewLineMaterial(GridView view, int rowHandle)
+        {
+            DevExpress.Utils.Menu.DXMenuItem menuItem = new DevExpress.Utils.Menu.DXMenuItem("Add Material",
+                new EventHandler(OnMenuItemAddnewLineMaterialClick));
+            menuItem.Tag = new Classes.RowInfo(view, rowHandle);
+            return menuItem;
+        }
+
+        DevExpress.Utils.Menu.DXMenuItem CreateMenuItemAddINewLineHardware(GridView view, int rowHandle)
+        {
+            DevExpress.Utils.Menu.DXMenuItem menuItem = new DevExpress.Utils.Menu.DXMenuItem("Add Hardware",
+                new EventHandler(OnMenuItemAddnewLineHardwareClick));
+            menuItem.Tag = new Classes.RowInfo(view, rowHandle);
+            return menuItem;
+        }
+
+        DevExpress.Utils.Menu.DXMenuItem CreateMenuItemAddINewLineHalfFinished(GridView view, int rowHandle)
+        {
+            DevExpress.Utils.Menu.DXMenuItem menuItem = new DevExpress.Utils.Menu.DXMenuItem("Add Half-finished",
+                new EventHandler(OnMenuItemAddnewLineHalfFinishedClick));
+            menuItem.Tag = new Classes.RowInfo(view, rowHandle);
+            return menuItem;
+        }
+
+        void OnMenuItemAddnewLineMaterialClick(object sender, EventArgs e)
+        {
+            try
+            {
+                DevExpress.Utils.Menu.DXMenuItem item = sender as DevExpress.Utils.Menu.DXMenuItem;
+                Classes.RowInfo info = item.Tag as Classes.RowInfo;
+
+                var row = info.View.GetRow(info.View.FocusedRowHandle);
+                (row as ItemBom).Materials.Add(new DetailBomMt());
+                info.View.ExpandMasterRow(info.View.FocusedRowHandle, nameof(ItemBom.Materials));
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        void OnMenuItemAddnewLineHardwareClick(object sender, EventArgs e)
+        {
+            try
+            {
+                DevExpress.Utils.Menu.DXMenuItem item = sender as DevExpress.Utils.Menu.DXMenuItem;
+                Classes.RowInfo info = item.Tag as Classes.RowInfo;
+
+                var row = info.View.GetRow(info.View.FocusedRowHandle);
+                (row as ItemBom).Hardwares.Add(new DetailBomHw());
+                info.View.ExpandMasterRow(info.View.FocusedRowHandle, nameof(ItemBom.Hardwares));
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        void OnMenuItemAddnewLineHalfFinishedClick(object sender, EventArgs e)
+        {
+            try
+            {
+                DevExpress.Utils.Menu.DXMenuItem item = sender as DevExpress.Utils.Menu.DXMenuItem;
+                Classes.RowInfo info = item.Tag as Classes.RowInfo;
+
+                var row = info.View.GetRow(info.View.FocusedRowHandle);
+
+                if ((row as ItemBom).HalfFinished == null)
+                    (row as ItemBom).HalfFinished = new List<DetailBomHf>();
+                (row as ItemBom).HalfFinished.Add(new DetailBomHf() { IdBom = (row as ItemBom).IdBom, });
+
+                info.View.ExpandMasterRow(info.View.FocusedRowHandle, nameof(ItemBom.HalfFinished));
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
 
@@ -2569,6 +2923,146 @@ namespace HKSupply.Forms.Master
             catch (Exception ex)
             {
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BomManagementHardwares_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+                DetailBomHw row = view.GetRow(view.FocusedRowHandle) as DetailBomHw;
+
+                BaseView parent = view.ParentView;
+                var rowParent = parent.GetRow(view.SourceRowHandle);
+
+                switch (view.FocusedColumn.FieldName)
+                {
+                    case nameof(DetailBomHw.IdItemBcn):
+                        //No se pueden repetir materiales 
+                        var idItemHw = e.Value.ToString();
+
+                        object exist = null;
+                        if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
+                        {
+                            exist = (rowParent as ItemBom).Hardwares.Where(a => a.IdItemBcn != null && a.IdItemBcn.Equals(idItemHw)).FirstOrDefault();
+                        }
+
+                        if (exist == null)
+                        {
+                            var itemHw = _itemsHwList.Where(a => a.IdItemBcn.Equals(idItemHw)).Single().Clone();
+                            row.Item = itemHw;
+                        }
+                        else
+                        {
+                            e.Valid = false;
+                        }
+
+                        break;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void BomManagementHalfFinished_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
+        {
+            try
+            {
+                Cursor = Cursors.WaitCursor;
+
+                GridView view = sender as GridView;
+                DetailBomHf row = view.GetRow(view.FocusedRowHandle) as DetailBomHf;
+
+                BaseView parent = view.ParentView;
+                var rowParent = parent.GetRow(view.SourceRowHandle);
+
+                //Nota: A veces no se reajusta automáticamente el tamaño cuando se van desplegando los detalles. No sé por qué, pero poniendo un valor alto el grid se va reajustando correctamemte. 
+                //Quizás en alguna futura versión de DexExpress se arregla esto.
+                view.DetailHeight = 1000;
+
+                switch (view.FocusedColumn.FieldName)
+                {
+                    case nameof(DetailBomHf.DetailItemBom) + "." + nameof(ItemBom.IdItemBcn):
+
+                        view.CollapseMasterRow(view.FocusedRowHandle);
+
+                        //No se pueden repetir los semielaborados 
+                        string idItemHf = e.Value.ToString();
+
+                        object exist = null;
+
+                        if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
+                        {
+                            
+                            exist = (rowParent as ItemBom).HalfFinished.Where(a => a.DetailItemBom != null && a.DetailItemBom.IdItemBcn.Equals(idItemHf)).FirstOrDefault();
+                        }
+
+                        if (exist == null)
+                        {
+                            var itemBom = GlobalSetting.ItemBomService.GetItemSupplierBom(idItemHf, (rowParent as ItemBom).IdSupplier);
+
+                            row.DetailItemBom = itemBom;
+                            row.IdBomDetail = itemBom.IdBom;
+                            row.Quantity = 1;
+                        }
+                        else
+                        {
+                            e.Valid = false;
+                        }
+
+
+                        
+
+
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
+}
+
+        private void BomManagementHalfFinished_ShownEditor(object sender, EventArgs e)
+        {
+            try
+            {
+                Cursor = Cursors.WaitCursor;
+
+                GridView view = sender as GridView;
+                DetailBomHf row = view.GetRow(view.FocusedRowHandle) as DetailBomHf;
+
+                BaseView parent = view.ParentView;
+                var rowParent = parent.GetRow(view.SourceRowHandle);
+
+                switch (view.FocusedColumn.FieldName)
+                {
+                    case nameof(DetailBomHf.DetailItemBom) + "." + nameof(ItemBom.IdItemBcn):
+                        SearchLookUpEdit riItemsHf = (SearchLookUpEdit)view.ActiveEditor;
+                        var supplierItemsHf = GlobalSetting.ItemHfService.GetISupplierHfItems((rowParent as ItemBom).IdSupplier);
+                        var ids= supplierItemsHf.Select(a => a.IdItemBcn).ToList();
+                        riItemsHf.Properties.DataSource = ids;
+                        break;
+                }
+                    
+
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
             }
         }
 

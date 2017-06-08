@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
+            DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
             this.documentGroup2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.document9 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.document10 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
@@ -84,9 +84,6 @@
             this.document7 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.document12 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
-            this.dockPanelTreeListBom = new DevExpress.XtraBars.Docking.DockPanel();
-            this.controlContainer3 = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.treeListBom = new DevExpress.XtraTreeList.TreeList();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document9)).BeginInit();
@@ -139,9 +136,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.document7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document12)).BeginInit();
-            this.dockPanelTreeListBom.SuspendLayout();
-            this.controlContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.treeListBom)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -224,8 +218,7 @@
             this.panelContainer1,
             this.dockPanelGrdBom,
             this.dockPanelPlainBom,
-            this.dockPanelTreeBom,
-            this.dockPanelTreeListBom});
+            this.dockPanelTreeBom});
             this.dockManagerItemBom.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
             "DevExpress.XtraBars.StandaloneBarDockControl",
@@ -472,7 +465,7 @@
             this.dockPanel4_Container.Controls.Add(this.slueSupplier);
             this.dockPanel4_Container.Location = new System.Drawing.Point(0, 0);
             this.dockPanel4_Container.Name = "dockPanel4_Container";
-            this.dockPanel4_Container.Size = new System.Drawing.Size(1332, 608);
+            this.dockPanel4_Container.Size = new System.Drawing.Size(692, 577);
             this.dockPanel4_Container.TabIndex = 0;
             // 
             // xgrdItemBom
@@ -484,7 +477,7 @@
             this.xgrdItemBom.MainView = this.gridViewItemBom;
             this.xgrdItemBom.MenuManager = this.ribbonControl;
             this.xgrdItemBom.Name = "xgrdItemBom";
-            this.xgrdItemBom.Size = new System.Drawing.Size(1326, 572);
+            this.xgrdItemBom.Size = new System.Drawing.Size(686, 541);
             this.xgrdItemBom.TabIndex = 4;
             this.xgrdItemBom.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewItemBom});
@@ -507,7 +500,7 @@
             this.lblSupplier.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblSupplier.Location = new System.Drawing.Point(8, 7);
             this.lblSupplier.Name = "lblSupplier";
-            this.lblSupplier.Size = new System.Drawing.Size(104, 13);
+            this.lblSupplier.Size = new System.Drawing.Size(104, 19);
             this.lblSupplier.TabIndex = 2;
             this.lblSupplier.Text = "Supplier";
             // 
@@ -626,9 +619,9 @@
             this.document10,
             this.document11});
             this.tabbedView1.RootContainer.Element = null;
-            dockingContainer2.Element = this.documentGroup2;
+            dockingContainer1.Element = this.documentGroup2;
             this.tabbedView1.RootContainer.Nodes.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer[] {
-            dockingContainer2});
+            dockingContainer1});
             // 
             // document5
             // 
@@ -690,35 +683,6 @@
             this.document12.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.True;
             this.document12.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
             this.document12.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
-            // 
-            // dockPanelTreeListBom
-            // 
-            this.dockPanelTreeListBom.Controls.Add(this.controlContainer3);
-            this.dockPanelTreeListBom.Dock = DevExpress.XtraBars.Docking.DockingStyle.Float;
-            this.dockPanelTreeListBom.FloatLocation = new System.Drawing.Point(738, 297);
-            this.dockPanelTreeListBom.FloatSize = new System.Drawing.Size(488, 358);
-            this.dockPanelTreeListBom.ID = new System.Guid("52b206a4-4ead-42d7-975a-694b5efc7072");
-            this.dockPanelTreeListBom.Location = new System.Drawing.Point(0, 0);
-            this.dockPanelTreeListBom.Name = "dockPanelTreeListBom";
-            this.dockPanelTreeListBom.OriginalSize = new System.Drawing.Size(200, 200);
-            this.dockPanelTreeListBom.Size = new System.Drawing.Size(488, 358);
-            this.dockPanelTreeListBom.Text = "dockPanel1";
-            // 
-            // controlContainer3
-            // 
-            this.controlContainer3.Controls.Add(this.treeListBom);
-            this.controlContainer3.Location = new System.Drawing.Point(4, 24);
-            this.controlContainer3.Name = "controlContainer3";
-            this.controlContainer3.Size = new System.Drawing.Size(480, 330);
-            this.controlContainer3.TabIndex = 0;
-            // 
-            // treeListBom
-            // 
-            this.treeListBom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeListBom.Location = new System.Drawing.Point(0, 0);
-            this.treeListBom.Name = "treeListBom";
-            this.treeListBom.Size = new System.Drawing.Size(480, 330);
-            this.treeListBom.TabIndex = 0;
             // 
             // BomManagement
             // 
@@ -786,9 +750,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.document7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.document12)).EndInit();
-            this.dockPanelTreeListBom.ResumeLayout(false);
-            this.controlContainer3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.treeListBom)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -850,8 +811,5 @@
         private DevExpress.XtraBars.Docking.ControlContainer controlContainer2;
         private DevExpress.XtraGrid.GridControl xgrdItemsHfDetail;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewItemsHfDetail;
-        private DevExpress.XtraBars.Docking.DockPanel dockPanelTreeListBom;
-        private DevExpress.XtraBars.Docking.ControlContainer controlContainer3;
-        private DevExpress.XtraTreeList.TreeList treeListBom;
     }
 }

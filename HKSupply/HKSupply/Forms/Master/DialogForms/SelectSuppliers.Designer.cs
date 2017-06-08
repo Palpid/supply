@@ -57,7 +57,7 @@
             this.sbOk.TabIndex = 2;
             this.sbOk.Text = "OK";
             // 
-            // SelectSupplirs
+            // SelectSuppliers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -65,8 +65,8 @@
             this.Controls.Add(this.sbOk);
             this.Controls.Add(this.sbCancel);
             this.Controls.Add(this.checkedListBoxSuppliers);
-            this.Name = "SelectSupplirs";
-            this.Text = "SelectSupplirs";
+            this.Name = "SelectSuppliers";
+            this.Text = "SelectSuppliers";
             this.Load += new System.EventHandler(this.SelectSupplirs_Load);
             this.ResumeLayout(false);
 
