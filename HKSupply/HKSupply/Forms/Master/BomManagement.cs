@@ -631,6 +631,12 @@ namespace HKSupply.Forms.Master
 
                         //Seteamos el tamaño de las columnas
                         (e.View as GridView).Columns[nameof(DetailBomMt.IdItemBcn)].Width = 150;
+                        (e.View as GridView).Columns[nameof(DetailBomMt.Length)].Width = 60;
+                        (e.View as GridView).Columns[nameof(DetailBomMt.Width)].Width = 60;
+                        (e.View as GridView).Columns[nameof(DetailBomMt.Height)].Width = 60;
+                        (e.View as GridView).Columns[nameof(DetailBomMt.Density)].Width = 60;
+                        (e.View as GridView).Columns[nameof(DetailBomMt.NumberOfParts)].Width = 105;
+                        (e.View as GridView).Columns[nameof(DetailBomMt.Scrap)].Width = 60;
 
                         //agregamos la columna de descripcion y de unidades
                         GridColumn colDescriptionMt = new GridColumn()
@@ -985,9 +991,15 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                var x = gridViewItemBom.GetRow(gridViewItemBom.FocusedRowHandle);
+                GridView activeView = xgrdItemBom.FocusedView as GridView;
 
-                OpenEditHfBom();
+                DetailBomHf row = activeView.GetRow(activeView.FocusedRowHandle) as DetailBomHf;
+
+                if(row.IdBomDetail > 0)
+                    OpenEditHfBom(row.DetailItemBom);
+                else
+                    XtraMessageBox.Show("Select Half-finished first", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
             }
             catch (Exception ex)
             {
@@ -1399,23 +1411,40 @@ namespace HKSupply.Forms.Master
                 if (CurrentState != ActionsStates.Edit)
                     return;
 
-                if (e.KeyCode == Keys.Delete)
+                if (e.KeyCode == Keys.F4)
                 {
                     DialogResult result = XtraMessageBox.Show("Delete row?", "Confirmation", MessageBoxButtons.YesNo);
                     if (result != DialogResult.Yes)
                         return;
 
                     GridView activeView = xgrdItemBom.FocusedView as GridView;
+                    BaseView parent = activeView.ParentView;
+                    var rowParent = parent.GetRow(activeView.SourceRowHandle);
+
                     switch (activeView.LevelName)
                     {
                         case nameof(ItemBom.Materials):
                         case nameof(ItemBom.Hardwares):
+                        case nameof(ItemBom.HalfFinished):
+
                             var bomRow = activeView.GetRow(activeView.FocusedRowHandle);
 
-                            if (bomRow.GetType() == typeof(DetailBomMt))
-                                DeleteRawMaterial(bomRow as DetailBomMt);
-                            else if (bomRow.GetType() == typeof(DetailBomHw))
-                                DeleteHardware(bomRow as DetailBomHw);
+                            //if (bomRow.GetType() == typeof(DetailBomMt))
+                            //    DeleteRawMaterial(bomRow as DetailBomMt);
+                            //else if (bomRow.GetType() == typeof(DetailBomHw))
+                            //    DeleteHardware(bomRow as DetailBomHw);
+
+                            if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
+                            {
+                                if (bomRow.GetType() == typeof(DetailBomMt))
+                                    (rowParent as ItemBom).Materials.Remove(bomRow as DetailBomMt);
+                                else if (bomRow.GetType() == typeof(DetailBomHw))
+                                    (rowParent as ItemBom).Hardwares.Remove(bomRow as DetailBomHw);
+                                else if (bomRow.GetType() == typeof(DetailBomHf))
+                                    (rowParent as ItemBom).HalfFinished.Remove(bomRow as DetailBomHf);
+                            }
+
+                            activeView.RefreshData();
 
                             LoadBomTreeView();
                             LoadPlainBom();
@@ -1424,7 +1453,6 @@ namespace HKSupply.Forms.Master
                     }
                 }
 
-                //Test
                 if (e.KeyCode == Keys.Enter)
                 {
                     GridView activeView = xgrdItemBom.FocusedView as GridView;
@@ -1875,41 +1903,39 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void DeleteRawMaterial(DetailBomMt bomRow)
-        {
-            try
-            {
-                ItemBom itemBom = _itemBomList.FirstOrDefault();
-                var material = itemBom.Materials.Where(a => a.IdItemBcn.Equals(bomRow.IdItemBcn)).FirstOrDefault();
-                if (material != null)
-                {
-                    itemBom.Materials.Remove(material);
-                    grdBomRefreshAndExpand();
-                }
-            }
-            catch(Exception ex)
-            {
-                throw ex;
-            }
-        }
+        //private void DeleteRawMaterial(DetailBomMt bomRow)
+        //{
+        //    try
+        //    {
+        //        ItemBom itemBom = _itemBomList.FirstOrDefault();
+        //        var material = itemBom.Materials.Where(a => a.IdItemBcn.Equals(bomRow.IdItemBcn)).FirstOrDefault();
+        //        if (material != null)
+        //        {
+        //            itemBom.Materials.Remove(material);
+        //        }
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
 
-        private void DeleteHardware(DetailBomHw bomRow)
-        {
-            try
-            {
-                ItemBom itemBom = _itemBomList.FirstOrDefault();
-                var hardware = itemBom.Hardwares.Where(a => a.IdItemBcn.Equals(bomRow.IdItemBcn)).FirstOrDefault();
-                if (hardware != null)
-                {
-                    itemBom.Hardwares.Remove(hardware);
-                    grdBomRefreshAndExpand();
-                }
-            }
-            catch(Exception ex)
-            {
-                throw ex;
-            }
-        }
+        //private void DeleteHardware(DetailBomHw bomRow)
+        //{
+        //    try
+        //    {
+        //        ItemBom itemBom = _itemBomList.FirstOrDefault();
+        //        var hardware = itemBom.Hardwares.Where(a => a.IdItemBcn.Equals(bomRow.IdItemBcn)).FirstOrDefault();
+        //        if (hardware != null)
+        //        {
+        //            itemBom.Hardwares.Remove(hardware);
+        //        }
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
 
         private void SetGrdBomEditColumns()
         {
@@ -2301,13 +2327,17 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void OpenEditHfBom()
+        private void OpenEditHfBom(ItemBom bom)
         {
             try
             {
                 using (DialogForms.EditHfBom form = new DialogForms.EditHfBom())
                 {
-                    //form.InitData(_currentItem, "listItemBom");
+
+                    //No se le puede pasar directamente el objeto porque se pasaría un puntero y desde el otro formulario, si modifican y cancelan se vería reflejado aquí.
+                    //También me da un error al intentar clonarlo
+                    form.InitData(bom.IdItemBcn, bom.IdSupplier);
+
                     if (form.ShowDialog() == DialogResult.OK)
                     {
                         MessageBox.Show("KO");
@@ -2587,12 +2617,15 @@ namespace HKSupply.Forms.Master
 
                 GridView view = sender as GridView;
 
+                if (view.FocusedRowHandle < 0)
+                    return;
+
                 if (e.MenuType == GridMenuType.Row)
                 {
 
                     var row = view.GetRow(view.FocusedRowHandle);
 
-                    if (row.GetType() == typeof(ItemBom))
+                    if (row.GetType().BaseType == typeof(ItemBom) || row.GetType() == typeof(ItemBom))
                     {
                         int rowHandle = e.HitInfo.RowHandle;
                         e.Menu.Items.Clear();

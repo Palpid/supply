@@ -118,7 +118,7 @@ namespace HKSupply.Services.Implementations
                 using (var db = new HKSupplyContext())
                 {
                     var bom = db.ItemsBom
-                        .Where(a => a.IdItemBcn.Equals(IdItemBcn))
+                        .Where(a => a.IdItemBcn.Equals(IdItemBcn) && a.IdSupplier.Equals(idSupplier))
                         .Include(h => h.Hardwares)
                         .Include(hi => hi.Hardwares.Select(i => i.Item))
                         .Include(m => m.Materials)
