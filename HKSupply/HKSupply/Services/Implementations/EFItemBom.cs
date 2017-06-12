@@ -468,6 +468,9 @@ namespace HKSupply.Services.Implementations
 
                                     //EF insertará la cabecera y los details (Materials, hardwares...)
                                     db.ItemsBom.Add(supplierBom);
+
+                                    //Los semielaborados los trato a parte
+
                                 }
                                 else  //update
                                 {
