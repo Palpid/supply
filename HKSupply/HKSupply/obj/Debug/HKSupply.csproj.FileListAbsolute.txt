@@ -1,3 +1,4 @@
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\Edit_16x16.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\etnia_icon.ico
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\etnia_logo.jpg
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\log4net.config
@@ -112,6 +113,7 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.CurrenciesEchang
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.CustomerManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.CustomerManagement_v1.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.CustomerPriceListManagement.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.DialogForms.EditHfBom.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.DialogForms.SelectSuppliers.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.FamiliesHkManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.FunctionalityManagement.resources
@@ -201,12 +203,10 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.detailBomHw_scrap_
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.detailBOMHf_20170606_01.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.detailBOM_User_20170606_01.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.FK_detailItemHf_20170607_01.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.scrapNUll_20170612_01.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Properties.Resources.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Resources.HKSupplyRes.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.csproj.GenerateResource.Cache
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe.licenses
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
-C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\Edit_16x16.png
-C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.DialogForms.EditHfBom.resources
-C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.scrapNUll_20170612_01.resources
