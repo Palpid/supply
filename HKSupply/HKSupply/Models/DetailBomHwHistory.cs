@@ -28,7 +28,7 @@ namespace HKSupply.Models
         public DateTime Timestamp { get; set; }
 
         [Column("SCRAP", TypeName = "NUMERIC")]
-        public decimal Scrap { get; set; }
+        public decimal? Scrap { get; set; }
 
         [Column("QUANTITY", TypeName = "NUMERIC")]
         public decimal Quantity { get; set; }

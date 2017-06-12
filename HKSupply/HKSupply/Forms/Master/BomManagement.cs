@@ -153,8 +153,8 @@ namespace HKSupply.Forms.Master
             {
 
                 //TEST.INI!!
-                ShowHalfFinishedMessageInfo();
-                GlobalSetting.ItemBomService.EditItemSuppliersBom(_itemBomList);
+                //ShowHalfFinishedMessageInfo();
+                //GlobalSetting.ItemBomService.EditItemSuppliersBom(_itemBomList);
                 //TEST.FIN!!
 
                 bool res = false;
@@ -169,15 +169,19 @@ namespace HKSupply.Forms.Master
 
                 Cursor = Cursors.WaitCursor;
 
-                ItemBom itemBom = _itemBomList.FirstOrDefault();
+                ////ItemBom itemBom = _itemBomList.FirstOrDefault();
 
-                if (itemBom.Equals(_itemBomOriginal))
-                {
-                    MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
-                    return;
-                }
+                ////if (itemBom.Equals(_itemBomOriginal))
+                ////{
+                ////    MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
+                ////    return;
+                ////}
 
-                res = EditBom(itemBom);
+                //res = EditBom(itemBom);
+
+                DeleteLastRowIfEmpty();
+
+                res = EditBom();
 
                 if (res == true)
                 {
@@ -996,7 +1000,10 @@ namespace HKSupply.Forms.Master
                 DetailBomHf row = activeView.GetRow(activeView.FocusedRowHandle) as DetailBomHf;
 
                 if(row.IdBomDetail > 0)
+                {
                     OpenEditHfBom(row.DetailItemBom);
+                    activeView.RefreshData();
+                }
                 else
                     XtraMessageBox.Show("Select Half-finished first", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 
@@ -2340,12 +2347,12 @@ namespace HKSupply.Forms.Master
 
                     if (form.ShowDialog() == DialogResult.OK)
                     {
-                        MessageBox.Show("KO");
+                        bom = GlobalSetting.ItemBomService.GetItemSupplierBom(bom.IdItemBcn, bom.IdSupplier);
                     }
-                    else
-                    {
-                        MessageBox.Show("KO");
-                    }
+                    //else
+                    //{
+                    //    MessageBox.Show("KO");
+                    //}
                 }
             }
             catch
@@ -2464,27 +2471,76 @@ namespace HKSupply.Forms.Master
             {
                 foreach (var bom in _itemBomList)
                 {
+                    foreach (var m in bom.Materials)
+                    {
+                        if (string.IsNullOrEmpty(m.IdItemBcn) == false && m.Quantity <= 0)
+                        {
+                            XtraMessageBox.Show($"Quantity must be greater than Zero ({m.IdItemBcn})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return false;
+                        }
+                    }
+
                     foreach (var h in bom.Hardwares)
                     {
-                        if (h.Quantity <= 0)
+                        if (string.IsNullOrEmpty(h.IdItemBcn) == false && h.Quantity <= 0)
                         {
                             XtraMessageBox.Show($"Quantity must be greater than Zero ({h.IdItemBcn})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             return false;
                         }
                     }
 
-                    foreach (var m in bom.Materials)
+                    foreach (var hf in bom.HalfFinished)
                     {
-                        if (m.Quantity <= 0)
+                        if (hf.DetailItemBom != null && hf.Quantity <= 0)
                         {
-                            XtraMessageBox.Show($"Quantity must be greater than Zero ({m.IdItemBcn})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            XtraMessageBox.Show($"Half-finished must be greater than Zero ({hf.DetailItemBom.IdItemBcn})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             return false;
                         }
                     }
+
                 }
-                
 
                 return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void DeleteLastRowIfEmpty()
+        {
+            try
+            {
+                foreach (var bom in _itemBomList)
+                {
+                    //Hay que hacer el loop al inverso para poder ir borrando y que no de error
+
+                    for (int i = bom.Materials.Count - 1; i >= 0; i--)
+                    {
+                        if (string.IsNullOrEmpty(bom.Materials[i].IdItemBcn))
+                        {
+                            bom.Materials.RemoveAt(i);
+                        }
+                    }
+
+                    for (int i = bom.Hardwares.Count - 1; i >= 0; i--)
+                    {
+                        if (string.IsNullOrEmpty(bom.Hardwares[i].IdItemBcn))
+                        {
+                            bom.Hardwares.RemoveAt(i);
+                        }
+                    }
+
+                    for (int i = bom.HalfFinished.Count - 1; i >= 0; i--)
+                    {
+                        if (bom.HalfFinished[i].DetailItemBom == null)
+                        {
+                            bom.HalfFinished.RemoveAt(i);
+                        }
+                    }
+
+                }
             }
             catch
             {
@@ -2543,11 +2599,23 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private bool EditBom(ItemBom itemBom)
+        //private bool EditBom(ItemBom itemBom)
+        //{
+        //    try
+        //    {
+        //        return GlobalSetting.ItemBomService.EditItemBom(itemBom);
+        //    }
+        //    catch
+        //    {
+        //        throw;
+        //    }
+        //}
+
+        private bool EditBom()
         {
             try
             {
-                return GlobalSetting.ItemBomService.EditItemBom(itemBom);
+                return GlobalSetting.ItemBomService.EditItemSuppliersBom(_itemBomList);
             }
             catch
             {

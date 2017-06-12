@@ -845,6 +845,30 @@ namespace HKSupply.Forms.Master.DialogForms
 
         #endregion
 
+        #region Button events
+        private void SbSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (IsValidBom())
+                {
+                    DeleteLastRowIfEmpty();
+
+                    if (EditBom())
+                    {
+                        XtraMessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
+                        DialogResult = DialogResult.OK;
+                        Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        #endregion
+
         #endregion
 
         #region Public Methods
@@ -910,16 +934,7 @@ namespace HKSupply.Forms.Master.DialogForms
                     Close();
                 };
 
-                sbSave.Click += (o, e) =>
-                {
-                    if (IsValidBom())
-                    {
-                        DeleteLasRowIfEmpty();
-
-                        DialogResult = DialogResult.OK;
-                        Close();
-                    }
-                };
+                sbSave.Click += SbSave_Click;
 
             }
             catch
@@ -1352,7 +1367,7 @@ namespace HKSupply.Forms.Master.DialogForms
             }
         }
 
-        private void DeleteLasRowIfEmpty()
+        private void DeleteLastRowIfEmpty()
         {
             try
             {

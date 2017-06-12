@@ -471,12 +471,12 @@ namespace HKSupply.Services.Implementations
                                 }
                                 else  //update
                                 {
-                                    ItemBom bomToUpdate = GetItemSupplierBom(supplierBom.IdBom, supplierBom.IdSupplier);
+                                    //GetItemSupplierBom
+                                    ItemBom bomToUpdate = db.ItemsBom.Where(a => a.IdBom.Equals(supplierBom.IdBom)).Single();
+
                                     if (bomToUpdate == null)
                                         throw new Exception("BOM error");
 
-                                    //Hay que agregarlo al contexto actual para que lo actualice
-                                    db.ItemsBom.Attach(bomToUpdate);
 
                                     //modifico las del original para el historial y reaprovecho tanto si es insert como update
                                     supplierBom.IdSubVer += 1;
@@ -508,47 +508,49 @@ namespace HKSupply.Services.Implementations
 
                                     foreach (var hf in supplierBom.HalfFinished)
                                         db.DetailsBomHf.Add(hf);
-
-                                    //History
-                                    foreach (var h in supplierBom.Hardwares)
-                                    {
-                                        DetailBomHwHistory histHw = h.Clone();
-                                        histHw.IdVer = supplierBom.IdVer;
-                                        histHw.IdSubVer = supplierBom.IdSubVer;
-                                        histHw.Timestamp = supplierBom.Timestamp;
-                                        histHw.User = GlobalSetting.LoggedUser.UserLogin;
-
-                                        db.DetailsBomHwHistory.Add(histHw);
-                                    }
-
-                                    foreach (var m in supplierBom.Materials)
-                                    {
-                                        DetailBomMtHistory histMt = m.Clone();
-                                        histMt.IdVer = supplierBom.IdVer;
-                                        histMt.IdSubVer = supplierBom.IdSubVer;
-                                        histMt.Timestamp = supplierBom.Timestamp;
-                                        histMt.User = GlobalSetting.LoggedUser.UserLogin;
-
-                                        db.DetailsBomMtHistory.Add(histMt);
-                                    }
-
-                                    foreach(var hf in supplierBom.HalfFinished)
-                                    {
-                                        var tmpHf = detailBomHfListTmp.Where(a => a.IdBom.Equals(hf.IdBom)).Single();
-                                        DetailBomHfHistory histHf = hf.Clone();
-                                        histHf.IdVerBom = supplierBom.IdVer;
-                                        histHf.IdSubVerBom = supplierBom.IdSubVer;
-                                        histHf.TimestampBom = supplierBom.Timestamp;
-
-                                        histHf.IdVerBomDetail = tmpHf.DetailItemBom.IdVer;
-                                        histHf.IdSubVerBomDetail = tmpHf.DetailItemBom.IdSubVer;
-                                        histHf.TimestampBomDetail = tmpHf.DetailItemBom.Timestamp;
-
-                                        histHf.User = GlobalSetting.LoggedUser.UserLogin;
-
-                                        db.DetailsBomHfHistory.Add(histHf);
-                                    }
+                                    
                                 }
+
+                                //History
+                                foreach (var h in supplierBom.Hardwares)
+                                {
+                                    DetailBomHwHistory histHw = h.Clone();
+                                    histHw.IdVer = supplierBom.IdVer;
+                                    histHw.IdSubVer = supplierBom.IdSubVer;
+                                    histHw.Timestamp = supplierBom.Timestamp;
+                                    histHw.User = GlobalSetting.LoggedUser.UserLogin;
+
+                                    db.DetailsBomHwHistory.Add(histHw);
+                                }
+
+                                foreach (var m in supplierBom.Materials)
+                                {
+                                    DetailBomMtHistory histMt = m.Clone();
+                                    histMt.IdVer = supplierBom.IdVer;
+                                    histMt.IdSubVer = supplierBom.IdSubVer;
+                                    histMt.Timestamp = supplierBom.Timestamp;
+                                    histMt.User = GlobalSetting.LoggedUser.UserLogin;
+
+                                    db.DetailsBomMtHistory.Add(histMt);
+                                }
+
+                                foreach (var hf in supplierBom.HalfFinished)
+                                {
+                                    var tmpHf = detailBomHfListTmp.Where(a => a.IdBomDetail.Equals(hf.IdBomDetail)).Single();
+                                    DetailBomHfHistory histHf = hf.Clone();
+                                    histHf.IdVerBom = supplierBom.IdVer;
+                                    histHf.IdSubVerBom = supplierBom.IdSubVer;
+                                    histHf.TimestampBom = supplierBom.Timestamp;
+
+                                    histHf.IdVerBomDetail = tmpHf.DetailItemBom.IdVer;
+                                    histHf.IdSubVerBomDetail = tmpHf.DetailItemBom.IdSubVer;
+                                    histHf.TimestampBomDetail = tmpHf.DetailItemBom.Timestamp;
+
+                                    histHf.User = GlobalSetting.LoggedUser.UserLogin;
+
+                                    db.DetailsBomHfHistory.Add(histHf);
+                                }
+
                             }
 
 
