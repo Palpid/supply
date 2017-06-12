@@ -413,6 +413,15 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="itemSuppliersBom"></param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Como con el Entity no he conseguido hacer bien la relacíón entre ITEM_BOM y DETAIL_BOM_HF, ya que la ha cogido desde ITEM_BOM.ID_BOM -> DETAIL_BOM_HF.ID_DETAIL_BOM
+        /// tengo que ir limpiando las nested propoerties para que no intente hacer los insert/update anidados y de error
+        /// </remarks>
         public bool EditItemSuppliersBom(List<ItemBom> itemSuppliersBom)
         {
             try
@@ -453,26 +462,65 @@ namespace HKSupply.Services.Implementations
                                             IdVer = hf.DetailItemBom.IdVer,
                                             IdSubVer = hf.DetailItemBom.IdSubVer,
                                             Timestamp = hf.DetailItemBom.Timestamp
-                                        }
+                                        },
+                                        Quantity = hf.Quantity,
                                     };
                                     detailBomHfListTmp.Add(tmp);
                                     hf.DetailItemBom = null;
                                 }
 
-                                if (supplierBom.IdBom == 0)  //insert new
+                                //--------INSERT--------//
+                                if (supplierBom.IdBom == 0) 
                                 {
                                     supplierBom.IdVer = 1;
                                     supplierBom.IdSubVer = 0;
                                     supplierBom.Timestamp = DateTime.Now;
                                     supplierBom.CreateDate = DateTime.Now;
 
-                                    //EF insertará la cabecera y los details (Materials, hardwares...)
+                                    supplierBom.HalfFinished = null;
+                                    //EF insertará la cabecera y los details de Materials y hardwares
                                     db.ItemsBom.Add(supplierBom);
 
+                                    db.SaveChanges(); //para poder recuperar el id insertado
+
+                                    db.Entry(supplierBom).GetDatabaseValues();
+
                                     //Los semielaborados los trato a parte
+                                    foreach (var hf in detailBomHfListTmp)
+                                    {
+                                        //Detail
+                                        DetailBomHf detailTmp = new DetailBomHf
+                                        {
+                                            IdBom = supplierBom.IdBom,
+                                            IdBomDetail = hf.IdBomDetail,
+                                            Quantity = hf.Quantity
+                                        };
+
+                                        hf.IdBom = supplierBom.IdBom;
+
+                                        //History
+                                        DetailBomHfHistory histHf = hf.Clone();
+                                        histHf.IdVerBom = supplierBom.IdVer;
+                                        histHf.IdSubVerBom = supplierBom.IdSubVer;
+                                        histHf.TimestampBom = supplierBom.Timestamp;
+
+                                        histHf.IdVerBomDetail = hf.DetailItemBom.IdVer;
+                                        histHf.IdSubVerBomDetail = hf.DetailItemBom.IdSubVer;
+                                        histHf.TimestampBomDetail = hf.DetailItemBom.Timestamp;
+
+                                        histHf.User = GlobalSetting.LoggedUser.UserLogin;
+
+                                        //Inserts into DB
+                                        db.DetailsBomHf.Add(detailTmp);
+                                        db.DetailsBomHfHistory.Add(histHf);
+
+                                        db.SaveChanges();
+
+                                    }
 
                                 }
-                                else  //update
+                                //--------UPDATE--------//
+                                else
                                 {
                                     //GetItemSupplierBom
                                     ItemBom bomToUpdate = db.ItemsBom.Where(a => a.IdBom.Equals(supplierBom.IdBom)).Single();
@@ -509,12 +557,32 @@ namespace HKSupply.Services.Implementations
                                     foreach (var m in supplierBom.Materials)
                                         db.DetailsBomMt.Add(m);
 
+
                                     foreach (var hf in supplierBom.HalfFinished)
+                                    {
+                                        //Detail
                                         db.DetailsBomHf.Add(hf);
+
+                                        //History
+                                        var tmpHf = detailBomHfListTmp.Where(a => a.IdBomDetail.Equals(hf.IdBomDetail)).Single();
+                                        DetailBomHfHistory histHf = hf.Clone();
+                                        histHf.IdVerBom = supplierBom.IdVer;
+                                        histHf.IdSubVerBom = supplierBom.IdSubVer;
+                                        histHf.TimestampBom = supplierBom.Timestamp;
+
+                                        histHf.IdVerBomDetail = tmpHf.DetailItemBom.IdVer;
+                                        histHf.IdSubVerBomDetail = tmpHf.DetailItemBom.IdSubVer;
+                                        histHf.TimestampBomDetail = tmpHf.DetailItemBom.Timestamp;
+
+                                        histHf.User = GlobalSetting.LoggedUser.UserLogin;
+
+                                        db.DetailsBomHfHistory.Add(histHf);
+                                    }
+                                        
                                     
                                 }
 
-                                //History
+                                //History de Hardware y materiales, comnún para insert y update
                                 foreach (var h in supplierBom.Hardwares)
                                 {
                                     DetailBomHwHistory histHw = h.Clone();
@@ -537,22 +605,22 @@ namespace HKSupply.Services.Implementations
                                     db.DetailsBomMtHistory.Add(histMt);
                                 }
 
-                                foreach (var hf in supplierBom.HalfFinished)
-                                {
-                                    var tmpHf = detailBomHfListTmp.Where(a => a.IdBomDetail.Equals(hf.IdBomDetail)).Single();
-                                    DetailBomHfHistory histHf = hf.Clone();
-                                    histHf.IdVerBom = supplierBom.IdVer;
-                                    histHf.IdSubVerBom = supplierBom.IdSubVer;
-                                    histHf.TimestampBom = supplierBom.Timestamp;
+                                //foreach (var hf in supplierBom.HalfFinished)
+                                //{
+                                //    var tmpHf = detailBomHfListTmp.Where(a => a.IdBomDetail.Equals(hf.IdBomDetail)).Single();
+                                //    DetailBomHfHistory histHf = hf.Clone();
+                                //    histHf.IdVerBom = supplierBom.IdVer;
+                                //    histHf.IdSubVerBom = supplierBom.IdSubVer;
+                                //    histHf.TimestampBom = supplierBom.Timestamp;
 
-                                    histHf.IdVerBomDetail = tmpHf.DetailItemBom.IdVer;
-                                    histHf.IdSubVerBomDetail = tmpHf.DetailItemBom.IdSubVer;
-                                    histHf.TimestampBomDetail = tmpHf.DetailItemBom.Timestamp;
+                                //    histHf.IdVerBomDetail = tmpHf.DetailItemBom.IdVer;
+                                //    histHf.IdSubVerBomDetail = tmpHf.DetailItemBom.IdSubVer;
+                                //    histHf.TimestampBomDetail = tmpHf.DetailItemBom.Timestamp;
 
-                                    histHf.User = GlobalSetting.LoggedUser.UserLogin;
+                                //    histHf.User = GlobalSetting.LoggedUser.UserLogin;
 
-                                    db.DetailsBomHfHistory.Add(histHf);
-                                }
+                                //    db.DetailsBomHfHistory.Add(histHf);
+                                //}
 
                             }
 

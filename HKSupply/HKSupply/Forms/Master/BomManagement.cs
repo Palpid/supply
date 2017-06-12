@@ -2489,14 +2489,18 @@ namespace HKSupply.Forms.Master
                         }
                     }
 
-                    foreach (var hf in bom.HalfFinished)
+                    if (bom.HalfFinished != null)
                     {
-                        if (hf.DetailItemBom != null && hf.Quantity <= 0)
+                        foreach (var hf in bom.HalfFinished)
                         {
-                            XtraMessageBox.Show($"Half-finished must be greater than Zero ({hf.DetailItemBom.IdItemBcn})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return false;
+                            if (hf.DetailItemBom != null && hf.Quantity <= 0)
+                            {
+                                XtraMessageBox.Show($"Half-finished must be greater than Zero ({hf.DetailItemBom.IdItemBcn})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return false;
+                            }
                         }
                     }
+                    
 
                 }
 
