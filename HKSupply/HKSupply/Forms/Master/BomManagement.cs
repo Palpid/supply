@@ -152,11 +152,6 @@ namespace HKSupply.Forms.Master
             try
             {
 
-                //TEST.INI!!
-                //ShowHalfFinishedMessageInfo();
-                //GlobalSetting.ItemBomService.EditItemSuppliersBom(_itemBomList);
-                //TEST.FIN!!
-
                 bool res = false;
 
                 if (IsValidBom() == false)
@@ -167,17 +162,10 @@ namespace HKSupply.Forms.Master
                 if (result != DialogResult.Yes)
                     return;
 
+                if (ShowHalfFinishedMessageInfo() == false)
+                    return;
+
                 Cursor = Cursors.WaitCursor;
-
-                ////ItemBom itemBom = _itemBomList.FirstOrDefault();
-
-                ////if (itemBom.Equals(_itemBomOriginal))
-                ////{
-                ////    MessageBox.Show(GlobalSetting.ResManager.GetString("NoPendingChanges"));
-                ////    return;
-                ////}
-
-                //res = EditBom(itemBom);
 
                 DeleteLastRowIfEmpty();
 
@@ -303,7 +291,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                ShowAddBomSupplier(false);
+                ShowAddBomSupplierAndCopyBom(false);
 
                 dockPanelGrdBom.Select();
 
@@ -326,6 +314,19 @@ namespace HKSupply.Forms.Master
                     AddSupplierBom();
             }
             catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SbCopyBom_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_itemBomList != null && _itemBomList.Count() > 0)
+                    OpenSelectSuppliersForm2Copy();
+            }
+            catch(Exception ex)
             {
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -410,8 +411,6 @@ namespace HKSupply.Forms.Master
                 //    LoadPlainBom();
                 //}
 
-                //TEST AKI
-
                 GridView view = sender as GridView;
                 GridHitInfo hitInfo = view.CalcHitInfo((e as MouseEventArgs).Location);
 
@@ -466,7 +465,7 @@ namespace HKSupply.Forms.Master
 
                             //activeBomView.RefreshData(); //--> OK
                             activeBomView.BeginDataUpdate();
-                            grdBomRefreshAndExpand();
+                            GrdBomRefreshAndExpand();
                             activeBomView.EndDataUpdate();
 
 
@@ -502,7 +501,7 @@ namespace HKSupply.Forms.Master
 
                             //activeBomView.RefreshData(); //--> OK
                             activeBomView.BeginDataUpdate();
-                            grdBomRefreshAndExpand();
+                            GrdBomRefreshAndExpand();
                             activeBomView.EndDataUpdate();
 
 
@@ -706,7 +705,7 @@ namespace HKSupply.Forms.Master
                         (e.View as GridView).Columns[nameof(DetailBomMt.Quantity)].VisibleIndex = 11;
 
                         //Events
-                        (e.View as GridView).CellValueChanged += grdBomView_CellValueChanged;
+                        (e.View as GridView).CellValueChanged += GrdBomView_CellValueChanged;
                         //Test
                         //(e.View as GridView).ValidateRow += BomManagementMaterials_ValidateRow;
                         (e.View as GridView).ValidatingEditor += BomManagementMaterials_ValidatingEditor;
@@ -770,7 +769,7 @@ namespace HKSupply.Forms.Master
                         (e.View as GridView).Columns[nameof(DetailBomHw.Scrap)].VisibleIndex = 4;
 
                         //Events
-                        (e.View as GridView).CellValueChanged += grdBomView_CellValueChanged;
+                        (e.View as GridView).CellValueChanged += GrdBomView_CellValueChanged;
                         (e.View as GridView).ValidatingEditor += BomManagementHardwares_ValidatingEditor;
 
                         //Agregamos los Summary
@@ -905,7 +904,7 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void grdBomView_CellValueChanged(object sender, CellValueChangedEventArgs e)
+        private void GrdBomView_CellValueChanged(object sender, CellValueChangedEventArgs e)
         {
             try
             {
@@ -1026,6 +1025,7 @@ namespace HKSupply.Forms.Master
             try
             {
                 sbAddBomSupplier.Click += SbAddBomSupplier_Click;
+                sbCopyBom.Click += SbCopyBom_Click;
             }
             catch
             {
@@ -1721,14 +1721,17 @@ namespace HKSupply.Forms.Master
                 _itemBomList.Clear();
 
                 string idIdItemBcn = string.Empty;
+                string idSupplier = string.Empty;
 
                 if (item.GetType() == typeof(ItemEy))
                 {
                     idIdItemBcn = (item as ItemEy).IdItemBcn;
+                    idSupplier = (item as ItemEy).IdDefaultSupplier;
                 }
                 else
                 {
                     idIdItemBcn = (item as ItemHf).IdItemBcn;
+                    idSupplier = (item as ItemHf).IdDefaultSupplier;
                 }
 
 
@@ -1736,13 +1739,20 @@ namespace HKSupply.Forms.Master
 
 
 
-                if (_itemBomList == null)
+                if (_itemBomList == null || _itemBomList.Count == 0)
                 {
+                    if (string.IsNullOrEmpty(idSupplier))
+                    {
+                            XtraMessageBox.Show("Item without default supplier. You must define one first", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                    }
+
                     ItemBom itemBom = new ItemBom();
                     itemBom.IdBom = 0;
                     itemBom.IdItemBcn = idIdItemBcn;
                     itemBom.Item = item;
                     itemBom.IdItemGroup = (item.GetType() == typeof(ItemEy) ? Constants.ITEM_GROUP_EY: Constants.ITEM_GROUP_HF);
+                    itemBom.IdSupplier = idSupplier;
                     itemBom.Materials = new List<DetailBomMt>();
                     itemBom.Hardwares = new List<DetailBomHw>();
                     itemBom.HalfFinishedNM = new List<ItemBom>();
@@ -1760,23 +1770,10 @@ namespace HKSupply.Forms.Master
                     //_itemBomOriginal.HalfFinishedNM = new List<ItemBom>();
                 }
 
-                //TEST
-                ////var x = GlobalSetting.ItemBomService.GetItemBom("8 AKANE BLBE/FRE");
-                ////var xx = _itemBomList.Where(a => a.IdSupplier.Equals("N/D")).FirstOrDefault();
-                ////xx.HalfFinishedNM = x;
-
-                ////DetailBomHf detailBomHfTest= new DetailBomHf();
-                ////detailBomHfTest.IdBom = xx.IdBom;
-                ////detailBomHfTest.IdBomDetail = x.Select(a => a.IdBom).FirstOrDefault();
-                ////detailBomHfTest.DetailItemBom = x.FirstOrDefault();
-                ////List<DetailBomHf> detailBomHfListTest = new List<DetailBomHf>();
-                ////detailBomHfListTest.Add(detailBomHfTest);
-                ////xx.HalfFinished = detailBomHfListTest;
-
                 xgrdItemBom.DataSource = null;
                 xgrdItemBom.DataSource = _itemBomList;
 
-                grdBomRefreshAndExpand();
+                GrdBomRefreshAndExpand();
                 dockPanelGrdBom.Select();
 
                 LoadBomTreeView();
@@ -1865,7 +1862,7 @@ namespace HKSupply.Forms.Master
                     };
 
                     itemBom.Materials.Add(detail);
-                    grdBomRefreshAndExpand();
+                    GrdBomRefreshAndExpand();
                 }
                 else
                 {
@@ -1897,7 +1894,7 @@ namespace HKSupply.Forms.Master
                         Scrap = 0
                     };
                     itemBom.Hardwares.Add(detail);
-                    grdBomRefreshAndExpand();
+                    GrdBomRefreshAndExpand();
                 }
                 else
                 {
@@ -2118,7 +2115,7 @@ namespace HKSupply.Forms.Master
 
         #region Grids Aux
 
-        private void grdBomRefreshAndExpand()
+        private void GrdBomRefreshAndExpand()
         {
             xgrdItemBom.RefreshDataSource();
             ExpandAllRows(gridViewItemBom);
@@ -2281,7 +2278,7 @@ namespace HKSupply.Forms.Master
                     xgrdItemBom.DataSource = null;
                     xgrdItemBom.DataSource = _itemBomList;
 
-                    grdBomRefreshAndExpand();
+                    GrdBomRefreshAndExpand();
                     dockPanelGrdBom.Select();
 
                     LoadBomTreeView();
@@ -2312,7 +2309,7 @@ namespace HKSupply.Forms.Master
                 
 
                 var suppliers = _itemBomList.Select(a => a.IdSupplier).ToList();
-                List <string> selectedSuppliers = new List<string>();
+                List <string> selectedSuppliersSource = new List<string>();
 
                 using (DialogForms.SelectSuppliers form = new DialogForms.SelectSuppliers())
                 {
@@ -2320,12 +2317,45 @@ namespace HKSupply.Forms.Master
 
                     if (form.ShowDialog() == DialogResult.OK)
                     {
-                        selectedSuppliers = form.SelectedSuppliers;
+                        selectedSuppliersSource = form.SelectedSuppliersSource;
                     }
 
                 }
 
-                return selectedSuppliers;
+                return selectedSuppliersSource;
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private bool OpenSelectSuppliersForm2Copy()
+        {
+            try
+            {
+
+
+                var suppliers = _itemBomList.Select(a => a.IdSupplier).ToList();
+                List<string> selectedSuppliersSource = new List<string>();
+                List<string> selectedSuppliersDestination = new List<string>();
+
+                using (DialogForms.SelectSuppliers form = new DialogForms.SelectSuppliers())
+                {
+                    form.InitData(suppliers);
+
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        selectedSuppliersSource = form.SelectedSuppliersSource;
+                        selectedSuppliersDestination = form.SelectedSuppliersDestination;
+
+                        CopySupplierBom2SupplierBom(selectedSuppliersSource.Single(), selectedSuppliersDestination);
+                    }
+
+                }
+
+                return true;
 
             }
             catch
@@ -2373,7 +2403,7 @@ namespace HKSupply.Forms.Master
             {
                 SetGrdBomEditColumns();
 
-                ShowAddBomSupplier(true);
+                ShowAddBomSupplierAndCopyBom(true);
 
                 xgrdItemsEy.Enabled = false;
                 xgrdItemsHf.Enabled = false;
@@ -2563,23 +2593,32 @@ namespace HKSupply.Forms.Master
                 {
                     foreach (var item in _itemBomList)
                     {
-                        using (var db = new DB.HKSupplyContext())
-                        {
-                            var list = db.ItemsBom
-                                .Join(
-                                    db.DetailsBomHf,
-                                    itemBom => itemBom.IdBom,
-                                    detail => detail.IdBom,
-                                    (itemBom, detail) => new { ItemBom = itemBom, DetailBomHf = detail }
-                                    )
-                                .Where(a => a.DetailBomHf.IdBomDetail.Equals(item.IdBom))
-                                .ToList();
+                        //using (var db = new DB.HKSupplyContext())
+                        //{
+                        //    var list = db.ItemsBom
+                        //        .Join(
+                        //            db.DetailsBomHf,
+                        //            itemBom => itemBom.IdBom,
+                        //            detail => detail.IdBom,
+                        //            (itemBom, detail) => new { ItemBom = itemBom, DetailBomHf = detail }
+                        //            )
+                        //        .Where(a => a.DetailBomHf.IdBomDetail.Equals(item.IdBom))
+                        //        .ToList();
 
-                            foreach (var x in list)
-                            {
-                                find = true;
-                                msg += x.ItemBom.IdItemBcn + Environment.NewLine;
-                            }
+                        //    var list2 = GlobalSetting.ItemBomService.GetRelatedItemBom(item.IdBom);
+
+                        //    foreach (var x in list)
+                        //    {
+                        //        find = true;
+                        //        msg += $"{x.ItemBom.IdItemBcn} ({x.ItemBom.IdSupplier}) {Environment.NewLine}";
+                        //    }
+                        //}
+
+                        var list = GlobalSetting.ItemBomService.GetRelatedItemBom(item.IdBom);
+                        foreach (var x in list)
+                        {
+                            find = true;
+                            msg += $"{x.IdItemBcn} ({x.IdSupplier}) {Environment.NewLine}";
                         }
                     }
 
@@ -2631,20 +2670,19 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                ItemEy item = _itemBomOriginal.Item as ItemEy;
+                //ItemEy item = _itemBomOriginal.Item as ItemEy;
                 _itemBomOriginal = null;
                 _itemBomList.Clear();
-                LoadItemGridBom(item);
+                LoadItemGridBom(_currentItem);
 
                 //Restore de ribbon to initial states
                 RestoreInitState();
 
+                dockPanelItemsHf.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
+                dockPanelItemsHf.ShowSliding();
 
                 dockPanelItemsEy.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
                 dockPanelItemsEy.ShowSliding();
-
-                dockPanelItemsHf.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
-                dockPanelItemsHf.ShowSliding();
 
                 xgrdItemsEy.Enabled = true;
                 xgrdItemsHf.Enabled = true;
@@ -2653,6 +2691,7 @@ namespace HKSupply.Forms.Master
                 gridViewItemsHw.DoubleClick -= GridViewItemsHw_DoubleClick;
 
                 SetGrdBomDetailsNonEdit();
+                ShowAddBomSupplierAndCopyBom(false);
             }
             catch
             {
@@ -2664,11 +2703,11 @@ namespace HKSupply.Forms.Master
 
         #region Aux
 
-        private void ShowAddBomSupplier(bool show)
+        private void ShowAddBomSupplierAndCopyBom(bool show)
         {
             try
             {
-                lblSupplier.Visible = slueSupplier.Visible = sbAddBomSupplier.Visible = show;
+                lblSupplier.Visible = slueSupplier.Visible = sbAddBomSupplier.Visible = lblCopyBom.Visible = sbCopyBom.Visible = show;
             }
             catch
             {
@@ -2803,9 +2842,86 @@ namespace HKSupply.Forms.Master
 
         #endregion
 
+        #region Copy Supplier BOM to other Supplier BOM
+        private bool CopySupplierBom2SupplierBom(string selectedSupplierSource, List<string> selectedSuppliersDestination)
+        {
+            try
+            {
+                Cursor = Cursors.WaitCursor;
+
+                string msgHalfFinished = string.Empty;
+
+                var bomSource = _itemBomList.Where(a => a.IdSupplier.Equals(selectedSupplierSource)).Single();
+
+                foreach(var supplierDestination in selectedSuppliersDestination)
+                {
+                    var bomDestination = _itemBomList.Where(a => a.IdSupplier.Equals(supplierDestination)).Single();
+
+                    bomDestination.Materials = new List<DetailBomMt>();
+                    bomDestination.Hardwares = new List<DetailBomHw>();
+                    bomDestination.HalfFinished = new List<DetailBomHf>();
+
+                    foreach (var m in bomSource.Materials)
+                    {
+                        var tmpMat = m.Clone();
+                        tmpMat.IdBom = bomDestination.IdBom;
+                        bomDestination.Materials.Add(tmpMat);
+                    }
+
+                    foreach(var hw in bomSource.Hardwares)
+                    {
+                        var tmpHw = hw.Clone();
+                        tmpHw.IdBom = bomDestination.IdBom;
+                        bomDestination.Hardwares.Add(tmpHw);
+                    }
+
+                    foreach(var hf in bomSource.HalfFinished)
+                    {
+                        //Los semielaborados no se copían directamente, hay que buscar si existe un bom en el sistema para ese item/supplier y copiar ese.
+                        var itemBomHf = GlobalSetting.ItemBomService.GetItemSupplierBom(hf.DetailItemBom.IdItemBcn, supplierDestination);
+
+                        if (itemBomHf != null)
+                        {
+                            DetailBomHf detailBomHf = new DetailBomHf()
+                            {
+                                DetailItemBom = itemBomHf,
+                                IdBomDetail = itemBomHf.IdBom,
+                                Quantity = hf.Quantity
+
+                            };
+                            bomDestination.HalfFinished.Add(detailBomHf);
+                        }
+                        else
+                        {
+                            msgHalfFinished += $"{hf.DetailItemBom.IdItemBcn} is not defined for supplier {supplierDestination}.{Environment.NewLine}";
+                        }
+                    }
+                }
+
+                if (msgHalfFinished != string.Empty)
+                {
+                    XtraMessageBox.Show(msgHalfFinished, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                GrdBomRefreshAndExpand();
+
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
+            
+        }
         #endregion
 
-        #region TEST
+        #endregion
+
+        #region BomManagement ValidatingEditor
         //private void BomManagementMaterials_ValidateRow(object sender, ValidateRowEventArgs e)
         //{
         //    try
@@ -3135,7 +3251,7 @@ namespace HKSupply.Forms.Master
             {
                 Cursor = Cursors.Default;
             }
-}
+        }
 
         private void BomManagementHalfFinished_ShownEditor(object sender, EventArgs e)
         {

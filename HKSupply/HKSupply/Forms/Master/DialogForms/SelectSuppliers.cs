@@ -20,9 +20,11 @@ namespace HKSupply.Forms.Master.DialogForms
         #endregion
 
         #region Public Properties
-        public List<string> SelectedSuppliers { get; set; }
+        public List<string> SelectedSuppliersSource { get; set; }
+        public List<string> SelectedSuppliersDestination { get; set; }
         #endregion
 
+        #region Constructor
         public SelectSuppliers()
         {
             InitializeComponent();
@@ -37,11 +39,33 @@ namespace HKSupply.Forms.Master.DialogForms
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
+        #region Form Events
         private void SelectSupplirs_Load(object sender, EventArgs e)
         {
 
         }
+
+        private void CheckedListBoxSuppliersSource_ItemCheck(object sender, System.Windows.Forms.ItemCheckEventArgs e)
+        {
+            try
+            {
+                if (e.NewValue == CheckState.Unchecked) return;
+               
+                for (int i = 0; i < checkedListBoxSuppliersSource.Items.Count; i++)
+                {
+                    if (i != e.Index)
+                        checkedListBoxSuppliersSource.SetItemChecked(i, false);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        #endregion
 
         #region Public Methods
         public void InitData(List<string> suppliers)
@@ -66,14 +90,32 @@ namespace HKSupply.Forms.Master.DialogForms
 
             sbOk.Click += (o, e) =>
             {
-                SelectedSuppliers = new List<string>();
-                foreach( var itemChecked in checkedListBoxSuppliers.CheckedItems)
+                SelectedSuppliersSource = new List<string>();
+                SelectedSuppliersDestination = new List<string>();
+
+                foreach (var itemChecked in checkedListBoxSuppliersSource.CheckedItems)
                 {
-                    SelectedSuppliers.Add(itemChecked.ToString());
+                    SelectedSuppliersSource.Add(itemChecked.ToString());
                 }
-                DialogResult = DialogResult.OK;
-                Close();
+
+                foreach (var itemChecked in checkedListBoxSuppliersDestination.CheckedItems)
+                {
+                    SelectedSuppliersDestination.Add(itemChecked.ToString());
+                }
+
+                if (ValidateSuppliers())
+                {
+                    DialogResult = DialogResult.OK;
+                    Close();
+                }
+                else
+                {
+                    XtraMessageBox.Show("Same Supplier as source  and destination", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                
             };
+
+            checkedListBoxSuppliersSource.ItemCheck += CheckedListBoxSuppliersSource_ItemCheck;
         }
 
         private void SetFormStyle()
@@ -100,8 +142,33 @@ namespace HKSupply.Forms.Master.DialogForms
             {
                 foreach (var supplier in _suppliers)
                 {
-                    checkedListBoxSuppliers.Items.Add(new CheckedListBoxItem(supplier, false));
+                    checkedListBoxSuppliersSource.Items.Add(new CheckedListBoxItem(supplier, false));
                 }
+
+                foreach (var supplier in _suppliers)
+                {
+                    checkedListBoxSuppliersDestination.Items.Add(new CheckedListBoxItem(supplier, false));
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Validar si hemos escogido el mismo supplier como Source y Destination
+        /// </summary>
+        /// <returns></returns>
+        private bool ValidateSuppliers()
+        {
+            try
+            {
+                var validate = SelectedSuppliersSource.Intersect(SelectedSuppliersDestination).ToList();
+                if (validate.Count == 0)
+                    return true;
+                else
+                    return false;
             }
             catch
             {

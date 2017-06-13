@@ -90,6 +90,11 @@ namespace HKSupply.Models
                 res = (Materials.Count == itemBom.Materials.Count);
             }
 
+            if (res == true)
+            {
+                res = (HalfFinished.Count == itemBom.HalfFinished.Count);
+            }
+
             int i = 0;
             if (res == true)
             {
@@ -120,7 +125,22 @@ namespace HKSupply.Models
                 }
             }
 
-            return res;
+            i = 0;
+            if (res == true)
+            {
+                foreach (var hf in HalfFinished)
+                {
+                    res = res && (
+                        hf.IdBom == itemBom.HalfFinished[i].IdBom &&
+                        hf.IdBomDetail == itemBom.HalfFinished[i].IdBomDetail &&
+                        hf.Quantity == itemBom.HalfFinished[i].Quantity
+                        );
+                    i++;
+                }
+            }
+
+
+                return res;
         }
 
         public override int GetHashCode()

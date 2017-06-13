@@ -11,5 +11,7 @@ namespace HKSupply.Services.Interfaces
         bool EditItemBom(ItemBom bom);
 
         bool EditItemSuppliersBom(List<ItemBom> itemSuppliersBom);
+
+        List<ItemBom> GetRelatedItemBom(int idBomn);
     }
 }

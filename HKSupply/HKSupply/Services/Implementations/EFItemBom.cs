@@ -438,7 +438,6 @@ namespace HKSupply.Services.Implementations
 
                             foreach(ItemBom supplierBom in itemSuppliersBom)
                             {
-
                                 //Nota: Al hacer un add, EF agrega al contexto del inset todas las nested properties y también intenta hacerles un insert (familias, item...)
                                 //Las seteo a null para que las ignore, no sé si es muy correcto, pero es la única manera que he encontrado ahora.
                                 supplierBom.Item = null;
@@ -514,20 +513,19 @@ namespace HKSupply.Services.Implementations
                                         db.DetailsBomHf.Add(detailTmp);
                                         db.DetailsBomHfHistory.Add(histHf);
 
-                                        db.SaveChanges();
+                                        
 
                                     }
-
+                                    db.SaveChanges();
                                 }
                                 //--------UPDATE--------//
                                 else
                                 {
                                     //GetItemSupplierBom
-                                    ItemBom bomToUpdate = db.ItemsBom.Where(a => a.IdBom.Equals(supplierBom.IdBom)).Single();
+                                    ItemBom bomToUpdate = db.ItemsBom.Where(a => a.IdBom.Equals(supplierBom.IdBom)).Single(); //OK
 
                                     if (bomToUpdate == null)
                                         throw new Exception("BOM error");
-
 
                                     //modifico las del original para el historial y reaprovecho tanto si es insert como update
                                     supplierBom.IdSubVer += 1;
@@ -605,27 +603,15 @@ namespace HKSupply.Services.Implementations
                                     db.DetailsBomMtHistory.Add(histMt);
                                 }
 
-                                //foreach (var hf in supplierBom.HalfFinished)
-                                //{
-                                //    var tmpHf = detailBomHfListTmp.Where(a => a.IdBomDetail.Equals(hf.IdBomDetail)).Single();
-                                //    DetailBomHfHistory histHf = hf.Clone();
-                                //    histHf.IdVerBom = supplierBom.IdVer;
-                                //    histHf.IdSubVerBom = supplierBom.IdSubVer;
-                                //    histHf.TimestampBom = supplierBom.Timestamp;
 
-                                //    histHf.IdVerBomDetail = tmpHf.DetailItemBom.IdVer;
-                                //    histHf.IdSubVerBomDetail = tmpHf.DetailItemBom.IdSubVer;
-                                //    histHf.TimestampBomDetail = tmpHf.DetailItemBom.Timestamp;
+                                db.SaveChanges();
 
-                                //    histHf.User = GlobalSetting.LoggedUser.UserLogin;
-
-                                //    db.DetailsBomHfHistory.Add(histHf);
-                                //}
-
+                                //Si es un semielaborado tenemos que actualizar la versión de todo lo que lo incluya
+                                UpdateVersionRelatedItems(db, supplierBom);
                             }
 
 
-                            db.SaveChanges();
+                            //db.SaveChanges();
 
                             dbTrans.Commit();
                             return true;
@@ -670,6 +656,59 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        public List<ItemBom> GetRelatedItemBom(int idBomn)
+        {
+           try
+            {
+                using (var db = new DB.HKSupplyContext())
+                {
+                    var list = db.ItemsBom
+                        .Join(
+                            db.DetailsBomHf,
+                            itemBom => itemBom.IdBom,
+                            detail => detail.IdBom,
+                            (itemBom, detail) => new { ItemBom = itemBom, DetailBomHf = detail }
+                            )
+                        .Where(a => a.DetailBomHf.IdBomDetail.Equals(idBomn))
+                        .Select(a => a.ItemBom)
+                        .ToList();
+
+                    return list;
+
+
+                }
+            }
+            catch (ArgumentNullException anex)
+            {
+                _log.Error(anex.Message, anex);
+                throw anex;
+            }
+            catch (SqlException sqlex)
+            {
+                for (int i = 0; i < sqlex.Errors.Count; i++)
+                {
+                    _log.Error("Index #" + i + "\n" +
+                        "Message: " + sqlex.Errors[i].Message + "\n" +
+                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                        "Source: " + sqlex.Errors[i].Source + "\n" +
+                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                    switch (sqlex.Errors[i].Number)
+                    {
+                        case -1: //connection broken
+                        case -2: //timeout
+                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                    }
+                }
+                throw sqlex;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
+            }
+        }
 
         #region Private Methods
 
@@ -681,88 +720,87 @@ namespace HKSupply.Services.Implementations
         /// Al hacer un add por ejemplo, EF agrega al contexto del inset todas las nested properties y también intenta hacerles un insert (familias, item...)
         /// Las seteo a null para que las ignore, no sé si es muy correcto, pero es la única manera que he encontrado ahora.
         /// </remarks>
-        private void SetComplexPropertiesToNUll(ItemBom bom)
-        {
-            try
-            {
-                bom.Item = null;
-                foreach (var h in bom.Hardwares)
-                    h.Item = null;
+        //private void SetComplexPropertiesToNUll(ItemBom bom)
+        //{
+        //    try
+        //    {
+        //        bom.Item = null;
+        //        foreach (var h in bom.Hardwares)
+        //            h.Item = null;
 
-                foreach (var m in bom.Materials)
-                    m.Item = null;
+        //        foreach (var m in bom.Materials)
+        //            m.Item = null;
 
-                foreach(var hf in bom.HalfFinished)
-                    SetComplexPropertiesToNUll(hf.DetailItemBom);
-            }
-            catch
-            {
-                throw;
-            }
-        }
+        //        foreach(var hf in bom.HalfFinished)
+        //            SetComplexPropertiesToNUll(hf.DetailItemBom);
+        //    }
+        //    catch
+        //    {
+        //        throw;
+        //    }
+        //}
 
-        private void EditItemSupplierBom(HKSupplyContext db, ItemBom bom)
-        {
-            try
-            {
-                if (bom.IdBom == 0)  //insert new
-                {
-                   
-                }
-                else  //update
-                {
-                    ItemBom bomToUpdate = GetItemSupplierBom(bom.IdBom, bom.IdSupplier);
-                    if (bomToUpdate == null)
-                        throw new Exception("BOM error");
+        //private void EditItemSupplierBom(HKSupplyContext db, ItemBom bom)
+        //{
+        //    try
+        //    {
+        //        if (bom.IdBom == 0)  //insert new
+        //        {
 
-                    //Hay que agregarlo al contexto actual para que lo actualice
-                    db.ItemsBom.Attach(bomToUpdate);
+        //        }
+        //        else  //update
+        //        {
+        //            ItemBom bomToUpdate = GetItemSupplierBom(bom.IdBom, bom.IdSupplier);
+        //            if (bomToUpdate == null)
+        //                throw new Exception("BOM error");
 
-                    bomToUpdate.IdSubVer += 1;
-                    bomToUpdate.Timestamp = DateTime.Now;
+        //            //Hay que agregarlo al contexto actual para que lo actualice
+        //            db.ItemsBom.Attach(bomToUpdate);
 
-                    //-------Primero tratamos Material y Hardware, que es más simple, sólo hay que borrar e insertar de nuevo -------//
+        //            bomToUpdate.IdSubVer += 1;
+        //            bomToUpdate.Timestamp = DateTime.Now;
 
-                    //borramos todos los detalles
-                    var detailHw = db.DetailsBomHw.Where(a => a.IdBom.Equals(bom.IdBom));
-                    var detailMt = db.DetailsBomMt.Where(a => a.IdBom.Equals(bom.IdBom));
+        //            //-------Primero tratamos Material y Hardware, que es más simple, sólo hay que borrar e insertar de nuevo -------//
 
-                    foreach (var h in detailHw)
-                        db.DetailsBomHw.Remove(h);
+        //            //borramos todos los detalles
+        //            var detailHw = db.DetailsBomHw.Where(a => a.IdBom.Equals(bom.IdBom));
+        //            var detailMt = db.DetailsBomMt.Where(a => a.IdBom.Equals(bom.IdBom));
 
-                    foreach (var m in detailMt)
-                        db.DetailsBomMt.Remove(m);
+        //            foreach (var h in detailHw)
+        //                db.DetailsBomHw.Remove(h);
 
-                    //e insertamos los nuevos
-                    foreach (var h in bom.Hardwares)
-                        db.DetailsBomHw.Add(h);
+        //            foreach (var m in detailMt)
+        //                db.DetailsBomMt.Remove(m);
 
-                    foreach (var m in bom.Materials)
-                        db.DetailsBomMt.Add(m);
+        //            //e insertamos los nuevos
+        //            foreach (var h in bom.Hardwares)
+        //                db.DetailsBomHw.Add(h);
 
-                    //------- -------//
-                    foreach (var hf in bom.HalfFinished)
-                    {
-                        if (hf.IdBomDetail == 0)
-                        {
-                            //insertarlo y recuperar su id
-                        }
+        //            foreach (var m in bom.Materials)
+        //                db.DetailsBomMt.Add(m);
 
-                    }
+        //            //------- -------//
+        //            foreach (var hf in bom.HalfFinished)
+        //            {
+        //                if (hf.IdBomDetail == 0)
+        //                {
+        //                    //insertarlo y recuperar su id
+        //                }
 
-                }
+        //            }
 
-            }
-            catch
-            {
-                throw;
-            }
-        }
+        //        }
 
-        #endregion
+        //    }
+        //    catch
+        //    {
+        //        throw;
+        //    }
+        //}
 
 
-        #region Test
+
+
         private ItemBom GetItemSupplierBom(HKSupplyContext db, int IdBom, string idSupplier, bool getPoco = false)
         {
             try
@@ -849,6 +887,108 @@ namespace HKSupply.Services.Implementations
                 throw ex;
             }
         }
+
+        /// <summary>
+        /// Actualizar la versión de los items que incluyen un semielaborado que ha sido modificado
+        /// </summary>
+        private void UpdateVersionRelatedItems(HKSupplyContext db, ItemBom itemBom)
+        {
+            try
+            {
+                if (itemBom.IdItemGroup == Constants.ITEM_GROUP_HF)
+                {
+                    var detailsHf = db.DetailsBomHf.
+                        Where(a => a.IdBomDetail.Equals(itemBom.IdBom)).
+                        ToList();
+
+                    if(detailsHf != null && detailsHf.Count > 0)
+                    {
+                        foreach (var detail in detailsHf)
+                        {
+                            //buscamos la cabecera
+                            var itemBomUv = db.ItemsBom.Where(a => a.IdBom.Equals(detail.IdBom)).Single();
+
+                            itemBomUv.IdSubVer += 1;
+                            itemBomUv.Timestamp = DateTime.Now;
+
+                            //Historificamos Harware
+                            foreach (var h in itemBomUv.Hardwares)
+                            {
+                                DetailBomHwHistory histHw = h.Clone();
+                                histHw.IdVer = itemBomUv.IdVer;
+                                histHw.IdSubVer = itemBomUv.IdSubVer;
+                                histHw.Timestamp = itemBomUv.Timestamp;
+                                histHw.User = GlobalSetting.LoggedUser.UserLogin;
+
+                                db.DetailsBomHwHistory.Add(histHw);
+                            }
+                            db.SaveChanges();
+
+                            foreach (var m in itemBomUv.Materials)
+                            {
+                                DetailBomMtHistory histMt = m.Clone();
+                                histMt.IdVer = itemBomUv.IdVer;
+                                histMt.IdSubVer = itemBomUv.IdSubVer;
+                                histMt.Timestamp = itemBomUv.Timestamp;
+                                histMt.User = GlobalSetting.LoggedUser.UserLogin;
+
+                                db.DetailsBomMtHistory.Add(histMt);
+                            }
+
+                            db.SaveChanges();
+
+                            //Half-finished (semielaborados). Por el tema de que no he sabido hacer bien la relación con el EF hay que buscarlos por separado
+                            itemBomUv.HalfFinished = null;
+
+                            var itemBomUvDetailHf = db.DetailsBomHf.Where(a => a.IdBom.Equals(itemBomUv.IdBom)).ToList();
+
+                            foreach (var hf in itemBomUvDetailHf)
+                            {
+                                hf.DetailItemBom = db.ItemsBom.Where(a => a.IdBom.Equals(hf.IdBomDetail)).Single();
+
+                                DetailBomHfHistory histHf = new DetailBomHfHistory();
+
+                                histHf.IdBom = hf.IdBom;
+                                histHf.IdBomDetail = hf.IdBomDetail;
+                                histHf.Quantity = hf.Quantity;
+
+
+                                histHf.IdVerBom = itemBomUv.IdVer;
+                                histHf.IdSubVerBom = itemBomUv.IdSubVer;
+                                histHf.TimestampBom = itemBomUv.Timestamp;
+
+                                if (hf.IdBomDetail == itemBom.IdBom)
+                                {
+                                    histHf.IdVerBomDetail = itemBom.IdVer;
+                                    histHf.IdSubVerBomDetail = itemBom.IdSubVer;
+                                    histHf.TimestampBomDetail = itemBom.Timestamp;
+                                    
+                                }
+                                else
+                                {
+                                    histHf.IdVerBomDetail = hf.DetailItemBom.IdVer;
+                                    histHf.IdSubVerBomDetail = hf.DetailItemBom.IdSubVer;
+                                    histHf.TimestampBomDetail = hf.DetailItemBom.Timestamp;
+                                }
+
+                                histHf.User = GlobalSetting.LoggedUser.UserLogin;
+
+                                db.DetailsBomHfHistory.Add(histHf);
+                            }
+                            db.SaveChanges();
+                        }
+                    }
+
+                    db.SaveChanges();
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         #endregion
+
     }
 }
