@@ -297,5 +297,38 @@ namespace HKSupply.Helpers
             return dataBindings.Add
                  (controlPropertyName, dataSource, bindingTargetName, true, DataSourceUpdateMode.OnPropertyChanged);
         }
+
+        /// <summary>
+        /// Devuelve la lista vacía si es nula
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="list"></param>
+        /// <returns></returns>
+        public static List<T> EmptyIfNull<T>(this List<T> list)
+        {
+            return list ?? new List<T>();
+        }
+
+        /// <summary>
+        /// Devuelve el array vacío si es nulo
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="arr"></param>
+        /// <returns></returns>
+        public static T[] EmptyIfNull<T>(this T[] arr)
+        {
+            return arr ?? new T[0];
+        }
+
+        /// <summary>
+        /// Devuelve el IEnumerable vacío si es nulo 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="enumerable"></param>
+        /// <returns></returns>
+        public static IEnumerable<T> EmptyIfNull<T>(this IEnumerable<T> enumerable)
+        {
+            return enumerable ?? Enumerable.Empty<T>();
+        }
     }
 }

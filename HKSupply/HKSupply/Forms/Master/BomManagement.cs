@@ -38,8 +38,6 @@ namespace HKSupply.Forms.Master
 
         object _currentItem;
         List<ItemBom> _itemBomList = new List<ItemBom>();
-        //BindingList<ItemBom> _itemBomList = new BindingList<ItemBom>();
-        ItemBom _itemBomOriginal;
 
         List<Supplier> _suppliersList;
 
@@ -69,7 +67,7 @@ namespace HKSupply.Forms.Master
                 //SetUpGrdItemsHw();
                 //SetUpGrdItemsHfDetail();
                 SetUpGrdItemBom();
-                SetUpGrdPlainBom();
+                SetUpGrdSummaryBom();
 
                 
             }
@@ -224,7 +222,7 @@ namespace HKSupply.Forms.Master
 
         public override void bbiExportCsv_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (gridViewPlainBom.DataRowCount == 0)
+            if (gridViewSummaryBom.DataRowCount == 0)
             {
                 MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
                 return;
@@ -236,7 +234,7 @@ namespace HKSupply.Forms.Master
             {
                 if (string.IsNullOrEmpty(ExportCsvFile) == false)
                 {
-                    gridViewPlainBom.ExportToCsv(ExportCsvFile);
+                    gridViewSummaryBom.ExportToCsv(ExportCsvFile);
 
                     DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)
@@ -254,7 +252,7 @@ namespace HKSupply.Forms.Master
         public override void bbiExportExcel_ItemClick(object sender, ItemClickEventArgs e)
         {
             
-            if (gridViewPlainBom.DataRowCount == 0)
+            if (gridViewSummaryBom.DataRowCount == 0)
             {
                 MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
                 return;
@@ -267,8 +265,8 @@ namespace HKSupply.Forms.Master
                 if (string.IsNullOrEmpty(ExportExcelFile) == false)
                 {
 
-                    gridViewPlainBom.OptionsPrint.PrintFooter = false;
-                    gridViewPlainBom.ExportToXlsx(ExportExcelFile);
+                    gridViewSummaryBom.OptionsPrint.PrintFooter = false;
+                    gridViewSummaryBom.ExportToXlsx(ExportExcelFile);
 
                     DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)
@@ -297,8 +295,8 @@ namespace HKSupply.Forms.Master
 
                 LoadItemsListEy();
                 LoadItemsListHf();
-                LoadItemsListMt();
-                LoadItemsListHw();
+                //LoadItemsListMt();
+                //LoadItemsListHw();
             }
             catch (Exception ex)
             {
@@ -608,7 +606,7 @@ namespace HKSupply.Forms.Master
                     }
                         
                     LoadBomTreeView();
-                    LoadPlainBom();
+                    LoadSummaryBom();
                 }
             }
             catch(Exception ex)
@@ -634,12 +632,19 @@ namespace HKSupply.Forms.Master
 
                         //Seteamos el tamaño de las columnas
                         (e.View as GridView).Columns[nameof(DetailBomMt.IdItemBcn)].Width = 150;
-                        (e.View as GridView).Columns[nameof(DetailBomMt.Length)].Width = 60;
-                        (e.View as GridView).Columns[nameof(DetailBomMt.Width)].Width = 60;
-                        (e.View as GridView).Columns[nameof(DetailBomMt.Height)].Width = 60;
+                        (e.View as GridView).Columns[nameof(DetailBomMt.Length)].Width = 80;
+                        (e.View as GridView).Columns[nameof(DetailBomMt.Width)].Width = 80;
+                        (e.View as GridView).Columns[nameof(DetailBomMt.Height)].Width = 80;
                         (e.View as GridView).Columns[nameof(DetailBomMt.Density)].Width = 60;
                         (e.View as GridView).Columns[nameof(DetailBomMt.NumberOfParts)].Width = 105;
                         (e.View as GridView).Columns[nameof(DetailBomMt.Scrap)].Width = 60;
+
+                        //Captions
+                        (e.View as GridView).Columns[nameof(DetailBomMt.Length)].Caption = "Length (mm)";
+                        (e.View as GridView).Columns[nameof(DetailBomMt.Width)].Caption = "Width (mm)";
+                        (e.View as GridView).Columns[nameof(DetailBomMt.Height)].Caption = "Height (mm)";
+
+
 
                         //agregamos la columna de descripcion y de unidades
                         GridColumn colDescriptionMt = new GridColumn()
@@ -678,9 +683,9 @@ namespace HKSupply.Forms.Master
                         (e.View as GridView).Columns[nameof(DetailBomMt.NumberOfParts)].DisplayFormat.FormatString = "n0";
 
                         (e.View as GridView).Columns[nameof(DetailBomMt.Coefficient1)].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-                        (e.View as GridView).Columns[nameof(DetailBomMt.Coefficient1)].DisplayFormat.FormatString = "n2";
+                        (e.View as GridView).Columns[nameof(DetailBomMt.Coefficient1)].DisplayFormat.FormatString = "n6";
                         (e.View as GridView).Columns[nameof(DetailBomMt.Coefficient2)].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-                        (e.View as GridView).Columns[nameof(DetailBomMt.Coefficient2)].DisplayFormat.FormatString = "n2";
+                        (e.View as GridView).Columns[nameof(DetailBomMt.Coefficient2)].DisplayFormat.FormatString = "n6";
 
 
                         (e.View as GridView).Columns[nameof(DetailBomMt.Scrap)].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -706,8 +711,6 @@ namespace HKSupply.Forms.Master
 
                         //Events
                         (e.View as GridView).CellValueChanged += GrdBomView_CellValueChanged;
-                        //Test
-                        //(e.View as GridView).ValidateRow += BomManagementMaterials_ValidateRow;
                         (e.View as GridView).ValidatingEditor += BomManagementMaterials_ValidatingEditor;
 
                        //Agregamos los Summary
@@ -910,10 +913,10 @@ namespace HKSupply.Forms.Master
             {
                 GridView view = sender as GridView;
                 view.UpdateSummary();
-                gridViewPlainBom.UpdateSummary();
+                gridViewSummaryBom.UpdateSummary();
 
                 LoadBomTreeView();
-                LoadPlainBom();
+                LoadSummaryBom();
             }
             catch (Exception ex)
             {
@@ -1001,6 +1004,7 @@ namespace HKSupply.Forms.Master
                 if(row.IdBomDetail > 0)
                 {
                     OpenEditHfBom(row.DetailItemBom);
+                    activeView.CollapseMasterRow(activeView.FocusedRowHandle);
                     activeView.RefreshData();
                 }
                 else
@@ -1306,7 +1310,7 @@ namespace HKSupply.Forms.Master
 
                 //Events
                 xgrdItemBom.ViewRegistered += XgrdItemBom_ViewRegistered;
-
+                xgrdItemBom.ProcessGridKey += XgrdItemBom_ProcessGridKey;
                 gridViewItemBom.PopupMenuShowing += GridViewItemBom_PopupMenuShowing;
 
                 //Hide group panel
@@ -1321,89 +1325,20 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void SetUpGrdPlainBom()
+        private void SetUpGrdSummaryBom()
         {
             try
             {
-                //Ocultamos el nombre de las columnas agrupadas
-                gridViewPlainBom.GroupFormat = "[#image]{1} {2}";
-
                 //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
-                gridViewPlainBom.OptionsView.ColumnAutoWidth = false;
-                gridViewPlainBom.HorzScrollVisibility = ScrollVisibility.Auto;
+                gridViewSummaryBom.OptionsView.ColumnAutoWidth = false;
+                gridViewSummaryBom.HorzScrollVisibility = ScrollVisibility.Auto;
 
                 //Hacer todo el grid no editable
-                gridViewPlainBom.OptionsBehavior.Editable = false;
+                gridViewSummaryBom.OptionsBehavior.Editable = false;
 
-                //Columns definition
-                GridColumn colIdSupplier = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Supplier"), Visible = true, FieldName = nameof(Classes.PlainBomAux.IdSupplier), Width = 60 };
-                GridColumn colIdItemGroup = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemGroup"), Visible = true, FieldName = nameof(Classes.PlainBomAux.ItemGroup), Width = 90 };
-                GridColumn colIdItemBcn = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemBCN"), Visible = true, FieldName = nameof(Classes.PlainBomAux.IdItemBcn), Width = 200 };
-                GridColumn colDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemDescription"), Visible = true, FieldName = nameof(Classes.PlainBomAux.ItemDescription), Width = 450 };
-                GridColumn colQuantity = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Quantity"), Visible = true, FieldName = nameof(Classes.PlainBomAux.Quantity), Width = 60 };
-                //GridColumn colScrap = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Scrap"), Visible = true, FieldName = nameof(Classes.PlainBomAux.Scrap), Width = 60 };
-                //GridColumn colUnit = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Unit"), Visible = true, FieldName = nameof(Classes.PlainBomAux.Scrap), Width = 70 };
+                //Hide group panel
+                gridViewSummaryBom.OptionsView.ShowGroupPanel = false;
 
-                //Format types
-                colQuantity.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-                colQuantity.DisplayFormat.FormatString = "n2";
-                //colScrap.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-                //colScrap.DisplayFormat.FormatString = "n2";
-
-                //Show footer for summaries
-                //gridViewPlainBom.OptionsView.ShowFooter = true; 
-
-                //Summaries
-                //GridColumnSummaryItem sumMtQuantity = new GridColumnSummaryItem()
-                //{
-                //    SummaryType = SummaryItemType.Custom,
-                //    FieldName = nameof(Classes.PlainBomAux.Quantity),
-                //    DisplayFormat = "MT: {0}",
-                //    Tag = 1
-                //};
-
-                //GridColumnSummaryItem sumHwQuantity = new GridColumnSummaryItem()
-                //{
-                //    SummaryType = SummaryItemType.Custom,
-                //    FieldName = nameof(Classes.PlainBomAux.Quantity),
-                //    DisplayFormat = "HW: {0}",
-                //    Tag = 2
-                //};
-
-                //GridColumnSummaryItem sumMtWaste = new GridColumnSummaryItem()
-                //{
-                //    SummaryType = SummaryItemType.Custom,
-                //    FieldName = nameof(Classes.PlainBomAux.Scrap),
-                //    DisplayFormat = "MT: {0}",
-                //    Tag = 3
-                //};
-
-                //GridColumnSummaryItem sumHwWaste = new GridColumnSummaryItem()
-                //{
-                //    SummaryType = SummaryItemType.Custom,
-                //    FieldName = nameof(Classes.PlainBomAux.Scrap),
-                //    DisplayFormat = "HW: {0}",
-                //    Tag = 4
-                //};
-
-                //Add  summaries to columns
-                //colQuantity.Summary.Add(sumMtQuantity);
-                //colQuantity.Summary.Add(sumHwQuantity);
-                //colScrap.Summary.Add(sumMtWaste);
-                //colScrap.Summary.Add(sumHwWaste);
-
-                //Add columns to grid root view
-                gridViewPlainBom.Columns.Add(colIdSupplier);
-                gridViewPlainBom.Columns.Add(colIdItemGroup);
-                gridViewPlainBom.Columns.Add(colIdItemBcn);
-                gridViewPlainBom.Columns.Add(colDescription);
-                gridViewPlainBom.Columns.Add(colQuantity);
-                //gridViewPlainBom.Columns.Add(colScrap);
-
-                //events
-                gridViewPlainBom.CustomSummaryCalculate += GridViewPlainBom_CustomSummaryCalculate;
-
-                xgrdItemBom.ProcessGridKey += XgrdItemBom_ProcessGridKey;
             }
             catch (Exception ex)
             {
@@ -1454,7 +1389,7 @@ namespace HKSupply.Forms.Master
                             activeView.RefreshData();
 
                             LoadBomTreeView();
-                            LoadPlainBom();
+                            LoadSummaryBom();
                             break;
 
                     }
@@ -1488,12 +1423,12 @@ namespace HKSupply.Forms.Master
                                         {
                                             if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
                                             {
-                                                (rowParent as ItemBom).Materials.Add(new DetailBomMt());
+                                                (rowParent as ItemBom).Materials.Add(new DetailBomMt() { IdBom = (rowParent as ItemBom).IdBom });
                                             }
-                                            else if (rowParent.GetType().BaseType == typeof(DetailBomHf) || rowParent.GetType() == typeof(DetailBomHf))
-                                            {
-                                                (rowParent as DetailBomHf).DetailItemBom.Materials.Add(new DetailBomMt());
-                                            }
+                                            //else if (rowParent.GetType().BaseType == typeof(DetailBomHf) || rowParent.GetType() == typeof(DetailBomHf))
+                                            //{
+                                            //    (rowParent as DetailBomHf).DetailItemBom.Materials.Add(new DetailBomMt());
+                                            //}
                                             activeView.RefreshData();
 
                                             //activeView.BeginDataUpdate();
@@ -1541,7 +1476,7 @@ namespace HKSupply.Forms.Master
                                         {
                                             if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
                                             {
-                                                (rowParent as ItemBom).Hardwares.Add(new DetailBomHw());
+                                                (rowParent as ItemBom).Hardwares.Add(new DetailBomHw() { IdBom = (rowParent as ItemBom).IdBom });
                                             }
                                             //else if (rowParent.GetType().BaseType == typeof(DetailBomHf) || rowParent.GetType() == typeof(DetailBomHf))
                                             //{
@@ -1623,6 +1558,9 @@ namespace HKSupply.Forms.Master
             try
             {
                 _suppliersList = GlobalSetting.SupplierService.GetSuppliers();
+
+                _itemsMtList = GlobalSetting.ItemMtService.GetItems();
+                _itemsHwList = GlobalSetting.ItemHwService.GetItems();
             }
             catch
             {
@@ -1673,48 +1611,35 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void LoadItemsListMt()
-        {
-            try
-            {
-                _itemsMtList = GlobalSetting.ItemMtService.GetItems();
-                xgrdItemsMt.DataSource = _itemsMtList;
-            }
-            catch
-            {
-                throw;
-            }
-        }
+        //private void LoadItemsListMt()
+        //{
+        //    try
+        //    {
+        //        xgrdItemsMt.DataSource = _itemsMtList;
+        //    }
+        //    catch
+        //    {
+        //        throw;
+        //    }
+        //}
 
-        private void LoadItemsListHw()
-        {
-            try
-            {
-                _itemsHwList = GlobalSetting.ItemHwService.GetItems();
-                xgrdItemsHw.DataSource = _itemsHwList;
-            }
-            catch
-            {
-                throw;
-            }
-        }
+        //private void LoadItemsListHw()
+        //{
+        //    try
+        //    {
+        //        xgrdItemsHw.DataSource = _itemsHwList;
+        //    }
+        //    catch
+        //    {
+        //        throw;
+        //    }
+        //}
 
         //private void LoadItemGridBom(ItemEy item)
         private void LoadItemGridBom(object item)
         {
             try
             {
-                //ItemBom itemBom;
-
-                //itemBom = GlobalSetting.ItemBomService.GetItemBom(item.IdItemBcn);
-                //_itemBomOriginal = GlobalSetting.ItemBomService.GetItemBom(item.IdItemBcn);
-
-                //itemBom = GlobalSetting.ItemBomService.GetItemBom(item.IdItemBcn, getPoco : true);
-                //_itemBomOriginal = itemBom.DeepCopyByExpressionTree();
-
-                //TODO: Las extensiones para clonar no me funcionan con esta clase. Al no ser el tipo base sino el proxy que genera EF hace cosas raras
-                //_itemBomOriginal = itemBom.Clone(); 
-                //_itemBomOriginal = itemBom.DeepCopyByExpressionTree();
 
                 Cursor = Cursors.WaitCursor;
 
@@ -1734,11 +1659,8 @@ namespace HKSupply.Forms.Master
                     idSupplier = (item as ItemHf).IdDefaultSupplier;
                 }
 
-
                 _itemBomList = GlobalSetting.ItemBomService.GetItemBom(idIdItemBcn);
-
-
-
+                
                 if (_itemBomList == null || _itemBomList.Count == 0)
                 {
                     if (string.IsNullOrEmpty(idSupplier))
@@ -1755,29 +1677,22 @@ namespace HKSupply.Forms.Master
                     itemBom.IdSupplier = idSupplier;
                     itemBom.Materials = new List<DetailBomMt>();
                     itemBom.Hardwares = new List<DetailBomHw>();
+                    itemBom.HalfFinished = new List<DetailBomHf>();
                     itemBom.HalfFinishedNM = new List<ItemBom>();
 
                     _itemBomList.Add(itemBom);
 
-                    //_itemBomList.Add(itemBom);
-                    //_itemBomOriginal = new ItemBom();
-                    //_itemBomOriginal.IdBom = 0;
-                    //_itemBomOriginal.IdItemBcn = item.IdItemBcn;
-                    //_itemBomOriginal.Item = item;
-                    //_itemBomOriginal.IdItemGroup = Constants.ITEM_GROUP_EY;
-                    //_itemBomOriginal.Materials = new List<DetailBomMt>();
-                    //_itemBomOriginal.Hardwares = new List<DetailBomHw>();
-                    //_itemBomOriginal.HalfFinishedNM = new List<ItemBom>();
                 }
 
                 xgrdItemBom.DataSource = null;
                 xgrdItemBom.DataSource = _itemBomList;
 
                 GrdBomRefreshAndExpand();
-                dockPanelGrdBom.Select();
 
+                dockPanelGrdBom.Select();
+                
                 LoadBomTreeView();
-                LoadPlainBom();
+                LoadSummaryBom();
 
             }
             catch (Exception ex)
@@ -1790,51 +1705,150 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void LoadPlainBom()
+        private void LoadSummaryBom()
         {
             try
             {
-                return; //TODO
-                xgrdPlainBom.DataSource = null;
-                List<Classes.PlainBomAux> plainBom = new List<Classes.PlainBomAux>();
+                xgrdSummaryBom.DataSource = null;
+                
+                
+                DataTable tableSummary = new DataTable();
+                tableSummary.Columns.Add("Group", typeof(string));
+                tableSummary.Columns.Add("Item", typeof(string));
+                tableSummary.PrimaryKey = new DataColumn[] { tableSummary.Columns["Item"] };
 
-                foreach(var bom in _itemBomList)
+                DataTable tableSummaryUnit = new DataTable();
+                tableSummaryUnit.Columns.Add("Group", typeof(string));
+                tableSummaryUnit.Columns.Add("Unit", typeof(string));
+                tableSummaryUnit.PrimaryKey = new DataColumn[] { tableSummary.Columns["Group"], tableSummary.Columns["Unit"] };
+
+                //Obtenemos los supplier para generar una columna por cada uno de ellos
+                var suppliers = _itemBomList.Select(a => a.IdSupplier).ToList();
+
+                foreach(var supplier in suppliers)
                 {
-                    foreach (DetailBomMt rm in bom.Materials)
-                    {
-                        Classes.PlainBomAux tmp = rm;
-                        tmp.IdSupplier = bom.IdSupplier;
-                        plainBom.Add(tmp);
-                    }
+                    tableSummary.Columns.Add(supplier, typeof(decimal));
+                    tableSummaryUnit.Columns.Add(supplier, typeof(decimal));
+                }
 
-                    foreach (DetailBomHw h in bom.Hardwares)
-                    {
-                        Classes.PlainBomAux tmp = h;
-                        tmp.IdSupplier = bom.IdSupplier;
-                        plainBom.Add(tmp);
-                    }
+                //rellenamos el datatable
+                foreach (var bom in _itemBomList)
+                {
+                    FillDtHfSummary(tableSummary, tableSummaryUnit, suppliers, bom);
+                }
 
-                    foreach(var hf in bom.HalfFinishedNM)
+                xgrdSummaryBom.DataSource = tableSummary;
+
+                //Una vez cargado, modificamos el estilo del grid
+                gridViewSummaryBom.Columns["Item"].Width = 150;
+
+                foreach(GridColumn col in gridViewSummaryBom.Columns)
+                {
+                    if (col.FieldName == "Item")
                     {
-                        Classes.PlainBomAux tmp = new Classes.PlainBomAux()
-                        {
-                            IdSupplier = hf.IdSupplier,
-                            IdItemBcn = hf.IdItemBcn,
-                            ItemDescription = (hf.Item as ItemHf).ItemDescription,
-                            ItemGroup = Constants.ITEM_GROUP_HF,
-                        };
-                        plainBom.Add(tmp);
+                        col.Width = 150;
+                    }
+                    else if (col.FieldName == "Group")
+                    {
+                        col.Width = 60;
+                    }
+                    else
+                    {
+                        col.Width = 90;
+                        col.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                        col.DisplayFormat.FormatString = "n2";
                     }
                 }
 
-                
-
-                xgrdPlainBom.DataSource = plainBom;
 
             }
             catch(Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        private void FillDtHfSummary(DataTable tableSummary, DataTable tableSummaryUnit, List<string> suppliers, ItemBom bom)
+        {
+            try
+            {
+
+                foreach (DetailBomMt rm in bom.Materials.EmptyIfNull())
+                {
+                    if (string.IsNullOrEmpty(rm.IdItemBcn))
+                        continue;
+
+
+                    //Summary por item/Supplir
+
+                    DataRow row = tableSummary.Rows.Find(rm.IdItemBcn);
+
+                    if (row == null)
+                    {
+                        //insert
+                        var dr = tableSummary.NewRow();
+                        dr["Group"] = Constants.ITEM_GROUP_MT;
+                        dr["Item"] = rm.IdItemBcn;
+                        foreach (var supplier in suppliers)
+                            dr[supplier] = (supplier == bom.IdSupplier ? rm.Quantity : 0);
+                        tableSummary.Rows.Add(dr);
+                    }
+                    else
+                    {
+                        //update value
+                        row[bom.IdSupplier] = (decimal)row[bom.IdSupplier] + rm.Quantity;
+                    }
+
+                    //Summary por Unit/Supplir
+                    DataRow rowSummaryUnit = tableSummaryUnit.Rows.Find(new string[] { Constants.ITEM_GROUP_MT, rm.Item.Unit });
+
+                    if (rowSummaryUnit == null)
+                    {
+                        var dr = tableSummaryUnit.NewRow();
+                    }
+                    else
+                    {
+                        rowSummaryUnit[bom.IdSupplier] = (decimal)rowSummaryUnit[bom.IdSupplier] + rm.Quantity;
+                    }
+                }
+
+
+                foreach (DetailBomHw hw in bom.Hardwares.EmptyIfNull())
+                {
+                    if (string.IsNullOrEmpty(hw.IdItemBcn))
+                        continue;
+
+                    DataRow row = tableSummary.Rows.Find(hw.IdItemBcn);
+
+                    if (row == null)
+                    {
+                        //insert
+                        var dr = tableSummary.NewRow();
+                        dr["Group"] = Constants.ITEM_GROUP_HW;
+                        dr["Item"] = hw.IdItemBcn;
+                        foreach (var supplier in suppliers)
+                            dr[supplier] = (supplier == bom.IdSupplier ? hw.Quantity : 0);
+                        tableSummary.Rows.Add(dr);
+                    }
+                    else
+                    {
+                        //update value
+                        row[bom.IdSupplier] = (decimal)row[bom.IdSupplier] + hw.Quantity;
+                    }
+                }
+
+                foreach (var hf in bom.HalfFinished.EmptyIfNull())
+                {
+                    if (hf.DetailItemBom == null)
+                        continue;
+
+                    FillDtHfSummary(tableSummary, tableSummaryUnit, suppliers, hf.DetailItemBom);
+                }
+
+            }
+            catch
+            {
+                throw;
             }
         }
 
@@ -1951,6 +1965,11 @@ namespace HKSupply.Forms.Master
                 ritxt2Dec.Mask.EditMask = "F2";
                 ritxt2Dec.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
 
+                RepositoryItemTextEdit ritxt6Dec = new RepositoryItemTextEdit();
+                ritxt6Dec.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                ritxt6Dec.Mask.EditMask = "F6";
+                ritxt6Dec.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+
                 RepositoryItemTextEdit ritxtInt = new RepositoryItemTextEdit();
                 ritxtInt.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
                 ritxtInt.Mask.EditMask = "N";
@@ -2001,8 +2020,8 @@ namespace HKSupply.Forms.Master
                             view.Columns[nameof(DetailBomMt.Width)].ColumnEdit = ritxt2Dec;
                             view.Columns[nameof(DetailBomMt.Height)].ColumnEdit = ritxt2Dec;
                             view.Columns[nameof(DetailBomMt.Density)].ColumnEdit = ritxt2Dec;
-                            view.Columns[nameof(DetailBomMt.Coefficient1)].ColumnEdit = ritxt2Dec;
-                            view.Columns[nameof(DetailBomMt.Coefficient2)].ColumnEdit = ritxt2Dec;
+                            view.Columns[nameof(DetailBomMt.Coefficient1)].ColumnEdit = ritxt6Dec;
+                            view.Columns[nameof(DetailBomMt.Coefficient2)].ColumnEdit = ritxt6Dec;
                             view.Columns[nameof(DetailBomMt.Scrap)].ColumnEdit = ritxt2Dec;
                             view.Columns[nameof(DetailBomMt.Quantity)].ColumnEdit = ritxt2Dec;
                             view.Columns[nameof(DetailBomMt.NumberOfParts)].ColumnEdit = ritxtInt;
@@ -2126,11 +2145,22 @@ namespace HKSupply.Forms.Master
             view.BeginUpdate();
             try
             {
+                string defaultSupplier = string.Empty;
+
+                if (_currentItem.GetType() == typeof(ItemEy))
+                    defaultSupplier = (_currentItem as ItemEy).IdDefaultSupplier;
+                else if (_currentItem.GetType() == typeof(ItemHf))
+                    defaultSupplier = (_currentItem as ItemHf).IdDefaultSupplier;
+
                 view.ExpandAllGroups();
 
                 int dataRowCount = view.DataRowCount;
                 for (int rHandle = 0; rHandle < dataRowCount; rHandle++)
-                    view.SetMasterRowExpanded(rHandle, true);
+                {
+                    object idSupplier = view.GetRowCellValue(rHandle, nameof(ItemBom.IdSupplier));
+                    if (idSupplier != null && idSupplier.ToString() == defaultSupplier)
+                        view.SetMasterRowExpanded(rHandle, true);
+                }
             }
             finally
             {
@@ -2143,9 +2173,6 @@ namespace HKSupply.Forms.Master
         #region Tree Bom
         private void LoadBomTreeView()
         {
-            //TODO
-            return;
-
             try
             {
                 string idItem = string.Empty;
@@ -2154,6 +2181,11 @@ namespace HKSupply.Forms.Master
                 {
                     idItem = (_currentItem as ItemEy).IdItemBcn;
                 }
+                else if (_currentItem.GetType() == typeof(ItemHf))
+                {
+                    idItem = (_currentItem as ItemHf).IdItemBcn;
+                }
+
                 treeViewBom.Nodes.Clear();
 
                 TreeNode root = new TreeNode(idItem);
@@ -2189,43 +2221,42 @@ namespace HKSupply.Forms.Master
                 root.Nodes.Add(HalfFinishedRoot);
                 root.Expand();
 
-                if (item.Materials != null)
+                foreach (DetailBomMt rawMaterial in item.Materials.EmptyIfNull())
                 {
-                    foreach (DetailBomMt rawMaterial in item.Materials)
-                    {
-                        root.Nodes[0].Nodes.Add(rawMaterial.IdItemBcn, $"{rawMaterial.IdItemBcn} : {rawMaterial.Item.ItemDescription}");
-                        root.Nodes[0].Nodes[contRawMaterialsNode].Tag = "RawMaterials";
-                        root.Nodes[0].Nodes[contRawMaterialsNode].Nodes.Add(
-                            new TreeNode($"Quantity : {rawMaterial.Quantity.ToString()}")
-                            );
-                        contRawMaterialsNode++;
-                    }
-                    root.Nodes[0].Expand();
-                }
+                    if (string.IsNullOrEmpty(rawMaterial.IdItemBcn))
+                        continue;
 
-                if (item.Hardwares != null)
+                    root.Nodes[0].Nodes.Add(rawMaterial.IdItemBcn, $"{rawMaterial.IdItemBcn} : {rawMaterial.Item.ItemDescription}");
+                    root.Nodes[0].Nodes[contRawMaterialsNode].Tag = "RawMaterials";
+                    root.Nodes[0].Nodes[contRawMaterialsNode].Nodes.Add(
+                        new TreeNode($"Quantity : {rawMaterial.Quantity.ToString()}")
+                        );
+                    contRawMaterialsNode++;
+                }
+                root.Nodes[0].Expand();
+
+                foreach (DetailBomHw hardware in item.Hardwares.EmptyIfNull())
                 {
-                    foreach (DetailBomHw hardware in item.Hardwares)
-                    {
-                        root.Nodes[1].Nodes.Add(hardware.IdItemBcn, $"{hardware.IdItemBcn} : {hardware.Item.ItemDescription}");
-                        root.Nodes[1].Nodes[contHardwareNode].Tag = "Hardware";
-                        root.Nodes[1].Nodes[contHardwareNode].Nodes.Add(
-                            new TreeNode($"Quantity : {hardware.Quantity.ToString()}")
-                            );
-                        contHardwareNode++;
-                    }
-                    root.Nodes[1].Expand();
-                }
+                    if (string.IsNullOrEmpty(hardware.IdItemBcn))
+                        continue;
 
-                if (item.HalfFinishedNM != null)
+                    root.Nodes[1].Nodes.Add(hardware.IdItemBcn, $"{hardware.IdItemBcn} : {hardware.Item.ItemDescription}");
+                    root.Nodes[1].Nodes[contHardwareNode].Tag = "Hardware";
+                    root.Nodes[1].Nodes[contHardwareNode].Nodes.Add(
+                        new TreeNode($"Quantity : {hardware.Quantity.ToString()}")
+                        );
+                    contHardwareNode++;
+                }
+                root.Nodes[1].Expand();
+
+                foreach(DetailBomHf ib in item.HalfFinished.EmptyIfNull())
                 {
-                    foreach(ItemBom ib in item.HalfFinishedNM)
-                    {
-                        root.Nodes[2].Nodes.Add(GetComponentNode(ib));
-                        root.Nodes[2].Expand();
-                    }
-                }
+                    if (ib.DetailItemBom == null)
+                        continue;
 
+                    root.Nodes[2].Nodes.Add(GetComponentNode(ib.DetailItemBom));
+                    root.Nodes[2].Expand();
+                }
 
                 return root;
             }
@@ -2282,7 +2313,7 @@ namespace HKSupply.Forms.Master
                     dockPanelGrdBom.Select();
 
                     LoadBomTreeView();
-                    LoadPlainBom();
+                    LoadSummaryBom();
 
 
 
@@ -2377,7 +2408,36 @@ namespace HKSupply.Forms.Master
 
                     if (form.ShowDialog() == DialogResult.OK)
                     {
-                        bom = GlobalSetting.ItemBomService.GetItemSupplierBom(bom.IdItemBcn, bom.IdSupplier);
+                        var modifiedBom = GlobalSetting.ItemBomService.GetItemSupplierBom(bom.IdItemBcn, bom.IdSupplier);
+
+                        //Actualizamos la versión del padre, ya que al modificar un semielaborado, también modifica la versión de los que lo incluyen
+                        var parent = _itemBomList.Where(a => a.IdSupplier.Equals(bom.IdSupplier)).Single();
+                        var parentNewVersion = GlobalSetting.ItemBomService.GetItemSupplierBom(parent.IdItemBcn, parent.IdSupplier);
+                        parent.IdVer = parentNewVersion.IdVer;
+                        parent.IdSubVer = parentNewVersion.IdSubVer;
+                        parent.Timestamp = parentNewVersion.Timestamp;
+
+                        //actualizamos el que tenemos en pantalla por el que hemos actualizado
+                        bom.IdVer = modifiedBom.IdVer;
+                        bom.IdSubVer = modifiedBom.IdSubVer;
+                        bom.Timestamp = modifiedBom.Timestamp;
+
+                        bom.Materials = new List<DetailBomMt>();
+                        foreach(var mt in modifiedBom.Materials)
+                        {
+                            bom.Materials.Add(mt.Clone());
+                        }
+
+                        bom.Hardwares = new List<DetailBomHw>();
+                        foreach(var hw in modifiedBom.Hardwares)
+                        {
+                            bom.Hardwares.Add(hw.Clone());
+                        }
+
+                        //TODO: faltan los semielaborados!
+
+                        //Tenemos que recargar todo ya que si hemos actualizado un semielaborado, éste ha cambiado la versión de los BOM que lo incluyen, incluyendo este mismo que lo ha lanzado
+                        //LoadItemGridBom(_currentItem);
                     }
                     //else
                     //{
@@ -2605,15 +2665,6 @@ namespace HKSupply.Forms.Master
                         //        .Where(a => a.DetailBomHf.IdBomDetail.Equals(item.IdBom))
                         //        .ToList();
 
-                        //    var list2 = GlobalSetting.ItemBomService.GetRelatedItemBom(item.IdBom);
-
-                        //    foreach (var x in list)
-                        //    {
-                        //        find = true;
-                        //        msg += $"{x.ItemBom.IdItemBcn} ({x.ItemBom.IdSupplier}) {Environment.NewLine}";
-                        //    }
-                        //}
-
                         var list = GlobalSetting.ItemBomService.GetRelatedItemBom(item.IdBom);
                         foreach (var x in list)
                         {
@@ -2671,7 +2722,7 @@ namespace HKSupply.Forms.Master
             try
             {
                 //ItemEy item = _itemBomOriginal.Item as ItemEy;
-                _itemBomOriginal = null;
+                //_itemBomOriginal = null;
                 _itemBomList.Clear();
                 LoadItemGridBom(_currentItem);
 
@@ -2922,28 +2973,6 @@ namespace HKSupply.Forms.Master
         #endregion
 
         #region BomManagement ValidatingEditor
-        //private void BomManagementMaterials_ValidateRow(object sender, ValidateRowEventArgs e)
-        //{
-        //    try
-        //    {
-        //        GridView view = sender as GridView;
-        //        DetailBomMt row = view.GetRow(view.FocusedRowHandle) as DetailBomMt;
-        //        BaseView parent = view.ParentView;
-        //        var rowParent = parent.GetRow(view.SourceRowHandle);
-
-        //        if (row.Quantity > 0 && string.IsNullOrEmpty(row.IdItemBcn) == false)
-        //        {
-        //            (rowParent as ItemBom).Materials.Add(new DetailBomMt());
-        //            grdBomRefreshAndExpand();
-
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
-
 
         private void BomManagementMaterials_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
         {
@@ -3219,11 +3248,14 @@ namespace HKSupply.Forms.Master
 
                         if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
                         {
-                            
+                            //No se puede agregar el mismo como HF para evitar referencias circulares
+                            if ((rowParent as ItemBom).IdItemBcn == idItemHf)
+                                e.Valid = false;
+
                             exist = (rowParent as ItemBom).HalfFinished.Where(a => a.DetailItemBom != null && a.DetailItemBom.IdItemBcn.Equals(idItemHf)).FirstOrDefault();
                         }
 
-                        if (exist == null)
+                        if (e.Valid == true && exist == null)
                         {
                             var itemBom = GlobalSetting.ItemBomService.GetItemSupplierBom(idItemHf, (rowParent as ItemBom).IdSupplier);
 
@@ -3235,10 +3267,6 @@ namespace HKSupply.Forms.Master
                         {
                             e.Valid = false;
                         }
-
-
-                        
-
 
                         break;
                 }

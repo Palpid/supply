@@ -212,6 +212,8 @@ namespace HKSupply.Forms
         {
             try
             {
+                FormClosing += RibbonFormBase_FormClosing;
+
                 //Task buttons
                 bbiEdit.ItemClick += bbiEdit_ItemClick;
                 bbiNew.ItemClick += bbiNew_ItemClick;
@@ -233,6 +235,17 @@ namespace HKSupply.Forms
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        private void RibbonFormBase_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (_currentState == ActionsStates.Edit)
+            {
+                DialogResult result = MessageBox.Show("Pending changes. Close?", "", MessageBoxButtons.YesNo);
+
+                if (result != DialogResult.Yes)
+                    e.Cancel = true;
             }
         }
 
@@ -382,7 +395,21 @@ namespace HKSupply.Forms
         {
             try
             {
+                //if (_currentState == ActionsStates.Edit)
+                //{
+                //    DialogResult result = MessageBox.Show("Pending changes. Close?", "", MessageBoxButtons.YesNo);
+
+                //    if (result != DialogResult.Yes)
+                //        return;
+                //    else
+                //        Close();
+                //}
+                //else
+                //{
+                //    Close();
+                //}
                 Close();
+
             }
             catch (Exception ex)
             {

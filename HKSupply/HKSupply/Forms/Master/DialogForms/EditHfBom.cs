@@ -23,6 +23,7 @@ namespace HKSupply.Forms.Master.DialogForms
         #region Private Members
         //object _currentItem;
         List<ItemBom> _itemBomList = new List<ItemBom>();
+        string _idItemBcn;
 
         List<ItemHf> _itemsHfList;
         List<ItemMt> _itemsMtList;
@@ -611,28 +612,34 @@ namespace HKSupply.Forms.Master.DialogForms
 
                         view.CollapseMasterRow(view.FocusedRowHandle);
 
-                        //No se pueden repetir los semielaborados 
+                        //No se pueden repetir los semielaborados ni es posible indicarse como HF el mismo que el padre para evitar referencias circulares
                         string idItemHf = e.Value.ToString();
 
-                        object exist = null;
-
-                        if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
-                        {
-
-                            exist = (rowParent as ItemBom).HalfFinished.Where(a => a.DetailItemBom != null && a.DetailItemBom.IdItemBcn.Equals(idItemHf)).FirstOrDefault();
-                        }
-
-                        if (exist == null)
-                        {
-                            var itemBom = GlobalSetting.ItemBomService.GetItemSupplierBom(idItemHf, (rowParent as ItemBom).IdSupplier);
-
-                            row.DetailItemBom = itemBom;
-                            row.IdBomDetail = itemBom.IdBom;
-                            row.Quantity = 1;
-                        }
-                        else
-                        {
+                        if (idItemHf == _idItemBcn)
                             e.Valid = false;
+
+                        if (e.Valid)
+                        {
+                            object exist = null;
+
+                            if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
+                            {
+
+                                exist = (rowParent as ItemBom).HalfFinished.Where(a => a.DetailItemBom != null && a.DetailItemBom.IdItemBcn.Equals(idItemHf)).FirstOrDefault();
+                            }
+
+                            if (exist == null)
+                            {
+                                var itemBom = GlobalSetting.ItemBomService.GetItemSupplierBom(idItemHf, (rowParent as ItemBom).IdSupplier);
+
+                                row.DetailItemBom = itemBom;
+                                row.IdBomDetail = itemBom.IdBom;
+                                row.Quantity = 1;
+                            }
+                            else
+                            {
+                                e.Valid = false;
+                            }
                         }
 
                         break;
@@ -748,11 +755,7 @@ namespace HKSupply.Forms.Master.DialogForms
                                         {
                                             if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
                                             {
-                                                (rowParent as ItemBom).Materials.Add(new DetailBomMt());
-                                            }
-                                            else if (rowParent.GetType().BaseType == typeof(DetailBomHf) || rowParent.GetType() == typeof(DetailBomHf))
-                                            {
-                                                (rowParent as DetailBomHf).DetailItemBom.Materials.Add(new DetailBomMt());
+                                                (rowParent as ItemBom).Materials.Add(new DetailBomMt() { IdBom = (rowParent as ItemBom).IdBom });
                                             }
                                             activeView.RefreshData();
 
@@ -784,7 +787,7 @@ namespace HKSupply.Forms.Master.DialogForms
                                         {
                                             if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
                                             {
-                                                (rowParent as ItemBom).Hardwares.Add(new DetailBomHw());
+                                                (rowParent as ItemBom).Hardwares.Add(new DetailBomHw() { IdBom = (rowParent as ItemBom).IdBom });
                                             }
                                             activeView.RefreshData();
 
@@ -891,6 +894,8 @@ namespace HKSupply.Forms.Master.DialogForms
         {
             try
             {
+                _idItemBcn = idItemBcn;
+
                 var bom =  GlobalSetting.ItemBomService.GetItemSupplierBom(idItemBcn, idSupplier);
 
                 _itemBomList.Add(bom);

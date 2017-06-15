@@ -32,8 +32,8 @@
             DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
             this.documentGroup2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.document9 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
-            this.document10 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.document11 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
+            this.document10 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.document8 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.document1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.dockManagerItemBom = new DevExpress.XtraBars.Docking.DockManager(this.components);
@@ -61,19 +61,21 @@
             this.gridViewItemsHfDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.dockPanelGrdBom = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel4_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.lblCopyBom = new DevExpress.XtraEditors.LabelControl();
+            this.sbCopyBom = new DevExpress.XtraEditors.SimpleButton();
             this.xgrdItemBom = new DevExpress.XtraGrid.GridControl();
             this.gridViewItemBom = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.sbAddBomSupplier = new DevExpress.XtraEditors.SimpleButton();
             this.lblSupplier = new DevExpress.XtraEditors.LabelControl();
             this.slueSupplier = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dockPanelPlainBom = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel6_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.xgrdSummaryBom = new DevExpress.XtraGrid.GridControl();
+            this.gridViewSummaryBom = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.dockPanelTreeBom = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel5_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.treeViewBom = new System.Windows.Forms.TreeView();
-            this.dockPanelPlainBom = new DevExpress.XtraBars.Docking.DockPanel();
-            this.dockPanel6_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.xgrdPlainBom = new DevExpress.XtraGrid.GridControl();
-            this.gridViewPlainBom = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.document3 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.documentManagerBom = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
@@ -84,13 +86,11 @@
             this.document7 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.document12 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
-            this.sbCopyBom = new DevExpress.XtraEditors.SimpleButton();
-            this.lblCopyBom = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.document10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.document10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManagerItemBom)).BeginInit();
@@ -122,12 +122,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewItemBom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.slueSupplier.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
-            this.dockPanelTreeBom.SuspendLayout();
-            this.dockPanel5_Container.SuspendLayout();
             this.dockPanelPlainBom.SuspendLayout();
             this.dockPanel6_Container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xgrdPlainBom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewPlainBom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdSummaryBom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewSummaryBom)).BeginInit();
+            this.dockPanelTreeBom.SuspendLayout();
+            this.dockPanel5_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.document3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManagerBom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -159,8 +159,8 @@
             // 
             this.documentGroup2.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document[] {
             this.document9,
-            this.document10,
-            this.document11});
+            this.document11,
+            this.document10});
             // 
             // document9
             // 
@@ -172,25 +172,25 @@
             this.document9.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
             this.document9.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
             // 
-            // document10
-            // 
-            this.document10.Caption = "Plain";
-            this.document10.ControlName = "dockPanelPlainBom";
-            this.document10.FloatLocation = new System.Drawing.Point(-10000, -10000);
-            this.document10.FloatSize = new System.Drawing.Size(719, 466);
-            this.document10.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.True;
-            this.document10.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
-            this.document10.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
-            // 
             // document11
             // 
             this.document11.Caption = "Tree";
             this.document11.ControlName = "dockPanelTreeBom";
-            this.document11.FloatLocation = new System.Drawing.Point(-10000, -10000);
+            this.document11.FloatLocation = new System.Drawing.Point(438, 223);
             this.document11.FloatSize = new System.Drawing.Size(719, 466);
             this.document11.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.True;
             this.document11.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
             this.document11.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // document10
+            // 
+            this.document10.Caption = "Summary";
+            this.document10.ControlName = "dockPanelPlainBom";
+            this.document10.FloatLocation = new System.Drawing.Point(497, 218);
+            this.document10.FloatSize = new System.Drawing.Size(719, 466);
+            this.document10.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.True;
+            this.document10.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
+            this.document10.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
             // 
             // document8
             // 
@@ -470,6 +470,23 @@
             this.dockPanel4_Container.Size = new System.Drawing.Size(692, 577);
             this.dockPanel4_Container.TabIndex = 0;
             // 
+            // lblCopyBom
+            // 
+            this.lblCopyBom.Location = new System.Drawing.Point(407, 7);
+            this.lblCopyBom.Name = "lblCopyBom";
+            this.lblCopyBom.Size = new System.Drawing.Size(63, 13);
+            this.lblCopyBom.TabIndex = 6;
+            this.lblCopyBom.Text = "Copy BOM to";
+            // 
+            // sbCopyBom
+            // 
+            this.sbCopyBom.ImageUri.Uri = "Replace;Size16x16";
+            this.sbCopyBom.Location = new System.Drawing.Point(376, 1);
+            this.sbCopyBom.Name = "sbCopyBom";
+            this.sbCopyBom.Size = new System.Drawing.Size(25, 25);
+            this.sbCopyBom.TabIndex = 5;
+            this.sbCopyBom.Text = "simpleButton1";
+            // 
             // xgrdItemBom
             // 
             this.xgrdItemBom.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -524,17 +541,55 @@
             this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
+            // dockPanelPlainBom
+            // 
+            this.dockPanelPlainBom.Controls.Add(this.dockPanel6_Container);
+            this.dockPanelPlainBom.DockedAsTabbedDocument = true;
+            this.dockPanelPlainBom.FloatLocation = new System.Drawing.Point(497, 218);
+            this.dockPanelPlainBom.FloatSize = new System.Drawing.Size(719, 466);
+            this.dockPanelPlainBom.ID = new System.Guid("8993b175-6353-4699-86aa-fdfd2a63807f");
+            this.dockPanelPlainBom.Name = "dockPanelPlainBom";
+            this.dockPanelPlainBom.OriginalSize = new System.Drawing.Size(711, 411);
+            this.dockPanelPlainBom.SavedIndex = 3;
+            this.dockPanelPlainBom.SavedMdiDocument = true;
+            this.dockPanelPlainBom.Text = "Summary";
+            // 
+            // dockPanel6_Container
+            // 
+            this.dockPanel6_Container.Controls.Add(this.xgrdSummaryBom);
+            this.dockPanel6_Container.Location = new System.Drawing.Point(0, 0);
+            this.dockPanel6_Container.Name = "dockPanel6_Container";
+            this.dockPanel6_Container.Size = new System.Drawing.Size(692, 577);
+            this.dockPanel6_Container.TabIndex = 0;
+            // 
+            // xgrdSummaryBom
+            // 
+            this.xgrdSummaryBom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xgrdSummaryBom.Location = new System.Drawing.Point(0, 0);
+            this.xgrdSummaryBom.MainView = this.gridViewSummaryBom;
+            this.xgrdSummaryBom.MenuManager = this.ribbonControl;
+            this.xgrdSummaryBom.Name = "xgrdSummaryBom";
+            this.xgrdSummaryBom.Size = new System.Drawing.Size(692, 577);
+            this.xgrdSummaryBom.TabIndex = 0;
+            this.xgrdSummaryBom.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewSummaryBom});
+            // 
+            // gridViewSummaryBom
+            // 
+            this.gridViewSummaryBom.GridControl = this.xgrdSummaryBom;
+            this.gridViewSummaryBom.Name = "gridViewSummaryBom";
+            // 
             // dockPanelTreeBom
             // 
             this.dockPanelTreeBom.Controls.Add(this.dockPanel5_Container);
             this.dockPanelTreeBom.DockedAsTabbedDocument = true;
-            this.dockPanelTreeBom.FloatLocation = new System.Drawing.Point(-10000, -10000);
+            this.dockPanelTreeBom.FloatLocation = new System.Drawing.Point(438, 223);
             this.dockPanelTreeBom.FloatSize = new System.Drawing.Size(719, 466);
             this.dockPanelTreeBom.FloatVertical = true;
             this.dockPanelTreeBom.ID = new System.Guid("71f082f0-f295-4c17-a81c-48cbf5d4862e");
             this.dockPanelTreeBom.Name = "dockPanelTreeBom";
             this.dockPanelTreeBom.OriginalSize = new System.Drawing.Size(688, 400);
-            this.dockPanelTreeBom.SavedIndex = 1;
+            this.dockPanelTreeBom.SavedIndex = 4;
             this.dockPanelTreeBom.SavedMdiDocument = true;
             this.dockPanelTreeBom.Text = "Tree";
             // 
@@ -553,46 +608,6 @@
             this.treeViewBom.Name = "treeViewBom";
             this.treeViewBom.Size = new System.Drawing.Size(692, 577);
             this.treeViewBom.TabIndex = 0;
-            // 
-            // dockPanelPlainBom
-            // 
-            this.dockPanelPlainBom.Controls.Add(this.dockPanel6_Container);
-            this.dockPanelPlainBom.DockedAsTabbedDocument = true;
-            this.dockPanelPlainBom.FloatLocation = new System.Drawing.Point(-10000, -10000);
-            this.dockPanelPlainBom.FloatSize = new System.Drawing.Size(719, 466);
-            this.dockPanelPlainBom.ID = new System.Guid("8993b175-6353-4699-86aa-fdfd2a63807f");
-            this.dockPanelPlainBom.Name = "dockPanelPlainBom";
-            this.dockPanelPlainBom.OriginalSize = new System.Drawing.Size(711, 411);
-            this.dockPanelPlainBom.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
-            this.dockPanelPlainBom.SavedIndex = 0;
-            this.dockPanelPlainBom.SavedParent = this.dockPanelTreeBom;
-            this.dockPanelPlainBom.SavedTabbed = true;
-            this.dockPanelPlainBom.Text = "Plain";
-            // 
-            // dockPanel6_Container
-            // 
-            this.dockPanel6_Container.Controls.Add(this.xgrdPlainBom);
-            this.dockPanel6_Container.Location = new System.Drawing.Point(0, 0);
-            this.dockPanel6_Container.Name = "dockPanel6_Container";
-            this.dockPanel6_Container.Size = new System.Drawing.Size(692, 577);
-            this.dockPanel6_Container.TabIndex = 0;
-            // 
-            // xgrdPlainBom
-            // 
-            this.xgrdPlainBom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xgrdPlainBom.Location = new System.Drawing.Point(0, 0);
-            this.xgrdPlainBom.MainView = this.gridViewPlainBom;
-            this.xgrdPlainBom.MenuManager = this.ribbonControl;
-            this.xgrdPlainBom.Name = "xgrdPlainBom";
-            this.xgrdPlainBom.Size = new System.Drawing.Size(692, 577);
-            this.xgrdPlainBom.TabIndex = 0;
-            this.xgrdPlainBom.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewPlainBom});
-            // 
-            // gridViewPlainBom
-            // 
-            this.gridViewPlainBom.GridControl = this.xgrdPlainBom;
-            this.gridViewPlainBom.Name = "gridViewPlainBom";
             // 
             // document3
             // 
@@ -617,9 +632,9 @@
             this.tabbedView1.DocumentGroups.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup[] {
             this.documentGroup2});
             this.tabbedView1.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
-            this.document10,
+            this.document9,
             this.document11,
-            this.document9});
+            this.document10});
             this.tabbedView1.RootContainer.Element = null;
             dockingContainer1.Element = this.documentGroup2;
             this.tabbedView1.RootContainer.Nodes.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer[] {
@@ -686,23 +701,6 @@
             this.document12.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
             this.document12.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
             // 
-            // sbCopyBom
-            // 
-            this.sbCopyBom.ImageUri.Uri = "Replace;Size16x16";
-            this.sbCopyBom.Location = new System.Drawing.Point(376, 1);
-            this.sbCopyBom.Name = "sbCopyBom";
-            this.sbCopyBom.Size = new System.Drawing.Size(25, 25);
-            this.sbCopyBom.TabIndex = 5;
-            this.sbCopyBom.Text = "simpleButton1";
-            // 
-            // lblCopyBom
-            // 
-            this.lblCopyBom.Location = new System.Drawing.Point(407, 7);
-            this.lblCopyBom.Name = "lblCopyBom";
-            this.lblCopyBom.Size = new System.Drawing.Size(63, 13);
-            this.lblCopyBom.TabIndex = 6;
-            this.lblCopyBom.Text = "Copy BOM to";
-            // 
             // BomManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -720,8 +718,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.document9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.document10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.document11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.document10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.document8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.document1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManagerItemBom)).EndInit();
@@ -754,12 +752,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewItemBom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.slueSupplier.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
-            this.dockPanelTreeBom.ResumeLayout(false);
-            this.dockPanel5_Container.ResumeLayout(false);
             this.dockPanelPlainBom.ResumeLayout(false);
             this.dockPanel6_Container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.xgrdPlainBom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewPlainBom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdSummaryBom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewSummaryBom)).EndInit();
+            this.dockPanelTreeBom.ResumeLayout(false);
+            this.dockPanel5_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.document3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManagerBom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
@@ -802,8 +800,8 @@
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document document1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document document5;
         private System.Windows.Forms.TreeView treeViewBom;
-        private DevExpress.XtraGrid.GridControl xgrdPlainBom;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridViewPlainBom;
+        private DevExpress.XtraGrid.GridControl xgrdSummaryBom;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewSummaryBom;
         private DevExpress.XtraEditors.SimpleButton sbAddBomSupplier;
         private DevExpress.XtraEditors.LabelControl lblSupplier;
         private DevExpress.XtraEditors.SearchLookUpEdit slueSupplier;
