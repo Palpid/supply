@@ -16,6 +16,12 @@ namespace HKSupply.Models
         [ForeignKey("IdItemBcn")]
         public ItemMt Item { get; set; }
 
+        [Column("ID_BOM_BREAKDOWN", TypeName = "NVARCHAR", Order = 2), Key, StringLength(100)]
+        public string IdBomBreakdown { get; set; }
+
+        [ForeignKey("IdBomBreakdown")]
+        public BomBreakdown BomBreakdown { get; set; }
+
         [Column("LENGTH", TypeName = "NUMERIC")]
         public decimal? Length { get; set; }
 
@@ -55,6 +61,7 @@ namespace HKSupply.Models
             bool res = (
                 IdBom == detailBomMt.IdBom &&
                 IdItemBcn == detailBomMt.IdItemBcn &&
+                IdBomBreakdown == detailBomMt.IdBomBreakdown &&
                 Length == detailBomMt.Length &&
                 Width == detailBomMt.Width &&
                 Height == detailBomMt.Height &&
@@ -74,6 +81,7 @@ namespace HKSupply.Models
             int hashCode = (
                 IdBom.GetHashCode() + 
                 (IdItemBcn == null ? 0 : IdItemBcn.GetHashCode()) +
+                 (IdBomBreakdown == null ? 0 : IdBomBreakdown.GetHashCode()) +
                 (Length == null ? 0 : Length.GetHashCode()) + 
                 (Width == null ? 0 : Width.GetHashCode()) + 
                 (Height == null ? 0 : Height.GetHashCode()) +

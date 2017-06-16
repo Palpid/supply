@@ -47,6 +47,7 @@ namespace HKSupply.General
     /// Controlador para acceso a datos para Prototypes Docs
     /// Controlador para acceso a datos para Layouts
     /// Controlador para acceso a datos para Item BOM
+    /// Controlador para acceso a datos para Bom Breakdown
     /// </remarks>
     public sealed class GlobalSetting
     {
@@ -86,6 +87,7 @@ namespace HKSupply.General
         static EFPrototypeDoc _prototypeDocEF = new EFPrototypeDoc();
         static EFLayout _layoutEF = new EFLayout();
         static EFItemBom _itemBomEF = new EFItemBom();
+        static EFBomBreakdown _bomBreakdownEF = new EFBomBreakdown();
 
         static User _loggedUser;
         static IEnumerable<FunctionalityRole> _functionalitiesRoles;
@@ -440,6 +442,17 @@ namespace HKSupply.General
                     return new EFItemBom();
                 else
                     return _itemBomEF;
+            }
+        }
+
+        public static IBomBreakdown BomBreakdownService
+        {
+            get
+            {
+                if (_bomBreakdownEF == null)
+                    return new EFBomBreakdown();
+                else
+                    return _bomBreakdownEF;
             }
         }
 

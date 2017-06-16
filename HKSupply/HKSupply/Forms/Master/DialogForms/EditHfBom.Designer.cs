@@ -39,7 +39,7 @@
             // sbSave
             // 
             this.sbSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbSave.Location = new System.Drawing.Point(1307, 502);
+            this.sbSave.Location = new System.Drawing.Point(1307, 352);
             this.sbSave.Name = "sbSave";
             this.sbSave.Size = new System.Drawing.Size(75, 23);
             this.sbSave.TabIndex = 4;
@@ -48,7 +48,7 @@
             // sbCancel
             // 
             this.sbCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbCancel.Location = new System.Drawing.Point(1226, 502);
+            this.sbCancel.Location = new System.Drawing.Point(1226, 352);
             this.sbCancel.Name = "sbCancel";
             this.sbCancel.Size = new System.Drawing.Size(75, 23);
             this.sbCancel.TabIndex = 3;
@@ -59,7 +59,7 @@
             this.xgrdItemBom.Location = new System.Drawing.Point(12, 12);
             this.xgrdItemBom.MainView = this.gridViewItemBom;
             this.xgrdItemBom.Name = "xgrdItemBom";
-            this.xgrdItemBom.Size = new System.Drawing.Size(1370, 484);
+            this.xgrdItemBom.Size = new System.Drawing.Size(1370, 327);
             this.xgrdItemBom.TabIndex = 5;
             this.xgrdItemBom.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewItemBom});
@@ -73,7 +73,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1394, 537);
+            this.ClientSize = new System.Drawing.Size(1394, 387);
             this.Controls.Add(this.xgrdItemBom);
             this.Controls.Add(this.sbSave);
             this.Controls.Add(this.sbCancel);

@@ -18,6 +18,11 @@ namespace HKSupply.Models
         [ForeignKey("IdItemBcn")]
         public ItemMt Item { get; set; }
 
+        [Column("ID_BOM_BREAKDOWN", TypeName = "NVARCHAR", Order = 5), Key, StringLength(100)]
+        public string IdBomBreakdown { get; set; }
+        [ForeignKey("IdBomBreakdown")]
+        public BomBreakdown BomBreakdown { get; set; }
+
         [Column("ID_VER", Order = 2), Key]
         public int IdVer { get; set; }
 
@@ -71,6 +76,7 @@ namespace HKSupply.Models
             return res = (
                 IdBom == detailBomMtHistory.IdBom &&
                 IdItemBcn == detailBomMtHistory.IdItemBcn &&
+                IdBomBreakdown == detailBomMtHistory.IdBomBreakdown && 
                 IdVer == detailBomMtHistory.IdVer &&
                 IdSubVer == detailBomMtHistory.IdSubVer &&
                 Timestamp == detailBomMtHistory.Timestamp &&
@@ -92,6 +98,7 @@ namespace HKSupply.Models
             int hashCode = (
                 IdBom.GetHashCode() + 
                 (IdItemBcn == null ? 0 : IdItemBcn.GetHashCode()) +
+                (IdBomBreakdown == null ? 0 : IdBomBreakdown.GetHashCode()) +
                 IdVer.GetHashCode() + 
                 IdSubVer.GetHashCode() + 
                 Timestamp.GetHashCode() +
@@ -116,6 +123,7 @@ namespace HKSupply.Models
             DetailBomMtHistory detailBomMtHistory = new DetailBomMtHistory();
             detailBomMtHistory.IdBom = dbmt.IdBom;
             detailBomMtHistory.IdItemBcn = dbmt.IdItemBcn;
+            detailBomMtHistory.IdBomBreakdown = dbmt.IdBomBreakdown;
             detailBomMtHistory.Length = dbmt.Length;
             detailBomMtHistory.Width = dbmt.Width;
             detailBomMtHistory.Height = dbmt.Height;

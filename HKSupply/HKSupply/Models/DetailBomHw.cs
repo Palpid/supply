@@ -17,6 +17,11 @@ namespace HKSupply.Models
         [ForeignKey("IdItemBcn")]
         public ItemHw Item { get; set; }
 
+        [Column("ID_BOM_BREAKDOWN", TypeName = "NVARCHAR", Order = 2), Key, StringLength(100)]
+        public string IdBomBreakdown { get; set; }
+        [ForeignKey("IdBomBreakdown")]
+        public BomBreakdown BomBreakdown { get; set; }
+
         [Column("SCRAP", TypeName = "NUMERIC")]
         public decimal? Scrap { get; set; }
 
@@ -35,6 +40,7 @@ namespace HKSupply.Models
             bool res = (
                 IdBom == detailBomHw.IdBom &&
                 IdItemBcn == detailBomHw.IdItemBcn &&
+                IdBomBreakdown == detailBomHw.IdBomBreakdown && 
                 Quantity == detailBomHw.Quantity &&
                 Scrap == detailBomHw.Scrap
                 );
@@ -47,6 +53,7 @@ namespace HKSupply.Models
             int hashCode = (
                 IdBom.GetHashCode() +
                 (IdItemBcn == null ? 0 : IdItemBcn.GetHashCode()) +
+                (IdBomBreakdown == null ? 0 : IdBomBreakdown.GetHashCode()) +
                 Quantity.GetHashCode() +
                 Scrap.GetHashCode()
                 );

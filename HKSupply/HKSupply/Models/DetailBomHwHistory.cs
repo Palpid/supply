@@ -18,6 +18,12 @@ namespace HKSupply.Models
         [ForeignKey("IdItemBcn")]
         public ItemHw Item { get; set; }
 
+        [Column("ID_BOM_BREAKDOWN", TypeName = "NVARCHAR", Order = 5), Key, StringLength(100)]
+        public string IdBomBreakdown { get; set; }
+
+        [ForeignKey("IdBomBreakdown")]
+        public BomBreakdown BomBreakdown { get; set; }
+
         [Column("ID_VER", Order = 2), Key]
         public int IdVer { get; set; }
 
@@ -47,6 +53,7 @@ namespace HKSupply.Models
             bool res = (
                 IdBom == detailBomHwHistory.IdBom &&
                 IdItemBcn == detailBomHwHistory.IdItemBcn &&
+                IdBomBreakdown == detailBomHwHistory.IdBomBreakdown &&
                 IdVer == detailBomHwHistory.IdVer &&
                 IdSubVer == detailBomHwHistory.IdSubVer &&
                 Timestamp == detailBomHwHistory.Timestamp &&
@@ -64,6 +71,7 @@ namespace HKSupply.Models
             int hashCode = (
                 IdBom.GetHashCode() +
                 (IdItemBcn == null ? 0 : IdItemBcn.GetHashCode()) +
+                (IdBomBreakdown == null ? 0 : IdBomBreakdown.GetHashCode()) +
                 IdVer.GetHashCode() + 
                 IdSubVer.GetHashCode() + 
                 Timestamp.GetHashCode() + 
@@ -82,6 +90,7 @@ namespace HKSupply.Models
 
             detailBomHwHistory.IdBom = dbhw.IdBom;
             detailBomHwHistory.IdItemBcn = dbhw.IdItemBcn;
+            detailBomHwHistory.IdBomBreakdown = dbhw.IdBomBreakdown;
             detailBomHwHistory.Quantity = dbhw.Quantity;
             detailBomHwHistory.Scrap = dbhw.Scrap;
 

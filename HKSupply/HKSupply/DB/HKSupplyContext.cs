@@ -85,6 +85,8 @@ namespace HKSupply.DB
         public DbSet<DetailBomHf> DetailsBomHf { get; set; }
         public DbSet<DetailBomHfHistory> DetailsBomHfHistory { get; set; }
 
+        public DbSet<BomBreakdown> BomBreakdown { get; set; }
+
         //public HKSupplyContext()
         //    : base("name=SqlExpressConn")
         //{
