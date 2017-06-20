@@ -32,6 +32,8 @@
             DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
             this.documentGroup2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.document9 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
+            this.document11 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
+            this.document13 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.document10 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.document8 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.document1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
@@ -87,12 +89,12 @@
             this.document7 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.document12 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
-            this.document11 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
-            this.document13 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.document14 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.document11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.document13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document1)).BeginInit();
@@ -143,8 +145,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.document7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.document11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.document13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document14)).BeginInit();
             this.SuspendLayout();
             // 
@@ -179,6 +179,26 @@
             this.document9.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.True;
             this.document9.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
             this.document9.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // document11
+            // 
+            this.document11.Caption = "Tree";
+            this.document11.ControlName = "dockPanelTreeBom";
+            this.document11.FloatLocation = new System.Drawing.Point(-10000, -10000);
+            this.document11.FloatSize = new System.Drawing.Size(719, 466);
+            this.document11.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.True;
+            this.document11.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
+            this.document11.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // document13
+            // 
+            this.document13.Caption = "Summary";
+            this.document13.ControlName = "dockPanelPlainBom";
+            this.document13.FloatLocation = new System.Drawing.Point(-10000, -10000);
+            this.document13.FloatSize = new System.Drawing.Size(719, 466);
+            this.document13.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.True;
+            this.document13.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
+            this.document13.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
             // 
             // document10
             // 
@@ -465,7 +485,7 @@
             this.dockPanel4_Container.Controls.Add(this.slueSupplier);
             this.dockPanel4_Container.Location = new System.Drawing.Point(0, 0);
             this.dockPanel4_Container.Name = "dockPanel4_Container";
-            this.dockPanel4_Container.Size = new System.Drawing.Size(692, 577);
+            this.dockPanel4_Container.Size = new System.Drawing.Size(1332, 608);
             this.dockPanel4_Container.TabIndex = 0;
             // 
             // lblCopyBom
@@ -494,7 +514,7 @@
             this.xgrdItemBom.MainView = this.gridViewItemBom;
             this.xgrdItemBom.MenuManager = this.ribbonControl;
             this.xgrdItemBom.Name = "xgrdItemBom";
-            this.xgrdItemBom.Size = new System.Drawing.Size(686, 541);
+            this.xgrdItemBom.Size = new System.Drawing.Size(1326, 572);
             this.xgrdItemBom.TabIndex = 4;
             this.xgrdItemBom.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewItemBom});
@@ -560,7 +580,7 @@
             this.dockPanel5_Container.Controls.Add(this.treeViewBom);
             this.dockPanel5_Container.Location = new System.Drawing.Point(0, 0);
             this.dockPanel5_Container.Name = "dockPanel5_Container";
-            this.dockPanel5_Container.Size = new System.Drawing.Size(692, 577);
+            this.dockPanel5_Container.Size = new System.Drawing.Size(1332, 608);
             this.dockPanel5_Container.TabIndex = 0;
             // 
             // treeViewBom
@@ -568,7 +588,7 @@
             this.treeViewBom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewBom.Location = new System.Drawing.Point(0, 0);
             this.treeViewBom.Name = "treeViewBom";
-            this.treeViewBom.Size = new System.Drawing.Size(692, 577);
+            this.treeViewBom.Size = new System.Drawing.Size(1332, 608);
             this.treeViewBom.TabIndex = 0;
             // 
             // dockPanelPlainBom
@@ -723,22 +743,6 @@
             this.document12.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
             this.document12.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
             // 
-            // document11
-            // 
-            this.document11.Caption = "Tree";
-            this.document11.ControlName = "dockPanelTreeBom";
-            this.document11.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.True;
-            this.document11.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
-            this.document11.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
-            // 
-            // document13
-            // 
-            this.document13.Caption = "Summary";
-            this.document13.ControlName = "dockPanelPlainBom";
-            this.document13.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.True;
-            this.document13.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
-            this.document13.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
-            // 
             // document14
             // 
             this.document14.Caption = "panelContainer3";
@@ -763,6 +767,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.document9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.document11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.document13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.document10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.document8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.document1)).EndInit();
@@ -814,8 +820,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.document7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.document12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.document11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.document13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.document14)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

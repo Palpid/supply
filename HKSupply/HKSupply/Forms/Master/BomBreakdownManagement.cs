@@ -55,8 +55,8 @@ namespace HKSupply.Forms.Master
                 RestoreInitState();
                 //Print and export buttons
                 EnablePrintPreview = false;
-                EnableExportExcel = true;
-                EnableExportCsv = true;
+                EnableExportExcel = false;
+                EnableExportCsv = false;
                 ConfigurePrintExportOptions();
                 //Layout
                 EnableLayoutOptions = false;
@@ -143,12 +143,12 @@ namespace HKSupply.Forms.Master
                     }
                     else
                     {
-                        //res = UpdateStores();
+                        res = UpdateBomBreakdowns();
                     }
                 }
                 else if (CurrentState == ActionsStates.New)
                 {
-                    //res = CreateStore();
+                    res = CreateBomBrakdown();
                 }
 
                 if (res == true)
@@ -279,6 +279,9 @@ namespace HKSupply.Forms.Master
 
                 List<BomBreakdown> bomBreakdowns = GlobalSetting.BomBreakdownService.GetBomBreakdowns();
                 xgrdBomBreakdown.DataSource = bomBreakdowns;
+
+                gridViewBomBreakdown.OptionsBehavior.Editable = false;
+                gridViewBomBreakdown.Columns[nameof(BomBreakdown.IdBomBreakdown)].AppearanceCell.ForeColor = Color.Black;
             }
             catch
             {
@@ -410,6 +413,34 @@ namespace HKSupply.Forms.Master
         }
 
 
+        #endregion
+
+        #region CRUD
+        private bool UpdateBomBreakdowns()
+        {
+            try
+            {
+                return GlobalSetting.BomBreakdownService.UpdateBomBreakdown(_modifiedBomBreakdowns);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private bool CreateBomBrakdown()
+        {
+            try
+            {
+                GlobalSetting.BomBreakdownService.NewBomBreakdown(_createdBomBreakdowns.FirstOrDefault());
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
+
+        }
         #endregion
 
         #endregion

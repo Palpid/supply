@@ -104,7 +104,7 @@ namespace HKSupply.Forms
                             if (type.Name == menuItem.FormName)
                             {
                                 found = true;
-
+                                Cursor = Cursors.WaitCursor;
                                 Form frmShow = (Form)frmAssembly.CreateInstance(type.ToString());
                                 frmShow.MdiParent = this;
                                 frmShow.ShowIcon = false;
@@ -125,6 +125,10 @@ namespace HKSupply.Forms
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
             }
         }
 

@@ -154,33 +154,33 @@ namespace HKSupply.Models
         public override int GetHashCode()
         {
             int hashCode =
-                IdVer.GetHashCode() +
-                IdSubVer.GetHashCode() +
-                Timestamp.GetHashCode() +
-                (IdPrototype == null ? 0 : IdPrototype.GetHashCode()) +
-                (IdItemBcn == null ? 0 : IdItemBcn.GetHashCode()) +
-                (IdHwTypeL1 == null ? 0 : IdHwTypeL1.GetHashCode()) +
-                (IdHwTypeL2 == null ? 0 : IdHwTypeL2.GetHashCode()) +
-                (IdHwTypeL3 == null ? 0 : IdHwTypeL3.GetHashCode()) +
-                (IdDefaultSupplier == null ? 0 : IdDefaultSupplier.GetHashCode()) +
-                (IdModel == null ? 0 : IdModel.GetHashCode()) +
-                (IdFamilyHK == null ? 0 : IdFamilyHK.GetHashCode()) +
-                (IdColor1 == null ? 0 : IdColor1.GetHashCode()) +
-                (IdColor2 == null ? 0 : IdColor2.GetHashCode()) +
-                (IdItemHK == null ? 0 : IdItemHK.GetHashCode()) +
-                (ItemDescription == null ? 0 : ItemDescription.GetHashCode()) +
-                (Comments == null ? 0 : Comments.GetHashCode()) +
-                (LaunchDate == null ? 0 : LaunchDate.GetHashCode()) +
-                (RemovalDate == null ? 0 : RemovalDate.GetHashCode()) +
-                IdStatusCial.GetHashCode() +
-                IdStatusProd.GetHashCode() +
-                (IdUserAttri1 == null ? 0 : IdUserAttri1.GetHashCode()) +
-                (IdUserAttri2 == null ? 0 : IdUserAttri2.GetHashCode()) +
-                (IdUserAttri3 == null ? 0 : IdUserAttri3.GetHashCode()) +
-                (Unit == null ? 0 : Unit.GetHashCode()) +
-                (DocsLink == null ? 0 : DocsLink.GetHashCode()) +
-                CreateDate.GetHashCode() +
-                (PhotoUrl == null ? 0 : PhotoUrl.GetHashCode());
+                                IdVer.GetHashCode() +
+                                IdSubVer.GetHashCode() +
+                                Timestamp.GetHashCode() +
+                                (IdPrototype == null ? 0 : IdPrototype.GetHashCode()) +
+                                (IdItemBcn == null ? 0 : IdItemBcn.GetHashCode()) +
+                                (IdHwTypeL1 == null ? 0 : IdHwTypeL1.GetHashCode()) +
+                                (IdHwTypeL2 == null ? 0 : IdHwTypeL2.GetHashCode()) +
+                                (IdHwTypeL3 == null ? 0 : IdHwTypeL3.GetHashCode()) +
+                                (IdDefaultSupplier == null ? 0 : IdDefaultSupplier.GetHashCode()) +
+                                (IdModel == null ? 0 : IdModel.GetHashCode()) +
+                                (IdFamilyHK == null ? 0 : IdFamilyHK.GetHashCode()) +
+                                (IdColor1 == null ? 0 : IdColor1.GetHashCode()) +
+                                (IdColor2 == null ? 0 : IdColor2.GetHashCode()) +
+                                (IdItemHK == null ? 0 : IdItemHK.GetHashCode()) +
+                                (ItemDescription == null ? 0 : ItemDescription.GetHashCode()) +
+                                (Comments == null ? 0 : Comments.GetHashCode()) +
+                                (LaunchDate == null ? 0 : LaunchDate.GetHashCode()) +
+                                (RemovalDate == null ? 0 : RemovalDate.GetHashCode()) +
+                                IdStatusCial.GetHashCode() +
+                                IdStatusProd.GetHashCode() +
+                                (IdUserAttri1 == null ? 0 : IdUserAttri1.GetHashCode()) +
+                                (IdUserAttri2 == null ? 0 : IdUserAttri2.GetHashCode()) +
+                                (IdUserAttri3 == null ? 0 : IdUserAttri3.GetHashCode()) +
+                                (Unit == null ? 0 : Unit.GetHashCode()) +
+                                (DocsLink == null ? 0 : DocsLink.GetHashCode()) +
+                                CreateDate.GetHashCode() +
+                                (PhotoUrl == null ? 0 : PhotoUrl.GetHashCode());
 
             return hashCode;
         }

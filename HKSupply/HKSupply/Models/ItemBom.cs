@@ -59,9 +59,6 @@ namespace HKSupply.Models
 
         public virtual List<DetailBomHf> HalfFinished { get; set; }
 
-        [NotMapped]
-        public List<ItemBom> HalfFinishedNM { get; set; }
-
         #region Equals
         public override bool Equals(object obj)
         {
