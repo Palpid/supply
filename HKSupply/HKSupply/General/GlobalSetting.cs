@@ -52,8 +52,8 @@ namespace HKSupply.General
     public sealed class GlobalSetting
     {
         #region Private Members
-        static string _dbEnvironment = Constants.SQL_EXPRESS_CONN; //SQL Express local
-        //static string _dbEnvironment = Constants.SQL_DEV_SERVER_CONN; //SQL Server (Desarrollo)
+        //static string _dbEnvironment = Constants.SQL_EXPRESS_CONN; //SQL Express local
+        static string _dbEnvironment = Constants.SQL_DEV_SERVER_CONN; //SQL Server (Desarrollo)
         //static string _dbEnvironment = Constants.SQL_PROD_SERVER_CONN; //SQL Server (Producción)
 
         static EFRole _roleEF = new EFRole();
@@ -99,6 +99,11 @@ namespace HKSupply.General
         public static string DbEnvironment
         {
             get { return _dbEnvironment; }
+        }
+
+        public static string ConnStringName
+        {
+            get { return _dbEnvironment.Replace("name=", ""); }
         }
 
         public static IRole RoleService 

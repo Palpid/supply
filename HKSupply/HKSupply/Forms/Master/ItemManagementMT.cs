@@ -359,10 +359,16 @@ namespace HKSupply.Forms.Master
                 xtpForm.PageVisible = false;
                 xtpDocs.PageVisible = false;
                 SetUpLueStatusProd();
+                Cursor = Cursors.WaitCursor;
+                LoadItemsList();
             }
             catch (Exception ex)
             {
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
             }
         }
 

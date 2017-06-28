@@ -1,3 +1,4 @@
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Reports\Rpt\BOM.rpt
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\Edit_16x16.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\etnia_icon.ico
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\etnia_logo.jpg
@@ -5,6 +6,10 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\log4net.config
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\HKSupply.exe.config
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\HKSupply.pdb
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CrystalDecisions.Shared.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CustomControls.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Data.v16.2.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Pdf.v16.2.Core.dll
@@ -24,7 +29,22 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\EntityFramework.SqlServer.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\log4net.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Log4Slack.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\System.Linq.Dynamic.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\FlashControlV71.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.RichEdit.v16.2.Core.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\stdole.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ShockwaveFlashObjects.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Office.v16.2.Core.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CustomControls.pdb
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Data.v16.2.xml
@@ -107,6 +127,7 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.DynamicFilters.resource
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Form1.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Login.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Main.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.BomBreakdownManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.BomManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.ChangePassword.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.CurrenciesEchangeRatesManagement.resources
@@ -133,6 +154,7 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.SupplierManageme
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.SupplierPriceListManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.UserManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.PDFViewer.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Reports.BOMReport.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.RibbonFormBase.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.Customer.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.ObjectVersion.resources
@@ -208,9 +230,10 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.BomBreakdown_20170
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.BomBreakdown_20170616_02.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.BomBreakdown_20170616_03.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Properties.Resources.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Reports.frmVisor.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Resources.HKSupplyRes.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.csproj.GenerateResource.Cache
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe.licenses
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
-C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.BomBreakdownManagement.resources
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\HelpDocs\EN\BOM Flow and Application Help.pdf

@@ -38,6 +38,7 @@ namespace HKSupply.Forms.Master
 
         object _currentItem;
         List<ItemBom> _itemBomList = new List<ItemBom>();
+        List<ItemDoc> _itemLastDocsList;
 
         List<Supplier> _suppliersList;
         List<BomBreakdown> _bomBreakdownList;
@@ -298,6 +299,8 @@ namespace HKSupply.Forms.Master
                 LoadItemsListHf();
                 //LoadItemsListMt();
                 //LoadItemsListHw();
+
+                dockPanelDrawing.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
             }
             catch (Exception ex)
             {
@@ -379,242 +382,242 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void GridViewItemsMt_DoubleClick(object sender, EventArgs e)
-        {
-            try
-            {
-                //var selectedSuppliers = OpenSelectSuppliersForm();
+        //private void GridViewItemsMt_DoubleClick(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        //var selectedSuppliers = OpenSelectSuppliersForm();
 
-                //if (selectedSuppliers.Count == 0)
-                //{
-                //    XtraMessageBox.Show("No selected Supplier", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //    return;
-                //}
-
-
-
-                //GridView view = sender as GridView;
-
-                //GridHitInfo hitInfo = view.CalcHitInfo((e as MouseEventArgs).Location);
-                //if (hitInfo.InRowCell)
-                //{
-                //    ItemMt itemMt = view.GetRow(view.FocusedRowHandle) as ItemMt;
-
-                //    foreach(var supplier in selectedSuppliers)
-                //    {
-                //        AddRawMaterial(itemMt, supplier);
-                //    }
-
-
-                //    LoadBomTreeView();
-                //    LoadPlainBom();
-                //}
-
-                GridView view = sender as GridView;
-                GridHitInfo hitInfo = view.CalcHitInfo((e as MouseEventArgs).Location);
-
-                if (hitInfo.InRowCell)
-                {
-                    ItemMt itemMt = view.GetRow(view.FocusedRowHandle) as ItemMt;
-
-                    GridView activeBomView = xgrdItemBom.FocusedView as GridView;
-
-                    if (activeBomView == null)
-                    {
-                        XtraMessageBox.Show("Select BOM node first", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-
-                    //------------------------------------------------------------------------
-
-                    var rowtmp = activeBomView.GetRow(activeBomView.FocusedRowHandle);
-
-                    object rowParent;
-
-                    if (rowtmp.GetType().BaseType == typeof(ItemBom) || rowtmp.GetType() == typeof(ItemBom) ||
-                        rowtmp.GetType().BaseType == typeof(DetailBomHf) || rowtmp.GetType() == typeof(DetailBomHf)
-                        )
-                    {
-                        rowParent = rowtmp;
-                    }
-                    else
-                    {
-                        BaseView parent = activeBomView.ParentView;
-
-                        rowParent = parent.GetRow(activeBomView.SourceRowHandle);
-                    }
-
-
-                    if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
-                    {
-                        var rawMaterial = (rowParent as ItemBom).Materials.Where(a => a.IdItemBcn != null && a.IdItemBcn.Equals(itemMt.IdItemBcn));
-
-                        if (rawMaterial == null || rawMaterial.Count() == 0)
-                        {
-                            DetailBomMt detail = new DetailBomMt()
-                            {
-                                IdBom = (rowParent as ItemBom).IdBom,
-                                IdItemBcn = itemMt.IdItemBcn,
-                                Item = itemMt,
-                                Quantity = 0,
-                                Scrap = 0,
-                            };
-
-                            (rowParent as ItemBom).Materials.Add(detail);
-
-                            //activeBomView.RefreshData(); //--> OK
-                            activeBomView.BeginDataUpdate();
-                            GrdBomRefreshAndExpand();
-                            activeBomView.EndDataUpdate();
-
-
-                            //grdBomRefreshAndExpand();
-                            //xgrdItemBom.RefreshDataSource();
-                            //NavigateDetails(gridViewItemBom);
-                            //gridViewItemBom.ExpandMasterRow(0, nameof(ItemBom.Hardwares)); --> Medio OK
-                            //xgrdItemBom.FocusedView = gridViewItemBom.GetDetailView(gridViewItemBom.FocusedRowHandle, 1); --> Medio OK
-
-
-                        }
-                        else
-                        {
-                            XtraMessageBox.Show($"Raw Material already exist for supplier {(rowParent as ItemBom).IdSupplier}");
-                        }
-                    }
-                    else if (rowParent.GetType().BaseType == typeof(DetailBomHf) || rowParent.GetType() == typeof(DetailBomHf))
-                    {
-                        //var rawMaterial = (rowParent as ItemBom).Materials.Where(a => a.IdItemBcn.Equals(itemMt.IdItemBcn));
-                        var rawMaterial = (rowParent as DetailBomHf).DetailItemBom.Materials.Where(a => a.IdItemBcn != null && a.IdItemBcn.Equals(itemMt.IdItemBcn)); 
-                        if (rawMaterial == null || rawMaterial.Count() == 0)
-                        {
-                            DetailBomMt detail = new DetailBomMt()
-                            {
-                                IdBom = (rowParent as DetailBomHf).IdBom,
-                                IdItemBcn = itemMt.IdItemBcn,
-                                Item = itemMt,
-                                Quantity = 0,
-                                Scrap = 0,
-                            };
-
-                            (rowParent as DetailBomHf).DetailItemBom.Materials.Add(detail);
-
-                            //activeBomView.RefreshData(); //--> OK
-                            activeBomView.BeginDataUpdate();
-                            GrdBomRefreshAndExpand();
-                            activeBomView.EndDataUpdate();
-
-
-                            //xgrdItemBom.RefreshDataSource();
-                            //ExpandAllRows(activeBomView);
-
-                            //grdBomRefreshAndExpand();
-                            //xgrdItemBom.RefreshDataSource();
-                            //NavigateDetails(gridViewItemBom);
-                            //gridViewItemBom.ExpandMasterRow(0, nameof(ItemBom.Hardwares));
-                            //xgrdItemBom.FocusedView = gridViewItemBom.GetDetailView(gridViewItemBom.FocusedRowHandle, 1);
-
-
-                        }
-                        else
-                        {
-                            XtraMessageBox.Show($"Raw Material already exist for supplier {(rowParent as ItemBom).IdSupplier}");
-                        }
-                    }
+        //        //if (selectedSuppliers.Count == 0)
+        //        //{
+        //        //    XtraMessageBox.Show("No selected Supplier", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //        //    return;
+        //        //}
 
 
 
-                    //switch (activeBomView.LevelName)
-                    //{
-                    //    case nameof(ItemBom.Materials):
+        //        //GridView view = sender as GridView;
+
+        //        //GridHitInfo hitInfo = view.CalcHitInfo((e as MouseEventArgs).Location);
+        //        //if (hitInfo.InRowCell)
+        //        //{
+        //        //    ItemMt itemMt = view.GetRow(view.FocusedRowHandle) as ItemMt;
+
+        //        //    foreach(var supplier in selectedSuppliers)
+        //        //    {
+        //        //        AddRawMaterial(itemMt, supplier);
+        //        //    }
 
 
-                        //        DetailBomMt row = activeBomView.GetRow(activeBomView.FocusedRowHandle) as DetailBomMt;
-                        //        BaseView parent = activeBomView.ParentView;
-                        //        var rowParent = parent.GetRow(activeBomView.SourceRowHandle);
+        //        //    LoadBomTreeView();
+        //        //    LoadPlainBom();
+        //        //}
 
-                        //        var rawMaterial = (rowParent as ItemBom).Materials.Where(a => a.IdItemBcn.Equals(itemMt.IdItemBcn));
+        //        GridView view = sender as GridView;
+        //        GridHitInfo hitInfo = view.CalcHitInfo((e as MouseEventArgs).Location);
 
-                        //        if (rawMaterial == null || rawMaterial.Count() == 0)
-                        //        {
-                        //            DetailBomMt detail = new DetailBomMt()
-                        //            {
-                        //                IdBom = (rowParent as ItemBom).IdBom,
-                        //                IdItemBcn = itemMt.IdItemBcn,
-                        //                Item = itemMt,
-                        //                Quantity = 0,
-                        //                Scrap = 0,
-                        //            };
+        //        if (hitInfo.InRowCell)
+        //        {
+        //            ItemMt itemMt = view.GetRow(view.FocusedRowHandle) as ItemMt;
 
-                        //            (rowParent as ItemBom).Materials.Add(detail);
+        //            GridView activeBomView = xgrdItemBom.FocusedView as GridView;
 
-                        //            grdBomRefreshAndExpand();
+        //            if (activeBomView == null)
+        //            {
+        //                XtraMessageBox.Show("Select BOM node first", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //                return;
+        //            }
 
-                        //            //------------------------------ PRUEBAS -----------------------------------//
-                        //            //xgrdItemBom.FocusedView = parent;
-                        //            gridViewItemBom.FocusedRowHandle = 0;
-                        //            GridView childView1 = gridViewItemBom.GetDetailView(0, 1) as GridView;
+        //            //------------------------------------------------------------------------
 
-                        //            childView1.FocusedRowHandle = 0;
-                        //            childView1.ExpandMasterRow(0);
-                        //            GridView childView2 = childView1.GetDetailView(0, 0) as GridView;
+        //            var rowtmp = activeBomView.GetRow(activeBomView.FocusedRowHandle);
 
+        //            object rowParent;
 
-                        //        }
-                        //        else
-                        //        {
-                        //            XtraMessageBox.Show($"Raw Material already exist for supplier {(rowParent as ItemBom).IdSupplier}");
-                        //        }
+        //            if (rowtmp.GetType().BaseType == typeof(ItemBom) || rowtmp.GetType() == typeof(ItemBom) ||
+        //                rowtmp.GetType().BaseType == typeof(DetailBomHf) || rowtmp.GetType() == typeof(DetailBomHf)
+        //                )
+        //            {
+        //                rowParent = rowtmp;
+        //            }
+        //            else
+        //            {
+        //                BaseView parent = activeBomView.ParentView;
 
-                        //        break;
-
-                        //    default:
-                        //        XtraMessageBox.Show("Select BOM node first", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        //        break;
-
-                        //}
-                }
+        //                rowParent = parent.GetRow(activeBomView.SourceRowHandle);
+        //            }
 
 
-            }
-            catch(Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        //            if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
+        //            {
+        //                var rawMaterial = (rowParent as ItemBom).Materials.Where(a => a.IdItemBcn != null && a.IdItemBcn.Equals(itemMt.IdItemBcn));
 
-        private void GridViewItemsHw_DoubleClick(object sender, EventArgs e)
-        {
-            try
-            {
-                var selectedSuppliers = OpenSelectSuppliersForm();
+        //                if (rawMaterial == null || rawMaterial.Count() == 0)
+        //                {
+        //                    DetailBomMt detail = new DetailBomMt()
+        //                    {
+        //                        IdBom = (rowParent as ItemBom).IdBom,
+        //                        IdItemBcn = itemMt.IdItemBcn,
+        //                        Item = itemMt,
+        //                        Quantity = 0,
+        //                        Scrap = 0,
+        //                    };
 
-                if (selectedSuppliers.Count == 0)
-                {
-                    XtraMessageBox.Show("No selected Supplier", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+        //                    (rowParent as ItemBom).Materials.Add(detail);
 
-                GridView view = sender as GridView;
+        //                    //activeBomView.RefreshData(); //--> OK
+        //                    activeBomView.BeginDataUpdate();
+        //                    GrdBomRefreshAndExpand();
+        //                    activeBomView.EndDataUpdate();
 
-                GridHitInfo hitInfo = view.CalcHitInfo((e as MouseEventArgs).Location);
-                if (hitInfo.InRowCell)
-                {
-                    ItemHw itemHw = view.GetRow(view.FocusedRowHandle) as ItemHw;
 
-                    foreach (var supplier in selectedSuppliers)
-                    {
-                        AddHardware(itemHw, supplier);
-                    }
+        //                    //grdBomRefreshAndExpand();
+        //                    //xgrdItemBom.RefreshDataSource();
+        //                    //NavigateDetails(gridViewItemBom);
+        //                    //gridViewItemBom.ExpandMasterRow(0, nameof(ItemBom.Hardwares)); --> Medio OK
+        //                    //xgrdItemBom.FocusedView = gridViewItemBom.GetDetailView(gridViewItemBom.FocusedRowHandle, 1); --> Medio OK
+
+
+        //                }
+        //                else
+        //                {
+        //                    XtraMessageBox.Show($"Raw Material already exist for supplier {(rowParent as ItemBom).IdSupplier}");
+        //                }
+        //            }
+        //            else if (rowParent.GetType().BaseType == typeof(DetailBomHf) || rowParent.GetType() == typeof(DetailBomHf))
+        //            {
+        //                //var rawMaterial = (rowParent as ItemBom).Materials.Where(a => a.IdItemBcn.Equals(itemMt.IdItemBcn));
+        //                var rawMaterial = (rowParent as DetailBomHf).DetailItemBom.Materials.Where(a => a.IdItemBcn != null && a.IdItemBcn.Equals(itemMt.IdItemBcn)); 
+        //                if (rawMaterial == null || rawMaterial.Count() == 0)
+        //                {
+        //                    DetailBomMt detail = new DetailBomMt()
+        //                    {
+        //                        IdBom = (rowParent as DetailBomHf).IdBom,
+        //                        IdItemBcn = itemMt.IdItemBcn,
+        //                        Item = itemMt,
+        //                        Quantity = 0,
+        //                        Scrap = 0,
+        //                    };
+
+        //                    (rowParent as DetailBomHf).DetailItemBom.Materials.Add(detail);
+
+        //                    //activeBomView.RefreshData(); //--> OK
+        //                    activeBomView.BeginDataUpdate();
+        //                    GrdBomRefreshAndExpand();
+        //                    activeBomView.EndDataUpdate();
+
+
+        //                    //xgrdItemBom.RefreshDataSource();
+        //                    //ExpandAllRows(activeBomView);
+
+        //                    //grdBomRefreshAndExpand();
+        //                    //xgrdItemBom.RefreshDataSource();
+        //                    //NavigateDetails(gridViewItemBom);
+        //                    //gridViewItemBom.ExpandMasterRow(0, nameof(ItemBom.Hardwares));
+        //                    //xgrdItemBom.FocusedView = gridViewItemBom.GetDetailView(gridViewItemBom.FocusedRowHandle, 1);
+
+
+        //                }
+        //                else
+        //                {
+        //                    XtraMessageBox.Show($"Raw Material already exist for supplier {(rowParent as ItemBom).IdSupplier}");
+        //                }
+        //            }
+
+
+
+        //            //switch (activeBomView.LevelName)
+        //            //{
+        //            //    case nameof(ItemBom.Materials):
+
+
+        //                //        DetailBomMt row = activeBomView.GetRow(activeBomView.FocusedRowHandle) as DetailBomMt;
+        //                //        BaseView parent = activeBomView.ParentView;
+        //                //        var rowParent = parent.GetRow(activeBomView.SourceRowHandle);
+
+        //                //        var rawMaterial = (rowParent as ItemBom).Materials.Where(a => a.IdItemBcn.Equals(itemMt.IdItemBcn));
+
+        //                //        if (rawMaterial == null || rawMaterial.Count() == 0)
+        //                //        {
+        //                //            DetailBomMt detail = new DetailBomMt()
+        //                //            {
+        //                //                IdBom = (rowParent as ItemBom).IdBom,
+        //                //                IdItemBcn = itemMt.IdItemBcn,
+        //                //                Item = itemMt,
+        //                //                Quantity = 0,
+        //                //                Scrap = 0,
+        //                //            };
+
+        //                //            (rowParent as ItemBom).Materials.Add(detail);
+
+        //                //            grdBomRefreshAndExpand();
+
+        //                //            //------------------------------ PRUEBAS -----------------------------------//
+        //                //            //xgrdItemBom.FocusedView = parent;
+        //                //            gridViewItemBom.FocusedRowHandle = 0;
+        //                //            GridView childView1 = gridViewItemBom.GetDetailView(0, 1) as GridView;
+
+        //                //            childView1.FocusedRowHandle = 0;
+        //                //            childView1.ExpandMasterRow(0);
+        //                //            GridView childView2 = childView1.GetDetailView(0, 0) as GridView;
+
+
+        //                //        }
+        //                //        else
+        //                //        {
+        //                //            XtraMessageBox.Show($"Raw Material already exist for supplier {(rowParent as ItemBom).IdSupplier}");
+        //                //        }
+
+        //                //        break;
+
+        //                //    default:
+        //                //        XtraMessageBox.Show("Select BOM node first", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //                //        break;
+
+        //                //}
+        //        }
+
+
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
+
+        //private void GridViewItemsHw_DoubleClick(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        var selectedSuppliers = OpenSelectSuppliersForm();
+
+        //        if (selectedSuppliers.Count == 0)
+        //        {
+        //            XtraMessageBox.Show("No selected Supplier", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //            return;
+        //        }
+
+        //        GridView view = sender as GridView;
+
+        //        GridHitInfo hitInfo = view.CalcHitInfo((e as MouseEventArgs).Location);
+        //        if (hitInfo.InRowCell)
+        //        {
+        //            ItemHw itemHw = view.GetRow(view.FocusedRowHandle) as ItemHw;
+
+        //            foreach (var supplier in selectedSuppliers)
+        //            {
+        //                AddHardware(itemHw, supplier);
+        //            }
                         
-                    LoadBomTreeView();
-                    LoadSummaryBom();
-                }
-            }
-            catch(Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        //            LoadBomTreeView();
+        //            LoadSummaryBom();
+        //        }
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
 
         private void XgrdItemBom_ViewRegistered(object sender, ViewOperationEventArgs e)
         {
@@ -805,26 +808,83 @@ namespace HKSupply.Forms.Master
 
                         (e.View as GridView).DetailHeight = 1000;
 
-                        //Ocultamos todas las columnas menos el item que no nos interesan
-                        foreach(GridColumn col in (e.View as GridView).Columns)
+                        ////Ocultamos todas las columnas menos el item que no nos interesan
+                        //foreach(GridColumn col in (e.View as GridView).Columns)
+                        //{
+                        //    if (col.FieldName != nameof(ItemBom.IdItemBcn))
+                        //        col.Visible = false;
+                        //}
+
+                        ////Seteamos el tamaño de las columnas
+                        //(e.View as GridView).Columns[nameof(ItemBom.IdItemBcn)].Width = 150;
+
+                        ////agregamos la columna de descripcion
+                        //GridColumn colDescriptionItemHf = new GridColumn()
+                        //{
+                        //    Caption = GlobalSetting.ResManager.GetString("ItemDescription"),
+                        //    Visible = true,
+                        //    FieldName = $"{nameof(ItemBom.Item)}.{nameof(ItemHf.ItemDescription)}",
+                        //    Width = 300
+                        //};
+
+                        //(e.View as GridView).Columns.Add(colDescriptionItemHf);
+
+                        //------------------------------------------------------------------------------------------//
+                        //Ocultamos las columnas que no nos interesan
+                        foreach (GridColumn col in (e.View as GridView).Columns)
                         {
-                            if (col.FieldName != nameof(ItemBom.IdItemBcn))
+                            if (col.FieldName != nameof(DetailBomHf.Quantity))
                                 col.Visible = false;
                         }
 
-                        //Seteamos el tamaño de las columnas
-                        (e.View as GridView).Columns[nameof(ItemBom.IdItemBcn)].Width = 150;
-
                         //agregamos la columna de descripcion
-                        GridColumn colDescriptionItemHf = new GridColumn()
+                        GridColumn colIdItemHfDet = new GridColumn()
                         {
                             Caption = GlobalSetting.ResManager.GetString("ItemDescription"),
                             Visible = true,
-                            FieldName = $"{nameof(ItemBom.Item)}.{nameof(ItemHf.ItemDescription)}",
-                            Width = 300
+                            FieldName = $"{nameof(DetailBomHf.DetailItemBom)}.{nameof(ItemBom.IdItemBcn)}",
+                            Width = 300,
                         };
 
-                        (e.View as GridView).Columns.Add(colDescriptionItemHf);
+                        (e.View as GridView).Columns.Add(colIdItemHfDet);
+
+                        //No queremos que se muestra la columna, pero al ser listas tenemos que generarlo para que se monte el hijo con sus tabs
+                        GridColumn ListMaterialsDet = new GridColumn()
+                        {
+                            Caption = " ",
+                            Visible = false,
+                            FieldName = $"{nameof(DetailBomHf.DetailItemBom)}.{nameof(ItemBom.Materials)}",
+                            Width = 300
+                        };
+                        (e.View as GridView).Columns.Add(ListMaterialsDet);
+
+                        GridColumn ListHardwaresDet = new GridColumn()
+                        {
+                            Caption = " ",
+                            Visible = false,
+                            FieldName = $"{nameof(DetailBomHf.DetailItemBom)}.{nameof(ItemBom.Hardwares)}",
+                            Width = 300
+                        };
+                        (e.View as GridView).Columns.Add(ListHardwaresDet);
+
+                        GridColumn ListHalfFinishedDet = new GridColumn()
+                        {
+                            Caption = " ",
+                            Visible = false,
+                            FieldName = $"{nameof(DetailBomHf.DetailItemBom)}.{nameof(ItemBom.HalfFinished)}",
+                            Width = 300
+                        };
+                        (e.View as GridView).Columns.Add(ListHalfFinishedDet);
+
+                        //Formats
+                        (e.View as GridView).Columns[nameof(DetailBomHf.Quantity)].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                        (e.View as GridView).Columns[nameof(DetailBomHf.Quantity)].DisplayFormat.FormatString = "n2";
+
+                        //Columns order
+                        (e.View as GridView).Columns[$"{nameof(DetailBomHf.DetailItemBom)}.{nameof(ItemBom.IdItemBcn)}"].VisibleIndex = 0;
+                        (e.View as GridView).Columns[nameof(DetailBomHf.Quantity)].VisibleIndex = 1;
+
+                        //---------------------------------------------------------------------------------------------//
 
                         //Si está en edición al pintar una nueva vista tiene que hacerla editable
                         if (CurrentState == ActionsStates.Edit)
@@ -1055,17 +1115,10 @@ namespace HKSupply.Forms.Master
             {
                 dockPanelItemsEy.Options.ShowCloseButton = false;
                 dockPanelItemsHf.Options.ShowCloseButton = false;
-                //dockPanelItemsHw.Options.ShowCloseButton = false;
-                //dockPanelItemsMt.Options.ShowCloseButton = false;
                 dockPanelGrdBom.Options.ShowCloseButton = false;
                 dockPanelTreeBom.Options.ShowCloseButton = false;
                 dockPanelPlainBom.Options.ShowCloseButton = false;
-
-                dockPanelItemsHw.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
-                dockPanelItemsMt.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
-                dockPanelItemsHfDetail.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
-                panelContainer1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
-
+                dockPanelDrawing.Options.ShowCloseButton = false;
             }
             catch (Exception ex)
             {
@@ -1173,130 +1226,130 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void SetUpGrdItemsMt()
-        {
-            try
-            {
-                //Ocultamos el nombre de las columnas agrupadas
-                gridViewItemsMt.GroupFormat = "[#image]{1} {2}";
+        //private void SetUpGrdItemsMt()
+        //{
+        //    try
+        //    {
+        //        //Ocultamos el nombre de las columnas agrupadas
+        //        gridViewItemsMt.GroupFormat = "[#image]{1} {2}";
 
-                //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
-                gridViewItemsMt.OptionsView.ColumnAutoWidth = false;
-                gridViewItemsMt.HorzScrollVisibility = ScrollVisibility.Auto;
+        //        //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
+        //        gridViewItemsMt.OptionsView.ColumnAutoWidth = false;
+        //        gridViewItemsMt.HorzScrollVisibility = ScrollVisibility.Auto;
 
-                //Hacer todo el grid no editable
-                gridViewItemsMt.OptionsBehavior.Editable = false;
+        //        //Hacer todo el grid no editable
+        //        gridViewItemsMt.OptionsBehavior.Editable = false;
 
-                //Columns definition
-                GridColumn colIdItemBcn = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemBCN"), Visible = true, FieldName = nameof(ItemMt.IdItemBcn), Width = 160 };
-                GridColumn colItemDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemDescription"), Visible = true, FieldName = nameof(ItemMt.ItemDescription), Width = 300 };
-                GridColumn colIdMatTypeL1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MatTypeL1"), Visible = false, FieldName = nameof(ItemMt.IdMatTypeL1), Width = 100 };
-                GridColumn colIdMatTypeL2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MatTypeL2"), Visible = false, FieldName = nameof(ItemMt.IdMatTypeL2), Width = 100 };
-                GridColumn colIdMatTypeL3 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MatTypeL3"), Visible = false, FieldName = nameof(ItemMt.IdMatTypeL3), Width = 100 };
+        //        //Columns definition
+        //        GridColumn colIdItemBcn = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemBCN"), Visible = true, FieldName = nameof(ItemMt.IdItemBcn), Width = 160 };
+        //        GridColumn colItemDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemDescription"), Visible = true, FieldName = nameof(ItemMt.ItemDescription), Width = 300 };
+        //        GridColumn colIdMatTypeL1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MatTypeL1"), Visible = false, FieldName = nameof(ItemMt.IdMatTypeL1), Width = 100 };
+        //        GridColumn colIdMatTypeL2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MatTypeL2"), Visible = false, FieldName = nameof(ItemMt.IdMatTypeL2), Width = 100 };
+        //        GridColumn colIdMatTypeL3 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MatTypeL3"), Visible = false, FieldName = nameof(ItemMt.IdMatTypeL3), Width = 100 };
 
-                //Add columns to grid root view
-                gridViewItemsMt.Columns.Add(colIdItemBcn);
-                gridViewItemsMt.Columns.Add(colItemDescription);
-                gridViewItemsMt.Columns.Add(colIdMatTypeL1);
-                gridViewItemsMt.Columns.Add(colIdMatTypeL2);
-                gridViewItemsMt.Columns.Add(colIdMatTypeL3);
+        //        //Add columns to grid root view
+        //        gridViewItemsMt.Columns.Add(colIdItemBcn);
+        //        gridViewItemsMt.Columns.Add(colItemDescription);
+        //        gridViewItemsMt.Columns.Add(colIdMatTypeL1);
+        //        gridViewItemsMt.Columns.Add(colIdMatTypeL2);
+        //        gridViewItemsMt.Columns.Add(colIdMatTypeL3);
 
-                //Grouping
-                gridViewItemsMt.OptionsView.ShowGroupPanel = false;
+        //        //Grouping
+        //        gridViewItemsMt.OptionsView.ShowGroupPanel = false;
 
-                gridViewItemsMt.Columns[nameof(ItemMt.IdMatTypeL1)].GroupIndex = 0;
-                gridViewItemsMt.Columns[nameof(ItemMt.IdMatTypeL2)].GroupIndex = 1;
-                //gridViewItemsMt.Columns[nameof(ItemMt.IdMatTypeL3)].GroupIndex = 2;
+        //        gridViewItemsMt.Columns[nameof(ItemMt.IdMatTypeL1)].GroupIndex = 0;
+        //        gridViewItemsMt.Columns[nameof(ItemMt.IdMatTypeL2)].GroupIndex = 1;
+        //        //gridViewItemsMt.Columns[nameof(ItemMt.IdMatTypeL3)].GroupIndex = 2;
 
-                //Events
-                //gridViewItemsMt.DoubleClick += GridViewItemsMt_DoubleClick;
+        //        //Events
+        //        //gridViewItemsMt.DoubleClick += GridViewItemsMt_DoubleClick;
 
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
 
-        private void SetUpGrdItemsHw()
-        {
-            try
-            {
-                //Ocultamos el nombre de las columnas agrupadas
-                gridViewItemsHw.GroupFormat = "[#image]{1} {2}";
+        //private void SetUpGrdItemsHw()
+        //{
+        //    try
+        //    {
+        //        //Ocultamos el nombre de las columnas agrupadas
+        //        gridViewItemsHw.GroupFormat = "[#image]{1} {2}";
 
-                //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
-                gridViewItemsHw.OptionsView.ColumnAutoWidth = false;
-                gridViewItemsHw.HorzScrollVisibility = ScrollVisibility.Auto;
+        //        //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
+        //        gridViewItemsHw.OptionsView.ColumnAutoWidth = false;
+        //        gridViewItemsHw.HorzScrollVisibility = ScrollVisibility.Auto;
 
-                //Hacer todo el grid no editable
-                gridViewItemsHw.OptionsBehavior.Editable = false;
+        //        //Hacer todo el grid no editable
+        //        gridViewItemsHw.OptionsBehavior.Editable = false;
 
-                //Columns definition
-                GridColumn colIdItemBcn = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemBCN"), Visible = true, FieldName = nameof(ItemHw.IdItemBcn), Width = 160 };
-                GridColumn colItemDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemDescription"), Visible = true, FieldName = nameof(ItemHw.ItemDescription), Width = 300 };
-                GridColumn colIdHwTypeL1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MatTypeL1"), Visible = false, FieldName = nameof(ItemHw.IdHwTypeL1), Width = 100 };
-                GridColumn colIdHwTypeL2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MatTypeL2"), Visible = false, FieldName = nameof(ItemHw.IdHwTypeL2), Width = 100 };
-                GridColumn colIdHwTypeL3 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MatTypeL3"), Visible = false, FieldName = nameof(ItemHw.IdHwTypeL3), Width = 100 };
+        //        //Columns definition
+        //        GridColumn colIdItemBcn = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemBCN"), Visible = true, FieldName = nameof(ItemHw.IdItemBcn), Width = 160 };
+        //        GridColumn colItemDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemDescription"), Visible = true, FieldName = nameof(ItemHw.ItemDescription), Width = 300 };
+        //        GridColumn colIdHwTypeL1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MatTypeL1"), Visible = false, FieldName = nameof(ItemHw.IdHwTypeL1), Width = 100 };
+        //        GridColumn colIdHwTypeL2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MatTypeL2"), Visible = false, FieldName = nameof(ItemHw.IdHwTypeL2), Width = 100 };
+        //        GridColumn colIdHwTypeL3 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("MatTypeL3"), Visible = false, FieldName = nameof(ItemHw.IdHwTypeL3), Width = 100 };
 
-                //Add columns to grid root view
-                gridViewItemsHw.Columns.Add(colIdItemBcn);
-                gridViewItemsHw.Columns.Add(colItemDescription);
-                gridViewItemsHw.Columns.Add(colIdHwTypeL1);
-                gridViewItemsHw.Columns.Add(colIdHwTypeL2);
-                gridViewItemsHw.Columns.Add(colIdHwTypeL3);
+        //        //Add columns to grid root view
+        //        gridViewItemsHw.Columns.Add(colIdItemBcn);
+        //        gridViewItemsHw.Columns.Add(colItemDescription);
+        //        gridViewItemsHw.Columns.Add(colIdHwTypeL1);
+        //        gridViewItemsHw.Columns.Add(colIdHwTypeL2);
+        //        gridViewItemsHw.Columns.Add(colIdHwTypeL3);
 
-                //Grouping
-                gridViewItemsHw.OptionsView.ShowGroupPanel = false;
+        //        //Grouping
+        //        gridViewItemsHw.OptionsView.ShowGroupPanel = false;
 
-                gridViewItemsHw.Columns[nameof(ItemHw.IdHwTypeL1)].GroupIndex = 0;
-                gridViewItemsHw.Columns[nameof(ItemHw.IdHwTypeL2)].GroupIndex = 1;
-                //gridViewItemsHw.Columns[nameof(ItemHw.IdHwTypeL3)].GroupIndex = 2;
+        //        gridViewItemsHw.Columns[nameof(ItemHw.IdHwTypeL1)].GroupIndex = 0;
+        //        gridViewItemsHw.Columns[nameof(ItemHw.IdHwTypeL2)].GroupIndex = 1;
+        //        //gridViewItemsHw.Columns[nameof(ItemHw.IdHwTypeL3)].GroupIndex = 2;
 
-                //Events
-                //gridViewItemsHw.DoubleClick += GridViewItemsHw_DoubleClick;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        //        //Events
+        //        //gridViewItemsHw.DoubleClick += GridViewItemsHw_DoubleClick;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
 
-        private void SetUpGrdItemsHfDetail()
-        {
-            try
-            {
-                //Ocultamos el nombre de las columnas agrupadas
-                gridViewItemsHfDetail.GroupFormat = "[#image]{1} {2}";
+        //private void SetUpGrdItemsHfDetail()
+        //{
+        //    try
+        //    {
+        //        //Ocultamos el nombre de las columnas agrupadas
+        //        gridViewItemsHfDetail.GroupFormat = "[#image]{1} {2}";
 
-                //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
-                gridViewItemsHfDetail.OptionsView.ColumnAutoWidth = false;
-                gridViewItemsHfDetail.HorzScrollVisibility = ScrollVisibility.Auto;
+        //        //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
+        //        gridViewItemsHfDetail.OptionsView.ColumnAutoWidth = false;
+        //        gridViewItemsHfDetail.HorzScrollVisibility = ScrollVisibility.Auto;
 
-                //Hacer todo el grid no editable
-                gridViewItemsHfDetail.OptionsBehavior.Editable = false;
+        //        //Hacer todo el grid no editable
+        //        gridViewItemsHfDetail.OptionsBehavior.Editable = false;
 
-                //Columns definition
-                GridColumn colIdItemBcn = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemBCN"), Visible = true, FieldName = nameof(ItemHf.IdItemBcn), Width = 160 };
-                GridColumn colItemDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemDescription"), Visible = true, FieldName = nameof(ItemHf.ItemDescription), Width = 300 };
-                GridColumn colModel = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Model"), Visible = true, FieldName = $"{nameof(ItemHf.Model)}.{nameof(Model.Description)}", Width = 10 };
+        //        //Columns definition
+        //        GridColumn colIdItemBcn = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemBCN"), Visible = true, FieldName = nameof(ItemHf.IdItemBcn), Width = 160 };
+        //        GridColumn colItemDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemDescription"), Visible = true, FieldName = nameof(ItemHf.ItemDescription), Width = 300 };
+        //        GridColumn colModel = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Model"), Visible = true, FieldName = $"{nameof(ItemHf.Model)}.{nameof(Model.Description)}", Width = 10 };
 
-                //Add columns to grid root view
-                gridViewItemsHfDetail.Columns.Add(colIdItemBcn);
-                gridViewItemsHfDetail.Columns.Add(colItemDescription);
-                gridViewItemsHfDetail.Columns.Add(colModel);
+        //        //Add columns to grid root view
+        //        gridViewItemsHfDetail.Columns.Add(colIdItemBcn);
+        //        gridViewItemsHfDetail.Columns.Add(colItemDescription);
+        //        gridViewItemsHfDetail.Columns.Add(colModel);
 
-                //Grouping
-                gridViewItemsHfDetail.OptionsView.ShowGroupPanel = false;
+        //        //Grouping
+        //        gridViewItemsHfDetail.OptionsView.ShowGroupPanel = false;
 
-                gridViewItemsHfDetail.Columns[$"{nameof(ItemHf.Model)}.{nameof(Model.Description)}"].GroupIndex = 0;
+        //        gridViewItemsHfDetail.Columns[$"{nameof(ItemHf.Model)}.{nameof(Model.Description)}"].GroupIndex = 0;
 
-            }
-            catch
-            {
-                throw;
-            }
-        }
+        //    }
+        //    catch
+        //    {
+        //        throw;
+        //    }
+        //}
 
         private void SetUpGrdItemBom()
         {
@@ -1619,7 +1672,7 @@ namespace HKSupply.Forms.Master
 
                 //Para el detalle, ya que un semielaborado se puede editar independientemente su bom o formar parte del BOM de otro item
                 _itemsHfDetailBomList = GlobalSetting.ItemHfService.GetItems();
-                xgrdItemsHfDetail.DataSource = _itemsHfDetailBomList;
+                //xgrdItemsHfDetail.DataSource = _itemsHfDetailBomList;
             }
             catch
             {
@@ -1668,11 +1721,13 @@ namespace HKSupply.Forms.Master
                 {
                     idIdItemBcn = (item as ItemEy).IdItemBcn;
                     idSupplier = (item as ItemEy).IdDefaultSupplier;
+                    _itemLastDocsList = GlobalSetting.ItemDocService.GetLastItemsDocs((item as ItemEy).IdItemBcn, Constants.ITEM_GROUP_EY);
                 }
                 else
                 {
                     idIdItemBcn = (item as ItemHf).IdItemBcn;
                     idSupplier = (item as ItemHf).IdDefaultSupplier;
+                    _itemLastDocsList = GlobalSetting.ItemDocService.GetLastItemsDocs((item as ItemHf).IdItemBcn, Constants.ITEM_GROUP_HF);
                 }
 
                 _itemBomList = GlobalSetting.ItemBomService.GetItemBom(idIdItemBcn);
@@ -1708,6 +1763,7 @@ namespace HKSupply.Forms.Master
                 
                 LoadBomTreeView();
                 LoadSummaryBom();
+                LoadDrawingPanel();
 
             }
             catch (Exception ex)
@@ -1719,6 +1775,7 @@ namespace HKSupply.Forms.Master
                 Cursor = Cursors.Default;
             }
         }
+
 
         private void LoadSummaryBom()
         {
@@ -1800,6 +1857,55 @@ namespace HKSupply.Forms.Master
             catch(Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        private void LoadDrawingPanel()
+        {
+            try
+            {
+                //Borramos si ya hemos cargado algo en al dockpanel
+                foreach (Control control in dockPanelDrawing.Controls)
+                {
+                    if (control.GetType() == typeof(DevExpress.XtraBars.Docking.ControlContainer))
+                    {
+                        foreach (Control subcontrol in control.Controls)
+                        {
+                            control.Controls.Remove(subcontrol);
+                        }
+                    }
+                }
+
+                string docType = string.Empty;
+                if (_currentItem.GetType() == typeof(ItemEy))
+                    docType = "PDFDRAWING";
+                else if (_currentItem.GetType() == typeof(ItemHf))
+                    docType = "PDFDRAWING_HF";
+
+                string drawinfPath = Constants.ITEMS_DOCS_PATH + _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).Select(b => b.FilePath).FirstOrDefault();
+
+                if (System.IO.File.Exists(drawinfPath))
+                {
+                    PDFViewer pdfViewer = new PDFViewer();
+                    pdfViewer.TopLevel = false;
+                    pdfViewer.MinimizeBox = false;
+                    pdfViewer.MaximizeBox = false;
+                    pdfViewer.pdfFile = drawinfPath;
+                    pdfViewer.FormClosing += (o, e) => { e.Cancel = true; }; //No queremos que puedan cerrar el formulario del viewer incrustado dentro del dockpanel
+                    dockPanelDrawing.Controls.Add(pdfViewer);
+                    pdfViewer.Dock = DockStyle.Fill;
+                    pdfViewer.Visible = true;
+                }
+                else
+                {
+                    LabelControl lbl = new LabelControl();
+                    lbl.Text = "No Drawing doc";
+                    dockPanelDrawing.Controls.Add(lbl);
+                }
+            }
+            catch
+            {
+                throw;
             }
         }
 
@@ -2070,11 +2176,6 @@ namespace HKSupply.Forms.Master
 
 
                             view.OptionsBehavior.Editable = true;
-
-                            //Edit Columns
-                            //view.Columns[nameof(DetailBomHw.Quantity)].OptionsColumn.AllowEdit = true;
-                            //view.Columns[nameof(DetailBomHw.Scrap)].OptionsColumn.AllowEdit = true;
-                            //view.Columns[nameof(DetailBomHw.IdItemBcn)].OptionsColumn.AllowEdit = true;
 
                             //No edit columns
                             view.Columns[$"{nameof(DetailBomHw.Item)}.{nameof(ItemHw.ItemDescription)}"].OptionsColumn.AllowEdit = false;
@@ -2496,8 +2597,8 @@ namespace HKSupply.Forms.Master
                 dockPanelItemsHf.HideSliding();
 
                 //Suscribirse a los eventos de los grid para agregar al bom con doble click
-                gridViewItemsMt.DoubleClick += GridViewItemsMt_DoubleClick;
-                gridViewItemsHw.DoubleClick += GridViewItemsHw_DoubleClick;
+                //gridViewItemsMt.DoubleClick += GridViewItemsMt_DoubleClick;
+                //gridViewItemsHw.DoubleClick += GridViewItemsHw_DoubleClick;
             }
             catch (Exception ex)
             {
@@ -2776,8 +2877,8 @@ namespace HKSupply.Forms.Master
                 xgrdItemsEy.Enabled = true;
                 xgrdItemsHf.Enabled = true;
 
-                gridViewItemsMt.DoubleClick -= GridViewItemsMt_DoubleClick;
-                gridViewItemsHw.DoubleClick -= GridViewItemsHw_DoubleClick;
+                //gridViewItemsMt.DoubleClick -= GridViewItemsMt_DoubleClick;
+                //gridViewItemsHw.DoubleClick -= GridViewItemsHw_DoubleClick;
 
                 SetGrdBomDetailsNonEdit();
                 ShowAddBomSupplierAndCopyBom(false);

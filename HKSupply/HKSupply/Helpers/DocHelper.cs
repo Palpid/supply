@@ -12,7 +12,7 @@ namespace HKSupply.Helpers
 {
     public class DocHelper
     {
-        public static void OpenDoc(string fullFilePath)
+        public static void OpenDoc(string fullFilePath, bool showDialog = true)
         {
             try
             {
@@ -25,7 +25,12 @@ namespace HKSupply.Helpers
                         case ".PDF":
                             PDFViewer pdfViewer = new PDFViewer();
                             pdfViewer.pdfFile = fullFilePath;
-                            pdfViewer.ShowDialog();
+
+                            if (showDialog)
+                                pdfViewer.ShowDialog();
+                            else
+                                pdfViewer.Show();
+
                             break;
 
                         case ".JPG":
@@ -42,6 +47,7 @@ namespace HKSupply.Helpers
                                 form.Height = 720;
                                 form.Controls.Add(pb);
                                 form.ShowDialog();
+
                             }
                             break;
 

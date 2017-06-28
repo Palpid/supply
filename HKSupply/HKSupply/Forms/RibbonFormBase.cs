@@ -71,6 +71,7 @@ namespace HKSupply.Forms
             ConfigureLayoutOptions();
             ConfigureRibbonStyles();
         }
+
         #endregion
 
         #region Public Functions
@@ -533,6 +534,30 @@ namespace HKSupply.Forms
 
         #endregion
 
+        #region Overrides
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if(keyData == Keys.F1)
+            {
 
+                string pdfHelp = string.Empty;
+
+                switch (Name)
+                {
+                    case nameof(Master.BomManagement):
+                        pdfHelp = $"{Application.StartupPath}\\HelpDocs\\EN\\BOM Flow and Application Help.pdf";
+                        if(File.Exists(pdfHelp))
+                        {
+                            Helpers.DocHelper.OpenDoc(pdfHelp, showDialog: false);
+                        }
+                        break;
+                }
+
+                return true;
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+        #endregion
     }
 }

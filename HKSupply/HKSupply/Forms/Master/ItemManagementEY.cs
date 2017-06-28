@@ -361,10 +361,16 @@ namespace HKSupply.Forms.Master
                 xtpForm.PageVisible = false;
                 xtpDocs.PageVisible = false;
                 SetUpLueStatusProd();
+                Cursor = Cursors.WaitCursor;
+                LoadItemsList();
             }
             catch (Exception ex)
             {
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
             }
         }
 
@@ -544,7 +550,12 @@ namespace HKSupply.Forms.Master
 
                     if (string.IsNullOrEmpty(url)) return;
 
-                    AddToPhotoCache(url);
+                    //TODO: quitar la conversión de url a ruta física
+                    url = url.Replace("http://www.files-eb.com/images/products", Constants.ITEMS_PHOTOSWEB_PATH);
+                    url = url.Replace("/", "\\");
+
+                    //AddToPhotoCacheByUrl(url);
+                    AddToPhotoCachebyPath(url);
 
                     Bitmap im = null;
                     if (photosCache.ContainsKey(url.ToString()))
@@ -599,30 +610,44 @@ namespace HKSupply.Forms.Master
                 string url = itemTemp.PhotoUrl;
                 if (string.IsNullOrEmpty(url)) return;
 
+                //TODO: Quitar esta conversión de url a path local
+                url = url.Replace("http://www.files-eb.com/images/products", Constants.ITEMS_PHOTOSWEB_PATH);
+                url = url.Replace("/", "\\");
+
+
                 if (photosCache.ContainsKey(url))
                 {
                     e.Value = photosCache[url];
                     return;
                 }
-                var request = System.Net.WebRequest.Create(url);
-                try
+                //Para recuperarla de una url, ahora están en local, pero dejo el código por si cambia en un futuro
+                //var request = System.Net.WebRequest.Create(url);
+                //try
+                //{
+                //    using (var response = request.GetResponse())
+                //    {
+                //        using (var stream = response.GetResponseStream())
+                //        {
+                //            e.Value = Bitmap.FromStream(stream);
+                //            photosCache.Add(url, (Bitmap)e.Value);
+                //        }
+                //    }
+                //}
+                //catch (System.Net.WebException wex)
+                //{
+                //    if (((System.Net.HttpWebResponse)(wex.Response)).StatusCode != System.Net.HttpStatusCode.NotFound)
+                //    {
+                //        throw;
+                //    }
+                //}
+
+                //lalala
+                if (File.Exists(url))
                 {
-                    using (var response = request.GetResponse())
-                    {
-                        using (var stream = response.GetResponseStream())
-                        {
-                            e.Value = Bitmap.FromStream(stream);
-                            photosCache.Add(url, (Bitmap)e.Value);
-                        }
-                    }
+                    e.Value = Bitmap.FromFile(url);
+                    photosCache.Add(url, (Bitmap)e.Value);
                 }
-                catch (System.Net.WebException wex)
-                {
-                    if (((System.Net.HttpWebResponse)(wex.Response)).StatusCode != System.Net.HttpStatusCode.NotFound)
-                    {
-                        throw;
-                    }
-                }
+
 
             }
             catch (Exception ex)
@@ -1361,12 +1386,20 @@ namespace HKSupply.Forms.Master
                 if (string.IsNullOrEmpty(_itemUpdate.PhotoUrl)) return;
 
                 //Cargamos la imagen de la cache.
-                AddToPhotoCache(_itemUpdate.PhotoUrl);
+                //AddToPhotoCacheByUrl(_itemUpdate.PhotoUrl);
+                AddToPhotoCachebyPath(_itemUpdate.PhotoUrl);
                 Bitmap im = null;
-                if (photosCache.ContainsKey(_itemUpdate.PhotoUrl))
+                //TODO: descomentar esto y quitar la parte de la conversión de url al path físico
+                //if (photosCache.ContainsKey(_itemUpdate.PhotoUrl))
+                //{
+                //    im = photosCache[_itemUpdate.PhotoUrl];
+                //}
+
+                if (photosCache.ContainsKey(_itemUpdate.PhotoUrl.Replace("http://www.files-eb.com/images/products", Constants.ITEMS_PHOTOSWEB_PATH).Replace("/", "\\")))
                 {
-                    im = photosCache[_itemUpdate.PhotoUrl];
+                    im = photosCache[_itemUpdate.PhotoUrl.Replace("http://www.files-eb.com/images/products", Constants.ITEMS_PHOTOSWEB_PATH).Replace("/", "\\")];
                 }
+
                 peItemImage.Image = im;
             }
             catch (Exception ex)
@@ -1376,39 +1409,58 @@ namespace HKSupply.Forms.Master
         }
 
         /// <summary>
-        /// Agregar una imagen al cache de fotos si no está ya en él
+        /// Agregar una imagen de un url al cache de fotos si no está ya en él
         /// </summary>
         /// <param name="url"></param>
-        private void AddToPhotoCache(string url)
+        //private void AddToPhotoCacheByUrl(string url)
+        //{
+        //    try
+        //    {
+        //        if (photosCache.ContainsKey(url) == false)
+        //        {
+        //            var request = System.Net.WebRequest.Create(url);
+        //            try
+        //            {
+        //                using (var response = request.GetResponse())
+        //                {
+        //                    using (var stream = response.GetResponseStream())
+        //                    {
+        //                        Image p = Bitmap.FromStream(stream);
+        //                        photosCache.Add(url, (Bitmap)p);
+        //                    }
+        //                }
+        //            }
+        //            catch (System.Net.WebException wex)
+        //            {
+        //                if (((System.Net.HttpWebResponse)(wex.Response)).StatusCode != System.Net.HttpStatusCode.NotFound)
+        //                {
+        //                    throw;
+        //                }
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+
+        private void AddToPhotoCachebyPath(string path)
         {
             try
             {
-                if (photosCache.ContainsKey(url) == false)
+                if (photosCache.ContainsKey(path) == false)
                 {
-                    var request = System.Net.WebRequest.Create(url);
-                    try
+                    if(File.Exists(path))
                     {
-                        using (var response = request.GetResponse())
-                        {
-                            using (var stream = response.GetResponseStream())
-                            {
-                                Image p = Bitmap.FromStream(stream);
-                                photosCache.Add(url, (Bitmap)p);
-                            }
-                        }
-                    }
-                    catch (System.Net.WebException wex)
-                    {
-                        if (((System.Net.HttpWebResponse)(wex.Response)).StatusCode != System.Net.HttpStatusCode.NotFound)
-                        {
-                            throw;
-                        }
+                        Image p = Bitmap.FromFile(path);
+                        photosCache.Add(path, (Bitmap)p);
                     }
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                throw;
             }
         }
 

@@ -23,10 +23,13 @@ namespace HKSupply.General
         //** DOCS FOLDERS **//
         public const string ITEMS_DOCS_PATH = "C:\\Temp\\ITEM_DOCS\\";
         public const string PROTO_DOCS_PATH = "C:\\Temp\\PROTO_DOCS\\";
+        public const string ITEMS_PHOTOSWEB_PATH = "C:\\Temp\\ITEM_WEB_PHOTOS\\";
+
         public const string COLOR_PDF_FOLDER = "PDFCOLOR\\";
         public const string DRAWING_PDF_FOLDER = "PDFDRAWING\\";
         public const string DRAWING_DWG_FOLDER = "DWGDRAWING\\";
         public const string ITEM_PHOTO_FOLDER = "ITEMIMG\\";
+        public const string ITEM_PHOTOWEB_FOLDER = "640x350\\";
 
         //** USER ATTRIBUTES **//
         public const string EY_USER_ATTR_01 = "EYATTR01";

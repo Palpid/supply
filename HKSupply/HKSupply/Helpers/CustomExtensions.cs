@@ -330,5 +330,10 @@ namespace HKSupply.Helpers
         {
             return enumerable ?? Enumerable.Empty<T>();
         }
+
+        public static string hola(this string str)
+        {
+            return "hola";
+        }
     }
 }
