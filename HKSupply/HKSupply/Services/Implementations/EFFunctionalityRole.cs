@@ -187,6 +187,7 @@ namespace HKSupply.Services.Implementations
                             fr => fr.FunctionalityId,
                             f => f.FunctionalityId,
                             (fr, f) => new { FunctionalitiesRole = fr, Functionalities = f })
+                        .Where(x => x.FunctionalitiesRole.RoleId.Equals(roleId))
                         .Select(f => f.Functionalities.Category)
                         .Distinct()
                         .ToList();

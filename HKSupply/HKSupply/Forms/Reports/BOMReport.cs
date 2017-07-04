@@ -39,6 +39,7 @@ namespace HKSupply.Forms.Reports
         List<ItemEy> _itemBcnList;
         List<Model> _modelList;
         List<Supplier> _suppliersList;
+        List<StatusCial> _statusCialList;
 
         DataTable _dtGrid = new DataTable();
 
@@ -56,6 +57,7 @@ namespace HKSupply.Forms.Reports
                 SetUpSlueSupplier();
                 SetUpSlueModel();
                 SetUpSlueItemEy();
+                SetUpSlueStatusCial();
                 SetupGrdList();
 
             }
@@ -115,6 +117,7 @@ namespace HKSupply.Forms.Reports
             {
                 _suppliersList = GlobalSetting.SupplierService.GetSuppliers();
                 _itemBcnList = GlobalSetting.ItemEyService.GetItems();
+                _statusCialList = GlobalSetting.StatusCialService.GetStatusCial();
 
                 //TODO
                 using (var db = new HKSupplyContext())
@@ -232,6 +235,20 @@ namespace HKSupply.Forms.Reports
             finally
             {
                 _clearingSlue = false;
+            }
+        }
+
+        private void SetUpSlueStatusCial()
+        {
+            try
+            {
+                slueStatusCial.Properties.DataSource = _statusCialList;
+                slueStatusCial.Properties.ValueMember = nameof(StatusCial.IdStatusCial);
+                slueStatusCial.Properties.DisplayMember = nameof(StatusCial.IdStatusCial);
+            }
+            catch
+            {
+                throw;
             }
         }
 

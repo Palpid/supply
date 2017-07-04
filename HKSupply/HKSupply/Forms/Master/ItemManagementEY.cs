@@ -1385,19 +1385,16 @@ namespace HKSupply.Forms.Master
 
                 if (string.IsNullOrEmpty(_itemUpdate.PhotoUrl)) return;
 
+                string fullPath = $"{Constants.ITEMS_PHOTOSWEB_PATH}{Constants.ITEM_PHOTOWEB_FOLDER}{_itemUpdate.PhotoUrl}";
+
                 //Cargamos la imagen de la cache.
                 //AddToPhotoCacheByUrl(_itemUpdate.PhotoUrl);
-                AddToPhotoCachebyPath(_itemUpdate.PhotoUrl);
+                AddToPhotoCachebyPath(fullPath);
                 Bitmap im = null;
                 //TODO: descomentar esto y quitar la parte de la conversión de url al path físico
-                //if (photosCache.ContainsKey(_itemUpdate.PhotoUrl))
-                //{
-                //    im = photosCache[_itemUpdate.PhotoUrl];
-                //}
-
-                if (photosCache.ContainsKey(_itemUpdate.PhotoUrl.Replace("http://www.files-eb.com/images/products", Constants.ITEMS_PHOTOSWEB_PATH).Replace("/", "\\")))
+                if (photosCache.ContainsKey(fullPath))
                 {
-                    im = photosCache[_itemUpdate.PhotoUrl.Replace("http://www.files-eb.com/images/products", Constants.ITEMS_PHOTOSWEB_PATH).Replace("/", "\\")];
+                    im = photosCache[fullPath];
                 }
 
                 peItemImage.Image = im;
@@ -1896,6 +1893,11 @@ namespace HKSupply.Forms.Master
         {
             try
             {
+                string rateDateStr = null;
+                DateTime rateDate;
+                Dictionary<string, decimal> ReferenceRatesDic = new Dictionary<string, decimal>();
+
+                //----------------------------------------------------------------------------------------------
                 string xmlString = "<?xml version='1.0' encoding='UTF-8'?>";
                 xmlString += "<gesmesEnvelope>";
                 xmlString += "  <gesmessubject>Reference rates</gesmessubject>";
@@ -1932,16 +1934,31 @@ namespace HKSupply.Forms.Master
                             string name3 = xnode3.Name;
                             string value3 = xnode3.InnerText;
                             var a = xnode3.Attributes;
+                            rateDateStr = a?["time"]?.Value;
+
 
                             foreach (System.Xml.XmlNode xnode4 in xnode3)
                             {
                                 string name4 = xnode4.Name;
                                 string value4 = xnode4.InnerText;
                                 var aa = xnode4.Attributes;
+
+                                if (xnode4.Attributes?.Count == 2)
+                                {
+                                    var currency = xnode4.Attributes["currency"].Value;
+                                    var rate = xnode4.Attributes["rate"].Value;
+                                    ReferenceRatesDic.Add(currency, Convert.ToDecimal(rate.Replace(".", ",")));
+                                }
                             }
                         }
                     }
                 }
+
+                if (rateDateStr != null)
+                {
+                    rateDate = DateTime.ParseExact(rateDateStr, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+                }
+                
 
                 //------------------------------------------------------------------------------
                 System.Xml.Linq.XElement xml2 = System.Xml.Linq.XElement.Load(xmlUrl);
