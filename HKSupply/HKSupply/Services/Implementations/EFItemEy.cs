@@ -150,6 +150,7 @@ namespace HKSupply.Services.Implementations
                             //que se pueden modificar de un item desde la aplicación para que EF genere el update sólo de esos campos y no de todos
                             itemToUpdate.IdDefaultSupplier = updateItem.IdDefaultSupplier;
                             itemToUpdate.IdFamilyHK = updateItem.IdFamilyHK;
+                            itemToUpdate.IdItemHK = updateItem.IdItemHK;
                             itemToUpdate.IdStatusProd = updateItem.IdStatusProd;
                             itemToUpdate.IdUserAttri1 = updateItem.IdUserAttri1;
                             itemToUpdate.IdUserAttri2 = updateItem.IdUserAttri2;
@@ -244,6 +245,7 @@ namespace HKSupply.Services.Implementations
                             //que se pueden modificar de un item desde la aplicación para que EF genere el update sólo de esos campos y no de todos
                             itemToUpdate.IdDefaultSupplier = updateItem.IdDefaultSupplier;
                             itemToUpdate.IdFamilyHK = updateItem.IdFamilyHK;
+                            itemToUpdate.IdItemHK = updateItem.IdItemHK;
                             itemToUpdate.IdStatusProd = updateItem.IdStatusProd;
                             itemToUpdate.IdUserAttri1 = updateItem.IdUserAttri1;
                             itemToUpdate.IdUserAttri2 = updateItem.IdUserAttri2;
@@ -331,6 +333,7 @@ namespace HKSupply.Services.Implementations
                                 //que se pueden modificar de un item desde la aplicación para que EF genere el update sólo de esos campos y no de todos
                                 itemToUpdate.IdDefaultSupplier = item.IdDefaultSupplier;
                                 itemToUpdate.IdFamilyHK = item.IdFamilyHK;
+                                itemToUpdate.IdItemHK = item.IdItemHK;
                                 itemToUpdate.IdStatusProd = item.IdStatusProd;
                                 itemToUpdate.IdUserAttri1 = item.IdUserAttri1;
                                 itemToUpdate.IdUserAttri2 = item.IdUserAttri2;

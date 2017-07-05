@@ -54,8 +54,8 @@ namespace HKSupply.Forms.Master
         List<ItemDoc> _itemDocsList;
         List<ItemDoc> _itemLastDocsList;
 
-        string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "lueIdFamilyHK", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };
-        string[] _editingCols = { nameof(ItemHf.IdDefaultSupplier), nameof(ItemHf.IdUserAttri1), nameof(ItemHf.IdUserAttri2), nameof(ItemHf.IdUserAttri3), nameof(ItemHf.IdStatusProd), nameof(ItemHf.IdFamilyHK) };
+        string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "lueIdFamilyHK", "txtIdItemHK", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };
+        string[] _editingCols = { nameof(ItemHf.IdDefaultSupplier), nameof(ItemHf.IdUserAttri1), nameof(ItemHf.IdUserAttri2), nameof(ItemHf.IdUserAttri3), nameof(ItemHf.IdStatusProd), nameof(ItemHf.IdFamilyHK), nameof(ItemHf.IdItemHK) };
 
         Dictionary<String, Bitmap> photosCache = new Dictionary<string, Bitmap>();
 

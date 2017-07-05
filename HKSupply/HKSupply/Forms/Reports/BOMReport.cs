@@ -142,7 +142,8 @@ namespace HKSupply.Forms.Reports
                 query.Append($"'{Constants.ITEMS_PHOTOSWEB_PATH + Constants.ITEM_PHOTOWEB_FOLDER}',");
                 query.Append($"'{(string)slueModel.EditValue}',");
                 query.Append($"'{(string)slueItem.EditValue}',");
-                query.Append($"'{(string)slueSupplier.EditValue}'");
+                query.Append($"'{(string)slueSupplier.EditValue}',");
+                query.Append($"{(string)slueStatusCial.EditValue.ToString()}");
 
                 using (var db = new HKSupplyContext())
                 {
@@ -299,6 +300,7 @@ namespace HKSupply.Forms.Reports
                 m_Parametros.Add("@pIdModel", (string)slueModel.EditValue);
                 m_Parametros.Add("@pIdItem", (string)slueItem.EditValue);
                 m_Parametros.Add("@pIdSupplier", (string)slueSupplier.EditValue);
+                m_Parametros.Add("@pIdStatusCial", (string)slueStatusCial.EditValue.ToString());
                 crReport.Parametros = m_Parametros;
                 crReport.ReportFileName = $"{Application.StartupPath}\\Reports\\Rpt\\BOM.rpt";
                 //The easiest way to get the default printer is to create a new PrinterSettings object. It starts with all default values.

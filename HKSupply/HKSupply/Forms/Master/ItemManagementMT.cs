@@ -102,8 +102,8 @@ namespace HKSupply.Forms.Master
         List<ItemDoc> _itemDocsList;
         List<ItemDoc> _itemLastDocsList;
 
-        string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "lueIdFamilyHK", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };
-        string[] _editingCols = { nameof(ItemMt.IdDefaultSupplier), nameof(ItemMt.IdUserAttri1), nameof(ItemMt.IdUserAttri2), nameof(ItemMt.IdUserAttri3), nameof(ItemMt.IdStatusProd), nameof(ItemMt.IdFamilyHK) };
+        string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "lueIdFamilyHK", "txtIdItemHK", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };
+        string[] _editingCols = { nameof(ItemMt.IdDefaultSupplier), nameof(ItemMt.IdUserAttri1), nameof(ItemMt.IdUserAttri2), nameof(ItemMt.IdUserAttri3), nameof(ItemMt.IdStatusProd), nameof(ItemMt.IdFamilyHK), nameof(ItemMt.IdItemHK) };
 
         int _currentHistoryNumList;
         bool _itemImageChanged = false;

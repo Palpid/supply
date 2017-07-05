@@ -24,7 +24,7 @@ namespace HKSupply.Services.Implementations
             {
                 using (var db = new HKSupplyContext())
                 {
-                    return db.BomBreakdown.OrderBy(a => a.IdBomBreakdown).ToList();
+                    return db.BomBreakdown.OrderBy(a => a.Description).ToList();
                 }
             }
             catch (SqlException sqlex)
