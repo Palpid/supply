@@ -118,13 +118,7 @@ namespace HKSupply.Forms.Reports
                 _suppliersList = GlobalSetting.SupplierService.GetSuppliers();
                 _itemBcnList = GlobalSetting.ItemEyService.GetItems();
                 _statusCialList = GlobalSetting.StatusCialService.GetStatusCial();
-
-                //TODO
-                using (var db = new HKSupplyContext())
-                {
-                    _modelList = db.Models.ToList();
-                }
-
+                _modelList = GlobalSetting.ModelService.GetModels();
             }
             catch
             {
@@ -136,14 +130,13 @@ namespace HKSupply.Forms.Reports
         {
             try
             {
-                //TODO
                 StringBuilder query = new StringBuilder();
                 query.Append($"EXEC GET_BOM_REPORT ");
                 query.Append($"'{Constants.ITEMS_PHOTOSWEB_PATH + Constants.ITEM_PHOTOWEB_FOLDER}',");
                 query.Append($"'{(string)slueModel.EditValue}',");
                 query.Append($"'{(string)slueItem.EditValue}',");
                 query.Append($"'{(string)slueSupplier.EditValue}',");
-                query.Append($"{(string)slueStatusCial.EditValue.ToString()}");
+                query.Append($"{(slueStatusCial.EditValue ?? -100).ToString()}"); //El -1 y el 0 son estados posibles
 
                 using (var db = new HKSupplyContext())
                 {
@@ -300,7 +293,7 @@ namespace HKSupply.Forms.Reports
                 m_Parametros.Add("@pIdModel", (string)slueModel.EditValue);
                 m_Parametros.Add("@pIdItem", (string)slueItem.EditValue);
                 m_Parametros.Add("@pIdSupplier", (string)slueSupplier.EditValue);
-                m_Parametros.Add("@pIdStatusCial", (string)slueStatusCial.EditValue.ToString());
+                m_Parametros.Add("@pIdStatusCial", (slueStatusCial.EditValue ?? -100).ToString());
                 crReport.Parametros = m_Parametros;
                 crReport.ReportFileName = $"{Application.StartupPath}\\Reports\\Rpt\\BOM.rpt";
                 //The easiest way to get the default printer is to create a new PrinterSettings object. It starts with all default values.
