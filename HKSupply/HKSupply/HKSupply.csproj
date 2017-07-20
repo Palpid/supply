@@ -191,6 +191,12 @@
     <Compile Include="Forms\Master\DialogForms\EditHfBom.Designer.cs">
       <DependentUpon>EditHfBom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Master\DialogForms\SelectItem2CopyBom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\DialogForms\SelectItem2CopyBom.Designer.cs">
+      <DependentUpon>SelectItem2CopyBom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Master\DialogForms\SelectSuppliers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +293,12 @@
     <Compile Include="Forms\Master\StoreManagement.Designer.cs">
       <DependentUpon>StoreManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Master\SupplierFactoryCoeffManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\SupplierFactoryCoeffManagement.Designer.cs">
+      <DependentUpon>SupplierFactoryCoeffManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Master\SupplierManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -322,6 +334,12 @@
     </Compile>
     <Compile Include="Forms\RibbonFormBase.Designer.cs">
       <DependentUpon>RibbonFormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\PurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\PurchaseOrder.Designer.cs">
+      <DependentUpon>PurchaseOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="General\Constants.cs" />
     <Compile Include="General\GlobalSetting.cs" />
@@ -625,11 +643,20 @@
     <Compile Include="Migrations\201706160817447_BomBreakdown_20170616_03.Designer.cs">
       <DependentUpon>201706160817447_BomBreakdown_20170616_03.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707190837385_SupplierFactoryCoeff_20170719_01.cs" />
+    <Compile Include="Migrations\201707190837385_SupplierFactoryCoeff_20170719_01.Designer.cs">
+      <DependentUpon>201707190837385_SupplierFactoryCoeff_20170719_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707201514147_supplierFactoryCoeff_20170720_01.cs" />
+    <Compile Include="Migrations\201707201514147_supplierFactoryCoeff_20170720_01.Designer.cs">
+      <DependentUpon>201707201514147_supplierFactoryCoeff_20170720_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BomBreakdown.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\CustomerPriceList.cs" />
     <Compile Include="Models\CustomerPriceListHistory.cs" />
+    <Compile Include="Models\DeliveryTerms.cs" />
     <Compile Include="Models\DetailBomHf.cs" />
     <Compile Include="Models\DetailBomHfHistory.cs" />
     <Compile Include="Models\DetailBomHw.cs" />
@@ -676,9 +703,14 @@
     <Compile Include="Models\StatusHK.cs" />
     <Compile Include="Models\Store.cs" />
     <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Models\SupplierFactoryCoeff.cs" />
     <Compile Include="Models\SupplierHistory.cs" />
     <Compile Include="Models\SupplierPriceList.cs" />
     <Compile Include="Models\SupplierPriceListHistory.cs" />
+    <Compile Include="Models\Supply\DocHead.cs" />
+    <Compile Include="Models\Supply\DocLines.cs" />
+    <Compile Include="Models\Supply\SupplyDocType.cs" />
+    <Compile Include="Models\Supply\SupplyStatus.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserAttrDescription.cs" />
     <Compile Include="Program.cs" />
@@ -724,6 +756,7 @@
     <Compile Include="Services\Implementations\EFStatusProd.cs" />
     <Compile Include="Services\Implementations\EFStore.cs" />
     <Compile Include="Services\Implementations\EFSupplier.cs" />
+    <Compile Include="Services\Implementations\EFSupplierFactoryCoeff.cs" />
     <Compile Include="Services\Implementations\EFSupplierPriceList.cs" />
     <Compile Include="Services\Implementations\EFUser.cs" />
     <Compile Include="Services\Implementations\EFUserAttrDescription.cs" />
@@ -757,6 +790,7 @@
     <Compile Include="Services\Interfaces\IStatusProd.cs" />
     <Compile Include="Services\Interfaces\IStore.cs" />
     <Compile Include="Services\Interfaces\ISupplier.cs" />
+    <Compile Include="Services\Interfaces\ISupplierFactoryCoeff.cs" />
     <Compile Include="Services\Interfaces\ISupplierPriceList.cs" />
     <Compile Include="Services\Interfaces\IUser.cs" />
     <Compile Include="Services\Interfaces\IUserAttrDescription.cs" />
@@ -799,6 +833,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\DialogForms\EditHfBom.resx">
       <DependentUpon>EditHfBom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\DialogForms\SelectItem2CopyBom.resx">
+      <DependentUpon>SelectItem2CopyBom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\DialogForms\SelectSuppliers.resx">
       <DependentUpon>SelectSuppliers.cs</DependentUpon>
@@ -848,6 +885,9 @@
     <EmbeddedResource Include="Forms\Master\StoreManagement.resx">
       <DependentUpon>StoreManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\SupplierFactoryCoeffManagement.resx">
+      <DependentUpon>SupplierFactoryCoeffManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\SupplierManagement.resx">
       <DependentUpon>SupplierManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -865,6 +905,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RibbonFormBase.resx">
       <DependentUpon>RibbonFormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\PurchaseOrder.resx">
+      <DependentUpon>PurchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703081042226_Customer.resx">
       <DependentUpon>201703081042226_Customer.cs</DependentUpon>
@@ -1085,6 +1128,12 @@
     <EmbeddedResource Include="Migrations\201706160817447_BomBreakdown_20170616_03.resx">
       <DependentUpon>201706160817447_BomBreakdown_20170616_03.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707190837385_SupplierFactoryCoeff_20170719_01.resx">
+      <DependentUpon>201707190837385_SupplierFactoryCoeff_20170719_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707201514147_supplierFactoryCoeff_20170720_01.resx">
+      <DependentUpon>201707201514147_supplierFactoryCoeff_20170720_01.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -1150,6 +1199,7 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <PropertyGroup>

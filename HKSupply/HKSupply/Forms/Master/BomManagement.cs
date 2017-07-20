@@ -18,6 +18,7 @@ using HKSupply.Helpers;
 using System.Data.Entity;
 using System.ComponentModel;
 using DevExpress.XtraEditors.Controls;
+using System.Drawing;
 
 namespace HKSupply.Forms.Master
 {
@@ -42,6 +43,7 @@ namespace HKSupply.Forms.Master
 
         List<Supplier> _suppliersList;
         List<BomBreakdown> _bomBreakdownList;
+        List<SupplierFactoryCoeff> _supplierFactoryCoeffList;
 
         List<Models.Layout> _formLayouts;
 
@@ -302,6 +304,7 @@ namespace HKSupply.Forms.Master
 
                 dockPanelDrawing.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
                 dockPanelPdfColor.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                dockPanelPhoto.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
             }
             catch (Exception ex)
             {
@@ -635,6 +638,11 @@ namespace HKSupply.Forms.Master
                         (e.View as GridView).Columns[nameof(DetailBomMt.IdBom)].Visible = false;
                         (e.View as GridView).Columns[nameof(DetailBomMt.Item)].Visible = false;
                         (e.View as GridView).Columns[nameof(DetailBomMt.BomBreakdown)].Visible = false;
+                        
+                        //Columnas que no queremos que aparezan en el Column Chooser
+                        (e.View as GridView).Columns[nameof(DetailBomMt.IdBom)].OptionsColumn.ShowInCustomizationForm = false;
+                        (e.View as GridView).Columns[nameof(DetailBomMt.Item)].OptionsColumn.ShowInCustomizationForm = false;
+                        (e.View as GridView).Columns[nameof(DetailBomMt.BomBreakdown)].OptionsColumn.ShowInCustomizationForm = false;
 
                         //Seteamos el tamaño de las columnas
                         (e.View as GridView).Columns[nameof(DetailBomMt.IdItemBcn)].Width = 150;
@@ -726,7 +734,7 @@ namespace HKSupply.Forms.Master
                         //Agregamos los Summary
                         (e.View as GridView).OptionsView.ShowFooter = true;
                         (e.View as GridView).Columns[nameof(DetailBomMt.Quantity)].Summary.Add(SummaryItemType.Sum, nameof(DetailBomMt.Quantity), "{0:n}");
-                        (e.View as GridView).Columns[nameof(DetailBomMt.Scrap)].Summary.Add(SummaryItemType.Sum, nameof(DetailBomMt.Scrap), "{0:n}");
+                        //(e.View as GridView).Columns[nameof(DetailBomMt.Scrap)].Summary.Add(SummaryItemType.Sum, nameof(DetailBomMt.Scrap), "{0:n}");
 
                         //Si está en edición al pintar una nueva vista tiene que hacerla editable
                         if (CurrentState == ActionsStates.Edit)
@@ -745,6 +753,11 @@ namespace HKSupply.Forms.Master
                         (e.View as GridView).Columns[nameof(DetailBomHw.IdBom)].Visible = false;
                         (e.View as GridView).Columns[nameof(DetailBomHw.Item)].Visible = false;
                         (e.View as GridView).Columns[nameof(DetailBomHw.BomBreakdown)].Visible = false;
+
+                        //Columnas que no queremos que aparezan en el Column Chooser
+                        (e.View as GridView).Columns[nameof(DetailBomHw.IdBom)].OptionsColumn.ShowInCustomizationForm = false;
+                        (e.View as GridView).Columns[nameof(DetailBomHw.Item)].OptionsColumn.ShowInCustomizationForm = false;
+                        (e.View as GridView).Columns[nameof(DetailBomHw.BomBreakdown)].OptionsColumn.ShowInCustomizationForm = false;
 
                         //Seteamos el tamaño de las columnas
                         (e.View as GridView).Columns[nameof(DetailBomHw.IdItemBcn)].Width = 150;
@@ -1121,6 +1134,7 @@ namespace HKSupply.Forms.Master
                 dockPanelPlainBom.Options.ShowCloseButton = false;
                 dockPanelDrawing.Options.ShowCloseButton = false;
                 dockPanelPdfColor.Options.ShowCloseButton = false;
+                dockPanelPhoto.Options.ShowCloseButton = false;
             }
             catch (Exception ex)
             {
@@ -1175,7 +1189,7 @@ namespace HKSupply.Forms.Master
 
                 gridViewItemsEy.Columns[nameof(ItemEy.IdFamilyHK)].GroupIndex = 0;
                 gridViewItemsEy.Columns[$"{nameof(ItemEy.Model)}.{nameof(Model.Description)}"].GroupIndex = 1;
-                gridViewItemsEy.Columns[nameof(ItemEy.IdDefaultSupplier)].GroupIndex = 2;
+                //gridViewItemsEy.Columns[nameof(ItemEy.IdDefaultSupplier)].GroupIndex = 2;
 
                 gridViewItemsEy.DoubleClick += GridViewItemsEy_DoubleClick;
 
@@ -1217,7 +1231,7 @@ namespace HKSupply.Forms.Master
 
                 gridViewItemsHf.Columns[nameof(ItemHf.IdFamilyHK)].GroupIndex = 0;
                 gridViewItemsHf.Columns[$"{nameof(ItemHf.Model)}.{nameof(Model.Description)}"].GroupIndex = 1;
-                gridViewItemsHf.Columns[nameof(ItemHf.IdDefaultSupplier)].GroupIndex = 2;
+                //gridViewItemsHf.Columns[nameof(ItemHf.IdDefaultSupplier)].GroupIndex = 2;
 
                 gridViewItemsHf.DoubleClick += GridViewItemsHf_DoubleClick;
 
@@ -1629,6 +1643,7 @@ namespace HKSupply.Forms.Master
             {
                 _suppliersList = GlobalSetting.SupplierService.GetSuppliers();
                 _bomBreakdownList = GlobalSetting.BomBreakdownService.GetBomBreakdowns();
+                _supplierFactoryCoeffList = GlobalSetting.SupplierFactoryCoeffService.GetAllSupplierFactoryCoeff();
 
                 _itemsMtList = GlobalSetting.ItemMtService.GetItems();
                 _itemsHwList = GlobalSetting.ItemHwService.GetItems();
@@ -1718,17 +1733,20 @@ namespace HKSupply.Forms.Master
 
                 string idIdItemBcn = string.Empty;
                 string idSupplier = string.Empty;
+                string photo = string.Empty;
 
                 if (item.GetType() == typeof(ItemEy))
                 {
                     idIdItemBcn = (item as ItemEy).IdItemBcn;
                     idSupplier = (item as ItemEy).IdDefaultSupplier;
+                    photo = (item as ItemEy).PhotoUrl;
                     _itemLastDocsList = GlobalSetting.ItemDocService.GetLastItemsDocs((item as ItemEy).IdItemBcn, Constants.ITEM_GROUP_EY);
                 }
                 else
                 {
                     idIdItemBcn = (item as ItemHf).IdItemBcn;
                     idSupplier = (item as ItemHf).IdDefaultSupplier;
+                    photo = (item as ItemHf).PhotoPath;
                     _itemLastDocsList = GlobalSetting.ItemDocService.GetLastItemsDocs((item as ItemHf).IdItemBcn, Constants.ITEM_GROUP_HF);
                 }
 
@@ -1767,6 +1785,7 @@ namespace HKSupply.Forms.Master
                 LoadSummaryBom();
                 LoadDrawingPanel();
                 LoadPdfColorgPanel();
+                LoadPhotoPanel(photo);
 
             }
             catch (Exception ex)
@@ -1937,6 +1956,51 @@ namespace HKSupply.Forms.Master
                     LabelControl lbl = new LabelControl();
                     lbl.Text = "No PDF Color doc";
                     dockPanelPdfColor.Controls.Add(lbl);
+                }
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void LoadPhotoPanel(string photo)
+        {
+            try
+            {
+                ClearPdfPanels(dockPanelPhoto);
+
+                if (string.IsNullOrEmpty(photo) == false)
+                {
+                    string fullPath = $"{Constants.ITEMS_PHOTOSWEB_PATH}{Constants.ITEM_PHOTOWEB_FOLDER}{photo}";
+
+                    if (System.IO.File.Exists(fullPath))
+                    {
+                        PictureEdit peItemImage = new PictureEdit();
+                        peItemImage.Properties.ShowMenu = false;
+                        peItemImage.Properties.SizeMode = PictureSizeMode.Zoom;
+                        peItemImage.Size = new Size(400, 400);
+
+                        Image img = Bitmap.FromFile(fullPath);
+
+                        peItemImage.Image = img;
+
+                        dockPanelPhoto.Controls.Add(peItemImage);
+                    }
+                    else
+                    {
+                        LabelControl lbl = new LabelControl();
+                        lbl.Text = "No Photo";
+                        dockPanelPhoto.Controls.Add(lbl);
+                    }
+
+                }
+                else
+                {
+                    LabelControl lbl = new LabelControl();
+                    lbl.Text = "No Photo";
+                    dockPanelPhoto.Controls.Add(lbl);
                 }
 
             }
@@ -2546,8 +2610,6 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-
-
                 var suppliers = _itemBomList.Select(a => a.IdSupplier).ToList();
                 List<string> selectedSuppliersSource = new List<string>();
                 List<string> selectedSuppliersDestination = new List<string>();
@@ -2565,9 +2627,7 @@ namespace HKSupply.Forms.Master
                     }
 
                 }
-
                 return true;
-
             }
             catch
             {
@@ -2631,7 +2691,30 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private ItemBom OpenSelectItem2CopyBomForm(string idItemDestination, string model, string supplier)
+        {
+            try
+            {
+                ItemBom bom = null;
 
+                using (DialogForms.SelectItem2CopyBom form = new DialogForms.SelectItem2CopyBom())
+                {
+                    form.InitData(idItemDestination, model, supplier);
+
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        bom = form.SelectedBom;
+                    }
+                }
+
+                return bom;
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
 
         #endregion
 
@@ -2989,6 +3072,8 @@ namespace HKSupply.Forms.Master
                         int rowHandle = e.HitInfo.RowHandle;
                         e.Menu.Items.Clear();
 
+                        e.Menu.Items.Add(CreateMenuItemCopyBomFromItem(view, rowHandle));
+
                         //if ((row as ItemBom).Materials == null || (row as ItemBom).Materials.Count() == 0)
                         //    e.Menu.Items.Add(CreateMenuItemAddINewLineMaterial(view, rowHandle));
 
@@ -3023,6 +3108,14 @@ namespace HKSupply.Forms.Master
             {
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        DevExpress.Utils.Menu.DXMenuItem CreateMenuItemCopyBomFromItem(GridView view, int rowHandle)
+        {
+            DevExpress.Utils.Menu.DXMenuItem menuItem = new DevExpress.Utils.Menu.DXMenuItem("Copy BOM from Item",
+                new EventHandler(OnMenuItemCopyBomFromItemClick));
+            menuItem.Tag = new Classes.RowInfo(view, rowHandle);
+            return menuItem;
         }
 
         DevExpress.Utils.Menu.DXMenuItem CreateMenuItemAddINewLineMaterial(GridView view, int rowHandle)
@@ -3107,8 +3200,37 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        void OnMenuItemCopyBomFromItemClick(object sender, EventArgs e)
+        {
+            try
+            {
+                DevExpress.Utils.Menu.DXMenuItem item = sender as DevExpress.Utils.Menu.DXMenuItem;
+                Classes.RowInfo info = item.Tag as Classes.RowInfo;
+                string idModel = string.Empty;
+
+                var row = info.View.GetRow(info.View.FocusedRowHandle);
+                if((row as ItemBom).Item.GetType().BaseType == typeof(ItemEy) || (row as ItemBom).Item.GetType() == typeof(ItemEy))
+                {
+                    var tmp = (row as ItemBom).Item;
+                    idModel = (tmp as ItemEy).IdModel;
+                }
+
+                ItemBom bom = OpenSelectItem2CopyBomForm((row as ItemBom).IdItemBcn, idModel, (row as ItemBom).IdSupplier);
+
+                if (bom != null)
+                {
+                    CopyBomFromModelItem((row as ItemBom), bom);
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
         #endregion
 
+        #region Copy Bom
+        
         #region Copy Supplier BOM to other Supplier BOM
         private bool CopySupplierBom2SupplierBom(string selectedSupplierSource, List<string> selectedSuppliersDestination)
         {
@@ -3186,6 +3308,63 @@ namespace HKSupply.Forms.Master
         }
         #endregion
 
+        #region Copy BOM from item (same model)
+        private bool CopyBomFromModelItem(ItemBom itemBomOri, ItemBom bomCopy)
+        {
+            try
+            {
+                Cursor = Cursors.WaitCursor;
+
+                itemBomOri.Materials = new List<DetailBomMt>();
+                itemBomOri.Hardwares = new List<DetailBomHw>();
+                itemBomOri.HalfFinished = new List<DetailBomHf>();
+
+                foreach(var m in bomCopy.Materials)
+                {
+                    var tmpMat = m.Clone();
+                    tmpMat.IdBom = itemBomOri.IdBom;
+                    itemBomOri.Materials.Add(tmpMat);
+                }
+
+                foreach (var hw in bomCopy.Hardwares)
+                {
+                    var tmpHw = hw.Clone();
+                    tmpHw.IdBom = itemBomOri.IdBom;
+                    itemBomOri.Hardwares.Add(tmpHw);
+                }
+
+                foreach (var hf in bomCopy.HalfFinished)
+                {
+                    var itemBomHf = GlobalSetting.ItemBomService.GetItemSupplierBom(hf.DetailItemBom.IdItemBcn, itemBomOri.IdSupplier);
+                    DetailBomHf detailBomHf = new DetailBomHf()
+                    {
+                        DetailItemBom = itemBomHf,
+                        IdBomDetail = itemBomOri.IdBom,
+                        Quantity = hf.Quantity
+
+                    };
+                    itemBomOri.HalfFinished.Add(detailBomHf);
+                }
+
+                GrdBomRefreshAndExpand();
+
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
+        }
+            
+
+        #endregion
+
+        #endregion
+
         #endregion
 
         #region BomManagement ValidatingEditor
@@ -3201,6 +3380,7 @@ namespace HKSupply.Forms.Master
 
                 BaseView parent = view.ParentView;
                 var rowParent = parent.GetRow(view.SourceRowHandle);
+                string factory = string.Empty;
 
                 switch (view.FocusedColumn.FieldName)
                 {
@@ -3216,6 +3396,8 @@ namespace HKSupply.Forms.Master
                                     (a.IdItemBcn ?? "").Equals(idItemMt) && (a.IdBomBreakdown ?? "").Equals(row.IdBomBreakdown ?? "")
                                     )
                                 .FirstOrDefault();
+
+                            factory = (rowParent as ItemBom).IdSupplier;
                         }
                         else if (rowParent.GetType().BaseType == typeof(DetailBomHf) || rowParent.GetType() == typeof(DetailBomHf))
                         {
@@ -3225,6 +3407,8 @@ namespace HKSupply.Forms.Master
                                      (a.IdItemBcn ?? "").Equals(idItemMt) && (a.IdBomBreakdown ?? "").Equals(row.IdBomBreakdown ?? "")
                                     )
                                 .FirstOrDefault();
+
+                            factory = (rowParent as DetailBomHf).DetailItemBom?.IdSupplier;
                         }
 
 
@@ -3232,6 +3416,21 @@ namespace HKSupply.Forms.Master
                         {
                             var itemMt = _itemsMtList.Where(a => a.IdItemBcn.Equals(idItemMt)).Single().Clone();
                             row.Item = itemMt;
+
+                            //Buscamos los valores de coeficientes y scrap para ese item/factory
+                            SupplierFactoryCoeff supplierFactoryCoeff = _supplierFactoryCoeffList.Where(a => a.IdSupplier.Equals(itemMt.IdDefaultSupplier) && a.IdFactory.Equals(factory)).FirstOrDefault();
+                            if (supplierFactoryCoeff != null)
+                            {
+                                row.Coefficient1 = supplierFactoryCoeff.Coefficient1;
+                                row.Coefficient2 = supplierFactoryCoeff.Coefficient2;
+                                row.Scrap = supplierFactoryCoeff.Scrap;
+                            }
+                            else
+                            {
+                                row.Coefficient1 = null;
+                                row.Coefficient2 = null;
+                                row.Scrap = null;
+                            }
                         }
                         else
                         {

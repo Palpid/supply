@@ -11,6 +11,7 @@ namespace HKSupply.General
         //** DB CONN **//
         public const string SQL_EXPRESS_CONN = "name=SqlExpressConn";
         public const string SQL_DEV_SERVER_CONN = "name=SqlDevServerConn";
+        public const string SQL_DEV_EF_SERVER_CONN = "name=SqlDevEFServerConn";
         public const string SQL_PROD_SERVER_CONN = "";
 
         //** ITEM_GROUP **//

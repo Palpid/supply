@@ -546,21 +546,19 @@ namespace HKSupply.Forms.Master
                     if (hi.Column.FieldName != PHOTO_COLUMN)
                         return;
 
-                    string url = (view.GetRowCellValue(hi.RowHandle, nameof(ItemEy.PhotoUrl)) ?? string.Empty).ToString();
+                    string photo = (view.GetRowCellValue(hi.RowHandle, nameof(ItemEy.PhotoUrl)) ?? string.Empty).ToString();
 
-                    if (string.IsNullOrEmpty(url)) return;
+                    if (string.IsNullOrEmpty(photo)) return;
 
-                    //TODO: quitar la conversión de url a ruta física
-                    url = url.Replace("http://www.files-eb.com/images/products", Constants.ITEMS_PHOTOSWEB_PATH);
-                    url = url.Replace("/", "\\");
+                    photo = $"{Constants.ITEMS_PHOTOSWEB_PATH}{Constants.ITEM_PHOTOWEB_FOLDER}{photo}";
 
                     //AddToPhotoCacheByUrl(url);
-                    AddToPhotoCachebyPath(url);
+                    AddToPhotoCachebyPath(photo);
 
                     Bitmap im = null;
-                    if (photosCache.ContainsKey(url.ToString()))
+                    if (photosCache.ContainsKey(photo.ToString()))
                     {
-                        im = photosCache[url.ToString()];
+                        im = photosCache[photo.ToString()];
                     }
                     ToolTipItem item1 = new ToolTipItem() { Image = im };
                     sTooltip1.Items.Add(item1);
@@ -603,23 +601,20 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                //DataRow dr = (e.Row as DataRowView).Row;
-                //string url = dr[eItemColumns.PhotoUrl.ToString()].ToString();
                 ItemEy itemTemp = e.Row as ItemEy;
-                //string url = (e.Row as ItemEy).PhotoUrl;
-                string url = itemTemp.PhotoUrl;
-                if (string.IsNullOrEmpty(url)) return;
+                string photo = itemTemp.PhotoUrl;
+                if (string.IsNullOrEmpty(photo)) return;
 
-                //TODO: Quitar esta conversión de url a path local
-                url = url.Replace("http://www.files-eb.com/images/products", Constants.ITEMS_PHOTOSWEB_PATH);
-                url = url.Replace("/", "\\");
+                photo = $"{Constants.ITEMS_PHOTOSWEB_PATH}{Constants.ITEM_PHOTOWEB_FOLDER}{itemTemp.PhotoUrl}";
 
+                AddToPhotoCachebyPath(photo);
 
-                if (photosCache.ContainsKey(url))
+                if (photosCache.ContainsKey(photo))
                 {
-                    e.Value = photosCache[url];
+                    e.Value = photosCache[photo];
                     return;
                 }
+
                 //Para recuperarla de una url, ahora están en local, pero dejo el código por si cambia en un futuro
                 //var request = System.Net.WebRequest.Create(url);
                 //try
@@ -640,14 +635,6 @@ namespace HKSupply.Forms.Master
                 //        throw;
                 //    }
                 //}
-
-                //lalala
-                if (File.Exists(url))
-                {
-                    e.Value = Bitmap.FromFile(url);
-                    photosCache.Add(url, (Bitmap)e.Value);
-                }
-
 
             }
             catch (Exception ex)

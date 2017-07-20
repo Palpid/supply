@@ -4,3 +4,10 @@ C:\Git\Supply\HKSupply\CustomControls\obj\Debug\CustomControls.StackView.resourc
 C:\Git\Supply\HKSupply\CustomControls\obj\Debug\CustomControls.csproj.GenerateResource.Cache
 C:\Git\Supply\HKSupply\CustomControls\obj\Debug\CustomControls.dll
 C:\Git\Supply\HKSupply\CustomControls\obj\Debug\CustomControls.pdb
+C:\Git\HKSupply\CustomControls\bin\Debug\CustomControls.dll
+C:\Git\HKSupply\CustomControls\bin\Debug\CustomControls.pdb
+C:\Git\HKSupply\CustomControls\obj\Debug\CustomControls.csprojResolveAssemblyReference.cache
+C:\Git\HKSupply\CustomControls\obj\Debug\CustomControls.StackView.resources
+C:\Git\HKSupply\CustomControls\obj\Debug\CustomControls.csproj.GenerateResource.Cache
+C:\Git\HKSupply\CustomControls\obj\Debug\CustomControls.dll
+C:\Git\HKSupply\CustomControls\obj\Debug\CustomControls.pdb
