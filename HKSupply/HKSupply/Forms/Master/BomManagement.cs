@@ -3220,6 +3220,8 @@ namespace HKSupply.Forms.Master
                 if (bom != null)
                 {
                     CopyBomFromModelItem((row as ItemBom), bom);
+                    info.View.Columns[nameof(ItemBom.IdSupplier)].AppearanceCell.BackColor = Color.Salmon;
+                    info.View.Columns[nameof(ItemBom.IdSupplier)].AppearanceCell.BackColor2 = Color.SeaShell;
                 }
             }
             catch
@@ -3418,15 +3420,19 @@ namespace HKSupply.Forms.Master
                             row.Item = itemMt;
 
                             //Buscamos los valores de coeficientes y scrap para ese item/factory
-                            SupplierFactoryCoeff supplierFactoryCoeff = _supplierFactoryCoeffList.Where(a => a.IdSupplier.Equals(itemMt.IdDefaultSupplier) && a.IdFactory.Equals(factory)).FirstOrDefault();
+                            SupplierFactoryCoeff supplierFactoryCoeff = _supplierFactoryCoeffList
+                                .Where(a => a.IdSupplier.Equals(itemMt.IdDefaultSupplier) && a.IdFactory.Equals(factory) && a.IdItemGroup.Equals(Constants.ITEM_GROUP_MT))
+                                .FirstOrDefault();
                             if (supplierFactoryCoeff != null)
                             {
+                                row.Density = supplierFactoryCoeff.Density;
                                 row.Coefficient1 = supplierFactoryCoeff.Coefficient1;
                                 row.Coefficient2 = supplierFactoryCoeff.Coefficient2;
                                 row.Scrap = supplierFactoryCoeff.Scrap;
                             }
                             else
                             {
+                                row.Density = null;
                                 row.Coefficient1 = null;
                                 row.Coefficient2 = null;
                                 row.Scrap = null;
@@ -3645,6 +3651,7 @@ namespace HKSupply.Forms.Master
 
                 BaseView parent = view.ParentView;
                 var rowParent = parent.GetRow(view.SourceRowHandle);
+                string factory = string.Empty;
 
                 switch (view.FocusedColumn.FieldName)
                 {
@@ -3662,12 +3669,33 @@ namespace HKSupply.Forms.Master
                                     (a.IdItemBcn ?? "").Equals(idItemHw) && (a.IdBomBreakdown ?? "").Equals(row.IdBomBreakdown ?? "")
                                     )
                                 .FirstOrDefault();
+
+                            factory = (rowParent as ItemBom).IdSupplier;
                         }
 
                         if (exist == null)
                         {
                             var itemHw = _itemsHwList.Where(a => a.IdItemBcn.Equals(idItemHw)).Single().Clone();
                             row.Item = itemHw;
+
+                            //Buscamos los valores de coeficientes y scrap para ese item/factory
+                            SupplierFactoryCoeff supplierFactoryCoeff = _supplierFactoryCoeffList
+                                .Where(a => a.IdSupplier.Equals(itemHw.IdDefaultSupplier) && a.IdFactory.Equals(factory) && a.IdItemGroup.Equals(Constants.ITEM_GROUP_HW))
+                                .FirstOrDefault();
+                            if (supplierFactoryCoeff != null)
+                            {
+                                //row.Density = supplierFactoryCoeff.Density;
+                                //row.Coefficient1 = supplierFactoryCoeff.Coefficient1;
+                                //row.Coefficient2 = supplierFactoryCoeff.Coefficient2;
+                                row.Scrap = supplierFactoryCoeff.Scrap;
+                            }
+                            else
+                            {
+                                //row.Density = null;
+                                //row.Coefficient1 = null;
+                                //row.Coefficient2 = null;
+                                row.Scrap = null;
+                            }
                         }
                         else
                         {

@@ -45,30 +45,6 @@ namespace HKSupply.Models
         public Supplier Factory { get; set; }
         #endregion
 
-        #region Constructor
-        public SupplierFactoryCoeff(string idItemGroup)
-        {
-            IdItemGroup = idItemGroup;
-
-            if (idItemGroup == Constants.ITEM_GROUP_MT)
-            {
-                Density = 1.29m;
-                Coefficient1 = 1 / 1000m;
-                Coefficient2 = 1;
-                Scrap = 1.18m;
-            }
-            else if (idItemGroup == Constants.ITEM_GROUP_HW)
-            {
-                Density = null;
-                Coefficient1 = 1;
-                Coefficient2 = 1;
-                Scrap = 1;
-            }
-
-
-        }
-        #endregion
-
         #region Equals
         public override bool Equals(object obj)
         {
@@ -80,6 +56,8 @@ namespace HKSupply.Models
             bool res = (
                 IdSupplier == supplierFactoryCoeff.IdSupplier &&
                 IdFactory == supplierFactoryCoeff.IdFactory &&
+                IdItemGroup == supplierFactoryCoeff.IdItemGroup &&
+                Density == supplierFactoryCoeff.Density &&
                 Coefficient1 == supplierFactoryCoeff.Coefficient1 &&
                 Coefficient2 == supplierFactoryCoeff.Coefficient2 &&
                 Scrap == supplierFactoryCoeff.Scrap
@@ -93,6 +71,8 @@ namespace HKSupply.Models
             int hashCode = (
                 (IdSupplier == null ? 0 : IdSupplier.GetHashCode()) +
                 (IdFactory == null ? 0 : IdFactory.GetHashCode()) +
+                (IdItemGroup == null ? 0 : IdItemGroup.GetHashCode()) +
+                (Density == null ? 0 : Density.GetHashCode()) +
                 Coefficient1.GetHashCode() +
                 Coefficient2.GetHashCode() +
                 Scrap.GetHashCode()

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.Utils;
 using DevExpress.XtraBars;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Columns;
@@ -24,6 +25,7 @@ namespace HKSupply.Forms.Master
 
         #region Private Members
         List<Supplier> _supplierList;
+        List<ItemGroup> _itemGroupList;
 
         List<SupplierFactoryCoeff> _modifiedSupplierFactoryCoeffs = new List<SupplierFactoryCoeff>();
         List<SupplierFactoryCoeff> _createdSupplierFactoryCoeffs = new List<SupplierFactoryCoeff>();
@@ -170,7 +172,7 @@ namespace HKSupply.Forms.Master
 
         #endregion
 
-        #region Forms Events
+        #region Form Events
         private void SupplierFactoryCoeffManagement_Load(object sender, EventArgs e)
         {
             try
@@ -226,15 +228,19 @@ namespace HKSupply.Forms.Master
                 //Columns definition
                 GridColumn colIdSupplier = new GridColumn() { Caption = "Supplier", Visible = true, FieldName = nameof(SupplierFactoryCoeff.IdSupplier), Width = 150 };
                 GridColumn colIdFactory = new GridColumn() { Caption = "Factory", Visible = true, FieldName = nameof(SupplierFactoryCoeff.IdFactory), Width = 150 };
+                GridColumn colIdItemGroup = new GridColumn() { Caption = "Group", Visible = true, FieldName = nameof(SupplierFactoryCoeff.IdItemGroup), Width = 100};
+                GridColumn colDensity = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Density"), Visible = true, FieldName = nameof(SupplierFactoryCoeff.Density), Width = 150 };
                 GridColumn colCoefficient1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Coefficient1"), Visible = true, FieldName = nameof(SupplierFactoryCoeff.Coefficient1), Width = 150 };
                 GridColumn colCoefficient2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Coefficient2"), Visible = true, FieldName = nameof(SupplierFactoryCoeff.Coefficient2), Width = 150 };
                 GridColumn colScrap = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Scrap"), Visible = true, FieldName = nameof(SupplierFactoryCoeff.Scrap), Width = 150 };
 
                 //Display Format
-                colCoefficient1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-                colCoefficient2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-                colScrap.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                colDensity.DisplayFormat.FormatType = FormatType.Numeric;
+                colCoefficient1.DisplayFormat.FormatType = FormatType.Numeric;
+                colCoefficient2.DisplayFormat.FormatType = FormatType.Numeric;
+                colScrap.DisplayFormat.FormatType = FormatType.Numeric;
 
+                colDensity.DisplayFormat.FormatString = "n6";
                 colCoefficient1.DisplayFormat.FormatString = "n6";
                 colCoefficient2.DisplayFormat.FormatString = "n6";
                 colScrap.DisplayFormat.FormatString = "n6";
@@ -245,7 +251,8 @@ namespace HKSupply.Forms.Master
                     DataSource = _supplierList,
                     ValueMember = nameof(Supplier.IdSupplier),
                     DisplayMember = nameof(Supplier.IdSupplier),
-                    ShowClearButton = false
+                    ShowClearButton = false,
+                    NullText = "Select..."
                 };
                 riSupplierFactory.View.Columns.AddField(nameof(Supplier.IdSupplier)).Visible = true;
                 riSupplierFactory.View.Columns.AddField(nameof(Supplier.SupplierName)).Visible = true;
@@ -253,10 +260,21 @@ namespace HKSupply.Forms.Master
                 colIdSupplier.ColumnEdit = riSupplierFactory;
                 colIdFactory.ColumnEdit = riSupplierFactory;
 
+                RepositoryItemSearchLookUpEdit riItemGroup = new RepositoryItemSearchLookUpEdit()
+                {
+                    DataSource = _itemGroupList,
+                    ValueMember = nameof(ItemGroup.Id),
+                    DisplayMember = nameof(ItemGroup.Description),
+                    ShowClearButton = false,
+                    NullText = "Select..."
+                };
+                colIdItemGroup.ColumnEdit = riItemGroup;
+
                 RepositoryItemTextEdit ritxt2Dec = new RepositoryItemTextEdit();
                 ritxt2Dec.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
                 ritxt2Dec.Mask.EditMask = "F6";
 
+                colDensity.ColumnEdit = ritxt2Dec;
                 colCoefficient1.ColumnEdit = ritxt2Dec;
                 colCoefficient2.ColumnEdit = ritxt2Dec;
                 colScrap.ColumnEdit = ritxt2Dec;
@@ -264,6 +282,8 @@ namespace HKSupply.Forms.Master
                 //add columns to grid root view
                 gridViewSupplierFactoryCoeff.Columns.Add(colIdSupplier);
                 gridViewSupplierFactoryCoeff.Columns.Add(colIdFactory);
+                gridViewSupplierFactoryCoeff.Columns.Add(colIdItemGroup);
+                gridViewSupplierFactoryCoeff.Columns.Add(colDensity);
                 gridViewSupplierFactoryCoeff.Columns.Add(colCoefficient1);
                 gridViewSupplierFactoryCoeff.Columns.Add(colCoefficient2);
                 gridViewSupplierFactoryCoeff.Columns.Add(colScrap);
@@ -286,6 +306,10 @@ namespace HKSupply.Forms.Master
             try
             {
                 _supplierList = GlobalSetting.SupplierService.GetSuppliers();
+                //Es un poco feo, pero nos ahorramos la consulta a la db y aquí sólo se usan estos dos grupos
+                _itemGroupList = new List<ItemGroup>();
+                _itemGroupList.Add(new ItemGroup() { Id = Constants.ITEM_GROUP_MT, Description = Constants.ITEM_GROUP_MT });
+                _itemGroupList.Add(new ItemGroup() { Id = Constants.ITEM_GROUP_HW, Description = Constants.ITEM_GROUP_HW });
             }
             catch
             {
@@ -306,6 +330,7 @@ namespace HKSupply.Forms.Master
                 gridViewSupplierFactoryCoeff.OptionsBehavior.Editable = false;
                 gridViewSupplierFactoryCoeff.Columns[nameof(SupplierFactoryCoeff.IdFactory)].AppearanceCell.ForeColor = Color.Black;
                 gridViewSupplierFactoryCoeff.Columns[nameof(SupplierFactoryCoeff.IdSupplier)].AppearanceCell.ForeColor = Color.Black;
+                gridViewSupplierFactoryCoeff.Columns[nameof(SupplierFactoryCoeff.IdItemGroup)].AppearanceCell.ForeColor = Color.Black;
             }
             catch
             {
@@ -322,9 +347,11 @@ namespace HKSupply.Forms.Master
                 gridViewSupplierFactoryCoeff.OptionsBehavior.Editable = true;
                 gridViewSupplierFactoryCoeff.Columns[nameof(SupplierFactoryCoeff.IdFactory)].OptionsColumn.AllowEdit = false;
                 gridViewSupplierFactoryCoeff.Columns[nameof(SupplierFactoryCoeff.IdSupplier)].OptionsColumn.AllowEdit = false;
+                gridViewSupplierFactoryCoeff.Columns[nameof(SupplierFactoryCoeff.IdItemGroup)].OptionsColumn.AllowEdit = false;
 
                 gridViewSupplierFactoryCoeff.Columns[nameof(SupplierFactoryCoeff.IdFactory)].AppearanceCell.ForeColor = Color.Gray;
                 gridViewSupplierFactoryCoeff.Columns[nameof(SupplierFactoryCoeff.IdSupplier)].AppearanceCell.ForeColor = Color.Gray;
+                gridViewSupplierFactoryCoeff.Columns[nameof(SupplierFactoryCoeff.IdItemGroup)].AppearanceCell.ForeColor = Color.Gray;
             }
             catch
             {
@@ -336,11 +363,14 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _createdSupplierFactoryCoeffs.Add(new SupplierFactoryCoeff(Constants.ITEM_GROUP_MT));
+                _createdSupplierFactoryCoeffs.Add(new SupplierFactoryCoeff());
                 xgrdSupplierFactoryCoeff.DataSource = null;
                 xgrdSupplierFactoryCoeff.DataSource = _createdSupplierFactoryCoeffs;
                 //Allow edit all columns
                 gridViewSupplierFactoryCoeff.OptionsBehavior.Editable = true;
+                gridViewSupplierFactoryCoeff.Columns[nameof(SupplierFactoryCoeff.IdFactory)].OptionsColumn.AllowEdit = true;
+                gridViewSupplierFactoryCoeff.Columns[nameof(SupplierFactoryCoeff.IdSupplier)].OptionsColumn.AllowEdit = true;
+                gridViewSupplierFactoryCoeff.Columns[nameof(SupplierFactoryCoeff.IdItemGroup)].OptionsColumn.AllowEdit = true;
             }
             catch (Exception ex)
             {
@@ -355,7 +385,7 @@ namespace HKSupply.Forms.Master
             try
             {
                 var supplierFactoryCoeff = _modifiedSupplierFactoryCoeffs
-                    .FirstOrDefault(a => a.IdFactory.Equals(modifiedSupplierFactoryCoeff.IdFactory) && a.IdSupplier.Equals(modifiedSupplierFactoryCoeff.IdSupplier));
+                    .FirstOrDefault(a => a.IdItemGroup.Equals(modifiedSupplierFactoryCoeff.IdItemGroup) && a.IdFactory.Equals(modifiedSupplierFactoryCoeff.IdFactory) && a.IdSupplier.Equals(modifiedSupplierFactoryCoeff.IdSupplier));
 
                 if (supplierFactoryCoeff == null)
                 {
@@ -363,6 +393,7 @@ namespace HKSupply.Forms.Master
                 }
                 else
                 {
+                    supplierFactoryCoeff.Density = modifiedSupplierFactoryCoeff.Density;
                     supplierFactoryCoeff.Coefficient1 = modifiedSupplierFactoryCoeff.Coefficient1;
                     supplierFactoryCoeff.Coefficient2 = modifiedSupplierFactoryCoeff.Coefficient2;
                     supplierFactoryCoeff.Scrap  = modifiedSupplierFactoryCoeff.Scrap;
@@ -401,6 +432,15 @@ namespace HKSupply.Forms.Master
                 foreach (var supplierFactoryCoeff in _modifiedSupplierFactoryCoeffs)
                 {
 
+                    if (supplierFactoryCoeff.IdItemGroup == Constants.ITEM_GROUP_MT)
+                    {
+                        if (supplierFactoryCoeff.Density == 0)
+                        {
+                            MessageBox.Show($"Density 1 must be greater than Zero ({supplierFactoryCoeff.IdSupplier}/{supplierFactoryCoeff.IdFactory})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+                        }
+                    }
+
                     if (supplierFactoryCoeff.Coefficient1 == 0)
                     {
                         MessageBox.Show($"Coefficient 1 must be greater than Zero ({supplierFactoryCoeff.IdSupplier}/{supplierFactoryCoeff.IdFactory})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -433,8 +473,9 @@ namespace HKSupply.Forms.Master
             try
             {
 
-                foreach (var supplierFactoryCoeff in _modifiedSupplierFactoryCoeffs)
+                foreach (var supplierFactoryCoeff in _createdSupplierFactoryCoeffs)
                 {
+
 
                     if(string.IsNullOrEmpty(supplierFactoryCoeff.IdFactory))
                     {
@@ -446,6 +487,21 @@ namespace HKSupply.Forms.Master
                     {
                         MessageBox.Show(GlobalSetting.ResManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
+                    }
+
+                    if (string.IsNullOrEmpty(supplierFactoryCoeff.IdItemGroup))
+                    {
+                        MessageBox.Show(GlobalSetting.ResManager.GetString("FieldRequired"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+
+                    if (supplierFactoryCoeff.IdItemGroup == Constants.ITEM_GROUP_MT)
+                    {
+                        if (supplierFactoryCoeff.Density == null || supplierFactoryCoeff.Density == 0)
+                        {
+                            MessageBox.Show($"Density must be greater than Zero ({supplierFactoryCoeff.IdSupplier}/{supplierFactoryCoeff.IdFactory})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+                        }
                     }
 
                     if (supplierFactoryCoeff.Coefficient1 == 0)

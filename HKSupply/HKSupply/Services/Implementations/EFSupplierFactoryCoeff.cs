@@ -24,7 +24,11 @@ namespace HKSupply.Services.Implementations
             {
                 using (var db = new HKSupplyContext())
                 {
-                    return db.SupplierFactoryCoeff.OrderBy(a => a.IdSupplier).ThenBy(b => b.IdFactory).ToList();
+                    return db.SupplierFactoryCoeff
+                        .OrderBy(a => a.IdItemGroup)
+                        .ThenBy(a => a.IdSupplier)
+                        .ThenBy(a => a.IdFactory)
+                        .ToList();
                 }
             }
             catch (SqlException sqlex)
@@ -63,7 +67,7 @@ namespace HKSupply.Services.Implementations
 
                 using (var db = new HKSupplyContext())
                 {
-                    var supplierFactoryCoeff = db.SupplierFactoryCoeff.FirstOrDefault(a => a.IdFactory.Equals(newSupplierFactoryCoeff.IdFactory) && a.IdSupplier.Equals(newSupplierFactoryCoeff.IdSupplier));
+                    var supplierFactoryCoeff = db.SupplierFactoryCoeff.FirstOrDefault(a => a.IdItemGroup.Equals(newSupplierFactoryCoeff.IdItemGroup) && a.IdFactory.Equals(newSupplierFactoryCoeff.IdFactory) && a.IdSupplier.Equals(newSupplierFactoryCoeff.IdSupplier));
 
                     if (supplierFactoryCoeff != null)
                         throw new Exception("Supplier/Factory Already Exist");
@@ -139,11 +143,12 @@ namespace HKSupply.Services.Implementations
                             foreach (var supplierFactory in SupplierFactoryCoeffsToUpdate)
                             {
                                 var supplierFactoryToUpdate = db.SupplierFactoryCoeff
-                                    .Where(a => a.IdSupplier.Equals(supplierFactory.IdSupplier) && a.IdFactory.Equals(supplierFactory.IdFactory))
+                                    .Where(a => a.IdItemGroup.Equals(supplierFactory.IdItemGroup) && a.IdSupplier.Equals(supplierFactory.IdSupplier) && a.IdFactory.Equals(supplierFactory.IdFactory))
                                     .FirstOrDefault();
 
                                 if (supplierFactoryToUpdate != null)
                                 {
+                                    supplierFactoryToUpdate.Density = supplierFactory.Density;
                                     supplierFactoryToUpdate.Coefficient1 = supplierFactory.Coefficient1;
                                     supplierFactoryToUpdate.Coefficient2 = supplierFactory.Coefficient2;
                                     supplierFactoryToUpdate.Scrap = supplierFactory.Scrap;
