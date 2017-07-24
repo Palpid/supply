@@ -1,3 +1,4 @@
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HelpDocs\EN\BOM Flow and Application Help.pdf
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Reports\Rpt\BOM.rpt
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\Edit_16x16.png
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\etnia_icon.ico
@@ -69,7 +70,6 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Pdf.v16.2.Drawing.x
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraPrinting.v16.2.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.RichEdit.v16.2.Core.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Office.v16.2.Core.xml
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\de\DevExpress.XtraEditors.v16.2.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\DevExpress.XtraEditors.v16.2.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ja\DevExpress.XtraEditors.v16.2.resources.dll

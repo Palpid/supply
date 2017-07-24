@@ -11,7 +11,8 @@ namespace HKSupply.General
         //** DB CONN **//
         public const string SQL_EXPRESS_CONN = "name=SqlExpressConn";
         public const string SQL_DEV_SERVER_CONN = "name=SqlDevServerConn";
-        public const string SQL_PROD_SERVER_CONN = "";
+        public const string SQL_CN_SERVER_CONN = "name=SqlCNServerConn";
+        //public const string SQL_PROD_SERVER_CONN = "";
 
         //** ITEM_GROUP **//
         public const string ITEM_GROUP_EY = "EY";
@@ -21,9 +22,12 @@ namespace HKSupply.General
         public const string ITEM_GROUP_PROTO = "PROTO";
 
         //** DOCS FOLDERS **//
-        public const string ITEMS_DOCS_PATH = "C:\\Temp\\ITEM_DOCS\\";
-        public const string PROTO_DOCS_PATH = "C:\\Temp\\PROTO_DOCS\\";
-        public const string ITEMS_PHOTOSWEB_PATH = "C:\\Temp\\ITEM_WEB_PHOTOS\\";
+        //public const string ITEMS_DOCS_PATH = "C:\\Temp\\ITEM_DOCS\\";
+        //public const string PROTO_DOCS_PATH = "C:\\Temp\\PROTO_DOCS\\";
+        //public const string ITEMS_PHOTOSWEB_PATH = "C:\\Temp\\ITEM_WEB_PHOTOS\\";
+        public const string ITEMS_DOCS_PATH = "\\\\sql\\SPTdata$\\ITEM_DOCS\\";
+        public const string PROTO_DOCS_PATH = "\\\\sql\\SPTdata$\\PROTO_DOCS\\";
+        public const string ITEMS_PHOTOSWEB_PATH = "\\\\sql\\SPTdata$\\ITEM_WEB_PHOTOS\\";
 
         public const string COLOR_PDF_FOLDER = "PDFCOLOR\\";
         public const string DRAWING_PDF_FOLDER = "PDFDRAWING\\";

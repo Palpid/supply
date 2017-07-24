@@ -116,7 +116,7 @@ namespace HKSupply.Forms.Master
                 ActionsAfterCU();
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -139,7 +139,7 @@ namespace HKSupply.Forms.Master
                     ConfigureRibbonActionsEditing();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -179,7 +179,7 @@ namespace HKSupply.Forms.Master
 
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -196,7 +196,7 @@ namespace HKSupply.Forms.Master
             try
             {
                 var result = XtraInputBox.Show("Enter Layout Name", "Save Layout", string.Empty);
-                if(string.IsNullOrEmpty(result) == false)
+                if (string.IsNullOrEmpty(result) == false)
                 {
                     SaveLayout(result);
                 }
@@ -253,7 +253,7 @@ namespace HKSupply.Forms.Master
 
         public override void bbiExportExcel_ItemClick(object sender, ItemClickEventArgs e)
         {
-            
+
             if (gridViewSummaryBom.DataRowCount == 0)
             {
                 MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
@@ -301,6 +301,7 @@ namespace HKSupply.Forms.Master
                 //LoadItemsListHw();
 
                 dockPanelDrawing.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                dockPanelPdfColor.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
             }
             catch (Exception ex)
             {
@@ -328,7 +329,7 @@ namespace HKSupply.Forms.Master
                 if (_itemBomList != null && _itemBomList.Count() > 0)
                     OpenSelectSuppliersForm2Copy();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -608,7 +609,7 @@ namespace HKSupply.Forms.Master
         //            {
         //                AddHardware(itemHw, supplier);
         //            }
-                        
+
         //            LoadBomTreeView();
         //            LoadSummaryBom();
         //        }
@@ -625,7 +626,7 @@ namespace HKSupply.Forms.Master
             {
                 switch (e.View.LevelName)
                 {
-                    case nameof(DetailBomHf.DetailItemBom) + "." + nameof(ItemBom.Materials): 
+                    case nameof(DetailBomHf.DetailItemBom) + "." + nameof(ItemBom.Materials):
                     case nameof(ItemBom.Materials):
 
                         (e.View as GridView).DetailHeight = 1000;
@@ -722,8 +723,8 @@ namespace HKSupply.Forms.Master
                         (e.View as GridView).CellValueChanged += GrdBomView_CellValueChanged;
                         (e.View as GridView).ValidatingEditor += BomManagementMaterials_ValidatingEditor;
 
-                       //Agregamos los Summary
-                       (e.View as GridView).OptionsView.ShowFooter = true;
+                        //Agregamos los Summary
+                        (e.View as GridView).OptionsView.ShowFooter = true;
                         (e.View as GridView).Columns[nameof(DetailBomMt.Quantity)].Summary.Add(SummaryItemType.Sum, nameof(DetailBomMt.Quantity), "{0:n}");
                         (e.View as GridView).Columns[nameof(DetailBomMt.Scrap)].Summary.Add(SummaryItemType.Sum, nameof(DetailBomMt.Scrap), "{0:n}");
 
@@ -898,7 +899,7 @@ namespace HKSupply.Forms.Master
 
 
                     case nameof(ItemBom.HalfFinished):
-                        
+
                         (e.View as GridView).DetailHeight = 1000;
 
 
@@ -973,7 +974,7 @@ namespace HKSupply.Forms.Master
 
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -1073,7 +1074,7 @@ namespace HKSupply.Forms.Master
 
                 DetailBomHf row = activeView.GetRow(activeView.FocusedRowHandle) as DetailBomHf;
 
-                if(row.IdBomDetail > 0)
+                if (row.IdBomDetail > 0)
                 {
                     OpenEditHfBom(row.DetailItemBom);
                     activeView.CollapseMasterRow(activeView.FocusedRowHandle);
@@ -1081,7 +1082,7 @@ namespace HKSupply.Forms.Master
                 }
                 else
                     XtraMessageBox.Show("Select Half-finished first", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                
+
             }
             catch (Exception ex)
             {
@@ -1119,6 +1120,7 @@ namespace HKSupply.Forms.Master
                 dockPanelTreeBom.Options.ShowCloseButton = false;
                 dockPanelPlainBom.Options.ShowCloseButton = false;
                 dockPanelDrawing.Options.ShowCloseButton = false;
+                dockPanelPdfColor.Options.ShowCloseButton = false;
             }
             catch (Exception ex)
             {
@@ -1173,7 +1175,7 @@ namespace HKSupply.Forms.Master
 
                 gridViewItemsEy.Columns[nameof(ItemEy.IdFamilyHK)].GroupIndex = 0;
                 gridViewItemsEy.Columns[$"{nameof(ItemEy.Model)}.{nameof(Model.Description)}"].GroupIndex = 1;
-                gridViewItemsEy.Columns[nameof(ItemEy.IdDefaultSupplier)].GroupIndex = 2;
+                //gridViewItemsEy.Columns[nameof(ItemEy.IdDefaultSupplier)].GroupIndex = 2;
 
                 gridViewItemsEy.DoubleClick += GridViewItemsEy_DoubleClick;
 
@@ -1215,7 +1217,7 @@ namespace HKSupply.Forms.Master
 
                 gridViewItemsHf.Columns[nameof(ItemHf.IdFamilyHK)].GroupIndex = 0;
                 gridViewItemsHf.Columns[$"{nameof(ItemHf.Model)}.{nameof(Model.Description)}"].GroupIndex = 1;
-                gridViewItemsHf.Columns[nameof(ItemHf.IdDefaultSupplier)].GroupIndex = 2;
+                //gridViewItemsHf.Columns[nameof(ItemHf.IdDefaultSupplier)].GroupIndex = 2;
 
                 gridViewItemsHf.DoubleClick += GridViewItemsHf_DoubleClick;
 
@@ -1384,7 +1386,7 @@ namespace HKSupply.Forms.Master
                 gridViewItemBom.Columns[nameof(ItemBom.IdItemBcn)].GroupIndex = 0;
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -1540,7 +1542,7 @@ namespace HKSupply.Forms.Master
                                         BaseView parent = activeView.ParentView;
                                         var rowParent = parent.GetRow(activeView.SourceRowHandle);
 
-                                        if (row.Quantity > 0 && string.IsNullOrEmpty(row.IdItemBcn ) == false && string.IsNullOrEmpty(row.IdBomBreakdown) == false)
+                                        if (row.Quantity > 0 && string.IsNullOrEmpty(row.IdItemBcn) == false && string.IsNullOrEmpty(row.IdBomBreakdown) == false)
                                         {
                                             if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
                                             {
@@ -1611,7 +1613,7 @@ namespace HKSupply.Forms.Master
                 }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -1731,20 +1733,20 @@ namespace HKSupply.Forms.Master
                 }
 
                 _itemBomList = GlobalSetting.ItemBomService.GetItemBom(idIdItemBcn);
-                
+
                 if (_itemBomList == null || _itemBomList.Count == 0)
                 {
                     if (string.IsNullOrEmpty(idSupplier))
                     {
-                            XtraMessageBox.Show("Item without default supplier. You must define one first", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return;
+                        XtraMessageBox.Show("Item without default supplier. You must define one first", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
                     }
 
                     ItemBom itemBom = new ItemBom();
                     itemBom.IdBom = 0;
                     itemBom.IdItemBcn = idIdItemBcn;
                     itemBom.Item = item;
-                    itemBom.IdItemGroup = (item.GetType() == typeof(ItemEy) ? Constants.ITEM_GROUP_EY: Constants.ITEM_GROUP_HF);
+                    itemBom.IdItemGroup = (item.GetType() == typeof(ItemEy) ? Constants.ITEM_GROUP_EY : Constants.ITEM_GROUP_HF);
                     itemBom.IdSupplier = idSupplier;
                     itemBom.Materials = new List<DetailBomMt>();
                     itemBom.Hardwares = new List<DetailBomHw>();
@@ -1760,10 +1762,11 @@ namespace HKSupply.Forms.Master
                 GrdBomRefreshAndExpand();
 
                 dockPanelGrdBom.Select();
-                
+
                 LoadBomTreeView();
                 LoadSummaryBom();
                 LoadDrawingPanel();
+                LoadPdfColorgPanel();
 
             }
             catch (Exception ex)
@@ -1782,8 +1785,8 @@ namespace HKSupply.Forms.Master
             try
             {
                 xgrdSummaryBom.DataSource = null;
-                
-                
+
+
                 DataTable tableSummary = new DataTable();
                 tableSummary.Columns.Add("Group", typeof(string));
                 tableSummary.Columns.Add("Item", typeof(string));
@@ -1797,7 +1800,7 @@ namespace HKSupply.Forms.Master
                 //Obtenemos los supplier para generar una columna por cada uno de ellos
                 var suppliers = _itemBomList.Select(a => a.IdSupplier).ToList();
 
-                foreach(var supplier in suppliers)
+                foreach (var supplier in suppliers)
                 {
                     tableSummary.Columns.Add(supplier, typeof(decimal));
                     tableSummaryUnit.Columns.Add(supplier, typeof(decimal));
@@ -1815,7 +1818,7 @@ namespace HKSupply.Forms.Master
                 //Una vez cargado, modificamos el estilo de los grid de resumen
 
                 //Summary item/supplier
-                foreach(GridColumn col in gridViewSummaryBom.Columns)
+                foreach (GridColumn col in gridViewSummaryBom.Columns)
                 {
                     if (col.FieldName == "Item")
                     {
@@ -1854,7 +1857,7 @@ namespace HKSupply.Forms.Master
 
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -1865,16 +1868,7 @@ namespace HKSupply.Forms.Master
             try
             {
                 //Borramos si ya hemos cargado algo en al dockpanel
-                foreach (Control control in dockPanelDrawing.Controls)
-                {
-                    if (control.GetType() == typeof(DevExpress.XtraBars.Docking.ControlContainer))
-                    {
-                        foreach (Control subcontrol in control.Controls)
-                        {
-                            control.Controls.Remove(subcontrol);
-                        }
-                    }
-                }
+                ClearPdfPanels(dockPanelDrawing);
 
                 string docType = string.Empty;
                 if (_currentItem.GetType() == typeof(ItemEy))
@@ -1882,19 +1876,20 @@ namespace HKSupply.Forms.Master
                 else if (_currentItem.GetType() == typeof(ItemHf))
                     docType = "PDFDRAWING_HF";
 
-                string drawinfPath = Constants.ITEMS_DOCS_PATH + _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).Select(b => b.FilePath).FirstOrDefault();
+                string drawingPath = Constants.ITEMS_DOCS_PATH + _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).Select(b => b.FilePath).FirstOrDefault();
 
-                if (System.IO.File.Exists(drawinfPath))
+                if (System.IO.File.Exists(drawingPath))
                 {
                     PDFViewer pdfViewer = new PDFViewer();
                     pdfViewer.TopLevel = false;
                     pdfViewer.MinimizeBox = false;
                     pdfViewer.MaximizeBox = false;
-                    pdfViewer.pdfFile = drawinfPath;
+                    pdfViewer.pdfFile = drawingPath;
                     pdfViewer.FormClosing += (o, e) => { e.Cancel = true; }; //No queremos que puedan cerrar el formulario del viewer incrustado dentro del dockpanel
                     dockPanelDrawing.Controls.Add(pdfViewer);
                     pdfViewer.Dock = DockStyle.Fill;
                     pdfViewer.Visible = true;
+
                 }
                 else
                 {
@@ -1909,6 +1904,69 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void LoadPdfColorgPanel()
+        {
+            try
+            {
+                //Borramos si ya hemos cargado algo en al dockpanel
+                ClearPdfPanels(dockPanelPdfColor);
+
+                string docType = string.Empty;
+                if (_currentItem.GetType() == typeof(ItemEy))
+                    docType = "PDFCOLOR";
+                else if (_currentItem.GetType() == typeof(ItemHf))
+                    docType = "PDFCOLOR_HF";
+
+                string pdfColorPath = Constants.ITEMS_DOCS_PATH + _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).Select(b => b.FilePath).FirstOrDefault();
+
+                if (System.IO.File.Exists(pdfColorPath))
+                {
+                    PDFViewer pdfViewer = new PDFViewer();
+                    pdfViewer.TopLevel = false;
+                    pdfViewer.MinimizeBox = false;
+                    pdfViewer.MaximizeBox = false;
+                    pdfViewer.pdfFile = pdfColorPath;
+                    pdfViewer.FormClosing += (o, e) => { e.Cancel = true; }; //No queremos que puedan cerrar el formulario del viewer incrustado dentro del dockpanel
+                    dockPanelPdfColor.Controls.Add(pdfViewer);
+                    pdfViewer.Dock = DockStyle.Fill;
+                    pdfViewer.Visible = true;
+
+                }
+                else
+                {
+                    LabelControl lbl = new LabelControl();
+                    lbl.Text = "No PDF Color doc";
+                    dockPanelPdfColor.Controls.Add(lbl);
+                }
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void ClearPdfPanels(DevExpress.XtraBars.Docking.DockPanel panelPdf)
+        {
+            try
+            {
+                foreach (Control control in panelPdf.Controls)
+                {
+                    if (control.GetType() == typeof(DevExpress.XtraBars.Docking.ControlContainer))
+                    {
+                        foreach (Control subcontrol in control.Controls)
+                        {
+                            control.Controls.Remove(subcontrol);
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        
         private void FillDtHfSummary(DataTable tableSummary, DataTable tableSummaryUnit, List<string> suppliers, ItemBom bom)
         {
             try
@@ -2351,7 +2409,7 @@ namespace HKSupply.Forms.Master
                     root.Nodes[0].Nodes.Add(rawMaterial.IdItemBcn, $"{rawMaterial.IdItemBcn} : {rawMaterial.Item.ItemDescription}");
                     root.Nodes[0].Nodes[contRawMaterialsNode].Tag = "RawMaterials";
                     root.Nodes[0].Nodes[contRawMaterialsNode].Nodes.Add(
-                        new TreeNode($"Quantity : {rawMaterial.Quantity.ToString()}")
+                        new TreeNode($"Quantity : {rawMaterial.Quantity.ToString()} ({rawMaterial.Item.Unit})")
                         );
                     contRawMaterialsNode++;
                 }
@@ -2365,7 +2423,7 @@ namespace HKSupply.Forms.Master
                     root.Nodes[1].Nodes.Add(hardware.IdItemBcn, $"{hardware.IdItemBcn} : {hardware.Item.ItemDescription}");
                     root.Nodes[1].Nodes[contHardwareNode].Tag = "Hardware";
                     root.Nodes[1].Nodes[contHardwareNode].Nodes.Add(
-                        new TreeNode($"Quantity : {hardware.Quantity.ToString()}")
+                        new TreeNode($"Quantity : {hardware.Quantity.ToString()} ({hardware.Item.Unit})")
                         );
                     contHardwareNode++;
                 }

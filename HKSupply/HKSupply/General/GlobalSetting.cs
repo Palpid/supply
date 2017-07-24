@@ -48,13 +48,14 @@ namespace HKSupply.General
     /// Controlador para acceso a datos para Layouts
     /// Controlador para acceso a datos para Item BOM
     /// Controlador para acceso a datos para Bom Breakdown
+    /// Controlador para acceso a datos para Model
     /// </remarks>
     public sealed class GlobalSetting
     {
         #region Private Members
         //static string _dbEnvironment = Constants.SQL_EXPRESS_CONN; //SQL Express local
-        static string _dbEnvironment = Constants.SQL_DEV_SERVER_CONN; //SQL Server (Desarrollo)
-        //static string _dbEnvironment = Constants.SQL_PROD_SERVER_CONN; //SQL Server (Producción)
+        //static string _dbEnvironment = Constants.SQL_DEV_SERVER_CONN; //SQL Server (Desarrollo)
+        static string _dbEnvironment = Constants.SQL_CN_SERVER_CONN; //SQL Server China (Producción)
 
         static EFRole _roleEF = new EFRole();
         static EFUser _userEF = new EFUser();
@@ -88,6 +89,7 @@ namespace HKSupply.General
         static EFLayout _layoutEF = new EFLayout();
         static EFItemBom _itemBomEF = new EFItemBom();
         static EFBomBreakdown _bomBreakdownEF = new EFBomBreakdown();
+        static EFModel _modelEF = new EFModel();
 
         static User _loggedUser;
         static IEnumerable<FunctionalityRole> _functionalitiesRoles;
@@ -458,6 +460,17 @@ namespace HKSupply.General
                     return new EFBomBreakdown();
                 else
                     return _bomBreakdownEF;
+            }
+        }
+
+        public static IModel ModelService
+        {
+            get
+            {
+                if (_modelEF == null)
+                    return new EFModel();
+                else
+                    return _modelEF;
             }
         }
 

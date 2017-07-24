@@ -39,6 +39,7 @@ namespace HKSupply.Forms.Reports
         List<ItemEy> _itemBcnList;
         List<Model> _modelList;
         List<Supplier> _suppliersList;
+        List<StatusCial> _statusCialList;
 
         DataTable _dtGrid = new DataTable();
 
@@ -56,6 +57,7 @@ namespace HKSupply.Forms.Reports
                 SetUpSlueSupplier();
                 SetUpSlueModel();
                 SetUpSlueItemEy();
+                SetUpSlueStatusCial();
                 SetupGrdList();
 
             }
@@ -115,13 +117,8 @@ namespace HKSupply.Forms.Reports
             {
                 _suppliersList = GlobalSetting.SupplierService.GetSuppliers();
                 _itemBcnList = GlobalSetting.ItemEyService.GetItems();
-
-                //TODO
-                using (var db = new HKSupplyContext())
-                {
-                    _modelList = db.Models.ToList();
-                }
-
+                _statusCialList = GlobalSetting.StatusCialService.GetStatusCial();
+                _modelList = GlobalSetting.ModelService.GetModels();
             }
             catch
             {
@@ -133,13 +130,13 @@ namespace HKSupply.Forms.Reports
         {
             try
             {
-                //TODO
                 StringBuilder query = new StringBuilder();
                 query.Append($"EXEC GET_BOM_REPORT ");
                 query.Append($"'{Constants.ITEMS_PHOTOSWEB_PATH + Constants.ITEM_PHOTOWEB_FOLDER}',");
                 query.Append($"'{(string)slueModel.EditValue}',");
                 query.Append($"'{(string)slueItem.EditValue}',");
-                query.Append($"'{(string)slueSupplier.EditValue}'");
+                query.Append($"'{(string)slueSupplier.EditValue}',");
+                query.Append($"{(slueStatusCial.EditValue ?? -100).ToString()}"); //El -1 y el 0 son estados posibles
 
                 using (var db = new HKSupplyContext())
                 {
@@ -235,6 +232,20 @@ namespace HKSupply.Forms.Reports
             }
         }
 
+        private void SetUpSlueStatusCial()
+        {
+            try
+            {
+                slueStatusCial.Properties.DataSource = _statusCialList;
+                slueStatusCial.Properties.ValueMember = nameof(StatusCial.IdStatusCial);
+                slueStatusCial.Properties.DisplayMember = nameof(StatusCial.IdStatusCial);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         private void SetupGrdList()
         {
             try
@@ -282,6 +293,7 @@ namespace HKSupply.Forms.Reports
                 m_Parametros.Add("@pIdModel", (string)slueModel.EditValue);
                 m_Parametros.Add("@pIdItem", (string)slueItem.EditValue);
                 m_Parametros.Add("@pIdSupplier", (string)slueSupplier.EditValue);
+                m_Parametros.Add("@pIdStatusCial", (slueStatusCial.EditValue ?? -100).ToString());
                 crReport.Parametros = m_Parametros;
                 crReport.ReportFileName = $"{Application.StartupPath}\\Reports\\Rpt\\BOM.rpt";
                 //The easiest way to get the default printer is to create a new PrinterSettings object. It starts with all default values.

@@ -104,8 +104,8 @@ namespace HKSupply.Forms.Master
         List<ItemDoc> _itemDocsList;
         List<ItemDoc> _itemLastDocsList;
 
-        string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "lueIdFamilyHK", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };
-        string[] _editingCols = { nameof(ItemEy.IdDefaultSupplier), nameof(ItemEy.IdUserAttri1), nameof(ItemEy.IdUserAttri2), nameof(ItemEy.IdUserAttri3), nameof(ItemEy.IdStatusProd), nameof(ItemEy.IdFamilyHK) };
+        string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "lueIdFamilyHK", "txtIdItemHK", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };
+        string[] _editingCols = { nameof(ItemEy.IdDefaultSupplier), nameof(ItemEy.IdUserAttri1), nameof(ItemEy.IdUserAttri2), nameof(ItemEy.IdUserAttri3), nameof(ItemEy.IdStatusProd), nameof(ItemEy.IdFamilyHK), nameof(ItemEy.IdItemHK) };
 
         Dictionary<String, Bitmap> photosCache = new Dictionary<string, Bitmap>();
 
@@ -546,21 +546,19 @@ namespace HKSupply.Forms.Master
                     if (hi.Column.FieldName != PHOTO_COLUMN)
                         return;
 
-                    string url = (view.GetRowCellValue(hi.RowHandle, nameof(ItemEy.PhotoUrl)) ?? string.Empty).ToString();
+                    string photo = (view.GetRowCellValue(hi.RowHandle, nameof(ItemEy.PhotoUrl)) ?? string.Empty).ToString();
 
-                    if (string.IsNullOrEmpty(url)) return;
+                    if (string.IsNullOrEmpty(photo)) return;
 
-                    //TODO: quitar la conversión de url a ruta física
-                    url = url.Replace("http://www.files-eb.com/images/products", Constants.ITEMS_PHOTOSWEB_PATH);
-                    url = url.Replace("/", "\\");
+                    photo = $"{Constants.ITEMS_PHOTOSWEB_PATH}{Constants.ITEM_PHOTOWEB_FOLDER}{photo}";
 
                     //AddToPhotoCacheByUrl(url);
-                    AddToPhotoCachebyPath(url);
+                    AddToPhotoCachebyPath(photo);
 
                     Bitmap im = null;
-                    if (photosCache.ContainsKey(url.ToString()))
+                    if (photosCache.ContainsKey(photo.ToString()))
                     {
-                        im = photosCache[url.ToString()];
+                        im = photosCache[photo.ToString()];
                     }
                     ToolTipItem item1 = new ToolTipItem() { Image = im };
                     sTooltip1.Items.Add(item1);
@@ -603,23 +601,20 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                //DataRow dr = (e.Row as DataRowView).Row;
-                //string url = dr[eItemColumns.PhotoUrl.ToString()].ToString();
                 ItemEy itemTemp = e.Row as ItemEy;
-                //string url = (e.Row as ItemEy).PhotoUrl;
-                string url = itemTemp.PhotoUrl;
-                if (string.IsNullOrEmpty(url)) return;
+                string photo = itemTemp.PhotoUrl;
+                if (string.IsNullOrEmpty(photo)) return;
 
-                //TODO: Quitar esta conversión de url a path local
-                url = url.Replace("http://www.files-eb.com/images/products", Constants.ITEMS_PHOTOSWEB_PATH);
-                url = url.Replace("/", "\\");
+                photo = $"{Constants.ITEMS_PHOTOSWEB_PATH}{Constants.ITEM_PHOTOWEB_FOLDER}{itemTemp.PhotoUrl}";
 
+                AddToPhotoCachebyPath(photo);
 
-                if (photosCache.ContainsKey(url))
+                if (photosCache.ContainsKey(photo))
                 {
-                    e.Value = photosCache[url];
+                    e.Value = photosCache[photo];
                     return;
                 }
+
                 //Para recuperarla de una url, ahora están en local, pero dejo el código por si cambia en un futuro
                 //var request = System.Net.WebRequest.Create(url);
                 //try
@@ -640,15 +635,6 @@ namespace HKSupply.Forms.Master
                 //        throw;
                 //    }
                 //}
-
-                //lalala
-                if (File.Exists(url))
-                {
-                    e.Value = Bitmap.FromFile(url);
-                    photosCache.Add(url, (Bitmap)e.Value);
-                }
-
-
             }
             catch (Exception ex)
             {
@@ -1385,19 +1371,16 @@ namespace HKSupply.Forms.Master
 
                 if (string.IsNullOrEmpty(_itemUpdate.PhotoUrl)) return;
 
+                string fullPath = $"{Constants.ITEMS_PHOTOSWEB_PATH}{Constants.ITEM_PHOTOWEB_FOLDER}{_itemUpdate.PhotoUrl}";
+
                 //Cargamos la imagen de la cache.
                 //AddToPhotoCacheByUrl(_itemUpdate.PhotoUrl);
-                AddToPhotoCachebyPath(_itemUpdate.PhotoUrl);
+                AddToPhotoCachebyPath(fullPath);
                 Bitmap im = null;
                 //TODO: descomentar esto y quitar la parte de la conversión de url al path físico
-                //if (photosCache.ContainsKey(_itemUpdate.PhotoUrl))
-                //{
-                //    im = photosCache[_itemUpdate.PhotoUrl];
-                //}
-
-                if (photosCache.ContainsKey(_itemUpdate.PhotoUrl.Replace("http://www.files-eb.com/images/products", Constants.ITEMS_PHOTOSWEB_PATH).Replace("/", "\\")))
+                if (photosCache.ContainsKey(fullPath))
                 {
-                    im = photosCache[_itemUpdate.PhotoUrl.Replace("http://www.files-eb.com/images/products", Constants.ITEMS_PHOTOSWEB_PATH).Replace("/", "\\")];
+                    im = photosCache[fullPath];
                 }
 
                 peItemImage.Image = im;
@@ -1896,6 +1879,11 @@ namespace HKSupply.Forms.Master
         {
             try
             {
+                string rateDateStr = null;
+                DateTime rateDate;
+                Dictionary<string, decimal> ReferenceRatesDic = new Dictionary<string, decimal>();
+
+                //----------------------------------------------------------------------------------------------
                 string xmlString = "<?xml version='1.0' encoding='UTF-8'?>";
                 xmlString += "<gesmesEnvelope>";
                 xmlString += "  <gesmessubject>Reference rates</gesmessubject>";
@@ -1932,16 +1920,31 @@ namespace HKSupply.Forms.Master
                             string name3 = xnode3.Name;
                             string value3 = xnode3.InnerText;
                             var a = xnode3.Attributes;
+                            rateDateStr = a?["time"]?.Value;
+
 
                             foreach (System.Xml.XmlNode xnode4 in xnode3)
                             {
                                 string name4 = xnode4.Name;
                                 string value4 = xnode4.InnerText;
                                 var aa = xnode4.Attributes;
+
+                                if (xnode4.Attributes?.Count == 2)
+                                {
+                                    var currency = xnode4.Attributes["currency"].Value;
+                                    var rate = xnode4.Attributes["rate"].Value;
+                                    ReferenceRatesDic.Add(currency, Convert.ToDecimal(rate.Replace(".", ",")));
+                                }
                             }
                         }
                     }
                 }
+
+                if (rateDateStr != null)
+                {
+                    rateDate = DateTime.ParseExact(rateDateStr, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+                }
+                
 
                 //------------------------------------------------------------------------------
                 System.Xml.Linq.XElement xml2 = System.Xml.Linq.XElement.Load(xmlUrl);

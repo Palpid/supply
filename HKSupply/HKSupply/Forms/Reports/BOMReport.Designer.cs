@@ -43,6 +43,9 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.slueSupplier = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.lblStatusCial = new DevExpress.XtraEditors.LabelControl();
+            this.slueStatusCial = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
             this.xtcGeneral.SuspendLayout();
@@ -55,6 +58,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.slueSupplier.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueStatusCial.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -77,13 +82,15 @@
             this.xtcGeneral.Location = new System.Drawing.Point(0, 79);
             this.xtcGeneral.Name = "xtcGeneral";
             this.xtcGeneral.SelectedTabPage = this.xtpList;
-            this.xtcGeneral.Size = new System.Drawing.Size(1338, 489);
+            this.xtcGeneral.Size = new System.Drawing.Size(1338, 520);
             this.xtcGeneral.TabIndex = 2;
             this.xtcGeneral.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpList});
             // 
             // xtpList
             // 
+            this.xtpList.Controls.Add(this.lblStatusCial);
+            this.xtpList.Controls.Add(this.slueStatusCial);
             this.xtpList.Controls.Add(this.sbShowReport);
             this.xtpList.Controls.Add(this.sbFilter);
             this.xtpList.Controls.Add(this.xgrdList);
@@ -94,12 +101,12 @@
             this.xtpList.Controls.Add(this.slueItem);
             this.xtpList.Controls.Add(this.slueSupplier);
             this.xtpList.Name = "xtpList";
-            this.xtpList.Size = new System.Drawing.Size(1332, 461);
+            this.xtpList.Size = new System.Drawing.Size(1332, 492);
             this.xtpList.Text = "List";
             // 
             // sbShowReport
             // 
-            this.sbShowReport.Location = new System.Drawing.Point(1051, 7);
+            this.sbShowReport.Location = new System.Drawing.Point(859, 7);
             this.sbShowReport.Name = "sbShowReport";
             this.sbShowReport.Size = new System.Drawing.Size(73, 26);
             this.sbShowReport.TabIndex = 16;
@@ -108,7 +115,7 @@
             // 
             // sbFilter
             // 
-            this.sbFilter.Location = new System.Drawing.Point(987, 7);
+            this.sbFilter.Location = new System.Drawing.Point(795, 7);
             this.sbFilter.Name = "sbFilter";
             this.sbFilter.Size = new System.Drawing.Size(58, 26);
             this.sbFilter.TabIndex = 15;
@@ -124,7 +131,7 @@
             this.xgrdList.MainView = this.gridViewList;
             this.xgrdList.MenuManager = this.ribbonControl;
             this.xgrdList.Name = "xgrdList";
-            this.xgrdList.Size = new System.Drawing.Size(1314, 411);
+            this.xgrdList.Size = new System.Drawing.Size(1314, 442);
             this.xgrdList.TabIndex = 14;
             this.xgrdList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewList});
@@ -136,7 +143,7 @@
             // 
             // lblModel
             // 
-            this.lblModel.Location = new System.Drawing.Point(344, 13);
+            this.lblModel.Location = new System.Drawing.Point(232, 13);
             this.lblModel.Name = "lblModel";
             this.lblModel.Size = new System.Drawing.Size(28, 13);
             this.lblModel.TabIndex = 13;
@@ -144,13 +151,13 @@
             // 
             // slueModel
             // 
-            this.slueModel.Location = new System.Drawing.Point(386, 10);
+            this.slueModel.Location = new System.Drawing.Point(274, 10);
             this.slueModel.MenuManager = this.ribbonControl;
             this.slueModel.Name = "slueModel";
             this.slueModel.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.slueModel.Properties.View = this.gridView2;
-            this.slueModel.Size = new System.Drawing.Size(262, 20);
+            this.slueModel.Size = new System.Drawing.Size(172, 20);
             this.slueModel.TabIndex = 11;
             // 
             // gridView2
@@ -162,7 +169,7 @@
             // 
             // lblItemBcn
             // 
-            this.lblItemBcn.Location = new System.Drawing.Point(677, 13);
+            this.lblItemBcn.Location = new System.Drawing.Point(461, 13);
             this.lblItemBcn.Name = "lblItemBcn";
             this.lblItemBcn.Size = new System.Drawing.Size(22, 13);
             this.lblItemBcn.TabIndex = 9;
@@ -178,13 +185,13 @@
             // 
             // slueItem
             // 
-            this.slueItem.Location = new System.Drawing.Point(719, 10);
+            this.slueItem.Location = new System.Drawing.Point(503, 10);
             this.slueItem.MenuManager = this.ribbonControl;
             this.slueItem.Name = "slueItem";
             this.slueItem.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.slueItem.Properties.View = this.gridView1;
-            this.slueItem.Size = new System.Drawing.Size(262, 20);
+            this.slueItem.Size = new System.Drawing.Size(119, 20);
             this.slueItem.TabIndex = 7;
             // 
             // gridView1
@@ -202,7 +209,7 @@
             this.slueSupplier.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.slueSupplier.Properties.View = this.searchLookUpEdit1View;
-            this.slueSupplier.Size = new System.Drawing.Size(262, 20);
+            this.slueSupplier.Size = new System.Drawing.Size(161, 20);
             this.slueSupplier.TabIndex = 6;
             // 
             // searchLookUpEdit1View
@@ -211,6 +218,32 @@
             this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
             this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // lblStatusCial
+            // 
+            this.lblStatusCial.Location = new System.Drawing.Point(628, 13);
+            this.lblStatusCial.Name = "lblStatusCial";
+            this.lblStatusCial.Size = new System.Drawing.Size(31, 13);
+            this.lblStatusCial.TabIndex = 18;
+            this.lblStatusCial.Text = "Status";
+            // 
+            // slueStatusCial
+            // 
+            this.slueStatusCial.Location = new System.Drawing.Point(670, 10);
+            this.slueStatusCial.MenuManager = this.ribbonControl;
+            this.slueStatusCial.Name = "slueStatusCial";
+            this.slueStatusCial.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.slueStatusCial.Properties.View = this.gridView3;
+            this.slueStatusCial.Size = new System.Drawing.Size(119, 20);
+            this.slueStatusCial.TabIndex = 17;
+            // 
+            // gridView3
+            // 
+            this.gridView3.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView3.OptionsView.ShowGroupPanel = false;
             // 
             // BOMReport
             // 
@@ -222,8 +255,8 @@
             this.Text = "BOM Report";
             this.Load += new System.EventHandler(this.BOMReport_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
-            this.Controls.SetChildIndex(this.ribbonStatusBar, 0);
             this.Controls.SetChildIndex(this.xtcGeneral, 0);
+            this.Controls.SetChildIndex(this.ribbonStatusBar, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).EndInit();
             this.xtcGeneral.ResumeLayout(false);
@@ -237,6 +270,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.slueSupplier.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueStatusCial.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,5 +294,8 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewList;
         private DevExpress.XtraEditors.SimpleButton sbFilter;
         private DevExpress.XtraEditors.SimpleButton sbShowReport;
+        private DevExpress.XtraEditors.LabelControl lblStatusCial;
+        private DevExpress.XtraEditors.SearchLookUpEdit slueStatusCial;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
     }
 }

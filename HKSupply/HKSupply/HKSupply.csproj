@@ -44,7 +44,7 @@
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Images.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.Pdf.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Pdf.v16.2.Drawing, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -220,6 +220,12 @@
     </Compile>
     <Compile Include="Forms\Master\IncotermsManagement.Designer.cs">
       <DependentUpon>IncotermsManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\ItemDocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\ItemDocs.Designer.cs">
+      <DependentUpon>ItemDocs.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Master\ItemManagementEY.cs">
       <SubType>Form</SubType>
@@ -709,6 +715,7 @@
     <Compile Include="Services\Implementations\EFLayout.cs" />
     <Compile Include="Services\Implementations\EFMaterial.cs" />
     <Compile Include="Services\Implementations\EFMatType.cs" />
+    <Compile Include="Services\Implementations\EFModel.cs" />
     <Compile Include="Services\Implementations\EFPaymentTerms.cs" />
     <Compile Include="Services\Implementations\EFPrototype.cs" />
     <Compile Include="Services\Implementations\EFPrototypeDoc.cs" />
@@ -741,6 +748,7 @@
     <Compile Include="Services\Interfaces\ILayout.cs" />
     <Compile Include="Services\Interfaces\IMaterial.cs" />
     <Compile Include="Services\Interfaces\IMatType.cs" />
+    <Compile Include="Services\Interfaces\IModel.cs" />
     <Compile Include="Services\Interfaces\IPaymentTerms.cs" />
     <Compile Include="Services\Interfaces\IPrototype.cs" />
     <Compile Include="Services\Interfaces\IPrototypeDoc.cs" />
@@ -806,6 +814,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\IncotermsManagement.resx">
       <DependentUpon>IncotermsManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\ItemDocs.resx">
+      <DependentUpon>ItemDocs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\ItemManagementEY.resx">
       <DependentUpon>ItemManagementEY.cs</DependentUpon>
