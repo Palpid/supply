@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HKSupply.Models
 {
-    [Table("PAYMENT_TERMS")]
+    [Table("DELIVERY_TERMS")]
     public class DeliveryTerm
     {
         [Column("ID_DELIVERY_TERM", TypeName = "NVARCHAR"), Key, StringLength(5)]
@@ -20,9 +20,9 @@ namespace HKSupply.Models
             if (obj == null || obj == DBNull.Value)
                 return false;
 
-            PaymentTerms paymentTerms = (PaymentTerms)obj;
+            DeliveryTerm deliveryTerm = (DeliveryTerm)obj;
 
-            return (IdDeliveryTerm == paymentTerms.IdPaymentTerms);
+            return (IdDeliveryTerm == deliveryTerm.IdDeliveryTerm);
         }
 
         public override int GetHashCode()

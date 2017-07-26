@@ -48,5 +48,16 @@ namespace HKSupply.General
         public const string HF_USER_ATTR_01 = "HFATTR01";
         public const string HF_USER_ATTR_02 = "HFATTR02";
         public const string HF_USER_ATTR_03 = "HFATTR03";
+
+        //** SUPPLY STATUS **//
+        public const string SUPPLY_STATUS_OPEN = "OPN";
+        public const string SUPPLY_STATUS_CLOSE = "CLS";
+        public const string SUPPLY_STATUS_CANCEL = "CNL";
+
+        //** SUPPLY DOC TYPES **//
+        public const string SUPPLY_DOCTYPE_PO = "PO";
+        public const string SUPPLY_DOCTYPE_SO = "SO";
+        public const string SUPPLY_DOCTYPE_INV = "INVOICE";
+
     }
 }

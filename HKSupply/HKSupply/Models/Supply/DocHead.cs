@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -22,8 +23,8 @@ namespace HKSupply.Models.Supply
         [Column("DOC_DATE")]
         public DateTime DocDate { get; set; }
 
-        [Column("ID_SUPPLY_STATUS")]
-        public int IdSupplyStatus { get; set; }
+        [Column("ID_SUPPLY_STATUS", TypeName = "NVARCHAR"), StringLength(100)]
+        public string IdSupplyStatus { get; set; }
 
         [Column("ID_SUPPLIER", TypeName = "NVARCHAR"), StringLength(100)]
         public string IdSupplier { get; set; }
@@ -40,9 +41,7 @@ namespace HKSupply.Models.Supply
         [Column("ID_CURRENCY", TypeName = "NVARCHAR"), StringLength(4)]
         public string IdCurrency { get; set; }
 
-        [Column("ITEM_COUNT")]
-        public int ItemCount { get; set; }
-
+        public virtual List<DocLine> Lines { get; set; }
 
         #region Foreign keys
 
@@ -89,8 +88,7 @@ namespace HKSupply.Models.Supply
                 IdCustomer == docHead.IdCustomer &&
                 IdDeliveryTerm == docHead.IdDeliveryTerm &&
                 IdPaymentTerms == docHead.IdPaymentTerms &&
-                IdCurrency == docHead.IdCurrency &&
-                ItemCount == docHead.ItemCount               
+                IdCurrency == docHead.IdCurrency             
                 );
 
             return res;

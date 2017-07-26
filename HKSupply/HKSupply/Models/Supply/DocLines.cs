@@ -9,7 +9,8 @@ namespace HKSupply.Models.Supply
         [Column("ID_DOC", TypeName = "NVARCHAR", Order = 0), Key, StringLength(50)]
         public string IdDoc { get; set; }
 
-        public int NumLin { get; set; } //TODO: identity!
+        [Column("NUM_LIN", Order = 1), Key]
+        public int NumLin { get; set; }
 
         [Column("ID_ITEM_BCN", TypeName = "NVARCHAR"), StringLength(50), Required]
         public string IdItemBcn { get; set; }
@@ -30,23 +31,29 @@ namespace HKSupply.Models.Supply
         [Column("BATCH", TypeName = "NVARCHAR"), StringLength(50)]
         public string Batch { get; set; }
 
-        [Column("QUANTITY", TypeName = "REAL")]
-        public short Quantity { get; set; }
+        [Column("QUANTITY")]
+        public int Quantity { get; set; }
 
-        [Column("QUANTITY_ORIGINAL", TypeName = "REAL")]
-        public short QuantityOriginal { get; set; }
+        [Column("QUANTITY_ORIGINAL")]
+        public int QuantityOriginal { get; set; }
 
-        [Column("DELIVERED_QUANTITY", TypeName = "REAL")]
-        public short DeliveredQuantity { get; set; }
+        [Column("DELIVERED_QUANTITY")]
+        public int DeliveredQuantity { get; set; }
 
-        [Column("REMARKS", TypeName = "NVARCHAR"), StringLength(5000)]
+        [Column("REMARKS", TypeName = "NVARCHAR"), StringLength(4000)]
         public string Remarks { get; set; }
 
-        [Column("UNIT_PRICE", TypeName = "REAL")]
-        public short UnitPrice { get; set; }
+        [Column("UNIT_PRICE", TypeName = "NUMERIC")]
+        public decimal UnitPrice { get; set; }
 
-        [Column("UNIT_PRICE_BASE_CURRENCY", TypeName = "REAL")]
-        public short UnitPriceBaseCurrency { get; set; }
+        [Column("UNIT_PRICE_BASE_CURRENCY", TypeName = "NUMERIC")]
+        public decimal UnitPriceBaseCurrency { get; set; }
+
+        [NotMapped]
+        public decimal TotalAmount { get { return Quantity * UnitPrice; } }
+
+        [NotMapped]
+        public LineStates LineState { get; set; }
 
         #region Foreign Keys
 
@@ -56,6 +63,15 @@ namespace HKSupply.Models.Supply
         [ForeignKey("IdSupplyStatus")]
         public SupplyStatus SupplyStatus { get; set; }
 
+        #endregion
+
+        #region Enums
+        public enum LineStates
+        {
+            New,
+            Edited,
+            Loaded
+        }
         #endregion
 
         #region #Equals
@@ -104,6 +120,8 @@ namespace HKSupply.Models.Supply
             return hashCode;
         }
         #endregion
+
+
 
     }
 }

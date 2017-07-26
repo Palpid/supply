@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using HKSupply.Models;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using HKSupply.Models.Supply;
 
 namespace HKSupply.DB
 {
@@ -89,6 +90,13 @@ namespace HKSupply.DB
 
         public DbSet<SupplierFactoryCoeff> SupplierFactoryCoeff { get; set; }
 
+        public DbSet<SupplyStatus> SupplyStatus { get; set; }
+        public DbSet<DeliveryTerm> DeliveryTerms { get; set; }
+        public DbSet<SupplyDocType> SupplyDocTypes { get; set; }
+
+        public DbSet<DocHead> DocsHead { get; set; }
+        public DbSet<DocLine> DocsLines { get; set; }
+
         //public HKSupplyContext()
         //    : base("name=SqlExpressConn")
         //{
@@ -162,6 +170,9 @@ namespace HKSupply.DB
             modelBuilder.Entity<SupplierFactoryCoeff>().Property(x => x.Coefficient2).HasPrecision(19, 6);
             modelBuilder.Entity<SupplierFactoryCoeff>().Property(x => x.Scrap).HasPrecision(19, 6);
             modelBuilder.Entity<SupplierFactoryCoeff>().Property(x => x.Density).HasPrecision(19, 6);
+
+            modelBuilder.Entity<DocLine>().Property(x => x.UnitPrice).HasPrecision(19,6);
+            modelBuilder.Entity<DocLine>().Property(x => x.UnitPriceBaseCurrency).HasPrecision(19, 6);
 
             base.OnModelCreating(modelBuilder);
         }

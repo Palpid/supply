@@ -49,7 +49,9 @@ namespace HKSupply.General
     /// Controlador para acceso a datos para Item BOM
     /// Controlador para acceso a datos para Bom Breakdown
     /// Controlador para acceso a datos para Model
-    /// Controlador para acceso a daros para SupplierFactoryCoeff
+    /// Controlador para acceso a datos para SupplierFactoryCoeff
+    /// Controlador para acceso a datos para SupplyStatus
+    /// Controlador para acceso a datos para Delivery Terms
     /// </remarks>
     public sealed class GlobalSetting
     {
@@ -83,7 +85,7 @@ namespace HKSupply.General
         static EFMaterial _materialEF = new EFMaterial();
         static EFMatType _matTypeEF = new EFMatType();
         static EFHwType _hwTypeEF = new EFHwType();
-        static EFFamilyHK _familyHKEF = new EFFamilyHK();
+        static EFFamilyHK _familyHKEF = new EFFamilyHK(); 
         static EFDocType _docTypeEF = new EFDocType();
         static EFItemDoc _itemDocEF = new EFItemDoc();
         static EFPrototype _prototypeEF = new EFPrototype();
@@ -93,7 +95,8 @@ namespace HKSupply.General
         static EFBomBreakdown _bomBreakdownEF = new EFBomBreakdown();
         static EFModel _modelEF = new EFModel();
         static EFSupplierFactoryCoeff _supplierFactoryCoeffEF = new EFSupplierFactoryCoeff();
-
+        static EFSupplyDocs _supplyDocsEF = new EFSupplyDocs();
+        static EFDeliveryTerms _deliveryTermsEF = new EFDeliveryTerms();
         static User _loggedUser;
         static IEnumerable<FunctionalityRole> _functionalitiesRoles;
 
@@ -485,6 +488,28 @@ namespace HKSupply.General
                     return new EFModel();
                 else
                     return _modelEF;
+            }
+        }
+
+        public static ISupplyDocs SupplyDocsService
+        {
+            get
+            {
+                if (_supplyDocsEF == null)
+                    _supplyDocsEF =  new EFSupplyDocs();
+
+                return _supplyDocsEF;
+            }
+        }
+
+        public static IDeliveryTerms DeliveryTermsService
+        {
+            get
+            {
+                if (_deliveryTermsEF == null)
+                    _deliveryTermsEF =  new EFDeliveryTerms();
+
+                return _deliveryTermsEF;
             }
         }
 

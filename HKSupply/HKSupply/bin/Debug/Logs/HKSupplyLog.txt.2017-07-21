@@ -1,0 +1,57 @@
+﻿2017-07-21 09:44:49,253 ERROR [1] HKSupply.Services.Implementations.EFSupplierFactoryCoeff.GetAllSupplierFactoryCoeff - Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: The class 'HKSupply.Models.SupplierFactoryCoeff' has no parameterless constructor.
+   at System.Data.Entity.Core.Objects.DelegateFactory.GetConstructorForType(Type type)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Emit_ConstructEntity(EntityType oSpaceType, IEnumerable`1 propertyBindings, Expression entityKeyReader, Expression entitySetReader, TranslatorArg arg, EntityProxyTypeInfo proxyTypeInfo)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(EntityColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.EntityColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.ProcessCollectionColumnMap(CollectionColumnMap columnMap, TranslatorArg arg, ColumnMap discriminatorColumnMap, Object discriminatorValue)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(SimpleCollectionColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.SimpleCollectionColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslateColumnMap[T](ColumnMap columnMap, MetadataWorkspace workspace, SpanIndex spanIndex, MergeOption mergeOption, Boolean streaming, Boolean valueLayer)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslateColumnMap(Translator translator, Type elementType, ColumnMap columnMap, MetadataWorkspace workspace, SpanIndex spanIndex, MergeOption mergeOption, Boolean streaming, Boolean valueLayer)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at HKSupply.Services.Implementations.EFSupplierFactoryCoeff.GetAllSupplierFactoryCoeff() in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFSupplierFactoryCoeff.cs:line 27
+2017-07-21 09:46:02,476 ERROR [1] HKSupply.Services.Implementations.EFSupplierFactoryCoeff.GetAllSupplierFactoryCoeff - Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: The class 'HKSupply.Models.SupplierFactoryCoeff' has no parameterless constructor.
+   at System.Data.Entity.Core.Objects.DelegateFactory.GetConstructorForType(Type type)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Emit_ConstructEntity(EntityType oSpaceType, IEnumerable`1 propertyBindings, Expression entityKeyReader, Expression entitySetReader, TranslatorArg arg, EntityProxyTypeInfo proxyTypeInfo)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(EntityColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.EntityColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.ProcessCollectionColumnMap(CollectionColumnMap columnMap, TranslatorArg arg, ColumnMap discriminatorColumnMap, Object discriminatorValue)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(SimpleCollectionColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.SimpleCollectionColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslateColumnMap[T](ColumnMap columnMap, MetadataWorkspace workspace, SpanIndex spanIndex, MergeOption mergeOption, Boolean streaming, Boolean valueLayer)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslateColumnMap(Translator translator, Type elementType, ColumnMap columnMap, MetadataWorkspace workspace, SpanIndex spanIndex, MergeOption mergeOption, Boolean streaming, Boolean valueLayer)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at HKSupply.Services.Implementations.EFSupplierFactoryCoeff.GetAllSupplierFactoryCoeff() in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFSupplierFactoryCoeff.cs:line 27
+2017-07-21 10:40:33,482 ERROR [1] HKSupply.Services.Implementations.EFSupplierFactoryCoeff.NewSupplierFactoryCoeff - Supplier/Factory Already Exist
+System.Exception: Supplier/Factory Already Exist
+   at HKSupply.Services.Implementations.EFSupplierFactoryCoeff.NewSupplierFactoryCoeff(SupplierFactoryCoeff newSupplierFactoryCoeff)

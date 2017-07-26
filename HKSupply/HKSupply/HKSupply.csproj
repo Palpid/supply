@@ -335,6 +335,12 @@
     <Compile Include="Forms\RibbonFormBase.Designer.cs">
       <DependentUpon>RibbonFormBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Supply\DialogForms\SelectDocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\DialogForms\SelectDocs.Designer.cs">
+      <DependentUpon>SelectDocs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Supply\PurchaseOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -651,6 +657,22 @@
     <Compile Include="Migrations\201707201514147_supplierFactoryCoeff_20170720_01.Designer.cs">
       <DependentUpon>201707201514147_supplierFactoryCoeff_20170720_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707241357248_SupplyStatus_20170724_01.cs" />
+    <Compile Include="Migrations\201707241357248_SupplyStatus_20170724_01.Designer.cs">
+      <DependentUpon>201707241357248_SupplyStatus_20170724_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707250844531_DeliveryTerms_20170725_01.cs" />
+    <Compile Include="Migrations\201707250844531_DeliveryTerms_20170725_01.Designer.cs">
+      <DependentUpon>201707250844531_DeliveryTerms_20170725_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707250932263_SupplyDocType_20170725_01.cs" />
+    <Compile Include="Migrations\201707250932263_SupplyDocType_20170725_01.Designer.cs">
+      <DependentUpon>201707250932263_SupplyDocType_20170725_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707250953035_SupplyDocs_20170725_01.cs" />
+    <Compile Include="Migrations\201707250953035_SupplyDocs_20170725_01.Designer.cs">
+      <DependentUpon>201707250953035_SupplyDocs_20170725_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BomBreakdown.cs" />
     <Compile Include="Models\Currency.cs" />
@@ -730,6 +752,7 @@
     <Compile Include="Services\Implementations\EFCurrency.cs" />
     <Compile Include="Services\Implementations\EFCustomer.cs" />
     <Compile Include="Services\Implementations\EFCustomerPriceList.cs" />
+    <Compile Include="Services\Implementations\EFDeliveryTerms.cs" />
     <Compile Include="Services\Implementations\EFDocType.cs" />
     <Compile Include="Services\Implementations\EFEchangeRate.cs" />
     <Compile Include="Services\Implementations\EFFamilyHK.cs" />
@@ -758,12 +781,14 @@
     <Compile Include="Services\Implementations\EFSupplier.cs" />
     <Compile Include="Services\Implementations\EFSupplierFactoryCoeff.cs" />
     <Compile Include="Services\Implementations\EFSupplierPriceList.cs" />
+    <Compile Include="Services\Implementations\EFSupplyDocs.cs" />
     <Compile Include="Services\Implementations\EFUser.cs" />
     <Compile Include="Services\Implementations\EFUserAttrDescription.cs" />
     <Compile Include="Services\Interfaces\IBomBreakdown.cs" />
     <Compile Include="Services\Interfaces\ICurrency.cs" />
     <Compile Include="Services\Interfaces\ICustomer.cs" />
     <Compile Include="Services\Interfaces\ICustomerPriceList.cs" />
+    <Compile Include="Services\Interfaces\IDeliveryTerms.cs" />
     <Compile Include="Services\Interfaces\IDocType.cs" />
     <Compile Include="Services\Interfaces\IEchangeRate.cs" />
     <Compile Include="Services\Interfaces\IFamilyHK.cs" />
@@ -792,6 +817,7 @@
     <Compile Include="Services\Interfaces\ISupplier.cs" />
     <Compile Include="Services\Interfaces\ISupplierFactoryCoeff.cs" />
     <Compile Include="Services\Interfaces\ISupplierPriceList.cs" />
+    <Compile Include="Services\Interfaces\ISupplyDocs.cs" />
     <Compile Include="Services\Interfaces\IUser.cs" />
     <Compile Include="Services\Interfaces\IUserAttrDescription.cs" />
     <Compile Include="Styles\AppStyles.cs" />
@@ -905,6 +931,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RibbonFormBase.resx">
       <DependentUpon>RibbonFormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\DialogForms\SelectDocs.resx">
+      <DependentUpon>SelectDocs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\PurchaseOrder.resx">
       <DependentUpon>PurchaseOrder.cs</DependentUpon>
@@ -1133,6 +1162,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707201514147_supplierFactoryCoeff_20170720_01.resx">
       <DependentUpon>201707201514147_supplierFactoryCoeff_20170720_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707241357248_SupplyStatus_20170724_01.resx">
+      <DependentUpon>201707241357248_SupplyStatus_20170724_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707250844531_DeliveryTerms_20170725_01.resx">
+      <DependentUpon>201707250844531_DeliveryTerms_20170725_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707250932263_SupplyDocType_20170725_01.resx">
+      <DependentUpon>201707250932263_SupplyDocType_20170725_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707250953035_SupplyDocs_20170725_01.resx">
+      <DependentUpon>201707250953035_SupplyDocs_20170725_01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -35,7 +35,7 @@
             this.xgrdLines = new DevExpress.XtraGrid.GridControl();
             this.gridViewLines = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtpTerms = new DevExpress.XtraTab.XtraTabPage();
-            this.slueTermPayment = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.sluePaymentTerm = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.lblTxtInvoiceTo = new DevExpress.XtraEditors.LabelControl();
             this.lblTxtShipTo = new DevExpress.XtraEditors.LabelControl();
@@ -49,9 +49,10 @@
             this.lblAddress = new DevExpress.XtraEditors.LabelControl();
             this.lblCompany = new DevExpress.XtraEditors.LabelControl();
             this.gbHeader = new System.Windows.Forms.GroupBox();
+            this.sbSearch = new DevExpress.XtraEditors.SimpleButton();
             this.slueCurrency = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.slueTermsDelivery = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.slueDeliveryTerms = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.slueSupplier = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -68,6 +69,7 @@
             this.lblDocDate = new DevExpress.XtraEditors.LabelControl();
             this.lblPONumber = new DevExpress.XtraEditors.LabelControl();
             this.txtPONumber = new DevExpress.XtraEditors.TextEdit();
+            this.sbOrder = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
             this.xtcGeneral.SuspendLayout();
@@ -78,12 +80,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.xgrdLines)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLines)).BeginInit();
             this.xtpTerms.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.slueTermPayment.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sluePaymentTerm.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.gbHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slueCurrency.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.slueTermsDelivery.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueDeliveryTerms.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.slueSupplier.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
@@ -168,7 +170,7 @@
             // 
             // xtpTerms
             // 
-            this.xtpTerms.Controls.Add(this.slueTermPayment);
+            this.xtpTerms.Controls.Add(this.sluePaymentTerm);
             this.xtpTerms.Controls.Add(this.lblTxtInvoiceTo);
             this.xtpTerms.Controls.Add(this.lblTxtShipTo);
             this.xtpTerms.Controls.Add(this.lblTxtContact);
@@ -184,16 +186,16 @@
             this.xtpTerms.Size = new System.Drawing.Size(1308, 428);
             this.xtpTerms.Text = "TERMS";
             // 
-            // slueTermPayment
+            // sluePaymentTerm
             // 
-            this.slueTermPayment.Location = new System.Drawing.Point(225, 201);
-            this.slueTermPayment.MenuManager = this.ribbonControl;
-            this.slueTermPayment.Name = "slueTermPayment";
-            this.slueTermPayment.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.sluePaymentTerm.Location = new System.Drawing.Point(225, 201);
+            this.sluePaymentTerm.MenuManager = this.ribbonControl;
+            this.sluePaymentTerm.Name = "sluePaymentTerm";
+            this.sluePaymentTerm.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.slueTermPayment.Properties.View = this.gridView3;
-            this.slueTermPayment.Size = new System.Drawing.Size(389, 20);
-            this.slueTermPayment.TabIndex = 15;
+            this.sluePaymentTerm.Properties.View = this.gridView3;
+            this.sluePaymentTerm.Size = new System.Drawing.Size(389, 20);
+            this.sluePaymentTerm.TabIndex = 15;
             // 
             // gridView3
             // 
@@ -310,8 +312,10 @@
             // 
             this.gbHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbHeader.Controls.Add(this.sbOrder);
+            this.gbHeader.Controls.Add(this.sbSearch);
             this.gbHeader.Controls.Add(this.slueCurrency);
-            this.gbHeader.Controls.Add(this.slueTermsDelivery);
+            this.gbHeader.Controls.Add(this.slueDeliveryTerms);
             this.gbHeader.Controls.Add(this.slueSupplier);
             this.gbHeader.Controls.Add(this.lblCurrency);
             this.gbHeader.Controls.Add(this.lblTermsOfDelivery);
@@ -332,6 +336,15 @@
             this.gbHeader.TabIndex = 2;
             this.gbHeader.TabStop = false;
             // 
+            // sbSearch
+            // 
+            this.sbSearch.ImageUri.Uri = "Find;Size32x32";
+            this.sbSearch.Location = new System.Drawing.Point(1120, 14);
+            this.sbSearch.Name = "sbSearch";
+            this.sbSearch.Size = new System.Drawing.Size(86, 35);
+            this.sbSearch.TabIndex = 16;
+            this.sbSearch.Text = "Search";
+            // 
             // slueCurrency
             // 
             this.slueCurrency.Location = new System.Drawing.Point(697, 71);
@@ -350,16 +363,16 @@
             this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
-            // slueTermsDelivery
+            // slueDeliveryTerms
             // 
-            this.slueTermsDelivery.Location = new System.Drawing.Point(697, 52);
-            this.slueTermsDelivery.MenuManager = this.ribbonControl;
-            this.slueTermsDelivery.Name = "slueTermsDelivery";
-            this.slueTermsDelivery.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.slueDeliveryTerms.Location = new System.Drawing.Point(697, 52);
+            this.slueDeliveryTerms.MenuManager = this.ribbonControl;
+            this.slueDeliveryTerms.Name = "slueDeliveryTerms";
+            this.slueDeliveryTerms.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.slueTermsDelivery.Properties.View = this.gridView1;
-            this.slueTermsDelivery.Size = new System.Drawing.Size(389, 20);
-            this.slueTermsDelivery.TabIndex = 14;
+            this.slueDeliveryTerms.Properties.View = this.gridView1;
+            this.slueDeliveryTerms.Size = new System.Drawing.Size(389, 20);
+            this.slueDeliveryTerms.TabIndex = 14;
             // 
             // gridView1
             // 
@@ -507,6 +520,15 @@
             this.txtPONumber.Size = new System.Drawing.Size(120, 20);
             this.txtPONumber.TabIndex = 1;
             // 
+            // sbOrder
+            // 
+            this.sbOrder.ImageUri.Uri = "SortAsc;Size32x32";
+            this.sbOrder.Location = new System.Drawing.Point(1120, 56);
+            this.sbOrder.Name = "sbOrder";
+            this.sbOrder.Size = new System.Drawing.Size(86, 35);
+            this.sbOrder.TabIndex = 17;
+            this.sbOrder.Text = "Order";
+            // 
             // PurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -529,13 +551,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.xgrdLines)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLines)).EndInit();
             this.xtpTerms.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.slueTermPayment.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sluePaymentTerm.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.gbHeader.ResumeLayout(false);
             this.gbHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slueCurrency.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.slueTermsDelivery.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueDeliveryTerms.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.slueSupplier.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
@@ -569,7 +591,7 @@
         private DevExpress.XtraEditors.LabelControl lblSupplier;
         private DevExpress.XtraEditors.SearchLookUpEdit slueCurrency;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraEditors.SearchLookUpEdit slueTermsDelivery;
+        private DevExpress.XtraEditors.SearchLookUpEdit slueDeliveryTerms;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.SearchLookUpEdit slueSupplier;
         private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
@@ -578,7 +600,7 @@
         private DevExpress.XtraTab.XtraTabPage xtpTerms;
         private DevExpress.XtraGrid.GridControl xgrdLines;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewLines;
-        private DevExpress.XtraEditors.SearchLookUpEdit slueTermPayment;
+        private DevExpress.XtraEditors.SearchLookUpEdit sluePaymentTerm;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraEditors.LabelControl lblTxtInvoiceTo;
         private DevExpress.XtraEditors.LabelControl lblTxtShipTo;
@@ -591,5 +613,7 @@
         private DevExpress.XtraEditors.LabelControl lblContact;
         private DevExpress.XtraEditors.LabelControl lblAddress;
         private DevExpress.XtraEditors.LabelControl lblCompany;
+        private DevExpress.XtraEditors.SimpleButton sbSearch;
+        private DevExpress.XtraEditors.SimpleButton sbOrder;
     }
 }
