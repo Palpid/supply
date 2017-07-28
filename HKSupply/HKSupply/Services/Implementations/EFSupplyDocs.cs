@@ -186,16 +186,29 @@ namespace HKSupply.Services.Implementations
                 {
                     using (var dbTrans = db.Database.BeginTransaction())
                     {
-                        //Ordenamos las líneas 
+                        //TODO: comprobar si es necesario recalcular el batch y el PO Number por si se ha creado alguna otra PO desde otro pc (es poco probable, pero es una opción)
+
+                        //número de línea
                         int numLin = 1;
 
-                        foreach(var line in newDoc.Lines)
+                        //Actualizar el precio por si han modificado alguno mientras dejaban el formulario de PO abierto
+                        var supplierPriceList = GlobalSetting.SupplierPriceListService.GetSuppliersPriceList(idItemBcn: null, idSupplier: newDoc.IdSupplier);
+
+                        foreach (var line in newDoc.Lines)
                         {
                             line.NumLin = numLin;
                             line.IdDoc = newDoc.IdDoc;
                             line.QuantityOriginal = line.Quantity;
+
+                            var supplierPrice = supplierPriceList.Where(a => a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
+
+                            line.UnitPrice = (supplierPrice == null ? 0 : (short)supplierPrice.Price);
+                            line.UnitPriceBaseCurrency = (supplierPrice == null ? 0 : (short)supplierPrice.PriceBaseCurrency);
+
                             numLin++;
                         }
+
+                        newDoc.User = GlobalSetting.LoggedUser.UserLogin.ToUpper();
 
                         db.DocsHead.Add(newDoc);
 
@@ -241,6 +254,119 @@ namespace HKSupply.Services.Implementations
             {
                 _log.Error(ex.Message, ex);
                 throw ex;
+            }
+        }
+
+        public DocHead UpdateDoc(DocHead doc)
+        {
+           try
+            {
+                if (doc == null)
+                    throw new ArgumentNullException(nameof(doc));
+
+                using (var db = new HKSupplyContext())
+                {
+                    using (var dbTrans = db.Database.BeginTransaction())
+                    {
+                        try
+                        {
+                            DocHead docToUpdate = GetDoc(doc.IdDoc);
+
+                            if (docToUpdate == null)
+                                throw new Exception("DOC error");
+
+
+                            //número de línea
+                            int numLin = 1;
+
+                            string idQP = $"{Constants.SUPPLY_DOCTYPE_QP}{doc.IdDoc}";
+                            bool existQP = (db.DocsHead.Where(a => a.IdDoc.Equals(idQP)).Count()) > 0;
+                            //bool existQP = false;
+
+                            //Actualizar el precio por si han modificado alguno mientras dejaban el formulario de PO abierto (siempre y cuando no exista ya la QP)
+                            List<Models.SupplierPriceList> supplierPriceList = null;
+
+                            if (existQP == false)
+                                supplierPriceList = GlobalSetting.SupplierPriceListService.GetSuppliersPriceList(idItemBcn: null, idSupplier: doc.IdSupplier);
+                            
+                            foreach (var line in doc.Lines)
+                            {
+                                line.NumLin = numLin;
+                                line.IdDoc = doc.IdDoc;
+
+                                if (line.LineState == DocLine.LineStates.New)
+                                    line.QuantityOriginal = line.Quantity;
+
+                                if (existQP == false)
+                                {
+                                    var supplierPrice = supplierPriceList?.Where(a => a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
+
+                                    line.UnitPrice = (supplierPrice == null ? 0 : (short)supplierPrice.Price);
+                                    line.UnitPriceBaseCurrency = (supplierPrice == null ? 0 : (short)supplierPrice.PriceBaseCurrency);
+                                }
+
+                                numLin++;
+                            }
+
+                            //Hay que agregarlo al contexto actual para que lo actualice
+                            db.DocsHead.Attach(docToUpdate);
+
+                            //Borramos las líneas de la base de datos para insertarla de nuevo
+                            var lines = db.DocsLines.Where(a => a.IdDoc.Equals(doc.IdDoc));
+
+                            foreach (var line in lines)
+                                db.DocsLines.Remove(line);
+
+                            //y los insertamos de nuevo
+                            foreach (var line in doc.Lines)
+                                db.DocsLines.Add(line);
+
+                            //user
+                            docToUpdate.User = GlobalSetting.LoggedUser.UserLogin.ToUpper();
+
+                            db.SaveChanges();
+                            dbTrans.Commit();
+
+                            db.Entry(docToUpdate).GetDatabaseValues();
+                            return docToUpdate;
+
+
+                        }
+                        catch (SqlException sqlex)
+                        {
+                            dbTrans.Rollback();
+
+                            for (int i = 0; i < sqlex.Errors.Count; i++)
+                            {
+                                _log.Error("Index #" + i + "\n" +
+                                    "Message: " + sqlex.Errors[i].Message + "\n" +
+                                    "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                                    "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                                    "Source: " + sqlex.Errors[i].Source + "\n" +
+                                    "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                                switch (sqlex.Errors[i].Number)
+                                {
+                                    case -1: //connection broken
+                                    case -2: //timeout
+                                        throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                                }
+                            }
+                            throw sqlex;
+                        }
+                        catch (Exception ex)
+                        {
+                            dbTrans.Rollback();
+                            _log.Error(ex.Message, ex);
+                            throw ex;
+                        }
+                    }
+                }
+            }
+            catch (ArgumentNullException anex)
+            {
+                _log.Error(anex.Message, anex);
+                throw anex;
             }
         }
     }

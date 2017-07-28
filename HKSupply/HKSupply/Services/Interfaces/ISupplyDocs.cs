@@ -11,5 +11,6 @@ namespace HKSupply.Services.Interfaces
         List<DocHead> GetDocs(string idSupplier, DateTime docDate);
         DocHead NewDoc(DocHead newDoc);
         DocHead GetDoc(string idDoc);
+        DocHead UpdateDoc(DocHead doc);
     }
 }

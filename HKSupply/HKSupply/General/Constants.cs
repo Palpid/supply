@@ -55,8 +55,9 @@ namespace HKSupply.General
         public const string SUPPLY_STATUS_CANCEL = "CNL";
 
         //** SUPPLY DOC TYPES **//
-        public const string SUPPLY_DOCTYPE_PO = "PO";
-        public const string SUPPLY_DOCTYPE_SO = "SO";
+        public const string SUPPLY_DOCTYPE_PO = "PO"; //Purchase Order
+        public const string SUPPLY_DOCTYPE_SO = "SO"; //Sales Order
+        public const string SUPPLY_DOCTYPE_QP = "QP"; //Quotation Proposal
         public const string SUPPLY_DOCTYPE_INV = "INVOICE";
 
     }

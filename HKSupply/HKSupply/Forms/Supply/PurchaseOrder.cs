@@ -49,6 +49,8 @@ namespace HKSupply.Forms.Supply
 
         int? _batchCont = null;
 
+        bool _existQP = false;
+
         #endregion
 
         #region Constructor
@@ -63,6 +65,7 @@ namespace HKSupply.Forms.Supply
                 ConfigureRibbonActions();
                 LoadAuxList();
                 SetUpLabels();
+                SetUpButtons();
                 SetUpSearchLookUpEdit();
                 SetUpEvents();
                 SetUpGrdLines();
@@ -172,6 +175,10 @@ namespace HKSupply.Forms.Supply
                 {
                     res = CreatePO();
                 }
+                else if(CurrentState == ActionsStates.Edit)
+                {
+                    res = UpdatePO();
+                }
 
             }
             catch (Exception ex)
@@ -206,7 +213,11 @@ namespace HKSupply.Forms.Supply
                 if (dateEditDocDate.EditValue != null)
                 {
                     lblDocDateWeek.Text = GetWeek(dateEditDocDate.DateTime).ToString();
-                    CreatePoNumber();
+                    if (CurrentState == ActionsStates.New)
+                    { 
+                        CreatePoNumber();
+                        UpdateBatch();
+                    }
                 }
             }
             catch (Exception ex)
@@ -242,6 +253,7 @@ namespace HKSupply.Forms.Supply
                     CreatePoNumber();
                     LoadSelectedSupplierPriceList();
                     UpdateItemsPrice();
+                    UpdateBatch();
                 }
             }
             catch (Exception ex)
@@ -291,6 +303,19 @@ namespace HKSupply.Forms.Supply
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void SbImportExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ImportExcel();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         #endregion
 
@@ -382,12 +407,28 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void SetUpButtons()
+        {
+            try
+            {
+                sbImportExcel.Image = System.Drawing.Image.FromFile(@"Resources\Images\import_export_excel_icon_32x32.png");
+                sbImportExcel.Text = string.Empty;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         private void SetUpEvents()
         {
             try
             {
                 sbSearch.Click += SbSearch_Click;
                 sbOrder.Click += SbOrder_Click;
+                sbImportExcel.Click += SbImportExcel_Click;
+                dateEditDelivery.EditValueChanged += DateEditDelivery_EditValueChanged;
+                dateEditDocDate.EditValueChanged += DateEditDocDate_EditValueChanged;
             }
             catch
             {
@@ -399,8 +440,6 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                dateEditDelivery.EditValueChanged += DateEditDelivery_EditValueChanged;
-                dateEditDocDate.EditValueChanged += DateEditDocDate_EditValueChanged;
                 slueSupplier.EditValueChanged += SlueSupplierEditValueChanged;
             }
             catch
@@ -595,11 +634,12 @@ namespace HKSupply.Forms.Supply
 
                 //Events
                 gridViewLines.ValidatingEditor += GridViewLines_ValidatingEditor;
-
+                gridViewLines.RowCellStyle += GridViewLines_RowCellStyle;
+                xgrdLines.ProcessGridKey += XgrdLines_ProcessGridKey;
                 //Test
                 //gridViewLines.OptionsView.NewItemRowPosition = NewItemRowPosition.Top;
                 //gridViewLines.RowUpdated += GridViewLines_RowUpdated;
-                gridViewLines.RowCellStyle += GridViewLines_RowCellStyle;
+
             }
             catch
             {
@@ -684,7 +724,7 @@ namespace HKSupply.Forms.Supply
                         row.IdItemGroup = Constants.ITEM_GROUP_EY;
 
                         //price
-                        var supplierPrice = _selectedSupplierPriceList.Where(a => a.IdItemBcn.Equals(idItem)).FirstOrDefault();
+                        var supplierPrice = _selectedSupplierPriceList?.Where(a => a.IdItemBcn.Equals(idItem)).FirstOrDefault();
                         if (supplierPrice != null)
                         {
                             row.UnitPrice = (short)supplierPrice.Price;
@@ -762,6 +802,41 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void XgrdLines_ProcessGridKey(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (CurrentState != ActionsStates.Edit && CurrentState != ActionsStates.New)
+                    return;
+
+                if (e.KeyCode == Keys.F4)
+                {
+                    DialogResult result = XtraMessageBox.Show("Delete row?", "Confirmation", MessageBoxButtons.YesNo);
+                    if (result != DialogResult.Yes)
+                        return;
+
+                    var row = gridViewLines.GetRow(gridViewLines.FocusedRowHandle) as DocLine;
+                    if (row.IdItemBcn != null)
+                    {
+                        if(row.LineState == DocLine.LineStates.New || _existQP == false)
+                        {
+                            _docLinesList.Remove(row);
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show("You can't delete this row", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        
+                    }
+
+                }
+
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         #region Loads / Resets
@@ -930,7 +1005,6 @@ namespace HKSupply.Forms.Supply
                 if (slueSupplier.EditValue != null & dateEditDocDate.EditValue != null)
                 {
                     var docs = GlobalSetting.SupplyDocsService.GetDocs((string)slueSupplier.EditValue, dateEditDocDate.DateTime);
-                    //string strCont = (docs.Count == 0 ? string.Empty : (docs.Count + 1).ToString());
 
                     string strCont;
                     if (docs.Count == 0)
@@ -1003,7 +1077,7 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                if (txtPONumber.Text == null)
+                if (string.IsNullOrEmpty(txtPONumber.Text) == true)
                     return;
 
                 string poNumber = txtPONumber.Text.Substring(0,5);
@@ -1013,7 +1087,7 @@ namespace HKSupply.Forms.Supply
                 if (_batchCont != null)
                     cont = _batchCont.Value + 1;
 
-                var models = _docLinesList.Select(a => (a.Item as ItemEy)?.Model.Description).Distinct().OrderBy(a => a).ToList();
+                var models = _docLinesList.Select(a => (a.Item as ItemEy)?.Model.Description).Distinct().Where(a => string.IsNullOrEmpty(a) == false).OrderBy(a => a).ToList();
 
 
                 foreach (var model in models)
@@ -1029,6 +1103,7 @@ namespace HKSupply.Forms.Supply
                     cont++;
                 }
 
+                gridViewLines.RefreshData();
             }
             catch
             {
@@ -1075,12 +1150,16 @@ namespace HKSupply.Forms.Supply
                 {
                     case ActionsStates.Edit:
                     case ActionsStates.New:
+                        sbFinishPO.Visible = true;
                         sbOrder.Visible = true;
+                        sbImportExcel.Visible = true;
                         sbSearch.Visible = false;
                         break;
 
                     default:
+                        sbFinishPO.Visible = false;
                         sbOrder.Visible = false;
+                        sbImportExcel.Visible = false;
                         sbSearch.Visible = true;
                         break;
                 }
@@ -1109,6 +1188,165 @@ namespace HKSupply.Forms.Supply
                 throw;
             }
         }
+
+        private void ImportExcel()
+        {
+            try
+            {
+                Cursor = Cursors.WaitCursor;
+
+                Dictionary<string, int> importData = GetExcelImportData();
+
+                if (importData.Count > 0)
+                {
+                    ImportDataToGrid(importData);
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
+        }
+        
+        private Dictionary<string, int> GetExcelImportData()
+        {
+            try
+            {
+                Dictionary<string, int> itemDic = new Dictionary<string, int>();
+                List<string> errorlist = new List<string>();
+
+                OpenFileDialog openFileDialog = new OpenFileDialog()
+                {
+                    InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                    Filter = "XLSX files (*.xlsx)|*.xlsx|XLS files (*.xls)|*.xls|CSV files (*.csv)|*.csv",
+                    Multiselect = false,
+                    RestoreDirectory = true,
+                };
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    var excelFile = openFileDialog.FileName;
+
+                    using (DevExpress.XtraSpreadsheet.SpreadsheetControl spreadsheet = new DevExpress.XtraSpreadsheet.SpreadsheetControl())
+                    {
+                        spreadsheet.LoadDocument(excelFile);
+
+                        DevExpress.Spreadsheet.Worksheet ws = spreadsheet.ActiveWorksheet;
+                        DevExpress.Spreadsheet.Range firstColumn = ws.Columns[0];
+                        DevExpress.Spreadsheet.Range secondColumn = ws.Columns[1];
+                        DevExpress.Spreadsheet.Range range = ws.GetDataRange();
+
+                        for (int i = range.TopRowIndex; i <= range.BottomRowIndex; i++)
+                        {
+                            var cellItem = firstColumn[i].Value;
+                            var cellQuantity = secondColumn[i].Value;
+
+                            int exist = _itemsEyList.Where(a => a.IdItemBcn.Equals(cellItem.ToString())).Count();
+                            if (exist > 0)
+                            {
+                                int quantity;
+                                if (int.TryParse(cellQuantity.ToString(), out quantity))
+                                {
+                                    if (itemDic.ContainsKey(cellItem.ToString()))
+                                    {
+                                        errorlist.Add($"Line {(i + 1).ToString()}: Item duplicated {cellItem.ToString()}.");
+                                    }
+                                    else
+                                    {
+                                        itemDic.Add(cellItem.ToString(), quantity);
+                                    }
+                                        
+                                }
+                                else
+                                {
+                                    errorlist.Add($"Line {(i + 1).ToString()}: Item {cellItem.ToString()}. Incorrect Quantity: {cellQuantity.ToString()}");
+                                }
+                            }
+                            else
+                            {
+                                errorlist.Add($"Line {(i + 1).ToString()}: Item {cellItem.ToString()} doesn't exist.");
+                            }
+                        }
+                    }
+
+                    if (errorlist.Count > 0)
+                    {
+                        itemDic = new Dictionary<string, int>();
+                        XtraMessageBox.Show("Import with errors", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                        string errorFile = $"{ System.IO.Path.GetTempPath()}ExcelErrorImport_{DateTime.Now.Ticks.ToString()}";
+                        System.IO.File.WriteAllLines(errorFile, errorlist);
+                        System.Diagnostics.Process.Start("notepad.exe", errorFile);
+                    }
+
+                }
+
+                return itemDic;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        
+        private void ImportDataToGrid(Dictionary<string, int> importData)
+        {
+            try
+            {
+
+                _docLinesList = new BindingList<DocLine>();
+
+                foreach (KeyValuePair<string, int> entry in importData)
+                {
+                    var item = _itemsEyList.Where(a => a.IdItemBcn.Equals(entry.Key)).Single().Clone();
+
+                    DocLine line = new DocLine();
+
+                    //Item
+                    line.IdItemBcn = entry.Key;
+                    line.IdItemGroup = Constants.ITEM_GROUP_EY;
+                    line.Item = item;
+
+                    //price
+                    var supplierPrice = _selectedSupplierPriceList?.Where(a => a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
+                    if (supplierPrice != null)
+                    {
+                        line.UnitPrice = (short)supplierPrice.Price;
+                        line.UnitPriceBaseCurrency = (short)supplierPrice.PriceBaseCurrency;
+                    }
+                    else
+                    {
+                        line.UnitPrice = 0;
+                        line.UnitPriceBaseCurrency = 0;
+                    }
+
+                    //Status & quantity
+                    line.IdSupplyStatus = Constants.SUPPLY_STATUS_OPEN;
+                    line.Quantity = entry.Value;
+                    line.DeliveredQuantity = 0;
+                    line.LineState = DocLine.LineStates.New;
+
+
+                    _docLinesList.Add(line);
+                }
+
+                _docLinesList.Add(new DocLine() { LineState = DocLine.LineStates.New});
+
+                UpdateBatch();
+
+                xgrdLines.DataSource = null;
+                xgrdLines.DataSource = _docLinesList;
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         #endregion
 
         #region Configure Ribbon Actions
@@ -1129,6 +1367,7 @@ namespace HKSupply.Forms.Supply
 
                 //Block not editing columns
                 gridViewLines.Columns[nameof(DocLine.UnitPrice)].OptionsColumn.AllowEdit = false;
+                gridViewLines.Columns[nameof(DocLine.Batch)].OptionsColumn.AllowEdit = false;
                 gridViewLines.Columns[TOTAL_AMOUNT_COLUMN].OptionsColumn.AllowEdit = false;
                 gridViewLines.Columns[nameof(DocLine.QuantityOriginal)].OptionsColumn.AllowEdit = false;
                 gridViewLines.Columns[$"{nameof(DocLine.Item)}.{nameof(ItemEy.ItemDescription)}"].OptionsColumn.AllowEdit = false;
@@ -1152,19 +1391,36 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                //agregamos una línea nueva
-                _docLinesList.Add(new DocLine() { LineState = DocLine.LineStates.New });
-                gridViewLines.RefreshData();
+                //Si no existe Quotation Proposal asociado al PO puede editar practicamente todo y agregar nuevas líneas, 
+                //en caso contrario sólo puede editar cantidades y comentarios y no se pueden agregar líneas nuevas
+                var qp = GlobalSetting.SupplyDocsService.GetDoc($"{Constants.SUPPLY_DOCTYPE_QP}{_docHeadPO.IdDoc}");
+
+                if (qp != null)
+                    _existQP = true;
 
                 //Allow edit all columns
                 gridViewLines.OptionsBehavior.Editable = true;
 
-                //Block not editing columns
+                //Block common not editing columns
                 gridViewLines.Columns[nameof(DocLine.UnitPrice)].OptionsColumn.AllowEdit = false;
+                gridViewLines.Columns[nameof(DocLine.Batch)].OptionsColumn.AllowEdit = false;
                 gridViewLines.Columns[TOTAL_AMOUNT_COLUMN].OptionsColumn.AllowEdit = false;
                 gridViewLines.Columns[nameof(DocLine.QuantityOriginal)].OptionsColumn.AllowEdit = false;
                 gridViewLines.Columns[$"{nameof(DocLine.Item)}.{nameof(ItemEy.ItemDescription)}"].OptionsColumn.AllowEdit = false;
                 gridViewLines.Columns[nameof(DocLine.IdSupplyStatus)].OptionsColumn.AllowEdit = false;
+
+                if (_existQP == true)
+                {
+                    gridViewLines.Columns[nameof(DocLine.IdItemBcn)].OptionsColumn.AllowEdit = false;
+                }
+                else
+                {
+                    gridViewLines.Columns[nameof(DocLine.DeliveredQuantity)].OptionsColumn.AllowEdit = false;
+
+                    //agregamos una línea nueva
+                    _docLinesList.Add(new DocLine() { LineState = DocLine.LineStates.New });
+                    gridViewLines.RefreshData();
+                }
 
                 //events
                 SetUpEventsEditing();
@@ -1172,7 +1428,7 @@ namespace HKSupply.Forms.Supply
                 //Visible buttons
                 SetVisiblePropertyByState();
 
-                //No editing fields
+                //No editing form fields
                 slueSupplier.ReadOnly = true;
                 dateEditDocDate.ReadOnly = true;
 
@@ -1283,6 +1539,38 @@ namespace HKSupply.Forms.Supply
                 };
 
                 DocHead createdDoc = GlobalSetting.SupplyDocsService.NewDoc(purchaseOrder);
+
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private bool UpdatePO()
+        {
+            try
+            {
+                List<DocLine> sortedLines = _docLinesList.Where(lin => lin.IdItemBcn != null).OrderBy(a => a.Batch).ThenBy(b => b.IdItemBcn).ToList();
+
+                DocHead purchaseOrder = new DocHead()
+                {
+                    IdDoc = txtPONumber.Text,
+                    IdSupplyDocType = Constants.SUPPLY_DOCTYPE_PO,
+                    CreationDate = _docHeadPO.CreationDate,
+                    DeliveryDate = dateEditDelivery.DateTime,
+                    DocDate = dateEditDocDate.DateTime,
+                    IdSupplyStatus = Constants.SUPPLY_STATUS_OPEN,
+                    IdSupplier = slueSupplier.EditValue as string,
+                    //IdCustomer = //TODO: Etnia a piñon??
+                    IdDeliveryTerm = slueDeliveryTerms.EditValue as string,
+                    IdPaymentTerms = sluePaymentTerm.EditValue as string,
+                    IdCurrency = slueCurrency.EditValue as string,
+                    Lines = sortedLines
+                };
+
+                DocHead createdDoc = GlobalSetting.SupplyDocsService.UpdateDoc(purchaseOrder);
 
                 return true;
             }

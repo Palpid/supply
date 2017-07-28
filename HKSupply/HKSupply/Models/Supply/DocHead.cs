@@ -41,6 +41,9 @@ namespace HKSupply.Models.Supply
         [Column("ID_CURRENCY", TypeName = "NVARCHAR"), StringLength(4)]
         public string IdCurrency { get; set; }
 
+        [Column("USER", TypeName = "NVARCHAR"), StringLength(20)]
+        public string User { get; set; }
+
         public virtual List<DocLine> Lines { get; set; }
 
         #region Foreign keys

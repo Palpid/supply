@@ -1,0 +1,3 @@
+﻿2017-07-26 17:33:08,192 INFO [1] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid Password
+HKSupply.Exceptions.InvalidPasswordException: Invalid Password
+   at HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) in C:\Git\HKSupply\HKSupply\Services\Implementations\EFUser.cs:line 139
