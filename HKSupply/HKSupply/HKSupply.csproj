@@ -358,6 +358,18 @@
     <Compile Include="Forms\Supply\PurchaseOrder.Designer.cs">
       <DependentUpon>PurchaseOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Supply\PurchaseOrderSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\PurchaseOrderSelection.Designer.cs">
+      <DependentUpon>PurchaseOrderSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\QuotationProposal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\QuotationProposal.Designer.cs">
+      <DependentUpon>QuotationProposal.cs</DependentUpon>
+    </Compile>
     <Compile Include="General\Constants.cs" />
     <Compile Include="General\GlobalSetting.cs" />
     <Compile Include="Helpers\CustomExtensions.cs" />
@@ -958,6 +970,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\PurchaseOrder.resx">
       <DependentUpon>PurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\PurchaseOrderSelection.resx">
+      <DependentUpon>PurchaseOrderSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\QuotationProposal.resx">
+      <DependentUpon>QuotationProposal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703081042226_Customer.resx">
       <DependentUpon>201703081042226_Customer.cs</DependentUpon>

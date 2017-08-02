@@ -316,6 +316,43 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void SbFinishPO_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bool res = false;
+
+                if (ValidatePO() == false)
+                    return;
+
+                DialogResult result = MessageBox.Show("Save change and finish Purchase Order", "", MessageBoxButtons.YesNo);
+
+                if (result != DialogResult.Yes)
+                    return;
+
+                Cursor = Cursors.WaitCursor;
+
+                if (CurrentState == ActionsStates.New)
+                {
+                    res = CreatePO();
+                }
+                else if (CurrentState == ActionsStates.Edit)
+                {
+                    res = UpdatePO(finishPO:true);
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
+        }
 
         #endregion
 
@@ -411,7 +448,7 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                sbImportExcel.Image = System.Drawing.Image.FromFile(@"Resources\Images\import_export_excel_icon_32x32.png");
+                sbImportExcel.Image = Image.FromFile(@"Resources\Images\import_export_excel_icon_32x32.png");
                 sbImportExcel.Text = string.Empty;
             }
             catch
@@ -427,6 +464,7 @@ namespace HKSupply.Forms.Supply
                 sbSearch.Click += SbSearch_Click;
                 sbOrder.Click += SbOrder_Click;
                 sbImportExcel.Click += SbImportExcel_Click;
+                sbFinishPO.Click += SbFinishPO_Click;
                 dateEditDelivery.EditValueChanged += DateEditDelivery_EditValueChanged;
                 dateEditDocDate.EditValueChanged += DateEditDocDate_EditValueChanged;
             }
@@ -964,7 +1002,7 @@ namespace HKSupply.Forms.Supply
                 string supplier = slueSupplier.EditValue as string;
                 DateTime docDate = dateEditDocDate.DateTime;
 
-                var docs = GlobalSetting.SupplyDocsService.GetDocs(supplier, docDate);
+                var docs = GlobalSetting.SupplyDocsService.GetDocs(idSupplier: supplier, idCustomer: null, docDate: docDate, IdSupplyDocType: Constants.SUPPLY_DOCTYPE_PO);
 
                 if (docs.Count == 0)
                 {
@@ -1004,7 +1042,7 @@ namespace HKSupply.Forms.Supply
 
                 if (slueSupplier.EditValue != null & dateEditDocDate.EditValue != null)
                 {
-                    var docs = GlobalSetting.SupplyDocsService.GetDocs((string)slueSupplier.EditValue, dateEditDocDate.DateTime);
+                    var docs = GlobalSetting.SupplyDocsService.GetDocs(idSupplier: (string)slueSupplier.EditValue, idCustomer: null, docDate: dateEditDocDate.DateTime, IdSupplyDocType: Constants.SUPPLY_DOCTYPE_PO);
 
                     string strCont;
                     if (docs.Count == 0)
@@ -1174,7 +1212,11 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                List<DocLine> sortedLines = _docLinesList.Where(lin => lin.IdItemBcn != null).OrderBy(a => a.Batch).ThenBy(b => b.IdItemBcn).ToList();
+                //List<DocLine> sortedLines = _docLinesList.Where(lin => lin.IdItemBcn != null).OrderBy(a => a.Batch).ThenBy(b => b.IdItemBcn).ToList();
+                List<DocLine> sortedLines = _docLinesList
+                    .Where(lin => lin.IdItemBcn != null)
+                    .OrderBy(a => Convert.ToInt32(System.Text.RegularExpressions.Regex.Match(a.Batch, @"\d+$").Value))
+                    .ThenBy(b => b.IdItemBcn).ToList();
 
                 _docLinesList.Clear();
                 _docLinesList = new BindingList<DocLine>(sortedLines);
@@ -1548,11 +1590,17 @@ namespace HKSupply.Forms.Supply
             }
         }
 
-        private bool UpdatePO()
+        private bool UpdatePO(bool finishPO = false)
         {
             try
             {
-                List<DocLine> sortedLines = _docLinesList.Where(lin => lin.IdItemBcn != null).OrderBy(a => a.Batch).ThenBy(b => b.IdItemBcn).ToList();
+                //para quedarse sólo con la parte final del batch (el número)
+                List<DocLine> sortedLines = _docLinesList
+                    .Where(lin => lin.IdItemBcn != null)
+                    .OrderBy(a => Convert.ToInt32(System.Text.RegularExpressions.Regex.Match(a.Batch, @"\d+$").Value))
+                    .ThenBy(b => b.IdItemBcn)
+                    .ToList();
+                //List<DocLine> sortedLines = _docLinesList.Where(lin => lin.IdItemBcn != null).OrderBy(a => a.Batch).ThenBy(b => b.IdItemBcn).ToList();
 
                 DocHead purchaseOrder = new DocHead()
                 {
@@ -1570,7 +1618,7 @@ namespace HKSupply.Forms.Supply
                     Lines = sortedLines
                 };
 
-                DocHead createdDoc = GlobalSetting.SupplyDocsService.UpdateDoc(purchaseOrder);
+                DocHead createdDoc = GlobalSetting.SupplyDocsService.UpdateDoc(purchaseOrder, finishPO: finishPO);
 
                 return true;
             }

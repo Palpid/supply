@@ -202,7 +202,7 @@ namespace HKSupply.Forms.Master
                 OpenFileDialog openFileDialog = new OpenFileDialog()
                 {
                     InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
-                    Filter = "PDF files (*.pdf)|*.pdf|JPG files(*.jpg)|*.jpg|PNG files (*.png)|*.png",
+                    Filter = "PDF files (*.pdf)|*.pdf|JPG files(*.jpg)|*.jpg|PNG files (*.png)|*.png|DWG files (*.dwg|*.dwg|DXF files (*.dxf)|*.dxf",
                     Multiselect = false,
                     RestoreDirectory = true,
                 };

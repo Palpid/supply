@@ -55,6 +55,37 @@ namespace HKSupply.Models.Supply
         [NotMapped]
         public LineStates LineState { get; set; }
 
+        [NotMapped]
+        public string ItemDesc
+        {
+            get
+            {
+                if (Item?.GetType() == typeof(ItemEy))
+                    return (Item as ItemEy).ItemDescription;
+                else if(Item?.GetType() == typeof(ItemMt))
+                    return (Item as ItemMt).ItemDescription;
+                else if (Item?.GetType() == typeof(ItemHw))
+                    return (Item as ItemHw).ItemDescription;
+                else
+                    return string.Empty;
+            }
+        }
+        [NotMapped]
+        public string ItemUnit
+        {
+            get
+            {
+                if (Item?.GetType() == typeof(ItemEy))
+                    return (Item as ItemEy).Unit;
+                else if (Item?.GetType() == typeof(ItemMt))
+                    return (Item as ItemMt).Unit;
+                else if (Item?.GetType() == typeof(ItemHw))
+                    return (Item as ItemHw).Unit;
+                else
+                    return string.Empty;
+            }
+        }
+
         #region Foreign Keys
 
         [ForeignKey("IdItemGroup")]

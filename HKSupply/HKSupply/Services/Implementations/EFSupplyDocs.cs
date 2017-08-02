@@ -13,7 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity.Validation;
 using HKSupply.Models.Supply;
-
+using HKSupply.Helpers;
 
 namespace HKSupply.Services.Implementations
 {
@@ -43,6 +43,14 @@ namespace HKSupply.Services.Implementations
                             {
                                 case Constants.ITEM_GROUP_EY:
                                     line.Item = GlobalSetting.ItemEyService.GetItem(line.IdItemBcn);
+                                    break;
+
+                                case Constants.ITEM_GROUP_MT:
+                                    line.Item = GlobalSetting.ItemMtService.GetItem(line.IdItemBcn);
+                                    break;
+
+                                case Constants.ITEM_GROUP_HW:
+                                    line.Item = GlobalSetting.ItemHwService.GetItem(line.IdItemBcn);
                                     break;
                             }
                         }
@@ -78,7 +86,7 @@ namespace HKSupply.Services.Implementations
             }
         }
 
-        public List<DocHead> GetDocs(string idSupplier, DateTime docDate)
+        public List<DocHead> GetDocs(string idSupplier, string idCustomer, DateTime docDate, string IdSupplyDocType)
         {
             try
             {
@@ -89,7 +97,9 @@ namespace HKSupply.Services.Implementations
                 {
                     var docs =  db.DocsHead.Where(d =>
                         (d.IdSupplier.Equals(idSupplier) || string.IsNullOrEmpty(idSupplier)) &&
-                        System.Data.Entity.SqlServer.SqlFunctions.DatePart("week", d.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("week", docDate)
+                        (d.IdCustomer.Equals(idSupplier) || string.IsNullOrEmpty(idCustomer)) &&
+                        System.Data.Entity.SqlServer.SqlFunctions.DatePart("week", d.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("week", docDate) &&
+                        (d.IdSupplyDocType.Equals(IdSupplyDocType))
                         )
                         .Include(l => l.Lines)
                         .ToList();
@@ -104,6 +114,14 @@ namespace HKSupply.Services.Implementations
                             {
                                 case Constants.ITEM_GROUP_EY:
                                     line.Item = GlobalSetting.ItemEyService.GetItem(line.IdItemBcn);
+                                    break;
+
+                                case Constants.ITEM_GROUP_MT:
+                                    line.Item = GlobalSetting.ItemMtService.GetItem(line.IdItemBcn);
+                                    break;
+
+                                case Constants.ITEM_GROUP_HW:
+                                    line.Item = GlobalSetting.ItemHwService.GetItem(line.IdItemBcn);
                                     break;
                             }
                         }
@@ -257,7 +275,7 @@ namespace HKSupply.Services.Implementations
             }
         }
 
-        public DocHead UpdateDoc(DocHead doc)
+        public DocHead UpdateDoc(DocHead doc, bool finishPO = false)
         {
            try
             {
@@ -324,6 +342,50 @@ namespace HKSupply.Services.Implementations
                             //user
                             docToUpdate.User = GlobalSetting.LoggedUser.UserLogin.ToUpper();
 
+                            //Si es una Purchase Order y se finaliza hay que generar la Sales Order de BCN a HK y la Quotation Proposal
+                            if (finishPO == true)
+                            {
+
+                                //Guardamos los datos porque son necesarios los actualizados para generar la Sales Order y la Quotation Proposal
+                                db.SaveChanges();
+
+                                //copiamos las líneas tal cual
+                                List<DocLine> linesSoBcnHk = new List<DocLine>();
+
+                                foreach (var line in doc.Lines)
+                                {
+                                    //DocLine lineSoBcnHk = line.Clone();
+                                    DocLine lineSoBcnHk = line.DeepCopyByExpressionTree();
+                                    lineSoBcnHk.QuantityOriginal = lineSoBcnHk.Quantity;
+                                    lineSoBcnHk.IdDoc = $"{Constants.SUPPLY_DOCTYPE_SO}{docToUpdate.IdDoc}";
+                                    linesSoBcnHk.Add(lineSoBcnHk);
+                                }
+
+                                DocHead soBcnHk = new DocHead()
+                                {
+                                    IdDoc = $"{Constants.SUPPLY_DOCTYPE_SO}{docToUpdate.IdDoc}",
+                                    IdSupplyDocType = Constants.SUPPLY_DOCTYPE_SO,
+                                    CreationDate = DateTime.Now,
+                                    DeliveryDate = docToUpdate.DeliveryDate,
+                                    DocDate = docToUpdate.DocDate,
+                                    //TODO: que datos ponemos ??
+                                    IdSupplyStatus = Constants.SUPPLY_STATUS_OPEN, //STATUS?
+                                    //IdSupplier = slueSupplier.EditValue as string, //Etnia HK??
+                                    //IdCustomer = //TODO: Etnia a piñon??
+                                    //DeliveryTerm = slueDeliveryTerms.EditValue as string,
+                                    //IdPaymentTerms = sluePaymentTerm.EditValue as string,
+                                    //IdCurrency = slueCurrency.EditValue as string,
+                                    Lines = linesSoBcnHk,
+                                };
+
+                                db.DocsHead.Add(soBcnHk);
+
+                                var quotationProposal =  GetQuotationProposal(db, doc);
+
+                                db.DocsHead.Add(quotationProposal);
+
+                            }
+
                             db.SaveChanges();
                             dbTrans.Commit();
 
@@ -369,5 +431,42 @@ namespace HKSupply.Services.Implementations
                 throw anex;
             }
         }
+
+
+        #region Private Methods
+
+        private DocHead GetQuotationProposal(HKSupplyContext db, DocHead purchaseOrder)
+        {
+            try
+            {
+                SqlParameter param1 = new SqlParameter("@pIdDocPo", purchaseOrder.IdDoc);
+                List<DocLine> lines = db.Database.SqlQuery<DocLine>("GET_QUOTATIO_PROPOSAL_BOM_EXPLOSION @pIdDocPo", param1).ToList();
+
+                DocHead quotationProposal = new DocHead()
+                {
+                    IdDoc = $"{Constants.SUPPLY_DOCTYPE_QP}{purchaseOrder.IdDoc}",
+                    IdSupplyDocType = Constants.SUPPLY_DOCTYPE_QP,
+                    CreationDate = DateTime.Now,
+                    DeliveryDate = purchaseOrder.DeliveryDate,
+                    DocDate = purchaseOrder.DocDate,
+                    //TODO: que datos ponemos ??
+                    IdSupplyStatus = Constants.SUPPLY_STATUS_OPEN, //STATUS?
+                    //IdSupplier = slueSupplier.EditValue as string, //Etnia HK??
+                    IdCustomer = purchaseOrder.IdSupplier, //Se invierte el proveedor/cliente?
+                    //DeliveryTerm = slueDeliveryTerms.EditValue as string,
+                    //IdPaymentTerms = sluePaymentTerm.EditValue as string,
+                    //IdCurrency = slueCurrency.EditValue as string,
+                    Lines = lines,
+                };
+
+                return quotationProposal;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        #endregion
     }
 }

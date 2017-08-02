@@ -555,7 +555,7 @@
             this.ClientSize = new System.Drawing.Size(1338, 715);
             this.Controls.Add(this.xtcGeneral);
             this.Name = "PurchaseOrder";
-            this.Text = "PurchaseOrder";
+            this.Text = "Purchase Order";
             this.Load += new System.EventHandler(this.PurchaseOrder_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.ribbonStatusBar, 0);
