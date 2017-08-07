@@ -29,6 +29,11 @@ namespace HKSupply.Models
         [ForeignKey("IdItemGroup")]
         public ItemGroup ItemGroup { get; set; }
 
+        [Column("ID_SUPPLIER", TypeName = "NVARCHAR"), StringLength(100)]
+        public string IdSupplier { get; set; }
+        [ForeignKey("IdSupplier")]
+        public Supplier Supplier { get; set; }
+        
         [Column("ID_DOC_TYPE", TypeName = "NVARCHAR"), StringLength(100)]
         public string IdDocType { get; set; }
         [ForeignKey("IdDocType")]

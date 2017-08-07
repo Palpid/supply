@@ -1,0 +1,41 @@
+﻿2017-08-03 11:02:05,216 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.GetPOSelection - Index #0
+Message: Procedure or function 'GET_PURCHASE_ORDER_SELECTION' expects parameter '@pPODateIni', which was not supplied.
+Error Number: 201
+LineNumber: 0
+Source: .Net SqlClient Data Provider
+Procedure: GET_PURCHASE_ORDER_SELECTION
+
+2017-08-03 15:40:08,634 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.GetPOSelection - Index #0
+Message: Error converting data type varchar to datetime.
+Error Number: 8114
+LineNumber: 0
+Source: .Net SqlClient Data Provider
+Procedure: GET_PURCHASE_ORDER_SELECTION
+
+2017-08-03 15:41:11,153 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.GetPOSelection - Index #0
+Message: Error converting data type varchar to datetime.
+Error Number: 8114
+LineNumber: 0
+Source: .Net SqlClient Data Provider
+Procedure: GET_PURCHASE_ORDER_SELECTION
+
+2017-08-03 15:44:10,491 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.GetPOSelection - Index and length must refer to a location within the string.
+Parameter name: length
+System.ArgumentOutOfRangeException: Index and length must refer to a location within the string.
+Parameter name: length
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at HKSupply.Services.Implementations.EFSupplyDocs.GetPOSelection(String idDocPo, String idSupplyStatus, String idSupplier, DateTime PODateIni, DateTime PODateEnd) in C:\Git\HKSupply\HKSupply\Services\Implementations\EFSupplyDocs.cs:line 175
+2017-08-03 15:45:21,300 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.GetPOSelection - Index #0
+Message: Error converting data type varchar to datetime.
+Error Number: 8114
+LineNumber: 0
+Source: .Net SqlClient Data Provider
+Procedure: GET_PURCHASE_ORDER_SELECTION
+
+2017-08-03 15:46:25,542 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.GetPOSelection - Index #0
+Message: Error converting data type varchar to datetime.
+Error Number: 8114
+LineNumber: 0
+Source: .Net SqlClient Data Provider
+Procedure: GET_PURCHASE_ORDER_SELECTION
+

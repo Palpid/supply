@@ -14,6 +14,8 @@ using System.Threading.Tasks;
 using System.Data.Entity.Validation;
 using HKSupply.Models.Supply;
 using HKSupply.Helpers;
+using HKSupply.Classes;
+using System.Data;
 
 namespace HKSupply.Services.Implementations
 {
@@ -129,6 +131,65 @@ namespace HKSupply.Services.Implementations
 
                     return docs;
                 }
+            }
+            catch (SqlException sqlex)
+            {
+                for (int i = 0; i < sqlex.Errors.Count; i++)
+                {
+                    _log.Error("Index #" + i + "\n" +
+                        "Message: " + sqlex.Errors[i].Message + "\n" +
+                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                        "Source: " + sqlex.Errors[i].Source + "\n" +
+                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                    switch (sqlex.Errors[i].Number)
+                    {
+                        case -1: //connection broken
+                        case -2: //timeout
+                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                    }
+                }
+                throw sqlex;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
+            }
+        }
+
+        public List<POSelection> GetPOSelection(string idDocPo, string idSupplyStatus, string idSupplier, DateTime PODateIni, DateTime PODateEnd)
+        {
+            try
+            {
+                List<POSelection> poSelectionList = new List<POSelection>();
+
+                string txtPODateIni = string.Empty;
+                string txtPODateEnd = string.Empty;
+                DateTime dateZero = new DateTime(1, 1, 1);
+                if (PODateIni != dateZero)
+                {
+                    var culture = new System.Globalization.CultureInfo("en-US");
+                    txtPODateIni = PODateIni.ToString("MM/dd/yyyy", culture);
+                    txtPODateEnd = PODateEnd.ToString("MM/dd/yyyy", culture);
+                }
+
+                StringBuilder query = new StringBuilder();
+                query.Append($"EXEC GET_PURCHASE_ORDER_SELECTION ");
+                query.Append($" @pIdDocPo = '{idDocPo}'");
+                query.Append($",@pIdSupplyStatus = '{idSupplyStatus}'");
+                query.Append($",@pIdSupplier = '{idSupplier}'");
+                query.Append($",@pPODateIni = '{txtPODateIni}'");
+                query.Append($",@pPODateEnd = '{txtPODateEnd}'");
+
+                using (var db = new HKSupplyContext())
+                {
+                    DataTable dataTable = db.DataTable(query.ToString());
+                    poSelectionList = dataTable.DataTableToList<POSelection>();
+                }
+
+                return poSelectionList;
             }
             catch (SqlException sqlex)
             {

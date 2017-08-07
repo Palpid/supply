@@ -643,7 +643,7 @@ namespace HKSupply.Forms.Supply
                 gridViewLines.Columns.Add(colTotalAmount);
                 gridViewLines.Columns.Add(colRemarks);
 
-                //Evets
+                //Events
                 gridViewLines.ShowingEditor += GridViewLines_ShowingEditor;
                 gridViewLines.CustomRowCellEdit += GridViewLines_CustomRowCellEdit;
                 gridViewLines.ValidatingEditor += GridViewLines_ValidatingEditor;

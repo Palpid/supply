@@ -7,7 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-
+using System.Data;
+using System.Reflection;
 
 namespace HKSupply.Helpers
 {
@@ -331,9 +332,44 @@ namespace HKSupply.Helpers
             return enumerable ?? Enumerable.Empty<T>();
         }
 
-        public static string hola(this string str)
+        /// <summary>
+        /// Convierte un DataTable a una lista con objectos genéricos
+        /// </summary>
+        /// <typeparam name="T">Objecto Genérico object</typeparam>
+        /// <param name="table">DataTable</param>
+        /// <returns>Lista con objectos genéricos </returns>
+        public static List<T> DataTableToList<T>(this DataTable table) where T : class, new()
         {
-            return "hola";
+            try
+            {
+                List<T> list = new List<T>();
+
+                foreach (var row in table.AsEnumerable())
+                {
+                    T obj = new T();
+
+                    foreach (var prop in obj.GetType().GetProperties())
+                    {
+                        try
+                        {
+                            PropertyInfo propertyInfo = obj.GetType().GetProperty(prop.Name);
+                            propertyInfo.SetValue(obj, Convert.ChangeType(row[prop.Name], propertyInfo.PropertyType), null);
+                        }
+                        catch
+                        {
+                            continue;
+                        }
+                    }
+
+                    list.Add(obj);
+                }
+
+                return list;
+            }
+            catch
+            {
+                return null;
+            }
         }
     }
 }

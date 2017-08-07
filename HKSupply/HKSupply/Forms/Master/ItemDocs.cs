@@ -112,7 +112,7 @@ namespace HKSupply.Forms.Master
                 if (res == true)
                 {
                     MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
-                    ResetForm();
+                    ResetForm(all: false);
                 }
 
             }
@@ -201,7 +201,7 @@ namespace HKSupply.Forms.Master
             {
                 OpenFileDialog openFileDialog = new OpenFileDialog()
                 {
-                    InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                    //InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
                     Filter = "PDF files (*.pdf)|*.pdf|JPG files(*.jpg)|*.jpg|PNG files (*.png)|*.png|DWG files (*.dwg|*.dwg|DXF files (*.dxf)|*.dxf",
                     Multiselect = false,
                     RestoreDirectory = true,
@@ -402,13 +402,22 @@ namespace HKSupply.Forms.Master
 
         #endregion
 
-        private void ResetForm()
+        private void ResetForm(bool all = true)
         {
             try
             {
                 txtPathNewDoc.Text = string.Empty;
-                slueModel.EditValue = null;
                 lueDocType.EditValue = null;
+
+                if (all == true)
+                {
+                    slueModel.EditValue = null;
+                }
+                else
+                {
+                    checkedListBoxControlItems.UnCheckAll();
+                    checkedListBoxControlItems.Items[0].Description = "Check All";
+                }
             }
             catch
             {

@@ -109,6 +109,7 @@
   <ItemGroup>
     <Compile Include="Classes\B1Report.cs" />
     <Compile Include="Classes\PlainBomAux.cs" />
+    <Compile Include="Classes\POSelection.cs" />
     <Compile Include="Classes\RowInfo.cs" />
     <Compile Include="DB\HKSupplyContext.cs" />
     <Compile Include="Exceptions\DBServerConnectionException.cs" />
@@ -373,6 +374,7 @@
     <Compile Include="General\Constants.cs" />
     <Compile Include="General\GlobalSetting.cs" />
     <Compile Include="Helpers\CustomExtensions.cs" />
+    <Compile Include="Helpers\DbContextExtensions.cs" />
     <Compile Include="Helpers\DeepCopyByExpressionTrees.cs" />
     <Compile Include="Helpers\DocHelper.cs" />
     <Compile Include="Helpers\EntityFrameworkHelper.cs" />

@@ -356,6 +356,21 @@ namespace HKSupply.Forms.Supply
 
         #endregion
 
+        #region Public Methods
+        public void InitData(string idDocPo)
+        {
+            try
+            {
+                _docHeadPO = GlobalSetting.SupplyDocsService.GetDoc(idDocPo);
+                LoadPO();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        #endregion
+
         #region Private Methods
 
         #region SetUps Form Objects
@@ -1188,9 +1203,19 @@ namespace HKSupply.Forms.Supply
                 {
                     case ActionsStates.Edit:
                     case ActionsStates.New:
-                        sbFinishPO.Visible = true;
-                        sbOrder.Visible = true;
-                        sbImportExcel.Visible = true;
+                        if (_existQP == true)
+                        {
+                            sbFinishPO.Visible = false;
+                            sbImportExcel.Visible = false;
+                            sbOrder.Visible = false;
+                        }
+                        else
+                        {
+                            sbFinishPO.Visible = true;
+                            sbImportExcel.Visible = true;
+                            sbOrder.Visible = true;
+                        }
+                        
                         sbSearch.Visible = false;
                         break;
 
