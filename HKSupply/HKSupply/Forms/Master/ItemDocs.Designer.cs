@@ -31,10 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemDocs));
             this.xtcGeneral = new DevExpress.XtraTab.XtraTabControl();
             this.xtpMain = new DevExpress.XtraTab.XtraTabPage();
-            this.lblModel = new DevExpress.XtraEditors.LabelControl();
-            this.slueModel = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.checkedListBoxControlItems = new DevExpress.XtraEditors.CheckedListBoxControl();
             this.gbNewDoc = new System.Windows.Forms.GroupBox();
             this.layoutControlNewDoc = new DevExpress.XtraLayout.LayoutControl();
             this.lueDocType = new DevExpress.XtraEditors.LookUpEdit();
@@ -46,13 +42,20 @@
             this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lcilueDocType = new DevExpress.XtraLayout.LayoutControlItem();
+            this.checkedListBoxControlItems = new DevExpress.XtraEditors.CheckedListBoxControl();
+            this.lblModel = new DevExpress.XtraEditors.LabelControl();
+            this.slueModel = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gbSupplier = new System.Windows.Forms.GroupBox();
+            this.lblSupplier = new DevExpress.XtraEditors.LabelControl();
+            this.slueSupplier = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.xgrdLastDocs = new DevExpress.XtraGrid.GridControl();
+            this.gridViewLastDocs = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
             this.xtcGeneral.SuspendLayout();
             this.xtpMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.slueModel.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxControlItems)).BeginInit();
             this.gbNewDoc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlNewDoc)).BeginInit();
             this.layoutControlNewDoc.SuspendLayout();
@@ -63,6 +66,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcilueDocType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxControlItems)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueModel.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            this.gbSupplier.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.slueSupplier.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdLastDocs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewLastDocs)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -85,54 +96,22 @@
             this.xtcGeneral.Location = new System.Drawing.Point(0, 79);
             this.xtcGeneral.Name = "xtcGeneral";
             this.xtcGeneral.SelectedTabPage = this.xtpMain;
-            this.xtcGeneral.Size = new System.Drawing.Size(1338, 489);
+            this.xtcGeneral.Size = new System.Drawing.Size(1338, 520);
             this.xtcGeneral.TabIndex = 2;
             this.xtcGeneral.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpMain});
             // 
             // xtpMain
             // 
+            this.xtpMain.Controls.Add(this.xgrdLastDocs);
+            this.xtpMain.Controls.Add(this.gbSupplier);
             this.xtpMain.Controls.Add(this.gbNewDoc);
             this.xtpMain.Controls.Add(this.checkedListBoxControlItems);
             this.xtpMain.Controls.Add(this.lblModel);
             this.xtpMain.Controls.Add(this.slueModel);
             this.xtpMain.Name = "xtpMain";
-            this.xtpMain.Size = new System.Drawing.Size(1332, 461);
+            this.xtpMain.Size = new System.Drawing.Size(1332, 492);
             this.xtpMain.Text = "Docs";
-            // 
-            // lblModel
-            // 
-            this.lblModel.Location = new System.Drawing.Point(21, 18);
-            this.lblModel.Name = "lblModel";
-            this.lblModel.Size = new System.Drawing.Size(28, 13);
-            this.lblModel.TabIndex = 15;
-            this.lblModel.Text = "Model";
-            // 
-            // slueModel
-            // 
-            this.slueModel.Location = new System.Drawing.Point(63, 15);
-            this.slueModel.MenuManager = this.ribbonControl;
-            this.slueModel.Name = "slueModel";
-            this.slueModel.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.slueModel.Properties.View = this.gridView2;
-            this.slueModel.Size = new System.Drawing.Size(172, 20);
-            this.slueModel.TabIndex = 14;
-            // 
-            // gridView2
-            // 
-            this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView2.OptionsView.ShowGroupPanel = false;
-            // 
-            // checkedListBoxControlItems
-            // 
-            this.checkedListBoxControlItems.Cursor = System.Windows.Forms.Cursors.Default;
-            this.checkedListBoxControlItems.Location = new System.Drawing.Point(21, 53);
-            this.checkedListBoxControlItems.Name = "checkedListBoxControlItems";
-            this.checkedListBoxControlItems.Size = new System.Drawing.Size(370, 180);
-            this.checkedListBoxControlItems.TabIndex = 17;
             // 
             // gbNewDoc
             // 
@@ -258,6 +237,92 @@
             this.lcilueDocType.TextSize = new System.Drawing.Size(0, 0);
             this.lcilueDocType.TextVisible = false;
             // 
+            // checkedListBoxControlItems
+            // 
+            this.checkedListBoxControlItems.Cursor = System.Windows.Forms.Cursors.Default;
+            this.checkedListBoxControlItems.Location = new System.Drawing.Point(21, 53);
+            this.checkedListBoxControlItems.Name = "checkedListBoxControlItems";
+            this.checkedListBoxControlItems.Size = new System.Drawing.Size(370, 180);
+            this.checkedListBoxControlItems.TabIndex = 17;
+            // 
+            // lblModel
+            // 
+            this.lblModel.Location = new System.Drawing.Point(21, 18);
+            this.lblModel.Name = "lblModel";
+            this.lblModel.Size = new System.Drawing.Size(28, 13);
+            this.lblModel.TabIndex = 15;
+            this.lblModel.Text = "Model";
+            // 
+            // slueModel
+            // 
+            this.slueModel.Location = new System.Drawing.Point(63, 15);
+            this.slueModel.MenuManager = this.ribbonControl;
+            this.slueModel.Name = "slueModel";
+            this.slueModel.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.slueModel.Properties.View = this.gridView2;
+            this.slueModel.Size = new System.Drawing.Size(172, 20);
+            this.slueModel.TabIndex = 14;
+            // 
+            // gridView2
+            // 
+            this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
+            // 
+            // gbSupplier
+            // 
+            this.gbSupplier.Controls.Add(this.lblSupplier);
+            this.gbSupplier.Controls.Add(this.slueSupplier);
+            this.gbSupplier.Location = new System.Drawing.Point(21, 304);
+            this.gbSupplier.Name = "gbSupplier";
+            this.gbSupplier.Size = new System.Drawing.Size(370, 39);
+            this.gbSupplier.TabIndex = 19;
+            this.gbSupplier.TabStop = false;
+            // 
+            // lblSupplier
+            // 
+            this.lblSupplier.Location = new System.Drawing.Point(0, 16);
+            this.lblSupplier.Name = "lblSupplier";
+            this.lblSupplier.Size = new System.Drawing.Size(38, 13);
+            this.lblSupplier.TabIndex = 17;
+            this.lblSupplier.Text = "Supplier";
+            // 
+            // slueSupplier
+            // 
+            this.slueSupplier.Location = new System.Drawing.Point(42, 13);
+            this.slueSupplier.MenuManager = this.ribbonControl;
+            this.slueSupplier.Name = "slueSupplier";
+            this.slueSupplier.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.slueSupplier.Properties.View = this.gridView1;
+            this.slueSupplier.Size = new System.Drawing.Size(172, 20);
+            this.slueSupplier.TabIndex = 16;
+            // 
+            // gridView1
+            // 
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // xgrdLastDocs
+            // 
+            this.xgrdLastDocs.Location = new System.Drawing.Point(437, 9);
+            this.xgrdLastDocs.MainView = this.gridViewLastDocs;
+            this.xgrdLastDocs.MenuManager = this.ribbonControl;
+            this.xgrdLastDocs.Name = "xgrdLastDocs";
+            this.xgrdLastDocs.Size = new System.Drawing.Size(605, 224);
+            this.xgrdLastDocs.TabIndex = 20;
+            this.xgrdLastDocs.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewLastDocs});
+            // 
+            // gridViewLastDocs
+            // 
+            this.gridViewLastDocs.GridControl = this.xgrdLastDocs;
+            this.gridViewLastDocs.Name = "gridViewLastDocs";
+            // 
             // ItemDocs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,16 +333,13 @@
             this.Text = "ItemDocs";
             this.Load += new System.EventHandler(this.ItemDocs_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
-            this.Controls.SetChildIndex(this.ribbonStatusBar, 0);
             this.Controls.SetChildIndex(this.xtcGeneral, 0);
+            this.Controls.SetChildIndex(this.ribbonStatusBar, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).EndInit();
             this.xtcGeneral.ResumeLayout(false);
             this.xtpMain.ResumeLayout(false);
             this.xtpMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.slueModel.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxControlItems)).EndInit();
             this.gbNewDoc.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlNewDoc)).EndInit();
             this.layoutControlNewDoc.ResumeLayout(false);
@@ -288,6 +350,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcilueDocType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxControlItems)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueModel.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            this.gbSupplier.ResumeLayout(false);
+            this.gbSupplier.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.slueSupplier.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdLastDocs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewLastDocs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,5 +383,11 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem35;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem36;
         private DevExpress.XtraLayout.LayoutControlItem lcilueDocType;
+        private System.Windows.Forms.GroupBox gbSupplier;
+        private DevExpress.XtraEditors.LabelControl lblSupplier;
+        private DevExpress.XtraEditors.SearchLookUpEdit slueSupplier;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl xgrdLastDocs;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewLastDocs;
     }
 }

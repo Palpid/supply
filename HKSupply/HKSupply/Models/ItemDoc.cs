@@ -26,26 +26,32 @@ namespace HKSupply.Models
 
         [Column("ID_ITEM_GROUP", TypeName = "NVARCHAR"), StringLength(100)]
         public string IdItemGroup { get; set; }
-        [ForeignKey("IdItemGroup")]
-        public ItemGroup ItemGroup { get; set; }
 
         [Column("ID_SUPPLIER", TypeName = "NVARCHAR"), StringLength(100)]
         public string IdSupplier { get; set; }
-        [ForeignKey("IdSupplier")]
-        public Supplier Supplier { get; set; }
         
         [Column("ID_DOC_TYPE", TypeName = "NVARCHAR"), StringLength(100)]
         public string IdDocType { get; set; }
-        [ForeignKey("IdDocType")]
-        public DocType DocType { get; set; }
 
         [Column("FILE_NAME", TypeName = "NVARCHAR"), StringLength(100)]
         public string FileName { get; set; }
+
         [Column("FILE_PATH", TypeName = "NVARCHAR"), StringLength(500)]
         public string FilePath { get; set; }
 
         [Column("CREATE_DATE")]
         public DateTime CreateDate { get; set; }
+
+        #region Foreign Keys
+        [ForeignKey("IdItemGroup")]
+        public ItemGroup ItemGroup { get; set; }
+
+        [ForeignKey("IdSupplier")]
+        public Supplier Supplier { get; set; }
+
+        [ForeignKey("IdDocType")]
+        public DocType DocType { get; set; }
+        #endregion
 
         #region Equals
 

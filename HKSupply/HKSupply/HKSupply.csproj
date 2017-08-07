@@ -702,6 +702,10 @@
     <Compile Include="Migrations\201707281028585_DocHeadUser_01.Designer.cs">
       <DependentUpon>201707281028585_DocHeadUser_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708070930149_SupplierInDocs_01.cs" />
+    <Compile Include="Migrations\201708070930149_SupplierInDocs_01.Designer.cs">
+      <DependentUpon>201708070930149_SupplierInDocs_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BomBreakdown.cs" />
     <Compile Include="Models\Currency.cs" />
@@ -1218,6 +1222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707281028585_DocHeadUser_01.resx">
       <DependentUpon>201707281028585_DocHeadUser_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708070930149_SupplierInDocs_01.resx">
+      <DependentUpon>201708070930149_SupplierInDocs_01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
