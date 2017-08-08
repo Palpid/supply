@@ -129,6 +129,8 @@ namespace HKSupply.Forms.Master.DialogForms
                 FormBorderStyle = FormBorderStyle.FixedDialog;
                 Text = "Select suppliers";
 
+                checkedListBoxSuppliersDestination.CheckOnClick = true;
+                checkedListBoxSuppliersSource.CheckOnClick = true;
             }
             catch
             {

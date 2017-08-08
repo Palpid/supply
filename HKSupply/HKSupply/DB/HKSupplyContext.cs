@@ -87,6 +87,8 @@ namespace HKSupply.DB
 
         public DbSet<BomBreakdown> BomBreakdown { get; set; }
 
+        public DbSet<SupplierFactoryCoeff> SupplierFactoryCoeff { get; set; }
+
         //public HKSupplyContext()
         //    : base("name=SqlExpressConn")
         //{
@@ -155,6 +157,11 @@ namespace HKSupply.DB
 
             modelBuilder.Entity<DetailBomHf>().Property(x => x.Quantity).HasPrecision(19, 6);
             modelBuilder.Entity<DetailBomHfHistory>().Property(x => x.Quantity).HasPrecision(19, 6);
+
+            modelBuilder.Entity<SupplierFactoryCoeff>().Property(x => x.Coefficient1).HasPrecision(19, 6);
+            modelBuilder.Entity<SupplierFactoryCoeff>().Property(x => x.Coefficient2).HasPrecision(19, 6);
+            modelBuilder.Entity<SupplierFactoryCoeff>().Property(x => x.Scrap).HasPrecision(19, 6);
+            modelBuilder.Entity<SupplierFactoryCoeff>().Property(x => x.Density).HasPrecision(19, 6);
 
             base.OnModelCreating(modelBuilder);
         }

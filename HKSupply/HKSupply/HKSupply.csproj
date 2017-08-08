@@ -191,6 +191,12 @@
     <Compile Include="Forms\Master\DialogForms\EditHfBom.Designer.cs">
       <DependentUpon>EditHfBom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Master\DialogForms\SelectItem2CopyBom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\DialogForms\SelectItem2CopyBom.designer.cs">
+      <DependentUpon>SelectItem2CopyBom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Master\DialogForms\SelectSuppliers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,6 +292,12 @@
     </Compile>
     <Compile Include="Forms\Master\StoreManagement.Designer.cs">
       <DependentUpon>StoreManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\SupplierFactoryCoeffManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\SupplierFactoryCoeffManagement.Designer.cs">
+      <DependentUpon>SupplierFactoryCoeffManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Master\SupplierManagement.cs">
       <SubType>Form</SubType>
@@ -676,6 +688,7 @@
     <Compile Include="Models\StatusHK.cs" />
     <Compile Include="Models\Store.cs" />
     <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Models\SupplierFactoryCoeff.cs" />
     <Compile Include="Models\SupplierHistory.cs" />
     <Compile Include="Models\SupplierPriceList.cs" />
     <Compile Include="Models\SupplierPriceListHistory.cs" />
@@ -724,6 +737,7 @@
     <Compile Include="Services\Implementations\EFStatusProd.cs" />
     <Compile Include="Services\Implementations\EFStore.cs" />
     <Compile Include="Services\Implementations\EFSupplier.cs" />
+    <Compile Include="Services\Implementations\EFSupplierFactoryCoeff.cs" />
     <Compile Include="Services\Implementations\EFSupplierPriceList.cs" />
     <Compile Include="Services\Implementations\EFUser.cs" />
     <Compile Include="Services\Implementations\EFUserAttrDescription.cs" />
@@ -757,6 +771,7 @@
     <Compile Include="Services\Interfaces\IStatusProd.cs" />
     <Compile Include="Services\Interfaces\IStore.cs" />
     <Compile Include="Services\Interfaces\ISupplier.cs" />
+    <Compile Include="Services\Interfaces\ISupplierFactoryCoeff.cs" />
     <Compile Include="Services\Interfaces\ISupplierPriceList.cs" />
     <Compile Include="Services\Interfaces\IUser.cs" />
     <Compile Include="Services\Interfaces\IUserAttrDescription.cs" />
@@ -799,6 +814,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\DialogForms\EditHfBom.resx">
       <DependentUpon>EditHfBom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\DialogForms\SelectItem2CopyBom.resx">
+      <DependentUpon>SelectItem2CopyBom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\DialogForms\SelectSuppliers.resx">
       <DependentUpon>SelectSuppliers.cs</DependentUpon>
@@ -847,6 +865,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\StoreManagement.resx">
       <DependentUpon>StoreManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\SupplierFactoryCoeffManagement.resx">
+      <DependentUpon>SupplierFactoryCoeffManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\SupplierManagement.resx">
       <DependentUpon>SupplierManagement.cs</DependentUpon>

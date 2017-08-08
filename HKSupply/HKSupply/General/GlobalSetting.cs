@@ -49,6 +49,7 @@ namespace HKSupply.General
     /// Controlador para acceso a datos para Item BOM
     /// Controlador para acceso a datos para Bom Breakdown
     /// Controlador para acceso a datos para Model
+    /// Controlador para acceso a daros para SupplierFactoryCoeff
     /// </remarks>
     public sealed class GlobalSetting
     {
@@ -90,6 +91,7 @@ namespace HKSupply.General
         static EFItemBom _itemBomEF = new EFItemBom();
         static EFBomBreakdown _bomBreakdownEF = new EFBomBreakdown();
         static EFModel _modelEF = new EFModel();
+        static EFSupplierFactoryCoeff _supplierFactoryCoeffEF = new EFSupplierFactoryCoeff();
 
         static User _loggedUser;
         static IEnumerable<FunctionalityRole> _functionalitiesRoles;
@@ -460,6 +462,17 @@ namespace HKSupply.General
                     return new EFBomBreakdown();
                 else
                     return _bomBreakdownEF;
+            }
+        }
+
+        public static ISupplierFactoryCoeff SupplierFactoryCoeffService
+        {
+            get
+            {
+                if (_supplierFactoryCoeffEF == null)
+                    return new EFSupplierFactoryCoeff();
+                else
+                    return _supplierFactoryCoeffEF;
             }
         }
 

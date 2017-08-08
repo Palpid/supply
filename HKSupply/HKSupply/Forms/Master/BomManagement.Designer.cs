@@ -68,6 +68,8 @@
             this.gridViewSummaryBom = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.dockPanelDrawing = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer2 = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.dockPanelPdfColor = new DevExpress.XtraBars.Docking.DockPanel();
+            this.controlContainer3 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.document3 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.documentManagerBom = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
@@ -79,8 +81,8 @@
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.document12 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.document14 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
-            this.dockPanelPdfColor = new DevExpress.XtraBars.Docking.DockPanel();
-            this.controlContainer3 = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.dockPanelPhoto = new DevExpress.XtraBars.Docking.DockPanel();
+            this.controlContainer4 = new DevExpress.XtraBars.Docking.ControlContainer();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document9)).BeginInit();
@@ -114,6 +116,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.xgrdSummaryBom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewSummaryBom)).BeginInit();
             this.dockPanelDrawing.SuspendLayout();
+            this.dockPanelPdfColor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.document3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManagerBom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -125,7 +128,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document14)).BeginInit();
-            this.dockPanelPdfColor.SuspendLayout();
+            this.dockPanelPhoto.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -219,7 +222,8 @@
             this.dockPanelTreeBom,
             this.dockPanelPlainBom,
             this.dockPanelDrawing,
-            this.dockPanelPdfColor});
+            this.dockPanelPdfColor,
+            this.dockPanelPhoto});
             this.dockManagerItemBom.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
             "DevExpress.XtraBars.StandaloneBarDockControl",
@@ -467,7 +471,7 @@
             this.dockPanel6_Container.Controls.Add(this.xgrdSummaryBom);
             this.dockPanel6_Container.Location = new System.Drawing.Point(0, 0);
             this.dockPanel6_Container.Name = "dockPanel6_Container";
-            this.dockPanel6_Container.Size = new System.Drawing.Size(510, 577);
+            this.dockPanel6_Container.Size = new System.Drawing.Size(310, 577);
             this.dockPanel6_Container.TabIndex = 0;
             // 
             // xgrdSummaryUnitBom
@@ -479,7 +483,7 @@
             this.xgrdSummaryUnitBom.MainView = this.gridViewSummaryUnitBom;
             this.xgrdSummaryUnitBom.MenuManager = this.ribbonControl;
             this.xgrdSummaryUnitBom.Name = "xgrdSummaryUnitBom";
-            this.xgrdSummaryUnitBom.Size = new System.Drawing.Size(509, 284);
+            this.xgrdSummaryUnitBom.Size = new System.Drawing.Size(309, 284);
             this.xgrdSummaryUnitBom.TabIndex = 1;
             this.xgrdSummaryUnitBom.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSummaryUnitBom});
@@ -498,7 +502,7 @@
             this.xgrdSummaryBom.MainView = this.gridViewSummaryBom;
             this.xgrdSummaryBom.MenuManager = this.ribbonControl;
             this.xgrdSummaryBom.Name = "xgrdSummaryBom";
-            this.xgrdSummaryBom.Size = new System.Drawing.Size(509, 416);
+            this.xgrdSummaryBom.Size = new System.Drawing.Size(309, 416);
             this.xgrdSummaryBom.TabIndex = 0;
             this.xgrdSummaryBom.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSummaryBom});
@@ -525,6 +529,24 @@
             this.controlContainer2.Name = "controlContainer2";
             this.controlContainer2.Size = new System.Drawing.Size(297, 578);
             this.controlContainer2.TabIndex = 0;
+            // 
+            // dockPanelPdfColor
+            // 
+            this.dockPanelPdfColor.Controls.Add(this.controlContainer3);
+            this.dockPanelPdfColor.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
+            this.dockPanelPdfColor.ID = new System.Guid("6e1bfd15-96fc-4afc-9cf0-3ce044632b04");
+            this.dockPanelPdfColor.Location = new System.Drawing.Point(832, 79);
+            this.dockPanelPdfColor.Name = "dockPanelPdfColor";
+            this.dockPanelPdfColor.OriginalSize = new System.Drawing.Size(200, 200);
+            this.dockPanelPdfColor.Size = new System.Drawing.Size(200, 605);
+            this.dockPanelPdfColor.Text = "Color";
+            // 
+            // controlContainer3
+            // 
+            this.controlContainer3.Location = new System.Drawing.Point(5, 23);
+            this.controlContainer3.Name = "controlContainer3";
+            this.controlContainer3.Size = new System.Drawing.Size(191, 578);
+            this.controlContainer3.TabIndex = 0;
             // 
             // document3
             // 
@@ -625,29 +647,30 @@
             this.document14.FloatLocation = new System.Drawing.Point(462, 122);
             this.document14.FloatSize = new System.Drawing.Size(719, 466);
             // 
-            // dockPanelPdfColor
+            // dockPanelPhoto
             // 
-            this.dockPanelPdfColor.Controls.Add(this.controlContainer3);
-            this.dockPanelPdfColor.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
-            this.dockPanelPdfColor.ID = new System.Guid("6e1bfd15-96fc-4afc-9cf0-3ce044632b04");
-            this.dockPanelPdfColor.Location = new System.Drawing.Point(832, 79);
-            this.dockPanelPdfColor.Name = "dockPanelPdfColor";
-            this.dockPanelPdfColor.OriginalSize = new System.Drawing.Size(200, 200);
-            this.dockPanelPdfColor.Size = new System.Drawing.Size(200, 605);
-            this.dockPanelPdfColor.Text = "Color";
+            this.dockPanelPhoto.Controls.Add(this.controlContainer4);
+            this.dockPanelPhoto.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
+            this.dockPanelPhoto.ID = new System.Guid("b502950d-5f36-4cd1-959f-2170cd18eb41");
+            this.dockPanelPhoto.Location = new System.Drawing.Point(632, 79);
+            this.dockPanelPhoto.Name = "dockPanelPhoto";
+            this.dockPanelPhoto.OriginalSize = new System.Drawing.Size(200, 200);
+            this.dockPanelPhoto.Size = new System.Drawing.Size(200, 605);
+            this.dockPanelPhoto.Text = "Photo";
             // 
-            // controlContainer3
+            // controlContainer4
             // 
-            this.controlContainer3.Location = new System.Drawing.Point(5, 23);
-            this.controlContainer3.Name = "controlContainer3";
-            this.controlContainer3.Size = new System.Drawing.Size(191, 578);
-            this.controlContainer3.TabIndex = 0;
+            this.controlContainer4.Location = new System.Drawing.Point(5, 23);
+            this.controlContainer4.Name = "controlContainer4";
+            this.controlContainer4.Size = new System.Drawing.Size(191, 578);
+            this.controlContainer4.TabIndex = 0;
             // 
             // BomManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1338, 715);
+            this.Controls.Add(this.dockPanelPhoto);
             this.Controls.Add(this.dockPanelPdfColor);
             this.Controls.Add(this.dockPanelDrawing);
             this.Controls.Add(this.panelContainer2);
@@ -659,6 +682,7 @@
             this.Controls.SetChildIndex(this.panelContainer2, 0);
             this.Controls.SetChildIndex(this.dockPanelDrawing, 0);
             this.Controls.SetChildIndex(this.dockPanelPdfColor, 0);
+            this.Controls.SetChildIndex(this.dockPanelPhoto, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.document9)).EndInit();
@@ -693,6 +717,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.xgrdSummaryBom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewSummaryBom)).EndInit();
             this.dockPanelDrawing.ResumeLayout(false);
+            this.dockPanelPdfColor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.document3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManagerBom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
@@ -704,7 +729,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.document12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.document14)).EndInit();
-            this.dockPanelPdfColor.ResumeLayout(false);
+            this.dockPanelPhoto.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -763,5 +788,7 @@
         private DevExpress.XtraBars.Docking.ControlContainer controlContainer2;
         private DevExpress.XtraBars.Docking.DockPanel dockPanelPdfColor;
         private DevExpress.XtraBars.Docking.ControlContainer controlContainer3;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanelPhoto;
+        private DevExpress.XtraBars.Docking.ControlContainer controlContainer4;
     }
 }
