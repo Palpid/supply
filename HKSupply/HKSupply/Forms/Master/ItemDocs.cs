@@ -152,6 +152,7 @@ namespace HKSupply.Forms.Master
                 if (string.IsNullOrEmpty(idModel) == false)
                     _itemsModelList = _itemEyList.Where(a => a.IdModel.Equals(idModel)).ToList();
                 LoadCheckedList();
+                LoadLastDocsGrid(); //TEST
 
             }
             catch(Exception ex)
@@ -269,7 +270,7 @@ namespace HKSupply.Forms.Master
                 _docsTypeList = GlobalSetting.DocTypeService.GetDocsType(Constants.ITEM_GROUP_EY);
                 _suppliersList = GlobalSetting.SupplierService.GetSuppliers();
 
-                //Only drawing need a supplier
+                //Only drawing needs a supplier
                 _docsTypeShowSupplierList = _docsTypeList.Where(a => a.IdDocType.Contains("DRAWING")).ToList();
             }
             catch
@@ -289,6 +290,25 @@ namespace HKSupply.Forms.Master
                 {
                     checkedListBoxControlItems.Items.Add(item.IdItemBcn, false);
                 }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void LoadLastDocsGrid()
+        {
+            try
+            {
+                string idModel = slueModel.EditValue as string;
+                if (string.IsNullOrEmpty(idModel))
+                    return;
+
+                var tmpModelosList = _itemsModelList.Select(a => a.IdItemBcn).ToList();
+                var listDocs = GlobalSetting.ItemDocService.GetLastItemsDocsListItems(tmpModelosList, Constants.ITEM_GROUP_EY);
+                xgrdLastDocs.DataSource = null;
+                xgrdLastDocs.DataSource = listDocs;
             }
             catch
             {
@@ -389,6 +409,7 @@ namespace HKSupply.Forms.Master
 
                 //Columns definition
                 GridColumn colIdItemBcn = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemBcn"), Visible = true, FieldName = nameof(ItemDoc.IdItemBcn), Width = 150 };
+                GridColumn colIdSupplier = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Supplier"), Visible = true, FieldName = nameof(ItemDoc.IdSupplier), Width = 60 };
                 GridColumn colIdVerItem = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemVer"), Visible = true, FieldName = nameof(ItemDoc.IdVerItem), Width = 60 };
                 GridColumn colIdSubVerItem = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemSubver"), Visible = true, FieldName = nameof(ItemDoc.IdSubVerItem), Width = 75 };
                 GridColumn colIdDocType = new GridColumn() { Caption = "IdDocType", Visible = false, FieldName = nameof(ItemDoc.IdDocType), Width = 10 };
@@ -426,6 +447,7 @@ namespace HKSupply.Forms.Master
 
                 //Add columns to grid root view
                 gridViewLastDocs.Columns.Add(colIdItemBcn);
+                gridViewLastDocs.Columns.Add(colIdSupplier);
                 gridViewLastDocs.Columns.Add(colIdVerItem);
                 gridViewLastDocs.Columns.Add(colIdSubVerItem);
                 gridViewLastDocs.Columns.Add(colIdDocType);
@@ -561,6 +583,7 @@ namespace HKSupply.Forms.Master
                 {
                     checkedListBoxControlItems.UnCheckAll();
                     checkedListBoxControlItems.Items[0].Description = "Check All";
+                    LoadLastDocsGrid();
                 }
             }
             catch

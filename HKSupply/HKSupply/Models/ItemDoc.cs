@@ -71,7 +71,8 @@ namespace HKSupply.Models
                 IdDocType == itemDoc.IdDocType &&
                 FileName == itemDoc.FileName &&
                 FilePath == itemDoc.FilePath &&
-                CreateDate == itemDoc.CreateDate
+                CreateDate == itemDoc.CreateDate &&
+                IdSupplier == itemDoc.IdSupplier
                 );
 
             return res;
@@ -87,7 +88,8 @@ namespace HKSupply.Models
                 (IdItemGroup == null ? 0 : IdItemGroup.GetHashCode()) + 
                 (IdDocType == null ? 0 : IdDocType.GetHashCode()) + 
                 (FileName == null ? 0 : FileName.GetHashCode()) + 
-                (FilePath == null ? 0 : FilePath.GetHashCode()) + 
+                (FilePath == null ? 0 : FilePath.GetHashCode()) +
+                (IdSupplier == null ? 0 : IdSupplier.GetHashCode()) +
                 CreateDate.GetHashCode());
 
             return hashCode;

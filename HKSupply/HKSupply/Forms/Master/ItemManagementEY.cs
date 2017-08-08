@@ -30,7 +30,7 @@ using System.IO;
 namespace HKSupply.Forms.Master
 {
     /// <summary>
-    /// Pantalla de getsión para los Items EY
+    /// Pantalla de gestión para los Items EY
     /// </summary>
     /// <remarks>Se empezó en VS2012, después de pasar a VS2017 y poder usar C# 6.0 se han cambiado algunas cosas usando el nameof, pero no todas</remarks>
     public partial class ItemManagementEY : RibbonFormBase
@@ -101,6 +101,7 @@ namespace HKSupply.Forms.Master
         List<FamilyHK> _familiesHkList;
         List<UserAttrDescription> _userAttrDescriptionList;
         List<DocType> _docsTypeList;
+        List<DocType> _docsTypeShowSupplierList;
         List<ItemDoc> _itemDocsList;
         List<ItemDoc> _itemLastDocsList;
 
@@ -129,6 +130,7 @@ namespace HKSupply.Forms.Master
                 SetUpLueFamiliesHk();
                 SetUpLueDefaultSupplier();
                 SetUpLueDocType();
+                SetUpSlueSupplier();
                 SetUpLabelNameUserAttributes();
                 ResetItemUpdate();
                 SetFormBinding();
@@ -679,6 +681,34 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void LueDocType_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lueDocType.EditValue != null)
+                {
+                    if (_docsTypeShowSupplierList.Where(a => a.IdDocType.Equals((string)lueDocType.EditValue)).Count() > 0)
+                    {
+                        slueSupplier.ReadOnly = false;
+                    }
+                    else
+                    {
+                        slueSupplier.EditValue = null;
+                        slueSupplier.ReadOnly = true;
+                    }
+                }
+                else
+                {
+                    slueSupplier.EditValue = null;
+                    slueSupplier.ReadOnly = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         #endregion
 
         #region Private Methods
@@ -691,6 +721,7 @@ namespace HKSupply.Forms.Master
             _itemUpdate = new ItemEy();
             _itemDocsList = null;
             txtPathNewDoc.Text = string.Empty;
+            slueSupplier.EditValue = null;
         }
 
         #region SetUp Form Object
@@ -868,6 +899,7 @@ namespace HKSupply.Forms.Master
                 GridColumn colIdVerItem = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemVer"), Visible = true, FieldName = nameof(ItemDoc.IdVerItem), Width = 60 };
                 GridColumn colIdSubVerItem = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemSubver"), Visible = true, FieldName = nameof(ItemDoc.IdSubVerItem), Width = 75 };
                 GridColumn colIdDocType = new GridColumn() { Caption = "IdDocType", Visible = false, FieldName = nameof(ItemDoc.IdDocType), Width = 10 };
+                GridColumn colIdSupplier = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Supplier"), Visible = true, FieldName = nameof(ItemDoc.IdSupplier), Width = 60 };
                 GridColumn colDocType = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("DocType"), Visible = true, FieldName = $"{nameof(ItemDoc.DocType)}.{nameof(DocType.Description)}" , Width = 100 };
                 GridColumn colFileName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("FileName"), Visible = true, FieldName = nameof(ItemDoc.FileName), Width = 250 };
                 GridColumn colFilePath = new GridColumn() { Caption = "FilePath", Visible = false, FieldName = nameof(ItemDoc.FilePath), Width = 10 };
@@ -893,6 +925,7 @@ namespace HKSupply.Forms.Master
                 colIdVerItem.OptionsColumn.AllowEdit = false;
                 colIdSubVerItem.OptionsColumn.AllowEdit = false;
                 colIdDocType.OptionsColumn.AllowEdit = false;
+                colIdSupplier.OptionsColumn.AllowEdit = false;
                 colDocType.OptionsColumn.AllowEdit = false;
                 colFileName.OptionsColumn.AllowEdit = false;
                 colFilePath.OptionsColumn.AllowEdit = false;
@@ -903,6 +936,7 @@ namespace HKSupply.Forms.Master
                 gridViewLastDocs.Columns.Add(colIdVerItem);
                 gridViewLastDocs.Columns.Add(colIdSubVerItem);
                 gridViewLastDocs.Columns.Add(colIdDocType);
+                gridViewLastDocs.Columns.Add(colIdSupplier);
                 gridViewLastDocs.Columns.Add(colDocType);
                 gridViewLastDocs.Columns.Add(colFileName);
                 gridViewLastDocs.Columns.Add(colFilePath);
@@ -1244,10 +1278,29 @@ namespace HKSupply.Forms.Master
                 lueDocType.Properties.DisplayMember = nameof(DocType.Description);
                 lueDocType.Properties.ValueMember = nameof(DocType.IdDocType);
                 lueDocType.Properties.Columns.Add(new LookUpColumnInfo(nameof(DocType.Description), 100, GlobalSetting.ResManager.GetString("Description")));
+
+                lueDocType.EditValueChanged += LueDocType_EditValueChanged;
             }
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        private void SetUpSlueSupplier()
+        {
+            try
+            {
+                slueSupplier.Properties.DataSource = _supplierList;
+                slueSupplier.Properties.ValueMember = nameof(Supplier.IdSupplier);
+                slueSupplier.Properties.DisplayMember = nameof(Supplier.SupplierName);
+                slueSupplier.Properties.View.Columns.AddField(nameof(Supplier.IdSupplier)).Visible = true;
+                slueSupplier.Properties.View.Columns.AddField(nameof(Supplier.SupplierName)).Visible = true;
+                slueSupplier.Properties.NullText = "Select Supplier...";
+            }
+            catch
+            {
+                throw;
             }
         }
 
@@ -1277,6 +1330,9 @@ namespace HKSupply.Forms.Master
                 _supplierList = GlobalSetting.SupplierService.GetSuppliers();
                 _docsTypeList = GlobalSetting.DocTypeService.GetDocsType(Constants.ITEM_GROUP_EY);
                 _userAttrDescriptionList = GlobalSetting.UserAttrDescriptionService.GetUserAttrsDescription(Constants.ITEM_GROUP_EY);
+
+                //Only drawing needs a supplier
+                _docsTypeShowSupplierList = _docsTypeList.Where(a => a.IdDocType.Contains("DRAWING")).ToList();
             }
             catch (Exception ex)
             {
@@ -1499,6 +1555,7 @@ namespace HKSupply.Forms.Master
                 {
                     xtpList.PageVisible = false;
                     gbNewDoc.Enabled = true;
+                    slueSupplier.ReadOnly = true;
                     SetEditingFieldsEnabled();
                 }
                 else if (xtcGeneral.SelectedTabPage == xtpList)
@@ -1731,7 +1788,7 @@ namespace HKSupply.Forms.Master
 
                 if (string.IsNullOrEmpty(txtPathNewDoc.Text) == false)
                 {
-                    if (System.IO.File.Exists(txtPathNewDoc.Text) == false)
+                    if (File.Exists(txtPathNewDoc.Text) == false)
                     {
                         XtraMessageBox.Show(GlobalSetting.ResManager.GetString("FileDoesntExist"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         return false;
@@ -1739,6 +1796,12 @@ namespace HKSupply.Forms.Master
                     if (lueDocType.EditValue == null)
                     {
                         XtraMessageBox.Show(GlobalSetting.ResManager.GetString("SelectDocType"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return false;
+                    }
+
+                    if ((_docsTypeShowSupplierList.Where(a => a.IdDocType.Equals((string)lueDocType.EditValue)).Count() > 0) && slueSupplier.EditValue == null)
+                    {
+                        XtraMessageBox.Show("Select supplier for the drawing", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         return false;
                     }
                 }
@@ -1774,12 +1837,12 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                string fileName = System.IO.Path.GetFileName(txtPathNewDoc.Text);
-				string fileNameNoExtension = System.IO.Path.GetFileNameWithoutExtension(txtPathNewDoc.Text);
-				string extension = System.IO.Path.GetExtension(txtPathNewDoc.Text);
+                string fileName = Path.GetFileName(txtPathNewDoc.Text);
+				string fileNameNoExtension = Path.GetFileNameWithoutExtension(txtPathNewDoc.Text);
+				string extension = Path.GetExtension(txtPathNewDoc.Text);
 
                 //Creamos los directorios si no existen
-                new System.IO.FileInfo(Constants.ITEMS_DOCS_PATH + _itemUpdate.IdItemBcn + "\\" + lueDocType.EditValue.ToString()+"\\").Directory.Create();
+                new FileInfo(Constants.ITEMS_DOCS_PATH + _itemUpdate.IdItemBcn + "\\" + lueDocType.EditValue.ToString()+"\\").Directory.Create();
 
                 
                 ItemDoc itemDoc = new ItemDoc();
@@ -1788,9 +1851,10 @@ namespace HKSupply.Forms.Master
                 itemDoc.IdDocType = lueDocType.EditValue.ToString();
                 itemDoc.FileName = fileNameNoExtension + "_" + (_itemUpdate.IdVer.ToString()) + "." + ((_itemUpdate.IdSubVer + 1).ToString()) + extension;
                 itemDoc.FilePath = _itemUpdate.IdItemBcn + "\\" + lueDocType.EditValue.ToString() + "\\" + itemDoc.FileName;
+                itemDoc.IdSupplier = slueSupplier.EditValue?.ToString();
 
                 //move to file server
-                System.IO.File.Copy(txtPathNewDoc.Text, Constants.ITEMS_DOCS_PATH + itemDoc.FilePath, overwrite: true);
+                File.Copy(txtPathNewDoc.Text, Constants.ITEMS_DOCS_PATH + itemDoc.FilePath, overwrite: true);
 
                 //update database
                 return GlobalSetting.ItemEyService.UpdateItemWithDoc(_itemUpdate, itemDoc, newVersion);

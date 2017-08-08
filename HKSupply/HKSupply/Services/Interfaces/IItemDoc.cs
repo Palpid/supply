@@ -11,5 +11,6 @@ namespace HKSupply.Services.Interfaces
     {
         List<ItemDoc> GetItemsDocs(string idItemBcn, string idItemGroup);
         List<ItemDoc> GetLastItemsDocs(string idItemBcn, string idItemGroup);
+        List<ItemDoc> GetLastItemsDocsListItems(List<string> idItemBcnList, string idItemGroup);
     }
 }

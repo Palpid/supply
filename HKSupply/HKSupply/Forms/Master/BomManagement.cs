@@ -1897,17 +1897,67 @@ namespace HKSupply.Forms.Master
 
                 string drawingPath = Constants.ITEMS_DOCS_PATH + _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).Select(b => b.FilePath).FirstOrDefault();
 
+
                 if (System.IO.File.Exists(drawingPath))
                 {
-                    PDFViewer pdfViewer = new PDFViewer();
-                    pdfViewer.TopLevel = false;
-                    pdfViewer.MinimizeBox = false;
-                    pdfViewer.MaximizeBox = false;
-                    pdfViewer.pdfFile = drawingPath;
-                    pdfViewer.FormClosing += (o, e) => { e.Cancel = true; }; //No queremos que puedan cerrar el formulario del viewer incrustado dentro del dockpanel
-                    dockPanelDrawing.Controls.Add(pdfViewer);
-                    pdfViewer.Dock = DockStyle.Fill;
-                    pdfViewer.Visible = true;
+
+                    //LookUpEdit lueSupliers = new LookUpEdit();
+
+                    //PDFViewer pdfViewer = new PDFViewer();
+                    //pdfViewer.TopLevel = false;
+                    //pdfViewer.MinimizeBox = false;
+                    //pdfViewer.MaximizeBox = false;
+                    //pdfViewer.pdfFile = drawingPath;
+                    //pdfViewer.FormClosing += (o, e) => { e.Cancel = true; }; //No queremos que puedan cerrar el formulario del viewer incrustado dentro del dockpanel
+
+                    //dockPanelDrawing.Controls.Add(lueSupliers);
+                    //dockPanelDrawing.Controls.Add(pdfViewer);
+
+                    //pdfViewer.Dock = DockStyle.Fill;
+                    //pdfViewer.Visible = true;
+
+                    //Creamos un tab control y en vamos agregando tabpages con los pdf's de los planos
+                    TabControl tcDrawings = new TabControl();
+
+                    var drawings = _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).ToList();
+
+                    foreach (var drawing in drawings)
+                    {
+                        TabPage tpDrawind = new TabPage();
+                        tpDrawind.Text = drawing.IdSupplier;
+
+                        //string drawingPath = Constants.ITEMS_DOCS_PATH + _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).Select(b => b.FilePath).FirstOrDefault();
+                        string path = Constants.ITEMS_DOCS_PATH + drawing.FilePath;
+
+                        if (System.IO.File.Exists(path))
+                        {
+                            //Creamos el pdf Viewer
+                            PDFViewer pdfViewer = new PDFViewer();
+                            pdfViewer.TopLevel = false;
+                            pdfViewer.MinimizeBox = false;
+                            pdfViewer.MaximizeBox = false;
+                            pdfViewer.pdfFile = path;
+                            pdfViewer.FormClosing += (o, e) => { e.Cancel = true; }; //No queremos que puedan cerrar el formulario del viewer incrustado dentro del dockpanel
+
+                            tpDrawind.Controls.Add(pdfViewer);
+                            pdfViewer.Dock = DockStyle.Fill;
+                            pdfViewer.Visible = true;
+                        }
+                        else
+                        {
+                            LabelControl lbl = new LabelControl();
+                            lbl.Text = "No Drawing doc";
+                            tpDrawind.Controls.Add(lbl);
+                        }
+
+
+                        //agregamos el tabpage al tabcontrol
+                        tcDrawings.TabPages.Add(tpDrawind);
+                    }
+
+                    dockPanelDrawing.Controls.Add(tcDrawings);
+                    tcDrawings.Dock = DockStyle.Fill;
+
 
                 }
                 else
