@@ -49,6 +49,10 @@ namespace HKSupply.General
         public const string HF_USER_ATTR_02 = "HFATTR02";
         public const string HF_USER_ATTR_03 = "HFATTR03";
 
+        //** HARDWARE GROUP TYPES **//
+        public const string HW_GROUP_TYPE_DESING = "DESIGN";
+        public const string HW_GROUP_TYPE_PRODUCTION = "PRODUCTION";
+
         //** SUPPLY STATUS **//
         public const string SUPPLY_STATUS_OPEN = "OPN";
         public const string SUPPLY_STATUS_CLOSE = "CLS";

@@ -145,16 +145,26 @@ namespace HKSupply.Services.Implementations
                             }
                             itemToUpdate.Timestamp = DateTime.Now;
 
-                            //no hacemos  un "entry" en el contexto de db y lo marcamos como modificado, sino que updatamos sólo los pocos campos
+                            //no hacemos  un "entry" en el contexto de db y lo marcamos como modificado, sino que updatamos sólo los campos
                             //que se pueden modificar de un item desde la aplicación para que EF genere el update sólo de esos campos y no de todos
+                            itemToUpdate.IdPrototype = updateItem.IdPrototype;
+                            itemToUpdate.IdColor1 = updateItem.IdColor1;
+                            itemToUpdate.IdColor2 = updateItem.IdColor2;
                             itemToUpdate.IdDefaultSupplier = updateItem.IdDefaultSupplier;
                             itemToUpdate.IdFamilyHK = updateItem.IdFamilyHK;
                             itemToUpdate.IdItemHK = updateItem.IdItemHK;
+                            itemToUpdate.IdFamilyHK = updateItem.IdFamilyHK;
+                            itemToUpdate.ItemDescription = updateItem.ItemDescription;
+                            itemToUpdate.IdStatusCial = updateItem.IdStatusCial;
                             itemToUpdate.IdStatusProd = updateItem.IdStatusProd;
                             itemToUpdate.IdUserAttri1 = updateItem.IdUserAttri1;
                             itemToUpdate.IdUserAttri2 = updateItem.IdUserAttri2;
                             itemToUpdate.IdUserAttri3 = updateItem.IdUserAttri3;
+                            itemToUpdate.Comments = updateItem.Comments;
+                            itemToUpdate.LaunchDate = updateItem.LaunchDate;
+                            itemToUpdate.RemovalDate = updateItem.RemovalDate;
                             itemToUpdate.PhotoUrl = updateItem.PhotoUrl;
+                            itemToUpdate.Unit = updateItem.Unit;
 
                             ItemHwHistory itemHistory = (ItemHwHistory)itemToUpdate;
                             itemHistory.User = GlobalSetting.LoggedUser.UserLogin;
@@ -438,5 +448,87 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        public bool newItem(ItemHw newItemHw)
+        {
+            try
+            {
+                if (newItemHw == null)
+                    throw new ArgumentNullException("newItemHw ");
+
+                using (var db = new HKSupplyContext())
+                {
+                    using (var dbTrans = db.Database.BeginTransaction())
+                    {
+                        try
+                        {
+                            var tmpItem = GetItem(newItemHw.IdItemBcn);
+                            if (tmpItem != null)
+                                throw new Exception("Item already exist");
+
+                            newItemHw.Model = null;
+                            newItemHw.DefaultSupplier = null;
+                            newItemHw.Prototype = null;
+
+                            newItemHw.IdVer = 1;
+                            newItemHw.IdSubVer = 0;
+                            newItemHw.Timestamp = DateTime.Now;
+                            newItemHw.CreateDate = DateTime.Now;
+                            newItemHw.IdGroupType = Constants.HW_GROUP_TYPE_PRODUCTION; //Los hw que se crean desde esta aplicación a día de hoy son todos del tipo "producción"
+
+                            ItemHwHistory itemHwHistory = (ItemHwHistory)newItemHw;
+                            itemHwHistory.User = GlobalSetting.LoggedUser.UserLogin;
+
+                            db.ItemsHw.Add(newItemHw);
+                            db.ItemsHwHistory.Add(itemHwHistory);
+                            db.SaveChanges();
+                            dbTrans.Commit();
+
+                            return true;
+
+                        }
+                        catch (DbEntityValidationException e)
+                        {
+                            dbTrans.Rollback();
+                            _log.Error(e.Message, e);
+                            throw e;
+                        }
+                        catch (SqlException sqlex)
+                        {
+                            dbTrans.Rollback();
+
+                            for (int i = 0; i < sqlex.Errors.Count; i++)
+                            {
+                                _log.Error("Index #" + i + "\n" +
+                                    "Message: " + sqlex.Errors[i].Message + "\n" +
+                                    "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                                    "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                                    "Source: " + sqlex.Errors[i].Source + "\n" +
+                                    "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                                switch (sqlex.Errors[i].Number)
+                                {
+                                    case -1: //connection broken
+                                    case -2: //timeout
+                                        throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                                }
+                            }
+                            throw sqlex;
+                        }
+                        catch (Exception ex)
+                        {
+                            dbTrans.Rollback();
+                            _log.Error(ex.Message, ex);
+                            throw ex;
+                        }
+
+                    }
+                }
+            }
+            catch (ArgumentNullException anex)
+            {
+                _log.Error(anex.Message, anex);
+                throw anex;
+            }
+        }
     }
 }

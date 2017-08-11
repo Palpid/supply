@@ -1,0 +1,12 @@
+﻿2017-08-10 09:34:29,332 INFO [1] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid Password
+HKSupply.Exceptions.InvalidPasswordException: Invalid Password
+   at HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:line 139
+2017-08-10 13:45:43,981 INFO [1] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid Password
+HKSupply.Exceptions.InvalidPasswordException: Invalid Password
+   at HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:line 139
+2017-08-10 13:45:50,875 INFO [1] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid Password
+HKSupply.Exceptions.InvalidPasswordException: Invalid Password
+   at HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:line 139
+2017-08-10 16:30:53,181 ERROR [1] HKSupply.Services.Implementations.EFItemHw.newItem - Item already exist
+System.Exception: Item already exist
+   at HKSupply.Services.Implementations.EFItemHw.newItem(ItemHw newItemHw) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemHw.cs:line 456

@@ -27,6 +27,7 @@ namespace HKSupply.Forms.Master
 
         #region Constants
         private const string EDIT_COLUMN = "EditHf";
+        private const string DYNAMIC_PANEL_DRAWING = "DynamicPanelDrawing";
         #endregion
 
 
@@ -302,9 +303,8 @@ namespace HKSupply.Forms.Master
                 //LoadItemsListMt();
                 //LoadItemsListHw();
 
-                dockPanelDrawing.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
-                dockPanelPdfColor.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
-                dockPanelPhoto.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                //Se tiene que llamar en el load, no en el constructor
+                SetDockPanelsVisibility();
             }
             catch (Exception ex)
             {
@@ -1135,10 +1135,33 @@ namespace HKSupply.Forms.Master
                 dockPanelDrawing.Options.ShowCloseButton = false;
                 dockPanelPdfColor.Options.ShowCloseButton = false;
                 dockPanelPhoto.Options.ShowCloseButton = false;
+
+                dockPanelDrawingCR.Options.ShowCloseButton = false;
+                dockPanelDrawingCV.Options.ShowCloseButton = false;
+                dockPanelDrawingFA.Options.ShowCloseButton = false;
+                dockPanelDrawingGB.Options.ShowCloseButton = false;
             }
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        private void SetDockPanelsVisibility()
+        {
+            try
+            {
+                dockPanelDrawing.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden; //Es el antiguo del plano cuando sólo había uno por SKU, lo dejo por si acaso
+                dockPanelPdfColor.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                dockPanelPhoto.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                dockPanelDrawingCR.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                dockPanelDrawingCV.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                dockPanelDrawingFA.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                dockPanelDrawingGB.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+            }
+            catch
+            {
+                throw;
             }
         }
 
@@ -1783,7 +1806,7 @@ namespace HKSupply.Forms.Master
 
                 LoadBomTreeView();
                 LoadSummaryBom();
-                LoadDrawingPanel();
+                LoadDrawingPanels();
                 LoadPdfColorgPanel();
                 LoadPhotoPanel(photo);
 
@@ -1882,12 +1905,23 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void LoadDrawingPanel()
+        private void LoadDrawingPanels()
         {
             try
             {
-                //Borramos si ya hemos cargado algo en al dockpanel
-                ClearPdfPanels(dockPanelDrawing);
+
+                ////eliminamos los paneles de planos si existen
+                //var panelstoDel = dockManagerItemBom.Panels.Where(a => a.Name.Contains(DYNAMIC_PANEL_DRAWING)).ToList();
+                //foreach (var panel in panelstoDel)
+                //{
+                //    dockManagerItemBom.RemovePanel(panel);
+                //}
+
+                ////ocultamos el panel estático del drawing que ahora ha quedado para mensajes
+                //dockPanelDrawing.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+
+                ////Borramos si ya hemos cargado algo en al dockpanel de Drawing
+                //ClearPdfPanels(dockPanelDrawing);
 
                 string docType = string.Empty;
                 if (_currentItem.GetType() == typeof(ItemEy))
@@ -1895,81 +1929,172 @@ namespace HKSupply.Forms.Master
                 else if (_currentItem.GetType() == typeof(ItemHf))
                     docType = "PDFDRAWING_HF";
 
-                string drawingPath = Constants.ITEMS_DOCS_PATH + _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).Select(b => b.FilePath).FirstOrDefault();
+                //string drawingPath = Constants.ITEMS_DOCS_PATH + _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).Select(b => b.FilePath).FirstOrDefault();
 
 
-                if (System.IO.File.Exists(drawingPath))
+                //if (System.IO.File.Exists(drawingPath))
+                //{
+
+                //V1: un sólo plano por item
+                //PDFViewer pdfViewer = new PDFViewer();
+                //pdfViewer.TopLevel = false;
+                //pdfViewer.MinimizeBox = false;
+                //pdfViewer.MaximizeBox = false;
+                //pdfViewer.pdfFile = drawingPath;
+                //pdfViewer.FormClosing += (o, e) => { e.Cancel = true; }; //No queremos que puedan cerrar el formulario del viewer incrustado dentro del dockpanel
+                //dockPanelDrawing.Controls.Add(pdfViewer);
+                //pdfViewer.Dock = DockStyle.Fill;
+                //pdfViewer.Visible = true;
+
+                //--------------------------------------------------------------------------------------------------
+                //V2: Planos por item/supplier en un panel y tabs por cada plano de fábrica
+                //TabControl tcDrawings = new TabControl();
+
+                //var drawings = _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).ToList();
+
+                //foreach (var drawing in drawings)
+                //{
+                //    TabPage tpDrawind = new TabPage();
+                //    tpDrawind.Text = drawing.IdSupplier;
+
+                //    string path = Constants.ITEMS_DOCS_PATH + drawing.FilePath;
+
+                //    if (System.IO.File.Exists(path))
+                //    {
+                //        //Creamos el pdf Viewer
+                //        PDFViewer pdfViewer = new PDFViewer();
+                //        pdfViewer.TopLevel = false;
+                //        pdfViewer.MinimizeBox = false;
+                //        pdfViewer.MaximizeBox = false;
+                //        pdfViewer.pdfFile = path;
+                //        pdfViewer.FormClosing += (o, e) => { e.Cancel = true; }; //No queremos que puedan cerrar el formulario del viewer incrustado dentro del dockpanel
+
+                //        tpDrawind.Controls.Add(pdfViewer);
+                //        pdfViewer.Dock = DockStyle.Fill;
+                //        pdfViewer.Visible = true;
+                //    }
+                //    else
+                //    {
+                //        LabelControl lbl = new LabelControl();
+                //        lbl.Text = "No Drawing doc";
+                //        tpDrawind.Controls.Add(lbl);
+                //    }
+
+
+                //    //agregamos el tabpage al tabcontrol
+                //    tcDrawings.TabPages.Add(tpDrawind);
+                //}
+
+                //dockPanelDrawing.Controls.Add(tcDrawings);
+                //tcDrawings.Dock = DockStyle.Fill;
+
+                //--------------------------------------------------------------------------------------------------
+
+                //V3: Planos por item/supplier cada uno en un panel diferente de forma dinámica
+                //var drawings = _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).ToList();
+                //foreach (var drawing in drawings)
+                //{
+
+                //    //Creamos el panel
+                //    DevExpress.XtraBars.Docking.DockPanel tmpPanel = new DevExpress.XtraBars.Docking.DockPanel();
+                //    tmpPanel.Name = $"{DYNAMIC_PANEL_DRAWING}{drawing.IdSupplier}";
+                //    tmpPanel.Text = $"Drawing {drawing.IdSupplier}";
+                //    tmpPanel.Options.ShowCloseButton = false;
+                //    //creamos el ControlContainer y le agregamos el pdfViewer
+                //    DevExpress.XtraBars.Docking.ControlContainer tmpControlContainer = new DevExpress.XtraBars.Docking.ControlContainer();
+                //    tmpControlContainer.Name = $"{DYNAMIC_PANEL_DRAWING}{drawing.IdSupplier}";
+
+                //    string path = Constants.ITEMS_DOCS_PATH + drawing.FilePath;
+                //    if (System.IO.File.Exists(path))
+                //    {
+                //        //Creamos el pdf Viewer
+                //        PDFViewer pdfViewer = new PDFViewer();
+                //        pdfViewer.TopLevel = false;
+                //        pdfViewer.MinimizeBox = false;
+                //        pdfViewer.MaximizeBox = false;
+                //        pdfViewer.pdfFile = path;
+                //        pdfViewer.FormClosing += (o, e) => { e.Cancel = true; }; //No queremos que puedan cerrar el formulario del viewer incrustado dentro del dockpanel
+                //        //Agregamos el pdfViewer al ControlContainer
+                //        tmpControlContainer.Controls.Add(pdfViewer);
+                //        pdfViewer.Dock = DockStyle.Fill;
+                //        pdfViewer.Visible = true;
+                //    }
+                //    else
+                //    {
+                //        LabelControl lbl = new LabelControl();
+                //        lbl.Text = "Drawing File doesn't exist";
+                //        tmpControlContainer.Controls.Add(lbl);
+                //    }
+
+                //    //Agregamos el ControlContainer al panel, con el plano en pdf o con el label de que no existe el fichero en el servidor
+                //    tmpPanel.Controls.Add(tmpControlContainer);
+                //    //Agregamos el panel al dock manager del formulario
+                //    dockManagerItemBom.AddPanel(DevExpress.XtraBars.Docking.DockingStyle.Right, tmpPanel);
+                //    dockManagerItemBom.Panels[tmpPanel.Name].Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                //}
+
+
+                //}
+                //else
+                //{
+                //    LabelControl lbl = new LabelControl();
+                //    lbl.Text = "No Drawing doc";
+                //    dockPanelDrawing.Controls.Add(lbl);
+                //    dockPanelDrawing.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                //}
+
+
+                //--------------------------------------------------------------------------------------------------
+                //v4: Cada fábrica tiene su propio panel estático, si no existe plano para ese SKU/fábrica no pinta nada en él
+
+                //Borramos antes todos los planos cargados
+                ClearPdfPanels(dockPanelDrawingCR);
+                ClearPdfPanels(dockPanelDrawingCV);
+                ClearPdfPanels(dockPanelDrawingFA);
+                ClearPdfPanels(dockPanelDrawingGB);
+
+                var drawings = _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).ToList();
+                foreach (var drawing in drawings)
                 {
+                    var panel = Controls.Find($"dockPanelDrawing{drawing.IdSupplier}", true).FirstOrDefault() as DevExpress.XtraBars.Docking.DockPanel;
+                    string path = Constants.ITEMS_DOCS_PATH + drawing.FilePath;
 
-                    //LookUpEdit lueSupliers = new LookUpEdit();
-
-                    //PDFViewer pdfViewer = new PDFViewer();
-                    //pdfViewer.TopLevel = false;
-                    //pdfViewer.MinimizeBox = false;
-                    //pdfViewer.MaximizeBox = false;
-                    //pdfViewer.pdfFile = drawingPath;
-                    //pdfViewer.FormClosing += (o, e) => { e.Cancel = true; }; //No queremos que puedan cerrar el formulario del viewer incrustado dentro del dockpanel
-
-                    //dockPanelDrawing.Controls.Add(lueSupliers);
-                    //dockPanelDrawing.Controls.Add(pdfViewer);
-
-                    //pdfViewer.Dock = DockStyle.Fill;
-                    //pdfViewer.Visible = true;
-
-                    //Creamos un tab control y en vamos agregando tabpages con los pdf's de los planos
-                    TabControl tcDrawings = new TabControl();
-
-                    var drawings = _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).ToList();
-
-                    foreach (var drawing in drawings)
+                    if (panel != null)
                     {
-                        TabPage tpDrawind = new TabPage();
-                        tpDrawind.Text = drawing.IdSupplier;
-
-                        //string drawingPath = Constants.ITEMS_DOCS_PATH + _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).Select(b => b.FilePath).FirstOrDefault();
-                        string path = Constants.ITEMS_DOCS_PATH + drawing.FilePath;
-
-                        if (System.IO.File.Exists(path))
-                        {
-                            //Creamos el pdf Viewer
-                            PDFViewer pdfViewer = new PDFViewer();
-                            pdfViewer.TopLevel = false;
-                            pdfViewer.MinimizeBox = false;
-                            pdfViewer.MaximizeBox = false;
-                            pdfViewer.pdfFile = path;
-                            pdfViewer.FormClosing += (o, e) => { e.Cancel = true; }; //No queremos que puedan cerrar el formulario del viewer incrustado dentro del dockpanel
-
-                            tpDrawind.Controls.Add(pdfViewer);
-                            pdfViewer.Dock = DockStyle.Fill;
-                            pdfViewer.Visible = true;
-                        }
-                        else
-                        {
-                            LabelControl lbl = new LabelControl();
-                            lbl.Text = "No Drawing doc";
-                            tpDrawind.Controls.Add(lbl);
-                        }
-
-
-                        //agregamos el tabpage al tabcontrol
-                        tcDrawings.TabPages.Add(tpDrawind);
+                        LoadDrawingPanel(panel, path);
                     }
 
-                    dockPanelDrawing.Controls.Add(tcDrawings);
-                    tcDrawings.Dock = DockStyle.Fill;
-
-
                 }
-                else
-                {
-                    LabelControl lbl = new LabelControl();
-                    lbl.Text = "No Drawing doc";
-                    dockPanelDrawing.Controls.Add(lbl);
-                }
+
             }
             catch
             {
                 throw;
+            }
+        }
+
+        private void LoadDrawingPanel(DevExpress.XtraBars.Docking.DockPanel dockPanel, string drawingPath)
+        {
+            try
+            {
+                ClearPdfPanels(dockPanel);
+
+                if (System.IO.File.Exists(drawingPath))
+                {
+                    PDFViewer pdfViewer = new PDFViewer();
+                    pdfViewer.TopLevel = false;
+                    pdfViewer.MinimizeBox = false;
+                    pdfViewer.MaximizeBox = false;
+                    pdfViewer.pdfFile = drawingPath;
+                    pdfViewer.FormClosing += (o, e) => { e.Cancel = true; }; //No queremos que puedan cerrar el formulario del viewer incrustado dentro del dockpanel
+                    dockPanel.Controls.Add(pdfViewer);
+                    pdfViewer.Dock = DockStyle.Fill;
+                    pdfViewer.Visible = true;
+                }
+            }
+            catch
+            {
+
             }
         }
 

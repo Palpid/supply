@@ -706,6 +706,10 @@
     <Compile Include="Migrations\201708070930149_SupplierInDocs_01.Designer.cs">
       <DependentUpon>201708070930149_SupplierInDocs_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708101446234_ItemHwGroupType_01.cs" />
+    <Compile Include="Migrations\201708101446234_ItemHwGroupType_01.Designer.cs">
+      <DependentUpon>201708101446234_ItemHwGroupType_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BomBreakdown.cs" />
     <Compile Include="Models\Currency.cs" />
@@ -788,6 +792,7 @@
     <Compile Include="Services\Implementations\EFDeliveryTerms.cs" />
     <Compile Include="Services\Implementations\EFDocType.cs" />
     <Compile Include="Services\Implementations\EFEchangeRate.cs" />
+    <Compile Include="Services\Implementations\EFEtnColor.cs" />
     <Compile Include="Services\Implementations\EFFamilyHK.cs" />
     <Compile Include="Services\Implementations\EFFunctionality.cs" />
     <Compile Include="Services\Implementations\EFFunctionalityRole.cs" />
@@ -824,6 +829,7 @@
     <Compile Include="Services\Interfaces\IDeliveryTerms.cs" />
     <Compile Include="Services\Interfaces\IDocType.cs" />
     <Compile Include="Services\Interfaces\IEchangeRate.cs" />
+    <Compile Include="Services\Interfaces\IEtnColor.cs" />
     <Compile Include="Services\Interfaces\IFamilyHK.cs" />
     <Compile Include="Services\Interfaces\IFunctionality.cs" />
     <Compile Include="Services\Interfaces\IFunctionalityRole.cs" />
@@ -1225,6 +1231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708070930149_SupplierInDocs_01.resx">
       <DependentUpon>201708070930149_SupplierInDocs_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708101446234_ItemHwGroupType_01.resx">
+      <DependentUpon>201708101446234_ItemHwGroupType_01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

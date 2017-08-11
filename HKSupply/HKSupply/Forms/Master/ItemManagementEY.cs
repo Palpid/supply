@@ -965,6 +965,7 @@ namespace HKSupply.Forms.Master
                 GridColumn colIdVerItem = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemVer"), Visible = true, FieldName = nameof(ItemDoc.IdVerItem), Width = 60 };
                 GridColumn colIdSubVerItem = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemSubver"), Visible = true, FieldName = nameof(ItemDoc.IdSubVerItem), Width = 75 };
                 GridColumn colIdDocType = new GridColumn() { Caption = "IdDocType", Visible = false, FieldName = nameof(ItemDoc.IdDocType), Width = 10 };
+                GridColumn colIdSupplier = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Supplier"), Visible = true, FieldName = nameof(ItemDoc.IdSupplier), Width = 60 };
                 GridColumn colDocType = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("DocType"), Visible = true, FieldName = $"{nameof(ItemDoc.DocType)}.{nameof(DocType.Description)}" , Width = 100 };
                 GridColumn colFileName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("FileName"), Visible = true, FieldName = nameof(ItemDoc.FileName), Width = 280 };
                 GridColumn colFilePath = new GridColumn() { Caption = "FilePath", Visible = false, FieldName = nameof(ItemDoc.FilePath), Width = 10 };
@@ -1000,6 +1001,7 @@ namespace HKSupply.Forms.Master
                 gridViewDocsHistory.Columns.Add(colIdVerItem);
                 gridViewDocsHistory.Columns.Add(colIdSubVerItem);
                 gridViewDocsHistory.Columns.Add(colIdDocType);
+                gridViewDocsHistory.Columns.Add(colIdSupplier);
                 gridViewDocsHistory.Columns.Add(colDocType);
                 gridViewDocsHistory.Columns.Add(colFileName);
                 gridViewDocsHistory.Columns.Add(colFilePath);
