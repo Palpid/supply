@@ -160,6 +160,9 @@ namespace HKSupply.Services.Implementations
                             itemToUpdate.IdUserAttri1 = updateItem.IdUserAttri1;
                             itemToUpdate.IdUserAttri2 = updateItem.IdUserAttri2;
                             itemToUpdate.IdUserAttri3 = updateItem.IdUserAttri3;
+                            itemToUpdate.IdHwTypeL1 = updateItem.IdHwTypeL1;
+                            itemToUpdate.IdHwTypeL2 = updateItem.IdHwTypeL2;
+                            itemToUpdate.IdHwTypeL3 = updateItem.IdHwTypeL3;
                             itemToUpdate.Comments = updateItem.Comments;
                             itemToUpdate.LaunchDate = updateItem.LaunchDate;
                             itemToUpdate.RemovalDate = updateItem.RemovalDate;
@@ -253,14 +256,27 @@ namespace HKSupply.Services.Implementations
 
                             //no hacemos  un "entry" en el contexto de db y lo marcamos como modificado, sino que updatamos sólo los pocos campos
                             //que se pueden modificar de un item desde la aplicación para que EF genere el update sólo de esos campos y no de todos
+                            itemToUpdate.IdPrototype = updateItem.IdPrototype;
+                            itemToUpdate.IdColor1 = updateItem.IdColor1;
+                            itemToUpdate.IdColor2 = updateItem.IdColor2;
                             itemToUpdate.IdDefaultSupplier = updateItem.IdDefaultSupplier;
                             itemToUpdate.IdFamilyHK = updateItem.IdFamilyHK;
                             itemToUpdate.IdItemHK = updateItem.IdItemHK;
+                            itemToUpdate.IdFamilyHK = updateItem.IdFamilyHK;
+                            itemToUpdate.ItemDescription = updateItem.ItemDescription;
+                            itemToUpdate.IdStatusCial = updateItem.IdStatusCial;
                             itemToUpdate.IdStatusProd = updateItem.IdStatusProd;
                             itemToUpdate.IdUserAttri1 = updateItem.IdUserAttri1;
                             itemToUpdate.IdUserAttri2 = updateItem.IdUserAttri2;
                             itemToUpdate.IdUserAttri3 = updateItem.IdUserAttri3;
+                            itemToUpdate.IdHwTypeL1 = updateItem.IdHwTypeL1;
+                            itemToUpdate.IdHwTypeL2 = updateItem.IdHwTypeL2;
+                            itemToUpdate.IdHwTypeL3 = updateItem.IdHwTypeL3;
+                            itemToUpdate.Comments = updateItem.Comments;
+                            itemToUpdate.LaunchDate = updateItem.LaunchDate;
+                            itemToUpdate.RemovalDate = updateItem.RemovalDate;
                             itemToUpdate.PhotoUrl = updateItem.PhotoUrl;
+                            itemToUpdate.Unit = updateItem.Unit;
 
                             ItemHwHistory itemHistory = (ItemHwHistory)itemToUpdate;
                             itemHistory.User = GlobalSetting.LoggedUser.UserLogin;
@@ -342,13 +358,27 @@ namespace HKSupply.Services.Implementations
                                 itemToUpdate.Timestamp = DateTime.Now;
                                 //no hacemos  un "entry" en el contexto de db y lo marcamos como modificado, sino que updatamos sólo los pocos campos
                                 //que se pueden modificar de un item desde la aplicación para que EF genere el update sólo de esos campos y no de todos
+                                itemToUpdate.IdPrototype = item.IdPrototype;
+                                itemToUpdate.IdColor1 = item.IdColor1;
+                                itemToUpdate.IdColor2 = item.IdColor2;
                                 itemToUpdate.IdDefaultSupplier = item.IdDefaultSupplier;
                                 itemToUpdate.IdFamilyHK = item.IdFamilyHK;
                                 itemToUpdate.IdItemHK = item.IdItemHK;
+                                itemToUpdate.IdFamilyHK = item.IdFamilyHK;
+                                itemToUpdate.ItemDescription = item.ItemDescription;
+                                itemToUpdate.IdStatusCial = item.IdStatusCial;
                                 itemToUpdate.IdStatusProd = item.IdStatusProd;
                                 itemToUpdate.IdUserAttri1 = item.IdUserAttri1;
                                 itemToUpdate.IdUserAttri2 = item.IdUserAttri2;
                                 itemToUpdate.IdUserAttri3 = item.IdUserAttri3;
+                                itemToUpdate.IdHwTypeL1 = item.IdHwTypeL1;
+                                itemToUpdate.IdHwTypeL2 = item.IdHwTypeL2;
+                                itemToUpdate.IdHwTypeL3 = item.IdHwTypeL3;
+                                itemToUpdate.Comments = item.Comments;
+                                itemToUpdate.LaunchDate = item.LaunchDate;
+                                itemToUpdate.RemovalDate = item.RemovalDate;
+                                itemToUpdate.PhotoUrl = item.PhotoUrl;
+                                itemToUpdate.Unit = item.Unit;
 
                                 ItemHwHistory itemHistory = (ItemHwHistory)itemToUpdate;
                                 itemHistory.User = GlobalSetting.LoggedUser.UserLogin;

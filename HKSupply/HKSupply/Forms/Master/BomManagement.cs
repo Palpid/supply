@@ -730,6 +730,7 @@ namespace HKSupply.Forms.Master
                         //Events
                         (e.View as GridView).CellValueChanged += GrdBomView_CellValueChanged;
                         (e.View as GridView).ValidatingEditor += BomManagementMaterials_ValidatingEditor;
+                        (e.View as GridView).ShowingEditor += BomManagementMaterials_ShowingEditor;
 
                         //Agregamos los Summary
                         (e.View as GridView).OptionsView.ShowFooter = true;
@@ -804,6 +805,7 @@ namespace HKSupply.Forms.Master
                         //Events
                         (e.View as GridView).CellValueChanged += GrdBomView_CellValueChanged;
                         (e.View as GridView).ValidatingEditor += BomManagementHardwares_ValidatingEditor;
+                        (e.View as GridView).ShowingEditor += BomManagementHardwares_ShowingEditor;
 
                         //Agregamos los Summary
                         (e.View as GridView).OptionsView.ShowFooter = true;
@@ -977,6 +979,7 @@ namespace HKSupply.Forms.Master
                         //Events
                         (e.View as GridView).ShownEditor += BomManagementHalfFinished_ShownEditor;
                         (e.View as GridView).ValidatingEditor += BomManagementHalfFinished_ValidatingEditor;
+                        (e.View as GridView).ShowingEditor += BomManagementHalfFinished_ShowingEditor;
 
                         if (CurrentState == ActionsStates.Edit)
                             SetGrdBomEditColumns();
@@ -990,6 +993,84 @@ namespace HKSupply.Forms.Master
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        private void BomManagementHalfFinished_ShowingEditor(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+                DetailBomHf row = view.GetRow(view.FocusedRowHandle) as DetailBomHf;
+
+                BaseView parent = view.ParentView;
+                var rowParent = parent.GetRow(view.SourceRowHandle);
+                string factory = string.Empty;
+
+                if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
+                {
+                    //No se puede ediar el BOM de la intranet
+                    factory = (rowParent as ItemBom).IdSupplier;
+                    if (factory == "INTRANET")
+                        e.Cancel = true;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BomManagementHardwares_ShowingEditor(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+                DetailBomHw row = view.GetRow(view.FocusedRowHandle) as DetailBomHw;
+
+                BaseView parent = view.ParentView;
+                var rowParent = parent.GetRow(view.SourceRowHandle);
+                string factory = string.Empty;
+
+                if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
+                {
+                    //No se puede ediar el BOM de la intranet
+                    factory = (rowParent as ItemBom).IdSupplier;
+                    if (factory == "INTRANET")
+                        e.Cancel = true;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BomManagementMaterials_ShowingEditor(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+                DetailBomMt row = view.GetRow(view.FocusedRowHandle) as DetailBomMt;
+
+                BaseView parent = view.ParentView;
+                var rowParent = parent.GetRow(view.SourceRowHandle);
+                string factory = string.Empty;
+
+                if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
+                {
+                    //No se puede ediar el BOM de la intranet
+                    factory = (rowParent as ItemBom).IdSupplier;
+                    if (factory == "INTRANET")
+                        e.Cancel = true;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -3438,7 +3519,8 @@ namespace HKSupply.Forms.Master
                     {
                         var tmpHw = hw.Clone();
                         tmpHw.IdBom = bomDestination.IdBom;
-                        bomDestination.Hardwares.Add(tmpHw);
+                        if (tmpHw.Item.IdGroupType != Constants.HW_GROUP_TYPE_DESING)
+                            bomDestination.Hardwares.Add(tmpHw);
                     }
 
                     foreach(var hf in bomSource.HalfFinished)

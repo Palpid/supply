@@ -1,6 +1,1 @@
-﻿2017-08-11 09:50:43,256 ERROR [1] HKSupply.Services.Implementations.EFItemHw.newItem - Item already exist
-System.Exception: Item already exist
-   at HKSupply.Services.Implementations.EFItemHw.newItem(ItemHw newItemHw) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemHw.cs:line 456
-2017-08-11 11:30:20,149 ERROR [1] HKSupply.Services.Implementations.EFItemHw.newItem - Item already exist
-System.Exception: Item already exist
-   at HKSupply.Services.Implementations.EFItemHw.newItem(ItemHw newItemHw) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemHw.cs:line 456
+﻿
