@@ -275,6 +275,12 @@
     <Compile Include="Forms\Master\ItemsLevelsManagement.Designer.cs">
       <DependentUpon>ItemsLevelsManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Master\MyCompanyManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\MyCompanyManagement.Designer.cs">
+      <DependentUpon>MyCompanyManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Master\PaymentTermsManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -710,6 +716,18 @@
     <Compile Include="Migrations\201708101446234_ItemHwGroupType_01.Designer.cs">
       <DependentUpon>201708101446234_ItemHwGroupType_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708141248031_MyCompany_01.cs" />
+    <Compile Include="Migrations\201708141248031_MyCompany_01.Designer.cs">
+      <DependentUpon>201708141248031_MyCompany_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708160801489_FuncionalityGroup_01.cs" />
+    <Compile Include="Migrations\201708160801489_FuncionalityGroup_01.Designer.cs">
+      <DependentUpon>201708160801489_FuncionalityGroup_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708160824065_FuncionalityOrder_01.cs" />
+    <Compile Include="Migrations\201708160824065_FuncionalityOrder_01.Designer.cs">
+      <DependentUpon>201708160824065_FuncionalityOrder_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BomBreakdown.cs" />
     <Compile Include="Models\Currency.cs" />
@@ -754,6 +772,7 @@
     <Compile Include="Models\MatTypeL2.cs" />
     <Compile Include="Models\MatTypeL3.cs" />
     <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\MyCompany.cs" />
     <Compile Include="Models\PaymentTerms.cs" />
     <Compile Include="Models\Prototype.cs" />
     <Compile Include="Models\PrototypeDoc.cs" />
@@ -809,6 +828,7 @@
     <Compile Include="Services\Implementations\EFMaterial.cs" />
     <Compile Include="Services\Implementations\EFMatType.cs" />
     <Compile Include="Services\Implementations\EFModel.cs" />
+    <Compile Include="Services\Implementations\EFMyCompany.cs" />
     <Compile Include="Services\Implementations\EFPaymentTerms.cs" />
     <Compile Include="Services\Implementations\EFPrototype.cs" />
     <Compile Include="Services\Implementations\EFPrototypeDoc.cs" />
@@ -846,6 +866,7 @@
     <Compile Include="Services\Interfaces\IMaterial.cs" />
     <Compile Include="Services\Interfaces\IMatType.cs" />
     <Compile Include="Services\Interfaces\IModel.cs" />
+    <Compile Include="Services\Interfaces\IMyCompany.cs" />
     <Compile Include="Services\Interfaces\IPaymentTerms.cs" />
     <Compile Include="Services\Interfaces\IPrototype.cs" />
     <Compile Include="Services\Interfaces\IPrototypeDoc.cs" />
@@ -940,6 +961,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\ItemsLevelsManagement.resx">
       <DependentUpon>ItemsLevelsManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\MyCompanyManagement.resx">
+      <DependentUpon>MyCompanyManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\PaymentTermsManagement.resx">
       <DependentUpon>PaymentTermsManagement.cs</DependentUpon>
@@ -1234,6 +1258,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708101446234_ItemHwGroupType_01.resx">
       <DependentUpon>201708101446234_ItemHwGroupType_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708141248031_MyCompany_01.resx">
+      <DependentUpon>201708141248031_MyCompany_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708160801489_FuncionalityGroup_01.resx">
+      <DependentUpon>201708160801489_FuncionalityGroup_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708160824065_FuncionalityOrder_01.resx">
+      <DependentUpon>201708160824065_FuncionalityOrder_01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

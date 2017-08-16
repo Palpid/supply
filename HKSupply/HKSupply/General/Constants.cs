@@ -64,5 +64,8 @@ namespace HKSupply.General
         public const string SUPPLY_DOCTYPE_QP = "QP"; //Quotation Proposal
         public const string SUPPLY_DOCTYPE_INV = "INVOICE";
 
+        //** ETNIA HK CODE **//
+        public const string ETNIA_HK_COMPANY_CODE = "ETNLTD";
+
     }
 }

@@ -53,6 +53,7 @@ namespace HKSupply.General
     /// Controlador para acceso a datos para SupplyStatus
     /// Controlador para acceso a datos para Delivery Terms
     /// Controlador para acceso a datos para EtnColor
+    /// Controlador para acceso a datos para My Company
     /// </remarks>
     public sealed class GlobalSetting
     {
@@ -99,6 +100,7 @@ namespace HKSupply.General
         static EFSupplyDocs _supplyDocsEF = new EFSupplyDocs();
         static EFDeliveryTerms _deliveryTermsEF = new EFDeliveryTerms();
         static EFEtnColor _etnColorEF = new EFEtnColor();
+        static EFMyCompany _myCompanyEF = new EFMyCompany();
         static User _loggedUser;
         static IEnumerable<FunctionalityRole> _functionalitiesRoles;
 
@@ -523,6 +525,17 @@ namespace HKSupply.General
                     _etnColorEF = new EFEtnColor();
 
                 return _etnColorEF;
+            }
+        }
+
+        public static IMyCompany MyCompanyService
+        {
+            get
+            {
+                if (_myCompanyEF == null)
+                    _myCompanyEF = new EFMyCompany();
+
+                return _myCompanyEF;
             }
         }
 

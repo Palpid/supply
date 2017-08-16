@@ -53,8 +53,8 @@ namespace HKSupply.Forms.Master
         List<Customer> _customersList;
         List<Currency> _currenciesList;
 
-        string[] _nonEditingFields = { "lueIdItemBcn", "lueIdCustomer", "txtIdVersion", "txtIdSubversion", "txtTimestamp" };
-        string[] _mandatoryEditingFields = { "lueIdItemBcn", "lueIdSupplier", "txtPrice", "lueIdCurrency", "txtPriceBaseCurrency", "txtExchangeRateUsed" };
+        string[] _nonEditingFields = { "slueIdItemBcn", "lueIdCustomer", "txtIdVersion", "txtIdSubversion", "txtTimestamp" };
+        string[] _mandatoryEditingFields = { "slueIdItemBcn", "lueIdSupplier", "txtPrice", "lueIdCurrency", "txtPriceBaseCurrency", "txtExchangeRateUsed" };
 
         int _currentHistoryNumList;
 
@@ -676,9 +676,9 @@ namespace HKSupply.Forms.Master
             {
                 _itemBcnList = GlobalSetting.ItemBcnService.GetItemsBcn();
 
-                lueIdItemBcn.Properties.DataSource = _itemBcnList;
-                lueIdItemBcn.Properties.DisplayMember = nameof(ItemBcn.Description);
-                lueIdItemBcn.Properties.ValueMember = nameof(ItemBcn.IdItemBcn);
+                slueIdItemBcn.Properties.DataSource = _itemBcnList;
+                slueIdItemBcn.Properties.DisplayMember = nameof(ItemBcn.IdItemBcn);
+                slueIdItemBcn.Properties.ValueMember = nameof(ItemBcn.IdItemBcn);
             }
             catch (Exception ex)
             {
@@ -692,7 +692,7 @@ namespace HKSupply.Forms.Master
             {
                 _modifiedRowsList.Clear();
 
-                _customersList = GlobalSetting.CustomerService.GetCustomers();
+                _customersList = GlobalSetting.CustomerService.GetCustomers(withEtniaHk: true);
 
                 lueIdCustomer.Properties.DataSource = _customersList;
                 lueIdCustomer.Properties.DisplayMember = nameof(Customer.CustomerName);
@@ -799,6 +799,11 @@ namespace HKSupply.Forms.Master
                         ctl.DataBindings.Clear();
                         ((LookUpEdit)ctl).ReadOnly = true;
                     }
+                    else if (ctl.GetType() == typeof(SearchLookUpEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((SearchLookUpEdit)ctl).ReadOnly = true;
+                    }
                 }
 
                 //Textedit
@@ -814,9 +819,11 @@ namespace HKSupply.Forms.Master
                 txtLeadTime.DataBindings.Add<CustomerPriceList>(_customerPriceListUpdate, (Control c) => c.Text, customerPriceList => customerPriceList.LeadTime);
 
                 //LookUpEdit
-                lueIdItemBcn.DataBindings.Add<CustomerPriceList>(_customerPriceListUpdate, (LookUpEdit e) => e.EditValue, customerPriceList => customerPriceList.IdItemBcn);
                 lueIdCustomer.DataBindings.Add<CustomerPriceList>(_customerPriceListUpdate, (LookUpEdit e) => e.EditValue, customerPriceList => customerPriceList.IdCustomer);
                 lueIdCurrency.DataBindings.Add<CustomerPriceList>(_customerPriceListUpdate, (LookUpEdit e) => e.EditValue, customerPriceList => customerPriceList.IdCurrency);
+
+                //SearchLookUpEdit
+                slueIdItemBcn.DataBindings.Add<CustomerPriceList>(_customerPriceListUpdate, (SearchLookUpEdit e) => e.EditValue, customerPriceList => customerPriceList.IdItemBcn);
 
             }
             catch (Exception ex)
@@ -967,6 +974,10 @@ namespace HKSupply.Forms.Master
                         {
                             ((LookUpEdit)ctl).ReadOnly = false;
                         }
+                        else if (ctl.GetType() == typeof(SearchLookUpEdit))
+                        {
+                            ((SearchLookUpEdit)ctl).ReadOnly = false;
+                        }
                     }
                 }
             }
@@ -993,6 +1004,10 @@ namespace HKSupply.Forms.Master
                     else if (ctl.GetType() == typeof(LookUpEdit))
                     {
                         ((LookUpEdit)ctl).ReadOnly = false;
+                    }
+                    else if (ctl.GetType() == typeof(SearchLookUpEdit))
+                    {
+                        ((SearchLookUpEdit)ctl).ReadOnly = false;
                     }
                 }
             }
@@ -1110,6 +1125,14 @@ namespace HKSupply.Forms.Master
                         else if (ctl.GetType() == typeof(LookUpEdit))
                         {
                             if (string.IsNullOrEmpty(((LookUpEdit)ctl).Text))
+                            {
+                                MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
+                                return false;
+                            }
+                        }
+                        else if (ctl.GetType() == typeof(SearchLookUpEdit))
+                        {
+                            if (string.IsNullOrEmpty(((SearchLookUpEdit)ctl).Text))
                             {
                                 MessageBox.Show(string.Format(GlobalSetting.ResManager.GetString("NullArgument"), ctl.Name));
                                 return false;

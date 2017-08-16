@@ -153,8 +153,15 @@ namespace HKSupply.Forms
 
                     var categoryMenu = menuList.Where(m => m.Functionality.Category.Equals(category));
 
+                    string group = null;
                     foreach (FunctionalityRole submenu in categoryMenu)
                     {
+                        if (group != submenu.Functionality.Group)
+                        {
+                            group = submenu.Functionality.Group;
+                            MnuStripItem.DropDownItems.Add(new ToolStripSeparator());
+                        }
+
                         CustomToolStripMenuItem SSMenu = new CustomToolStripMenuItem(submenu.Functionality.FunctionalityName, null, ChildClick, null);
                         SSMenu.FormName = submenu.Functionality.FormName;  //"Form1";
                         MnuStripItem.DropDownItems.Add(SSMenu);

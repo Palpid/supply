@@ -80,7 +80,6 @@
             this.lciUser = new DevExpress.XtraLayout.LayoutControlItem();
             this.sbNewVersion = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlForm = new DevExpress.XtraLayout.LayoutControl();
-            this.lueIdItemBcn = new DevExpress.XtraEditors.LookUpEdit();
             this.lueIdSupplier = new DevExpress.XtraEditors.LookUpEdit();
             this.lueIdCurrency = new DevExpress.XtraEditors.LookUpEdit();
             this.txtComments = new DevExpress.XtraEditors.TextEdit();
@@ -104,10 +103,12 @@
             this.lciIncrLot = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciPriceBaseCurrency = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciPrice = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciIdItemBcn = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciIdSupplier = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciComments = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciIdCurrency = new DevExpress.XtraLayout.LayoutControlItem();
+            this.slueIdItemBcn = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.lciIdItemBcn = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
             this.xtcGeneral.SuspendLayout();
@@ -157,7 +158,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlForm)).BeginInit();
             this.layoutControlForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lueIdItemBcn.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueIdSupplier.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueIdCurrency.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtComments.Properties)).BeginInit();
@@ -181,16 +181,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciIncrLot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPriceBaseCurrency)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPrice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciIdItemBcn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIdSupplier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciComments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIdCurrency)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueIdItemBcn.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciIdItemBcn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Size = new System.Drawing.Size(1338, 143);
+            this.ribbonControl.Size = new System.Drawing.Size(1338, 79);
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.ribbonPage1.Appearance.Options.UseFont = true;
             // 
             // ribbonStatusBar
             // 
@@ -202,11 +209,11 @@
             this.xtcGeneral.Appearance.Options.UseTextOptions = true;
             this.xtcGeneral.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.xtcGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtcGeneral.Location = new System.Drawing.Point(0, 143);
+            this.xtcGeneral.Location = new System.Drawing.Point(0, 79);
             this.xtcGeneral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtcGeneral.Name = "xtcGeneral";
             this.xtcGeneral.SelectedTabPage = this.xtpList;
-            this.xtcGeneral.Size = new System.Drawing.Size(1338, 425);
+            this.xtcGeneral.Size = new System.Drawing.Size(1338, 489);
             this.xtcGeneral.TabIndex = 3;
             this.xtcGeneral.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpList,
@@ -222,7 +229,7 @@
             this.xtpList.Controls.Add(this.xgrdSuppliersPriceList);
             this.xtpList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtpList.Name = "xtpList";
-            this.xtpList.Size = new System.Drawing.Size(1332, 397);
+            this.xtpList.Size = new System.Drawing.Size(1332, 461);
             this.xtpList.Text = "List";
             // 
             // lblItemBcn
@@ -299,7 +306,7 @@
             this.xgrdSuppliersPriceList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xgrdSuppliersPriceList.MenuManager = this.ribbonControl;
             this.xgrdSuppliersPriceList.Name = "xgrdSuppliersPriceList";
-            this.xgrdSuppliersPriceList.Size = new System.Drawing.Size(1327, 357);
+            this.xgrdSuppliersPriceList.Size = new System.Drawing.Size(1327, 421);
             this.xgrdSuppliersPriceList.TabIndex = 0;
             this.xgrdSuppliersPriceList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.rootGridViewSuppliersPriceList});
@@ -316,7 +323,7 @@
             this.xtpForm.Controls.Add(this.layoutControlForm);
             this.xtpForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtpForm.Name = "xtpForm";
-            this.xtpForm.Size = new System.Drawing.Size(1332, 397);
+            this.xtpForm.Size = new System.Drawing.Size(1332, 461);
             this.xtpForm.Text = "Form";
             // 
             // groupControlHistory
@@ -330,7 +337,7 @@
             this.groupControlHistory.Location = new System.Drawing.Point(526, 15);
             this.groupControlHistory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControlHistory.Name = "groupControlHistory";
-            this.groupControlHistory.Size = new System.Drawing.Size(694, 360);
+            this.groupControlHistory.Size = new System.Drawing.Size(694, 424);
             this.groupControlHistory.TabIndex = 4;
             this.groupControlHistory.Text = "History";
             // 
@@ -347,13 +354,13 @@
             this.xtraScrollableControl1.Location = new System.Drawing.Point(2, 20);
             this.xtraScrollableControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtraScrollableControl1.Name = "xtraScrollableControl1";
-            this.xtraScrollableControl1.Size = new System.Drawing.Size(690, 338);
+            this.xtraScrollableControl1.Size = new System.Drawing.Size(690, 402);
             this.xtraScrollableControl1.TabIndex = 0;
             // 
             // sbSetCurrentSubversion
             // 
             this.sbSetCurrentSubversion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.sbSetCurrentSubversion.Location = new System.Drawing.Point(26, 293);
+            this.sbSetCurrentSubversion.Location = new System.Drawing.Point(26, 357);
             this.sbSetCurrentSubversion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sbSetCurrentSubversion.Name = "sbSetCurrentSubversion";
             this.sbSetCurrentSubversion.Size = new System.Drawing.Size(128, 31);
@@ -364,7 +371,7 @@
             // sbSetCurrentVersion
             // 
             this.sbSetCurrentVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.sbSetCurrentVersion.Location = new System.Drawing.Point(166, 293);
+            this.sbSetCurrentVersion.Location = new System.Drawing.Point(166, 357);
             this.sbSetCurrentVersion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sbSetCurrentVersion.Name = "sbSetCurrentVersion";
             this.sbSetCurrentVersion.Size = new System.Drawing.Size(128, 31);
@@ -375,7 +382,7 @@
             // sbBackward
             // 
             this.sbBackward.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbBackward.Location = new System.Drawing.Point(561, 293);
+            this.sbBackward.Location = new System.Drawing.Point(561, 357);
             this.sbBackward.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sbBackward.Name = "sbBackward";
             this.sbBackward.Size = new System.Drawing.Size(55, 31);
@@ -386,7 +393,7 @@
             // sbForward
             // 
             this.sbForward.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbForward.Location = new System.Drawing.Point(621, 293);
+            this.sbForward.Location = new System.Drawing.Point(621, 357);
             this.sbForward.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sbForward.Name = "sbForward";
             this.sbForward.Size = new System.Drawing.Size(55, 31);
@@ -417,7 +424,7 @@
             this.layoutControlSupplierHistory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.layoutControlSupplierHistory.Name = "layoutControlSupplierHistory";
             this.layoutControlSupplierHistory.Root = this.layoutControlGroup3;
-            this.layoutControlSupplierHistory.Size = new System.Drawing.Size(674, 274);
+            this.layoutControlSupplierHistory.Size = new System.Drawing.Size(674, 338);
             this.layoutControlSupplierHistory.TabIndex = 3;
             this.layoutControlSupplierHistory.Text = "layoutControl1";
             // 
@@ -427,7 +434,7 @@
             this.txtUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUser.MenuManager = this.ribbonControl;
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(526, 20);
+            this.txtUser.Size = new System.Drawing.Size(509, 20);
             this.txtUser.StyleController = this.layoutControlSupplierHistory;
             this.txtUser.TabIndex = 23;
             // 
@@ -437,7 +444,7 @@
             this.txtHIdCurrency.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIdCurrency.MenuManager = this.ribbonControl;
             this.txtHIdCurrency.Name = "txtHIdCurrency";
-            this.txtHIdCurrency.Size = new System.Drawing.Size(526, 20);
+            this.txtHIdCurrency.Size = new System.Drawing.Size(509, 20);
             this.txtHIdCurrency.StyleController = this.layoutControlSupplierHistory;
             this.txtHIdCurrency.TabIndex = 22;
             // 
@@ -446,7 +453,7 @@
             this.txtHIdSupplier.Location = new System.Drawing.Point(126, 118);
             this.txtHIdSupplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIdSupplier.Name = "txtHIdSupplier";
-            this.txtHIdSupplier.Size = new System.Drawing.Size(526, 20);
+            this.txtHIdSupplier.Size = new System.Drawing.Size(509, 20);
             this.txtHIdSupplier.StyleController = this.layoutControlSupplierHistory;
             this.txtHIdSupplier.TabIndex = 4;
             // 
@@ -455,7 +462,7 @@
             this.txtHIdVersion.Location = new System.Drawing.Point(126, 22);
             this.txtHIdVersion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIdVersion.Name = "txtHIdVersion";
-            this.txtHIdVersion.Size = new System.Drawing.Size(526, 20);
+            this.txtHIdVersion.Size = new System.Drawing.Size(509, 20);
             this.txtHIdVersion.StyleController = this.layoutControlSupplierHistory;
             this.txtHIdVersion.TabIndex = 5;
             // 
@@ -464,7 +471,7 @@
             this.txtHIdSubversion.Location = new System.Drawing.Point(126, 46);
             this.txtHIdSubversion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIdSubversion.Name = "txtHIdSubversion";
-            this.txtHIdSubversion.Size = new System.Drawing.Size(526, 20);
+            this.txtHIdSubversion.Size = new System.Drawing.Size(509, 20);
             this.txtHIdSubversion.StyleController = this.layoutControlSupplierHistory;
             this.txtHIdSubversion.TabIndex = 6;
             // 
@@ -473,7 +480,7 @@
             this.txtHTimestamp.Location = new System.Drawing.Point(126, 70);
             this.txtHTimestamp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHTimestamp.Name = "txtHTimestamp";
-            this.txtHTimestamp.Size = new System.Drawing.Size(526, 20);
+            this.txtHTimestamp.Size = new System.Drawing.Size(509, 20);
             this.txtHTimestamp.StyleController = this.layoutControlSupplierHistory;
             this.txtHTimestamp.TabIndex = 7;
             // 
@@ -482,7 +489,7 @@
             this.txtHIdItemBcn.Location = new System.Drawing.Point(126, 94);
             this.txtHIdItemBcn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIdItemBcn.Name = "txtHIdItemBcn";
-            this.txtHIdItemBcn.Size = new System.Drawing.Size(526, 20);
+            this.txtHIdItemBcn.Size = new System.Drawing.Size(509, 20);
             this.txtHIdItemBcn.StyleController = this.layoutControlSupplierHistory;
             this.txtHIdItemBcn.TabIndex = 8;
             // 
@@ -491,7 +498,7 @@
             this.txtHPrice.Location = new System.Drawing.Point(126, 142);
             this.txtHPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHPrice.Name = "txtHPrice";
-            this.txtHPrice.Size = new System.Drawing.Size(526, 20);
+            this.txtHPrice.Size = new System.Drawing.Size(509, 20);
             this.txtHPrice.StyleController = this.layoutControlSupplierHistory;
             this.txtHPrice.TabIndex = 10;
             // 
@@ -500,7 +507,7 @@
             this.txtHPriceBaseCurrency.Location = new System.Drawing.Point(126, 214);
             this.txtHPriceBaseCurrency.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHPriceBaseCurrency.Name = "txtHPriceBaseCurrency";
-            this.txtHPriceBaseCurrency.Size = new System.Drawing.Size(526, 20);
+            this.txtHPriceBaseCurrency.Size = new System.Drawing.Size(509, 20);
             this.txtHPriceBaseCurrency.StyleController = this.layoutControlSupplierHistory;
             this.txtHPriceBaseCurrency.TabIndex = 11;
             // 
@@ -509,7 +516,7 @@
             this.txtHMinLot.Location = new System.Drawing.Point(126, 262);
             this.txtHMinLot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHMinLot.Name = "txtHMinLot";
-            this.txtHMinLot.Size = new System.Drawing.Size(526, 20);
+            this.txtHMinLot.Size = new System.Drawing.Size(509, 20);
             this.txtHMinLot.StyleController = this.layoutControlSupplierHistory;
             this.txtHMinLot.TabIndex = 12;
             // 
@@ -518,7 +525,7 @@
             this.txtHLeadTime.Location = new System.Drawing.Point(126, 310);
             this.txtHLeadTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHLeadTime.Name = "txtHLeadTime";
-            this.txtHLeadTime.Size = new System.Drawing.Size(526, 20);
+            this.txtHLeadTime.Size = new System.Drawing.Size(509, 20);
             this.txtHLeadTime.StyleController = this.layoutControlSupplierHistory;
             this.txtHLeadTime.TabIndex = 13;
             // 
@@ -527,7 +534,7 @@
             this.txtHExchangeRateUsed.Location = new System.Drawing.Point(126, 238);
             this.txtHExchangeRateUsed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHExchangeRateUsed.Name = "txtHExchangeRateUsed";
-            this.txtHExchangeRateUsed.Size = new System.Drawing.Size(526, 20);
+            this.txtHExchangeRateUsed.Size = new System.Drawing.Size(509, 20);
             this.txtHExchangeRateUsed.StyleController = this.layoutControlSupplierHistory;
             this.txtHExchangeRateUsed.TabIndex = 18;
             // 
@@ -536,7 +543,7 @@
             this.txtHIncrLot.Location = new System.Drawing.Point(126, 286);
             this.txtHIncrLot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIncrLot.Name = "txtHIncrLot";
-            this.txtHIncrLot.Size = new System.Drawing.Size(526, 20);
+            this.txtHIncrLot.Size = new System.Drawing.Size(509, 20);
             this.txtHIncrLot.StyleController = this.layoutControlSupplierHistory;
             this.txtHIncrLot.TabIndex = 19;
             // 
@@ -545,7 +552,7 @@
             this.txtHComments.Location = new System.Drawing.Point(126, 166);
             this.txtHComments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHComments.Name = "txtHComments";
-            this.txtHComments.Size = new System.Drawing.Size(526, 20);
+            this.txtHComments.Size = new System.Drawing.Size(509, 20);
             this.txtHComments.StyleController = this.layoutControlSupplierHistory;
             this.txtHComments.TabIndex = 21;
             // 
@@ -558,7 +565,7 @@
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup2";
             this.layoutControlGroup3.OptionsItemText.TextToControlDistance = 4;
-            this.layoutControlGroup3.Size = new System.Drawing.Size(674, 386);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(657, 386);
             this.layoutControlGroup3.TextVisible = false;
             // 
             // layoutControlGroup5
@@ -585,7 +592,7 @@
             this.layoutControlGroup5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup5.Name = "layoutControlGroup5";
             this.layoutControlGroup5.OptionsItemText.TextToControlDistance = 4;
-            this.layoutControlGroup5.Size = new System.Drawing.Size(654, 366);
+            this.layoutControlGroup5.Size = new System.Drawing.Size(637, 366);
             this.layoutControlGroup5.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup5.Text = "Root";
             this.layoutControlGroup5.TextVisible = false;
@@ -596,7 +603,7 @@
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem1";
             this.emptySpaceItem3.Location = new System.Drawing.Point(0, 336);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(634, 10);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(617, 10);
             this.emptySpaceItem3.Text = "emptySpaceItem1";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -606,7 +613,7 @@
             this.lciHIdVersion.CustomizationFormText = "Id Version";
             this.lciHIdVersion.Location = new System.Drawing.Point(0, 0);
             this.lciHIdVersion.Name = "lciHIdVersion";
-            this.lciHIdVersion.Size = new System.Drawing.Size(634, 24);
+            this.lciHIdVersion.Size = new System.Drawing.Size(617, 24);
             this.lciHIdVersion.Text = "Id Version";
             this.lciHIdVersion.TextSize = new System.Drawing.Size(100, 13);
             // 
@@ -616,7 +623,7 @@
             this.lciHIdSubversion.CustomizationFormText = "Id Subversion";
             this.lciHIdSubversion.Location = new System.Drawing.Point(0, 24);
             this.lciHIdSubversion.Name = "lciHIdSubversion";
-            this.lciHIdSubversion.Size = new System.Drawing.Size(634, 24);
+            this.lciHIdSubversion.Size = new System.Drawing.Size(617, 24);
             this.lciHIdSubversion.Text = "Id Subversion";
             this.lciHIdSubversion.TextSize = new System.Drawing.Size(100, 13);
             // 
@@ -626,7 +633,7 @@
             this.lciHTimestamp.CustomizationFormText = "Timestamp";
             this.lciHTimestamp.Location = new System.Drawing.Point(0, 48);
             this.lciHTimestamp.Name = "lciHTimestamp";
-            this.lciHTimestamp.Size = new System.Drawing.Size(634, 24);
+            this.lciHTimestamp.Size = new System.Drawing.Size(617, 24);
             this.lciHTimestamp.Text = "Timestamp";
             this.lciHTimestamp.TextSize = new System.Drawing.Size(100, 13);
             // 
@@ -636,7 +643,7 @@
             this.lciHPrice.CustomizationFormText = "VAT Number";
             this.lciHPrice.Location = new System.Drawing.Point(0, 120);
             this.lciHPrice.Name = "lciHPrice";
-            this.lciHPrice.Size = new System.Drawing.Size(634, 24);
+            this.lciHPrice.Size = new System.Drawing.Size(617, 24);
             this.lciHPrice.Text = "Price";
             this.lciHPrice.TextSize = new System.Drawing.Size(100, 13);
             // 
@@ -646,7 +653,7 @@
             this.lciHPriceBaseCurrency.CustomizationFormText = "Shipping Address";
             this.lciHPriceBaseCurrency.Location = new System.Drawing.Point(0, 192);
             this.lciHPriceBaseCurrency.Name = "lciHPriceBaseCurrency";
-            this.lciHPriceBaseCurrency.Size = new System.Drawing.Size(634, 24);
+            this.lciHPriceBaseCurrency.Size = new System.Drawing.Size(617, 24);
             this.lciHPriceBaseCurrency.Text = "Price Base Currency";
             this.lciHPriceBaseCurrency.TextSize = new System.Drawing.Size(100, 13);
             // 
@@ -656,7 +663,7 @@
             this.lciHMinLot.CustomizationFormText = "Billing Address";
             this.lciHMinLot.Location = new System.Drawing.Point(0, 240);
             this.lciHMinLot.Name = "lciHMinLot";
-            this.lciHMinLot.Size = new System.Drawing.Size(634, 24);
+            this.lciHMinLot.Size = new System.Drawing.Size(617, 24);
             this.lciHMinLot.Text = "Min Lot";
             this.lciHMinLot.TextSize = new System.Drawing.Size(100, 13);
             // 
@@ -666,7 +673,7 @@
             this.lciHLeadTime.CustomizationFormText = "Contact Name";
             this.lciHLeadTime.Location = new System.Drawing.Point(0, 288);
             this.lciHLeadTime.Name = "lciHLeadTime";
-            this.lciHLeadTime.Size = new System.Drawing.Size(634, 24);
+            this.lciHLeadTime.Size = new System.Drawing.Size(617, 24);
             this.lciHLeadTime.Text = "Lead Time";
             this.lciHLeadTime.TextSize = new System.Drawing.Size(100, 13);
             // 
@@ -676,7 +683,7 @@
             this.lciHExchangeRateUsed.CustomizationFormText = "Shipping Address (Chinese)";
             this.lciHExchangeRateUsed.Location = new System.Drawing.Point(0, 216);
             this.lciHExchangeRateUsed.Name = "lciHExchangeRateUsed";
-            this.lciHExchangeRateUsed.Size = new System.Drawing.Size(634, 24);
+            this.lciHExchangeRateUsed.Size = new System.Drawing.Size(617, 24);
             this.lciHExchangeRateUsed.Text = "Exchange Rate Used";
             this.lciHExchangeRateUsed.TextSize = new System.Drawing.Size(100, 13);
             // 
@@ -686,7 +693,7 @@
             this.lciHIncrLot.CustomizationFormText = "Billing Address (Chinese)";
             this.lciHIncrLot.Location = new System.Drawing.Point(0, 264);
             this.lciHIncrLot.Name = "lciHIncrLot";
-            this.lciHIncrLot.Size = new System.Drawing.Size(634, 24);
+            this.lciHIncrLot.Size = new System.Drawing.Size(617, 24);
             this.lciHIncrLot.Text = "Incr Lot";
             this.lciHIncrLot.TextSize = new System.Drawing.Size(100, 13);
             // 
@@ -696,7 +703,7 @@
             this.lciHIdSupplier.CustomizationFormText = "Id Supplier";
             this.lciHIdSupplier.Location = new System.Drawing.Point(0, 96);
             this.lciHIdSupplier.Name = "lciHIdSupplier";
-            this.lciHIdSupplier.Size = new System.Drawing.Size(634, 24);
+            this.lciHIdSupplier.Size = new System.Drawing.Size(617, 24);
             this.lciHIdSupplier.Text = "Supplier";
             this.lciHIdSupplier.TextSize = new System.Drawing.Size(100, 13);
             // 
@@ -706,7 +713,7 @@
             this.lciHIdItemBcn.CustomizationFormText = "Name";
             this.lciHIdItemBcn.Location = new System.Drawing.Point(0, 72);
             this.lciHIdItemBcn.Name = "lciHIdItemBcn";
-            this.lciHIdItemBcn.Size = new System.Drawing.Size(634, 24);
+            this.lciHIdItemBcn.Size = new System.Drawing.Size(617, 24);
             this.lciHIdItemBcn.Text = "Item Bcn";
             this.lciHIdItemBcn.TextSize = new System.Drawing.Size(100, 13);
             // 
@@ -716,7 +723,7 @@
             this.lciHComments.CustomizationFormText = "Comments";
             this.lciHComments.Location = new System.Drawing.Point(0, 144);
             this.lciHComments.Name = "lciHComments";
-            this.lciHComments.Size = new System.Drawing.Size(634, 24);
+            this.lciHComments.Size = new System.Drawing.Size(617, 24);
             this.lciHComments.Text = "Comments";
             this.lciHComments.TextSize = new System.Drawing.Size(100, 13);
             // 
@@ -725,7 +732,7 @@
             this.lciHIdCurrency.Control = this.txtHIdCurrency;
             this.lciHIdCurrency.Location = new System.Drawing.Point(0, 168);
             this.lciHIdCurrency.Name = "lciHIdCurrency";
-            this.lciHIdCurrency.Size = new System.Drawing.Size(634, 24);
+            this.lciHIdCurrency.Size = new System.Drawing.Size(617, 24);
             this.lciHIdCurrency.Text = "Currency";
             this.lciHIdCurrency.TextSize = new System.Drawing.Size(100, 13);
             // 
@@ -734,7 +741,7 @@
             this.lciUser.Control = this.txtUser;
             this.lciUser.Location = new System.Drawing.Point(0, 312);
             this.lciUser.Name = "lciUser";
-            this.lciUser.Size = new System.Drawing.Size(634, 24);
+            this.lciUser.Size = new System.Drawing.Size(617, 24);
             this.lciUser.Text = "User";
             this.lciUser.TextSize = new System.Drawing.Size(100, 13);
             // 
@@ -743,7 +750,7 @@
             this.sbNewVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.sbNewVersion.Appearance.Options.UseTextOptions = true;
             this.sbNewVersion.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.sbNewVersion.Location = new System.Drawing.Point(5, 322);
+            this.sbNewVersion.Location = new System.Drawing.Point(5, 386);
             this.sbNewVersion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sbNewVersion.Name = "sbNewVersion";
             this.sbNewVersion.Size = new System.Drawing.Size(83, 54);
@@ -755,7 +762,7 @@
             // 
             this.layoutControlForm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.layoutControlForm.Controls.Add(this.lueIdItemBcn);
+            this.layoutControlForm.Controls.Add(this.slueIdItemBcn);
             this.layoutControlForm.Controls.Add(this.lueIdSupplier);
             this.layoutControlForm.Controls.Add(this.lueIdCurrency);
             this.layoutControlForm.Controls.Add(this.txtComments);
@@ -772,21 +779,9 @@
             this.layoutControlForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.layoutControlForm.Name = "layoutControlForm";
             this.layoutControlForm.Root = this.layoutControlGroup1;
-            this.layoutControlForm.Size = new System.Drawing.Size(495, 293);
+            this.layoutControlForm.Size = new System.Drawing.Size(495, 357);
             this.layoutControlForm.TabIndex = 0;
             this.layoutControlForm.Text = "layoutControl1";
-            // 
-            // lueIdItemBcn
-            // 
-            this.lueIdItemBcn.Location = new System.Drawing.Point(116, 84);
-            this.lueIdItemBcn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lueIdItemBcn.MenuManager = this.ribbonControl;
-            this.lueIdItemBcn.Name = "lueIdItemBcn";
-            this.lueIdItemBcn.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueIdItemBcn.Size = new System.Drawing.Size(367, 20);
-            this.lueIdItemBcn.StyleController = this.layoutControlForm;
-            this.lueIdItemBcn.TabIndex = 24;
             // 
             // lueIdSupplier
             // 
@@ -927,14 +922,14 @@
             this.lciIncrLot,
             this.lciPriceBaseCurrency,
             this.lciPrice,
-            this.lciIdItemBcn,
             this.lciIdSupplier,
             this.lciComments,
-            this.lciIdCurrency});
+            this.lciIdCurrency,
+            this.lciIdItemBcn});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.OptionsItemText.TextToControlDistance = 4;
-            this.layoutControlGroup1.Size = new System.Drawing.Size(495, 342);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(495, 357);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // emptySpaceItem1
@@ -942,7 +937,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 312);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(475, 10);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(475, 25);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lciIdVersion
@@ -1026,15 +1021,6 @@
             this.lciPrice.Text = "Price";
             this.lciPrice.TextSize = new System.Drawing.Size(100, 13);
             // 
-            // lciIdItemBcn
-            // 
-            this.lciIdItemBcn.Control = this.lueIdItemBcn;
-            this.lciIdItemBcn.Location = new System.Drawing.Point(0, 72);
-            this.lciIdItemBcn.Name = "lciIdItemBcn";
-            this.lciIdItemBcn.Size = new System.Drawing.Size(475, 24);
-            this.lciIdItemBcn.Text = "Item Bcn";
-            this.lciIdItemBcn.TextSize = new System.Drawing.Size(100, 13);
-            // 
             // lciIdSupplier
             // 
             this.lciIdSupplier.Control = this.lueIdSupplier;
@@ -1061,6 +1047,34 @@
             this.lciIdCurrency.Size = new System.Drawing.Size(475, 24);
             this.lciIdCurrency.Text = "Currency";
             this.lciIdCurrency.TextSize = new System.Drawing.Size(100, 13);
+            // 
+            // slueIdItemBcn
+            // 
+            this.slueIdItemBcn.Location = new System.Drawing.Point(116, 84);
+            this.slueIdItemBcn.MenuManager = this.ribbonControl;
+            this.slueIdItemBcn.Name = "slueIdItemBcn";
+            this.slueIdItemBcn.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.slueIdItemBcn.Properties.View = this.gridView2;
+            this.slueIdItemBcn.Size = new System.Drawing.Size(367, 20);
+            this.slueIdItemBcn.StyleController = this.layoutControlForm;
+            this.slueIdItemBcn.TabIndex = 25;
+            // 
+            // lciIdItemBcn
+            // 
+            this.lciIdItemBcn.Control = this.slueIdItemBcn;
+            this.lciIdItemBcn.Location = new System.Drawing.Point(0, 72);
+            this.lciIdItemBcn.Name = "lciIdItemBcn";
+            this.lciIdItemBcn.Size = new System.Drawing.Size(475, 24);
+            this.lciIdItemBcn.Text = "Item Bcn";
+            this.lciIdItemBcn.TextSize = new System.Drawing.Size(100, 13);
+            // 
+            // gridView2
+            // 
+            this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // SupplierPriceListManagement
             // 
@@ -1125,7 +1139,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlForm)).EndInit();
             this.layoutControlForm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.lueIdItemBcn.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueIdSupplier.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueIdCurrency.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtComments.Properties)).EndInit();
@@ -1149,10 +1162,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciIncrLot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPriceBaseCurrency)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPrice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciIdItemBcn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIdSupplier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciComments)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIdCurrency)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueIdItemBcn.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciIdItemBcn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1204,7 +1219,6 @@
         private DevExpress.XtraLayout.LayoutControlItem lciHIdCurrency;
         private DevExpress.XtraEditors.SimpleButton sbNewVersion;
         private DevExpress.XtraLayout.LayoutControl layoutControlForm;
-        private DevExpress.XtraEditors.LookUpEdit lueIdItemBcn;
         private DevExpress.XtraEditors.LookUpEdit lueIdSupplier;
         private DevExpress.XtraEditors.LookUpEdit lueIdCurrency;
         private DevExpress.XtraEditors.TextEdit txtComments;
@@ -1231,7 +1245,6 @@
         private DevExpress.XtraLayout.LayoutControlItem lciIdCurrency;
         private DevExpress.XtraLayout.LayoutControlItem lciComments;
         private DevExpress.XtraLayout.LayoutControlItem lciIdSupplier;
-        private DevExpress.XtraLayout.LayoutControlItem lciIdItemBcn;
         private DevExpress.XtraEditors.TextEdit txtUser;
         private DevExpress.XtraLayout.LayoutControlItem lciUser;
         private DevExpress.XtraEditors.SearchLookUpEdit slueItemBcn;
@@ -1240,5 +1253,8 @@
         private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
         private DevExpress.XtraEditors.LabelControl lblItemBcn;
         private DevExpress.XtraEditors.LabelControl lblSupplier;
+        private DevExpress.XtraEditors.SearchLookUpEdit slueIdItemBcn;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraLayout.LayoutControlItem lciIdItemBcn;
     }
 }

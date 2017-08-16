@@ -97,6 +97,8 @@ namespace HKSupply.DB
         public DbSet<DocHead> DocsHead { get; set; }
         public DbSet<DocLine> DocsLines { get; set; }
 
+        public DbSet<MyCompany> MyCompany { get; set; }
+
         //public HKSupplyContext()
         //    : base("name=SqlExpressConn")
         //{

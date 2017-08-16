@@ -228,13 +228,16 @@ namespace HKSupply.Services.Implementations
             }
         }
 
-        public List<Models.Supplier> GetSuppliers()
+        public List<Models.Supplier> GetSuppliers(bool withEtniaHk = false)
         {
             try
             {
                 using (var db = new HKSupplyContext())
                 {
-                    return db.Suppliers.ToList();
+                    if (withEtniaHk)
+                        return db.Suppliers.ToList();
+                    else
+                        return db.Suppliers.Where(a => a.IdSupplier != Constants.ETNIA_HK_COMPANY_CODE).ToList();
                 }
             }
             catch (SqlException sqlex)
