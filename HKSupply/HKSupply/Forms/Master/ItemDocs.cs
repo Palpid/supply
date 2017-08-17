@@ -14,6 +14,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
+using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.Utils;
+using DevExpress.XtraEditors.Repository;
 
 namespace HKSupply.Forms.Master
 {
@@ -25,6 +29,8 @@ namespace HKSupply.Forms.Master
         List<ItemEy> _itemEyList;
         List<ItemEy> _itemsModelList;
         List<DocType> _docsTypeList;
+        List<DocType> _docsTypeShowSupplierList;
+        List<Supplier> _suppliersList;
 
         #endregion
 
@@ -38,8 +44,11 @@ namespace HKSupply.Forms.Master
                 ConfigureRibbonActions();
                 LoadAuxList();
                 SetUpSlueModel();
+                SetUpSlueSupplier();
                 SetUpCheckedListBoxControlItems();
                 SetUpLueDocType();
+                SetUpEvents();
+                SetUpGrdLastDocs();
                 //SetUpGrdBomBreakdown();
             }
             catch (Exception ex)
@@ -131,7 +140,7 @@ namespace HKSupply.Forms.Master
         #region Form Events
         private void ItemDocs_Load(object sender, EventArgs e)
         {
-
+            gbSupplier.Visible = false;
         }
 
         private void SlueModel_EditValueChanged(object sender, EventArgs e)
@@ -143,6 +152,7 @@ namespace HKSupply.Forms.Master
                 if (string.IsNullOrEmpty(idModel) == false)
                     _itemsModelList = _itemEyList.Where(a => a.IdModel.Equals(idModel)).ToList();
                 LoadCheckedList();
+                LoadLastDocsGrid(); //TEST
 
             }
             catch(Exception ex)
@@ -217,6 +227,34 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void LueDocType_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if(lueDocType.EditValue != null)
+                {
+                    if (_docsTypeShowSupplierList.Where(a => a.IdDocType.Equals((string)lueDocType.EditValue)).Count() > 0)
+                    {
+                        gbSupplier.Visible = true;
+                    }
+                    else
+                    {
+                        gbSupplier.Visible = false;
+                        slueSupplier.EditValue = null;
+                    }
+                }
+                else
+                {
+                    gbSupplier.Visible = false;
+                    slueSupplier.EditValue = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         #endregion
 
         #region Private Members
@@ -230,6 +268,10 @@ namespace HKSupply.Forms.Master
                 _modelList = GlobalSetting.ModelService.GetModels();
                 _itemEyList = GlobalSetting.ItemEyService.GetItems();
                 _docsTypeList = GlobalSetting.DocTypeService.GetDocsType(Constants.ITEM_GROUP_EY);
+                _suppliersList = GlobalSetting.SupplierService.GetSuppliers();
+
+                //Only drawing needs a supplier
+                _docsTypeShowSupplierList = _docsTypeList.Where(a => a.IdDocType.Contains("DRAWING")).ToList();
             }
             catch
             {
@@ -255,6 +297,25 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void LoadLastDocsGrid()
+        {
+            try
+            {
+                string idModel = slueModel.EditValue as string;
+                if (string.IsNullOrEmpty(idModel))
+                    return;
+
+                var tmpModelosList = _itemsModelList.Select(a => a.IdItemBcn).ToList();
+                var listDocs = GlobalSetting.ItemDocService.GetLastItemsDocsListItems(tmpModelosList, Constants.ITEM_GROUP_EY);
+                xgrdLastDocs.DataSource = null;
+                xgrdLastDocs.DataSource = listDocs;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         #endregion
 
         #region SetUp Form Objects
@@ -269,6 +330,23 @@ namespace HKSupply.Forms.Master
                 slueModel.Properties.View.Columns.AddField(nameof(Model.Description)).Visible = true;
                 slueModel.Properties.NullText = "Select model...";
                 slueModel.EditValueChanged += SlueModel_EditValueChanged;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void SetUpSlueSupplier()
+        {
+            try
+            {
+                slueSupplier.Properties.DataSource = _suppliersList;
+                slueSupplier.Properties.ValueMember = nameof(Supplier.IdSupplier);
+                slueSupplier.Properties.DisplayMember = nameof(Supplier.SupplierName);
+                slueSupplier.Properties.View.Columns.AddField(nameof(Supplier.IdSupplier)).Visible = true;
+                slueSupplier.Properties.View.Columns.AddField(nameof(Supplier.SupplierName)).Visible = true;
+                slueSupplier.Properties.NullText = "Select Supplier...";
             }
             catch
             {
@@ -306,6 +384,86 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void SetUpEvents()
+        {
+            try
+            {
+                lueDocType.EditValueChanged += LueDocType_EditValueChanged;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void SetUpGrdLastDocs()
+        {
+            try
+            {
+                //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
+                gridViewLastDocs.OptionsView.ColumnAutoWidth = false;
+                gridViewLastDocs.HorzScrollVisibility = ScrollVisibility.Auto;
+
+                //hacer todo el grid no editable
+                gridViewLastDocs.OptionsBehavior.Editable = false;
+
+                //Columns definition
+                GridColumn colIdItemBcn = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemBcn"), Visible = true, FieldName = nameof(ItemDoc.IdItemBcn), Width = 150 };
+                GridColumn colIdSupplier = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Supplier"), Visible = true, FieldName = nameof(ItemDoc.IdSupplier), Width = 60 };
+                GridColumn colIdVerItem = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemVer"), Visible = true, FieldName = nameof(ItemDoc.IdVerItem), Width = 60 };
+                GridColumn colIdSubVerItem = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ItemSubver"), Visible = true, FieldName = nameof(ItemDoc.IdSubVerItem), Width = 75 };
+                GridColumn colIdDocType = new GridColumn() { Caption = "IdDocType", Visible = false, FieldName = nameof(ItemDoc.IdDocType), Width = 10 };
+                GridColumn colDocType = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("DocType"), Visible = true, FieldName = $"{nameof(ItemDoc.DocType)}.{nameof(DocType.Description)}", Width = 100 };
+                GridColumn colFileName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("FileName"), Visible = true, FieldName = nameof(ItemDoc.FileName), Width = 250 };
+                GridColumn colFilePath = new GridColumn() { Caption = "FilePath", Visible = false, FieldName = nameof(ItemDoc.FilePath), Width = 10 };
+                GridColumn colCreateDate = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("CreateDate"), Visible = true, FieldName = nameof(ItemDoc.CreateDate), Width = 150 };
+                //GridColumn colViewButton = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("View"), Visible = true, FieldName = VIEW_COLUMN, Width = 50 };
+
+                //Display Format
+                colCreateDate.DisplayFormat.FormatType = FormatType.DateTime;
+
+                //View Button
+                //colViewButton.UnboundType = DevExpress.Data.UnboundColumnType.Object;
+                //RepositoryItemButtonEdit repButtonLastDoc = new RepositoryItemButtonEdit()
+                //{
+                //    Name = "btnViewLastDoc",
+                //    TextEditStyle = TextEditStyles.HideTextEditor,
+                //};
+                //TODO
+                //repButtonLastDoc.Click += repButtonLastDoc_Click;
+
+                //colViewButton.ShowButtonMode = ShowButtonModeEnum.ShowAlways;
+                //colViewButton.ColumnEdit = repButtonLastDoc;
+
+                //Only button allow to edit to allow click
+                //colIdVerItem.OptionsColumn.AllowEdit = false;
+                //colIdSubVerItem.OptionsColumn.AllowEdit = false;
+                //colIdDocType.OptionsColumn.AllowEdit = false;
+                //colDocType.OptionsColumn.AllowEdit = false;
+                //colFileName.OptionsColumn.AllowEdit = false;
+                //colFilePath.OptionsColumn.AllowEdit = false;
+                //colCreateDate.OptionsColumn.AllowEdit = false;
+                //colViewButton.OptionsColumn.AllowEdit = true;
+
+                //Add columns to grid root view
+                gridViewLastDocs.Columns.Add(colIdItemBcn);
+                gridViewLastDocs.Columns.Add(colIdSupplier);
+                gridViewLastDocs.Columns.Add(colIdVerItem);
+                gridViewLastDocs.Columns.Add(colIdSubVerItem);
+                gridViewLastDocs.Columns.Add(colIdDocType);
+                gridViewLastDocs.Columns.Add(colDocType);
+                gridViewLastDocs.Columns.Add(colFileName);
+                gridViewLastDocs.Columns.Add(colFilePath);
+                gridViewLastDocs.Columns.Add(colCreateDate);
+                //gridViewLastDocs.Columns.Add(colViewButton);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         #endregion
 
         #region CRUD
@@ -333,9 +491,16 @@ namespace HKSupply.Forms.Master
                     XtraMessageBox.Show(GlobalSetting.ResManager.GetString("FileDoesntExist"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return false;
                 }
+
                 if (lueDocType.EditValue == null)
                 {
                     XtraMessageBox.Show(GlobalSetting.ResManager.GetString("SelectDocType"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return false;
+                }
+
+                if ((_docsTypeShowSupplierList.Where(a => a.IdDocType.Equals((string)lueDocType.EditValue)).Count() > 0) && slueSupplier.EditValue == null)
+                {
+                    XtraMessageBox.Show("Select supplier for the drawing", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return false;
                 }
 
@@ -385,6 +550,7 @@ namespace HKSupply.Forms.Master
                 itemDoc.IdDocType = lueDocType.EditValue.ToString();
                 itemDoc.FileName = fileNameNoExtension + "_" + (itemUpdate.IdVer.ToString()) + "." + ((itemUpdate.IdSubVer + 1).ToString()) + extension;
                 itemDoc.FilePath = itemUpdate.IdItemBcn + "\\" + lueDocType.EditValue.ToString() + "\\" + itemDoc.FileName;
+                itemDoc.IdSupplier = slueSupplier.EditValue?.ToString();
 
                 //move to file server
                 System.IO.File.Copy(txtPathNewDoc.Text, Constants.ITEMS_DOCS_PATH + itemDoc.FilePath, overwrite: true);
@@ -417,8 +583,8 @@ namespace HKSupply.Forms.Master
                 {
                     checkedListBoxControlItems.UnCheckAll();
                     checkedListBoxControlItems.Items[0].Description = "Check All";
+                    LoadLastDocsGrid();
                 }
-
             }
             catch
             {
