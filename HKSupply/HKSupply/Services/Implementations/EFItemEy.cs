@@ -28,7 +28,8 @@ namespace HKSupply.Services.Implementations
             {
                 using (var db = new HKSupplyContext())
                 {
-                    return db.ItemsEy
+
+                    var itemsEy =  db.ItemsEy
                         .Include(i => i.Model)
                         .Include(i => i.Prototype) 
                         .Include(i => i.FamilyHK)
@@ -36,6 +37,14 @@ namespace HKSupply.Services.Implementations
                         .Include(i => i.StatusProd)
                         .OrderBy(i => i.IdItemBcn)
                         .ToList();
+
+                    foreach(var item in itemsEy)
+                    {
+                        Classes.ItemDocWarning docWarning = db.Database.SqlQuery<Classes.ItemDocWarning>($"SELECT ID_ITEM_BCN,WARNING_COL_CODE,WARNING_COL_DESC,WARNING_COL_COLOR FROM dbo.V_DOCS_WARNINGS WHERE ID_ITEM_BCN = '{item.IdItemBcn}'").FirstOrDefault();
+                        item.DocWarning = docWarning;
+                    }
+
+                    return itemsEy;
                 }
             }
             catch (SqlException sqlex)

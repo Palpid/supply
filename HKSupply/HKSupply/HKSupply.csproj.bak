@@ -37,16 +37,38 @@
     <ApplicationIcon>etnia_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Data.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Images.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Accessibility" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v16.2.UI, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v16.2.Drawing, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Spreadsheet.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.2.UI, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPdfViewer.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -63,12 +85,18 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -79,6 +107,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\B1Report.cs" />
+    <Compile Include="Classes\PlainBomAux.cs" />
+    <Compile Include="Classes\POSelection.cs" />
+    <Compile Include="Classes\RowInfo.cs" />
     <Compile Include="DB\HKSupplyContext.cs" />
     <Compile Include="Exceptions\DBServerConnectionException.cs" />
     <Compile Include="Exceptions\InvalidPasswordException.cs" />
@@ -123,11 +155,29 @@
     <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Master\BomBreakdownManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\BomBreakdownManagement.Designer.cs">
+      <DependentUpon>BomBreakdownManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\BomManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\BomManagement.Designer.cs">
+      <DependentUpon>BomManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Master\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Master\ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\CurrenciesEchangeRatesManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\CurrenciesEchangeRatesManagement.Designer.cs">
+      <DependentUpon>CurrenciesEchangeRatesManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Master\CustomerManagement.cs">
       <SubType>Form</SubType>
@@ -141,17 +191,41 @@
     <Compile Include="Forms\Master\CustomerManagement_v1.Designer.cs">
       <DependentUpon>CustomerManagement_v1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Master\CustomerPriceListManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\CustomerPriceListManagement.Designer.cs">
+      <DependentUpon>CustomerPriceListManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\DialogForms\EditHfBom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\DialogForms\EditHfBom.Designer.cs">
+      <DependentUpon>EditHfBom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\DialogForms\SelectItem2CopyBom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\DialogForms\SelectItem2CopyBom.Designer.cs">
+      <DependentUpon>SelectItem2CopyBom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\DialogForms\SelectSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\DialogForms\SelectSuppliers.Designer.cs">
+      <DependentUpon>SelectSuppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\FamiliesHkManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\FamiliesHkManagement.Designer.cs">
+      <DependentUpon>FamiliesHkManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Master\FunctionalityManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Master\FunctionalityManagement.Designer.cs">
       <DependentUpon>FunctionalityManagement.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Master\FunctionalityManagement_v1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Master\FunctionalityManagement_v1.Designer.cs">
-      <DependentUpon>FunctionalityManagement_v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Master\FunctionalityRoleManagement.cs">
       <SubType>Form</SubType>
@@ -159,23 +233,65 @@
     <Compile Include="Forms\Master\FunctionalityRoleManagement.Designer.cs">
       <DependentUpon>FunctionalityRoleManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Master\FunctionalityRoleManagement_v1.cs">
+    <Compile Include="Forms\Master\IncotermsManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Master\FunctionalityRoleManagement_v1.Designer.cs">
-      <DependentUpon>FunctionalityRoleManagement_v1.cs</DependentUpon>
+    <Compile Include="Forms\Master\IncotermsManagement.Designer.cs">
+      <DependentUpon>IncotermsManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Master\ItemManagement.cs">
+    <Compile Include="Forms\Master\ItemDocs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Master\ItemManagement.Designer.cs">
-      <DependentUpon>ItemManagement.cs</DependentUpon>
+    <Compile Include="Forms\Master\ItemDocs.Designer.cs">
+      <DependentUpon>ItemDocs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Master\ItemManagement_v1.cs">
+    <Compile Include="Forms\Master\ItemManagementEY.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Master\ItemManagement_v1.Designer.cs">
-      <DependentUpon>ItemManagement_v1.cs</DependentUpon>
+    <Compile Include="Forms\Master\ItemManagementEY.Designer.cs">
+      <DependentUpon>ItemManagementEY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\ItemManagementHF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\ItemManagementHF.Designer.cs">
+      <DependentUpon>ItemManagementHF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\ItemManagementHW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\ItemManagementHW.Designer.cs">
+      <DependentUpon>ItemManagementHW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\ItemManagementMT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\ItemManagementMT.Designer.cs">
+      <DependentUpon>ItemManagementMT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\ItemsLevelsManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\ItemsLevelsManagement.Designer.cs">
+      <DependentUpon>ItemsLevelsManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\MyCompanyManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\MyCompanyManagement.Designer.cs">
+      <DependentUpon>MyCompanyManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\PaymentTermsManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\PaymentTermsManagement.Designer.cs">
+      <DependentUpon>PaymentTermsManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\PrototypeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\PrototypeManagement.Designer.cs">
+      <DependentUpon>PrototypeManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Master\RoleManagement.cs">
       <SubType>Form</SubType>
@@ -183,11 +299,11 @@
     <Compile Include="Forms\Master\RoleManagement.Designer.cs">
       <DependentUpon>RoleManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Master\RoleManagement_v1.cs">
+    <Compile Include="Forms\Master\StatusManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Master\RoleManagement_v1.Designer.cs">
-      <DependentUpon>RoleManagement_v1.cs</DependentUpon>
+    <Compile Include="Forms\Master\StatusManagement.Designer.cs">
+      <DependentUpon>StatusManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Master\StoreManagement.cs">
       <SubType>Form</SubType>
@@ -195,11 +311,11 @@
     <Compile Include="Forms\Master\StoreManagement.Designer.cs">
       <DependentUpon>StoreManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Master\StoreManagement_v1.cs">
+    <Compile Include="Forms\Master\SupplierFactoryCoeffManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Master\StoreManagement_v1.Designer.cs">
-      <DependentUpon>StoreManagement_v1.cs</DependentUpon>
+    <Compile Include="Forms\Master\SupplierFactoryCoeffManagement.Designer.cs">
+      <DependentUpon>SupplierFactoryCoeffManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Master\SupplierManagement.cs">
       <SubType>Form</SubType>
@@ -207,11 +323,11 @@
     <Compile Include="Forms\Master\SupplierManagement.Designer.cs">
       <DependentUpon>SupplierManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Master\SupplierManagement_v1.cs">
+    <Compile Include="Forms\Master\SupplierPriceListManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Master\SupplierManagement_v1.Designer.cs">
-      <DependentUpon>SupplierManagement_v1.cs</DependentUpon>
+    <Compile Include="Forms\Master\SupplierPriceListManagement.Designer.cs">
+      <DependentUpon>SupplierPriceListManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Master\UserManagement.cs">
       <SubType>Form</SubType>
@@ -219,11 +335,17 @@
     <Compile Include="Forms\Master\UserManagement.Designer.cs">
       <DependentUpon>UserManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Master\UserManagement_v1.cs">
+    <Compile Include="Forms\PDFViewer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Master\UserManagement_v1.Designer.cs">
-      <DependentUpon>UserManagement_v1.cs</DependentUpon>
+    <Compile Include="Forms\PDFViewer.Designer.cs">
+      <DependentUpon>PDFViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\BOMReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\BOMReport.Designer.cs">
+      <DependentUpon>BOMReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\RibbonFormBase.cs">
       <SubType>Form</SubType>
@@ -231,8 +353,38 @@
     <Compile Include="Forms\RibbonFormBase.Designer.cs">
       <DependentUpon>RibbonFormBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Supply\DialogForms\SelectDocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\DialogForms\SelectDocs.Designer.cs">
+      <DependentUpon>SelectDocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\PurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\PurchaseOrder.Designer.cs">
+      <DependentUpon>PurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\PurchaseOrderSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\PurchaseOrderSelection.Designer.cs">
+      <DependentUpon>PurchaseOrderSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\QuotationProposal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\QuotationProposal.Designer.cs">
+      <DependentUpon>QuotationProposal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\Constants.cs" />
     <Compile Include="General\GlobalSetting.cs" />
     <Compile Include="Helpers\CustomExtensions.cs" />
+    <Compile Include="Helpers\DbContextExtensions.cs" />
+    <Compile Include="Helpers\DeepCopyByExpressionTrees.cs" />
+    <Compile Include="Helpers\DocHelper.cs" />
+    <Compile Include="Helpers\EntityFrameworkHelper.cs" />
+    <Compile Include="Helpers\LayoutHelper.cs" />
     <Compile Include="Helpers\MDIClientSupport.cs" />
     <Compile Include="Helpers\Mocking\MockData.cs" />
     <Compile Include="Helpers\PasswordHelper.cs" />
@@ -264,42 +416,481 @@
     <Compile Include="Migrations\201703210811583_items_2.Designer.cs">
       <DependentUpon>201703210811583_items_2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704100904228_Items_3.cs" />
+    <Compile Include="Migrations\201704100904228_Items_3.Designer.cs">
+      <DependentUpon>201704100904228_Items_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704100910420_Items_3.1.cs" />
+    <Compile Include="Migrations\201704100910420_Items_3.1.Designer.cs">
+      <DependentUpon>201704100910420_Items_3.1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704101100355_Items_3.2_ItemHistory.cs" />
+    <Compile Include="Migrations\201704101100355_Items_3.2_ItemHistory.Designer.cs">
+      <DependentUpon>201704101100355_Items_3.2_ItemHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704101119002_Items_3.3.cs" />
+    <Compile Include="Migrations\201704101119002_Items_3.3.Designer.cs">
+      <DependentUpon>201704101119002_Items_3.3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704101348541_Items_3.4.cs" />
+    <Compile Include="Migrations\201704101348541_Items_3.4.Designer.cs">
+      <DependentUpon>201704101348541_Items_3.4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111019546_ColorModelStatusCial_DefincionCampos.cs" />
+    <Compile Include="Migrations\201704111019546_ColorModelStatusCial_DefincionCampos.Designer.cs">
+      <DependentUpon>201704111019546_ColorModelStatusCial_DefincionCampos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111027090_ColorModelStatusCial_DefincionCampos_2.cs" />
+    <Compile Include="Migrations\201704111027090_ColorModelStatusCial_DefincionCampos_2.Designer.cs">
+      <DependentUpon>201704111027090_ColorModelStatusCial_DefincionCampos_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111032377_ColorModelStatusCial_DefincionCampos_2.1.cs" />
+    <Compile Include="Migrations\201704111032377_ColorModelStatusCial_DefincionCampos_2.1.Designer.cs">
+      <DependentUpon>201704111032377_ColorModelStatusCial_DefincionCampos_2.1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111033353_ColorModelStatusCial_DefincionCampos_2.2.cs" />
+    <Compile Include="Migrations\201704111033353_ColorModelStatusCial_DefincionCampos_2.2.Designer.cs">
+      <DependentUpon>201704111033353_ColorModelStatusCial_DefincionCampos_2.2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111035315_ColorModelStatusCial_DefincionCampos_2.3.cs" />
+    <Compile Include="Migrations\201704111035315_ColorModelStatusCial_DefincionCampos_2.3.Designer.cs">
+      <DependentUpon>201704111035315_ColorModelStatusCial_DefincionCampos_2.3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111046282_ColorModelStatusCial_DefincionCampos_2.4.cs" />
+    <Compile Include="Migrations\201704111046282_ColorModelStatusCial_DefincionCampos_2.4.Designer.cs">
+      <DependentUpon>201704111046282_ColorModelStatusCial_DefincionCampos_2.4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111132216_userAttr_Incotems_PaymentTerms_Currency_EchangeRate.cs" />
+    <Compile Include="Migrations\201704111132216_userAttr_Incotems_PaymentTerms_Currency_EchangeRate.Designer.cs">
+      <DependentUpon>201704111132216_userAttr_Incotems_PaymentTerms_Currency_EchangeRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111141186_familyHK_2.cs" />
+    <Compile Include="Migrations\201704111141186_familyHK_2.Designer.cs">
+      <DependentUpon>201704111141186_familyHK_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111230522_statusHK.cs" />
+    <Compile Include="Migrations\201704111230522_statusHK.Designer.cs">
+      <DependentUpon>201704111230522_statusHK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111247588_Materials.cs" />
+    <Compile Include="Migrations\201704111247588_Materials.Designer.cs">
+      <DependentUpon>201704111247588_Materials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111259253_MatType.cs" />
+    <Compile Include="Migrations\201704111259253_MatType.Designer.cs">
+      <DependentUpon>201704111259253_MatType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111300251_MatType2.cs" />
+    <Compile Include="Migrations\201704111300251_MatType2.Designer.cs">
+      <DependentUpon>201704111300251_MatType2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111311550_HwType.cs" />
+    <Compile Include="Migrations\201704111311550_HwType.Designer.cs">
+      <DependentUpon>201704111311550_HwType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111348344_Item_11042017.cs" />
+    <Compile Include="Migrations\201704111348344_Item_11042017.Designer.cs">
+      <DependentUpon>201704111348344_Item_11042017.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111356233_Item_11042017_2.cs" />
+    <Compile Include="Migrations\201704111356233_Item_11042017_2.Designer.cs">
+      <DependentUpon>201704111356233_Item_11042017_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111400001_Item_11042017_3.cs" />
+    <Compile Include="Migrations\201704111400001_Item_11042017_3.Designer.cs">
+      <DependentUpon>201704111400001_Item_11042017_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704120736569_Customers_12042017_1.cs" />
+    <Compile Include="Migrations\201704120736569_Customers_12042017_1.Designer.cs">
+      <DependentUpon>201704120736569_Customers_12042017_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704120828580_Customers_12042017_2.cs" />
+    <Compile Include="Migrations\201704120828580_Customers_12042017_2.Designer.cs">
+      <DependentUpon>201704120828580_Customers_12042017_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704120909108_Items_12042017_1.cs" />
+    <Compile Include="Migrations\201704120909108_Items_12042017_1.Designer.cs">
+      <DependentUpon>201704120909108_Items_12042017_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704121018220_Items_12042017_2.cs" />
+    <Compile Include="Migrations\201704121018220_Items_12042017_2.Designer.cs">
+      <DependentUpon>201704121018220_Items_12042017_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704121041221_Items_12042017_3.cs" />
+    <Compile Include="Migrations\201704121041221_Items_12042017_3.Designer.cs">
+      <DependentUpon>201704121041221_Items_12042017_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704131021016_userAtt_20170413_1.cs" />
+    <Compile Include="Migrations\201704131021016_userAtt_20170413_1.Designer.cs">
+      <DependentUpon>201704131021016_userAtt_20170413_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704131030222_items_20170413_1.cs" />
+    <Compile Include="Migrations\201704131030222_items_20170413_1.Designer.cs">
+      <DependentUpon>201704131030222_items_20170413_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704181325109_itemPhoto_20160418_1.cs" />
+    <Compile Include="Migrations\201704181325109_itemPhoto_20160418_1.Designer.cs">
+      <DependentUpon>201704181325109_itemPhoto_20160418_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704181331167_itemPhoto_20160418_2.cs" />
+    <Compile Include="Migrations\201704181331167_itemPhoto_20160418_2.Designer.cs">
+      <DependentUpon>201704181331167_itemPhoto_20160418_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704190803322_ItemBcn_PricesList_1.cs" />
+    <Compile Include="Migrations\201704190803322_ItemBcn_PricesList_1.Designer.cs">
+      <DependentUpon>201704190803322_ItemBcn_PricesList_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704190958289_PricesList_precision_1.cs" />
+    <Compile Include="Migrations\201704190958289_PricesList_precision_1.Designer.cs">
+      <DependentUpon>201704190958289_PricesList_precision_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704191209177_PricesListHistoty_user_1.cs" />
+    <Compile Include="Migrations\201704191209177_PricesListHistoty_user_1.Designer.cs">
+      <DependentUpon>201704191209177_PricesListHistoty_user_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704260712449_items_20170426_01.cs" />
+    <Compile Include="Migrations\201704260712449_items_20170426_01.Designer.cs">
+      <DependentUpon>201704260712449_items_20170426_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704260734400_items_20170426_02.cs" />
+    <Compile Include="Migrations\201704260734400_items_20170426_02.Designer.cs">
+      <DependentUpon>201704260734400_items_20170426_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704260740393_items_20170426_03.cs" />
+    <Compile Include="Migrations\201704260740393_items_20170426_03.Designer.cs">
+      <DependentUpon>201704260740393_items_20170426_03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704260805066_items_20170426_04.cs" />
+    <Compile Include="Migrations\201704260805066_items_20170426_04.Designer.cs">
+      <DependentUpon>201704260805066_items_20170426_04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704260848126_items_20170426_05.cs" />
+    <Compile Include="Migrations\201704260848126_items_20170426_05.Designer.cs">
+      <DependentUpon>201704260848126_items_20170426_05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704260849595_items_20170426_06.cs" />
+    <Compile Include="Migrations\201704260849595_items_20170426_06.Designer.cs">
+      <DependentUpon>201704260849595_items_20170426_06.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704271337550_DocType_ItemMtHw_01.cs" />
+    <Compile Include="Migrations\201704271337550_DocType_ItemMtHw_01.Designer.cs">
+      <DependentUpon>201704271337550_DocType_ItemMtHw_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705020858436_itemHwMt_idmodel_01.cs" />
+    <Compile Include="Migrations\201705020858436_itemHwMt_idmodel_01.Designer.cs">
+      <DependentUpon>201705020858436_itemHwMt_idmodel_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705031357142_IdItemBcn_IdItemHk_changeLength_01.1.cs" />
+    <Compile Include="Migrations\201705031357142_IdItemBcn_IdItemHk_changeLength_01.1.Designer.cs">
+      <DependentUpon>201705031357142_IdItemBcn_IdItemHk_changeLength_01.1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705040746209_CustomerH_SupplierH_User_01.cs" />
+    <Compile Include="Migrations\201705040746209_CustomerH_SupplierH_User_01.Designer.cs">
+      <DependentUpon>201705040746209_CustomerH_SupplierH_User_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705040832324_deleteCascadeRemove_01.cs" />
+    <Compile Include="Migrations\201705040832324_deleteCascadeRemove_01.Designer.cs">
+      <DependentUpon>201705040832324_deleteCascadeRemove_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705100824273_items_deleteFKColors_01.cs" />
+    <Compile Include="Migrations\201705100824273_items_deleteFKColors_01.Designer.cs">
+      <DependentUpon>201705100824273_items_deleteFKColors_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705111418473_protoDocs_01.cs" />
+    <Compile Include="Migrations\201705111418473_protoDocs_01.Designer.cs">
+      <DependentUpon>201705111418473_protoDocs_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705171004567_layout_01.cs" />
+    <Compile Include="Migrations\201705171004567_layout_01.Designer.cs">
+      <DependentUpon>201705171004567_layout_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705171048334_layout_02.cs" />
+    <Compile Include="Migrations\201705171048334_layout_02.Designer.cs">
+      <DependentUpon>201705171048334_layout_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705171106353_layout_03.cs" />
+    <Compile Include="Migrations\201705171106353_layout_03.Designer.cs">
+      <DependentUpon>201705171106353_layout_03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705171202405_layout_04.cs" />
+    <Compile Include="Migrations\201705171202405_layout_04.Designer.cs">
+      <DependentUpon>201705171202405_layout_04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705221401295_bom_20170522_01.cs" />
+    <Compile Include="Migrations\201705221401295_bom_20170522_01.Designer.cs">
+      <DependentUpon>201705221401295_bom_20170522_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705221414455_bom_20170522_02.cs" />
+    <Compile Include="Migrations\201705221414455_bom_20170522_02.Designer.cs">
+      <DependentUpon>201705221414455_bom_20170522_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705240921195_itemHF_01.cs" />
+    <Compile Include="Migrations\201705240921195_itemHF_01.Designer.cs">
+      <DependentUpon>201705240921195_itemHF_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705241046460_MatType_20170524_01.cs" />
+    <Compile Include="Migrations\201705241046460_MatType_20170524_01.Designer.cs">
+      <DependentUpon>201705241046460_MatType_20170524_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705251427536_hwType_25042014_01.cs" />
+    <Compile Include="Migrations\201705251427536_hwType_25042014_01.Designer.cs">
+      <DependentUpon>201705251427536_hwType_25042014_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705251508254_bom_item_supplier_20170525_01.cs" />
+    <Compile Include="Migrations\201705251508254_bom_item_supplier_20170525_01.Designer.cs">
+      <DependentUpon>201705251508254_bom_item_supplier_20170525_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705261110132_detailBomMt_20170526_01.cs" />
+    <Compile Include="Migrations\201705261110132_detailBomMt_20170526_01.Designer.cs">
+      <DependentUpon>201705261110132_detailBomMt_20170526_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705261124163_detailBomMt_20170526_02.cs" />
+    <Compile Include="Migrations\201705261124163_detailBomMt_20170526_02.Designer.cs">
+      <DependentUpon>201705261124163_detailBomMt_20170526_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705301036149_detailBomHw_scrap_20170530_01.cs" />
+    <Compile Include="Migrations\201705301036149_detailBomHw_scrap_20170530_01.Designer.cs">
+      <DependentUpon>201705301036149_detailBomHw_scrap_20170530_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706060707179_detailBOMHf_20170606_01.cs" />
+    <Compile Include="Migrations\201706060707179_detailBOMHf_20170606_01.Designer.cs">
+      <DependentUpon>201706060707179_detailBOMHf_20170606_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706060713514_detailBOM_User_20170606_01.cs" />
+    <Compile Include="Migrations\201706060713514_detailBOM_User_20170606_01.Designer.cs">
+      <DependentUpon>201706060713514_detailBOM_User_20170606_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706070753069_FK_detailItemHf_20170607_01.cs" />
+    <Compile Include="Migrations\201706070753069_FK_detailItemHf_20170607_01.Designer.cs">
+      <DependentUpon>201706070753069_FK_detailItemHf_20170607_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706120657322_scrapNUll_20170612_01.cs" />
+    <Compile Include="Migrations\201706120657322_scrapNUll_20170612_01.Designer.cs">
+      <DependentUpon>201706120657322_scrapNUll_20170612_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706160640163_BomBreakdown_20170616_01.cs" />
+    <Compile Include="Migrations\201706160640163_BomBreakdown_20170616_01.Designer.cs">
+      <DependentUpon>201706160640163_BomBreakdown_20170616_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706160759192_BomBreakdown_20170616_02.cs" />
+    <Compile Include="Migrations\201706160759192_BomBreakdown_20170616_02.Designer.cs">
+      <DependentUpon>201706160759192_BomBreakdown_20170616_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706160817447_BomBreakdown_20170616_03.cs" />
+    <Compile Include="Migrations\201706160817447_BomBreakdown_20170616_03.Designer.cs">
+      <DependentUpon>201706160817447_BomBreakdown_20170616_03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707190837385_SupplierFactoryCoeff_20170719_01.cs" />
+    <Compile Include="Migrations\201707190837385_SupplierFactoryCoeff_20170719_01.Designer.cs">
+      <DependentUpon>201707190837385_SupplierFactoryCoeff_20170719_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707201514147_supplierFactoryCoeff_20170720_01.cs" />
+    <Compile Include="Migrations\201707201514147_supplierFactoryCoeff_20170720_01.Designer.cs">
+      <DependentUpon>201707201514147_supplierFactoryCoeff_20170720_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707241357248_SupplyStatus_20170724_01.cs" />
+    <Compile Include="Migrations\201707241357248_SupplyStatus_20170724_01.Designer.cs">
+      <DependentUpon>201707241357248_SupplyStatus_20170724_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707250844531_DeliveryTerms_20170725_01.cs" />
+    <Compile Include="Migrations\201707250844531_DeliveryTerms_20170725_01.Designer.cs">
+      <DependentUpon>201707250844531_DeliveryTerms_20170725_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707250932263_SupplyDocType_20170725_01.cs" />
+    <Compile Include="Migrations\201707250932263_SupplyDocType_20170725_01.Designer.cs">
+      <DependentUpon>201707250932263_SupplyDocType_20170725_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707250953035_SupplyDocs_20170725_01.cs" />
+    <Compile Include="Migrations\201707250953035_SupplyDocs_20170725_01.Designer.cs">
+      <DependentUpon>201707250953035_SupplyDocs_20170725_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707281028585_DocHeadUser_01.cs" />
+    <Compile Include="Migrations\201707281028585_DocHeadUser_01.Designer.cs">
+      <DependentUpon>201707281028585_DocHeadUser_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708070930149_SupplierInDocs_01.cs" />
+    <Compile Include="Migrations\201708070930149_SupplierInDocs_01.Designer.cs">
+      <DependentUpon>201708070930149_SupplierInDocs_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708101446234_ItemHwGroupType_01.cs" />
+    <Compile Include="Migrations\201708101446234_ItemHwGroupType_01.Designer.cs">
+      <DependentUpon>201708101446234_ItemHwGroupType_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708141248031_MyCompany_01.cs" />
+    <Compile Include="Migrations\201708141248031_MyCompany_01.Designer.cs">
+      <DependentUpon>201708141248031_MyCompany_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708160801489_FuncionalityGroup_01.cs" />
+    <Compile Include="Migrations\201708160801489_FuncionalityGroup_01.Designer.cs">
+      <DependentUpon>201708160801489_FuncionalityGroup_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708160824065_FuncionalityOrder_01.cs" />
+    <Compile Include="Migrations\201708160824065_FuncionalityOrder_01.Designer.cs">
+      <DependentUpon>201708160824065_FuncionalityOrder_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708161427242_breakdownSubGroups_01.cs" />
+    <Compile Include="Migrations\201708161427242_breakdownSubGroups_01.Designer.cs">
+      <DependentUpon>201708161427242_breakdownSubGroups_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\BomBreakdown.cs" />
+    <Compile Include="Models\Currency.cs" />
+    <Compile Include="Models\CustomerPriceList.cs" />
+    <Compile Include="Models\CustomerPriceListHistory.cs" />
+    <Compile Include="Models\DeliveryTerms.cs" />
+    <Compile Include="Models\DetailBomHf.cs" />
+    <Compile Include="Models\DetailBomHfHistory.cs" />
+    <Compile Include="Models\DetailBomHw.cs" />
+    <Compile Include="Models\DetailBomHwHistory.cs" />
+    <Compile Include="Models\DetailBomMt.cs" />
+    <Compile Include="Models\DetailBomMtHistory.cs" />
+    <Compile Include="Models\DocType.cs" />
+    <Compile Include="Models\EchangeRate.cs" />
+    <Compile Include="Models\EtnColor.cs" />
     <Compile Include="Models\CustomerHistory.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\FamilyHK.cs" />
     <Compile Include="Models\Functionality.cs" />
     <Compile Include="Models\FunctionalityRole.cs" />
-    <Compile Include="Models\Item.cs" />
-    <Compile Include="Models\ItemHistory.cs" />
+    <Compile Include="Models\HwTypeL1.cs" />
+    <Compile Include="Models\HwTypeL2.cs" />
+    <Compile Include="Models\HwTypeL3.cs" />
+    <Compile Include="Models\Incoterm.cs" />
+    <Compile Include="Models\ItemBom.cs" />
+    <Compile Include="Models\ItemEy.cs" />
+    <Compile Include="Models\ItemBcn.cs" />
+    <Compile Include="Models\ItemDoc.cs" />
+    <Compile Include="Models\ItemHF.cs" />
+    <Compile Include="Models\ItemHfHistory.cs" />
+    <Compile Include="Models\ItemHw.cs" />
+    <Compile Include="Models\ItemGroup.cs" />
+    <Compile Include="Models\ItemEyHistory.cs" />
+    <Compile Include="Models\ItemHwHistory.cs" />
+    <Compile Include="Models\ItemMt.cs" />
+    <Compile Include="Models\ItemMtHistory.cs" />
+    <Compile Include="Models\Layout.cs" />
+    <Compile Include="Models\MaterialL1.cs" />
+    <Compile Include="Models\MaterialL2.cs" />
+    <Compile Include="Models\MaterialL3.cs" />
+    <Compile Include="Models\MatTypeL1.cs" />
+    <Compile Include="Models\MatTypeL2.cs" />
+    <Compile Include="Models\MatTypeL3.cs" />
+    <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\MyCompany.cs" />
+    <Compile Include="Models\PaymentTerms.cs" />
+    <Compile Include="Models\Prototype.cs" />
+    <Compile Include="Models\PrototypeDoc.cs" />
     <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\StatusCial.cs" />
+    <Compile Include="Models\StatusHK.cs" />
     <Compile Include="Models\Store.cs" />
     <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Models\SupplierFactoryCoeff.cs" />
     <Compile Include="Models\SupplierHistory.cs" />
+    <Compile Include="Models\SupplierPriceList.cs" />
+    <Compile Include="Models\SupplierPriceListHistory.cs" />
+    <Compile Include="Models\Supply\DocHead.cs" />
+    <Compile Include="Models\Supply\DocLines.cs" />
+    <Compile Include="Models\Supply\SupplyDocType.cs" />
+    <Compile Include="Models\Supply\SupplyStatus.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserAttrDescription.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\frmVisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmVisor.designer.cs">
+      <DependentUpon>frmVisor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Resources\HKSupplyRes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HKSupplyRes.resx</DependentUpon>
     </Compile>
+    <Compile Include="Services\Implementations\EFBomBreakdown.cs" />
+    <Compile Include="Services\Implementations\EFCurrency.cs" />
     <Compile Include="Services\Implementations\EFCustomer.cs" />
+    <Compile Include="Services\Implementations\EFCustomerPriceList.cs" />
+    <Compile Include="Services\Implementations\EFDeliveryTerms.cs" />
+    <Compile Include="Services\Implementations\EFDocType.cs" />
+    <Compile Include="Services\Implementations\EFEchangeRate.cs" />
+    <Compile Include="Services\Implementations\EFEtnColor.cs" />
+    <Compile Include="Services\Implementations\EFFamilyHK.cs" />
     <Compile Include="Services\Implementations\EFFunctionality.cs" />
     <Compile Include="Services\Implementations\EFFunctionalityRole.cs" />
-    <Compile Include="Services\Implementations\EFItem.cs" />
+    <Compile Include="Services\Implementations\EFHwType.cs" />
+    <Compile Include="Services\Implementations\EFIncoterm.cs" />
+    <Compile Include="Services\Implementations\EFItemBom.cs" />
+    <Compile Include="Services\Implementations\EFItemDoc.cs" />
+    <Compile Include="Services\Implementations\EFItemEy.cs" />
+    <Compile Include="Services\Implementations\EFItemBcn.cs" />
+    <Compile Include="Services\Implementations\EFItemHf.cs" />
+    <Compile Include="Services\Implementations\EFItemHw.cs" />
+    <Compile Include="Services\Implementations\EFItemMt.cs" />
+    <Compile Include="Services\Implementations\EFLayout.cs" />
+    <Compile Include="Services\Implementations\EFMaterial.cs" />
+    <Compile Include="Services\Implementations\EFMatType.cs" />
+    <Compile Include="Services\Implementations\EFModel.cs" />
+    <Compile Include="Services\Implementations\EFMyCompany.cs" />
+    <Compile Include="Services\Implementations\EFPaymentTerms.cs" />
+    <Compile Include="Services\Implementations\EFPrototype.cs" />
+    <Compile Include="Services\Implementations\EFPrototypeDoc.cs" />
     <Compile Include="Services\Implementations\EFRole.cs" />
+    <Compile Include="Services\Implementations\EFStatusCial.cs" />
+    <Compile Include="Services\Implementations\EFStatusProd.cs" />
     <Compile Include="Services\Implementations\EFStore.cs" />
     <Compile Include="Services\Implementations\EFSupplier.cs" />
+    <Compile Include="Services\Implementations\EFSupplierFactoryCoeff.cs" />
+    <Compile Include="Services\Implementations\EFSupplierPriceList.cs" />
+    <Compile Include="Services\Implementations\EFSupplyDocs.cs" />
     <Compile Include="Services\Implementations\EFUser.cs" />
+    <Compile Include="Services\Implementations\EFUserAttrDescription.cs" />
+    <Compile Include="Services\Interfaces\IBomBreakdown.cs" />
+    <Compile Include="Services\Interfaces\ICurrency.cs" />
     <Compile Include="Services\Interfaces\ICustomer.cs" />
+    <Compile Include="Services\Interfaces\ICustomerPriceList.cs" />
+    <Compile Include="Services\Interfaces\IDeliveryTerms.cs" />
+    <Compile Include="Services\Interfaces\IDocType.cs" />
+    <Compile Include="Services\Interfaces\IEchangeRate.cs" />
+    <Compile Include="Services\Interfaces\IEtnColor.cs" />
+    <Compile Include="Services\Interfaces\IFamilyHK.cs" />
     <Compile Include="Services\Interfaces\IFunctionality.cs" />
     <Compile Include="Services\Interfaces\IFunctionalityRole.cs" />
-    <Compile Include="Services\Interfaces\IItem.cs" />
+    <Compile Include="Services\Interfaces\IHwType.cs" />
+    <Compile Include="Services\Interfaces\IIncoterm.cs" />
+    <Compile Include="Services\Interfaces\IItemBom.cs" />
+    <Compile Include="Services\Interfaces\IItemDoc.cs" />
+    <Compile Include="Services\Interfaces\IItemEy.cs" />
+    <Compile Include="Services\Interfaces\IItemBcn.cs" />
+    <Compile Include="Services\Interfaces\IItemHf.cs" />
+    <Compile Include="Services\Interfaces\IItemHw.cs" />
+    <Compile Include="Services\Interfaces\IItemMt.cs" />
+    <Compile Include="Services\Interfaces\ILayout.cs" />
+    <Compile Include="Services\Interfaces\IMaterial.cs" />
+    <Compile Include="Services\Interfaces\IMatType.cs" />
+    <Compile Include="Services\Interfaces\IModel.cs" />
+    <Compile Include="Services\Interfaces\IMyCompany.cs" />
+    <Compile Include="Services\Interfaces\IPaymentTerms.cs" />
+    <Compile Include="Services\Interfaces\IPrototype.cs" />
+    <Compile Include="Services\Interfaces\IPrototypeDoc.cs" />
     <Compile Include="Services\Interfaces\IRole.cs" />
+    <Compile Include="Services\Interfaces\IStatusCial.cs" />
+    <Compile Include="Services\Interfaces\IStatusProd.cs" />
     <Compile Include="Services\Interfaces\IStore.cs" />
     <Compile Include="Services\Interfaces\ISupplier.cs" />
+    <Compile Include="Services\Interfaces\ISupplierFactoryCoeff.cs" />
+    <Compile Include="Services\Interfaces\ISupplierPriceList.cs" />
+    <Compile Include="Services\Interfaces\ISupplyDocs.cs" />
     <Compile Include="Services\Interfaces\IUser.cs" />
+    <Compile Include="Services\Interfaces\IUserAttrDescription.cs" />
     <Compile Include="Styles\AppStyles.cs" />
+    <Content Include="Resources\Images\import_export_excel_icon_16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\import_export_excel_icon_32x32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,8 +906,17 @@
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\BomBreakdownManagement.resx">
+      <DependentUpon>BomBreakdownManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\BomManagement.resx">
+      <DependentUpon>BomManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\CurrenciesEchangeRatesManagement.resx">
+      <DependentUpon>CurrenciesEchangeRatesManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\CustomerManagement.resx">
       <DependentUpon>CustomerManagement.cs</DependentUpon>
@@ -324,50 +924,98 @@
     <EmbeddedResource Include="Forms\Master\CustomerManagement_v1.resx">
       <DependentUpon>CustomerManagement_v1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\CustomerPriceListManagement.resx">
+      <DependentUpon>CustomerPriceListManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\DialogForms\EditHfBom.resx">
+      <DependentUpon>EditHfBom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\DialogForms\SelectItem2CopyBom.resx">
+      <DependentUpon>SelectItem2CopyBom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\DialogForms\SelectSuppliers.resx">
+      <DependentUpon>SelectSuppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\FamiliesHkManagement.resx">
+      <DependentUpon>FamiliesHkManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\FunctionalityManagement.resx">
       <DependentUpon>FunctionalityManagement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Master\FunctionalityManagement_v1.resx">
-      <DependentUpon>FunctionalityManagement_v1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\FunctionalityRoleManagement.resx">
       <DependentUpon>FunctionalityRoleManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Master\FunctionalityRoleManagement_v1.resx">
-      <DependentUpon>FunctionalityRoleManagement_v1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Master\IncotermsManagement.resx">
+      <DependentUpon>IncotermsManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Master\ItemManagement.resx">
-      <DependentUpon>ItemManagement.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Master\ItemDocs.resx">
+      <DependentUpon>ItemDocs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Master\ItemManagement_v1.resx">
-      <DependentUpon>ItemManagement_v1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Master\ItemManagementEY.resx">
+      <DependentUpon>ItemManagementEY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\ItemManagementHF.resx">
+      <DependentUpon>ItemManagementHF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\ItemManagementHW.resx">
+      <DependentUpon>ItemManagementHW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\ItemManagementMT.resx">
+      <DependentUpon>ItemManagementMT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\ItemsLevelsManagement.resx">
+      <DependentUpon>ItemsLevelsManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\MyCompanyManagement.resx">
+      <DependentUpon>MyCompanyManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\PaymentTermsManagement.resx">
+      <DependentUpon>PaymentTermsManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\PrototypeManagement.resx">
+      <DependentUpon>PrototypeManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\RoleManagement.resx">
       <DependentUpon>RoleManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Master\RoleManagement_v1.resx">
-      <DependentUpon>RoleManagement_v1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Master\StatusManagement.resx">
+      <DependentUpon>StatusManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\StoreManagement.resx">
       <DependentUpon>StoreManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Master\StoreManagement_v1.resx">
-      <DependentUpon>StoreManagement_v1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Master\SupplierFactoryCoeffManagement.resx">
+      <DependentUpon>SupplierFactoryCoeffManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\SupplierManagement.resx">
       <DependentUpon>SupplierManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Master\SupplierManagement_v1.resx">
-      <DependentUpon>SupplierManagement_v1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Master\SupplierPriceListManagement.resx">
+      <DependentUpon>SupplierPriceListManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\UserManagement.resx">
       <DependentUpon>UserManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Master\UserManagement_v1.resx">
-      <DependentUpon>UserManagement_v1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\PDFViewer.resx">
+      <DependentUpon>PDFViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\BOMReport.resx">
+      <DependentUpon>BOMReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RibbonFormBase.resx">
       <DependentUpon>RibbonFormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\DialogForms\SelectDocs.resx">
+      <DependentUpon>SelectDocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\PurchaseOrder.resx">
+      <DependentUpon>PurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\PurchaseOrderSelection.resx">
+      <DependentUpon>PurchaseOrderSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\QuotationProposal.resx">
+      <DependentUpon>QuotationProposal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703081042226_Customer.resx">
       <DependentUpon>201703081042226_Customer.cs</DependentUpon>
@@ -390,6 +1038,243 @@
     <EmbeddedResource Include="Migrations\201703210811583_items_2.resx">
       <DependentUpon>201703210811583_items_2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704100904228_Items_3.resx">
+      <DependentUpon>201704100904228_Items_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704100910420_Items_3.1.resx">
+      <DependentUpon>201704100910420_Items_3.1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704101100355_Items_3.2_ItemHistory.resx">
+      <DependentUpon>201704101100355_Items_3.2_ItemHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704101119002_Items_3.3.resx">
+      <DependentUpon>201704101119002_Items_3.3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704101348541_Items_3.4.resx">
+      <DependentUpon>201704101348541_Items_3.4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111019546_ColorModelStatusCial_DefincionCampos.resx">
+      <DependentUpon>201704111019546_ColorModelStatusCial_DefincionCampos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111027090_ColorModelStatusCial_DefincionCampos_2.resx">
+      <DependentUpon>201704111027090_ColorModelStatusCial_DefincionCampos_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111032377_ColorModelStatusCial_DefincionCampos_2.1.resx">
+      <DependentUpon>201704111032377_ColorModelStatusCial_DefincionCampos_2.1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111033353_ColorModelStatusCial_DefincionCampos_2.2.resx">
+      <DependentUpon>201704111033353_ColorModelStatusCial_DefincionCampos_2.2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111035315_ColorModelStatusCial_DefincionCampos_2.3.resx">
+      <DependentUpon>201704111035315_ColorModelStatusCial_DefincionCampos_2.3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111046282_ColorModelStatusCial_DefincionCampos_2.4.resx">
+      <DependentUpon>201704111046282_ColorModelStatusCial_DefincionCampos_2.4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111132216_userAttr_Incotems_PaymentTerms_Currency_EchangeRate.resx">
+      <DependentUpon>201704111132216_userAttr_Incotems_PaymentTerms_Currency_EchangeRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111141186_familyHK_2.resx">
+      <DependentUpon>201704111141186_familyHK_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111230522_statusHK.resx">
+      <DependentUpon>201704111230522_statusHK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111247588_Materials.resx">
+      <DependentUpon>201704111247588_Materials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111259253_MatType.resx">
+      <DependentUpon>201704111259253_MatType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111300251_MatType2.resx">
+      <DependentUpon>201704111300251_MatType2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111311550_HwType.resx">
+      <DependentUpon>201704111311550_HwType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111348344_Item_11042017.resx">
+      <DependentUpon>201704111348344_Item_11042017.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111356233_Item_11042017_2.resx">
+      <DependentUpon>201704111356233_Item_11042017_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111400001_Item_11042017_3.resx">
+      <DependentUpon>201704111400001_Item_11042017_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704120736569_Customers_12042017_1.resx">
+      <DependentUpon>201704120736569_Customers_12042017_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704120828580_Customers_12042017_2.resx">
+      <DependentUpon>201704120828580_Customers_12042017_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704120909108_Items_12042017_1.resx">
+      <DependentUpon>201704120909108_Items_12042017_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704121018220_Items_12042017_2.resx">
+      <DependentUpon>201704121018220_Items_12042017_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704121041221_Items_12042017_3.resx">
+      <DependentUpon>201704121041221_Items_12042017_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704131021016_userAtt_20170413_1.resx">
+      <DependentUpon>201704131021016_userAtt_20170413_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704131030222_items_20170413_1.resx">
+      <DependentUpon>201704131030222_items_20170413_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704181325109_itemPhoto_20160418_1.resx">
+      <DependentUpon>201704181325109_itemPhoto_20160418_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704181331167_itemPhoto_20160418_2.resx">
+      <DependentUpon>201704181331167_itemPhoto_20160418_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704190803322_ItemBcn_PricesList_1.resx">
+      <DependentUpon>201704190803322_ItemBcn_PricesList_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704190958289_PricesList_precision_1.resx">
+      <DependentUpon>201704190958289_PricesList_precision_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704191209177_PricesListHistoty_user_1.resx">
+      <DependentUpon>201704191209177_PricesListHistoty_user_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704260712449_items_20170426_01.resx">
+      <DependentUpon>201704260712449_items_20170426_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704260734400_items_20170426_02.resx">
+      <DependentUpon>201704260734400_items_20170426_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704260740393_items_20170426_03.resx">
+      <DependentUpon>201704260740393_items_20170426_03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704260805066_items_20170426_04.resx">
+      <DependentUpon>201704260805066_items_20170426_04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704260848126_items_20170426_05.resx">
+      <DependentUpon>201704260848126_items_20170426_05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704260849595_items_20170426_06.resx">
+      <DependentUpon>201704260849595_items_20170426_06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704271337550_DocType_ItemMtHw_01.resx">
+      <DependentUpon>201704271337550_DocType_ItemMtHw_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705020858436_itemHwMt_idmodel_01.resx">
+      <DependentUpon>201705020858436_itemHwMt_idmodel_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705031357142_IdItemBcn_IdItemHk_changeLength_01.1.resx">
+      <DependentUpon>201705031357142_IdItemBcn_IdItemHk_changeLength_01.1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705040746209_CustomerH_SupplierH_User_01.resx">
+      <DependentUpon>201705040746209_CustomerH_SupplierH_User_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705040832324_deleteCascadeRemove_01.resx">
+      <DependentUpon>201705040832324_deleteCascadeRemove_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705100824273_items_deleteFKColors_01.resx">
+      <DependentUpon>201705100824273_items_deleteFKColors_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111418473_protoDocs_01.resx">
+      <DependentUpon>201705111418473_protoDocs_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705171004567_layout_01.resx">
+      <DependentUpon>201705171004567_layout_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705171048334_layout_02.resx">
+      <DependentUpon>201705171048334_layout_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705171106353_layout_03.resx">
+      <DependentUpon>201705171106353_layout_03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705171202405_layout_04.resx">
+      <DependentUpon>201705171202405_layout_04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705221401295_bom_20170522_01.resx">
+      <DependentUpon>201705221401295_bom_20170522_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705221414455_bom_20170522_02.resx">
+      <DependentUpon>201705221414455_bom_20170522_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705240921195_itemHF_01.resx">
+      <DependentUpon>201705240921195_itemHF_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705241046460_MatType_20170524_01.resx">
+      <DependentUpon>201705241046460_MatType_20170524_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705251427536_hwType_25042014_01.resx">
+      <DependentUpon>201705251427536_hwType_25042014_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705251508254_bom_item_supplier_20170525_01.resx">
+      <DependentUpon>201705251508254_bom_item_supplier_20170525_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705261110132_detailBomMt_20170526_01.resx">
+      <DependentUpon>201705261110132_detailBomMt_20170526_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705261124163_detailBomMt_20170526_02.resx">
+      <DependentUpon>201705261124163_detailBomMt_20170526_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705301036149_detailBomHw_scrap_20170530_01.resx">
+      <DependentUpon>201705301036149_detailBomHw_scrap_20170530_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706060707179_detailBOMHf_20170606_01.resx">
+      <DependentUpon>201706060707179_detailBOMHf_20170606_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706060713514_detailBOM_User_20170606_01.resx">
+      <DependentUpon>201706060713514_detailBOM_User_20170606_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706070753069_FK_detailItemHf_20170607_01.resx">
+      <DependentUpon>201706070753069_FK_detailItemHf_20170607_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706120657322_scrapNUll_20170612_01.resx">
+      <DependentUpon>201706120657322_scrapNUll_20170612_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706160640163_BomBreakdown_20170616_01.resx">
+      <DependentUpon>201706160640163_BomBreakdown_20170616_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706160759192_BomBreakdown_20170616_02.resx">
+      <DependentUpon>201706160759192_BomBreakdown_20170616_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706160817447_BomBreakdown_20170616_03.resx">
+      <DependentUpon>201706160817447_BomBreakdown_20170616_03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707190837385_SupplierFactoryCoeff_20170719_01.resx">
+      <DependentUpon>201707190837385_SupplierFactoryCoeff_20170719_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707201514147_supplierFactoryCoeff_20170720_01.resx">
+      <DependentUpon>201707201514147_supplierFactoryCoeff_20170720_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707241357248_SupplyStatus_20170724_01.resx">
+      <DependentUpon>201707241357248_SupplyStatus_20170724_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707250844531_DeliveryTerms_20170725_01.resx">
+      <DependentUpon>201707250844531_DeliveryTerms_20170725_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707250932263_SupplyDocType_20170725_01.resx">
+      <DependentUpon>201707250932263_SupplyDocType_20170725_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707250953035_SupplyDocs_20170725_01.resx">
+      <DependentUpon>201707250953035_SupplyDocs_20170725_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707281028585_DocHeadUser_01.resx">
+      <DependentUpon>201707281028585_DocHeadUser_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708070930149_SupplierInDocs_01.resx">
+      <DependentUpon>201708070930149_SupplierInDocs_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708101446234_ItemHwGroupType_01.resx">
+      <DependentUpon>201708101446234_ItemHwGroupType_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708141248031_MyCompany_01.resx">
+      <DependentUpon>201708141248031_MyCompany_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708160801489_FuncionalityGroup_01.resx">
+      <DependentUpon>201708160801489_FuncionalityGroup_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708160824065_FuncionalityOrder_01.resx">
+      <DependentUpon>201708160824065_FuncionalityOrder_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708161427242_breakdownSubGroups_01.resx">
+      <DependentUpon>201708161427242_breakdownSubGroups_01.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -400,10 +1285,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\frmVisor.resx">
+      <DependentUpon>frmVisor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\HKSupplyRes.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>HKSupplyRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Content Include="HelpDocs\EN\BOM Flow and Application Help.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -414,6 +1305,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Content Include="Reports\Rpt\BOM.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -427,6 +1321,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="etnia_icon.ico" />
+    <Content Include="Resources\Images\Edit_16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\etnia_icon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -440,6 +1337,10 @@
       <Name>CustomControls</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <PropertyGroup>

@@ -8,7 +8,7 @@ namespace HKSupply.Services.Interfaces
         ItemBom GetItemSupplierBom(int IdBom, string idSupplier, bool getPoco = false);
         ItemBom GetItemSupplierBom(string IdItemBcn, string idSupplier, bool getPoco = false);
         List<ItemBom> GetItemBom(string idItemBcn);
-        bool EditItemBom(ItemBom bom);
+        //bool EditItemBom(ItemBom bom);
 
         bool EditItemSuppliersBom(List<ItemBom> itemSuppliersBom);
 

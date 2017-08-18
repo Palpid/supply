@@ -415,6 +415,25 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void RootGridViewItems_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            try
+            {
+                GridView View = sender as GridView;
+                if (e.Column.FieldName == $"{nameof(ItemEy.DocWarning)}.{nameof(ItemDocWarning.WARNING_COL_DESC)}")
+                {
+                    ItemEy item = View.GetRow(e.RowHandle) as ItemEy;
+                    e.Appearance.BackColor = ColorTranslator.FromHtml(item.DocWarning.WARNING_COL_COLOR);
+                    e.Appearance.BackColor2 = ColorTranslator.FromHtml(item.DocWarning.WARNING_COL_COLOR);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void sbLoad_Click(object sender, EventArgs e)
         {
             try
@@ -774,6 +793,7 @@ namespace HKSupply.Forms.Master
                 GridColumn colIdUserAttri1 = new GridColumn() { Caption = userAtt01, Visible = true, FieldName = nameof(ItemEy.IdUserAttri1), Width = 90 };
                 GridColumn colIdUserAttri2 = new GridColumn() { Caption = userAtt02, Visible = true, FieldName = nameof(ItemEy.IdUserAttri2), Width = 90 };
                 GridColumn colIdUserAttri3 = new GridColumn() { Caption = userAtt03, Visible = true, FieldName = nameof(ItemEy.IdUserAttri3), Width = 90 };
+                GridColumn coldDocWarning = new GridColumn() { Caption = "Docs. Warning", Visible = true, FieldName =$"{nameof(ItemEy.DocWarning)}.{nameof(ItemDocWarning.WARNING_COL_DESC)}", Width = 270 };
                 GridColumn colPhotoUrl = new GridColumn() { Caption = "Photo URL", Visible = false, FieldName = nameof(ItemEy.PhotoUrl), Width = 90 };
                 GridColumn colPhoto = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Photo"), Visible = true, FieldName = PHOTO_COLUMN, Width = 90 };
 
@@ -867,6 +887,7 @@ namespace HKSupply.Forms.Master
                 rootGridViewItems.Columns.Add(colIdUserAttri2);
                 rootGridViewItems.Columns.Add(colIdUserAttri3);
                 rootGridViewItems.Columns.Add(colComments);
+                rootGridViewItems.Columns.Add(coldDocWarning);
                 rootGridViewItems.Columns.Add(colPhotoUrl);
                 rootGridViewItems.Columns.Add(colPhoto);
 
@@ -876,6 +897,8 @@ namespace HKSupply.Forms.Master
 
                 rootGridViewItems.PopupMenuShowing += rootGridViewItems_PopupMenuShowing;
                 rootGridViewItems.CellValueChanged += RootGridViewItems_CellValueChanged;
+
+                rootGridViewItems.RowCellStyle += RootGridViewItems_RowCellStyle;
 
             }
             catch (Exception ex)

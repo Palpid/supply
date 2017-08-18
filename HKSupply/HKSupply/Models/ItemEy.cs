@@ -119,6 +119,12 @@ namespace HKSupply.Models
         [Column("PHOTO_URL", TypeName = "NVARCHAR"), StringLength(2500)]
         public string PhotoUrl { get; set; }
 
+
+        #region NotMapped
+        [NotMapped]
+        public Classes.ItemDocWarning DocWarning { get; set; }
+        #endregion
+
         #region Equal
 
         public override bool Equals(object obj)
