@@ -99,6 +99,8 @@ namespace HKSupply.DB
 
         public DbSet<MyCompany> MyCompany { get; set; }
 
+        public DbSet<ItemType> ItemTypes { get; set; }
+
         //public HKSupplyContext()
         //    : base("name=SqlExpressConn")
         //{

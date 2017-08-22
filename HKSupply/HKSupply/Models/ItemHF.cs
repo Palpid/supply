@@ -71,6 +71,11 @@ namespace HKSupply.Models
         [Column("ITEM_DESCRIPTION", TypeName = "NVARCHAR"), StringLength(100)]
         public string ItemDescription { get; set; }
 
+        [Column("ID_ITEM_TYPE", TypeName = "NVARCHAR"), StringLength(100)]
+        public string IdItemType { get; set; }
+        [ForeignKey("IdItemType")]
+        public ItemType ItemType { get; set; }
+
         [Column("COMMENTS", TypeName = "NVARCHAR"), StringLength(2500)]
         public string Comments { get; set; }
 
@@ -144,6 +149,7 @@ namespace HKSupply.Models
                IdColor2 == item.IdColor2 &&
                IdItemHK == item.IdItemHK &&
                ItemDescription == item.ItemDescription &&
+               IdItemType == item.IdItemType &&
                Comments == item.Comments &&
                Segment == item.Segment &&
                Category == item.Category &&
@@ -185,6 +191,7 @@ namespace HKSupply.Models
                 (IdColor2 == null ? 0 : IdColor2.GetHashCode()) +
                 (IdItemHK == null ? 0 : IdItemHK.GetHashCode()) +
                 (ItemDescription == null ? 0 : ItemDescription.GetHashCode()) +
+                (IdItemType == null ? 0 : IdItemType.GetHashCode()) +
                 (Comments == null ? 0 : Comments.GetHashCode()) +
                 (Segment == null ? 0 : Segment.GetHashCode()) +
                 (Category == null ? 0 : Category.GetHashCode()) +

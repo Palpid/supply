@@ -53,6 +53,20 @@ namespace HKSupply.General
         public const string HW_GROUP_TYPE_DESING = "DESIGN";
         public const string HW_GROUP_TYPE_PRODUCTION = "PRODUCTION";
 
+        //** ITEM TYPES IDs**//
+        public const string ITEM_TYPE_FRONT = "02";
+        public const string ITEM_TYPE_LEFT_TEMPLE = "03";
+        public const string ITEM_TYPE_RIGHT_TEMPLE = "04";
+
+        //** BREAKDOWN SUBGROUPS **//
+        public const string BREAKDOWN_SUBGROUP_FRONT = "FRONT";
+        public const string BREAKDOWN_SUBGROUP_TEMPLE = "TEMPLE";
+        public const string BREAKDOWN_SUBGROUP_TEMPLE_LEFT = "TEMPLE_LEFT";
+        public const string BREAKDOWN_SUBGROUP_TEMPLE_RIGHT = "TEMPLE_RIGHT";
+
+        //** INTRANET ETNIA BARCELONA **//
+        public const string INTRANET_ETNIA_BCN = "INTRANET";
+
         //** SUPPLY STATUS **//
         public const string SUPPLY_STATUS_OPEN = "OPN";
         public const string SUPPLY_STATUS_CLOSE = "CLS";
