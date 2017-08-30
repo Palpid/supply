@@ -202,6 +202,38 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void SbFinishQP_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bool res = false;
+
+                if (ValidateQP() == false)
+                    return;
+
+                DialogResult result = MessageBox.Show("Save change and finish Purchase Order", "", MessageBoxButtons.YesNo);
+
+                if (result != DialogResult.Yes)
+                    return;
+
+                Cursor = Cursors.WaitCursor;
+
+                if (CurrentState == ActionsStates.Edit)
+                {
+                    res = UpdateQP(finishQP:true);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
+        }
+
         private void GridViewLines_ShowingEditor(object sender, CancelEventArgs e)
         {
             try
@@ -517,8 +549,8 @@ namespace HKSupply.Forms.Supply
             {
                 //TODO
                 sbSearch.Click += SbSearch_Click;
+                sbFinishQP.Click += SbFinishQP_Click;
                 //sbOrder.Click += SbOrder_Click;
-                //sbFinishPO.Click += SbFinishPO_Click;
 
             }
             catch
@@ -697,7 +729,7 @@ namespace HKSupply.Forms.Supply
             try
             {
 
-                _docHeadAssociatedPO = GlobalSetting.SupplyDocsService.GetDoc(_docHeadQP.IdDoc.Replace(Constants.SUPPLY_DOCTYPE_QP,string.Empty));
+                //_docHeadAssociatedPO = GlobalSetting.SupplyDocsService.GetDoc(_docHeadQP.IdDoc.Replace(Constants.SUPPLY_DOCTYPE_QP,string.Empty));
 
                 if (_docHeadAssociatedPO == null)
                     throw new Exception("Associated PO not found");
@@ -764,7 +796,7 @@ namespace HKSupply.Forms.Supply
                 string customer = slueCustomer.EditValue as string;
                 DateTime qpCreateDate = dateEditQPCreationDate.DateTime;
 
-                var docs = GlobalSetting.SupplyDocsService.GetDocs( idSupplier: null, idCustomer: customer, docDate: qpCreateDate, IdSupplyDocType: Constants.SUPPLY_DOCTYPE_QP);
+                var docs = GlobalSetting.SupplyDocsService.GetDocs( idSupplier: null, idCustomer: customer, docDate: qpCreateDate, IdSupplyDocType: Constants.SUPPLY_DOCTYPE_QP, idSupplyStatus: null);
 
                 if (docs.Count == 0)
                 {
@@ -903,7 +935,7 @@ namespace HKSupply.Forms.Supply
                     .OrderBy(a => Convert.ToInt32(System.Text.RegularExpressions.Regex.Match(a.Batch, @"\d+$").Value))
                     .ToList();
 
-                DocHead purchaseOrder = new DocHead()
+                DocHead quotationProposal = new DocHead()
                 {
                     IdDoc = _docHeadQP.IdDoc,
                     IdSupplyDocType = _docHeadQP.IdSupplyDocType,
@@ -919,7 +951,7 @@ namespace HKSupply.Forms.Supply
                     Lines = sortedLines
                 };
 
-                DocHead createdDoc = GlobalSetting.SupplyDocsService.UpdateDoc(purchaseOrder);
+                DocHead createdDoc = GlobalSetting.SupplyDocsService.UpdateDoc(quotationProposal, finishDoc: finishQP);
 
                 return true;
             }

@@ -2731,7 +2731,7 @@ namespace HKSupply.Forms.Master
 
                 foreach (DetailBomMt rawMaterial in item.Materials.EmptyIfNull().OrderBy(a => a.IdBomBreakdown))
                 {
-                    if (string.IsNullOrEmpty(rawMaterial.IdItemBcn))
+                    if (string.IsNullOrEmpty(rawMaterial.IdItemBcn) || string.IsNullOrEmpty(rawMaterial.IdBomBreakdown))
                         continue;
 
                     if(root.Nodes[0].Nodes.Find(rawMaterial.IdBomBreakdown, false).Count() == 0)
@@ -2748,7 +2748,7 @@ namespace HKSupply.Forms.Master
                 
                 foreach (DetailBomHw hardware in item.Hardwares.EmptyIfNull())
                 {
-                    if (string.IsNullOrEmpty(hardware.IdItemBcn))
+                    if (string.IsNullOrEmpty(hardware.IdItemBcn) || string.IsNullOrEmpty(hardware.IdBomBreakdown))
                         continue;
 
                     if (root.Nodes[1].Nodes.Find(hardware.IdBomBreakdown, false).Count() == 0)

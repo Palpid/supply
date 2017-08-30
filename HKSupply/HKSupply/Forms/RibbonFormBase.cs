@@ -22,7 +22,8 @@ namespace HKSupply.Forms
             OnlyEdit,
             OnlyEditNew,
             Edit,
-            New
+            New,
+            OnlyNew
         }
         #endregion
 
@@ -174,6 +175,8 @@ namespace HKSupply.Forms
                 ConfigureByState(ActionsStates.OnlyEditNew);
             else if (Read == true && New == false && Modify == true)
                 ConfigureByState(ActionsStates.OnlyEdit);
+            else if (Read == true && New == true && Modify == false)
+                ConfigureByState(ActionsStates.OnlyNew);
         }
 
         private void ConfigureByState(ActionsStates state)
@@ -205,6 +208,12 @@ namespace HKSupply.Forms
                     bbiNew.Enabled = false;
                     bbiSave.Enabled = true;
                     bbiCancel.Enabled = true;
+                    break;
+                case ActionsStates.OnlyNew:
+                    bbiEdit.Enabled = false;
+                    bbiNew.Enabled = true;
+                    bbiSave.Enabled = false;
+                    bbiCancel.Enabled = false;
                     break;
             }
         }

@@ -8,10 +8,12 @@ namespace HKSupply.Services.Interfaces
     public interface ISupplyDocs
     {
         List<SupplyStatus> GetSupplyStatus();
-        List<DocHead> GetDocs(string idSupplier, string idCustomer, DateTime docDate, string IdSupplyDocType);
+        List<DocHead> GetDocs(string idSupplier, string idCustomer, DateTime docDate, string IdSupplyDocType, string idSupplyStatus);
         DocHead NewDoc(DocHead newDoc);
         DocHead GetDoc(string idDoc);
-        DocHead UpdateDoc(DocHead doc, bool finishPO = false);
+        DocHead UpdateDoc(DocHead doc, bool finishDoc = false);
         List<POSelection> GetPOSelection(string idDocPo, string idSupplyStatus, string idSupplier, DateTime PODateIni, DateTime PODateEnd);
+        bool ValidateBomSupplierLines(string idSupplier, List<DocLine> lines , out List<string> itemWithouBom);
+        bool UpdateLinesRemarks(List<DocLine> lines);
     }
 }

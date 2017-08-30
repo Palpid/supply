@@ -355,11 +355,29 @@
     <Compile Include="Forms\RibbonFormBase.Designer.cs">
       <DependentUpon>RibbonFormBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Supply\DeliveryNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\DeliveryNote.Designer.cs">
+      <DependentUpon>DeliveryNote.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Supply\DialogForms\SelectDocs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Supply\DialogForms\SelectDocs.Designer.cs">
       <DependentUpon>SelectDocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\Invoice.Designer.cs">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\PackingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\PackingList.Designer.cs">
+      <DependentUpon>PackingList.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Supply\PurchaseOrder.cs">
       <SubType>Form</SubType>
@@ -378,6 +396,12 @@
     </Compile>
     <Compile Include="Forms\Supply\QuotationProposal.Designer.cs">
       <DependentUpon>QuotationProposal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\SalesOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\SalesOrder.Designer.cs">
+      <DependentUpon>SalesOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="General\Constants.cs" />
     <Compile Include="General\GlobalSetting.cs" />
@@ -746,6 +770,10 @@
     <Compile Include="Migrations\201708210910300_itemType_03.Designer.cs">
       <DependentUpon>201708210910300_itemType_03.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708280736245_DOC_LINES_ID_DOC_RELATED_01.cs" />
+    <Compile Include="Migrations\201708280736245_DOC_LINES_ID_DOC_RELATED_01.Designer.cs">
+      <DependentUpon>201708280736245_DOC_LINES_ID_DOC_RELATED_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BomBreakdown.cs" />
     <Compile Include="Models\Currency.cs" />
@@ -1020,8 +1048,17 @@
     <EmbeddedResource Include="Forms\RibbonFormBase.resx">
       <DependentUpon>RibbonFormBase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\DeliveryNote.resx">
+      <DependentUpon>DeliveryNote.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\DialogForms\SelectDocs.resx">
       <DependentUpon>SelectDocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\Invoice.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\PackingList.resx">
+      <DependentUpon>PackingList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\PurchaseOrder.resx">
       <DependentUpon>PurchaseOrder.cs</DependentUpon>
@@ -1031,6 +1068,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\QuotationProposal.resx">
       <DependentUpon>QuotationProposal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\SalesOrder.resx">
+      <DependentUpon>SalesOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703081042226_Customer.resx">
       <DependentUpon>201703081042226_Customer.cs</DependentUpon>
@@ -1298,6 +1338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708210910300_itemType_03.resx">
       <DependentUpon>201708210910300_itemType_03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708280736245_DOC_LINES_ID_DOC_RELATED_01.resx">
+      <DependentUpon>201708280736245_DOC_LINES_ID_DOC_RELATED_01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -1373,7 +1373,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _itemsList = GlobalSetting.ItemEyService.GetItems();
+                _itemsList = GlobalSetting.ItemEyService.GetItems(withDocWarning: true);
                 xgrdItems.DataSource = _itemsList;
             }
             catch (Exception ex)

@@ -1,0 +1,235 @@
+﻿2017-08-22 09:28:27,473 ERROR [1] HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom - An error occurred while updating the entries. See the inner exception for details.
+System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Violation of PRIMARY KEY constraint 'PK_dbo.DETAIL_BOM_HW'. Cannot insert duplicate key in object 'dbo.DETAIL_BOM_HW'. The duplicate key value is (9358, 03WF92986000, TEMPLE).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   at System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   at System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at HKSupply.DB.HKSupplyContext.SaveChanges() in C:\Git\Supply\HKSupply\HKSupply\DB\HKSupplyContext.cs:line 192
+   at HKSupply.Services.Implementations.EFItemBom.EditBomFrontTemple(HKSupplyContext db, ItemBom bom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1304
+   at HKSupply.Services.Implementations.EFItemBom.CreateFrontTempleBom(HKSupplyContext db, ItemBom eyBomSupplier) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1210
+   at HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom(List`1 itemSuppliersBom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 611
+2017-08-22 09:31:41,892 ERROR [1] HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom - An error occurred while updating the entries. See the inner exception for details.
+System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Violation of PRIMARY KEY constraint 'PK_dbo.DETAIL_BOM_HW'. Cannot insert duplicate key in object 'dbo.DETAIL_BOM_HW'. The duplicate key value is (9358, 03WF92986000, TEMPLE).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   at System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   at System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at HKSupply.DB.HKSupplyContext.SaveChanges() in C:\Git\Supply\HKSupply\HKSupply\DB\HKSupplyContext.cs:line 192
+   at HKSupply.Services.Implementations.EFItemBom.EditBomFrontTemple(HKSupplyContext db, ItemBom bom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1304
+   at HKSupply.Services.Implementations.EFItemBom.CreateFrontTempleBom(HKSupplyContext db, ItemBom eyBomSupplier) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1210
+   at HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom(List`1 itemSuppliersBom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 611
+2017-08-22 09:40:18,802 ERROR [1] HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom - An error occurred while updating the entries. See the inner exception for details.
+System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Violation of PRIMARY KEY constraint 'PK_dbo.DETAIL_BOM_HW'. Cannot insert duplicate key in object 'dbo.DETAIL_BOM_HW'. The duplicate key value is (9358, 03WF92986000, TEMPLE).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   at System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   at System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at HKSupply.DB.HKSupplyContext.SaveChanges() in C:\Git\Supply\HKSupply\HKSupply\DB\HKSupplyContext.cs:line 192
+   at HKSupply.Services.Implementations.EFItemBom.EditBomFrontTemple(HKSupplyContext db, ItemBom bom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1304
+   at HKSupply.Services.Implementations.EFItemBom.CreateFrontTempleBom(HKSupplyContext db, ItemBom eyBomSupplier) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1210
+   at HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom(List`1 itemSuppliersBom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 611
+2017-08-22 09:44:47,715 ERROR [1] HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom - An error occurred while updating the entries. See the inner exception for details.
+System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Violation of PRIMARY KEY constraint 'PK_dbo.DETAIL_BOM_HW'. Cannot insert duplicate key in object 'dbo.DETAIL_BOM_HW'. The duplicate key value is (9358, 03WF92986000, TEMPLE).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   at System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   at System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at HKSupply.DB.HKSupplyContext.SaveChanges() in C:\Git\Supply\HKSupply\HKSupply\DB\HKSupplyContext.cs:line 192
+   at HKSupply.Services.Implementations.EFItemBom.EditBomFrontTemple(HKSupplyContext db, ItemBom bom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1304
+   at HKSupply.Services.Implementations.EFItemBom.CreateFrontTempleBom(HKSupplyContext db, ItemBom eyBomSupplier) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1210
+   at HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom(List`1 itemSuppliersBom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 611
+2017-08-22 09:57:28,471 ERROR [1] HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom - Adding a relationship with an entity which is in the Deleted state is not allowed.
+System.InvalidOperationException: Adding a relationship with an entity which is in the Deleted state is not allowed.
+   at System.Data.Entity.Core.Objects.ObjectStateManager.DetectConflicts(IList`1 entries)
+   at System.Data.Entity.Core.Objects.ObjectStateManager.DetectChanges()
+   at System.Data.Entity.Core.Objects.ObjectContext.DetectChanges()
+   at System.Data.Entity.Internal.InternalContext.DetectChanges(Boolean force)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Remove(Object entity)
+   at System.Data.Entity.DbSet`1.Remove(TEntity entity)
+   at HKSupply.Services.Implementations.EFItemBom.EditBomFrontTemple(HKSupplyContext db, ItemBom bom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1306
+   at HKSupply.Services.Implementations.EFItemBom.CreateFrontTempleBom(HKSupplyContext db, ItemBom eyBomSupplier) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1212
+   at HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom(List`1 itemSuppliersBom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 611
+2017-08-22 10:08:21,717 ERROR [1] HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom - Adding a relationship with an entity which is in the Deleted state is not allowed.
+System.InvalidOperationException: Adding a relationship with an entity which is in the Deleted state is not allowed.
+   at System.Data.Entity.Core.Objects.ObjectStateManager.DetectConflicts(IList`1 entries)
+   at System.Data.Entity.Core.Objects.ObjectStateManager.DetectChanges()
+   at System.Data.Entity.Core.Objects.ObjectContext.DetectChanges()
+   at System.Data.Entity.Internal.InternalContext.DetectChanges(Boolean force)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Remove(Object entity)
+   at System.Data.Entity.DbSet`1.Remove(TEntity entity)
+   at HKSupply.Services.Implementations.EFItemBom.EditBomFrontTemple(HKSupplyContext db, ItemBom bom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1306
+   at HKSupply.Services.Implementations.EFItemBom.CreateFrontTempleBom(HKSupplyContext db, ItemBom eyBomSupplier) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1212
+   at HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom(List`1 itemSuppliersBom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 611
+2017-08-22 10:10:30,591 ERROR [1] HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom - Adding a relationship with an entity which is in the Deleted state is not allowed.
+System.InvalidOperationException: Adding a relationship with an entity which is in the Deleted state is not allowed.
+   at System.Data.Entity.Core.Objects.ObjectStateManager.DetectConflicts(IList`1 entries)
+   at System.Data.Entity.Core.Objects.ObjectStateManager.DetectChanges()
+   at System.Data.Entity.Core.Objects.ObjectContext.DetectChanges()
+   at System.Data.Entity.Internal.InternalContext.DetectChanges(Boolean force)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Remove(Object entity)
+   at System.Data.Entity.DbSet`1.Remove(TEntity entity)
+   at HKSupply.Services.Implementations.EFItemBom.EditBomFrontTemple(HKSupplyContext db, ItemBom bom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1306
+   at HKSupply.Services.Implementations.EFItemBom.CreateFrontTempleBom(HKSupplyContext db, ItemBom eyBomSupplier) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1212
+   at HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom(List`1 itemSuppliersBom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 611
+2017-08-22 10:58:03,772 ERROR [1] HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom - Adding a relationship with an entity which is in the Deleted state is not allowed.
+System.InvalidOperationException: Adding a relationship with an entity which is in the Deleted state is not allowed.
+   at System.Data.Entity.Core.Objects.ObjectStateManager.DetectConflicts(IList`1 entries)
+   at System.Data.Entity.Core.Objects.ObjectStateManager.DetectChanges()
+   at System.Data.Entity.Core.Objects.ObjectContext.DetectChanges()
+   at System.Data.Entity.Internal.InternalContext.DetectChanges(Boolean force)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Remove(Object entity)
+   at System.Data.Entity.DbSet`1.Remove(TEntity entity)
+   at HKSupply.Services.Implementations.EFItemBom.EditBomFrontTemple(HKSupplyContext db, ItemBom bom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1306
+   at HKSupply.Services.Implementations.EFItemBom.CreateFrontTempleBom(HKSupplyContext db, ItemBom eyBomSupplier) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1212
+   at HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom(List`1 itemSuppliersBom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 611
+2017-08-22 11:02:13,594 ERROR [1] HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom - Adding a relationship with an entity which is in the Deleted state is not allowed.
+System.InvalidOperationException: Adding a relationship with an entity which is in the Deleted state is not allowed.
+   at System.Data.Entity.Core.Objects.ObjectStateManager.DetectConflicts(IList`1 entries)
+   at System.Data.Entity.Core.Objects.ObjectStateManager.DetectChanges()
+   at System.Data.Entity.Core.Objects.ObjectContext.DetectChanges()
+   at System.Data.Entity.Internal.InternalContext.DetectChanges(Boolean force)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.RemoveRange(IEnumerable entities)
+   at System.Data.Entity.DbSet`1.RemoveRange(IEnumerable`1 entities)
+   at HKSupply.Services.Implementations.EFItemBom.EditBomFrontTemple(HKSupplyContext db, ItemBom bom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1310
+   at HKSupply.Services.Implementations.EFItemBom.CreateFrontTempleBom(HKSupplyContext db, ItemBom eyBomSupplier) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1212
+   at HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom(List`1 itemSuppliersBom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 611
+2017-08-22 11:10:29,580 INFO [1] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid Password
+HKSupply.Exceptions.InvalidPasswordException: Invalid Password
+   at HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:line 139
+2017-08-22 11:35:47,702 ERROR [1] HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom - Adding a relationship with an entity which is in the Deleted state is not allowed.
+System.InvalidOperationException: Adding a relationship with an entity which is in the Deleted state is not allowed.
+   at System.Data.Entity.Core.Objects.ObjectStateManager.DetectConflicts(IList`1 entries)
+   at System.Data.Entity.Core.Objects.ObjectStateManager.DetectChanges()
+   at System.Data.Entity.Core.Objects.ObjectContext.DetectChanges()
+   at System.Data.Entity.Internal.InternalContext.DetectChanges(Boolean force)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.RemoveRange(IEnumerable entities)
+   at System.Data.Entity.DbSet`1.RemoveRange(IEnumerable`1 entities)
+   at HKSupply.Services.Implementations.EFItemBom.EditBomFrontTemple(HKSupplyContext db, ItemBom bom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1312
+   at HKSupply.Services.Implementations.EFItemBom.CreateFrontTempleBom(HKSupplyContext db, ItemBom eyBomSupplier) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1214
+   at HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom(List`1 itemSuppliersBom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 611
+2017-08-22 12:02:04,970 ERROR [1] HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom - The property 'Materials' on type 'ItemBom' is a collection navigation property. The Collection method should be used instead of the Reference method.
+System.ArgumentException: The property 'Materials' on type 'ItemBom' is a collection navigation property. The Collection method should be used instead of the Reference method.
+   at System.Data.Entity.Internal.InternalEntityEntry.ValidateAndGetNavigationMetadata(String navigationProperty, Type requestedType, Boolean requireCollection)
+   at System.Data.Entity.Internal.InternalEntityEntry.Reference(String navigationProperty, Type requestedType)
+   at System.Data.Entity.Infrastructure.DbEntityEntry`1.Reference[TProperty](Expression`1 navigationProperty)
+   at HKSupply.Services.Implementations.EFItemBom.CreateFrontTempleBom(HKSupplyContext db, ItemBom eyBomSupplier) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 1218
+   at HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom(List`1 itemSuppliersBom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 611
+2017-08-22 16:11:09,105 INFO [1] HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword - Invalid Password
+HKSupply.Exceptions.InvalidPasswordException: Invalid Password
+   at HKSupply.Services.Implementations.EFUser.GetUserByLoginPassword(String UserLogin, String Password) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFUser.cs:line 139

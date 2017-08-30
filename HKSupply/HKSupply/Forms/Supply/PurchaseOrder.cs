@@ -764,43 +764,51 @@ namespace HKSupply.Forms.Supply
 
                         var idItem = e.Value.ToString();
 
-                        //clear some fields
-                        row.Quantity = 0;
-                        row.Remarks = string.Empty;
-
-                        //item
-                        var item = _itemsEyList.Where(a => a.IdItemBcn.Equals(idItem)).Single().Clone();
-                        row.Item = item;
-
-                        (row.Item as ItemEy).ItemDescription = item.ItemDescription;
-
-                        row.IdItemGroup = Constants.ITEM_GROUP_EY;
-
-                        //price
-                        var supplierPrice = _selectedSupplierPriceList?.Where(a => a.IdItemBcn.Equals(idItem)).FirstOrDefault();
-                        if (supplierPrice != null)
+                        //No se puede repetir item
+                        var exist = _docLinesList.Where(a => string.IsNullOrEmpty(a.IdItemBcn) == false && a.IdItemBcn.Equals(idItem)).FirstOrDefault();
+                        if (exist == null)
                         {
-                            row.UnitPrice = (short)supplierPrice.Price;
-                            row.UnitPriceBaseCurrency = (short)supplierPrice.PriceBaseCurrency;
+                            //clear some fields
+                            row.Quantity = 0;
+                            row.Remarks = string.Empty;
+
+                            //item
+                            var item = _itemsEyList.Where(a => a.IdItemBcn.Equals(idItem)).Single().Clone();
+                            row.Item = item;
+
+                            (row.Item as ItemEy).ItemDescription = item.ItemDescription;
+
+                            row.IdItemGroup = Constants.ITEM_GROUP_EY;
+
+                            //price
+                            var supplierPrice = _selectedSupplierPriceList?.Where(a => a.IdItemBcn.Equals(idItem)).FirstOrDefault();
+                            if (supplierPrice != null)
+                            {
+                                row.UnitPrice = (short)supplierPrice.Price;
+                                row.UnitPriceBaseCurrency = (short)supplierPrice.PriceBaseCurrency;
+                            }
+                            else
+                            {
+                                row.UnitPrice = 0;
+                                row.UnitPriceBaseCurrency = 0;
+                            }
+
+                            //Status & quantity
+                            row.IdSupplyStatus = Constants.SUPPLY_STATUS_OPEN;
+                            row.DeliveredQuantity = 0;
+
+                            UpdateBatch();
+
+                            //agregamos una línea nueva salvo que ya exista una en blanco
+                            if (_docLinesList.Where(a => a.Item == null).Count() == 0)
+                                _docLinesList.Add(new DocLine() { LineState = DocLine.LineStates.New });
+
+                            //gridViewLines.RefreshData();
                         }
                         else
                         {
-                            row.UnitPrice = 0;
-                            row.UnitPriceBaseCurrency = 0;
+                            e.Valid = false;
                         }
-
-                        //Status & quantity
-                        row.IdSupplyStatus = Constants.SUPPLY_STATUS_OPEN;
-                        row.DeliveredQuantity = 0;
-
-                        UpdateBatch();
-
-                        //agregamos una línea nueva salvo que ya exista una en blanco
-                        if (_docLinesList.Where(a => a.Item == null).Count() == 0)
-                            _docLinesList.Add(new DocLine() { LineState = DocLine.LineStates.New});
-
-                        //gridViewLines.RefreshData();
-
                         break;
 
                     case nameof(DocLine.Quantity):
@@ -1017,7 +1025,7 @@ namespace HKSupply.Forms.Supply
                 string supplier = slueSupplier.EditValue as string;
                 DateTime docDate = dateEditDocDate.DateTime;
 
-                var docs = GlobalSetting.SupplyDocsService.GetDocs(idSupplier: supplier, idCustomer: null, docDate: docDate, IdSupplyDocType: Constants.SUPPLY_DOCTYPE_PO);
+                var docs = GlobalSetting.SupplyDocsService.GetDocs(idSupplier: supplier, idCustomer: null, docDate: docDate, IdSupplyDocType: Constants.SUPPLY_DOCTYPE_PO, idSupplyStatus: null);
 
                 if (docs.Count == 0)
                 {
@@ -1057,7 +1065,7 @@ namespace HKSupply.Forms.Supply
 
                 if (slueSupplier.EditValue != null & dateEditDocDate.EditValue != null)
                 {
-                    var docs = GlobalSetting.SupplyDocsService.GetDocs(idSupplier: (string)slueSupplier.EditValue, idCustomer: null, docDate: dateEditDocDate.DateTime, IdSupplyDocType: Constants.SUPPLY_DOCTYPE_PO);
+                    var docs = GlobalSetting.SupplyDocsService.GetDocs(idSupplier: (string)slueSupplier.EditValue, idCustomer: null, docDate: dateEditDocDate.DateTime, IdSupplyDocType: Constants.SUPPLY_DOCTYPE_PO, idSupplyStatus: null);
 
                     string strCont;
                     if (docs.Count == 0)
@@ -1067,7 +1075,7 @@ namespace HKSupply.Forms.Supply
                     }
                     else
                     {
-                        strCont = (docs.Count + 1).ToString();
+                        strCont = $"-{(docs.Count + 1).ToString()}";
                         var tmp = docs.OrderByDescending(a => a.IdDoc).FirstOrDefault().Lines.OrderByDescending(b => b.Batch).FirstOrDefault();
                         _batchCont = Convert.ToInt32(tmp.Batch.Substring(5, 1));
                     }
@@ -1423,6 +1431,13 @@ namespace HKSupply.Forms.Supply
             {
                 ResetPO();
 
+                dateEditDocDate.EditValue = null;
+                dateEditDelivery.EditValue = null;
+                slueSupplier.EditValue = null;
+                slueDeliveryTerms.EditValue = null;
+                slueCurrency.EditValue = null;
+
+
                 _docLinesList = new BindingList<DocLine>();
                 _docLinesList.Add(new DocLine() { LineState = DocLine.LineStates.New});
 
@@ -1561,6 +1576,30 @@ namespace HKSupply.Forms.Supply
                     return false;
                 }
 
+                //Validamos que no haya ningún item sin precio
+                foreach(DocLine line in _docLinesList)
+                {
+                    if(string.IsNullOrEmpty(line.IdItemBcn) == false && line.TotalAmount == 0)
+                    {
+                        MessageBox.Show($"Item [{line.IdItemBcn}]. Total Amount cannot be 0", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                    }
+                }
+
+                //validamos que exista un BOM para cada item y supplier indicado
+                List<string> itemWithouBom;
+                if (GlobalSetting.SupplyDocsService.ValidateBomSupplierLines(slueSupplier.EditValue.ToString(), _docLinesList.ToList(), out itemWithouBom) == false)
+                {
+                    string msg = "The following items has not BOM" + Environment.NewLine;
+
+                    foreach (var item in itemWithouBom)
+                        msg += item + Environment.NewLine;
+
+                    MessageBox.Show(msg, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    return false;
+                }
+                
                 return true;
             }
             catch
@@ -1598,7 +1637,7 @@ namespace HKSupply.Forms.Supply
                     DocDate = dateEditDocDate.DateTime,
                     IdSupplyStatus = Constants.SUPPLY_STATUS_OPEN,
                     IdSupplier = slueSupplier.EditValue as string,
-                    //IdCustomer = //TODO: Etnia a piñon??
+                    IdCustomer = Constants.ETNIA_HK_COMPANY_CODE,
                     IdDeliveryTerm = slueDeliveryTerms.EditValue as string,
                     IdPaymentTerms = sluePaymentTerm.EditValue as string,
                     IdCurrency = slueCurrency.EditValue as string,
@@ -1643,7 +1682,7 @@ namespace HKSupply.Forms.Supply
                     Lines = sortedLines
                 };
 
-                DocHead createdDoc = GlobalSetting.SupplyDocsService.UpdateDoc(purchaseOrder, finishPO: finishPO);
+                DocHead createdDoc = GlobalSetting.SupplyDocsService.UpdateDoc(purchaseOrder, finishDoc: finishPO);
 
                 return true;
             }

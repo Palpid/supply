@@ -1,12 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.10
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HKSupply", "HKSupply\HKSupply.csproj", "{65F371B9-F181-4186-939D-28AE026D49BE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HKSuply.UnitTest", "HKSuply.UnitTest\HKSuply.UnitTest.csproj", "{636A28CC-DF2B-4D0A-8B10-04E32F4F1427}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{CBDD4119-D32A-4213-B999-FD0279B0BE34}"
 	ProjectSection(SolutionItems) = preProject
+		HKSupply\Forms\Master\BomManagement.cs = HKSupply\Forms\Master\BomManagement.cs
+		HKSupply\Forms\Master\BomManagement.Designer.cs = HKSupply\Forms\Master\BomManagement.Designer.cs
+		HKSupply\Forms\Master\BomManagement.resx = HKSupply\Forms\Master\BomManagement.resx
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
@@ -35,5 +40,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B750B73-5705-4511-BCC2-DD097B270958}
 	EndGlobalSection
 EndGlobal

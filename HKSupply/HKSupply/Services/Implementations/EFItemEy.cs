@@ -22,7 +22,7 @@ namespace HKSupply.Services.Implementations
     {
         ILog _log = LogManager.GetLogger(typeof(EFItemEy));
 
-        public List<ItemEy> GetItems()
+        public List<ItemEy> GetItems(bool withDocWarning = false)
         {
             try
             {
@@ -38,10 +38,13 @@ namespace HKSupply.Services.Implementations
                         .OrderBy(i => i.IdItemBcn)
                         .ToList();
 
-                    foreach(var item in itemsEy)
+                    if (withDocWarning)
                     {
-                        Classes.ItemDocWarning docWarning = db.Database.SqlQuery<Classes.ItemDocWarning>($"SELECT ID_ITEM_BCN,WARNING_COL_CODE,WARNING_COL_DESC,WARNING_COL_COLOR FROM dbo.V_DOCS_WARNINGS WHERE ID_ITEM_BCN = '{item.IdItemBcn}'").FirstOrDefault();
-                        item.DocWarning = docWarning;
+                        foreach (var item in itemsEy)
+                        {
+                            Classes.ItemDocWarning docWarning = db.Database.SqlQuery<Classes.ItemDocWarning>($"SELECT ID_ITEM_BCN,WARNING_COL_CODE,WARNING_COL_DESC,WARNING_COL_COLOR FROM dbo.V_DOCS_WARNINGS WHERE ID_ITEM_BCN = '{item.IdItemBcn}'").FirstOrDefault();
+                            item.DocWarning = docWarning;
+                        }
                     }
 
                     return itemsEy;

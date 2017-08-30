@@ -38,5 +38,8 @@ namespace HKSupply.Helpers
                 context.Configuration.ProxyCreationEnabled = proxyCreationEnabled;
             }
         }
+
     }
+
+
 }

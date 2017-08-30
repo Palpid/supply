@@ -415,5 +415,44 @@ namespace HKSupply.Helpers
                 return null;
             }
         }
+
+        /// <summary>
+        /// Obtiene el número de la semana a partir de una fecha.
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
+        public static int GetWeek(this DateTime date)
+        {
+            try
+            {
+                var currentCulture = System.Globalization.CultureInfo.CurrentCulture;
+                var weekNo = currentCulture.Calendar.GetWeekOfYear(
+                date,
+                currentCulture.DateTimeFormat.CalendarWeekRule,
+                currentCulture.DateTimeFormat.FirstDayOfWeek);
+
+                return weekNo;
+            }
+            catch
+            {
+                throw;
+            }
+
+        }
+
+
+        /// <summary>
+        /// Obtener los valores de los Data Annotations de Entity Framework de las clases de modelos
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="instance"></param>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
+        public static T GetAttributeFrom<T>(this object instance, string propertyName) where T : Attribute
+        {
+            var attrType = typeof(T);
+            var property = instance.GetType().GetProperty(propertyName);
+            return (T)property.GetCustomAttributes(attrType, false).First();
+        }
     }
 }

@@ -49,6 +49,9 @@ namespace HKSupply.Models.Supply
         [Column("UNIT_PRICE_BASE_CURRENCY", TypeName = "NUMERIC")]
         public decimal UnitPriceBaseCurrency { get; set; }
 
+        [Column("ID_DOC_RELATED", TypeName = "NVARCHAR"), StringLength(50)]
+        public string IdDocRelated { get; set; }
+
         [NotMapped]
         public decimal TotalAmount { get { return Quantity * UnitPrice; } }
 

@@ -202,6 +202,7 @@ C:\Git\HKSupply\HKSuply.UnitTest\bin\Debug\ru\DevExpress.Diagram.v16.2.Core.reso
 C:\Git\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.csprojResolveAssemblyReference.cache
 C:\Git\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.dll
 C:\Git\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.pdb
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\EntityFramework.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\import_export_excel_icon_16x16.png
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\import_export_excel_icon_32x32.png
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HelpDocs\EN\BOM Flow and Application Help.pdf
@@ -271,7 +272,6 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\stdole.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ShockwaveFlashObjects.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HKSupply.pdb
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HKSupply.exe.config
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\EntityFramework.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\EntityFramework.SqlServer.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\log4net.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\CustomControls.pdb
@@ -404,5 +404,6 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\DevExpress.Diagram.v17.1.Co
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ja\DevExpress.Diagram.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ru\DevExpress.Diagram.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.csprojResolveAssemblyReference.cache
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.csproj.CoreCompileInputs.cache
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.pdb
