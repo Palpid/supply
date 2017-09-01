@@ -45,6 +45,8 @@ namespace HKSupply.Forms.Supply
         //List<ItemMt> _itemsMtList;
         //List<ItemHw> _itemsHwList;
 
+        List<SupplyStatus> _supplyStatusList;
+
         BindingList<DocLine> _docLinesList;
         DocHead _docHeadSO;
         DocHead _docHeadAssociatedPO;
@@ -323,6 +325,23 @@ namespace HKSupply.Forms.Supply
 
         #endregion
 
+        #region Public Methods
+
+        public void InitData(string idDoc)
+        {
+            try
+            {
+                txtSONumber.EditValue = idDoc;
+                SearchSO();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        #endregion
+
         #region Private Methods
 
         #region SetUps Form Objects
@@ -492,10 +511,12 @@ namespace HKSupply.Forms.Supply
                 GridColumn colIdItemBcn = new GridColumn() { Caption = "Item Code", Visible = true, FieldName = nameof(DocLine.IdItemBcn), Width = 200 };
                 GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = nameof(DocLine.ItemDesc), Width = 350 };
                 GridColumn colIdItemGroup = new GridColumn() { Caption = "Type", Visible = true, FieldName = nameof(DocLine.IdItemGroup), Width = 100 };
+                GridColumn colQuantityOriginal = new GridColumn() { Caption = "Quantity Original", Visible = true, FieldName = nameof(DocLine.QuantityOriginal), Width = 120 };
                 GridColumn colQuantity = new GridColumn() { Caption = "Quantity", Visible = true, FieldName = nameof(DocLine.Quantity), Width = 85 };
                 GridColumn colUnit = new GridColumn() { Caption = "Unit", Visible = true, FieldName = nameof(DocLine.ItemUnit), Width = 85 };
                 GridColumn colUnitPrice = new GridColumn() { Caption = "Unit Price", Visible = true, FieldName = nameof(DocLine.UnitPrice), Width = 85 };
                 GridColumn colTotalAmount = new GridColumn() { Caption = "TotalAmount", Visible = true, FieldName = nameof(DocLine.TotalAmount), Width = 120 };
+                GridColumn colIdIdSupplyStatus = new GridColumn() { Caption = "Status", Visible = true, FieldName = nameof(DocLine.IdSupplyStatus), Width = 75 };
                 GridColumn colRemarks = new GridColumn() { Caption = "Remarks", Visible = true, FieldName = nameof(DocLine.Remarks), Width = 350 };
 
                 //Display Format
@@ -504,6 +525,9 @@ namespace HKSupply.Forms.Supply
 
                 colTotalAmount.DisplayFormat.FormatType = FormatType.Numeric;
                 colTotalAmount.DisplayFormat.FormatString = "n2";
+
+                colQuantityOriginal.DisplayFormat.FormatType = FormatType.Numeric;
+                colQuantityOriginal.DisplayFormat.FormatString = "n0";
 
                 colQuantity.DisplayFormat.FormatType = FormatType.Numeric;
                 colQuantity.DisplayFormat.FormatString = "n0";
@@ -518,6 +542,23 @@ namespace HKSupply.Forms.Supply
                 };
                 colRemarks.ColumnEdit = riTxtRemarks;
 
+                RepositoryItemTextEdit ritxtInt = new RepositoryItemTextEdit();
+                ritxtInt.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                ritxtInt.Mask.EditMask = "N";
+                ritxtInt.AllowNullInput = DefaultBoolean.False;
+
+                colQuantity.ColumnEdit = ritxtInt;
+
+                RepositoryItemSearchLookUpEdit riSupplyStatus = new RepositoryItemSearchLookUpEdit()
+                {
+                    DataSource = _supplyStatusList,
+                    ValueMember = nameof(SupplyStatus.IdSupplyStatus),
+                    DisplayMember = nameof(SupplyStatus.IdSupplyStatus),
+                    ShowClearButton = false,
+                    NullText = string.Empty,
+                };
+                colIdIdSupplyStatus.ColumnEdit = riSupplyStatus;
+
                 //Summaries
                 gridViewLines.OptionsView.ShowFooter = true;
 
@@ -531,10 +572,12 @@ namespace HKSupply.Forms.Supply
                 gridViewLines.Columns.Add(colIdItemBcn);
                 gridViewLines.Columns.Add(colDescription);
                 gridViewLines.Columns.Add(colIdItemGroup);
+                gridViewLines.Columns.Add(colQuantityOriginal);
                 gridViewLines.Columns.Add(colQuantity);
                 gridViewLines.Columns.Add(colUnit);
                 gridViewLines.Columns.Add(colUnitPrice);
                 gridViewLines.Columns.Add(colTotalAmount);
+                gridViewLines.Columns.Add(colIdIdSupplyStatus);
                 gridViewLines.Columns.Add(colRemarks);
 
                 //Events
@@ -554,6 +597,7 @@ namespace HKSupply.Forms.Supply
             try
             {
                 _customersList = GlobalSetting.CustomerService.GetCustomers();
+                _supplyStatusList = GlobalSetting.SupplyDocsService.GetSupplyStatus();
             }
             catch
             {
@@ -716,7 +760,7 @@ namespace HKSupply.Forms.Supply
 
                 foreach (GridColumn col in gridViewLines.Columns)
                 {
-                    if (col.FieldName != nameof(DocLine.Remarks))
+                    if (col.FieldName != nameof(DocLine.Quantity) && col.FieldName != nameof(DocLine.Remarks))
                         col.OptionsColumn.AllowEdit = false;
                 }
 

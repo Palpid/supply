@@ -367,6 +367,12 @@
     <Compile Include="Forms\Supply\DialogForms\SelectDocs.Designer.cs">
       <DependentUpon>SelectDocs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Supply\DocsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\DocsList.Designer.cs">
+      <DependentUpon>DocsList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Supply\Invoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -774,6 +780,10 @@
     <Compile Include="Migrations\201708280736245_DOC_LINES_ID_DOC_RELATED_01.Designer.cs">
       <DependentUpon>201708280736245_DOC_LINES_ID_DOC_RELATED_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709010730453_docHead_docRelated_01.cs" />
+    <Compile Include="Migrations\201709010730453_docHead_docRelated_01.Designer.cs">
+      <DependentUpon>201709010730453_docHead_docRelated_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BomBreakdown.cs" />
     <Compile Include="Models\Currency.cs" />
@@ -1053,6 +1063,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\DialogForms\SelectDocs.resx">
       <DependentUpon>SelectDocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\DocsList.resx">
+      <DependentUpon>DocsList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\Invoice.resx">
       <DependentUpon>Invoice.cs</DependentUpon>
@@ -1341,6 +1354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708280736245_DOC_LINES_ID_DOC_RELATED_01.resx">
       <DependentUpon>201708280736245_DOC_LINES_ID_DOC_RELATED_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709010730453_docHead_docRelated_01.resx">
+      <DependentUpon>201709010730453_docHead_docRelated_01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

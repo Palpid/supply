@@ -44,6 +44,9 @@ namespace HKSupply.Models.Supply
         [Column("USER", TypeName = "NVARCHAR"), StringLength(20)]
         public string User { get; set; }
 
+        [Column("ID_DOC_RELATED", TypeName = "NVARCHAR"), StringLength(50)]
+        public string IdDocRelated { get; set; }
+
         public virtual List<DocLine> Lines { get; set; }
 
         #region Foreign keys
@@ -91,7 +94,9 @@ namespace HKSupply.Models.Supply
                 IdCustomer == docHead.IdCustomer &&
                 IdDeliveryTerm == docHead.IdDeliveryTerm &&
                 IdPaymentTerms == docHead.IdPaymentTerms &&
-                IdCurrency == docHead.IdCurrency             
+                IdCurrency == docHead.IdCurrency    &&
+                User == docHead.User &&
+                IdDocRelated == docHead.IdDocRelated
                 );
 
             return res;

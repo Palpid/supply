@@ -164,6 +164,9 @@ namespace HKSupply.Forms.Supply
                     res = UpdateQP();
                 }
 
+                if (res == true)
+                    ActionsAfterCU();
+
             }
             catch (Exception ex)
             {
@@ -187,7 +190,7 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                if (dateEditQPCreationDate.EditValue != null)
+                if (dateEditQPCreationDate.EditValue != null || txtQPNumber != null)
                 {
                     SearchQP();
                 }
@@ -222,6 +225,9 @@ namespace HKSupply.Forms.Supply
                 {
                     res = UpdateQP(finishQP:true);
                 }
+
+                if (res == true)
+                    ActionsAfterCU();
 
             }
             catch (Exception ex)
@@ -510,6 +516,7 @@ namespace HKSupply.Forms.Supply
                 lblPODateWeek.Appearance.TextOptions.HAlignment = HorzAlignment.Center;
                 lblQPCreationDateWeek.Appearance.TextOptions.HAlignment = HorzAlignment.Center;
                 txtPONumber.Properties.Appearance.TextOptions.HAlignment = HorzAlignment.Center;
+                txtQPNumber.Properties.Appearance.TextOptions.HAlignment = HorzAlignment.Center;
 
                 //Terms Tab
                 lblCompany.Appearance.TextOptions.HAlignment = HorzAlignment.Far;
@@ -793,32 +800,55 @@ namespace HKSupply.Forms.Supply
             {
                 ResetPO();
 
+                string idDocQP = txtQPNumber.Text;
                 string customer = slueCustomer.EditValue as string;
                 DateTime qpCreateDate = dateEditQPCreationDate.DateTime;
 
-                var docs = GlobalSetting.SupplyDocsService.GetDocs( idSupplier: null, idCustomer: customer, docDate: qpCreateDate, IdSupplyDocType: Constants.SUPPLY_DOCTYPE_QP, idSupplyStatus: null);
-
-                if (docs.Count == 0)
+                if (string.IsNullOrEmpty(idDocQP) == false)
                 {
-                    XtraMessageBox.Show("No Data Found", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                //else if(docs.Count == 1)
-                //{
+                    _docHeadQP = GlobalSetting.SupplyDocsService.GetDoc(idDocQP);
 
-                //}
+                    if (_docHeadQP == null)
+                    {
+                        XtraMessageBox.Show("No Data Found", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else if (_docHeadQP.IdSupplyDocType != Constants.SUPPLY_DOCTYPE_QP)
+                    {
+                        XtraMessageBox.Show("Document is not a Sales Order", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        _docHeadAssociatedPO = GlobalSetting.SupplyDocsService.GetDoc(_docHeadQP.IdDocRelated);
+                        LoadQP();
+                    }
+                  
+                }
                 else
                 {
-                    using (DialogForms.SelectDocs form = new DialogForms.SelectDocs())
+                    var docs = GlobalSetting.SupplyDocsService.GetDocs( idSupplier: null, idCustomer: customer, docDate: qpCreateDate, IdSupplyDocType: Constants.SUPPLY_DOCTYPE_QP, idSupplyStatus: null);
+
+                    if (docs.Count == 0)
                     {
-                        form.InitData(docs);
-                        if (form.ShowDialog() == DialogResult.OK)
+                        XtraMessageBox.Show("No Data Found", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    //else if(docs.Count == 1)
+                    //{
+
+                    //}
+                    else
+                    {
+                        using (DialogForms.SelectDocs form = new DialogForms.SelectDocs())
                         {
-                            _docHeadQP = form.SelectedDoc;
-                            LoadQP();
+                            form.InitData(docs);
+                            if (form.ShowDialog() == DialogResult.OK)
+                            {
+                                _docHeadQP = form.SelectedDoc;
+                                _docHeadAssociatedPO = GlobalSetting.SupplyDocsService.GetDoc(_docHeadQP.IdDocRelated);
+                                LoadQP();
+                            }
                         }
                     }
                 }
-
             }
             catch
             {
@@ -951,7 +981,10 @@ namespace HKSupply.Forms.Supply
                     Lines = sortedLines
                 };
 
-                DocHead createdDoc = GlobalSetting.SupplyDocsService.UpdateDoc(quotationProposal, finishDoc: finishQP);
+                DocHead updatedDoc = GlobalSetting.SupplyDocsService.UpdateDoc(quotationProposal, finishDoc: finishQP);
+
+                _docHeadQP = updatedDoc;
+                _docHeadAssociatedPO = GlobalSetting.SupplyDocsService.GetDoc(_docHeadQP.IdDocRelated);
 
                 return true;
             }
@@ -960,8 +993,27 @@ namespace HKSupply.Forms.Supply
                 throw;
             }
         }
-            #endregion
 
-            #endregion
+        private void ActionsAfterCU()
+        {
+            try
+            {
+                //Reload PO
+                LoadQP();
+
+                //Restore de ribbon to initial states
+                RestoreInitState();
+
+                SetVisiblePropertyByState();
+            }
+            catch
+            {
+                throw;
+            }
         }
+
+        #endregion
+
+        #endregion
+    }
 }

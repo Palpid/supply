@@ -27,10 +27,6 @@ namespace HKSupply.Forms.Supply
     public partial class PurchaseOrder : RibbonFormBase
     {
 
-        #region Constants
-        private const string TOTAL_AMOUNT_COLUMN = "TotalAmount";
-        #endregion
-
         #region Private Members
 
         Font _labelDefaultFontBold = new Font("SourceSansProRegular", 8, FontStyle.Bold);
@@ -178,6 +174,11 @@ namespace HKSupply.Forms.Supply
                 else if(CurrentState == ActionsStates.Edit)
                 {
                     res = UpdatePO();
+                }
+
+                if (res == true)
+                {
+                    ActionsAfterCU();
                 }
 
             }
@@ -339,6 +340,11 @@ namespace HKSupply.Forms.Supply
                 else if (CurrentState == ActionsStates.Edit)
                 {
                     res = UpdatePO(finishPO:true);
+                }
+
+                if (res == true)
+                {
+                    ActionsAfterCU();
                 }
 
 
@@ -609,7 +615,6 @@ namespace HKSupply.Forms.Supply
                 GridColumn colBatch = new GridColumn() { Caption = "Batch", Visible = true, FieldName = nameof(DocLine.Batch), Width = 85 };
                 GridColumn colQuantity = new GridColumn() { Caption = "Quantity", Visible = true, FieldName = nameof(DocLine.Quantity), Width =85 };
                 GridColumn colUnitPrice = new GridColumn() { Caption = "Unit Price", Visible = true, FieldName = nameof(DocLine.UnitPrice), Width = 85 };
-                //GridColumn colTotalAmount = new GridColumn() { Caption = "TotalAmount", Visible = true, FieldName = TOTAL_AMOUNT_COLUMN, Width = 120 };
                 GridColumn colTotalAmount = new GridColumn() { Caption = "TotalAmount", Visible = true, FieldName = nameof(DocLine.TotalAmount), Width = 120 };
                 GridColumn colQuantityOriginal = new GridColumn() { Caption = "Original Quantity", Visible = true, FieldName = nameof(DocLine.QuantityOriginal), Width = 110 };
                 GridColumn colDeliveredQuantity = new GridColumn() { Caption = "Quantity Delivered", Visible = true, FieldName = nameof(DocLine.DeliveredQuantity), Width = 120 };
@@ -1433,6 +1438,8 @@ namespace HKSupply.Forms.Supply
 
                 dateEditDocDate.EditValue = null;
                 dateEditDelivery.EditValue = null;
+                lblDocDateWeek.Text = string.Empty;
+                lblDeliveryWeek.Text = string.Empty;
                 slueSupplier.EditValue = null;
                 slueDeliveryTerms.EditValue = null;
                 slueCurrency.EditValue = null;
@@ -1450,7 +1457,7 @@ namespace HKSupply.Forms.Supply
                 //Block not editing columns
                 gridViewLines.Columns[nameof(DocLine.UnitPrice)].OptionsColumn.AllowEdit = false;
                 gridViewLines.Columns[nameof(DocLine.Batch)].OptionsColumn.AllowEdit = false;
-                gridViewLines.Columns[TOTAL_AMOUNT_COLUMN].OptionsColumn.AllowEdit = false;
+                gridViewLines.Columns[nameof(DocLine.TotalAmount)].OptionsColumn.AllowEdit = false;
                 gridViewLines.Columns[nameof(DocLine.QuantityOriginal)].OptionsColumn.AllowEdit = false;
                 gridViewLines.Columns[$"{nameof(DocLine.Item)}.{nameof(ItemEy.ItemDescription)}"].OptionsColumn.AllowEdit = false;
                 gridViewLines.Columns[nameof(DocLine.DeliveredQuantity)].OptionsColumn.AllowEdit = false;
@@ -1486,7 +1493,7 @@ namespace HKSupply.Forms.Supply
                 //Block common not editing columns
                 gridViewLines.Columns[nameof(DocLine.UnitPrice)].OptionsColumn.AllowEdit = false;
                 gridViewLines.Columns[nameof(DocLine.Batch)].OptionsColumn.AllowEdit = false;
-                gridViewLines.Columns[TOTAL_AMOUNT_COLUMN].OptionsColumn.AllowEdit = false;
+                gridViewLines.Columns[nameof(DocLine.TotalAmount)].OptionsColumn.AllowEdit = false;
                 gridViewLines.Columns[nameof(DocLine.QuantityOriginal)].OptionsColumn.AllowEdit = false;
                 gridViewLines.Columns[$"{nameof(DocLine.Item)}.{nameof(ItemEy.ItemDescription)}"].OptionsColumn.AllowEdit = false;
                 gridViewLines.Columns[nameof(DocLine.IdSupplyStatus)].OptionsColumn.AllowEdit = false;
@@ -1646,6 +1653,8 @@ namespace HKSupply.Forms.Supply
 
                 DocHead createdDoc = GlobalSetting.SupplyDocsService.NewDoc(purchaseOrder);
 
+                _docHeadPO = createdDoc;
+
                 return true;
             }
             catch
@@ -1682,9 +1691,29 @@ namespace HKSupply.Forms.Supply
                     Lines = sortedLines
                 };
 
-                DocHead createdDoc = GlobalSetting.SupplyDocsService.UpdateDoc(purchaseOrder, finishDoc: finishPO);
+                DocHead updatedDoc = GlobalSetting.SupplyDocsService.UpdateDoc(purchaseOrder, finishDoc: finishPO);
+
+                _docHeadPO = updatedDoc;
 
                 return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void ActionsAfterCU()
+        {
+            try
+            {
+                //Reload PO
+                LoadPO();
+
+                //Restore de ribbon to initial states
+                RestoreInitState();
+
+                SetVisiblePropertyByState();
             }
             catch
             {

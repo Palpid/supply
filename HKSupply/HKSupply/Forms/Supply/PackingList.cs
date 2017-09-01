@@ -555,6 +555,21 @@ namespace HKSupply.Forms.Supply
 
         #endregion
 
+        #region Public Methods
+        public void InitData(string idDoc)
+        {
+            try
+            {
+                //TODO
+                
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        #endregion
+
         #region Private Methods
 
         #region Load/Resets

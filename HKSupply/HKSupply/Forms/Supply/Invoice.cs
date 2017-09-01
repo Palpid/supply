@@ -201,6 +201,21 @@ namespace HKSupply.Forms.Supply
 
         #endregion
 
+        #region Public Methods
+        public void InitData(string idDoc)
+        {
+            try
+            {
+                txtINVNumber.Text = idDoc;
+                SearchInvoice();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        #endregion
+
         #region Private Methods
 
         #region Loads/Resets
