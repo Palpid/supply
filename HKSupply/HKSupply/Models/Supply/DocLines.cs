@@ -52,6 +52,7 @@ namespace HKSupply.Models.Supply
         [Column("ID_DOC_RELATED", TypeName = "NVARCHAR"), StringLength(50)]
         public string IdDocRelated { get; set; }
 
+        #region Not Mapped
         [NotMapped]
         public decimal TotalAmount { get { return Quantity * UnitPrice; } }
 
@@ -88,6 +89,14 @@ namespace HKSupply.Models.Supply
                     return string.Empty;
             }
         }
+
+        /// <summary>
+        /// Para algunos grids que va bien tener una cantidad auxiliar para ciertos cálculos/juegos
+        /// </summary>
+        [NotMapped]
+        public int DummyQuantity { get; set; }
+
+        #endregion
 
         #region Foreign Keys
 

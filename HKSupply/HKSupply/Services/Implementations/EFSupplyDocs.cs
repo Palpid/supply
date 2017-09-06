@@ -90,6 +90,73 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        public DocHead GetDocByRelated(string idDocRelated)
+        {
+            try
+            {
+                if (idDocRelated == null)
+                    throw new ArgumentNullException(nameof(idDocRelated));
+
+                using (var db = new HKSupplyContext())
+                {
+                    DocHead doc = db.DocsHead
+                        .Where(a => a.IdDocRelated.Equals(idDocRelated))
+                        .Include(l => l.Lines)
+                        .FirstOrDefault();
+
+                    if (doc != null)
+                    {
+                        foreach (var line in doc.Lines)
+                        {
+                            line.LineState = DocLine.LineStates.Loaded;
+
+                            switch (line.IdItemGroup)
+                            {
+                                case Constants.ITEM_GROUP_EY:
+                                    line.Item = GlobalSetting.ItemEyService.GetItem(line.IdItemBcn);
+                                    break;
+
+                                case Constants.ITEM_GROUP_MT:
+                                    line.Item = GlobalSetting.ItemMtService.GetItem(line.IdItemBcn);
+                                    break;
+
+                                case Constants.ITEM_GROUP_HW:
+                                    line.Item = GlobalSetting.ItemHwService.GetItem(line.IdItemBcn);
+                                    break;
+                            }
+                        }
+                    }
+
+                    return doc;
+                }
+            }
+            catch (SqlException sqlex)
+            {
+                for (int i = 0; i < sqlex.Errors.Count; i++)
+                {
+                    _log.Error("Index #" + i + "\n" +
+                        "Message: " + sqlex.Errors[i].Message + "\n" +
+                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                        "Source: " + sqlex.Errors[i].Source + "\n" +
+                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                    switch (sqlex.Errors[i].Number)
+                    {
+                        case -1: //connection broken
+                        case -2: //timeout
+                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                    }
+                }
+                throw sqlex;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
+            }
+        }
+
         public List<DocHead> GetDocs(string idSupplier, string idCustomer, DateTime docDate, string IdSupplyDocType, string idSupplyStatus)
         {
             try            {
@@ -403,84 +470,6 @@ namespace HKSupply.Services.Implementations
 
                         db.DocsHead.Add(newDoc);
 
-                        /************************************* PK *************************************/
-                        
-                        if (newDoc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_PK)
-                        {
-                            //******* Tenemos que actualizar los datos de la/s Sales Order asociadas a cada línea del packing *******//
-
-                            foreach (var line in newDoc.Lines)
-                            {
-                                var doclineSo = db.DocsLines.Where(a => a.IdDoc.Equals(line.IdDocRelated) && a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
-                                if (doclineSo != null)
-                                {
-                                    doclineSo.DeliveredQuantity += line.Quantity;
-
-                                    if (doclineSo.Quantity == doclineSo.DeliveredQuantity)
-                                        doclineSo.IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE;
-
-                                    db.SaveChanges();
-                                }
-                            }
-
-                            //******* Hay que comprobar si se ha entregado todo para cerrar la/s sale order asociadas al packing *******//
-                            // Obtenemos el listado de Sales Order
-                            List<string> salesOrderList = newDoc.Lines.Select(a => a.IdDocRelated).Distinct().ToList();
-
-                            foreach(var salesOrder in salesOrderList)
-                            {
-                                SqlParameter param1 = new SqlParameter("@pIdDoc", salesOrder);
-                                bool checkClose = db.Database.SqlQuery<bool>("CHECK_CLOSE_DOC @pIdDoc", param1).FirstOrDefault();
-
-                                if (checkClose == true)
-                                {
-                                    //Cerramos la SO
-                                    var soDoc = db.DocsHead.Where(a => a.IdDoc.Equals(salesOrder)).FirstOrDefault();
-                                    if(soDoc != null)
-                                    {
-                                        soDoc.IdSupplyDocType = Constants.SUPPLY_STATUS_CLOSE;
-                                        db.SaveChanges();
-                                    }
-                                }
-
-                            }
-
-
-                            //******* Si es un packing list (PK) hay que generar la Delivery Note asociada *******//
-                            //Guardamos los datos porque son necesarios los actualizados para generar la Delivery Note
-                            db.SaveChanges();
-
-                            //copiamos las líneas tal cual
-                            List<DocLine> linesDnHkFactory = new List<DocLine>();
-
-                            foreach (var line in newDoc.Lines)
-                            {
-                                DocLine lineDnHkFactory = line.DeepCopyByExpressionTree();
-                                lineDnHkFactory.QuantityOriginal = lineDnHkFactory.Quantity;
-                                lineDnHkFactory.IdDoc = line.IdDoc.Replace(Constants.SUPPLY_DOCTYPE_PK, Constants.SUPPLY_DOCTYPE_DN);
-                                //lineDnHkFactory.IdDocRelated = newDoc.IdDoc; //Mantenemos el original referenciado a la SO
-                                lineDnHkFactory.IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE;
-                                linesDnHkFactory.Add(lineDnHkFactory);
-                            }
-
-                            DocHead dnHkFactory = new DocHead()
-                            {
-                                IdDoc = newDoc.IdDoc.Replace(Constants.SUPPLY_DOCTYPE_PK, Constants.SUPPLY_DOCTYPE_DN), //ID? Cómo se linka por el la PO de fábrica
-                                IdSupplyDocType = Constants.SUPPLY_DOCTYPE_DN,
-                                CreationDate = DateTime.Now,
-                                DeliveryDate = newDoc.DeliveryDate,
-                                DocDate = newDoc.DocDate,
-                                IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE, 
-                                IdSupplier = Constants.ETNIA_HK_COMPANY_CODE, 
-                                IdCustomer = newDoc.IdCustomer,
-                                DeliveryTerm = newDoc.DeliveryTerm,
-                                IdPaymentTerms = newDoc.IdPaymentTerms,
-                                IdCurrency = newDoc.IdCurrency,
-                                Lines = linesDnHkFactory,
-                            };
-
-                            db.DocsHead.Add(dnHkFactory);
-                        }
 
                         db.SaveChanges();
                         dbTrans.Commit();
@@ -579,6 +568,9 @@ namespace HKSupply.Services.Implementations
                             //Hay que agregarlo al contexto actual para que lo actualice
                             db.DocsHead.Attach(docToUpdate);
 
+                            //actualizamos el estado
+                            docToUpdate.IdSupplyStatus = doc.IdSupplyStatus;
+
                             //Borramos las líneas de la base de datos para insertarla de nuevo
                             var lines = db.DocsLines.Where(a => a.IdDoc.Equals(doc.IdDoc));
 
@@ -591,6 +583,8 @@ namespace HKSupply.Services.Implementations
 
                             //user
                             docToUpdate.User = GlobalSetting.LoggedUser.UserLogin.ToUpper();
+
+                            db.SaveChanges();
 
                             /************************************* PO *************************************/
                             // Al modificar hay que actualizar las cantidades de la PO de BCN a HK y la QP
@@ -611,8 +605,9 @@ namespace HKSupply.Services.Implementations
                                 {
                                     //tenememos que obtener los nuevos datos en la explosión del BOM
                                     //Sólo nos interesan las líneas en esta llamada, la cabecera no
+                                    //updatamos la qty original, ya que la qty la puede haber modificado el usuario
                                     var quotationProposalLines = GetQuotationProposal(db, doc).Lines;
-                                    UpdateLineQty(db, idQP, quotationProposalLines);
+                                    UpdateLineQtyOriginal(db, idQP, quotationProposalLines);
                                 }
                             }
 
@@ -641,40 +636,46 @@ namespace HKSupply.Services.Implementations
 
                                 DocHead soHkFactory = GetSalesOrderHk2Factory(docToUpdate);
                                 db.DocsHead.Add(soHkFactory);
+                                
+                            }
 
-                                ////copiamos las líneas tal cual
-                                //List<DocLine> linesSoHkFactory = new List<DocLine>();
+                            /************************************* SO *************************************/
+                            //Si todas las líneas están canceladas o cerradas cerramos el documento
+                            if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_SO)
+                            {
+                                db.SaveChanges();
 
-                                //foreach (var line in doc.Lines)
-                                //{
-                                //    DocLine lineSoHkFactory = line.DeepCopyByExpressionTree();
-                                //    lineSoHkFactory.QuantityOriginal = lineSoHkFactory.Quantity;
-                                //    lineSoHkFactory.IdDoc = $"{Constants.SUPPLY_DOCTYPE_SO}{line.IdDocRelated}";
-                                //    lineSoHkFactory.IdDocRelated = docToUpdate.IdDoc;
-                                //    linesSoHkFactory.Add(lineSoHkFactory);
-                                //}
-
-                                //DocHead soHkFactory = new DocHead()
-                                //{
-                                //    IdDoc = docToUpdate.IdDoc.Replace(Constants.SUPPLY_DOCTYPE_QP, Constants.SUPPLY_DOCTYPE_SO), //ID? Cómo se linka por el la PO de fábrica
-                                //    IdSupplyDocType = Constants.SUPPLY_DOCTYPE_SO,
-                                //    CreationDate = DateTime.Now,
-                                //    //    //TODO: que datos ponemos ??
-                                //    DeliveryDate = docToUpdate.DeliveryDate,
-                                //    DocDate = docToUpdate.DocDate,
-                                //    IdSupplyStatus = Constants.SUPPLY_STATUS_OPEN, //STATUS?
-                                //    IdSupplier = Constants.ETNIA_HK_COMPANY_CODE, //Etnia HK??
-                                //    IdCustomer =docToUpdate.IdCustomer,
-                                //    //DeliveryTerm = slueDeliveryTerms.EditValue as string,
-                                //    //IdPaymentTerms = sluePaymentTerm.EditValue as string,
-                                //    IdCurrency = docToUpdate.IdCurrency,
-                                //    Lines = linesSoHkFactory,
-                                //};
-
-                                //db.DocsHead.Add(soHkFactory);
+                                //Comprobamos si hay que cerrar el documento
+                                if (docToUpdate.IdSupplyStatus == Constants.SUPPLY_STATUS_OPEN)
+                                {
+                                    SqlParameter param1 = new SqlParameter("@pIdDoc", docToUpdate.IdDoc);
+                                    bool checkClose = db.Database.SqlQuery<bool>("CHECK_CLOSE_DOC @pIdDoc", param1).FirstOrDefault();
+                                    if (checkClose == true)
+                                    {
+                                        docToUpdate.IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE;
+                                    }
+                                }
                             }
 
 
+                            /************************************* PK *************************************/
+                            //Si es un Packing List y se finaliza hay que generar la Delivery Note 
+                            //y actualizar los datos en las Sales orders asociadas
+
+                            if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_PK && finishDoc == true)
+                            {
+                                db.SaveChanges();
+
+                                //actualizar los datos en las Sales orders asociadas
+                                UpdateSoAssociatedToPk(db, docToUpdate);
+
+                                //Generar la Delivery Note de HK a la fábrica
+                                DocHead dnHkFactory = GetDeliveryNoteHk2Factory(docToUpdate);
+                                db.DocsHead.Add(dnHkFactory);
+                            }
+
+
+                            //Save last changes and commit
                             db.SaveChanges();
                             dbTrans.Commit();
 
@@ -984,6 +985,102 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        private DocHead GetDeliveryNoteHk2Factory(DocHead packingList)
+        {
+            try
+            {
+                //copiamos las líneas tal cual
+                List<DocLine> linesDnHkFactory = new List<DocLine>();
+
+                foreach (var line in packingList.Lines)
+                {
+                    DocLine lineDnHkFactory = line.DeepCopyByExpressionTree();
+                    lineDnHkFactory.QuantityOriginal = lineDnHkFactory.Quantity;
+                    lineDnHkFactory.IdDoc = line.IdDoc.Replace(Constants.SUPPLY_DOCTYPE_PK, Constants.SUPPLY_DOCTYPE_DN);
+                    //lineDnHkFactory.IdDocRelated = newDoc.IdDoc; //Mantenemos el original referenciado a la SO
+                    lineDnHkFactory.IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE;
+                    linesDnHkFactory.Add(lineDnHkFactory);
+                }
+
+                DocHead dnHkFactory = new DocHead()
+                {
+                    IdDoc = packingList.IdDoc.Replace(Constants.SUPPLY_DOCTYPE_PK, Constants.SUPPLY_DOCTYPE_DN), //ID? Cómo se linka por el la PO de fábrica
+                    IdDocRelated = packingList.IdDoc,
+                    IdSupplyDocType = Constants.SUPPLY_DOCTYPE_DN,
+                    CreationDate = DateTime.Now,
+                    DeliveryDate = packingList.DeliveryDate,
+                    DocDate = packingList.DocDate,
+                    IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE,
+                    IdSupplier = Constants.ETNIA_HK_COMPANY_CODE,
+                    IdCustomer = packingList.IdCustomer,
+                    DeliveryTerm = packingList.DeliveryTerm,
+                    IdPaymentTerms = packingList.IdPaymentTerms,
+                    IdCurrency = packingList.IdCurrency,
+                    Lines = linesDnHkFactory,
+                };
+
+                return dnHkFactory;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Actualizar las Sales Orders asociadas a un packing list
+        /// </summary>
+        /// <returns></returns>
+        private bool UpdateSoAssociatedToPk(HKSupplyContext db, DocHead packingList)
+        {
+            try
+            {
+                //******* Tenemos que actualizar los datos de la/s Sales Order asociadas a cada línea del packing *******//
+
+                foreach (var line in packingList.Lines)
+                {
+                    var doclineSo = db.DocsLines.Where(a => a.IdDoc.Equals(line.IdDocRelated) && a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
+                    if (doclineSo != null)
+                    {
+                        doclineSo.DeliveredQuantity += line.Quantity;
+
+                        if (doclineSo.Quantity == doclineSo.DeliveredQuantity)
+                            doclineSo.IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE;
+
+                        db.SaveChanges();
+                    }
+                }
+
+                //******* Hay que comprobar si se ha entregado todo para cerrar la/s sale order asociadas al packing *******//
+                // Obtenemos el listado de Sales Order
+                List<string> salesOrderList = packingList.Lines.Select(a => a.IdDocRelated).Distinct().ToList();
+
+                foreach (var salesOrder in salesOrderList)
+                {
+                    SqlParameter param1 = new SqlParameter("@pIdDoc", salesOrder);
+                    bool checkClose = db.Database.SqlQuery<bool>("CHECK_CLOSE_DOC @pIdDoc", param1).FirstOrDefault();
+
+                    if (checkClose == true)
+                    {
+                        //Cerramos la SO
+                        var soDoc = db.DocsHead.Where(a => a.IdDoc.Equals(salesOrder)).FirstOrDefault();
+                        if (soDoc != null)
+                        {
+                            soDoc.IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE;
+                            db.SaveChanges();
+                        }
+                    }
+
+                }
+
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         /// <summary>
         /// Actualizar las cantidades de un documento, cuando se modifica uno y hay que modificar también los documentos relacionados que tiene
         /// </summary>
@@ -1000,9 +1097,31 @@ namespace HKSupply.Services.Implementations
                     if (lineToUpdate == null)
                         throw new Exception("Line not found");
 
-                    if (lineToUpdate.Quantity != line.Quantity || lineToUpdate.QuantityOriginal != line.QuantityOriginal)
+                    if(lineToUpdate.Quantity != line.Quantity /*|| lineToUpdate.QuantityOriginal != line.QuantityOriginal*/)
                     {
                         lineToUpdate.Quantity = line.Quantity;
+                        db.SaveChanges();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void UpdateLineQtyOriginal(HKSupplyContext db, string idDoc, List<DocLine> lines)
+        {
+            try
+            {
+                foreach (DocLine line in lines)
+                {
+                    DocLine lineToUpdate = db.DocsLines.Where(a => a.IdDoc.Equals(idDoc) && a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
+                    if (lineToUpdate == null)
+                        throw new Exception("Line not found");
+
+                    if(lineToUpdate.QuantityOriginal != line.QuantityOriginal)
+                    {
                         lineToUpdate.QuantityOriginal = line.QuantityOriginal;
                         db.SaveChanges();
                     }

@@ -18,6 +18,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraBars;
 
 namespace HKSupply.Forms.Supply
 {
@@ -105,6 +106,67 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        public override void bbiExportCsv_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (gridViewLines.DataRowCount == 0)
+            {
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
+                return;
+            }
+
+            //Abre el dialog de save as
+            base.bbiExportCsv_ItemClick(sender, e);
+
+            try
+            {
+                if (string.IsNullOrEmpty(ExportCsvFile) == false)
+                {
+                    gridViewLines.OptionsPrint.PrintFooter = false;
+                    gridViewLines.ExportToCsv(ExportCsvFile);
+
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportCsvFile);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public override void bbiExportExcel_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (gridViewLines.DataRowCount == 0)
+            {
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
+                return;
+            }
+
+            //Abre el dialog de save as
+            base.bbiExportExcel_ItemClick(sender, e);
+
+            try
+            {
+                if (string.IsNullOrEmpty(ExportExcelFile) == false)
+                {
+                    gridViewLines.OptionsPrint.PrintFooter = false;
+                    gridViewLines.ExportToXlsx(ExportExcelFile);
+
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportExcelFile);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         #region Form Events

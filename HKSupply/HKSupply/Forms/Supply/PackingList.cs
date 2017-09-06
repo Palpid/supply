@@ -52,11 +52,14 @@ namespace HKSupply.Forms.Supply
         Font _labelDefaultFontBold = new Font("SourceSansProRegular", 8, FontStyle.Bold);
         Font _labelDefaultFont = new Font("SourceSansProRegular", 8, FontStyle.Regular);
 
+        List<SupplyStatus> _supplyStatusList;
+
         List<Customer> _customersList;
         List<Currency> _currenciesList;
         List<DeliveryTerm> _deliveryTermList;
         List<PaymentTerms> _paymentTermsList;
 
+        DocHead _docHeadPK;
         BindingList<DocHead> _docSoSelectionList;
         BindingList<DocLine> _docLinesSoSelectionList;
         BindingList<DocLine> _docLinesDeliveredGoodsList;
@@ -92,7 +95,7 @@ namespace HKSupply.Forms.Supply
                 SetUpGrdLinesSoSelection();
                 SetUpGrdLinesDeliveredGoods();
 
-                //SetVisiblePropertyByState();
+                SetVisiblePropertyByState();
             }
             catch (Exception ex)
             {
@@ -129,6 +132,39 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        public override void bbiCancel_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            base.bbiCancel_ItemClick(sender, e);
+           
+        }
+
+        public override void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            base.bbiEdit_ItemClick(sender, e);
+
+            try
+            {
+                if (_docHeadPK == null)
+                {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
+                    RestoreInitState();
+                }
+                else if (_docHeadPK.IdSupplyStatus != Constants.SUPPLY_STATUS_OPEN)
+                {
+                    MessageBox.Show("Only OPEN Packing List can be edited.");
+                    RestoreInitState();
+                }
+                else
+                {
+                    ConfigureActionsStackViewEditing(); 
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public override void bbiNew_ItemClick(object sender, ItemClickEventArgs e)
         {
             base.bbiNew_ItemClick(sender, e);
@@ -138,6 +174,10 @@ namespace HKSupply.Forms.Supply
                 if(gridViewSoSelection.DataRowCount == 0)
                 {
                     MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
+                    RestoreInitState();
+                }
+                else if(ValidateIfExistOpenPK() == false)
+                {
                     RestoreInitState();
                 }
                 else
@@ -174,7 +214,17 @@ namespace HKSupply.Forms.Supply
                 {
                     res = CreatePK();
                 }
-                
+                else if(CurrentState == ActionsStates.Edit)
+                {
+                    res = UpdatePK();
+                }
+
+                if (res == true)
+                {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
+                    ActionsAfterCU();
+                }
+
 
             }
             catch (Exception ex)
@@ -186,6 +236,69 @@ namespace HKSupply.Forms.Supply
                 Cursor = Cursors.Default;
             }
 
+        }
+
+        public override void bbiExportCsv_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+            if (gridViewLinesDeliveredGoods.DataRowCount == 0)
+            {
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
+                return;
+            }
+
+            //Abre el dialog de save as
+            base.bbiExportCsv_ItemClick(sender, e);
+
+            try
+            {
+                if (string.IsNullOrEmpty(ExportCsvFile) == false)
+                {
+                    gridViewLinesDeliveredGoods.OptionsPrint.PrintFooter = false;
+                    gridViewLinesDeliveredGoods.ExportToCsv(ExportCsvFile);
+
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportCsvFile);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public override void bbiExportExcel_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (gridViewLinesDeliveredGoods.DataRowCount == 0)
+            {
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
+                return;
+            }
+
+            //Abre el dialog de save as
+            base.bbiExportExcel_ItemClick(sender, e);
+
+            try
+            {
+                if (string.IsNullOrEmpty(ExportExcelFile) == false)
+                {
+                    gridViewLinesDeliveredGoods.OptionsPrint.PrintFooter = false;
+                    gridViewLinesDeliveredGoods.ExportToXlsx(ExportExcelFile);
+
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportExcelFile);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         #endregion
@@ -200,12 +313,76 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-
-                if (slueCustomer.EditValue != null)
+                if (string.IsNullOrEmpty(txtPKNumber.Text) == false)
+                {
+                    SearchPK();
+                }
+                else if (slueCustomer.EditValue != null)
                 {
                     SearchCustomersSOs();
                 }
 
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void TxtPKNumber_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter && string.IsNullOrEmpty(txtPKNumber.Text) == false)
+                {
+                    SearchPK();
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SbFinishPK_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                try
+                {
+                    bool res = false;
+
+                    if (ValidatePK() == false)
+                        return;
+
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
+
+                    if (result != DialogResult.Yes)
+                        return;
+
+                    Cursor = Cursors.WaitCursor;
+
+                    if (CurrentState == ActionsStates.Edit)
+                    {
+                        res = UpdatePK(finishPK: true);
+                    }
+
+                    if (res == true)
+                    {
+                        MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
+                        ActionsAfterCU();
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
             }
             catch (Exception ex)
             {
@@ -231,9 +408,9 @@ namespace HKSupply.Forms.Supply
                     if (doc != null)
                     {
                         _docLinesSoSelectionList = new BindingList<DocLine>(doc.Lines);
-                        //cambiamos la cantidad por la cantidad pendiente para facilitar al usuario
+                        //cambiamos la cantidad Dummy (aquí la cantida da incluir en el packing) por la cantidad pendiente para facilitar al usuario
                         //The ToList is needed in order to evaluate the select immediately
-                        _docLinesSoSelectionList.Select(a => { a.Quantity = a.QuantityOriginal - a.DeliveredQuantity; return a; }).ToList();
+                        _docLinesSoSelectionList.Select(a => { a.DummyQuantity = a.Quantity - a.DeliveredQuantity; return a; }).ToList();
 
                         xgrdLinesSoSelection.DataSource = null;
                         xgrdLinesSoSelection.DataSource = _docLinesSoSelectionList;
@@ -253,28 +430,54 @@ namespace HKSupply.Forms.Supply
             try
             {
                 GridView view = sender as GridView;
+                DocLine line = view.GetRow(view.FocusedRowHandle) as DocLine;
 
-                //Si no esta editando no se pueden seleccionar líneas
-                if (CurrentState != ActionsStates.New)
+                if (CurrentState == ActionsStates.New ||CurrentState == ActionsStates.Edit)
                 {
-                    view.BeginSelection();
-                    view.ClearSelection();
-                    view.EndSelection();
-                }
-                else
-                {
-                    DocLine line = view.GetRow(view.FocusedRowHandle) as DocLine;
                     if (e.Action == CollectionChangeAction.Add)
                     {
-                        CopyToDeliveredGood(line);
+                        if (line.IdSupplyStatus == Constants.SUPPLY_STATUS_OPEN)
+                        {
+                            CopyToDeliveredGood(line);
+                            gridViewLinesSoSelection.UpdateSummary();
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show("This line is Close.");
+                            view.BeginSelection();
+                            gridViewLinesSoSelection.UnselectRow(view.FocusedRowHandle);
+                            view.EndSelection();
+                        }
+                        
                     }
                     else if (e.Action == CollectionChangeAction.Remove)
                     {
                         line.Quantity = line.QuantityOriginal;
                         gridViewLinesSoSelection.RefreshData();
                         DeleteDeliveredGood(line);
+                        gridViewLinesSoSelection.UpdateSummary();
                     }
-                    
+                }
+                else
+                {
+                    //Si no está editando/creando sólo se marcan las que están en el packing
+                    var existInPk = _docLinesDeliveredGoodsList?.Where(a => a.IdItemBcn.Equals(line.IdItemBcn) && a.IdDocRelated.Equals(line.IdDoc)).FirstOrDefault();
+                    if (existInPk == null)
+                    {
+                        view.BeginSelection();
+                        gridViewLinesSoSelection.UnselectRow(view.FocusedRowHandle);
+                        view.EndSelection();
+                    }
+                    else
+                    {
+                        //Tampoco se puede deseleccionar
+                        if (e.Action == CollectionChangeAction.Remove)
+                        {
+                            view.BeginSelection();
+                            gridViewLinesSoSelection.SelectRow(view.FocusedRowHandle);
+                            view.EndSelection();
+                        }
+                    }
                 }
             }
             catch(Exception ex)
@@ -377,17 +580,18 @@ namespace HKSupply.Forms.Supply
 
                         case eGridLinesSoSelectionSummaries.totalQuantityMt:
 
-                            if (row.IdItemGroup == Constants.ITEM_GROUP_MT)
+                            if (row.IdItemGroup == Constants.ITEM_GROUP_MT && view.IsRowSelected(e.RowHandle) == true )
                                 _totalQuantityMtLinesSo += Convert.ToInt32(e.FieldValue);
                             break;
 
                         case eGridLinesSoSelectionSummaries.totalQuantityHw:
 
-                            if (row.IdItemGroup == Constants.ITEM_GROUP_HW)
+                            if (row.IdItemGroup == Constants.ITEM_GROUP_HW && view.IsRowSelected(e.RowHandle) == true)
                                 _totalQuantityHwLinesSo += Convert.ToInt32(e.FieldValue);
                             break;
                     }
                 }
+
 
                 // Finalization
                 if (e.SummaryProcess == CustomSummaryProcess.Finalize)
@@ -424,7 +628,7 @@ namespace HKSupply.Forms.Supply
                 GridView view = sender as GridView;
                 if (e.Column.FieldName == "PENDING_QTY" && e.IsGetData)
                     e.Value = (
-                        (int)view.GetRowCellValue(e.ListSourceRowIndex, nameof(DocLine.QuantityOriginal)) - 
+                        (int)view.GetRowCellValue(e.ListSourceRowIndex, nameof(DocLine.Quantity)) - 
                         (int)view.GetRowCellValue(e.ListSourceRowIndex, nameof(DocLine.DeliveredQuantity))
                         );
             }
@@ -516,7 +720,7 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                lblPKCreationWeek.Text = dateEditPKCreation.DateTime.GetWeek().ToString();
+                lblPKDocDateWeek.Text = dateEditPKDocDate.DateTime.GetWeek().ToString();
 
             }
             catch (Exception ex)
@@ -560,8 +764,9 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                //TODO
-                
+                txtPKNumber.EditValue = idDoc;
+                SearchPK();
+
             }
             catch
             {
@@ -581,6 +786,7 @@ namespace HKSupply.Forms.Supply
                 _currenciesList = GlobalSetting.CurrencyService.GetCurrencies();
                 _deliveryTermList = GlobalSetting.DeliveryTermsService.GetDeliveryTerms();
                 _paymentTermsList = GlobalSetting.PaymentTermsService.GetPaymentTerms();
+                _supplyStatusList = GlobalSetting.SupplyDocsService.GetSupplyStatus();
             }
             catch
             {
@@ -602,6 +808,127 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void ResetPK()
+        {
+            try
+            {
+                ResetCustomerSOs();
+                _docHeadPK = null;
+                xgrdSoSelection.DataSource = null;
+                xgrdLinesSoSelection.DataSource = null;
+                xgrdLinesDeliveredGoods.DataSource = null;
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void Reset4NewPk()
+        {
+            try
+            {
+                _docHeadPK = null;
+                _docLinesSoSelectionList = null;
+                _docLinesDeliveredGoodsList = null;
+
+                xgrdLinesSoSelection.DataSource = null;
+                xgrdLinesDeliveredGoods.DataSource = null;
+
+                dateEditPKDelivery.EditValue = null;
+                lblPKDeliveryWeek.Text = string.Empty;
+
+                slueDeliveryTerms.EditValue = null;
+                slueCurrency.EditValue = null;
+                sluePaymentTerm.EditValue = null;
+
+                gridViewSoSelection.BeginSelection();
+                gridViewSoSelection.ClearSelection();
+                gridViewSoSelection.EndSelection();
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void SearchPK()
+        {
+            try
+            {
+                ResetPK();
+                ResetForm();
+
+                string pkNumber = txtPKNumber.Text;
+
+                _docHeadPK = GlobalSetting.SupplyDocsService.GetDoc(pkNumber);
+
+                if (_docHeadPK == null)
+                {
+                    XtraMessageBox.Show("No Data Found", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (_docHeadPK.IdSupplyDocType != Constants.SUPPLY_DOCTYPE_PK)
+                {
+                    XtraMessageBox.Show("Document is not a Packing List", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    LoadPK();
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void LoadPK()
+        {
+            try
+            {
+                var customer = _customersList.Where(a => a.IdCustomer.Equals(_docHeadPK.IdCustomer)).FirstOrDefault();
+
+                //***** Header *****/
+                lbltxtStatus.Visible = true;
+                lbltxtStatus.Text = _docHeadPK.IdSupplyStatus;
+                slueCustomer.EditValue = _docHeadPK.IdCustomer;
+                slueDeliveryTerms.EditValue = _docHeadPK.IdDeliveryTerm;
+                slueCurrency.EditValue = _docHeadPK.IdCurrency;
+
+                dateEditPKDocDate.EditValue = _docHeadPK.DocDate;
+                dateEditPKDelivery.EditValue = _docHeadPK.DeliveryDate;
+
+                lblPKDocDateWeek.Text = dateEditPKDocDate.DateTime.GetWeek().ToString();
+                lblPKDeliveryWeek.Text = dateEditPKDelivery.DateTime.GetWeek().ToString();
+
+                //***** Grid SO Selection *****/
+                SearchCustomersSOs();
+
+                //***** Grid Delivered Goods*****/
+                _docLinesDeliveredGoodsList = new BindingList<DocLine>(_docHeadPK.Lines);
+
+                xgrdLinesDeliveredGoods.DataSource = null;
+                xgrdLinesDeliveredGoods.DataSource = _docLinesDeliveredGoodsList;
+
+                //***** Terms Tab *****/
+                lblTxtCompany.Text = customer.CustomerName;
+                lblTxtAddress.Text = customer.ShippingAddress;
+                lblTxtContact.Text = $"{customer.ContactName} ({customer.ContactPhone})";
+                lblTxtShipTo.Text = "??"; //TODO
+                lblTxtInvoiceTo.Text = "??"; //TODO
+                sluePaymentTerm.EditValue = _docHeadPK.IdPaymentTerms;
+
+
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         #endregion
 
         #region Setup Form Objects
@@ -613,12 +940,13 @@ namespace HKSupply.Forms.Supply
                 /********* Fonts **********/
                 //Header 
                 lblPKNumber.Font = _labelDefaultFontBold;
+                lbltxtStatus.Font = _labelDefaultFontBold;
                 lblDate.Font = _labelDefaultFontBold;
                 lblWeek.Font = _labelDefaultFontBold;
-                lblPKCreation.Font = _labelDefaultFontBold;
+                lblPKDocDate.Font = _labelDefaultFontBold;
                 lblPKDelivery.Font = _labelDefaultFontBold;
                 lblCustomer.Font = _labelDefaultFontBold;
-                lblPKCreationWeek.Font = _labelDefaultFont;
+                lblPKDocDateWeek.Font = _labelDefaultFont;
                 lblPKDeliveryWeek.Font = _labelDefaultFont;
                 txtPKNumber.Font = _labelDefaultFontBold;
                 lblTermsOfDelivery.Font = _labelDefaultFont;
@@ -639,12 +967,13 @@ namespace HKSupply.Forms.Supply
                 /********* Texts **********/
                 //Headers
                 lblPKNumber.Text = "PK Number";
+                lbltxtStatus.Text = string.Empty;
                 lblDate.Text = "Date";
                 lblWeek.Text = "Week";
-                lblPKCreation.Text = "CREATION";
+                lblPKDocDate.Text = "DATE";
                 lblPKDelivery.Text = "DELIVERY";
                 lblCustomer.Text = "CUSTOMER";
-                lblPKCreationWeek.Text = string.Empty;
+                lblPKDocDateWeek.Text = string.Empty;
                 lblPKDeliveryWeek.Text = string.Empty;
                 lblTermsOfDelivery.Text = "Terms of Delivery";
                 lblCurrency.Text = "Currency";
@@ -663,7 +992,8 @@ namespace HKSupply.Forms.Supply
 
                 /********* Align **********/
                 //Headers
-                lblPKCreationWeek.Appearance.TextOptions.HAlignment = HorzAlignment.Center;
+                lbltxtStatus.Appearance.TextOptions.HAlignment = HorzAlignment.Center;
+                lblPKDocDateWeek.Appearance.TextOptions.HAlignment = HorzAlignment.Center;
                 lblPKDeliveryWeek.Appearance.TextOptions.HAlignment = HorzAlignment.Center;
                 txtPKNumber.Properties.Appearance.TextOptions.HAlignment = HorzAlignment.Center;
 
@@ -676,11 +1006,12 @@ namespace HKSupply.Forms.Supply
                 lblTermPayment.Appearance.TextOptions.HAlignment = HorzAlignment.Far;
 
                 /********* ReadOnly **********/
-                txtPKNumber.ReadOnly = true; //no es un label, lo sé
+                //txtPKNumber.ReadOnly = true; //no es un label, lo sé
 
                 /********* BackColor **********/
                 txtPKNumber.Properties.Appearance.BackColor = Color.CadetBlue;
                 txtPKNumber.Properties.Appearance.BackColor2 = Color.CadetBlue;
+
             }
             catch
             {
@@ -790,9 +1121,11 @@ namespace HKSupply.Forms.Supply
             try
             {
                 sbSearch.Click += SbSearch_Click;
-                dateEditPKCreation.EditValueChanged += DateEditPKCreation_EditValueChanged;
+                sbFinishPK.Click += SbFinishPK_Click;
+                dateEditPKDocDate.EditValueChanged += DateEditPKCreation_EditValueChanged;
                 dateEditPKDelivery.EditValueChanged += DateEditPKDelivery_EditValueChanged;
                 slueCustomer.EditValueChanged += SlueCustomer_EditValueChanged;
+                txtPKNumber.KeyDown += TxtPKNumber_KeyDown;
             }
             catch
             {
@@ -875,12 +1208,13 @@ namespace HKSupply.Forms.Supply
                 GridColumn colIdItemBcn = new GridColumn() { Caption = "Item Code", Visible = true, FieldName = nameof(DocLine.IdItemBcn), Width = 200 };
                 GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = nameof(DocLine.ItemDesc), Width = 350 };
                 GridColumn colIdItemGroup = new GridColumn() { Caption = "Type", Visible = true, FieldName = nameof(DocLine.IdItemGroup), Width = 100 };
-                GridColumn colQuantityOriginal = new GridColumn() { Caption = "Order Quantity", Visible = true, FieldName = nameof(DocLine.QuantityOriginal), Width = 110 };
+                GridColumn colQuantity = new GridColumn() { Caption = "Order Quantity", Visible = true, FieldName = nameof(DocLine.Quantity), Width = 110 };
                 GridColumn colDeliveredQuantity = new GridColumn() { Caption = "Delivered Qty", Visible = true, FieldName = nameof(DocLine.DeliveredQuantity), Width = 110 };
-                GridColumn colQuantity = new GridColumn() { Caption = "Quantity", Visible = true, FieldName = nameof(DocLine.Quantity), Width = 85 };
+                GridColumn colDummyQuantity = new GridColumn() { Caption = "Packing Quantity", Visible = true, FieldName = nameof(DocLine.DummyQuantity), Width = 110 };
                 GridColumn colUnit = new GridColumn() { Caption = "Unit", Visible = true, FieldName = nameof(DocLine.ItemUnit), Width = 85 };
                 GridColumn colUnitPrice = new GridColumn() { Caption = "Unit Price", Visible = true, FieldName = nameof(DocLine.UnitPrice), Width = 85 };
                 GridColumn colTotalAmount = new GridColumn() { Caption = "TotalAmount", Visible = true, FieldName = nameof(DocLine.TotalAmount), Width = 120 };
+                GridColumn colIdIdSupplyStatus = new GridColumn() { Caption = "Status", Visible = true, FieldName = nameof(DocLine.IdSupplyStatus), Width = 75 };
                 //Unbound Column. Para calcular la cantidad pendiente
                 GridColumn colPendingQuantity = new GridColumn() { Caption = "Pending Qty", Visible = true, FieldName = "PENDING_QTY", Width = 110, UnboundType = UnboundColumnType.Integer };
 
@@ -894,11 +1228,14 @@ namespace HKSupply.Forms.Supply
                 colQuantity.DisplayFormat.FormatType = FormatType.Numeric;
                 colQuantity.DisplayFormat.FormatString = "n0";
 
-                colQuantityOriginal.DisplayFormat.FormatType = FormatType.Numeric;
-                colQuantityOriginal.DisplayFormat.FormatString = "n0";
-
                 colDeliveredQuantity.DisplayFormat.FormatType = FormatType.Numeric;
                 colDeliveredQuantity.DisplayFormat.FormatString = "n0";
+
+                colPendingQuantity.DisplayFormat.FormatType = FormatType.Numeric;
+                colPendingQuantity.DisplayFormat.FormatString = "n0";
+
+                colDummyQuantity.DisplayFormat.FormatType = FormatType.Numeric;
+                colDummyQuantity.DisplayFormat.FormatString = "n0";
 
                 //Edit Repositories
                 RepositoryItemTextEdit ritxtInt = new RepositoryItemTextEdit();
@@ -908,30 +1245,41 @@ namespace HKSupply.Forms.Supply
 
                 colQuantity.ColumnEdit = ritxtInt;
 
+                RepositoryItemSearchLookUpEdit riSupplyStatus = new RepositoryItemSearchLookUpEdit()
+                {
+                    DataSource = _supplyStatusList,
+                    ValueMember = nameof(SupplyStatus.IdSupplyStatus),
+                    DisplayMember = nameof(SupplyStatus.Description),
+                    ShowClearButton = false,
+                    NullText = string.Empty,
+                };
+                colIdIdSupplyStatus.ColumnEdit = riSupplyStatus;
+
                 //Summaries
                 gridViewLinesSoSelection.OptionsView.ShowFooter = true;
 
                 colTotalAmount.Summary.Add(SummaryItemType.Sum, nameof(DocLine.TotalAmount), "{0:n2}");
-                
-                colQuantityOriginal.Summary.AddRange(new GridSummaryItem[] {
-                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.QuantityOriginal), "{0} Gr", eGridLinesSoSelectionSummaries.totalQuantityOrderedMt),
-                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.QuantityOriginal), "{0} PC", eGridLinesSoSelectionSummaries.totalQuantityOrderedHw) });
+
+                colDummyQuantity.Summary.AddRange(new GridSummaryItem[] {
+                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.DummyQuantity), "{0} Gr", eGridLinesSoSelectionSummaries.totalQuantityMt),
+                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.DummyQuantity), "{0} PC", eGridLinesSoSelectionSummaries.totalQuantityHw) });
 
                 colQuantity.Summary.AddRange(new GridSummaryItem[] {
-                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0} Gr", eGridLinesSoSelectionSummaries.totalQuantityMt),
-                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0} PC", eGridLinesSoSelectionSummaries.totalQuantityHw) });
+                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0} Gr", eGridLinesSoSelectionSummaries.totalQuantityOrderedMt),
+                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0} PC", eGridLinesSoSelectionSummaries.totalQuantityOrderedHw) });
 
                 //Add columns to grid root view
                 gridViewLinesSoSelection.Columns.Add(colIdItemBcn);
                 gridViewLinesSoSelection.Columns.Add(colDescription);
                 gridViewLinesSoSelection.Columns.Add(colIdItemGroup);
-                gridViewLinesSoSelection.Columns.Add(colQuantityOriginal);
+                gridViewLinesSoSelection.Columns.Add(colQuantity);
                 gridViewLinesSoSelection.Columns.Add(colDeliveredQuantity);
                 gridViewLinesSoSelection.Columns.Add(colPendingQuantity);
-                gridViewLinesSoSelection.Columns.Add(colQuantity);
+                gridViewLinesSoSelection.Columns.Add(colDummyQuantity);
                 gridViewLinesSoSelection.Columns.Add(colUnit);
                 gridViewLinesSoSelection.Columns.Add(colUnitPrice);
                 gridViewLinesSoSelection.Columns.Add(colTotalAmount);
+                gridViewLinesSoSelection.Columns.Add(colIdIdSupplyStatus);
 
                 //Events
                 gridViewLinesSoSelection.SelectionChanged += GridViewLinesSoSelection_SelectionChanged;
@@ -1024,6 +1372,66 @@ namespace HKSupply.Forms.Supply
 
         #region Aux
 
+        private void SetVisiblePropertyByState()
+        {
+            try
+            {
+                switch (CurrentState)
+                {
+
+                    case ActionsStates.New:
+                        sbFinishPK.Visible = false;
+                        sbSearch.Visible = false;
+                        lbltxtStatus.Visible = false;
+                        break;
+
+                    case ActionsStates.Edit:
+                        sbFinishPK.Visible = true;
+                        sbSearch.Visible = false;
+                        lbltxtStatus.Visible = true;
+                        break;
+
+                    default:
+                        sbFinishPK.Visible = false;
+                        sbSearch.Visible = true;
+                        lbltxtStatus.Visible = false;
+                        break;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void ResetForm()
+        {
+            try
+            {
+                /********* Head *********/
+                //txtPKNumber.EditValue = null;
+                dateEditPKDocDate.EditValue = null;
+                dateEditPKDelivery.EditValue = null;
+                lblPKDocDateWeek.Text = string.Empty;
+                lblPKDeliveryWeek.Text = string.Empty;
+                slueCustomer.EditValue = null;
+                slueDeliveryTerms.EditValue = null;
+                slueCurrency.EditValue = null;
+
+                /********* Terms Tab *********/
+                lblTxtCompany.Text = string.Empty;
+                lblTxtAddress.Text = string.Empty;
+                lblTxtContact.Text = string.Empty;
+                lblTxtShipTo.Text = string.Empty;
+                lblTxtInvoiceTo.Text = string.Empty;
+                sluePaymentTerm.EditValue = null;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         private void SetCustomerInfo()
         {
             try
@@ -1059,12 +1467,16 @@ namespace HKSupply.Forms.Supply
                     DocLine tmp = line.DeepCopyByExpressionTree();
                     tmp.IdDoc = txtPKNumber.Text;
                     tmp.IdDocRelated = line.IdDoc;
+                    tmp.DeliveredQuantity = 0;
+                    tmp.QuantityOriginal = line.Quantity;
+                    tmp.Quantity = line.DummyQuantity;
+                    tmp.Remarks = null;
                     _docLinesDeliveredGoodsList.Add(tmp);
                 }
                 else
                 {
                     //Actualizamos la cantidad que es el única campo que se puede editar
-                    exist.Quantity = line.Quantity;
+                    exist.Quantity = line.DummyQuantity;
                     gridViewLinesDeliveredGoods.RefreshData();
                 }
             }
@@ -1103,7 +1515,7 @@ namespace HKSupply.Forms.Supply
                     if (rowDeliveredGoods != null)
                     {
                         gridViewLinesSoSelection.SelectRow(i);
-                        rowSoSelection.Quantity = rowDeliveredGoods.Quantity; //Por si se ha modificado la cantidad, está guardada en la línea de delivered good
+                        rowSoSelection.DummyQuantity = rowDeliveredGoods.Quantity; //Por si se ha modificado la cantidad, está guardada en la línea de delivered good
                         gridViewLinesSoSelection.RefreshRow(i);
                     }
 
@@ -1146,6 +1558,13 @@ namespace HKSupply.Forms.Supply
                     return false;
                 }
 
+                if (dateEditPKDelivery.EditValue == null)
+                {
+                    MessageBox.Show("Field Required: Delivery Date", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    dateEditPKDelivery.Focus();
+                    return false;
+                }
+
                 if (_docLinesDeliveredGoodsList.Count == 0)
                 {
                     MessageBox.Show("Packing without lines", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -1160,29 +1579,17 @@ namespace HKSupply.Forms.Supply
             }
         }
 
-        #endregion
-
-        #region Configure Ribbon Actions
-        private void ConfigureActionsStackViewCreating()
+        private void SetGridsEnabled()
         {
             try
             {
-                slueCustomer.ReadOnly = true;
-                dateEditPKCreation.ReadOnly = true;
-
-                CreatePkNumber(); //generar el número de packing
-
-                _docLinesDeliveredGoodsList = new BindingList<DocLine>();
-                xgrdLinesDeliveredGoods.DataSource = null;
-                xgrdLinesDeliveredGoods.DataSource = _docLinesDeliveredGoodsList;
-
                 //Ponemos los grid como editables y bloqueamos las columnas que no se puede editar
                 gridViewLinesSoSelection.OptionsBehavior.Editable = true;
                 gridViewLinesDeliveredGoods.OptionsBehavior.Editable = true;
 
-                foreach(GridColumn col in gridViewLinesSoSelection.Columns)
+                foreach (GridColumn col in gridViewLinesSoSelection.Columns)
                 {
-                    if (col.FieldName != nameof(DocLine.Quantity))
+                    if (col.FieldName != nameof(DocLine.DummyQuantity))
                         col.OptionsColumn.AllowEdit = false;
                 }
 
@@ -1191,6 +1598,54 @@ namespace HKSupply.Forms.Supply
                     if (col.FieldName != nameof(DocLine.Remarks))
                         col.OptionsColumn.AllowEdit = false;
                 }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        #endregion
+
+        #region Configure Ribbon Actions
+
+        private void ConfigureActionsStackViewCreating()
+        {
+            try
+            {
+                slueCustomer.ReadOnly = true;
+                dateEditPKDocDate.ReadOnly = true;
+
+                //clean necessary objects
+                Reset4NewPk();
+
+                //generate packing list number
+                CreatePkNumber(); 
+
+                _docLinesDeliveredGoodsList = new BindingList<DocLine>();
+                xgrdLinesDeliveredGoods.DataSource = null;
+                xgrdLinesDeliveredGoods.DataSource = _docLinesDeliveredGoodsList;
+
+                //habilitar los grids para edición
+                SetGridsEnabled(); 
+
+                SetVisiblePropertyByState();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void ConfigureActionsStackViewEditing()
+        {
+            try
+            {
+                txtPKNumber.ReadOnly = true;
+                slueCustomer.ReadOnly = true;
+                dateEditPKDocDate.ReadOnly = true;
+                SetGridsEnabled(); //habilitar los grids para edición
+                SetVisiblePropertyByState();
 
             }
             catch
@@ -1198,6 +1653,7 @@ namespace HKSupply.Forms.Supply
                 throw;
             }
         }
+
         #endregion
 
         #region CRUD
@@ -1209,13 +1665,13 @@ namespace HKSupply.Forms.Supply
                 ResetCustomerSOs();
 
                 string customer = slueCustomer.EditValue as string;
-                DateTime pkCreateDate = dateEditPKCreation.DateTime;
+                DateTime pkDocDate = dateEditPKDocDate.DateTime;
 
-                var soDocsCustomer = GlobalSetting.SupplyDocsService.GetDocs(idSupplier: null, idCustomer: customer, docDate: pkCreateDate, IdSupplyDocType: Constants.SUPPLY_DOCTYPE_SO, idSupplyStatus: Constants.SUPPLY_STATUS_OPEN);
+                var soDocsCustomer = GlobalSetting.SupplyDocsService.GetDocs(idSupplier: null, idCustomer: customer, docDate: pkDocDate, IdSupplyDocType: Constants.SUPPLY_DOCTYPE_SO, idSupplyStatus: null);
 
                 if (soDocsCustomer.Count == 0)
                 {
-                    XtraMessageBox.Show("No Data Found", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    XtraMessageBox.Show("No Customer's Sales Orders Found", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -1224,6 +1680,35 @@ namespace HKSupply.Forms.Supply
                     xgrdSoSelection.DataSource = null;
                     xgrdSoSelection.DataSource = _docSoSelectionList;
                 }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private bool ValidateIfExistOpenPK()
+        {
+            try
+            {
+                var exist = GlobalSetting.SupplyDocsService.GetDocs(
+                    idSupplier: Constants.ETNIA_HK_COMPANY_CODE, 
+                    idCustomer: (string)slueCustomer.EditValue, 
+                    docDate: dateEditPKDocDate.DateTime, 
+                    IdSupplyDocType: Constants.SUPPLY_DOCTYPE_PK, 
+                    idSupplyStatus: Constants.SUPPLY_STATUS_OPEN);
+
+                if (exist.Count > 0)
+                {
+                    XtraMessageBox.Show($"Packing List Open ({exist.Select(a => a.IdDoc).FirstOrDefault()}). You cannot craeted new one.");
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+
+                
             }
             catch
             {
@@ -1243,7 +1728,7 @@ namespace HKSupply.Forms.Supply
                 var pakingsDocs = GlobalSetting.SupplyDocsService.GetDocs(
                     idSupplier: null, 
                     idCustomer: (string)slueCustomer.EditValue, 
-                    docDate: dateEditPKCreation.DateTime, 
+                    docDate: dateEditPKDocDate.DateTime, 
                     IdSupplyDocType: Constants.SUPPLY_DOCTYPE_PK, 
                     idSupplyStatus: null);
 
@@ -1252,7 +1737,7 @@ namespace HKSupply.Forms.Supply
                 else
                     strCont = $"-{(pakingsDocs.Count + 1).ToString()}";
 
-                pkNumber = $"{Constants.SUPPLY_DOCTYPE_PK}{DateTime.Now.Year.ToString().Substring(3)}{lblPKCreationWeek.Text}{slueCustomer.EditValue}{strCont}";
+                pkNumber = $"{Constants.SUPPLY_DOCTYPE_PK}{DateTime.Now.Year.ToString().Substring(3)}{lblPKDocDateWeek.Text}{slueCustomer.EditValue}{strCont}";
 
                 txtPKNumber.Text = pkNumber;
             }
@@ -1278,8 +1763,8 @@ namespace HKSupply.Forms.Supply
                     IdSupplyDocType = Constants.SUPPLY_DOCTYPE_PK,
                     CreationDate = DateTime.Now,
                     DeliveryDate = dateEditPKDelivery.DateTime,
-                    DocDate = DateTime.Now,
-                    IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE,
+                    DocDate = dateEditPKDocDate.DateTime, //DateTime.Now,
+                    IdSupplyStatus = Constants.SUPPLY_STATUS_OPEN,
                     IdSupplier = Constants.ETNIA_HK_COMPANY_CODE,
                     IdCustomer = slueCustomer.EditValue as string,
                     IdDeliveryTerm = slueDeliveryTerms.EditValue as string,
@@ -1290,6 +1775,8 @@ namespace HKSupply.Forms.Supply
 
                 DocHead createdDoc = GlobalSetting.SupplyDocsService.NewDoc(packingList);
 
+                _docHeadPK = createdDoc;
+
                 return true;
             }
             catch
@@ -1298,6 +1785,67 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private bool UpdatePK(bool finishPK = false)
+        {
+            try
+            {
+                List<DocLine> sortedLines = _docLinesDeliveredGoodsList.OrderBy(a => a.IdItemGroup).ThenBy(b => b.IdItemBcn).ToList();
+
+                DocHead packingList = new DocHead()
+                {
+                        
+                    IdDoc = _docHeadPK.IdDoc,
+                    IdDocRelated = _docHeadPK.IdDocRelated,
+                    IdSupplyDocType = _docHeadPK.IdSupplyDocType,
+                    CreationDate = _docHeadPK.CreationDate,
+                    DeliveryDate = dateEditPKDelivery.DateTime,
+                    DocDate = _docHeadPK.DocDate,
+                    IdSupplyStatus = (finishPK ? Constants.SUPPLY_STATUS_CLOSE : Constants.SUPPLY_STATUS_OPEN),
+                    IdSupplier = _docHeadPK.IdSupplier,
+                    IdCustomer = _docHeadPK.IdCustomer,
+                    IdDeliveryTerm = slueDeliveryTerms.EditValue as string,
+                    IdPaymentTerms = sluePaymentTerm.EditValue as string,
+                    IdCurrency = slueCurrency.EditValue as string,
+                    Lines = sortedLines
+                };
+
+                DocHead updatedDoc = GlobalSetting.SupplyDocsService.UpdateDoc(packingList, finishDoc: finishPK);
+
+                _docHeadPK = updatedDoc;
+
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
+            
+        }
+
+        private void ActionsAfterCU()
+        {
+            try
+            {
+                //Clear grids
+                xgrdSoSelection.DataSource = null;
+                xgrdLinesSoSelection.DataSource = null;
+                xgrdLinesDeliveredGoods.DataSource = null;
+                //Reload Packing list
+                LoadPK();
+                //not allow grid editing
+                gridViewSoSelection.OptionsBehavior.Editable = false;
+                gridViewLinesSoSelection.OptionsBehavior.Editable = false;
+                gridViewLinesDeliveredGoods.OptionsBehavior.Editable = false;
+                //Restore de ribbon to initial states
+                RestoreInitState();
+
+                SetVisiblePropertyByState();
+            }
+            catch
+            {
+                throw;
+            }
+        }
         #endregion
 
         #endregion

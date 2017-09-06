@@ -16,12 +16,12 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraEditors.Repository;
+using HKSupply.Styles;
 
 namespace HKSupply.Forms.Supply
 {
     public partial class DocsList : RibbonFormBase
     {
-
         #region Private Members
 
         Font _labelDefaultFontBold = new Font("SourceSansProRegular", 8, FontStyle.Bold);
@@ -177,6 +177,44 @@ namespace HKSupply.Forms.Supply
                 if (doc != null)
                 {
                     OpenDocForm(doc);
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void GridViewLines_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+                DocHead doc = view.GetRow(e.RowHandle) as DocHead;
+
+                switch (e.Column.FieldName)
+                {
+                    case nameof(DocHead.IdSupplyStatus):
+
+                        switch (doc.IdSupplyStatus)
+                        {
+                            case Constants.SUPPLY_STATUS_OPEN:
+                                e.Appearance.BackColor = AppStyles.SupplyStatusOpnBKGD1;
+                                e.Appearance.BackColor2 = AppStyles.SupplyStatusOpnBKGD2;
+                                break;
+
+                            case Constants.SUPPLY_STATUS_CLOSE:
+                                e.Appearance.BackColor = AppStyles.SupplyStatusClsBKGD1;
+                                e.Appearance.BackColor2 = AppStyles.SupplyStatusClsBKGD2;
+                                break;
+
+                            case Constants.SUPPLY_STATUS_CANCEL:
+                                e.Appearance.BackColor = AppStyles.SupplyStatusCnlBKGD1;
+                                e.Appearance.BackColor2 = AppStyles.SupplyStatusCnlBKGD2;
+                                break;
+                        }
+
+                        break;
                 }
             }
             catch (Exception ex)
@@ -400,6 +438,10 @@ namespace HKSupply.Forms.Supply
                 };
                 colIdSupplyDocType.ColumnEdit = riDocTypes;
 
+                //Alignment
+                colIdSupplyStatus.AppearanceCell.Options.UseTextOptions = true;
+                colIdSupplyStatus.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+
                 //Add columns to grid root view
                 gridViewLines.Columns.Add(colIdDoc);
                 gridViewLines.Columns.Add(colIdSupplyDocType);
@@ -412,6 +454,7 @@ namespace HKSupply.Forms.Supply
 
                 //Events
                 gridViewLines.DoubleClick += GridViewLines_DoubleClick;
+                gridViewLines.RowCellStyle += GridViewLines_RowCellStyle;
 
             }
             catch
@@ -461,7 +504,7 @@ namespace HKSupply.Forms.Supply
                         //Check if is already open
                         PurchaseOrder purchaseOrderForm =
                             Application.OpenForms.OfType<PurchaseOrder>()
-                            .Where(pre => pre.Name == "PurchaseOrder")
+                            .Where(pre => pre.Name == nameof(PurchaseOrder))
                             .SingleOrDefault();
 
                         if (purchaseOrderForm != null)
@@ -474,6 +517,27 @@ namespace HKSupply.Forms.Supply
                         purchaseOrderForm.ShowIcon = false;
                         purchaseOrderForm.Show();
                         purchaseOrderForm.WindowState = FormWindowState.Maximized;
+
+                        break;
+
+                    case Constants.SUPPLY_DOCTYPE_QP:
+
+                        //Check if is already open
+                        QuotationProposal quotationProposalForm =
+                            Application.OpenForms.OfType<QuotationProposal>()
+                            .Where(pre => pre.Name == nameof(QuotationProposal))
+                            .SingleOrDefault();
+
+                        if (quotationProposalForm != null)
+                            quotationProposalForm.Close();
+
+                        quotationProposalForm = new QuotationProposal();
+                        quotationProposalForm.InitData(doc.IdDoc);
+
+                        quotationProposalForm.MdiParent = MdiParent;
+                        quotationProposalForm.ShowIcon = false;
+                        quotationProposalForm.Show();
+                        quotationProposalForm.WindowState = FormWindowState.Maximized;
 
                         break;
 
@@ -517,24 +581,24 @@ namespace HKSupply.Forms.Supply
 
                         break;
 
-                    //case Constants.SUPPLY_DOCTYPE_PK:
+                    case Constants.SUPPLY_DOCTYPE_PK:
 
-                    //    PackingList packingListForm =
-                    //       Application.OpenForms.OfType<PackingList>()
-                    //       .Where(pre => pre.Name == nameof(PackingList))
-                    //       .SingleOrDefault();
+                        PackingList packingListForm =
+                           Application.OpenForms.OfType<PackingList>()
+                           .Where(pre => pre.Name == nameof(PackingList))
+                           .SingleOrDefault();
 
-                    //    if (packingListForm != null)
-                    //        packingListForm.Close();
+                        if (packingListForm != null)
+                            packingListForm.Close();
 
-                    //    packingListForm = new PackingList();
-                    //    packingListForm.InitData(doc.IdDoc);
+                        packingListForm = new PackingList();
+                        packingListForm.InitData(doc.IdDoc);
 
-                    //    packingListForm.MdiParent = MdiParent;
-                    //    packingListForm.ShowIcon = false;
-                    //    packingListForm.Show();
-                    //    packingListForm.WindowState = FormWindowState.Maximized;
-                    //    break;
+                        packingListForm.MdiParent = MdiParent;
+                        packingListForm.ShowIcon = false;
+                        packingListForm.Show();
+                        packingListForm.WindowState = FormWindowState.Maximized;
+                        break;
 
                     case Constants.SUPPLY_DOCTYPE_INV:
 

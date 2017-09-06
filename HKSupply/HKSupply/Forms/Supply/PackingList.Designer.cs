@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.gbHeader = new System.Windows.Forms.GroupBox();
+            this.lbltxtStatus = new DevExpress.XtraEditors.LabelControl();
+            this.sbFinishPK = new DevExpress.XtraEditors.SimpleButton();
             this.slueCurrency = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.slueDeliveryTerms = new DevExpress.XtraEditors.SearchLookUpEdit();
@@ -41,12 +43,12 @@
             this.lblCustomer = new DevExpress.XtraEditors.LabelControl();
             this.lblWeek = new DevExpress.XtraEditors.LabelControl();
             this.lblPKDeliveryWeek = new DevExpress.XtraEditors.LabelControl();
-            this.lblPKCreationWeek = new DevExpress.XtraEditors.LabelControl();
+            this.lblPKDocDateWeek = new DevExpress.XtraEditors.LabelControl();
             this.lblDate = new DevExpress.XtraEditors.LabelControl();
             this.dateEditPKDelivery = new DevExpress.XtraEditors.DateEdit();
-            this.dateEditPKCreation = new DevExpress.XtraEditors.DateEdit();
+            this.dateEditPKDocDate = new DevExpress.XtraEditors.DateEdit();
             this.lblPKDelivery = new DevExpress.XtraEditors.LabelControl();
-            this.lblPKCreation = new DevExpress.XtraEditors.LabelControl();
+            this.lblPKDocDate = new DevExpress.XtraEditors.LabelControl();
             this.lblPKNumber = new DevExpress.XtraEditors.LabelControl();
             this.txtPKNumber = new DevExpress.XtraEditors.TextEdit();
             this.xtcPK = new DevExpress.XtraTab.XtraTabControl();
@@ -59,8 +61,6 @@
             this.xgrdLinesDeliveredGoods = new DevExpress.XtraGrid.GridControl();
             this.gridViewLinesDeliveredGoods = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtpTerms = new DevExpress.XtraTab.XtraTabPage();
-            this.xtcGeneral = new DevExpress.XtraTab.XtraTabControl();
-            this.xtpPakingList = new DevExpress.XtraTab.XtraTabPage();
             this.sluePaymentTerm = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.lblTxtInvoiceTo = new DevExpress.XtraEditors.LabelControl();
@@ -74,6 +74,8 @@
             this.lblContact = new DevExpress.XtraEditors.LabelControl();
             this.lblAddress = new DevExpress.XtraEditors.LabelControl();
             this.lblCompany = new DevExpress.XtraEditors.LabelControl();
+            this.xtcGeneral = new DevExpress.XtraTab.XtraTabControl();
+            this.xtpPakingList = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             this.gbHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slueCurrency.Properties)).BeginInit();
@@ -84,8 +86,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditPKDelivery.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditPKDelivery.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditPKCreation.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditPKCreation.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditPKDocDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditPKDocDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPKNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcPK)).BeginInit();
             this.xtcPK.SuspendLayout();
@@ -98,11 +100,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.xgrdLinesDeliveredGoods)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLinesDeliveredGoods)).BeginInit();
             this.xtpTerms.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sluePaymentTerm.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
             this.xtcGeneral.SuspendLayout();
             this.xtpPakingList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sluePaymentTerm.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -124,6 +126,8 @@
             // 
             this.gbHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbHeader.Controls.Add(this.lbltxtStatus);
+            this.gbHeader.Controls.Add(this.sbFinishPK);
             this.gbHeader.Controls.Add(this.slueCurrency);
             this.gbHeader.Controls.Add(this.slueDeliveryTerms);
             this.gbHeader.Controls.Add(this.lblCurrency);
@@ -133,12 +137,12 @@
             this.gbHeader.Controls.Add(this.lblCustomer);
             this.gbHeader.Controls.Add(this.lblWeek);
             this.gbHeader.Controls.Add(this.lblPKDeliveryWeek);
-            this.gbHeader.Controls.Add(this.lblPKCreationWeek);
+            this.gbHeader.Controls.Add(this.lblPKDocDateWeek);
             this.gbHeader.Controls.Add(this.lblDate);
             this.gbHeader.Controls.Add(this.dateEditPKDelivery);
-            this.gbHeader.Controls.Add(this.dateEditPKCreation);
+            this.gbHeader.Controls.Add(this.dateEditPKDocDate);
             this.gbHeader.Controls.Add(this.lblPKDelivery);
-            this.gbHeader.Controls.Add(this.lblPKCreation);
+            this.gbHeader.Controls.Add(this.lblPKDocDate);
             this.gbHeader.Controls.Add(this.lblPKNumber);
             this.gbHeader.Controls.Add(this.txtPKNumber);
             this.gbHeader.Location = new System.Drawing.Point(11, 3);
@@ -146,6 +150,25 @@
             this.gbHeader.Size = new System.Drawing.Size(1314, 99);
             this.gbHeader.TabIndex = 3;
             this.gbHeader.TabStop = false;
+            // 
+            // lbltxtStatus
+            // 
+            this.lbltxtStatus.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lbltxtStatus.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbltxtStatus.Location = new System.Drawing.Point(146, 33);
+            this.lbltxtStatus.Name = "lbltxtStatus";
+            this.lbltxtStatus.Size = new System.Drawing.Size(65, 20);
+            this.lbltxtStatus.TabIndex = 22;
+            this.lbltxtStatus.Text = "XX";
+            // 
+            // sbFinishPK
+            // 
+            this.sbFinishPK.ImageOptions.ImageUri.Uri = "Apply";
+            this.sbFinishPK.Location = new System.Drawing.Point(23, 59);
+            this.sbFinishPK.Name = "sbFinishPK";
+            this.sbFinishPK.Size = new System.Drawing.Size(166, 32);
+            this.sbFinishPK.TabIndex = 21;
+            this.sbFinishPK.Text = "Close and generate DN/Inv";
             // 
             // slueCurrency
             // 
@@ -254,15 +277,16 @@
             this.lblPKDeliveryWeek.TabIndex = 8;
             this.lblPKDeliveryWeek.Text = "XX";
             // 
-            // lblPKCreationWeek
+            // lblPKDocDateWeek
             // 
-            this.lblPKCreationWeek.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblPKCreationWeek.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lblPKCreationWeek.Location = new System.Drawing.Point(544, 33);
-            this.lblPKCreationWeek.Name = "lblPKCreationWeek";
-            this.lblPKCreationWeek.Size = new System.Drawing.Size(65, 20);
-            this.lblPKCreationWeek.TabIndex = 7;
-            this.lblPKCreationWeek.Text = "XX";
+            this.lblPKDocDateWeek.AccessibleRole = System.Windows.Forms.AccessibleRole.Animation;
+            this.lblPKDocDateWeek.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblPKDocDateWeek.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lblPKDocDateWeek.Location = new System.Drawing.Point(544, 33);
+            this.lblPKDocDateWeek.Name = "lblPKDocDateWeek";
+            this.lblPKDocDateWeek.Size = new System.Drawing.Size(65, 20);
+            this.lblPKDocDateWeek.TabIndex = 7;
+            this.lblPKDocDateWeek.Text = "XX";
             // 
             // lblDate
             // 
@@ -285,18 +309,18 @@
             this.dateEditPKDelivery.Size = new System.Drawing.Size(106, 20);
             this.dateEditPKDelivery.TabIndex = 5;
             // 
-            // dateEditPKCreation
+            // dateEditPKDocDate
             // 
-            this.dateEditPKCreation.EditValue = null;
-            this.dateEditPKCreation.Location = new System.Drawing.Point(432, 33);
-            this.dateEditPKCreation.MenuManager = this.ribbonControl;
-            this.dateEditPKCreation.Name = "dateEditPKCreation";
-            this.dateEditPKCreation.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditPKDocDate.EditValue = null;
+            this.dateEditPKDocDate.Location = new System.Drawing.Point(432, 33);
+            this.dateEditPKDocDate.MenuManager = this.ribbonControl;
+            this.dateEditPKDocDate.Name = "dateEditPKDocDate";
+            this.dateEditPKDocDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditPKCreation.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditPKDocDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditPKCreation.Size = new System.Drawing.Size(106, 20);
-            this.dateEditPKCreation.TabIndex = 4;
+            this.dateEditPKDocDate.Size = new System.Drawing.Size(106, 20);
+            this.dateEditPKDocDate.TabIndex = 4;
             // 
             // lblPKDelivery
             // 
@@ -306,13 +330,13 @@
             this.lblPKDelivery.TabIndex = 3;
             this.lblPKDelivery.Text = "DELIVERY";
             // 
-            // lblPKCreation
+            // lblPKDocDate
             // 
-            this.lblPKCreation.Location = new System.Drawing.Point(357, 34);
-            this.lblPKCreation.Name = "lblPKCreation";
-            this.lblPKCreation.Size = new System.Drawing.Size(52, 13);
-            this.lblPKCreation.TabIndex = 2;
-            this.lblPKCreation.Text = "CREATION";
+            this.lblPKDocDate.Location = new System.Drawing.Point(357, 34);
+            this.lblPKDocDate.Name = "lblPKDocDate";
+            this.lblPKDocDate.Size = new System.Drawing.Size(52, 13);
+            this.lblPKDocDate.TabIndex = 2;
+            this.lblPKDocDate.Text = "CREATION";
             // 
             // lblPKNumber
             // 
@@ -429,25 +453,6 @@
             this.xtpTerms.Name = "xtpTerms";
             this.xtpTerms.Size = new System.Drawing.Size(1308, 438);
             this.xtpTerms.Text = "TERMS";
-            // 
-            // xtcGeneral
-            // 
-            this.xtcGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtcGeneral.Location = new System.Drawing.Point(0, 79);
-            this.xtcGeneral.Name = "xtcGeneral";
-            this.xtcGeneral.SelectedTabPage = this.xtpPakingList;
-            this.xtcGeneral.Size = new System.Drawing.Size(1338, 605);
-            this.xtcGeneral.TabIndex = 5;
-            this.xtcGeneral.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtpPakingList});
-            // 
-            // xtpPakingList
-            // 
-            this.xtpPakingList.Controls.Add(this.gbHeader);
-            this.xtpPakingList.Controls.Add(this.xtcPK);
-            this.xtpPakingList.Name = "xtpPakingList";
-            this.xtpPakingList.Size = new System.Drawing.Size(1332, 577);
-            this.xtpPakingList.Text = "PACKING LIST";
             // 
             // sluePaymentTerm
             // 
@@ -571,6 +576,25 @@
             this.lblCompany.TabIndex = 16;
             this.lblCompany.Text = "Company:";
             // 
+            // xtcGeneral
+            // 
+            this.xtcGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtcGeneral.Location = new System.Drawing.Point(0, 79);
+            this.xtcGeneral.Name = "xtcGeneral";
+            this.xtcGeneral.SelectedTabPage = this.xtpPakingList;
+            this.xtcGeneral.Size = new System.Drawing.Size(1338, 605);
+            this.xtcGeneral.TabIndex = 5;
+            this.xtcGeneral.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtpPakingList});
+            // 
+            // xtpPakingList
+            // 
+            this.xtpPakingList.Controls.Add(this.gbHeader);
+            this.xtpPakingList.Controls.Add(this.xtcPK);
+            this.xtpPakingList.Name = "xtpPakingList";
+            this.xtpPakingList.Size = new System.Drawing.Size(1332, 577);
+            this.xtpPakingList.Text = "PACKING LIST";
+            // 
             // PackingList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -594,8 +618,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditPKDelivery.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditPKDelivery.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditPKCreation.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditPKCreation.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditPKDocDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditPKDocDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPKNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcPK)).EndInit();
             this.xtcPK.ResumeLayout(false);
@@ -608,11 +632,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.xgrdLinesDeliveredGoods)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLinesDeliveredGoods)).EndInit();
             this.xtpTerms.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sluePaymentTerm.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).EndInit();
             this.xtcGeneral.ResumeLayout(false);
             this.xtpPakingList.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sluePaymentTerm.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -627,12 +651,12 @@
         private DevExpress.XtraEditors.LabelControl lblCustomer;
         private DevExpress.XtraEditors.LabelControl lblWeek;
         private DevExpress.XtraEditors.LabelControl lblPKDeliveryWeek;
-        private DevExpress.XtraEditors.LabelControl lblPKCreationWeek;
+        private DevExpress.XtraEditors.LabelControl lblPKDocDateWeek;
         private DevExpress.XtraEditors.LabelControl lblDate;
         private DevExpress.XtraEditors.DateEdit dateEditPKDelivery;
-        private DevExpress.XtraEditors.DateEdit dateEditPKCreation;
+        private DevExpress.XtraEditors.DateEdit dateEditPKDocDate;
         private DevExpress.XtraEditors.LabelControl lblPKDelivery;
-        private DevExpress.XtraEditors.LabelControl lblPKCreation;
+        private DevExpress.XtraEditors.LabelControl lblPKDocDate;
         private DevExpress.XtraEditors.LabelControl lblPKNumber;
         private DevExpress.XtraEditors.TextEdit txtPKNumber;
         private DevExpress.XtraTab.XtraTabControl xtcPK;
@@ -666,5 +690,7 @@
         private DevExpress.XtraEditors.LabelControl lblContact;
         private DevExpress.XtraEditors.LabelControl lblAddress;
         private DevExpress.XtraEditors.LabelControl lblCompany;
+        private DevExpress.XtraEditors.SimpleButton sbFinishPK;
+        private DevExpress.XtraEditors.LabelControl lbltxtStatus;
     }
 }

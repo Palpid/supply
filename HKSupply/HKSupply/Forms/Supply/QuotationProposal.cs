@@ -56,6 +56,7 @@ namespace HKSupply.Forms.Supply
         BindingList<DocLine> _docLinesList;
         DocHead _docHeadQP;
         DocHead _docHeadAssociatedPO;
+        DocHead _docHeadAssociatedSO;
 
         int _totalQuantityBomMt;
         int _totalQuantityBomHw;
@@ -121,6 +122,15 @@ namespace HKSupply.Forms.Supply
         public override void bbiCancel_ItemClick(object sender, ItemClickEventArgs e)
         {
             base.bbiCancel_ItemClick(sender, e);
+
+            try
+            {
+                ActionsAfterCU();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public override void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
@@ -132,8 +142,10 @@ namespace HKSupply.Forms.Supply
                 if (_docLinesList?.Count > 0)
                     ConfigureRibbonActionsEditing();
                 else
+                {
                     MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
-
+                    RestoreInitState();
+                }
             }
             catch (Exception ex)
             {
@@ -165,7 +177,11 @@ namespace HKSupply.Forms.Supply
                 }
 
                 if (res == true)
+                {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
                     ActionsAfterCU();
+                }
+                    
 
             }
             catch (Exception ex)
@@ -175,6 +191,67 @@ namespace HKSupply.Forms.Supply
             finally
             {
                 Cursor = Cursors.Default;
+            }
+        }
+
+        public override void bbiExportCsv_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+            if (gridViewLines.DataRowCount == 0)
+            {
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
+                return;
+            }
+
+            //Abre el dialog de save as
+            base.bbiExportCsv_ItemClick(sender, e);
+
+            try
+            {
+                if (string.IsNullOrEmpty(ExportCsvFile) == false)
+                {
+                    gridViewLines.ExportToCsv(ExportCsvFile);
+
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportCsvFile);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public override void bbiExportExcel_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (gridViewLines.DataRowCount == 0)
+            {
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
+                return;
+            }
+
+            //Abre el dialog de save as
+            base.bbiExportExcel_ItemClick(sender, e);
+
+            try
+            {
+                if (string.IsNullOrEmpty(ExportExcelFile) == false)
+                {
+                    gridViewLines.ExportToXlsx(ExportExcelFile);
+
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportExcelFile);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -190,18 +267,26 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                if (dateEditQPCreationDate.EditValue != null || txtQPNumber != null)
+                if (dateEditQPCreationDate.EditValue != null || txtQPNumber.EditValue != null)
                 {
                     SearchQP();
                 }
                 else
                 {
-                    XtraMessageBox.Show("Select a Doc. Date", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    XtraMessageBox.Show("Select a Doc. Date or QP number", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
             {
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void TxtQPNumber_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && txtQPNumber.EditValue != null)
+            {
+                SearchQP();
             }
         }
 
@@ -227,7 +312,11 @@ namespace HKSupply.Forms.Supply
                 }
 
                 if (res == true)
+                {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
                     ActionsAfterCU();
+                }
+                    
 
             }
             catch (Exception ex)
@@ -462,6 +551,23 @@ namespace HKSupply.Forms.Supply
         }
         #endregion
 
+        #region Public Methods
+
+        public void InitData(string idDoc)
+        {
+            try
+            {
+                txtQPNumber.EditValue = idDoc;
+                SearchQP();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        #endregion
+
         #region Private Methods
 
         #region SetUps Form Objects
@@ -554,11 +660,9 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                //TODO
                 sbSearch.Click += SbSearch_Click;
                 sbFinishQP.Click += SbFinishQP_Click;
-                //sbOrder.Click += SbOrder_Click;
-
+                txtQPNumber.KeyDown += TxtQPNumber_KeyDown;
             }
             catch
             {
@@ -616,7 +720,7 @@ namespace HKSupply.Forms.Supply
                 GridColumn colIdItemGroup = new GridColumn() { Caption = "Group", Visible = true, FieldName = nameof(DocLine.IdItemGroup), Width = 100 };
                 GridColumn colIdItemBcn = new GridColumn() { Caption = "Item Code", Visible = true, FieldName = nameof(DocLine.IdItemBcn), Width = 200 };
                 GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = nameof(DocLine.ItemDesc), Width = 350 };
-                GridColumn colBatch = new GridColumn() { Caption = "Batch", Visible = true, FieldName = nameof(DocLine.Batch), Width = 85 };
+                GridColumn colBatch = new GridColumn() { Caption = "Batch", Visible = true, FieldName = nameof(DocLine.Batch), Width = 100 };
                 GridColumn colQuantityOriginal = new GridColumn() { Caption = "Quantity BOM", Visible = true, FieldName = nameof(DocLine.QuantityOriginal), Width = 110 };
                 GridColumn colQuantity = new GridColumn() { Caption = "Quantity", Visible = true, FieldName = nameof(DocLine.Quantity), Width = 85 };
                 GridColumn colUnit = new GridColumn() { Caption = "Unit", Visible = true, FieldName = nameof(DocLine.ItemUnit), Width = 85 };
@@ -721,6 +825,7 @@ namespace HKSupply.Forms.Supply
             try
             {
                 _docHeadAssociatedPO = null;
+                _docHeadAssociatedSO = null;
                 _docHeadQP = null;
                 _docLinesList = null;
                 xgrdLines.DataSource = null;
@@ -735,8 +840,6 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-
-                //_docHeadAssociatedPO = GlobalSetting.SupplyDocsService.GetDoc(_docHeadQP.IdDoc.Replace(Constants.SUPPLY_DOCTYPE_QP,string.Empty));
 
                 if (_docHeadAssociatedPO == null)
                     throw new Exception("Associated PO not found");
@@ -776,7 +879,7 @@ namespace HKSupply.Forms.Supply
                 {
                     case ActionsStates.Edit:
                     case ActionsStates.New:
-                        sbFinishQP.Visible = true;
+                        sbFinishQP.Visible = (_docHeadAssociatedSO == null); //Si ya se ha generado la SO no se puede finalizar de nuevo;
                         sbOrder.Visible = false; // true;
                         sbSearch.Visible = false;
                         break;
@@ -819,6 +922,7 @@ namespace HKSupply.Forms.Supply
                     else
                     {
                         _docHeadAssociatedPO = GlobalSetting.SupplyDocsService.GetDoc(_docHeadQP.IdDocRelated);
+                        _docHeadAssociatedSO = GlobalSetting.SupplyDocsService.GetDocByRelated(_docHeadQP.IdDoc);
                         LoadQP();
                     }
                   
@@ -882,14 +986,8 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                /*
-                //Si no existe Quotation Proposal asociado al PO puede editar practicamente todo y agregar nuevas líneas, 
-                //en caso contrario sólo puede editar cantidades y comentarios y no se pueden agregar líneas nuevas
-                var qp = GlobalSetting.SupplyDocsService.GetDoc($"{Constants.SUPPLY_DOCTYPE_QP}{_docHeadPO.IdDoc}");
-
-                if (qp != null)
-                    _existQP = true;
-                */
+                //
+                txtQPNumber.ReadOnly = true;
                 //Allow edit all columns
                 gridViewLines.OptionsBehavior.Editable = true;
 
@@ -1005,6 +1103,8 @@ namespace HKSupply.Forms.Supply
                 RestoreInitState();
 
                 SetVisiblePropertyByState();
+
+                txtQPNumber.ReadOnly = false;
             }
             catch
             {

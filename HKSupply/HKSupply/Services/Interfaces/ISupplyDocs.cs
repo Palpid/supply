@@ -12,6 +12,7 @@ namespace HKSupply.Services.Interfaces
         List<DocHead> GetDocs(string idDoc, string idSupplier, string idCustomer, DateTime docDateIni, DateTime docDateEnd, string IdSupplyDocType, string idSupplyStatus);
         DocHead NewDoc(DocHead newDoc);
         DocHead GetDoc(string idDoc);
+        DocHead GetDocByRelated(string idDocRelated);
         DocHead UpdateDoc(DocHead doc, bool finishDoc = false);
         List<POSelection> GetPOSelection(string idDocPo, string idSupplyStatus, string idSupplier, DateTime PODateIni, DateTime PODateEnd);
         bool ValidateBomSupplierLines(string idSupplier, List<DocLine> lines , out List<string> itemWithouBom);

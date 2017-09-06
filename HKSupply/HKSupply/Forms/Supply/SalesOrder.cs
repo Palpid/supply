@@ -40,10 +40,6 @@ namespace HKSupply.Forms.Supply
         Font _labelDefaultFont = new Font("SourceSansProRegular", 8, FontStyle.Regular);
 
         List<Customer> _customersList;
-        //List<ItemGroup> _itemGroupList;
-
-        //List<ItemMt> _itemsMtList;
-        //List<ItemHw> _itemsHwList;
 
         List<SupplyStatus> _supplyStatusList;
 
@@ -53,6 +49,11 @@ namespace HKSupply.Forms.Supply
 
         int _totalQuantityMt;
         int _totalQuantityHw;
+
+        /// <summary>
+        /// para guardar líneas que originalmente estaban abiertas, pero al modificar la cantidad quizás se han cancelado/cerrado, pero se pueden modificar
+        /// </summary>
+        List<string> _auxIdItemList = new List<string>(); 
 
         #endregion
 
@@ -177,9 +178,23 @@ namespace HKSupply.Forms.Supply
             try
             {
                 if (_docLinesList?.Count > 0)
-                    ConfigureRibbonActionsEditing();
+                {
+                    if (_docHeadSO.IdSupplyStatus == Constants.SUPPLY_STATUS_OPEN)
+                    {
+                        ConfigureRibbonActionsEditing();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Only Open Docs. can be edited");
+                        RestoreInitState();
+                    }
+                    
+                }
                 else
+                {
                     MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
+                    RestoreInitState();
+                }
             }
             catch (Exception ex)
             {
@@ -204,7 +219,7 @@ namespace HKSupply.Forms.Supply
 
                 if (CurrentState == ActionsStates.Edit)
                 {
-                    res = UpdateSORemarks();
+                    res = UpdateSO();
 
                     if (res == true)
                     {
@@ -265,6 +280,21 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void TxtSONumber_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+               if(e.KeyCode == Keys.Enter && txtSONumber.EditValue !=null)
+                {
+                    SearchSO();
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void GridViewLines_CustomSummaryCalculate(object sender, CustomSummaryEventArgs e)
         {
             try
@@ -315,6 +345,102 @@ namespace HKSupply.Forms.Supply
                             e.TotalValue = _totalQuantityHw;
                             break;
                     }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void GridViewLines_ShowingEditor(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+                DocLine row = view.GetRow(view.FocusedRowHandle) as DocLine;
+
+                switch (view.FocusedColumn.FieldName)
+                {
+                    case nameof(DocLine.Quantity):
+                        if (row.IdSupplyStatus != Constants.SUPPLY_STATUS_OPEN && _auxIdItemList.Contains(row.IdItemBcn) == false) //si está cerrada porque el usuario ha modificado la cantidad si puede modificarla
+                        {
+                            XtraMessageBox.Show("Only Open lines can be edited", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            e.Cancel = true;
+                        }
+                        
+                        break;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void GridViewLines_CellValueChanged(object sender, CellValueChangedEventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+                DocLine row = view.GetRow(e.RowHandle) as DocLine;
+
+                if (row.Quantity == 0)
+                {
+                    if (_auxIdItemList.Contains(row.IdItemBcn) == false) _auxIdItemList.Add(row.IdItemBcn);
+                    row.IdSupplyStatus = Constants.SUPPLY_STATUS_CANCEL;
+                }
+                else if (row.Quantity == row.DeliveredQuantity)
+                {
+                    if (_auxIdItemList.Contains(row.IdItemBcn) == false) _auxIdItemList.Add(row.IdItemBcn);
+                    row.IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE;
+                }
+                else
+                {
+                    row.IdSupplyStatus = Constants.SUPPLY_STATUS_OPEN;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void GridViewLines_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+                DocLine line = view.GetRow(e.RowHandle) as DocLine;
+
+                if (line == null)
+                    return;
+
+                switch(e.Column.FieldName)
+                {
+                    case nameof(DocLine.IdSupplyStatus):
+
+                        switch (line.IdSupplyStatus)
+                        {
+
+                            case Constants.SUPPLY_STATUS_OPEN:
+                                e.Appearance.BackColor = AppStyles.SupplyStatusOpnBKGD1;
+                                e.Appearance.BackColor2 = AppStyles.SupplyStatusOpnBKGD2;
+                                break;
+
+                            case Constants.SUPPLY_STATUS_CLOSE:
+                                e.Appearance.BackColor = AppStyles.SupplyStatusClsBKGD1;
+                                e.Appearance.BackColor2 = AppStyles.SupplyStatusClsBKGD2;
+                                break;
+
+                            case Constants.SUPPLY_STATUS_CANCEL:
+                                e.Appearance.BackColor = AppStyles.SupplyStatusCnlBKGD1;
+                                e.Appearance.BackColor2 = AppStyles.SupplyStatusCnlBKGD2;
+                                break;
+                        }
+
+                        break;
                 }
             }
             catch (Exception ex)
@@ -483,6 +609,7 @@ namespace HKSupply.Forms.Supply
             {
                 sbSearch.Click += SbSearch_Click;
                 txtSONumber.EditValueChanged += TxtSONumber_EditValueChanged;
+                txtSONumber.KeyDown += TxtSONumber_KeyDown;
             }
             catch
             {
@@ -513,6 +640,7 @@ namespace HKSupply.Forms.Supply
                 GridColumn colIdItemGroup = new GridColumn() { Caption = "Type", Visible = true, FieldName = nameof(DocLine.IdItemGroup), Width = 100 };
                 GridColumn colQuantityOriginal = new GridColumn() { Caption = "Quantity Original", Visible = true, FieldName = nameof(DocLine.QuantityOriginal), Width = 120 };
                 GridColumn colQuantity = new GridColumn() { Caption = "Quantity", Visible = true, FieldName = nameof(DocLine.Quantity), Width = 85 };
+                GridColumn colDeliveredQuantity = new GridColumn() { Caption = "Delivered Quantity", Visible = true, FieldName = nameof(DocLine.DeliveredQuantity), Width = 120 };
                 GridColumn colUnit = new GridColumn() { Caption = "Unit", Visible = true, FieldName = nameof(DocLine.ItemUnit), Width = 85 };
                 GridColumn colUnitPrice = new GridColumn() { Caption = "Unit Price", Visible = true, FieldName = nameof(DocLine.UnitPrice), Width = 85 };
                 GridColumn colTotalAmount = new GridColumn() { Caption = "TotalAmount", Visible = true, FieldName = nameof(DocLine.TotalAmount), Width = 120 };
@@ -531,6 +659,9 @@ namespace HKSupply.Forms.Supply
 
                 colQuantity.DisplayFormat.FormatType = FormatType.Numeric;
                 colQuantity.DisplayFormat.FormatString = "n0";
+
+                colDeliveredQuantity.DisplayFormat.FormatType = FormatType.Numeric;
+                colDeliveredQuantity.DisplayFormat.FormatString = "n0";
 
                 //Edit Repositories
 
@@ -553,7 +684,7 @@ namespace HKSupply.Forms.Supply
                 {
                     DataSource = _supplyStatusList,
                     ValueMember = nameof(SupplyStatus.IdSupplyStatus),
-                    DisplayMember = nameof(SupplyStatus.IdSupplyStatus),
+                    DisplayMember = nameof(SupplyStatus.Description),
                     ShowClearButton = false,
                     NullText = string.Empty,
                 };
@@ -574,6 +705,7 @@ namespace HKSupply.Forms.Supply
                 gridViewLines.Columns.Add(colIdItemGroup);
                 gridViewLines.Columns.Add(colQuantityOriginal);
                 gridViewLines.Columns.Add(colQuantity);
+                gridViewLines.Columns.Add(colDeliveredQuantity);
                 gridViewLines.Columns.Add(colUnit);
                 gridViewLines.Columns.Add(colUnitPrice);
                 gridViewLines.Columns.Add(colTotalAmount);
@@ -582,6 +714,9 @@ namespace HKSupply.Forms.Supply
 
                 //Events
                 gridViewLines.CustomSummaryCalculate += GridViewLines_CustomSummaryCalculate;
+                gridViewLines.ShowingEditor += GridViewLines_ShowingEditor;
+                gridViewLines.CellValueChanged += GridViewLines_CellValueChanged;
+                gridViewLines.RowCellStyle += GridViewLines_RowCellStyle;
             }
             catch
             {
@@ -613,6 +748,8 @@ namespace HKSupply.Forms.Supply
                 _docHeadSO = null;
                 _docLinesList = null;
                 xgrdLines.DataSource = null;
+
+                _auxIdItemList = new List<string>();
             }
             catch
             {
@@ -775,17 +912,40 @@ namespace HKSupply.Forms.Supply
 
         #region CRUD
 
-        private bool UpdateSORemarks()
+        private bool UpdateSO()
         {
             try
             {
                 var lines = _docLinesList.ToList();
-                return GlobalSetting.SupplyDocsService.UpdateLinesRemarks(lines);
+
+                DocHead salesOrder = new DocHead()
+                {
+                    IdDoc = _docHeadSO.IdDoc,
+                    IdSupplyDocType = _docHeadSO.IdSupplyDocType,
+                    CreationDate = _docHeadSO.CreationDate,
+                    DeliveryDate = _docHeadSO.DeliveryDate,
+                    DocDate = _docHeadSO.DocDate,
+                    IdSupplyStatus = _docHeadSO.IdSupplyStatus,
+                    IdSupplier = _docHeadSO.IdSupplier,
+                    IdCustomer = _docHeadSO.IdCustomer,
+                    IdDeliveryTerm = _docHeadSO.IdDeliveryTerm,
+                    IdPaymentTerms = _docHeadSO.IdPaymentTerms,
+                    IdCurrency = _docHeadSO.IdCurrency,
+                    Lines = lines
+                };
+
+                DocHead updatedDoc = GlobalSetting.SupplyDocsService.UpdateDoc(salesOrder);
+                _docHeadSO = updatedDoc;
+
+                return true;
             }
             catch
             {
                 throw;
             }
+
+            
+
         }
 
         private void ActionsAfterCU()
@@ -794,6 +954,8 @@ namespace HKSupply.Forms.Supply
             {
                 //Reload Sales Order
                 SearchSO();
+
+                gridViewLines.OptionsBehavior.Editable = false;
 
                 //Restore de ribbon to initial states
                 RestoreInitState();

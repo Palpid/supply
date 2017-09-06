@@ -1,5 +1,6 @@
 ﻿using DevExpress.Utils;
 using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
@@ -7,6 +8,7 @@ using HKSupply.Classes;
 using HKSupply.General;
 using HKSupply.Models;
 using HKSupply.Models.Supply;
+using HKSupply.Styles;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,11 +18,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraBars;
 
 namespace HKSupply.Forms.Supply
 {
     public partial class PurchaseOrderSelection : RibbonFormBase
     {
+        #region Colors
+        private static Color Percent100BKGD1 = Color.Green;
+        private static Color Percent100BKGD2 = Color.LightGreen;
+
+        private static Color PercentMore50BKGD1 = Color.DarkOrange;
+        private static Color PercentMore50BKGD2 = Color.Orange;
+
+        private static Color PercentLess50BKGD1 = Color.Red;
+        private static Color PercentLess50BKGD2 = Color.OrangeRed;
+        #endregion
+
         #region Private Members
 
         Font _labelDefaultFontBold = new Font("SourceSansProRegular", 8, FontStyle.Bold);
@@ -80,6 +94,67 @@ namespace HKSupply.Forms.Supply
                 throw ex;
             }
         }
+
+        public override void bbiExportCsv_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (gridViewLines.DataRowCount == 0)
+            {
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
+                return;
+            }
+
+            //Abre el dialog de save as
+            base.bbiExportCsv_ItemClick(sender, e);
+
+            try
+            {
+                if (string.IsNullOrEmpty(ExportCsvFile) == false)
+                {
+                    gridViewLines.ExportToCsv(ExportCsvFile);
+
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportCsvFile);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public override void bbiExportExcel_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (gridViewLines.DataRowCount == 0)
+            {
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
+                return;
+            }
+
+            //Abre el dialog de save as
+            base.bbiExportExcel_ItemClick(sender, e);
+
+            try
+            {
+                if (string.IsNullOrEmpty(ExportExcelFile) == false)
+                {
+                    gridViewLines.ExportToXlsx(ExportExcelFile);
+
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportExcelFile);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         #endregion
 
         #region Form Events
@@ -112,6 +187,68 @@ namespace HKSupply.Forms.Supply
                 if (po != null)
                 {
                     OpenPoForm(po);
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void GridViewLines_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            try
+            {
+                GridView View = sender as GridView;
+                POSelection line = View.GetRow(e.RowHandle) as POSelection;
+
+                if (line == null)
+                    return;
+
+                switch(e.Column.FieldName)
+                {
+                    case nameof(POSelection.DocStatus):
+
+                        switch (line.DocStatus)
+                        {
+                            case Constants.SUPPLY_STATUS_OPEN:
+                                e.Appearance.BackColor = AppStyles.SupplyStatusOpnBKGD1;
+                                e.Appearance.BackColor2 = AppStyles.SupplyStatusOpnBKGD2;
+                                break;
+
+                            case Constants.SUPPLY_STATUS_CLOSE:
+                                e.Appearance.BackColor = AppStyles.SupplyStatusClsBKGD1;
+                                e.Appearance.BackColor2 = AppStyles.SupplyStatusClsBKGD2;
+                                break;
+
+                            case Constants.SUPPLY_STATUS_CANCEL:
+                                e.Appearance.BackColor = AppStyles.SupplyStatusCnlBKGD1;
+                                e.Appearance.BackColor2 = AppStyles.SupplyStatusCnlBKGD2;
+                                break;
+                        }
+
+                        break;
+
+                    case nameof(POSelection.Fulfillment):
+
+                        if(line.Fulfillment == 100)
+                        {
+                            e.Appearance.BackColor = Percent100BKGD1;
+                            e.Appearance.BackColor2 = Percent100BKGD2;
+                        }
+                        else if (line.Fulfillment >= 50)
+                        {
+                            e.Appearance.BackColor = PercentMore50BKGD1;
+                            e.Appearance.BackColor2 = PercentMore50BKGD2;
+                        }
+                        else if (line.Fulfillment < 50)
+                        {
+                            e.Appearance.BackColor = PercentLess50BKGD1;
+                            e.Appearance.BackColor2 = PercentLess50BKGD2;
+                        }
+
+                        break;
+
                 }
             }
             catch (Exception ex)
@@ -276,12 +413,13 @@ namespace HKSupply.Forms.Supply
                 GridColumn colTotalAmount = new GridColumn() { Caption = "Total Amount", Visible = true, FieldName = nameof(POSelection.TotalAmount), Width = 100 };
                 GridColumn colFulfillment = new GridColumn() { Caption = "% Fulfillment", Visible = true, FieldName = nameof(POSelection.Fulfillment), Width = 100 };
 
+                //Text alignment
+                colDocStatus.AppearanceCell.Options.UseTextOptions = true; //Sin esto ignora el alignment, ya que por defecto está a false el use text options
+                colDocStatus.AppearanceCell.TextOptions.HAlignment = HorzAlignment.Center;
+
                 //Display Format
                 colTotalAmount.DisplayFormat.FormatType = FormatType.Numeric;
                 colTotalAmount.DisplayFormat.FormatString = "n2";
-
-                colFulfillment.DisplayFormat.FormatType = FormatType.Numeric;
-                colFulfillment.DisplayFormat.FormatString = "n2";
 
                 colOriginalQuantity.DisplayFormat.FormatType = FormatType.Numeric;
                 colOriginalQuantity.DisplayFormat.FormatString = "n0";
@@ -297,6 +435,13 @@ namespace HKSupply.Forms.Supply
 
                 colPendingQuantity.DisplayFormat.FormatType = FormatType.Numeric;
                 colPendingQuantity.DisplayFormat.FormatString = "n0";
+
+                //Repositories
+                RepositoryItemSpinEdit riPercent = new RepositoryItemSpinEdit();
+                riPercent.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                riPercent.Mask.EditMask = "P";
+                riPercent.Mask.UseMaskAsDisplayFormat = true;
+                colFulfillment.ColumnEdit = riPercent;
 
                 //Add columns to grid root view
                 gridViewLines.Columns.Add(colPoNumber);
@@ -315,6 +460,7 @@ namespace HKSupply.Forms.Supply
 
                 //Events
                 gridViewLines.DoubleClick += GridViewLines_DoubleClick;
+                gridViewLines.RowCellStyle += GridViewLines_RowCellStyle;
 
             }
             catch

@@ -109,7 +109,7 @@ namespace HKSupply.Forms.Supply
 
             try
             {
-
+                CancelEdit();
             }
             catch (Exception ex)
             {
@@ -126,8 +126,10 @@ namespace HKSupply.Forms.Supply
                 if (_docLinesList?.Count > 0)
                     ConfigureRibbonActionsEditing();
                 else
+                {
                     MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
-
+                    RestoreInitState();
+                }
             }
             catch (Exception ex)
             {
@@ -178,6 +180,7 @@ namespace HKSupply.Forms.Supply
 
                 if (res == true)
                 {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
                     ActionsAfterCU();
                 }
 
@@ -189,6 +192,66 @@ namespace HKSupply.Forms.Supply
             finally
             {
                 Cursor = Cursors.Default;
+            }
+        }
+
+        public override void bbiExportCsv_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (gridViewLines.DataRowCount == 0)
+            {
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
+                return;
+            }
+
+            //Abre el dialog de save as
+            base.bbiExportCsv_ItemClick(sender, e);
+
+            try
+            {
+                if (string.IsNullOrEmpty(ExportCsvFile) == false)
+                {
+                    gridViewLines.ExportToCsv(ExportCsvFile);
+
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportCsvFile);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public override void bbiExportExcel_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (gridViewLines.DataRowCount == 0)
+            {
+                MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
+                return;
+            }
+
+            //Abre el dialog de save as
+            base.bbiExportExcel_ItemClick(sender, e);
+
+            try
+            {
+                if (string.IsNullOrEmpty(ExportExcelFile) == false)
+                {
+                    gridViewLines.ExportToXlsx(ExportExcelFile);
+
+                    DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(ExportExcelFile);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -344,6 +407,7 @@ namespace HKSupply.Forms.Supply
 
                 if (res == true)
                 {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
                     ActionsAfterCU();
                 }
 
@@ -1019,7 +1083,7 @@ namespace HKSupply.Forms.Supply
 
         #endregion
 
-        #region Random
+        #region Aux
 
         private void SearchPO()
         {
@@ -1427,6 +1491,33 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void CancelEdit()
+        {
+            try
+            {
+                dateEditDocDate.ReadOnly = false;
+                slueSupplier.ReadOnly = false;
+
+                string idPO = _docHeadPO?.IdDoc;
+
+                ResetPO();
+
+                if (idPO != null )
+                {
+                    _docHeadPO = GlobalSetting.SupplyDocsService.GetDoc(idPO);
+                    LoadPO();
+                }
+
+                //Restore de ribbon to initial states
+                RestoreInitState();
+
+                SetVisiblePropertyByState();
+            }
+            catch
+            {
+                throw;
+            }
+        }
         #endregion
 
         #region Configure Ribbon Actions
@@ -1443,6 +1534,9 @@ namespace HKSupply.Forms.Supply
                 slueSupplier.EditValue = null;
                 slueDeliveryTerms.EditValue = null;
                 slueCurrency.EditValue = null;
+
+                slueSupplier.ReadOnly = false;
+                dateEditDocDate.ReadOnly = false;
 
 
                 _docLinesList = new BindingList<DocLine>();
