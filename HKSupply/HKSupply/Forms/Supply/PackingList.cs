@@ -74,6 +74,7 @@ namespace HKSupply.Forms.Supply
         int _totalQuantityMtDeliveredGoods;
         int _totalQuantityHwDeliveredGoods;
 
+        bool _isLoadingPacking = false;
         #endregion
 
         #region Constructor
@@ -88,13 +89,13 @@ namespace HKSupply.Forms.Supply
                 ConfigureRibbonActions();
                 LoadAuxList();
                 SetUpLabels();
+                SetObjectsReadOnly();
                 SetUpButtons();
                 SetUpSearchLookUpEdit();
                 SetUpEvents();
                 SetUpGrdSoSelection();
                 SetUpGrdLinesSoSelection();
                 SetUpGrdLinesDeliveredGoods();
-
                 SetVisiblePropertyByState();
             }
             catch (Exception ex)
@@ -135,7 +136,16 @@ namespace HKSupply.Forms.Supply
         public override void bbiCancel_ItemClick(object sender, ItemClickEventArgs e)
         {
             base.bbiCancel_ItemClick(sender, e);
-           
+
+            try
+            {
+                CancelEdit();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         public override void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
@@ -171,12 +181,23 @@ namespace HKSupply.Forms.Supply
 
             try
             {
-                if(gridViewSoSelection.DataRowCount == 0)
+                if(slueCustomer.EditValue == null)
                 {
-                    MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
+                    MessageBox.Show("Select a customer");
                     RestoreInitState();
                 }
-                else if(ValidateIfExistOpenPK() == false)
+                else
+                {
+                    //buscamos las SO abiertas del customer
+                    SearchCustomersSOs();
+                }
+
+                if(gridViewSoSelection.DataRowCount == 0)
+                {
+                    //Si no ha cargado datos SO restauramos el estado inicial
+                    RestoreInitState();
+                }
+                else if(ValidateIfExistOpenPK() == false) //validamos 
                 {
                     RestoreInitState();
                 }
@@ -370,6 +391,7 @@ namespace HKSupply.Forms.Supply
                     if (res == true)
                     {
                         MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
+                        ShowMessageDocsGenerated();
                         ActionsAfterCU();
                     }
 
@@ -747,6 +769,14 @@ namespace HKSupply.Forms.Supply
             {
                 if(slueCustomer.EditValue != null)
                 {
+                    if (_isLoadingPacking == false)
+                    {
+                        var customer = slueCustomer.EditValue;
+                        ResetPK();
+                        ResetFormChangeCustomer();
+                        slueCustomer.EditValue = customer;
+                    }
+
                     SetCustomerInfo();
                 }
             }
@@ -755,8 +785,6 @@ namespace HKSupply.Forms.Supply
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
         #endregion
 
         #region Public Methods
@@ -858,6 +886,7 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                _isLoadingPacking = true;
                 ResetPK();
                 ResetForm();
 
@@ -882,6 +911,10 @@ namespace HKSupply.Forms.Supply
             {
                 throw;
             }
+            finally
+            {
+                _isLoadingPacking = false;
+            }
         }
 
         private void LoadPK()
@@ -904,7 +937,11 @@ namespace HKSupply.Forms.Supply
                 lblPKDeliveryWeek.Text = dateEditPKDelivery.DateTime.GetWeek().ToString();
 
                 //***** Grid SO Selection *****/
-                SearchCustomersSOs();
+                ResetCustomerSOs();
+                var packingSOs = GlobalSetting.SupplyDocsService.GetSalesOrderFromPackingList(_docHeadPK.IdDoc);
+                _docSoSelectionList = new BindingList<DocHead>(packingSOs);
+                xgrdSoSelection.DataSource = null;
+                xgrdSoSelection.DataSource = _docSoSelectionList;
 
                 //***** Grid Delivered Goods*****/
                 _docLinesDeliveredGoodsList = new BindingList<DocLine>(_docHeadPK.Lines);
@@ -919,8 +956,6 @@ namespace HKSupply.Forms.Supply
                 lblTxtShipTo.Text = "??"; //TODO
                 lblTxtInvoiceTo.Text = "??"; //TODO
                 sluePaymentTerm.EditValue = _docHeadPK.IdPaymentTerms;
-
-
 
             }
             catch
@@ -1012,6 +1047,22 @@ namespace HKSupply.Forms.Supply
                 txtPKNumber.Properties.Appearance.BackColor = Color.CadetBlue;
                 txtPKNumber.Properties.Appearance.BackColor2 = Color.CadetBlue;
 
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void SetObjectsReadOnly()
+        {
+            try
+            {
+                dateEditPKDocDate.ReadOnly = true;
+                dateEditPKDelivery.ReadOnly = true;
+                slueDeliveryTerms.ReadOnly = true;
+                slueCurrency.ReadOnly = true;
+                sluePaymentTerm.ReadOnly = true;
             }
             catch
             {
@@ -1404,7 +1455,7 @@ namespace HKSupply.Forms.Supply
             }
         }
 
-        private void ResetForm()
+        private void ResetForm(bool resetCustomer = true)
         {
             try
             {
@@ -1414,7 +1465,35 @@ namespace HKSupply.Forms.Supply
                 dateEditPKDelivery.EditValue = null;
                 lblPKDocDateWeek.Text = string.Empty;
                 lblPKDeliveryWeek.Text = string.Empty;
-                slueCustomer.EditValue = null;
+                if (resetCustomer) slueCustomer.EditValue = null;
+                slueDeliveryTerms.EditValue = null;
+                slueCurrency.EditValue = null;
+
+                /********* Terms Tab *********/
+                lblTxtCompany.Text = string.Empty;
+                lblTxtAddress.Text = string.Empty;
+                lblTxtContact.Text = string.Empty;
+                lblTxtShipTo.Text = string.Empty;
+                lblTxtInvoiceTo.Text = string.Empty;
+                sluePaymentTerm.EditValue = null;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void ResetFormChangeCustomer(bool resetCustomer = true)
+        {
+            try
+            {
+                /********* Head *********/
+                txtPKNumber.EditValue = null;
+                lbltxtStatus.Text = string.Empty;
+                dateEditPKDocDate.EditValue = null;
+                dateEditPKDelivery.EditValue = null;
+                lblPKDocDateWeek.Text = string.Empty;
+                lblPKDeliveryWeek.Text = string.Empty;
                 slueDeliveryTerms.EditValue = null;
                 slueCurrency.EditValue = null;
 
@@ -1605,6 +1684,57 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void CancelEdit()
+        {
+            try
+            {
+                txtPKNumber.ReadOnly = false;
+                slueCustomer.ReadOnly = false;
+
+                string idPk = _docHeadPK?.IdDoc;
+                ResetPK();
+                ResetForm();
+
+                if(idPk != null)
+                {
+                    txtPKNumber.Text = idPk;
+                    SearchPK();
+                }
+                RestoreInitState();
+                SetVisiblePropertyByState();
+            }
+            catch
+            {
+                throw;
+            }
+
+        }
+
+        private void ShowMessageDocsGenerated()
+        {
+            try
+            {
+                var docs = GlobalSetting.SupplyDocsService.GetDocsByRelated(_docHeadPK.IdDoc);
+
+                if (docs.Count > 0)
+                {
+                    string msg = "The Following documents have been created:" + Environment.NewLine;
+
+                    foreach (var doc in docs)
+                    {
+                        msg += $"{doc.IdDoc} ({doc.SupplyDocType.Description}){Environment.NewLine}";
+                    }
+
+                    XtraMessageBox.Show(msg);
+                }
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         #endregion
 
         #region Configure Ribbon Actions
@@ -1614,7 +1744,7 @@ namespace HKSupply.Forms.Supply
             try
             {
                 slueCustomer.ReadOnly = true;
-                dateEditPKDocDate.ReadOnly = true;
+                dateEditPKDocDate.EditValue = DateTime.Now;
 
                 //clean necessary objects
                 Reset4NewPk();
@@ -1643,7 +1773,26 @@ namespace HKSupply.Forms.Supply
             {
                 txtPKNumber.ReadOnly = true;
                 slueCustomer.ReadOnly = true;
-                dateEditPKDocDate.ReadOnly = true;
+
+                //cargamos las SO abiertas de ese customer aparte de las que incluye el packing a editar
+                var soDocsCustomer = GlobalSetting.SupplyDocsService.GetDocs(
+                    idSupplier: null,
+                    idCustomer: slueCustomer.EditValue as string,
+                    docDate: new DateTime(1, 1, 1),  //filtrar sin fecha
+                    IdSupplyDocType: Constants.SUPPLY_DOCTYPE_SO,
+                    idSupplyStatus: Constants.SUPPLY_STATUS_OPEN);
+
+                if (soDocsCustomer.Count != 0)
+                {
+                    //Con el union hace el merge y descarta duplicados
+                    _docSoSelectionList = new BindingList<DocHead>(_docSoSelectionList.Union(soDocsCustomer).ToList());
+                }
+                xgrdSoSelection.DataSource = null;
+                xgrdSoSelection.DataSource = _docSoSelectionList;
+
+                xgrdLinesSoSelection.DataSource = null;
+
+
                 SetGridsEnabled(); //habilitar los grids para edición
                 SetVisiblePropertyByState();
 
@@ -1665,13 +1814,17 @@ namespace HKSupply.Forms.Supply
                 ResetCustomerSOs();
 
                 string customer = slueCustomer.EditValue as string;
-                DateTime pkDocDate = dateEditPKDocDate.DateTime;
 
-                var soDocsCustomer = GlobalSetting.SupplyDocsService.GetDocs(idSupplier: null, idCustomer: customer, docDate: pkDocDate, IdSupplyDocType: Constants.SUPPLY_DOCTYPE_SO, idSupplyStatus: null);
+                var soDocsCustomer = GlobalSetting.SupplyDocsService.GetDocs(
+                    idSupplier: null, 
+                    idCustomer: customer, 
+                    docDate: new DateTime(1, 1, 1),  //filtrar sin fecha
+                    IdSupplyDocType: Constants.SUPPLY_DOCTYPE_SO, 
+                    idSupplyStatus: Constants.SUPPLY_STATUS_OPEN);
 
                 if (soDocsCustomer.Count == 0)
                 {
-                    XtraMessageBox.Show("No Customer's Sales Orders Found", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    XtraMessageBox.Show("No Customer's Sales Orders open found", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -1693,8 +1846,9 @@ namespace HKSupply.Forms.Supply
             {
                 var exist = GlobalSetting.SupplyDocsService.GetDocs(
                     idSupplier: Constants.ETNIA_HK_COMPANY_CODE, 
-                    idCustomer: (string)slueCustomer.EditValue, 
-                    docDate: dateEditPKDocDate.DateTime, 
+                    idCustomer: (string)slueCustomer.EditValue,
+                    //docDate: dateEditPKDocDate.DateTime, 
+                    docDate: new DateTime(1, 1, 1),
                     IdSupplyDocType: Constants.SUPPLY_DOCTYPE_PK, 
                     idSupplyStatus: Constants.SUPPLY_STATUS_OPEN);
 

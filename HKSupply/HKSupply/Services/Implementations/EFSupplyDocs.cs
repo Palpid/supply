@@ -35,6 +35,7 @@ namespace HKSupply.Services.Implementations
                     DocHead doc =  db.DocsHead
                         .Where(a => a.IdDoc.Equals(idDoc))
                         .Include(l => l.Lines)
+                        .Include(s => s.SupplyDocType)
                         .FirstOrDefault();
 
                     if (doc != null)
@@ -102,6 +103,7 @@ namespace HKSupply.Services.Implementations
                     DocHead doc = db.DocsHead
                         .Where(a => a.IdDocRelated.Equals(idDocRelated))
                         .Include(l => l.Lines)
+                        .Include(s => s.SupplyDocType)
                         .FirstOrDefault();
 
                     if (doc != null)
@@ -157,6 +159,78 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        public List<DocHead> GetDocsByRelated(string idDocRelated)
+        {
+            try
+            {
+                if (idDocRelated == null)
+                    throw new ArgumentNullException(nameof(idDocRelated));
+
+                using (var db = new HKSupplyContext())
+                {
+                    var docs = db.DocsHead
+                        .Where(a => a.IdDocRelated.Equals(idDocRelated))
+                        .Include(l => l.Lines)
+                        .Include(s => s.SupplyDocType)
+                        .ToList();
+
+                    if (docs.Count > 0)
+                    {
+                        foreach (var doc in docs)
+                        {
+                            foreach (var line in doc.Lines)
+                            {
+                                line.LineState = DocLine.LineStates.Loaded;
+
+                                switch (line.IdItemGroup)
+                                {
+                                    case Constants.ITEM_GROUP_EY:
+                                        line.Item = GlobalSetting.ItemEyService.GetItem(line.IdItemBcn);
+                                        break;
+
+                                    case Constants.ITEM_GROUP_MT:
+                                        line.Item = GlobalSetting.ItemMtService.GetItem(line.IdItemBcn);
+                                        break;
+
+                                    case Constants.ITEM_GROUP_HW:
+                                        line.Item = GlobalSetting.ItemHwService.GetItem(line.IdItemBcn);
+                                        break;
+                                }
+                            }
+                        }
+
+                    }
+
+                    return docs;
+                }
+            }
+            catch (SqlException sqlex)
+            {
+                for (int i = 0; i < sqlex.Errors.Count; i++)
+                {
+                    _log.Error("Index #" + i + "\n" +
+                        "Message: " + sqlex.Errors[i].Message + "\n" +
+                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                        "Source: " + sqlex.Errors[i].Source + "\n" +
+                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                    switch (sqlex.Errors[i].Number)
+                    {
+                        case -1: //connection broken
+                        case -2: //timeout
+                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                    }
+                }
+                throw sqlex;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
+            }
+        }
+
         public List<DocHead> GetDocs(string idSupplier, string idCustomer, DateTime docDate, string IdSupplyDocType, string idSupplyStatus)
         {
             try            {
@@ -165,14 +239,17 @@ namespace HKSupply.Services.Implementations
 
                 using (var db = new HKSupplyContext())
                 {
+                    DateTime dateZero = new DateTime(1, 1, 1);
+
                     var docs =  db.DocsHead.Where(d =>
                         (d.IdSupplier.Equals(idSupplier) || string.IsNullOrEmpty(idSupplier)) &&
                         (d.IdCustomer.Equals(idCustomer) || string.IsNullOrEmpty(idCustomer)) &&
                         (d.IdSupplyStatus.Equals(idSupplyStatus) || string.IsNullOrEmpty(idSupplyStatus)) &&
-                        System.Data.Entity.SqlServer.SqlFunctions.DatePart("week", d.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("week", docDate) &&
+                        (System.Data.Entity.SqlServer.SqlFunctions.DatePart("week", d.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("week", docDate) || docDate == dateZero) &&
                         (d.IdSupplyDocType.Equals(IdSupplyDocType))
                         )
                         .Include(l => l.Lines)
+                        .Include(s => s.SupplyDocType)
                         .ToList();
 
                     foreach(var doc in docs)
@@ -246,6 +323,7 @@ namespace HKSupply.Services.Implementations
                         (d.IdSupplyStatus.Equals(idSupplyStatus) || string.IsNullOrEmpty(idSupplyStatus)) 
                         )
                         .Include(l => l.Lines)
+                        .Include(s => s.SupplyDocType)
                         .OrderBy(o => o.DocDate)
                         .ToList();
 
@@ -274,6 +352,73 @@ namespace HKSupply.Services.Implementations
 
                     return docs;
                 }
+            }
+            catch (SqlException sqlex)
+            {
+                for (int i = 0; i < sqlex.Errors.Count; i++)
+                {
+                    _log.Error("Index #" + i + "\n" +
+                        "Message: " + sqlex.Errors[i].Message + "\n" +
+                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                        "Source: " + sqlex.Errors[i].Source + "\n" +
+                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                    switch (sqlex.Errors[i].Number)
+                    {
+                        case -1: //connection broken
+                        case -2: //timeout
+                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                    }
+                }
+                throw sqlex;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
+            }
+        }
+
+        public List<DocHead> GetSalesOrderFromPackingList(string idDocPK)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(idDocPK))
+                    throw new ArgumentNullException(nameof(idDocPK));
+
+                using (var db = new HKSupplyContext())
+                {
+                    var packingSalesOrders = db.DocsLines.Where(a => a.IdDoc.Equals(idDocPK)).Select(b => b.IdDocRelated).ToList();
+
+                    var docs = db.DocsHead.Where(a => packingSalesOrders.Contains(a.IdDoc)).ToList();
+
+                    foreach (var doc in docs)
+                    {
+                        foreach (var line in doc.Lines)
+                        {
+                            line.LineState = DocLine.LineStates.Loaded;
+
+                            switch (line.IdItemGroup)
+                            {
+                                case Constants.ITEM_GROUP_EY:
+                                    line.Item = GlobalSetting.ItemEyService.GetItem(line.IdItemBcn);
+                                    break;
+
+                                case Constants.ITEM_GROUP_MT:
+                                    line.Item = GlobalSetting.ItemMtService.GetItem(line.IdItemBcn);
+                                    break;
+
+                                case Constants.ITEM_GROUP_HW:
+                                    line.Item = GlobalSetting.ItemHwService.GetItem(line.IdItemBcn);
+                                    break;
+                            }
+                        }
+                    }
+
+                    return docs;
+                }
+
             }
             catch (SqlException sqlex)
             {

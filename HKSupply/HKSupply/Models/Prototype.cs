@@ -33,6 +33,9 @@ namespace HKSupply.Models
         [Column("LAUNCH_DATE")]
         public DateTime? LaunchDate { get; set; }
 
+        [Column("ACTIVE")]
+        public bool Active { get; set; }
+
         [Column("CREATE_DATE")]
         public DateTime CreateDate { get; set; }
 
@@ -52,6 +55,7 @@ namespace HKSupply.Models
                 IdDefaultSupplier == prototype.IdDefaultSupplier &&
                 Caliber == prototype.Caliber &&
                 LaunchDate == prototype.LaunchDate &&
+                Active == prototype.Active &&
                 CreateDate == prototype.CreateDate);
 
             return res;
@@ -60,13 +64,14 @@ namespace HKSupply.Models
         public override int GetHashCode()
         {
             int hashCode =
-                (IdPrototype == null ? 0 : IdPrototype.GetHashCode()) + 
-                (PrototypeName == null ? 0 : PrototypeName.GetHashCode()) + 
-                (PrototypeDescription == null ? 0 : PrototypeName.GetHashCode()) + 
-                PrototypeStatus.GetHashCode() + 
-                (IdDefaultSupplier == null ? 0 : IdDefaultSupplier.GetHashCode()) + 
-                (Caliber.GetHashCode()) + 
-                (LaunchDate == null ? 0 : LaunchDate.GetHashCode()) + 
+                (IdPrototype == null ? 0 : IdPrototype.GetHashCode()) +
+                (PrototypeName == null ? 0 : PrototypeName.GetHashCode()) +
+                (PrototypeDescription == null ? 0 : PrototypeName.GetHashCode()) +
+                PrototypeStatus.GetHashCode() +
+                (IdDefaultSupplier == null ? 0 : IdDefaultSupplier.GetHashCode()) +
+                (Caliber.GetHashCode()) +
+                (LaunchDate == null ? 0 : LaunchDate.GetHashCode()) +
+                Active.GetHashCode() +
                 CreateDate.GetHashCode();
 
             return hashCode;

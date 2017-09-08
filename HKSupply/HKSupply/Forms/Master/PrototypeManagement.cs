@@ -314,6 +314,7 @@ namespace HKSupply.Forms.Master
                 GridColumn colCaliber = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Caliber"), Visible = true, FieldName = nameof(Prototype.Caliber), Width = 70 };
                 GridColumn colLaunchDate = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("LaunchDate"), Visible = true, FieldName = nameof(Prototype.LaunchDate), Width = 90 };
                 GridColumn colCreateDate = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("CreateDate"), Visible = true, FieldName = nameof(Prototype.CreateDate), Width = 120 };
+                GridColumn colActive = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Active"), Visible = true, FieldName = nameof(Prototype.Active), Width = 70 };
 
                 //Display Format
                 colLaunchDate.DisplayFormat.FormatType = FormatType.DateTime;
@@ -331,6 +332,7 @@ namespace HKSupply.Forms.Master
                 rootGridViewProtos.Columns.Add(colCaliber);
                 rootGridViewProtos.Columns.Add(colLaunchDate);
                 rootGridViewProtos.Columns.Add(colCreateDate);
+                rootGridViewProtos.Columns.Add(colActive);
 
                 //Events
                 rootGridViewProtos.DoubleClick += RootGridViewProtos_DoubleClick;

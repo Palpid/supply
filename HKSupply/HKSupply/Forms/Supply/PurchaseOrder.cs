@@ -408,6 +408,7 @@ namespace HKSupply.Forms.Supply
                 if (res == true)
                 {
                     MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
+                    ShowMessageDocsGenerated();
                     ActionsAfterCU();
                 }
 
@@ -1012,6 +1013,7 @@ namespace HKSupply.Forms.Supply
                 xgrdLines.DataSource = _docLinesList;
 
                 LoadSelectedSupplierPriceList();
+
             }
             catch
             {
@@ -1512,6 +1514,31 @@ namespace HKSupply.Forms.Supply
                 RestoreInitState();
 
                 SetVisiblePropertyByState();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void ShowMessageDocsGenerated()
+        {
+            try
+            {
+                var docs = GlobalSetting.SupplyDocsService.GetDocsByRelated(_docHeadPO.IdDoc);
+
+                if (docs.Count > 0)
+                {
+                    string msg = "The Following documents have been created:" + Environment.NewLine;
+
+                    foreach(var doc in docs)
+                    {
+                        msg += $"{doc.IdDoc} ({doc.SupplyDocType.Description}){Environment.NewLine}";
+                    }
+
+                    XtraMessageBox.Show(msg);
+                }
+
             }
             catch
             {

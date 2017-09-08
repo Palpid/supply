@@ -314,6 +314,7 @@ namespace HKSupply.Forms.Supply
                 if (res == true)
                 {
                     MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
+                    ShowMessageDocsGenerated();
                     ActionsAfterCU();
                 }
                     
@@ -869,7 +870,7 @@ namespace HKSupply.Forms.Supply
 
         #endregion
 
-        #region Random
+        #region Aux
 
         private void SetVisiblePropertyByState()
         {
@@ -971,6 +972,31 @@ namespace HKSupply.Forms.Supply
                 currentCulture.DateTimeFormat.FirstDayOfWeek);
 
                 return weekNo;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void ShowMessageDocsGenerated()
+        {
+            try
+            {
+                var docs = GlobalSetting.SupplyDocsService.GetDocsByRelated(_docHeadQP.IdDoc);
+
+                if (docs.Count > 0)
+                {
+                    string msg = "The Following documents have been created:" + Environment.NewLine;
+
+                    foreach (var doc in docs)
+                    {
+                        msg += $"{doc.IdDoc} ({doc.SupplyDocType.Description}){Environment.NewLine}";
+                    }
+
+                    XtraMessageBox.Show(msg);
+                }
+
             }
             catch
             {
