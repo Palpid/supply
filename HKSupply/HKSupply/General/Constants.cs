@@ -51,5 +51,38 @@ namespace HKSupply.General
         public const string HF_USER_ATTR_01 = "HFATTR01";
         public const string HF_USER_ATTR_02 = "HFATTR02";
         public const string HF_USER_ATTR_03 = "HFATTR03";
+
+        //** HARDWARE GROUP TYPES **//
+        public const string HW_GROUP_TYPE_DESING = "DESIGN";
+        public const string HW_GROUP_TYPE_PRODUCTION = "PRODUCTION";
+
+        //** ITEM TYPES IDs**//
+        public const string ITEM_TYPE_FRONT = "02";
+        public const string ITEM_TYPE_LEFT_TEMPLE = "03";
+        public const string ITEM_TYPE_RIGHT_TEMPLE = "04";
+
+        //** BREAKDOWN SUBGROUPS **//
+        public const string BREAKDOWN_SUBGROUP_FRONT = "FRONT";
+        public const string BREAKDOWN_SUBGROUP_TEMPLE = "TEMPLE";
+        public const string BREAKDOWN_SUBGROUP_TEMPLE_LEFT = "TEMPLE_LEFT";
+        public const string BREAKDOWN_SUBGROUP_TEMPLE_RIGHT = "TEMPLE_RIGHT";
+
+        //** INTRANET ETNIA BARCELONA **//
+        public const string INTRANET_ETNIA_BCN = "INTRANET";
+
+        //** SUPPLY STATUS **//
+        public const string SUPPLY_STATUS_OPEN = "OPN";
+        public const string SUPPLY_STATUS_CLOSE = "CLS";
+        public const string SUPPLY_STATUS_CANCEL = "CNL";
+
+        //** SUPPLY DOC TYPES **//
+        public const string SUPPLY_DOCTYPE_PO = "PO"; //Purchase Order
+        public const string SUPPLY_DOCTYPE_SO = "SO"; //Sales Order
+        public const string SUPPLY_DOCTYPE_QP = "QP"; //Quotation Proposal
+        public const string SUPPLY_DOCTYPE_INV = "INVOICE";
+
+        //** ETNIA HK/BCN CODE **//
+        public const string ETNIA_HK_COMPANY_CODE = "ETNLTD";
+        public const string ETNIA_BCN_COMPANY_CODE = "ETNBCN";
     }
 }

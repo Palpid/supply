@@ -38,9 +38,9 @@ namespace HKSupply.Models
 
         [ForeignKey("IdMaterialL1")]
         public MaterialL1 MaterialL1 { get; set; }
-        [ForeignKey("IdMaterialL2")]
+        [ForeignKey("IdMaterialL2, IdMaterialL1")]
         public MaterialL2 MaterialL2 { get; set; }
-        [ForeignKey("IdMaterialL3")]
+        [ForeignKey("IdMaterialL3, IdMaterialL2, IdMaterialL1")]
         public MaterialL3 MaterialL3 { get; set; }
 
         [Column("ID_DEFAULT_SUPPLIER", TypeName = "NVARCHAR"), StringLength(100)]
@@ -118,6 +118,11 @@ namespace HKSupply.Models
 
         [Column("PHOTO_URL", TypeName = "NVARCHAR"), StringLength(2500)]
         public string PhotoUrl { get; set; }
+
+        #region NotMapped
+        [NotMapped]
+        public Classes.ItemDocWarning DocWarning { get; set; }
+        #endregion
 
         #region Equal
 

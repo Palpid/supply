@@ -32,6 +32,11 @@ namespace HKSupply.Models
         [Required]
         public string FormName { get; set; }
 
+        [Column("GROUP", TypeName = "NVARCHAR"), StringLength(20)]
+        public string Group { get; set; }
+
+        [Column("ORDER")]
+        public int Order { get; set; }
 
         public override bool Equals(object obj)
         {

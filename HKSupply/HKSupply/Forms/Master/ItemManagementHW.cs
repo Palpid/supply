@@ -27,7 +27,7 @@ using DevExpress.XtraBars;
 namespace HKSupply.Forms.Master
 {
     /// <summary>
-    /// Pantalla de getsión para los Items EY
+    /// Pantalla de gestión para los Items HW
     /// </summary>
     /// <remarks>Se empezó en VS2012, después de pasar a VS2017 y poder usar C# 6.0 se han cambiado algunas cosas usando el nameof, pero no todas</remarks>
     public partial class ItemManagementHW : RibbonFormBase
@@ -35,50 +35,6 @@ namespace HKSupply.Forms.Master
         #region Constants
         private const string PHOTO_COLUMN = "Photo";
         private const string VIEW_COLUMN = "View";
-        #endregion
-
-        #region Enums
-        /*private enum eItemColumns
-        {
-            IdVer,
-            IdSubVer,
-            Timestamp,
-            IdDefaultSupplier,
-            IdPrototype,
-            Prototype,
-            IdModel,
-            Model,
-            Caliber,
-            IdColor1,
-            IdColor2,
-            IdItemBcn,
-            IdItemHK,
-            ItemDescription,
-            IdHwTypeL1,
-            IdHwTypeL2,
-            IdHwTypeL3,
-            Comments,
-            LaunchDate,
-            RemovalDate,
-            IdStatusCial,
-            IdStatusProd,
-            IdUserAttri1,
-            IdUserAttri2,
-            IdUserAttri3,
-        }
-
-        private enum eItemDocColumns
-        {
-            IdVerItem,
-            IdSubVerItem,
-            IdDocType,
-            DocType,
-            FileName,
-            FilePath,
-            CreateDate,
-            View,
-        }*/
-
         #endregion
 
         #region Private Members
@@ -92,18 +48,27 @@ namespace HKSupply.Forms.Master
         List<ItemHw> _modifiedItemsHw = new List<ItemHw>();
         List<Supplier> _supplierList;
         List<StatusHK> _statusProdList;
+        List<StatusCial> _statusCialList;
         List<FamilyHK> _familiesHkList;
         List<UserAttrDescription> _userAttrDescriptionList;
         List<DocType> _docsTypeList;
         List<ItemDoc> _itemDocsList;
         List<ItemDoc> _itemLastDocsList;
+        List<HwTypeL1> _hwTypeL1List;
+        List<HwTypeL2> _hwTypeL2List;
+        List<HwTypeL3> _hwTypeL3List;
+        List<Prototype> _prototypeList;
+        List<EtnColor> _etnColorsList;
 
-        string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "lueIdFamilyHK", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };
-        string[] _editingCols = { nameof(ItemHw.IdDefaultSupplier), nameof(ItemHw.IdUserAttri1), nameof(ItemHw.IdUserAttri2), nameof(ItemHw.IdUserAttri3), nameof(ItemHw.IdStatusProd), nameof(ItemHw.IdFamilyHK) };
+        //string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "lueIdFamilyHK", "txtIdItemHK", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };
+        string[] _nonEditingFields = { "txtIdVersion", "txtIdSubversion", "txtTimestamp", "txtPrototypeName", "txtPrototypeDescription", "txtPrototypeStatus", "txtIdItemBcn", "txtCreateDate" };
+        string[] _nonCreatingFields = { "txtPrototypeName", "txtPrototypeDescription", "txtPrototypeStatus" };
+        //string[] _editingCols = { nameof(ItemHw.IdDefaultSupplier), nameof(ItemHw.IdUserAttri1), nameof(ItemHw.IdUserAttri2), nameof(ItemHw.IdUserAttri3), nameof(ItemHw.IdStatusProd), nameof(ItemHw.IdFamilyHK), nameof(ItemHw.IdItemHK) };
+        string[] _nonEditingCols = { nameof(ItemHw.IdVer), nameof(ItemHw.IdSubVer), nameof(ItemHw.Timestamp), $"{nameof(ItemHw.Prototype)}.{nameof(Prototype.PrototypeName)}", $"{nameof(ItemHw.Prototype)}.{nameof(Prototype.PrototypeDescription)}", $"{nameof(ItemHw.Prototype)}.{nameof(Prototype.PrototypeStatus)}", nameof(ItemHw.IdItemBcn), nameof(ItemHw.CreateDate) };
 
         int _currentHistoryNumList;
         bool _itemImageChanged = false;
-
+        bool isLoadingData = false;
         #endregion
 
         #region Constructor
@@ -121,7 +86,11 @@ namespace HKSupply.Forms.Master
                 SetUpTexEdit();
                 SetUpLueDefaultSupplier();
                 SetUpLueStatusProd();
+                SetUpLueStatusCial();
                 SetUpLueFamiliesHk();
+                SetUpSlueProtptypes();
+                SetUpSlueEtnColors();
+                SetUpLueHwLv();
                 SetUpLueDocType();
                 SetUpLabelNameUserAttributes();
                 SetUpPictureEditItemImage();
@@ -215,6 +184,15 @@ namespace HKSupply.Forms.Master
         public override void bbiNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             base.bbiNew_ItemClick(sender, e);
+
+            try
+            {
+                ConfigureRibbonActionsCreating();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public override void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -267,6 +245,11 @@ namespace HKSupply.Forms.Master
                     {
                         res = UpdateItems(); 
                     }
+                }
+
+                if (CurrentState == ActionsStates.New)
+                {
+                    res = CreateItem();
                 }
 
                 if (res == true)
@@ -378,6 +361,7 @@ namespace HKSupply.Forms.Master
                 ItemHw item = view.GetRow(view.FocusedRowHandle) as ItemHw;
                 if (item != null)
                 {
+                    isLoadingData = true;
                     LoadItemForm(item);
                     LoadItemHistory();
                     LoadItemDocs();
@@ -387,6 +371,10 @@ namespace HKSupply.Forms.Master
             {
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            finally
+            {
+                isLoadingData = false;
+            }
         }
 
         private void RootGridViewItems_CellValueChanged(object sender, CellValueChangedEventArgs e)
@@ -395,12 +383,99 @@ namespace HKSupply.Forms.Master
             {
                 if (CurrentState == ActionsStates.Edit)
                 {
+
                     GridView view = sender as GridView;
                     ItemHw item = view.GetRow(view.FocusedRowHandle) as ItemHw;
                     if (item != null)
                     {
+
+                        switch (e.Column.FieldName)
+                        {
+                            case (nameof(ItemHw.IdHwTypeL1)):
+                                item.IdHwTypeL2 = null;
+                                item.IdHwTypeL3 = null;
+                                break;
+
+                            case (nameof(ItemHw.IdHwTypeL2)):
+                                item.IdHwTypeL3 = null;
+                                break;
+                        }
+
                         AddModifiedItemToList(item);
                     }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void RootGridViewItems_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+                ItemHw row = (ItemHw)rootGridViewItems.GetRow(view.FocusedRowHandle);
+
+                switch (view.FocusedColumn.FieldName)
+                {
+                    case nameof(ItemHw.IdPrototype):
+                        var idProto = e.Value.ToString();
+                        var proto = _prototypeList.Where(a => a.IdPrototype.Equals(idProto)).FirstOrDefault();
+
+                        row.Prototype = proto;
+
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void RootGridViewItems_CustomRowCellEdit(object sender, CustomRowCellEditEventArgs e)
+        {
+            try
+            {
+                if (isLoadingData == true)
+                    return;
+
+                GridView view = sender as GridView;
+                ItemHw row = view.GetRow(e.RowHandle) as ItemHw;
+
+                if (row == null)
+                    return;
+
+                switch (e.Column.FieldName)
+                {
+                    case nameof(ItemHw.IdHwTypeL2):
+
+                        RepositoryItemLookUpEdit riIdHwTypeL2 = new RepositoryItemLookUpEdit()
+                        {
+                            DataSource = _hwTypeL2List.Where(a => a.IdHwTypeL1.Equals(row.IdHwTypeL1)).ToList(),
+                            DisplayMember = nameof(HwTypeL2.IdHwTypeL2),
+                            ValueMember = nameof(HwTypeL2.IdHwTypeL2),
+                            NullText = string.Empty,
+                        };
+                        riIdHwTypeL2.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(HwTypeL2.IdHwTypeL2), "Description"));
+
+                        e.RepositoryItem = riIdHwTypeL2;
+                        break;
+
+                    case nameof(ItemHw.IdHwTypeL3):
+                        RepositoryItemLookUpEdit riIdHwTypeL3 = new RepositoryItemLookUpEdit()
+                        {
+                            DataSource = _hwTypeL3List.Where(a => a.IdHwTypeL1.Equals(row.IdHwTypeL1) && a.IdHwTypeL2.Equals(row.IdHwTypeL2)).ToList(),
+                            DisplayMember = nameof(HwTypeL3.IdHwTypeL3),
+                            ValueMember = nameof(HwTypeL3.IdHwTypeL3),
+                            NullText = string.Empty,
+                        };
+                        riIdHwTypeL3.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(HwTypeL3.IdHwTypeL3), "Description"));
+
+                        e.RepositoryItem = riIdHwTypeL3;
+                        break;
                 }
             }
             catch (Exception ex)
@@ -651,6 +726,75 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void LueIdHwTypeL1_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (isLoadingData == true)
+                    return;
+
+                //Nota: El objecto bindeado aun no ha cambiado su valor, 
+                //si cambiamos los edit value de los otros dos niveles hace cosas raras porque en el objeto de atrás el primer nivel aun es null. Por eso fuerzo el valor
+                //TODO: intentar investigar esto y arreglarlo mejor
+                _itemUpdate.IdHwTypeL1 = lueIdHwTypeL1.EditValue?.ToString();
+
+                lueIdHwTypeL2.Properties.DataSource = _hwTypeL2List.Where(a => a.IdHwTypeL1.Equals(lueIdHwTypeL1.EditValue)).ToList();
+                lueIdHwTypeL2.EditValue = null;
+                lueIdHwTypeL3.EditValue = null;
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LueIdHwTypeL2_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (isLoadingData == true)
+                    return;
+
+                _itemUpdate.IdHwTypeL2 = lueIdHwTypeL2.EditValue?.ToString();
+
+                lueIdHwTypeL3.Properties.DataSource = _hwTypeL3List.Where(a => a.IdHwTypeL1.Equals(lueIdHwTypeL1.EditValue) && a.IdHwTypeL2.Equals(lueIdHwTypeL2.EditValue)).ToList();
+
+                lueIdHwTypeL3.EditValue = null;
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SlueIdPrototype_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (isLoadingData == true)
+                    return;
+
+                Prototype proto = _prototypeList.Where(a => a.IdPrototype.Equals(slueIdPrototype.EditValue?.ToString())).FirstOrDefault();
+                if (proto == null)
+                    proto = new Prototype();
+
+                _itemUpdate.IdPrototype = proto?.IdPrototype;
+                _itemUpdate.Prototype = proto;
+                //SetFormBinding();
+                
+                //txtPrototypeDescription.Text = proto?.PrototypeDescription;
+                //txtPrototypeName.Text = proto?.PrototypeName;
+                //txtPrototypeStatus.Text = proto?.PrototypeStatus.ToString();
+                txtPrototypeDescription.EditValue = proto.PrototypeDescription;
+                txtPrototypeName.EditValue = proto.PrototypeName;
+                txtPrototypeStatus.EditValue = proto.PrototypeStatus.ToString();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         #endregion
 
         #region Private Methods
@@ -660,7 +804,8 @@ namespace HKSupply.Forms.Master
         /// </summary>
         private void ResetItemUpdate()
         {
-            _itemUpdate = new ItemHw();
+            _itemUpdate = new ItemHw() { IdStatusProd = -1 };
+            _modifiedItemsHw = new List<ItemHw>();
         }
 
         private void SetUpGrdItems()
@@ -683,13 +828,14 @@ namespace HKSupply.Forms.Master
                 GridColumn colIdVer = new GridColumn() { Caption = "Version Id", Visible = false, FieldName = nameof(ItemHw.IdVer), Width = 70 };
                 GridColumn colIdSubVer = new GridColumn() { Caption = "Subversion Id", Visible = false, FieldName = nameof(ItemHw.IdSubVer), Width = 85 };
                 GridColumn colTimestamp = new GridColumn() { Caption = "Timestamp", Visible = false, FieldName = nameof(ItemHw.Timestamp), Width = 130 };
+                GridColumn colCreateDate = new GridColumn() { Caption = "Create Date", Visible = false, FieldName = nameof(ItemHw.CreateDate), Width = 85 };
                 GridColumn colIdDefaultSupplier = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("DefaultSupplier"), Visible = true, FieldName = nameof(ItemHw.IdDefaultSupplier), Width = 110 };
                 GridColumn colIdPrototype = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("IdPrototype"), Visible = true, FieldName = nameof(ItemHw.IdPrototype), Width = 150 };
                 GridColumn colPrototypeName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("PrototypeName"), Visible = true, FieldName = nameof(ItemHw.Prototype) + "." + nameof(Prototype.PrototypeName), Width = 150 };
                 GridColumn colPrototypeDescription = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("PrototypeDescription"), Visible = true, FieldName = nameof(ItemHw.Prototype) + "." + nameof(Prototype.PrototypeDescription), Width = 150 };
                 GridColumn colPrototypeStatus = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Prototype Status"), Visible = true, FieldName = nameof(ItemHw.Prototype) + "." + nameof(Prototype.PrototypeStatus), Width = 150 };
-                GridColumn colIdModel = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("IdModel"), Visible = false, FieldName = nameof(ItemHw.IdModel), Width = 0 };
-                GridColumn colModel = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Model"), Visible = true, FieldName = nameof(ItemHw.Model) + "." + nameof(Model.Description), Width = 120 };
+                //GridColumn colIdModel = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("IdModel"), Visible = false, FieldName = nameof(ItemHw.IdModel), Width = 0 };
+                //GridColumn colModel = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Model"), Visible = true, FieldName = nameof(ItemHw.Model) + "." + nameof(Model.Description), Width = 120 };
                 GridColumn colFamilyHK = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("FamilyHk"), Visible = true, FieldName = nameof(ItemHw.IdFamilyHK), Width = 90 };
                 GridColumn colIdColor1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Color1"), Visible = true, FieldName = nameof(ItemHw.IdColor1), Width = 60 };
                 GridColumn colIdColor2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Color2"), Visible = true, FieldName = nameof(ItemHw.IdColor2), Width = 60 };
@@ -713,6 +859,9 @@ namespace HKSupply.Forms.Master
                 //Display Format
                 colTimestamp.DisplayFormat.FormatType = FormatType.DateTime;
 
+                //Columnas que no queremos que aparezcan en el column chooser
+                colPhotoUrl.OptionsColumn.ShowInCustomizationForm = false;
+
                 //Photo
                 colPhoto.UnboundType = DevExpress.Data.UnboundColumnType.Object;
                 RepositoryItemPictureEdit pictureEdit = new RepositoryItemPictureEdit()
@@ -732,6 +881,15 @@ namespace HKSupply.Forms.Master
 
                 colIdStatusProd.ColumnEdit = riStatusProd;
 
+                RepositoryItemLookUpEdit riStatusCial = new RepositoryItemLookUpEdit()
+                {
+                    DataSource = _statusCialList,
+                    DisplayMember = nameof(StatusCial.IdStatusCial), //nameof(StatusCial.Description), //Tenemos las descripciones en blanco de momento
+                    ValueMember = nameof(StatusCial.IdStatusCial),
+                };
+
+                colIdStatusCial.ColumnEdit = riStatusCial;
+
                 RepositoryItemLookUpEdit riFamilyHk = new RepositoryItemLookUpEdit()
                 {
                     DataSource = _familiesHkList,
@@ -748,24 +906,73 @@ namespace HKSupply.Forms.Master
                     ValueMember = nameof(Supplier.IdSupplier),
                     DisplayMember = nameof(Supplier.SupplierName),
                     ShowClearButton = false,
+                    NullText = string.Empty,
                 };
                 riDefaultSupplier.View.Columns.AddField(nameof(Supplier.IdSupplier)).Visible = true;
                 riDefaultSupplier.View.Columns.AddField(nameof(Supplier.SupplierName)).Visible = true;
 
                 colIdDefaultSupplier.ColumnEdit = riDefaultSupplier;
 
+                RepositoryItemSearchLookUpEdit riColor = new RepositoryItemSearchLookUpEdit()
+                {
+                    DataSource = _etnColorsList,
+                    ValueMember = nameof(EtnColor.IdColor),
+                    DisplayMember = nameof(EtnColor.IdColor),
+                    ShowClearButton = false,
+                    NullText = string.Empty,
+                };
+
+                colIdColor1.ColumnEdit = riColor;
+                colIdColor2.ColumnEdit = riColor;
+
+                RepositoryItemSearchLookUpEdit riPrototype = new RepositoryItemSearchLookUpEdit()
+                {
+                    DataSource = _prototypeList,
+                    ValueMember = nameof(Prototype.IdPrototype),
+                    DisplayMember = nameof(Prototype.IdPrototype),
+                    NullText = string.Empty,
+                };
+
+                colIdPrototype.ColumnEdit = riPrototype;
+
+
+                RepositoryItemLookUpEdit riIdHwTypeL1 = new RepositoryItemLookUpEdit()
+                {
+                    DataSource = _hwTypeL1List,
+                    DisplayMember = nameof(HwTypeL1.IdHwTypeL1), 
+                    ValueMember = nameof(HwTypeL1.IdHwTypeL1),
+                };
+                colIdHwTypeL1.ColumnEdit = riIdHwTypeL1;
+
+                RepositoryItemLookUpEdit riIdHwTypeL2 = new RepositoryItemLookUpEdit()
+                {
+                    DataSource = _hwTypeL2List,
+                    DisplayMember = nameof(HwTypeL2.IdHwTypeL2),
+                    ValueMember = nameof(HwTypeL2.IdHwTypeL2),
+                };
+                colIdHwTypeL2.ColumnEdit = riIdHwTypeL2;
+
+                RepositoryItemLookUpEdit riIdHwTypeL3 = new RepositoryItemLookUpEdit()
+                {
+                    DataSource = _hwTypeL3List,
+                    DisplayMember = nameof(HwTypeL3.IdHwTypeL3),
+                    ValueMember = nameof(HwTypeL3.IdHwTypeL3),
+                };
+                colIdHwTypeL3.ColumnEdit = riIdHwTypeL1;
+
                 //Add columns to grid root view
                 rootGridViewItems.Columns.Add(colIdVer);
                 rootGridViewItems.Columns.Add(colIdSubVer);
                 rootGridViewItems.Columns.Add(colTimestamp);
+                rootGridViewItems.Columns.Add(colCreateDate);
                 rootGridViewItems.Columns.Add(colIdDefaultSupplier);
                 rootGridViewItems.Columns.Add(colIdPrototype);
                 rootGridViewItems.Columns.Add(colPrototypeName);
                 rootGridViewItems.Columns.Add(colPrototypeDescription);
                 rootGridViewItems.Columns.Add(colPrototypeStatus);
-                rootGridViewItems.Columns.Add(colIdModel);
+                //rootGridViewItems.Columns.Add(colIdModel);
                 rootGridViewItems.Columns.Add(colFamilyHK);
-                rootGridViewItems.Columns.Add(colModel);
+                //rootGridViewItems.Columns.Add(colModel);
                 rootGridViewItems.Columns.Add(colIdColor1);
                 rootGridViewItems.Columns.Add(colIdColor2);
                 rootGridViewItems.Columns.Add(colIdItemBcn);
@@ -791,6 +998,9 @@ namespace HKSupply.Forms.Master
                 rootGridViewItems.CustomUnboundColumnData += RootGridViewItems_CustomUnboundColumnData;
                 rootGridViewItems.CellValueChanged += RootGridViewItems_CellValueChanged;
                 rootGridViewItems.PopupMenuShowing += RootGridViewItems_PopupMenuShowing;
+                rootGridViewItems.ValidatingEditor += RootGridViewItems_ValidatingEditor;
+
+                rootGridViewItems.CustomRowCellEdit += RootGridViewItems_CustomRowCellEdit;
             }
             catch (Exception ex)
             {
@@ -927,14 +1137,6 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                txtLaunchDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
-                txtLaunchDate.Properties.Mask.EditMask = "dd/MM/yyyy";
-                txtLaunchDate.Properties.Mask.UseMaskAsDisplayFormat = true;
-
-                txtRemovalDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
-                txtRemovalDate.Properties.Mask.EditMask = "dd/MM/yyyy";
-                txtRemovalDate.Properties.Mask.UseMaskAsDisplayFormat = true;
-
                 //History
                 txtHLaunchDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
                 txtHLaunchDate.Properties.Mask.EditMask = "dd/MM/yyyy";
@@ -955,6 +1157,11 @@ namespace HKSupply.Forms.Master
         {
             try
             {
+                //para evitar problemas al bindear nested properties
+                if (_itemUpdate.Model == null) _itemUpdate.Model = new Model();
+                if (_itemUpdate.Prototype == null) _itemUpdate.Prototype = new Prototype();
+
+
                 foreach (Control ctl in layoutControlForm.Controls)
                 {
                     if (ctl.GetType() == typeof(TextEdit))
@@ -977,35 +1184,25 @@ namespace HKSupply.Forms.Master
                         ctl.DataBindings.Clear();
                         ((LookUpEdit)ctl).ReadOnly = true;
                     }
+                    else if (ctl.GetType() == typeof(SearchLookUpEdit))
+                    {
+                        ctl.DataBindings.Clear();
+                        ((SearchLookUpEdit)ctl).ReadOnly = true;
+                    }
                 }
-
-                //para evitar problemas al bindear nested properties
-                if (_itemUpdate.Model == null) _itemUpdate.Model = new Model();
-                if (_itemUpdate.Prototype == null) _itemUpdate.Prototype = new Prototype(); 
 
                 //TextEdit
                 txtIdVersion.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.IdVer);
                 txtIdSubversion.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.IdSubVer);
                 txtTimestamp.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.Timestamp);
-                txtIdPrototype.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.IdPrototype);
                 txtPrototypeName.DataBindings.Add("Text", _itemUpdate, "Prototype.PrototypeName");//La custom extension que hice no funciona con propiedades que son clases, bindeo a la antigua
                 txtPrototypeDescription.DataBindings.Add("Text", _itemUpdate, "Prototype.PrototypeDescription");//La custom extension que hice no funciona con propiedades que son clases, bindeo a la antigua
                 txtPrototypeStatus.DataBindings.Add("Text", _itemUpdate, "Prototype.PrototypeStatus");//La custom extension que hice no funciona con propiedades que son clases, bindeo a la antigua
-                txtModel.DataBindings.Add("Text", _itemUpdate, "Model.Description");//La custom extension que hice no funciona con propiedades que son clases, bindeo a la antigua
-                txtIdColor1.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.IdColor1);
-                txtIdColor2.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.IdColor2);
                 txtIdItemBcn.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.IdItemBcn);
                 txtIdItemHK.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.IdItemHK);
                 txtItemDescription.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.ItemDescription);
-
-                txtIdHwTypeL1.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.IdHwTypeL1);
-                txtIdHwTypeL2.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.IdHwTypeL2);
-                txtIdHwTypeL3.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.IdHwTypeL3);
-
+                
                 txtComments.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.Comments);
-                txtLaunchDate.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.LaunchDate);
-                txtRemovalDate.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.RemovalDate);
-                txtIdStatusCial.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.IdStatusCial);
                 txtUnit.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.Unit);
                 txtDocsLink.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.DocsLink);
                 txtCreateDate.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.CreateDate);
@@ -1018,8 +1215,21 @@ namespace HKSupply.Forms.Master
 
                 //LookUpEdit
                 lueIdDefaultSupplier.DataBindings.Add<ItemHw>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdDefaultSupplier);
-                lueIdStatusProd.DataBindings.Add<ItemHw>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdStatusProd);
+                lueIdStatusProd.DataBindings.Add<ItemHw>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdStatusProd); 
+                lueIdStatusCial.DataBindings.Add<ItemHw>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdStatusCial);
                 lueIdFamilyHK.DataBindings.Add<ItemHw>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdFamilyHK);
+                lueIdHwTypeL1.DataBindings.Add<ItemHw>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdHwTypeL1);
+                lueIdHwTypeL2.DataBindings.Add<ItemHw>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdHwTypeL2);
+                lueIdHwTypeL3.DataBindings.Add<ItemHw>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdHwTypeL3);
+
+                //SearchLookUpEdit
+                slueIdPrototype.DataBindings.Add<ItemHw>(_itemUpdate, (SearchLookUpEdit e) => e.EditValue, item => item.IdPrototype);
+                slueIdColor1.DataBindings.Add<ItemHw>(_itemUpdate, (SearchLookUpEdit e) => e.EditValue, item => item.IdColor1);
+                slueIdColor2.DataBindings.Add<ItemHw>(_itemUpdate, (SearchLookUpEdit e) => e.EditValue, item => item.IdColor2);
+
+                //DateEdit
+                dateEditLaunchDate.DataBindings.Add<ItemHw>(_itemUpdate, (DateEdit e) => e.EditValue, item => item.LaunchDate);
+                dateEditRemovalDate.DataBindings.Add<ItemHw>(_itemUpdate, (DateEdit e) => e.EditValue, item => item.RemovalDate);
 
             }
             catch (Exception ex)
@@ -1061,7 +1271,6 @@ namespace HKSupply.Forms.Master
                 txtHIdSubversion.DataBindings.Add<ItemHwHistory>(_itemHistory, (Control c) => c.Text, item => item.IdSubVer);
                 txtHTimestamp.DataBindings.Add<ItemHwHistory>(_itemHistory, (Control c) => c.Text, item => item.Timestamp);
                 txtHIdPrototype.DataBindings.Add<ItemHwHistory>(_itemHistory, (Control c) => c.Text, item => item.IdPrototype);
-                txtHModel.DataBindings.Add<ItemHwHistory>(_itemHistory, (Control c) => c.Text, item => item.IdModel);
                 txtHIdColor1.DataBindings.Add<ItemHwHistory>(_itemHistory, (Control c) => c.Text, item => item.IdColor1);
                 txtHIdColor2.DataBindings.Add<ItemHwHistory>(_itemHistory, (Control c) => c.Text, item => item.IdColor2);
                 txtHIdItemBcn.DataBindings.Add<ItemHwHistory>(_itemHistory, (Control c) => c.Text, item => item.IdItemBcn);
@@ -1106,6 +1315,7 @@ namespace HKSupply.Forms.Master
                 lueIdDefaultSupplier.Properties.ValueMember = nameof(Supplier.IdSupplier); ;
                 lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Supplier.IdSupplier), 20, GlobalSetting.ResManager.GetString("Supplier")));
                 lueIdDefaultSupplier.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(Supplier.SupplierName), 100, GlobalSetting.ResManager.GetString("Name")));
+                lueIdDefaultSupplier.Properties.NullText = string.Empty;
 
                 //De esta manera se activa el limpiar el combo pulsado Ctrl + Supr. Es poco intuitivo, lo controlamos por el evento
                 //lueIdDefaultSupplier.Properties.AllowNullInput = DefaultBoolean.True; 
@@ -1133,7 +1343,7 @@ namespace HKSupply.Forms.Master
             try
             {
                 lueIdStatusProd.Properties.DataSource = _statusProdList;
-                lueIdStatusProd.Properties.DisplayMember = nameof(StatusHK.Description);
+                lueIdStatusProd.Properties.DisplayMember = nameof(StatusHK.IdStatusProd);
                 lueIdStatusProd.Properties.ValueMember = nameof(StatusHK.IdStatusProd);
                 //lueIdStatusProd.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IdSupplier", 20, "Id Supplier"));
                 //lueIdStatusProd.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SupplierName", 100, "Name"));
@@ -1148,6 +1358,20 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void SetUpLueStatusCial()
+        {
+            try
+            {
+                lueIdStatusCial.Properties.DataSource = _statusCialList;
+                lueIdStatusCial.Properties.DisplayMember = nameof(StatusCial.Description);
+                lueIdStatusCial.Properties.ValueMember = nameof(StatusCial.IdStatusCial);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         private void SetUpLueFamiliesHk()
         {
             try
@@ -1155,16 +1379,93 @@ namespace HKSupply.Forms.Master
                 lueIdFamilyHK.Properties.DataSource = _familiesHkList;
                 lueIdFamilyHK.Properties.DisplayMember = nameof(FamilyHK.Description);
                 lueIdFamilyHK.Properties.ValueMember = nameof(FamilyHK.IdFamilyHk);
+                lueIdFamilyHK.Properties.NullText = string.Empty;
 
                 lueHIdFamilyHK.Properties.DataSource = _familiesHkList;
                 lueHIdFamilyHK.Properties.DisplayMember = nameof(FamilyHK.Description);
                 lueHIdFamilyHK.Properties.ValueMember = nameof(FamilyHK.IdFamilyHk);
+                lueHIdFamilyHK.Properties.NullText = string.Empty;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
+
+        private void SetUpSlueProtptypes()
+        {
+            try
+            {
+                slueIdPrototype.Properties.DataSource = _prototypeList;
+                slueIdPrototype.Properties.DisplayMember = nameof(Prototype.IdPrototype);
+                slueIdPrototype.Properties.ValueMember = nameof(Prototype.IdPrototype);
+
+                slueIdPrototype.Properties.View.Columns.AddField(nameof(Prototype.IdPrototype)).Visible = true;
+                slueIdPrototype.Properties.View.Columns.AddField(nameof(Prototype.PrototypeName)).Visible = true;
+                slueIdPrototype.Properties.View.Columns.AddField(nameof(Prototype.PrototypeDescription)).Visible = true;
+                slueIdPrototype.Properties.NullText = string.Empty;
+
+                slueIdPrototype.EditValueChanged += SlueIdPrototype_EditValueChanged;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void SetUpSlueEtnColors()
+        {
+            try
+            {
+                slueIdColor1.Properties.DataSource = _etnColorsList;
+                slueIdColor1.Properties.DisplayMember = nameof(EtnColor.IdColor);
+                slueIdColor1.Properties.ValueMember = nameof(EtnColor.IdColor);
+                slueIdColor1.Properties.NullText = string.Empty;
+
+                slueIdColor2.Properties.DataSource = _etnColorsList;
+                slueIdColor2.Properties.DisplayMember = nameof(EtnColor.IdColor);
+                slueIdColor2.Properties.ValueMember = nameof(EtnColor.IdColor);
+                slueIdColor2.Properties.NullText = string.Empty;
+            }
+            catch
+            {
+                throw;
+                    }
+        }
+
+        private void SetUpLueHwLv()
+        {
+            try
+            {
+                lueIdHwTypeL1.Properties.DataSource = _hwTypeL1List;
+                lueIdHwTypeL1.Properties.DisplayMember = nameof(HwTypeL1.Description);
+                lueIdHwTypeL1.Properties.ValueMember = nameof(HwTypeL1.IdHwTypeL1);
+                lueIdHwTypeL1.Properties.NullText = string.Empty;
+
+                lueIdHwTypeL2.Properties.DataSource = _hwTypeL2List;
+                lueIdHwTypeL2.Properties.DisplayMember = nameof(HwTypeL2.Description);
+                lueIdHwTypeL2.Properties.ValueMember = nameof(HwTypeL2.IdHwTypeL2);
+                lueIdHwTypeL2.Properties.NullText = string.Empty;
+
+                lueIdHwTypeL3.Properties.DataSource = _hwTypeL3List;
+                lueIdHwTypeL3.Properties.DisplayMember = nameof(HwTypeL3.Description);
+                lueIdHwTypeL3.Properties.ValueMember = nameof(HwTypeL3.IdHwTypeL3);
+                lueIdHwTypeL3.Properties.NullText = string.Empty;
+
+                //events
+                lueIdHwTypeL1.EditValueChanged += LueIdHwTypeL1_EditValueChanged;
+                lueIdHwTypeL2.EditValueChanged += LueIdHwTypeL2_EditValueChanged;
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+
+
+        
 
         private void SetUpLueDocType()
         {
@@ -1232,9 +1533,16 @@ namespace HKSupply.Forms.Master
             {
                 _familiesHkList = GlobalSetting.FamilyHKService.GetFamiliesHK();
                 _statusProdList = GlobalSetting.StatusProdService.GetStatusProd();
+                _statusCialList = GlobalSetting.StatusCialService.GetStatusCial();
                 _supplierList = GlobalSetting.SupplierService.GetSuppliers();
                 _docsTypeList = GlobalSetting.DocTypeService.GetDocsType(Constants.ITEM_GROUP_HW);
                 _userAttrDescriptionList = GlobalSetting.UserAttrDescriptionService.GetUserAttrsDescription(Constants.ITEM_GROUP_HW);
+                _hwTypeL1List = GlobalSetting.HwTypeService.GetHwsTypeL1();
+                _hwTypeL2List = GlobalSetting.HwTypeService.GetHwsTypeL2();
+                _hwTypeL3List = GlobalSetting.HwTypeService.GetHwsTypeL3();
+                _prototypeList = GlobalSetting.PrototypeService.GetPrototypes();
+
+                _etnColorsList = GlobalSetting.EtnColorService.GetEtnColors();
             }
             catch (Exception ex)
             {
@@ -1250,12 +1558,17 @@ namespace HKSupply.Forms.Master
         {
             try
             {
+                isLoadingData = true;
                 _itemsList = GlobalSetting.ItemHwService.GetItems();
                 xgrdItems.DataSource = _itemsList;
             }
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                isLoadingData = false;
             }
         }
 
@@ -1390,6 +1703,8 @@ namespace HKSupply.Forms.Master
                     SetEditingFieldsEnabled();
                     peItemImage.Properties.ShowMenu = true; //activamos el menú contextual en el picture edit
                     lblEditImg.Visible = true;
+                    //filtramos los niveles que están vinculados entre ellos
+                    SetHwLevelsFilterEditing();
                 }
                 else if (xtcGeneral.SelectedTabPage == xtpList)
                 {
@@ -1401,7 +1716,8 @@ namespace HKSupply.Forms.Master
 
                     foreach (GridColumn col in rootGridViewItems.Columns)
                     {
-                        if (Array.IndexOf(_editingCols, col.FieldName) >= 0)
+                        //if (Array.IndexOf(_editingCols, col.FieldName) >= 0)
+                        if (Array.IndexOf(_nonEditingCols, col.FieldName) < 0)
                         {
                             col.OptionsColumn.AllowEdit = true;
                         }
@@ -1424,6 +1740,32 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void ConfigureRibbonActionsCreating()
+        {
+            try
+            {
+                ResetItemUpdate();
+                SetFormBinding(); //refresh binding
+
+                xtpForm.PageVisible = true;
+                xtpList.PageVisible = false;
+                xtpDocs.PageVisible = false;
+                gcHistory.Visible = false;
+
+                SetCreatingFieldsEnabled();
+                SetNonCreatingFieldsVisibility(visibility: LayoutVisibility.Never);
+
+                //gbNewDoc.Enabled = true;
+                //SetEditingFieldsEnabled();
+                //peItemImage.Properties.ShowMenu = true; //activamos el menú contextual en el picture edit
+                //lblEditImg.Visible = true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         private void AddModifiedItemToList(ItemHw modifiedItem)
         {
             try
@@ -1435,16 +1777,35 @@ namespace HKSupply.Forms.Master
                 }
                 else
                 {
-                    item.IdDefaultSupplier = modifiedItem.IdDefaultSupplier;
-                    item.IdUserAttri1 = modifiedItem.IdUserAttri1;
-                    item.IdUserAttri2 = modifiedItem.IdUserAttri2;
-                    item.IdUserAttri3 = modifiedItem.IdUserAttri3;
-                    item.IdStatusProd = modifiedItem.IdStatusProd;
+                    _modifiedItemsHw.Remove(item);
+                    _modifiedItemsHw.Add(modifiedItem);
+                    //item.IdDefaultSupplier = modifiedItem.IdDefaultSupplier;
+                    //item.IdUserAttri1 = modifiedItem.IdUserAttri1;
+                    //item.IdUserAttri2 = modifiedItem.IdUserAttri2;
+                    //item.IdUserAttri3 = modifiedItem.IdUserAttri3;
+                    //item.IdStatusProd = modifiedItem.IdStatusProd;
                 }
             }
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Filtra el datasource del nivel 2 y 3 que están vinculados al superior cuando se pulsa sobre editar. 
+        /// Ya que de inicio están todos cargados para la carga de los datos del item
+        /// </summary>
+        private void SetHwLevelsFilterEditing()
+        {
+            try
+            {
+                lueIdHwTypeL2.Properties.DataSource = _hwTypeL2List.Where(a => a.IdHwTypeL1.Equals(lueIdHwTypeL1.EditValue)).ToList();
+                lueIdHwTypeL3.Properties.DataSource = _hwTypeL3List.Where(a => a.IdHwTypeL1.Equals(lueIdHwTypeL1.EditValue) && a.IdHwTypeL2.Equals(lueIdHwTypeL2.EditValue)).ToList();
+            }
+            catch
+            {
+                throw;
             }
         }
 
@@ -1457,7 +1818,8 @@ namespace HKSupply.Forms.Master
             {
                 foreach (Control ctl in layoutControlForm.Controls)
                 {
-                    if (Array.IndexOf(_editingFields, ctl.Name) >= 0)
+                    //if (Array.IndexOf(_editingFields, ctl.Name) >= 0)
+                    if (Array.IndexOf(_nonEditingFields, ctl.Name) < 0)
                     {
                         if (ctl.GetType() == typeof(TextEdit))
                         {
@@ -1475,6 +1837,10 @@ namespace HKSupply.Forms.Master
                         {
                             ((LookUpEdit)ctl).ReadOnly = false;
                         }
+                        else if (ctl.GetType() == typeof(SearchLookUpEdit))
+                        {
+                            ((SearchLookUpEdit)ctl).ReadOnly = false;
+                        }
                     }
                 }
             }
@@ -1490,14 +1856,30 @@ namespace HKSupply.Forms.Master
             {
                 foreach (Control ctl in layoutControlForm.Controls)
                 {
-                    if (ctl.GetType() == typeof(TextEdit))
+                    if (Array.IndexOf(_nonCreatingFields, ctl.Name) < 0)
                     {
-                        ((TextEdit)ctl).ReadOnly = false;
+                        if (ctl.GetType() == typeof(TextEdit))
+                        {
+                            ((TextEdit)ctl).ReadOnly = false;
+                        }
+                        else if (ctl.GetType() == typeof(CheckEdit))
+                        {
+                            ((CheckEdit)ctl).ReadOnly = false;
+                        }
+                        else if (ctl.GetType() == typeof(DateEdit))
+                        {
+                            ((DateEdit)ctl).ReadOnly = false;
+                        }
+                        else if (ctl.GetType() == typeof(LookUpEdit))
+                        {
+                            ((LookUpEdit)ctl).ReadOnly = false;
+                        }
+                        else if (ctl.GetType() == typeof(SearchLookUpEdit))
+                        {
+                            ((SearchLookUpEdit)ctl).ReadOnly = false;
+                        }
                     }
-                    else if (ctl.GetType() == typeof(CheckEdit))
-                    {
-                        ((CheckEdit)ctl).ReadOnly = false;
-                    }
+                   
                 }
             }
             catch (Exception ex)
@@ -1513,6 +1895,10 @@ namespace HKSupply.Forms.Master
                 lciIdVersion.Visibility = visibility;
                 lciIdSubversion.Visibility = visibility;
                 lciTimestamp.Visibility = visibility;
+
+                //TODO: Consultar los campos!
+                lciCreateDate.Visibility = visibility;
+                
             }
             catch (Exception ex)
             {
@@ -1554,7 +1940,7 @@ namespace HKSupply.Forms.Master
             {
                 if (xtcGeneral.SelectedTabPage == xtpList)
                     return IsValidItemGrid();
-                else if (xtcGeneral.SelectedTabPage == xtpForm)
+                else if (xtcGeneral.SelectedTabPage == xtpForm || xtcGeneral.SelectedTabPage == xtpDocs)
                     return IsValidItemForm();
                 return false;
             }
@@ -1570,12 +1956,35 @@ namespace HKSupply.Forms.Master
             {
                 foreach (var item in _modifiedItemsHw)
                 {
+                    if (string.IsNullOrEmpty(item.ItemDescription))
+                    {
+                        XtraMessageBox.Show("Item Description Field Required", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return false;
+                    }
+
                     if (string.IsNullOrEmpty(item.IdDefaultSupplier))
                     {
                         XtraMessageBox.Show("Default Supplier Field Required", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return false;
                     }
 
+                    if (string.IsNullOrEmpty(item.IdHwTypeL1))
+                    {
+                        XtraMessageBox.Show("Hw Type L1 Field Required", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return false;
+                    }
+
+                    if (string.IsNullOrEmpty(item.IdHwTypeL2))
+                    {
+                        XtraMessageBox.Show("Hw Type L2 Field Required", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return false;
+                    }
+
+                    if (string.IsNullOrEmpty(item.IdHwTypeL3))
+                    {
+                        XtraMessageBox.Show("Hw Type L3 Field Required", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return false;
+                    }
                 }
                 return true;
             }
@@ -1600,6 +2009,71 @@ namespace HKSupply.Forms.Master
                 //        }
                 //    }
                 //}
+
+
+                if(string.IsNullOrEmpty(txtIdItemBcn.Text))
+                {
+                    XtraMessageBox.Show("Item BCN mandatory", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtIdItemBcn.Focus();
+                    return false;
+                }
+
+                if (string.IsNullOrEmpty(txtIdItemHK.Text))
+                {
+                    XtraMessageBox.Show("Item HK mandatory", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtIdItemHK.Focus();
+                    return false;
+                }
+
+                if (string.IsNullOrEmpty(txtItemDescription.Text))
+                {
+                    XtraMessageBox.Show("Item Description mandatory", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtItemDescription.Focus();
+                    return false;
+                }
+
+                if (lueIdDefaultSupplier.EditValue == null)
+                {
+                    XtraMessageBox.Show("Default Supplier mandatory", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    lueIdDefaultSupplier.Focus();
+                    return false;
+                }
+
+                if (string.IsNullOrEmpty(lueIdHwTypeL1.EditValue?.ToString()))
+                {
+                    XtraMessageBox.Show("Hw Type L1 mandatory", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    lueIdHwTypeL1.Focus();
+                    return false;
+                }
+
+                if (string.IsNullOrEmpty(lueIdHwTypeL2.EditValue?.ToString()))
+                {
+                    XtraMessageBox.Show("Hw Type L2 mandatory", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    lueIdHwTypeL2.Focus();
+                    return false;
+                }
+
+                if (string.IsNullOrEmpty(lueIdHwTypeL3.EditValue?.ToString()))
+                {
+                    XtraMessageBox.Show("Hw Type L3 mandatory", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    lueIdHwTypeL3.Focus();
+                    return false;
+                }
+
+                if (lueIdStatusCial.EditValue == null)
+                {
+                    XtraMessageBox.Show("Status Cial. mandatory", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    lueIdStatusCial.Focus();
+                    return false;
+                }
+
+                if (lueIdStatusProd.EditValue == null)
+                {
+                    XtraMessageBox.Show("Status Cial. mandatory", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    lueIdStatusCial.Focus();
+                    return false;
+                }
+
 
                 if (string.IsNullOrEmpty(txtPathNewDoc.Text) == false)
                 {
@@ -1684,6 +2158,28 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        /// <summary>
+        /// Crea un item nuevo
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>
+        /// No se le puede pasar directamente _itemUpdate porque al agregarlo al contexto de EF 
+        /// para crearlo después da error al rebindear los datos 
+        /// </remarks>
+        private bool CreateItem()
+        {
+            try
+            {
+        
+                var newItem = _itemUpdate.Clone();
+                return GlobalSetting.ItemHwService.newItem(newItem);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         private void SetItemPhoto()
         {
             try
@@ -1707,7 +2203,7 @@ namespace HKSupply.Forms.Master
                 }
                 else
                 {
-                    _itemUpdate.PhotoUrl = _itemOriginal.PhotoUrl;
+                    _itemUpdate.PhotoUrl = _itemOriginal?.PhotoUrl;
                 }
             }
             catch(Exception ex)
@@ -1720,18 +2216,34 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                string idItemBcn = (_itemOriginal == null ? string.Empty : _itemOriginal.IdItemBcn);
-                _itemOriginal = null;
-                peItemImage.EditValue = null;
-                ResetItemUpdate();
-                SetFormBinding();
-                xtpForm.PageVisible = false;
-                xtpDocs.PageVisible = false;
-                xtpList.PageVisible = true;
-                peItemImage.Properties.ShowMenu = false;
-                lblEditImg.Visible = false;
+                //V1
+                //string idItemBcn = (_itemOriginal == null ? string.Empty : _itemOriginal.IdItemBcn);
+                //_itemOriginal = null;
+                //peItemImage.EditValue = null;
+                //ResetItemUpdate();
+                //SetFormBinding();
+                //xtpForm.PageVisible = false;
+                //xtpDocs.PageVisible = false;
+                //xtpList.PageVisible = true;
+                //peItemImage.Properties.ShowMenu = false;
+                //lblEditImg.Visible = false;
+                //LoadItemsList();
+                //MoveGridToItem(idItemBcn);
+                //SetItemGridStylesByState();
+                //V2
+                string idItemBcn = (_itemUpdate == null ? string.Empty : _itemUpdate.IdItemBcn);
                 LoadItemsList();
+                ResetItemUpdate();
+                _itemOriginal = null;
+                xtpList.PageVisible = true;
                 MoveGridToItem(idItemBcn);
+                ItemHw item = _itemsList.Where(a => a.IdItemBcn.Equals(idItemBcn)).FirstOrDefault();
+                if (item != null)
+                {
+                    LoadItemForm(item);
+                    LoadItemHistory();
+                    LoadItemDocs();
+                }
                 SetItemGridStylesByState();
                 //suscribirse de nuevo a los eventos
                 rootGridViewItems.DoubleClick += rootGridViewItems_DoubleClick;
@@ -1756,7 +2268,8 @@ namespace HKSupply.Forms.Master
                     {
                         case ActionsStates.Edit:
 
-                            if (Array.IndexOf(_editingCols, col.FieldName) >= 0)
+                            //if (Array.IndexOf(_editingCols, col.FieldName) >= 0)
+                            if (Array.IndexOf(_nonEditingCols, col.FieldName) < 0)
                                 col.AppearanceCell.BackColor = Color.White;
                             else
                                 col.AppearanceCell.BackColor = Color.GhostWhite;

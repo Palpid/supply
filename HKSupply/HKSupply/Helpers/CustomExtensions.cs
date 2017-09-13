@@ -7,7 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-
+using System.Data;
+using System.Reflection;
 
 namespace HKSupply.Helpers
 {
@@ -299,6 +300,50 @@ namespace HKSupply.Helpers
         }
 
         /// <summary>
+        /// Extensión para hacer un binding tipado y evitar posibles errores al no depender del string para
+        /// las propiedades bindeadas entre el objeto y el source
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="dataBindings"></param>
+        /// <param name="dataSource"></param>
+        /// <param name="controlLambda"></param>
+        /// <param name="objectLambda"></param>
+        /// <returns></returns>
+        public static Binding Add<T>(this ControlBindingsCollection dataBindings,
+            object dataSource,
+            Expression<Func<SearchLookUpEdit, object>> controlLambda,
+            Expression<Func<T, object>> objectLambda)
+        {
+
+            string controlPropertyName;
+            string bindingTargetName;
+
+            if (controlLambda.Body is MemberExpression)
+            {
+                controlPropertyName = ((MemberExpression)(controlLambda.Body)).Member.Name;
+            }
+            else
+            {
+                var op = ((UnaryExpression)controlLambda.Body).Operand;
+                controlPropertyName = ((MemberExpression)op).Member.Name;
+            }
+
+
+            if (objectLambda.Body is MemberExpression)
+            {
+                bindingTargetName = ((MemberExpression)(objectLambda.Body)).Member.Name;
+            }
+            else
+            {
+                var op = ((UnaryExpression)objectLambda.Body).Operand;
+                bindingTargetName = ((MemberExpression)op).Member.Name;
+            }
+
+            return dataBindings.Add
+                 (controlPropertyName, dataSource, bindingTargetName, true, DataSourceUpdateMode.OnPropertyChanged);
+        }
+
+        /// <summary>
         /// Devuelve la lista vacía si es nula
         /// </summary>
         /// <typeparam name="T"></typeparam>
@@ -331,9 +376,68 @@ namespace HKSupply.Helpers
             return enumerable ?? Enumerable.Empty<T>();
         }
 
-        public static string hola(this string str)
+        /// <summary>
+        /// Convierte un DataTable a una lista con objectos genéricos
+        /// </summary>
+        /// <typeparam name="T">Objecto Genérico object</typeparam>
+        /// <param name="table">DataTable</param>
+        /// <returns>Lista con objectos genéricos </returns>
+        public static List<T> DataTableToList<T>(this DataTable table) where T : class, new()
         {
-            return "hola";
+            try
+            {
+                List<T> list = new List<T>();
+
+                foreach (var row in table.AsEnumerable())
+                {
+                    T obj = new T();
+
+                    foreach (var prop in obj.GetType().GetProperties())
+                    {
+                        try
+                        {
+                            PropertyInfo propertyInfo = obj.GetType().GetProperty(prop.Name);
+                            propertyInfo.SetValue(obj, Convert.ChangeType(row[prop.Name], propertyInfo.PropertyType), null);
+                        }
+                        catch
+                        {
+                            continue;
+                        }
+                    }
+
+                    list.Add(obj);
+                }
+
+                return list;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Obtiene el número de la semana a partir de una fecha.
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
+        public static int GetWeek(this DateTime date)
+        {
+            try
+            {
+                var currentCulture = System.Globalization.CultureInfo.CurrentCulture;
+                var weekNo = currentCulture.Calendar.GetWeekOfYear(
+                date,
+                currentCulture.DateTimeFormat.CalendarWeekRule,
+                currentCulture.DateTimeFormat.FirstDayOfWeek);
+
+                return weekNo;
+            }
+            catch
+            {
+                throw;
+            }
+
         }
     }
 }

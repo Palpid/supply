@@ -137,6 +137,11 @@ namespace HKSupply.Forms.Master
                     MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
                     RestoreInitState();
                 }
+                else if(_itemBomList.Where(a => a.IdItemGroup.Equals(Constants.ITEM_GROUP_HF)).Count() > 0)
+                {
+                    MessageBox.Show("You can't edit Half-Finished");
+                    RestoreInitState();
+                }
                 else
                 {
                     ConfigureRibbonActionsEditing();
@@ -303,9 +308,8 @@ namespace HKSupply.Forms.Master
                 //LoadItemsListMt();
                 //LoadItemsListHw();
 
-                dockPanelDrawing.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
-                dockPanelPdfColor.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
-                dockPanelPhoto.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                //Se tiene que llamar en el load, no en el constructor
+                SetDockPanelsVisibility();
             }
             catch (Exception ex)
             {
@@ -639,7 +643,7 @@ namespace HKSupply.Forms.Master
                         (e.View as GridView).Columns[nameof(DetailBomMt.IdBom)].Visible = false;
                         (e.View as GridView).Columns[nameof(DetailBomMt.Item)].Visible = false;
                         (e.View as GridView).Columns[nameof(DetailBomMt.BomBreakdown)].Visible = false;
-                        
+
                         //Columnas que no queremos que aparezan en el Column Chooser
                         (e.View as GridView).Columns[nameof(DetailBomMt.IdBom)].OptionsColumn.ShowInCustomizationForm = false;
                         (e.View as GridView).Columns[nameof(DetailBomMt.Item)].OptionsColumn.ShowInCustomizationForm = false;
@@ -731,6 +735,7 @@ namespace HKSupply.Forms.Master
                         //Events
                         (e.View as GridView).CellValueChanged += GrdBomView_CellValueChanged;
                         (e.View as GridView).ValidatingEditor += BomManagementMaterials_ValidatingEditor;
+                        (e.View as GridView).ShowingEditor += BomManagementMaterials_ShowingEditor;
 
                         //Agregamos los Summary
                         (e.View as GridView).OptionsView.ShowFooter = true;
@@ -805,6 +810,7 @@ namespace HKSupply.Forms.Master
                         //Events
                         (e.View as GridView).CellValueChanged += GrdBomView_CellValueChanged;
                         (e.View as GridView).ValidatingEditor += BomManagementHardwares_ValidatingEditor;
+                        (e.View as GridView).ShowingEditor += BomManagementHardwares_ShowingEditor;
 
                         //Agregamos los Summary
                         (e.View as GridView).OptionsView.ShowFooter = true;
@@ -978,6 +984,7 @@ namespace HKSupply.Forms.Master
                         //Events
                         (e.View as GridView).ShownEditor += BomManagementHalfFinished_ShownEditor;
                         (e.View as GridView).ValidatingEditor += BomManagementHalfFinished_ValidatingEditor;
+                        (e.View as GridView).ShowingEditor += BomManagementHalfFinished_ShowingEditor;
 
                         if (CurrentState == ActionsStates.Edit)
                             SetGrdBomEditColumns();
@@ -991,6 +998,84 @@ namespace HKSupply.Forms.Master
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        private void BomManagementHalfFinished_ShowingEditor(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+                DetailBomHf row = view.GetRow(view.FocusedRowHandle) as DetailBomHf;
+
+                BaseView parent = view.ParentView;
+                var rowParent = parent.GetRow(view.SourceRowHandle);
+                string factory = string.Empty;
+
+                if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
+                {
+                    //No se puede ediar el BOM de la intranet
+                    factory = (rowParent as ItemBom).IdSupplier;
+                    if (factory == "INTRANET")
+                        e.Cancel = true;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BomManagementHardwares_ShowingEditor(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+                DetailBomHw row = view.GetRow(view.FocusedRowHandle) as DetailBomHw;
+
+                BaseView parent = view.ParentView;
+                var rowParent = parent.GetRow(view.SourceRowHandle);
+                string factory = string.Empty;
+
+                if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
+                {
+                    //No se puede ediar el BOM de la intranet
+                    factory = (rowParent as ItemBom).IdSupplier;
+                    if (factory == "INTRANET")
+                        e.Cancel = true;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BomManagementMaterials_ShowingEditor(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                GridView view = sender as GridView;
+                DetailBomMt row = view.GetRow(view.FocusedRowHandle) as DetailBomMt;
+
+                BaseView parent = view.ParentView;
+                var rowParent = parent.GetRow(view.SourceRowHandle);
+                string factory = string.Empty;
+
+                if (rowParent.GetType().BaseType == typeof(ItemBom) || rowParent.GetType() == typeof(ItemBom))
+                {
+                    //No se puede ediar el BOM de la intranet
+                    factory = (rowParent as ItemBom).IdSupplier;
+                    if (factory == "INTRANET")
+                        e.Cancel = true;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -1136,10 +1221,33 @@ namespace HKSupply.Forms.Master
                 dockPanelDrawing.Options.ShowCloseButton = false;
                 dockPanelPdfColor.Options.ShowCloseButton = false;
                 dockPanelPhoto.Options.ShowCloseButton = false;
+
+                dockPanelDrawingCR.Options.ShowCloseButton = false;
+                dockPanelDrawingCV.Options.ShowCloseButton = false;
+                dockPanelDrawingFA.Options.ShowCloseButton = false;
+                dockPanelDrawingGB.Options.ShowCloseButton = false;
             }
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        private void SetDockPanelsVisibility()
+        {
+            try
+            {
+                dockPanelDrawing.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden; //Es el antiguo del plano cuando sólo había uno por SKU, lo dejo por si acaso
+                dockPanelPdfColor.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                dockPanelPhoto.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                dockPanelDrawingCR.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                dockPanelDrawingCV.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                dockPanelDrawingFA.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                dockPanelDrawingGB.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+            }
+            catch
+            {
+                throw;
             }
         }
 
@@ -1784,7 +1892,7 @@ namespace HKSupply.Forms.Master
 
                 LoadBomTreeView();
                 LoadSummaryBom();
-                LoadDrawingPanel();
+                LoadDrawingPanels();
                 LoadPdfColorgPanel();
                 LoadPhotoPanel(photo);
 
@@ -1832,6 +1940,8 @@ namespace HKSupply.Forms.Master
                     FillDtHfSummary(tableSummary, tableSummaryUnit, suppliers, bom);
                 }
 
+                gridViewSummaryBom.Columns.Clear();
+                gridViewSummaryUnitBom.Columns.Clear();
                 xgrdSummaryBom.DataSource = tableSummary;
                 xgrdSummaryUnitBom.DataSource = tableSummaryUnit;
 
@@ -1883,23 +1993,23 @@ namespace HKSupply.Forms.Master
             }
         }
 
-        private void LoadDrawingPanel()
+        private void LoadDrawingPanels()
         {
             try
             {
 
-                //eliminamos los paneles de planos si existen
-                var panelstoDel = dockManagerItemBom.Panels.Where(a => a.Name.Contains(DYNAMIC_PANEL_DRAWING)).ToList();
-                foreach (var panel in panelstoDel)
-                {
-                    dockManagerItemBom.RemovePanel(panel);
-                }
+                ////eliminamos los paneles de planos si existen
+                //var panelstoDel = dockManagerItemBom.Panels.Where(a => a.Name.Contains(DYNAMIC_PANEL_DRAWING)).ToList();
+                //foreach (var panel in panelstoDel)
+                //{
+                //    dockManagerItemBom.RemovePanel(panel);
+                //}
 
-                //ocultamos el panel estático del drawing que ahora ha quedado para mensajes
-                dockPanelDrawing.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+                ////ocultamos el panel estático del drawing que ahora ha quedado para mensajes
+                //dockPanelDrawing.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
 
-                //Borramos si ya hemos cargado algo en al dockpanel de Drawing
-                ClearPdfPanels(dockPanelDrawing);
+                ////Borramos si ya hemos cargado algo en al dockpanel de Drawing
+                //ClearPdfPanels(dockPanelDrawing);
 
                 string docType = string.Empty;
                 if (_currentItem.GetType() == typeof(ItemEy))
@@ -1907,122 +2017,172 @@ namespace HKSupply.Forms.Master
                 else if (_currentItem.GetType() == typeof(ItemHf))
                     docType = "PDFDRAWING_HF";
 
-                string drawingPath = Constants.ITEMS_DOCS_PATH + _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).Select(b => b.FilePath).FirstOrDefault();
+                //string drawingPath = Constants.ITEMS_DOCS_PATH + _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).Select(b => b.FilePath).FirstOrDefault();
 
 
-                if (System.IO.File.Exists(drawingPath))
+                //if (System.IO.File.Exists(drawingPath))
+                //{
+
+                //V1: un sólo plano por item
+                //PDFViewer pdfViewer = new PDFViewer();
+                //pdfViewer.TopLevel = false;
+                //pdfViewer.MinimizeBox = false;
+                //pdfViewer.MaximizeBox = false;
+                //pdfViewer.pdfFile = drawingPath;
+                //pdfViewer.FormClosing += (o, e) => { e.Cancel = true; }; //No queremos que puedan cerrar el formulario del viewer incrustado dentro del dockpanel
+                //dockPanelDrawing.Controls.Add(pdfViewer);
+                //pdfViewer.Dock = DockStyle.Fill;
+                //pdfViewer.Visible = true;
+
+                //--------------------------------------------------------------------------------------------------
+                //V2: Planos por item/supplier en un panel y tabs por cada plano de fábrica
+                //TabControl tcDrawings = new TabControl();
+
+                //var drawings = _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).ToList();
+
+                //foreach (var drawing in drawings)
+                //{
+                //    TabPage tpDrawind = new TabPage();
+                //    tpDrawind.Text = drawing.IdSupplier;
+
+                //    string path = Constants.ITEMS_DOCS_PATH + drawing.FilePath;
+
+                //    if (System.IO.File.Exists(path))
+                //    {
+                //        //Creamos el pdf Viewer
+                //        PDFViewer pdfViewer = new PDFViewer();
+                //        pdfViewer.TopLevel = false;
+                //        pdfViewer.MinimizeBox = false;
+                //        pdfViewer.MaximizeBox = false;
+                //        pdfViewer.pdfFile = path;
+                //        pdfViewer.FormClosing += (o, e) => { e.Cancel = true; }; //No queremos que puedan cerrar el formulario del viewer incrustado dentro del dockpanel
+
+                //        tpDrawind.Controls.Add(pdfViewer);
+                //        pdfViewer.Dock = DockStyle.Fill;
+                //        pdfViewer.Visible = true;
+                //    }
+                //    else
+                //    {
+                //        LabelControl lbl = new LabelControl();
+                //        lbl.Text = "No Drawing doc";
+                //        tpDrawind.Controls.Add(lbl);
+                //    }
+
+
+                //    //agregamos el tabpage al tabcontrol
+                //    tcDrawings.TabPages.Add(tpDrawind);
+                //}
+
+                //dockPanelDrawing.Controls.Add(tcDrawings);
+                //tcDrawings.Dock = DockStyle.Fill;
+
+                //--------------------------------------------------------------------------------------------------
+
+                //V3: Planos por item/supplier cada uno en un panel diferente de forma dinámica
+                //var drawings = _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).ToList();
+                //foreach (var drawing in drawings)
+                //{
+
+                //    //Creamos el panel
+                //    DevExpress.XtraBars.Docking.DockPanel tmpPanel = new DevExpress.XtraBars.Docking.DockPanel();
+                //    tmpPanel.Name = $"{DYNAMIC_PANEL_DRAWING}{drawing.IdSupplier}";
+                //    tmpPanel.Text = $"Drawing {drawing.IdSupplier}";
+                //    tmpPanel.Options.ShowCloseButton = false;
+                //    //creamos el ControlContainer y le agregamos el pdfViewer
+                //    DevExpress.XtraBars.Docking.ControlContainer tmpControlContainer = new DevExpress.XtraBars.Docking.ControlContainer();
+                //    tmpControlContainer.Name = $"{DYNAMIC_PANEL_DRAWING}{drawing.IdSupplier}";
+
+                //    string path = Constants.ITEMS_DOCS_PATH + drawing.FilePath;
+                //    if (System.IO.File.Exists(path))
+                //    {
+                //        //Creamos el pdf Viewer
+                //        PDFViewer pdfViewer = new PDFViewer();
+                //        pdfViewer.TopLevel = false;
+                //        pdfViewer.MinimizeBox = false;
+                //        pdfViewer.MaximizeBox = false;
+                //        pdfViewer.pdfFile = path;
+                //        pdfViewer.FormClosing += (o, e) => { e.Cancel = true; }; //No queremos que puedan cerrar el formulario del viewer incrustado dentro del dockpanel
+                //        //Agregamos el pdfViewer al ControlContainer
+                //        tmpControlContainer.Controls.Add(pdfViewer);
+                //        pdfViewer.Dock = DockStyle.Fill;
+                //        pdfViewer.Visible = true;
+                //    }
+                //    else
+                //    {
+                //        LabelControl lbl = new LabelControl();
+                //        lbl.Text = "Drawing File doesn't exist";
+                //        tmpControlContainer.Controls.Add(lbl);
+                //    }
+
+                //    //Agregamos el ControlContainer al panel, con el plano en pdf o con el label de que no existe el fichero en el servidor
+                //    tmpPanel.Controls.Add(tmpControlContainer);
+                //    //Agregamos el panel al dock manager del formulario
+                //    dockManagerItemBom.AddPanel(DevExpress.XtraBars.Docking.DockingStyle.Right, tmpPanel);
+                //    dockManagerItemBom.Panels[tmpPanel.Name].Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                //}
+
+
+                //}
+                //else
+                //{
+                //    LabelControl lbl = new LabelControl();
+                //    lbl.Text = "No Drawing doc";
+                //    dockPanelDrawing.Controls.Add(lbl);
+                //    dockPanelDrawing.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                //}
+
+
+                //--------------------------------------------------------------------------------------------------
+                //v4: Cada fábrica tiene su propio panel estático, si no existe plano para ese SKU/fábrica no pinta nada en él
+
+                //Borramos antes todos los planos cargados
+                ClearPdfPanels(dockPanelDrawingCR);
+                ClearPdfPanels(dockPanelDrawingCV);
+                ClearPdfPanels(dockPanelDrawingFA);
+                ClearPdfPanels(dockPanelDrawingGB);
+
+                var drawings = _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).ToList();
+                foreach (var drawing in drawings)
                 {
+                    var panel = Controls.Find($"dockPanelDrawing{drawing.IdSupplier}", true).FirstOrDefault() as DevExpress.XtraBars.Docking.DockPanel;
+                    string path = Constants.ITEMS_DOCS_PATH + drawing.FilePath;
 
-                    //V1: un sólo plano por item
-                    //PDFViewer pdfViewer = new PDFViewer();
-                    //pdfViewer.TopLevel = false;
-                    //pdfViewer.MinimizeBox = false;
-                    //pdfViewer.MaximizeBox = false;
-                    //pdfViewer.pdfFile = drawingPath;
-                    //pdfViewer.FormClosing += (o, e) => { e.Cancel = true; }; //No queremos que puedan cerrar el formulario del viewer incrustado dentro del dockpanel
-                    //dockPanelDrawing.Controls.Add(pdfViewer);
-                    //pdfViewer.Dock = DockStyle.Fill;
-                    //pdfViewer.Visible = true;
-
-                    //--------------------------------------------------------------------------------------------------
-                    //V2: Planos por item/supplier en un panel y tabs por cada plano de fábrica
-                    //TabControl tcDrawings = new TabControl();
-
-                    //var drawings = _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).ToList();
-
-                    //foreach (var drawing in drawings)
-                    //{
-                    //    TabPage tpDrawind = new TabPage();
-                    //    tpDrawind.Text = drawing.IdSupplier;
-
-                    //    string path = Constants.ITEMS_DOCS_PATH + drawing.FilePath;
-
-                    //    if (System.IO.File.Exists(path))
-                    //    {
-                    //        //Creamos el pdf Viewer
-                    //        PDFViewer pdfViewer = new PDFViewer();
-                    //        pdfViewer.TopLevel = false;
-                    //        pdfViewer.MinimizeBox = false;
-                    //        pdfViewer.MaximizeBox = false;
-                    //        pdfViewer.pdfFile = path;
-                    //        pdfViewer.FormClosing += (o, e) => { e.Cancel = true; }; //No queremos que puedan cerrar el formulario del viewer incrustado dentro del dockpanel
-
-                    //        tpDrawind.Controls.Add(pdfViewer);
-                    //        pdfViewer.Dock = DockStyle.Fill;
-                    //        pdfViewer.Visible = true;
-                    //    }
-                    //    else
-                    //    {
-                    //        LabelControl lbl = new LabelControl();
-                    //        lbl.Text = "No Drawing doc";
-                    //        tpDrawind.Controls.Add(lbl);
-                    //    }
-
-
-                    //    //agregamos el tabpage al tabcontrol
-                    //    tcDrawings.TabPages.Add(tpDrawind);
-                    //}
-
-                    //dockPanelDrawing.Controls.Add(tcDrawings);
-                    //tcDrawings.Dock = DockStyle.Fill;
-
-                    //--------------------------------------------------------------------------------------------------
-
-                    //V3: Planos por item/supplier cada uno en un panel diferente
-                    var drawings = _itemLastDocsList.Where(a => a.IdDocType.Equals(docType)).ToList();
-                    foreach (var drawing in drawings)
+                    if (panel != null)
                     {
-
-                        //Creamos el panel
-                        DevExpress.XtraBars.Docking.DockPanel tmpPanel = new DevExpress.XtraBars.Docking.DockPanel();
-                        tmpPanel.Name = $"{DYNAMIC_PANEL_DRAWING}{drawing.IdSupplier}";
-                        tmpPanel.Text = $"Drawing {drawing.IdSupplier}";
-                        tmpPanel.Options.ShowCloseButton = false;
-                        //creamos el ControlContainer y le agregamos el pdfViewer
-                        DevExpress.XtraBars.Docking.ControlContainer tmpControlContainer = new DevExpress.XtraBars.Docking.ControlContainer();
-                        tmpControlContainer.Name = $"{DYNAMIC_PANEL_DRAWING}{drawing.IdSupplier}";
-
-                        string path = Constants.ITEMS_DOCS_PATH + drawing.FilePath;
-                        if (System.IO.File.Exists(path))
-                        {
-                            //Creamos el pdf Viewer
-                            PDFViewer pdfViewer = new PDFViewer();
-                            pdfViewer.TopLevel = false;
-                            pdfViewer.MinimizeBox = false;
-                            pdfViewer.MaximizeBox = false;
-                            pdfViewer.pdfFile = path;
-                            pdfViewer.FormClosing += (o, e) => { e.Cancel = true; }; //No queremos que puedan cerrar el formulario del viewer incrustado dentro del dockpanel
-                            //Agregamos el pdfViewer al ControlContainer
-                            tmpControlContainer.Controls.Add(pdfViewer);
-                            pdfViewer.Dock = DockStyle.Fill;
-                            pdfViewer.Visible = true;
-                        }
-                        else
-                        {
-                            LabelControl lbl = new LabelControl();
-                            lbl.Text = "Drawing File doesn't exist";
-                            tmpControlContainer.Controls.Add(lbl);
-                        }
-
-                        //Agregamos el ControlContainer al panel, con el plano en pdf o con el label de que no existe el fichero en el servidor
-                        tmpPanel.Controls.Add(tmpControlContainer);
-                        //Agregamos el panel al dock manager del formulario
-                        dockManagerItemBom.AddPanel(DevExpress.XtraBars.Docking.DockingStyle.Right, tmpPanel);
-                        dockManagerItemBom.Panels[tmpPanel.Name].Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                        LoadDrawingPanel(panel, path);
                     }
 
                 }
-                else
-                {
-                    LabelControl lbl = new LabelControl();
-                    lbl.Text = "No Drawing doc";
-                    dockPanelDrawing.Controls.Add(lbl);
-                    dockPanelDrawing.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
-                }
+
             }
             catch
             {
                 throw;
+            }
+        }
+
+        private void LoadDrawingPanel(DevExpress.XtraBars.Docking.DockPanel dockPanel, string drawingPath)
+        {
+            try
+            {
+                ClearPdfPanels(dockPanel);
+
+                if (System.IO.File.Exists(drawingPath))
+                {
+                    PDFViewer pdfViewer = new PDFViewer();
+                    pdfViewer.TopLevel = false;
+                    pdfViewer.MinimizeBox = false;
+                    pdfViewer.MaximizeBox = false;
+                    pdfViewer.pdfFile = drawingPath;
+                    pdfViewer.FormClosing += (o, e) => { e.Cancel = true; }; //No queremos que puedan cerrar el formulario del viewer incrustado dentro del dockpanel
+                    dockPanel.Controls.Add(pdfViewer);
+                    pdfViewer.Dock = DockStyle.Fill;
+                    pdfViewer.Visible = true;
+                }
+            }
+            catch
+            {
+
             }
         }
 
@@ -2133,7 +2293,7 @@ namespace HKSupply.Forms.Master
                 throw;
             }
         }
-        
+
         private void FillDtHfSummary(DataTable tableSummary, DataTable tableSummaryUnit, List<string> suppliers, ItemBom bom)
         {
             try
@@ -2253,7 +2413,7 @@ namespace HKSupply.Forms.Master
 
                 var rawMaterial = itemBom.Materials.Where(a => a.IdItemBcn.Equals(itemMt.IdItemBcn));
 
-                if(rawMaterial == null || rawMaterial.Count() == 0)
+                if (rawMaterial == null || rawMaterial.Count() == 0)
                 {
                     DetailBomMt detail = new DetailBomMt()
                     {
@@ -2471,7 +2631,7 @@ namespace HKSupply.Forms.Master
                     view.OptionsBehavior.Editable = false;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -2549,70 +2709,144 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        /// <summary>
+        /// Generar el arbol de un BOM
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        /// <remarks>v2. SKU -> Factory -> Raw Material/Hardware -> breakdown</remarks>
         private TreeNode GetComponentNode(ItemBom item)
         {
             try
             {
-                int contRawMaterialsNode = 0;
-                int contHardwareNode = 0;
-
                 TreeNode root = new TreeNode(item.IdSupplier);
                 root.Name = item.IdSupplier; //El Name es el key de un treeNode
 
                 TreeNode rawMatPrimasRoot = new TreeNode("Raw Materials");
                 TreeNode HardwareRoot = new TreeNode("Hardware");
-                TreeNode HalfFinishedRoot = new TreeNode("Half-Finished");
 
                 root.Nodes.Add(rawMatPrimasRoot);
                 root.Nodes.Add(HardwareRoot);
-                root.Nodes.Add(HalfFinishedRoot);
                 root.Expand();
 
-                foreach (DetailBomMt rawMaterial in item.Materials.EmptyIfNull())
+                foreach (DetailBomMt rawMaterial in item.Materials.EmptyIfNull().OrderBy(a => a.IdBomBreakdown))
                 {
-                    if (string.IsNullOrEmpty(rawMaterial.IdItemBcn))
+                    if (string.IsNullOrEmpty(rawMaterial.IdItemBcn) || string.IsNullOrEmpty(rawMaterial.IdBomBreakdown))
                         continue;
 
-                    root.Nodes[0].Nodes.Add(rawMaterial.IdItemBcn, $"{rawMaterial.IdItemBcn} : {rawMaterial.Item.ItemDescription}");
-                    root.Nodes[0].Nodes[contRawMaterialsNode].Tag = "RawMaterials";
-                    root.Nodes[0].Nodes[contRawMaterialsNode].Nodes.Add(
+                    if(root.Nodes[0].Nodes.Find(rawMaterial.IdBomBreakdown, false).Count() == 0)
+                    {
+                        root.Nodes[0].Nodes.Add(rawMaterial.IdBomBreakdown, rawMaterial.IdBomBreakdown);
+                    }
+
+                    root.Nodes[0].Nodes[rawMaterial.IdBomBreakdown].Nodes.Add(rawMaterial.IdItemBcn, $"{rawMaterial.IdItemBcn} : {rawMaterial.Item.ItemDescription}");
+                    root.Nodes[0].Nodes[rawMaterial.IdBomBreakdown].Nodes[rawMaterial.IdItemBcn].Tag = "RawMaterials";
+                    root.Nodes[0].Nodes[rawMaterial.IdBomBreakdown].Nodes[rawMaterial.IdItemBcn].Nodes.Add(
                         new TreeNode($"Quantity : {rawMaterial.Quantity.ToString()} ({rawMaterial.Item.Unit})")
                         );
-                    contRawMaterialsNode++;
                 }
-                root.Nodes[0].Expand();
-
+                
                 foreach (DetailBomHw hardware in item.Hardwares.EmptyIfNull())
                 {
-                    if (string.IsNullOrEmpty(hardware.IdItemBcn))
+                    if (string.IsNullOrEmpty(hardware.IdItemBcn) || string.IsNullOrEmpty(hardware.IdBomBreakdown))
                         continue;
 
-                    root.Nodes[1].Nodes.Add(hardware.IdItemBcn, $"{hardware.IdItemBcn} : {hardware.Item.ItemDescription}");
-                    root.Nodes[1].Nodes[contHardwareNode].Tag = "Hardware";
-                    root.Nodes[1].Nodes[contHardwareNode].Nodes.Add(
+                    if (root.Nodes[1].Nodes.Find(hardware.IdBomBreakdown, false).Count() == 0)
+                    {
+                        root.Nodes[1].Nodes.Add(hardware.IdBomBreakdown, hardware.IdBomBreakdown);
+                    }
+
+                    root.Nodes[1].Nodes[hardware.IdBomBreakdown].Nodes.Add(hardware.IdItemBcn, $"{hardware.IdItemBcn} : {hardware.Item.ItemDescription}");
+                    root.Nodes[1].Nodes[hardware.IdBomBreakdown].Nodes[hardware.IdItemBcn].Tag = "Hardware";
+                    root.Nodes[1].Nodes[hardware.IdBomBreakdown].Nodes[hardware.IdItemBcn].Nodes.Add(
                         new TreeNode($"Quantity : {hardware.Quantity.ToString()} ({hardware.Item.Unit})")
                         );
-                    contHardwareNode++;
                 }
+
+                //Expandemos los nodos
+                root.Nodes[0].Expand();
                 root.Nodes[1].Expand();
 
-                foreach(DetailBomHf ib in item.HalfFinished.EmptyIfNull())
-                {
-                    if (ib.DetailItemBom == null)
-                        continue;
+                foreach (TreeNode node in root.Nodes[0].Nodes)
+                    node.Expand();
 
-                    root.Nodes[2].Nodes.Add(GetComponentNode(ib.DetailItemBom));
-                    root.Nodes[2].Expand();
-                }
+                foreach (TreeNode node in root.Nodes[1].Nodes)
+                    node.Expand();
 
                 return root;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
 
         }
+
+        //v1
+        //private TreeNode GetComponentNode(ItemBom item)
+        //{
+        //    try
+        //    {
+        //        int contRawMaterialsNode = 0;
+        //        int contHardwareNode = 0;
+
+        //        TreeNode root = new TreeNode(item.IdSupplier);
+        //        root.Name = item.IdSupplier; //El Name es el key de un treeNode
+
+        //        TreeNode rawMatPrimasRoot = new TreeNode("Raw Materials");
+        //        TreeNode HardwareRoot = new TreeNode("Hardware");
+        //        TreeNode HalfFinishedRoot = new TreeNode("Half-Finished");
+
+        //        root.Nodes.Add(rawMatPrimasRoot);
+        //        root.Nodes.Add(HardwareRoot);
+        //        root.Nodes.Add(HalfFinishedRoot);
+        //        root.Expand();
+
+        //        foreach (DetailBomMt rawMaterial in item.Materials.EmptyIfNull().OrderBy(a => a.IdBomBreakdown))
+        //        {
+        //            if (string.IsNullOrEmpty(rawMaterial.IdItemBcn))
+        //                continue;
+
+        //            root.Nodes[0].Nodes.Add(rawMaterial.IdItemBcn, $"{rawMaterial.IdItemBcn} : {rawMaterial.Item.ItemDescription}");
+        //            root.Nodes[0].Nodes[contRawMaterialsNode].Tag = "RawMaterials";
+        //            root.Nodes[0].Nodes[contRawMaterialsNode].Nodes.Add(
+        //                new TreeNode($"Quantity : {rawMaterial.Quantity.ToString()} ({rawMaterial.Item.Unit})")
+        //                );
+        //            contRawMaterialsNode++;
+        //        }
+        //        root.Nodes[0].Expand();
+
+        //        foreach (DetailBomHw hardware in item.Hardwares.EmptyIfNull())
+        //        {
+        //            if (string.IsNullOrEmpty(hardware.IdItemBcn))
+        //                continue;
+
+        //            root.Nodes[1].Nodes.Add(hardware.IdItemBcn, $"{hardware.IdItemBcn} : {hardware.Item.ItemDescription}");
+        //            root.Nodes[1].Nodes[contHardwareNode].Tag = "Hardware";
+        //            root.Nodes[1].Nodes[contHardwareNode].Nodes.Add(
+        //                new TreeNode($"Quantity : {hardware.Quantity.ToString()} ({hardware.Item.Unit})")
+        //                );
+        //            contHardwareNode++;
+        //        }
+        //        root.Nodes[1].Expand();
+
+        //        foreach (DetailBomHf ib in item.HalfFinished.EmptyIfNull())
+        //        {
+        //            if (ib.DetailItemBom == null)
+        //                continue;
+
+        //            root.Nodes[2].Nodes.Add(GetComponentNode(ib.DetailItemBom));
+        //            root.Nodes[2].Expand();
+        //        }
+
+        //        return root;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+
+        //}
 
         #endregion
 
@@ -2626,7 +2860,7 @@ namespace HKSupply.Forms.Master
 
                 string idItemBcn = string.Empty;
                 string idItemGroup = string.Empty;
-              
+
 
                 if (exist == null)
                 {
@@ -2669,7 +2903,7 @@ namespace HKSupply.Forms.Master
                 {
                     XtraMessageBox.Show("Supplier already exist in BOM");
                 }
-                
+
             }
             catch
             {
@@ -2684,10 +2918,10 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                
+
 
                 var suppliers = _itemBomList.Select(a => a.IdSupplier).ToList();
-                List <string> selectedSuppliersSource = new List<string>();
+                List<string> selectedSuppliersSource = new List<string>();
 
                 using (DialogForms.SelectSuppliers form = new DialogForms.SelectSuppliers())
                 {
@@ -2727,6 +2961,10 @@ namespace HKSupply.Forms.Master
                         selectedSuppliersDestination = form.SelectedSuppliersDestination;
 
                         CopySupplierBom2SupplierBom(selectedSuppliersSource.Single(), selectedSuppliersDestination);
+
+                        //Reload Tree & Summary
+                        LoadBomTreeView();
+                        LoadSummaryBom();
                     }
 
                 }
@@ -2766,13 +3004,13 @@ namespace HKSupply.Forms.Master
                         bom.Timestamp = modifiedBom.Timestamp;
 
                         bom.Materials = new List<DetailBomMt>();
-                        foreach(var mt in modifiedBom.Materials)
+                        foreach (var mt in modifiedBom.Materials)
                         {
                             bom.Materials.Add(mt.Clone());
                         }
 
                         bom.Hardwares = new List<DetailBomHw>();
-                        foreach(var hw in modifiedBom.Hardwares)
+                        foreach (var hw in modifiedBom.Hardwares)
                         {
                             bom.Hardwares.Add(hw.Clone());
                         }
@@ -2902,14 +3140,14 @@ namespace HKSupply.Forms.Master
             {
                 LayoutHelper.RestoreLayoutFromBase64String(dockManagerItemBom,
                     LayoutHelper.GetObjectLayout(
-                        _formLayouts, 
-                        CurrentLayout, 
+                        _formLayouts,
+                        CurrentLayout,
                         nameof(dockManagerItemBom)));
 
                 LayoutHelper.RestoreLayoutFromBase64String(documentManagerBom.View,
                      LayoutHelper.GetObjectLayout(
-                         _formLayouts, 
-                         CurrentLayout, 
+                         _formLayouts,
+                         CurrentLayout,
                          nameof(documentManagerBom)));
             }
             catch (Exception ex)
@@ -2945,7 +3183,7 @@ namespace HKSupply.Forms.Master
 
                     foreach (var m in bom.Materials)
                     {
-                        if (string.IsNullOrEmpty(m.IdItemBcn) == false && m.Quantity <= 0 )
+                        if (string.IsNullOrEmpty(m.IdItemBcn) == false && m.Quantity <= 0)
                         {
                             XtraMessageBox.Show($"Quantity must be greater than Zero ({m.IdItemBcn})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             return false;
@@ -2984,7 +3222,7 @@ namespace HKSupply.Forms.Master
                             }
                         }
                     }
-                    
+
 
                 }
 
@@ -3067,7 +3305,7 @@ namespace HKSupply.Forms.Master
                             return false;
                     }
                 }
-                
+
                 return true;
             }
             catch
@@ -3186,20 +3424,20 @@ namespace HKSupply.Forms.Master
                         //if ((row as ItemBom).HalfFinished == null || (row as ItemBom).HalfFinished.Count() == 0)
                         //    e.Menu.Items.Add(CreateMenuItemAddINewLineHalfFinished(view, rowHandle));
 
-                        if (((row as ItemBom).Materials == null || (row as ItemBom).Materials.Count() == 0) && 
-                            ((row as ItemBom).HalfFinished == null || (row as ItemBom).HalfFinished.Count() == 0)) 
+                        if (((row as ItemBom).Materials == null || (row as ItemBom).Materials.Count() == 0) &&
+                            ((row as ItemBom).HalfFinished == null || (row as ItemBom).HalfFinished.Count() == 0))
                         {
                             e.Menu.Items.Add(CreateMenuItemAddINewLineMaterial(view, rowHandle));
                         }
 
-                        if (((row as ItemBom).Hardwares == null || (row as ItemBom).Hardwares.Count() == 0) && 
+                        if (((row as ItemBom).Hardwares == null || (row as ItemBom).Hardwares.Count() == 0) &&
                             ((row as ItemBom).HalfFinished == null || (row as ItemBom).HalfFinished.Count() == 0))
                         {
                             e.Menu.Items.Add(CreateMenuItemAddINewLineHardware(view, rowHandle));
                         }
 
-                        if (((row as ItemBom).HalfFinished == null || (row as ItemBom).HalfFinished.Count() == 0) && 
-                            ((row as ItemBom).Materials == null || (row as ItemBom).Materials.Count() == 0) && 
+                        if (((row as ItemBom).HalfFinished == null || (row as ItemBom).HalfFinished.Count() == 0) &&
+                            ((row as ItemBom).Materials == null || (row as ItemBom).Materials.Count() == 0) &&
                             ((row as ItemBom).Hardwares == null || (row as ItemBom).Hardwares.Count() == 0))
                         {
                             e.Menu.Items.Add(CreateMenuItemAddINewLineHalfFinished(view, rowHandle));
@@ -3312,7 +3550,7 @@ namespace HKSupply.Forms.Master
                 string idModel = string.Empty;
 
                 var row = info.View.GetRow(info.View.FocusedRowHandle);
-                if((row as ItemBom).Item.GetType().BaseType == typeof(ItemEy) || (row as ItemBom).Item.GetType() == typeof(ItemEy))
+                if ((row as ItemBom).Item.GetType().BaseType == typeof(ItemEy) || (row as ItemBom).Item.GetType() == typeof(ItemEy))
                 {
                     var tmp = (row as ItemBom).Item;
                     idModel = (tmp as ItemEy).IdModel;
@@ -3323,8 +3561,6 @@ namespace HKSupply.Forms.Master
                 if (bom != null)
                 {
                     CopyBomFromModelItem((row as ItemBom), bom);
-                    info.View.Columns[nameof(ItemBom.IdSupplier)].AppearanceCell.BackColor = Color.Salmon;
-                    info.View.Columns[nameof(ItemBom.IdSupplier)].AppearanceCell.BackColor2 = Color.SeaShell;
                 }
             }
             catch
@@ -3335,7 +3571,7 @@ namespace HKSupply.Forms.Master
         #endregion
 
         #region Copy Bom
-        
+
         #region Copy Supplier BOM to other Supplier BOM
         private bool CopySupplierBom2SupplierBom(string selectedSupplierSource, List<string> selectedSuppliersDestination)
         {
@@ -3347,7 +3583,7 @@ namespace HKSupply.Forms.Master
 
                 var bomSource = _itemBomList.Where(a => a.IdSupplier.Equals(selectedSupplierSource)).Single();
 
-                foreach(var supplierDestination in selectedSuppliersDestination)
+                foreach (var supplierDestination in selectedSuppliersDestination)
                 {
                     var bomDestination = _itemBomList.Where(a => a.IdSupplier.Equals(supplierDestination)).Single();
 
@@ -3362,34 +3598,39 @@ namespace HKSupply.Forms.Master
                         bomDestination.Materials.Add(tmpMat);
                     }
 
-                    foreach(var hw in bomSource.Hardwares)
+                    foreach (var hw in bomSource.Hardwares)
                     {
                         var tmpHw = hw.Clone();
                         tmpHw.IdBom = bomDestination.IdBom;
-                        bomDestination.Hardwares.Add(tmpHw);
+                        if (tmpHw.Item.IdGroupType != Constants.HW_GROUP_TYPE_DESING)
+                            bomDestination.Hardwares.Add(tmpHw);
                     }
 
-                    foreach(var hf in bomSource.HalfFinished)
+                    if (bomSource.IdSupplier != Constants.INTRANET_ETNIA_BCN)
                     {
-                        //Los semielaborados no se copían directamente, hay que buscar si existe un bom en el sistema para ese item/supplier y copiar ese.
-                        var itemBomHf = GlobalSetting.ItemBomService.GetItemSupplierBom(hf.DetailItemBom.IdItemBcn, supplierDestination);
-
-                        if (itemBomHf != null)
+                        foreach (var hf in bomSource.HalfFinished)
                         {
-                            DetailBomHf detailBomHf = new DetailBomHf()
+                            //Los semielaborados no se copían directamente, hay que buscar si existe un bom en el sistema para ese item/supplier y copiar ese.
+                            var itemBomHf = GlobalSetting.ItemBomService.GetItemSupplierBom(hf.DetailItemBom.IdItemBcn, supplierDestination);
+
+                            if (itemBomHf != null)
                             {
-                                DetailItemBom = itemBomHf,
-                                IdBomDetail = itemBomHf.IdBom,
-                                Quantity = hf.Quantity
+                                DetailBomHf detailBomHf = new DetailBomHf()
+                                {
+                                    DetailItemBom = itemBomHf,
+                                    IdBomDetail = itemBomHf.IdBom,
+                                    Quantity = hf.Quantity
 
-                            };
-                            bomDestination.HalfFinished.Add(detailBomHf);
-                        }
-                        else
-                        {
-                            msgHalfFinished += $"{hf.DetailItemBom.IdItemBcn} is not defined for supplier {supplierDestination}.{Environment.NewLine}";
+                                };
+                                bomDestination.HalfFinished.Add(detailBomHf);
+                            }
+                            else
+                            {
+                                msgHalfFinished += $"{hf.DetailItemBom.IdItemBcn} is not defined for supplier {supplierDestination}.{Environment.NewLine}";
+                            }
                         }
                     }
+
                 }
 
                 if (msgHalfFinished != string.Empty)
@@ -3409,7 +3650,7 @@ namespace HKSupply.Forms.Master
             {
                 Cursor = Cursors.Default;
             }
-            
+
         }
         #endregion
 
@@ -3424,7 +3665,7 @@ namespace HKSupply.Forms.Master
                 itemBomOri.Hardwares = new List<DetailBomHw>();
                 itemBomOri.HalfFinished = new List<DetailBomHf>();
 
-                foreach(var m in bomCopy.Materials)
+                foreach (var m in bomCopy.Materials)
                 {
                     var tmpMat = m.Clone();
                     tmpMat.IdBom = itemBomOri.IdBom;
@@ -3464,7 +3705,7 @@ namespace HKSupply.Forms.Master
                 Cursor = Cursors.Default;
             }
         }
-            
+
 
         #endregion
 
@@ -3497,7 +3738,7 @@ namespace HKSupply.Forms.Master
                         {
                             //exist = (rowParent as ItemBom).Materials.Where(a => a.IdItemBcn != null && a.IdItemBcn.Equals(idItemMt)).FirstOrDefault();
                             exist = (rowParent as ItemBom).Materials
-                                .Where(a => 
+                                .Where(a =>
                                     (a.IdItemBcn ?? "").Equals(idItemMt) && (a.IdBomBreakdown ?? "").Equals(row.IdBomBreakdown ?? "")
                                     )
                                 .FirstOrDefault();
@@ -3670,7 +3911,7 @@ namespace HKSupply.Forms.Master
                         {
                             e.Valid = false;
                         }
-                        else if(numParts == 0)
+                        else if (numParts == 0)
                         {
                             e.Valid = false;
                         }
@@ -3918,11 +4159,11 @@ namespace HKSupply.Forms.Master
                     case nameof(DetailBomHf.DetailItemBom) + "." + nameof(ItemBom.IdItemBcn):
                         SearchLookUpEdit riItemsHf = (SearchLookUpEdit)view.ActiveEditor;
                         var supplierItemsHf = GlobalSetting.ItemHfService.GetISupplierHfItems((rowParent as ItemBom).IdSupplier);
-                        var ids= supplierItemsHf.Select(a => a.IdItemBcn).ToList();
+                        var ids = supplierItemsHf.Select(a => a.IdItemBcn).ToList();
                         riItemsHf.Properties.DataSource = ids;
                         break;
                 }
-                    
+
 
             }
             catch (Exception ex)
@@ -3962,7 +4203,7 @@ namespace HKSupply.Forms.Master
                     // ...                     
                     if (gridView != null)
                     {
-                        if(gridView.LevelName == nameof(ItemBom.HalfFinished))
+                        if (gridView.LevelName == nameof(ItemBom.HalfFinished))
                         {
                             //xgrdItemBom.FocusedView = gridView.get;
                             var x = gridView.GetDetailView(rowHandle, 0);

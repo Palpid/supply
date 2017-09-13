@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\B1Report.cs" />
+    <Compile Include="Classes\ItemDocWarning.cs" />
     <Compile Include="Classes\PlainBomAux.cs" />
     <Compile Include="Classes\RowInfo.cs" />
     <Compile Include="DB\HKSupplyContext.cs" />
@@ -672,6 +673,7 @@
     <Compile Include="Models\ItemHwHistory.cs" />
     <Compile Include="Models\ItemMt.cs" />
     <Compile Include="Models\ItemMtHistory.cs" />
+    <Compile Include="Models\ItemType.cs" />
     <Compile Include="Models\Layout.cs" />
     <Compile Include="Models\MaterialL1.cs" />
     <Compile Include="Models\MaterialL2.cs" />
@@ -680,12 +682,14 @@
     <Compile Include="Models\MatTypeL2.cs" />
     <Compile Include="Models\MatTypeL3.cs" />
     <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\MyCompany.cs" />
     <Compile Include="Models\PaymentTerms.cs" />
     <Compile Include="Models\Prototype.cs" />
     <Compile Include="Models\PrototypeDoc.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\StatusCial.cs" />
     <Compile Include="Models\StatusHK.cs" />
+    <Compile Include="Models\StatusPrototype.cs" />
     <Compile Include="Models\Store.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\SupplierFactoryCoeff.cs" />
@@ -713,6 +717,7 @@
     <Compile Include="Services\Implementations\EFCustomerPriceList.cs" />
     <Compile Include="Services\Implementations\EFDocType.cs" />
     <Compile Include="Services\Implementations\EFEchangeRate.cs" />
+    <Compile Include="Services\Implementations\EFEtnColor.cs" />
     <Compile Include="Services\Implementations\EFFamilyHK.cs" />
     <Compile Include="Services\Implementations\EFFunctionality.cs" />
     <Compile Include="Services\Implementations\EFFunctionalityRole.cs" />
@@ -729,6 +734,7 @@
     <Compile Include="Services\Implementations\EFMaterial.cs" />
     <Compile Include="Services\Implementations\EFMatType.cs" />
     <Compile Include="Services\Implementations\EFModel.cs" />
+    <Compile Include="Services\Implementations\EFMyCompany.cs" />
     <Compile Include="Services\Implementations\EFPaymentTerms.cs" />
     <Compile Include="Services\Implementations\EFPrototype.cs" />
     <Compile Include="Services\Implementations\EFPrototypeDoc.cs" />
@@ -747,6 +753,7 @@
     <Compile Include="Services\Interfaces\ICustomerPriceList.cs" />
     <Compile Include="Services\Interfaces\IDocType.cs" />
     <Compile Include="Services\Interfaces\IEchangeRate.cs" />
+    <Compile Include="Services\Interfaces\IEtnColor.cs" />
     <Compile Include="Services\Interfaces\IFamilyHK.cs" />
     <Compile Include="Services\Interfaces\IFunctionality.cs" />
     <Compile Include="Services\Interfaces\IFunctionalityRole.cs" />
@@ -763,6 +770,7 @@
     <Compile Include="Services\Interfaces\IMaterial.cs" />
     <Compile Include="Services\Interfaces\IMatType.cs" />
     <Compile Include="Services\Interfaces\IModel.cs" />
+    <Compile Include="Services\Interfaces\IMyCompany.cs" />
     <Compile Include="Services\Interfaces\IPaymentTerms.cs" />
     <Compile Include="Services\Interfaces\IPrototype.cs" />
     <Compile Include="Services\Interfaces\IPrototypeDoc.cs" />

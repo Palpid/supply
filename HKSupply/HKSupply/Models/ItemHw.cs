@@ -109,6 +109,9 @@ namespace HKSupply.Models
         [Column("PHOTO_URL", TypeName = "NVARCHAR"), StringLength(2500)]
         public string PhotoUrl { get; set; }
 
+        [Column("ID_GROUP_TYPE", TypeName = "NVARCHAR"), StringLength(50)]
+        public string IdGroupType { get; set; }
+
         #region Equal
 
         public override bool Equals(object obj)
@@ -145,7 +148,8 @@ namespace HKSupply.Models
                 Unit == itemHw.Unit &&
                 DocsLink == itemHw.DocsLink &&
                 CreateDate == itemHw.CreateDate &&
-                PhotoUrl == itemHw.PhotoUrl
+                PhotoUrl == itemHw.PhotoUrl &&
+                IdGroupType == itemHw.IdGroupType
                 );
 
             return res;
@@ -180,7 +184,8 @@ namespace HKSupply.Models
                                 (Unit == null ? 0 : Unit.GetHashCode()) +
                                 (DocsLink == null ? 0 : DocsLink.GetHashCode()) +
                                 CreateDate.GetHashCode() +
-                                (PhotoUrl == null ? 0 : PhotoUrl.GetHashCode());
+                                (PhotoUrl == null ? 0 : PhotoUrl.GetHashCode()) +
+                                (IdGroupType == null ? 0 : IdGroupType.GetHashCode());
 
             return hashCode;
         }

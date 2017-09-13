@@ -89,6 +89,13 @@ namespace HKSupply.DB
 
         public DbSet<SupplierFactoryCoeff> SupplierFactoryCoeff { get; set; }
 
+        public DbSet<MyCompany> MyCompany { get; set; }
+
+        public DbSet<ItemType> ItemTypes { get; set; }
+
+        public DbSet<StatusPrototype> StatusPrototype { get; set; }
+
+
         //public HKSupplyContext()
         //    : base("name=SqlExpressConn")
         //{

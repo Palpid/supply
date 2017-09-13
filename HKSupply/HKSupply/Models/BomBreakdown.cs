@@ -13,6 +13,9 @@ namespace HKSupply.Models
         [Column("DESCRIPTION", TypeName = "NVARCHAR"), StringLength(500)]
         public string Description { get; set; }
 
+        [Column("SUB_GROUP", TypeName = "NVARCHAR"), StringLength(100)]
+        public string SubGroup { get; set; }
+
         #region Equals
         public override bool Equals(object obj)
         {
@@ -22,7 +25,8 @@ namespace HKSupply.Models
             BomBreakdown bomBreakdown = (BomBreakdown)obj;
             bool res = (
                 IdBomBreakdown == bomBreakdown.IdBomBreakdown &&
-                Description == bomBreakdown.Description);
+                Description == bomBreakdown.Description &&
+                SubGroup == bomBreakdown.SubGroup);
 
             return res;
         }
@@ -31,7 +35,8 @@ namespace HKSupply.Models
         {
             int hashCode =
                 (IdBomBreakdown == null ? 0 : IdBomBreakdown.GetHashCode()) +
-                (Description == null ? 0 : Description.GetHashCode());
+                (Description == null ? 0 : Description.GetHashCode()) +
+                (SubGroup == null ? 0 : SubGroup.GetHashCode());
 
             return hashCode;
         }

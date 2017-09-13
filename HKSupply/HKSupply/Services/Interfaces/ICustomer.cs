@@ -15,7 +15,7 @@ namespace HKSupply.Services.Interfaces
         bool NewCustomer(Customer newCustomer);
         bool UpdateCustomer(Customer updateCustomer, bool newVer = false);
         Customer GetCustomerById(string idCustomer);
-        List<Customer> GetCustomers();
+        List<Customer> GetCustomers(bool withEtniaHk = false);
         List<CustomerHistory> GetCustomerHistory(string idCustomer);
     }
 }

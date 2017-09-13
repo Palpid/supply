@@ -109,6 +109,9 @@ namespace HKSupply.Models
         [Column("PHOTO_URL", TypeName = "NVARCHAR"), StringLength(2500)]
         public string PhotoUrl { get; set; }
 
+        [Column("ID_GROUP_TYPE", TypeName = "NVARCHAR"), StringLength(50)]
+        public string IdGroupType { get; set; }
+
         [Column("USER"), StringLength(20)]
         public string User { get; set; }
 
@@ -150,6 +153,7 @@ namespace HKSupply.Models
                 DocsLink == itemHwHistory.DocsLink &&
                 CreateDate == itemHwHistory.CreateDate &&
                 PhotoUrl == itemHwHistory.PhotoUrl &&
+                IdGroupType == itemHwHistory.IdGroupType &&
                 User == itemHwHistory.User
                 );
 
@@ -186,6 +190,7 @@ namespace HKSupply.Models
                 (DocsLink == null ? 0 : DocsLink.GetHashCode()) +
                 CreateDate.GetHashCode() +
                 (PhotoUrl == null ? 0 : PhotoUrl.GetHashCode()) +
+                (IdGroupType == null ? 0 : IdGroupType.GetHashCode()) +
                 (User == null ? 0 : User.GetHashCode());
 
             return hashCode;
@@ -197,33 +202,34 @@ namespace HKSupply.Models
         {
             ItemHwHistory ihwh = new ItemHwHistory();
 
-             ihwh.IdVer = i.IdVer ;
-                ihwh.IdSubVer = i.IdSubVer ;
-                ihwh.Timestamp = i.Timestamp ;
-                ihwh.IdPrototype = i.IdPrototype ;
-                ihwh.IdItemBcn = i.IdItemBcn ;
-                ihwh.IdHwTypeL1 = i.IdHwTypeL1 ;
-                ihwh.IdHwTypeL2 = i.IdHwTypeL2 ;
-                ihwh.IdHwTypeL3 = i.IdHwTypeL3 ;
+             ihwh.IdVer = i.IdVer;
+                ihwh.IdSubVer = i.IdSubVer;
+                ihwh.Timestamp = i.Timestamp;
+                ihwh.IdPrototype = i.IdPrototype;
+                ihwh.IdItemBcn = i.IdItemBcn;
+                ihwh.IdHwTypeL1 = i.IdHwTypeL1;
+                ihwh.IdHwTypeL2 = i.IdHwTypeL2;
+                ihwh.IdHwTypeL3 = i.IdHwTypeL3;
                 ihwh.IdDefaultSupplier = i.IdDefaultSupplier;
                 ihwh.IdModel = i.IdModel;
-                ihwh.IdFamilyHK = i.IdFamilyHK ;
+                ihwh.IdFamilyHK = i.IdFamilyHK;
                 ihwh.IdColor1 = i.IdColor1;
                 ihwh.IdColor2 = i.IdColor2;
-                ihwh.IdItemHK = i.IdItemHK ;
-                ihwh.ItemDescription = i.ItemDescription ;
-                ihwh.Comments = i.Comments ;
-                ihwh.LaunchDate = i.LaunchDate ;
-                ihwh.RemovalDate = i.RemovalDate ;
-                ihwh.IdStatusCial = i.IdStatusCial ;
-                ihwh.IdStatusProd = i.IdStatusProd ;
-                ihwh.IdUserAttri1 = i.IdUserAttri1 ;
-                ihwh.IdUserAttri2 = i.IdUserAttri2 ;
-                ihwh.IdUserAttri3 = i.IdUserAttri3 ;
-                ihwh.Unit = i.Unit ;
-                ihwh.DocsLink = i.DocsLink ;
-                ihwh.CreateDate = i.CreateDate ;
-                ihwh.PhotoUrl = i.PhotoUrl ;
+                ihwh.IdItemHK = i.IdItemHK;
+                ihwh.ItemDescription = i.ItemDescription;
+                ihwh.Comments = i.Comments;
+                ihwh.LaunchDate = i.LaunchDate;
+                ihwh.RemovalDate = i.RemovalDate;
+                ihwh.IdStatusCial = i.IdStatusCial;
+                ihwh.IdStatusProd = i.IdStatusProd;
+                ihwh.IdUserAttri1 = i.IdUserAttri1;
+                ihwh.IdUserAttri2 = i.IdUserAttri2;
+                ihwh.IdUserAttri3 = i.IdUserAttri3;
+                ihwh.Unit = i.Unit;
+                ihwh.DocsLink = i.DocsLink;
+                ihwh.CreateDate = i.CreateDate;
+                ihwh.PhotoUrl = i.PhotoUrl;
+                ihwh.IdGroupType = i.IdGroupType;
 
             return ihwh;
         }
