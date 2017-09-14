@@ -804,10 +804,10 @@ namespace HKSupply.Services.Implementations
 
 
                             /************************************* PK *************************************/
-                            //Si es un Packing List y se finaliza hay que generar la Delivery Note 
+                            //Si es un Packing List y se finaliza hay que generar la Delivery Note, la Invoice
                             //y actualizar los datos en las Sales orders asociadas
 
-                            if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_PK && finishDoc == true)
+                            if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_PL && finishDoc == true)
                             {
                                 db.SaveChanges();
 
@@ -817,6 +817,11 @@ namespace HKSupply.Services.Implementations
                                 //Generar la Delivery Note de HK a la fábrica
                                 DocHead dnHkFactory = GetDeliveryNoteHk2Factory(docToUpdate);
                                 db.DocsHead.Add(dnHkFactory);
+
+                                //Generar la Invice de HK a la fábrica
+                                DocHead ivHkFactory = GetInvoiceHk2Factory(dnHkFactory);
+                                db.DocsHead.Add(ivHkFactory);
+
                             }
 
 
@@ -1007,6 +1012,58 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        public string GetPackingListNumber(string idCustomer, DateTime date)
+        {
+            try
+            {
+                if (idCustomer == null)
+                    throw new ArgumentNullException(nameof(idCustomer));
+
+                using (var db = new HKSupplyContext())
+                {
+
+                    string strCont;
+                    string pkNumber = string.Empty;
+
+                    var pakingsDocs = db.DocsHead
+                        .Where(a => a.IdSupplyDocType.Equals(Constants.SUPPLY_DOCTYPE_PL) && a.IdCustomer.Equals(idCustomer) &&
+                        System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", date) &&
+                        System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", date))
+                        .ToList();
+
+                    strCont = $"{(pakingsDocs.Count + 1).ToString().PadLeft(3, '0')}";
+
+                    pkNumber = $"{Constants.SUPPLY_DOCTYPE_PL}{idCustomer}{DateTime.Now.Year.ToString()}{DateTime.Now.Month.ToString("d2")}{strCont}";
+
+                    return pkNumber;
+                }
+            }
+            catch (SqlException sqlex)
+            {
+                for (int i = 0; i < sqlex.Errors.Count; i++)
+                {
+                    _log.Error("Index #" + i + "\n" +
+                        "Message: " + sqlex.Errors[i].Message + "\n" +
+                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                        "Source: " + sqlex.Errors[i].Source + "\n" +
+                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                    switch (sqlex.Errors[i].Number)
+                    {
+                        case -1: //connection broken
+                        case -2: //timeout
+                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                    }
+                }
+                throw sqlex;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
+            }
+        }
 
         #region Private Methods
 
@@ -1141,7 +1198,7 @@ namespace HKSupply.Services.Implementations
                 {
                     DocLine lineDnHkFactory = line.DeepCopyByExpressionTree();
                     lineDnHkFactory.QuantityOriginal = lineDnHkFactory.Quantity;
-                    lineDnHkFactory.IdDoc = line.IdDoc.Replace(Constants.SUPPLY_DOCTYPE_PK, Constants.SUPPLY_DOCTYPE_DN);
+                    lineDnHkFactory.IdDoc = line.IdDoc.Replace(Constants.SUPPLY_DOCTYPE_PL, Constants.SUPPLY_DOCTYPE_DN);
                     //lineDnHkFactory.IdDocRelated = newDoc.IdDoc; //Mantenemos el original referenciado a la SO
                     lineDnHkFactory.IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE;
                     linesDnHkFactory.Add(lineDnHkFactory);
@@ -1149,7 +1206,7 @@ namespace HKSupply.Services.Implementations
 
                 DocHead dnHkFactory = new DocHead()
                 {
-                    IdDoc = packingList.IdDoc.Replace(Constants.SUPPLY_DOCTYPE_PK, Constants.SUPPLY_DOCTYPE_DN), //ID? Cómo se linka por el la PO de fábrica
+                    IdDoc = packingList.IdDoc.Replace(Constants.SUPPLY_DOCTYPE_PL, Constants.SUPPLY_DOCTYPE_DN), //ID? Cómo se linka por el la PO de fábrica
                     IdDocRelated = packingList.IdDoc,
                     IdSupplyDocType = Constants.SUPPLY_DOCTYPE_DN,
                     CreationDate = DateTime.Now,
@@ -1165,6 +1222,48 @@ namespace HKSupply.Services.Implementations
                 };
 
                 return dnHkFactory;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private DocHead GetInvoiceHk2Factory(DocHead deliveryNote)
+        {
+            try
+            {
+                //copiamos las líneas tal cual
+                List<DocLine> linesIvHkFactory = new List<DocLine>();
+
+                foreach (var line in deliveryNote.Lines)
+                {
+                    DocLine lineIvHkFactory = line.DeepCopyByExpressionTree();
+                    lineIvHkFactory.IdDoc = line.IdDoc.Replace(Constants.SUPPLY_DOCTYPE_DN, Constants.SUPPLY_DOCTYPE_IV);
+                    //lineIvHkFactory.IdDocRelated = deliveryNote.IdDoc; //mantenemos la relación a la SO al igual que la DN
+                    lineIvHkFactory.IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE;
+
+                    linesIvHkFactory.Add(lineIvHkFactory);
+                }
+
+                DocHead ivHkFactory = new DocHead()
+                {
+                    IdDoc = deliveryNote.IdDoc.Replace(Constants.SUPPLY_DOCTYPE_DN, Constants.SUPPLY_DOCTYPE_IV), 
+                    IdDocRelated = deliveryNote.IdDoc,
+                    IdSupplyDocType = Constants.SUPPLY_DOCTYPE_IV,
+                    CreationDate = DateTime.Now,
+                    DeliveryDate = deliveryNote.DeliveryDate,
+                    DocDate = deliveryNote.DocDate,
+                    IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE,
+                    IdSupplier = Constants.ETNIA_HK_COMPANY_CODE,
+                    IdCustomer = deliveryNote.IdCustomer,
+                    DeliveryTerm = deliveryNote.DeliveryTerm,
+                    IdPaymentTerms = deliveryNote.IdPaymentTerms,
+                    IdCurrency = deliveryNote.IdCurrency,
+                    Lines = linesIvHkFactory,
+                };
+
+                return ivHkFactory;
             }
             catch
             {

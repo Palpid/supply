@@ -385,6 +385,12 @@
     <Compile Include="Forms\Supply\PackingList.Designer.cs">
       <DependentUpon>PackingList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Supply\PackingListBcn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\PackingListBcn.Designer.cs">
+      <DependentUpon>PackingListBcn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Supply\PurchaseOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -792,6 +798,10 @@
     <Compile Include="Migrations\201709080945404_protosActive_01.Designer.cs">
       <DependentUpon>201709080945404_protosActive_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709131107085_StatusPrototype_01.cs" />
+    <Compile Include="Migrations\201709131107085_StatusPrototype_01.Designer.cs">
+      <DependentUpon>201709131107085_StatusPrototype_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BomBreakdown.cs" />
     <Compile Include="Models\Currency.cs" />
@@ -844,6 +854,7 @@
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\StatusCial.cs" />
     <Compile Include="Models\StatusHK.cs" />
+    <Compile Include="Models\StatusPrototype.cs" />
     <Compile Include="Models\Store.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\SupplierFactoryCoeff.cs" />
@@ -1080,6 +1091,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\PackingList.resx">
       <DependentUpon>PackingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\PackingListBcn.resx">
+      <DependentUpon>PackingListBcn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\PurchaseOrder.resx">
       <DependentUpon>PurchaseOrder.cs</DependentUpon>
@@ -1371,6 +1385,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709080945404_protosActive_01.resx">
       <DependentUpon>201709080945404_protosActive_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709131107085_StatusPrototype_01.resx">
+      <DependentUpon>201709131107085_StatusPrototype_01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

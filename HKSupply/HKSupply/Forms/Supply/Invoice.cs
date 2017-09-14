@@ -203,6 +203,21 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void TxtINVNumber_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter && txtINVNumber.EditValue != null)
+                {
+                    SearchInvoice();
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void GridViewLines_CustomSummaryCalculate(object sender, CustomSummaryEventArgs e)
         {
             try
@@ -521,6 +536,7 @@ namespace HKSupply.Forms.Supply
             {
                 sbSearch.Click += SbSearch_Click;
                 txtINVNumber.EditValueChanged += TxtDNNumber_EditValueChanged;
+                txtINVNumber.KeyDown += TxtINVNumber_KeyDown;
             }
             catch
             {
@@ -629,7 +645,7 @@ namespace HKSupply.Forms.Supply
                 var customer = _customersList.Where(a => a.IdCustomer.Equals(_docInvoice.IdCustomer)).FirstOrDefault();
 
                 /********* Head *********/
-                txtDNNumber.EditValue = "??"; //TODO
+                txtDNNumber.EditValue = _docInvoice.IdDocRelated; 
                 dateEditINVDate.EditValue = _docInvoice.DocDate;
                 lblINVDateWeek.Text = _docInvoice.DocDate.GetWeek().ToString();
                 slueCustomer.EditValue = _docInvoice.IdCustomer;
@@ -670,7 +686,7 @@ namespace HKSupply.Forms.Supply
                 {
                     XtraMessageBox.Show("No Data Found", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else if (_docInvoice.IdSupplyDocType != Constants.SUPPLY_DOCTYPE_INV)
+                else if (_docInvoice.IdSupplyDocType != Constants.SUPPLY_DOCTYPE_IV)
                 {
                     XtraMessageBox.Show("Document is not an Invoice", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

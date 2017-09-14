@@ -581,7 +581,7 @@ namespace HKSupply.Forms.Supply
 
                         break;
 
-                    case Constants.SUPPLY_DOCTYPE_PK:
+                    case Constants.SUPPLY_DOCTYPE_PL:
 
                         PackingList packingListForm =
                            Application.OpenForms.OfType<PackingList>()
@@ -600,7 +600,7 @@ namespace HKSupply.Forms.Supply
                         packingListForm.WindowState = FormWindowState.Maximized;
                         break;
 
-                    case Constants.SUPPLY_DOCTYPE_INV:
+                    case Constants.SUPPLY_DOCTYPE_IV:
 
                         Invoice invoiceForm =
                             Application.OpenForms.OfType<Invoice>()

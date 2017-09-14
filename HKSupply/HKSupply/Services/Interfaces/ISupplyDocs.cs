@@ -20,5 +20,7 @@ namespace HKSupply.Services.Interfaces
         bool ValidateBomSupplierLines(string idSupplier, List<DocLine> lines , out List<string> itemWithouBom);
         bool UpdateLinesRemarks(List<DocLine> lines);
         List<SupplyDocType> GetSupplyDocTypes();
+
+        String GetPackingListNumber(string idCustomer, DateTime date);
     }
 }

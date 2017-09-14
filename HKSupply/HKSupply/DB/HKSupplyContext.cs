@@ -101,6 +101,8 @@ namespace HKSupply.DB
 
         public DbSet<ItemType> ItemTypes { get; set; }
 
+        public DbSet<StatusPrototype> StatusPrototype { get; set; }
+
         //public HKSupplyContext()
         //    : base("name=SqlExpressConn")
         //{

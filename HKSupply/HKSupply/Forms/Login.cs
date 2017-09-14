@@ -33,6 +33,9 @@ namespace HKSupply.Forms
         {
             try
             {
+                //Si el usuario logado en Windows existe en la aplicación no mostramos la pantalla de login local
+                LoginWithWindowsUser();
+
                 InitializeFormStyles();
                 InitializeTexts();
                 txtPassword.KeyDown +=txtPassword_KeyDown;
@@ -123,6 +126,27 @@ namespace HKSupply.Forms
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        private void LoginWithWindowsUser()
+        {
+            try
+            {
+
+                var windowsUser = Environment.UserName;
+                var user = GlobalSetting.UserService.GetUserByLogin(windowsUser);
+                if (user != null)
+                {
+                    GlobalSetting.LoggedUser = user;
+                    var functionalitiesRoles = GlobalSetting.FunctionalityRoleService.GetFunctionalitiesRole(GlobalSetting.LoggedUser.RoleId);
+                    GlobalSetting.FunctionalitiesRoles = functionalitiesRoles;
+                    DialogResult = DialogResult.OK;
+                }
+            }
+            catch
+            {
+                throw;
             }
         }
 

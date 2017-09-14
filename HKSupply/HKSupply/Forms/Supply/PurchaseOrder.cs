@@ -123,12 +123,20 @@ namespace HKSupply.Forms.Supply
 
             try
             {
-                if (_docLinesList?.Count > 0)
-                    ConfigureRibbonActionsEditing();
-                else
+                if (_docLinesList?.Count == 0)
                 {
                     MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
                     RestoreInitState();
+                    
+                }
+                else if (_docHeadPO.IdSupplier == Constants.ETNIA_HK_COMPANY_CODE)
+                {
+                    MessageBox.Show("Etnia Barcelona Purchase Orders cannot be edited.");
+                    RestoreInitState();
+                }
+                else
+                {
+                    ConfigureRibbonActionsEditing();
                 }
             }
             catch (Exception ex)
@@ -975,7 +983,7 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                _suppliersList = GlobalSetting.SupplierService.GetSuppliers();
+                _suppliersList = GlobalSetting.SupplierService.GetSuppliers(withEtniaHk: true);
                 _currenciesList = GlobalSetting.CurrencyService.GetCurrencies();
                 _supplyStatusList = GlobalSetting.SupplyDocsService.GetSupplyStatus();
                 _itemsEyList = GlobalSetting.ItemEyService.GetItems();

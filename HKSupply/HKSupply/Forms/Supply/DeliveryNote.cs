@@ -641,7 +641,7 @@ namespace HKSupply.Forms.Supply
                 var customer = _customersList.Where(a => a.IdCustomer.Equals(_docDeliveyNote.IdCustomer)).FirstOrDefault();
 
                 /********* Head *********/
-                txtPKNumber.EditValue = _docDeliveyNote.IdDoc.Replace(Constants.SUPPLY_DOCTYPE_DN, Constants.SUPPLY_DOCTYPE_PK); //TODO: Esto es un poco chustero...
+                txtPKNumber.EditValue = _docDeliveyNote.IdDoc.Replace(Constants.SUPPLY_DOCTYPE_DN, Constants.SUPPLY_DOCTYPE_PL); //TODO: Esto es un poco chustero...
                 dateEditDNCreation.EditValue = _docDeliveyNote.DocDate;
                 dateEditDNDelivery.EditValue = _docDeliveyNote.DeliveryDate;
                 lblDNCreationDateWeek.Text = _docDeliveyNote.DocDate.GetWeek().ToString();

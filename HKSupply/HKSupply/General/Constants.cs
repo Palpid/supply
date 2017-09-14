@@ -76,8 +76,8 @@ namespace HKSupply.General
         public const string SUPPLY_DOCTYPE_PO = "PO"; //Purchase Order
         public const string SUPPLY_DOCTYPE_SO = "SO"; //Sales Order
         public const string SUPPLY_DOCTYPE_QP = "QP"; //Quotation Proposal
-        public const string SUPPLY_DOCTYPE_INV = "INV"; //Invoice
-        public const string SUPPLY_DOCTYPE_PK = "PK"; //Paking List
+        public const string SUPPLY_DOCTYPE_IV = "IV"; //Invoice
+        public const string SUPPLY_DOCTYPE_PL = "PL"; //Paking List
         public const string SUPPLY_DOCTYPE_DN = "DN"; //Deñivery Note
 
         //** ETNIA HK/BCN CODE **//

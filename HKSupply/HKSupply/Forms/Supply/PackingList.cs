@@ -898,7 +898,7 @@ namespace HKSupply.Forms.Supply
                 {
                     XtraMessageBox.Show("No Data Found", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else if (_docHeadPK.IdSupplyDocType != Constants.SUPPLY_DOCTYPE_PK)
+                else if (_docHeadPK.IdSupplyDocType != Constants.SUPPLY_DOCTYPE_PL)
                 {
                     XtraMessageBox.Show("Document is not a Packing List", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -1063,6 +1063,21 @@ namespace HKSupply.Forms.Supply
                 slueDeliveryTerms.ReadOnly = true;
                 slueCurrency.ReadOnly = true;
                 sluePaymentTerm.ReadOnly = true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void SetObjectsEnableToCreate()
+        {
+            try
+            {
+                dateEditPKDelivery.ReadOnly = false; //TODO --> no tiene que ser editable cuando tengamos lead time y se calcule 
+                slueDeliveryTerms.ReadOnly = false;
+                slueCurrency.ReadOnly = false;
+                sluePaymentTerm.ReadOnly = false;
             }
             catch
             {
@@ -1694,8 +1709,10 @@ namespace HKSupply.Forms.Supply
                 string idPk = _docHeadPK?.IdDoc;
                 ResetPK();
                 ResetForm();
+                txtPKNumber.Text = string.Empty;
+                SetObjectsReadOnly();
 
-                if(idPk != null)
+                if (idPk != null)
                 {
                     txtPKNumber.Text = idPk;
                     SearchPK();
@@ -1748,6 +1765,8 @@ namespace HKSupply.Forms.Supply
 
                 //clean necessary objects
                 Reset4NewPk();
+                //Enable objects
+                SetObjectsEnableToCreate();
 
                 //generate packing list number
                 CreatePkNumber(); 
@@ -1849,7 +1868,7 @@ namespace HKSupply.Forms.Supply
                     idCustomer: (string)slueCustomer.EditValue,
                     //docDate: dateEditPKDocDate.DateTime, 
                     docDate: new DateTime(1, 1, 1),
-                    IdSupplyDocType: Constants.SUPPLY_DOCTYPE_PK, 
+                    IdSupplyDocType: Constants.SUPPLY_DOCTYPE_PL, 
                     idSupplyStatus: Constants.SUPPLY_STATUS_OPEN);
 
                 if (exist.Count > 0)
@@ -1876,22 +1895,21 @@ namespace HKSupply.Forms.Supply
             {
                 Cursor = Cursors.WaitCursor;
 
-                string strCont;
-                string pkNumber = string.Empty;
+                //string strCont;
+                //string pkNumber = string.Empty;
 
-                var pakingsDocs = GlobalSetting.SupplyDocsService.GetDocs(
-                    idSupplier: null, 
-                    idCustomer: (string)slueCustomer.EditValue, 
-                    docDate: dateEditPKDocDate.DateTime, 
-                    IdSupplyDocType: Constants.SUPPLY_DOCTYPE_PK, 
-                    idSupplyStatus: null);
+                //var pakingsDocs = GlobalSetting.SupplyDocsService.GetDocs(
+                //    idSupplier: null, 
+                //    idCustomer: (string)slueCustomer.EditValue, 
+                //    docDate: dateEditPKDocDate.DateTime, 
+                //    IdSupplyDocType: Constants.SUPPLY_DOCTYPE_PL, 
+                //    idSupplyStatus: null);
 
-                if (pakingsDocs.Count == 0)
-                    strCont = string.Empty;
-                else
-                    strCont = $"-{(pakingsDocs.Count + 1).ToString()}";
+                //strCont = $"{(pakingsDocs.Count + 1).ToString().PadLeft(3, '0')}";
 
-                pkNumber = $"{Constants.SUPPLY_DOCTYPE_PK}{DateTime.Now.Year.ToString().Substring(3)}{lblPKDocDateWeek.Text}{slueCustomer.EditValue}{strCont}";
+                //pkNumber = $"{Constants.SUPPLY_DOCTYPE_PL}{slueCustomer.EditValue}{DateTime.Now.Year.ToString()}{DateTime.Now.Month.ToString("d2")}{strCont}";
+
+                string pkNumber = GlobalSetting.SupplyDocsService.GetPackingListNumber((string)slueCustomer.EditValue, DateTime.Now);
 
                 txtPKNumber.Text = pkNumber;
             }
@@ -1914,7 +1932,7 @@ namespace HKSupply.Forms.Supply
                 DocHead packingList = new DocHead()
                 {
                     IdDoc = txtPKNumber.Text,
-                    IdSupplyDocType = Constants.SUPPLY_DOCTYPE_PK,
+                    IdSupplyDocType = Constants.SUPPLY_DOCTYPE_PL,
                     CreationDate = DateTime.Now,
                     DeliveryDate = dateEditPKDelivery.DateTime,
                     DocDate = dateEditPKDocDate.DateTime, //DateTime.Now,
