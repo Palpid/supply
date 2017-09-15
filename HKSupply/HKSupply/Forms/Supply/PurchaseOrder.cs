@@ -285,6 +285,7 @@ namespace HKSupply.Forms.Supply
                 if (dateEditDocDate.EditValue != null)
                 {
                     lblDocDateWeek.Text = GetWeek(dateEditDocDate.DateTime).ToString();
+                    GetDeliveryDate();
                     if (CurrentState == ActionsStates.New)
                     { 
                         CreatePoNumber();
@@ -326,6 +327,7 @@ namespace HKSupply.Forms.Supply
                     LoadSelectedSupplierPriceList();
                     UpdateItemsPrice();
                     UpdateBatch();
+                    GetDeliveryDate();
                 }
             }
             catch (Exception ex)
@@ -767,10 +769,8 @@ namespace HKSupply.Forms.Supply
                 gridViewLines.ValidatingEditor += GridViewLines_ValidatingEditor;
                 gridViewLines.RowCellStyle += GridViewLines_RowCellStyle;
                 xgrdLines.ProcessGridKey += XgrdLines_ProcessGridKey;
-                //Test
-                //gridViewLines.OptionsView.NewItemRowPosition = NewItemRowPosition.Top;
-                //gridViewLines.RowUpdated += GridViewLines_RowUpdated;
 
+                gridViewLines.CellValueChanged += GridViewLines_CellValueChanged;
             }
             catch
             {
@@ -862,8 +862,8 @@ namespace HKSupply.Forms.Supply
                             var supplierPrice = _selectedSupplierPriceList?.Where(a => a.IdItemBcn.Equals(idItem)).FirstOrDefault();
                             if (supplierPrice != null)
                             {
-                                row.UnitPrice = (short)supplierPrice.Price;
-                                row.UnitPriceBaseCurrency = (short)supplierPrice.PriceBaseCurrency;
+                                row.UnitPrice = supplierPrice.Price;
+                                row.UnitPriceBaseCurrency = supplierPrice.PriceBaseCurrency;
                             }
                             else
                             {
@@ -882,6 +882,7 @@ namespace HKSupply.Forms.Supply
                                 _docLinesList.Add(new DocLine() { LineState = DocLine.LineStates.New });
 
                             //gridViewLines.RefreshData();
+
                         }
                         else
                         {
@@ -941,6 +942,24 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void GridViewLines_CellValueChanged(object sender, CellValueChangedEventArgs e)
+        {
+            try
+            {
+                switch(e.Column.FieldName)
+                {
+                    case nameof(DocLine.IdItemBcn):
+                        GetDeliveryDate();
+                        break;
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void XgrdLines_ProcessGridKey(object sender, KeyEventArgs e)
         {
             try
@@ -960,6 +979,7 @@ namespace HKSupply.Forms.Supply
                         if(row.LineState == DocLine.LineStates.New || _existQP == false)
                         {
                             _docLinesList.Remove(row);
+                            GetDeliveryDate();
                         }
                         else
                         {
@@ -1553,6 +1573,26 @@ namespace HKSupply.Forms.Supply
                 throw;
             }
         }
+        
+        private void GetDeliveryDate()
+        {
+            try
+            {
+                if (dateEditDocDate.EditValue == null || _selectedSupplierPriceList == null)
+                    return;
+
+                var itemsList = _docLinesList.Where(l => l.IdItemBcn != null).Select(a => a.IdItemBcn).ToList();
+                float maxLeadTime = _selectedSupplierPriceList.Where(a => itemsList.Contains(a.IdItemBcn)).Select(b => b.LeadTime).DefaultIfEmpty(0).Max();
+
+                DateTime deliveryDate = dateEditDocDate.DateTime.AddDays(maxLeadTime);
+                dateEditDelivery.EditValue = deliveryDate;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        
         #endregion
 
         #region Configure Ribbon Actions

@@ -902,6 +902,10 @@ namespace HKSupply.Forms.Supply
                 {
                     XtraMessageBox.Show("Document is not a Packing List", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                else if (_docHeadPK.IdCustomer == Constants.ETNIA_BCN_COMPANY_CODE)
+                {
+                    XtraMessageBox.Show("Packing List is not to a Factory", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 else
                 {
                     LoadPK();
@@ -1740,6 +1744,14 @@ namespace HKSupply.Forms.Supply
                     foreach (var doc in docs)
                     {
                         msg += $"{doc.IdDoc} ({doc.SupplyDocType.Description}){Environment.NewLine}";
+                        if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_DN)
+                        {
+                            var docs2 = GlobalSetting.SupplyDocsService.GetDocsByRelated(doc.IdDoc);
+                            foreach (var doc2 in docs2)
+                            {
+                                msg += $"{doc2.IdDoc} ({doc2.SupplyDocType.Description}){Environment.NewLine}";
+                            }
+                        }
                     }
 
                     XtraMessageBox.Show(msg);

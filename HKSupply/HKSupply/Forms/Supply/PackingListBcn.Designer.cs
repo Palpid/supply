@@ -171,7 +171,7 @@
             // 
             this.lbltxtCustomer.AccessibleRole = System.Windows.Forms.AccessibleRole.Animation;
             this.lbltxtCustomer.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lbltxtCustomer.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lbltxtCustomer.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.lbltxtCustomer.Location = new System.Drawing.Point(750, 33);
             this.lbltxtCustomer.Name = "lbltxtCustomer";
             this.lbltxtCustomer.Size = new System.Drawing.Size(340, 20);

@@ -336,7 +336,7 @@ namespace HKSupply.Forms.Supply
             {
                 if (e.KeyCode == Keys.Enter && string.IsNullOrEmpty(txtPKNumber.Text) == false)
                 {
-                    //SearchPK(); //TODO
+                    SearchPK();
                 }
             }
             catch (Exception ex)
@@ -365,14 +365,14 @@ namespace HKSupply.Forms.Supply
 
                     if (CurrentState == ActionsStates.Edit)
                     {
-                        //res = UpdatePK(finishPK: true); //TODO
+                        res = UpdatePK(finishPK: true); 
                     }
 
                     if (res == true)
                     {
                         MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
                         ShowMessageDocsGenerated();
-                        //ActionsAfterCU(); //TODO
+                        ActionsAfterCU();
                     }
 
 
@@ -768,7 +768,7 @@ namespace HKSupply.Forms.Supply
                 {
                     XtraMessageBox.Show("Document is not a Packing List", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else if (_docHeadPK.IdCustomer != Constants.INTRANET_ETNIA_BCN)
+                else if (_docHeadPK.IdCustomer != Constants.ETNIA_BCN_COMPANY_CODE)
                 {
                     XtraMessageBox.Show("Packing List is not to Etnia Barcelona", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -1237,7 +1237,7 @@ namespace HKSupply.Forms.Supply
                 colQuantityOriginal.DisplayFormat.FormatType = FormatType.Numeric;
                 colQuantityOriginal.DisplayFormat.FormatString = "n0";
 
-                //Summarieshttps://toggl.com/login
+                //Summaries
                 gridViewLinesDeliveredGoods.OptionsView.ShowFooter = true;
 
                 colTotalAmount.Summary.Add(SummaryItemType.Sum, nameof(DocLine.TotalAmount), "{0:n2}");
@@ -1563,6 +1563,15 @@ namespace HKSupply.Forms.Supply
                     foreach (var doc in docs)
                     {
                         msg += $"{doc.IdDoc} ({doc.SupplyDocType.Description}){Environment.NewLine}";
+
+                        if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_DN)
+                        {
+                            var docs2 = GlobalSetting.SupplyDocsService.GetDocsByRelated(doc.IdDoc);
+                            foreach (var doc2 in docs2)
+                            {
+                                msg += $"{doc2.IdDoc} ({doc2.SupplyDocType.Description}){Environment.NewLine}";
+                            }
+                        }
                     }
 
                     XtraMessageBox.Show(msg);

@@ -207,6 +207,21 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void TxtDNNumber_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter && txtDNNumber.EditValue != null)
+                {
+                    SearchDeliveryNote();
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void GridViewLines_CustomSummaryCalculate(object sender, CustomSummaryEventArgs e)
         {
             try
@@ -531,6 +546,7 @@ namespace HKSupply.Forms.Supply
             {
                 sbSearch.Click += SbSearch_Click;
                 txtDNNumber.EditValueChanged += TxtDNNumber_EditValueChanged;
+                txtDNNumber.KeyDown += TxtDNNumber_KeyDown;
             }
             catch
             {

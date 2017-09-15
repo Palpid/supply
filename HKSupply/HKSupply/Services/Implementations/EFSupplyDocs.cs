@@ -703,8 +703,8 @@ namespace HKSupply.Services.Implementations
                                 {
                                     var supplierPrice = supplierPriceList?.Where(a => a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
 
-                                    line.UnitPrice = (supplierPrice == null ? 0 : (short)supplierPrice.Price);
-                                    line.UnitPriceBaseCurrency = (supplierPrice == null ? 0 : (short)supplierPrice.PriceBaseCurrency);
+                                    line.UnitPrice = (supplierPrice == null ? 0 : supplierPrice.Price);
+                                    line.UnitPriceBaseCurrency = (supplierPrice == null ? 0 : supplierPrice.PriceBaseCurrency);
                                 }
 
                                 numLin++;
@@ -764,7 +764,7 @@ namespace HKSupply.Services.Implementations
                                 db.SaveChanges();
 
                                 //PO Bcn to HK
-                                var poBcnHk = GetPurchaseOrderBcn2Hk(docToUpdate);
+                                var poBcnHk = GetPurchaseOrderBcn2Hk(db, docToUpdate);
                                 db.DocsHead.Add(poBcnHk);
                                 //QP
                                 var quotationProposal =  GetQuotationProposal(db, doc);
@@ -805,14 +805,24 @@ namespace HKSupply.Services.Implementations
 
                             /************************************* PK *************************************/
                             //Si es un Packing List y se finaliza hay que generar la Delivery Note, la Invoice
-                            //y actualizar los datos en las Sales orders asociadas
+                            //y actualizar los datos en las Sales orders asociadas si es un packing de Etnia HK a las fábricas
+                            //o actualizar los datos en la PO de Etnia Barcelona a Etnia HK en el caso de que sea un packing de Etnia HK a Etnia Barcelona
 
                             if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_PL && finishDoc == true)
                             {
                                 db.SaveChanges();
 
-                                //actualizar los datos en las Sales orders asociadas
-                                UpdateSoAssociatedToPk(db, docToUpdate);
+                                if (docToUpdate.IdCustomer != Constants.ETNIA_BCN_COMPANY_CODE)
+                                {
+                                    //actualizar los datos en las Sales orders asociadas
+                                    UpdateSoAssociatedToPk(db, docToUpdate);
+                                }
+                                else
+                                {
+                                    //Actualizar los datos de las PO de Barcelona asociadas
+                                    UpdatePoAssociatedToPkBcn(db, docToUpdate);
+                                }
+                                
 
                                 //Generar la Delivery Note de HK a la fábrica
                                 DocHead dnHkFactory = GetDeliveryNoteHk2Factory(docToUpdate);
@@ -1067,11 +1077,16 @@ namespace HKSupply.Services.Implementations
 
         #region Private Methods
 
-        private DocHead GetPurchaseOrderBcn2Hk(DocHead purchaseOrderHk2Factory)
+        private DocHead GetPurchaseOrderBcn2Hk(HKSupplyContext db, DocHead purchaseOrderHk2Factory)
         {
             try
             {
-                //copiamos las líneas tal cual
+                //obtenemos la lista de precios de venta a Etnia Barcelona
+                var etniaBcnPriceList = db.CustomersPriceList
+                    .Where(a => a.IdCustomer.Equals(Constants.ETNIA_BCN_COMPANY_CODE))
+                    .ToList();
+
+                //copiamos las líneas tal cual y actualizamos los importes
                 List<DocLine> linesPoBcnHk = new List<DocLine>();
 
                 foreach (var line in purchaseOrderHk2Factory.Lines)
@@ -1080,8 +1095,22 @@ namespace HKSupply.Services.Implementations
                     lineSoBcnHk.QuantityOriginal = lineSoBcnHk.Quantity;
                     lineSoBcnHk.IdDoc = $"{Constants.SUPPLY_DOCTYPE_PO}{purchaseOrderHk2Factory.IdDoc}";
                     lineSoBcnHk.IdDocRelated = purchaseOrderHk2Factory.IdDoc;
+                    //Calculamos el precio
+                    var price = etniaBcnPriceList?.Where(a => a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
+                    lineSoBcnHk.UnitPrice = (price != null ? price.Price : 0);
+                    lineSoBcnHk.UnitPriceBaseCurrency = (price != null ? price.PriceBaseCurrency : 0);
+
+                    //agregamos la línea a la lista de lineas de la PO
                     linesPoBcnHk.Add(lineSoBcnHk);
                 }
+
+                //Calculamos la delivery date para Etnia Barcelona
+                var itemsList = linesPoBcnHk.Select(a => a.IdItemBcn).ToList();
+                float maxLeadTime = etniaBcnPriceList
+                    .Where(a => a.IdCustomer.Equals(Constants.ETNIA_BCN_COMPANY_CODE) && itemsList.Contains(a.IdItemBcn))
+                    .Select(b => b.LeadTime)
+                    .DefaultIfEmpty(0).Max();
+                DateTime deliveryDate = purchaseOrderHk2Factory.DocDate.AddDays(maxLeadTime);
 
                 DocHead poBcnHk = new DocHead()
                 {
@@ -1089,7 +1118,7 @@ namespace HKSupply.Services.Implementations
                     IdDocRelated = purchaseOrderHk2Factory.IdDoc,
                     IdSupplyDocType = Constants.SUPPLY_DOCTYPE_PO,
                     CreationDate = DateTime.Now,
-                    DeliveryDate = purchaseOrderHk2Factory.DeliveryDate, //?'
+                    DeliveryDate = deliveryDate, 
                     DocDate = purchaseOrderHk2Factory.DocDate,
                     User = GlobalSetting.LoggedUser.UserLogin.ToUpper(),
                     //TODO: que datos ponemos ??
@@ -1115,7 +1144,8 @@ namespace HKSupply.Services.Implementations
             try
             {
                 SqlParameter param1 = new SqlParameter("@pIdDocPo", purchaseOrder.IdDoc);
-                List<DocLine> lines = db.Database.SqlQuery<DocLine>("GET_QUOTATIO_PROPOSAL_BOM_EXPLOSION @pIdDocPo", param1).ToList();
+                SqlParameter param2 = new SqlParameter("@pIdCustomer", Constants.ETNIA_BCN_COMPANY_CODE);
+                List<DocLine> lines = db.Database.SqlQuery<DocLine>("GET_QUOTATIO_PROPOSAL_BOM_EXPLOSION @pIdDocPo", param1, param2).ToList();
 
                 DocHead quotationProposal = new DocHead()
                 {
@@ -1311,6 +1341,55 @@ namespace HKSupply.Services.Implementations
                         if (soDoc != null)
                         {
                             soDoc.IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE;
+                            db.SaveChanges();
+                        }
+                    }
+
+                }
+
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private bool UpdatePoAssociatedToPkBcn(HKSupplyContext db, DocHead packingList)
+        {
+            try
+            {
+                //******* Tenemos que actualizar los datos de la/s Purchase orders de Barcelona asociadas a cada línea del packing *******//
+                foreach (var line in packingList.Lines)
+                {
+                    var doclinePo = db.DocsLines.Where(a => a.IdDoc.Equals(line.IdDocRelated) && a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
+                    if (doclinePo != null)
+                    {
+                        doclinePo.DeliveredQuantity += line.Quantity;
+
+                        if (doclinePo.DeliveredQuantity >= doclinePo.Quantity)
+                            doclinePo.IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE;
+
+                        db.SaveChanges();
+                    }
+                }
+
+                //******* Hay que comprobar si se ha entregado todo para cerrar la/s purchase order/s asociadas al packing *******//
+                // Obtenemos el listado de Sales Order
+                List<string> purchaseOrderList = packingList.Lines.Select(a => a.IdDocRelated).Distinct().ToList();
+
+                foreach (var purchaseOrder in purchaseOrderList)
+                {
+                    SqlParameter param1 = new SqlParameter("@pIdDoc", purchaseOrder);
+                    bool checkClose = db.Database.SqlQuery<bool>("CHECK_CLOSE_DOC @pIdDoc", param1).FirstOrDefault();
+
+                    if (checkClose == true)
+                    {
+                        //Cerramos la SO
+                        var poDoc = db.DocsHead.Where(a => a.IdDoc.Equals(purchaseOrder)).FirstOrDefault();
+                        if (poDoc != null)
+                        {
+                            poDoc.IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE;
                             db.SaveChanges();
                         }
                     }

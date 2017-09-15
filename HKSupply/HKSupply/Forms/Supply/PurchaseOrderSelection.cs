@@ -231,7 +231,7 @@ namespace HKSupply.Forms.Supply
 
                     case nameof(POSelection.Fulfillment):
 
-                        if(line.Fulfillment == 100)
+                        if(line.Fulfillment >= 100)
                         {
                             e.Appearance.BackColor = Percent100BKGD1;
                             e.Appearance.BackColor2 = Percent100BKGD2;
@@ -266,7 +266,7 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                _suppliersList = GlobalSetting.SupplierService.GetSuppliers();
+                _suppliersList = GlobalSetting.SupplierService.GetSuppliers(withEtniaHk: true);
                 _supplyStatusList = GlobalSetting.SupplyDocsService.GetSupplyStatus();
             }
             catch
