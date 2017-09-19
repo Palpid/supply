@@ -205,6 +205,7 @@ C:\Git\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.pdb
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\import_export_excel_icon_16x16.png
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\import_export_excel_icon_32x32.png
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HelpDocs\EN\BOM Flow and Application Help.pdf
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HelpDocs\EN\SUPPLY Flow and Application Help.pdf
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Reports\Rpt\BOM.rpt
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\Edit_16x16.png
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\etnia_icon.ico

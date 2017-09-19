@@ -47,6 +47,7 @@ namespace HKSupply.Forms.Supply
 
         bool _existQP = false;
 
+        bool _isLoadingPO = false;
         #endregion
 
         #region Constructor
@@ -67,6 +68,7 @@ namespace HKSupply.Forms.Supply
                 SetUpGrdLines();
 
                 SetVisiblePropertyByState();
+                SetObjectsReadOnly();
             }
             catch (Exception ex)
             {
@@ -282,6 +284,15 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                if (_isLoadingPO) return;
+
+                if (_docHeadPO != null)
+                {
+                    ResetPO();
+                    ResetForm(resetSupplier: true, resetDate: false);
+
+                }
+
                 if (dateEditDocDate.EditValue != null)
                 {
                     lblDocDateWeek.Text = GetWeek(dateEditDocDate.DateTime).ToString();
@@ -319,7 +330,19 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                if (slueSupplier.EditValue != null)
+                if (_isLoadingPO)
+                    return;
+
+                if (CurrentState != ActionsStates.New)
+                {
+                    if (_docHeadPO != null)
+                    {
+                        ResetPO();
+                        ResetForm(resetSupplier: false, resetDate: true);
+
+                    }
+                }
+                else if (slueSupplier.EditValue != null)
                 {
                     Cursor = Cursors.WaitCursor;
                     SetSupplierInfo();
@@ -563,17 +586,6 @@ namespace HKSupply.Forms.Supply
                 sbFinishPO.Click += SbFinishPO_Click;
                 dateEditDelivery.EditValueChanged += DateEditDelivery_EditValueChanged;
                 dateEditDocDate.EditValueChanged += DateEditDocDate_EditValueChanged;
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        private void SetUpEventsEditing()
-        {
-            try
-            {
                 slueSupplier.EditValueChanged += SlueSupplierEditValueChanged;
             }
             catch
@@ -581,6 +593,18 @@ namespace HKSupply.Forms.Supply
                 throw;
             }
         }
+
+        //private void SetUpEventsEditing()
+        //{
+        //    try
+        //    {
+        //        slueSupplier.EditValueChanged += SlueSupplierEditValueChanged;
+        //    }
+        //    catch
+        //    {
+        //        throw;
+        //    }
+        //}
 
         private void SetUpSearchLookUpEdit()
         {
@@ -1020,6 +1044,8 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                _isLoadingPO = true;
+
                 var currentCulture = CultureInfo.CurrentCulture;
 
                 slueSupplier.EditValue = _docHeadPO.IdSupplier;
@@ -1046,6 +1072,10 @@ namespace HKSupply.Forms.Supply
             catch
             {
                 throw;
+            }
+            finally
+            {
+                _isLoadingPO = false;
             }
         }
 
@@ -1309,7 +1339,6 @@ namespace HKSupply.Forms.Supply
                 switch (CurrentState)
                 {
                     case ActionsStates.Edit:
-                    case ActionsStates.New:
                         if (_existQP == true)
                         {
                             sbFinishPO.Visible = false;
@@ -1322,7 +1351,24 @@ namespace HKSupply.Forms.Supply
                             sbImportExcel.Visible = true;
                             sbOrder.Visible = true;
                         }
-                        
+
+                        sbSearch.Visible = false;
+                        break;
+
+                    case ActionsStates.New:
+                        if (_existQP == true)
+                        {
+                            sbImportExcel.Visible = false;
+                            sbOrder.Visible = false;
+                        }
+                        else
+                        {
+                            
+                            sbImportExcel.Visible = true;
+                            sbOrder.Visible = true;
+                        }
+
+                        sbFinishPO.Visible = false;
                         sbSearch.Visible = false;
                         break;
 
@@ -1531,6 +1577,8 @@ namespace HKSupply.Forms.Supply
                 string idPO = _docHeadPO?.IdDoc;
 
                 ResetPO();
+                ResetForm();
+                SetObjectsReadOnly();
 
                 if (idPO != null )
                 {
@@ -1547,6 +1595,36 @@ namespace HKSupply.Forms.Supply
             {
                 throw;
             }
+        }
+
+        private void ResetForm(bool resetSupplier = true, bool resetDate = true)
+        {
+            try
+            {
+                /********* Head *********/
+                txtPONumber.Text = string.Empty;
+                if (resetDate) dateEditDocDate.EditValue = null;
+                dateEditDelivery.EditValue = null;
+                lblDocDateWeek.Text = string.Empty;
+                lblDeliveryWeek.Text = string.Empty;
+                if(resetSupplier) slueSupplier.EditValue = null;
+                slueDeliveryTerms.EditValue = null;
+                slueCurrency.EditValue = null;
+
+                /********* Terms Tab *********/
+                lblTxtCompany.Text = string.Empty;
+                lblTxtAddress.Text = string.Empty;
+                lblTxtContact.Text = string.Empty;
+                lblTxtShipTo.Text = string.Empty;
+                lblTxtInvoiceTo.Text = string.Empty;
+                sluePaymentTerm.EditValue = null;
+
+            }
+            catch
+            {
+                throw;
+            }
+
         }
 
         private void ShowMessageDocsGenerated()
@@ -1578,7 +1656,7 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                if (dateEditDocDate.EditValue == null || _selectedSupplierPriceList == null)
+                if (dateEditDocDate.EditValue == null || _selectedSupplierPriceList == null || _docLinesList == null)
                     return;
 
                 var itemsList = _docLinesList.Where(l => l.IdItemBcn != null).Select(a => a.IdItemBcn).ToList();
@@ -1593,6 +1671,39 @@ namespace HKSupply.Forms.Supply
             }
         }
         
+        private void SetObjectsReadOnly()
+        {
+            try
+            {
+                dateEditDelivery.ReadOnly = true;
+                slueDeliveryTerms.ReadOnly = true;
+                slueCurrency.ReadOnly = true;
+                sluePaymentTerm.ReadOnly = true;
+            }
+            catch
+            {
+                throw;
+            }
+
+        }
+
+        private void SetObjectsEnableToCreate()
+        {
+            try
+            {
+                dateEditDelivery.ReadOnly = false;
+                slueDeliveryTerms.ReadOnly = false;
+                slueCurrency.ReadOnly = false;
+                sluePaymentTerm.ReadOnly = false;
+            }
+            catch
+            {
+                throw;
+            }
+
+
+        }
+
         #endregion
 
         #region Configure Ribbon Actions
@@ -1601,6 +1712,7 @@ namespace HKSupply.Forms.Supply
             try
             {
                 ResetPO();
+                SetObjectsEnableToCreate();
 
                 dateEditDocDate.EditValue = null;
                 dateEditDelivery.EditValue = null;
@@ -1633,7 +1745,7 @@ namespace HKSupply.Forms.Supply
                 gridViewLines.Columns[nameof(DocLine.IdSupplyStatus)].OptionsColumn.AllowEdit = false;
 
                 //events
-                SetUpEventsEditing();
+                //SetUpEventsEditing();
 
                 //Visible buttons
                 SetVisiblePropertyByState();
@@ -1655,6 +1767,8 @@ namespace HKSupply.Forms.Supply
 
                 if (qp != null)
                     _existQP = true;
+                else
+                    _existQP = false;
 
                 //Allow edit all columns
                 gridViewLines.OptionsBehavior.Editable = true;
@@ -1681,7 +1795,7 @@ namespace HKSupply.Forms.Supply
                 }
 
                 //events
-                SetUpEventsEditing();
+                //SetUpEventsEditing();
 
                 //Visible buttons
                 SetVisiblePropertyByState();
@@ -1879,9 +1993,13 @@ namespace HKSupply.Forms.Supply
                 //Reload PO
                 LoadPO();
 
+                dateEditDocDate.ReadOnly = false;
+                slueSupplier.ReadOnly = false;
+
                 //Restore de ribbon to initial states
                 RestoreInitState();
 
+                SetObjectsReadOnly();
                 SetVisiblePropertyByState();
             }
             catch

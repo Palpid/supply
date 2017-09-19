@@ -1,0 +1,7 @@
+﻿2017-09-18 08:58:08,364 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDoc - Index #0
+Message: Procedure or function 'GET_QUOTATIO_PROPOSAL_BOM_EXPLOSION' expects parameter '@pIdCustomer', which was not supplied.
+Error Number: 201
+LineNumber: 0
+Source: .Net SqlClient Data Provider
+Procedure: GET_QUOTATIO_PROPOSAL_BOM_EXPLOSION
+

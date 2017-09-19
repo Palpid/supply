@@ -1145,7 +1145,7 @@ namespace HKSupply.Services.Implementations
             {
                 SqlParameter param1 = new SqlParameter("@pIdDocPo", purchaseOrder.IdDoc);
                 SqlParameter param2 = new SqlParameter("@pIdCustomer", Constants.ETNIA_BCN_COMPANY_CODE);
-                List<DocLine> lines = db.Database.SqlQuery<DocLine>("GET_QUOTATIO_PROPOSAL_BOM_EXPLOSION @pIdDocPo", param1, param2).ToList();
+                List<DocLine> lines = db.Database.SqlQuery<DocLine>("GET_QUOTATIO_PROPOSAL_BOM_EXPLOSION @pIdDocPo, @pIdCustomer", param1, param2).ToList();
 
                 DocHead quotationProposal = new DocHead()
                 {

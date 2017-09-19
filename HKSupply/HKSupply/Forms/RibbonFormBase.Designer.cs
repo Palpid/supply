@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.Animation.PushTransition pushTransition2 = new DevExpress.Utils.Animation.PushTransition();
+            DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
             this.bbiNew = new DevExpress.XtraBars.BarButtonItem();
@@ -42,12 +42,16 @@
             this.bsiRestoreLayout = new DevExpress.XtraBars.BarSubItem();
             this.bwmiLayouts = new DevExpress.XtraBars.BarWorkspaceMenuItem();
             this.workspaceManager1 = new DevExpress.Utils.WorkspaceManager();
+            this.barStaticItemUser = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItemDbServer = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItemDb = new DevExpress.XtraBars.BarStaticItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupLayout = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.barStaticItemAppVersion = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,9 +70,13 @@
             this.bbiExportCsv,
             this.bbiSaveLayout,
             this.bsiRestoreLayout,
-            this.bwmiLayouts});
+            this.bwmiLayouts,
+            this.barStaticItemUser,
+            this.barStaticItemDbServer,
+            this.barStaticItemDb,
+            this.barStaticItemAppVersion});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 26;
+            this.ribbonControl.MaxItemId = 30;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -159,7 +167,25 @@
             // workspaceManager1
             // 
             this.workspaceManager1.TargetControl = this;
-            this.workspaceManager1.TransitionType = pushTransition2;
+            this.workspaceManager1.TransitionType = pushTransition1;
+            // 
+            // barStaticItemUser
+            // 
+            this.barStaticItemUser.Caption = "User: XX";
+            this.barStaticItemUser.Id = 26;
+            this.barStaticItemUser.Name = "barStaticItemUser";
+            // 
+            // barStaticItemDbServer
+            // 
+            this.barStaticItemDbServer.Caption = "Db Server: XXX";
+            this.barStaticItemDbServer.Id = 27;
+            this.barStaticItemDbServer.Name = "barStaticItemDbServer";
+            // 
+            // barStaticItemDb
+            // 
+            this.barStaticItemDb.Caption = "DB: XX";
+            this.barStaticItemDb.Id = 28;
+            this.barStaticItemDb.Name = "barStaticItemDb";
             // 
             // ribbonPage1
             // 
@@ -208,10 +234,20 @@
             // 
             // ribbonStatusBar
             // 
+            this.ribbonStatusBar.ItemLinks.Add(this.barStaticItemAppVersion);
+            this.ribbonStatusBar.ItemLinks.Add(this.barStaticItemUser);
+            this.ribbonStatusBar.ItemLinks.Add(this.barStaticItemDbServer);
+            this.ribbonStatusBar.ItemLinks.Add(this.barStaticItemDb);
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 568);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
             this.ribbonStatusBar.Size = new System.Drawing.Size(790, 31);
+            // 
+            // barStaticItemAppVersion
+            // 
+            this.barStaticItemAppVersion.Caption = "App. Version: X.X";
+            this.barStaticItemAppVersion.Id = 29;
+            this.barStaticItemAppVersion.Name = "barStaticItemAppVersion";
             // 
             // RibbonFormBase
             // 
@@ -250,5 +286,9 @@
         private DevExpress.XtraBars.BarSubItem bsiRestoreLayout;
         private DevExpress.XtraBars.BarWorkspaceMenuItem bwmiLayouts;
         private DevExpress.Utils.WorkspaceManager workspaceManager1;
+        private DevExpress.XtraBars.BarStaticItem barStaticItemUser;
+        private DevExpress.XtraBars.BarStaticItem barStaticItemDbServer;
+        private DevExpress.XtraBars.BarStaticItem barStaticItemDb;
+        private DevExpress.XtraBars.BarStaticItem barStaticItemAppVersion;
     }
 }

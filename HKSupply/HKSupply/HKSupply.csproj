@@ -1409,6 +1409,11 @@
     <Content Include="HelpDocs\EN\BOM Flow and Application Help.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="HelpDocs\EN\BOM Flow and Application Help.docx" />
+    <None Include="HelpDocs\EN\SUPPLY Flow and Application Help.docx" />
+    <Content Include="HelpDocs\EN\SUPPLY Flow and Application Help.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

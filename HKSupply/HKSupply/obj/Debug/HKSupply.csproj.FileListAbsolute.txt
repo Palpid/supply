@@ -326,6 +326,7 @@ C:\Git\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.PurchaseOrderSelection.
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\import_export_excel_icon_16x16.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\import_export_excel_icon_32x32.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\HelpDocs\EN\BOM Flow and Application Help.pdf
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\HelpDocs\EN\SUPPLY Flow and Application Help.pdf
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Reports\Rpt\BOM.rpt
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\Edit_16x16.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\etnia_icon.ico

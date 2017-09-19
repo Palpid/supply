@@ -20,6 +20,14 @@ namespace HKSupply.Forms
 {
     public partial class Main : Form
     {
+        #region Enums
+        private enum ePdfDocsHelp
+        {
+            Bom,
+            Supply
+        }
+        #endregion
+
         #region Private members
         System.Drawing.Icon _gIcon = new Icon(@"Resources\Images\etnia_icon.ico");
         #endregion
@@ -132,6 +140,36 @@ namespace HKSupply.Forms
             }
         }
 
+        public void ChildPdfClick(object sender, System.EventArgs e)
+        {
+            try
+            {
+                //MessageBox.Show(string.Concat("You have Clicked '", sender.ToString(), "' Menu"), "Menu Items Event", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string pdfHelp = string.Empty;
+
+                CustomToolStripMenuItem menuItem = (CustomToolStripMenuItem)sender;
+                switch(menuItem.Tag)
+                {
+                    case ePdfDocsHelp.Bom:
+                        pdfHelp = $"{Application.StartupPath}\\HelpDocs\\EN\\BOM Flow and Application Help.pdf";
+                        break;
+
+                    case ePdfDocsHelp.Supply:
+                        pdfHelp = $"{Application.StartupPath}\\HelpDocs\\EN\\SUPPLY Flow and Application Help.pdf";
+                        break;
+                }
+
+                if(string.IsNullOrEmpty(pdfHelp) == false && System.IO.File.Exists(pdfHelp))
+                    DocHelper.OpenDoc(pdfHelp, showDialog: false);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
         #endregion
 
         #region Private Methods
@@ -149,6 +187,7 @@ namespace HKSupply.Forms
                 foreach (string category in categoriesList)
                 {
                     var MnuStripItem = new ToolStripMenuItem(category);
+                    MnuStripItem.Name = category;
                     msMainMenu.Items.Add(MnuStripItem);
 
                     var categoryMenu = menuList.Where(m => m.Functionality.Category.Equals(category));
@@ -169,6 +208,8 @@ namespace HKSupply.Forms
 
                 }
 
+                //Agreagmos las entradas del menú de los pdf de ayuda.
+                CreatePdfDocsHelpMenu();
             }
             catch (Exception ex)
             {
@@ -218,6 +259,44 @@ namespace HKSupply.Forms
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Método para agregar las entradas de menú relacionadas con los pdf de ayuda
+        /// </summary>
+        /// <remarks>Es bastante manual, de momento no está bien decido como se quiere la ayuda</remarks>
+        private void CreatePdfDocsHelpMenu()
+        {
+            try
+            {
+                //validate if exist Help Menu
+                foreach (ToolStripMenuItem item in msMainMenu.Items)
+                {
+                    if (item.Name == "Help")
+                    {
+                        //Submenu de Help Docs
+                        var MnuStripItemHelpDocs = new ToolStripMenuItem("Help Docs");
+
+                        //submenus por ayuda
+                        CustomToolStripMenuItem SSMenuDocBomPdfHelp = new CustomToolStripMenuItem("BOM Help", null, ChildPdfClick, null);
+                        CustomToolStripMenuItem SSMenuDocSupplyPdfHelp = new CustomToolStripMenuItem("Supply Help", null, ChildPdfClick, null);
+                        
+                        //Tag para diferenciarlos por Tag
+                        SSMenuDocBomPdfHelp.Tag = ePdfDocsHelp.Bom;
+                        SSMenuDocSupplyPdfHelp.Tag = ePdfDocsHelp.Supply;
+
+                        //agregarlos al menu general
+                        MnuStripItemHelpDocs.DropDownItems.Add(SSMenuDocBomPdfHelp);
+                        MnuStripItemHelpDocs.DropDownItems.Add(SSMenuDocSupplyPdfHelp);
+                        item.DropDownItems.Add(MnuStripItemHelpDocs);
+                    }
+                }
+
+            }
+            catch
+            {
+                throw;
             }
         }
 

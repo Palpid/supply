@@ -239,6 +239,20 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        public override void bbiCancel_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            base.bbiCancel_ItemClick(sender, e);
+
+            try
+            {
+                ActionsAfterCU();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         #endregion
 
         #region Form Events
@@ -890,8 +904,9 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                txtSONumber.ReadOnly = true;
+
                 //Sólo es editable la columna de comentarios
-                
                 //Allow edit all columns
                 gridViewLines.OptionsBehavior.Editable = true;
 
@@ -952,6 +967,8 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                txtSONumber.ReadOnly = false;
+
                 //Reload Sales Order
                 SearchSO();
 

@@ -223,6 +223,7 @@ namespace HKSupply.Forms
             try
             {
                 FormClosing += RibbonFormBase_FormClosing;
+                Load += RibbonFormBase_Load;
 
                 //Task buttons
                 bbiEdit.ItemClick += bbiEdit_ItemClick;
@@ -248,6 +249,18 @@ namespace HKSupply.Forms
             }
         }
 
+        private void RibbonFormBase_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                ConfigureStatusBar();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         private void RibbonFormBase_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (_currentState == ActionsStates.Edit)
@@ -269,6 +282,34 @@ namespace HKSupply.Forms
 
             ribbonPage1.Appearance.Font = new Font(ribbonPage1.Appearance.Font, FontStyle.Bold);
 
+        }
+
+        private void ConfigureStatusBar()
+        {
+            try
+            {
+                //Si estamos diseñando no tiene que pasar por aquí. Al ser un form que se hereda se llama al constructor y peta el diseñador al no tener acceso estos parámetros
+                //if (DesignMode) return; //No detecta que está en modo diseño
+                if (System.ComponentModel.LicenseManager.UsageMode == System.ComponentModel.LicenseUsageMode.Designtime)
+                    return;
+                else if (System.Diagnostics.Process.GetCurrentProcess().ProcessName.ToUpper().Equals("DEVENV"))
+                    return;
+
+                
+
+                //Recuperamos los datos de la conexión de la DB
+                var connectionString = System.Configuration.ConfigurationManager.ConnectionStrings[GlobalSetting.ConnStringName].ConnectionString;
+                System.Data.SqlClient.SqlConnectionStringBuilder builder = new System.Data.SqlClient.SqlConnectionStringBuilder(connectionString);
+
+                barStaticItemAppVersion.Caption = $"v{Application.ProductVersion}";
+                barStaticItemUser.Caption = $"{GlobalSetting.ResManager.GetString("User")}: {GlobalSetting.LoggedUser.UserLogin}";
+                barStaticItemDbServer.Caption = $"{GlobalSetting.ResManager.GetString("DbServer")}: {builder.DataSource}";
+                barStaticItemDb.Caption = $"{GlobalSetting.ResManager.GetString("DataBase")}: {builder.InitialCatalog}";
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         private void SaveWorkspace(string name, string base64stringLayout)
@@ -551,16 +592,28 @@ namespace HKSupply.Forms
 
                 string pdfHelp = string.Empty;
 
+                //Documentos de ayuda por formulario
                 switch (Name)
                 {
                     case nameof(Master.BomManagement):
                         pdfHelp = $"{Application.StartupPath}\\HelpDocs\\EN\\BOM Flow and Application Help.pdf";
-                        if(File.Exists(pdfHelp))
-                        {
-                            Helpers.DocHelper.OpenDoc(pdfHelp, showDialog: false);
-                        }
                         break;
                 }
+
+                //Documentos de ayuda por Categoría.
+                var category = GlobalSetting.FunctionalitiesRoles
+                    .Where(a => a.Functionality.FormName.Equals(Name))
+                    .Select(b => b.Functionality.Category).FirstOrDefault();
+
+                switch(category)
+                {
+                    case "Supply":
+                        pdfHelp = $"{Application.StartupPath}\\HelpDocs\\EN\\SUPPLY Flow and Application Help.pdf";
+                        break;
+                }
+
+                if (string.IsNullOrEmpty(pdfHelp) == false && File.Exists(pdfHelp))
+                    Helpers.DocHelper.OpenDoc(pdfHelp, showDialog: false);
 
                 return true;
             }

@@ -63,6 +63,7 @@ namespace HKSupply.Forms.Supply
         int _totalQuantityMt;
         int _totalQuantityHw;
 
+        bool _isLoadingQP = false;
         #endregion
 
         #region Constructor
@@ -83,6 +84,7 @@ namespace HKSupply.Forms.Supply
                 SetUpGrdLines();
 
                 SetVisiblePropertyByState();
+                SetObjectsReadOnly();
             }
             catch (Exception ex)
             {
@@ -290,6 +292,22 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void TxtQPNumber_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_isLoadingQP)
+                    return;
+
+                ResetQP();
+                ResetForm(resetQpNumber: false);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         private void SbFinishQP_Click(object sender, EventArgs e)
         {
             try
@@ -327,6 +345,38 @@ namespace HKSupply.Forms.Supply
             finally
             {
                 Cursor = Cursors.Default;
+            }
+        }
+
+        private void SlueCustomer_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_isLoadingQP)
+                    return;
+
+                ResetQP();
+                ResetForm(resetCustomer:false);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void DateEditQPCreationDate_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_isLoadingQP)
+                    return;
+
+                ResetQP();
+                ResetForm(resetQpDate: false);
+            }
+            catch
+            {
+                throw;
             }
         }
 
@@ -664,6 +714,9 @@ namespace HKSupply.Forms.Supply
                 sbSearch.Click += SbSearch_Click;
                 sbFinishQP.Click += SbFinishQP_Click;
                 txtQPNumber.KeyDown += TxtQPNumber_KeyDown;
+                txtQPNumber.EditValueChanged += TxtQPNumber_EditValueChanged;
+                slueCustomer.EditValueChanged += SlueCustomer_EditValueChanged;
+                dateEditQPCreationDate.EditValueChanged += DateEditQPCreationDate_EditValueChanged;
             }
             catch
             {
@@ -821,7 +874,7 @@ namespace HKSupply.Forms.Supply
             }
         }
 
-        private void ResetPO()
+        private void ResetQP()
         {
             try
             {
@@ -841,6 +894,7 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                _isLoadingQP = true;
 
                 if (_docHeadAssociatedPO == null)
                     throw new Exception("Associated PO not found");
@@ -865,6 +919,10 @@ namespace HKSupply.Forms.Supply
             catch
             {
                 throw;
+            }
+            finally
+            {
+                _isLoadingQP = false;
             }
         }
 
@@ -898,11 +956,23 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void SetObjectsReadOnly()
+        {
+            try
+            {
+                dateEditPODate.ReadOnly = true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         private void SearchQP()
         {
             try
             {
-                ResetPO();
+                ResetQP();
 
                 string idDocQP = txtQPNumber.Text;
                 string customer = slueCustomer.EditValue as string;
@@ -1004,6 +1074,44 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void ResetForm(bool resetQpNumber = true, bool resetQpDate = true, bool resetCustomer = true)
+        {
+            try
+            {
+                //desuscribirse a los eventos de edit value changed para evitar que se lancen al modificar los valores
+                slueCustomer.EditValueChanged -= SlueCustomer_EditValueChanged;
+                dateEditQPCreationDate.EditValueChanged -= DateEditQPCreationDate_EditValueChanged;
+                txtQPNumber.EditValueChanged -= TxtQPNumber_EditValueChanged;
+
+                /********* Head *********/
+                txtPONumber.EditValue = null;
+                if (resetQpNumber) txtQPNumber.EditValue = null;
+                if (resetCustomer) slueCustomer.EditValue = null;
+                dateEditPODate.EditValue = null;
+                lblPODateWeek.Text = string.Empty;
+                if (resetQpDate)
+                {
+                    dateEditQPCreationDate.EditValue = null;
+                    lblQPCreationDateWeek.Text = string.Empty;
+                }
+
+                /********* Terms Tab *********/
+                lblTxtCompany.Text = string.Empty;
+                lblTxtAddress.Text = string.Empty;
+                lblTxtContact.Text = string.Empty;
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                slueCustomer.EditValueChanged += SlueCustomer_EditValueChanged;
+                dateEditQPCreationDate.EditValueChanged += DateEditQPCreationDate_EditValueChanged;
+                txtQPNumber.EditValueChanged += TxtQPNumber_EditValueChanged;
+            }
+        }
+
         #endregion
 
         #region Configure Ribbon Actions
@@ -1012,8 +1120,12 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                //
+                //Fields cannot been edited
                 txtQPNumber.ReadOnly = true;
+                slueCustomer.ReadOnly = true;
+                dateEditQPCreationDate.ReadOnly = true;
+
+
                 //Allow edit all columns
                 gridViewLines.OptionsBehavior.Editable = true;
 
@@ -1107,8 +1219,11 @@ namespace HKSupply.Forms.Supply
 
                 DocHead updatedDoc = GlobalSetting.SupplyDocsService.UpdateDoc(quotationProposal, finishDoc: finishQP);
 
+                ResetQP();
+
                 _docHeadQP = updatedDoc;
                 _docHeadAssociatedPO = GlobalSetting.SupplyDocsService.GetDoc(_docHeadQP.IdDocRelated);
+                _docHeadAssociatedSO = GlobalSetting.SupplyDocsService.GetDocByRelated(_docHeadQP.IdDoc);
 
                 return true;
             }
@@ -1122,6 +1237,8 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                ResetForm();
+                gridViewLines.OptionsBehavior.Editable = false;
                 //Reload PO
                 LoadQP();
 
@@ -1131,6 +1248,8 @@ namespace HKSupply.Forms.Supply
                 SetVisiblePropertyByState();
 
                 txtQPNumber.ReadOnly = false;
+                slueCustomer.ReadOnly = false;
+                dateEditQPCreationDate.ReadOnly = false;
             }
             catch
             {

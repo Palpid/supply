@@ -70,6 +70,9 @@ namespace HKSupply.Forms.Supply
         int _totalQuantityMtDeliveredGoods;
         int _totalQuantityHwDeliveredGoods;
 
+        bool _isLoadingPacking = false;
+        bool _isCreatingPacking = false;
+
         #endregion
 
         #region #Constructor
@@ -334,10 +337,29 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                if (CurrentState == ActionsStates.Edit || CurrentState == ActionsStates.New)
+                    return;
+
                 if (e.KeyCode == Keys.Enter && string.IsNullOrEmpty(txtPKNumber.Text) == false)
                 {
                     SearchPK();
                 }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void TxtPKNumber_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_isLoadingPacking || _isCreatingPacking)
+                    return;
+
+                ResetForm();
+                ResetPK();
             }
             catch (Exception ex)
             {
@@ -753,6 +775,8 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                _isLoadingPacking = true;
+
                 ResetPK();
                 ResetForm();
 
@@ -780,6 +804,10 @@ namespace HKSupply.Forms.Supply
             catch
             {
                 throw;
+            }
+            finally
+            {
+                _isLoadingPacking = false;
             }
         }
 
@@ -1038,6 +1066,7 @@ namespace HKSupply.Forms.Supply
                 dateEditPKDocDate.EditValueChanged += DateEditPKCreation_EditValueChanged;
                 dateEditPKDelivery.EditValueChanged += DateEditPKDelivery_EditValueChanged;
                 txtPKNumber.KeyDown += TxtPKNumber_KeyDown;
+                txtPKNumber.EditValueChanged += TxtPKNumber_EditValueChanged;
             }
             catch
             {
@@ -1327,33 +1356,6 @@ namespace HKSupply.Forms.Supply
             }
         }
 
-        private void ResetFormChangeCustomer(bool resetCustomer = true)
-        {
-            try
-            {
-                /********* Head *********/
-                txtPKNumber.EditValue = null;
-                lbltxtStatus.Text = string.Empty;
-                dateEditPKDocDate.EditValue = null;
-                dateEditPKDelivery.EditValue = null;
-                lblPKDocDateWeek.Text = string.Empty;
-                lblPKDeliveryWeek.Text = string.Empty;
-                slueDeliveryTerms.EditValue = null;
-                slueCurrency.EditValue = null;
-
-                /********* Terms Tab *********/
-                lblTxtCompany.Text = string.Empty;
-                lblTxtAddress.Text = string.Empty;
-                lblTxtContact.Text = string.Empty;
-                lblTxtShipTo.Text = string.Empty;
-                lblTxtInvoiceTo.Text = string.Empty;
-                sluePaymentTerm.EditValue = null;
-            }
-            catch
-            {
-                throw;
-            }
-        }
 
         private void SetCustomerInfo()
         {
@@ -1593,6 +1595,9 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                _isCreatingPacking = true;
+
+                txtPKNumber.ReadOnly = true;
                 dateEditPKDocDate.EditValue = DateTime.Now;
 
                 //clean necessary objects
@@ -1616,6 +1621,10 @@ namespace HKSupply.Forms.Supply
             {
                 throw;
             }
+            finally
+            {
+                _isCreatingPacking = false;
+            }
         }
 
         private void ConfigureActionsStackViewEditing()
@@ -1623,7 +1632,7 @@ namespace HKSupply.Forms.Supply
             try
             {
                 txtPKNumber.ReadOnly = true;
-                //TODO: Revisar!!
+
                 //cargamos las PO abiertas de Etnia Barcelona aparte de las que incluye el packing a editar
                 var soDocsCustomer = GlobalSetting.SupplyDocsService.GetDocs(
                     idSupplier: null,
@@ -1827,6 +1836,8 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                txtPKNumber.ReadOnly = false;
+
                 //Clear grids
                 xgrdPoSelection.DataSource = null;
                 xgrdLinesPoSelection.DataSource = null;

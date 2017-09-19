@@ -75,6 +75,7 @@ namespace HKSupply.Forms.Supply
         int _totalQuantityHwDeliveredGoods;
 
         bool _isLoadingPacking = false;
+        bool _isCreatingPacking = false;
         #endregion
 
         #region Constructor
@@ -354,10 +355,29 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                if (CurrentState == ActionsStates.Edit || CurrentState == ActionsStates.New)
+                    return;
+
                 if (e.KeyCode == Keys.Enter && string.IsNullOrEmpty(txtPKNumber.Text) == false)
                 {
                     SearchPK();
                 }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void TxtPKNumber_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_isLoadingPacking || _isCreatingPacking)
+                    return;
+
+                ResetPK();
+                ResetForm(resetPkNumber: false);
             }
             catch (Exception ex)
             {
@@ -773,7 +793,7 @@ namespace HKSupply.Forms.Supply
                     {
                         var customer = slueCustomer.EditValue;
                         ResetPK();
-                        ResetFormChangeCustomer();
+                        ResetForm(resetCustomer: false);
                         slueCustomer.EditValue = customer;
                     }
 
@@ -888,7 +908,7 @@ namespace HKSupply.Forms.Supply
             {
                 _isLoadingPacking = true;
                 ResetPK();
-                ResetForm();
+                ResetForm(resetPkNumber: false);
 
                 string pkNumber = txtPKNumber.Text;
 
@@ -1196,6 +1216,7 @@ namespace HKSupply.Forms.Supply
                 dateEditPKDelivery.EditValueChanged += DateEditPKDelivery_EditValueChanged;
                 slueCustomer.EditValueChanged += SlueCustomer_EditValueChanged;
                 txtPKNumber.KeyDown += TxtPKNumber_KeyDown;
+                txtPKNumber.EditValueChanged += TxtPKNumber_EditValueChanged;
             }
             catch
             {
@@ -1474,45 +1495,18 @@ namespace HKSupply.Forms.Supply
             }
         }
 
-        private void ResetForm(bool resetCustomer = true)
+        private void ResetForm(bool resetPkNumber = true, bool resetCustomer = true)
         {
             try
             {
                 /********* Head *********/
-                //txtPKNumber.EditValue = null;
-                dateEditPKDocDate.EditValue = null;
-                dateEditPKDelivery.EditValue = null;
-                lblPKDocDateWeek.Text = string.Empty;
-                lblPKDeliveryWeek.Text = string.Empty;
-                if (resetCustomer) slueCustomer.EditValue = null;
-                slueDeliveryTerms.EditValue = null;
-                slueCurrency.EditValue = null;
-
-                /********* Terms Tab *********/
-                lblTxtCompany.Text = string.Empty;
-                lblTxtAddress.Text = string.Empty;
-                lblTxtContact.Text = string.Empty;
-                lblTxtShipTo.Text = string.Empty;
-                lblTxtInvoiceTo.Text = string.Empty;
-                sluePaymentTerm.EditValue = null;
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        private void ResetFormChangeCustomer(bool resetCustomer = true)
-        {
-            try
-            {
-                /********* Head *********/
-                txtPKNumber.EditValue = null;
+                if (resetPkNumber) txtPKNumber.EditValue = null;
                 lbltxtStatus.Text = string.Empty;
                 dateEditPKDocDate.EditValue = null;
                 dateEditPKDelivery.EditValue = null;
                 lblPKDocDateWeek.Text = string.Empty;
                 lblPKDeliveryWeek.Text = string.Empty;
+                if (resetCustomer) slueCustomer.EditValue = null;
                 slueDeliveryTerms.EditValue = null;
                 slueCurrency.EditValue = null;
 
@@ -1713,7 +1707,7 @@ namespace HKSupply.Forms.Supply
                 string idPk = _docHeadPK?.IdDoc;
                 ResetPK();
                 ResetForm();
-                txtPKNumber.Text = string.Empty;
+                //txtPKNumber.Text = string.Empty;
                 SetObjectsReadOnly();
 
                 if (idPk != null)
@@ -1772,6 +1766,9 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                _isCreatingPacking = true;
+
+                txtPKNumber.ReadOnly = true;
                 slueCustomer.ReadOnly = true;
                 dateEditPKDocDate.EditValue = DateTime.Now;
 
@@ -1795,6 +1792,10 @@ namespace HKSupply.Forms.Supply
             catch
             {
                 throw;
+            }
+            finally
+            {
+                _isCreatingPacking = false;
             }
         }
 
@@ -2010,6 +2011,8 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                txtPKNumber.ReadOnly = false;
+
                 //Clear grids
                 xgrdSoSelection.DataSource = null;
                 xgrdLinesSoSelection.DataSource = null;
