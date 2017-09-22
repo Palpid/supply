@@ -103,6 +103,8 @@ namespace HKSupply.DB
 
         public DbSet<StatusPrototype> StatusPrototype { get; set; }
 
+        public DbSet<FunctionalityReport> FunctionalityReports { get; set; }
+
         //public HKSupplyContext()
         //    : base("name=SqlExpressConn")
         //{

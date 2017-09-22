@@ -802,6 +802,14 @@
     <Compile Include="Migrations\201709131107085_StatusPrototype_01.Designer.cs">
       <DependentUpon>201709131107085_StatusPrototype_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709211056337_functionalityReport_01.cs" />
+    <Compile Include="Migrations\201709211056337_functionalityReport_01.Designer.cs">
+      <DependentUpon>201709211056337_functionalityReport_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709211425300_functionalityReport_02.cs" />
+    <Compile Include="Migrations\201709211425300_functionalityReport_02.Designer.cs">
+      <DependentUpon>201709211425300_functionalityReport_02.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BomBreakdown.cs" />
     <Compile Include="Models\Currency.cs" />
@@ -821,6 +829,7 @@
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\FamilyHK.cs" />
     <Compile Include="Models\Functionality.cs" />
+    <Compile Include="Models\FunctionalityReport.cs" />
     <Compile Include="Models\FunctionalityRole.cs" />
     <Compile Include="Models\HwTypeL1.cs" />
     <Compile Include="Models\HwTypeL2.cs" />
@@ -890,6 +899,7 @@
     <Compile Include="Services\Implementations\EFEtnColor.cs" />
     <Compile Include="Services\Implementations\EFFamilyHK.cs" />
     <Compile Include="Services\Implementations\EFFunctionality.cs" />
+    <Compile Include="Services\Implementations\EFFunctionalityReport.cs" />
     <Compile Include="Services\Implementations\EFFunctionalityRole.cs" />
     <Compile Include="Services\Implementations\EFHwType.cs" />
     <Compile Include="Services\Implementations\EFIncoterm.cs" />
@@ -928,6 +938,7 @@
     <Compile Include="Services\Interfaces\IEtnColor.cs" />
     <Compile Include="Services\Interfaces\IFamilyHK.cs" />
     <Compile Include="Services\Interfaces\IFunctionality.cs" />
+    <Compile Include="Services\Interfaces\IFunctionalityReport.cs" />
     <Compile Include="Services\Interfaces\IFunctionalityRole.cs" />
     <Compile Include="Services\Interfaces\IHwType.cs" />
     <Compile Include="Services\Interfaces\IIncoterm.cs" />
@@ -1389,6 +1400,12 @@
     <EmbeddedResource Include="Migrations\201709131107085_StatusPrototype_01.resx">
       <DependentUpon>201709131107085_StatusPrototype_01.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709211056337_functionalityReport_01.resx">
+      <DependentUpon>201709211056337_functionalityReport_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709211425300_functionalityReport_02.resx">
+      <DependentUpon>201709211425300_functionalityReport_02.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -1427,6 +1444,10 @@
     <Content Include="Reports\Rpt\BOM.rpt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Reports\Rpt\Supply\HK_SupplyDocument.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Reports\Rpt\Supply\HK_SupplyPLDocument.rpt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

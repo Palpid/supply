@@ -93,6 +93,10 @@ namespace HKSupply.Forms
             Modify = actions.Modify;
             //"Breadcrumb"
             SetRibbonText($"{actions.Functionality.Category} > {actions.Functionality.FunctionalityName}");
+
+            //Reports
+            GetFormReports(actions.FunctionalityId);
+
         }
 
         public void RestoreInitState()
@@ -387,6 +391,43 @@ namespace HKSupply.Forms
             }
         }
 
+        private void GetFormReports(int idFunctionality)
+        {
+            try
+            {
+                List<FunctionalityReport> reports = GlobalSetting.FunctionalityReportService.GetFunctionalityReports(idFunctionality);
+
+                List<BarButtonItem> reportList = new List<BarButtonItem>();
+
+                if(reports.Count() > 0)
+                {
+                    foreach (var report in reports)
+                    {
+                        BarButtonItem barButtonItem = new BarButtonItem();
+                        barButtonItem.Caption = report.ReportNameEn;
+                        barButtonItem.Tag = report;
+                        barButtonItem.ItemClick += BarButtonItemReport_ItemClick;
+
+                        reportList.Add(barButtonItem);
+                    }
+
+                    barLinkContainerItemReports.AddItems(reportList.ToArray());
+                    ribbonPageGroupReports.Visible = true;
+                }
+                else
+                {
+                    ribbonPageGroupReports.Visible = false;
+                }
+                
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+
+
         #endregion
 
         #region Events
@@ -580,6 +621,13 @@ namespace HKSupply.Forms
             }
         }
 
+        #endregion
+
+        #region Reports
+        public virtual void BarButtonItemReport_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            
+        }
         #endregion
 
         #endregion

@@ -20,6 +20,7 @@ namespace HKSupply.General
     /// Controlador para acceso a datos para User
     /// Controlador para acceso a datos para Functionality
     /// Controlador para acceso a datos para Functionality Role
+    /// Controlador para acceso a datos para Functionality Reports
     /// Controlador para acceso a datos para Customer
     /// Controlador para acceso a datos para Supplier
     /// Controlador para acceso a datos para Store
@@ -67,6 +68,7 @@ namespace HKSupply.General
         static EFUser _userEF = new EFUser();
         static EFFunctionality _functionalityEF = new EFFunctionality();
         static EFFunctionalityRole _functionalityRoleEF = new EFFunctionalityRole();
+        static EFFunctionalityReport _functionalityReportEF = new EFFunctionalityReport();
         static EFCustomer _customerEF = new EFCustomer();
         static EFSupplier _supplierEF = new EFSupplier();
         static EFStore _storeEF = new EFStore();
@@ -161,6 +163,17 @@ namespace HKSupply.General
                     return new EFFunctionalityRole();
                 else
                     return _functionalityRoleEF;
+            }
+        }
+
+        public static IFunctionalityReport FunctionalityReportService
+        {
+            get
+            {
+                if (_functionalityReportEF == null)
+                    _functionalityReportEF = new EFFunctionalityReport();
+
+                return _functionalityReportEF;
             }
         }
 

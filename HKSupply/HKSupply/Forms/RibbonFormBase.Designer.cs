@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
+            DevExpress.Utils.Animation.PushTransition pushTransition2 = new DevExpress.Utils.Animation.PushTransition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RibbonFormBase));
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
             this.bbiNew = new DevExpress.XtraBars.BarButtonItem();
@@ -45,13 +46,15 @@
             this.barStaticItemUser = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItemDbServer = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItemDb = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItemAppVersion = new DevExpress.XtraBars.BarStaticItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupLayout = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.barStaticItemAppVersion = new DevExpress.XtraBars.BarStaticItem();
+            this.ribbonPageGroupReports = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barLinkContainerItemReports = new DevExpress.XtraBars.BarLinkContainerItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,15 +77,16 @@
             this.barStaticItemUser,
             this.barStaticItemDbServer,
             this.barStaticItemDb,
-            this.barStaticItemAppVersion});
+            this.barStaticItemAppVersion,
+            this.barLinkContainerItemReports});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 30;
+            this.ribbonControl.MaxItemId = 31;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl.Size = new System.Drawing.Size(790, 143);
+            this.ribbonControl.Size = new System.Drawing.Size(1063, 143);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -167,7 +171,7 @@
             // workspaceManager1
             // 
             this.workspaceManager1.TargetControl = this;
-            this.workspaceManager1.TransitionType = pushTransition1;
+            this.workspaceManager1.TransitionType = pushTransition2;
             // 
             // barStaticItemUser
             // 
@@ -187,12 +191,19 @@
             this.barStaticItemDb.Id = 28;
             this.barStaticItemDb.Name = "barStaticItemDb";
             // 
+            // barStaticItemAppVersion
+            // 
+            this.barStaticItemAppVersion.Caption = "App. Version: X.X";
+            this.barStaticItemAppVersion.Id = 29;
+            this.barStaticItemAppVersion.Name = "barStaticItemAppVersion";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
             this.ribbonPageGroup2,
             this.ribbonPageGroupLayout,
+            this.ribbonPageGroupReports,
             this.ribbonPageGroup3});
             this.ribbonPage1.MergeOrder = 0;
             this.ribbonPage1.Name = "ribbonPage1";
@@ -241,19 +252,27 @@
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 568);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(790, 31);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1063, 31);
             // 
-            // barStaticItemAppVersion
+            // ribbonPageGroupReports
             // 
-            this.barStaticItemAppVersion.Caption = "App. Version: X.X";
-            this.barStaticItemAppVersion.Id = 29;
-            this.barStaticItemAppVersion.Name = "barStaticItemAppVersion";
+            this.ribbonPageGroupReports.ItemLinks.Add(this.barLinkContainerItemReports);
+            this.ribbonPageGroupReports.Name = "ribbonPageGroupReports";
+            this.ribbonPageGroupReports.Text = "Reports";
+            // 
+            // barLinkContainerItemReports
+            // 
+            this.barLinkContainerItemReports.Caption = "Reports";
+            this.barLinkContainerItemReports.Id = 30;
+            this.barLinkContainerItemReports.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLinkContainerItemReports.ImageOptions.Image")));
+            this.barLinkContainerItemReports.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLinkContainerItemReports.ImageOptions.LargeImage")));
+            this.barLinkContainerItemReports.Name = "barLinkContainerItemReports";
             // 
             // RibbonFormBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 599);
+            this.ClientSize = new System.Drawing.Size(1063, 599);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
             this.Name = "RibbonFormBase";
@@ -290,5 +309,7 @@
         private DevExpress.XtraBars.BarStaticItem barStaticItemDbServer;
         private DevExpress.XtraBars.BarStaticItem barStaticItemDb;
         private DevExpress.XtraBars.BarStaticItem barStaticItemAppVersion;
+        private DevExpress.XtraBars.BarLinkContainerItem barLinkContainerItemReports;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupReports;
     }
 }

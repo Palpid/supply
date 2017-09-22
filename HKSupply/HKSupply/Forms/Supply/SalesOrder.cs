@@ -731,6 +731,7 @@ namespace HKSupply.Forms.Supply
                 gridViewLines.ShowingEditor += GridViewLines_ShowingEditor;
                 gridViewLines.CellValueChanged += GridViewLines_CellValueChanged;
                 gridViewLines.RowCellStyle += GridViewLines_RowCellStyle;
+
             }
             catch
             {

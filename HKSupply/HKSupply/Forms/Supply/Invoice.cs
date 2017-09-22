@@ -19,6 +19,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
+using HKSupply.Reports;
 
 namespace HKSupply.Forms.Supply
 {
@@ -163,6 +164,28 @@ namespace HKSupply.Forms.Supply
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public override void BarButtonItemReport_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            base.BarButtonItemReport_ItemClick(sender, e);
+
+            try
+            {
+                if (_docInvoice != null)
+                {
+                    OpenReport((FunctionalityReport)e.Item.Tag);
+                }
+                else
+                {
+                    XtraMessageBox.Show("No Invoice Selected", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         #endregion
 
         #region Form Events
@@ -667,8 +690,7 @@ namespace HKSupply.Forms.Supply
         }
 
         #endregion
-
-
+        
         #region CRUD
 
         private void SearchInvoice()
@@ -700,6 +722,47 @@ namespace HKSupply.Forms.Supply
                     xgrdLines.DataSource = _docLinesInvoiceList;
                 }
 
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        #endregion
+
+        #region Crystal Reports
+
+        private void OpenReport(FunctionalityReport functionalityReport)
+        {
+            try
+            {
+                if (System.IO.File.Exists($"{Application.StartupPath}{functionalityReport.ReportFile}") == false)
+                    throw new Exception("Report File does not exist");
+
+                string idDoc = string.Empty;
+
+                switch (functionalityReport.Code)
+                {
+                    case Constants.SUPPLY_DOCTYPE_IV:
+                        idDoc = _docInvoice.IdDoc;
+                        break;
+
+                    case Constants.SUPPLY_DOCTYPE_DN:
+                        idDoc = _docInvoice.IdDocRelated;
+                        break;
+                }
+
+                B1Report crReport = new B1Report();
+                Dictionary<string, string> m_Parametros = new Dictionary<string, string>();
+                m_Parametros.Add("@pIdDoc", idDoc);
+                crReport.Parametros = m_Parametros;
+                crReport.ReportFileName = $"{Application.StartupPath}{functionalityReport.ReportFile}";
+                //The easiest way to get the default printer is to create a new PrinterSettings object. It starts with all default values.
+                System.Drawing.Printing.PrinterSettings settings = new System.Drawing.Printing.PrinterSettings();
+                crReport.PrinterName = settings.PrinterName;
+
+                crReport.PreviewReport();
             }
             catch
             {
