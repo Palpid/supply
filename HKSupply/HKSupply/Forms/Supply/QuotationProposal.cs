@@ -23,6 +23,10 @@ using DevExpress.XtraGrid.Views.Grid;
 using HKSupply.Helpers;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraGrid;
+using DevExpress.XtraPrinting;
+using DevExpress.Printing.ExportHelpers;
+using DevExpress.Export;
+using DevExpress.Export.Xl;
 
 namespace HKSupply.Forms.Supply
 {
@@ -242,7 +246,20 @@ namespace HKSupply.Forms.Supply
             {
                 if (string.IsNullOrEmpty(ExportExcelFile) == false)
                 {
-                    gridViewLines.ExportToXlsx(ExportExcelFile);
+
+                    XlsxExportOptionsEx op = new XlsxExportOptionsEx();
+                    op.CustomizeSheetHeader += Op_CustomizeSheetHeader;
+                    op.CustomizeSheetFooter += Op_CustomizeSheetFooter;
+                    op.CustomizeCell += Op_CustomizeCell;
+
+                    //op.RawDataMode = true;
+                    //op.ShowGridLines = true;
+
+                    //gridViewLines.OptionsPrint.PrintHorzLines = false;
+                    //gridViewLines.OptionsPrint.PrintVertLines = false;
+
+                    gridViewLines.OptionsPrint.PrintFooter = false;
+                    gridViewLines.ExportToXlsx(ExportExcelFile, op);
 
                     DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("OpenFileQuestion"), "", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)
@@ -827,6 +844,12 @@ namespace HKSupply.Forms.Supply
                     new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0} Gr", eGridSummaries.totalQuantityMt),
                     new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0} PC", eGridSummaries.totalQuantityHw) });
 
+                //Export Columns
+                colIdItemGroup.OptionsColumn.Printable = DefaultBoolean.False;
+                colDescription.OptionsColumn.Printable = DefaultBoolean.False;
+                colBatch.OptionsColumn.Printable = DefaultBoolean.False;
+                colUnitPrice.OptionsColumn.Printable = DefaultBoolean.False;
+                colTotalAmount.OptionsColumn.Printable = DefaultBoolean.False;
 
                 //Add columns to grid root view
                 gridViewLines.Columns.Add(colIdItemGroup);
@@ -845,6 +868,7 @@ namespace HKSupply.Forms.Supply
                 gridViewLines.CustomRowCellEdit += GridViewLines_CustomRowCellEdit;
                 gridViewLines.ValidatingEditor += GridViewLines_ValidatingEditor;
                 gridViewLines.CustomSummaryCalculate += GridViewLines_CustomSummaryCalculate;
+
             }
             catch
             {
@@ -1255,6 +1279,169 @@ namespace HKSupply.Forms.Supply
             {
                 throw;
             }
+        }
+
+        #endregion
+
+        #region Export to Excel
+
+        private void Op_CustomizeSheetHeader(ContextEventArgs e)
+        {
+            try
+            {
+
+                //Formato de las celdas 
+                var rowFormattingUnboldCenter = CreateXlFormattingObject(bold: false, size: 11);
+                rowFormattingUnboldCenter.Alignment.HorizontalAlignment = XlHorizontalAlignment.Center;
+
+                var rowFormattingUnboldLeft = CreateXlFormattingObject(bold: false, size: 11);
+                rowFormattingUnboldLeft.Alignment.HorizontalAlignment = XlHorizontalAlignment.Left;
+
+                //*************** Logo ***************//
+                Image logo = Image.FromFile(@"Resources\Images\etnia_logo.jpg");
+                e.ExportContext.InsertImage(logo, new XlCellRange(new XlCellPosition(0, 1), new XlCellPosition(1, 0)));
+                //hay que agregar el mismo número de líneas que hemos usado en el logo
+                e.ExportContext.AddRow();
+                e.ExportContext.AddRow();
+                e.ExportContext.AddRow();
+
+                //*************** Título ***************//
+                var titleRow = new CellObject();
+                titleRow.Value = @"HARDWARE & RAW MATERIAL REQUIREMENT";
+                var rowFormatting = CreateXlFormattingObject(true, 18);
+                rowFormatting.Alignment.HorizontalAlignment = XlHorizontalAlignment.Center;
+                titleRow.Formatting = rowFormatting;
+                e.ExportContext.AddRow(new[] { titleRow });
+                // hacemos el merge de las celdas donde va el título
+                var titleRange = new XlCellRange(new XlCellPosition(0, 3), new XlCellPosition(4, 3));
+                e.ExportContext.MergeCells(titleRange);
+
+                e.ExportContext.AddRow();
+
+                //*************** 1a línea cabecera ***************//
+                var factoryLitCell = new CellObject() { Value = "FACTORY: ", Formatting = rowFormattingUnboldLeft };
+                var factoryCell = new CellObject() { Value = _docHeadQP.Customer.CustomerName, Formatting = rowFormattingUnboldLeft };
+
+                var deliveryDateLitCell = new CellObject() { Value = "DELIVERY DATE:", Formatting = rowFormattingUnboldCenter };
+                var deliveryDateCell = new CellObject() { Value = _docHeadQP.DeliveryDate.ToShortDateString(), Formatting = rowFormattingUnboldLeft };
+
+                e.ExportContext.AddRow(new[] { factoryLitCell, factoryCell, deliveryDateLitCell, deliveryDateCell });
+
+                //*************** 2a línea cabecera ***************//
+                var poDateLitCell = new CellObject() { Value = "PO DATE:", Formatting = rowFormattingUnboldLeft };
+                var poDateCell = new CellObject() { Value = _docHeadAssociatedPO.DocDate.ToShortDateString(), Formatting = rowFormattingUnboldLeft };
+
+                var poLitCell = new CellObject() { Value = "PO#:", Formatting = rowFormattingUnboldCenter };
+                var poCell = new CellObject() { Value = _docHeadAssociatedPO.IdDoc, Formatting = rowFormattingUnboldLeft };
+
+                e.ExportContext.AddRow(new[] { poDateLitCell, poDateCell, poLitCell, poCell });
+
+                //*************** 3a línea cabecera ***************//
+                var modelLitCell = new CellObject() { Value = string.Empty, Formatting = rowFormattingUnboldCenter };
+                var modelCell = new CellObject() { Value = string.Empty, Formatting = rowFormattingUnboldCenter };
+
+                var qpLitCell = new CellObject() { Value = "QP#:", Formatting = rowFormattingUnboldCenter };
+                var qpCell = new CellObject() { Value = _docHeadQP.IdDoc, Formatting = rowFormattingUnboldLeft };
+
+                e.ExportContext.AddRow(new[] { modelLitCell, modelCell, qpLitCell, qpCell });
+
+
+                e.ExportContext.AddRow(); // Línea en blanco de separación
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void Op_CustomizeSheetFooter(ContextEventArgs e)
+        {
+            try
+            {
+                //Calculamos los totales
+                var totalMt = _docLinesList.Where(a => a.IdItemBcn != null && a.IdItemGroup.Equals(Constants.ITEM_GROUP_MT)).Sum(b => b.QuantityOriginal);
+                var totalHw = _docLinesList.Where(a => a.IdItemBcn != null && a.IdItemGroup.Equals(Constants.ITEM_GROUP_HW)).Sum(b => b.QuantityOriginal);
+
+
+                //Formato de las celdas (con negrita y sin negriya)
+                var rowFormattingBoldCenter = CreateXlFormattingObject(bold: true, size: 11);
+                rowFormattingBoldCenter.Alignment.HorizontalAlignment = XlHorizontalAlignment.Center;
+
+                var rowFormattingUnboldCenter = CreateXlFormattingObject(bold: false, size: 11);
+                rowFormattingUnboldCenter.Alignment.HorizontalAlignment = XlHorizontalAlignment.Center;
+
+                //Celda vacía
+                var dummyCell = new CellObject() { Value = string.Empty, Formatting = rowFormattingUnboldCenter };
+
+                //Líneas con los totales personalizamos, el summary que exporta del grid lo hace sin formato
+                var totalGrLitCell = new CellObject() { Value = "TOTAL GR", Formatting = rowFormattingBoldCenter };
+                var totalGrCell = new CellObject() { Value = totalMt.ToString(), Formatting = rowFormattingBoldCenter };
+
+                var totalPcLitCell = new CellObject() { Value = "TOTAL PC", Formatting = rowFormattingBoldCenter };
+                var totalPcCell = new CellObject() { Value = totalHw.ToString(), Formatting = rowFormattingBoldCenter };
+
+                e.ExportContext.AddRow(new[] { dummyCell, totalGrLitCell, totalGrCell });
+                e.ExportContext.AddRow(new[] { dummyCell, totalPcLitCell, totalPcCell });
+
+                //Líneas finales con literailes
+                e.ExportContext.AddRow();
+                var totalNwLitCell = new CellObject() { Value = "Total N.W. 总冫争重", Formatting = rowFormattingUnboldCenter };
+                var dateLitCell = new CellObject() { Value = "DATE:", Formatting = rowFormattingUnboldCenter };
+                var signatureLitCell = new CellObject() { Value = "SIGNATURE", Formatting = rowFormattingUnboldCenter };
+
+                e.ExportContext.AddRow(new[] { totalNwLitCell });
+                e.ExportContext.AddRow();
+                e.ExportContext.AddRow(new[] { dateLitCell });
+                e.ExportContext.AddRow();
+                e.ExportContext.AddRow(new[] { signatureLitCell });
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void Op_CustomizeCell(CustomizeCellEventArgs e)
+        {
+            try
+            {
+                //Para exportar a excel la columna de cantidad la queremos en blanco ya que en principio 
+                //el excel se enviará a la fábrica y ella pone las cantidades que desea.
+                if (e.ColumnFieldName == nameof(DocLine.Quantity))
+                {
+                    //Descartamos la cabecera que sí queremos que se pinte
+                    if ((e.Value is string && (string)e.Value == gridViewLines.Columns[nameof(DocLine.Quantity)].Caption) == false)
+                    {
+                        e.Handled = true;
+                        e.Value = string.Empty;
+                    }
+
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        static XlFormattingObject CreateXlFormattingObject(bool bold, double size)
+        {
+            var cellFormat = new XlFormattingObject
+            {
+                Font = new XlCellFont
+                {
+                    Bold = bold,
+                    Size = size
+                },
+                Alignment = new XlCellAlignment
+                {
+                    RelativeIndent = 10,
+                    HorizontalAlignment = XlHorizontalAlignment.Center,
+                    VerticalAlignment = XlVerticalAlignment.Center
+                }
+            };
+            return cellFormat;
         }
 
         #endregion

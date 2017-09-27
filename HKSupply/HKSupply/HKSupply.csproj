@@ -1447,7 +1447,9 @@
     <Content Include="Reports\Rpt\Supply\HK_SupplyDocument.rpt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Reports\Rpt\Supply\HK_SupplyPLDocument.rpt" />
+    <Content Include="Reports\Rpt\Supply\HK_SupplyPLDocument.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

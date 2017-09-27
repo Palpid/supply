@@ -36,6 +36,7 @@ namespace HKSupply.Services.Implementations
                         .Where(a => a.IdDoc.Equals(idDoc))
                         .Include(l => l.Lines)
                         .Include(s => s.SupplyDocType)
+                        .Include(c => c.Customer)
                         .FirstOrDefault();
 
                     if (doc != null)
@@ -104,6 +105,7 @@ namespace HKSupply.Services.Implementations
                         .Where(a => a.IdDocRelated.Equals(idDocRelated))
                         .Include(l => l.Lines)
                         .Include(s => s.SupplyDocType)
+                        .Include(c => c.Customer)
                         .FirstOrDefault();
 
                     if (doc != null)
@@ -172,6 +174,7 @@ namespace HKSupply.Services.Implementations
                         .Where(a => a.IdDocRelated.Equals(idDocRelated))
                         .Include(l => l.Lines)
                         .Include(s => s.SupplyDocType)
+                        .Include(c => c.Customer)
                         .ToList();
 
                     if (docs.Count > 0)
@@ -250,6 +253,7 @@ namespace HKSupply.Services.Implementations
                         )
                         .Include(l => l.Lines)
                         .Include(s => s.SupplyDocType)
+                        .Include(c => c.Customer)
                         .ToList();
 
                     foreach(var doc in docs)
@@ -324,6 +328,7 @@ namespace HKSupply.Services.Implementations
                         )
                         .Include(l => l.Lines)
                         .Include(s => s.SupplyDocType)
+                        .Include(c => c.Customer)
                         .OrderBy(o => o.DocDate)
                         .ToList();
 

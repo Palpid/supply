@@ -680,3 +680,4 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.csproj.CoreCompileInputs.cach
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.functionalityReport_02.resources
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Reports\Rpt\Supply\HK_SupplyPLDocument.rpt
