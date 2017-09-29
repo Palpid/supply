@@ -1133,7 +1133,7 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                dateEditPKDelivery.ReadOnly = false; //TODO --> no tiene que ser editable cuando tengamos lead time y se calcule 
+                dateEditPKDelivery.ReadOnly = false; 
                 slueDeliveryTerms.ReadOnly = false;
                 slueCurrency.ReadOnly = false;
                 sluePaymentTerm.ReadOnly = false;

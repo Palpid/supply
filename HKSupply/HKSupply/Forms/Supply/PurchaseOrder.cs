@@ -21,6 +21,7 @@ using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Views.Grid;
 using HKSupply.Helpers;
 using HKSupply.Styles;
+using HKSupply.Reports;
 
 namespace HKSupply.Forms.Supply
 {
@@ -260,6 +261,28 @@ namespace HKSupply.Forms.Supply
                 }
             }
             catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public override void BarButtonItemReport_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            base.BarButtonItemReport_ItemClick(sender, e);
+
+            try
+            {
+                if (_docHeadPO != null)
+                {
+                    FunctionalityReport tmp = e.Item.Tag as FunctionalityReport;
+                    OpenReport(_docHeadPO.IdDoc, tmp.ReportFile);
+                }
+                else
+                {
+                    XtraMessageBox.Show("No Delivery Note Selected", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch(Exception ex)
             {
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -2014,6 +2037,33 @@ namespace HKSupply.Forms.Supply
 
                 SetObjectsReadOnly();
                 SetVisiblePropertyByState();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        #endregion
+
+        #region Crystal Report
+        private void OpenReport(string idDoc, string reportFile)
+        {
+            try
+            {
+                if (System.IO.File.Exists($"{Application.StartupPath}{reportFile}") == false)
+                    throw new Exception("Report File does not exist");
+
+                B1Report crReport = new B1Report();
+                Dictionary<string, string> m_Parametros = new Dictionary<string, string>();
+                m_Parametros.Add("@pIdDoc", idDoc);
+                crReport.Parametros = m_Parametros;
+                crReport.ReportFileName = $"{Application.StartupPath}{reportFile}";
+                //The easiest way to get the default printer is to create a new PrinterSettings object. It starts with all default values.
+                System.Drawing.Printing.PrinterSettings settings = new System.Drawing.Printing.PrinterSettings();
+                crReport.PrinterName = settings.PrinterName;
+
+                crReport.PreviewReport();
             }
             catch
             {
