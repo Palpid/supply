@@ -503,6 +503,7 @@ namespace HKSupply.Forms.Supply
                 lblSODateWeek.Font = _labelDefaultFont;
                 txtPONumber.Font = _labelDefaultFontBold;
                 txtSONumber.Font = _labelDefaultFontBold;
+                lblRemarks.Font = _labelDefaultFontBold;
 
                 //Terms Tab
                 lblCompany.Font = _labelDefaultFontBold;
@@ -523,6 +524,8 @@ namespace HKSupply.Forms.Supply
                 lblCustomer.Text = "CUSTOMER";
                 lblPODateWeek.Text = string.Empty;
                 lblSODateWeek.Text = string.Empty;
+                lblRemarks.Text = "Remarks";
+
                 //Terms Tab
                 lblCompany.Text = "Company:";
                 lblAddress.Text = "Address:";
@@ -569,6 +572,7 @@ namespace HKSupply.Forms.Supply
                 dateEditPODate.ReadOnly = true;
                 dateEditSODate.ReadOnly = true;
                 slueCustomer.ReadOnly = true;
+                memoEditRemarks.ReadOnly = true;
             }
             catch
             {
@@ -793,6 +797,7 @@ namespace HKSupply.Forms.Supply
                 lblSODateWeek.Text = dateEditSODate.DateTime.GetWeek().ToString();
                 txtPONumber.Text = _docHeadAssociatedPO.IdDoc;
                 txtSONumber.Text = _docHeadSO.IdDoc;
+                memoEditRemarks.Text = _docHeadSO.Remarks;
 
                 //***** Grid *****/
                 _docLinesList = new BindingList<DocLine>(_docHeadSO.Lines);
@@ -827,6 +832,7 @@ namespace HKSupply.Forms.Supply
                 lblPODateWeek.Text = string.Empty;
                 lblSODateWeek.Text = string.Empty;
                 slueCustomer.EditValue = null;
+                memoEditRemarks.EditValue = null;
 
                 /********* Terms Tab *********/
                 lblTxtCompany.Text = string.Empty;
@@ -906,6 +912,7 @@ namespace HKSupply.Forms.Supply
             try
             {
                 txtSONumber.ReadOnly = true;
+                memoEditRemarks.ReadOnly = false;
 
                 //Sólo es editable la columna de comentarios
                 //Allow edit all columns
@@ -947,6 +954,7 @@ namespace HKSupply.Forms.Supply
                     IdDeliveryTerm = _docHeadSO.IdDeliveryTerm,
                     IdPaymentTerms = _docHeadSO.IdPaymentTerms,
                     IdCurrency = _docHeadSO.IdCurrency,
+                    Remarks = memoEditRemarks.EditValue as string,
                     Lines = lines
                 };
 
@@ -969,6 +977,7 @@ namespace HKSupply.Forms.Supply
             try
             {
                 txtSONumber.ReadOnly = false;
+                memoEditRemarks.ReadOnly = true;
 
                 //Reload Sales Order
                 SearchSO();

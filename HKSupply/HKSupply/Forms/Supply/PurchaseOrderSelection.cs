@@ -412,6 +412,7 @@ namespace HKSupply.Forms.Supply
                 GridColumn colDocStatus = new GridColumn() { Caption = "Status", Visible = true, FieldName = nameof(POSelection.DocStatus), Width = 100 };
                 GridColumn colTotalAmount = new GridColumn() { Caption = "Total Amount", Visible = true, FieldName = nameof(POSelection.TotalAmount), Width = 100 };
                 GridColumn colFulfillment = new GridColumn() { Caption = "% Fulfillment", Visible = true, FieldName = nameof(POSelection.Fulfillment), Width = 100 };
+                GridColumn colRemarks = new GridColumn() { Caption = "Remarks", Visible = true, FieldName = nameof(POSelection.Remarks), Width = 250 };
 
                 //Text alignment
                 colDocStatus.AppearanceCell.Options.UseTextOptions = true; //Sin esto ignora el alignment, ya que por defecto está a false el use text options
@@ -457,6 +458,7 @@ namespace HKSupply.Forms.Supply
                 gridViewLines.Columns.Add(colDocStatus);
                 gridViewLines.Columns.Add(colTotalAmount);
                 gridViewLines.Columns.Add(colFulfillment);
+                gridViewLines.Columns.Add(colRemarks);
 
                 //Events
                 gridViewLines.DoubleClick += GridViewLines_DoubleClick;

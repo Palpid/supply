@@ -21,5 +21,6 @@ namespace HKSupply.Classes
         public string DocStatus { get; set; }
         public decimal TotalAmount { get; set; }
         public decimal Fulfillment { get; set; }
+        public string Remarks { get; set; }
     }
 }

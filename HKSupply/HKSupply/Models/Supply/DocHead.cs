@@ -47,6 +47,12 @@ namespace HKSupply.Models.Supply
         [Column("ID_DOC_RELATED", TypeName = "NVARCHAR"), StringLength(50)]
         public string IdDocRelated { get; set; }
 
+        [Column("REMARKS", TypeName = "NVARCHAR"), StringLength(4000)]
+        public string Remarks { get; set; }
+
+        [Column("MANUAL_REFERENCE", TypeName = "NVARCHAR"), StringLength(50)]
+        public string ManualReference { get; set; }
+
         public virtual List<DocLine> Lines { get; set; }
 
         #region Foreign keys

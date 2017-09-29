@@ -912,6 +912,9 @@ namespace HKSupply.Forms.Supply
                 slueCurrency.EditValue = null;
                 sluePaymentTerm.EditValue = null;
 
+                txtManualReference.EditValue = null;
+                memoEditRemarks.EditValue = null;
+
                 gridViewSoSelection.BeginSelection();
                 gridViewSoSelection.ClearSelection();
                 gridViewSoSelection.EndSelection();
@@ -981,6 +984,9 @@ namespace HKSupply.Forms.Supply
                 lblPKDocDateWeek.Text = dateEditPKDocDate.DateTime.GetWeek().ToString();
                 lblPKDeliveryWeek.Text = dateEditPKDelivery.DateTime.GetWeek().ToString();
 
+                txtManualReference.Text = _docHeadPK.ManualReference;
+                memoEditRemarks.Text = _docHeadPK.Remarks;
+
                 //***** Grid SO Selection *****/
                 ResetCustomerSOs();
                 var packingSOs = GlobalSetting.SupplyDocsService.GetSalesOrderFromPackingList(_docHeadPK.IdDoc);
@@ -1031,6 +1037,9 @@ namespace HKSupply.Forms.Supply
                 txtPKNumber.Font = _labelDefaultFontBold;
                 lblTermsOfDelivery.Font = _labelDefaultFont;
                 lblCurrency.Font = _labelDefaultFont;
+                lblManualReference.Font = _labelDefaultFont;
+                lblRemarks.Font = _labelDefaultFont;
+
                 //Terms Tab
                 lblCompany.Font = _labelDefaultFontBold;
                 lblAddress.Font = _labelDefaultFontBold;
@@ -1057,6 +1066,9 @@ namespace HKSupply.Forms.Supply
                 lblPKDeliveryWeek.Text = string.Empty;
                 lblTermsOfDelivery.Text = "Terms of Delivery";
                 lblCurrency.Text = "Currency";
+                lblManualReference.Text = "Manual Reference";
+                lblRemarks.Text = "Remarks";
+
                 //Terms Tab
                 lblCompany.Text = "Company:";
                 lblAddress.Text = "Address:";
@@ -1108,6 +1120,8 @@ namespace HKSupply.Forms.Supply
                 slueDeliveryTerms.ReadOnly = true;
                 slueCurrency.ReadOnly = true;
                 sluePaymentTerm.ReadOnly = true;
+                txtManualReference.ReadOnly = true;
+                memoEditRemarks.ReadOnly = true;
             }
             catch
             {
@@ -1123,6 +1137,21 @@ namespace HKSupply.Forms.Supply
                 slueDeliveryTerms.ReadOnly = false;
                 slueCurrency.ReadOnly = false;
                 sluePaymentTerm.ReadOnly = false;
+                txtManualReference.ReadOnly = false;
+                memoEditRemarks.ReadOnly = false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void SetObjectsEnableToEdit()
+        {
+            try
+            {
+                txtManualReference.ReadOnly = false;
+                memoEditRemarks.ReadOnly = false;
             }
             catch
             {
@@ -1530,6 +1559,8 @@ namespace HKSupply.Forms.Supply
                 if (resetCustomer) slueCustomer.EditValue = null;
                 slueDeliveryTerms.EditValue = null;
                 slueCurrency.EditValue = null;
+                txtManualReference.EditValue = null;
+                memoEditRemarks.EditValue = null;
 
                 /********* Terms Tab *********/
                 lblTxtCompany.Text = string.Empty;
@@ -1827,6 +1858,8 @@ namespace HKSupply.Forms.Supply
                 txtPKNumber.ReadOnly = true;
                 slueCustomer.ReadOnly = true;
 
+                SetObjectsEnableToEdit();
+
                 //cargamos las SO abiertas de ese customer aparte de las que incluye el packing a editar
                 var soDocsCustomer = GlobalSetting.SupplyDocsService.GetDocs(
                     idSupplier: null,
@@ -1976,6 +2009,8 @@ namespace HKSupply.Forms.Supply
                     IdDeliveryTerm = slueDeliveryTerms.EditValue as string,
                     IdPaymentTerms = sluePaymentTerm.EditValue as string,
                     IdCurrency = slueCurrency.EditValue as string,
+                    ManualReference = txtManualReference.EditValue as string,
+                    Remarks = memoEditRemarks.EditValue as string,
                     Lines = sortedLines
                 };
 
@@ -2012,6 +2047,8 @@ namespace HKSupply.Forms.Supply
                     IdDeliveryTerm = slueDeliveryTerms.EditValue as string,
                     IdPaymentTerms = sluePaymentTerm.EditValue as string,
                     IdCurrency = slueCurrency.EditValue as string,
+                    ManualReference = txtManualReference.EditValue as string,
+                    Remarks = memoEditRemarks.EditValue as string,
                     Lines = sortedLines
                 };
 
@@ -2033,6 +2070,7 @@ namespace HKSupply.Forms.Supply
             try
             {
                 txtPKNumber.ReadOnly = false;
+                SetObjectsReadOnly();
 
                 //Clear grids
                 xgrdSoSelection.DataSource = null;

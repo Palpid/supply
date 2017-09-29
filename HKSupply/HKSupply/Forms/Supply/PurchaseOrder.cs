@@ -496,6 +496,7 @@ namespace HKSupply.Forms.Supply
                 lblDocDateWeek.Font = _labelDefaultFont;
                 lblDeliveryWeek.Font = _labelDefaultFont;
                 txtPONumber.Font = _labelDefaultFontBold;
+                lblRemarks.Font = _labelDefaultFontBold;
 
                 //Terms Tab
                 lblCompany.Font = _labelDefaultFontBold;
@@ -522,6 +523,8 @@ namespace HKSupply.Forms.Supply
                 lblCurrency.Text = "Currency";
                 lblDocDateWeek.Text = string.Empty;
                 lblDeliveryWeek.Text = string.Empty;
+                lblRemarks.Text = "Remarks";
+
                 //Terms Tab
                 lblCompany.Text = "Company:";
                 lblAddress.Text = "Address:";
@@ -1058,6 +1061,8 @@ namespace HKSupply.Forms.Supply
 
                 lblDocDateWeek.Text = GetWeek(dateEditDocDate.DateTime).ToString();
                 lblDeliveryWeek.Text = GetWeek(dateEditDelivery.DateTime).ToString();
+
+                memoEditRemarks.EditValue = _docHeadPO.Remarks;
 
                 txtPONumber.Text = _docHeadPO.IdDoc;
 
@@ -1610,6 +1615,7 @@ namespace HKSupply.Forms.Supply
                 if(resetSupplier) slueSupplier.EditValue = null;
                 slueDeliveryTerms.EditValue = null;
                 slueCurrency.EditValue = null;
+                memoEditRemarks.EditValue = null;
 
                 /********* Terms Tab *********/
                 lblTxtCompany.Text = string.Empty;
@@ -1679,6 +1685,7 @@ namespace HKSupply.Forms.Supply
                 slueDeliveryTerms.ReadOnly = true;
                 slueCurrency.ReadOnly = true;
                 sluePaymentTerm.ReadOnly = true;
+                memoEditRemarks.ReadOnly = true;
             }
             catch
             {
@@ -1695,6 +1702,7 @@ namespace HKSupply.Forms.Supply
                 slueDeliveryTerms.ReadOnly = false;
                 slueCurrency.ReadOnly = false;
                 sluePaymentTerm.ReadOnly = false;
+                memoEditRemarks.ReadOnly = false; ;
             }
             catch
             {
@@ -1803,6 +1811,9 @@ namespace HKSupply.Forms.Supply
                 //No editing form fields
                 slueSupplier.ReadOnly = true;
                 dateEditDocDate.ReadOnly = true;
+
+                //Editing dorm fields
+                memoEditRemarks.ReadOnly = false;
 
             }
             catch
@@ -1931,6 +1942,7 @@ namespace HKSupply.Forms.Supply
                     IdDeliveryTerm = slueDeliveryTerms.EditValue as string,
                     IdPaymentTerms = sluePaymentTerm.EditValue as string,
                     IdCurrency = slueCurrency.EditValue as string,
+                    Remarks = memoEditRemarks.EditValue as string,
                     Lines = sortedLines
                 };
 
@@ -1971,6 +1983,7 @@ namespace HKSupply.Forms.Supply
                     IdDeliveryTerm = slueDeliveryTerms.EditValue as string,
                     IdPaymentTerms = sluePaymentTerm.EditValue as string,
                     IdCurrency = slueCurrency.EditValue as string,
+                    Remarks = memoEditRemarks.EditValue as string,
                     Lines = sortedLines
                 };
 

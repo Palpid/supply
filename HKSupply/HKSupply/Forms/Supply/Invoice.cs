@@ -369,6 +369,8 @@ namespace HKSupply.Forms.Supply
                 txtINVNumber.Font = _labelDefaultFontBold;
                 lblTermsOfDelivery.Font = _labelDefaultFontBold;
                 lblCurrency.Font = _labelDefaultFontBold;
+                lblManualReference.Font = _labelDefaultFont;
+                lblRemarks.Font = _labelDefaultFont;
                 //Terms Tab
                 lblCompany.Font = _labelDefaultFontBold;
                 lblAddress.Font = _labelDefaultFontBold;
@@ -393,6 +395,8 @@ namespace HKSupply.Forms.Supply
                 lblINVDateWeek.Text = string.Empty;
                 lblTermsOfDelivery.Text = "Terms of Delivery";
                 lblCurrency.Text = "Currency";
+                lblManualReference.Text = "Manual Reference";
+                lblRemarks.Text = "Remarks";
                 //Terms Tab
                 lblCompany.Text = "Company:";
                 lblAddress.Text = "Address:";
@@ -446,6 +450,8 @@ namespace HKSupply.Forms.Supply
                 slueCustomer.ReadOnly = true;
                 slueDeliveryTerms.ReadOnly = true;
                 slueCurrency.ReadOnly = true;
+                txtManualReference.ReadOnly = true;
+                memoEditRemarks.ReadOnly = true;
 
                 /********* Terms Tab **********/
                 sluePaymentTerm.ReadOnly = true;
@@ -646,6 +652,8 @@ namespace HKSupply.Forms.Supply
                 slueCustomer.EditValue = null;
                 slueDeliveryTerms.EditValue = null;
                 slueCurrency.EditValue = null;
+                txtManualReference.EditValue = null;
+                memoEditRemarks.EditValue = null;
 
                 /********* Terms Tab *********/
                 sluePaymentTerm.EditValue = null;
@@ -674,6 +682,8 @@ namespace HKSupply.Forms.Supply
                 slueCustomer.EditValue = _docInvoice.IdCustomer;
                 slueDeliveryTerms.EditValue = _docInvoice.IdDeliveryTerm;
                 slueCurrency.EditValue = _docInvoice.IdCurrency;
+                txtManualReference.EditValue = _docInvoice.ManualReference;
+                memoEditRemarks.EditValue = _docInvoice.Remarks;
 
                 /********* Terms Tab *********/
                 sluePaymentTerm.EditValue = _docInvoice.IdPaymentTerms;

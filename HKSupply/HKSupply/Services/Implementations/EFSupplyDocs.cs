@@ -718,8 +718,10 @@ namespace HKSupply.Services.Implementations
                             //Hay que agregarlo al contexto actual para que lo actualice
                             db.DocsHead.Attach(docToUpdate);
 
-                            //actualizamos el estado
+                            //actualizamos el estado, manual ref y remarks
                             docToUpdate.IdSupplyStatus = doc.IdSupplyStatus;
+                            docToUpdate.ManualReference = doc.ManualReference;
+                            docToUpdate.Remarks = doc.Remarks;
 
                             //Borramos las líneas de la base de datos para insertarla de nuevo
                             var lines = db.DocsLines.Where(a => a.IdDoc.Equals(doc.IdDoc));
@@ -1133,6 +1135,7 @@ namespace HKSupply.Services.Implementations
                     //DeliveryTerm = slueDeliveryTerms.EditValue as string,
                     //IdPaymentTerms = sluePaymentTerm.EditValue as string,
                     //IdCurrency = slueCurrency.EditValue as string,
+                    Remarks = purchaseOrderHk2Factory.Remarks,
                     Lines = linesPoBcnHk,
                 };
 
@@ -1168,6 +1171,7 @@ namespace HKSupply.Services.Implementations
                     //DeliveryTerm = slueDeliveryTerms.EditValue as string,
                     //IdPaymentTerms = sluePaymentTerm.EditValue as string,
                     //IdCurrency = slueCurrency.EditValue as string,
+                    Remarks = purchaseOrder.Remarks,
                     Lines = lines,
                 };
 
@@ -1211,6 +1215,7 @@ namespace HKSupply.Services.Implementations
                     //DeliveryTerm = slueDeliveryTerms.EditValue as string,
                     //IdPaymentTerms = sluePaymentTerm.EditValue as string,
                     IdCurrency = quotationProposal.IdCurrency,
+                    Remarks = quotationProposal.Remarks,
                     Lines = linesSoHkFactory,
                 };
 
@@ -1253,6 +1258,8 @@ namespace HKSupply.Services.Implementations
                     DeliveryTerm = packingList.DeliveryTerm,
                     IdPaymentTerms = packingList.IdPaymentTerms,
                     IdCurrency = packingList.IdCurrency,
+                    ManualReference = packingList.ManualReference,
+                    Remarks = packingList.Remarks,
                     Lines = linesDnHkFactory,
                 };
 
@@ -1295,6 +1302,8 @@ namespace HKSupply.Services.Implementations
                     DeliveryTerm = deliveryNote.DeliveryTerm,
                     IdPaymentTerms = deliveryNote.IdPaymentTerms,
                     IdCurrency = deliveryNote.IdCurrency,
+                    ManualReference = deliveryNote.ManualReference,
+                    Remarks = deliveryNote.Remarks,
                     Lines = linesIvHkFactory,
                 };
 

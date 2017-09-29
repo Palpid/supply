@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Reflection;
 using System.Resources;
@@ -226,7 +227,14 @@ namespace HKSupply.Forms
             try
             {
                 msMainMenu.Renderer = new ToolStripProfessionalRenderer(new CustomProfessionalColors());
-                msMainMenu.Font = new Font("Brandon", 9);
+                //msMainMenu.Font = new Font("Brandon", 9);
+                //Fuente corportaiva para los menús
+                PrivateFontCollection collection = new PrivateFontCollection();
+                collection.AddFontFile(@"Resources\Fonts\brandon_bld-webfont.ttf");
+                FontFamily fontFamily = new FontFamily("Brandon Grotesque Bold", collection);
+                Font font = new Font(fontFamily, 9);
+                msMainMenu.Font = font;
+
             }
             catch (Exception ex)
             {
@@ -250,6 +258,8 @@ namespace HKSupply.Forms
                     {
                         chld = (MdiClient)ctrl;
                         chld.BackColor = Color.White;
+                        BackgroundImageLayout = ImageLayout.Center;
+                        chld.BackgroundImage = Image.FromFile(@"Resources\Images\etnia_logo.jpg");
                     }
                     catch (InvalidCastException)
                     {

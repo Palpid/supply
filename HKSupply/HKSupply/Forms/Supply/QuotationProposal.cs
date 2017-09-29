@@ -251,7 +251,7 @@ namespace HKSupply.Forms.Supply
                     op.CustomizeSheetHeader += Op_CustomizeSheetHeader;
                     op.CustomizeSheetFooter += Op_CustomizeSheetFooter;
                     op.CustomizeCell += Op_CustomizeCell;
-
+                    op.ApplyFormattingToEntireColumn = DefaultBoolean.False;
                     //op.RawDataMode = true;
                     //op.ShowGridLines = true;
 
@@ -657,6 +657,7 @@ namespace HKSupply.Forms.Supply
                 lblQPCreationDateWeek.Font = _labelDefaultFont;
                 txtPONumber.Font = _labelDefaultFontBold;
                 txtQPNumber.Font = _labelDefaultFontBold;
+                lblRemarks.Font = _labelDefaultFontBold;
 
                 //Terms Tab
                 lblCompany.Font = _labelDefaultFontBold;
@@ -677,6 +678,7 @@ namespace HKSupply.Forms.Supply
                 lblCustomer.Text = "CUSTOMER";
                 lblPODateWeek.Text = string.Empty;
                 lblQPCreationDateWeek.Text = string.Empty;
+                lblRemarks.Text = "Remarks";
                 //Terms Tab
                 lblCompany.Text = "Company:";
                 lblAddress.Text = "Address:";
@@ -934,6 +936,8 @@ namespace HKSupply.Forms.Supply
                 txtPONumber.Text = _docHeadAssociatedPO.IdDoc;
                 txtQPNumber.Text = _docHeadQP.IdDoc;
 
+                memoEditRemarks.EditValue = _docHeadQP.Remarks;
+
                 _docLinesList = new BindingList<DocLine>(_docHeadQP.Lines);
 
                 xgrdLines.DataSource = null;
@@ -985,6 +989,7 @@ namespace HKSupply.Forms.Supply
             try
             {
                 dateEditPODate.ReadOnly = true;
+                memoEditRemarks.ReadOnly = true;
             }
             catch
             {
@@ -1119,6 +1124,8 @@ namespace HKSupply.Forms.Supply
                     lblQPCreationDateWeek.Text = string.Empty;
                 }
 
+                memoEditRemarks.EditValue = null;
+
                 /********* Terms Tab *********/
                 lblTxtCompany.Text = string.Empty;
                 lblTxtAddress.Text = string.Empty;
@@ -1149,6 +1156,8 @@ namespace HKSupply.Forms.Supply
                 slueCustomer.ReadOnly = true;
                 dateEditQPCreationDate.ReadOnly = true;
 
+                //Fields can been edited
+                memoEditRemarks.ReadOnly = false;
 
                 //Allow edit all columns
                 gridViewLines.OptionsBehavior.Editable = true;
@@ -1238,6 +1247,7 @@ namespace HKSupply.Forms.Supply
                     IdDeliveryTerm = _docHeadQP.IdDeliveryTerm,
                     IdPaymentTerms = _docHeadQP.IdPaymentTerms,
                     IdCurrency = _docHeadQP.IdCurrency,
+                    Remarks = memoEditRemarks.EditValue as string,
                     Lines = sortedLines
                 };
 
@@ -1274,6 +1284,7 @@ namespace HKSupply.Forms.Supply
                 txtQPNumber.ReadOnly = false;
                 slueCustomer.ReadOnly = false;
                 dateEditQPCreationDate.ReadOnly = false;
+                memoEditRemarks.ReadOnly = true;
             }
             catch
             {
@@ -1293,14 +1304,16 @@ namespace HKSupply.Forms.Supply
                 //Formato de las celdas 
                 var rowFormattingUnboldCenter = CreateXlFormattingObject(bold: false, size: 11);
                 rowFormattingUnboldCenter.Alignment.HorizontalAlignment = XlHorizontalAlignment.Center;
+                rowFormattingUnboldCenter.Border = new XlBorder() { Outline = false };
 
                 var rowFormattingUnboldLeft = CreateXlFormattingObject(bold: false, size: 11);
                 rowFormattingUnboldLeft.Alignment.HorizontalAlignment = XlHorizontalAlignment.Left;
+                rowFormattingUnboldLeft.Border = new XlBorder() { Outline = false };
 
                 //*************** Logo ***************//
                 Image logo = Image.FromFile(@"Resources\Images\etnia_logo.jpg");
                 e.ExportContext.InsertImage(logo, new XlCellRange(new XlCellPosition(0, 1), new XlCellPosition(1, 0)));
-                //hay que agregar el mismo número de líneas que hemos usado en el logo
+                //hay que agregar el mismo número de líneas que hemos usado en el logo más una de separación con el siguiente texto
                 e.ExportContext.AddRow();
                 e.ExportContext.AddRow();
                 e.ExportContext.AddRow();
@@ -1308,9 +1321,10 @@ namespace HKSupply.Forms.Supply
                 //*************** Título ***************//
                 var titleRow = new CellObject();
                 titleRow.Value = @"HARDWARE & RAW MATERIAL REQUIREMENT";
-                var rowFormatting = CreateXlFormattingObject(true, 18);
-                rowFormatting.Alignment.HorizontalAlignment = XlHorizontalAlignment.Center;
-                titleRow.Formatting = rowFormatting;
+                var rowFormattingTitle = CreateXlFormattingObject(true, 18);
+                rowFormattingTitle.Alignment.HorizontalAlignment = XlHorizontalAlignment.Center;
+                rowFormattingTitle.Border = new XlBorder() { Outline = false };
+                titleRow.Formatting = rowFormattingTitle;
                 e.ExportContext.AddRow(new[] { titleRow });
                 // hacemos el merge de las celdas donde va el título
                 var titleRange = new XlCellRange(new XlCellPosition(0, 3), new XlCellPosition(4, 3));
@@ -1369,9 +1383,13 @@ namespace HKSupply.Forms.Supply
 
                 var rowFormattingUnboldCenter = CreateXlFormattingObject(bold: false, size: 11);
                 rowFormattingUnboldCenter.Alignment.HorizontalAlignment = XlHorizontalAlignment.Center;
+                rowFormattingUnboldCenter.Border = new XlBorder()
+                {
+                    Outline = false,
+                };
 
                 //Celda vacía
-                var dummyCell = new CellObject() { Value = string.Empty, Formatting = rowFormattingUnboldCenter };
+                //var dummyCell = new CellObject() { Value = string.Empty, Formatting = rowFormattingUnboldCenter };
 
                 //Líneas con los totales personalizamos, el summary que exporta del grid lo hace sin formato
                 var totalGrLitCell = new CellObject() { Value = "TOTAL GR", Formatting = rowFormattingBoldCenter };
@@ -1380,8 +1398,8 @@ namespace HKSupply.Forms.Supply
                 var totalPcLitCell = new CellObject() { Value = "TOTAL PC", Formatting = rowFormattingBoldCenter };
                 var totalPcCell = new CellObject() { Value = totalHw.ToString(), Formatting = rowFormattingBoldCenter };
 
-                e.ExportContext.AddRow(new[] { dummyCell, totalGrLitCell, totalGrCell });
-                e.ExportContext.AddRow(new[] { dummyCell, totalPcLitCell, totalPcCell });
+                e.ExportContext.AddRow(new[] { totalGrLitCell, totalGrCell });
+                e.ExportContext.AddRow(new[] { totalPcLitCell, totalPcCell });
 
                 //Líneas finales con literailes
                 e.ExportContext.AddRow();

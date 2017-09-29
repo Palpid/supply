@@ -428,6 +428,7 @@ namespace HKSupply.Forms.Supply
                 GridColumn colIdSupplier = new GridColumn() { Caption = "Supplier", Visible = true, FieldName = nameof(DocHead.IdSupplier), Width = 100 };
                 GridColumn colIdCustomer = new GridColumn() { Caption = "Customer", Visible = true, FieldName = nameof(DocHead.IdCustomer), Width = 100 };
                 GridColumn colIdDocRelated = new GridColumn() { Caption = "Doc. Related", Visible = true, FieldName = nameof(DocHead.IdDocRelated), Width = 100 };
+                GridColumn colRemarks = new GridColumn() { Caption = "Remarks", Visible = true, FieldName = nameof(DocHead.Remarks), Width = 250 };
 
                 //Repositories
                 RepositoryItemSearchLookUpEdit riDocTypes = new RepositoryItemSearchLookUpEdit()
@@ -451,6 +452,7 @@ namespace HKSupply.Forms.Supply
                 gridViewLines.Columns.Add(colIdSupplier);
                 gridViewLines.Columns.Add(colIdCustomer);
                 gridViewLines.Columns.Add(colIdDocRelated);
+                gridViewLines.Columns.Add(colRemarks);
 
                 //Events
                 gridViewLines.DoubleClick += GridViewLines_DoubleClick;

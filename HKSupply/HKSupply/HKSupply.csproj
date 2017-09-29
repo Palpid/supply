@@ -810,7 +810,12 @@
     <Compile Include="Migrations\201709211425300_functionalityReport_02.Designer.cs">
       <DependentUpon>201709211425300_functionalityReport_02.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709281513478_docHead_remarks_manualReference_01.cs" />
+    <Compile Include="Migrations\201709281513478_docHead_remarks_manualReference_01.Designer.cs">
+      <DependentUpon>201709281513478_docHead_remarks_manualReference_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Mocking\TestDb.cs" />
     <Compile Include="Models\BomBreakdown.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\CustomerPriceList.cs" />
@@ -1406,6 +1411,9 @@
     <EmbeddedResource Include="Migrations\201709211425300_functionalityReport_02.resx">
       <DependentUpon>201709211425300_functionalityReport_02.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709281513478_docHead_remarks_manualReference_01.resx">
+      <DependentUpon>201709281513478_docHead_remarks_manualReference_01.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -1448,6 +1456,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Reports\Rpt\Supply\HK_SupplyPLDocument.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fonts\brandon_bld-webfont.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
