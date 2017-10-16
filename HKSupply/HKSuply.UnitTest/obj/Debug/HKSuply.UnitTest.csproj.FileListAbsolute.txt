@@ -208,6 +208,8 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HelpDocs\EN\BOM Flow and Appli
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HelpDocs\EN\SUPPLY Flow and Application Help.pdf
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Reports\Rpt\BOM.rpt
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Reports\Rpt\Supply\HK_SupplyDocument.rpt
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Reports\Rpt\Supply\HK_SupplyPLDocument.rpt
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Fonts\brandon_bld-webfont.ttf
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\Edit_16x16.png
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\etnia_icon.ico
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\etnia_logo.jpg
@@ -229,13 +231,13 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraBars.v17.1.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Utils.v17.1.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraSpreadsheet.v17.1.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Spreadsheet.v17.1.Core.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Printing.v17.1.Core.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraLayout.v17.1.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\CrystalDecisions.Shared.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Images.v17.1.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\System.Linq.Dynamic.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Printing.v17.1.Core.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Sparkline.v17.1.Core.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraPrinting.v17.1.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraTreeList.v17.1.dll
@@ -285,8 +287,8 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraBars.v17.1.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Utils.v17.1.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraSpreadsheet.v17.1.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Spreadsheet.v17.1.Core.xml
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraLayout.v17.1.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Printing.v17.1.Core.xml
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraLayout.v17.1.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Sparkline.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraPrinting.v17.1.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraTreeList.v17.1.xml
@@ -337,14 +339,14 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\de\DevExpress.Spreadsheet.v17.
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\DevExpress.Spreadsheet.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ja\DevExpress.Spreadsheet.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ru\DevExpress.Spreadsheet.v17.1.Core.resources.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\de\DevExpress.XtraLayout.v17.1.resources.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\DevExpress.XtraLayout.v17.1.resources.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ja\DevExpress.XtraLayout.v17.1.resources.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ru\DevExpress.XtraLayout.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\de\DevExpress.Printing.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\DevExpress.Printing.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ja\DevExpress.Printing.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ru\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\de\DevExpress.XtraLayout.v17.1.resources.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\DevExpress.XtraLayout.v17.1.resources.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ja\DevExpress.XtraLayout.v17.1.resources.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ru\DevExpress.XtraLayout.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\de\DevExpress.Sparkline.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\DevExpress.Sparkline.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ja\DevExpress.Sparkline.v17.1.Core.resources.dll

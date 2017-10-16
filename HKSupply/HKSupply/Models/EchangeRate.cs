@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace HKSupply.Models
 {
+    /// <summary>
+    /// Está mal escrito, lo sé...
+    /// </summary>
     [Table("ECHANGE_RATES")]
     public class EchangeRate
     {

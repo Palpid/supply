@@ -1,1 +1,37 @@
-﻿
+﻿2017-10-16 15:32:17,026 ERROR [1] HKSupply.Services.Implementations.EFEchangeRate.UpdateEchangeRates - The property 'Date' is part of the object's key information and cannot be modified. 
+System.InvalidOperationException: The property 'Date' is part of the object's key information and cannot be modified. 
+   at System.Data.Entity.Core.Objects.EntityEntry.DetectChangesInProperty(Int32 ordinal, Boolean detectOnlyComplexProperties, Boolean detectOnly)
+   at System.Data.Entity.Core.Objects.EntityEntry.DetectChangesInProperties(Boolean detectOnlyComplexProperties)
+   at System.Data.Entity.Core.Objects.ObjectStateManager.DetectChangesInScalarAndComplexProperties(IList`1 entries)
+   at System.Data.Entity.Core.Objects.ObjectStateManager.DetectChanges()
+   at System.Data.Entity.Core.Objects.ObjectContext.DetectChanges()
+   at System.Data.Entity.Internal.InternalContext.DetectChanges(Boolean force)
+   at System.Data.Entity.Internal.InternalContext.GetStateEntries(Func`2 predicate)
+   at System.Data.Entity.Internal.InternalContext.GetStateEntries()
+   at System.Data.Entity.Infrastructure.DbChangeTracker.Entries()
+   at System.Data.Entity.DbContext.GetValidationErrors()
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at HKSupply.DB.HKSupplyContext.SaveChanges() in C:\Git\Supply\HKSupply\HKSupply\DB\HKSupplyContext.cs:line 196
+   at HKSupply.Services.Implementations.EFEchangeRate.UpdateEchangeRates(IEnumerable`1 echangeRates) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFEchangeRate.cs:line 102
+2017-10-16 15:33:56,499 ERROR [1] HKSupply.Services.Implementations.EFEchangeRate.UpdateEchangeRates - The property 'Date' is part of the object's key information and cannot be modified. 
+System.InvalidOperationException: The property 'Date' is part of the object's key information and cannot be modified. 
+   at System.Data.Entity.Core.Objects.EntityEntry.DetectChangesInProperty(Int32 ordinal, Boolean detectOnlyComplexProperties, Boolean detectOnly)
+   at System.Data.Entity.Core.Objects.EntityEntry.DetectChangesInProperties(Boolean detectOnlyComplexProperties)
+   at System.Data.Entity.Core.Objects.ObjectStateManager.DetectChangesInScalarAndComplexProperties(IList`1 entries)
+   at System.Data.Entity.Core.Objects.ObjectStateManager.DetectChanges()
+   at System.Data.Entity.Core.Objects.ObjectContext.DetectChanges()
+   at System.Data.Entity.Internal.InternalContext.DetectChanges(Boolean force)
+   at System.Data.Entity.Internal.InternalContext.GetStateEntries(Func`2 predicate)
+   at System.Data.Entity.Internal.InternalContext.GetStateEntries()
+   at System.Data.Entity.Infrastructure.DbChangeTracker.Entries()
+   at System.Data.Entity.DbContext.GetValidationErrors()
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at HKSupply.DB.HKSupplyContext.SaveChanges() in C:\Git\Supply\HKSupply\HKSupply\DB\HKSupplyContext.cs:line 196
+   at HKSupply.Services.Implementations.EFEchangeRate.UpdateEchangeRates(IEnumerable`1 echangeRates) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFEchangeRate.cs:line 102
+2017-10-16 15:41:52,201 ERROR [1] HKSupply.Services.Implementations.EFEchangeRate.UpdateEchangeRates - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HKSupply.Services.Implementations.EFEchangeRate.UpdateEchangeRates(IEnumerable`1 echangeRates)

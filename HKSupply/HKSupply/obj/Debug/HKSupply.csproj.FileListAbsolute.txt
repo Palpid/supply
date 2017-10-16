@@ -329,6 +329,8 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\HelpDocs\EN\BOM Flow and Application H
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\HelpDocs\EN\SUPPLY Flow and Application Help.pdf
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Reports\Rpt\BOM.rpt
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Reports\Rpt\Supply\HK_SupplyDocument.rpt
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Reports\Rpt\Supply\HK_SupplyPLDocument.rpt
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Fonts\brandon_bld-webfont.ttf
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\Edit_16x16.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\etnia_icon.ico
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\etnia_logo.jpg
@@ -543,6 +545,7 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.CustomerPriceLis
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.DialogForms.EditHfBom.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.DialogForms.SelectSuppliers.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.ExchangeRateUpdate.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.FamiliesHkManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.FunctionalityManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.FunctionalityRoleManagement.resources
@@ -671,6 +674,8 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.key_Material_level
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.protosActive_01.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.StatusPrototype_01.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.functionalityReport_01.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.functionalityReport_02.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.docHead_remarks_manualReference_01.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Properties.Resources.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Reports.frmVisor.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Resources.HKSupplyRes.resources
@@ -679,7 +684,4 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe.licenses
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.csproj.CoreCompileInputs.cache
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
-C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.functionalityReport_02.resources
-C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Reports\Rpt\Supply\HK_SupplyPLDocument.rpt
-C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Fonts\brandon_bld-webfont.ttf
-C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.docHead_remarks_manualReference_01.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.WaitForm1.resources

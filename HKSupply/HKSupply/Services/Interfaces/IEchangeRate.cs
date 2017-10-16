@@ -10,5 +10,6 @@ namespace HKSupply.Services.Interfaces
     public interface IEchangeRate
     {
         List<EchangeRate> GetEchangeRates();
+        bool UpdateEchangeRates(IEnumerable<EchangeRate> echangeRates);
     }
 }

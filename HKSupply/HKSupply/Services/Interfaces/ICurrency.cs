@@ -10,5 +10,6 @@ namespace HKSupply.Services.Interfaces
     public interface ICurrency
     {
         List<Currency> GetCurrencies();
+        Currency GetCurrency(string idCurrency);
     }
 }
