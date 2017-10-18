@@ -58,6 +58,26 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraCharts.Wizard.WizardTitlePage">
+
+            <summary>
+                <para>Represents a Chart Wizard page which enables customization of the text and layout of the chart's title.
+
+
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Wizard.WizardTitlePage.HiddenPageTabs">
+            <summary>
+                <para>Provides access to a collection of <b>TitlePageTab</b> enumeration members, representing hidden tabs.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraCharts.Wizard.TitlePageTabCollection"/> object, representing a collection of enumeration values for the hidden tabs on the Wizard's Titles page.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraCharts.Designer.XYSeriesSlideAnimationModel">
 
             <summary>
@@ -166,6 +186,14 @@
 
             <summary>
                 <para>The <see cref="T:DevExpress.XtraCharts.XYSeriesBlowUpAnimation"/> animation model.
+</para>
+            </summary>
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Designer.GridLinesYModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.GridLinesY"/> model.
 </para>
             </summary>
 
@@ -564,6 +592,22 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraCharts.Designer.Area3DSeriesLabelModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.Area3DSeriesLabel"/> model.
+</para>
+            </summary>
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Designer.RadarGridLinesYModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.RadarGridLinesY"/> model.
+</para>
+            </summary>
+
+        </member>
         <member name="T:DevExpress.XtraCharts.Designer.XYMarkerWidenAnimationModel">
 
             <summary>
@@ -572,70 +616,38 @@
             </summary>
 
         </member>
-        <member name="T:DevExpress.XtraCharts.Designer.GridLinesModel">
+        <member name="T:DevExpress.XtraCharts.Designer.AnnotationShapePositionModel">
 
             <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.GridLines"/> model.
+                <para>The <see cref="T:DevExpress.XtraCharts.AnnotationShapePosition"/> model.
 </para>
             </summary>
 
         </member>
-        <member name="P:DevExpress.XtraCharts.Designer.GridLinesModel.Color">
+        <member name="T:DevExpress.XtraCharts.Designer.PropertyDescriptorsCustomizingEventArgs">
+
             <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.GridLines.Color"/> within the model.
+                <para>Provides data for the <see cref="E:DevExpress.XtraCharts.Designer.ChartDesigner.PropertyDescriptorsCustomizing"/> event.
 </para>
             </summary>
-            <value>The color of gridlines.
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.PropertyDescriptorsCustomizingEventArgs.ElementModel">
+            <summary>
+                <para>Returns the model of a chart element whose property descriptors are currently customized.
+</para>
+            </summary>
+            <value>The chart element model.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraCharts.Designer.GridLinesModel.LineStyle">
+        <member name="P:DevExpress.XtraCharts.Designer.PropertyDescriptorsCustomizingEventArgs.Properties">
             <summary>
-                <para>Returns the model of the line style of gridlines configured by the modeled options.
+                <para>Gets or sets the property descriptors of the chart element.
 </para>
             </summary>
-            <value>The model of the line style.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.GridLinesModel.MinorColor">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.GridLines.MinorColor"/> within the model.
-</para>
-            </summary>
-            <value>The color of minor gridlines.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.GridLinesModel.MinorLineStyle">
-            <summary>
-                <para>Returns the model of minor gridline style of the modeled gridlines options.
-</para>
-            </summary>
-            <value>The model of the minor gridline style.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.GridLinesModel.MinorVisible">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.GridLines.MinorVisible"/> within the model.
-</para>
-            </summary>
-            <value><b>true</b> if the minor gridlines are visible; otherwise <b>false</b>. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.GridLinesModel.Visible">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.GridLines.Visible"/> within the model.
-</para>
-            </summary>
-            <value><b>true</b> if grid lines are visible; otherwise <b>false</b>.
+            <value>The collection of System.ComponentModel.PropertyDescriptor objects.
 </value>
 
 
@@ -664,6 +676,223 @@
                 <para>The <see cref="T:DevExpress.XtraCharts.GradientFillOptionsBase"/> model.
 </para>
             </summary>
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Designer.RadarDiagramModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.RadarDiagram"/> model.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.AxisX">
+            <summary>
+                <para>Returns the model of the X-axis of the modeled Radar diagram. 
+</para>
+            </summary>
+            <value>The model of the X-axis.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.AxisY">
+            <summary>
+                <para>Returns the model of the Y-axis of the modeled Radar or Polar diagram.
+</para>
+            </summary>
+            <value>The model of the Y-axis.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.BackColor">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarDiagram.BackColor"/> within the model.
+</para>
+            </summary>
+            <value>The radar diagram's background color.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.BackImage">
+            <summary>
+                <para>Returns the model of the background image of the modeled Radar or Polar diagram.
+</para>
+            </summary>
+            <value>The image model.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.BorderColor">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarDiagram.BorderColor"/> within the model.
+</para>
+            </summary>
+            <value>The border color.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.BorderVisible">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarDiagram.BorderVisible"/> within the model.
+</para>
+            </summary>
+            <value><b>true</b> to show border around the radar diagram; <b>false</b> to hide it. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.DrawingStyle">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarDiagram.DrawingStyle"/> within the model.
+</para>
+            </summary>
+            <value>The shape of a radar diagram.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.FillStyle">
+            <summary>
+                <para>Returns the model of the fill style of the modeled radar diagram.
+</para>
+            </summary>
+            <value>The fill style model.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.Margins">
+            <summary>
+                <para>Returns the model of the margins of the modeled Radar or Polar diagram.
+</para>
+            </summary>
+            <value>The model of margins.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.RotationDirection">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarDiagram.RotationDirection"/> within the model.
+</para>
+            </summary>
+            <value>The Y-axis rotation direction.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.Shadow">
+            <summary>
+                <para>Returns the model of the shadow of the modeled radar diagram.
+</para>
+            </summary>
+            <value>The shadow model.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.StartAngleInDegrees">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarDiagram.StartAngleInDegrees"/> within the model.
+</para>
+            </summary>
+            <value>The diagram start angle, in degrees.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Designer.RadarAxisYModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.RadarAxisY"/> model.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisYModel.Color">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarAxisY.Color"/> within the model.
+</para>
+            </summary>
+            <value>The color of the radar Y-axis.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisYModel.Label">
+            <summary>
+                <para>Returns the model of the label options of the modeled radar Y-axis.
+</para>
+            </summary>
+            <value>The label model.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisYModel.Name">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraCharts.Designer.ChartElementNamedModel.Name"/> property to hide it.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisYModel.Thickness">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarAxisY.Thickness"/> within the model.
+</para>
+            </summary>
+            <value>The axis thickness in pixels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisYModel.Tickmarks">
+            <summary>
+                <para>Returns the model of tickmark options of the modeled Radar or Polar diagram.
+</para>
+            </summary>
+            <value>The model of tickmark options.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisYModel.TopLevel">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarAxisY.TopLevel"/> within the model.
+</para>
+            </summary>
+            <value><b>true</b> if the Y-axis should be positioned above all series on a diagram; otherwise <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.Designer.RadarAxisYModel.ToString">
+            <summary>
+                <para>Returns the textual representation of the RadarAxisYModel.
+
+</para>
+            </summary>
+            <returns>The RadarAxisYModel textual representation.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisYModel.Visible">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarAxisY.Visible"/> within the model.
+</para>
+            </summary>
+            <value><b>true</b> if the radar Y-axis is visible; otherwise <b>false</b>.
+</value>
+
 
         </member>
         <member name="T:DevExpress.XtraCharts.Designer.GanttDiagramModel">
@@ -804,6 +1033,44 @@
             </summary>
 
         </member>
+        <member name="T:DevExpress.XtraCharts.Designer.WorkdaysOptionsModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.WorkdaysOptions"/> model.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.WorkdaysOptionsModel.ExactWorkdays">
+            <summary>
+                <para>Returns the model of the strict workdays collection of the modeled workdays options
+</para>
+            </summary>
+            <value>The model of the strict workdays collection.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.WorkdaysOptionsModel.Holidays">
+            <summary>
+                <para>Returns the model of the holidays collection of the modeled workdays options.
+</para>
+            </summary>
+            <value>The model of the holidays collection.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.WorkdaysOptionsModel.Workdays">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.WorkdaysOptions.Workdays"/> within the model.
+</para>
+            </summary>
+            <value>The flags specifying the week workdays.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraCharts.Designer.SingleLevelIndicatorModel">
 
             <summary>
@@ -887,6 +1154,55 @@
             </summary>
             <value>The animation direction.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Designer.RadarAxisXModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.RadarAxisX"/> model.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisXModel.Label">
+            <summary>
+                <para>Returns the model of the label options of the modeled radar X-axis.
+</para>
+            </summary>
+            <value>The label model.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisXModel.Name">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraCharts.Designer.ChartElementNamedModel.Name"/> property to hide it.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisXModel.QualitativeScaleOptions">
+            <summary>
+                <para>Returns the model of <see cref="T:DevExpress.XtraCharts.QualitativeScaleOptions"/> within the model of <see cref="T:DevExpress.XtraCharts.RadarAxisX"/>.
+</para>
+            </summary>
+            <value>The model of <see cref="T:DevExpress.XtraCharts.QualitativeScaleOptions"/>.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.Designer.RadarAxisXModel.ToString">
+            <summary>
+                <para>Returns the textual representation of the RadarAxisXModel.
+
+</para>
+            </summary>
+            <returns>The RadarAxisXModel textual representation.
+</returns>
 
 
         </member>
@@ -1280,24 +1596,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.Designer.RadarAxisModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.RadarAxis"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisModel.InterlacedFillStyle">
-            <summary>
-                <para>Returns the model of the interlaced fill style of the modeled Radar or Polar axis.
-</para>
-            </summary>
-            <value>The model of the interlaced fill style.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraCharts.Designer.SimpleMarkerModel">
 
             <summary>
@@ -1679,22 +1977,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.Designer.QuadraticEasingFunctionModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.QuadraticEasingFunction"/> easing function model.
-</para>
-            </summary>
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.FunnelFlyInAnimationModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.FunnelFlyInAnimation"/> animation model.
-</para>
-            </summary>
-
-        </member>
         <member name="T:DevExpress.XtraCharts.Designer.PropertyDescriptorsCustomizingEventHandler">
 
             <summary>
@@ -1869,34 +2151,6 @@
 </para>
             </summary>
             <value>The model of zooming options.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.PropertyDescriptorsCustomizingEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraCharts.Designer.ChartDesigner.PropertyDescriptorsCustomizing"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.PropertyDescriptorsCustomizingEventArgs.ElementModel">
-            <summary>
-                <para>Returns the model of a chart element whose property descriptors are currently customized.
-</para>
-            </summary>
-            <value>The chart element model.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.PropertyDescriptorsCustomizingEventArgs.Properties">
-            <summary>
-                <para>Gets or sets the property descriptors of the chart element.
-</para>
-            </summary>
-            <value>The collection of System.ComponentModel.PropertyDescriptor objects.
 </value>
 
 
@@ -2120,6 +2374,24 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraCharts.Designer.PolygonGradientFillOptionsModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.PolygonGradientFillOptions"/> model.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.PolygonGradientFillOptionsModel.GradientMode">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.PolygonGradientFillOptions.GradientMode"/> within the model.
+</para>
+            </summary>
+            <value>The linear gradient direction.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraCharts.Designer.WholeRangeModel">
 
             <summary>
@@ -2136,6 +2408,14 @@
             <value><b>true</b> if the zero level of an axis always should be shown; otherwise <b>false</b>.
 </value>
 
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Designer.PolygonFillStyleModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.PolygonFillStyle"/> model.
+</para>
+            </summary>
 
         </member>
         <member name="T:DevExpress.XtraCharts.Designer.PolygonFillStyle3DModel">
@@ -2270,103 +2550,6 @@
 </para>
             </summary>
             <value><b>true</b> if this menu item should be displayed; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.RadarPointSeriesLabelModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.RadarPointSeriesLabel"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.TaskLinkOptionsModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.TaskLinkOptions"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.TaskLinkOptionsModel.ArrowHeight">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.TaskLinkOptions.ArrowHeight"/> within the model.
-</para>
-            </summary>
-            <value>The length of the arrowhead, in pixels.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.TaskLinkOptionsModel.ArrowWidth">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.TaskLinkOptions.ArrowWidth"/> within the model.
-</para>
-            </summary>
-            <value>The width of the arrowhead, in pixels.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.TaskLinkOptionsModel.Color">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.TaskLinkOptions.Color"/> within the model.
-</para>
-            </summary>
-            <value>The color of task links.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.TaskLinkOptionsModel.ColorSource">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.TaskLinkOptions.ColorSource"/> within the model.
-</para>
-            </summary>
-            <value>The identifier of the color source used for task link rendering. 
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.TaskLinkOptionsModel.InFront">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.TaskLinkOptions.InFront"/> within the model.
-</para>
-            </summary>
-            <value><b>true</b> if task links should be in front; otherwise <b>false</b>. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.TaskLinkOptionsModel.MinIndent">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.TaskLinkOptions.MinIndent"/> within the model.
-</para>
-            </summary>
-            <value>The minimum indent, in pixels. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.TaskLinkOptionsModel.Thickness">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.TaskLinkOptions.Thickness"/> within the model.
-</para>
-            </summary>
-            <value>The task link thickness in pixels.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.TaskLinkOptionsModel.Visible">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.TaskLinkOptions.Visible"/> within the model.
-</para>
-            </summary>
-            <value><b>true</b> if task links are visible; otherwise <b>false</b>. 
 </value>
 
 
@@ -2671,6 +2854,66 @@
             </summary>
 
         </member>
+        <member name="T:DevExpress.XtraCharts.Designer.PieSeriesViewBaseModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.PieSeriesViewBase"/> model.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.PieSeriesViewBaseModel.ExplodedDistancePercentage">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.PieSeriesViewBase.ExplodedDistancePercentage"/> within the model.
+</para>
+            </summary>
+            <value>The offset of a slice from the pie center, as a percentage.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.PieSeriesViewBaseModel.ExplodedPoints">
+            <summary>
+                <para>Returns the model of the exploded series points collection of the modeled simple series view.
+</para>
+            </summary>
+            <value>The model of the exploded series points collection.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.PieSeriesViewBaseModel.ExplodedPointsFilters">
+            <summary>
+                <para>Returns the model of the exploded series point filters collection of the modeled simple series view.
+</para>
+            </summary>
+            <value>The model of the exploded series point filters collection.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.PieSeriesViewBaseModel.ExplodeMode">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.PieSeriesViewBase.ExplodeMode"/> within the model.
+</para>
+            </summary>
+            <value>The condition selecting which pie slices should be represented as spread apart. 
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.PieSeriesViewBaseModel.SweepDirection">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.PieSeriesViewBase.SweepDirection"/> within the model.
+</para>
+            </summary>
+            <value>The direction of the pie sweep.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraCharts.Designer.TriangularMovingAverageModel">
 
             <summary>
@@ -2776,6 +3019,14 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraCharts.Designer.PieWidenAnimationModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.PieWidenAnimation"/> animation model.
+</para>
+            </summary>
+
+        </member>
         <member name="T:DevExpress.XtraCharts.Designer.ScrollingOptionsModel">
 
             <summary>
@@ -2812,26 +3063,6 @@
                 <para>The <see cref="T:DevExpress.XtraCharts.SolidFillOptions"/> model.
 </para>
             </summary>
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Wizard.WizardTitlePage">
-
-            <summary>
-                <para>Represents a Chart Wizard page which enables customization of the text and layout of the chart's title.
-
-
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Wizard.WizardTitlePage.HiddenPageTabs">
-            <summary>
-                <para>Provides access to a collection of <b>TitlePageTab</b> enumeration members, representing hidden tabs.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraCharts.Wizard.TitlePageTabCollection"/> object, representing a collection of enumeration values for the hidden tabs on the Wizard's Titles page.
-</value>
-
 
         </member>
         <member name="T:DevExpress.XtraCharts.Designer.LineSeriesViewModel">
@@ -3498,50 +3729,101 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraCharts.Designer.TaskLinkOptionsModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.TaskLinkOptions"/> model.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.TaskLinkOptionsModel.ArrowHeight">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.TaskLinkOptions.ArrowHeight"/> within the model.
+</para>
+            </summary>
+            <value>The length of the arrowhead, in pixels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.TaskLinkOptionsModel.ArrowWidth">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.TaskLinkOptions.ArrowWidth"/> within the model.
+</para>
+            </summary>
+            <value>The width of the arrowhead, in pixels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.TaskLinkOptionsModel.Color">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.TaskLinkOptions.Color"/> within the model.
+</para>
+            </summary>
+            <value>The color of task links.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.TaskLinkOptionsModel.ColorSource">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.TaskLinkOptions.ColorSource"/> within the model.
+</para>
+            </summary>
+            <value>The identifier of the color source used for task link rendering. 
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.TaskLinkOptionsModel.InFront">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.TaskLinkOptions.InFront"/> within the model.
+</para>
+            </summary>
+            <value><b>true</b> if task links should be in front; otherwise <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.TaskLinkOptionsModel.MinIndent">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.TaskLinkOptions.MinIndent"/> within the model.
+</para>
+            </summary>
+            <value>The minimum indent, in pixels. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.TaskLinkOptionsModel.Thickness">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.TaskLinkOptions.Thickness"/> within the model.
+</para>
+            </summary>
+            <value>The task link thickness in pixels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.TaskLinkOptionsModel.Visible">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.TaskLinkOptions.Visible"/> within the model.
+</para>
+            </summary>
+            <value><b>true</b> if task links are visible; otherwise <b>false</b>. 
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraCharts.Designer.QuinticEasingFunctionModel">
 
             <summary>
                 <para>The <see cref="T:DevExpress.XtraCharts.QuinticEasingFunction"/> easing function model.
 </para>
             </summary>
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.BarSeriesLabelModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.BarSeriesLabel"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.BarSeriesLabelModel.Indent">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.BarSeriesLabel.Indent"/> within the model.
-</para>
-            </summary>
-            <value>The label indent, in pixels.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.BarSeriesLabelModel.Position">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.BarSeriesLabel.Position"/> within the model.
-</para>
-            </summary>
-            <value>The relative position of bar labels.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.BarSeriesLabelModel.ShowForZeroValues">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.BarSeriesLabel.ShowForZeroValues"/> within the model.
-</para>
-            </summary>
-            <value><b>true</b> to show labels of zero-height bars; otherwise <b>false</b>. 
-</value>
-
 
         </member>
         <member name="T:DevExpress.XtraCharts.Designer.ScaleBreakOptionsModel">
@@ -3683,6 +3965,14 @@
             <returns>The SwiftPlotDiagramSecondaryAxisYModel textual representation.
 </returns>
 
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Designer.QuadraticEasingFunctionModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.QuadraticEasingFunction"/> easing function model.
+</para>
+            </summary>
 
         </member>
         <member name="T:DevExpress.XtraCharts.Designer.XYDiagram2DSeriesViewBaseModel">
@@ -4489,44 +4779,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.Designer.WorkdaysOptionsModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.WorkdaysOptions"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.WorkdaysOptionsModel.ExactWorkdays">
-            <summary>
-                <para>Returns the model of the strict workdays collection of the modeled workdays options
-</para>
-            </summary>
-            <value>The model of the strict workdays collection.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.WorkdaysOptionsModel.Holidays">
-            <summary>
-                <para>Returns the model of the holidays collection of the modeled workdays options.
-</para>
-            </summary>
-            <value>The model of the holidays collection.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.WorkdaysOptionsModel.Workdays">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.WorkdaysOptions.Workdays"/> within the model.
-</para>
-            </summary>
-            <value>The flags specifying the week workdays.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraCharts.Designer.SwiftPlotDiagramAxisYBaseModel">
 
             <summary>
@@ -4678,6 +4930,34 @@
             </summary>
             <returns>The ScaleBreakCollectionModel textual representation.
 </returns>
+
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Designer.StripLimitModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.StripLimit"/> model.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.StripLimitModel.AxisValue">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.StripLimit.AxisValue"/> within the model.
+</para>
+            </summary>
+            <value>The strip limit coordinate.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.StripLimitModel.Enabled">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.StripLimit.Enabled"/> within the model.
+</para>
+            </summary>
+            <value><b>true</b> if the strip limit is enabled; otherwise <b>false</b>. 
+</value>
 
 
         </member>
@@ -4925,34 +5205,6 @@
 </para>
             </summary>
             <value><b>true</b> if the strip is visible; otherwise <b>false</b>. 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.StripLimitModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.StripLimit"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.StripLimitModel.AxisValue">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.StripLimit.AxisValue"/> within the model.
-</para>
-            </summary>
-            <value>The strip limit coordinate.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.StripLimitModel.Enabled">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.StripLimit.Enabled"/> within the model.
-</para>
-            </summary>
-            <value><b>true</b> if the strip limit is enabled; otherwise <b>false</b>. 
 </value>
 
 
@@ -6449,66 +6701,6 @@
 </para>
             </summary>
             <value><b>true</b> if dragging the pie slices is available to end-user; otherwise <b>false</b>. 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.PieSeriesViewBaseModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.PieSeriesViewBase"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.PieSeriesViewBaseModel.ExplodedDistancePercentage">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.PieSeriesViewBase.ExplodedDistancePercentage"/> within the model.
-</para>
-            </summary>
-            <value>The offset of a slice from the pie center, as a percentage.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.PieSeriesViewBaseModel.ExplodedPoints">
-            <summary>
-                <para>Returns the model of the exploded series points collection of the modeled simple series view.
-</para>
-            </summary>
-            <value>The model of the exploded series points collection.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.PieSeriesViewBaseModel.ExplodedPointsFilters">
-            <summary>
-                <para>Returns the model of the exploded series point filters collection of the modeled simple series view.
-</para>
-            </summary>
-            <value>The model of the exploded series point filters collection.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.PieSeriesViewBaseModel.ExplodeMode">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.PieSeriesViewBase.ExplodeMode"/> within the model.
-</para>
-            </summary>
-            <value>The condition selecting which pie slices should be represented as spread apart. 
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.PieSeriesViewBaseModel.SweepDirection">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.PieSeriesViewBase.SweepDirection"/> within the model.
-</para>
-            </summary>
-            <value>The direction of the pie sweep.
 </value>
 
 
@@ -9736,10 +9928,10 @@
             </summary>
 
         </member>
-        <member name="T:DevExpress.XtraCharts.Designer.RadarGridLinesYModel">
+        <member name="T:DevExpress.XtraCharts.Designer.RadarPointSeriesLabelModel">
 
             <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.RadarGridLinesY"/> model.
+                <para>The <see cref="T:DevExpress.XtraCharts.RadarPointSeriesLabel"/> model.
 </para>
             </summary>
 
@@ -9748,298 +9940,6 @@
 
             <summary>
                 <para>The <see cref="T:DevExpress.XtraCharts.RadarGridLinesX"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.RadarDiagramModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.RadarDiagram"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.AxisX">
-            <summary>
-                <para>Returns the model of the X-axis of the modeled Radar diagram. 
-</para>
-            </summary>
-            <value>The model of the X-axis.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.AxisY">
-            <summary>
-                <para>Returns the model of the Y-axis of the modeled Radar or Polar diagram.
-</para>
-            </summary>
-            <value>The model of the Y-axis.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.BackColor">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarDiagram.BackColor"/> within the model.
-</para>
-            </summary>
-            <value>The radar diagram's background color.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.BackImage">
-            <summary>
-                <para>Returns the model of the background image of the modeled Radar or Polar diagram.
-</para>
-            </summary>
-            <value>The image model.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.BorderColor">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarDiagram.BorderColor"/> within the model.
-</para>
-            </summary>
-            <value>The border color.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.BorderVisible">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarDiagram.BorderVisible"/> within the model.
-</para>
-            </summary>
-            <value><b>true</b> to show border around the radar diagram; <b>false</b> to hide it. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.DrawingStyle">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarDiagram.DrawingStyle"/> within the model.
-</para>
-            </summary>
-            <value>The shape of a radar diagram.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.FillStyle">
-            <summary>
-                <para>Returns the model of the fill style of the modeled radar diagram.
-</para>
-            </summary>
-            <value>The fill style model.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.Margins">
-            <summary>
-                <para>Returns the model of the margins of the modeled Radar or Polar diagram.
-</para>
-            </summary>
-            <value>The model of margins.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.RotationDirection">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarDiagram.RotationDirection"/> within the model.
-</para>
-            </summary>
-            <value>The Y-axis rotation direction.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.Shadow">
-            <summary>
-                <para>Returns the model of the shadow of the modeled radar diagram.
-</para>
-            </summary>
-            <value>The shadow model.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarDiagramModel.StartAngleInDegrees">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarDiagram.StartAngleInDegrees"/> within the model.
-</para>
-            </summary>
-            <value>The diagram start angle, in degrees.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.RadarAxisYModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.RadarAxisY"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisYModel.Color">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarAxisY.Color"/> within the model.
-</para>
-            </summary>
-            <value>The color of the radar Y-axis.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisYModel.Label">
-            <summary>
-                <para>Returns the model of the label options of the modeled radar Y-axis.
-</para>
-            </summary>
-            <value>The label model.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisYModel.Name">
-            <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraCharts.Designer.ChartElementNamedModel.Name"/> property to hide it.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisYModel.Thickness">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarAxisY.Thickness"/> within the model.
-</para>
-            </summary>
-            <value>The axis thickness in pixels.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisYModel.Tickmarks">
-            <summary>
-                <para>Returns the model of tickmark options of the modeled Radar or Polar diagram.
-</para>
-            </summary>
-            <value>The model of tickmark options.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisYModel.TopLevel">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarAxisY.TopLevel"/> within the model.
-</para>
-            </summary>
-            <value><b>true</b> if the Y-axis should be positioned above all series on a diagram; otherwise <b>false</b>. 
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.Designer.RadarAxisYModel.ToString">
-            <summary>
-                <para>Returns the textual representation of the RadarAxisYModel.
-
-</para>
-            </summary>
-            <returns>The RadarAxisYModel textual representation.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisYModel.Visible">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarAxisY.Visible"/> within the model.
-</para>
-            </summary>
-            <value><b>true</b> if the radar Y-axis is visible; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.RadarAxisXModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.RadarAxisX"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisXModel.Label">
-            <summary>
-                <para>Returns the model of the label options of the modeled radar X-axis.
-</para>
-            </summary>
-            <value>The label model.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisXModel.Name">
-            <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraCharts.Designer.ChartElementNamedModel.Name"/> property to hide it.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisXModel.QualitativeScaleOptions">
-            <summary>
-                <para>Returns the model of <see cref="T:DevExpress.XtraCharts.QualitativeScaleOptions"/> within the model of <see cref="T:DevExpress.XtraCharts.RadarAxisX"/>.
-</para>
-            </summary>
-            <value>The model of <see cref="T:DevExpress.XtraCharts.QualitativeScaleOptions"/>.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.Designer.RadarAxisXModel.ToString">
-            <summary>
-                <para>Returns the textual representation of the RadarAxisXModel.
-
-</para>
-            </summary>
-            <returns>The RadarAxisXModel textual representation.
-</returns>
-
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.PolygonGradientFillOptionsModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.PolygonGradientFillOptions"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.PolygonGradientFillOptionsModel.GradientMode">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.PolygonGradientFillOptions.GradientMode"/> within the model.
-</para>
-            </summary>
-            <value>The linear gradient direction.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.PolygonFillStyleModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.PolygonFillStyle"/> model.
 </para>
             </summary>
 
@@ -10088,14 +9988,6 @@
             <value>The relative position of point labels.
 </value>
 
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.PieWidenAnimationModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.PieWidenAnimation"/> animation model.
-</para>
-            </summary>
 
         </member>
         <member name="T:DevExpress.XtraCharts.Designer.PieSpinGrowUpAnimationModel">
@@ -10783,6 +10675,94 @@
             </summary>
 
         </member>
+        <member name="T:DevExpress.XtraCharts.Designer.IndicatorModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.Indicator"/> model.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.IndicatorModel.CheckableInLegend">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.Indicator.CheckableInLegend"/> within the model.
+</para>
+            </summary>
+            <value><b>true</b> to show a check box instead of a marker within a legend; otherwise <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.IndicatorModel.CheckedInLegend">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.Indicator.CheckedInLegend"/> within the model.
+</para>
+            </summary>
+            <value><b>true</b> if the legend check box of the indicator is checked; otherwise <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.IndicatorModel.Color">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.Indicator.Color"/> within the model.
+</para>
+            </summary>
+            <value>The indicator color.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.IndicatorModel.Legend">
+            <summary>
+                <para>Gets or sets the model of the legend assigned to the modeled indicator.
+</para>
+            </summary>
+            <value>The legend model.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.IndicatorModel.LineStyle">
+            <summary>
+                <para>Returns the model of the line style of the modeled indicator.
+</para>
+            </summary>
+            <value>The model of the line style.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.IndicatorModel.Name">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.Indicator.Name"/> within the model.
+</para>
+            </summary>
+            <value>The name of the indicator instance.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.IndicatorModel.ShowInLegend">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.Indicator.ShowInLegend"/> within the model.
+</para>
+            </summary>
+            <value><b>true</b> if the indicator is shown in the legend; otherwise <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.IndicatorModel.Visible">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.Indicator.Visible"/> within the model.
+</para>
+            </summary>
+            <value><b>true</b> if the indicator is visible; otherwise <b>false</b>.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraCharts.Designer.ImageAnnotationModel">
 
             <summary>
@@ -10811,20 +10791,80 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.Designer.GridLinesYModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.GridLinesY"/> model.
-</para>
-            </summary>
-
-        </member>
         <member name="T:DevExpress.XtraCharts.Designer.GridLinesXModel">
 
             <summary>
                 <para>The <see cref="T:DevExpress.XtraCharts.GridLinesX"/> model.
 </para>
             </summary>
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Designer.GridLinesModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.GridLines"/> model.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.GridLinesModel.Color">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.GridLines.Color"/> within the model.
+</para>
+            </summary>
+            <value>The color of gridlines.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.GridLinesModel.LineStyle">
+            <summary>
+                <para>Returns the model of the line style of gridlines configured by the modeled options.
+</para>
+            </summary>
+            <value>The model of the line style.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.GridLinesModel.MinorColor">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.GridLines.MinorColor"/> within the model.
+</para>
+            </summary>
+            <value>The color of minor gridlines.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.GridLinesModel.MinorLineStyle">
+            <summary>
+                <para>Returns the model of minor gridline style of the modeled gridlines options.
+</para>
+            </summary>
+            <value>The model of the minor gridline style.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.GridLinesModel.MinorVisible">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.GridLines.MinorVisible"/> within the model.
+</para>
+            </summary>
+            <value><b>true</b> if the minor gridlines are visible; otherwise <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.GridLinesModel.Visible">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.GridLines.Visible"/> within the model.
+</para>
+            </summary>
+            <value><b>true</b> if grid lines are visible; otherwise <b>false</b>.
+</value>
+
 
         </member>
         <member name="T:DevExpress.XtraCharts.Designer.GanttAxisXModel">
@@ -10893,6 +10933,14 @@
 
             <summary>
                 <para>The <see cref="T:DevExpress.XtraCharts.FunnelGrowUpAnimation"/> animation model.
+</para>
+            </summary>
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Designer.FunnelFlyInAnimationModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.FunnelFlyInAnimation"/> animation model.
 </para>
             </summary>
 
@@ -13842,6 +13890,44 @@
             </summary>
 
         </member>
+        <member name="T:DevExpress.XtraCharts.Designer.BarSeriesLabelModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.BarSeriesLabel"/> model.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.BarSeriesLabelModel.Indent">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.BarSeriesLabel.Indent"/> within the model.
+</para>
+            </summary>
+            <value>The label indent, in pixels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.BarSeriesLabelModel.Position">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.BarSeriesLabel.Position"/> within the model.
+</para>
+            </summary>
+            <value>The relative position of bar labels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.BarSeriesLabelModel.ShowForZeroValues">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.BarSeriesLabel.ShowForZeroValues"/> within the model.
+</para>
+            </summary>
+            <value><b>true</b> to show labels of zero-height bars; otherwise <b>false</b>. 
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraCharts.Designer.BarGrowUpAnimationModel">
 
             <summary>
@@ -14699,14 +14785,6 @@
             <value>The maximum number of automatic scale breaks. 
 </value>
 
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.Area3DSeriesLabelModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.Area3DSeriesLabel"/> model.
-</para>
-            </summary>
 
         </member>
         <member name="T:DevExpress.XtraCharts.Designer.AnnotationRepositoryModel">
@@ -22621,6 +22699,24 @@ This tab becomes available after assigning a <see cref="T:DevExpress.XtraPivotGr
 
 
         </member>
+        <member name="T:DevExpress.XtraCharts.Designer.RadarAxisModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.RadarAxis"/> model.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RadarAxisModel.InterlacedFillStyle">
+            <summary>
+                <para>Returns the model of the interlaced fill style of the modeled Radar or Polar axis.
+</para>
+            </summary>
+            <value>The model of the interlaced fill style.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraCharts.Designer.StackedBar3DSeriesViewModel">
 
             <summary>
@@ -22667,14 +22763,6 @@ This tab becomes available after assigning a <see cref="T:DevExpress.XtraPivotGr
 
             <summary>
                 <para>The <see cref="T:DevExpress.XtraCharts.StackedLineSeriesLabel"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.AnnotationShapePositionModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.AnnotationShapePosition"/> model.
 </para>
             </summary>
 
@@ -22780,94 +22868,6 @@ This tab becomes available after assigning a <see cref="T:DevExpress.XtraPivotGr
                 <para>The <see cref="T:DevExpress.XtraCharts.XYSeriesUnwindAnimation"/> animation model.
 </para>
             </summary>
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.IndicatorModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.Indicator"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.IndicatorModel.CheckableInLegend">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.Indicator.CheckableInLegend"/> within the model.
-</para>
-            </summary>
-            <value><b>true</b> to show a check box instead of a marker within a legend; otherwise <b>false</b>. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.IndicatorModel.CheckedInLegend">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.Indicator.CheckedInLegend"/> within the model.
-</para>
-            </summary>
-            <value><b>true</b> if the legend check box of the indicator is checked; otherwise <b>false</b>. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.IndicatorModel.Color">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.Indicator.Color"/> within the model.
-</para>
-            </summary>
-            <value>The indicator color.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.IndicatorModel.Legend">
-            <summary>
-                <para>Gets or sets the model of the legend assigned to the modeled indicator.
-</para>
-            </summary>
-            <value>The legend model.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.IndicatorModel.LineStyle">
-            <summary>
-                <para>Returns the model of the line style of the modeled indicator.
-</para>
-            </summary>
-            <value>The model of the line style.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.IndicatorModel.Name">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.Indicator.Name"/> within the model.
-</para>
-            </summary>
-            <value>The name of the indicator instance.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.IndicatorModel.ShowInLegend">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.Indicator.ShowInLegend"/> within the model.
-</para>
-            </summary>
-            <value><b>true</b> if the indicator is shown in the legend; otherwise <b>false</b>. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.IndicatorModel.Visible">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.Indicator.Visible"/> within the model.
-</para>
-            </summary>
-            <value><b>true</b> if the indicator is visible; otherwise <b>false</b>.
-</value>
-
 
         </member>
         <member name="T:DevExpress.XtraCharts.Designer.StackedBar3DSeriesLabelModel">

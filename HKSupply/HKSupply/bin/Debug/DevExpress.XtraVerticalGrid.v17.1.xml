@@ -84,360 +84,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraVerticalGrid.Rows.BaseRow">
-
-            <summary>
-                <para>Serves as the base class for rows of different types.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Appearance">
-            <summary>
-                <para>Gets the appearance settings used to paint the row's cells.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Utils.AppearanceObjectEx"/> object that provides the appearance settings used to paint the row's cells.
-
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraVerticalGrid.Rows.BaseRow.AssignTo(DevExpress.XtraVerticalGrid.Rows.BaseRow)">
-            <summary>
-                <para>Copies the current row's settings to the row specified.
-</para>
-            </summary>
-            <param name="destinationRow">
-		A <see cref="T:DevExpress.XtraVerticalGrid.Rows.BaseRow"/> object or descendant that represents the row object into which settings are copied.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.ChildRows">
-            <summary>
-                <para>Gets a collection of child rows for a row.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraVerticalGrid.Rows.VGridRows"/> object representing a collection of child rows (if any) for a row.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Expanded">
-            <summary>
-                <para>Gets or sets a value specifying whether the current row is expanded.
-</para>
-            </summary>
-            <value><b>true</b> if the current row is expanded; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Fixed">
-            <summary>
-                <para>Gets or sets whether the row is fixed (anchored to a control's top or bottom edge).
-</para>
-            </summary>
-            <value>A DevExpress.XtraVerticalGrid.Rows.FixedStyle value that specifies whether the row is fixed.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraVerticalGrid.Rows.BaseRow.GetRowProperties(System.Int32)">
-            <summary>
-                <para>Returns an object containing type specific row settings.
-</para>
-            </summary>
-            <param name="index">
-		A zero-based integer value representing the index of the object that contains the row settings.
-
-            </param>
-            <returns>A <see cref="T:DevExpress.XtraVerticalGrid.Rows.RowProperties"/> object or its descendant that represents type specific row properties. <b>null</b> (<b>Nothing</b> in Visual Basic) if the <I>index</I> parameter value is negative or exceeds the maximum index available.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraVerticalGrid.Rows.BaseRow.GetRowProperties">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Grid">
-            <summary>
-                <para>Gets or sets the vertical grid control that owns the current row.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraVerticalGrid.VGridControl"/> object which represents the vertical grid control that owns the current row.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraVerticalGrid.Rows.BaseRow.HasAsChild(DevExpress.XtraVerticalGrid.Rows.BaseRow)">
-            <summary>
-                <para>Indicates whether the row has the child row specified.
-</para>
-            </summary>
-            <param name="gridRow">
-		A <see cref="T:DevExpress.XtraVerticalGrid.Rows.BaseRow"/> descendant representing the row to test.
-
-            </param>
-            <returns><b>true</b> if the row is the parent for the row specified; otherwise <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraVerticalGrid.Rows.BaseRow.HasAsParent(DevExpress.XtraVerticalGrid.Rows.BaseRow)">
-            <summary>
-                <para>Determines whether the current row has a specific row as its parent.
-</para>
-            </summary>
-            <param name="gridRow">
-		A <see cref="T:DevExpress.XtraVerticalGrid.Rows.BaseRow"/> descendant that represents the row to check.
-
-            </param>
-            <returns><b>true</b> if the current row has the specified row as its parent; otherwise <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.HasChildren">
-            <summary>
-                <para>Gets a value indicating whether a specific row contains child rows.
-</para>
-            </summary>
-            <value><b>true</b> if a specific row contains one or more child rows; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.HeaderInfo">
-            <summary>
-                <para>Provides view information on the row's header.
-</para>
-            </summary>
-            <value>The <see cref="T:DevExpress.XtraVerticalGrid.ViewInfo.BaseRowHeaderInfo"/> class descendant that provides view information on the row's header.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Height">
-            <summary>
-                <para>Gets or sets the row's height.
-</para>
-            </summary>
-            <value>An integer value specifying the row's height in pixels.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Index">
-            <summary>
-                <para>Gets or sets the row's index within a collection of rows located at the same level (sibling rows).
-</para>
-            </summary>
-            <value>A zero-based index value representing the position of a specific row within a <see cref="T:DevExpress.XtraVerticalGrid.Rows.VGridRows"/> collection.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.InternalFixed">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.IsFocused">
-            <summary>
-                <para>Gets whether or not the current row is focused.
-</para>
-            </summary>
-            <value><b>true</b>, if the current row is focused; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.IsSelected">
-            <summary>
-                <para>Gets whether or not the current row is selected.
-</para>
-            </summary>
-            <value><b>true</b>, if the current row is selected; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Level">
-            <summary>
-                <para>Gets the row's nesting level.
-</para>
-            </summary>
-            <value>An integer value representing the row's zero-based nesting level.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.MaxCaptionLineCount">
-            <summary>
-                <para>Gets or sets the maximum number of text lines used to display the row header's caption.
-</para>
-            </summary>
-            <value>An integer value specifying the maximum number of text lines within the row header.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.MinHeight">
-            <summary>
-                <para>Gets the row's minimum height.
-</para>
-            </summary>
-            <value>An integer value specifying the grid row's minimum height.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Name">
-            <summary>
-                <para>Gets or sets the row name.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value specifying the row name.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.OptionsRow">
-            <summary>
-                <para>Provides access to the current row's options.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraVerticalGrid.Rows.VGridOptionsRow"/> object which contains the row's options.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.ParentRow">
-            <summary>
-                <para>Gets the parent row of the current grid row.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraVerticalGrid.Rows.BaseRow"/> descendant representing the row's parent.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Properties">
-            <summary>
-                <para>Gets an object containing type specific row settings.
-</para>
-            </summary>
-            <value>An instance of the <see cref="T:DevExpress.XtraVerticalGrid.Rows.RowProperties"/> class or its descendant representing type specific row properties.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.RowPropertiesCount">
-            <summary>
-                <para>Returns the number of objects owned by a row that contains row settings.
-</para>
-            </summary>
-            <value>An integer value representing the total number of objects representing specific row settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Site">
-            <summary>
-                <para>Gets or sets a <b>System.ComponentModel.ISite</b> for a row.
-</para>
-            </summary>
-            <value>A <b>System.ComponentModel.ISite</b> for a row.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.StyleName">
-            <summary>
-                <para>Gets or sets the name of the custom style to be applied to the current row.
-</para>
-            </summary>
-            <value>A string representing the name of the custom style set for the current row.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.TabStop">
-            <summary>
-                <para>Gets or sets whether the user can move focus to the cell using the TAB/SHIFT+TAB or ENTER key.
-</para>
-            </summary>
-            <value><b>true</b> if the user can focus the cell using the TAB/SHIFT+TAB or ENTER key; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Tag">
-            <summary>
-                <para>Gets or sets a value that identifies the current row object.
-</para>
-            </summary>
-            <value>An object  that identifies the current row object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.TreeButtonType">
-            <summary>
-                <para>Gets the row's tree button type.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraVerticalGrid.TreeButtonType"/> enumeration member that specifies the row's tree button type.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Visible">
-            <summary>
-                <para>Gets or sets a value indicating whether a row can be displayed within a vertical grid control.
-</para>
-            </summary>
-            <value><b>true</b> if a row can be displayed; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.VisibleIndex">
-            <summary>
-                <para>Gets the row's visible position within a vertical grid control.
-</para>
-            </summary>
-            <value>A zero based integer value specifying the row's visible position among the other visible rows.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.XtraRowTypeID">
-            <summary>
-                <para>Gets a value indicating the row's type.
-</para>
-            </summary>
-            <value>An integer value representing the row's type identifier.
-
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraVerticalGrid.PGridOptionsView">
 
             <summary>
@@ -1567,6 +1213,14 @@ This property is only in effect for the <see cref="T:DevExpress.XtraVerticalGrid
             <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> that contains the corresponding appearance settings.
 
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.VGridAppearanceCollection.SelectedCategory">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -4813,30 +4467,6 @@ For the <see cref="T:DevExpress.XtraVerticalGrid.PropertyGridControl"/>, this me
 
 
         </member>
-        <member name="T:DevExpress.XtraVerticalGrid.Events.CustomDrawRowValueCellEventHandler">
-
-            <summary>
-                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraVerticalGrid.VGridControlBase.CustomDrawRowValueCell"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraVerticalGrid.Events.CustomDrawRowValueCellEventHandler.Invoke(System.Object,DevExpress.XtraVerticalGrid.Events.CustomDrawRowValueCellEventArgs)">
-            <summary>
-                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraVerticalGrid.VGridControlBase.CustomDrawRowValueCell"/> event.
-</para>
-            </summary>
-            <param name="sender">
-		The event sender (the <see cref="T:DevExpress.XtraVerticalGrid.VGridControl"/>).
-
-            </param>
-            <param name="e">
-		A <see cref="T:DevExpress.XtraVerticalGrid.Events.CustomDrawRowValueCellEventArgs"/> object that contains event data.
-
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.XtraVerticalGrid.Rows.VGridOptionsRow">
 
             <summary>
@@ -7340,6 +6970,360 @@ Office2003 style:
 
 
         </member>
+        <member name="T:DevExpress.XtraVerticalGrid.Rows.BaseRow">
+
+            <summary>
+                <para>Serves as the base class for rows of different types.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Appearance">
+            <summary>
+                <para>Gets the appearance settings used to paint the row's cells.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Utils.AppearanceObjectEx"/> object that provides the appearance settings used to paint the row's cells.
+
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraVerticalGrid.Rows.BaseRow.AssignTo(DevExpress.XtraVerticalGrid.Rows.BaseRow)">
+            <summary>
+                <para>Copies the current row's settings to the row specified.
+</para>
+            </summary>
+            <param name="destinationRow">
+		A <see cref="T:DevExpress.XtraVerticalGrid.Rows.BaseRow"/> object or descendant that represents the row object into which settings are copied.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.ChildRows">
+            <summary>
+                <para>Gets a collection of child rows for a row.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraVerticalGrid.Rows.VGridRows"/> object representing a collection of child rows (if any) for a row.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Expanded">
+            <summary>
+                <para>Gets or sets a value specifying whether the current row is expanded.
+</para>
+            </summary>
+            <value><b>true</b> if the current row is expanded; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Fixed">
+            <summary>
+                <para>Gets or sets whether the row is fixed (anchored to a control's top or bottom edge).
+</para>
+            </summary>
+            <value>A DevExpress.XtraVerticalGrid.Rows.FixedStyle value that specifies whether the row is fixed.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraVerticalGrid.Rows.BaseRow.GetRowProperties(System.Int32)">
+            <summary>
+                <para>Returns an object containing type specific row settings.
+</para>
+            </summary>
+            <param name="index">
+		A zero-based integer value representing the index of the object that contains the row settings.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraVerticalGrid.Rows.RowProperties"/> object or its descendant that represents type specific row properties. <b>null</b> (<b>Nothing</b> in Visual Basic) if the <I>index</I> parameter value is negative or exceeds the maximum index available.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraVerticalGrid.Rows.BaseRow.GetRowProperties">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Grid">
+            <summary>
+                <para>Gets or sets the vertical grid control that owns the current row.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraVerticalGrid.VGridControl"/> object which represents the vertical grid control that owns the current row.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraVerticalGrid.Rows.BaseRow.HasAsChild(DevExpress.XtraVerticalGrid.Rows.BaseRow)">
+            <summary>
+                <para>Indicates whether the row has the child row specified.
+</para>
+            </summary>
+            <param name="gridRow">
+		A <see cref="T:DevExpress.XtraVerticalGrid.Rows.BaseRow"/> descendant representing the row to test.
+
+            </param>
+            <returns><b>true</b> if the row is the parent for the row specified; otherwise <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraVerticalGrid.Rows.BaseRow.HasAsParent(DevExpress.XtraVerticalGrid.Rows.BaseRow)">
+            <summary>
+                <para>Determines whether the current row has a specific row as its parent.
+</para>
+            </summary>
+            <param name="gridRow">
+		A <see cref="T:DevExpress.XtraVerticalGrid.Rows.BaseRow"/> descendant that represents the row to check.
+
+            </param>
+            <returns><b>true</b> if the current row has the specified row as its parent; otherwise <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.HasChildren">
+            <summary>
+                <para>Gets a value indicating whether a specific row contains child rows.
+</para>
+            </summary>
+            <value><b>true</b> if a specific row contains one or more child rows; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.HeaderInfo">
+            <summary>
+                <para>Provides view information on the row's header.
+</para>
+            </summary>
+            <value>The <see cref="T:DevExpress.XtraVerticalGrid.ViewInfo.BaseRowHeaderInfo"/> class descendant that provides view information on the row's header.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Height">
+            <summary>
+                <para>Gets or sets the row's height.
+</para>
+            </summary>
+            <value>An integer value specifying the row's height in pixels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Index">
+            <summary>
+                <para>Gets or sets the row's index within a collection of rows located at the same level (sibling rows).
+</para>
+            </summary>
+            <value>A zero-based index value representing the position of a specific row within a <see cref="T:DevExpress.XtraVerticalGrid.Rows.VGridRows"/> collection.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.InternalFixed">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.IsFocused">
+            <summary>
+                <para>Gets whether or not the current row is focused.
+</para>
+            </summary>
+            <value><b>true</b>, if the current row is focused; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.IsSelected">
+            <summary>
+                <para>Gets whether or not the current row is selected.
+</para>
+            </summary>
+            <value><b>true</b>, if the current row is selected; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Level">
+            <summary>
+                <para>Gets the row's nesting level.
+</para>
+            </summary>
+            <value>An integer value representing the row's zero-based nesting level.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.MaxCaptionLineCount">
+            <summary>
+                <para>Gets or sets the maximum number of text lines used to display the row header's caption.
+</para>
+            </summary>
+            <value>An integer value specifying the maximum number of text lines within the row header.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.MinHeight">
+            <summary>
+                <para>Gets the row's minimum height.
+</para>
+            </summary>
+            <value>An integer value specifying the grid row's minimum height.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Name">
+            <summary>
+                <para>Gets or sets the row name.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value specifying the row name.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.OptionsRow">
+            <summary>
+                <para>Provides access to the current row's options.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraVerticalGrid.Rows.VGridOptionsRow"/> object which contains the row's options.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.ParentRow">
+            <summary>
+                <para>Gets the parent row of the current grid row.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraVerticalGrid.Rows.BaseRow"/> descendant representing the row's parent.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Properties">
+            <summary>
+                <para>Gets an object containing type specific row settings.
+</para>
+            </summary>
+            <value>An instance of the <see cref="T:DevExpress.XtraVerticalGrid.Rows.RowProperties"/> class or its descendant representing type specific row properties.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.RowPropertiesCount">
+            <summary>
+                <para>Returns the number of objects owned by a row that contains row settings.
+</para>
+            </summary>
+            <value>An integer value representing the total number of objects representing specific row settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Site">
+            <summary>
+                <para>Gets or sets a <b>System.ComponentModel.ISite</b> for a row.
+</para>
+            </summary>
+            <value>A <b>System.ComponentModel.ISite</b> for a row.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.StyleName">
+            <summary>
+                <para>Gets or sets the name of the custom style to be applied to the current row.
+</para>
+            </summary>
+            <value>A string representing the name of the custom style set for the current row.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.TabStop">
+            <summary>
+                <para>Gets or sets whether the user can move focus to the cell using the TAB/SHIFT+TAB or ENTER key.
+</para>
+            </summary>
+            <value><b>true</b> if the user can focus the cell using the TAB/SHIFT+TAB or ENTER key; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Tag">
+            <summary>
+                <para>Gets or sets a value that identifies the current row object.
+</para>
+            </summary>
+            <value>An object  that identifies the current row object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.TreeButtonType">
+            <summary>
+                <para>Gets the row's tree button type.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraVerticalGrid.TreeButtonType"/> enumeration member that specifies the row's tree button type.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.Visible">
+            <summary>
+                <para>Gets or sets a value indicating whether a row can be displayed within a vertical grid control.
+</para>
+            </summary>
+            <value><b>true</b> if a row can be displayed; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.VisibleIndex">
+            <summary>
+                <para>Gets the row's visible position within a vertical grid control.
+</para>
+            </summary>
+            <value>A zero based integer value specifying the row's visible position among the other visible rows.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Rows.BaseRow.XtraRowTypeID">
+            <summary>
+                <para>Gets a value indicating the row's type.
+</para>
+            </summary>
+            <value>An integer value representing the row's type identifier.
+
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraVerticalGrid.Rows.SeparatorKind">
 
             <summary>
@@ -7931,6 +7915,30 @@ Office2003 style:
             </summary>
             <value>A <see cref="T:System.String"/> value representing the painted cell separator's text.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraVerticalGrid.Events.CustomDrawRowValueCellEventHandler">
+
+            <summary>
+                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraVerticalGrid.VGridControlBase.CustomDrawRowValueCell"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraVerticalGrid.Events.CustomDrawRowValueCellEventHandler.Invoke(System.Object,DevExpress.XtraVerticalGrid.Events.CustomDrawRowValueCellEventArgs)">
+            <summary>
+                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraVerticalGrid.VGridControlBase.CustomDrawRowValueCell"/> event.
+</para>
+            </summary>
+            <param name="sender">
+		The event sender (the <see cref="T:DevExpress.XtraVerticalGrid.VGridControl"/>).
+
+            </param>
+            <param name="e">
+		A <see cref="T:DevExpress.XtraVerticalGrid.Events.CustomDrawRowValueCellEventArgs"/> object that contains event data.
+
+            </param>
 
 
         </member>

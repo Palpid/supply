@@ -2727,453 +2727,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Xpo.SimpleObjectLayer">
-
-            <summary>
-                <para>An object access layer that saves and loads persistent objects via a data access layer associated with a data store provider (an <see cref="T:DevExpress.Xpo.DB.IDataStore"/> implementation).
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.#ctor(DevExpress.Xpo.IDataLayer)">
-            <summary>
-                <para>Initializes a new instance of the SimpleObjectLayer class with a data access layer.
-</para>
-            </summary>
-            <param name="dataLayer">
-		An object which implements the <see cref="T:DevExpress.Xpo.IDataLayer"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.SimpleObjectLayer.AutoCreateOption">
-            <summary>
-                <para>Returns an <see cref="T:DevExpress.Xpo.DB.AutoCreateOption"/> value associated with the current object layer.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Xpo.DB.AutoCreateOption"/> enumeration value which specifies the action which is performed when connecting to a data store.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.SimpleObjectLayer.CanLoadCollectionObjects">
-            <summary>
-                <para>Indicates if an object layer can call the <see cref="M:DevExpress.Xpo.SimpleObjectLayer.LoadCollectionObjects"/> method to load collection properties.
-</para>
-            </summary>
-            <value><b>true</b> if collections can be loaded via an object layer's <see cref="M:DevExpress.Xpo.SimpleObjectLayer.LoadCollectionObjects"/> method call; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.ClearDatabase">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.CommitChanges(DevExpress.Xpo.Session,System.Collections.ICollection,System.Collections.ICollection)">
-            <summary>
-                <para>Performs object layer specific operations that are required to commit object changes made in a specified session.
-</para>
-            </summary>
-            <param name="session">
-		A <see cref="T:DevExpress.Xpo.Session"/> with pending object changes.
-
-            </param>
-            <param name="fullListForDelete">
-		A collection of persistent objects to be deleted.
-
-            </param>
-            <param name="completeListForSave">
-		A collection of persistent objects to be saved.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.CommitChangesAsync(DevExpress.Xpo.Session,System.Collections.ICollection,System.Collections.ICollection,DevExpress.Xpo.AsyncCommitCallback)">
-            <summary>
-                <para>Performs object layer specific operations that are required to asynchronously commit object changes made in a specified session and notifies upon completion.
-</para>
-            </summary>
-            <param name="session">
-		A <see cref="T:DevExpress.Xpo.Session"/> with pending object changes.
-
-            </param>
-            <param name="fullListForDelete">
-		A collection of persistent objects to be deleted.
-
-            </param>
-            <param name="completeListForSave">
-		A collection of persistent objects to be saved.
-
-            </param>
-            <param name="callback">
-		An <see cref="T:DevExpress.Xpo.AsyncCommitCallback"/> delegate to be called after the changes have been committed. Use the <i>callback</i> to store the exception information passed as a parameter, and use this information later, to raise the exception again, within the original thread. Do not raise exceptions or modify persistent objects within a <i>callback</i>.
-
-            </param>
-            <returns>An object identifying the current asynchronous operation, intended for internal use.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.SimpleObjectLayer.Connection">
-            <summary>
-                <para>Provides access to the current object layer's <see cref="T:System.Data.IDbConnection"/> object that is used to access a database.
-</para>
-            </summary>
-            <value>An object which implements the <see cref="IDbConnection"/> interface.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.CreateObjectType(DevExpress.Xpo.XPObjectType)">
-            <summary>
-                <para>Performs object layer specific operations that are required to create an <see cref="T:DevExpress.Xpo.XPObjectType"/> record.
-</para>
-            </summary>
-            <param name="objectType">
-		An <see cref="T:DevExpress.Xpo.XPObjectType"/> object specifying a valid persistent type.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.SimpleObjectLayer.DataLayer">
-            <summary>
-                <para>Provides access to the current object layer's data access layer that is used to access a data store.
-</para>
-            </summary>
-            <value>An object which implements the <see cref="IDataLayer"/> interface.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.SimpleObjectLayer.Dictionary">
-            <summary>
-                <para>Gets an object providing metadata on persistent objects stored in a data store.
-</para>
-            </summary>
-            <value>An <see cref="XPDictionary"/> object, which provides metadata on persistent objects stored in a data store.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.FromDataLayer(DevExpress.Xpo.IDataLayer)">
-            <summary>
-                <para>Creates a new SimpleObjectLayer and initializes it with a specified data access layer.
-</para>
-            </summary>
-            <param name="dataLayer">
-		An object implementing the <see cref="T:DevExpress.Xpo.IDataLayer"/> interface.
-
-            </param>
-            <returns>A <see cref="SimpleObjectLayer"/> object which is initialized with the <i>dataLayer</i>. <b>null</b> (<b>Nothing</b> in Visual Basic) is returned if the <i>dataLayer</i> is not specified.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.GetObjectLayerWideObjectTypes">
-            <summary>
-                <para>Returns a <see cref="T:System.Collections.Generic.Dictionary`2[[DevExpress.Xpo.Metadata.XPClassInfo],[DevExpress.Xpo.XPObjectType]]"/> specifying the correspondence of <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> objects to <see cref="T:DevExpress.Xpo.XPObjectType"/> records.
-</para>
-            </summary>
-            <returns>A <see cref="T:System.Collections.Generic.Dictionary`2[[DevExpress.Xpo.Metadata.XPClassInfo],[DevExpress.Xpo.XPObjectType]]"/>, providing a collection of complementary <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/>-<see cref="T:DevExpress.Xpo.XPObjectType"/> pairs.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.GetObjectsByKey(DevExpress.Xpo.Session,DevExpress.Xpo.ObjectsByKeyQuery[])">
-            <summary>
-                <para>Performs object layer specific operations that are required to return persistent objects from a specified session using queries based on specified object types and key values.
-</para>
-            </summary>
-            <param name="session">
-		A <see cref="T:DevExpress.Xpo.Session"/> that is used to retrieve persistent objects.
-
-            </param>
-            <param name="queries">
-		An array of <see cref="T:DevExpress.Xpo.ObjectsByKeyQuery"/> objects, containing data for queries that retrieve persistent objects by specified object types and key values.
-
-            </param>
-            <returns>An array of persistent object collections retrieved for query data passed as the <i>queries</i> parameter.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.GetStaticCache(DevExpress.Xpo.Metadata.XPClassInfo)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="info">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.IsStaticType(DevExpress.Xpo.Metadata.XPClassInfo)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="type">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.LoadCollectionObjects(DevExpress.Xpo.Session,DevExpress.Xpo.Metadata.XPMemberInfo,System.Object)">
-            <summary>
-                <para>Performs object layer specific operations that are required to load a collection property using specified settings.
-</para>
-            </summary>
-            <param name="session">
-		A <see cref="T:DevExpress.Xpo.Session"/> that is used to load collection objects.
-
-            </param>
-            <param name="refProperty">
-		The <i>ownerObject</i>'s property that references a collection property.
-
-            </param>
-            <param name="ownerObject">
-		The object that owns the collection property.
-
-            </param>
-            <returns>An array of collection objects.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.LoadDelayedProperties(DevExpress.Xpo.Session,System.Object,DevExpress.Xpo.Metadata.Helpers.MemberPathCollection)">
-            <summary>
-                <para>Performs object layer specific operations that are required to load data to specific properties marked for delayed loading in a specified object.
-</para>
-            </summary>
-            <param name="session">
-		A <see cref="T:DevExpress.Xpo.Session"/> that is used to retrieve data for delayed properties.
-
-            </param>
-            <param name="theObject">
-		A persistent object containing delayed properties specified by the <i>props</i>.
-
-            </param>
-            <param name="props">
-		A <b>MemberPathCollection</b> object containing member paths of delayed properties whose values are loaded.
-
-            </param>
-            <returns>An array of loaded property values that correspond to the <i>props</i> collection elements.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.LoadDelayedProperties(DevExpress.Xpo.Session,System.Collections.IList,DevExpress.Xpo.Metadata.XPMemberInfo)">
-            <summary>
-                <para>Performs object layer specific operations that are required to load data to a specific property marked for delayed loading in specified objects.
-</para>
-            </summary>
-            <param name="session">
-		A <see cref="T:DevExpress.Xpo.Session"/> that is used to retrieve data for delayed properties.
-
-            </param>
-            <param name="objects">
-		A list of persistent objects containing the delayed property specified by the <i>property</i>.
-
-            </param>
-            <param name="property">
-		An <see cref="T:DevExpress.Xpo.Metadata.XPMemberInfo"/> object specifying a delayed property whose values are loaded.
-
-            </param>
-            <returns>An <b>ObjectDictionary</b> of loaded property values that correspond to the <i>objects</i> list elements.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.LoadObjects(DevExpress.Xpo.Session,DevExpress.Xpo.ObjectsQuery[])">
-            <summary>
-                <para>Performs object layer specific operations that are required to load persistent objects using specified settings.
-</para>
-            </summary>
-            <param name="session">
-		A <see cref="T:DevExpress.Xpo.Session"/> that is used to load persistent objects.
-
-            </param>
-            <param name="queries">
-		An array of <see cref="T:DevExpress.Xpo.ObjectsQuery"/> objects specifying queries that are executed to retrieve persistent objects.
-
-            </param>
-            <returns>An array of object collections that correspond to the <i>queries</i>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.LoadObjectsAsync(DevExpress.Xpo.Session,DevExpress.Xpo.ObjectsQuery[],DevExpress.Xpo.Helpers.AsyncLoadObjectsCallback)">
-            <summary>
-                <para>Performs object layer specific operations that are required to asynchronously load persistent objects using specified settings and notifies upon completion.
-</para>
-            </summary>
-            <param name="session">
-		A <see cref="T:DevExpress.Xpo.Session"/> that is used to load persistent objects.
-
-            </param>
-            <param name="queries">
-		An array of <see cref="T:DevExpress.Xpo.ObjectsQuery"/> objects specifying queries that are executed to retrieve persistent objects.
-
-            </param>
-            <param name="callback">
-		An <b>AsyncLoadObjectsCallback</b> delegate to be called after the objects have been loaded. Use the <i>callback</i> to store the exception information passed as a parameter, and use this information later, to raise the exception again, within the original thread. Do not raise exceptions or modify persistent objects within a <i>callback</i>.
-
-            </param>
-            <returns>An object identifying the current asynchronous operation, intended for internal use.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.SimpleObjectLayer.ObjectLayer">
-            <summary>
-                <para>Returns the current SimpleObjectLayer object.
-</para>
-            </summary>
-            <value>The current SimpleObjectLayer object cast to the <see cref="IObjectLayer"/>.
-
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.Purge">
-            <summary>
-                <para>Performs object layer specific operations that are required to remove all objects marked for deletion.
-</para>
-            </summary>
-            <returns>A <b>PurgeResult</b> object containing removal statistics (the number of objects processed, purged, etc.)
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.RegisterStaticTypes(DevExpress.Xpo.Metadata.XPClassInfo[])">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="types">
-		 
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.Xpo.SimpleObjectLayer.SchemaInit">
-            <summary>
-                <para>Occurs when a data store's schema is initialized or updated for the current object layer.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.SelectData(DevExpress.Xpo.Session,DevExpress.Xpo.ObjectsQuery,DevExpress.Data.Filtering.CriteriaOperatorCollection,DevExpress.Data.Filtering.CriteriaOperatorCollection,DevExpress.Data.Filtering.CriteriaOperator)">
-            <summary>
-                <para>Performs object layer specific operations that are required to retrieve object data from a session using specified query parameters.
-</para>
-            </summary>
-            <param name="session">
-		A <see cref="T:DevExpress.Xpo.Session"/> that is used to retrieve persistent objects.
-
-            </param>
-            <param name="query">
-		An <see cref="T:DevExpress.Xpo.ObjectsQuery"/> object specifying a query that is executed to retrieve persistent objects.
-
-            </param>
-            <param name="properties">
-		A <see cref="T:DevExpress.Data.Filtering.CriteriaOperatorCollection"/> object which specifies object properties to be retrieved.
-
-            </param>
-            <param name="groupProperties">
-		A <see cref="T:DevExpress.Data.Filtering.CriteriaOperatorCollection"/> object which specifies the grouping properties.
-
-            </param>
-            <param name="groupCriteria">
-		A <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> descendant which specifies the grouping criteria for the retrieved objects.
-
-            </param>
-            <returns>A list whose elements are property values that correspond to the <i>properties</i> of objects retrieved from the <i>session</i>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.SelectDataAsync(DevExpress.Xpo.Session,DevExpress.Xpo.ObjectsQuery,DevExpress.Data.Filtering.CriteriaOperatorCollection,DevExpress.Data.Filtering.CriteriaOperatorCollection,DevExpress.Data.Filtering.CriteriaOperator,DevExpress.Xpo.AsyncSelectDataCallback)">
-            <summary>
-                <para>Performs object layer specific operations that are required to asynchronously retrieve object data from a session using specified query parameters and notifies upon completion.
-</para>
-            </summary>
-            <param name="session">
-		A <see cref="T:DevExpress.Xpo.Session"/> that is used to retrieve persistent objects.
-
-            </param>
-            <param name="query">
-		An <see cref="T:DevExpress.Xpo.ObjectsQuery"/> object specifying a query that is executed to retrieve persistent objects.
-
-            </param>
-            <param name="properties">
-		A <see cref="T:DevExpress.Data.Filtering.CriteriaOperatorCollection"/> object which specifies object properties to be retrieved.
-
-            </param>
-            <param name="groupProperties">
-		A <see cref="T:DevExpress.Data.Filtering.CriteriaOperatorCollection"/> object which specifies the grouping properties.
-
-            </param>
-            <param name="groupCriteria">
-		A <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> descendant which specifies the grouping criteria for the retrieved objects.
-
-            </param>
-            <param name="callback">
-		An <b>AsyncLoadObjectsCallback</b> delegate to be called after the object data have been retrieved. Use the <i>callback</i> to store the exception information passed as a parameter, and use this information later, to raise the exception again, within the original thread. Do not raise exceptions or modify persistent objects within a <i>callback</i>.
-
-            </param>
-            <returns>An object identifying the current asynchronous operation, intended for internal use.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.SetObjectLayerWideObjectTypes(System.Collections.Generic.Dictionary`2)">
-            <summary>
-                <para>Designates a <see cref="T:System.Collections.Generic.Dictionary`2[[DevExpress.Xpo.Metadata.XPClassInfo],[DevExpress.Xpo.XPObjectType]]"/> specifying the correspondence of <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> objects to <see cref="T:DevExpress.Xpo.XPObjectType"/> records.
-</para>
-            </summary>
-            <param name="loadedTypes">
-		A <see cref="T:System.Collections.Generic.Dictionary`2[[DevExpress.Xpo.Metadata.XPClassInfo],[DevExpress.Xpo.XPObjectType]]"/>, providing a collection of complementary <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/>-<see cref="T:DevExpress.Xpo.XPObjectType"/> pairs.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.SimpleObjectLayer.UpdateSchema(System.Boolean,DevExpress.Xpo.Metadata.XPClassInfo[])">
-            <summary>
-                <para>Performs object layer specific operations that are required to update a data store's schema according to the class descriptions of the specified types.
-</para>
-            </summary>
-            <param name="dontCreateIfFirstTableNotExist">
-		<b>true</b> if the schema should not be created when the table that corresponds to the first item in the <i>types</i> array doesn't exist in the data store; otherwise, <b>false</b>.
-
-            </param>
-            <param name="types">
-		An array of <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> objects specifying the types of objects for which schema should be created in the data store.
-
-            </param>
-            <returns>An <see cref="T:DevExpress.Xpo.DB.UpdateSchemaResult"/> enumeration value which specifies the result of the update operation.
-</returns>
-
-
-        </member>
         <member name="T:DevExpress.Xpo.SessionObjectLayer">
 
             <summary>
@@ -6914,114 +6467,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Xpo.DB.OperationResult">
-
-            <summary>
-                <para>The result of an operation performed by the <see cref="T:DevExpress.Xpo.DB.DataStoreService"/>, <see cref="T:DevExpress.Xpo.DB.CachedDataStoreService"/>, or <see cref="T:DevExpress.Xpo.DB.SerializableObjectLayerService"/>.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.OperationResult.#ctor">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.OperationResult.#ctor(DevExpress.Xpo.DB.ServiceException,System.String)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="errorType">
-		 
-
-            </param>
-            <param name="error">
-		 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.OperationResult.DeserializeSecurityException(System.String)">
-            <summary>
-                <para>This method supports the internal infrastructure and is not intended to be used directly from your code. 
-</para>
-            </summary>
-            <param name="data">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="F:DevExpress.Xpo.DB.OperationResult.Error">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="F:DevExpress.Xpo.DB.OperationResult.ErrorType">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.OperationResult.ExecuteClient``2(DevExpress.Xpo.DB.OperationResultChannelPredicate{``0},``1@)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="predicate">
-		 
-
-            </param>
-            <param name="channel">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="F:DevExpress.Xpo.DB.OperationResult.ExecuteClientMaxRetryCount">
-            <summary>
-                <para>Specifies the maximum number of retries to be made when the execution of an operation fails. The default value is 3.
-</para>
-            </summary>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.OperationResult.SerializeSecurityException(DevExpress.Xpo.Exceptions.ObjectLayerSecurityException)">
-            <summary>
-                <para>This method supports the internal infrastructure and is not intended to be used directly from your code. 
-</para>
-            </summary>
-            <param name="sx">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
         <member name="T:DevExpress.Xpo.ServerExceptionThrownAction">
 
             <summary>
@@ -7390,47 +6835,6 @@
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.Xpo.Session"/> object whose persistent objects are being processed.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Xpo.ValueConverterAttribute">
-
-            <summary>
-                <para>Specifies that a persistent property has a Value Converter.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Xpo.ValueConverterAttribute.#ctor(System.Type)">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.Metadata.ValueConverter"/> class.
-</para>
-            </summary>
-            <param name="converterType">
-		The <see cref="T:System.Type"/> of the converter. This value is assigned to the <see cref="P:DevExpress.Xpo.ValueConverterAttribute.ConverterType"/> property.
-
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.ValueConverterAttribute.Converter">
-            <summary>
-                <para>Gets the value converter.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Xpo.Metadata.ValueConverter"/> descendant which represents the value converter.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.ValueConverterAttribute.ConverterType">
-            <summary>
-                <para>Gets the converter's type.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Type"/> of the converter.
 </value>
 
 
@@ -7879,6 +7283,14 @@
 
 
         </member>
+        <member name="F:DevExpress.Xpo.XPQueryBase.SuppressNonPersistentPropertiesCheck">
+            <summary>
+                <para> </para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
         <member name="T:DevExpress.Xpo.IdentityMapBehavior">
 
             <summary>
@@ -7908,36 +7320,6 @@
                 <para>Weak references are used, which allows the garbage collector to reclaim unused objects.
 </para>
             </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Xpo.DB.ServiceExceptionEventArgs">
-
-            <summary>
-                <para>Arguments, passed to the <see cref="E:DevExpress.Xpo.DB.ServiceBase.GlobalServiceExceptionThrown"/> and <see cref="E:DevExpress.Xpo.DB.ServiceBase.ServiceExceptionThrown"/> events.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ServiceExceptionEventArgs.#ctor(System.Exception)">
-            <summary>
-                <para>Initializes a new instance of the ServiceExceptionEventArgs class.
-</para>
-            </summary>
-            <param name="exception">
-		An exception thrown by the service.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.DB.ServiceExceptionEventArgs.Exception">
-            <summary>
-                <para>Gets the exception thrown by the service.
-</para>
-            </summary>
-            <value>An exception thrown by the service.
-</value>
 
 
         </member>
@@ -7971,104 +7353,490 @@
 
 
         </member>
-        <member name="T:DevExpress.Xpo.Exceptions.CannotResolveClassInfoException">
+        <member name="T:DevExpress.Xpo.SimpleObjectLayer">
 
             <summary>
-                <para>An exception that is thrown when the <see cref="T:DevExpress.Xpo.Metadata.XPDictionary"/> cannot provide <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> metadata information for the class.
+                <para>An object access layer that saves and loads persistent objects via a data access layer associated with a data store provider (an <see cref="T:DevExpress.Xpo.DB.IDataStore"/> implementation).
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Xpo.Exceptions.CannotResolveClassInfoException.#ctor(System.String,System.String)">
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.#ctor(DevExpress.Xpo.IDataLayer)">
             <summary>
-                <para>Initializes a new instance of the CannotResolveClassInfoException class.
+                <para>Initializes a new instance of the SimpleObjectLayer class with a data access layer.
 </para>
             </summary>
-            <param name="assemblyName">
-		The name of the assembly.
-
-            </param>
-            <param name="typeName">
-		The name of the type whose <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> cannot be obtained.
+            <param name="dataLayer">
+		An object which implements the <see cref="T:DevExpress.Xpo.IDataLayer"/> interface.
 
             </param>
 
 
         </member>
-        <member name="P:DevExpress.Xpo.Exceptions.CannotResolveClassInfoException.TypeName">
+        <member name="P:DevExpress.Xpo.SimpleObjectLayer.AutoCreateOption">
             <summary>
-                <para>Gets the name of the type whose <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> cannot be obtained.
+                <para>Returns an <see cref="T:DevExpress.Xpo.DB.AutoCreateOption"/> value associated with the current object layer.
 </para>
             </summary>
-            <value>A string representing the name of the class.
+            <value>An <see cref="T:DevExpress.Xpo.DB.AutoCreateOption"/> enumeration value which specifies the action which is performed when connecting to a data store.
 </value>
 
 
         </member>
-        <member name="T:DevExpress.Xpo.Exceptions.CannotReloadPurgedObjectException">
-
+        <member name="P:DevExpress.Xpo.SimpleObjectLayer.CanLoadCollectionObjects">
             <summary>
-                <para>An exception that is thrown when attempting to reload an object that is not present in the persistent data store.
-
+                <para>Indicates if an object layer can call the <see cref="M:DevExpress.Xpo.SimpleObjectLayer.LoadCollectionObjects"/> method to load collection properties.
 </para>
             </summary>
-
-        </member>
-        <member name="M:DevExpress.Xpo.Exceptions.CannotReloadPurgedObjectException.#ctor">
-            <summary>
-                <para>Initializes a new instance of the CannotReloadPurgedObjectException class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Xpo.Exceptions.CannotLoadInvalidTypeException">
-
-            <summary>
-                <para>An exception that is thrown when a persistent object cannot be loaded because it's type is not valid.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Xpo.Exceptions.CannotLoadInvalidTypeException.#ctor(System.String)">
-            <summary>
-                <para>Initializes a new instance of the CannotLoadInvalidTypeException class.
-</para>
-            </summary>
-            <param name="typeName">
-		A string that specifies the name of the type.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.Exceptions.CannotLoadInvalidTypeException.TypeName">
-            <summary>
-                <para>Gets the name of the type that cannot be loaded.
-</para>
-            </summary>
-            <value>A string that specifies the name of the type.
+            <value><b>true</b> if collections can be loaded via an object layer's <see cref="M:DevExpress.Xpo.SimpleObjectLayer.LoadCollectionObjects"/> method call; otherwise, <b>false</b>.
 </value>
 
 
         </member>
-        <member name="T:DevExpress.Xpo.Exceptions.CannotFindAppropriateConnectionProviderException">
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.ClearDatabase">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.CommitChanges(DevExpress.Xpo.Session,System.Collections.ICollection,System.Collections.ICollection)">
+            <summary>
+                <para>Performs object layer specific operations that are required to commit object changes made in a specified session.
+</para>
+            </summary>
+            <param name="session">
+		A <see cref="T:DevExpress.Xpo.Session"/> with pending object changes.
+
+            </param>
+            <param name="fullListForDelete">
+		A collection of persistent objects to be deleted.
+
+            </param>
+            <param name="completeListForSave">
+		A collection of persistent objects to be saved.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.CommitChangesAsync(DevExpress.Xpo.Session,System.Collections.ICollection,System.Collections.ICollection,DevExpress.Xpo.AsyncCommitCallback)">
+            <summary>
+                <para>Performs object layer specific operations that are required to asynchronously commit object changes made in a specified session and notifies upon completion.
+</para>
+            </summary>
+            <param name="session">
+		A <see cref="T:DevExpress.Xpo.Session"/> with pending object changes.
+
+            </param>
+            <param name="fullListForDelete">
+		A collection of persistent objects to be deleted.
+
+            </param>
+            <param name="completeListForSave">
+		A collection of persistent objects to be saved.
+
+            </param>
+            <param name="callback">
+		An <see cref="T:DevExpress.Xpo.AsyncCommitCallback"/> delegate to be called after the changes have been committed. Use the <i>callback</i> to store the exception information passed as a parameter, and use this information later, to raise the exception again, within the original thread. Do not raise exceptions or modify persistent objects within a <i>callback</i>.
+
+            </param>
+            <returns>An object identifying the current asynchronous operation, intended for internal use.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Xpo.SimpleObjectLayer.Connection">
+            <summary>
+                <para>Provides access to the current object layer's <see cref="T:System.Data.IDbConnection"/> object that is used to access a database.
+</para>
+            </summary>
+            <value>An object which implements the <see cref="IDbConnection"/> interface.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.CreateObjectType(DevExpress.Xpo.XPObjectType)">
+            <summary>
+                <para>Performs object layer specific operations that are required to create an <see cref="T:DevExpress.Xpo.XPObjectType"/> record.
+</para>
+            </summary>
+            <param name="objectType">
+		An <see cref="T:DevExpress.Xpo.XPObjectType"/> object specifying a valid persistent type.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Xpo.SimpleObjectLayer.DataLayer">
+            <summary>
+                <para>Provides access to the current object layer's data access layer that is used to access a data store.
+</para>
+            </summary>
+            <value>An object which implements the <see cref="IDataLayer"/> interface.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Xpo.SimpleObjectLayer.Dictionary">
+            <summary>
+                <para>Gets an object providing metadata on persistent objects stored in a data store.
+</para>
+            </summary>
+            <value>An <see cref="XPDictionary"/> object, which provides metadata on persistent objects stored in a data store.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.FromDataLayer(DevExpress.Xpo.IDataLayer)">
+            <summary>
+                <para>Creates a new SimpleObjectLayer and initializes it with a specified data access layer.
+</para>
+            </summary>
+            <param name="dataLayer">
+		An object implementing the <see cref="T:DevExpress.Xpo.IDataLayer"/> interface.
+
+            </param>
+            <returns>A <see cref="SimpleObjectLayer"/> object which is initialized with the <i>dataLayer</i>. <b>null</b> (<b>Nothing</b> in Visual Basic) is returned if the <i>dataLayer</i> is not specified.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.GetObjectLayerWideObjectTypes">
+            <summary>
+                <para>Returns a <see cref="T:System.Collections.Generic.Dictionary`2[[DevExpress.Xpo.Metadata.XPClassInfo],[DevExpress.Xpo.XPObjectType]]"/> specifying the correspondence of <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> objects to <see cref="T:DevExpress.Xpo.XPObjectType"/> records.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Collections.Generic.Dictionary`2[[DevExpress.Xpo.Metadata.XPClassInfo],[DevExpress.Xpo.XPObjectType]]"/>, providing a collection of complementary <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/>-<see cref="T:DevExpress.Xpo.XPObjectType"/> pairs.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.GetObjectsByKey(DevExpress.Xpo.Session,DevExpress.Xpo.ObjectsByKeyQuery[])">
+            <summary>
+                <para>Performs object layer specific operations that are required to return persistent objects from a specified session using queries based on specified object types and key values.
+</para>
+            </summary>
+            <param name="session">
+		A <see cref="T:DevExpress.Xpo.Session"/> that is used to retrieve persistent objects.
+
+            </param>
+            <param name="queries">
+		An array of <see cref="T:DevExpress.Xpo.ObjectsByKeyQuery"/> objects, containing data for queries that retrieve persistent objects by specified object types and key values.
+
+            </param>
+            <returns>An array of persistent object collections retrieved for query data passed as the <i>queries</i> parameter.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.GetStaticCache(DevExpress.Xpo.Metadata.XPClassInfo)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="info">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.IsStaticType(DevExpress.Xpo.Metadata.XPClassInfo)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="type">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.LoadCollectionObjects(DevExpress.Xpo.Session,DevExpress.Xpo.Metadata.XPMemberInfo,System.Object)">
+            <summary>
+                <para>Performs object layer specific operations that are required to load a collection property using specified settings.
+</para>
+            </summary>
+            <param name="session">
+		A <see cref="T:DevExpress.Xpo.Session"/> that is used to load collection objects.
+
+            </param>
+            <param name="refProperty">
+		The <i>ownerObject</i>'s property that references a collection property.
+
+            </param>
+            <param name="ownerObject">
+		The object that owns the collection property.
+
+            </param>
+            <returns>An array of collection objects.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.LoadDelayedProperties(DevExpress.Xpo.Session,System.Object,DevExpress.Xpo.Metadata.Helpers.MemberPathCollection)">
+            <summary>
+                <para>Performs object layer specific operations that are required to load data to specific properties marked for delayed loading in a specified object.
+</para>
+            </summary>
+            <param name="session">
+		A <see cref="T:DevExpress.Xpo.Session"/> that is used to retrieve data for delayed properties.
+
+            </param>
+            <param name="theObject">
+		A persistent object containing delayed properties specified by the <i>props</i>.
+
+            </param>
+            <param name="props">
+		A <b>MemberPathCollection</b> object containing member paths of delayed properties whose values are loaded.
+
+            </param>
+            <returns>An array of loaded property values that correspond to the <i>props</i> collection elements.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.LoadDelayedProperties(DevExpress.Xpo.Session,System.Collections.IList,DevExpress.Xpo.Metadata.XPMemberInfo)">
+            <summary>
+                <para>Performs object layer specific operations that are required to load data to a specific property marked for delayed loading in specified objects.
+</para>
+            </summary>
+            <param name="session">
+		A <see cref="T:DevExpress.Xpo.Session"/> that is used to retrieve data for delayed properties.
+
+            </param>
+            <param name="objects">
+		A list of persistent objects containing the delayed property specified by the <i>property</i>.
+
+            </param>
+            <param name="property">
+		An <see cref="T:DevExpress.Xpo.Metadata.XPMemberInfo"/> object specifying a delayed property whose values are loaded.
+
+            </param>
+            <returns>An <b>ObjectDictionary</b> of loaded property values that correspond to the <i>objects</i> list elements.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.LoadObjects(DevExpress.Xpo.Session,DevExpress.Xpo.ObjectsQuery[])">
+            <summary>
+                <para>Performs object layer specific operations that are required to load persistent objects using specified settings.
+</para>
+            </summary>
+            <param name="session">
+		A <see cref="T:DevExpress.Xpo.Session"/> that is used to load persistent objects.
+
+            </param>
+            <param name="queries">
+		An array of <see cref="T:DevExpress.Xpo.ObjectsQuery"/> objects specifying queries that are executed to retrieve persistent objects.
+
+            </param>
+            <returns>An array of object collections that correspond to the <i>queries</i>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.LoadObjectsAsync(DevExpress.Xpo.Session,DevExpress.Xpo.ObjectsQuery[],DevExpress.Xpo.Helpers.AsyncLoadObjectsCallback)">
+            <summary>
+                <para>Performs object layer specific operations that are required to asynchronously load persistent objects using specified settings and notifies upon completion.
+</para>
+            </summary>
+            <param name="session">
+		A <see cref="T:DevExpress.Xpo.Session"/> that is used to load persistent objects.
+
+            </param>
+            <param name="queries">
+		An array of <see cref="T:DevExpress.Xpo.ObjectsQuery"/> objects specifying queries that are executed to retrieve persistent objects.
+
+            </param>
+            <param name="callback">
+		An <b>AsyncLoadObjectsCallback</b> delegate to be called after the objects have been loaded. Use the <i>callback</i> to store the exception information passed as a parameter, and use this information later, to raise the exception again, within the original thread. Do not raise exceptions or modify persistent objects within a <i>callback</i>.
+
+            </param>
+            <returns>An object identifying the current asynchronous operation, intended for internal use.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Xpo.SimpleObjectLayer.ObjectLayer">
+            <summary>
+                <para>Returns the current SimpleObjectLayer object.
+</para>
+            </summary>
+            <value>The current SimpleObjectLayer object cast to the <see cref="IObjectLayer"/>.
+
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.Purge">
+            <summary>
+                <para>Performs object layer specific operations that are required to remove all objects marked for deletion.
+</para>
+            </summary>
+            <returns>A <b>PurgeResult</b> object containing removal statistics (the number of objects processed, purged, etc.)
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.RegisterStaticTypes(DevExpress.Xpo.Metadata.XPClassInfo[])">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="types">
+		 
+
+            </param>
+
+
+        </member>
+        <member name="E:DevExpress.Xpo.SimpleObjectLayer.SchemaInit">
+            <summary>
+                <para>Occurs when a data store's schema is initialized or updated for the current object layer.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.SelectData(DevExpress.Xpo.Session,DevExpress.Xpo.ObjectsQuery,DevExpress.Data.Filtering.CriteriaOperatorCollection,DevExpress.Data.Filtering.CriteriaOperatorCollection,DevExpress.Data.Filtering.CriteriaOperator)">
+            <summary>
+                <para>Performs object layer specific operations that are required to retrieve object data from a session using specified query parameters.
+</para>
+            </summary>
+            <param name="session">
+		A <see cref="T:DevExpress.Xpo.Session"/> that is used to retrieve persistent objects.
+
+            </param>
+            <param name="query">
+		An <see cref="T:DevExpress.Xpo.ObjectsQuery"/> object specifying a query that is executed to retrieve persistent objects.
+
+            </param>
+            <param name="properties">
+		A <see cref="T:DevExpress.Data.Filtering.CriteriaOperatorCollection"/> object which specifies object properties to be retrieved.
+
+            </param>
+            <param name="groupProperties">
+		A <see cref="T:DevExpress.Data.Filtering.CriteriaOperatorCollection"/> object which specifies the grouping properties.
+
+            </param>
+            <param name="groupCriteria">
+		A <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> descendant which specifies the grouping criteria for the retrieved objects.
+
+            </param>
+            <returns>A list whose elements are property values that correspond to the <i>properties</i> of objects retrieved from the <i>session</i>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.SelectDataAsync(DevExpress.Xpo.Session,DevExpress.Xpo.ObjectsQuery,DevExpress.Data.Filtering.CriteriaOperatorCollection,DevExpress.Data.Filtering.CriteriaOperatorCollection,DevExpress.Data.Filtering.CriteriaOperator,DevExpress.Xpo.AsyncSelectDataCallback)">
+            <summary>
+                <para>Performs object layer specific operations that are required to asynchronously retrieve object data from a session using specified query parameters and notifies upon completion.
+</para>
+            </summary>
+            <param name="session">
+		A <see cref="T:DevExpress.Xpo.Session"/> that is used to retrieve persistent objects.
+
+            </param>
+            <param name="query">
+		An <see cref="T:DevExpress.Xpo.ObjectsQuery"/> object specifying a query that is executed to retrieve persistent objects.
+
+            </param>
+            <param name="properties">
+		A <see cref="T:DevExpress.Data.Filtering.CriteriaOperatorCollection"/> object which specifies object properties to be retrieved.
+
+            </param>
+            <param name="groupProperties">
+		A <see cref="T:DevExpress.Data.Filtering.CriteriaOperatorCollection"/> object which specifies the grouping properties.
+
+            </param>
+            <param name="groupCriteria">
+		A <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> descendant which specifies the grouping criteria for the retrieved objects.
+
+            </param>
+            <param name="callback">
+		An <b>AsyncLoadObjectsCallback</b> delegate to be called after the object data have been retrieved. Use the <i>callback</i> to store the exception information passed as a parameter, and use this information later, to raise the exception again, within the original thread. Do not raise exceptions or modify persistent objects within a <i>callback</i>.
+
+            </param>
+            <returns>An object identifying the current asynchronous operation, intended for internal use.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.SetObjectLayerWideObjectTypes(System.Collections.Generic.Dictionary`2)">
+            <summary>
+                <para>Designates a <see cref="T:System.Collections.Generic.Dictionary`2[[DevExpress.Xpo.Metadata.XPClassInfo],[DevExpress.Xpo.XPObjectType]]"/> specifying the correspondence of <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> objects to <see cref="T:DevExpress.Xpo.XPObjectType"/> records.
+</para>
+            </summary>
+            <param name="loadedTypes">
+		A <see cref="T:System.Collections.Generic.Dictionary`2[[DevExpress.Xpo.Metadata.XPClassInfo],[DevExpress.Xpo.XPObjectType]]"/>, providing a collection of complementary <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/>-<see cref="T:DevExpress.Xpo.XPObjectType"/> pairs.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.SimpleObjectLayer.UpdateSchema(System.Boolean,DevExpress.Xpo.Metadata.XPClassInfo[])">
+            <summary>
+                <para>Performs object layer specific operations that are required to update a data store's schema according to the class descriptions of the specified types.
+</para>
+            </summary>
+            <param name="dontCreateIfFirstTableNotExist">
+		<b>true</b> if the schema should not be created when the table that corresponds to the first item in the <i>types</i> array doesn't exist in the data store; otherwise, <b>false</b>.
+
+            </param>
+            <param name="types">
+		An array of <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> objects specifying the types of objects for which schema should be created in the data store.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Xpo.DB.UpdateSchemaResult"/> enumeration value which specifies the result of the update operation.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.Xpo.OptimisticLockingBehavior">
 
             <summary>
-                <para>An exception that is thrown when an appropriate connection provider is not found.
+                <para>Contains values that specify the field-level locking behavior.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Xpo.Exceptions.CannotFindAppropriateConnectionProviderException.#ctor(System.String)">
+        <member name="F:DevExpress.Xpo.OptimisticLockingBehavior.ConsiderOptimisticLockingField">
             <summary>
-                <para>Initializes a new instance of the CannotFindAppropriateConnectionProviderException class.
+                <para>The optimistic lock field is considered.
 </para>
             </summary>
-            <param name="connectionString">
-		A string that specifies the connection string.
 
-            </param>
+
+        </member>
+        <member name="F:DevExpress.Xpo.OptimisticLockingBehavior.LockAll">
+            <summary>
+                <para>All properties are checked (requires that the <see cref="P:DevExpress.Xpo.Session.TrackPropertiesModifications"/> property is set to <b>true</b>).
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Xpo.OptimisticLockingBehavior.LockModified">
+            <summary>
+                <para>Modified properties are checked (requires that the <see cref="P:DevExpress.Xpo.Session.TrackPropertiesModifications"/> property is set to <b>true</b>).
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Xpo.OptimisticLockingBehavior.NoLocking">
+            <summary>
+                <para>Locking is disabled.
+</para>
+            </summary>
 
 
         </member>
@@ -8387,7 +8155,7 @@
         </member>
         <member name="F:DevExpress.Xpo.OptimisticLockingReadMergeBehavior.Default">
             <summary>
-                <para>The changed objects are automatically reloaded. The default behavior can be changed by setting the <see cref="F:DevExpress.Xpo.XpoDefault.DefaultOptimisticLockingReadBehavior"/> field.
+                <para>The changed objects are automatically reloaded. The default behavior can be changed by setting the <see cref="P:DevExpress.Xpo.XpoDefault.OptimisticLockingReadBehavior"/> property.
 </para>
             </summary>
 
@@ -8497,6 +8265,774 @@
 		An object that is the member's old value.
 
             </param>
+
+
+        </member>
+        <member name="T:DevExpress.Xpo.DB.MSSqlConnectionProvider">
+
+            <summary>
+                <para>Implements data-aware operations for working with an <b>MS SQL Server</b> or <b>MS SQL Azure</b> database.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.#ctor(System.Data.IDbConnection,DevExpress.Xpo.DB.AutoCreateOption)">
+            <summary>
+                <para>Initializes a new instance of the MSSqlConnectionProvider class with the specified settings.
+</para>
+            </summary>
+            <param name="connection">
+		An object implementing the <see cref="T:System.Data.IDbConnection"/> interface that represents an open connection to a data source.
+
+            </param>
+            <param name="autoCreateOption">
+		An <see cref="T:DevExpress.Xpo.DB.AutoCreateOption"/> value that specifies which operations are performed when storage is accessed for the first time. This parameter is used to initialize the <see cref="P:DevExpress.Xpo.DB.IDataStore.AutoCreateOption"/> property.
+
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.ClearDatabase(System.Data.IDbCommand)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="command">
+		 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.CollectTablesToCreate(System.Collections.ICollection)">
+            <summary>
+                <para>This method supports the internal infrastructure and is not intended to be called directly from your code.
+</para>
+            </summary>
+            <param name="tables">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.ComposeSafeSchemaName(System.String)">
+            <summary>
+                <para>Returns the valid schema name for the specified table's name.
+</para>
+            </summary>
+            <param name="tableName">
+		A string value that specifies the table's name for which the valid schema name must be composed.
+
+            </param>
+            <returns>A string value that specifies the valid schema name.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.CreateProviderFromConnection(System.Data.IDbConnection,DevExpress.Xpo.DB.AutoCreateOption)">
+            <summary>
+                <para>This method supports the internal infrastructure and is not intended to be called directly from your code.
+</para>
+            </summary>
+            <param name="connection">
+		 
+
+            </param>
+            <param name="autoCreateOption">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.CreateProviderFromString(System.String,DevExpress.Xpo.DB.AutoCreateOption,System.IDisposable[]@)">
+            <summary>
+                <para>This method supports the internal infrastructure and is not intended to be called directly from your code.
+</para>
+            </summary>
+            <param name="connectionString">
+		 
+
+            </param>
+            <param name="autoCreateOption">
+		 
+
+            </param>
+            <param name="objectsToDisposeOnDisconnect">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.EmptyAllTablesInDatabase(System.Data.IDbCommand)">
+            <summary>
+                <para>This method supports the internal infrastructure and is not intended to be used directly in your code.
+</para>
+            </summary>
+            <param name="command">
+		 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatBinary(DevExpress.Data.Filtering.BinaryOperatorType,System.String,System.String)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="operatorType">
+		 
+
+            </param>
+            <param name="leftOperand">
+		 
+
+            </param>
+            <param name="rightOperand">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatColumn(System.String)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="columnName">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatColumn(System.String,System.String)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="columnName">
+		 
+
+            </param>
+            <param name="tableAlias">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatConstraint(System.String)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="constraintName">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatDelete(System.String,System.String)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="tableName">
+		 
+
+            </param>
+            <param name="whereClause">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatFunction(DevExpress.Data.Filtering.FunctionOperatorType,System.String[])">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="operatorType">
+		 
+
+            </param>
+            <param name="operands">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatFunction(DevExpress.Xpo.DB.Helpers.ProcessParameter,DevExpress.Data.Filtering.FunctionOperatorType,System.Object[])">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="processParameter">
+		 
+
+            </param>
+            <param name="operatorType">
+		 
+
+            </param>
+            <param name="operands">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatInsert(System.String,System.String,System.String)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="tableName">
+		 
+
+            </param>
+            <param name="fields">
+		 
+
+            </param>
+            <param name="values">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatInsertDefaultValues(System.String)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="tableName">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatSelect(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="selectedPropertiesSql">
+		 
+
+            </param>
+            <param name="fromSql">
+		 
+
+            </param>
+            <param name="whereSql">
+		 
+
+            </param>
+            <param name="orderBySql">
+		 
+
+            </param>
+            <param name="groupBySql">
+		 
+
+            </param>
+            <param name="havingSql">
+		 
+
+            </param>
+            <param name="skipSelectedRecords">
+		 
+
+            </param>
+            <param name="topSelectedRecords">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatTable(System.String,System.String)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="schema">
+		 
+
+            </param>
+            <param name="tableName">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatTable(System.String,System.String,System.String)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="schema">
+		 
+
+            </param>
+            <param name="tableName">
+		 
+
+            </param>
+            <param name="tableAlias">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatUpdate(System.String,System.String,System.String)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="tableName">
+		 
+
+            </param>
+            <param name="sets">
+		 
+
+            </param>
+            <param name="whereClause">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GenerateStoredProcedures(DevExpress.Xpo.DB.DBTable,System.String@)">
+            <summary>
+                <para>Generates DDL (Data Description Language) code for the Generating Persistent Classes wizard, when mapping persistent classes to MS SQL Server database views with the help of <a href="http://msdn.microsoft.com/en-us/library/ms175521.aspx">INSTEAD-OF triggers</a> and stored procedures.
+</para>
+            </summary>
+            <param name="table">
+		 
+
+            </param>
+            <param name="dropLines">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString(System.String,System.String,System.String,System.String)">
+            <summary>
+                <para>Returns a connection string used to open a specified MS SQL database using provided login credentials.
+</para>
+            </summary>
+            <param name="server">
+		A string that specifies the SQL server's name.
+
+
+            </param>
+            <param name="userid">
+		A string that specifies a user name.
+
+            </param>
+            <param name="password">
+		A string that specifies a password.
+
+            </param>
+            <param name="database">
+		A string that specifies the database name.
+
+            </param>
+            <returns>A string that specifies the connection string.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString(System.String,System.String)">
+            <summary>
+                <para>Returns a connection string used to open a specified MS SQL database using Windows Integrated Security.
+</para>
+            </summary>
+            <param name="server">
+		A string that specifies the SQL server name.
+
+            </param>
+            <param name="database">
+		A string that specifies the database name.
+
+            </param>
+            <returns>A string that specifies the connection string.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString2005CacheRoot(System.String,System.String,System.String,System.String)">
+            <summary>
+                <para>Returns a connection string used to open a specified MS SQL database using provided login credentials and to enable the <a href="http://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqldependency.aspx">SqlDependency</a> feature.
+</para>
+            </summary>
+            <param name="server">
+		A string that specifies the SQL server name.
+
+            </param>
+            <param name="userid">
+		A string that specifies a user name.
+
+            </param>
+            <param name="password">
+		A string that specifies a user password.
+
+            </param>
+            <param name="database">
+		A string that specifies the database name.
+
+            </param>
+            <returns>A string that specifies the connection string.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString2005CacheRoot(System.String,System.String)">
+            <summary>
+                <para>Returns a connection string used to open a specified MS SQL database using Windows Integrated Security and to enable the <a href="http://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqldependency.aspx">SqlDependency</a> feature.
+</para>
+            </summary>
+            <param name="server">
+		A string that specifies the SQL server name.
+
+            </param>
+            <param name="database">
+		A string that specifies the database name.
+
+            </param>
+            <returns>A string that specifies the connection string.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString2005WithCache(System.String,System.String,System.String,System.String)">
+            <summary>
+                <para>Returns a connection string used to open a specified MS SQL database using provided login credentials and to enable the <a href="http://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqldependency.aspx">SqlDependency</a> feature.
+</para>
+            </summary>
+            <param name="server">
+		A string that specifies the SQL server name.
+
+            </param>
+            <param name="userid">
+		A string that specifies a user name.
+
+            </param>
+            <param name="password">
+		A string that specifies a user password.
+
+            </param>
+            <param name="database">
+		A string that specifies the database name.
+
+            </param>
+            <returns>A string that specifies the connection string.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString2005WithCache(System.String,System.String)">
+            <summary>
+                <para>Returns a connection string used to open a specified MS SQL database using Windows Integrated Security and to enable the <a href="http://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqldependency.aspx">SqlDependency</a> feature.
+</para>
+            </summary>
+            <param name="server">
+		A string that specifies the SQL server name.
+
+            </param>
+            <param name="database">
+		A string that specifies the database name.
+
+            </param>
+            <returns>A string that specifies the connection string.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionStringWithAttach(System.String,System.String,System.Boolean)">
+            <summary>
+                <para>Returns a connection string to connect to a MS SQL Server database by attaching a specified .mdf database file to a specific server using Windows Integrated Security.
+</para>
+            </summary>
+            <param name="server">
+		A string that specifies the SQL server name.
+
+            </param>
+            <param name="attachDbFilename">
+		A string specifying a .mdf database file to attach to the <i>server</i>. This value is used to initialize the "AttachDbFilename" field of the connection string.
+
+            </param>
+            <param name="userInstance">
+		<b>true</b> to enable User Instances (required when attaching the <i>attachDbFilename</i>); otherwise, <b>false</b> (when the database specified by the <i>attachDbFilename</i> already exists on the <i>server</i>). For more information about SQL Server Express and User Instances, read the <a href="http://msdn.microsoft.com/en-us/library/bb264564(SQL.90).aspx">SQL Server 2005 Express Edition User Instances</a> MSDN article.
+
+            </param>
+            <returns>A string that specifies the connection string.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionStringWithAttach(System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+                <para>Returns a connection string to connect to a MS SQL Server database by attaching a specified .mdf database file to a specific server using specified login credentials.
+</para>
+            </summary>
+            <param name="server">
+		A string that specifies the SQL server name.
+
+            </param>
+            <param name="userid">
+		A string that specifies a user name.
+
+            </param>
+            <param name="password">
+		A string that specifies the password. This is used to initialize the "Password" field of the connection string.
+
+            </param>
+            <param name="attachDbFilename">
+		A string specifying a .mdf database file to attach to the <i>server</i>. This value is used to initialize the "AttachDbFilename" field of the connection string.
+
+            </param>
+            <param name="userInstance">
+		<b>true</b> to enable User Instances (required when attaching the <i>attachDbFilename</i>); otherwise, <b>false</b> (when the database specified by the <i>attachDbFilename</i> already exists on the <i>server</i>). This value is used to initialize the "User Instance" field of the connection string.For more information about SQL Server Express and User Instances, read the <a href="http://msdn.microsoft.com/en-us/library/bb264564(SQL.90).aspx">SQL Server 2005 Express Edition User Instances</a> MSDN article.
+
+            </param>
+            <returns>A string that specifies the connection string.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionStringWithAttachForLocalDB(System.String,System.String,System.String)">
+            <summary>
+                <para>Returns the connection string to SQL Server 2012 Express LocalDB for the specified server, database and database file location.
+</para>
+            </summary>
+            <param name="server">
+		A string that is the server name.
+
+            </param>
+            <param name="database">
+		A string that is the database name.
+
+            </param>
+            <param name="attachDbFilename">
+		A string that is the path to the MDB file.
+
+            </param>
+            <returns>A string that is the connection string to SQL Server 2012 Express LocalDB for the specified server, database and database file location.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetParameterName(DevExpress.Data.Filtering.OperandValue,System.Int32,System.Boolean@)">
+            <summary>
+                <para>This member supports the .NET Framework infrastructure and cannot be used directly from your code.
+</para>
+            </summary>
+            <param name="parameter">
+		 
+
+            </param>
+            <param name="index">
+		 
+
+            </param>
+            <param name="createParameter">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetSqlCreateColumnFullAttributes(DevExpress.Xpo.DB.DBTable,DevExpress.Xpo.DB.DBColumn)">
+            <summary>
+                <para>This method supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="table">
+		 
+
+            </param>
+            <param name="column">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetStorageTablesList(System.Boolean)">
+            <summary>
+                <para>Returns a list of the available tables in the data store.
+</para>
+            </summary>
+            <param name="includeViews">
+		<b>true</b>, to include available database views in the resulting array; otherwise, <b>false</b>.
+
+            </param>
+            <returns>An array of the table names in the data store.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetStoredProcedures">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetTableSchema(DevExpress.Xpo.DB.DBTable,System.Boolean,System.Boolean)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="table">
+		 
+
+            </param>
+            <param name="checkIndexes">
+		 
+
+            </param>
+            <param name="checkForeignKeys">
+		 
+
+            </param>
+
+
+        </member>
+        <member name="F:DevExpress.Xpo.DB.MSSqlConnectionProvider.IsNotForReplication">
+            <summary>
+                <para>Specifies whether or not the "NOT FOR REPLICATION" option is used in SQL statements that create constraints.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Xpo.DB.MSSqlConnectionProvider.MaximumBinarySize">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="F:DevExpress.Xpo.DB.MSSqlConnectionProvider.MaximumStringSize">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Xpo.DB.MSSqlConnectionProvider.NativeOuterApplySupported">
+            <summary>
+                <para>Indicates whether the connection provider supports the <a href="http://msdn.microsoft.com/en-us/library/ms174853.aspx">OUTER APPLY</a> operators.
+</para>
+            </summary>
+            <value><b>true</b> for MS SQL Server version 2005 and later; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Xpo.DB.MSSqlConnectionProvider.NativeSkipTakeSupported">
+            <summary>
+                <para>Indicates whether the connection provider supports the SKIP and TAKE (<a href="http://msdn.microsoft.com/en-us/library/ms189463.aspx">TOP</a>) operators.
+</para>
+            </summary>
+            <value><b>true</b> for MS SQL Server version 2005 and later; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.Xpo.DB.MSSqlConnectionProvider.ObjectsOwner">
+            <summary>
+                <para>The default owner of the objects in the MS SQL database. By default "dbo".
+</para>
+            </summary>
+            <returns>
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.Register">
+            <summary>
+                <para>Registers the provider for use with XPO.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Xpo.DB.MSSqlConnectionProvider.XpoProviderTypeString">
+            <summary>
+                <para>Gets the name of the current connection provider. This name is used internally when generating a connection string via the <see cref="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString"/> method.
+</para>
+            </summary>
+            <returns> </returns>
 
 
         </member>
@@ -9585,14 +10121,6 @@
             <returns>A <see cref="T:System.String"/> value which represents the current object.
 </returns>
 
-
-        </member>
-        <member name="T:DevExpress.Xpo.IXPSimpleObject">
-
-            <summary>
-                <para>The interface that provides the basic functionality required by persistent objects.
-</para>
-            </summary>
 
         </member>
         <member name="T:DevExpress.Xpo.Metadata.ReflectionPropertyInfo">
@@ -13027,6 +13555,107 @@
 
 
         </member>
+        <member name="T:DevExpress.Xpo.Exceptions.CannotResolveClassInfoException">
+
+            <summary>
+                <para>An exception that is thrown when the <see cref="T:DevExpress.Xpo.Metadata.XPDictionary"/> cannot provide <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> metadata information for the class.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Xpo.Exceptions.CannotResolveClassInfoException.#ctor(System.String,System.String)">
+            <summary>
+                <para>Initializes a new instance of the CannotResolveClassInfoException class.
+</para>
+            </summary>
+            <param name="assemblyName">
+		The name of the assembly.
+
+            </param>
+            <param name="typeName">
+		The name of the type whose <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> cannot be obtained.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Xpo.Exceptions.CannotResolveClassInfoException.TypeName">
+            <summary>
+                <para>Gets the name of the type whose <see cref="T:DevExpress.Xpo.Metadata.XPClassInfo"/> cannot be obtained.
+</para>
+            </summary>
+            <value>A string representing the name of the class.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Xpo.Exceptions.CannotReloadPurgedObjectException">
+
+            <summary>
+                <para>An exception that is thrown when attempting to reload an object that is not present in the persistent data store.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Xpo.Exceptions.CannotReloadPurgedObjectException.#ctor">
+            <summary>
+                <para>Initializes a new instance of the CannotReloadPurgedObjectException class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Xpo.Exceptions.CannotLoadInvalidTypeException">
+
+            <summary>
+                <para>An exception that is thrown when a persistent object cannot be loaded because it's type is not valid.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Xpo.Exceptions.CannotLoadInvalidTypeException.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the CannotLoadInvalidTypeException class.
+</para>
+            </summary>
+            <param name="typeName">
+		A string that specifies the name of the type.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Xpo.Exceptions.CannotLoadInvalidTypeException.TypeName">
+            <summary>
+                <para>Gets the name of the type that cannot be loaded.
+</para>
+            </summary>
+            <value>A string that specifies the name of the type.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Xpo.Exceptions.CannotFindAppropriateConnectionProviderException">
+
+            <summary>
+                <para>An exception that is thrown when an appropriate connection provider is not found.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Xpo.Exceptions.CannotFindAppropriateConnectionProviderException.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the CannotFindAppropriateConnectionProviderException class.
+</para>
+            </summary>
+            <param name="connectionString">
+		A string that specifies the connection string.
+
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.Xpo.Exceptions.CannotChangePropertyWhenSessionIsConnectedException">
 
             <summary>
@@ -13142,774 +13771,6 @@
         <member name="F:DevExpress.Xpo.DB.OleDBConnectionProvider.SortColumnsAlphabetically">
             <summary>
                 <para>Specifies how to order columns retrieved via the <b>GetStorageTables</b> and <see cref="M:DevExpress.Xpo.DB.OleDBConnectionProvider.GetTableSchema"/> methods. By default, this field is set to <b>true</b>, and the columns are listed alphabetically. If the field is set to <b>false</b>, the columns are returned as they appear in the database. 
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="T:DevExpress.Xpo.DB.MSSqlConnectionProvider">
-
-            <summary>
-                <para>Implements data-aware operations for working with an <b>MS SQL Server</b> or <b>MS SQL Azure</b> database.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.#ctor(System.Data.IDbConnection,DevExpress.Xpo.DB.AutoCreateOption)">
-            <summary>
-                <para>Initializes a new instance of the MSSqlConnectionProvider class with the specified settings.
-</para>
-            </summary>
-            <param name="connection">
-		An object implementing the <see cref="T:System.Data.IDbConnection"/> interface that represents an open connection to a data source.
-
-            </param>
-            <param name="autoCreateOption">
-		An <see cref="T:DevExpress.Xpo.DB.AutoCreateOption"/> value that specifies which operations are performed when storage is accessed for the first time. This parameter is used to initialize the <see cref="P:DevExpress.Xpo.DB.IDataStore.AutoCreateOption"/> property.
-
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.ClearDatabase(System.Data.IDbCommand)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="command">
-		 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.CollectTablesToCreate(System.Collections.ICollection)">
-            <summary>
-                <para>This method supports the internal infrastructure and is not intended to be called directly from your code.
-</para>
-            </summary>
-            <param name="tables">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.ComposeSafeSchemaName(System.String)">
-            <summary>
-                <para>Returns the valid schema name for the specified table's name.
-</para>
-            </summary>
-            <param name="tableName">
-		A string value that specifies the table's name for which the valid schema name must be composed.
-
-            </param>
-            <returns>A string value that specifies the valid schema name.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.CreateProviderFromConnection(System.Data.IDbConnection,DevExpress.Xpo.DB.AutoCreateOption)">
-            <summary>
-                <para>This method supports the internal infrastructure and is not intended to be called directly from your code.
-</para>
-            </summary>
-            <param name="connection">
-		 
-
-            </param>
-            <param name="autoCreateOption">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.CreateProviderFromString(System.String,DevExpress.Xpo.DB.AutoCreateOption,System.IDisposable[]@)">
-            <summary>
-                <para>This method supports the internal infrastructure and is not intended to be called directly from your code.
-</para>
-            </summary>
-            <param name="connectionString">
-		 
-
-            </param>
-            <param name="autoCreateOption">
-		 
-
-            </param>
-            <param name="objectsToDisposeOnDisconnect">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.EmptyAllTablesInDatabase(System.Data.IDbCommand)">
-            <summary>
-                <para>This method supports the internal infrastructure and is not intended to be used directly in your code.
-</para>
-            </summary>
-            <param name="command">
-		 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatBinary(DevExpress.Data.Filtering.BinaryOperatorType,System.String,System.String)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="operatorType">
-		 
-
-            </param>
-            <param name="leftOperand">
-		 
-
-            </param>
-            <param name="rightOperand">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatColumn(System.String)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="columnName">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatColumn(System.String,System.String)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="columnName">
-		 
-
-            </param>
-            <param name="tableAlias">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatConstraint(System.String)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="constraintName">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatDelete(System.String,System.String)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="tableName">
-		 
-
-            </param>
-            <param name="whereClause">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatFunction(DevExpress.Data.Filtering.FunctionOperatorType,System.String[])">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="operatorType">
-		 
-
-            </param>
-            <param name="operands">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatFunction(DevExpress.Xpo.DB.Helpers.ProcessParameter,DevExpress.Data.Filtering.FunctionOperatorType,System.Object[])">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="processParameter">
-		 
-
-            </param>
-            <param name="operatorType">
-		 
-
-            </param>
-            <param name="operands">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatInsert(System.String,System.String,System.String)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="tableName">
-		 
-
-            </param>
-            <param name="fields">
-		 
-
-            </param>
-            <param name="values">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatInsertDefaultValues(System.String)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="tableName">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatSelect(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="selectedPropertiesSql">
-		 
-
-            </param>
-            <param name="fromSql">
-		 
-
-            </param>
-            <param name="whereSql">
-		 
-
-            </param>
-            <param name="orderBySql">
-		 
-
-            </param>
-            <param name="groupBySql">
-		 
-
-            </param>
-            <param name="havingSql">
-		 
-
-            </param>
-            <param name="skipSelectedRecords">
-		 
-
-            </param>
-            <param name="topSelectedRecords">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatTable(System.String,System.String)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="schema">
-		 
-
-            </param>
-            <param name="tableName">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatTable(System.String,System.String,System.String)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="schema">
-		 
-
-            </param>
-            <param name="tableName">
-		 
-
-            </param>
-            <param name="tableAlias">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.FormatUpdate(System.String,System.String,System.String)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="tableName">
-		 
-
-            </param>
-            <param name="sets">
-		 
-
-            </param>
-            <param name="whereClause">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GenerateStoredProcedures(DevExpress.Xpo.DB.DBTable,System.String@)">
-            <summary>
-                <para>Generates DDL (Data Description Language) code for the Generating Persistent Classes wizard, when mapping persistent classes to MS SQL Server database views with the help of <a href="http://msdn.microsoft.com/en-us/library/ms175521.aspx">INSTEAD-OF triggers</a> and stored procedures.
-</para>
-            </summary>
-            <param name="table">
-		 
-
-            </param>
-            <param name="dropLines">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString(System.String,System.String,System.String,System.String)">
-            <summary>
-                <para>Returns a connection string used to open a specified MS SQL database using provided login credentials.
-</para>
-            </summary>
-            <param name="server">
-		A string that specifies the SQL server's name.
-
-
-            </param>
-            <param name="userid">
-		A string that specifies a user name.
-
-            </param>
-            <param name="password">
-		A string that specifies a password.
-
-            </param>
-            <param name="database">
-		A string that specifies the database name.
-
-            </param>
-            <returns>A string that specifies the connection string.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString(System.String,System.String)">
-            <summary>
-                <para>Returns a connection string used to open a specified MS SQL database using Windows Integrated Security.
-</para>
-            </summary>
-            <param name="server">
-		A string that specifies the SQL server name.
-
-            </param>
-            <param name="database">
-		A string that specifies the database name.
-
-            </param>
-            <returns>A string that specifies the connection string.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString2005CacheRoot(System.String,System.String,System.String,System.String)">
-            <summary>
-                <para>Returns a connection string used to open a specified MS SQL database using provided login credentials and to enable the <a href="http://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqldependency.aspx">SqlDependency</a> feature.
-</para>
-            </summary>
-            <param name="server">
-		A string that specifies the SQL server name.
-
-            </param>
-            <param name="userid">
-		A string that specifies a user name.
-
-            </param>
-            <param name="password">
-		A string that specifies a user password.
-
-            </param>
-            <param name="database">
-		A string that specifies the database name.
-
-            </param>
-            <returns>A string that specifies the connection string.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString2005CacheRoot(System.String,System.String)">
-            <summary>
-                <para>Returns a connection string used to open a specified MS SQL database using Windows Integrated Security and to enable the <a href="http://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqldependency.aspx">SqlDependency</a> feature.
-</para>
-            </summary>
-            <param name="server">
-		A string that specifies the SQL server name.
-
-            </param>
-            <param name="database">
-		A string that specifies the database name.
-
-            </param>
-            <returns>A string that specifies the connection string.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString2005WithCache(System.String,System.String,System.String,System.String)">
-            <summary>
-                <para>Returns a connection string used to open a specified MS SQL database using provided login credentials and to enable the <a href="http://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqldependency.aspx">SqlDependency</a> feature.
-</para>
-            </summary>
-            <param name="server">
-		A string that specifies the SQL server name.
-
-            </param>
-            <param name="userid">
-		A string that specifies a user name.
-
-            </param>
-            <param name="password">
-		A string that specifies a user password.
-
-            </param>
-            <param name="database">
-		A string that specifies the database name.
-
-            </param>
-            <returns>A string that specifies the connection string.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString2005WithCache(System.String,System.String)">
-            <summary>
-                <para>Returns a connection string used to open a specified MS SQL database using Windows Integrated Security and to enable the <a href="http://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqldependency.aspx">SqlDependency</a> feature.
-</para>
-            </summary>
-            <param name="server">
-		A string that specifies the SQL server name.
-
-            </param>
-            <param name="database">
-		A string that specifies the database name.
-
-            </param>
-            <returns>A string that specifies the connection string.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionStringWithAttach(System.String,System.String,System.Boolean)">
-            <summary>
-                <para>Returns a connection string to connect to a MS SQL Server database by attaching a specified .mdf database file to a specific server using Windows Integrated Security.
-</para>
-            </summary>
-            <param name="server">
-		A string that specifies the SQL server name.
-
-            </param>
-            <param name="attachDbFilename">
-		A string specifying a .mdf database file to attach to the <i>server</i>. This value is used to initialize the "AttachDbFilename" field of the connection string.
-
-            </param>
-            <param name="userInstance">
-		<b>true</b> to enable User Instances (required when attaching the <i>attachDbFilename</i>); otherwise, <b>false</b> (when the database specified by the <i>attachDbFilename</i> already exists on the <i>server</i>). For more information about SQL Server Express and User Instances, read the <a href="http://msdn.microsoft.com/en-us/library/bb264564(SQL.90).aspx">SQL Server 2005 Express Edition User Instances</a> MSDN article.
-
-            </param>
-            <returns>A string that specifies the connection string.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionStringWithAttach(System.String,System.String,System.String,System.String,System.Boolean)">
-            <summary>
-                <para>Returns a connection string to connect to a MS SQL Server database by attaching a specified .mdf database file to a specific server using specified login credentials.
-</para>
-            </summary>
-            <param name="server">
-		A string that specifies the SQL server name.
-
-            </param>
-            <param name="userid">
-		A string that specifies a user name.
-
-            </param>
-            <param name="password">
-		A string that specifies the password. This is used to initialize the "Password" field of the connection string.
-
-            </param>
-            <param name="attachDbFilename">
-		A string specifying a .mdf database file to attach to the <i>server</i>. This value is used to initialize the "AttachDbFilename" field of the connection string.
-
-            </param>
-            <param name="userInstance">
-		<b>true</b> to enable User Instances (required when attaching the <i>attachDbFilename</i>); otherwise, <b>false</b> (when the database specified by the <i>attachDbFilename</i> already exists on the <i>server</i>). This value is used to initialize the "User Instance" field of the connection string.For more information about SQL Server Express and User Instances, read the <a href="http://msdn.microsoft.com/en-us/library/bb264564(SQL.90).aspx">SQL Server 2005 Express Edition User Instances</a> MSDN article.
-
-            </param>
-            <returns>A string that specifies the connection string.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionStringWithAttachForLocalDB(System.String,System.String,System.String)">
-            <summary>
-                <para>Returns the connection string to SQL Server 2012 Express LocalDB for the specified server, database and database file location.
-</para>
-            </summary>
-            <param name="server">
-		A string that is the server name.
-
-            </param>
-            <param name="database">
-		A string that is the database name.
-
-            </param>
-            <param name="attachDbFilename">
-		A string that is the path to the MDB file.
-
-            </param>
-            <returns>A string that is the connection string to SQL Server 2012 Express LocalDB for the specified server, database and database file location.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetParameterName(DevExpress.Data.Filtering.OperandValue,System.Int32,System.Boolean@)">
-            <summary>
-                <para>This member supports the .NET Framework infrastructure and cannot be used directly from your code.
-</para>
-            </summary>
-            <param name="parameter">
-		 
-
-            </param>
-            <param name="index">
-		 
-
-            </param>
-            <param name="createParameter">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetSqlCreateColumnFullAttributes(DevExpress.Xpo.DB.DBTable,DevExpress.Xpo.DB.DBColumn)">
-            <summary>
-                <para>This method supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="table">
-		 
-
-            </param>
-            <param name="column">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetStorageTablesList(System.Boolean)">
-            <summary>
-                <para>Returns a list of the available tables in the data store.
-</para>
-            </summary>
-            <param name="includeViews">
-		<b>true</b>, to include available database views in the resulting array; otherwise, <b>false</b>.
-
-            </param>
-            <returns>An array of the table names in the data store.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetStoredProcedures">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetTableSchema(DevExpress.Xpo.DB.DBTable,System.Boolean,System.Boolean)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="table">
-		 
-
-            </param>
-            <param name="checkIndexes">
-		 
-
-            </param>
-            <param name="checkForeignKeys">
-		 
-
-            </param>
-
-
-        </member>
-        <member name="F:DevExpress.Xpo.DB.MSSqlConnectionProvider.IsNotForReplication">
-            <summary>
-                <para>Specifies whether or not the "NOT FOR REPLICATION" option is used in SQL statements that create constraints.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Xpo.DB.MSSqlConnectionProvider.MaximumBinarySize">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="F:DevExpress.Xpo.DB.MSSqlConnectionProvider.MaximumStringSize">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.DB.MSSqlConnectionProvider.NativeOuterApplySupported">
-            <summary>
-                <para>Indicates whether the connection provider supports the <a href="http://msdn.microsoft.com/en-us/library/ms174853.aspx">OUTER APPLY</a> operators.
-</para>
-            </summary>
-            <value><b>true</b> for MS SQL Server version 2005 and later; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.DB.MSSqlConnectionProvider.NativeSkipTakeSupported">
-            <summary>
-                <para>Indicates whether the connection provider supports the SKIP and TAKE (<a href="http://msdn.microsoft.com/en-us/library/ms189463.aspx">TOP</a>) operators.
-</para>
-            </summary>
-            <value><b>true</b> for MS SQL Server version 2005 and later; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="F:DevExpress.Xpo.DB.MSSqlConnectionProvider.ObjectsOwner">
-            <summary>
-                <para>The default owner of the objects in the MS SQL database. By default "dbo".
-</para>
-            </summary>
-            <returns>
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.Register">
-            <summary>
-                <para>Registers the provider for use with XPO.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Xpo.DB.MSSqlConnectionProvider.XpoProviderTypeString">
-            <summary>
-                <para>Gets the name of the current connection provider. This name is used internally when generating a connection string via the <see cref="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString"/> method.
 </para>
             </summary>
             <returns> </returns>
@@ -14603,6 +14464,14 @@
             </summary>
             <returns> </returns>
 
+
+        </member>
+        <member name="T:DevExpress.Xpo.IXPSimpleObject">
+
+            <summary>
+                <para>The interface that provides the basic functionality required by persistent objects.
+</para>
+            </summary>
 
         </member>
         <member name="T:DevExpress.Xpo.Helpers.ISessionProvider">
@@ -15634,7 +15503,7 @@
         </member>
         <member name="F:DevExpress.Xpo.XpoDefault.DefaultOptimisticLockingReadBehavior">
             <summary>
-                <para>Specifies the value which is assigned to the <see cref="P:DevExpress.Xpo.XpoDefault.OptimisticLockingReadBehavior"/> property when it is set to the <see cref="F:DevExpress.Xpo.OptimisticLockingReadBehavior.Default"/> value. By default, this field returns the <see cref="F:DevExpress.Xpo.OptimisticLockingReadBehavior.ReloadObject"/> value.
+                <para>Specifies the value which is assigned to the <see cref="P:DevExpress.Xpo.XpoDefault.OptimisticLockingReadBehavior"/> property when it is set to the <see cref="F:DevExpress.Xpo.OptimisticLockingReadBehavior.Default"/> value. By default, this field returns the <see cref="F:DevExpress.Xpo.OptimisticLockingReadBehavior.Mixed"/> value.
 </para>
             </summary>
             <returns> </returns>
@@ -17907,6 +17776,47 @@ To learn more, refer to How to: Control Automatic Saving of Objects when Editing
 
             </param>
             <value>A <see cref="T:DevExpress.Xpo.ViewProperty"/> with the specified <i>name</i>.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Xpo.ValueConverterAttribute">
+
+            <summary>
+                <para>Specifies that a persistent property has a Value Converter.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Xpo.ValueConverterAttribute.#ctor(System.Type)">
+            <summary>
+                <para>Initializes a new instance of the <see cref="T:DevExpress.Xpo.Metadata.ValueConverter"/> class.
+</para>
+            </summary>
+            <param name="converterType">
+		The <see cref="T:System.Type"/> of the converter. This value is assigned to the <see cref="P:DevExpress.Xpo.ValueConverterAttribute.ConverterType"/> property.
+
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Xpo.ValueConverterAttribute.Converter">
+            <summary>
+                <para>Gets the value converter.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Xpo.Metadata.ValueConverter"/> descendant which represents the value converter.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Xpo.ValueConverterAttribute.ConverterType">
+            <summary>
+                <para>Gets the converter's type.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Type"/> of the converter.
 </value>
 
 
@@ -24180,7 +24090,7 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
         </member>
         <member name="F:DevExpress.Xpo.OptimisticLockingReadBehavior.Default">
             <summary>
-                <para>The default behavior can be changed by setting the <see cref="F:DevExpress.Xpo.XpoDefault.DefaultOptimisticLockingReadBehavior"/> field.
+                <para>The default behavior can be changed by setting the <see cref="P:DevExpress.Xpo.XpoDefault.OptimisticLockingReadBehavior"/> property.
 </para>
             </summary>
 
@@ -24813,43 +24723,33 @@ When storing descendant classes to the table of their parent class, make sure th
 
 
         </member>
-        <member name="T:DevExpress.Xpo.OptimisticLockingBehavior">
+        <member name="T:DevExpress.Xpo.DB.ServiceExceptionEventArgs">
 
             <summary>
-                <para>Contains values that specify the field-level locking behavior.
+                <para>Arguments, passed to the <see cref="E:DevExpress.Xpo.DB.ServiceBase.GlobalServiceExceptionThrown"/> and <see cref="E:DevExpress.Xpo.DB.ServiceBase.ServiceExceptionThrown"/> events.
 </para>
             </summary>
 
         </member>
-        <member name="F:DevExpress.Xpo.OptimisticLockingBehavior.ConsiderOptimisticLockingField">
+        <member name="M:DevExpress.Xpo.DB.ServiceExceptionEventArgs.#ctor(System.Exception)">
             <summary>
-                <para>The optimistic lock field is considered.
+                <para>Initializes a new instance of the ServiceExceptionEventArgs class.
 </para>
             </summary>
+            <param name="exception">
+		An exception thrown by the service.
+
+            </param>
 
 
         </member>
-        <member name="F:DevExpress.Xpo.OptimisticLockingBehavior.LockAll">
+        <member name="P:DevExpress.Xpo.DB.ServiceExceptionEventArgs.Exception">
             <summary>
-                <para>All properties are checked (requires that the <see cref="P:DevExpress.Xpo.Session.TrackPropertiesModifications"/> property is set to <b>true</b>).
+                <para>Gets the exception thrown by the service.
 </para>
             </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Xpo.OptimisticLockingBehavior.LockModified">
-            <summary>
-                <para>Modified properties are checked (requires that the <see cref="P:DevExpress.Xpo.Session.TrackPropertiesModifications"/> property is set to <b>true</b>).
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Xpo.OptimisticLockingBehavior.NoLocking">
-            <summary>
-                <para>Locking is disabled.
-</para>
-            </summary>
+            <value>An exception thrown by the service.
+</value>
 
 
         </member>
@@ -25284,6 +25184,114 @@ When storing descendant classes to the table of their parent class, make sure th
             </summary>
             <value> 
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.Xpo.DB.OperationResult">
+
+            <summary>
+                <para>The result of an operation performed by the <see cref="T:DevExpress.Xpo.DB.DataStoreService"/>, <see cref="T:DevExpress.Xpo.DB.CachedDataStoreService"/>, or <see cref="T:DevExpress.Xpo.DB.SerializableObjectLayerService"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.OperationResult.#ctor">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.OperationResult.#ctor(DevExpress.Xpo.DB.ServiceException,System.String)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="errorType">
+		 
+
+            </param>
+            <param name="error">
+		 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.OperationResult.DeserializeSecurityException(System.String)">
+            <summary>
+                <para>This method supports the internal infrastructure and is not intended to be used directly from your code. 
+</para>
+            </summary>
+            <param name="data">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="F:DevExpress.Xpo.DB.OperationResult.Error">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="F:DevExpress.Xpo.DB.OperationResult.ErrorType">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.OperationResult.ExecuteClient``2(DevExpress.Xpo.DB.OperationResultChannelPredicate{``0},``1@)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="predicate">
+		 
+
+            </param>
+            <param name="channel">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="F:DevExpress.Xpo.DB.OperationResult.ExecuteClientMaxRetryCount">
+            <summary>
+                <para>Specifies the maximum number of retries to be made when the execution of an operation fails. The default value is 3.
+</para>
+            </summary>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.DB.OperationResult.SerializeSecurityException(DevExpress.Xpo.Exceptions.ObjectLayerSecurityException)">
+            <summary>
+                <para>This method supports the internal infrastructure and is not intended to be used directly from your code. 
+</para>
+            </summary>
+            <param name="sx">
+		 
+
+            </param>
+            <returns> 
+</returns>
 
 
         </member>

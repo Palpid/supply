@@ -42,33 +42,34 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Charts.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Data.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.DataAccess.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.DataAccess.v16.2.UI, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Images.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.1.UI, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
-    <Reference Include="DevExpress.Office.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Pdf.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Pdf.v16.2.Drawing, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.RichEdit.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Spreadsheet.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v16.2.UI, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraCharts.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraNavBar.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPdfViewer.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraRichEdit.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraSpreadsheet.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraTreeList.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v17.1.Drawing, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Spreadsheet.v17.1.Core, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.Wizard, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPdfViewer.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -108,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\B1Report.cs" />
+    <Compile Include="Classes\ItemDocWarning.cs" />
     <Compile Include="Classes\PlainBomAux.cs" />
     <Compile Include="Classes\POSelection.cs" />
     <Compile Include="Classes\RowInfo.cs" />
@@ -214,6 +216,12 @@
     </Compile>
     <Compile Include="Forms\Master\DialogForms\SelectSuppliers.Designer.cs">
       <DependentUpon>SelectSuppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master\ExchangeRateUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\ExchangeRateUpdate.Designer.cs">
+      <DependentUpon>ExchangeRateUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Master\FamiliesHkManagement.cs">
       <SubType>Form</SubType>
@@ -353,11 +361,41 @@
     <Compile Include="Forms\RibbonFormBase.Designer.cs">
       <DependentUpon>RibbonFormBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Supply\DeliveryNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\DeliveryNote.Designer.cs">
+      <DependentUpon>DeliveryNote.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Supply\DialogForms\SelectDocs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Supply\DialogForms\SelectDocs.Designer.cs">
       <DependentUpon>SelectDocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\DocsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\DocsList.Designer.cs">
+      <DependentUpon>DocsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\Invoice.Designer.cs">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\PackingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\PackingList.Designer.cs">
+      <DependentUpon>PackingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\PackingListBcn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\PackingListBcn.Designer.cs">
+      <DependentUpon>PackingListBcn.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Supply\PurchaseOrder.cs">
       <SubType>Form</SubType>
@@ -377,8 +415,23 @@
     <Compile Include="Forms\Supply\QuotationProposal.Designer.cs">
       <DependentUpon>QuotationProposal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Supply\SalesOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\SalesOrder.Designer.cs">
+      <DependentUpon>SalesOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="General\Constants.cs" />
     <Compile Include="General\GlobalSetting.cs" />
+    <Compile Include="Helpers\CurrencyConverter\CurrencyConverter.cs" />
+    <Compile Include="Helpers\CurrencyConverter\ICurrencyConverter.cs" />
+    <Compile Include="Helpers\CurrencyConverter\Rates.cs" />
     <Compile Include="Helpers\CustomExtensions.cs" />
     <Compile Include="Helpers\DbContextExtensions.cs" />
     <Compile Include="Helpers\DeepCopyByExpressionTrees.cs" />
@@ -732,7 +785,52 @@
     <Compile Include="Migrations\201708161427242_breakdownSubGroups_01.Designer.cs">
       <DependentUpon>201708161427242_breakdownSubGroups_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708210903176_itemType_01.cs" />
+    <Compile Include="Migrations\201708210903176_itemType_01.Designer.cs">
+      <DependentUpon>201708210903176_itemType_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708210907056_itemType_02.cs" />
+    <Compile Include="Migrations\201708210907056_itemType_02.Designer.cs">
+      <DependentUpon>201708210907056_itemType_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708210910300_itemType_03.cs" />
+    <Compile Include="Migrations\201708210910300_itemType_03.Designer.cs">
+      <DependentUpon>201708210910300_itemType_03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708280736245_DOC_LINES_ID_DOC_RELATED_01.cs" />
+    <Compile Include="Migrations\201708280736245_DOC_LINES_ID_DOC_RELATED_01.Designer.cs">
+      <DependentUpon>201708280736245_DOC_LINES_ID_DOC_RELATED_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709010730453_docHead_docRelated_01.cs" />
+    <Compile Include="Migrations\201709010730453_docHead_docRelated_01.Designer.cs">
+      <DependentUpon>201709010730453_docHead_docRelated_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709061001218_key_Material_levels_01.cs" />
+    <Compile Include="Migrations\201709061001218_key_Material_levels_01.Designer.cs">
+      <DependentUpon>201709061001218_key_Material_levels_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709080945404_protosActive_01.cs" />
+    <Compile Include="Migrations\201709080945404_protosActive_01.Designer.cs">
+      <DependentUpon>201709080945404_protosActive_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709131107085_StatusPrototype_01.cs" />
+    <Compile Include="Migrations\201709131107085_StatusPrototype_01.Designer.cs">
+      <DependentUpon>201709131107085_StatusPrototype_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709211056337_functionalityReport_01.cs" />
+    <Compile Include="Migrations\201709211056337_functionalityReport_01.Designer.cs">
+      <DependentUpon>201709211056337_functionalityReport_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709211425300_functionalityReport_02.cs" />
+    <Compile Include="Migrations\201709211425300_functionalityReport_02.Designer.cs">
+      <DependentUpon>201709211425300_functionalityReport_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709281513478_docHead_remarks_manualReference_01.cs" />
+    <Compile Include="Migrations\201709281513478_docHead_remarks_manualReference_01.Designer.cs">
+      <DependentUpon>201709281513478_docHead_remarks_manualReference_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Mocking\TestDb.cs" />
     <Compile Include="Models\BomBreakdown.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\CustomerPriceList.cs" />
@@ -745,12 +843,13 @@
     <Compile Include="Models\DetailBomMt.cs" />
     <Compile Include="Models\DetailBomMtHistory.cs" />
     <Compile Include="Models\DocType.cs" />
-    <Compile Include="Models\EchangeRate.cs" />
+    <Compile Include="Models\ExchangeRate.cs" />
     <Compile Include="Models\EtnColor.cs" />
     <Compile Include="Models\CustomerHistory.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\FamilyHK.cs" />
     <Compile Include="Models\Functionality.cs" />
+    <Compile Include="Models\FunctionalityReport.cs" />
     <Compile Include="Models\FunctionalityRole.cs" />
     <Compile Include="Models\HwTypeL1.cs" />
     <Compile Include="Models\HwTypeL2.cs" />
@@ -768,6 +867,7 @@
     <Compile Include="Models\ItemHwHistory.cs" />
     <Compile Include="Models\ItemMt.cs" />
     <Compile Include="Models\ItemMtHistory.cs" />
+    <Compile Include="Models\ItemType.cs" />
     <Compile Include="Models\Layout.cs" />
     <Compile Include="Models\MaterialL1.cs" />
     <Compile Include="Models\MaterialL2.cs" />
@@ -783,6 +883,7 @@
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\StatusCial.cs" />
     <Compile Include="Models\StatusHK.cs" />
+    <Compile Include="Models\StatusPrototype.cs" />
     <Compile Include="Models\Store.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\SupplierFactoryCoeff.cs" />
@@ -814,10 +915,11 @@
     <Compile Include="Services\Implementations\EFCustomerPriceList.cs" />
     <Compile Include="Services\Implementations\EFDeliveryTerms.cs" />
     <Compile Include="Services\Implementations\EFDocType.cs" />
-    <Compile Include="Services\Implementations\EFEchangeRate.cs" />
+    <Compile Include="Services\Implementations\EFExchangeRate.cs" />
     <Compile Include="Services\Implementations\EFEtnColor.cs" />
     <Compile Include="Services\Implementations\EFFamilyHK.cs" />
     <Compile Include="Services\Implementations\EFFunctionality.cs" />
+    <Compile Include="Services\Implementations\EFFunctionalityReport.cs" />
     <Compile Include="Services\Implementations\EFFunctionalityRole.cs" />
     <Compile Include="Services\Implementations\EFHwType.cs" />
     <Compile Include="Services\Implementations\EFIncoterm.cs" />
@@ -852,10 +954,11 @@
     <Compile Include="Services\Interfaces\ICustomerPriceList.cs" />
     <Compile Include="Services\Interfaces\IDeliveryTerms.cs" />
     <Compile Include="Services\Interfaces\IDocType.cs" />
-    <Compile Include="Services\Interfaces\IEchangeRate.cs" />
+    <Compile Include="Services\Interfaces\IExchangeRate.cs" />
     <Compile Include="Services\Interfaces\IEtnColor.cs" />
     <Compile Include="Services\Interfaces\IFamilyHK.cs" />
     <Compile Include="Services\Interfaces\IFunctionality.cs" />
+    <Compile Include="Services\Interfaces\IFunctionalityReport.cs" />
     <Compile Include="Services\Interfaces\IFunctionalityRole.cs" />
     <Compile Include="Services\Interfaces\IHwType.cs" />
     <Compile Include="Services\Interfaces\IIncoterm.cs" />
@@ -936,6 +1039,9 @@
     <EmbeddedResource Include="Forms\Master\DialogForms\SelectSuppliers.resx">
       <DependentUpon>SelectSuppliers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\ExchangeRateUpdate.resx">
+      <DependentUpon>ExchangeRateUpdate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\FamiliesHkManagement.resx">
       <DependentUpon>FamiliesHkManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -1005,8 +1111,23 @@
     <EmbeddedResource Include="Forms\RibbonFormBase.resx">
       <DependentUpon>RibbonFormBase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\DeliveryNote.resx">
+      <DependentUpon>DeliveryNote.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\DialogForms\SelectDocs.resx">
       <DependentUpon>SelectDocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\DocsList.resx">
+      <DependentUpon>DocsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\Invoice.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\PackingList.resx">
+      <DependentUpon>PackingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\PackingListBcn.resx">
+      <DependentUpon>PackingListBcn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\PurchaseOrder.resx">
       <DependentUpon>PurchaseOrder.cs</DependentUpon>
@@ -1016,6 +1137,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\QuotationProposal.resx">
       <DependentUpon>QuotationProposal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\SalesOrder.resx">
+      <DependentUpon>SalesOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703081042226_Customer.resx">
       <DependentUpon>201703081042226_Customer.cs</DependentUpon>
@@ -1275,6 +1402,39 @@
     <EmbeddedResource Include="Migrations\201708161427242_breakdownSubGroups_01.resx">
       <DependentUpon>201708161427242_breakdownSubGroups_01.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708210903176_itemType_01.resx">
+      <DependentUpon>201708210903176_itemType_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708210907056_itemType_02.resx">
+      <DependentUpon>201708210907056_itemType_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708210910300_itemType_03.resx">
+      <DependentUpon>201708210910300_itemType_03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708280736245_DOC_LINES_ID_DOC_RELATED_01.resx">
+      <DependentUpon>201708280736245_DOC_LINES_ID_DOC_RELATED_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709010730453_docHead_docRelated_01.resx">
+      <DependentUpon>201709010730453_docHead_docRelated_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709061001218_key_Material_levels_01.resx">
+      <DependentUpon>201709061001218_key_Material_levels_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709080945404_protosActive_01.resx">
+      <DependentUpon>201709080945404_protosActive_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709131107085_StatusPrototype_01.resx">
+      <DependentUpon>201709131107085_StatusPrototype_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709211056337_functionalityReport_01.resx">
+      <DependentUpon>201709211056337_functionalityReport_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709211425300_functionalityReport_02.resx">
+      <DependentUpon>201709211425300_functionalityReport_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709281513478_docHead_remarks_manualReference_01.resx">
+      <DependentUpon>201709281513478_docHead_remarks_manualReference_01.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -1295,6 +1455,11 @@
     <Content Include="HelpDocs\EN\BOM Flow and Application Help.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="HelpDocs\EN\BOM Flow and Application Help.docx" />
+    <None Include="HelpDocs\EN\SUPPLY Flow and Application Help.docx" />
+    <Content Include="HelpDocs\EN\SUPPLY Flow and Application Help.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -1306,6 +1471,15 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Content Include="Reports\Rpt\BOM.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Rpt\Supply\HK_SupplyDocument.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Rpt\Supply\HK_SupplyPLDocument.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fonts\brandon_bld-webfont.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

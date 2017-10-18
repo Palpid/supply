@@ -129,30 +129,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Diagram.Core.ModifySelectionMode">
-
-            <summary>
-                <para>Lists the values used to specify whether to add or replace the existing selection with selected diagram items.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.ModifySelectionMode.AddToSelection">
-            <summary>
-                <para>Selected diagram items are added to the existing selection.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.ModifySelectionMode.ReplaceSelection">
-            <summary>
-                <para>The existing selection is replaced with selected diagram items.
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.Diagram.Core.DiagramCommandsBase">
 
             <summary>
@@ -305,7 +281,8 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.DiagramCommandsBase.EmptyCommand">
             <summary>
-                <para> </para>
+                <para>The placeholder command. This property supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
             </summary>
             <returns> </returns>
 
@@ -383,7 +360,8 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.DiagramCommandsBase.FlipImageCommand">
             <summary>
-                <para> </para>
+                <para>Flip the content of the selected image item on the horizontal or vertical axis.
+</para>
             </summary>
             <returns> </returns>
 
@@ -391,7 +369,8 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.DiagramCommandsBase.FocusNextControlCommand">
             <summary>
-                <para> </para>
+                <para>Move focus forward to the previously unselected control.
+</para>
             </summary>
             <returns> </returns>
 
@@ -399,7 +378,8 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.DiagramCommandsBase.FocusPrevControlCommand">
             <summary>
-                <para> </para>
+                <para>Move focus back to the previously selected control.
+</para>
             </summary>
             <returns> </returns>
 
@@ -407,29 +387,37 @@
         </member>
         <member name="M:DevExpress.Diagram.Core.DiagramCommandsBase.GetKeyDownCommand(System.Windows.Input.Key,System.Windows.Input.ModifierKeys)">
             <summary>
-                <para> </para>
+                <para>Returns the command associated with pressing the specified key or key combination.
+</para>
             </summary>
             <param name="key">
-		 
+		The key for which to return the associated command.
+
             </param>
             <param name="modifiers">
-		 
+		The key modifiers.
+
             </param>
-            <returns> </returns>
+            <returns>A diagram command.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.Diagram.Core.DiagramCommandsBase.GetKeyUpCommand(System.Windows.Input.Key,System.Windows.Input.ModifierKeys)">
             <summary>
-                <para> </para>
+                <para>Returns the command associated with releasing the specified key or key combination.
+</para>
             </summary>
             <param name="key">
-		 
+		The key for which to return the associated command.
+
             </param>
             <param name="modifiers">
-		 
+		The key modifiers.
+
             </param>
-            <returns> </returns>
+            <returns>A diagram command.
+</returns>
 
 
         </member>
@@ -453,7 +441,8 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.DiagramCommandsBase.LoadImageCommand">
             <summary>
-                <para> </para>
+                <para>Invoke the "Insert Picture" dialog window to change the content of the selected image item.
+</para>
             </summary>
             <returns> </returns>
 
@@ -479,7 +468,9 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.DiagramCommandsBase.NewFileCommand">
             <summary>
-                <para> </para>
+                <para>Close the current diagram, ask to save unsaved changes and create a new diagram.
+
+</para>
             </summary>
             <returns> </returns>
 
@@ -532,26 +523,33 @@
         </member>
         <member name="M:DevExpress.Diagram.Core.DiagramCommandsBase.RegisterHandlers(System.Action`1,System.Boolean)">
             <summary>
-                <para> </para>
+                <para>Allows you to override the default commands.
+</para>
             </summary>
             <param name="registerHandlers">
-		 
+		An action delegate that registers a custom method to be called when executing the specified command.
+
             </param>
             <param name="updateCommandsOnRequerySuggested">
-		 
+		<b>true</b> to update the commands UI after each diagram action; otherwise, <b>false</b>. By default, <b>false</b>.
+
             </param>
-            <returns> </returns>
+            <returns>A collection of custom command handlers.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.Diagram.Core.DiagramCommandsBase.RegisterHotKeys(System.Action`1)">
             <summary>
-                <para> </para>
+                <para>Allows you to clear the existing shortcuts or define new ones.
+</para>
             </summary>
             <param name="registerHotKeys">
-		 
+		An action delegate that clears the existing shortcuts or registers custom ones.
+
             </param>
-            <returns> </returns>
+            <returns>A collection of command handlers.
+</returns>
 
 
         </member>
@@ -566,7 +564,8 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.DiagramCommandsBase.RotateCommand">
             <summary>
-                <para> </para>
+                <para>Rotate the selected item counterclockwise by the specified angle.
+</para>
             </summary>
             <returns> </returns>
 
@@ -648,7 +647,8 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.DiagramCommandsBase.SelectPanToolCommand">
             <summary>
-                <para> </para>
+                <para>Select the tool used to pan the diagram canvas.
+</para>
             </summary>
             <returns> </returns>
 
@@ -738,7 +738,8 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.DiagramCommandsBase.SetSelectedContainersHeaderPaddingCommand">
             <summary>
-                <para> </para>
+                <para>Set the header padding (in pixels) for the selected container.
+</para>
             </summary>
             <returns> </returns>
 
@@ -746,7 +747,8 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.DiagramCommandsBase.SetSelectedContainersPaddingCommand">
             <summary>
-                <para> </para>
+                <para>Set the padding (in pixels) for the selected container.
+</para>
             </summary>
             <returns> </returns>
 
@@ -754,7 +756,8 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.DiagramCommandsBase.SetSelectedContainersShapeCommand">
             <summary>
-                <para> </para>
+                <para>Set the shape kind of the selected container.
+</para>
             </summary>
             <returns> </returns>
 
@@ -762,7 +765,8 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.DiagramCommandsBase.SetSelectedImagesScaleCommand">
             <summary>
-                <para> </para>
+                <para>Set the scale for the content of the selected image item.
+</para>
             </summary>
             <returns> </returns>
 
@@ -770,7 +774,8 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.DiagramCommandsBase.SetSelectedImagesStretchModeCommand">
             <summary>
-                <para> </para>
+                <para>Set the stretch mode for the content of the selected image item.
+</para>
             </summary>
             <returns> </returns>
 
@@ -778,7 +783,8 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.DiagramCommandsBase.SetSelectedItemsStyleCommand">
             <summary>
-                <para> </para>
+                <para>Set the style for the selected diagram items.
+</para>
             </summary>
             <returns> </returns>
 
@@ -804,7 +810,8 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.DiagramCommandsBase.ShowContainerHeaderCommand">
             <summary>
-                <para> </para>
+                <para>Toggle the container header visibility.
+</para>
             </summary>
             <returns> </returns>
 
@@ -874,7 +881,8 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.DiagramCommandsBase.TipOverTreeLayoutForSubordinatesCommand">
             <summary>
-                <para> </para>
+                <para>Realign the child items of the selected diagram item according to the tip-over tree layout algorithm.
+</para>
             </summary>
             <returns> </returns>
 
@@ -922,7 +930,8 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.DiagramCommandsBase.ToggleSubordinatesVisibilityCommand">
             <summary>
-                <para> </para>
+                <para>Toggle the visibility of the child items of the selected diagram item.
+</para>
             </summary>
             <returns> </returns>
 
@@ -939,7 +948,8 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.DiagramCommandsBase.TreeLayoutForSubordinatesCommand">
             <summary>
-                <para> </para>
+                <para>Realign the child items of the selected diagram item according to the tree layout algorithm.
+</para>
             </summary>
             <returns> </returns>
 
@@ -1041,38 +1051,6 @@
         <member name="F:DevExpress.Diagram.Core.PropertiesPanelVisibility.Visible">
             <summary>
                 <para>The Properties panel is fully expanded.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Diagram.Core.ToolboxVisibility">
-
-            <summary>
-                <para>Lists the values used to specify the Shapes panel display mode.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.ToolboxVisibility.Closed">
-            <summary>
-                <para>The Shapes panel is hidden.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.ToolboxVisibility.Compact">
-            <summary>
-                <para>The Shapes panel is in the compact mode.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.ToolboxVisibility.Full">
-            <summary>
-                <para>The Shapes panel is fully expanded.
 </para>
             </summary>
 
@@ -1181,6 +1159,38 @@
             </summary>
             <returns>A <see cref="T:System.String"/> value.
 </returns>
+
+
+        </member>
+        <member name="T:DevExpress.Diagram.Core.CanvasSizeMode">
+
+            <summary>
+                <para>Lists the values used to specify whether the canvas size is automatically changed to fit the current shapes layout.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.CanvasSizeMode.AutoSize">
+            <summary>
+                <para>The canvas is automatically resized to fit the current shapes layout.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.CanvasSizeMode.Fill">
+            <summary>
+                <para>The canvas fills the entire visible area.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.CanvasSizeMode.None">
+            <summary>
+                <para>The canvas size does not change on moving shapes outside of it.
+</para>
+            </summary>
 
 
         </member>
@@ -1358,33 +1368,383 @@
 
 
         </member>
-        <member name="T:DevExpress.Diagram.Core.CanvasSizeMode">
+        <member name="T:DevExpress.Diagram.Core.ToolboxVisibility">
 
             <summary>
-                <para>Lists the values used to specify whether the canvas size is automatically changed to fit the current shapes layout.
+                <para>Lists the values used to specify the Shapes panel display mode.
 </para>
             </summary>
 
         </member>
-        <member name="F:DevExpress.Diagram.Core.CanvasSizeMode.AutoSize">
+        <member name="F:DevExpress.Diagram.Core.ToolboxVisibility.Closed">
             <summary>
-                <para>The canvas is automatically resized to fit the current shapes layout.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.CanvasSizeMode.Fill">
-            <summary>
-                <para>The canvas fills the entire visible area.
+                <para>The Shapes panel is hidden.
 </para>
             </summary>
 
 
         </member>
-        <member name="F:DevExpress.Diagram.Core.CanvasSizeMode.None">
+        <member name="F:DevExpress.Diagram.Core.ToolboxVisibility.Compact">
             <summary>
-                <para>The canvas size does not change on moving shapes outside of it.
+                <para>The Shapes panel is in the compact mode.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.ToolboxVisibility.Full">
+            <summary>
+                <para>The Shapes panel is fully expanded.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Diagram.Core.Shapes.Parameter">
+
+            <summary>
+                <para>Represents a shape's parameter.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Diagram.Core.Shapes.Parameter.#ctor">
+            <summary>
+                <para>Initializes a new instance of the Parameter class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Parameter.___Max">
+            <summary>
+                <para>For internal use.</para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Parameter.___Min">
+            <summary>
+                <para>For internal use.</para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Parameter.___Point">
+            <summary>
+                <para>For internal use.</para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Parameter.__Value">
+            <summary>
+                <para>For internal use.</para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="M:DevExpress.Diagram.Core.Shapes.Parameter.CreateParameterDescription(System.Func`3)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="normalizeParameters">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Parameter.DefaultValue">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Parameter.Max">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Parameter.Min">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Parameter.Point">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Parameter.Value">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="T:DevExpress.Diagram.Core.ImageFlipMode">
+
+            <summary>
+                <para>Lists values that specify how the image is flipped.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.ImageFlipMode.Both">
+            <summary>
+                <para>The image is flipped both vertically and horizontally.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.ImageFlipMode.Horizontal">
+            <summary>
+                <para>The image is flipped horizontally.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.ImageFlipMode.None">
+            <summary>
+                <para>The image is not flipped.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.ImageFlipMode.Vertical">
+            <summary>
+                <para>The image is flipped vertically.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Diagram.Core.Layout.CircularLayoutOrder">
+
+            <summary>
+                <para>Lists the values used to specify how the circular layout algorithm arranges shapes.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.Layout.CircularLayoutOrder.Clockwise">
+            <summary>
+                <para>Arrange shapes clockwise.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.Layout.CircularLayoutOrder.Counterclockwise">
+            <summary>
+                <para>Arrange shapes counterclockwise.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.Layout.CircularLayoutOrder.Optimal">
+            <summary>
+                <para>Arrange shapes minimizing the number of crossings of connection lines.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Diagram.Core.Shapes.Arc">
+
+            <summary>
+                <para>Represents an arc segment of a shape's geometry.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Diagram.Core.Shapes.Arc.#ctor">
+            <summary>
+                <para>Initializes a new instance of the Arc class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Arc.___Size">
+            <summary>
+                <para>For internal use.</para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Arc.Direction">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Arc.Size">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="T:DevExpress.Diagram.Core.Shapes.Start">
+
+            <summary>
+                <para>Represents the start of a shape's geometry.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Diagram.Core.Shapes.Start.#ctor">
+            <summary>
+                <para>Initializes a new instance of the Start class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Start.___FillColor">
+            <summary>
+                <para>For internal use.</para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Start.___StrokeColor">
+            <summary>
+                <para>For internal use.</para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Start.___StrokeDashArray">
+            <summary>
+                <para>For internal use.</para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Start.___StrokeThickness">
+            <summary>
+                <para>For internal use.</para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Start.FillBrightness">
+            <summary>
+                <para>Specifies the brightness of the color used to fill the geometry.
+</para>
+            </summary>
+            <value>A numerical value that ranges from <b>-1</b> through <b>1</b>, where <b>-1</b> represents black and <b>1</b> represents white.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Start.FillColor">
+            <summary>
+                <para>Specifies the color that is used to fill the geometry.
+</para>
+            </summary>
+            <value>A System.Drawing.Color value that represents an ARGB color.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Start.IsNewShape">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Start.IsSmoothJoin">
+            <summary>
+                <para>Specifies whether to round the corners of the geometry.
+</para>
+            </summary>
+            <value><b>true</b>, to round the corners of the geometry; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Start.Kind">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Start.StrokeColor">
+            <summary>
+                <para>Gets or sets the color used to paint the outline of the geometry.
+</para>
+            </summary>
+            <value>A System.Drawing.Color value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Start.StrokeDashArray">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Diagram.Core.Shapes.Start.StrokeThickness">
+            <summary>
+                <para>Gets or sets the thickness of the geometry's outline.
+</para>
+            </summary>
+            <value>A System.Double value that is the thickness of the geometry's outline.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Diagram.Core.Shapes.Line">
+
+            <summary>
+                <para>Represents a line segment of a shape's geometry.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Diagram.Core.Shapes.Line.#ctor">
+            <summary>
+                <para>Initializes a new instance of the Line class with default settings.
 </para>
             </summary>
 
@@ -1451,38 +1811,6 @@
             <summary>
                 <para>The diagram has a vertical orientation.
 
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Diagram.Core.Alignment">
-
-            <summary>
-                <para>Lists the values used to specify how the tree layout algorithm arranges shapes relatively to the layout axis.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.Alignment.Center">
-            <summary>
-                <para>Items are aligned along the layout axis.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.Alignment.Far">
-            <summary>
-                <para>In a left-to-right layout, items are aligned to the right from the layout axis. In a right-to-left layout, items are aligned to the left.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.Alignment.Near">
-            <summary>
-                <para>In a left-to-right layout, items are aligned to the left from the layout axis. In a right-to-left layout, items are aligned to the right.
 </para>
             </summary>
 
@@ -1643,44 +1971,56 @@ If the generation and/or expansion depth is set to a non-default value, expand/c
         </member>
         <member name="M:DevExpress.Diagram.Core.FactoryItemTool.#ctor(System.String,System.Func`1,System.Func`2,System.Nullable`1,System.Boolean)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the FactoryItemTool class.
+</para>
             </summary>
             <param name="id">
-		 
+		A System.String value that is the tool's identifier.
+
             </param>
             <param name="getName">
-		 
+		A function that returns the name of the tool.
+
             </param>
             <param name="createItem">
-		 
+		A function that creates the item.
+
             </param>
             <param name="defaultSize">
-		 
+		The default item size.
+
             </param>
             <param name="isQuick">
-		 
+		<b>true</b> to display the item in the Quick Shapes category of the Shapes Panel; otherwise, <b>false</b>.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.Diagram.Core.FactoryItemTool.#ctor(System.String,System.Func`1,System.Func`3,System.Nullable`1,System.Boolean)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the FactoryItemTool class.
+</para>
             </summary>
             <param name="id">
-		 
+		A System.String value that is the tool's identifier.
+
             </param>
             <param name="getName">
-		 
+		A function that returns the name of the tool.
+
             </param>
             <param name="createItem">
-		 
+		A function that creates the item.
+
             </param>
             <param name="defaultSize">
-		 
+		The default item size.
+
             </param>
             <param name="isQuick">
-		 
+		<b>true</b> to display the item in the Quick Shapes category of the Shapes Panel; otherwise, <b>false</b>.
+
             </param>
 
 
@@ -1827,6 +2167,151 @@ If the generation and/or expansion depth is set to a non-default value, expand/c
             </param>
             <returns>The value in pixels.
 </returns>
+
+
+        </member>
+        <member name="T:DevExpress.Diagram.Core.Layout.TipOverTreeLayoutSettings">
+
+            <summary>
+                <para>Contains tip-over tree layout settings.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Diagram.Core.Layout.TipOverTreeLayoutSettings.#ctor(DevExpress.Diagram.Core.Layout.TipOverDirection,DevExpress.Diagram.Core.Layout.TipOverOffsetMode,System.Double,System.Double)">
+            <summary>
+                <para>Initializes a new instance of the TipOverTreeLayoutSettings class.
+</para>
+            </summary>
+            <param name="direction">
+		A <see cref="T:DevExpress.Diagram.Core.Layout.TipOverDirection"/> enumeration value.
+
+            </param>
+            <param name="offsetMode">
+		A <see cref="T:DevExpress.Diagram.Core.Layout.TipOverOffsetMode"/> enumeration value that specifies whether the offset is applied from the center or the edge of parent shapes. .
+
+            </param>
+            <param name="offset">
+		A System.Double value that specifies the offset.
+
+            </param>
+            <param name="verticalSpacing">
+		A System.Double value that specifies the vertical spacing between shapes.
+
+            </param>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.Layout.TipOverTreeLayoutSettings.Direction">
+            <summary>
+                <para>Specifies the tip-over layout direction.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.Layout.TipOverTreeLayoutSettings.Offset">
+            <summary>
+                <para>Specifies the offset applied to the next level of hierarchy.
+
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.Layout.TipOverTreeLayoutSettings.OffsetMode">
+            <summary>
+                <para>Specifies how the resulting offset is calculated.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.Layout.TipOverTreeLayoutSettings.VerticalSpacing">
+            <summary>
+                <para>Specifies the distance between layers of hierarchy. 
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="T:DevExpress.Diagram.Core.TextAlignmentKind">
+
+            <summary>
+                <para>Specifies the horizontal text alignment.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.TextAlignmentKind.Center">
+            <summary>
+                <para>Text is centered
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.TextAlignmentKind.Justify">
+            <summary>
+                <para>Text is justified.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.TextAlignmentKind.Left">
+            <summary>
+                <para>Text is aligned to the left.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.TextAlignmentKind.Right">
+            <summary>
+                <para>Text is aligned to the right.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Diagram.Core.VerticalAlignmentKind">
+
+            <summary>
+                <para>Specifies the vertical text alignment.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.VerticalAlignmentKind.Bottom">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.VerticalAlignmentKind.Center">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.VerticalAlignmentKind.Stretch">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.VerticalAlignmentKind.Top">
+            <summary>
+                <para> </para>
+            </summary>
 
 
         </member>
@@ -3810,108 +4295,28 @@ If the generation and/or expansion depth is set to a non-default value, expand/c
 
 
         </member>
-        <member name="T:DevExpress.Diagram.Core.Layout.CircularLayoutOrder">
+        <member name="T:DevExpress.Diagram.Core.ContainerDragMode">
 
             <summary>
-                <para>Lists the values used to specify how the circular layout algorithm arranges shapes.
+                <para>Lists the values used to specify whether containers can be dragged by any point or only by the header and bounds.
+
 </para>
             </summary>
 
         </member>
-        <member name="F:DevExpress.Diagram.Core.Layout.CircularLayoutOrder.Clockwise">
+        <member name="F:DevExpress.Diagram.Core.ContainerDragMode.ByAnyPoint">
             <summary>
-                <para>Arrange shapes clockwise.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.Layout.CircularLayoutOrder.Counterclockwise">
-            <summary>
-                <para>Arrange shapes counterclockwise.
+                <para>Containers can be dragged by any point.
 </para>
             </summary>
 
 
         </member>
-        <member name="F:DevExpress.Diagram.Core.Layout.CircularLayoutOrder.Optimal">
+        <member name="F:DevExpress.Diagram.Core.ContainerDragMode.ByHeaderAndBounds">
             <summary>
-                <para>Arrange shapes minimizing the number of crossings of connection lines.
+                <para>Containers can be dragged only by the header and bounds.
+
 </para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Diagram.Core.TextAlignmentKind">
-
-            <summary>
-                <para> </para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.TextAlignmentKind.Center">
-            <summary>
-                <para>Text is centered
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.TextAlignmentKind.Justify">
-            <summary>
-                <para>Text is justified.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.TextAlignmentKind.Left">
-            <summary>
-                <para>Text is aligned to the left.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.TextAlignmentKind.Right">
-            <summary>
-                <para>Text is aligned to the right.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Diagram.Core.VerticalAlignmentKind">
-
-            <summary>
-                <para> </para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.VerticalAlignmentKind.Bottom">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.VerticalAlignmentKind.Center">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.VerticalAlignmentKind.Stretch">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.VerticalAlignmentKind.Top">
-            <summary>
-                <para> </para>
             </summary>
 
 
@@ -4023,6 +4428,30 @@ If the generation and/or expansion depth is set to a non-default value, expand/c
         <member name="F:DevExpress.Diagram.Core.ConnectorPointRestrictions.None">
             <summary>
                 <para>Restrictions are not applied.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Diagram.Core.ModifySelectionMode">
+
+            <summary>
+                <para>Lists the values used to specify whether to add or replace the existing selection with selected diagram items.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.ModifySelectionMode.AddToSelection">
+            <summary>
+                <para>Selected diagram items are added to the existing selection.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.ModifySelectionMode.ReplaceSelection">
+            <summary>
+                <para>The existing selection is replaced with selected diagram items.
 </para>
             </summary>
 
@@ -4608,17 +5037,21 @@ If the generation and/or expansion depth is set to a non-default value, expand/c
         </member>
         <member name="P:DevExpress.Diagram.Core.ShapeDescriptionBase.Id">
             <summary>
-                <para> </para>
+                <para>Gets the shape's ID value.
+</para>
             </summary>
-            <value> </value>
+            <value>An string value that is the shape's unique identifier. 
+</value>
 
 
         </member>
         <member name="P:DevExpress.Diagram.Core.ShapeDescriptionBase.Name">
             <summary>
-                <para> </para>
+                <para>Gets the name of the shape.
+</para>
             </summary>
-            <value> </value>
+            <value>A string value that is the shape's name.
+</value>
 
 
         </member>
@@ -4666,6 +5099,38 @@ If the generation and/or expansion depth is set to a non-default value, expand/c
         <member name="F:DevExpress.Diagram.Core.AdjustBoundaryBehavior.None">
             <summary>
                 <para>Neither the items position nor the container boundaries are auto adjusted when the end-user attempts to move items close to the container boundaries.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Diagram.Core.Alignment">
+
+            <summary>
+                <para>Lists the values used to specify how the tree layout algorithm arranges shapes relatively to the layout axis.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.Alignment.Center">
+            <summary>
+                <para>Items are aligned along the layout axis.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.Alignment.Far">
+            <summary>
+                <para>In a left-to-right layout, items are aligned to the right from the layout axis. In a right-to-left layout, items are aligned to the left.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Diagram.Core.Alignment.Near">
+            <summary>
+                <para>In a left-to-right layout, items are aligned to the left from the layout axis. In a right-to-left layout, items are aligned to the right.
 </para>
             </summary>
 
@@ -4889,75 +5354,6 @@ If the generation and/or expansion depth is set to a non-default value, expand/c
         <member name="F:DevExpress.Diagram.Core.Layout.TreeLayoutSettings.Spacing">
             <summary>
                 <para> </para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="T:DevExpress.Diagram.Core.Layout.TipOverTreeLayoutSettings">
-
-            <summary>
-                <para>Contains tip-over tree layout settings.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Diagram.Core.Layout.TipOverTreeLayoutSettings.#ctor(DevExpress.Diagram.Core.Layout.TipOverDirection,DevExpress.Diagram.Core.Layout.TipOverOffsetMode,System.Double,System.Double)">
-            <summary>
-                <para>Initializes a new instance of the TipOverTreeLayoutSettings class.
-</para>
-            </summary>
-            <param name="direction">
-		A <see cref="T:DevExpress.Diagram.Core.Layout.TipOverDirection"/> enumeration value.
-
-            </param>
-            <param name="offsetMode">
-		A <see cref="T:DevExpress.Diagram.Core.Layout.TipOverOffsetMode"/> enumeration value that specifies whether the offset is applied from the center or the edge of parent shapes. .
-
-            </param>
-            <param name="offset">
-		A System.Double value that specifies the offset.
-
-            </param>
-            <param name="verticalSpacing">
-		A System.Double value that specifies the vertical spacing between shapes.
-
-            </param>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.Layout.TipOverTreeLayoutSettings.Direction">
-            <summary>
-                <para>Specifies the tip-over layout direction.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.Layout.TipOverTreeLayoutSettings.Offset">
-            <summary>
-                <para>Specifies the offset applied to the next level of hierarchy.
-
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.Layout.TipOverTreeLayoutSettings.OffsetMode">
-            <summary>
-                <para>Specifies how the resulting offset is calculated.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.Layout.TipOverTreeLayoutSettings.VerticalSpacing">
-            <summary>
-                <para>Specifies the distance between layers of hierarchy. 
-</para>
             </summary>
             <returns> </returns>
 
@@ -5210,32 +5606,6 @@ If the generation and/or expansion depth is set to a non-default value, expand/c
         <member name="F:DevExpress.Diagram.Core.Layout.TipOverDirection.RightToLeft">
             <summary>
                 <para>The layout direction is right-to-left.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Diagram.Core.ContainerDragMode">
-
-            <summary>
-                <para>Lists the values used to specify whether containers can be dragged by any point or only by the header and bounds.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.ContainerDragMode.ByAnyPoint">
-            <summary>
-                <para>Containers can be dragged by any point.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.ContainerDragMode.ByHeaderAndBounds">
-            <summary>
-                <para>Containers can be dragged only by the header and bounds.
-
 </para>
             </summary>
 
@@ -5533,46 +5903,6 @@ If the generation and/or expansion depth is set to a non-default value, expand/c
             </param>
             <returns>A ShapeDescription instance with updated properties.
 </returns>
-
-
-        </member>
-        <member name="T:DevExpress.Diagram.Core.ImageFlipMode">
-
-            <summary>
-                <para>Lists values that specify how the image is flipped.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.ImageFlipMode.Both">
-            <summary>
-                <para>The image is flipped both vertically and horizontally.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.ImageFlipMode.Horizontal">
-            <summary>
-                <para>The image is flipped horizontally.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.ImageFlipMode.None">
-            <summary>
-                <para>The image is not flipped.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Diagram.Core.ImageFlipMode.Vertical">
-            <summary>
-                <para>The image is flipped vertically.
-</para>
-            </summary>
 
 
         </member>

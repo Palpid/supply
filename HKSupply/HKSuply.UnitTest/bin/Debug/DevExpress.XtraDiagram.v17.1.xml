@@ -1720,7 +1720,7 @@
         </member>
         <member name="P:DevExpress.XtraDiagram.DiagramItem.Angle">
             <summary>
-                <para>Specifies the angle by which the diagram item is rotated around its anchor point. This is a dependency property.
+                <para>Specifies the angle by which the diagram item is rotated counterclockwise around its anchor point. This is a dependency property.
 </para>
             </summary>
             <value>A <see cref="T:System.Single"/> value specifying an angle in degrees.
@@ -4674,7 +4674,7 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
         </member>
         <member name="P:DevExpress.XtraDiagram.CustomHitTestEventArgs.Angle">
             <summary>
-                <para>Gets the angle by which the diagram item is rotated around its anchor point relative to the diagram canvas.
+                <para>Gets the angle by which the diagram item is rotated counterclockwise around its anchor point relative to the diagram canvas.
 </para>
             </summary>
             <value>A <see cref="T:System.Single"/> value specifying an angle in degrees relative to the diagram canvas.
@@ -4701,6 +4701,22 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
             </summary>
             <value>A <see cref="T:DevExpress.XtraDiagram.DiagramItem"/> object.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraDiagram.CustomHitTestEventArgs.ItemHeight">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraDiagram.CustomHitTestEventArgs.ItemWidth">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>

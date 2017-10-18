@@ -665,23 +665,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraRichEdit.VerticalScrollbarOptions">
-
-            <summary>
-                <para>Represents the class containing options for the vertical scrollbar.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraRichEdit.VerticalScrollbarOptions.#ctor">
-            <summary>
-                <para>Initializes a new instance of the VerticalScrollbarOptions class with default settings.
-
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.XtraRichEdit.RichEditPen">
 
             <summary>
@@ -3667,6 +3650,23 @@ The default is <b>DocumentLayoutUnit.Pixel</b>.
             </summary>
             <value>An integer value that specifies a vertical margin, in pixels, between the border and text.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraRichEdit.VerticalScrollbarOptions">
+
+            <summary>
+                <para>Represents the class containing options for the vertical scrollbar.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.VerticalScrollbarOptions.#ctor">
+            <summary>
+                <para>Initializes a new instance of the VerticalScrollbarOptions class with default settings.
+
+</para>
+            </summary>
 
 
         </member>

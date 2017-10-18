@@ -2214,15 +2214,12 @@ In other paint Views, links are painted in the <b>SmallIconsText</b> mode.
         </member>
         <member name="M:DevExpress.XtraNavBar.NavElement.GetPrefferedImageSize(System.Drawing.Size)">
             <summary>
-                <para>Gets the current size of a NavElement's large or small icon.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="r">
-		The <see cref="P:DevExpress.XtraNavBar.NavElement.LargeImageSize"/> or <see cref="P:DevExpress.XtraNavBar.NavElement.SmallImageSize"/> property's current value to be obtained.
-
+		 
             </param>
-            <returns>A Size structure that is the NavElement's large or small icon's size.
-</returns>
+            <returns> </returns>
 
 
         </member>
@@ -3236,12 +3233,9 @@ A specific version of the addressed image is automatically chosen, based on the 
         </member>
         <member name="M:DevExpress.XtraNavBar.NavBarGroup.GetPrefferedImageSize">
             <summary>
-                <para>Gets the size of an image for the currently displayed NavBarGroup icon.
-
-</para>
+                <para>For internal use.</para>
             </summary>
-            <returns>A Size structure that is the currently displayed NavBarGroup icon's size.
-</returns>
+            <returns> </returns>
 
 
         </member>

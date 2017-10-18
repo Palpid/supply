@@ -2129,6 +2129,14 @@ The default is <b>DefaultBoolean.Default</b>.
 
 
         </member>
+        <member name="E:DevExpress.XtraSpreadsheet.SpreadsheetControl.DefinedNameConflictResolving">
+            <summary>
+                <para>Occurs when you move or copy a formula or sheet containing the defined name, which already exists on the destination worksheet or workbook.
+</para>
+            </summary>
+
+
+        </member>
         <member name="E:DevExpress.XtraSpreadsheet.SpreadsheetControl.DefinedNameDeleting">
             <summary>
                 <para>Occurs before a Defined Name is deleted.
