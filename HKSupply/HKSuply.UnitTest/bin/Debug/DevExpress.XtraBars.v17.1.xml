@@ -447,38 +447,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraBars.BarDockWindow">
-
-            <summary>
-                <para>Represents a dock window.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraBars.BarDockWindow.#ctor">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraBars.BarDockWindow"/> class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.BarDockWindow.BeginInit">
-            <summary>
-                <para>Begins initialization of the component.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.BarDockWindow.EndInit">
-            <summary>
-                <para>Ends component initialization. 
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.XtraBars.Utils.BarManagerOptionsLayout">
 
             <summary>
@@ -3337,289 +3305,182 @@ This option is in effect when a custom control is embedded into the gallery grou
 
 
         </member>
-        <member name="T:DevExpress.XtraBars.Ribbon.GalleryControl">
+        <member name="T:DevExpress.XtraBars.Docking.DockingOptions">
 
             <summary>
-                <para>The control displaying an image gallery, with the capability to categorize items into groups.
+                <para>Provides docking options that are common to all dock panels.
 
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.#ctor">
+        <member name="M:DevExpress.XtraBars.Docking.DockingOptions.#ctor">
             <summary>
-                <para>Initializes a new instance of the GalleryControl class.
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraBars.Docking.DockingOptions"/> class.
 </para>
             </summary>
 
 
         </member>
-        <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.About">
+        <member name="M:DevExpress.XtraBars.Docking.DockingOptions.#ctor(DevExpress.XtraBars.Docking.DockManager)">
             <summary>
-                <para>Activates the GalleryControl's <b>About</b> dialog box.
+                <para>Initializes a new instance of the DockingOptions class with the specified settings.
 </para>
             </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.Appearance">
-            <summary>
-                <para>This property is not supported by the GalleryControl class.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.BackColor">
-            <summary>
-                <para>This property is not supported by the GalleryControl class. Use the <b>Gallery.</b><b>BackColor</b> (<see cref="P:DevExpress.XtraBars.Ribbon.Gallery.GalleryControlGallery.BackColor"/>) property instead.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.BackgroundImage">
-            <summary>
-                <para>This property is not supported by the GalleryControl class. Use the <b>Gallery.</b><b>BackgroundImage</b> (<see cref="P:DevExpress.XtraBars.Ribbon.Gallery.GalleryControlGallery.BackgroundImage"/>) property instead.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.BackgroundImageLayout">
-            <summary>
-                <para>This property is not supported by the GalleryControl class. Use the <b>Gallery.</b><b>BackgroundImageLayout</b> (<see cref="P:DevExpress.XtraBars.Ribbon.Gallery.GalleryControlGallery.BackgroundImageLayout"/>) property instead.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.BeginInit">
-            <summary>
-                <para>Starts the runtime initialization of the GalleryControl component.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.CalcHitInfo(System.Drawing.Point)">
-            <summary>
-                <para>Returns information on the GalleryControl's elements located at the specified point.
-</para>
-            </summary>
-            <param name="pt">
-		A <see cref="T:System.Drawing.Point"/> structure which specifies the test point coordinates relative to the GalleryControl's top-left corner.
+            <param name="owner">
+		A DockManager that owns this newly created DockingOptions object.
 
             </param>
-            <returns>A <see cref="T:DevExpress.XtraBars.Ribbon.ViewInfo.RibbonHitInfo"/> object which contains information about the visual elements located at the test point.
-</returns>
 
 
         </member>
-        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.Controller">
+        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.AllowRestoreToAutoHideContainer">
             <summary>
-                <para>Gets or sets the Bar and Docking Controllers that provides default look and feel options for the GalleryControl.
+                <para>Gets or sets whether or not dock panels that have been dragged away from their parent auto-hide containers should return to these containers when docked again.
+
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraBars.BarAndDockingController"/> object that provides default look and feel options for the GalleryControl.
+            <value><b>true</b> if dock panels should return to their former auto-hide containers when docked; otherwise, <b>false</b>.
+
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.DesignGalleryGroupIndex">
+        <member name="M:DevExpress.XtraBars.Docking.DockingOptions.Assign(DevExpress.Utils.Controls.BaseOptions)">
             <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+                <para>Copies all the settings from the options object passed as the parameter.
 </para>
             </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.DesignGalleryItemIndex">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.EndInit">
-            <summary>
-                <para>Ends component initialization. 
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.Font">
-            <summary>
-                <para>This property is not supported by the GalleryControl class.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.ForeColor">
-            <summary>
-                <para>This property is not supported by the GalleryControl class.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.Gallery">
-            <summary>
-                <para>Provides access to the Gallery displayed by the GalleryControl.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraBars.Ribbon.Gallery.GalleryControlGallery"/> displayed by the GalleryControl.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.GetController">
-            <summary>
-                <para>Returns the Bar and Docking Controllers that provides look and feel options for the GalleryControl. 
-</para>
-            </summary>
-            <returns>A <see cref="T:DevExpress.XtraBars.BarAndDockingController"/> object that provides look and feel  options for the GalleryControl
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.GetDesignTimeManager">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.GetPreferredSize(System.Drawing.Size)">
-            <summary>
-                <para>Retrieves the size of a rectangular area that will fit the control.
-</para>
-            </summary>
-            <param name="proposedSize">
-		The custom-sized area for a control. 
+            <param name="options">
+		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> descendant whose settings are assigned to the current object.
 
             </param>
-            <returns>The size that will fit the control.
-</returns>
 
 
         </member>
-        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.IsLoading">
+        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.AutoHidePanelVerticalTextOrientation">
             <summary>
-                <para>Gets or sets whether the GalleryControl is being loaded.
+                <para>Specifies the vertical direction of auto-hidden panel captions.
+
 </para>
             </summary>
-            <value><b>true</b> if the GalleryControl is being loaded; otherwise <b>false</b>.
-</value>
+            <value>The vertical text direction of auto-hidden panel captions.
 
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.MenuManager">
-            <summary>
-                <para>Gets or sets an object that controls the look and feel of the control's popup menus.
-</para>
-            </summary>
-            <value>An object that controls the look and feel of the control's popup menus.
 
 </value>
 
 
         </member>
-        <member name="T:DevExpress.XtraBars.Docking2010.Views.Widget.IDocumentProperties">
-
+        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.CloseActiveFloatTabOnly">
             <summary>
-                <para>Stores default <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/> properties.
+                <para>Gets or sets whether only a dock panel corresponding to the active tab within a floating container can be closed upon clicking the close button.
+
 </para>
             </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.IDocumentProperties.AllowCollapse">
-            <summary>
-                <para>Gets or sets whether any <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/> within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/> can be collapsed.
-</para>
-            </summary>
-            <value><b>true</b>, if any <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/> within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/> can be collapsed; otherwise, <b>false</b>.
+            <value><b>true</b> if only dock panel corresponding to the active tab within a floating container can be closed upon clicking the close button; otherwise, <b>false</b>.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.IDocumentProperties.AllowDragging">
+        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.CloseActiveTabOnly">
             <summary>
-                <para>Gets or sets whether any widget document within this View can be dragged at runtime.
+                <para>Gets or sets whether only the dock panel corresponding to the currently active tab in a tab container is closed when the close button within the  tab container's caption is clicked. The option is not in effect when the tab container is in the floating state.
 </para>
             </summary>
-            <value><b>true</b>, if any widget document within this View can be dragged at runtime; otherwise, <b>false</b>.
+            <value><b>true</b> to close only the dock panel corresponding to the currently active tab when a tab container's close button is clicked; <b>false</b> to close the tab container.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.IDocumentProperties.AllowMaximize">
+        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.CursorFloatCanceled">
             <summary>
-                <para>Gets or sets 
+                <para>Gets or sets the cursor that indicates that a dock panel cannot be floating during a dock operation.
+
 </para>
             </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.IDocumentProperties.AllowResize">
-            <summary>
-                <para>Gets or sets whether all <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/>s within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/> can be resized at runtime.
-</para>
-            </summary>
-            <value><b>true</b>, if all <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/>s within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/> can be resized at runtime; otherwise, <b>false</b>.
+            <value>A <see cref="T:System.Windows.Forms.Cursor"/> object that represents the corresponding cursor.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.IDocumentProperties.ShowBorders">
+        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.CustomResizeZoneThickness">
             <summary>
-                <para>Gets or sets whether or not any widget within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/> can display its borders.
+                <para>Gets or sets the thickness of a resize zone for any dock panel owned by this manager.
 </para>
             </summary>
-            <value><b>true</b>, if any widget within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/> can display its borders; otherwise, <b>false</b>.
+            <value>An Int32 value that is the resize zone thickness.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.IDocumentProperties.ShowCloseButton">
+        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.DockPanelInCaptionRegion">
             <summary>
-                <para>Gets or sets whether or not all widgets owned by this View display their Close buttons.
+                <para>Gets or sets whether a panel can be docked as a tab to another panel while dragging over its header.
+
 </para>
             </summary>
-            <value><b>true</b>, if all widgets owned by this View display their Close buttons; otherwise, <b>false</b>.
+            <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration value that specifies whether a panel can be docked while dragging this panel over the header of another panel.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.IDocumentProperties.ShowMaximizeButton">
+        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.DockPanelInTabContainerTabRegion">
             <summary>
-                <para>Gets or sets whether all <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/>s within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/> should display their maximize buttons.
+                <para>Gets or sets whether the panel is immediately docked while dragging over the tab region or the panel is docked when it is dropped.
 </para>
             </summary>
-            <value><b>true</b>, if all <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/>s within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/> should display their maximize buttons; otherwise, <b>false</b>.
+            <value>The <b>DockPanelInTabContainerTabRegion</b> value that specifies whether the panel is immediately docked while dragging over the tab region or the panel is docked when it is dropped.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.HideImmediatelyOnAutoHide">
+            <summary>
+                <para>Gets or sets whether dock panels are immediately hidden when their auto hide functionality is enabled.
+</para>
+            </summary>
+            <value><b>true</b> to hide dock panels immediately when their auto hide functionality is enabled; <b>false</b> to hide dock panels using the sliding animation effect, and only when the mouse pointer leaves their area.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.ShowCaptionImage">
+            <summary>
+                <para>Gets or sets whether an image associated with a dock panel is displayed within the panel's caption.
+</para>
+            </summary>
+            <value><b>true</b> if a dock panel's image is displayed in the panel's caption; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.ShowCaptionOnMouseHover">
+            <summary>
+                <para>Gets or sets whether the dock panel's caption is shown only when the mouse pointer hovers over the panel's top or all the time.
+</para>
+            </summary>
+            <value><b>true</b> to show the panel's caption when the mouse pointer hovers over the panel's top; <b>false</b> the panel captions are always shown.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.SnapMode">
+            <summary>
+                <para>Gets or sets whether or not dock panels can stick to each other, parent forms or screen edges.
+</para>
+            </summary>
+            <value>A <see cref="SnapMode"/> enumerator value that specifies whether or not dock panels can stick to each other, parent forms or screen edges.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.TabbedPanelVerticalTextOrientation">
+            <summary>
+                <para>Gets or sets the text direction, according to which tabbed panels' header strings are drawn.
+</para>
+            </summary>
+            <value>A <see cref="VerticalTextOrientation"/> enumerator value that specifies the text direction, according to which tabbed panels' header strings are drawn.
 </value>
 
 
@@ -5161,6 +5022,17 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
+        <member name="M:DevExpress.XtraBars.TabFormControlBase.IsInterceptKey(System.Windows.Forms.KeyEventArgs)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="e">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.TabFormControlBase.IsMultiLine">
             <summary>
                 <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
@@ -5515,6 +5387,14 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
+        <member name="P:DevExpress.XtraBars.TabFormControlBase.UsePageBindingContext">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.TabFormControlBase.ViewInfo">
             <summary>
                 <para>Returns the object which contains internal information used to render the control.
@@ -5612,6 +5492,216 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
+        <member name="T:DevExpress.XtraBars.Ribbon.GalleryControl">
+
+            <summary>
+                <para>The control displaying an image gallery, with the capability to categorize items into groups.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.#ctor">
+            <summary>
+                <para>Initializes a new instance of the GalleryControl class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.About">
+            <summary>
+                <para>Activates the GalleryControl's <b>About</b> dialog box.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.Appearance">
+            <summary>
+                <para>This property is not supported by the GalleryControl class.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.BackColor">
+            <summary>
+                <para>This property is not supported by the GalleryControl class. Use the <b>Gallery.</b><b>BackColor</b> (<see cref="P:DevExpress.XtraBars.Ribbon.Gallery.GalleryControlGallery.BackColor"/>) property instead.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.BackgroundImage">
+            <summary>
+                <para>This property is not supported by the GalleryControl class. Use the <b>Gallery.</b><b>BackgroundImage</b> (<see cref="P:DevExpress.XtraBars.Ribbon.Gallery.GalleryControlGallery.BackgroundImage"/>) property instead.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.BackgroundImageLayout">
+            <summary>
+                <para>This property is not supported by the GalleryControl class. Use the <b>Gallery.</b><b>BackgroundImageLayout</b> (<see cref="P:DevExpress.XtraBars.Ribbon.Gallery.GalleryControlGallery.BackgroundImageLayout"/>) property instead.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.BeginInit">
+            <summary>
+                <para>Starts the runtime initialization of the GalleryControl component.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.CalcHitInfo(System.Drawing.Point)">
+            <summary>
+                <para>Returns information on the GalleryControl's elements located at the specified point.
+</para>
+            </summary>
+            <param name="pt">
+		A <see cref="T:System.Drawing.Point"/> structure which specifies the test point coordinates relative to the GalleryControl's top-left corner.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraBars.Ribbon.ViewInfo.RibbonHitInfo"/> object which contains information about the visual elements located at the test point.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.Controller">
+            <summary>
+                <para>Gets or sets the Bar and Docking Controllers that provides default look and feel options for the GalleryControl.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraBars.BarAndDockingController"/> object that provides default look and feel options for the GalleryControl.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.DesignGalleryGroupIndex">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.DesignGalleryItemIndex">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.EndInit">
+            <summary>
+                <para>Ends component initialization. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.Font">
+            <summary>
+                <para>This property is not supported by the GalleryControl class.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.ForeColor">
+            <summary>
+                <para>This property is not supported by the GalleryControl class.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.Gallery">
+            <summary>
+                <para>Provides access to the Gallery displayed by the GalleryControl.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraBars.Ribbon.Gallery.GalleryControlGallery"/> displayed by the GalleryControl.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.GetController">
+            <summary>
+                <para>Returns the Bar and Docking Controllers that provides look and feel options for the GalleryControl. 
+</para>
+            </summary>
+            <returns>A <see cref="T:DevExpress.XtraBars.BarAndDockingController"/> object that provides look and feel  options for the GalleryControl
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.GetDesignTimeManager">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.GetPreferredSize(System.Drawing.Size)">
+            <summary>
+                <para>Retrieves the size of a rectangular area that will fit the control.
+</para>
+            </summary>
+            <param name="proposedSize">
+		The custom-sized area for a control. 
+
+            </param>
+            <returns>The size that will fit the control.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.IsLoading">
+            <summary>
+                <para>Gets or sets whether the GalleryControl is being loaded.
+</para>
+            </summary>
+            <value><b>true</b> if the GalleryControl is being loaded; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.GalleryControl.MenuManager">
+            <summary>
+                <para>Gets or sets an object that controls the look and feel of the control's popup menus.
+</para>
+            </summary>
+            <value>An object that controls the look and feel of the control's popup menus.
+
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraBars.BarToggleSwitchItemLink">
 
             <summary>
@@ -5626,108 +5716,6 @@ A specific version of the addressed image is automatically chosen based on the a
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraBars.BarToggleSwitchItem"/> to which the current item link corresponds.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraBars.Docking.AutoHideContainer">
-
-            <summary>
-                <para>Represents an auto hide container.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking.AutoHideContainer.#ctor">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraBars.Docking.AutoHideContainer"/> class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking.AutoHideContainer.Contains(DevExpress.XtraBars.Docking.DockPanel)">
-            <summary>
-                <para>Indicates whether the auto hide container holds the specified dock panel.
-</para>
-            </summary>
-            <param name="panel">
-		A <see cref="T:DevExpress.XtraBars.Docking.DockPanel"/> object to locate.
-
-            </param>
-            <returns><b>true</b> if the auto hide container holds the specified dock panel; otherwise, <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.AutoHideContainer.Count">
-            <summary>
-                <para>Gets the number of dock panels contained within the auto hide container.
-</para>
-            </summary>
-            <value>An integer value specifying the number of dock panels contained within the auto hide container.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.AutoHideContainer.Dock">
-            <summary>
-                <para>Gets or sets a value specifying how the auto hide container is aligned within its parent control.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Windows.Forms.DockStyle"/> enumeration value specifying the manner in which an auto hide container is docked.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking.AutoHideContainer.GetHitInfo(System.Drawing.Point)">
-            <summary>
-                <para>Returns information about the container's element located at the specified point.
-</para>
-            </summary>
-            <param name="ptClient">
-		A <see cref="T:System.Drawing.Point"/> structure which specifies the test point coordinates relative to the container's top-left corner.
-
-            </param>
-            <returns>A <see cref="T:DevExpress.XtraBars.Docking.HitInfo"/> object which contains information about the auto hide container's element at the test point.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking.AutoHideContainer.IndexOf(DevExpress.XtraBars.Docking.DockPanel)">
-            <summary>
-                <para>Returns the specified dock panel's position within the auto hide container.
-</para>
-            </summary>
-            <param name="panel">
-		A <see cref="T:DevExpress.XtraBars.Docking.DockPanel"/> object to locate.
-
-            </param>
-            <returns>A zero-based integer representing the dock panel's position within the auto hide container. <b>-1</b> if the auto hide container doesn't contain the specified dock panel.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.AutoHideContainer.Item(System.Int32)">
-            <summary>
-                <para>Provides indexed access to the dock panels contained within the auto hide container.
-</para>
-            </summary>
-            <param name="index">
-		An integer value specifying the dock panel's zero-based index within the collection.
-
-            </param>
-            <value>A <see cref="T:DevExpress.XtraBars.Docking.DockPanel"/> object representing the dock panel located at the specified position.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.AutoHideContainer.Position">
-            <summary>
-                <para>Gets the position of the auto hide container within its parent control.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraBars.Docking.TabsPosition"/> enumeration value specifying the position of the auto hide container within its parent control.
 </value>
 
 
@@ -5857,66 +5845,6 @@ A specific version of the addressed image is automatically chosen based on the a
                 <para>Fires after the check state of the current item is changed.
 </para>
             </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.SplitGroup">
-
-            <summary>
-                <para>A WindowsUI View container that displays all its Documents simultaneously, arranging them in a single row or column without a scroll bar. End-users can resize Documents at runtime by dragging split bars.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.SplitGroup.#ctor">
-            <summary>
-                <para>Initializes a new instance of the SplitGroup class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.SplitGroup.#ctor(System.ComponentModel.IContainer)">
-            <summary>
-                <para>Initializes a new instance of the SplitGroup class with the specified container.
-</para>
-            </summary>
-            <param name="container">
-		An object that implements the <see cref="T:System.ComponentModel.IContainer"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.SplitGroup.#ctor(DevExpress.XtraBars.Docking2010.Views.WindowsUI.ISplitGroupProperties)">
-            <summary>
-                <para>Initializes a new instance of the SplitGroup class with custom settings.
-</para>
-            </summary>
-            <param name="defaultProperties">
-		An ISplitGroupProperties object that specifies custom settings for the newly created SplitGroup.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.SplitGroup.DetailContainerProperties">
-            <summary>
-                <para>Provides access to properties of the content container that displays individual documents hosted within this SplitGroup.
-</para>
-            </summary>
-            <value>A <see cref="IContentContainerDefaultProperties"/> object that stores properties of the content container that displays individual documents hosted within this SplitGroup.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.SplitGroup.Properties">
-            <summary>
-                <para>Provides access to the current SplitGroup's settings.
-</para>
-            </summary>
-            <value>An ISplitGroupDefaultProperties object that contains settings for the current SplitGroup.
-</value>
 
 
         </member>
@@ -7467,6 +7395,95 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
+        <member name="T:DevExpress.XtraBars.Docking.HitTest">
+
+            <summary>
+                <para>Lists values which identify the elements in a dock panel.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraBars.Docking.HitTest.AutoHidePanel">
+            <summary>
+                <para>The test point belongs to the label within the auto hide container which corresponds to a dock panel with its auto hiding functionality enabled.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraBars.Docking.HitTest.Border">
+            <summary>
+                <para>The test point belongs to the dock panel's border.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraBars.Docking.HitTest.Caption">
+            <summary>
+                <para>The test point belongs to a dock panel's caption.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraBars.Docking.HitTest.Client">
+            <summary>
+                <para>The test point belongs to the dock panel's client area.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraBars.Docking.HitTest.EmbeddedButtonPanel">
+            <summary>
+                <para>The test point belongs to the header buttons panel, which contains both default and custom header buttons.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraBars.Docking.HitTest.NextTabButton">
+            <summary>
+                <para>The test point belongs to a scroll button used to traverse forwards through the tabs in a tab container.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraBars.Docking.HitTest.None">
+            <summary>
+                <para>The test point is not within a dock panel.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraBars.Docking.HitTest.PrevTabButton">
+            <summary>
+                <para>The test point belongs to a scroll button used to traverse backwards through the tabs in a tab container.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraBars.Docking.HitTest.Tab">
+            <summary>
+                <para>The test point belongs to a tab button in a tab container.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraBars.Docking.HitTest.TabPanel">
+            <summary>
+                <para>The test point belongs to a tab panel in a tab container.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.SlideGroup">
 
             <summary>
@@ -8937,871 +8954,6 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
-        <member name="T:DevExpress.XtraBars.Navigation.AccordionControl">
-
-            <summary>
-                <para>An advanced hierarchical navigation menu.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.#ctor">
-            <summary>
-                <para>Initializes a new instance of the AccordionControl class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.AddGroup">
-            <summary>
-                <para>Adds a new group to this AccordionControl.
-</para>
-            </summary>
-            <returns>A <see cref="AccordionControlElement"/> object added to this AccordionControl.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.AddItem">
-            <summary>
-                <para>Creates a new <see cref="T:DevExpress.XtraBars.Navigation.AccordionControlElement"/> owned by this AccordionControl.
-</para>
-            </summary>
-            <returns>An <see cref="AccordionControlElement"/> object created by this method.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowElementDragging">
-            <summary>
-                <para>Gets or sets whether or not end-users should be able to drag this AccordionControl's elements at runtime.
-</para>
-            </summary>
-            <value><b>true</b>, if end-users should be able to drag this AccordionControl's elements at runtime; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowGlyphSkinning">
-            <summary>
-                <para>Gets or sets whether or not the Glyph Skinning feature is enabled for this AccordionControl.
-</para>
-            </summary>
-            <value>A DefaultBoolean enumerator value that specifies whether or not the Glyph Skinning feature is enabled for this AccordionControl.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowHorizontalResizing">
-            <summary>
-                <para>Gets or sets whether or not end-users can drag AccordionControl borders to resize this control horizontally.
-</para>
-            </summary>
-            <value>A <see cref="DefaultBoolean"/> enumerator value that specifies whether or not this AccordionControl can be horizontally resized at runtime.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowHtmlText">
-            <summary>
-                <para>Gets or sets whether HTML tags can be used to format element header text (<see cref="P:DevExpress.XtraBars.Navigation.AccordionControlElementBase.Text"/>).
-</para>
-            </summary>
-            <value><b>true</b>, if this AccordionControl supports HTML tags, used within the captions of its items.; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowItemSelection">
-            <summary>
-                <para>Gets or sets whether or not this AccordionControl supports the selected state for its Items.
-
-</para>
-            </summary>
-            <value><b>true</b>, if this AccordionControl supports the selected state for its Items; otherwise, <b>false</b>.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowMultipleItemExpansion">
-            <summary>
-                <para>Gets or sets whether or not multiple <see cref="T:DevExpress.XtraBars.Navigation.AccordionControlElement"/>s can be expanded simultaneously.
-
-</para>
-            </summary>
-            <value><b>true</b>, if multiple <see cref="T:DevExpress.XtraBars.Navigation.AccordionControlElement"/>s can be expanded simultaneously; otherwise, <b>false</b>.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowSmoothScrolling">
-            <summary>
-                <para>Gets or sets whether AccordionControl items are scrolled using smoothing animation.
-
-</para>
-            </summary>
-            <value><b>true</b>, if AccordionControl items are scrolled using smoothing animation; otherwise, <b>false</b>.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.AnimationType">
-            <summary>
-                <para>Gets or sets the animation effect that follows expanding\collapsing elements within this AccordionControl.
-</para>
-            </summary>
-            <value>An <see cref="AnimationType"/> enumerator value that specifies the animation effect. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.Appearance">
-            <summary>
-                <para>Provides access to multiple appearance groups that store appearance settings for all accordion elements in every visual state.
-</para>
-            </summary>
-            <value>An <see cref="AccordionControlAppearances"/> object that contains multiple appearance groups that store appearance settings for all accordion elements in every visual state.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.BeginInit">
-            <summary>
-                <para>Starts this AccordionControl's initialization.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.BeginUpdate">
-            <summary>
-                <para>Locks the AccordionControl.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.BorderStyle">
-            <summary>
-                <para>This member is not supported by the AccordionControl class.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.CalcHitInfo(System.Drawing.Point)">
-            <summary>
-                <para>Returns the hit info related to the target point within the AccordionControl.
-</para>
-            </summary>
-            <param name="p">
-		A Point that is the target location for which the hit info should be returned.
-
-            </param>
-            <returns>An <see cref="AccordionControlHitInfo"/> object that allows you to get what accordion element is located at the target position.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.CollapseAll">
-            <summary>
-                <para>Collapses all group elements that belong to this AccordionControl.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.CollapseElement(DevExpress.XtraBars.Navigation.AccordionControlElement)">
-            <summary>
-                <para>Collapses the target accordion element.
-</para>
-            </summary>
-            <param name="element">
-		An  that should be collapsed. 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.CollapseElement(DevExpress.XtraBars.Navigation.AccordionControlElement,System.Boolean)">
-            <summary>
-                <para>Collapses the target element with optional animation effects.
-</para>
-            </summary>
-            <param name="element">
-		An AccordionControlElement that has to be collapsed.
-
-            </param>
-            <param name="shouldRunAnimation">
-		<b>true</b>, if collapsing this element should be visualized with animation effects; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.ContextButtonClick">
-            <summary>
-                <para>Occurs whenever an item from either the <see cref="P:DevExpress.XtraBars.Navigation.AccordionControl.GroupContextButtons"/> or <see cref="P:DevExpress.XtraBars.Navigation.AccordionControl.ItemContextButtons"/> collections is clicked.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.ContextButtonCustomize">
-            <summary>
-                <para>Fires before any context button is shown and allows you to dynamically customize it.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ContextButtonsOptions">
-            <summary>
-                <para>Provides access to properties that affect all context buttons within this AccordionControl's elements.
-</para>
-            </summary>
-            <value>A <see cref="AccordionContextItemCollectionOptions"/> object that stores global context button settings.
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.CustomContextButtonToolTip">
-            <summary>
-                <para>Allows you to dynamically customize item tooltips.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.CustomDrawElement">
-            <summary>
-                <para>Allows you to draw your own elements upon AccordionControl items and groups using the standard <b>e.Cache</b> and <b>e.Graphics</b> methods.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.CustomElementText">
-            <summary>
-                <para>Provides the capability to dynamically rename specific AccordionControl elements.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.DesignManager">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.DistanceBetweenRootGroups">
-            <summary>
-                <para>Gets or sets the distance between top-level elements.
-</para>
-            </summary>
-            <value>An Int32 value that is the distance between top-level elements.
-
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.ElementClick">
-            <summary>
-                <para>Occurs after any <see cref="T:DevExpress.XtraBars.Navigation.AccordionControlElement"/> hosted in this AccordionControl is clicked.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.ElementDragOver">
-            <summary>
-                <para>Occurs whenever an end-user hovers an element within this AccordionControl while dragging another element.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ElementPositionOnExpanding">
-            <summary>
-                <para>Gets or sets whether expandable groups and elements are scrolled (if required) to make their contents visible when they are expanded.
-</para>
-            </summary>
-            <value>A value that specifies whether elements and groups are scrolled (if required) on their expansion to make their contents visible.
-The <b>Default</b> value is equivalent to <b>ScrollUp</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.Elements">
-            <summary>
-                <para>Provides access to <see cref="T:DevExpress.XtraBars.Navigation.AccordionControlElement"/>s that serve as root elements for this AccordionControl.
-</para>
-            </summary>
-            <value>A <see cref="AccordionControlElementCollection"/> object that stores all <see cref="T:DevExpress.XtraBars.Navigation.AccordionControlElement"/>s that serve as root elements for this AccordionControl.
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.EndElementDragging">
-            <summary>
-                <para>Occurs when an end-user releases the currently dragged AccordionControl element.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.EndInit">
-            <summary>
-                <para>Ends the initialization process, launched by the <see cref="M:DevExpress.XtraBars.Navigation.AccordionControl.BeginInit"/> method.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.EndUpdate">
-            <summary>
-                <para>Called after all required modifications are applied to the AccordionControl and forces the control to unlock its UI and reflect these changes.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.ExpandAll">
-            <summary>
-                <para>Expands all group elements within this AccordionControl.
-</para>
-            </summary>
-            <returns><b>true</b>, if AccordionControl groups have been successfully expanded; otherwise, <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.ExpandElement(DevExpress.XtraBars.Navigation.AccordionControlElement)">
-            <summary>
-                <para>Expands the target <see cref="T:DevExpress.XtraBars.Navigation.AccordionControlElement"/>.
-</para>
-            </summary>
-            <param name="element">
-		An  to be expanded.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.ExpandElement(DevExpress.XtraBars.Navigation.AccordionControlElement,System.Boolean)">
-            <summary>
-                <para>Expands the target element with optional animation effects.
-</para>
-            </summary>
-            <param name="element">
-		An AccordionControlElement object that is the element to be expanded.
-
-            </param>
-            <param name="shouldRunAnimation">
-		<b>true</b>, if expanding this element should be followed by animation effects; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ExpandElementMode">
-            <summary>
-                <para>Gets or sets whether a single element or multiple elements can be expanded simultaneously.
-</para>
-            </summary>
-            <value>A value that defines element expansion mode.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ExpandGroupOnHeaderClick">
-            <summary>
-                <para>Gets or sets whether or not this AccordionControl's groups can be expanded/collapsed by clicking their captions at runtime.
-</para>
-            </summary>
-            <value><b>true</b>, if this AccordionControl's groups can be expanded/collapsed by clicking their captions at runtime; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ExpandItemOnHeaderClick">
-            <summary>
-                <para>Gets or sets whether end-users can click item elements' headers to expand these elements.
-</para>
-            </summary>
-            <value><b>true</b>, if end-users can click item elements' headers to expand these elements; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.ExpandStateChanged">
-            <summary>
-                <para>Fires after an element has been expanded/collapsed.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.ExpandStateChanging">
-            <summary>
-                <para>Fires when an element is about to be expanded/collapsed. Allows you to implement a custom element expansion behavior.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.FilterContent">
-            <summary>
-                <para>Allows you to control an element's visibility during a filtration performed using the built-in filter control.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.FilterControl">
-            <summary>
-                <para>Gets or sets a built-in control that provides the filter functionality.
-</para>
-            </summary>
-            <value>A built-in filter control.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.ForceFireChanged">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.ForEachElement(System.Action`1)">
-            <summary>
-                <para>Performs a certain action for each <see cref="T:DevExpress.XtraBars.Navigation.AccordionControl"/> element.
-</para>
-            </summary>
-            <param name="handler">
-		An action to perform against each element.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.ForEachVisibleElement(System.Action`1)">
-            <summary>
-                <para>Performs a certain action for each <see cref="T:DevExpress.XtraBars.Navigation.AccordionControl"/> visible element.
-</para>
-            </summary>
-            <param name="handler">
-		An action to perform against each visible element.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.GetBackColor">
-            <summary>
-                <para>Gets the color, currently assigned to the control's <b>Appearance.ControlAppearance.BackColor</b> property.
-</para>
-            </summary>
-            <returns>A Color object that is the current backcolor of this AccordionControl.
-</returns>
-
-
-        </member>
-        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.GetContentContainer">
-            <summary>
-                <para>Allows you to dynamically specify a content container for empty items. This event must be handled along with the <see cref="E:DevExpress.XtraBars.Navigation.AccordionControl.HasContentContainer"/> event.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.GetElements">
-            <summary>
-                <para>Returns a linear list of all elements in the <see cref="T:DevExpress.XtraBars.Navigation.AccordionControl"/>.
-</para>
-            </summary>
-            <returns>A linear list of all elements in the <see cref="T:DevExpress.XtraBars.Navigation.AccordionControl"/>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.GetVisibleElements">
-            <summary>
-                <para>Returns a linear list that comprises visible top-level <see cref="T:DevExpress.XtraBars.Navigation.AccordionControl"/> elements and visible elements that reside within expanded groups.
-</para>
-            </summary>
-            <returns>A linear list of visible elements.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.GroupContextButtons">
-            <summary>
-                <para>Stores context buttons, shared among all AccordionControl groups.
-</para>
-            </summary>
-            <value>A <see cref="ContextItemCollection"/> object that stores context buttons, displayed by any group element within this AccordionControl.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.GroupHeight">
-            <summary>
-                <para>Gets or sets the header height common to all groups (elements whose <see cref="P:DevExpress.XtraBars.Navigation.AccordionControlElement.Style"/> is set to <see cref="F:DevExpress.XtraBars.Navigation.ElementStyle.Group"/>).
-</para>
-            </summary>
-            <value>An Int32 value that is the header height common to all group elements within this AccordionControl.
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.HasContentContainer">
-            <summary>
-                <para>Allows you to specify whether an item, when expanded, will display a custom control container. The custom control container should be provided by handling the <see cref="E:DevExpress.XtraBars.Navigation.AccordionControl.GetContentContainer"/> event.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.Images">
-            <summary>
-                <para>Gets or sets the source of images that can be displayed within element headers.
-</para>
-            </summary>
-            <value>The image collection containing images to be displayed in element headers.
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.ItemContentContainerHidden">
-            <summary>
-                <para>Occurs whenever an item element hides its content container (if any).
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ItemContextButtons">
-            <summary>
-                <para>Stores context buttons, shared among all AccordionControl items.
-</para>
-            </summary>
-            <value>A <see cref="ContextItemCollection"/> object that stores context buttons, shown by all items within this AccordionControl.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ItemHeight">
-            <summary>
-                <para>Gets or sets the header height common to all items (elements whose <see cref="P:DevExpress.XtraBars.Navigation.AccordionControlElement.Style"/> is set to <see cref="F:DevExpress.XtraBars.Navigation.ElementStyle.Item"/>).
-</para>
-            </summary>
-            <value>The header height, common to all items.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.LockUpdate">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.MakeElementVisible(DevExpress.XtraBars.Navigation.AccordionControlElement)">
-            <summary>
-                <para>Scrolls the AccordionControl up or down until the target element is visible.
-</para>
-            </summary>
-            <param name="element">
-		A  object which is the element that should be visible.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.OnElementCollectionChanged">
-            <summary>
-                <para>Occurs whenever the <see cref="P:DevExpress.XtraBars.Navigation.AccordionControl.Elements"/> collection is modified.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.OptionsMinimizing">
-            <summary>
-                <para>Provides access to options related to minimizing this AccordionControl.
-</para>
-            </summary>
-            <value>A <see cref="OptionsMinimizing"/> object that stores options related to minimizing this AccordionControl.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.Refresh">
-            <summary>
-                <para>Redraws the AccordionControl.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.RestoreFromRegistry(System.String)">
-            <summary>
-                <para>Loads the AccordionControl layout, stored in registry.
-</para>
-            </summary>
-            <param name="path">
-		A String value that is the registry path where the AccordionControl layout is stored.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.RestoreFromStream(System.IO.Stream)">
-            <summary>
-                <para>Loads the AccordionControl layout, stored in a stream.
-
-</para>
-            </summary>
-            <param name="stream">
-		A String value that is the name of the stream that keeps the AccordionControl layout.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.RestoreFromXml(System.String)">
-            <summary>
-                <para>Loads the AccordionControl layout, stored in a local XML file.
-</para>
-            </summary>
-            <param name="xmlFile">
-		A String value that is the path to the XML file that keeps the AccordionControl layout.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.SaveToRegistry(System.String)">
-            <summary>
-                <para>Saves the current AccordionControl layout to the registry.
-
-</para>
-            </summary>
-            <param name="path">
-		A String value that is the registry path to which the current layout should be saved.
-
-            </param>
-            <returns><b>true</b>, if the layout was successfully saved; otherwise, <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.SaveToStream(System.IO.Stream)">
-            <summary>
-                <para>Saves the current AccordionControl layout to a stream.
-
-</para>
-            </summary>
-            <param name="stream">
-		A String value that is the name of the stream that should keep the current AccordionControl layout.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.SaveToXml(System.String)">
-            <summary>
-                <para>Saves the current AccordionControl layout to a local XML file.
-</para>
-            </summary>
-            <param name="xmlFile">
-		A String value that is the name of the XML file that should keep the current AccordionControl layout.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ScaleImages">
-            <summary>
-                <para>Gets or sets whether icons are automatically stretched to match the current DPI settings of the user's monitor.
-</para>
-            </summary>
-            <value><b>True</b>, if icons are scaled to match the current DPI settings; otherwise, <b>Default</b> or <b>False</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ScrollBarMode">
-            <summary>
-                <para>Gets or sets the vertical scroll bar's visibility and style.
-</para>
-            </summary>
-            <value>The vertical scroll bar's visibility and style.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.SelectedElement">
-            <summary>
-                <para>Gets or sets the currently selected item. This property is in effect if item selection is enabled with the <see cref="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowItemSelection"/> property.
-</para>
-            </summary>
-            <value>The currently selected element.
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.SelectedElementChanged">
-            <summary>
-                <para>Fires when the <see cref="P:DevExpress.XtraBars.Navigation.AccordionControl.SelectedElement"/> property's value is changed. This event is in effect if item selection is enabled with the <see cref="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowItemSelection"/> property.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.SelectElement(DevExpress.XtraBars.Navigation.AccordionControlElement)">
-            <summary>
-                <para>Selects the specified element.
-This method is in effect if item selection is enabled with the <see cref="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowItemSelection"/> property.
-</para>
-            </summary>
-            <param name="element">
-		An item to select.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.SelectElementMode">
-            <summary>
-                <para>Gets or sets at which moment during an end-user click, an Accordion element this element is considered selected.
-
-</para>
-            </summary>
-            <value>A SelectElementMode enumerator value that specifies at which moment during an end-user clicking an Accordion element, this element is considered selected.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ShouldOptimizeAnimation">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ShowFilterControl">
-            <summary>
-                <para>Gets or sets the built-in filter control's visibility.
-</para>
-            </summary>
-            <value>A value that specifies the built-in filter control's visibility.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ShowGroupExpandButtons">
-            <summary>
-                <para>Gets or sets whether or not AccordionControl groups should display their expand/collapse buttons.
-</para>
-            </summary>
-            <value><b>true</b>, if AccordionControl groups should display their expand/collapse buttons; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ShowItemExpandButtons">
-            <summary>
-                <para>Gets or sets whether item elements should display their expand/collapse buttons.
-</para>
-            </summary>
-            <value><b>true</b>, if item elements should display their expand/collapse buttons; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.StartElementDragging">
-            <summary>
-                <para>Occurs whenever an end-user presses an element owned by this AccordionControl and starts dragging this element away from its original location.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.SuperTip">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ToolTip">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ToolTipIconType">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ToolTipTitle">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.UnlockUpdate">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.XtraBars.Navigation.TabNavigationPage">
 
             <summary>
@@ -9958,6 +9110,22 @@ See Navigation Frame and Tab Pane.
 		A <see cref="T:DevExpress.XtraRichEdit.PopupMenuShowingEventArgs"/> class instance containing event data.
 
             </param>
+
+
+        </member>
+        <member name="T:DevExpress.XtraBars.Docking2010.Views.Widget.ColumnDefinition">
+
+            <summary>
+                <para>A column within a Widget View.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Views.Widget.ColumnDefinition.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ColumnDefinition class with the default settings.
+</para>
+            </summary>
 
 
         </member>
@@ -11290,6 +10458,871 @@ See Navigation Frame and Tab Pane.
         <member name="E:DevExpress.XtraBars.Navigation.AccordionControlElement.StyleChanged">
             <summary>
                 <para>Occurs when the AccordionControlElement changes its <see cref="P:DevExpress.XtraBars.Navigation.AccordionControlElement.Style"/> property value.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraBars.Navigation.AccordionControl">
+
+            <summary>
+                <para>An advanced hierarchical navigation menu.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.#ctor">
+            <summary>
+                <para>Initializes a new instance of the AccordionControl class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.AddGroup">
+            <summary>
+                <para>Adds a new group to this AccordionControl.
+</para>
+            </summary>
+            <returns>A <see cref="AccordionControlElement"/> object added to this AccordionControl.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.AddItem">
+            <summary>
+                <para>Creates a new <see cref="T:DevExpress.XtraBars.Navigation.AccordionControlElement"/> owned by this AccordionControl.
+</para>
+            </summary>
+            <returns>An <see cref="AccordionControlElement"/> object created by this method.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowElementDragging">
+            <summary>
+                <para>Gets or sets whether or not end-users should be able to drag this AccordionControl's elements at runtime.
+</para>
+            </summary>
+            <value><b>true</b>, if end-users should be able to drag this AccordionControl's elements at runtime; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowGlyphSkinning">
+            <summary>
+                <para>Gets or sets whether or not the Glyph Skinning feature is enabled for this AccordionControl.
+</para>
+            </summary>
+            <value>A DefaultBoolean enumerator value that specifies whether or not the Glyph Skinning feature is enabled for this AccordionControl.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowHorizontalResizing">
+            <summary>
+                <para>Gets or sets whether or not end-users can drag AccordionControl borders to resize this control horizontally.
+</para>
+            </summary>
+            <value>A <see cref="DefaultBoolean"/> enumerator value that specifies whether or not this AccordionControl can be horizontally resized at runtime.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowHtmlText">
+            <summary>
+                <para>Gets or sets whether HTML tags can be used to format element header text (<see cref="P:DevExpress.XtraBars.Navigation.AccordionControlElementBase.Text"/>).
+</para>
+            </summary>
+            <value><b>true</b>, if this AccordionControl supports HTML tags, used within the captions of its items.; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowItemSelection">
+            <summary>
+                <para>Gets or sets whether or not this AccordionControl supports the selected state for its Items.
+
+</para>
+            </summary>
+            <value><b>true</b>, if this AccordionControl supports the selected state for its Items; otherwise, <b>false</b>.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowMultipleItemExpansion">
+            <summary>
+                <para>Gets or sets whether or not multiple <see cref="T:DevExpress.XtraBars.Navigation.AccordionControlElement"/>s can be expanded simultaneously.
+
+</para>
+            </summary>
+            <value><b>true</b>, if multiple <see cref="T:DevExpress.XtraBars.Navigation.AccordionControlElement"/>s can be expanded simultaneously; otherwise, <b>false</b>.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowSmoothScrolling">
+            <summary>
+                <para>Gets or sets whether AccordionControl items are scrolled using smoothing animation.
+
+</para>
+            </summary>
+            <value><b>true</b>, if AccordionControl items are scrolled using smoothing animation; otherwise, <b>false</b>.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.AnimationType">
+            <summary>
+                <para>Gets or sets the animation effect that follows expanding\collapsing elements within this AccordionControl.
+</para>
+            </summary>
+            <value>An <see cref="AnimationType"/> enumerator value that specifies the animation effect. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.Appearance">
+            <summary>
+                <para>Provides access to multiple appearance groups that store appearance settings for all accordion elements in every visual state.
+</para>
+            </summary>
+            <value>An <see cref="AccordionControlAppearances"/> object that contains multiple appearance groups that store appearance settings for all accordion elements in every visual state.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.BeginInit">
+            <summary>
+                <para>Starts this AccordionControl's initialization.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.BeginUpdate">
+            <summary>
+                <para>Locks the AccordionControl.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.BorderStyle">
+            <summary>
+                <para>This member is not supported by the AccordionControl class.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.CalcHitInfo(System.Drawing.Point)">
+            <summary>
+                <para>Returns the hit info related to the target point within the AccordionControl.
+</para>
+            </summary>
+            <param name="p">
+		A Point that is the target location for which the hit info should be returned.
+
+            </param>
+            <returns>An <see cref="AccordionControlHitInfo"/> object that allows you to get what accordion element is located at the target position.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.CollapseAll">
+            <summary>
+                <para>Collapses all group elements that belong to this AccordionControl.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.CollapseElement(DevExpress.XtraBars.Navigation.AccordionControlElement)">
+            <summary>
+                <para>Collapses the target accordion element.
+</para>
+            </summary>
+            <param name="element">
+		An  that should be collapsed. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.CollapseElement(DevExpress.XtraBars.Navigation.AccordionControlElement,System.Boolean)">
+            <summary>
+                <para>Collapses the target element with optional animation effects.
+</para>
+            </summary>
+            <param name="element">
+		An AccordionControlElement that has to be collapsed.
+
+            </param>
+            <param name="shouldRunAnimation">
+		<b>true</b>, if collapsing this element should be visualized with animation effects; otherwise, <b>false</b>.
+
+            </param>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.ContextButtonClick">
+            <summary>
+                <para>Occurs whenever an item from either the <see cref="P:DevExpress.XtraBars.Navigation.AccordionControl.GroupContextButtons"/> or <see cref="P:DevExpress.XtraBars.Navigation.AccordionControl.ItemContextButtons"/> collections is clicked.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.ContextButtonCustomize">
+            <summary>
+                <para>Fires before any context button is shown and allows you to dynamically customize it.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ContextButtonsOptions">
+            <summary>
+                <para>Provides access to properties that affect all context buttons within this AccordionControl's elements.
+</para>
+            </summary>
+            <value>A <see cref="AccordionContextItemCollectionOptions"/> object that stores global context button settings.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.CustomContextButtonToolTip">
+            <summary>
+                <para>Allows you to dynamically customize item tooltips.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.CustomDrawElement">
+            <summary>
+                <para>Allows you to draw your own elements upon AccordionControl items and groups using the standard <b>e.Cache</b> and <b>e.Graphics</b> methods.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.CustomElementText">
+            <summary>
+                <para>Provides the capability to dynamically rename specific AccordionControl elements.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.DesignManager">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.DistanceBetweenRootGroups">
+            <summary>
+                <para>Gets or sets the distance between top-level elements.
+</para>
+            </summary>
+            <value>An Int32 value that is the distance between top-level elements.
+
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.ElementClick">
+            <summary>
+                <para>Occurs after any <see cref="T:DevExpress.XtraBars.Navigation.AccordionControlElement"/> hosted in this AccordionControl is clicked.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.ElementDragOver">
+            <summary>
+                <para>Occurs whenever an end-user hovers an element within this AccordionControl while dragging another element.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ElementPositionOnExpanding">
+            <summary>
+                <para>Gets or sets whether expandable groups and elements are scrolled (if required) to make their contents visible when they are expanded.
+</para>
+            </summary>
+            <value>A value that specifies whether elements and groups are scrolled (if required) on their expansion to make their contents visible.
+The <b>Default</b> value is equivalent to <b>ScrollUp</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.Elements">
+            <summary>
+                <para>Provides access to <see cref="T:DevExpress.XtraBars.Navigation.AccordionControlElement"/>s that serve as root elements for this AccordionControl.
+</para>
+            </summary>
+            <value>A <see cref="AccordionControlElementCollection"/> object that stores all <see cref="T:DevExpress.XtraBars.Navigation.AccordionControlElement"/>s that serve as root elements for this AccordionControl.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.EndElementDragging">
+            <summary>
+                <para>Occurs when an end-user releases the currently dragged AccordionControl element.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.EndInit">
+            <summary>
+                <para>Ends the initialization process, launched by the <see cref="M:DevExpress.XtraBars.Navigation.AccordionControl.BeginInit"/> method.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.EndUpdate">
+            <summary>
+                <para>Called after all required modifications are applied to the AccordionControl and forces the control to unlock its UI and reflect these changes.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.ExpandAll">
+            <summary>
+                <para>Expands all group elements within this AccordionControl.
+</para>
+            </summary>
+            <returns><b>true</b>, if AccordionControl groups have been successfully expanded; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.ExpandElement(DevExpress.XtraBars.Navigation.AccordionControlElement)">
+            <summary>
+                <para>Expands the target <see cref="T:DevExpress.XtraBars.Navigation.AccordionControlElement"/>.
+</para>
+            </summary>
+            <param name="element">
+		An  to be expanded.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.ExpandElement(DevExpress.XtraBars.Navigation.AccordionControlElement,System.Boolean)">
+            <summary>
+                <para>Expands the target element with optional animation effects.
+</para>
+            </summary>
+            <param name="element">
+		An AccordionControlElement object that is the element to be expanded.
+
+            </param>
+            <param name="shouldRunAnimation">
+		<b>true</b>, if expanding this element should be followed by animation effects; otherwise, <b>false</b>.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ExpandElementMode">
+            <summary>
+                <para>Gets or sets whether a single element or multiple elements can be expanded simultaneously.
+</para>
+            </summary>
+            <value>A value that defines element expansion mode.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ExpandGroupOnHeaderClick">
+            <summary>
+                <para>Gets or sets whether or not this AccordionControl's groups can be expanded/collapsed by clicking their captions at runtime.
+</para>
+            </summary>
+            <value><b>true</b>, if this AccordionControl's groups can be expanded/collapsed by clicking their captions at runtime; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ExpandItemOnHeaderClick">
+            <summary>
+                <para>Gets or sets whether end-users can click item elements' headers to expand these elements.
+</para>
+            </summary>
+            <value><b>true</b>, if end-users can click item elements' headers to expand these elements; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.ExpandStateChanged">
+            <summary>
+                <para>Fires after an element has been expanded/collapsed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.ExpandStateChanging">
+            <summary>
+                <para>Fires when an element is about to be expanded/collapsed. Allows you to implement a custom element expansion behavior.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.FilterContent">
+            <summary>
+                <para>Allows you to control an element's visibility during a filtration performed using the built-in filter control.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.FilterControl">
+            <summary>
+                <para>Gets or sets a built-in control that provides the filter functionality.
+</para>
+            </summary>
+            <value>A built-in filter control.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.ForceFireChanged">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.ForEachElement(System.Action`1)">
+            <summary>
+                <para>Performs a certain action for each <see cref="T:DevExpress.XtraBars.Navigation.AccordionControl"/> element.
+</para>
+            </summary>
+            <param name="handler">
+		An action to perform against each element.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.ForEachVisibleElement(System.Action`1)">
+            <summary>
+                <para>Performs a certain action for each <see cref="T:DevExpress.XtraBars.Navigation.AccordionControl"/> visible element.
+</para>
+            </summary>
+            <param name="handler">
+		An action to perform against each visible element.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.GetBackColor">
+            <summary>
+                <para>Gets the color, currently assigned to the control's <b>Appearance.ControlAppearance.BackColor</b> property.
+</para>
+            </summary>
+            <returns>A Color object that is the current backcolor of this AccordionControl.
+</returns>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.GetContentContainer">
+            <summary>
+                <para>Allows you to dynamically specify a content container for empty items. This event must be handled along with the <see cref="E:DevExpress.XtraBars.Navigation.AccordionControl.HasContentContainer"/> event.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.GetElements">
+            <summary>
+                <para>Returns a linear list of all elements in the <see cref="T:DevExpress.XtraBars.Navigation.AccordionControl"/>.
+</para>
+            </summary>
+            <returns>A linear list of all elements in the <see cref="T:DevExpress.XtraBars.Navigation.AccordionControl"/>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.GetVisibleElements">
+            <summary>
+                <para>Returns a linear list that comprises visible top-level <see cref="T:DevExpress.XtraBars.Navigation.AccordionControl"/> elements and visible elements that reside within expanded groups.
+</para>
+            </summary>
+            <returns>A linear list of visible elements.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.GroupContextButtons">
+            <summary>
+                <para>Stores context buttons, shared among all AccordionControl groups.
+</para>
+            </summary>
+            <value>A <see cref="ContextItemCollection"/> object that stores context buttons, displayed by any group element within this AccordionControl.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.GroupHeight">
+            <summary>
+                <para>Gets or sets the header height common to all groups (elements whose <see cref="P:DevExpress.XtraBars.Navigation.AccordionControlElement.Style"/> is set to <see cref="F:DevExpress.XtraBars.Navigation.ElementStyle.Group"/>).
+</para>
+            </summary>
+            <value>An Int32 value that is the header height common to all group elements within this AccordionControl.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.HasContentContainer">
+            <summary>
+                <para>Allows you to specify whether an item, when expanded, will display a custom control container. The custom control container should be provided by handling the <see cref="E:DevExpress.XtraBars.Navigation.AccordionControl.GetContentContainer"/> event.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.Images">
+            <summary>
+                <para>Gets or sets the source of images that can be displayed within element headers.
+</para>
+            </summary>
+            <value>The image collection containing images to be displayed in element headers.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.ItemContentContainerHidden">
+            <summary>
+                <para>Occurs whenever an item element hides its content container (if any).
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ItemContextButtons">
+            <summary>
+                <para>Stores context buttons, shared among all AccordionControl items.
+</para>
+            </summary>
+            <value>A <see cref="ContextItemCollection"/> object that stores context buttons, shown by all items within this AccordionControl.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ItemHeight">
+            <summary>
+                <para>Gets or sets the header height common to all items (elements whose <see cref="P:DevExpress.XtraBars.Navigation.AccordionControlElement.Style"/> is set to <see cref="F:DevExpress.XtraBars.Navigation.ElementStyle.Item"/>).
+</para>
+            </summary>
+            <value>The header height, common to all items.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.LockUpdate">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.MakeElementVisible(DevExpress.XtraBars.Navigation.AccordionControlElement)">
+            <summary>
+                <para>Scrolls the AccordionControl up or down until the target element is visible.
+</para>
+            </summary>
+            <param name="element">
+		A  object which is the element that should be visible.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.OnElementCollectionChanged">
+            <summary>
+                <para>Occurs whenever the <see cref="P:DevExpress.XtraBars.Navigation.AccordionControl.Elements"/> collection is modified.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.OptionsMinimizing">
+            <summary>
+                <para>Provides access to options related to minimizing this AccordionControl.
+</para>
+            </summary>
+            <value>A <see cref="OptionsMinimizing"/> object that stores options related to minimizing this AccordionControl.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.Refresh">
+            <summary>
+                <para>Redraws the AccordionControl.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.RestoreFromRegistry(System.String)">
+            <summary>
+                <para>Loads the AccordionControl layout, stored in registry.
+</para>
+            </summary>
+            <param name="path">
+		A String value that is the registry path where the AccordionControl layout is stored.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.RestoreFromStream(System.IO.Stream)">
+            <summary>
+                <para>Loads the AccordionControl layout, stored in a stream.
+
+</para>
+            </summary>
+            <param name="stream">
+		A String value that is the name of the stream that keeps the AccordionControl layout.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.RestoreFromXml(System.String)">
+            <summary>
+                <para>Loads the AccordionControl layout, stored in a local XML file.
+</para>
+            </summary>
+            <param name="xmlFile">
+		A String value that is the path to the XML file that keeps the AccordionControl layout.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.SaveToRegistry(System.String)">
+            <summary>
+                <para>Saves the current AccordionControl layout to the registry.
+
+</para>
+            </summary>
+            <param name="path">
+		A String value that is the registry path to which the current layout should be saved.
+
+            </param>
+            <returns><b>true</b>, if the layout was successfully saved; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.SaveToStream(System.IO.Stream)">
+            <summary>
+                <para>Saves the current AccordionControl layout to a stream.
+
+</para>
+            </summary>
+            <param name="stream">
+		A String value that is the name of the stream that should keep the current AccordionControl layout.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.SaveToXml(System.String)">
+            <summary>
+                <para>Saves the current AccordionControl layout to a local XML file.
+</para>
+            </summary>
+            <param name="xmlFile">
+		A String value that is the name of the XML file that should keep the current AccordionControl layout.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ScaleImages">
+            <summary>
+                <para>Gets or sets whether icons are automatically stretched to match the current DPI settings of the user's monitor.
+</para>
+            </summary>
+            <value><b>True</b>, if icons are scaled to match the current DPI settings; otherwise, <b>Default</b> or <b>False</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ScrollBarMode">
+            <summary>
+                <para>Gets or sets the vertical scroll bar's visibility and style.
+</para>
+            </summary>
+            <value>The vertical scroll bar's visibility and style.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.SelectedElement">
+            <summary>
+                <para>Gets or sets the currently selected item. This property is in effect if item selection is enabled with the <see cref="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowItemSelection"/> property.
+</para>
+            </summary>
+            <value>The currently selected element.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.SelectedElementChanged">
+            <summary>
+                <para>Fires when the <see cref="P:DevExpress.XtraBars.Navigation.AccordionControl.SelectedElement"/> property's value is changed. This event is in effect if item selection is enabled with the <see cref="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowItemSelection"/> property.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.SelectElement(DevExpress.XtraBars.Navigation.AccordionControlElement)">
+            <summary>
+                <para>Selects the specified element.
+This method is in effect if item selection is enabled with the <see cref="P:DevExpress.XtraBars.Navigation.AccordionControl.AllowItemSelection"/> property.
+</para>
+            </summary>
+            <param name="element">
+		An item to select.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.SelectElementMode">
+            <summary>
+                <para>Gets or sets at which moment during an end-user click, an Accordion element this element is considered selected.
+
+</para>
+            </summary>
+            <value>A SelectElementMode enumerator value that specifies at which moment during an end-user clicking an Accordion element, this element is considered selected.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ShouldOptimizeAnimation">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ShowFilterControl">
+            <summary>
+                <para>Gets or sets the built-in filter control's visibility.
+</para>
+            </summary>
+            <value>A value that specifies the built-in filter control's visibility.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ShowGroupExpandButtons">
+            <summary>
+                <para>Gets or sets whether or not AccordionControl groups should display their expand/collapse buttons.
+</para>
+            </summary>
+            <value><b>true</b>, if AccordionControl groups should display their expand/collapse buttons; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ShowItemExpandButtons">
+            <summary>
+                <para>Gets or sets whether item elements should display their expand/collapse buttons.
+</para>
+            </summary>
+            <value><b>true</b>, if item elements should display their expand/collapse buttons; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.StartElementDragging">
+            <summary>
+                <para>Occurs whenever an end-user presses an element owned by this AccordionControl and starts dragging this element away from its original location.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.SuperTip">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ToolTip">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ToolTipIconType">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.AccordionControl.ToolTipTitle">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.AccordionControl.UnlockUpdate">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
 </para>
             </summary>
 
@@ -16226,6 +16259,189 @@ Supports animation effects when navigating through pages.  See Navigation Pane.
 </para>
             </summary>
             <value><b>true</b>, if this FlyoutDialog should use the same background color as the control displayed within it; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraBars.Ribbon.GalleryItemGroup">
+
+            <summary>
+                <para>Represents a group of gallery items within a gallery.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.GalleryItemGroup.#ctor">
+            <summary>
+                <para>Initializes a new instance of the GalleryItemGroup class with the default settings.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.GalleryItemGroup.#ctor(DevExpress.XtraBars.Ribbon.GalleryItemGroup)">
+            <summary>
+                <para>Initializes a new instance of the GalleryItemGroup class with settings of the specified GalleryItemGroup object.
+</para>
+            </summary>
+            <param name="sourceGroup">
+		A GalleryItemGroup object which will be a prototype for the object being created.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.GalleryItemGroup.Assign(DevExpress.XtraBars.Ribbon.GalleryItemGroup)">
+            <summary>
+                <para>Copies settings from the specified object to the current object.
+</para>
+            </summary>
+            <param name="sourceGroup">
+		A GalleryItemGroup object whose settings are copied to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.GalleryItemGroup.Caption">
+            <summary>
+                <para>Specifies the caption of the GalleryItemGroup object.
+</para>
+            </summary>
+            <value>A string which specifies the caption of the GalleryItemGroup object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.GalleryItemGroup.CaptionAlignment">
+            <summary>
+                <para>Gets or sets the horizontal alignment of the group caption content.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraBars.Ribbon.GalleryItemGroupCaptionAlignment"/> value that specifies the alignment of the group caption content.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.GalleryItemGroup.CaptionControl">
+            <summary>
+                <para>Gets or sets a custom control to be displayed within a group caption. This property is only supported for the <see cref="T:DevExpress.XtraBars.Ribbon.GalleryControl"/>.
+</para>
+            </summary>
+            <value>A custom control to be displayed within a group caption.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.GalleryItemGroup.CaptionControlSize">
+            <summary>
+                <para>Gets or sets the size of the control assigned to the <see cref="P:DevExpress.XtraBars.Ribbon.GalleryItemGroup.CaptionControl"/> property.
+</para>
+            </summary>
+            <value>A Size value that specifies the size of the <see cref="P:DevExpress.XtraBars.Ribbon.GalleryItemGroup.CaptionControl"/>.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.GalleryItemGroup.Clone">
+            <summary>
+                <para>Creates a new GalleryItemGroup object with the settings matching those of the current object.
+</para>
+            </summary>
+            <returns>A copy of the current GalleryItemGroup object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.GalleryItemGroup.Dispose">
+            <summary>
+                <para>Releases all resources used by the GalleryItemGroup object.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.GalleryItemGroup.Gallery">
+            <summary>
+                <para>Gets the gallery which owns the current GalleryItemGroup object.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery"/> descendant which owns the current object.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.GalleryItemGroup.GetCheckedItems">
+            <summary>
+                <para>Gets a list of checked items within the current group.
+</para>
+            </summary>
+            <returns>A list of checked gallery items.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.GalleryItemGroup.GetCheckedItemsCount">
+            <summary>
+                <para>Returns the total number of currently checked gallery items in this GalleryItemGroup.
+</para>
+            </summary>
+            <returns>An Int32 value that is the total number of currently checked gallery items in this GalleryItemGroup.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.GalleryItemGroup.GetItemByValue(System.Object)">
+            <summary>
+                <para>Gets a <see cref="T:DevExpress.XtraBars.Ribbon.GalleryItem"/> that matches the specific value.
+</para>
+            </summary>
+            <param name="value">
+		An Object that is the <see cref="T:DevExpress.XtraBars.Ribbon.GalleryItem"/> value.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraBars.Ribbon.GalleryItem"/> that matches the specific value and belongs to the current GalleryItemGroup.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Ribbon.GalleryItemGroup.HasVisibleItems">
+            <summary>
+                <para>Gets whether the current GalleryItemGroup contains any <see cref="T:DevExpress.XtraBars.Ribbon.GalleryItem"/>s currently visible to an end-user.
+</para>
+            </summary>
+            <returns><b>true</b>, if the current GalleryItemGroup contains any <see cref="T:DevExpress.XtraBars.Ribbon.GalleryItem"/>s currently visible to an end-user; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.GalleryItemGroup.Items">
+            <summary>
+                <para>Provides access to the collection of items of the current GalleryItemGroup object.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraBars.Ribbon.GalleryItemCollection"/> object which specifies the collection of items displayed within the current group.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.GalleryItemGroup.Tag">
+            <summary>
+                <para>Gets or sets an object that contains data on the current GalleryItemGroup object.
+</para>
+            </summary>
+            <value>An object that contains data on the current object. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.GalleryItemGroup.Visible">
+            <summary>
+                <para>Gets or sets whether the current GalleryItemGroup object is visible.
+</para>
+            </summary>
+            <value><b>true</b> if the group is visible; otherwise, <b>false</b>.
 </value>
 
 
@@ -21407,22 +21623,6 @@ that was automatically created when the <see cref="P:DevExpress.XtraBars.Navigat
 
 
         </member>
-        <member name="T:DevExpress.XtraBars.Docking2010.Views.Widget.ColumnDefinition">
-
-            <summary>
-                <para>A column within a Widget View.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Views.Widget.ColumnDefinition.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ColumnDefinition class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.XtraBars.Docking2010.Views.Widget.RowDefinition">
 
             <summary>
@@ -23215,6 +23415,83 @@ that was automatically created when the <see cref="P:DevExpress.XtraBars.Navigat
                 <para>Specifies that the merge mechanism should be invoked when a child MDI form is maximized. The unmerge mechanism is invoked when a child form is restored from the maximized view.
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraBars.Docking2010.Views.Widget.IDocumentProperties">
+
+            <summary>
+                <para>Stores default <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/> properties.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.IDocumentProperties.AllowCollapse">
+            <summary>
+                <para>Gets or sets whether any <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/> within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/> can be collapsed.
+</para>
+            </summary>
+            <value><b>true</b>, if any <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/> within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/> can be collapsed; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.IDocumentProperties.AllowDragging">
+            <summary>
+                <para>Gets or sets whether any widget document within this View can be dragged at runtime.
+</para>
+            </summary>
+            <value><b>true</b>, if any widget document within this View can be dragged at runtime; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.IDocumentProperties.AllowMaximize">
+            <summary>
+                <para>Gets or sets 
+</para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.IDocumentProperties.AllowResize">
+            <summary>
+                <para>Gets or sets whether all <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/>s within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/> can be resized at runtime.
+</para>
+            </summary>
+            <value><b>true</b>, if all <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/>s within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/> can be resized at runtime; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.IDocumentProperties.ShowBorders">
+            <summary>
+                <para>Gets or sets whether or not any widget within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/> can display its borders.
+</para>
+            </summary>
+            <value><b>true</b>, if any widget within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/> can display its borders; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.IDocumentProperties.ShowCloseButton">
+            <summary>
+                <para>Gets or sets whether or not all widgets owned by this View display their Close buttons.
+</para>
+            </summary>
+            <value><b>true</b>, if all widgets owned by this View display their Close buttons; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.Widget.IDocumentProperties.ShowMaximizeButton">
+            <summary>
+                <para>Gets or sets whether all <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/>s within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/> should display their maximize buttons.
+</para>
+            </summary>
+            <value><b>true</b>, if all <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.Document"/>s within this <see cref="T:DevExpress.XtraBars.Docking2010.Views.Widget.WidgetView"/> should display their maximize buttons; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -26316,39 +26593,59 @@ that was automatically created when the <see cref="P:DevExpress.XtraBars.Navigat
 
 
         </member>
-        <member name="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.DocumentAction">
+        <member name="T:DevExpress.XtraBars.MenuDrawMode">
 
             <summary>
-                <para>A push button displayed within a Content Container header and related to a specific <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document"/>.
+                <para>Enumerates menu display modes.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.DocumentAction.#ctor(System.Action`1)">
+        <member name="F:DevExpress.XtraBars.MenuDrawMode.Default">
             <summary>
-                <para>Initializes a new instance of the DocumentAction class with the specified functionality.
+                <para>A menu is painted according to its type.
+
+<para>
+For <see cref="T:DevExpress.XtraBars.Ribbon.ApplicationMenu"/> objects, the default draw mode is affected by the <see cref="P:DevExpress.XtraBars.Ribbon.ApplicationMenu.ShowRightPane"/> property. If the <see cref="P:DevExpress.XtraBars.Ribbon.ApplicationMenu.ShowRightPane"/> option is set to <b>false</b>, menu items are painted as in the <see cref="F:DevExpress.XtraBars.MenuDrawMode.LargeImagesTextDescription"/> mode. If the option is set to <b>true</b>, menu items are painted as in the <see cref="F:DevExpress.XtraBars.MenuDrawMode.LargeImagesText"/> draw mode.
+</para>
 </para>
             </summary>
-            <param name="execute">
-		An Action that implements the DocumentAction's functionality.
-
-            </param>
 
 
         </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.DocumentAction.#ctor(System.Predicate`1,System.Action`1)">
+        <member name="F:DevExpress.XtraBars.MenuDrawMode.LargeImagesText">
             <summary>
-                <para>Initializes a new instance of the DocumentAction class with the specified functionality and availability check.
+                <para>Allows menu item captions and large images to be displayed.
+
+<para>
+
+</para>
 </para>
             </summary>
-            <param name="canExecute">
-		A Predicate that specifies the set of criteria and checks whether the Document meets these criteria. The Action is not visible if the <i>canExecute</i> returns <b>false</b>.
 
-            </param>
-            <param name="execute">
-		An Action delegate that implements the DocumentAction's functionality.
 
-            </param>
+        </member>
+        <member name="F:DevExpress.XtraBars.MenuDrawMode.LargeImagesTextDescription">
+            <summary>
+                <para>Allows menu item captions, descriptions and large images to be displayed.
+
+<para>
+
+</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraBars.MenuDrawMode.SmallImagesText">
+            <summary>
+                <para>Allows menu item captions and small images to be displayed.
+
+<para>
+
+</para>
+</para>
+            </summary>
 
 
         </member>
@@ -27176,189 +27473,6 @@ that was automatically created when the <see cref="P:DevExpress.XtraBars.Navigat
 </para>
             </summary>
             <returns> </returns>
-
-
-        </member>
-        <member name="T:DevExpress.XtraBars.Ribbon.GalleryItemGroup">
-
-            <summary>
-                <para>Represents a group of gallery items within a gallery.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Ribbon.GalleryItemGroup.#ctor">
-            <summary>
-                <para>Initializes a new instance of the GalleryItemGroup class with the default settings.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Ribbon.GalleryItemGroup.#ctor(DevExpress.XtraBars.Ribbon.GalleryItemGroup)">
-            <summary>
-                <para>Initializes a new instance of the GalleryItemGroup class with settings of the specified GalleryItemGroup object.
-</para>
-            </summary>
-            <param name="sourceGroup">
-		A GalleryItemGroup object which will be a prototype for the object being created.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Ribbon.GalleryItemGroup.Assign(DevExpress.XtraBars.Ribbon.GalleryItemGroup)">
-            <summary>
-                <para>Copies settings from the specified object to the current object.
-</para>
-            </summary>
-            <param name="sourceGroup">
-		A GalleryItemGroup object whose settings are copied to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Ribbon.GalleryItemGroup.Caption">
-            <summary>
-                <para>Specifies the caption of the GalleryItemGroup object.
-</para>
-            </summary>
-            <value>A string which specifies the caption of the GalleryItemGroup object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Ribbon.GalleryItemGroup.CaptionAlignment">
-            <summary>
-                <para>Gets or sets the horizontal alignment of the group caption content.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraBars.Ribbon.GalleryItemGroupCaptionAlignment"/> value that specifies the alignment of the group caption content.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Ribbon.GalleryItemGroup.CaptionControl">
-            <summary>
-                <para>Gets or sets a custom control to be displayed within a group caption. This property is only supported for the <see cref="T:DevExpress.XtraBars.Ribbon.GalleryControl"/>.
-</para>
-            </summary>
-            <value>A custom control to be displayed within a group caption.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Ribbon.GalleryItemGroup.CaptionControlSize">
-            <summary>
-                <para>Gets or sets the size of the control assigned to the <see cref="P:DevExpress.XtraBars.Ribbon.GalleryItemGroup.CaptionControl"/> property.
-</para>
-            </summary>
-            <value>A Size value that specifies the size of the <see cref="P:DevExpress.XtraBars.Ribbon.GalleryItemGroup.CaptionControl"/>.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Ribbon.GalleryItemGroup.Clone">
-            <summary>
-                <para>Creates a new GalleryItemGroup object with the settings matching those of the current object.
-</para>
-            </summary>
-            <returns>A copy of the current GalleryItemGroup object.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Ribbon.GalleryItemGroup.Dispose">
-            <summary>
-                <para>Releases all resources used by the GalleryItemGroup object.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Ribbon.GalleryItemGroup.Gallery">
-            <summary>
-                <para>Gets the gallery which owns the current GalleryItemGroup object.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery"/> descendant which owns the current object.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Ribbon.GalleryItemGroup.GetCheckedItems">
-            <summary>
-                <para>Gets a list of checked items within the current group.
-</para>
-            </summary>
-            <returns>A list of checked gallery items.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Ribbon.GalleryItemGroup.GetCheckedItemsCount">
-            <summary>
-                <para>Returns the total number of currently checked gallery items in this GalleryItemGroup.
-</para>
-            </summary>
-            <returns>An Int32 value that is the total number of currently checked gallery items in this GalleryItemGroup.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Ribbon.GalleryItemGroup.GetItemByValue(System.Object)">
-            <summary>
-                <para>Gets a <see cref="T:DevExpress.XtraBars.Ribbon.GalleryItem"/> that matches the specific value.
-</para>
-            </summary>
-            <param name="value">
-		An Object that is the <see cref="T:DevExpress.XtraBars.Ribbon.GalleryItem"/> value.
-
-            </param>
-            <returns>A <see cref="T:DevExpress.XtraBars.Ribbon.GalleryItem"/> that matches the specific value and belongs to the current GalleryItemGroup.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Ribbon.GalleryItemGroup.HasVisibleItems">
-            <summary>
-                <para>Gets whether the current GalleryItemGroup contains any <see cref="T:DevExpress.XtraBars.Ribbon.GalleryItem"/>s currently visible to an end-user.
-</para>
-            </summary>
-            <returns><b>true</b>, if the current GalleryItemGroup contains any <see cref="T:DevExpress.XtraBars.Ribbon.GalleryItem"/>s currently visible to an end-user; otherwise, <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Ribbon.GalleryItemGroup.Items">
-            <summary>
-                <para>Provides access to the collection of items of the current GalleryItemGroup object.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraBars.Ribbon.GalleryItemCollection"/> object which specifies the collection of items displayed within the current group.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Ribbon.GalleryItemGroup.Tag">
-            <summary>
-                <para>Gets or sets an object that contains data on the current GalleryItemGroup object.
-</para>
-            </summary>
-            <value>An object that contains data on the current object. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Ribbon.GalleryItemGroup.Visible">
-            <summary>
-                <para>Gets or sets whether the current GalleryItemGroup object is visible.
-</para>
-            </summary>
-            <value><b>true</b> if the group is visible; otherwise, <b>false</b>.
-</value>
 
 
         </member>
@@ -33490,6 +33604,14 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.DisableAccessibility">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.Dock">
             <summary>
                 <para>This member overrides the <see cref="P:System.Windows.Forms.Control.Dock"/> property.
@@ -34628,6 +34750,42 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
+        <member name="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.DocumentAction">
+
+            <summary>
+                <para>A push button displayed within a Content Container header and related to a specific <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.DocumentAction.#ctor(System.Action`1)">
+            <summary>
+                <para>Initializes a new instance of the DocumentAction class with the specified functionality.
+</para>
+            </summary>
+            <param name="execute">
+		An Action that implements the DocumentAction's functionality.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.DocumentAction.#ctor(System.Predicate`1,System.Action`1)">
+            <summary>
+                <para>Initializes a new instance of the DocumentAction class with the specified functionality and availability check.
+</para>
+            </summary>
+            <param name="canExecute">
+		A Predicate that specifies the set of criteria and checks whether the Document meets these criteria. The Action is not visible if the <i>canExecute</i> returns <b>false</b>.
+
+            </param>
+            <param name="execute">
+		An Action delegate that implements the DocumentAction's functionality.
+
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.XtraBars.BarToolbarsListItemLink">
 
             <summary>
@@ -34643,62 +34801,6 @@ A specific version of the addressed image is automatically chosen based on the a
             </summary>
             <value><b>true</b>, if the current menu can be opened; otherwise, <b>false</b>.
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraBars.MenuDrawMode">
-
-            <summary>
-                <para>Enumerates menu display modes.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.XtraBars.MenuDrawMode.Default">
-            <summary>
-                <para>A menu is painted according to its type.
-
-<para>
-For <see cref="T:DevExpress.XtraBars.Ribbon.ApplicationMenu"/> objects, the default draw mode is affected by the <see cref="P:DevExpress.XtraBars.Ribbon.ApplicationMenu.ShowRightPane"/> property. If the <see cref="P:DevExpress.XtraBars.Ribbon.ApplicationMenu.ShowRightPane"/> option is set to <b>false</b>, menu items are painted as in the <see cref="F:DevExpress.XtraBars.MenuDrawMode.LargeImagesTextDescription"/> mode. If the option is set to <b>true</b>, menu items are painted as in the <see cref="F:DevExpress.XtraBars.MenuDrawMode.LargeImagesText"/> draw mode.
-</para>
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraBars.MenuDrawMode.LargeImagesText">
-            <summary>
-                <para>Allows menu item captions and large images to be displayed.
-
-<para>
-
-</para>
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraBars.MenuDrawMode.LargeImagesTextDescription">
-            <summary>
-                <para>Allows menu item captions, descriptions and large images to be displayed.
-
-<para>
-
-</para>
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraBars.MenuDrawMode.SmallImagesText">
-            <summary>
-                <para>Allows menu item captions and small images to be displayed.
-
-<para>
-
-</para>
-</para>
-            </summary>
 
 
         </member>
@@ -34733,11 +34835,9 @@ For <see cref="T:DevExpress.XtraBars.Ribbon.ApplicationMenu"/> objects, the defa
         </member>
         <member name="P:DevExpress.XtraBars.WinRTLiveTiles.WinRTLiveTileManager.ActualSqareTileSize">
             <summary>
-                <para>Gets the actual size of square Tiles within this WinRTLiveTileManager.
-</para>
+                <para>For internal use.</para>
             </summary>
-            <value>A Size structure that is the actual size of square Tiles within this WinRTLiveTileManager.
-</value>
+            <value> </value>
 
 
         </member>
@@ -41103,6 +41203,66 @@ For <see cref="T:DevExpress.XtraBars.Ribbon.ApplicationMenu"/> objects, the defa
 
 
         </member>
+        <member name="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.SplitGroup">
+
+            <summary>
+                <para>A WindowsUI View container that displays all its Documents simultaneously, arranging them in a single row or column without a scroll bar. End-users can resize Documents at runtime by dragging split bars.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.SplitGroup.#ctor">
+            <summary>
+                <para>Initializes a new instance of the SplitGroup class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.SplitGroup.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+                <para>Initializes a new instance of the SplitGroup class with the specified container.
+</para>
+            </summary>
+            <param name="container">
+		An object that implements the <see cref="T:System.ComponentModel.IContainer"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.SplitGroup.#ctor(DevExpress.XtraBars.Docking2010.Views.WindowsUI.ISplitGroupProperties)">
+            <summary>
+                <para>Initializes a new instance of the SplitGroup class with custom settings.
+</para>
+            </summary>
+            <param name="defaultProperties">
+		An ISplitGroupProperties object that specifies custom settings for the newly created SplitGroup.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.SplitGroup.DetailContainerProperties">
+            <summary>
+                <para>Provides access to properties of the content container that displays individual documents hosted within this SplitGroup.
+</para>
+            </summary>
+            <value>A <see cref="IContentContainerDefaultProperties"/> object that stores properties of the content container that displays individual documents hosted within this SplitGroup.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.SplitGroup.Properties">
+            <summary>
+                <para>Provides access to the current SplitGroup's settings.
+</para>
+            </summary>
+            <value>An ISplitGroupDefaultProperties object that contains settings for the current SplitGroup.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.PageGroup">
 
             <summary>
@@ -44716,186 +44876,6 @@ For <see cref="T:DevExpress.XtraBars.Ribbon.ApplicationMenu"/> objects, the defa
 
 
         </member>
-        <member name="T:DevExpress.XtraBars.Docking.DockingOptions">
-
-            <summary>
-                <para>Provides docking options that are common to all dock panels.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking.DockingOptions.#ctor">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraBars.Docking.DockingOptions"/> class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking.DockingOptions.#ctor(DevExpress.XtraBars.Docking.DockManager)">
-            <summary>
-                <para>Initializes a new instance of the DockingOptions class with the specified settings.
-</para>
-            </summary>
-            <param name="owner">
-		A DockManager that owns this newly created DockingOptions object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.AllowRestoreToAutoHideContainer">
-            <summary>
-                <para>Gets or sets whether or not dock panels that have been dragged away from their parent auto-hide containers should return to these containers when docked again.
-
-</para>
-            </summary>
-            <value><b>true</b> if dock panels should return to their former auto-hide containers when docked; otherwise, <b>false</b>.
-
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking.DockingOptions.Assign(DevExpress.Utils.Controls.BaseOptions)">
-            <summary>
-                <para>Copies all the settings from the options object passed as the parameter.
-</para>
-            </summary>
-            <param name="options">
-		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> descendant whose settings are assigned to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.AutoHidePanelVerticalTextOrientation">
-            <summary>
-                <para>Specifies the vertical direction of auto-hidden panel captions.
-
-</para>
-            </summary>
-            <value>The vertical text direction of auto-hidden panel captions.
-
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.CloseActiveFloatTabOnly">
-            <summary>
-                <para>Gets or sets whether only a dock panel corresponding to the active tab within a floating container can be closed upon clicking the close button.
-
-</para>
-            </summary>
-            <value><b>true</b> if only dock panel corresponding to the active tab within a floating container can be closed upon clicking the close button; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.CloseActiveTabOnly">
-            <summary>
-                <para>Gets or sets whether only the dock panel corresponding to the currently active tab in a tab container is closed when the close button within the  tab container's caption is clicked. The option is not in effect when the tab container is in the floating state.
-</para>
-            </summary>
-            <value><b>true</b> to close only the dock panel corresponding to the currently active tab when a tab container's close button is clicked; <b>false</b> to close the tab container.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.CursorFloatCanceled">
-            <summary>
-                <para>Gets or sets the cursor that indicates that a dock panel cannot be floating during a dock operation.
-
-</para>
-            </summary>
-            <value>A <see cref="T:System.Windows.Forms.Cursor"/> object that represents the corresponding cursor.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.CustomResizeZoneThickness">
-            <summary>
-                <para>Gets or sets the thickness of a resize zone for any dock panel owned by this manager.
-</para>
-            </summary>
-            <value>An Int32 value that is the resize zone thickness.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.DockPanelInCaptionRegion">
-            <summary>
-                <para>Gets or sets whether a panel can be docked as a tab to another panel while dragging over its header.
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration value that specifies whether a panel can be docked while dragging this panel over the header of another panel.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.DockPanelInTabContainerTabRegion">
-            <summary>
-                <para>Gets or sets whether the panel is immediately docked while dragging over the tab region or the panel is docked when it is dropped.
-</para>
-            </summary>
-            <value>The <b>DockPanelInTabContainerTabRegion</b> value that specifies whether the panel is immediately docked while dragging over the tab region or the panel is docked when it is dropped.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.HideImmediatelyOnAutoHide">
-            <summary>
-                <para>Gets or sets whether dock panels are immediately hidden when their auto hide functionality is enabled.
-</para>
-            </summary>
-            <value><b>true</b> to hide dock panels immediately when their auto hide functionality is enabled; <b>false</b> to hide dock panels using the sliding animation effect, and only when the mouse pointer leaves their area.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.ShowCaptionImage">
-            <summary>
-                <para>Gets or sets whether an image associated with a dock panel is displayed within the panel's caption.
-</para>
-            </summary>
-            <value><b>true</b> if a dock panel's image is displayed in the panel's caption; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.ShowCaptionOnMouseHover">
-            <summary>
-                <para>Gets or sets whether the dock panel's caption is shown only when the mouse pointer hovers over the panel's top or all the time.
-</para>
-            </summary>
-            <value><b>true</b> to show the panel's caption when the mouse pointer hovers over the panel's top; <b>false</b> the panel captions are always shown.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.SnapMode">
-            <summary>
-                <para>Gets or sets whether or not dock panels can stick to each other, parent forms or screen edges.
-</para>
-            </summary>
-            <value>A <see cref="SnapMode"/> enumerator value that specifies whether or not dock panels can stick to each other, parent forms or screen edges.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockingOptions.TabbedPanelVerticalTextOrientation">
-            <summary>
-                <para>Gets or sets the text direction, according to which tabbed panels' header strings are drawn.
-</para>
-            </summary>
-            <value>A <see cref="VerticalTextOrientation"/> enumerator value that specifies the text direction, according to which tabbed panels' header strings are drawn.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraBars.Docking.ControlContainer">
 
             <summary>
@@ -44985,92 +44965,105 @@ For <see cref="T:DevExpress.XtraBars.Ribbon.ApplicationMenu"/> objects, the defa
 
 
         </member>
-        <member name="T:DevExpress.XtraBars.Docking.HitTest">
+        <member name="T:DevExpress.XtraBars.Docking.AutoHideContainer">
 
             <summary>
-                <para>Lists values which identify the elements in a dock panel.
+                <para>Represents an auto hide container.
 </para>
             </summary>
 
         </member>
-        <member name="F:DevExpress.XtraBars.Docking.HitTest.AutoHidePanel">
+        <member name="M:DevExpress.XtraBars.Docking.AutoHideContainer.#ctor">
             <summary>
-                <para>The test point belongs to the label within the auto hide container which corresponds to a dock panel with its auto hiding functionality enabled.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraBars.Docking.HitTest.Border">
-            <summary>
-                <para>The test point belongs to the dock panel's border.
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraBars.Docking.AutoHideContainer"/> class.
 </para>
             </summary>
 
 
         </member>
-        <member name="F:DevExpress.XtraBars.Docking.HitTest.Caption">
+        <member name="M:DevExpress.XtraBars.Docking.AutoHideContainer.Contains(DevExpress.XtraBars.Docking.DockPanel)">
             <summary>
-                <para>The test point belongs to a dock panel's caption.
+                <para>Indicates whether the auto hide container holds the specified dock panel.
 </para>
             </summary>
+            <param name="panel">
+		A <see cref="T:DevExpress.XtraBars.Docking.DockPanel"/> object to locate.
+
+            </param>
+            <returns><b>true</b> if the auto hide container holds the specified dock panel; otherwise, <b>false</b>.
+</returns>
 
 
         </member>
-        <member name="F:DevExpress.XtraBars.Docking.HitTest.Client">
+        <member name="P:DevExpress.XtraBars.Docking.AutoHideContainer.Count">
             <summary>
-                <para>The test point belongs to the dock panel's client area.
+                <para>Gets the number of dock panels contained within the auto hide container.
 </para>
             </summary>
+            <value>An integer value specifying the number of dock panels contained within the auto hide container.
+</value>
 
 
         </member>
-        <member name="F:DevExpress.XtraBars.Docking.HitTest.EmbeddedButtonPanel">
+        <member name="P:DevExpress.XtraBars.Docking.AutoHideContainer.Dock">
             <summary>
-                <para>The test point belongs to the header buttons panel, which contains both default and custom header buttons.
-
+                <para>Gets or sets a value specifying how the auto hide container is aligned within its parent control.
 </para>
             </summary>
+            <value>A <see cref="T:System.Windows.Forms.DockStyle"/> enumeration value specifying the manner in which an auto hide container is docked.
+</value>
 
 
         </member>
-        <member name="F:DevExpress.XtraBars.Docking.HitTest.NextTabButton">
+        <member name="M:DevExpress.XtraBars.Docking.AutoHideContainer.GetHitInfo(System.Drawing.Point)">
             <summary>
-                <para>The test point belongs to a scroll button used to traverse forwards through the tabs in a tab container.
+                <para>Returns information about the container's element located at the specified point.
 </para>
             </summary>
+            <param name="ptClient">
+		A <see cref="T:System.Drawing.Point"/> structure which specifies the test point coordinates relative to the container's top-left corner.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraBars.Docking.HitInfo"/> object which contains information about the auto hide container's element at the test point.
+</returns>
 
 
         </member>
-        <member name="F:DevExpress.XtraBars.Docking.HitTest.None">
+        <member name="M:DevExpress.XtraBars.Docking.AutoHideContainer.IndexOf(DevExpress.XtraBars.Docking.DockPanel)">
             <summary>
-                <para>The test point is not within a dock panel.
+                <para>Returns the specified dock panel's position within the auto hide container.
 </para>
             </summary>
+            <param name="panel">
+		A <see cref="T:DevExpress.XtraBars.Docking.DockPanel"/> object to locate.
+
+            </param>
+            <returns>A zero-based integer representing the dock panel's position within the auto hide container. <b>-1</b> if the auto hide container doesn't contain the specified dock panel.
+</returns>
 
 
         </member>
-        <member name="F:DevExpress.XtraBars.Docking.HitTest.PrevTabButton">
+        <member name="P:DevExpress.XtraBars.Docking.AutoHideContainer.Item(System.Int32)">
             <summary>
-                <para>The test point belongs to a scroll button used to traverse backwards through the tabs in a tab container.
+                <para>Provides indexed access to the dock panels contained within the auto hide container.
 </para>
             </summary>
+            <param name="index">
+		An integer value specifying the dock panel's zero-based index within the collection.
+
+            </param>
+            <value>A <see cref="T:DevExpress.XtraBars.Docking.DockPanel"/> object representing the dock panel located at the specified position.
+</value>
 
 
         </member>
-        <member name="F:DevExpress.XtraBars.Docking.HitTest.Tab">
+        <member name="P:DevExpress.XtraBars.Docking.AutoHideContainer.Position">
             <summary>
-                <para>The test point belongs to a tab button in a tab container.
+                <para>Gets the position of the auto hide container within its parent control.
 </para>
             </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraBars.Docking.HitTest.TabPanel">
-            <summary>
-                <para>The test point belongs to a tab panel in a tab container.
-</para>
-            </summary>
+            <value>A <see cref="T:DevExpress.XtraBars.Docking.TabsPosition"/> enumeration value specifying the position of the auto hide container within its parent control.
+</value>
 
 
         </member>
@@ -45130,168 +45123,6 @@ It's not possible to make a dock panel fill the form (user control).
         <member name="F:DevExpress.XtraBars.Docking.DockingStyle.Top">
             <summary>
                 <para>The dock panel's top edge is docked to the top of its containing control.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout">
-
-            <summary>
-                <para>A WindowsUIView container that emulates Windows8-styled message boxes and pop-up windows.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.#ctor">
-            <summary>
-                <para>Initializes a new instance of the Flyout class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.#ctor(DevExpress.XtraBars.Docking2010.Views.WindowsUI.IFlyoutProperties)">
-            <summary>
-                <para>Initializes a new instance of the Flyout class with specific settings.
-</para>
-            </summary>
-            <param name="defaultProperties">
-		An IFlyoutProperties object that stores specific settings for the newly created Flyout.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.#ctor(System.ComponentModel.IContainer)">
-            <summary>
-                <para>Initializes a new instance of the Flyout object with specific owner.
-</para>
-            </summary>
-            <param name="container">
-		An IContainer object that owns the newly created Flyout.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.Action">
-            <summary>
-                <para>Gets or sets a <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> used by the current Flyout.
-</para>
-            </summary>
-            <value>A FlyoutAction object used by the current Flyout.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.AppearanceButton">
-            <summary>
-                <para>WindowsUI Buttons are not supported within Flyout containers.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.ButtonBackgroundImages">
-            <summary>
-                <para>WindowsUI Buttons are not supported within Flyout containers.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.ButtonChecked">
-            <summary>
-                <para>WindowsUI Buttons are not supported within Flyout containers.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.ButtonClick">
-            <summary>
-                <para>WindowsUI Buttons are not supported within Flyout containers.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.ButtonInterval">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.Buttons">
-            <summary>
-                <para>WindowsUI Buttons are not supported within Flyout containers.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.ButtonUnchecked">
-            <summary>
-                <para>WindowsUI Buttons are not supported within Flyout containers.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.Document">
-            <summary>
-                <para>Gets or sets a <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document"/> displayed within the current Flyout.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document"/> displayed within the current Flyout.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.FlyoutButtons">
-            <summary>
-                <para>Gets or sets buttons displayed within the current Flyout.
-</para>
-            </summary>
-            <value>A MessageBoxButtons enumerator value that specifies the buttons displayed within the current Flyout.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.LastResult">
-            <summary>
-                <para>Gets the last result returned by this Flyout.
-</para>
-            </summary>
-            <value>A DialogResult value that specifies the last result returned by this Flyout.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.Properties">
-            <summary>
-                <para>Provides access to the object that stores the current Flyout settings.
-</para>
-            </summary>
-            <value>An IFlyoutDefaultProperties object that stores the current Flyout settings.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.UpdateDocumentActions">
-            <summary>
-                <para>Refreshes document actions displayed within this Flyout.
 </para>
             </summary>
 
@@ -47851,6 +47682,168 @@ If such an item is not found in the parent form's bar/RibbonControl, the child f
 
 
         </member>
+        <member name="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout">
+
+            <summary>
+                <para>A WindowsUIView container that emulates Windows8-styled message boxes and pop-up windows.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.#ctor">
+            <summary>
+                <para>Initializes a new instance of the Flyout class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.#ctor(DevExpress.XtraBars.Docking2010.Views.WindowsUI.IFlyoutProperties)">
+            <summary>
+                <para>Initializes a new instance of the Flyout class with specific settings.
+</para>
+            </summary>
+            <param name="defaultProperties">
+		An IFlyoutProperties object that stores specific settings for the newly created Flyout.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+                <para>Initializes a new instance of the Flyout object with specific owner.
+</para>
+            </summary>
+            <param name="container">
+		An IContainer object that owns the newly created Flyout.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.Action">
+            <summary>
+                <para>Gets or sets a <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction"/> used by the current Flyout.
+</para>
+            </summary>
+            <value>A FlyoutAction object used by the current Flyout.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.AppearanceButton">
+            <summary>
+                <para>WindowsUI Buttons are not supported within Flyout containers.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.ButtonBackgroundImages">
+            <summary>
+                <para>WindowsUI Buttons are not supported within Flyout containers.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.ButtonChecked">
+            <summary>
+                <para>WindowsUI Buttons are not supported within Flyout containers.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.ButtonClick">
+            <summary>
+                <para>WindowsUI Buttons are not supported within Flyout containers.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.ButtonInterval">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.Buttons">
+            <summary>
+                <para>WindowsUI Buttons are not supported within Flyout containers.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.ButtonUnchecked">
+            <summary>
+                <para>WindowsUI Buttons are not supported within Flyout containers.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.Document">
+            <summary>
+                <para>Gets or sets a <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document"/> displayed within the current Flyout.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document"/> displayed within the current Flyout.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.FlyoutButtons">
+            <summary>
+                <para>Gets or sets buttons displayed within the current Flyout.
+</para>
+            </summary>
+            <value>A MessageBoxButtons enumerator value that specifies the buttons displayed within the current Flyout.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.LastResult">
+            <summary>
+                <para>Gets the last result returned by this Flyout.
+</para>
+            </summary>
+            <value>A DialogResult value that specifies the last result returned by this Flyout.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.Properties">
+            <summary>
+                <para>Provides access to the object that stores the current Flyout settings.
+</para>
+            </summary>
+            <value>An IFlyoutDefaultProperties object that stores the current Flyout settings.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking2010.Views.WindowsUI.Flyout.UpdateDocumentActions">
+            <summary>
+                <para>Refreshes document actions displayed within this Flyout.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraBars.Docking2010.Views.Widget.IStackGroupProperties">
 
             <summary>
@@ -49643,6 +49636,38 @@ Return value: Visible
         <member name="M:DevExpress.XtraBars.BarDockWindowCollection.#ctor">
             <summary>
                 <para>Initializes a new instance of the <see cref="T:DevExpress.XtraBars.BarDockWindowCollection"/> class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraBars.BarDockWindow">
+
+            <summary>
+                <para>Represents a dock window.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraBars.BarDockWindow.#ctor">
+            <summary>
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraBars.BarDockWindow"/> class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.BarDockWindow.BeginInit">
+            <summary>
+                <para>Begins initialization of the component.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.BarDockWindow.EndInit">
+            <summary>
+                <para>Ends component initialization. 
 </para>
             </summary>
 

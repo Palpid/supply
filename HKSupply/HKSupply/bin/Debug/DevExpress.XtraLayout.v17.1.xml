@@ -116,30 +116,6 @@ For the root group, its parent is the LayoutControl itself (the LayoutControl's 
 
 
         </member>
-        <member name="T:DevExpress.XtraLayout.MoveFocusDirection">
-
-            <summary>
-                <para>Specifies the direction in which focus is moved when the TAB key is pressed.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.XtraLayout.MoveFocusDirection.AcrossThenDown">
-            <summary>
-                <para>Focus moves from one 'row' to another selecting each control in a row.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraLayout.MoveFocusDirection.DownThenAcross">
-            <summary>
-                <para>Focus moves from one 'column' to another selecting each control in a column 
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.XtraLayout.Customization.LayoutItemDragController">
 
             <summary>
@@ -3217,6 +3193,30 @@ For the root group, its parent is the LayoutControl itself (the LayoutControl's 
         <member name="F:DevExpress.XtraLayout.SizeConstraintsType.SupportHorzAlignment">
             <summary>
                 <para>This mode is designed to support horizontal alignment of the controls that implement the automatic sizing feature, when they are displayed within a LayoutControl. A layout item's maximum and minimum sizes are determined automatically. To custom align a control, set its AutoSizeInLayoutControl property to <b>true</b> and specify the control's alignment via the <see cref="P:DevExpress.XtraLayout.LayoutControlItem.ControlAlignment"/> property. See Aligning Controls Within Layout Items to learn more.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraLayout.MoveFocusDirection">
+
+            <summary>
+                <para>Specifies the direction in which focus is moved when the TAB key is pressed.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraLayout.MoveFocusDirection.AcrossThenDown">
+            <summary>
+                <para>Focus moves from one 'row' to another selecting each control in a row.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraLayout.MoveFocusDirection.DownThenAcross">
+            <summary>
+                <para>Focus moves from one 'column' to another selecting each control in a column 
 </para>
             </summary>
 
