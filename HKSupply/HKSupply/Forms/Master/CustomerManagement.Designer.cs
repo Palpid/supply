@@ -218,21 +218,29 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Size = new System.Drawing.Size(1561, 179);
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ribbonControl.Size = new System.Drawing.Size(1338, 79);
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.ribbonPage1.Appearance.Options.UseFont = true;
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1561, 40);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1338, 31);
             // 
             // xtcGeneral
             // 
             this.xtcGeneral.Appearance.Options.UseTextOptions = true;
             this.xtcGeneral.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.xtcGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtcGeneral.Location = new System.Drawing.Point(0, 179);
+            this.xtcGeneral.Location = new System.Drawing.Point(0, 79);
+            this.xtcGeneral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtcGeneral.Name = "xtcGeneral";
             this.xtcGeneral.SelectedTabPage = this.xtpList;
-            this.xtcGeneral.Size = new System.Drawing.Size(1561, 518);
+            this.xtcGeneral.Size = new System.Drawing.Size(1338, 489);
             this.xtcGeneral.TabIndex = 3;
             this.xtcGeneral.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpList,
@@ -242,16 +250,18 @@
             // 
             this.xtpList.Controls.Add(this.sbLoad);
             this.xtpList.Controls.Add(this.xgrdCustomers);
+            this.xtpList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtpList.Name = "xtpList";
-            this.xtpList.Size = new System.Drawing.Size(1554, 484);
+            this.xtpList.Size = new System.Drawing.Size(1332, 461);
             this.xtpList.Text = "List";
             // 
             // sbLoad
             // 
             this.sbLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbLoad.Location = new System.Drawing.Point(1419, 3);
+            this.sbLoad.Location = new System.Drawing.Point(1216, 2);
+            this.sbLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sbLoad.Name = "sbLoad";
-            this.sbLoad.Size = new System.Drawing.Size(132, 38);
+            this.sbLoad.Size = new System.Drawing.Size(113, 31);
             this.sbLoad.TabIndex = 1;
             this.sbLoad.Text = "Load";
             this.sbLoad.Click += new System.EventHandler(this.sbLoad_Click);
@@ -261,11 +271,13 @@
             this.xgrdCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.xgrdCustomers.Location = new System.Drawing.Point(3, 47);
+            this.xgrdCustomers.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.xgrdCustomers.Location = new System.Drawing.Point(3, 38);
             this.xgrdCustomers.MainView = this.rootGridViewCustomers;
+            this.xgrdCustomers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xgrdCustomers.MenuManager = this.ribbonControl;
             this.xgrdCustomers.Name = "xgrdCustomers";
-            this.xgrdCustomers.Size = new System.Drawing.Size(1548, 434);
+            this.xgrdCustomers.Size = new System.Drawing.Size(1327, 421);
             this.xgrdCustomers.TabIndex = 0;
             this.xgrdCustomers.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.rootGridViewCustomers});
@@ -280,8 +292,9 @@
             this.xtpForm.Controls.Add(this.groupControlHistory);
             this.xtpForm.Controls.Add(this.sbNewVersion);
             this.xtpForm.Controls.Add(this.layoutControlForm);
+            this.xtpForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtpForm.Name = "xtpForm";
-            this.xtpForm.Size = new System.Drawing.Size(1530, 470);
+            this.xtpForm.Size = new System.Drawing.Size(1332, 461);
             this.xtpForm.Text = "Form";
             // 
             // groupControlHistory
@@ -292,9 +305,10 @@
             this.groupControlHistory.Appearance.BackColor = System.Drawing.Color.White;
             this.groupControlHistory.Appearance.Options.UseBackColor = true;
             this.groupControlHistory.Controls.Add(this.xtraScrollableControl1);
-            this.groupControlHistory.Location = new System.Drawing.Point(614, 19);
+            this.groupControlHistory.Location = new System.Drawing.Point(526, 15);
+            this.groupControlHistory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControlHistory.Name = "groupControlHistory";
-            this.groupControlHistory.Size = new System.Drawing.Size(810, 443);
+            this.groupControlHistory.Size = new System.Drawing.Size(694, 428);
             this.groupControlHistory.TabIndex = 5;
             this.groupControlHistory.Text = "History";
             // 
@@ -308,17 +322,19 @@
             this.xtraScrollableControl1.Controls.Add(this.sbForward);
             this.xtraScrollableControl1.Controls.Add(this.layoutControlHistory);
             this.xtraScrollableControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraScrollableControl1.Location = new System.Drawing.Point(2, 25);
+            this.xtraScrollableControl1.Location = new System.Drawing.Point(2, 20);
+            this.xtraScrollableControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtraScrollableControl1.Name = "xtraScrollableControl1";
-            this.xtraScrollableControl1.Size = new System.Drawing.Size(806, 416);
+            this.xtraScrollableControl1.Size = new System.Drawing.Size(690, 406);
             this.xtraScrollableControl1.TabIndex = 0;
             // 
             // sbSetCurrentSubversion
             // 
             this.sbSetCurrentSubversion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.sbSetCurrentSubversion.Location = new System.Drawing.Point(30, 360);
+            this.sbSetCurrentSubversion.Location = new System.Drawing.Point(26, 361);
+            this.sbSetCurrentSubversion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sbSetCurrentSubversion.Name = "sbSetCurrentSubversion";
-            this.sbSetCurrentSubversion.Size = new System.Drawing.Size(149, 38);
+            this.sbSetCurrentSubversion.Size = new System.Drawing.Size(128, 31);
             this.sbSetCurrentSubversion.TabIndex = 7;
             this.sbSetCurrentSubversion.Text = "Set Current Subversion";
             this.sbSetCurrentSubversion.Click += new System.EventHandler(this.sbSetCurrentSubversion_Click);
@@ -326,9 +342,10 @@
             // sbSetCurrentVersion
             // 
             this.sbSetCurrentVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.sbSetCurrentVersion.Location = new System.Drawing.Point(194, 360);
+            this.sbSetCurrentVersion.Location = new System.Drawing.Point(166, 361);
+            this.sbSetCurrentVersion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sbSetCurrentVersion.Name = "sbSetCurrentVersion";
-            this.sbSetCurrentVersion.Size = new System.Drawing.Size(149, 38);
+            this.sbSetCurrentVersion.Size = new System.Drawing.Size(128, 31);
             this.sbSetCurrentVersion.TabIndex = 6;
             this.sbSetCurrentVersion.Text = "Set Current Version";
             this.sbSetCurrentVersion.Click += new System.EventHandler(this.sbSetCurrentVersion_Click);
@@ -336,9 +353,10 @@
             // sbBackward
             // 
             this.sbBackward.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbBackward.Location = new System.Drawing.Point(656, 360);
+            this.sbBackward.Location = new System.Drawing.Point(561, 361);
+            this.sbBackward.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sbBackward.Name = "sbBackward";
-            this.sbBackward.Size = new System.Drawing.Size(64, 38);
+            this.sbBackward.Size = new System.Drawing.Size(55, 31);
             this.sbBackward.TabIndex = 5;
             this.sbBackward.Text = "<";
             this.sbBackward.Click += new System.EventHandler(this.sbBackward_Click);
@@ -346,9 +364,10 @@
             // sbForward
             // 
             this.sbForward.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbForward.Location = new System.Drawing.Point(726, 360);
+            this.sbForward.Location = new System.Drawing.Point(621, 361);
+            this.sbForward.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sbForward.Name = "sbForward";
-            this.sbForward.Size = new System.Drawing.Size(64, 38);
+            this.sbForward.Size = new System.Drawing.Size(55, 31);
             this.sbForward.TabIndex = 4;
             this.sbForward.Text = ">";
             this.sbForward.Click += new System.EventHandler(this.sbForward_Click);
@@ -377,182 +396,202 @@
             this.layoutControlHistory.Controls.Add(this.txtHIdSubversion);
             this.layoutControlHistory.Controls.Add(this.txtHIdVersion);
             this.layoutControlHistory.Controls.Add(this.txtHIdCustomer);
-            this.layoutControlHistory.Location = new System.Drawing.Point(3, 6);
+            this.layoutControlHistory.Location = new System.Drawing.Point(3, 5);
+            this.layoutControlHistory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.layoutControlHistory.Name = "layoutControlHistory";
             this.layoutControlHistory.Root = this.layoutControlGroup3;
-            this.layoutControlHistory.Size = new System.Drawing.Size(787, 337);
+            this.layoutControlHistory.Size = new System.Drawing.Size(674, 342);
             this.layoutControlHistory.TabIndex = 3;
             this.layoutControlHistory.Text = "Id Version";
             // 
             // txtHComments
             // 
-            this.txtHComments.Location = new System.Drawing.Point(178, 405);
+            this.txtHComments.Location = new System.Drawing.Point(147, 347);
+            this.txtHComments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHComments.MenuManager = this.ribbonControl;
             this.txtHComments.Name = "txtHComments";
-            this.txtHComments.Size = new System.Drawing.Size(593, 22);
+            this.txtHComments.Size = new System.Drawing.Size(498, 20);
             this.txtHComments.StyleController = this.layoutControlHistory;
             this.txtHComments.TabIndex = 22;
             // 
             // txtHContactNameZh
             // 
-            this.txtHContactNameZh.Location = new System.Drawing.Point(178, 349);
+            this.txtHContactNameZh.Location = new System.Drawing.Point(147, 299);
+            this.txtHContactNameZh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHContactNameZh.MenuManager = this.ribbonControl;
             this.txtHContactNameZh.Name = "txtHContactNameZh";
-            this.txtHContactNameZh.Size = new System.Drawing.Size(593, 22);
+            this.txtHContactNameZh.Size = new System.Drawing.Size(498, 20);
             this.txtHContactNameZh.StyleController = this.layoutControlHistory;
             this.txtHContactNameZh.TabIndex = 21;
             // 
             // txtHContactPhone
             // 
-            this.txtHContactPhone.Location = new System.Drawing.Point(178, 377);
+            this.txtHContactPhone.Location = new System.Drawing.Point(147, 323);
+            this.txtHContactPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHContactPhone.MenuManager = this.ribbonControl;
             this.txtHContactPhone.Name = "txtHContactPhone";
-            this.txtHContactPhone.Size = new System.Drawing.Size(593, 22);
+            this.txtHContactPhone.Size = new System.Drawing.Size(498, 20);
             this.txtHContactPhone.StyleController = this.layoutControlHistory;
             this.txtHContactPhone.TabIndex = 20;
             // 
             // txtHIdIncoterm
             // 
-            this.txtHIdIncoterm.Location = new System.Drawing.Point(178, 433);
+            this.txtHIdIncoterm.Location = new System.Drawing.Point(147, 371);
+            this.txtHIdIncoterm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIdIncoterm.MenuManager = this.ribbonControl;
             this.txtHIdIncoterm.Name = "txtHIdIncoterm";
-            this.txtHIdIncoterm.Size = new System.Drawing.Size(593, 22);
+            this.txtHIdIncoterm.Size = new System.Drawing.Size(498, 20);
             this.txtHIdIncoterm.StyleController = this.layoutControlHistory;
             this.txtHIdIncoterm.TabIndex = 19;
             // 
             // txtHIdPaymentTerms
             // 
-            this.txtHIdPaymentTerms.Location = new System.Drawing.Point(178, 461);
+            this.txtHIdPaymentTerms.Location = new System.Drawing.Point(147, 395);
+            this.txtHIdPaymentTerms.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIdPaymentTerms.MenuManager = this.ribbonControl;
             this.txtHIdPaymentTerms.Name = "txtHIdPaymentTerms";
-            this.txtHIdPaymentTerms.Size = new System.Drawing.Size(593, 22);
+            this.txtHIdPaymentTerms.Size = new System.Drawing.Size(498, 20);
             this.txtHIdPaymentTerms.StyleController = this.layoutControlHistory;
             this.txtHIdPaymentTerms.TabIndex = 18;
             // 
             // txtHIdDefaultCurrency
             // 
-            this.txtHIdDefaultCurrency.Location = new System.Drawing.Point(178, 489);
+            this.txtHIdDefaultCurrency.Location = new System.Drawing.Point(147, 419);
+            this.txtHIdDefaultCurrency.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIdDefaultCurrency.MenuManager = this.ribbonControl;
             this.txtHIdDefaultCurrency.Name = "txtHIdDefaultCurrency";
-            this.txtHIdDefaultCurrency.Size = new System.Drawing.Size(593, 22);
+            this.txtHIdDefaultCurrency.Size = new System.Drawing.Size(498, 20);
             this.txtHIdDefaultCurrency.StyleController = this.layoutControlHistory;
             this.txtHIdDefaultCurrency.TabIndex = 17;
             // 
             // txtHContactName
             // 
-            this.txtHContactName.Location = new System.Drawing.Point(178, 321);
+            this.txtHContactName.Location = new System.Drawing.Point(147, 275);
+            this.txtHContactName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHContactName.MenuManager = this.ribbonControl;
             this.txtHContactName.Name = "txtHContactName";
-            this.txtHContactName.Size = new System.Drawing.Size(593, 22);
+            this.txtHContactName.Size = new System.Drawing.Size(498, 20);
             this.txtHContactName.StyleController = this.layoutControlHistory;
             this.txtHContactName.TabIndex = 16;
             // 
             // txtHBillingAddressZh
             // 
-            this.txtHBillingAddressZh.Location = new System.Drawing.Point(178, 293);
+            this.txtHBillingAddressZh.Location = new System.Drawing.Point(147, 251);
+            this.txtHBillingAddressZh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHBillingAddressZh.MenuManager = this.ribbonControl;
             this.txtHBillingAddressZh.Name = "txtHBillingAddressZh";
-            this.txtHBillingAddressZh.Size = new System.Drawing.Size(593, 22);
+            this.txtHBillingAddressZh.Size = new System.Drawing.Size(498, 20);
             this.txtHBillingAddressZh.StyleController = this.layoutControlHistory;
             this.txtHBillingAddressZh.TabIndex = 15;
             // 
             // txtHBillingAddress
             // 
-            this.txtHBillingAddress.Location = new System.Drawing.Point(178, 265);
+            this.txtHBillingAddress.Location = new System.Drawing.Point(147, 227);
+            this.txtHBillingAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHBillingAddress.MenuManager = this.ribbonControl;
             this.txtHBillingAddress.Name = "txtHBillingAddress";
-            this.txtHBillingAddress.Size = new System.Drawing.Size(593, 22);
+            this.txtHBillingAddress.Size = new System.Drawing.Size(498, 20);
             this.txtHBillingAddress.StyleController = this.layoutControlHistory;
             this.txtHBillingAddress.TabIndex = 14;
             // 
             // textEdit4
             // 
-            this.textEdit4.Location = new System.Drawing.Point(178, 517);
+            this.textEdit4.Location = new System.Drawing.Point(147, 443);
+            this.textEdit4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textEdit4.MenuManager = this.ribbonControl;
             this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(593, 22);
+            this.textEdit4.Size = new System.Drawing.Size(498, 20);
             this.textEdit4.StyleController = this.layoutControlHistory;
             this.textEdit4.TabIndex = 13;
             // 
             // txtHShippingAddressZh
             // 
-            this.txtHShippingAddressZh.Location = new System.Drawing.Point(178, 237);
+            this.txtHShippingAddressZh.Location = new System.Drawing.Point(147, 203);
+            this.txtHShippingAddressZh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHShippingAddressZh.MenuManager = this.ribbonControl;
             this.txtHShippingAddressZh.Name = "txtHShippingAddressZh";
-            this.txtHShippingAddressZh.Size = new System.Drawing.Size(593, 22);
+            this.txtHShippingAddressZh.Size = new System.Drawing.Size(498, 20);
             this.txtHShippingAddressZh.StyleController = this.layoutControlHistory;
             this.txtHShippingAddressZh.TabIndex = 12;
             // 
             // txtHShippingAddress
             // 
-            this.txtHShippingAddress.Location = new System.Drawing.Point(178, 209);
+            this.txtHShippingAddress.Location = new System.Drawing.Point(147, 179);
+            this.txtHShippingAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHShippingAddress.MenuManager = this.ribbonControl;
             this.txtHShippingAddress.Name = "txtHShippingAddress";
-            this.txtHShippingAddress.Size = new System.Drawing.Size(593, 22);
+            this.txtHShippingAddress.Size = new System.Drawing.Size(498, 20);
             this.txtHShippingAddress.StyleController = this.layoutControlHistory;
             this.txtHShippingAddress.TabIndex = 11;
             // 
             // txtHVATNumber
             // 
-            this.txtHVATNumber.Location = new System.Drawing.Point(178, 181);
+            this.txtHVATNumber.Location = new System.Drawing.Point(147, 155);
+            this.txtHVATNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHVATNumber.MenuManager = this.ribbonControl;
             this.txtHVATNumber.Name = "txtHVATNumber";
-            this.txtHVATNumber.Size = new System.Drawing.Size(593, 22);
+            this.txtHVATNumber.Size = new System.Drawing.Size(498, 20);
             this.txtHVATNumber.StyleController = this.layoutControlHistory;
             this.txtHVATNumber.TabIndex = 10;
             // 
             // chkHActive
             // 
-            this.chkHActive.Location = new System.Drawing.Point(178, 156);
+            this.chkHActive.Location = new System.Drawing.Point(147, 132);
+            this.chkHActive.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkHActive.MenuManager = this.ribbonControl;
             this.chkHActive.Name = "chkHActive";
             this.chkHActive.Properties.Caption = "";
-            this.chkHActive.Size = new System.Drawing.Size(593, 19);
+            this.chkHActive.Size = new System.Drawing.Size(498, 19);
             this.chkHActive.StyleController = this.layoutControlHistory;
             this.chkHActive.TabIndex = 9;
             // 
             // txtHName
             // 
-            this.txtHName.Location = new System.Drawing.Point(178, 128);
+            this.txtHName.Location = new System.Drawing.Point(147, 108);
+            this.txtHName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHName.MenuManager = this.ribbonControl;
             this.txtHName.Name = "txtHName";
-            this.txtHName.Size = new System.Drawing.Size(593, 22);
+            this.txtHName.Size = new System.Drawing.Size(498, 20);
             this.txtHName.StyleController = this.layoutControlHistory;
             this.txtHName.TabIndex = 8;
             // 
             // txtHTimestamp
             // 
-            this.txtHTimestamp.Location = new System.Drawing.Point(178, 100);
+            this.txtHTimestamp.Location = new System.Drawing.Point(147, 84);
+            this.txtHTimestamp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHTimestamp.MenuManager = this.ribbonControl;
             this.txtHTimestamp.Name = "txtHTimestamp";
-            this.txtHTimestamp.Size = new System.Drawing.Size(593, 22);
+            this.txtHTimestamp.Size = new System.Drawing.Size(498, 20);
             this.txtHTimestamp.StyleController = this.layoutControlHistory;
             this.txtHTimestamp.TabIndex = 7;
             // 
             // txtHIdSubversion
             // 
-            this.txtHIdSubversion.Location = new System.Drawing.Point(178, 72);
+            this.txtHIdSubversion.Location = new System.Drawing.Point(147, 60);
+            this.txtHIdSubversion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIdSubversion.MenuManager = this.ribbonControl;
             this.txtHIdSubversion.Name = "txtHIdSubversion";
-            this.txtHIdSubversion.Size = new System.Drawing.Size(593, 22);
+            this.txtHIdSubversion.Size = new System.Drawing.Size(498, 20);
             this.txtHIdSubversion.StyleController = this.layoutControlHistory;
             this.txtHIdSubversion.TabIndex = 6;
             // 
             // txtHIdVersion
             // 
-            this.txtHIdVersion.Location = new System.Drawing.Point(178, 44);
+            this.txtHIdVersion.Location = new System.Drawing.Point(147, 36);
+            this.txtHIdVersion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIdVersion.MenuManager = this.ribbonControl;
             this.txtHIdVersion.Name = "txtHIdVersion";
-            this.txtHIdVersion.Size = new System.Drawing.Size(593, 22);
+            this.txtHIdVersion.Size = new System.Drawing.Size(498, 20);
             this.txtHIdVersion.StyleController = this.layoutControlHistory;
             this.txtHIdVersion.TabIndex = 5;
             // 
             // txtHIdCustomer
             // 
-            this.txtHIdCustomer.Location = new System.Drawing.Point(178, 16);
+            this.txtHIdCustomer.Location = new System.Drawing.Point(147, 12);
+            this.txtHIdCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIdCustomer.MenuManager = this.ribbonControl;
             this.txtHIdCustomer.Name = "txtHIdCustomer";
-            this.txtHIdCustomer.Size = new System.Drawing.Size(593, 22);
+            this.txtHIdCustomer.Size = new System.Drawing.Size(498, 20);
             this.txtHIdCustomer.StyleController = this.layoutControlHistory;
             this.txtHIdCustomer.TabIndex = 4;
             // 
@@ -584,7 +623,7 @@
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup2";
             this.layoutControlGroup3.OptionsItemText.TextToControlDistance = 4;
-            this.layoutControlGroup3.Size = new System.Drawing.Size(787, 565);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(657, 485);
             this.layoutControlGroup3.TextVisible = false;
             // 
             // lciHIdCustomer
@@ -592,187 +631,188 @@
             this.lciHIdCustomer.Control = this.txtHIdCustomer;
             this.lciHIdCustomer.Location = new System.Drawing.Point(0, 0);
             this.lciHIdCustomer.Name = "lciHIdCustomer";
-            this.lciHIdCustomer.Size = new System.Drawing.Size(761, 28);
+            this.lciHIdCustomer.Size = new System.Drawing.Size(637, 24);
             this.lciHIdCustomer.Text = "Id Customer";
-            this.lciHIdCustomer.TextSize = new System.Drawing.Size(158, 16);
+            this.lciHIdCustomer.TextSize = new System.Drawing.Size(131, 13);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 529);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 455);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(761, 10);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(637, 10);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lciHIdVersion
             // 
             this.lciHIdVersion.Control = this.txtHIdVersion;
-            this.lciHIdVersion.Location = new System.Drawing.Point(0, 28);
+            this.lciHIdVersion.Location = new System.Drawing.Point(0, 24);
             this.lciHIdVersion.Name = "lciHIdVersion";
-            this.lciHIdVersion.Size = new System.Drawing.Size(761, 28);
+            this.lciHIdVersion.Size = new System.Drawing.Size(637, 24);
             this.lciHIdVersion.Text = "Id Version";
-            this.lciHIdVersion.TextSize = new System.Drawing.Size(158, 16);
+            this.lciHIdVersion.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciHIdSubversion
             // 
             this.lciHIdSubversion.Control = this.txtHIdSubversion;
-            this.lciHIdSubversion.Location = new System.Drawing.Point(0, 56);
+            this.lciHIdSubversion.Location = new System.Drawing.Point(0, 48);
             this.lciHIdSubversion.Name = "lciHIdSubversion";
-            this.lciHIdSubversion.Size = new System.Drawing.Size(761, 28);
+            this.lciHIdSubversion.Size = new System.Drawing.Size(637, 24);
             this.lciHIdSubversion.Text = "Id Subversion";
-            this.lciHIdSubversion.TextSize = new System.Drawing.Size(158, 16);
+            this.lciHIdSubversion.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciHTimestamp
             // 
             this.lciHTimestamp.Control = this.txtHTimestamp;
-            this.lciHTimestamp.Location = new System.Drawing.Point(0, 84);
+            this.lciHTimestamp.Location = new System.Drawing.Point(0, 72);
             this.lciHTimestamp.Name = "lciHTimestamp";
-            this.lciHTimestamp.Size = new System.Drawing.Size(761, 28);
+            this.lciHTimestamp.Size = new System.Drawing.Size(637, 24);
             this.lciHTimestamp.Text = "Timestamp";
-            this.lciHTimestamp.TextSize = new System.Drawing.Size(158, 16);
+            this.lciHTimestamp.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciHName
             // 
             this.lciHName.Control = this.txtHName;
-            this.lciHName.Location = new System.Drawing.Point(0, 112);
+            this.lciHName.Location = new System.Drawing.Point(0, 96);
             this.lciHName.Name = "lciHName";
-            this.lciHName.Size = new System.Drawing.Size(761, 28);
+            this.lciHName.Size = new System.Drawing.Size(637, 24);
             this.lciHName.Text = "Name";
-            this.lciHName.TextSize = new System.Drawing.Size(158, 16);
+            this.lciHName.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciHActive
             // 
             this.lciHActive.Control = this.chkHActive;
-            this.lciHActive.Location = new System.Drawing.Point(0, 140);
+            this.lciHActive.Location = new System.Drawing.Point(0, 120);
             this.lciHActive.Name = "lciHActive";
-            this.lciHActive.Size = new System.Drawing.Size(761, 25);
+            this.lciHActive.Size = new System.Drawing.Size(637, 23);
             this.lciHActive.Text = "Active";
-            this.lciHActive.TextSize = new System.Drawing.Size(158, 16);
+            this.lciHActive.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciHVATNumber
             // 
             this.lciHVATNumber.Control = this.txtHVATNumber;
-            this.lciHVATNumber.Location = new System.Drawing.Point(0, 165);
+            this.lciHVATNumber.Location = new System.Drawing.Point(0, 143);
             this.lciHVATNumber.Name = "lciHVATNumber";
-            this.lciHVATNumber.Size = new System.Drawing.Size(761, 28);
+            this.lciHVATNumber.Size = new System.Drawing.Size(637, 24);
             this.lciHVATNumber.Text = "VAT Number";
-            this.lciHVATNumber.TextSize = new System.Drawing.Size(158, 16);
+            this.lciHVATNumber.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciHShippingAddress
             // 
             this.lciHShippingAddress.Control = this.txtHShippingAddress;
-            this.lciHShippingAddress.Location = new System.Drawing.Point(0, 193);
+            this.lciHShippingAddress.Location = new System.Drawing.Point(0, 167);
             this.lciHShippingAddress.Name = "lciHShippingAddress";
-            this.lciHShippingAddress.Size = new System.Drawing.Size(761, 28);
+            this.lciHShippingAddress.Size = new System.Drawing.Size(637, 24);
             this.lciHShippingAddress.Text = "Shipping Address";
-            this.lciHShippingAddress.TextSize = new System.Drawing.Size(158, 16);
+            this.lciHShippingAddress.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciHShippingAddressZh
             // 
             this.lciHShippingAddressZh.Control = this.txtHShippingAddressZh;
-            this.lciHShippingAddressZh.Location = new System.Drawing.Point(0, 221);
+            this.lciHShippingAddressZh.Location = new System.Drawing.Point(0, 191);
             this.lciHShippingAddressZh.Name = "lciHShippingAddressZh";
-            this.lciHShippingAddressZh.Size = new System.Drawing.Size(761, 28);
+            this.lciHShippingAddressZh.Size = new System.Drawing.Size(637, 24);
             this.lciHShippingAddressZh.Text = "Shipping Address (Chinese)";
-            this.lciHShippingAddressZh.TextSize = new System.Drawing.Size(158, 16);
+            this.lciHShippingAddressZh.TextSize = new System.Drawing.Size(131, 13);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.textEdit4;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 501);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 431);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(761, 28);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(158, 16);
+            this.layoutControlItem5.Size = new System.Drawing.Size(637, 24);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciHBillingAddress
             // 
             this.lciHBillingAddress.Control = this.txtHBillingAddress;
-            this.lciHBillingAddress.Location = new System.Drawing.Point(0, 249);
+            this.lciHBillingAddress.Location = new System.Drawing.Point(0, 215);
             this.lciHBillingAddress.Name = "lciHBillingAddress";
-            this.lciHBillingAddress.Size = new System.Drawing.Size(761, 28);
+            this.lciHBillingAddress.Size = new System.Drawing.Size(637, 24);
             this.lciHBillingAddress.Text = "Billing Address";
-            this.lciHBillingAddress.TextSize = new System.Drawing.Size(158, 16);
+            this.lciHBillingAddress.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciHBillingAddressZh
             // 
             this.lciHBillingAddressZh.Control = this.txtHBillingAddressZh;
-            this.lciHBillingAddressZh.Location = new System.Drawing.Point(0, 277);
+            this.lciHBillingAddressZh.Location = new System.Drawing.Point(0, 239);
             this.lciHBillingAddressZh.Name = "lciHBillingAddressZh";
-            this.lciHBillingAddressZh.Size = new System.Drawing.Size(761, 28);
+            this.lciHBillingAddressZh.Size = new System.Drawing.Size(637, 24);
             this.lciHBillingAddressZh.Text = "Billing Address (Chinese)";
-            this.lciHBillingAddressZh.TextSize = new System.Drawing.Size(158, 16);
+            this.lciHBillingAddressZh.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciHContactName
             // 
             this.lciHContactName.Control = this.txtHContactName;
-            this.lciHContactName.Location = new System.Drawing.Point(0, 305);
+            this.lciHContactName.Location = new System.Drawing.Point(0, 263);
             this.lciHContactName.Name = "lciHContactName";
-            this.lciHContactName.Size = new System.Drawing.Size(761, 28);
+            this.lciHContactName.Size = new System.Drawing.Size(637, 24);
             this.lciHContactName.Text = "Contact Name";
-            this.lciHContactName.TextSize = new System.Drawing.Size(158, 16);
+            this.lciHContactName.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciHIdDefaultCurrency
             // 
             this.lciHIdDefaultCurrency.Control = this.txtHIdDefaultCurrency;
-            this.lciHIdDefaultCurrency.Location = new System.Drawing.Point(0, 473);
+            this.lciHIdDefaultCurrency.Location = new System.Drawing.Point(0, 407);
             this.lciHIdDefaultCurrency.Name = "lciHIdDefaultCurrency";
-            this.lciHIdDefaultCurrency.Size = new System.Drawing.Size(761, 28);
+            this.lciHIdDefaultCurrency.Size = new System.Drawing.Size(637, 24);
             this.lciHIdDefaultCurrency.Text = "Default Currency";
-            this.lciHIdDefaultCurrency.TextSize = new System.Drawing.Size(158, 16);
+            this.lciHIdDefaultCurrency.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciHIdPaymentTerms
             // 
             this.lciHIdPaymentTerms.Control = this.txtHIdPaymentTerms;
-            this.lciHIdPaymentTerms.Location = new System.Drawing.Point(0, 445);
+            this.lciHIdPaymentTerms.Location = new System.Drawing.Point(0, 383);
             this.lciHIdPaymentTerms.Name = "lciHIdPaymentTerms";
-            this.lciHIdPaymentTerms.Size = new System.Drawing.Size(761, 28);
+            this.lciHIdPaymentTerms.Size = new System.Drawing.Size(637, 24);
             this.lciHIdPaymentTerms.Text = "Payment Terms";
-            this.lciHIdPaymentTerms.TextSize = new System.Drawing.Size(158, 16);
+            this.lciHIdPaymentTerms.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciHIdIncoterm
             // 
             this.lciHIdIncoterm.Control = this.txtHIdIncoterm;
-            this.lciHIdIncoterm.Location = new System.Drawing.Point(0, 417);
+            this.lciHIdIncoterm.Location = new System.Drawing.Point(0, 359);
             this.lciHIdIncoterm.Name = "lciHIdIncoterm";
-            this.lciHIdIncoterm.Size = new System.Drawing.Size(761, 28);
+            this.lciHIdIncoterm.Size = new System.Drawing.Size(637, 24);
             this.lciHIdIncoterm.Text = "Incoterm";
-            this.lciHIdIncoterm.TextSize = new System.Drawing.Size(158, 16);
+            this.lciHIdIncoterm.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciHContactPhone
             // 
             this.lciHContactPhone.Control = this.txtHContactPhone;
-            this.lciHContactPhone.Location = new System.Drawing.Point(0, 361);
+            this.lciHContactPhone.Location = new System.Drawing.Point(0, 311);
             this.lciHContactPhone.Name = "lciHContactPhone";
-            this.lciHContactPhone.Size = new System.Drawing.Size(761, 28);
+            this.lciHContactPhone.Size = new System.Drawing.Size(637, 24);
             this.lciHContactPhone.Text = "Contact Phone";
-            this.lciHContactPhone.TextSize = new System.Drawing.Size(158, 16);
+            this.lciHContactPhone.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciHContactNameZh
             // 
             this.lciHContactNameZh.Control = this.txtHContactNameZh;
-            this.lciHContactNameZh.Location = new System.Drawing.Point(0, 333);
+            this.lciHContactNameZh.Location = new System.Drawing.Point(0, 287);
             this.lciHContactNameZh.Name = "lciHContactNameZh";
-            this.lciHContactNameZh.Size = new System.Drawing.Size(761, 28);
+            this.lciHContactNameZh.Size = new System.Drawing.Size(637, 24);
             this.lciHContactNameZh.Text = "Contact Name (Chinese)";
-            this.lciHContactNameZh.TextSize = new System.Drawing.Size(158, 16);
+            this.lciHContactNameZh.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciHComments
             // 
             this.lciHComments.Control = this.txtHComments;
-            this.lciHComments.Location = new System.Drawing.Point(0, 389);
+            this.lciHComments.Location = new System.Drawing.Point(0, 335);
             this.lciHComments.Name = "lciHComments";
-            this.lciHComments.Size = new System.Drawing.Size(761, 28);
+            this.lciHComments.Size = new System.Drawing.Size(637, 24);
             this.lciHComments.Text = "Comments";
-            this.lciHComments.TextSize = new System.Drawing.Size(158, 16);
+            this.lciHComments.TextSize = new System.Drawing.Size(131, 13);
             // 
             // sbNewVersion
             // 
             this.sbNewVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.sbNewVersion.Appearance.Options.UseTextOptions = true;
             this.sbNewVersion.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.sbNewVersion.Location = new System.Drawing.Point(6, 396);
+            this.sbNewVersion.Location = new System.Drawing.Point(5, 390);
+            this.sbNewVersion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sbNewVersion.Name = "sbNewVersion";
-            this.sbNewVersion.Size = new System.Drawing.Size(97, 66);
+            this.sbNewVersion.Size = new System.Drawing.Size(83, 54);
             this.sbNewVersion.TabIndex = 1;
             this.sbNewVersion.Text = "New Version";
             this.sbNewVersion.Click += new System.EventHandler(this.sbNewVersion_Click);
@@ -799,179 +839,198 @@
             this.layoutControlForm.Controls.Add(this.txtIdSubversion);
             this.layoutControlForm.Controls.Add(this.txtIdVersion);
             this.layoutControlForm.Controls.Add(this.txtIdCustomer);
-            this.layoutControlForm.Location = new System.Drawing.Point(6, 13);
+            this.layoutControlForm.Location = new System.Drawing.Point(5, 11);
+            this.layoutControlForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.layoutControlForm.Name = "layoutControlForm";
             this.layoutControlForm.Root = this.layoutControlGroup1;
-            this.layoutControlForm.Size = new System.Drawing.Size(577, 361);
+            this.layoutControlForm.Size = new System.Drawing.Size(495, 361);
             this.layoutControlForm.TabIndex = 0;
             this.layoutControlForm.Text = "layoutControl1";
             // 
             // lueIdIncoterm
             // 
-            this.lueIdIncoterm.Location = new System.Drawing.Point(178, 433);
+            this.lueIdIncoterm.Location = new System.Drawing.Point(147, 371);
+            this.lueIdIncoterm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lueIdIncoterm.MenuManager = this.ribbonControl;
             this.lueIdIncoterm.Name = "lueIdIncoterm";
             this.lueIdIncoterm.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueIdIncoterm.Size = new System.Drawing.Size(383, 22);
+            this.lueIdIncoterm.Size = new System.Drawing.Size(319, 20);
             this.lueIdIncoterm.StyleController = this.layoutControlForm;
             this.lueIdIncoterm.TabIndex = 24;
             // 
             // lueIdPaymentTerms
             // 
-            this.lueIdPaymentTerms.Location = new System.Drawing.Point(178, 461);
+            this.lueIdPaymentTerms.Location = new System.Drawing.Point(147, 395);
+            this.lueIdPaymentTerms.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lueIdPaymentTerms.MenuManager = this.ribbonControl;
             this.lueIdPaymentTerms.Name = "lueIdPaymentTerms";
             this.lueIdPaymentTerms.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueIdPaymentTerms.Size = new System.Drawing.Size(383, 22);
+            this.lueIdPaymentTerms.Size = new System.Drawing.Size(319, 20);
             this.lueIdPaymentTerms.StyleController = this.layoutControlForm;
             this.lueIdPaymentTerms.TabIndex = 23;
             // 
             // lueIdDefaultCurrency
             // 
-            this.lueIdDefaultCurrency.Location = new System.Drawing.Point(178, 489);
+            this.lueIdDefaultCurrency.Location = new System.Drawing.Point(147, 419);
+            this.lueIdDefaultCurrency.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lueIdDefaultCurrency.MenuManager = this.ribbonControl;
             this.lueIdDefaultCurrency.Name = "lueIdDefaultCurrency";
             this.lueIdDefaultCurrency.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueIdDefaultCurrency.Size = new System.Drawing.Size(383, 22);
+            this.lueIdDefaultCurrency.Size = new System.Drawing.Size(319, 20);
             this.lueIdDefaultCurrency.StyleController = this.layoutControlForm;
             this.lueIdDefaultCurrency.TabIndex = 22;
             // 
             // txtComments
             // 
-            this.txtComments.Location = new System.Drawing.Point(178, 405);
+            this.txtComments.Location = new System.Drawing.Point(147, 347);
+            this.txtComments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtComments.MenuManager = this.ribbonControl;
             this.txtComments.Name = "txtComments";
-            this.txtComments.Size = new System.Drawing.Size(383, 22);
+            this.txtComments.Size = new System.Drawing.Size(319, 20);
             this.txtComments.StyleController = this.layoutControlForm;
             this.txtComments.TabIndex = 21;
             // 
             // txtContactNameZh
             // 
-            this.txtContactNameZh.Location = new System.Drawing.Point(178, 349);
+            this.txtContactNameZh.Location = new System.Drawing.Point(147, 299);
+            this.txtContactNameZh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContactNameZh.MenuManager = this.ribbonControl;
             this.txtContactNameZh.Name = "txtContactNameZh";
-            this.txtContactNameZh.Size = new System.Drawing.Size(383, 22);
+            this.txtContactNameZh.Size = new System.Drawing.Size(319, 20);
             this.txtContactNameZh.StyleController = this.layoutControlForm;
             this.txtContactNameZh.TabIndex = 20;
             // 
             // txtBillingAddressZh
             // 
-            this.txtBillingAddressZh.Location = new System.Drawing.Point(178, 293);
+            this.txtBillingAddressZh.Location = new System.Drawing.Point(147, 251);
+            this.txtBillingAddressZh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBillingAddressZh.MenuManager = this.ribbonControl;
             this.txtBillingAddressZh.Name = "txtBillingAddressZh";
-            this.txtBillingAddressZh.Size = new System.Drawing.Size(383, 22);
+            this.txtBillingAddressZh.Size = new System.Drawing.Size(319, 20);
             this.txtBillingAddressZh.StyleController = this.layoutControlForm;
             this.txtBillingAddressZh.TabIndex = 19;
             // 
             // txtShippingAddressZh
             // 
-            this.txtShippingAddressZh.Location = new System.Drawing.Point(178, 237);
+            this.txtShippingAddressZh.Location = new System.Drawing.Point(147, 203);
+            this.txtShippingAddressZh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtShippingAddressZh.MenuManager = this.ribbonControl;
             this.txtShippingAddressZh.Name = "txtShippingAddressZh";
-            this.txtShippingAddressZh.Size = new System.Drawing.Size(383, 22);
+            this.txtShippingAddressZh.Size = new System.Drawing.Size(319, 20);
             this.txtShippingAddressZh.StyleController = this.layoutControlForm;
             this.txtShippingAddressZh.TabIndex = 18;
             // 
             // txtContactPhone
             // 
-            this.txtContactPhone.Location = new System.Drawing.Point(178, 377);
+            this.txtContactPhone.Location = new System.Drawing.Point(147, 323);
+            this.txtContactPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContactPhone.MenuManager = this.ribbonControl;
             this.txtContactPhone.Name = "txtContactPhone";
-            this.txtContactPhone.Size = new System.Drawing.Size(383, 22);
+            this.txtContactPhone.Size = new System.Drawing.Size(319, 20);
             this.txtContactPhone.StyleController = this.layoutControlForm;
             this.txtContactPhone.TabIndex = 14;
             // 
             // txtContactName
             // 
-            this.txtContactName.Location = new System.Drawing.Point(178, 321);
+            this.txtContactName.Location = new System.Drawing.Point(147, 275);
+            this.txtContactName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContactName.MenuManager = this.ribbonControl;
             this.txtContactName.Name = "txtContactName";
-            this.txtContactName.Size = new System.Drawing.Size(383, 22);
+            this.txtContactName.Size = new System.Drawing.Size(319, 20);
             this.txtContactName.StyleController = this.layoutControlForm;
             this.txtContactName.TabIndex = 13;
             // 
             // txtBillingAddress
             // 
-            this.txtBillingAddress.Location = new System.Drawing.Point(178, 265);
+            this.txtBillingAddress.Location = new System.Drawing.Point(147, 227);
+            this.txtBillingAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBillingAddress.MenuManager = this.ribbonControl;
             this.txtBillingAddress.Name = "txtBillingAddress";
-            this.txtBillingAddress.Size = new System.Drawing.Size(383, 22);
+            this.txtBillingAddress.Size = new System.Drawing.Size(319, 20);
             this.txtBillingAddress.StyleController = this.layoutControlForm;
             this.txtBillingAddress.TabIndex = 12;
             // 
             // txtShippingAddress
             // 
-            this.txtShippingAddress.Location = new System.Drawing.Point(178, 209);
+            this.txtShippingAddress.Location = new System.Drawing.Point(147, 179);
+            this.txtShippingAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtShippingAddress.MenuManager = this.ribbonControl;
             this.txtShippingAddress.Name = "txtShippingAddress";
-            this.txtShippingAddress.Size = new System.Drawing.Size(383, 22);
+            this.txtShippingAddress.Size = new System.Drawing.Size(319, 20);
             this.txtShippingAddress.StyleController = this.layoutControlForm;
             this.txtShippingAddress.TabIndex = 11;
             // 
             // txtVatNumber
             // 
-            this.txtVatNumber.Location = new System.Drawing.Point(178, 181);
+            this.txtVatNumber.Location = new System.Drawing.Point(147, 155);
+            this.txtVatNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVatNumber.MenuManager = this.ribbonControl;
             this.txtVatNumber.Name = "txtVatNumber";
-            this.txtVatNumber.Size = new System.Drawing.Size(383, 22);
+            this.txtVatNumber.Size = new System.Drawing.Size(319, 20);
             this.txtVatNumber.StyleController = this.layoutControlForm;
             this.txtVatNumber.TabIndex = 10;
             // 
             // chkActive
             // 
-            this.chkActive.Location = new System.Drawing.Point(178, 156);
+            this.chkActive.Location = new System.Drawing.Point(147, 132);
+            this.chkActive.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkActive.MenuManager = this.ribbonControl;
             this.chkActive.Name = "chkActive";
             this.chkActive.Properties.Caption = "";
-            this.chkActive.Size = new System.Drawing.Size(383, 19);
+            this.chkActive.Size = new System.Drawing.Size(319, 19);
             this.chkActive.StyleController = this.layoutControlForm;
             this.chkActive.TabIndex = 9;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(178, 128);
+            this.txtName.Location = new System.Drawing.Point(147, 108);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.MenuManager = this.ribbonControl;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(383, 22);
+            this.txtName.Size = new System.Drawing.Size(319, 20);
             this.txtName.StyleController = this.layoutControlForm;
             this.txtName.TabIndex = 8;
             // 
             // txtTimestamp
             // 
-            this.txtTimestamp.Location = new System.Drawing.Point(178, 100);
+            this.txtTimestamp.Location = new System.Drawing.Point(147, 84);
+            this.txtTimestamp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTimestamp.MenuManager = this.ribbonControl;
             this.txtTimestamp.Name = "txtTimestamp";
-            this.txtTimestamp.Size = new System.Drawing.Size(383, 22);
+            this.txtTimestamp.Size = new System.Drawing.Size(319, 20);
             this.txtTimestamp.StyleController = this.layoutControlForm;
             this.txtTimestamp.TabIndex = 7;
             // 
             // txtIdSubversion
             // 
-            this.txtIdSubversion.Location = new System.Drawing.Point(178, 72);
+            this.txtIdSubversion.Location = new System.Drawing.Point(147, 60);
+            this.txtIdSubversion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdSubversion.MenuManager = this.ribbonControl;
             this.txtIdSubversion.Name = "txtIdSubversion";
-            this.txtIdSubversion.Size = new System.Drawing.Size(383, 22);
+            this.txtIdSubversion.Size = new System.Drawing.Size(319, 20);
             this.txtIdSubversion.StyleController = this.layoutControlForm;
             this.txtIdSubversion.TabIndex = 6;
             // 
             // txtIdVersion
             // 
-            this.txtIdVersion.Location = new System.Drawing.Point(178, 44);
+            this.txtIdVersion.Location = new System.Drawing.Point(147, 36);
+            this.txtIdVersion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdVersion.MenuManager = this.ribbonControl;
             this.txtIdVersion.Name = "txtIdVersion";
-            this.txtIdVersion.Size = new System.Drawing.Size(383, 22);
+            this.txtIdVersion.Size = new System.Drawing.Size(319, 20);
             this.txtIdVersion.StyleController = this.layoutControlForm;
             this.txtIdVersion.TabIndex = 5;
             // 
             // txtIdCustomer
             // 
-            this.txtIdCustomer.Location = new System.Drawing.Point(178, 16);
+            this.txtIdCustomer.Location = new System.Drawing.Point(147, 12);
+            this.txtIdCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdCustomer.MenuManager = this.ribbonControl;
             this.txtIdCustomer.Name = "txtIdCustomer";
-            this.txtIdCustomer.Size = new System.Drawing.Size(383, 22);
+            this.txtIdCustomer.Size = new System.Drawing.Size(319, 20);
             this.txtIdCustomer.StyleController = this.layoutControlForm;
             this.txtIdCustomer.TabIndex = 4;
             // 
@@ -1002,7 +1061,7 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.OptionsItemText.TextToControlDistance = 4;
-            this.layoutControlGroup1.Size = new System.Drawing.Size(577, 537);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(478, 461);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // lciIdSupplier
@@ -1010,177 +1069,178 @@
             this.lciIdSupplier.Control = this.txtIdCustomer;
             this.lciIdSupplier.Location = new System.Drawing.Point(0, 0);
             this.lciIdSupplier.Name = "lciIdSupplier";
-            this.lciIdSupplier.Size = new System.Drawing.Size(551, 28);
+            this.lciIdSupplier.Size = new System.Drawing.Size(458, 24);
             this.lciIdSupplier.Text = "Id Customer";
-            this.lciIdSupplier.TextSize = new System.Drawing.Size(158, 16);
+            this.lciIdSupplier.TextSize = new System.Drawing.Size(131, 13);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 501);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 431);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(551, 10);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(458, 10);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lciIdVersion
             // 
             this.lciIdVersion.Control = this.txtIdVersion;
-            this.lciIdVersion.Location = new System.Drawing.Point(0, 28);
+            this.lciIdVersion.Location = new System.Drawing.Point(0, 24);
             this.lciIdVersion.Name = "lciIdVersion";
-            this.lciIdVersion.Size = new System.Drawing.Size(551, 28);
+            this.lciIdVersion.Size = new System.Drawing.Size(458, 24);
             this.lciIdVersion.Text = "Id Version";
-            this.lciIdVersion.TextSize = new System.Drawing.Size(158, 16);
+            this.lciIdVersion.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciIdSubversion
             // 
             this.lciIdSubversion.Control = this.txtIdSubversion;
-            this.lciIdSubversion.Location = new System.Drawing.Point(0, 56);
+            this.lciIdSubversion.Location = new System.Drawing.Point(0, 48);
             this.lciIdSubversion.Name = "lciIdSubversion";
-            this.lciIdSubversion.Size = new System.Drawing.Size(551, 28);
+            this.lciIdSubversion.Size = new System.Drawing.Size(458, 24);
             this.lciIdSubversion.Text = "Id Subversion";
-            this.lciIdSubversion.TextSize = new System.Drawing.Size(158, 16);
+            this.lciIdSubversion.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciTimestamp
             // 
             this.lciTimestamp.Control = this.txtTimestamp;
-            this.lciTimestamp.Location = new System.Drawing.Point(0, 84);
+            this.lciTimestamp.Location = new System.Drawing.Point(0, 72);
             this.lciTimestamp.Name = "lciTimestamp";
-            this.lciTimestamp.Size = new System.Drawing.Size(551, 28);
+            this.lciTimestamp.Size = new System.Drawing.Size(458, 24);
             this.lciTimestamp.Text = "Timestamp";
-            this.lciTimestamp.TextSize = new System.Drawing.Size(158, 16);
+            this.lciTimestamp.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciName
             // 
             this.lciName.Control = this.txtName;
-            this.lciName.Location = new System.Drawing.Point(0, 112);
+            this.lciName.Location = new System.Drawing.Point(0, 96);
             this.lciName.Name = "lciName";
-            this.lciName.Size = new System.Drawing.Size(551, 28);
+            this.lciName.Size = new System.Drawing.Size(458, 24);
             this.lciName.Text = "Name";
-            this.lciName.TextSize = new System.Drawing.Size(158, 16);
+            this.lciName.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciActive
             // 
             this.lciActive.Control = this.chkActive;
-            this.lciActive.Location = new System.Drawing.Point(0, 140);
+            this.lciActive.Location = new System.Drawing.Point(0, 120);
             this.lciActive.Name = "lciActive";
-            this.lciActive.Size = new System.Drawing.Size(551, 25);
+            this.lciActive.Size = new System.Drawing.Size(458, 23);
             this.lciActive.Text = "Active";
-            this.lciActive.TextSize = new System.Drawing.Size(158, 16);
+            this.lciActive.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciVATNumber
             // 
             this.lciVATNumber.Control = this.txtVatNumber;
-            this.lciVATNumber.Location = new System.Drawing.Point(0, 165);
+            this.lciVATNumber.Location = new System.Drawing.Point(0, 143);
             this.lciVATNumber.Name = "lciVATNumber";
-            this.lciVATNumber.Size = new System.Drawing.Size(551, 28);
+            this.lciVATNumber.Size = new System.Drawing.Size(458, 24);
             this.lciVATNumber.Text = "VAT Number";
-            this.lciVATNumber.TextSize = new System.Drawing.Size(158, 16);
+            this.lciVATNumber.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciShippingAddress
             // 
             this.lciShippingAddress.Control = this.txtShippingAddress;
-            this.lciShippingAddress.Location = new System.Drawing.Point(0, 193);
+            this.lciShippingAddress.Location = new System.Drawing.Point(0, 167);
             this.lciShippingAddress.Name = "lciShippingAddress";
-            this.lciShippingAddress.Size = new System.Drawing.Size(551, 28);
+            this.lciShippingAddress.Size = new System.Drawing.Size(458, 24);
             this.lciShippingAddress.Text = "Shipping Address";
-            this.lciShippingAddress.TextSize = new System.Drawing.Size(158, 16);
+            this.lciShippingAddress.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciBillingAddress
             // 
             this.lciBillingAddress.Control = this.txtBillingAddress;
-            this.lciBillingAddress.Location = new System.Drawing.Point(0, 249);
+            this.lciBillingAddress.Location = new System.Drawing.Point(0, 215);
             this.lciBillingAddress.Name = "lciBillingAddress";
-            this.lciBillingAddress.Size = new System.Drawing.Size(551, 28);
+            this.lciBillingAddress.Size = new System.Drawing.Size(458, 24);
             this.lciBillingAddress.Text = "Billing Address";
-            this.lciBillingAddress.TextSize = new System.Drawing.Size(158, 16);
+            this.lciBillingAddress.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciContactName
             // 
             this.lciContactName.Control = this.txtContactName;
-            this.lciContactName.Location = new System.Drawing.Point(0, 305);
+            this.lciContactName.Location = new System.Drawing.Point(0, 263);
             this.lciContactName.Name = "lciContactName";
-            this.lciContactName.Size = new System.Drawing.Size(551, 28);
+            this.lciContactName.Size = new System.Drawing.Size(458, 24);
             this.lciContactName.Text = "Contact Name";
-            this.lciContactName.TextSize = new System.Drawing.Size(158, 16);
+            this.lciContactName.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciContactPhone
             // 
             this.lciContactPhone.Control = this.txtContactPhone;
-            this.lciContactPhone.Location = new System.Drawing.Point(0, 361);
+            this.lciContactPhone.Location = new System.Drawing.Point(0, 311);
             this.lciContactPhone.Name = "lciContactPhone";
-            this.lciContactPhone.Size = new System.Drawing.Size(551, 28);
+            this.lciContactPhone.Size = new System.Drawing.Size(458, 24);
             this.lciContactPhone.Text = "Contact Phone";
-            this.lciContactPhone.TextSize = new System.Drawing.Size(158, 16);
+            this.lciContactPhone.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciShippingAddressZh
             // 
             this.lciShippingAddressZh.Control = this.txtShippingAddressZh;
-            this.lciShippingAddressZh.Location = new System.Drawing.Point(0, 221);
+            this.lciShippingAddressZh.Location = new System.Drawing.Point(0, 191);
             this.lciShippingAddressZh.Name = "lciShippingAddressZh";
-            this.lciShippingAddressZh.Size = new System.Drawing.Size(551, 28);
+            this.lciShippingAddressZh.Size = new System.Drawing.Size(458, 24);
             this.lciShippingAddressZh.Text = "Shipping Address (Chinese)";
-            this.lciShippingAddressZh.TextSize = new System.Drawing.Size(158, 16);
+            this.lciShippingAddressZh.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciBillingAddressZh
             // 
             this.lciBillingAddressZh.Control = this.txtBillingAddressZh;
-            this.lciBillingAddressZh.Location = new System.Drawing.Point(0, 277);
+            this.lciBillingAddressZh.Location = new System.Drawing.Point(0, 239);
             this.lciBillingAddressZh.Name = "lciBillingAddressZh";
-            this.lciBillingAddressZh.Size = new System.Drawing.Size(551, 28);
+            this.lciBillingAddressZh.Size = new System.Drawing.Size(458, 24);
             this.lciBillingAddressZh.Text = "Billing Address (Chinese)";
-            this.lciBillingAddressZh.TextSize = new System.Drawing.Size(158, 16);
+            this.lciBillingAddressZh.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciContactNameZh
             // 
             this.lciContactNameZh.Control = this.txtContactNameZh;
-            this.lciContactNameZh.Location = new System.Drawing.Point(0, 333);
+            this.lciContactNameZh.Location = new System.Drawing.Point(0, 287);
             this.lciContactNameZh.Name = "lciContactNameZh";
-            this.lciContactNameZh.Size = new System.Drawing.Size(551, 28);
+            this.lciContactNameZh.Size = new System.Drawing.Size(458, 24);
             this.lciContactNameZh.Text = "Contact Name (Chinese)";
-            this.lciContactNameZh.TextSize = new System.Drawing.Size(158, 16);
+            this.lciContactNameZh.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciComments
             // 
             this.lciComments.Control = this.txtComments;
-            this.lciComments.Location = new System.Drawing.Point(0, 389);
+            this.lciComments.Location = new System.Drawing.Point(0, 335);
             this.lciComments.Name = "lciComments";
-            this.lciComments.Size = new System.Drawing.Size(551, 28);
+            this.lciComments.Size = new System.Drawing.Size(458, 24);
             this.lciComments.Text = "Comments";
-            this.lciComments.TextSize = new System.Drawing.Size(158, 16);
+            this.lciComments.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciIdDefaultCurrency
             // 
             this.lciIdDefaultCurrency.Control = this.lueIdDefaultCurrency;
-            this.lciIdDefaultCurrency.Location = new System.Drawing.Point(0, 473);
+            this.lciIdDefaultCurrency.Location = new System.Drawing.Point(0, 407);
             this.lciIdDefaultCurrency.Name = "lciIdDefaultCurrency";
-            this.lciIdDefaultCurrency.Size = new System.Drawing.Size(551, 28);
+            this.lciIdDefaultCurrency.Size = new System.Drawing.Size(458, 24);
             this.lciIdDefaultCurrency.Text = "Default Currency";
-            this.lciIdDefaultCurrency.TextSize = new System.Drawing.Size(158, 16);
+            this.lciIdDefaultCurrency.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciIdPaymentTerms
             // 
             this.lciIdPaymentTerms.Control = this.lueIdPaymentTerms;
-            this.lciIdPaymentTerms.Location = new System.Drawing.Point(0, 445);
+            this.lciIdPaymentTerms.Location = new System.Drawing.Point(0, 383);
             this.lciIdPaymentTerms.Name = "lciIdPaymentTerms";
-            this.lciIdPaymentTerms.Size = new System.Drawing.Size(551, 28);
+            this.lciIdPaymentTerms.Size = new System.Drawing.Size(458, 24);
             this.lciIdPaymentTerms.Text = "Payment Terms";
-            this.lciIdPaymentTerms.TextSize = new System.Drawing.Size(158, 16);
+            this.lciIdPaymentTerms.TextSize = new System.Drawing.Size(131, 13);
             // 
             // lciIdIncoterm
             // 
             this.lciIdIncoterm.Control = this.lueIdIncoterm;
-            this.lciIdIncoterm.Location = new System.Drawing.Point(0, 417);
+            this.lciIdIncoterm.Location = new System.Drawing.Point(0, 359);
             this.lciIdIncoterm.Name = "lciIdIncoterm";
-            this.lciIdIncoterm.Size = new System.Drawing.Size(551, 28);
+            this.lciIdIncoterm.Size = new System.Drawing.Size(458, 24);
             this.lciIdIncoterm.Text = "Incoterm";
-            this.lciIdIncoterm.TextSize = new System.Drawing.Size(158, 16);
+            this.lciIdIncoterm.TextSize = new System.Drawing.Size(131, 13);
             // 
             // CustomerManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1561, 737);
+            this.ClientSize = new System.Drawing.Size(1338, 599);
             this.Controls.Add(this.xtcGeneral);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CustomerManagement";
             this.Text = "Customer Management";
             this.Load += new System.EventHandler(this.CustomerManagement_Load);

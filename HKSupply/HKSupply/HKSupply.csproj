@@ -843,7 +843,7 @@
     <Compile Include="Models\DetailBomMt.cs" />
     <Compile Include="Models\DetailBomMtHistory.cs" />
     <Compile Include="Models\DocType.cs" />
-    <Compile Include="Models\EchangeRate.cs" />
+    <Compile Include="Models\ExchangeRate.cs" />
     <Compile Include="Models\EtnColor.cs" />
     <Compile Include="Models\CustomerHistory.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -915,7 +915,7 @@
     <Compile Include="Services\Implementations\EFCustomerPriceList.cs" />
     <Compile Include="Services\Implementations\EFDeliveryTerms.cs" />
     <Compile Include="Services\Implementations\EFDocType.cs" />
-    <Compile Include="Services\Implementations\EFEchangeRate.cs" />
+    <Compile Include="Services\Implementations\EFExchangeRate.cs" />
     <Compile Include="Services\Implementations\EFEtnColor.cs" />
     <Compile Include="Services\Implementations\EFFamilyHK.cs" />
     <Compile Include="Services\Implementations\EFFunctionality.cs" />
@@ -954,7 +954,7 @@
     <Compile Include="Services\Interfaces\ICustomerPriceList.cs" />
     <Compile Include="Services\Interfaces\IDeliveryTerms.cs" />
     <Compile Include="Services\Interfaces\IDocType.cs" />
-    <Compile Include="Services\Interfaces\IEchangeRate.cs" />
+    <Compile Include="Services\Interfaces\IExchangeRate.cs" />
     <Compile Include="Services\Interfaces\IEtnColor.cs" />
     <Compile Include="Services\Interfaces\IFamilyHK.cs" />
     <Compile Include="Services\Interfaces\IFunctionality.cs" />

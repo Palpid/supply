@@ -36,7 +36,7 @@ namespace HKSupply.DB
         public DbSet<Incoterm> Incoterms { get; set; }
         public DbSet<PaymentTerms> PaymentTerms { get; set; }
         public DbSet<Currency> Currencies { get; set; }
-        public DbSet<EchangeRate> EchangeRates { get; set; }
+        public DbSet<ExchangeRate> EchangeRates { get; set; }
 
         public DbSet<MaterialL1> MaterialsL1 { get; set; }
         public DbSet<MaterialL2> MaterialsL2 { get; set; }
@@ -126,7 +126,7 @@ namespace HKSupply.DB
             //Set precision 
             modelBuilder.Entity<ItemEy>().Property(x => x.Caliber).HasPrecision(19, 6);
             modelBuilder.Entity<ItemEyHistory>().Property(x => x.Caliber).HasPrecision(19, 6);
-            modelBuilder.Entity<EchangeRate>().Property(x => x.Ratio).HasPrecision(19, 6);
+            modelBuilder.Entity<ExchangeRate>().Property(x => x.Ratio).HasPrecision(19, 6);
 
             modelBuilder.Entity<Prototype>().Property(x => x.Caliber).HasPrecision(19, 6);
 

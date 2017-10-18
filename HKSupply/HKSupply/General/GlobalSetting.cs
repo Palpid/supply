@@ -79,7 +79,7 @@ namespace HKSupply.General
         static EFStatusProd _statusProdEF = new EFStatusProd();
         static EFStatusCial _statusCialEF = new EFStatusCial();
         static EFCurrency _currencyEF = new EFCurrency();
-        static EFEchangeRate _echangeRateEF = new EFEchangeRate();
+        static EFExchangeRate _echangeRateEF = new EFExchangeRate();
         static EFPaymentTerms _paymentTermsEF = new EFPaymentTerms();
         static EFIncoterm _incotermEF = new EFIncoterm();
         static EFUserAttrDescription _userAttrDescriptionEF = new EFUserAttrDescription();
@@ -398,12 +398,12 @@ namespace HKSupply.General
             }
         }
 
-        public static IEchangeRate EchangeRateService
+        public static IExchangeRate EchangeRateService
         {
             get 
             {
                 if (_echangeRateEF == null)
-                    return new EFEchangeRate();
+                    return new EFExchangeRate();
                 else
                     return _echangeRateEF;
             }

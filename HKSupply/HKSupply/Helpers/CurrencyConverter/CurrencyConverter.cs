@@ -107,7 +107,7 @@ namespace HKSupply.Helpers.CurrencyConverter
                             {
                                 throw new FormatException("Urecognised format!", fe);
                             }
-                            exchangeRates.Add(currency, rate); //ads currency and rate to exchange rate table
+                            exchangeRates.Add(currency, rate); //add currency and rate to exchange rate table
                         }
                         xml.MoveToNextAttribute();
                     }
@@ -130,7 +130,7 @@ namespace HKSupply.Helpers.CurrencyConverter
         public override string ToString()
         {
             StringBuilder str = new StringBuilder();
-            str.Append($"Reference rates of European Central Bank\nAll rates are for 1 {baseCurrency}{Environment.NewLine}{Environment.NewLine}");
+            str.Append($"Reference rates of European Central Bank{Environment.NewLine}All rates are for 1 {baseCurrency}{Environment.NewLine}{Environment.NewLine}");
             foreach (KeyValuePair<string, decimal> kvp in exchangeRates)
             {
                 str.Append(String.Format("{0}{1,15:0.0000}" + Environment.NewLine, kvp.Key, kvp.Value));
@@ -258,11 +258,11 @@ namespace HKSupply.Helpers.CurrencyConverter
         {
             try
             {
-                List<EchangeRate> exchangeRates = new List<EchangeRate>();
+                List<ExchangeRate> exchangeRates = new List<ExchangeRate>();
 
                 foreach (KeyValuePair<string, decimal> kvp in this.exchangeRates)
                 {
-                    EchangeRate rate = new EchangeRate()
+                    ExchangeRate rate = new ExchangeRate()
                     {
                         Date = Date,
                         IdCurrency1 = baseCurrency,

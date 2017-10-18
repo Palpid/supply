@@ -340,6 +340,7 @@
             this.Controls.Add(this.xtcGeneral);
             this.Name = "DocsList";
             this.Text = "Docs List";
+            this.Load += new System.EventHandler(this.DocsList_Load);
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.ribbonStatusBar, 0);
             this.Controls.SetChildIndex(this.xtcGeneral, 0);

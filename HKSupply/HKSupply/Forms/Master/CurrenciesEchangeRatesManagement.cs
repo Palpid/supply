@@ -38,7 +38,7 @@ namespace HKSupply.Forms.Master
 
         #region Private Members
         List<Currency> _currenciesList = new List<Currency>();
-        List<EchangeRate> _echangeRatesList = new List<EchangeRate>();
+        List<ExchangeRate> _echangeRatesList = new List<ExchangeRate>();
         #endregion
 
         #region Constructor
@@ -142,10 +142,10 @@ namespace HKSupply.Forms.Master
                 gridViewEchangeRates.OptionsBehavior.Editable = false;
 
                 //Columns definition
-                GridColumn colDate = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Date"), Visible = true, FieldName = nameof(EchangeRate.Date), Width = 100 };
-                GridColumn colIdCurrency1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Currency1"), Visible = true, FieldName = nameof(EchangeRate.IdCurrency1), Width = 70 };
-                GridColumn colIdCurrency2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Currency2"), Visible = true, FieldName = nameof(EchangeRate.IdCurrency2), Width = 70 };
-                GridColumn colRatio = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Ratio"), Visible = true, FieldName = nameof(EchangeRate.Ratio), Width = 100 };
+                GridColumn colDate = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Date"), Visible = true, FieldName = nameof(ExchangeRate.Date), Width = 100 };
+                GridColumn colIdCurrency1 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Currency1"), Visible = true, FieldName = nameof(ExchangeRate.IdCurrency1), Width = 70 };
+                GridColumn colIdCurrency2 = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Currency2"), Visible = true, FieldName = nameof(ExchangeRate.IdCurrency2), Width = 70 };
+                GridColumn colRatio = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Ratio"), Visible = true, FieldName = nameof(ExchangeRate.Ratio), Width = 100 };
 
                 //Format Type
                 colRatio.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
