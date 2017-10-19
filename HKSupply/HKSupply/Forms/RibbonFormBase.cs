@@ -279,12 +279,20 @@ namespace HKSupply.Forms
         private void ConfigureRibbonStyles()
         {
             //Cambiar a un estilo más minimalista en lugar del estilo Office 2010 de ribbon con iconos grandes
-            ribbonControl.RibbonStyle = RibbonControlStyle.OfficeUniversal;
+            //ribbonControl.RibbonStyle = RibbonControlStyle.OfficeUniversal;
 
             ribbonControl.ToolbarLocation = RibbonQuickAccessToolbarLocation.Hidden;
             ribbonControl.DrawGroupCaptions = DefaultBoolean.False;
 
             ribbonPage1.Appearance.Font = new Font(ribbonPage1.Appearance.Font, FontStyle.Bold);
+
+            //Cambiar el FormCaption y el TabHeaderBackground (el color de fondo de la parte superior del ribbon) a uno rojo "etnia". 
+            //Sustituyo las dos imágenes originales del skin que usamos de office 2016
+            DevExpress.Skins.SkinElement element = DevExpress.Skins.SkinManager.GetSkinElement(DevExpress.Skins.SkinProductId.Ribbon, DevExpress.LookAndFeel.UserLookAndFeel.Default, "FormCaption");
+            element.SetActualImage(Properties.Resources.formcaption_red, true);
+            element = DevExpress.Skins.SkinManager.GetSkinElement(DevExpress.Skins.SkinProductId.Ribbon, DevExpress.LookAndFeel.UserLookAndFeel.Default, "TabHeaderBackground");
+            element.SetActualImage(Properties.Resources.tabheaderbackground_red, true);
+            DevExpress.LookAndFeel.LookAndFeelHelper.ForceDefaultLookAndFeelChanged();
 
         }
 

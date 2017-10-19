@@ -76,7 +76,7 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Size = new System.Drawing.Size(1338, 79);
+            this.ribbonControl.Size = new System.Drawing.Size(1338, 129);
             // 
             // ribbonPage1
             // 
@@ -85,17 +85,17 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 684);
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1338, 31);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 694);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1338, 21);
             // 
             // xtcGeneral
             // 
             this.xtcGeneral.Controls.Add(this.xtpDocsList);
             this.xtcGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtcGeneral.Location = new System.Drawing.Point(0, 79);
+            this.xtcGeneral.Location = new System.Drawing.Point(0, 129);
             this.xtcGeneral.Name = "xtcGeneral";
             this.xtcGeneral.SelectedIndex = 0;
-            this.xtcGeneral.Size = new System.Drawing.Size(1338, 605);
+            this.xtcGeneral.Size = new System.Drawing.Size(1338, 565);
             this.xtcGeneral.TabIndex = 3;
             // 
             // xtpDocsList
@@ -105,7 +105,7 @@
             this.xtpDocsList.Location = new System.Drawing.Point(4, 22);
             this.xtpDocsList.Name = "xtpDocsList";
             this.xtpDocsList.Padding = new System.Windows.Forms.Padding(3);
-            this.xtpDocsList.Size = new System.Drawing.Size(1330, 579);
+            this.xtpDocsList.Size = new System.Drawing.Size(1330, 539);
             this.xtpDocsList.TabIndex = 0;
             this.xtpDocsList.Text = "DOCS LIST";
             this.xtpDocsList.UseVisualStyleBackColor = true;
@@ -120,7 +120,7 @@
             this.xgrdLines.MainView = this.gridViewLines;
             this.xgrdLines.MenuManager = this.ribbonControl;
             this.xgrdLines.Name = "xgrdLines";
-            this.xgrdLines.Size = new System.Drawing.Size(1316, 460);
+            this.xgrdLines.Size = new System.Drawing.Size(1316, 420);
             this.xgrdLines.TabIndex = 1;
             this.xgrdLines.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewLines});
@@ -212,10 +212,11 @@
             // sbFilter
             // 
             this.sbFilter.ImageOptions.ImageUri.Uri = "Find;Size32x32";
-            this.sbFilter.Location = new System.Drawing.Point(933, 51);
+            this.sbFilter.Location = new System.Drawing.Point(842, 47);
             this.sbFilter.Name = "sbFilter";
-            this.sbFilter.Size = new System.Drawing.Size(40, 38);
+            this.sbFilter.Size = new System.Drawing.Size(82, 38);
             this.sbFilter.TabIndex = 24;
+            this.sbFilter.Text = "Search";
             // 
             // lblAnd
             // 

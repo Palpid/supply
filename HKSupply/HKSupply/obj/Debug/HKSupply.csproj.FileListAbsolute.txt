@@ -323,8 +323,14 @@ C:\Git\HKSupply\HKSupply\obj\Debug\HKSupply.exe.licenses
 C:\Git\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
 C:\Git\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.PurchaseOrderSelection.resources
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Printing.v17.1.Core.xml
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Xpo.v17.1.xml
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\es\DevExpress.XtraCharts.v17.1.Wizard.resources.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\es\DevExpress.XtraCharts.v17.1.resources.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\formcaption_red.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\import_export_excel_icon_16x16.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\import_export_excel_icon_32x32.png
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\tabheaderbackground_red.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\HelpDocs\EN\BOM Flow and Application Help.pdf
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\HelpDocs\EN\SUPPLY Flow and Application Help.pdf
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Reports\Rpt\BOM.rpt
@@ -343,6 +349,7 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CrystalDecisions.ReportSource.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CrystalDecisions.Shared.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CustomControls.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.BonusSkins.v17.1.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Charts.v17.1.Core.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Data.v17.1.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.DataAccess.v17.1.dll
@@ -400,7 +407,6 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.DataAccess.v17.1.UI.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Office.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Pdf.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Pdf.v17.1.Drawing.xml
-C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Printing.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.RichEdit.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Sparkline.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Spreadsheet.v17.1.Core.xml
@@ -421,7 +427,6 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraTreeList.v17.1.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\EntityFramework.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\EntityFramework.SqlServer.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\log4net.xml
-C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Xpo.v17.1.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Diagram.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraDiagram.v17.1.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraVerticalGrid.v17.1.xml
@@ -474,11 +479,9 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\es\DevExpress.XtraBars.v17.1.resources
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ja\DevExpress.XtraBars.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ru\DevExpress.XtraBars.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\de\DevExpress.XtraCharts.v17.1.Wizard.resources.dll
-C:\Git\Supply\HKSupply\HKSupply\bin\Debug\es\DevExpress.XtraCharts.v17.1.Wizard.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ja\DevExpress.XtraCharts.v17.1.Wizard.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ru\DevExpress.XtraCharts.v17.1.Wizard.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\de\DevExpress.XtraCharts.v17.1.resources.dll
-C:\Git\Supply\HKSupply\HKSupply\bin\Debug\es\DevExpress.XtraCharts.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ja\DevExpress.XtraCharts.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ru\DevExpress.XtraCharts.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\de\DevExpress.XtraEditors.v17.1.resources.dll

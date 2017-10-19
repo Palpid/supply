@@ -367,6 +367,7 @@
             // 
             // ribbonStatusBar
             // 
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 568);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ribbonStatusBar.Size = new System.Drawing.Size(1338, 31);
             // 

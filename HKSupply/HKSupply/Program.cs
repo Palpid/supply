@@ -6,6 +6,7 @@ using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.LookAndFeel;
 
 namespace HKSupply
 {
@@ -27,6 +28,11 @@ namespace HKSupply
             Application.SetCompatibleTextRenderingDefault(false);
 
             DevExpress.XtraEditors.WindowsFormsSettings.DefaultFont = new System.Drawing.Font("Source Sans Pro", 10);
+
+            //Change DevExpress Look and Feel skin for all application
+            UserLookAndFeel.Default.SetSkinStyle("Office 2016 Colorful");
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
 
             //Test: change culture to English
             System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-GB");
