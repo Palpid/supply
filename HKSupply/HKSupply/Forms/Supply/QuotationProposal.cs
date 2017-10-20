@@ -32,8 +32,125 @@ namespace HKSupply.Forms.Supply
 {
     public partial class QuotationProposal : RibbonFormBase
     {
+        #region Mock Data Test stocks
+        List<PRJ_Stocks.Classes.Stocks.StockItem> _stockItemList = new List<PRJ_Stocks.Classes.Stocks.StockItem>();
+        private void FillMocking()
+        {
+            try
+            {
+                PRJ_Stocks.Classes.Stocks.Warehouse warehouseOnHand = new PRJ_Stocks.Classes.Stocks.Warehouse()
+                {
+                    idWareHouse = "001",
+                    Descr = "On Hand Etnia Ltd",
+                    Remarks = "",
+                    idOwner = "002",
+                    idWareHouseType = (int)PRJ_Stocks.Classes.Stocks.StockWareHousesType.OnHand,
+                };
+
+                PRJ_Stocks.Classes.Stocks.Warehouse warehouseAssigned = new PRJ_Stocks.Classes.Stocks.Warehouse()
+                {
+                    idWareHouse = "002",
+                    Descr = "Assigned Etnia Ltd",
+                    Remarks = "",
+                    idOwner = "002",
+                    idWareHouseType = (int)PRJ_Stocks.Classes.Stocks.StockWareHousesType.Assigned,
+                };
+
+                PRJ_Stocks.Classes.Stocks.Warehouse warehouseTransit = new PRJ_Stocks.Classes.Stocks.Warehouse()
+                {
+                    idWareHouse = "003",
+                    Descr = "Assigned Etnia Ltd",
+                    Remarks = "",
+                    idOwner = "002",
+                    idWareHouseType = (int)PRJ_Stocks.Classes.Stocks.StockWareHousesType.Transit,
+                };
+
+                PRJ_Stocks.Classes.Stocks.Item item1 = new PRJ_Stocks.Classes.Stocks.Item() { idItem = "009504TUN (6)", ItemName = "009504TUN (6)", Lot = "001" };
+                PRJ_Stocks.Classes.Stocks.Item item2 = new PRJ_Stocks.Classes.Stocks.Item() { idItem = "010846TUN (6)", ItemName = "010846TUN (6)", Lot = "001" };
+                PRJ_Stocks.Classes.Stocks.Item item3 = new PRJ_Stocks.Classes.Stocks.Item() { idItem = "014249TUN (6)", ItemName = "014249TUN (6)", Lot = "001" };
+                PRJ_Stocks.Classes.Stocks.Item item4 = new PRJ_Stocks.Classes.Stocks.Item() { idItem = "05TRB0852A1BYL", ItemName = "05TRB0852A1BYL", Lot = "001" };
+                PRJ_Stocks.Classes.Stocks.Item item5 = new PRJ_Stocks.Classes.Stocks.Item() { idItem = "05TRB0852A1BYR", ItemName = "05TRB0852A1BYR", Lot = "001" };
+                PRJ_Stocks.Classes.Stocks.Item item6 = new PRJ_Stocks.Classes.Stocks.Item() { idItem = "07VI19844A1BYX", ItemName = "07VI19844A1BYX", Lot = "001" };
+                PRJ_Stocks.Classes.Stocks.Item item7 = new PRJ_Stocks.Classes.Stocks.Item() { idItem = "07VIA0485A1BUX", ItemName = "07VIA0485A1BUX", Lot = "001" };
+                PRJ_Stocks.Classes.Stocks.Item item8 = new PRJ_Stocks.Classes.Stocks.Item() { idItem = "610705 (6)", ItemName = "610705 (6)", Lot = "001" };
+                PRJ_Stocks.Classes.Stocks.Item item9 = new PRJ_Stocks.Classes.Stocks.Item() { idItem = "610724 (4)", ItemName = "610724 (4)", Lot = "001" };
+                PRJ_Stocks.Classes.Stocks.Item item10 = new PRJ_Stocks.Classes.Stocks.Item() { idItem = "623DF2 (4)", ItemName = "623DF2 (4)", Lot = "001" };
+                PRJ_Stocks.Classes.Stocks.Item item11 = new PRJ_Stocks.Classes.Stocks.Item() { idItem = "633DP1 (4)", ItemName = "633DP1 (4)", Lot = "001" };
+                PRJ_Stocks.Classes.Stocks.Item item12 = new PRJ_Stocks.Classes.Stocks.Item() { idItem = "633DP4 (4)", ItemName = "633DP4 (4)", Lot = "001" };
+                PRJ_Stocks.Classes.Stocks.Item item13 = new PRJ_Stocks.Classes.Stocks.Item() { idItem = "810228 (4)", ItemName = "810228 (4)", Lot = "001" };
+                PRJ_Stocks.Classes.Stocks.Item item14 = new PRJ_Stocks.Classes.Stocks.Item() { idItem = "810685 (4)", ItemName = "810685 (4)", Lot = "001" };
+                PRJ_Stocks.Classes.Stocks.Item item15 = new PRJ_Stocks.Classes.Stocks.Item() { idItem = "AB2689T (6)", ItemName = "AB2689T (6)", Lot = "001" };
+                PRJ_Stocks.Classes.Stocks.Item item16 = new PRJ_Stocks.Classes.Stocks.Item() { idItem = "NANO FLEX", ItemName = "NANO FLEX", Lot = "001" };
+                PRJ_Stocks.Classes.Stocks.Item item17 = new PRJ_Stocks.Classes.Stocks.Item() { idItem = "W31920 (4)", ItemName = "W31920 (4)", Lot = "001" };
+
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseOnHand , Item = item1 , idOwner= "001", QttStock=500});
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseOnHand, Item = item2, idOwner = "001", QttStock = 1500 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseOnHand, Item = item3, idOwner = "001", QttStock = 2500 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseOnHand, Item = item4, idOwner = "001", QttStock = 3500 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseOnHand, Item = item5, idOwner = "001", QttStock = 4000 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseOnHand, Item = item6, idOwner = "001", QttStock = 2300 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseOnHand, Item = item7, idOwner = "001", QttStock = 1500 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseOnHand, Item = item8, idOwner = "001", QttStock = 7500 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseOnHand, Item = item9, idOwner = "001", QttStock = 7800 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseOnHand, Item = item10, idOwner = "001", QttStock = 2300 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseOnHand, Item = item11, idOwner = "001", QttStock = 9100 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseOnHand, Item = item12, idOwner = "001", QttStock = 200 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseOnHand, Item = item13, idOwner = "001", QttStock = 700 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseOnHand, Item = item14, idOwner = "001", QttStock = 690 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseOnHand, Item = item15, idOwner = "001", QttStock = 8900 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseOnHand, Item = item16, idOwner = "001", QttStock = 7300 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseOnHand, Item = item17, idOwner = "001", QttStock = 2800 });
+
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseAssigned, Item = item1, idOwner = "001", QttStock = 600 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseAssigned, Item = item2, idOwner = "001", QttStock = 280 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseAssigned, Item = item3, idOwner = "001", QttStock = 500 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseAssigned, Item = item4, idOwner = "001", QttStock = 500 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseAssigned, Item = item5, idOwner = "001", QttStock = 000 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseAssigned, Item = item6, idOwner = "001", QttStock = 800 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseAssigned, Item = item7, idOwner = "001", QttStock = 600 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseAssigned, Item = item8, idOwner = "001", QttStock = 750 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseAssigned, Item = item9, idOwner = "001", QttStock = 780 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseAssigned, Item = item10, idOwner = "001", QttStock = 283 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseAssigned, Item = item11, idOwner = "001", QttStock = 917 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseAssigned, Item = item12, idOwner = "001", QttStock = 480 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseAssigned, Item = item13, idOwner = "001", QttStock = 957 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseAssigned, Item = item14, idOwner = "001", QttStock = 265 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseAssigned, Item = item15, idOwner = "001", QttStock = 7895 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseAssigned, Item = item16, idOwner = "001", QttStock = 1234 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseAssigned, Item = item17, idOwner = "001", QttStock = 8541 });
+
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseTransit, Item = item1, idOwner = "001", QttStock = 1458 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseTransit, Item = item2, idOwner = "001", QttStock = 4500 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseTransit, Item = item3, idOwner = "001", QttStock = 1236 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseTransit, Item = item4, idOwner = "001", QttStock = 1400 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseTransit, Item = item5, idOwner = "001", QttStock = 9200 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseTransit, Item = item6, idOwner = "001", QttStock = 1200 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseTransit, Item = item7, idOwner = "001", QttStock = 3500 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseTransit, Item = item8, idOwner = "001", QttStock = 1278 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseTransit, Item = item9, idOwner = "001", QttStock = 500 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseTransit, Item = item10, idOwner = "001", QttStock = 33600 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseTransit, Item = item11, idOwner = "001", QttStock = 4578 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseTransit, Item = item12, idOwner = "001", QttStock = 9800 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseTransit, Item = item13, idOwner = "001", QttStock = 1800 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseTransit, Item = item14, idOwner = "001", QttStock = 1970 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseTransit, Item = item15, idOwner = "001", QttStock = 9813 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseTransit, Item = item16, idOwner = "001", QttStock = 1000 });
+                _stockItemList.Add(new PRJ_Stocks.Classes.Stocks.StockItem() { Ware = warehouseTransit, Item = item17, idOwner = "001", QttStock = 8702 });
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        #endregion
+
         #region Constants
         private const string TOTAL_AMOUNT_COLUMN = "TotalAmount";
+        private const string COL_STOCK_ONHAND = "StockOnHand";
+        private const string COL_STOCK_ASSIGNED = "Assigned";
+        private const string COL_STOCK_TRANSIT = "Transit";
         #endregion
 
         #region Enums
@@ -279,7 +396,7 @@ namespace HKSupply.Forms.Supply
         #region Form Events
         private void QuotationProposal_Load(object sender, EventArgs e)
         {
-
+            FillMocking();
         }
 
         private void SbSearch_Click(object sender, EventArgs e)
@@ -617,6 +734,57 @@ namespace HKSupply.Forms.Supply
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void GridViewLines_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)
+        {
+            try
+            {
+                DocLine docLine = e.Row as DocLine;
+
+                if (docLine == null)
+                    return;
+
+                switch (e.Column.FieldName)
+                {
+                    case COL_STOCK_ONHAND:
+
+                        var stockOnHand = _stockItemList
+                            .Where(a => a.idItem.Equals(docLine.IdItemBcn) && a.Ware.WareHouseType.Equals(PRJ_Stocks.Classes.Stocks.StockWareHousesType.OnHand))
+                            .Select(b => b.QttStock)
+                            .FirstOrDefault();
+
+                        e.Value = stockOnHand;
+
+                        break;
+
+                    case COL_STOCK_ASSIGNED:
+
+                        var stockAssigned = _stockItemList
+                            .Where(a => a.idItem.Equals(docLine.IdItemBcn) && a.Ware.WareHouseType.Equals(PRJ_Stocks.Classes.Stocks.StockWareHousesType.Assigned))
+                            .Select(b => b.QttStock)
+                            .FirstOrDefault();
+
+                        e.Value = stockAssigned;
+
+                        break;
+
+                    case COL_STOCK_TRANSIT:
+
+                        var stockTransit = _stockItemList
+                            .Where(a => a.idItem.Equals(docLine.IdItemBcn) && a.Ware.WareHouseType.Equals(PRJ_Stocks.Classes.Stocks.StockWareHousesType.Transit))
+                            .Select(b => b.QttStock)
+                            .FirstOrDefault();
+
+                        e.Value = stockTransit;
+
+                        break;
+                }
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         #region Public Methods
@@ -800,6 +968,9 @@ namespace HKSupply.Forms.Supply
                 GridColumn colUnitPrice = new GridColumn() { Caption = "Unit Price", Visible = true, FieldName = nameof(DocLine.UnitPrice), Width = 85 };
                 GridColumn colTotalAmount = new GridColumn() { Caption = "TotalAmount", Visible = true, FieldName = nameof(DocLine.TotalAmount), Width = 120 };
                 GridColumn colRemarks = new GridColumn() { Caption = "Remarks", Visible = true, FieldName = nameof(DocLine.Remarks), Width = 350 };
+                GridColumn colStockOnHand = new GridColumn() { Caption = "Stock On Hand", Visible = true, FieldName = COL_STOCK_ONHAND, Width = 100 };
+                GridColumn colStockAssigned = new GridColumn() { Caption = "Assigned", Visible = true, FieldName = COL_STOCK_ASSIGNED, Width = 100 };
+                GridColumn colStockTransit = new GridColumn() { Caption = "Transit", Visible = true, FieldName = COL_STOCK_TRANSIT, Width = 100 };
 
                 //Display Format
                 colUnitPrice.DisplayFormat.FormatType = FormatType.Numeric;
@@ -813,6 +984,11 @@ namespace HKSupply.Forms.Supply
 
                 colQuantityOriginal.DisplayFormat.FormatType = FormatType.Numeric;
                 colQuantityOriginal.DisplayFormat.FormatString = "n0";
+
+                //Unbound Columns
+                colStockOnHand.UnboundType = UnboundColumnType.Decimal;
+                colStockAssigned.UnboundType = UnboundColumnType.Decimal;
+                colStockTransit.UnboundType = UnboundColumnType.Decimal;
 
                 //Edit Repositories
                 RepositoryItemSearchLookUpEdit riItemGroup = new RepositoryItemSearchLookUpEdit()
@@ -864,12 +1040,16 @@ namespace HKSupply.Forms.Supply
                 gridViewLines.Columns.Add(colUnitPrice);
                 gridViewLines.Columns.Add(colTotalAmount);
                 gridViewLines.Columns.Add(colRemarks);
+                gridViewLines.Columns.Add(colStockOnHand);
+                gridViewLines.Columns.Add(colStockAssigned);
+                gridViewLines.Columns.Add(colStockTransit);
 
                 //Events
                 gridViewLines.ShowingEditor += GridViewLines_ShowingEditor;
                 gridViewLines.CustomRowCellEdit += GridViewLines_CustomRowCellEdit;
                 gridViewLines.ValidatingEditor += GridViewLines_ValidatingEditor;
                 gridViewLines.CustomSummaryCalculate += GridViewLines_CustomSummaryCalculate;
+                gridViewLines.CustomUnboundColumnData += GridViewLines_CustomUnboundColumnData;
 
             }
             catch

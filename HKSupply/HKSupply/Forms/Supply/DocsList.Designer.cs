@@ -76,7 +76,7 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Size = new System.Drawing.Size(1338, 129);
+            this.ribbonControl.Size = new System.Drawing.Size(1338, 125);
             // 
             // ribbonPage1
             // 
@@ -85,17 +85,17 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 694);
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1338, 21);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 684);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1338, 31);
             // 
             // xtcGeneral
             // 
             this.xtcGeneral.Controls.Add(this.xtpDocsList);
             this.xtcGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtcGeneral.Location = new System.Drawing.Point(0, 129);
+            this.xtcGeneral.Location = new System.Drawing.Point(0, 125);
             this.xtcGeneral.Name = "xtcGeneral";
             this.xtcGeneral.SelectedIndex = 0;
-            this.xtcGeneral.Size = new System.Drawing.Size(1338, 565);
+            this.xtcGeneral.Size = new System.Drawing.Size(1338, 559);
             this.xtcGeneral.TabIndex = 3;
             // 
             // xtpDocsList
@@ -105,7 +105,7 @@
             this.xtpDocsList.Location = new System.Drawing.Point(4, 22);
             this.xtpDocsList.Name = "xtpDocsList";
             this.xtpDocsList.Padding = new System.Windows.Forms.Padding(3);
-            this.xtpDocsList.Size = new System.Drawing.Size(1330, 539);
+            this.xtpDocsList.Size = new System.Drawing.Size(1330, 533);
             this.xtpDocsList.TabIndex = 0;
             this.xtpDocsList.Text = "DOCS LIST";
             this.xtpDocsList.UseVisualStyleBackColor = true;
@@ -120,7 +120,7 @@
             this.xgrdLines.MainView = this.gridViewLines;
             this.xgrdLines.MenuManager = this.ribbonControl;
             this.xgrdLines.Name = "xgrdLines";
-            this.xgrdLines.Size = new System.Drawing.Size(1316, 420);
+            this.xgrdLines.Size = new System.Drawing.Size(1316, 414);
             this.xgrdLines.TabIndex = 1;
             this.xgrdLines.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewLines});
