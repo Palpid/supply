@@ -205,6 +205,7 @@ C:\Git\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.pdb
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\formcaption_red.png
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\import_export_excel_icon_16x16.png
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\import_export_excel_icon_32x32.png
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\logo_etnia-barcelona.png
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\tabheaderbackground_red.png
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HelpDocs\EN\BOM Flow and Application Help.pdf
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HelpDocs\EN\SUPPLY Flow and Application Help.pdf
@@ -225,12 +226,12 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\log4net.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\CustomControls.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Utils.v17.1.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraGrid.v17.1.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraEditors.v17.1.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Data.v17.1.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraPdfViewer.v17.1.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraBars.v17.1.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Utils.v17.1.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraSpreadsheet.v17.1.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Spreadsheet.v17.1.Core.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Printing.v17.1.Core.dll
@@ -281,12 +282,12 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\EntityFramework.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\EntityFramework.SqlServer.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\log4net.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\CustomControls.pdb
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Utils.v17.1.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraGrid.v17.1.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraEditors.v17.1.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Data.v17.1.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraPdfViewer.v17.1.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraBars.v17.1.xml
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Utils.v17.1.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraSpreadsheet.v17.1.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Spreadsheet.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Printing.v17.1.Core.xml
@@ -309,6 +310,10 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Xpo.v17.1.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.Diagram.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\DevExpress.XtraDiagram.v17.1.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\de\DevExpress.Utils.v17.1.resources.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\DevExpress.Utils.v17.1.resources.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ja\DevExpress.Utils.v17.1.resources.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ru\DevExpress.Utils.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\de\DevExpress.XtraGrid.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\DevExpress.XtraGrid.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ja\DevExpress.XtraGrid.v17.1.resources.dll
@@ -329,10 +334,6 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\de\DevExpress.XtraBars.v17.1.r
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\DevExpress.XtraBars.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ja\DevExpress.XtraBars.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ru\DevExpress.XtraBars.v17.1.resources.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\de\DevExpress.Utils.v17.1.resources.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\DevExpress.Utils.v17.1.resources.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ja\DevExpress.Utils.v17.1.resources.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ru\DevExpress.Utils.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\de\DevExpress.XtraSpreadsheet.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\es\DevExpress.XtraSpreadsheet.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\ja\DevExpress.XtraSpreadsheet.v17.1.resources.dll

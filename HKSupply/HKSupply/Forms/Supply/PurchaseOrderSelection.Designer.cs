@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.xtcGeneral = new System.Windows.Forms.TabControl();
-            this.xtpPOSection = new System.Windows.Forms.TabPage();
+            this.xtcGeneral = new DevExpress.XtraTab.XtraTabControl();
+            this.xtpPOSection = new DevExpress.XtraTab.XtraTabPage();
             this.xgrdLines = new DevExpress.XtraGrid.GridControl();
             this.gridViewLines = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gbFilters = new System.Windows.Forms.GroupBox();
@@ -47,6 +47,7 @@
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.lblSupplier = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
             this.xtcGeneral.SuspendLayout();
             this.xtpPOSection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xgrdLines)).BeginInit();
@@ -66,7 +67,7 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Size = new System.Drawing.Size(1338, 129);
+            this.ribbonControl.Size = new System.Drawing.Size(1338, 125);
             // 
             // ribbonPage1
             // 
@@ -75,42 +76,39 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 694);
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1338, 21);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 684);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1338, 31);
             // 
             // xtcGeneral
             // 
-            this.xtcGeneral.Controls.Add(this.xtpPOSection);
             this.xtcGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtcGeneral.Location = new System.Drawing.Point(0, 129);
+            this.xtcGeneral.Location = new System.Drawing.Point(0, 125);
             this.xtcGeneral.Name = "xtcGeneral";
-            this.xtcGeneral.SelectedIndex = 0;
-            this.xtcGeneral.Size = new System.Drawing.Size(1338, 565);
-            this.xtcGeneral.TabIndex = 2;
+            this.xtcGeneral.SelectedTabPage = this.xtpPOSection;
+            this.xtcGeneral.Size = new System.Drawing.Size(1338, 559);
+            this.xtcGeneral.TabIndex = 3;
+            this.xtcGeneral.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtpPOSection});
             // 
             // xtpPOSection
             // 
             this.xtpPOSection.Controls.Add(this.xgrdLines);
             this.xtpPOSection.Controls.Add(this.gbFilters);
-            this.xtpPOSection.Location = new System.Drawing.Point(4, 22);
             this.xtpPOSection.Name = "xtpPOSection";
-            this.xtpPOSection.Padding = new System.Windows.Forms.Padding(3);
-            this.xtpPOSection.Size = new System.Drawing.Size(1330, 539);
-            this.xtpPOSection.TabIndex = 0;
+            this.xtpPOSection.Size = new System.Drawing.Size(1332, 531);
             this.xtpPOSection.Text = "PURCHASE ORDER SELECTION";
-            this.xtpPOSection.UseVisualStyleBackColor = true;
             // 
             // xgrdLines
             // 
             this.xgrdLines.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.xgrdLines.Location = new System.Drawing.Point(6, 113);
+            this.xgrdLines.Location = new System.Drawing.Point(6, 121);
             this.xgrdLines.MainView = this.gridViewLines;
             this.xgrdLines.MenuManager = this.ribbonControl;
             this.xgrdLines.Name = "xgrdLines";
-            this.xgrdLines.Size = new System.Drawing.Size(1316, 420);
-            this.xgrdLines.TabIndex = 1;
+            this.xgrdLines.Size = new System.Drawing.Size(1320, 407);
+            this.xgrdLines.TabIndex = 2;
             this.xgrdLines.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewLines});
             // 
@@ -134,15 +132,14 @@
             this.gbFilters.Controls.Add(this.lblPONumber);
             this.gbFilters.Controls.Add(this.slueSupplier);
             this.gbFilters.Controls.Add(this.lblSupplier);
-            this.gbFilters.Location = new System.Drawing.Point(6, 6);
+            this.gbFilters.Location = new System.Drawing.Point(6, 14);
             this.gbFilters.Name = "gbFilters";
-            this.gbFilters.Size = new System.Drawing.Size(1316, 101);
-            this.gbFilters.TabIndex = 0;
+            this.gbFilters.Size = new System.Drawing.Size(1320, 101);
+            this.gbFilters.TabIndex = 1;
             this.gbFilters.TabStop = false;
             // 
             // sbFilter
             // 
-            this.sbFilter.ImageOptions.ImageUri.Uri = "Find;Size32x32";
             this.sbFilter.Location = new System.Drawing.Point(645, 51);
             this.sbFilter.Name = "sbFilter";
             this.sbFilter.Size = new System.Drawing.Size(82, 38);
@@ -277,6 +274,7 @@
             this.Controls.SetChildIndex(this.ribbonStatusBar, 0);
             this.Controls.SetChildIndex(this.xtcGeneral, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).EndInit();
             this.xtcGeneral.ResumeLayout(false);
             this.xtpPOSection.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xgrdLines)).EndInit();
@@ -297,24 +295,23 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl xtcGeneral;
-        private System.Windows.Forms.TabPage xtpPOSection;
-        private System.Windows.Forms.GroupBox gbFilters;
+        private DevExpress.XtraTab.XtraTabControl xtcGeneral;
+        private DevExpress.XtraTab.XtraTabPage xtpPOSection;
         private DevExpress.XtraGrid.GridControl xgrdLines;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewLines;
-        private DevExpress.XtraEditors.SearchLookUpEdit slueSupplier;
-        private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
-        private DevExpress.XtraEditors.LabelControl lblSupplier;
-        private DevExpress.XtraEditors.LabelControl lblPONumber;
-        private DevExpress.XtraEditors.TextEdit txtPONumber;
-        private DevExpress.XtraEditors.SearchLookUpEdit slueStatus;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.LabelControl lblStatus;
+        private System.Windows.Forms.GroupBox gbFilters;
+        private DevExpress.XtraEditors.SimpleButton sbFilter;
         private DevExpress.XtraEditors.LabelControl lblAnd;
         private DevExpress.XtraEditors.LabelControl lblDocDate;
         private DevExpress.XtraEditors.DateEdit dateEditPODateEnd;
         private DevExpress.XtraEditors.DateEdit dateEditPODateIni;
-        private DevExpress.XtraEditors.SimpleButton sbFilter;
+        private DevExpress.XtraEditors.SearchLookUpEdit slueStatus;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.LabelControl lblStatus;
+        private DevExpress.XtraEditors.TextEdit txtPONumber;
+        private DevExpress.XtraEditors.LabelControl lblPONumber;
+        private DevExpress.XtraEditors.SearchLookUpEdit slueSupplier;
+        private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
+        private DevExpress.XtraEditors.LabelControl lblSupplier;
     }
 }

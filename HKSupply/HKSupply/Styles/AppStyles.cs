@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DevExpress.Skins;
+using DevExpress.LookAndFeel;
 
 namespace HKSupply.Styles
 {
@@ -28,6 +29,14 @@ namespace HKSupply.Styles
 
         #region Public Methods
 
+        #region Private Members
+        //private static Color _colorHighlight = Color.FromArgb(247, 190, 186);
+        private static Color _colorHighlight = Color.FromArgb(246, 229, 229);
+        private static Color _colorControl = Color.White;
+        private static Color _colorGridOddRow = Color.FromArgb(244, 244, 244);
+        private static Color _colorGridEvenRow = Color.White;
+        #endregion
+
         #region DevExpress, modify skin
 
         public static void SetEtniaSkinStyles()
@@ -36,26 +45,29 @@ namespace HKSupply.Styles
             {
                 //Cambiar el FormCaption y el TabHeaderBackground (el color de fondo de la parte superior del ribbon) a uno rojo "etnia". 
                 //Sustituyo las dos imágenes originales del skin que usamos de office 2016
-                SkinElement element = SkinManager.GetSkinElement(SkinProductId.Ribbon, DevExpress.LookAndFeel.UserLookAndFeel.Default, "FormCaption");
+                SkinElement element = SkinManager.GetSkinElement(SkinProductId.Ribbon, UserLookAndFeel.Default, "FormCaption");
                 element.SetActualImage(Properties.Resources.formcaption_red, true);
-                element = SkinManager.GetSkinElement(SkinProductId.Ribbon, DevExpress.LookAndFeel.UserLookAndFeel.Default, "TabHeaderBackground");
+                element = SkinManager.GetSkinElement(SkinProductId.Ribbon, UserLookAndFeel.Default, "TabHeaderBackground");
                 element.SetActualImage(Properties.Resources.tabheaderbackground_red, true);
 
                 //Ribbon
                 SetRibbonStyles();
 
+                //Common
+                SetCommonStyles();
+
+                //Tab
+                SetTabStyles();
+
+                //Grid
+                SetGridStyles();
+
                 //Test
-                //SkinElement elementTest = SkinManager.GetSkinElement(SkinProductId.Common, DevExpress.LookAndFeel.UserLookAndFeel.Default, "HighlightedItem");
-                //elementTest.Image.ImageCount = 0;
-                //elementTest.Color.BackColor = EtniaRed;
-                //elementTest.Color.BackColor2 = EtniaRed;
-
-                //Skin skin = CommonSkins.GetSkin(DevExpress.LookAndFeel.UserLookAndFeel.Default);
-
+                //SkinElement elementButton = SkinManager.GetSkinElement(SkinProductId.Common, DevExpress.LookAndFeel.UserLookAndFeel.Default, "Button");
 
                 //******************************** END ********************************/
                 //Forzar la aplicación de los cambios que hemos hecho
-                DevExpress.LookAndFeel.LookAndFeelHelper.ForceDefaultLookAndFeelChanged();
+                LookAndFeelHelper.ForceDefaultLookAndFeelChanged();
             }
             catch
             {
@@ -93,6 +105,59 @@ namespace HKSupply.Styles
             }
         }
 
+        private static void SetCommonStyles()
+        {
+            try
+            {
+                Skin skinCommon = SkinManager.Default.GetSkin(SkinProductId.Common, UserLookAndFeel.Default);
+                skinCommon.Colors["Highlight"] = _colorHighlight; //row grid seleccionada y con el foco
+                skinCommon.Colors["HideSelection"] = _colorHighlight;  //row grid seleccionada, pero sin el foco en el grid
+                skinCommon.Colors["HighlightText"] = EtniaRed;  //color del texto de una row seleccionada y con y sin el foco
+
+                skinCommon.Colors["Control"] = _colorControl;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private static void SetTabStyles()
+        {
+            try
+            {
+                SkinElement elementTabHeader = SkinManager.GetSkinElement(SkinProductId.Tab, UserLookAndFeel.Default, "TabHeader");
+                //Las imágenes tienen el border, mejor no quitarlas
+                //elementTabHeader.Image.ImageCount = 0;
+                //elementTabHeader.Color.BackColor = Color.White;
+                //elementTabHeader.Color.BackColor2 = Color.White;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private static void SetGridStyles()
+        {
+            try
+            {
+                //para altenar el color de las líneas del grid
+                //Para que funcione hay que poner a true las siguientes propiedades del grid view
+                //gridView.OptionsView.EnableAppearanceOddRow = true;
+                //gridView.OptionsView.EnableAppearanceEvenRow = true;
+                SkinElement elementGridOddRow = SkinManager.GetSkinElement(SkinProductId.Grid, UserLookAndFeel.Default, "GridOddRow");
+                SkinElement elementGridEvenRow = SkinManager.GetSkinElement(SkinProductId.Grid, UserLookAndFeel.Default, "GridEvenRow");
+                elementGridOddRow.Color.BackColor = _colorGridOddRow;
+                elementGridOddRow.Color.BackColor2 = _colorGridOddRow;
+                elementGridEvenRow.Color.BackColor = _colorGridEvenRow;
+                elementGridEvenRow.Color.BackColor2 = _colorGridEvenRow;
+            }
+            catch
+            {
+                throw;
+            }
+        }
         #endregion
 
         #endregion

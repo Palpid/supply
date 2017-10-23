@@ -1023,6 +1023,9 @@
     <Content Include="Resources\Images\import_export_excel_icon_32x32.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Images\logo_etnia-barcelona.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\tabheaderbackground_red.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

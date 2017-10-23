@@ -73,6 +73,16 @@ namespace HKSupply.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_etnia_barcelona {
+            get {
+                object obj = ResourceManager.GetObject("logo_etnia_barcelona", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tabheaderbackground_red {
             get {
                 object obj = ResourceManager.GetObject("tabheaderbackground_red", resourceCulture);

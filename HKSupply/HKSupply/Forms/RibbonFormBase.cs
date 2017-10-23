@@ -246,10 +246,60 @@ namespace HKSupply.Forms
 
                 bwmiLayouts.Popup += BwmiLayouts_Popup;
                 bwmiLayouts.WorkspaceManager.WorkspaceCollectionChanged += WorkspaceManager_WorkspaceCollectionChanged;
+
+                //test
+                ribbonControl.Paint += RibbonControl_Paint;
             }
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Draw Etnia Logo on right side of the ribbon
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RibbonControl_Paint(object sender, PaintEventArgs e)
+        {
+            try
+            {
+                DevExpress.XtraBars.Ribbon.ViewInfo.RibbonViewInfo ribbonViewInfo = ribbonControl.ViewInfo;
+                if (ribbonViewInfo == null)
+                    return;
+                DevExpress.XtraBars.Ribbon.ViewInfo.RibbonPanelViewInfo panelViewInfo = ribbonViewInfo.Panel;
+                if (panelViewInfo == null)
+                    return;
+                Rectangle bounds = panelViewInfo.Bounds;
+                int minX = bounds.X;
+                DevExpress.XtraBars.Ribbon.ViewInfo.RibbonPageGroupViewInfoCollection groups = panelViewInfo.Groups;
+                if (groups == null)
+                    return;
+                if (groups.Count > 0)
+                    minX = groups[groups.Count - 1].Bounds.Right;
+                //Image image = DevExpress.Utils.Frames.ApplicationCaption8_1.GetImageLogoEx(LookAndFeel);
+                //Image image = Image.FromFile(@"Resources\Images\logo_etnia-barcelona.png");
+                Image image = Properties.Resources.logo_etnia_barcelona;
+
+                if (bounds.Height < image.Height)
+                    return;
+                int offset = (bounds.Height - image.Height) / 2;
+                int width = image.Width + 15;
+                bounds.X = bounds.Width - width;
+                if (bounds.X < minX)
+                    return;
+                bounds.Width = width;
+                bounds.Y += offset;
+                bounds.Height = image.Height;
+                e.Graphics.DrawImage(image, bounds.Location);
+
+
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

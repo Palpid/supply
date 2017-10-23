@@ -1,7 +1,1 @@
-﻿2017-10-20 09:55:36,987 ERROR [1] HKSupply.PRJ_Stocks.DB.BD_Stocks.GetCurrentStock - Index #0
-Message: Invalid column name 'idWareHouseType'.
-Error Number: 207
-LineNumber: 1
-Source: .Net SqlClient Data Provider
-Procedure: 
-
+﻿

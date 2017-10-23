@@ -102,8 +102,8 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ribbonControl.Size = new System.Drawing.Size(1338, 129);
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(4);
+            this.ribbonControl.Size = new System.Drawing.Size(1338, 125);
             // 
             // ribbonPage1
             // 
@@ -112,17 +112,17 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 694);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1338, 21);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 684);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1338, 31);
             // 
             // xtcGeneral
             // 
             this.xtcGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtcGeneral.Location = new System.Drawing.Point(0, 129);
+            this.xtcGeneral.Location = new System.Drawing.Point(0, 125);
             this.xtcGeneral.Name = "xtcGeneral";
             this.xtcGeneral.SelectedTabPage = this.xtpINV;
-            this.xtcGeneral.Size = new System.Drawing.Size(1338, 565);
+            this.xtcGeneral.Size = new System.Drawing.Size(1338, 559);
             this.xtcGeneral.TabIndex = 6;
             this.xtcGeneral.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpINV});
@@ -132,7 +132,7 @@
             this.xtpINV.Controls.Add(this.xtcPO);
             this.xtpINV.Controls.Add(this.gbHeader);
             this.xtpINV.Name = "xtpINV";
-            this.xtpINV.Size = new System.Drawing.Size(1336, 540);
+            this.xtpINV.Size = new System.Drawing.Size(1332, 531);
             this.xtpINV.Text = "INVOICE";
             // 
             // xtcPO
@@ -143,7 +143,7 @@
             this.xtcPO.Location = new System.Drawing.Point(11, 129);
             this.xtcPO.Name = "xtcPO";
             this.xtcPO.SelectedTabPage = this.xtpGoods;
-            this.xtcPO.Size = new System.Drawing.Size(1314, 405);
+            this.xtcPO.Size = new System.Drawing.Size(1314, 399);
             this.xtcPO.TabIndex = 3;
             this.xtcPO.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpGoods,
@@ -153,7 +153,7 @@
             // 
             this.xtpGoods.Controls.Add(this.xgrdLines);
             this.xtpGoods.Name = "xtpGoods";
-            this.xtpGoods.Size = new System.Drawing.Size(1312, 380);
+            this.xtpGoods.Size = new System.Drawing.Size(1308, 371);
             this.xtpGoods.Text = "GOODS";
             // 
             // xgrdLines
@@ -163,7 +163,7 @@
             this.xgrdLines.MainView = this.gridViewLines;
             this.xgrdLines.MenuManager = this.ribbonControl;
             this.xgrdLines.Name = "xgrdLines";
-            this.xgrdLines.Size = new System.Drawing.Size(1312, 380);
+            this.xgrdLines.Size = new System.Drawing.Size(1308, 371);
             this.xgrdLines.TabIndex = 0;
             this.xgrdLines.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewLines});
@@ -188,7 +188,7 @@
             this.xtpTerms.Controls.Add(this.lblAddress);
             this.xtpTerms.Controls.Add(this.lblCompany);
             this.xtpTerms.Name = "xtpTerms";
-            this.xtpTerms.Size = new System.Drawing.Size(1312, 414);
+            this.xtpTerms.Size = new System.Drawing.Size(1308, 377);
             this.xtpTerms.Text = "TERMS";
             // 
             // sluePaymentTerm
@@ -474,7 +474,6 @@
             // 
             // sbSearch
             // 
-            this.sbSearch.ImageOptions.ImageUri.Uri = "Find;Size32x32";
             this.sbSearch.Location = new System.Drawing.Point(1213, 14);
             this.sbSearch.Name = "sbSearch";
             this.sbSearch.Size = new System.Drawing.Size(82, 38);
@@ -551,7 +550,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1338, 715);
             this.Controls.Add(this.xtcGeneral);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Invoice";
             this.Text = "Invoice";
             this.Load += new System.EventHandler(this.Invoice_Load);

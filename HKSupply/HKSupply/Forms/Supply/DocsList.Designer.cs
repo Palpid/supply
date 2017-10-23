@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.xtcGeneral = new System.Windows.Forms.TabControl();
-            this.xtpDocsList = new System.Windows.Forms.TabPage();
+            this.xtcGeneral = new DevExpress.XtraTab.XtraTabControl();
+            this.xtpDocsList = new DevExpress.XtraTab.XtraTabPage();
             this.xgrdLines = new DevExpress.XtraGrid.GridControl();
             this.gridViewLines = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gbFilters = new System.Windows.Forms.GroupBox();
@@ -53,6 +53,7 @@
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.lblSupplier = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
             this.xtcGeneral.SuspendLayout();
             this.xtpDocsList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xgrdLines)).BeginInit();
@@ -90,38 +91,34 @@
             // 
             // xtcGeneral
             // 
-            this.xtcGeneral.Controls.Add(this.xtpDocsList);
             this.xtcGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtcGeneral.Location = new System.Drawing.Point(0, 125);
             this.xtcGeneral.Name = "xtcGeneral";
-            this.xtcGeneral.SelectedIndex = 0;
+            this.xtcGeneral.SelectedTabPage = this.xtpDocsList;
             this.xtcGeneral.Size = new System.Drawing.Size(1338, 559);
-            this.xtcGeneral.TabIndex = 3;
+            this.xtcGeneral.TabIndex = 4;
+            this.xtcGeneral.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtpDocsList});
             // 
             // xtpDocsList
             // 
             this.xtpDocsList.Controls.Add(this.xgrdLines);
             this.xtpDocsList.Controls.Add(this.gbFilters);
-            this.xtpDocsList.Location = new System.Drawing.Point(4, 22);
             this.xtpDocsList.Name = "xtpDocsList";
-            this.xtpDocsList.Padding = new System.Windows.Forms.Padding(3);
-            this.xtpDocsList.Size = new System.Drawing.Size(1330, 533);
-            this.xtpDocsList.TabIndex = 0;
+            this.xtpDocsList.Size = new System.Drawing.Size(1332, 531);
             this.xtpDocsList.Text = "DOCS LIST";
-            this.xtpDocsList.UseVisualStyleBackColor = true;
-            this.xtpDocsList.Click += new System.EventHandler(this.xtpDocsList_Click);
             // 
             // xgrdLines
             // 
             this.xgrdLines.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.xgrdLines.Location = new System.Drawing.Point(6, 113);
+            this.xgrdLines.Location = new System.Drawing.Point(11, 110);
             this.xgrdLines.MainView = this.gridViewLines;
             this.xgrdLines.MenuManager = this.ribbonControl;
             this.xgrdLines.Name = "xgrdLines";
-            this.xgrdLines.Size = new System.Drawing.Size(1316, 414);
-            this.xgrdLines.TabIndex = 1;
+            this.xgrdLines.Size = new System.Drawing.Size(1314, 418);
+            this.xgrdLines.TabIndex = 2;
             this.xgrdLines.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewLines});
             // 
@@ -149,10 +146,10 @@
             this.gbFilters.Controls.Add(this.lblDocNumber);
             this.gbFilters.Controls.Add(this.slueSupplier);
             this.gbFilters.Controls.Add(this.lblSupplier);
-            this.gbFilters.Location = new System.Drawing.Point(6, 6);
+            this.gbFilters.Location = new System.Drawing.Point(11, 3);
             this.gbFilters.Name = "gbFilters";
-            this.gbFilters.Size = new System.Drawing.Size(1316, 101);
-            this.gbFilters.TabIndex = 0;
+            this.gbFilters.Size = new System.Drawing.Size(1314, 101);
+            this.gbFilters.TabIndex = 1;
             this.gbFilters.TabStop = false;
             // 
             // slueCustomer
@@ -211,7 +208,6 @@
             // 
             // sbFilter
             // 
-            this.sbFilter.ImageOptions.ImageUri.Uri = "Find;Size32x32";
             this.sbFilter.Location = new System.Drawing.Point(842, 47);
             this.sbFilter.Name = "sbFilter";
             this.sbFilter.Size = new System.Drawing.Size(82, 38);
@@ -346,6 +342,7 @@
             this.Controls.SetChildIndex(this.ribbonStatusBar, 0);
             this.Controls.SetChildIndex(this.xtcGeneral, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).EndInit();
             this.xtcGeneral.ResumeLayout(false);
             this.xtpDocsList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xgrdLines)).EndInit();
@@ -370,12 +367,17 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl xtcGeneral;
-        private System.Windows.Forms.TabPage xtpDocsList;
+        private DevExpress.XtraTab.XtraTabControl xtcGeneral;
+        private DevExpress.XtraTab.XtraTabPage xtpDocsList;
         private DevExpress.XtraGrid.GridControl xgrdLines;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewLines;
         private System.Windows.Forms.GroupBox gbFilters;
+        private DevExpress.XtraEditors.SearchLookUpEdit slueCustomer;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private DevExpress.XtraEditors.LabelControl lblCustomer;
+        private DevExpress.XtraEditors.SearchLookUpEdit slueDocType;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraEditors.LabelControl lblDocType;
         private DevExpress.XtraEditors.SimpleButton sbFilter;
         private DevExpress.XtraEditors.LabelControl lblAnd;
         private DevExpress.XtraEditors.LabelControl lblDocDate;
@@ -389,11 +391,5 @@
         private DevExpress.XtraEditors.SearchLookUpEdit slueSupplier;
         private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
         private DevExpress.XtraEditors.LabelControl lblSupplier;
-        private DevExpress.XtraEditors.SearchLookUpEdit slueDocType;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraEditors.LabelControl lblDocType;
-        private DevExpress.XtraEditors.SearchLookUpEdit slueCustomer;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
-        private DevExpress.XtraEditors.LabelControl lblCustomer;
     }
 }

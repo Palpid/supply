@@ -299,19 +299,19 @@
             // 
             // sbOrder
             // 
-            this.sbOrder.ImageOptions.ImageUri.Uri = "SortAsc;Size32x32";
             this.sbOrder.Location = new System.Drawing.Point(1080, 14);
             this.sbOrder.Name = "sbOrder";
             this.sbOrder.Size = new System.Drawing.Size(43, 35);
             this.sbOrder.TabIndex = 17;
+            this.sbOrder.Text = "Order";
             // 
             // sbSearch
             // 
-            this.sbSearch.ImageOptions.ImageUri.Uri = "Find;Size32x32";
             this.sbSearch.Location = new System.Drawing.Point(1025, 14);
             this.sbSearch.Name = "sbSearch";
             this.sbSearch.Size = new System.Drawing.Size(43, 35);
             this.sbSearch.TabIndex = 16;
+            this.sbSearch.Text = "Search";
             // 
             // slueCustomer
             // 

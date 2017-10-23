@@ -117,7 +117,7 @@
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonControl.Size = new System.Drawing.Size(1338, 129);
+            this.ribbonControl.Size = new System.Drawing.Size(1338, 125);
             // 
             // ribbonPage1
             // 
@@ -126,9 +126,9 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 694);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 684);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1338, 21);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1338, 31);
             // 
             // gbHeader
             // 
@@ -270,7 +270,6 @@
             // 
             // sbSearch
             // 
-            this.sbSearch.ImageOptions.ImageUri.Uri = "Find;Size32x32";
             this.sbSearch.Location = new System.Drawing.Point(1057, 14);
             this.sbSearch.Name = "sbSearch";
             this.sbSearch.Size = new System.Drawing.Size(82, 38);
@@ -407,7 +406,7 @@
             this.xtcPK.Location = new System.Drawing.Point(11, 149);
             this.xtcPK.Name = "xtcPK";
             this.xtcPK.SelectedTabPage = this.xtpSOSelection;
-            this.xtcPK.Size = new System.Drawing.Size(1314, 385);
+            this.xtcPK.Size = new System.Drawing.Size(1314, 379);
             this.xtcPK.TabIndex = 4;
             this.xtcPK.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpSOSelection,
@@ -419,7 +418,7 @@
             this.xtpSOSelection.Controls.Add(this.xgrdSoSelection);
             this.xtpSOSelection.Controls.Add(this.xgrdLinesSoSelection);
             this.xtpSOSelection.Name = "xtpSOSelection";
-            this.xtpSOSelection.Size = new System.Drawing.Size(1312, 360);
+            this.xtpSOSelection.Size = new System.Drawing.Size(1308, 351);
             this.xtpSOSelection.Text = "SO Selection";
             // 
             // xgrdSoSelection
@@ -447,7 +446,7 @@
             this.xgrdLinesSoSelection.MainView = this.gridViewLinesSoSelection;
             this.xgrdLinesSoSelection.MenuManager = this.ribbonControl;
             this.xgrdLinesSoSelection.Name = "xgrdLinesSoSelection";
-            this.xgrdLinesSoSelection.Size = new System.Drawing.Size(1305, 225);
+            this.xgrdLinesSoSelection.Size = new System.Drawing.Size(1305, 219);
             this.xgrdLinesSoSelection.TabIndex = 0;
             this.xgrdLinesSoSelection.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewLinesSoSelection});
@@ -461,7 +460,7 @@
             // 
             this.xtpDeliveredGoods.Controls.Add(this.xgrdLinesDeliveredGoods);
             this.xtpDeliveredGoods.Name = "xtpDeliveredGoods";
-            this.xtpDeliveredGoods.Size = new System.Drawing.Size(1312, 360);
+            this.xtpDeliveredGoods.Size = new System.Drawing.Size(1308, 357);
             this.xtpDeliveredGoods.Text = "DELIVERED GOODS";
             // 
             // xgrdLinesDeliveredGoods
@@ -471,7 +470,7 @@
             this.xgrdLinesDeliveredGoods.MainView = this.gridViewLinesDeliveredGoods;
             this.xgrdLinesDeliveredGoods.MenuManager = this.ribbonControl;
             this.xgrdLinesDeliveredGoods.Name = "xgrdLinesDeliveredGoods";
-            this.xgrdLinesDeliveredGoods.Size = new System.Drawing.Size(1312, 360);
+            this.xgrdLinesDeliveredGoods.Size = new System.Drawing.Size(1308, 357);
             this.xgrdLinesDeliveredGoods.TabIndex = 1;
             this.xgrdLinesDeliveredGoods.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewLinesDeliveredGoods});
@@ -496,7 +495,7 @@
             this.xtpTerms.Controls.Add(this.lblAddress);
             this.xtpTerms.Controls.Add(this.lblCompany);
             this.xtpTerms.Name = "xtpTerms";
-            this.xtpTerms.Size = new System.Drawing.Size(1312, 360);
+            this.xtpTerms.Size = new System.Drawing.Size(1308, 357);
             this.xtpTerms.Text = "TERMS";
             // 
             // sluePaymentTerm
@@ -624,10 +623,10 @@
             // xtcGeneral
             // 
             this.xtcGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtcGeneral.Location = new System.Drawing.Point(0, 129);
+            this.xtcGeneral.Location = new System.Drawing.Point(0, 125);
             this.xtcGeneral.Name = "xtcGeneral";
             this.xtcGeneral.SelectedTabPage = this.xtpPakingList;
-            this.xtcGeneral.Size = new System.Drawing.Size(1338, 565);
+            this.xtcGeneral.Size = new System.Drawing.Size(1338, 559);
             this.xtcGeneral.TabIndex = 5;
             this.xtcGeneral.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpPakingList});
@@ -637,7 +636,7 @@
             this.xtpPakingList.Controls.Add(this.gbHeader);
             this.xtpPakingList.Controls.Add(this.xtcPK);
             this.xtpPakingList.Name = "xtpPakingList";
-            this.xtpPakingList.Size = new System.Drawing.Size(1336, 540);
+            this.xtpPakingList.Size = new System.Drawing.Size(1332, 531);
             this.xtpPakingList.Text = "PACKING LIST";
             // 
             // PackingList
