@@ -20,6 +20,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
+using HKSupply.Styles;
 
 namespace HKSupply.Forms.Supply
 {
@@ -94,6 +95,7 @@ namespace HKSupply.Forms.Supply
                 SetUpGrdPoSelection();
                 SetUpGrdLinesPoSelection();
                 SetUpGrdLinesDeliveredGoods();
+                SetupPanelControl();
                 SetVisiblePropertyByState();
             }
             catch (Exception ex)
@@ -1105,6 +1107,10 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                //Activar que se alternen los colores de las filas del grid
+                gridViewPoSelection.OptionsView.EnableAppearanceOddRow = true;
+                gridViewPoSelection.OptionsView.EnableAppearanceEvenRow = true;
+
                 //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
                 gridViewPoSelection.OptionsView.ColumnAutoWidth = false;
                 gridViewPoSelection.HorzScrollVisibility = ScrollVisibility.Auto;
@@ -1157,6 +1163,10 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                //Activar que se alternen los colores de las filas del grid
+                gridViewLinesPoSelection.OptionsView.EnableAppearanceOddRow = true;
+                gridViewLinesPoSelection.OptionsView.EnableAppearanceEvenRow = true;
+
                 //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
                 gridViewLinesPoSelection.OptionsView.ColumnAutoWidth = false;
                 gridViewLinesPoSelection.HorzScrollVisibility = ScrollVisibility.Auto;
@@ -1259,6 +1269,10 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                //Activar que se alternen los colores de las filas del grid
+                gridViewLinesDeliveredGoods.OptionsView.EnableAppearanceOddRow = true;
+                gridViewLinesDeliveredGoods.OptionsView.EnableAppearanceEvenRow = true;
+
                 //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
                 gridViewLinesDeliveredGoods.OptionsView.ColumnAutoWidth = false;
                 gridViewLinesDeliveredGoods.HorzScrollVisibility = ScrollVisibility.Auto;
@@ -1313,6 +1327,21 @@ namespace HKSupply.Forms.Supply
 
                 //Events
                 gridViewLinesDeliveredGoods.CustomSummaryCalculate += GridViewLinesDeliveredGoods_CustomSummaryCalculate;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void SetupPanelControl()
+        {
+            try
+            {
+                var x = pcFilter.LookAndFeel;
+                x.UseDefaultLookAndFeel = false;
+                pcFilter.BackColor = AppStyles.BackColorAlternative;
+
             }
             catch
             {

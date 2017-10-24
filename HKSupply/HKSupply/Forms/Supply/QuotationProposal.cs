@@ -203,6 +203,7 @@ namespace HKSupply.Forms.Supply
                 SetUpSearchLookUpEdit();
                 SetUpEvents();
                 SetUpGrdLines();
+                SetupPanelControl();
 
                 SetVisiblePropertyByState();
                 SetObjectsReadOnly();
@@ -598,6 +599,9 @@ namespace HKSupply.Forms.Supply
                 GridView view = sender as GridView;
                 DocLine row = view.GetRow(view.FocusedRowHandle) as DocLine;
 
+                if (row == null)
+                    return;
+
                 switch (view.FocusedColumn.FieldName)
                 {
                     case nameof(DocLine.IdItemBcn):
@@ -886,7 +890,9 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-
+                DevExpress.Skins.Skin currentSkinsbFinishQP = DevExpress.Skins.CommonSkins.GetSkin(sbFinishQP.LookAndFeel);
+                //lookAndFeelButton.UseDefaultLookAndFeel = false;
+                //sbFinishQP.ImageOptions.Image = Image.FromFile(@"Resources\Images\button_red.png");
             }
             catch
             {
@@ -944,6 +950,10 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                //Activar que se alternen los colores de las filas del grid
+                gridViewLines.OptionsView.EnableAppearanceOddRow = true;
+                gridViewLines.OptionsView.EnableAppearanceEvenRow = true;
+
                 //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
                 gridViewLines.OptionsView.ColumnAutoWidth = false;
                 gridViewLines.HorzScrollVisibility = ScrollVisibility.Auto;
@@ -1058,6 +1068,21 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void SetupPanelControl()
+        {
+            try
+            {
+                var x = pcFilter.LookAndFeel;
+                x.UseDefaultLookAndFeel = false;
+                pcFilter.BackColor = AppStyles.BackColorAlternative;
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         #endregion
 
         #region Loads / Resets
@@ -1110,8 +1135,8 @@ namespace HKSupply.Forms.Supply
                 dateEditPODate.EditValue = _docHeadAssociatedPO.DocDate;
                 dateEditQPCreationDate.EditValue = _docHeadQP.CreationDate;
 
-                lblPODateWeek.Text = GetWeek(dateEditPODate.DateTime).ToString();
-                lblQPCreationDateWeek.Text = GetWeek(dateEditQPCreationDate.DateTime).ToString();
+                lblPODateWeek.Text = dateEditPODate.DateTime.GetWeek().ToString();
+                lblQPCreationDateWeek.Text = dateEditQPCreationDate.DateTime.GetWeek().ToString();
 
                 txtPONumber.Text = _docHeadAssociatedPO.IdDoc;
                 txtQPNumber.Text = _docHeadQP.IdDoc;
@@ -1233,24 +1258,6 @@ namespace HKSupply.Forms.Supply
                         }
                     }
                 }
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        private int GetWeek(DateTime date)
-        {
-            try
-            {
-                var currentCulture = CultureInfo.CurrentCulture;
-                var weekNo = currentCulture.Calendar.GetWeekOfYear(
-                date,
-                currentCulture.DateTimeFormat.CalendarWeekRule,
-                currentCulture.DateTimeFormat.FirstDayOfWeek);
-
-                return weekNo;
             }
             catch
             {

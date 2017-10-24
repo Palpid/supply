@@ -211,6 +211,10 @@ namespace HKSupply.Forms
 
                 //Agreagmos las entradas del menú de los pdf de ayuda.
                 CreatePdfDocsHelpMenu();
+
+                //Quitar la imagen del borde (aunque no haya imagen deja el espacio)
+                foreach (ToolStripMenuItem menuItem in msMainMenu.Items)
+                    ((ToolStripDropDownMenu)menuItem.DropDown).ShowImageMargin = false;
             }
             catch (Exception ex)
             {
@@ -234,7 +238,6 @@ namespace HKSupply.Forms
                 FontFamily fontFamily = new FontFamily("Brandon Grotesque Bold", collection);
                 Font font = new Font(fontFamily, 9);
                 msMainMenu.Font = font;
-
             }
             catch (Exception ex)
             {
@@ -319,10 +322,24 @@ namespace HKSupply.Forms
     /// </summary>
     internal class CustomProfessionalColors : ProfessionalColorTable
     {
+        public CustomProfessionalColors()
+        {
+            UseSystemColors = false;
+        }
+
         public override Color ToolStripGradientBegin { get { return Color.White; } }
         public override Color ToolStripGradientMiddle { get { return Color.White; } }
         public override Color ToolStripGradientEnd { get { return Color.White; } }
         public override Color MenuStripGradientBegin { get { return Color.White; } }
         public override Color MenuStripGradientEnd { get { return Color.White; } }
+
+        //Test para los estilos de los item y el menú
+        public override Color MenuBorder { get { return Color.White; } }
+        public override Color MenuItemBorder { get { return Color.White; } }
+        public override Color MenuItemSelected { get { return Color.FromArgb(246, 229, 229); } }
+        public override Color MenuItemSelectedGradientBegin { get { return Color.FromArgb(246, 229, 229); } }
+        public override Color MenuItemSelectedGradientEnd { get { return Color.FromArgb(246, 229, 229); } }
+        
     }
+
 }

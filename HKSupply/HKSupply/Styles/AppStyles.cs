@@ -12,6 +12,7 @@ namespace HKSupply.Styles
     public static class AppStyles
     {
         public static Color EtniaRed = Color.FromArgb(228, 37, 24);
+        public static Color BackColorAlternative = Color.FromArgb(204, 204, 204);
 
         //***** Supply Status *****//
         //Cancel
@@ -30,7 +31,6 @@ namespace HKSupply.Styles
         #region Public Methods
 
         #region Private Members
-        //private static Color _colorHighlight = Color.FromArgb(247, 190, 186);
         private static Color _colorHighlight = Color.FromArgb(246, 229, 229);
         private static Color _colorControl = Color.White;
         private static Color _colorGridOddRow = Color.FromArgb(244, 244, 244);

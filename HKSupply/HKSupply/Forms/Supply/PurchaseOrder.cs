@@ -67,7 +67,7 @@ namespace HKSupply.Forms.Supply
                 SetUpSearchLookUpEdit();
                 SetUpEvents();
                 SetUpGrdLines();
-
+                SetupPanelControl();
                 SetVisiblePropertyByState();
                 SetObjectsReadOnly();
             }
@@ -318,7 +318,7 @@ namespace HKSupply.Forms.Supply
 
                 if (dateEditDocDate.EditValue != null)
                 {
-                    lblDocDateWeek.Text = GetWeek(dateEditDocDate.DateTime).ToString();
+                    lblDocDateWeek.Text = dateEditDocDate.DateTime.GetWeek().ToString();
                     GetDeliveryDate();
                     if (CurrentState == ActionsStates.New)
                     { 
@@ -339,7 +339,7 @@ namespace HKSupply.Forms.Supply
             {
                 if (dateEditDelivery.EditValue != null)
                 {
-                    lblDeliveryWeek.Text = GetWeek(dateEditDelivery.DateTime).ToString();
+                    lblDeliveryWeek.Text = dateEditDelivery.DateTime.GetWeek().ToString();
                 }
             }
             catch (Exception ex)
@@ -721,6 +721,10 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                //Activar que se alternen los colores de las filas del grid
+                gridViewLines.OptionsView.EnableAppearanceOddRow = true;
+                gridViewLines.OptionsView.EnableAppearanceEvenRow = true;
+
                 //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
                 gridViewLines.OptionsView.ColumnAutoWidth = false;
                 gridViewLines.HorzScrollVisibility = ScrollVisibility.Auto;
@@ -1046,6 +1050,21 @@ namespace HKSupply.Forms.Supply
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void SetupPanelControl()
+        {
+            try
+            {
+                var x = pcFilter.LookAndFeel;
+                x.UseDefaultLookAndFeel = false;
+                pcFilter.BackColor = AppStyles.BackColorAlternative;
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
         #endregion
 
         #region Loads / Resets
@@ -1082,8 +1101,8 @@ namespace HKSupply.Forms.Supply
                 dateEditDocDate.EditValue = _docHeadPO.DocDate;
                 dateEditDelivery.EditValue = _docHeadPO.DeliveryDate;
 
-                lblDocDateWeek.Text = GetWeek(dateEditDocDate.DateTime).ToString();
-                lblDeliveryWeek.Text = GetWeek(dateEditDelivery.DateTime).ToString();
+                lblDocDateWeek.Text = dateEditDocDate.DateTime.GetWeek().ToString();
+                lblDeliveryWeek.Text = dateEditDelivery.DateTime.GetWeek().ToString();
 
                 memoEditRemarks.EditValue = _docHeadPO.Remarks;
 
@@ -1251,24 +1270,6 @@ namespace HKSupply.Forms.Supply
                 Cursor = Cursors.Default;
             }
 
-        }
-
-        private int GetWeek(DateTime date)
-        {
-            try
-            {
-                var currentCulture = CultureInfo.CurrentCulture;
-                var weekNo = currentCulture.Calendar.GetWeekOfYear(
-                date,
-                currentCulture.DateTimeFormat.CalendarWeekRule,
-                currentCulture.DateTimeFormat.FirstDayOfWeek);
-
-                return weekNo;
-            }
-            catch
-            {
-                throw;
-            }
         }
 
         private void SetSupplierInfo()

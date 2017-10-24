@@ -50,7 +50,7 @@ namespace HKSupply.Forms.Supply
                 SetUpSearchLookUpEdit();
                 SetUpEvents();
                 SetUpGrdLines();
-                SetupGroupBox();
+                SetupPanelControl();
             }
             catch (Exception ex)
             {
@@ -207,6 +207,9 @@ namespace HKSupply.Forms.Supply
             {
                 GridView view = sender as GridView;
                 DocHead doc = view.GetRow(e.RowHandle) as DocHead;
+
+                if (doc == null)
+                    return;
 
                 switch (e.Column.FieldName)
                 {
@@ -532,11 +535,13 @@ namespace HKSupply.Forms.Supply
             }
         }
 
-        private void SetupGroupBox()
+        private void SetupPanelControl()
         {
             try
             {
-                //    gbFilters.BackColor = Color.Gray;
+                var x = pcFilter.LookAndFeel;
+                x.UseDefaultLookAndFeel = false;
+                pcFilter.BackColor = AppStyles.BackColorAlternative;
 
             }
             catch

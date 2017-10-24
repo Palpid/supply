@@ -690,3 +690,4 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe.licenses
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.csproj.CoreCompileInputs.cache
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\button_red.png

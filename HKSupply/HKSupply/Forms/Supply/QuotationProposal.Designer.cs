@@ -30,6 +30,27 @@
         {
             this.xtcGeneral = new DevExpress.XtraTab.XtraTabControl();
             this.xtpQP = new DevExpress.XtraTab.XtraTabPage();
+            this.pcFilter = new DevExpress.XtraEditors.PanelControl();
+            this.memoEditRemarks = new DevExpress.XtraEditors.MemoEdit();
+            this.sbOrder = new DevExpress.XtraEditors.SimpleButton();
+            this.lblRemarks = new DevExpress.XtraEditors.LabelControl();
+            this.txtPONumber = new DevExpress.XtraEditors.TextEdit();
+            this.lblQPNumber = new DevExpress.XtraEditors.LabelControl();
+            this.lblPONumber = new DevExpress.XtraEditors.LabelControl();
+            this.txtQPNumber = new DevExpress.XtraEditors.TextEdit();
+            this.lblPODate = new DevExpress.XtraEditors.LabelControl();
+            this.sbFinishQP = new DevExpress.XtraEditors.SimpleButton();
+            this.lblQPCreationDate = new DevExpress.XtraEditors.LabelControl();
+            this.dateEditPODate = new DevExpress.XtraEditors.DateEdit();
+            this.sbSearch = new DevExpress.XtraEditors.SimpleButton();
+            this.dateEditQPCreationDate = new DevExpress.XtraEditors.DateEdit();
+            this.slueCustomer = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.lblDate = new DevExpress.XtraEditors.LabelControl();
+            this.lblCustomer = new DevExpress.XtraEditors.LabelControl();
+            this.lblPODateWeek = new DevExpress.XtraEditors.LabelControl();
+            this.lblWeek = new DevExpress.XtraEditors.LabelControl();
+            this.lblQPCreationDateWeek = new DevExpress.XtraEditors.LabelControl();
             this.xtcPO = new DevExpress.XtraTab.XtraTabControl();
             this.xtpProposal = new DevExpress.XtraTab.XtraTabPage();
             this.xgrdLines = new DevExpress.XtraGrid.GridControl();
@@ -41,47 +62,27 @@
             this.lblContact = new DevExpress.XtraEditors.LabelControl();
             this.lblAddress = new DevExpress.XtraEditors.LabelControl();
             this.lblCompany = new DevExpress.XtraEditors.LabelControl();
-            this.gbHeader = new System.Windows.Forms.GroupBox();
-            this.memoEditRemarks = new DevExpress.XtraEditors.MemoEdit();
-            this.lblRemarks = new DevExpress.XtraEditors.LabelControl();
-            this.lblQPNumber = new DevExpress.XtraEditors.LabelControl();
-            this.txtQPNumber = new DevExpress.XtraEditors.TextEdit();
-            this.sbFinishQP = new DevExpress.XtraEditors.SimpleButton();
-            this.sbOrder = new DevExpress.XtraEditors.SimpleButton();
-            this.sbSearch = new DevExpress.XtraEditors.SimpleButton();
-            this.slueCustomer = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.lblCustomer = new DevExpress.XtraEditors.LabelControl();
-            this.lblWeek = new DevExpress.XtraEditors.LabelControl();
-            this.lblQPCreationDateWeek = new DevExpress.XtraEditors.LabelControl();
-            this.lblPODateWeek = new DevExpress.XtraEditors.LabelControl();
-            this.lblDate = new DevExpress.XtraEditors.LabelControl();
-            this.dateEditQPCreationDate = new DevExpress.XtraEditors.DateEdit();
-            this.dateEditPODate = new DevExpress.XtraEditors.DateEdit();
-            this.lblQPCreationDate = new DevExpress.XtraEditors.LabelControl();
-            this.lblPODate = new DevExpress.XtraEditors.LabelControl();
-            this.lblPONumber = new DevExpress.XtraEditors.LabelControl();
-            this.txtPONumber = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
             this.xtcGeneral.SuspendLayout();
             this.xtpQP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcFilter)).BeginInit();
+            this.pcFilter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditRemarks.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPONumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQPNumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditPODate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditPODate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditQPCreationDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditQPCreationDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueCustomer.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcPO)).BeginInit();
             this.xtcPO.SuspendLayout();
             this.xtpProposal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xgrdLines)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLines)).BeginInit();
             this.xtpTerms.SuspendLayout();
-            this.gbHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEditRemarks.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtQPNumber.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.slueCustomer.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditQPCreationDate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditQPCreationDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditPODate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditPODate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPONumber.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -114,21 +115,227 @@
             // 
             // xtpQP
             // 
+            this.xtpQP.Controls.Add(this.pcFilter);
             this.xtpQP.Controls.Add(this.xtcPO);
-            this.xtpQP.Controls.Add(this.gbHeader);
             this.xtpQP.Name = "xtpQP";
             this.xtpQP.Size = new System.Drawing.Size(1332, 531);
             this.xtpQP.Text = "PURCHASE ORDER";
+            // 
+            // pcFilter
+            // 
+            this.pcFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pcFilter.Controls.Add(this.memoEditRemarks);
+            this.pcFilter.Controls.Add(this.sbOrder);
+            this.pcFilter.Controls.Add(this.lblRemarks);
+            this.pcFilter.Controls.Add(this.txtPONumber);
+            this.pcFilter.Controls.Add(this.lblQPNumber);
+            this.pcFilter.Controls.Add(this.lblPONumber);
+            this.pcFilter.Controls.Add(this.txtQPNumber);
+            this.pcFilter.Controls.Add(this.lblPODate);
+            this.pcFilter.Controls.Add(this.sbFinishQP);
+            this.pcFilter.Controls.Add(this.lblQPCreationDate);
+            this.pcFilter.Controls.Add(this.dateEditPODate);
+            this.pcFilter.Controls.Add(this.sbSearch);
+            this.pcFilter.Controls.Add(this.dateEditQPCreationDate);
+            this.pcFilter.Controls.Add(this.slueCustomer);
+            this.pcFilter.Controls.Add(this.lblDate);
+            this.pcFilter.Controls.Add(this.lblCustomer);
+            this.pcFilter.Controls.Add(this.lblPODateWeek);
+            this.pcFilter.Controls.Add(this.lblWeek);
+            this.pcFilter.Controls.Add(this.lblQPCreationDateWeek);
+            this.pcFilter.Location = new System.Drawing.Point(11, 12);
+            this.pcFilter.Name = "pcFilter";
+            this.pcFilter.Size = new System.Drawing.Size(1309, 102);
+            this.pcFilter.TabIndex = 4;
+            // 
+            // memoEditRemarks
+            // 
+            this.memoEditRemarks.Location = new System.Drawing.Point(738, 52);
+            this.memoEditRemarks.MenuManager = this.ribbonControl;
+            this.memoEditRemarks.Name = "memoEditRemarks";
+            this.memoEditRemarks.Size = new System.Drawing.Size(389, 32);
+            this.memoEditRemarks.TabIndex = 34;
+            // 
+            // sbOrder
+            // 
+            this.sbOrder.Location = new System.Drawing.Point(1085, 14);
+            this.sbOrder.Name = "sbOrder";
+            this.sbOrder.Size = new System.Drawing.Size(43, 35);
+            this.sbOrder.TabIndex = 17;
+            this.sbOrder.Text = "Order";
+            // 
+            // lblRemarks
+            // 
+            this.lblRemarks.Location = new System.Drawing.Point(648, 55);
+            this.lblRemarks.Name = "lblRemarks";
+            this.lblRemarks.Size = new System.Drawing.Size(41, 13);
+            this.lblRemarks.TabIndex = 33;
+            this.lblRemarks.Text = "Remarks";
+            // 
+            // txtPONumber
+            // 
+            this.txtPONumber.Location = new System.Drawing.Point(11, 33);
+            this.txtPONumber.MenuManager = this.ribbonControl;
+            this.txtPONumber.Name = "txtPONumber";
+            this.txtPONumber.Size = new System.Drawing.Size(120, 20);
+            this.txtPONumber.TabIndex = 1;
+            // 
+            // lblQPNumber
+            // 
+            this.lblQPNumber.Location = new System.Drawing.Point(150, 14);
+            this.lblQPNumber.Name = "lblQPNumber";
+            this.lblQPNumber.Size = new System.Drawing.Size(96, 13);
+            this.lblQPNumber.TabIndex = 19;
+            this.lblQPNumber.Text = "Q. Proposal Number";
+            // 
+            // lblPONumber
+            // 
+            this.lblPONumber.Location = new System.Drawing.Point(44, 14);
+            this.lblPONumber.Name = "lblPONumber";
+            this.lblPONumber.Size = new System.Drawing.Size(54, 13);
+            this.lblPONumber.TabIndex = 0;
+            this.lblPONumber.Text = "PO Number";
+            // 
+            // txtQPNumber
+            // 
+            this.txtQPNumber.Location = new System.Drawing.Point(137, 33);
+            this.txtQPNumber.MenuManager = this.ribbonControl;
+            this.txtQPNumber.Name = "txtQPNumber";
+            this.txtQPNumber.Size = new System.Drawing.Size(120, 20);
+            this.txtQPNumber.TabIndex = 20;
+            // 
+            // lblPODate
+            // 
+            this.lblPODate.Location = new System.Drawing.Point(362, 34);
+            this.lblPODate.Name = "lblPODate";
+            this.lblPODate.Size = new System.Drawing.Size(43, 13);
+            this.lblPODate.TabIndex = 2;
+            this.lblPODate.Text = "PO DATE";
+            // 
+            // sbFinishQP
+            // 
+            this.sbFinishQP.ImageOptions.ImageUri.Uri = "Apply";
+            this.sbFinishQP.Location = new System.Drawing.Point(12, 59);
+            this.sbFinishQP.Name = "sbFinishQP";
+            this.sbFinishQP.Size = new System.Drawing.Size(119, 32);
+            this.sbFinishQP.TabIndex = 18;
+            this.sbFinishQP.Text = "Finish QP";
+            // 
+            // lblQPCreationDate
+            // 
+            this.lblQPCreationDate.Location = new System.Drawing.Point(362, 53);
+            this.lblQPCreationDate.Name = "lblQPCreationDate";
+            this.lblQPCreationDate.Size = new System.Drawing.Size(69, 13);
+            this.lblQPCreationDate.TabIndex = 3;
+            this.lblQPCreationDate.Text = "QP CREATION";
+            // 
+            // dateEditPODate
+            // 
+            this.dateEditPODate.EditValue = null;
+            this.dateEditPODate.Location = new System.Drawing.Point(437, 33);
+            this.dateEditPODate.MenuManager = this.ribbonControl;
+            this.dateEditPODate.Name = "dateEditPODate";
+            this.dateEditPODate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditPODate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditPODate.Size = new System.Drawing.Size(106, 20);
+            this.dateEditPODate.TabIndex = 4;
+            // 
+            // sbSearch
+            // 
+            this.sbSearch.Location = new System.Drawing.Point(1030, 14);
+            this.sbSearch.Name = "sbSearch";
+            this.sbSearch.Size = new System.Drawing.Size(43, 35);
+            this.sbSearch.TabIndex = 16;
+            this.sbSearch.Text = "Search";
+            // 
+            // dateEditQPCreationDate
+            // 
+            this.dateEditQPCreationDate.EditValue = null;
+            this.dateEditQPCreationDate.Location = new System.Drawing.Point(437, 52);
+            this.dateEditQPCreationDate.MenuManager = this.ribbonControl;
+            this.dateEditQPCreationDate.Name = "dateEditQPCreationDate";
+            this.dateEditQPCreationDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditQPCreationDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditQPCreationDate.Size = new System.Drawing.Size(106, 20);
+            this.dateEditQPCreationDate.TabIndex = 5;
+            // 
+            // slueCustomer
+            // 
+            this.slueCustomer.Location = new System.Drawing.Point(738, 33);
+            this.slueCustomer.MenuManager = this.ribbonControl;
+            this.slueCustomer.Name = "slueCustomer";
+            this.slueCustomer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.slueCustomer.Properties.View = this.searchLookUpEdit1View;
+            this.slueCustomer.Size = new System.Drawing.Size(219, 20);
+            this.slueCustomer.TabIndex = 13;
+            // 
+            // searchLookUpEdit1View
+            // 
+            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
+            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // lblDate
+            // 
+            this.lblDate.Location = new System.Drawing.Point(477, 14);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(23, 13);
+            this.lblDate.TabIndex = 6;
+            this.lblDate.Text = "Date";
+            // 
+            // lblCustomer
+            // 
+            this.lblCustomer.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblCustomer.Location = new System.Drawing.Point(648, 36);
+            this.lblCustomer.Name = "lblCustomer";
+            this.lblCustomer.Size = new System.Drawing.Size(84, 13);
+            this.lblCustomer.TabIndex = 10;
+            this.lblCustomer.Text = "SUPPLIER";
+            // 
+            // lblPODateWeek
+            // 
+            this.lblPODateWeek.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblPODateWeek.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lblPODateWeek.Location = new System.Drawing.Point(549, 33);
+            this.lblPODateWeek.Name = "lblPODateWeek";
+            this.lblPODateWeek.Size = new System.Drawing.Size(65, 20);
+            this.lblPODateWeek.TabIndex = 7;
+            this.lblPODateWeek.Text = "XX";
+            // 
+            // lblWeek
+            // 
+            this.lblWeek.Location = new System.Drawing.Point(565, 14);
+            this.lblWeek.Name = "lblWeek";
+            this.lblWeek.Size = new System.Drawing.Size(27, 13);
+            this.lblWeek.TabIndex = 9;
+            this.lblWeek.Text = "Week";
+            // 
+            // lblQPCreationDateWeek
+            // 
+            this.lblQPCreationDateWeek.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblQPCreationDateWeek.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lblQPCreationDateWeek.Location = new System.Drawing.Point(549, 53);
+            this.lblQPCreationDateWeek.Name = "lblQPCreationDateWeek";
+            this.lblQPCreationDateWeek.Size = new System.Drawing.Size(65, 19);
+            this.lblQPCreationDateWeek.TabIndex = 8;
+            this.lblQPCreationDateWeek.Text = "XX";
             // 
             // xtcPO
             // 
             this.xtcPO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.xtcPO.Location = new System.Drawing.Point(11, 107);
+            this.xtcPO.Location = new System.Drawing.Point(11, 120);
             this.xtcPO.Name = "xtcPO";
             this.xtcPO.SelectedTabPage = this.xtpProposal;
-            this.xtcPO.Size = new System.Drawing.Size(1314, 420);
+            this.xtcPO.Size = new System.Drawing.Size(1314, 407);
             this.xtcPO.TabIndex = 3;
             this.xtcPO.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpProposal,
@@ -138,7 +345,7 @@
             // 
             this.xtpProposal.Controls.Add(this.xgrdLines);
             this.xtpProposal.Name = "xtpProposal";
-            this.xtpProposal.Size = new System.Drawing.Size(1308, 392);
+            this.xtpProposal.Size = new System.Drawing.Size(1308, 379);
             this.xtpProposal.Text = "PROPOSAL";
             // 
             // xgrdLines
@@ -148,7 +355,7 @@
             this.xgrdLines.MainView = this.gridViewLines;
             this.xgrdLines.MenuManager = this.ribbonControl;
             this.xgrdLines.Name = "xgrdLines";
-            this.xgrdLines.Size = new System.Drawing.Size(1308, 392);
+            this.xgrdLines.Size = new System.Drawing.Size(1308, 379);
             this.xgrdLines.TabIndex = 0;
             this.xgrdLines.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewLines});
@@ -167,7 +374,7 @@
             this.xtpTerms.Controls.Add(this.lblAddress);
             this.xtpTerms.Controls.Add(this.lblCompany);
             this.xtpTerms.Name = "xtpTerms";
-            this.xtpTerms.Size = new System.Drawing.Size(1308, 392);
+            this.xtpTerms.Size = new System.Drawing.Size(1308, 379);
             this.xtpTerms.Text = "TERMS";
             // 
             // lblTxtContact
@@ -227,213 +434,6 @@
             this.lblCompany.TabIndex = 3;
             this.lblCompany.Text = "Company:";
             // 
-            // gbHeader
-            // 
-            this.gbHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbHeader.Controls.Add(this.memoEditRemarks);
-            this.gbHeader.Controls.Add(this.lblRemarks);
-            this.gbHeader.Controls.Add(this.lblQPNumber);
-            this.gbHeader.Controls.Add(this.txtQPNumber);
-            this.gbHeader.Controls.Add(this.sbFinishQP);
-            this.gbHeader.Controls.Add(this.sbOrder);
-            this.gbHeader.Controls.Add(this.sbSearch);
-            this.gbHeader.Controls.Add(this.slueCustomer);
-            this.gbHeader.Controls.Add(this.lblCustomer);
-            this.gbHeader.Controls.Add(this.lblWeek);
-            this.gbHeader.Controls.Add(this.lblQPCreationDateWeek);
-            this.gbHeader.Controls.Add(this.lblPODateWeek);
-            this.gbHeader.Controls.Add(this.lblDate);
-            this.gbHeader.Controls.Add(this.dateEditQPCreationDate);
-            this.gbHeader.Controls.Add(this.dateEditPODate);
-            this.gbHeader.Controls.Add(this.lblQPCreationDate);
-            this.gbHeader.Controls.Add(this.lblPODate);
-            this.gbHeader.Controls.Add(this.lblPONumber);
-            this.gbHeader.Controls.Add(this.txtPONumber);
-            this.gbHeader.Location = new System.Drawing.Point(11, 3);
-            this.gbHeader.Name = "gbHeader";
-            this.gbHeader.Size = new System.Drawing.Size(1314, 99);
-            this.gbHeader.TabIndex = 2;
-            this.gbHeader.TabStop = false;
-            // 
-            // memoEditRemarks
-            // 
-            this.memoEditRemarks.Location = new System.Drawing.Point(733, 52);
-            this.memoEditRemarks.MenuManager = this.ribbonControl;
-            this.memoEditRemarks.Name = "memoEditRemarks";
-            this.memoEditRemarks.Size = new System.Drawing.Size(389, 32);
-            this.memoEditRemarks.TabIndex = 34;
-            // 
-            // lblRemarks
-            // 
-            this.lblRemarks.Location = new System.Drawing.Point(643, 55);
-            this.lblRemarks.Name = "lblRemarks";
-            this.lblRemarks.Size = new System.Drawing.Size(41, 13);
-            this.lblRemarks.TabIndex = 33;
-            this.lblRemarks.Text = "Remarks";
-            // 
-            // lblQPNumber
-            // 
-            this.lblQPNumber.Location = new System.Drawing.Point(145, 14);
-            this.lblQPNumber.Name = "lblQPNumber";
-            this.lblQPNumber.Size = new System.Drawing.Size(96, 13);
-            this.lblQPNumber.TabIndex = 19;
-            this.lblQPNumber.Text = "Q. Proposal Number";
-            // 
-            // txtQPNumber
-            // 
-            this.txtQPNumber.Location = new System.Drawing.Point(132, 33);
-            this.txtQPNumber.MenuManager = this.ribbonControl;
-            this.txtQPNumber.Name = "txtQPNumber";
-            this.txtQPNumber.Size = new System.Drawing.Size(120, 20);
-            this.txtQPNumber.TabIndex = 20;
-            // 
-            // sbFinishQP
-            // 
-            this.sbFinishQP.ImageOptions.ImageUri.Uri = "Apply";
-            this.sbFinishQP.Location = new System.Drawing.Point(7, 59);
-            this.sbFinishQP.Name = "sbFinishQP";
-            this.sbFinishQP.Size = new System.Drawing.Size(119, 32);
-            this.sbFinishQP.TabIndex = 18;
-            this.sbFinishQP.Text = "Finish QP";
-            // 
-            // sbOrder
-            // 
-            this.sbOrder.Location = new System.Drawing.Point(1080, 14);
-            this.sbOrder.Name = "sbOrder";
-            this.sbOrder.Size = new System.Drawing.Size(43, 35);
-            this.sbOrder.TabIndex = 17;
-            this.sbOrder.Text = "Order";
-            // 
-            // sbSearch
-            // 
-            this.sbSearch.Location = new System.Drawing.Point(1025, 14);
-            this.sbSearch.Name = "sbSearch";
-            this.sbSearch.Size = new System.Drawing.Size(43, 35);
-            this.sbSearch.TabIndex = 16;
-            this.sbSearch.Text = "Search";
-            // 
-            // slueCustomer
-            // 
-            this.slueCustomer.Location = new System.Drawing.Point(733, 33);
-            this.slueCustomer.MenuManager = this.ribbonControl;
-            this.slueCustomer.Name = "slueCustomer";
-            this.slueCustomer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.slueCustomer.Properties.View = this.searchLookUpEdit1View;
-            this.slueCustomer.Size = new System.Drawing.Size(219, 20);
-            this.slueCustomer.TabIndex = 13;
-            // 
-            // searchLookUpEdit1View
-            // 
-            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
-            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-            // 
-            // lblCustomer
-            // 
-            this.lblCustomer.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblCustomer.Location = new System.Drawing.Point(643, 36);
-            this.lblCustomer.Name = "lblCustomer";
-            this.lblCustomer.Size = new System.Drawing.Size(84, 13);
-            this.lblCustomer.TabIndex = 10;
-            this.lblCustomer.Text = "SUPPLIER";
-            // 
-            // lblWeek
-            // 
-            this.lblWeek.Location = new System.Drawing.Point(560, 14);
-            this.lblWeek.Name = "lblWeek";
-            this.lblWeek.Size = new System.Drawing.Size(27, 13);
-            this.lblWeek.TabIndex = 9;
-            this.lblWeek.Text = "Week";
-            // 
-            // lblQPCreationDateWeek
-            // 
-            this.lblQPCreationDateWeek.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblQPCreationDateWeek.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lblQPCreationDateWeek.Location = new System.Drawing.Point(544, 53);
-            this.lblQPCreationDateWeek.Name = "lblQPCreationDateWeek";
-            this.lblQPCreationDateWeek.Size = new System.Drawing.Size(65, 19);
-            this.lblQPCreationDateWeek.TabIndex = 8;
-            this.lblQPCreationDateWeek.Text = "XX";
-            // 
-            // lblPODateWeek
-            // 
-            this.lblPODateWeek.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblPODateWeek.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lblPODateWeek.Location = new System.Drawing.Point(544, 33);
-            this.lblPODateWeek.Name = "lblPODateWeek";
-            this.lblPODateWeek.Size = new System.Drawing.Size(65, 20);
-            this.lblPODateWeek.TabIndex = 7;
-            this.lblPODateWeek.Text = "XX";
-            // 
-            // lblDate
-            // 
-            this.lblDate.Location = new System.Drawing.Point(472, 14);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(23, 13);
-            this.lblDate.TabIndex = 6;
-            this.lblDate.Text = "Date";
-            // 
-            // dateEditQPCreationDate
-            // 
-            this.dateEditQPCreationDate.EditValue = null;
-            this.dateEditQPCreationDate.Location = new System.Drawing.Point(432, 52);
-            this.dateEditQPCreationDate.MenuManager = this.ribbonControl;
-            this.dateEditQPCreationDate.Name = "dateEditQPCreationDate";
-            this.dateEditQPCreationDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditQPCreationDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditQPCreationDate.Size = new System.Drawing.Size(106, 20);
-            this.dateEditQPCreationDate.TabIndex = 5;
-            // 
-            // dateEditPODate
-            // 
-            this.dateEditPODate.EditValue = null;
-            this.dateEditPODate.Location = new System.Drawing.Point(432, 33);
-            this.dateEditPODate.MenuManager = this.ribbonControl;
-            this.dateEditPODate.Name = "dateEditPODate";
-            this.dateEditPODate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditPODate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditPODate.Size = new System.Drawing.Size(106, 20);
-            this.dateEditPODate.TabIndex = 4;
-            // 
-            // lblQPCreationDate
-            // 
-            this.lblQPCreationDate.Location = new System.Drawing.Point(357, 53);
-            this.lblQPCreationDate.Name = "lblQPCreationDate";
-            this.lblQPCreationDate.Size = new System.Drawing.Size(69, 13);
-            this.lblQPCreationDate.TabIndex = 3;
-            this.lblQPCreationDate.Text = "QP CREATION";
-            // 
-            // lblPODate
-            // 
-            this.lblPODate.Location = new System.Drawing.Point(357, 34);
-            this.lblPODate.Name = "lblPODate";
-            this.lblPODate.Size = new System.Drawing.Size(43, 13);
-            this.lblPODate.TabIndex = 2;
-            this.lblPODate.Text = "PO DATE";
-            // 
-            // lblPONumber
-            // 
-            this.lblPONumber.Location = new System.Drawing.Point(39, 14);
-            this.lblPONumber.Name = "lblPONumber";
-            this.lblPONumber.Size = new System.Drawing.Size(54, 13);
-            this.lblPONumber.TabIndex = 0;
-            this.lblPONumber.Text = "PO Number";
-            // 
-            // txtPONumber
-            // 
-            this.txtPONumber.Location = new System.Drawing.Point(6, 33);
-            this.txtPONumber.MenuManager = this.ribbonControl;
-            this.txtPONumber.Name = "txtPONumber";
-            this.txtPONumber.Size = new System.Drawing.Size(120, 20);
-            this.txtPONumber.TabIndex = 1;
-            // 
             // QuotationProposal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,23 +451,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).EndInit();
             this.xtcGeneral.ResumeLayout(false);
             this.xtpQP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcFilter)).EndInit();
+            this.pcFilter.ResumeLayout(false);
+            this.pcFilter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditRemarks.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPONumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQPNumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditPODate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditPODate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditQPCreationDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditQPCreationDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueCustomer.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcPO)).EndInit();
             this.xtcPO.ResumeLayout(false);
             this.xtpProposal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xgrdLines)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLines)).EndInit();
             this.xtpTerms.ResumeLayout(false);
-            this.gbHeader.ResumeLayout(false);
-            this.gbHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEditRemarks.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtQPNumber.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.slueCustomer.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditQPCreationDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditQPCreationDate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditPODate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditPODate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPONumber.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -488,7 +489,6 @@
         private DevExpress.XtraEditors.LabelControl lblContact;
         private DevExpress.XtraEditors.LabelControl lblAddress;
         private DevExpress.XtraEditors.LabelControl lblCompany;
-        private System.Windows.Forms.GroupBox gbHeader;
         private DevExpress.XtraEditors.SimpleButton sbFinishQP;
         private DevExpress.XtraEditors.SimpleButton sbOrder;
         private DevExpress.XtraEditors.SimpleButton sbSearch;
@@ -509,5 +509,6 @@
         private DevExpress.XtraEditors.TextEdit txtQPNumber;
         private DevExpress.XtraEditors.MemoEdit memoEditRemarks;
         private DevExpress.XtraEditors.LabelControl lblRemarks;
+        private DevExpress.XtraEditors.PanelControl pcFilter;
     }
 }

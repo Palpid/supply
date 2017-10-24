@@ -73,6 +73,7 @@ namespace HKSupply.Forms.Supply
                 SetUpSearchLookUpEdit();
                 SetUpEvents();
                 SetUpGrdLines();
+                SetupPanelControl();
 
                 SetObjectsReadOnly();
             }
@@ -639,6 +640,10 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                //Activar que se alternen los colores de las filas del grid
+                gridViewLines.OptionsView.EnableAppearanceOddRow = true;
+                gridViewLines.OptionsView.EnableAppearanceEvenRow = true;
+
                 //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
                 gridViewLines.OptionsView.ColumnAutoWidth = false;
                 gridViewLines.HorzScrollVisibility = ScrollVisibility.Auto;
@@ -735,6 +740,21 @@ namespace HKSupply.Forms.Supply
                 gridViewLines.ShowingEditor += GridViewLines_ShowingEditor;
                 gridViewLines.CellValueChanged += GridViewLines_CellValueChanged;
                 gridViewLines.RowCellStyle += GridViewLines_RowCellStyle;
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void SetupPanelControl()
+        {
+            try
+            {
+                var x = pcFilter.LookAndFeel;
+                x.UseDefaultLookAndFeel = false;
+                pcFilter.BackColor = AppStyles.BackColorAlternative;
 
             }
             catch

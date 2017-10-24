@@ -60,6 +60,7 @@ namespace HKSupply.Forms.Supply
                 SetUpSearchLookUpEdit();
                 SetUpEvents();
                 SetUpGrdLines();
+                SetupPanelControl();
             }
             catch (Exception ex)
             {
@@ -467,6 +468,21 @@ namespace HKSupply.Forms.Supply
                 //Events
                 gridViewLines.DoubleClick += GridViewLines_DoubleClick;
                 gridViewLines.RowCellStyle += GridViewLines_RowCellStyle;
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void SetupPanelControl()
+        {
+            try
+            {
+                var x = pcFilter.LookAndFeel;
+                x.UseDefaultLookAndFeel = false;
+                pcFilter.BackColor = AppStyles.BackColorAlternative;
 
             }
             catch

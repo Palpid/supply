@@ -425,7 +425,7 @@ namespace HKSupply.Helpers
         {
             try
             {
-                var currentCulture = System.Globalization.CultureInfo.CurrentCulture;
+                var currentCulture = System.Globalization.CultureInfo.InvariantCulture;
                 var weekNo = currentCulture.Calendar.GetWeekOfYear(
                 date,
                 currentCulture.DateTimeFormat.CalendarWeekRule,

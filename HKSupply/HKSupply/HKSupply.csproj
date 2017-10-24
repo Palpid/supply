@@ -1014,6 +1014,9 @@
     <Compile Include="Services\Interfaces\IUserAttrDescription.cs" />
     <Compile Include="Styles\AppStyles.cs" />
     <None Include="Resources\formcaption_red.png" />
+    <Content Include="Resources\Images\button_red.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\formcaption_red.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
