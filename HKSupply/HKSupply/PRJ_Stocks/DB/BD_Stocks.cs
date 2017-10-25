@@ -28,12 +28,19 @@ namespace HKSupply.PRJ_Stocks.DB
                 string sSQL = "";
                 Classes.Stocks STK = new Classes.Stocks();
 
+                //TODO: Procesat els moviments pendents (trasllats) per veure si han finalitzat.
+
                 sSQL = $"SELECT idWarehouse,idWareHouseType,Descr,Remarks,idOwner FROM STK_WAREHOUSES ORDER BY idWarehouse";
-                STK.LstWareHouses = db.Database.SqlQuery <Stocks.Warehouse> (sSQL).ToList();
-                                
-                sSQL = $"SELECT idWarehouse,idWareHouseType,idItem,Lot,idOwner,QTT as QttStock FROM STK_STOCK ORDER BY idWarehouse";
+                STK.LstWarehouses = db.Database.SqlQuery<Stocks.Warehouse>(sSQL).ToList();
+
+                sSQL = $"SELECT STK.idWarehouse,STK.idWareHouseType,SW.Descr as WareHouseName, idItem, Lot, STK.idOwner,QTT as QttStock" +
+                        " FROM STK_STOCK STK" +
+                        " left join STK_WAREHOUSES SW on STK.idWarehouse = SW.idWarehouse and STK.idWareHouseType = SW.idWareHouseType" +
+                        " ORDER BY Descr";
                 STK.LstStocks = db.Database.SqlQuery<Stocks.StockItem>(sSQL).ToList();
-                
+
+                STK.SetStockBase(); //- Copiem el stock actual a la llsita StockBase per establir el punt base on es guarda.
+
                 //string query = $"SELECT ID_DOC, ID_SUPPLY_DOC_TYPE FROM DOC_HEAD WHERE  ID_DOC = '{idDoc}'";
 
                 //ResposeTest res1 = db.Database.SqlQuery<ResposeTest>(query).FirstOrDefault();

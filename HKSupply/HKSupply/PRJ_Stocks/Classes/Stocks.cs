@@ -30,35 +30,69 @@ namespace HKSupply.PRJ_Stocks.Classes
             Transit = 4
         }
 
-        public List<Warehouse> _LstWareHouses = new List<Warehouse>();
-        private List<StockItem> _LstStock = new List<StockItem>();
-        private List<StockMove> _LstStockMove = new List<StockMove>();
+        public class Warehouse
+        {
 
-        public List<Warehouse> LstWareHouses
-        {
-            get { return _LstWareHouses; }
-            set { _LstWareHouses = value; }
+            public string idWareHouse { get; set; }
+            public string Descr { get; set; }
+            public string Remarks { get; set; }
+            public string idOwner { get; set; }
+            public StockWareHousesType WareHouseType { get; set; }
+
+            public int idWareHouseType
+            {
+                get
+                { return (int)WareHouseType; }
+                set
+                {
+                    WareHouseType = (StockWareHousesType)value;
+                }
+            }
+
+            public string Key()
+            {
+                return idWareHouse + "|" + idWareHouseType;
+            }
+
         }
-        
-        public List<StockItem> LstStocks
+
+        private List<Warehouse> _LstWarehouses = new List<Warehouse>();
+        public List<Warehouse> LstWarehouses
         {
-            get { return _LstStock; }
-            set { _LstStock = value; }
+            get { return _LstWarehouses; }
+            set { _LstWarehouses = value; }
         }
+
+        public void AddWareHouse(Warehouse Ware)
+        {
+            _LstWarehouses.Add(Ware);
+        }
+
+
+        private List<StockMove> _LstStockMove = new List<StockMove>();
+        private List<StockItem> _LstStock = new List<StockItem>();
+        private List<StockItem> _LstStocksOrig = new List<StockItem>();
+
 
         public List<StockMove> LstStockMove
         {
             get { return _LstStockMove; }
             set { _LstStockMove = value; }
         }
-               
+
+        public List<StockItem> LstStocks
+        {
+            get { return _LstStock; }
+            set { _LstStock = value; }
+        }
+
+
         public class StockItem
         {
             public Warehouse Ware { get; set; }
             public Item Item { get; set; }
             public string idOwner { get; set; }
             public double QttStock { get; set; }
-
 
             public string idWareHouse
             {
@@ -70,13 +104,23 @@ namespace HKSupply.PRJ_Stocks.Classes
                     Ware.idWareHouse = value;
                 }
             }
+            public string WareHouseName
+            {
+                get
+                { return (string)Ware.Descr; }
+                set
+                {
+                    if (Ware == null) Ware = new Warehouse();
+                    Ware.Descr = value;
+                }
+            }
             public int idWareHouseType
             {
                 get
-                { return (int) Ware.WareHouseType; }
+                { return (int)Ware.WareHouseType; }
                 set
                 {
-                    if (Ware == null ) Ware = new Warehouse();
+                    if (Ware == null) Ware = new Warehouse();
                     Ware.WareHouseType = (StockWareHousesType)value;
                 }
             }
@@ -120,25 +164,6 @@ namespace HKSupply.PRJ_Stocks.Classes
             public StockMovementsType MoveType { get; set; }
         }
 
-        public class Warehouse
-        {
-
-            public string idWareHouse { get; set; }
-            public string Descr { get; set; }
-            public string Remarks { get; set; }
-            public string idOwner { get; set; }
-            public StockWareHousesType WareHouseType { get; set; }
-
-            public int idWareHouseType {
-                get
-                { return (int)WareHouseType;}
-                set
-                {
-                  WareHouseType = (StockWareHousesType) value; 
-                }
-            }
-        }
-
         public class Item
         {
             public string idItem { get; set; }
@@ -154,22 +179,19 @@ namespace HKSupply.PRJ_Stocks.Classes
 
         #endregion
 
-        public void AddWareHouse(Warehouse Ware)
-        {
-            _LstWareHouses.Add(Ware);
-        }
+
+
 
         #region OperacionsSobreDomini
 
-        public void AddSockItem(Warehouse ware,  Item item, string idOwner, double Qtt, StockMovementsType MoveType, 
-            string IdUser = "", string Remarks = "", List<string> LstidDoc = null)
+        public void AddSockItem(Warehouse ware, Item item, string idOwner, double Qtt, StockMovementsType MoveType, string IdUser = "", string Remarks = "", List<string> LstidDoc = null)
         {
             // -- Test Param --
             if (ware.idWareHouse == "" | ware.idWareHouse == null) throw new System.ArgumentException("IdWarehouse can't be empty/null");
             if (item.idItem == "" | item.idItem == null) throw new System.ArgumentException("IdItem can't be empty/null");
 
             // -- REGISTRE STOCK ----------------------------------------------------------------------------------------
-            StockItem SI = GetStockItem(ware,item, idOwner);
+            StockItem SI = GetStockItem(ware, item, idOwner);
             if (SI == null)
             {
                 if (Qtt < 0)
@@ -216,7 +238,7 @@ namespace HKSupply.PRJ_Stocks.Classes
             _LstStockMove.Add(SM);
         }
 
-        public void AssignSockItemToOwner(Warehouse ware, Item item, string idOwner, double Qtt, StockMovementsType MoveType = StockMovementsType.Reservation,string IdUser = "", string remarks = "", List<string> LstidDoc = null)
+        public void AssignSockItemToOwner(Warehouse ware, Item item, string idOwner, double Qtt, StockMovementsType MoveType = StockMovementsType.Reservation, string IdUser = "", string remarks = "", List<string> LstidDoc = null)
         {
             // -- Test Param
             if (item.idItem == "" | item.idItem == null) throw new System.ArgumentException("IdItem can't be null");
@@ -225,7 +247,7 @@ namespace HKSupply.PRJ_Stocks.Classes
             if (Qtt <= 0) throw new System.ArgumentException("Qtt to assing must be greather than 0", "Qtt");
 
             // -- REGISTRE STOCK ORIGEN ----------------------------------------------------------------------------------------
-            StockItem SIO = GetStockItem(ware,item, "");  //Ha de ser STOCK Lliure (sense Owner)
+            StockItem SIO = GetStockItem(ware, item, "");  //Ha de ser STOCK Lliure (sense Owner)
             if (SIO == null)
                 throw new System.InvalidOperationException("idITEM (" + item.idItem + ") & idLOT ( " + item.Lot + ") does not exist on Warehouse (" + ware.idWareHouse + "/" + ware.WareHouseType + ")");
             else
@@ -237,7 +259,7 @@ namespace HKSupply.PRJ_Stocks.Classes
 
             }
             // -- REGISTRE STOCK DESTI ----------------------------------------------------------------------------------------
-            StockItem SID = GetStockItem(ware,item, idOwner);
+            StockItem SID = GetStockItem(ware, item, idOwner);
             if (SID == null)
             {
                 SID = new StockItem();
@@ -296,7 +318,7 @@ namespace HKSupply.PRJ_Stocks.Classes
 
             }
             // -- REGISTRE STOCK DESTI ----------------------------------------------------------------------------------------
-            StockItem SID = GetStockItem(ware,item, "");
+            StockItem SID = GetStockItem(ware, item, "");
             if (SID == null)
             {
                 SID = new StockItem();
@@ -315,7 +337,7 @@ namespace HKSupply.PRJ_Stocks.Classes
             StockMove SM = new StockMove();
             SM.WareORIG.idWareHouse = "";
             SM.WareORIG.WareHouseType = StockWareHousesType.Undefined;
-            SM.WareDEST.idWareHouse = ware.idWareHouse  ;
+            SM.WareDEST.idWareHouse = ware.idWareHouse;
             SM.WareDEST.WareHouseType = ware.WareHouseType;
             SM.Item.idItem = item.idItem;
             SM.Item.Lot = item.Lot;
@@ -345,7 +367,7 @@ namespace HKSupply.PRJ_Stocks.Classes
             StockItem SI = GetStockItem(ware, item, idOwner);
             double oldStk;
             if (SI == null)
-                throw new System.InvalidOperationException("idITEM (" + item.idItem + ") & idLOT ( " + item.Lot + ") & idOwner ( " + idOwner + " ) does not exist on WarehouseORIG (" + ware.idWareHouse + "/" + ware.WareHouseType +")");
+                throw new System.InvalidOperationException("idITEM (" + item.idItem + ") & idLOT ( " + item.Lot + ") & idOwner ( " + idOwner + " ) does not exist on WarehouseORIG (" + ware.idWareHouse + "/" + ware.WareHouseType + ")");
             else
             {
                 oldStk = SI.QttStock;
@@ -356,7 +378,7 @@ namespace HKSupply.PRJ_Stocks.Classes
             // -- REGISTRE MOVIMENTS ----------------------------------------------------------------------------------------
             StockMove SM = new StockMove();
             SM.WareORIG.idWareHouse = "";
-            SM.WareORIG.WareHouseType= StockWareHousesType.Undefined;
+            SM.WareORIG.WareHouseType = StockWareHousesType.Undefined;
             SM.WareDEST.idWareHouse = ware.idWareHouse;
             SM.WareDEST.WareHouseType = ware.WareHouseType;
             SM.Item.idItem = item.idItem;
@@ -386,7 +408,7 @@ namespace HKSupply.PRJ_Stocks.Classes
             // -- REGISTRE STOCK ORIGEN ----------------------------------------------------------------------------------------
             StockItem SIO = GetStockItem(WareORIG, item, idOwner);
             if (SIO == null)
-                throw new System.InvalidOperationException("idITEM (" + item.idItem + ") & idLOT ( " + item.Lot + ") & idOwner ( " + idOwner + " ) does not exist on WarehouseORIG (" + WareORIG.idWareHouse + "/" + WareORIG.WareHouseType +")");
+                throw new System.InvalidOperationException("idITEM (" + item.idItem + ") & idLOT ( " + item.Lot + ") & idOwner ( " + idOwner + " ) does not exist on WarehouseORIG (" + WareORIG.idWareHouse + "/" + WareORIG.WareHouseType + ")");
             else
             {
                 if (SIO.QttStock < Qtt) throw
@@ -436,15 +458,21 @@ namespace HKSupply.PRJ_Stocks.Classes
 
         #endregion
 
+        public void SetStockBase()
+        {
+            _LstStocksOrig.Clear();
+            foreach (StockItem S in _LstStock) _LstStocksOrig.Add(S);
+        }
+
         #region ConsultaDomini
 
-        public Warehouse GetWareHouse(string idWareHouse, StockWareHousesType WareTYpe)
+        public Warehouse GetWareHouse(string WareHouseDescr)
         {
-            if (_LstWareHouses != null && _LstWareHouses.Count > 0)
+            if (_LstWarehouses != null && _LstWarehouses.Count > 0)
             {
-                foreach (Warehouse wr in _LstWareHouses)
+                foreach (Warehouse wr in _LstWarehouses)
                 {
-                    if (wr.idWareHouse == idWareHouse && wr.WareHouseType == WareTYpe )
+                    if (wr.Descr == WareHouseDescr)
                     {
                         return wr;
                     }
@@ -452,8 +480,47 @@ namespace HKSupply.PRJ_Stocks.Classes
             }
             return null;
         }
-        
-        public StockItem GetStockItem(Warehouse ware,  Item item, string idOwner)
+
+        public Warehouse GetWareHouse(string idWareHouse, StockWareHousesType WareTYpe)
+        {
+            if (_LstWarehouses != null && _LstWarehouses.Count > 0)
+            {
+                foreach (Warehouse wr in _LstWarehouses)
+                {
+                    if (wr.idWareHouse == idWareHouse && wr.WareHouseType == WareTYpe)
+                    {
+                        return wr;
+                    }
+                }
+            }
+            return null;
+        }
+
+        public List<Warehouse> GetLstWarehouses()
+        {
+            List<Warehouse> LW = new List<Warehouse>();
+            foreach (Warehouse W in _LstWarehouses) LW.Add(W);
+            return LW;
+        }
+
+        public List<string> GetLstWarehouseNames()
+        {
+            List<string> LN = new List<string>();
+            foreach (Warehouse W in _LstWarehouses) LN.Add(W.Descr);
+            return LN;
+        }
+
+        public List<string> GetLstWarehousesTypes()
+        {
+            List<string> LWT = new List<string>();
+            foreach (Warehouse W in _LstWarehouses)
+            {
+                if (!LWT.Contains(W.idWareHouseType.ToString())) LWT.Add(W.idWareHouseType.ToString());
+            }
+            return LWT;
+        }
+
+        public StockItem GetStockItem(Warehouse ware, Item item, string idOwner)
         {
             if (_LstStock != null && _LstStock.Count > 0)
             {
@@ -483,7 +550,18 @@ namespace HKSupply.PRJ_Stocks.Classes
             return 0;
         }
 
-        public List<StockItem> ListStockFilteredOR(Warehouse ware, Item item , string idOwner, double QttMin, double QttMax)
+        public List<string> ListOwners()
+        {
+            List<string> LO = new List<string>();
+            foreach (StockItem SI in _LstStock)
+            {
+                if (!LO.Contains(SI.idOwner)) LO.Add(SI.idOwner);
+            }
+            return LO;
+
+        }
+
+        public List<StockItem> ListStockFilteredOR(Warehouse ware, Item item, string idOwner, double QttMin, double QttMax)
         {
             // Llista de stock items que compleix ALGUNA de les condicions
             List<StockItem> LI = new List<StockItem>();
@@ -557,6 +635,6 @@ namespace HKSupply.PRJ_Stocks.Classes
 
         #endregion
 
-        
+
     }
 }

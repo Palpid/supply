@@ -30,6 +30,32 @@
         {
             this.xtcGeneral = new DevExpress.XtraTab.XtraTabControl();
             this.xtpPO = new DevExpress.XtraTab.XtraTabPage();
+            this.pcFilter = new DevExpress.XtraEditors.PanelControl();
+            this.memoEditRemarks = new DevExpress.XtraEditors.MemoEdit();
+            this.sbImportExcel = new DevExpress.XtraEditors.SimpleButton();
+            this.lblRemarks = new DevExpress.XtraEditors.LabelControl();
+            this.txtPONumber = new DevExpress.XtraEditors.TextEdit();
+            this.lblPONumber = new DevExpress.XtraEditors.LabelControl();
+            this.sbFinishPO = new DevExpress.XtraEditors.SimpleButton();
+            this.lblDocDate = new DevExpress.XtraEditors.LabelControl();
+            this.sbOrder = new DevExpress.XtraEditors.SimpleButton();
+            this.lblDelivery = new DevExpress.XtraEditors.LabelControl();
+            this.sbSearch = new DevExpress.XtraEditors.SimpleButton();
+            this.dateEditDocDate = new DevExpress.XtraEditors.DateEdit();
+            this.slueCurrency = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dateEditDelivery = new DevExpress.XtraEditors.DateEdit();
+            this.slueDeliveryTerms = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.lblDate = new DevExpress.XtraEditors.LabelControl();
+            this.slueSupplier = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.lblDocDateWeek = new DevExpress.XtraEditors.LabelControl();
+            this.lblCurrency = new DevExpress.XtraEditors.LabelControl();
+            this.lblDeliveryWeek = new DevExpress.XtraEditors.LabelControl();
+            this.lblTermsOfDelivery = new DevExpress.XtraEditors.LabelControl();
+            this.lblWeek = new DevExpress.XtraEditors.LabelControl();
+            this.lblSupplier = new DevExpress.XtraEditors.LabelControl();
             this.xtcPO = new DevExpress.XtraTab.XtraTabControl();
             this.xtpOrderedGoods = new DevExpress.XtraTab.XtraTabPage();
             this.xgrdLines = new DevExpress.XtraGrid.GridControl();
@@ -48,36 +74,24 @@
             this.lblContact = new DevExpress.XtraEditors.LabelControl();
             this.lblAddress = new DevExpress.XtraEditors.LabelControl();
             this.lblCompany = new DevExpress.XtraEditors.LabelControl();
-            this.memoEditRemarks = new DevExpress.XtraEditors.MemoEdit();
-            this.lblRemarks = new DevExpress.XtraEditors.LabelControl();
-            this.sbImportExcel = new DevExpress.XtraEditors.SimpleButton();
-            this.sbFinishPO = new DevExpress.XtraEditors.SimpleButton();
-            this.sbOrder = new DevExpress.XtraEditors.SimpleButton();
-            this.sbSearch = new DevExpress.XtraEditors.SimpleButton();
-            this.slueCurrency = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.slueDeliveryTerms = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.slueSupplier = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.lblCurrency = new DevExpress.XtraEditors.LabelControl();
-            this.lblTermsOfDelivery = new DevExpress.XtraEditors.LabelControl();
-            this.lblSupplier = new DevExpress.XtraEditors.LabelControl();
-            this.lblWeek = new DevExpress.XtraEditors.LabelControl();
-            this.lblDeliveryWeek = new DevExpress.XtraEditors.LabelControl();
-            this.lblDocDateWeek = new DevExpress.XtraEditors.LabelControl();
-            this.lblDate = new DevExpress.XtraEditors.LabelControl();
-            this.dateEditDelivery = new DevExpress.XtraEditors.DateEdit();
-            this.dateEditDocDate = new DevExpress.XtraEditors.DateEdit();
-            this.lblDelivery = new DevExpress.XtraEditors.LabelControl();
-            this.lblDocDate = new DevExpress.XtraEditors.LabelControl();
-            this.lblPONumber = new DevExpress.XtraEditors.LabelControl();
-            this.txtPONumber = new DevExpress.XtraEditors.TextEdit();
-            this.pcFilter = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
             this.xtcGeneral.SuspendLayout();
             this.xtpPO.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcFilter)).BeginInit();
+            this.pcFilter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditRemarks.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPONumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditDocDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditDocDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueCurrency.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditDelivery.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditDelivery.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueDeliveryTerms.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueSupplier.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcPO)).BeginInit();
             this.xtcPO.SuspendLayout();
             this.xtpOrderedGoods.SuspendLayout();
@@ -86,20 +100,6 @@
             this.xtpTerms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sluePaymentTerm.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEditRemarks.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.slueCurrency.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.slueDeliveryTerms.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.slueSupplier.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditDelivery.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditDelivery.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditDocDate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditDocDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPONumber.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcFilter)).BeginInit();
-            this.pcFilter.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -137,6 +137,261 @@
             this.xtpPO.Name = "xtpPO";
             this.xtpPO.Size = new System.Drawing.Size(1332, 531);
             this.xtpPO.Text = "PURCHASE ORDER";
+            // 
+            // pcFilter
+            // 
+            this.pcFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pcFilter.Controls.Add(this.memoEditRemarks);
+            this.pcFilter.Controls.Add(this.sbImportExcel);
+            this.pcFilter.Controls.Add(this.lblRemarks);
+            this.pcFilter.Controls.Add(this.txtPONumber);
+            this.pcFilter.Controls.Add(this.lblPONumber);
+            this.pcFilter.Controls.Add(this.sbFinishPO);
+            this.pcFilter.Controls.Add(this.lblDocDate);
+            this.pcFilter.Controls.Add(this.sbOrder);
+            this.pcFilter.Controls.Add(this.lblDelivery);
+            this.pcFilter.Controls.Add(this.sbSearch);
+            this.pcFilter.Controls.Add(this.dateEditDocDate);
+            this.pcFilter.Controls.Add(this.slueCurrency);
+            this.pcFilter.Controls.Add(this.dateEditDelivery);
+            this.pcFilter.Controls.Add(this.slueDeliveryTerms);
+            this.pcFilter.Controls.Add(this.lblDate);
+            this.pcFilter.Controls.Add(this.slueSupplier);
+            this.pcFilter.Controls.Add(this.lblDocDateWeek);
+            this.pcFilter.Controls.Add(this.lblCurrency);
+            this.pcFilter.Controls.Add(this.lblDeliveryWeek);
+            this.pcFilter.Controls.Add(this.lblTermsOfDelivery);
+            this.pcFilter.Controls.Add(this.lblWeek);
+            this.pcFilter.Controls.Add(this.lblSupplier);
+            this.pcFilter.Location = new System.Drawing.Point(12, 14);
+            this.pcFilter.Name = "pcFilter";
+            this.pcFilter.Size = new System.Drawing.Size(1313, 129);
+            this.pcFilter.TabIndex = 4;
+            // 
+            // memoEditRemarks
+            // 
+            this.memoEditRemarks.Location = new System.Drawing.Point(568, 84);
+            this.memoEditRemarks.MenuManager = this.ribbonControl;
+            this.memoEditRemarks.Name = "memoEditRemarks";
+            this.memoEditRemarks.Size = new System.Drawing.Size(389, 32);
+            this.memoEditRemarks.TabIndex = 36;
+            // 
+            // sbImportExcel
+            // 
+            this.sbImportExcel.Location = new System.Drawing.Point(1040, 53);
+            this.sbImportExcel.Name = "sbImportExcel";
+            this.sbImportExcel.Size = new System.Drawing.Size(43, 35);
+            this.sbImportExcel.TabIndex = 19;
+            this.sbImportExcel.Text = "Excel";
+            // 
+            // lblRemarks
+            // 
+            this.lblRemarks.Location = new System.Drawing.Point(461, 86);
+            this.lblRemarks.Name = "lblRemarks";
+            this.lblRemarks.Size = new System.Drawing.Size(41, 13);
+            this.lblRemarks.TabIndex = 35;
+            this.lblRemarks.Text = "Remarks";
+            // 
+            // txtPONumber
+            // 
+            this.txtPONumber.Location = new System.Drawing.Point(11, 29);
+            this.txtPONumber.MenuManager = this.ribbonControl;
+            this.txtPONumber.Name = "txtPONumber";
+            this.txtPONumber.Size = new System.Drawing.Size(120, 20);
+            this.txtPONumber.TabIndex = 1;
+            // 
+            // lblPONumber
+            // 
+            this.lblPONumber.Location = new System.Drawing.Point(44, 10);
+            this.lblPONumber.Name = "lblPONumber";
+            this.lblPONumber.Size = new System.Drawing.Size(54, 13);
+            this.lblPONumber.TabIndex = 0;
+            this.lblPONumber.Text = "PO Number";
+            // 
+            // sbFinishPO
+            // 
+            this.sbFinishPO.ImageOptions.ImageUri.Uri = "Apply";
+            this.sbFinishPO.Location = new System.Drawing.Point(12, 55);
+            this.sbFinishPO.Name = "sbFinishPO";
+            this.sbFinishPO.Size = new System.Drawing.Size(119, 32);
+            this.sbFinishPO.TabIndex = 18;
+            this.sbFinishPO.Text = "Finish PO";
+            // 
+            // lblDocDate
+            // 
+            this.lblDocDate.Location = new System.Drawing.Point(137, 32);
+            this.lblDocDate.Name = "lblDocDate";
+            this.lblDocDate.Size = new System.Drawing.Size(51, 13);
+            this.lblDocDate.TabIndex = 2;
+            this.lblDocDate.Text = "DOC DATE";
+            // 
+            // sbOrder
+            // 
+            this.sbOrder.Location = new System.Drawing.Point(991, 52);
+            this.sbOrder.Name = "sbOrder";
+            this.sbOrder.Size = new System.Drawing.Size(43, 35);
+            this.sbOrder.TabIndex = 17;
+            this.sbOrder.Text = "Order";
+            // 
+            // lblDelivery
+            // 
+            this.lblDelivery.Location = new System.Drawing.Point(141, 51);
+            this.lblDelivery.Name = "lblDelivery";
+            this.lblDelivery.Size = new System.Drawing.Size(47, 13);
+            this.lblDelivery.TabIndex = 3;
+            this.lblDelivery.Text = "DELIVERY";
+            // 
+            // sbSearch
+            // 
+            this.sbSearch.Location = new System.Drawing.Point(991, 10);
+            this.sbSearch.Name = "sbSearch";
+            this.sbSearch.Size = new System.Drawing.Size(43, 35);
+            this.sbSearch.TabIndex = 16;
+            this.sbSearch.Text = "Search";
+            // 
+            // dateEditDocDate
+            // 
+            this.dateEditDocDate.EditValue = null;
+            this.dateEditDocDate.Location = new System.Drawing.Point(194, 29);
+            this.dateEditDocDate.MenuManager = this.ribbonControl;
+            this.dateEditDocDate.Name = "dateEditDocDate";
+            this.dateEditDocDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditDocDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditDocDate.Size = new System.Drawing.Size(106, 20);
+            this.dateEditDocDate.TabIndex = 4;
+            // 
+            // slueCurrency
+            // 
+            this.slueCurrency.Location = new System.Drawing.Point(568, 67);
+            this.slueCurrency.MenuManager = this.ribbonControl;
+            this.slueCurrency.Name = "slueCurrency";
+            this.slueCurrency.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.slueCurrency.Properties.View = this.gridView2;
+            this.slueCurrency.Size = new System.Drawing.Size(194, 20);
+            this.slueCurrency.TabIndex = 15;
+            // 
+            // gridView2
+            // 
+            this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
+            // 
+            // dateEditDelivery
+            // 
+            this.dateEditDelivery.EditValue = null;
+            this.dateEditDelivery.Location = new System.Drawing.Point(194, 48);
+            this.dateEditDelivery.MenuManager = this.ribbonControl;
+            this.dateEditDelivery.Name = "dateEditDelivery";
+            this.dateEditDelivery.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditDelivery.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditDelivery.Size = new System.Drawing.Size(106, 20);
+            this.dateEditDelivery.TabIndex = 5;
+            // 
+            // slueDeliveryTerms
+            // 
+            this.slueDeliveryTerms.Location = new System.Drawing.Point(568, 48);
+            this.slueDeliveryTerms.MenuManager = this.ribbonControl;
+            this.slueDeliveryTerms.Name = "slueDeliveryTerms";
+            this.slueDeliveryTerms.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.slueDeliveryTerms.Properties.View = this.gridView1;
+            this.slueDeliveryTerms.Size = new System.Drawing.Size(389, 20);
+            this.slueDeliveryTerms.TabIndex = 14;
+            // 
+            // gridView1
+            // 
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // lblDate
+            // 
+            this.lblDate.Location = new System.Drawing.Point(234, 10);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(23, 13);
+            this.lblDate.TabIndex = 6;
+            this.lblDate.Text = "Date";
+            // 
+            // slueSupplier
+            // 
+            this.slueSupplier.Location = new System.Drawing.Point(568, 29);
+            this.slueSupplier.MenuManager = this.ribbonControl;
+            this.slueSupplier.Name = "slueSupplier";
+            this.slueSupplier.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.slueSupplier.Properties.View = this.searchLookUpEdit1View;
+            this.slueSupplier.Size = new System.Drawing.Size(389, 20);
+            this.slueSupplier.TabIndex = 13;
+            // 
+            // searchLookUpEdit1View
+            // 
+            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
+            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // lblDocDateWeek
+            // 
+            this.lblDocDateWeek.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblDocDateWeek.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lblDocDateWeek.Location = new System.Drawing.Point(306, 29);
+            this.lblDocDateWeek.Name = "lblDocDateWeek";
+            this.lblDocDateWeek.Size = new System.Drawing.Size(65, 20);
+            this.lblDocDateWeek.TabIndex = 7;
+            this.lblDocDateWeek.Text = "XX";
+            // 
+            // lblCurrency
+            // 
+            this.lblCurrency.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblCurrency.Location = new System.Drawing.Point(461, 68);
+            this.lblCurrency.Name = "lblCurrency";
+            this.lblCurrency.Size = new System.Drawing.Size(84, 13);
+            this.lblCurrency.TabIndex = 12;
+            this.lblCurrency.Text = "Currency";
+            // 
+            // lblDeliveryWeek
+            // 
+            this.lblDeliveryWeek.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblDeliveryWeek.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lblDeliveryWeek.Location = new System.Drawing.Point(306, 49);
+            this.lblDeliveryWeek.Name = "lblDeliveryWeek";
+            this.lblDeliveryWeek.Size = new System.Drawing.Size(65, 19);
+            this.lblDeliveryWeek.TabIndex = 8;
+            this.lblDeliveryWeek.Text = "XX";
+            // 
+            // lblTermsOfDelivery
+            // 
+            this.lblTermsOfDelivery.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblTermsOfDelivery.Location = new System.Drawing.Point(461, 49);
+            this.lblTermsOfDelivery.Name = "lblTermsOfDelivery";
+            this.lblTermsOfDelivery.Size = new System.Drawing.Size(84, 13);
+            this.lblTermsOfDelivery.TabIndex = 11;
+            this.lblTermsOfDelivery.Text = "Terms df Delivery";
+            // 
+            // lblWeek
+            // 
+            this.lblWeek.Location = new System.Drawing.Point(322, 10);
+            this.lblWeek.Name = "lblWeek";
+            this.lblWeek.Size = new System.Drawing.Size(27, 13);
+            this.lblWeek.TabIndex = 9;
+            this.lblWeek.Text = "Week";
+            // 
+            // lblSupplier
+            // 
+            this.lblSupplier.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblSupplier.Location = new System.Drawing.Point(461, 32);
+            this.lblSupplier.Name = "lblSupplier";
+            this.lblSupplier.Size = new System.Drawing.Size(84, 13);
+            this.lblSupplier.TabIndex = 10;
+            this.lblSupplier.Text = "SUPPLIER";
             // 
             // xtcPO
             // 
@@ -191,7 +446,7 @@
             this.xtpTerms.Controls.Add(this.lblAddress);
             this.xtpTerms.Controls.Add(this.lblCompany);
             this.xtpTerms.Name = "xtpTerms";
-            this.xtpTerms.Size = new System.Drawing.Size(1308, 364);
+            this.xtpTerms.Size = new System.Drawing.Size(1308, 350);
             this.xtpTerms.Text = "TERMS";
             // 
             // sluePaymentTerm
@@ -316,261 +571,6 @@
             this.lblCompany.TabIndex = 3;
             this.lblCompany.Text = "Company:";
             // 
-            // memoEditRemarks
-            // 
-            this.memoEditRemarks.Location = new System.Drawing.Point(568, 84);
-            this.memoEditRemarks.MenuManager = this.ribbonControl;
-            this.memoEditRemarks.Name = "memoEditRemarks";
-            this.memoEditRemarks.Size = new System.Drawing.Size(389, 32);
-            this.memoEditRemarks.TabIndex = 36;
-            // 
-            // lblRemarks
-            // 
-            this.lblRemarks.Location = new System.Drawing.Point(461, 86);
-            this.lblRemarks.Name = "lblRemarks";
-            this.lblRemarks.Size = new System.Drawing.Size(41, 13);
-            this.lblRemarks.TabIndex = 35;
-            this.lblRemarks.Text = "Remarks";
-            // 
-            // sbImportExcel
-            // 
-            this.sbImportExcel.Location = new System.Drawing.Point(1040, 53);
-            this.sbImportExcel.Name = "sbImportExcel";
-            this.sbImportExcel.Size = new System.Drawing.Size(43, 35);
-            this.sbImportExcel.TabIndex = 19;
-            this.sbImportExcel.Text = "Excel";
-            // 
-            // sbFinishPO
-            // 
-            this.sbFinishPO.ImageOptions.ImageUri.Uri = "Apply";
-            this.sbFinishPO.Location = new System.Drawing.Point(12, 55);
-            this.sbFinishPO.Name = "sbFinishPO";
-            this.sbFinishPO.Size = new System.Drawing.Size(119, 32);
-            this.sbFinishPO.TabIndex = 18;
-            this.sbFinishPO.Text = "Finish PO";
-            // 
-            // sbOrder
-            // 
-            this.sbOrder.Location = new System.Drawing.Point(991, 52);
-            this.sbOrder.Name = "sbOrder";
-            this.sbOrder.Size = new System.Drawing.Size(43, 35);
-            this.sbOrder.TabIndex = 17;
-            this.sbOrder.Text = "Order";
-            // 
-            // sbSearch
-            // 
-            this.sbSearch.Location = new System.Drawing.Point(991, 10);
-            this.sbSearch.Name = "sbSearch";
-            this.sbSearch.Size = new System.Drawing.Size(43, 35);
-            this.sbSearch.TabIndex = 16;
-            this.sbSearch.Text = "Search";
-            // 
-            // slueCurrency
-            // 
-            this.slueCurrency.Location = new System.Drawing.Point(568, 67);
-            this.slueCurrency.MenuManager = this.ribbonControl;
-            this.slueCurrency.Name = "slueCurrency";
-            this.slueCurrency.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.slueCurrency.Properties.View = this.gridView2;
-            this.slueCurrency.Size = new System.Drawing.Size(194, 20);
-            this.slueCurrency.TabIndex = 15;
-            // 
-            // gridView2
-            // 
-            this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView2.OptionsView.ShowGroupPanel = false;
-            // 
-            // slueDeliveryTerms
-            // 
-            this.slueDeliveryTerms.Location = new System.Drawing.Point(568, 48);
-            this.slueDeliveryTerms.MenuManager = this.ribbonControl;
-            this.slueDeliveryTerms.Name = "slueDeliveryTerms";
-            this.slueDeliveryTerms.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.slueDeliveryTerms.Properties.View = this.gridView1;
-            this.slueDeliveryTerms.Size = new System.Drawing.Size(389, 20);
-            this.slueDeliveryTerms.TabIndex = 14;
-            // 
-            // gridView1
-            // 
-            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            // 
-            // slueSupplier
-            // 
-            this.slueSupplier.Location = new System.Drawing.Point(568, 29);
-            this.slueSupplier.MenuManager = this.ribbonControl;
-            this.slueSupplier.Name = "slueSupplier";
-            this.slueSupplier.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.slueSupplier.Properties.View = this.searchLookUpEdit1View;
-            this.slueSupplier.Size = new System.Drawing.Size(389, 20);
-            this.slueSupplier.TabIndex = 13;
-            // 
-            // searchLookUpEdit1View
-            // 
-            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
-            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-            // 
-            // lblCurrency
-            // 
-            this.lblCurrency.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblCurrency.Location = new System.Drawing.Point(461, 68);
-            this.lblCurrency.Name = "lblCurrency";
-            this.lblCurrency.Size = new System.Drawing.Size(84, 13);
-            this.lblCurrency.TabIndex = 12;
-            this.lblCurrency.Text = "Currency";
-            // 
-            // lblTermsOfDelivery
-            // 
-            this.lblTermsOfDelivery.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblTermsOfDelivery.Location = new System.Drawing.Point(461, 49);
-            this.lblTermsOfDelivery.Name = "lblTermsOfDelivery";
-            this.lblTermsOfDelivery.Size = new System.Drawing.Size(84, 13);
-            this.lblTermsOfDelivery.TabIndex = 11;
-            this.lblTermsOfDelivery.Text = "Terms df Delivery";
-            // 
-            // lblSupplier
-            // 
-            this.lblSupplier.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblSupplier.Location = new System.Drawing.Point(461, 32);
-            this.lblSupplier.Name = "lblSupplier";
-            this.lblSupplier.Size = new System.Drawing.Size(84, 13);
-            this.lblSupplier.TabIndex = 10;
-            this.lblSupplier.Text = "SUPPLIER";
-            // 
-            // lblWeek
-            // 
-            this.lblWeek.Location = new System.Drawing.Point(322, 10);
-            this.lblWeek.Name = "lblWeek";
-            this.lblWeek.Size = new System.Drawing.Size(27, 13);
-            this.lblWeek.TabIndex = 9;
-            this.lblWeek.Text = "Week";
-            // 
-            // lblDeliveryWeek
-            // 
-            this.lblDeliveryWeek.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblDeliveryWeek.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lblDeliveryWeek.Location = new System.Drawing.Point(306, 49);
-            this.lblDeliveryWeek.Name = "lblDeliveryWeek";
-            this.lblDeliveryWeek.Size = new System.Drawing.Size(65, 19);
-            this.lblDeliveryWeek.TabIndex = 8;
-            this.lblDeliveryWeek.Text = "XX";
-            // 
-            // lblDocDateWeek
-            // 
-            this.lblDocDateWeek.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblDocDateWeek.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lblDocDateWeek.Location = new System.Drawing.Point(306, 29);
-            this.lblDocDateWeek.Name = "lblDocDateWeek";
-            this.lblDocDateWeek.Size = new System.Drawing.Size(65, 20);
-            this.lblDocDateWeek.TabIndex = 7;
-            this.lblDocDateWeek.Text = "XX";
-            // 
-            // lblDate
-            // 
-            this.lblDate.Location = new System.Drawing.Point(234, 10);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(23, 13);
-            this.lblDate.TabIndex = 6;
-            this.lblDate.Text = "Date";
-            // 
-            // dateEditDelivery
-            // 
-            this.dateEditDelivery.EditValue = null;
-            this.dateEditDelivery.Location = new System.Drawing.Point(194, 48);
-            this.dateEditDelivery.MenuManager = this.ribbonControl;
-            this.dateEditDelivery.Name = "dateEditDelivery";
-            this.dateEditDelivery.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditDelivery.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditDelivery.Size = new System.Drawing.Size(106, 20);
-            this.dateEditDelivery.TabIndex = 5;
-            // 
-            // dateEditDocDate
-            // 
-            this.dateEditDocDate.EditValue = null;
-            this.dateEditDocDate.Location = new System.Drawing.Point(194, 29);
-            this.dateEditDocDate.MenuManager = this.ribbonControl;
-            this.dateEditDocDate.Name = "dateEditDocDate";
-            this.dateEditDocDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditDocDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditDocDate.Size = new System.Drawing.Size(106, 20);
-            this.dateEditDocDate.TabIndex = 4;
-            // 
-            // lblDelivery
-            // 
-            this.lblDelivery.Location = new System.Drawing.Point(141, 51);
-            this.lblDelivery.Name = "lblDelivery";
-            this.lblDelivery.Size = new System.Drawing.Size(47, 13);
-            this.lblDelivery.TabIndex = 3;
-            this.lblDelivery.Text = "DELIVERY";
-            // 
-            // lblDocDate
-            // 
-            this.lblDocDate.Location = new System.Drawing.Point(137, 32);
-            this.lblDocDate.Name = "lblDocDate";
-            this.lblDocDate.Size = new System.Drawing.Size(51, 13);
-            this.lblDocDate.TabIndex = 2;
-            this.lblDocDate.Text = "DOC DATE";
-            // 
-            // lblPONumber
-            // 
-            this.lblPONumber.Location = new System.Drawing.Point(44, 10);
-            this.lblPONumber.Name = "lblPONumber";
-            this.lblPONumber.Size = new System.Drawing.Size(54, 13);
-            this.lblPONumber.TabIndex = 0;
-            this.lblPONumber.Text = "PO Number";
-            // 
-            // txtPONumber
-            // 
-            this.txtPONumber.Location = new System.Drawing.Point(11, 29);
-            this.txtPONumber.MenuManager = this.ribbonControl;
-            this.txtPONumber.Name = "txtPONumber";
-            this.txtPONumber.Size = new System.Drawing.Size(120, 20);
-            this.txtPONumber.TabIndex = 1;
-            // 
-            // pcFilter
-            // 
-            this.pcFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pcFilter.Controls.Add(this.memoEditRemarks);
-            this.pcFilter.Controls.Add(this.sbImportExcel);
-            this.pcFilter.Controls.Add(this.lblRemarks);
-            this.pcFilter.Controls.Add(this.txtPONumber);
-            this.pcFilter.Controls.Add(this.lblPONumber);
-            this.pcFilter.Controls.Add(this.sbFinishPO);
-            this.pcFilter.Controls.Add(this.lblDocDate);
-            this.pcFilter.Controls.Add(this.sbOrder);
-            this.pcFilter.Controls.Add(this.lblDelivery);
-            this.pcFilter.Controls.Add(this.sbSearch);
-            this.pcFilter.Controls.Add(this.dateEditDocDate);
-            this.pcFilter.Controls.Add(this.slueCurrency);
-            this.pcFilter.Controls.Add(this.dateEditDelivery);
-            this.pcFilter.Controls.Add(this.slueDeliveryTerms);
-            this.pcFilter.Controls.Add(this.lblDate);
-            this.pcFilter.Controls.Add(this.slueSupplier);
-            this.pcFilter.Controls.Add(this.lblDocDateWeek);
-            this.pcFilter.Controls.Add(this.lblCurrency);
-            this.pcFilter.Controls.Add(this.lblDeliveryWeek);
-            this.pcFilter.Controls.Add(this.lblTermsOfDelivery);
-            this.pcFilter.Controls.Add(this.lblWeek);
-            this.pcFilter.Controls.Add(this.lblSupplier);
-            this.pcFilter.Location = new System.Drawing.Point(12, 14);
-            this.pcFilter.Name = "pcFilter";
-            this.pcFilter.Size = new System.Drawing.Size(1313, 129);
-            this.pcFilter.TabIndex = 4;
-            // 
             // PurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -588,6 +588,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).EndInit();
             this.xtcGeneral.ResumeLayout(false);
             this.xtpPO.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcFilter)).EndInit();
+            this.pcFilter.ResumeLayout(false);
+            this.pcFilter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditRemarks.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPONumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditDocDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditDocDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueCurrency.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditDelivery.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditDelivery.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueDeliveryTerms.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slueSupplier.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcPO)).EndInit();
             this.xtcPO.ResumeLayout(false);
             this.xtpOrderedGoods.ResumeLayout(false);
@@ -596,21 +611,6 @@
             this.xtpTerms.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sluePaymentTerm.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEditRemarks.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.slueCurrency.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.slueDeliveryTerms.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.slueSupplier.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditDelivery.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditDelivery.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditDocDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditDocDate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPONumber.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcFilter)).EndInit();
-            this.pcFilter.ResumeLayout(false);
-            this.pcFilter.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
