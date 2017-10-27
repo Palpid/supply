@@ -767,12 +767,12 @@ namespace HKSupply.Forms.Supply
 
                         //var x = STKAct.GetStockItem(new Stocks.Warehouse() { })
 
-                        var stockOnHand = STKAct.LstStocks
-                            .Where(a => a.idItem.Equals(docLine.IdItemBcn) && a.Ware.WareHouseType.Equals(Stocks.StockWareHousesType.OnHand) && a.idOwner.Equals(Constants.ETNIA_HK_COMPANY_CODE))
-                            .Select(b => b.QttStock)
-                            .FirstOrDefault();
+                        //var stockOnHand = STKAct.LstStocks
+                        //    .Where(a => a.idItem.Equals(docLine.IdItemBcn) && a.Ware.WareHouseType.Equals(Stocks.StockWareHousesType.OnHand) && a.idOwner.Equals(Constants.ETNIA_HK_COMPANY_CODE))
+                        //    .Select(b => b.QttStock)
+                        //    .FirstOrDefault();
 
-                        e.Value = stockOnHand;
+                        //e.Value = stockOnHand;
 
                         break;
 
@@ -782,12 +782,13 @@ namespace HKSupply.Forms.Supply
                         //    .Where(a => a.idItem.Equals(docLine.IdItemBcn) && a.Ware.WareHouseType.Equals(PRJ_Stocks.Classes.Stocks.StockWareHousesType.Assigned))
                         //    .Select(b => b.QttStock)
                         //    .FirstOrDefault();
-                        var stockAssigned = STKAct.LstStocks
-                            .Where(a => a.idItem.Equals(docLine.IdItemBcn) && a.Ware.WareHouseType.Equals(Stocks.StockWareHousesType.Assigned) && a.idOwner.Equals(Constants.ETNIA_HK_COMPANY_CODE))
-                            .Select(b => b.QttStock)
-                            .FirstOrDefault();
 
-                        e.Value = stockAssigned;
+                        //var stockAssigned = STKAct.LstStocks
+                        //    .Where(a => a.idItem.Equals(docLine.IdItemBcn) && a.Ware.WareHouseType.Equals(Stocks.StockWareHousesType.Assigned) && a.idOwner.Equals(Constants.ETNIA_HK_COMPANY_CODE))
+                        //    .Select(b => b.QttStock)
+                        //    .FirstOrDefault();
+
+                        //e.Value = stockAssigned;
 
                         break;
 
@@ -798,12 +799,12 @@ namespace HKSupply.Forms.Supply
                         //    .Select(b => b.QttStock)
                         //    .FirstOrDefault();
 
-                        var stockTransit = STKAct.LstStocks
-                            .Where(a => a.idItem.Equals(docLine.IdItemBcn) && a.Ware.WareHouseType.Equals(Stocks.StockWareHousesType.Transit) && a.idOwner.Equals(Constants.ETNIA_HK_COMPANY_CODE))
-                            .Select(b => b.QttStock)
-                            .FirstOrDefault();
+                        //var stockTransit = STKAct.LstStocks
+                        //    .Where(a => a.idItem.Equals(docLine.IdItemBcn) && a.Ware.WareHouseType.Equals(Stocks.StockWareHousesType.Transit) && a.idOwner.Equals(Constants.ETNIA_HK_COMPANY_CODE))
+                        //    .Select(b => b.QttStock)
+                        //    .FirstOrDefault();
 
-                        e.Value = stockTransit;
+                        //e.Value = stockTransit;
 
                         break;
                 }

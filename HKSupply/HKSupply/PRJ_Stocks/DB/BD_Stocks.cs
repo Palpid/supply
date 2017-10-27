@@ -20,8 +20,13 @@ namespace HKSupply.PRJ_Stocks.DB
     class BD_Stocks
     {
         ILog _log = LogManager.GetLogger(typeof(BD_Stocks)); //variable para gestión del log de error
-
-        public Classes.Stocks GetCurrentStock(HKSupplyContext db)
+        /// <summary>
+        ///  Carrega les dades de Stock desde la BD. 
+        /// </summary>
+        /// <param name="db">La conexió de la BD gestionda per el EF</param>
+        /// <param name="idwarehouse">Filtre opcional. Si s'indica es carrega només el magatzem indicat</param>
+        /// <returns></returns>
+        public Classes.Stocks GetCurrentStock(HKSupplyContext db, string idwarehouse = "")
         {
             try
             {
@@ -33,11 +38,31 @@ namespace HKSupply.PRJ_Stocks.DB
                 sSQL = $"SELECT idWarehouse,idWareHouseType,Descr,Remarks,idOwner FROM STK_WAREHOUSES ORDER BY idWarehouse";
                 STK.LstWarehouses = db.Database.SqlQuery<Stocks.Warehouse>(sSQL).ToList();
 
-                sSQL = $"SELECT STK.idWarehouse,STK.idWareHouseType,SW.Descr as WareHouseName, idItem, Lot, STK.idOwner,QTT as QttStock" +
-                        " FROM STK_STOCK STK" +
-                        " left join STK_WAREHOUSES SW on STK.idWarehouse = SW.idWarehouse and STK.idWareHouseType = SW.idWareHouseType" +
-                        " ORDER BY Descr";
-                STK.LstStocks = db.Database.SqlQuery<Stocks.StockItem>(sSQL).ToList();
+                sSQL = $"SELECT distinct ID_CUSTOMER as ID, CUSTOMER_NAME as NAME FROM CUSTOMERS";
+                sSQL += " union ";
+                sSQL = " SELECT distinct ID_SUPPLIER as ID, SUPPLIER_NAME as NAME FROM SUPPLIERS";
+                STK.LstOwners = db.Database.SqlQuery<Stocks.Owner>(sSQL).ToList();
+
+                sSQL = $"SELECT STK.idWarehouse,STK.idWareHouseType,SW.Descr as WareHouseName, idItem, Lot, STK.idOwner as Own,QTT as QttStock";
+                sSQL += " FROM STK_STOCK STK";
+                sSQL += " left join STK_WAREHOUSES SW on STK.idWarehouse = SW.idWarehouse and STK.idWareHouseType = SW.idWareHouseType";
+                if (idwarehouse != "") sSQL += " Where idWarehouse='" + idwarehouse.Trim() + "'";
+                sSQL += " ORDER BY Descr";
+                DataTable DT = db.DataTable(sSQL);
+
+                foreach (DataRow rec in DT.Rows)
+                {
+                    string idWare = rec["idWarehouse"].ToString();
+                    int idWareType = (int)rec["idWareHouseType"];
+                    string WaraName = (string)rec["WareHouseName"];
+                    string IdIt = (string)rec["idItem"];
+                    string IdLt = (string)rec["Lot"];
+                    string Ow = (string)rec["Own"];
+                    int QTT = Convert.ToInt32(rec["QttStock"].ToString());
+
+                    Classes.Stocks.StockItem STKi = new Stocks.StockItem(idWare, idWareType, WaraName, IdIt, IdLt, Ow, QTT);
+                    STK.CargaSockItem(STKi);
+                }
 
                 STK.SetStockBase(); //- Copiem el stock actual a la llsita StockBase per establir el punt base on es guarda.
 

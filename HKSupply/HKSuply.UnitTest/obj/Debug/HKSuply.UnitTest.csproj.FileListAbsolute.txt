@@ -202,6 +202,7 @@ C:\Git\HKSupply\HKSuply.UnitTest\bin\Debug\ru\DevExpress.Diagram.v16.2.Core.reso
 C:\Git\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.csprojResolveAssemblyReference.cache
 C:\Git\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.dll
 C:\Git\HKSupply\HKSuply.UnitTest\obj\Debug\HKSuply.UnitTest.pdb
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\button_red.png
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\formcaption_red.png
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\import_export_excel_icon_16x16.png
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\import_export_excel_icon_32x32.png
