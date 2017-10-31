@@ -35,7 +35,10 @@ namespace HKSupply.Forms.Supply
     public partial class QuotationProposal : RibbonFormBase
     {
         #region Stocks (improvops)
-        private Stocks STKAct = new Stocks();
+        private Stocks _STKAct = new Stocks();
+        private Stocks.Warehouse _whEtniaHkOnHand;
+        private Stocks.Warehouse _whEtniaHkAssigned;
+        private Stocks.Warehouse _whEtniaHkTransit;
         #endregion
 
         #region Mock Data Test stocks
@@ -760,52 +763,20 @@ namespace HKSupply.Forms.Supply
                 {
                     case COL_STOCK_ONHAND:
 
-                        //var stockOnHand = _stockItemList
-                        //    .Where(a => a.idItem.Equals(docLine.IdItemBcn) && a.Ware.WareHouseType.Equals(PRJ_Stocks.Classes.Stocks.StockWareHousesType.OnHand))
-                        //    .Select(b => b.QttStock)
-                        //    .FirstOrDefault();
-
-                        //var x = STKAct.GetStockItem(new Stocks.Warehouse() { })
-
-                        //var stockOnHand = STKAct.LstStocks
-                        //    .Where(a => a.idItem.Equals(docLine.IdItemBcn) && a.Ware.WareHouseType.Equals(Stocks.StockWareHousesType.OnHand) && a.idOwner.Equals(Constants.ETNIA_HK_COMPANY_CODE))
-                        //    .Select(b => b.QttStock)
-                        //    .FirstOrDefault();
-
-                        //e.Value = stockOnHand;
-
+                        var stockOnHand = _STKAct.GetStockItem(_whEtniaHkOnHand, docLine.IdItemBcn);
+                        e.Value = stockOnHand?.FreeStock;
                         break;
 
                     case COL_STOCK_ASSIGNED:
 
-                        //var stockAssigned = _stockItemList
-                        //    .Where(a => a.idItem.Equals(docLine.IdItemBcn) && a.Ware.WareHouseType.Equals(PRJ_Stocks.Classes.Stocks.StockWareHousesType.Assigned))
-                        //    .Select(b => b.QttStock)
-                        //    .FirstOrDefault();
-
-                        //var stockAssigned = STKAct.LstStocks
-                        //    .Where(a => a.idItem.Equals(docLine.IdItemBcn) && a.Ware.WareHouseType.Equals(Stocks.StockWareHousesType.Assigned) && a.idOwner.Equals(Constants.ETNIA_HK_COMPANY_CODE))
-                        //    .Select(b => b.QttStock)
-                        //    .FirstOrDefault();
-
-                        //e.Value = stockAssigned;
-
+                        var stockAssigned = _STKAct.GetStockItem(_whEtniaHkAssigned, docLine.IdItemBcn);
+                        e.Value = stockAssigned?.FreeStock;
                         break;
 
                     case COL_STOCK_TRANSIT:
 
-                        //var stockTransit = _stockItemList
-                        //    .Where(a => a.idItem.Equals(docLine.IdItemBcn) && a.Ware.WareHouseType.Equals(PRJ_Stocks.Classes.Stocks.StockWareHousesType.Transit))
-                        //    .Select(b => b.QttStock)
-                        //    .FirstOrDefault();
-
-                        //var stockTransit = STKAct.LstStocks
-                        //    .Where(a => a.idItem.Equals(docLine.IdItemBcn) && a.Ware.WareHouseType.Equals(Stocks.StockWareHousesType.Transit) && a.idOwner.Equals(Constants.ETNIA_HK_COMPANY_CODE))
-                        //    .Select(b => b.QttStock)
-                        //    .FirstOrDefault();
-
-                        //e.Value = stockTransit;
-
+                        var stockTransit = _STKAct.GetStockItem(_whEtniaHkTransit, docLine.IdItemBcn);
+                        e.Value = stockTransit?.FreeStock;
                         break;
                 }
             }
@@ -1517,7 +1488,13 @@ namespace HKSupply.Forms.Supply
                 //FillMocking();
 
                 Call_DB_Stocks CallDBS = new Call_DB_Stocks();
-                STKAct = CallDBS.CallCargaStocks();
+                _STKAct = CallDBS.CallCargaStocks();
+
+                _whEtniaHkOnHand = _STKAct.GetWareHouse(Constants.ETNIA_HK_COMPANY_CODE, Stocks.StockWareHousesType.OnHand);
+                _whEtniaHkAssigned = _STKAct.GetWareHouse(Constants.ETNIA_HK_COMPANY_CODE, Stocks.StockWareHousesType.Assigned);
+                _whEtniaHkTransit = _STKAct.GetWareHouse(Constants.ETNIA_HK_COMPANY_CODE, Stocks.StockWareHousesType.Transit);
+
+
             }
             catch
             {

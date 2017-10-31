@@ -30,120 +30,74 @@
         {
             this.GC_Stocks = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtManualReference = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtWare = new DevExpress.XtraEditors.TextEdit();
+            this.txtWareType = new DevExpress.XtraEditors.TextEdit();
+            this.txtItem = new DevExpress.XtraEditors.TextEdit();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.CB_Owner = new System.Windows.Forms.ComboBox();
+            this.txtFreeStk = new DevExpress.XtraEditors.TextEdit();
+            this.txtNewQTT = new DevExpress.XtraEditors.TextEdit();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit11 = new DevExpress.XtraEditors.TextEdit();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtTotalStk = new DevExpress.XtraEditors.TextEdit();
+            this.txtAsgStk = new DevExpress.XtraEditors.TextEdit();
+            this.txtOnwStk = new DevExpress.XtraEditors.TextEdit();
+            this.BtnAsingToOwner = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.BtnStkAdjust = new System.Windows.Forms.Button();
+            this.CB_OwnDEST = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textEdit9 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit10 = new DevExpress.XtraEditors.TextEdit();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.BtnMoveStk = new System.Windows.Forms.Button();
+            this.CB_WareDEST = new System.Windows.Forms.ComboBox();
+            this.BtnFreeOwner = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BtnSave = new System.Windows.Forms.Button();
+            this.tabStk = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.GC_Movs = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.BtnAdjustOwner = new System.Windows.Forms.Button();
+            this.BtnClearOwner = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GC_Stocks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWare.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWareType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItem.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFreeStk.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNewQTT.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalStk.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAsgStk.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOnwStk.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtManualReference.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
+            this.tabStk.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GC_Movs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // GC_Stocks
             // 
-            this.GC_Stocks.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.GC_Stocks.Location = new System.Drawing.Point(5, 203);
+            this.GC_Stocks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GC_Stocks.Location = new System.Drawing.Point(3, 3);
             this.GC_Stocks.MainView = this.gridView1;
             this.GC_Stocks.Name = "GC_Stocks";
-            this.GC_Stocks.Size = new System.Drawing.Size(962, 430);
+            this.GC_Stocks.Size = new System.Drawing.Size(984, 401);
             this.GC_Stocks.TabIndex = 1;
             this.GC_Stocks.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.GC_Stocks.Click += new System.EventHandler(this.GC_Stocks_Click);
             // 
             // gridView1
             // 
             this.gridView1.GridControl = this.GC_Stocks;
             this.gridView1.Name = "gridView1";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.comboBox4);
-            this.groupBox1.Controls.Add(this.textEdit9);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.textEdit10);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textEdit7);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textEdit11);
-            this.groupBox1.Controls.Add(this.textEdit8);
-            this.groupBox1.Controls.Add(this.textEdit6);
-            this.groupBox1.Controls.Add(this.textEdit5);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textEdit4);
-            this.groupBox1.Controls.Add(this.textEdit3);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textEdit2);
-            this.groupBox1.Controls.Add(this.textEdit1);
-            this.groupBox1.Controls.Add(this.txtManualReference);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(5, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(962, 192);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Stock Actions";
             // 
             // label3
             // 
@@ -157,99 +111,91 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(267, 31);
+            this.label2.Location = new System.Drawing.Point(267, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(27, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Item";
             // 
-            // txtManualReference
+            // txtWare
             // 
-            this.txtManualReference.Location = new System.Drawing.Point(10, 41);
-            this.txtManualReference.MinimumSize = new System.Drawing.Size(0, 21);
-            this.txtManualReference.Name = "txtManualReference";
-            this.txtManualReference.Size = new System.Drawing.Size(226, 21);
-            this.txtManualReference.TabIndex = 35;
+            this.txtWare.Enabled = false;
+            this.txtWare.Location = new System.Drawing.Point(10, 41);
+            this.txtWare.MinimumSize = new System.Drawing.Size(0, 21);
+            this.txtWare.Name = "txtWare";
+            this.txtWare.Size = new System.Drawing.Size(226, 20);
+            this.txtWare.TabIndex = 35;
             // 
-            // textEdit1
+            // txtWareType
             // 
-            this.textEdit1.Location = new System.Drawing.Point(10, 65);
-            this.textEdit1.MinimumSize = new System.Drawing.Size(0, 21);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(151, 21);
-            this.textEdit1.TabIndex = 36;
+            this.txtWareType.Enabled = false;
+            this.txtWareType.Location = new System.Drawing.Point(10, 65);
+            this.txtWareType.MinimumSize = new System.Drawing.Size(0, 21);
+            this.txtWareType.Name = "txtWareType";
+            this.txtWareType.Size = new System.Drawing.Size(226, 20);
+            this.txtWareType.TabIndex = 36;
             // 
-            // textEdit2
+            // txtItem
             // 
-            this.textEdit2.Location = new System.Drawing.Point(297, 27);
-            this.textEdit2.MinimumSize = new System.Drawing.Size(0, 21);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(226, 21);
-            this.textEdit2.TabIndex = 37;
+            this.txtItem.Enabled = false;
+            this.txtItem.Location = new System.Drawing.Point(297, 42);
+            this.txtItem.MinimumSize = new System.Drawing.Size(0, 21);
+            this.txtItem.Name = "txtItem";
+            this.txtItem.Size = new System.Drawing.Size(211, 20);
+            this.txtItem.TabIndex = 37;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(256, 54);
+            this.label5.Location = new System.Drawing.Point(256, 69);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 39;
             this.label5.Text = "Owner";
             // 
-            // comboBox1
+            // CB_Owner
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(297, 50);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(226, 21);
-            this.comboBox1.TabIndex = 40;
+            this.CB_Owner.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CB_Owner.FormattingEnabled = true;
+            this.CB_Owner.Location = new System.Drawing.Point(297, 65);
+            this.CB_Owner.Name = "CB_Owner";
+            this.CB_Owner.Size = new System.Drawing.Size(211, 21);
+            this.CB_Owner.TabIndex = 40;
+            this.CB_Owner.SelectedIndexChanged += new System.EventHandler(this.CB_Owner_SelectedIndexChanged);
             // 
-            // comboBox2
+            // txtFreeStk
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(297, 74);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(226, 21);
-            this.comboBox2.TabIndex = 42;
+            this.txtFreeStk.EditValue = "0";
+            this.txtFreeStk.Enabled = false;
+            this.txtFreeStk.Location = new System.Drawing.Point(514, 41);
+            this.txtFreeStk.MinimumSize = new System.Drawing.Size(0, 21);
+            this.txtFreeStk.Name = "txtFreeStk";
+            this.txtFreeStk.Size = new System.Drawing.Size(83, 20);
+            this.txtFreeStk.TabIndex = 43;
             // 
-            // textEdit3
+            // txtNewQTT
             // 
-            this.textEdit3.Location = new System.Drawing.Point(525, 27);
-            this.textEdit3.MinimumSize = new System.Drawing.Size(0, 21);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(83, 21);
-            this.textEdit3.TabIndex = 43;
-            // 
-            // textEdit4
-            // 
-            this.textEdit4.Location = new System.Drawing.Point(859, 124);
-            this.textEdit4.MinimumSize = new System.Drawing.Size(0, 21);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(82, 21);
-            this.textEdit4.TabIndex = 44;
+            this.txtNewQTT.EditValue = "0";
+            this.txtNewQTT.Location = new System.Drawing.Point(507, 124);
+            this.txtNewQTT.MinimumSize = new System.Drawing.Size(0, 21);
+            this.txtNewQTT.Name = "txtNewQTT";
+            this.txtNewQTT.Size = new System.Drawing.Size(82, 20);
+            this.txtNewQTT.TabIndex = 44;
+            this.txtNewQTT.EditValueChanged += new System.EventHandler(this.txtNewQTT_EditValueChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(864, 106);
+            this.label4.Location = new System.Drawing.Point(512, 106);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 13);
             this.label4.TabIndex = 45;
             this.label4.Text = "New Quantity";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(269, 78);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(25, 13);
-            this.label6.TabIndex = 46;
-            this.label6.Text = " Lot";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(717, 12);
+            this.label7.Location = new System.Drawing.Point(703, 27);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(31, 13);
             this.label7.TabIndex = 47;
@@ -258,7 +204,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(625, 12);
+            this.label8.Location = new System.Drawing.Point(611, 27);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(50, 13);
             this.label8.TabIndex = 48;
@@ -267,52 +213,51 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(547, 12);
+            this.label9.Location = new System.Drawing.Point(533, 27);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(28, 13);
             this.label9.TabIndex = 49;
             this.label9.Text = "Free";
             // 
-            // textEdit5
+            // txtTotalStk
             // 
-            this.textEdit5.Location = new System.Drawing.Point(695, 27);
-            this.textEdit5.MinimumSize = new System.Drawing.Size(0, 21);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(83, 21);
-            this.textEdit5.TabIndex = 50;
+            this.txtTotalStk.EditValue = "0";
+            this.txtTotalStk.Enabled = false;
+            this.txtTotalStk.Location = new System.Drawing.Point(684, 41);
+            this.txtTotalStk.MinimumSize = new System.Drawing.Size(0, 21);
+            this.txtTotalStk.Name = "txtTotalStk";
+            this.txtTotalStk.Size = new System.Drawing.Size(83, 20);
+            this.txtTotalStk.TabIndex = 50;
             // 
-            // textEdit6
+            // txtAsgStk
             // 
-            this.textEdit6.Location = new System.Drawing.Point(610, 27);
-            this.textEdit6.MinimumSize = new System.Drawing.Size(0, 21);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(83, 21);
-            this.textEdit6.TabIndex = 51;
+            this.txtAsgStk.EditValue = "0";
+            this.txtAsgStk.Enabled = false;
+            this.txtAsgStk.Location = new System.Drawing.Point(599, 41);
+            this.txtAsgStk.MinimumSize = new System.Drawing.Size(0, 21);
+            this.txtAsgStk.Name = "txtAsgStk";
+            this.txtAsgStk.Size = new System.Drawing.Size(83, 20);
+            this.txtAsgStk.TabIndex = 51;
             // 
-            // textEdit8
+            // txtOnwStk
             // 
-            this.textEdit8.Location = new System.Drawing.Point(695, 73);
-            this.textEdit8.MinimumSize = new System.Drawing.Size(0, 21);
-            this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Size = new System.Drawing.Size(83, 21);
-            this.textEdit8.TabIndex = 53;
+            this.txtOnwStk.EditValue = "0";
+            this.txtOnwStk.Enabled = false;
+            this.txtOnwStk.Location = new System.Drawing.Point(599, 64);
+            this.txtOnwStk.MinimumSize = new System.Drawing.Size(0, 21);
+            this.txtOnwStk.Name = "txtOnwStk";
+            this.txtOnwStk.Size = new System.Drawing.Size(83, 20);
+            this.txtOnwStk.TabIndex = 56;
             // 
-            // textEdit11
+            // BtnAsingToOwner
             // 
-            this.textEdit11.Location = new System.Drawing.Point(695, 50);
-            this.textEdit11.MinimumSize = new System.Drawing.Size(0, 21);
-            this.textEdit11.Name = "textEdit11";
-            this.textEdit11.Size = new System.Drawing.Size(83, 21);
-            this.textEdit11.TabIndex = 56;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(443, 151);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 30);
-            this.button1.TabIndex = 57;
-            this.button1.Text = "Assign ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnAsingToOwner.Location = new System.Drawing.Point(297, 151);
+            this.BtnAsingToOwner.Name = "BtnAsingToOwner";
+            this.BtnAsingToOwner.Size = new System.Drawing.Size(64, 30);
+            this.BtnAsingToOwner.TabIndex = 57;
+            this.BtnAsingToOwner.Text = "Assign ";
+            this.BtnAsingToOwner.UseVisualStyleBackColor = true;
+            this.BtnAsingToOwner.Click += new System.EventHandler(this.BtnAsingToOwner_Click);
             // 
             // button2
             // 
@@ -323,81 +268,30 @@
             this.button2.Text = "Free";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // BtnStkAdjust
             // 
-            this.button3.Location = new System.Drawing.Point(10, 151);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(129, 30);
-            this.button3.TabIndex = 59;
-            this.button3.Text = "Move";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnStkAdjust.Location = new System.Drawing.Point(506, 151);
+            this.BtnStkAdjust.Name = "BtnStkAdjust";
+            this.BtnStkAdjust.Size = new System.Drawing.Size(83, 30);
+            this.BtnStkAdjust.TabIndex = 60;
+            this.BtnStkAdjust.Text = "Adjust";
+            this.BtnStkAdjust.UseVisualStyleBackColor = true;
+            this.BtnStkAdjust.Click += new System.EventHandler(this.BtnStkAdjust_Click);
             // 
-            // button4
+            // CB_OwnDEST
             // 
-            this.button4.Location = new System.Drawing.Point(858, 151);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(83, 30);
-            this.button4.TabIndex = 60;
-            this.button4.Text = "Adjust";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(631, 151);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(109, 30);
-            this.button5.TabIndex = 61;
-            this.button5.Text = "Assign To Owner";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(740, 151);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(109, 30);
-            this.button6.TabIndex = 62;
-            this.button6.Text = "Unassign To Owner";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // textEdit7
-            // 
-            this.textEdit7.Location = new System.Drawing.Point(824, 28);
-            this.textEdit7.MinimumSize = new System.Drawing.Size(0, 21);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Size = new System.Drawing.Size(82, 21);
-            this.textEdit7.TabIndex = 63;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(801, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 13);
-            this.label1.TabIndex = 64;
-            this.label1.Text = "Item / Lot / Owner Quantity";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(392, 124);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(226, 21);
-            this.comboBox3.TabIndex = 65;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(629, 107);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(25, 13);
-            this.label10.TabIndex = 67;
-            this.label10.Text = " Lot";
+            this.CB_OwnDEST.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CB_OwnDEST.FormattingEnabled = true;
+            this.CB_OwnDEST.Location = new System.Drawing.Point(259, 124);
+            this.CB_OwnDEST.Name = "CB_OwnDEST";
+            this.CB_OwnDEST.Size = new System.Drawing.Size(198, 21);
+            this.CB_OwnDEST.TabIndex = 65;
+            this.CB_OwnDEST.SelectedIndexChanged += new System.EventHandler(this.CB_OwnDEST_SelectedIndexChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(396, 106);
+            this.label11.Location = new System.Drawing.Point(263, 106);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(38, 13);
             this.label11.TabIndex = 66;
@@ -412,56 +306,184 @@
             this.label12.TabIndex = 68;
             this.label12.Text = "Warehouse";
             // 
-            // textEdit9
+            // BtnMoveStk
             // 
-            this.textEdit9.Location = new System.Drawing.Point(237, 124);
-            this.textEdit9.MinimumSize = new System.Drawing.Size(0, 21);
-            this.textEdit9.Name = "textEdit9";
-            this.textEdit9.Size = new System.Drawing.Size(151, 21);
-            this.textEdit9.TabIndex = 70;
+            this.BtnMoveStk.Location = new System.Drawing.Point(10, 151);
+            this.BtnMoveStk.Name = "BtnMoveStk";
+            this.BtnMoveStk.Size = new System.Drawing.Size(129, 30);
+            this.BtnMoveStk.TabIndex = 59;
+            this.BtnMoveStk.Text = "Move";
+            this.BtnMoveStk.UseVisualStyleBackColor = true;
+            this.BtnMoveStk.Click += new System.EventHandler(this.BtnMoveStk_Click);
             // 
-            // textEdit10
+            // CB_WareDEST
             // 
-            this.textEdit10.Location = new System.Drawing.Point(9, 124);
-            this.textEdit10.MinimumSize = new System.Drawing.Size(0, 21);
-            this.textEdit10.Name = "textEdit10";
-            this.textEdit10.Size = new System.Drawing.Size(226, 21);
-            this.textEdit10.TabIndex = 69;
+            this.CB_WareDEST.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CB_WareDEST.FormattingEnabled = true;
+            this.CB_WareDEST.Location = new System.Drawing.Point(6, 124);
+            this.CB_WareDEST.Name = "CB_WareDEST";
+            this.CB_WareDEST.Size = new System.Drawing.Size(226, 21);
+            this.CB_WareDEST.TabIndex = 72;
+            this.CB_WareDEST.SelectedIndexChanged += new System.EventHandler(this.CB_WareDEST_SelectedIndexChanged);
             // 
-            // comboBox4
+            // BtnFreeOwner
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(626, 124);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(226, 21);
-            this.comboBox4.TabIndex = 71;
+            this.BtnFreeOwner.Location = new System.Drawing.Point(684, 64);
+            this.BtnFreeOwner.Name = "BtnFreeOwner";
+            this.BtnFreeOwner.Size = new System.Drawing.Size(83, 22);
+            this.BtnFreeOwner.TabIndex = 74;
+            this.BtnFreeOwner.Text = "Free Owner";
+            this.BtnFreeOwner.UseVisualStyleBackColor = true;
+            this.BtnFreeOwner.Click += new System.EventHandler(this.BtnFreeOwner_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.BtnClearOwner);
+            this.groupBox1.Controls.Add(this.BtnAdjustOwner);
+            this.groupBox1.Controls.Add(this.BtnSave);
+            this.groupBox1.Controls.Add(this.BtnFreeOwner);
+            this.groupBox1.Controls.Add(this.CB_WareDEST);
+            this.groupBox1.Controls.Add(this.BtnMoveStk);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.CB_OwnDEST);
+            this.groupBox1.Controls.Add(this.BtnStkAdjust);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.BtnAsingToOwner);
+            this.groupBox1.Controls.Add(this.txtOnwStk);
+            this.groupBox1.Controls.Add(this.txtAsgStk);
+            this.groupBox1.Controls.Add(this.txtTotalStk);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtNewQTT);
+            this.groupBox1.Controls.Add(this.txtFreeStk);
+            this.groupBox1.Controls.Add(this.CB_Owner);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtItem);
+            this.groupBox1.Controls.Add(this.txtWareType);
+            this.groupBox1.Controls.Add(this.txtWare);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Location = new System.Drawing.Point(5, 5);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(999, 192);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Stock Actions";
+            // 
+            // BtnSave
+            // 
+            this.BtnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.BtnSave.Location = new System.Drawing.Point(884, 19);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(107, 30);
+            this.BtnSave.TabIndex = 75;
+            this.BtnSave.Text = "Save Changes";
+            this.BtnSave.UseVisualStyleBackColor = false;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
+            // tabStk
+            // 
+            this.tabStk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabStk.Controls.Add(this.tabPage1);
+            this.tabStk.Controls.Add(this.tabPage2);
+            this.tabStk.Location = new System.Drawing.Point(5, 200);
+            this.tabStk.Name = "tabStk";
+            this.tabStk.SelectedIndex = 0;
+            this.tabStk.Size = new System.Drawing.Size(998, 433);
+            this.tabStk.TabIndex = 3;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.GC_Stocks);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(990, 407);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Stock";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.GC_Movs);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(990, 407);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Movements";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // GC_Movs
+            // 
+            this.GC_Movs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GC_Movs.Location = new System.Drawing.Point(3, 3);
+            this.GC_Movs.MainView = this.gridView2;
+            this.GC_Movs.Name = "GC_Movs";
+            this.GC_Movs.Size = new System.Drawing.Size(984, 401);
+            this.GC_Movs.TabIndex = 2;
+            this.GC_Movs.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.GC_Movs;
+            this.gridView2.Name = "gridView2";
+            // 
+            // BtnAdjustOwner
+            // 
+            this.BtnAdjustOwner.Location = new System.Drawing.Point(367, 151);
+            this.BtnAdjustOwner.Name = "BtnAdjustOwner";
+            this.BtnAdjustOwner.Size = new System.Drawing.Size(64, 30);
+            this.BtnAdjustOwner.TabIndex = 76;
+            this.BtnAdjustOwner.Text = "Adjust";
+            this.BtnAdjustOwner.UseVisualStyleBackColor = true;
+            this.BtnAdjustOwner.Click += new System.EventHandler(this.BtnAdjustOwner_Click);
+            // 
+            // BtnClearOwner
+            // 
+            this.BtnClearOwner.Location = new System.Drawing.Point(462, 124);
+            this.BtnClearOwner.Name = "BtnClearOwner";
+            this.BtnClearOwner.Size = new System.Drawing.Size(24, 21);
+            this.BtnClearOwner.TabIndex = 77;
+            this.BtnClearOwner.Text = "C";
+            this.BtnClearOwner.UseVisualStyleBackColor = true;
+            this.BtnClearOwner.Click += new System.EventHandler(this.BtnClearOwner_Click);
             // 
             // StockManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(971, 636);
+            this.ClientSize = new System.Drawing.Size(1008, 636);
+            this.Controls.Add(this.tabStk);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.GC_Stocks);
             this.Name = "StockManagement";
             this.Text = "StockManagment";
             this.Load += new System.EventHandler(this.StockManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GC_Stocks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWare.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWareType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItem.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFreeStk.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNewQTT.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalStk.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAsgStk.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOnwStk.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtManualReference.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
+            this.tabStk.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GC_Movs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -469,40 +491,39 @@
         #endregion
         private DevExpress.XtraGrid.GridControl GC_Stocks;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private DevExpress.XtraEditors.TextEdit textEdit11;
-        private DevExpress.XtraEditors.TextEdit textEdit8;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label5;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.TextEdit txtManualReference;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private DevExpress.XtraEditors.TextEdit textEdit9;
-        private DevExpress.XtraEditors.TextEdit textEdit10;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.TextEdit txtWare;
+        private DevExpress.XtraEditors.TextEdit txtWareType;
+        private DevExpress.XtraEditors.TextEdit txtItem;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox CB_Owner;
+        private DevExpress.XtraEditors.TextEdit txtFreeStk;
+        private DevExpress.XtraEditors.TextEdit txtNewQTT;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private DevExpress.XtraEditors.TextEdit txtTotalStk;
+        private DevExpress.XtraEditors.TextEdit txtAsgStk;
+        private DevExpress.XtraEditors.TextEdit txtOnwStk;
+        private System.Windows.Forms.Button BtnAsingToOwner;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnStkAdjust;
+        private System.Windows.Forms.ComboBox CB_OwnDEST;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button BtnMoveStk;
+        private System.Windows.Forms.ComboBox CB_WareDEST;
+        private System.Windows.Forms.Button BtnFreeOwner;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TabControl tabStk;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private DevExpress.XtraGrid.GridControl GC_Movs;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private System.Windows.Forms.Button BtnSave;
+        private System.Windows.Forms.Button BtnClearOwner;
+        private System.Windows.Forms.Button BtnAdjustOwner;
     }
 }

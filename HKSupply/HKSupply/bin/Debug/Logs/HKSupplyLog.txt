@@ -1,1 +1,45 @@
-﻿
+﻿2017-10-31 17:37:48,399 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDoc - idITEM (610724 (4)) does not have enough free stock at ETNLTD/OnHand. Required = 1500 , Available = 1110.
+System.InvalidOperationException: idITEM (610724 (4)) does not have enough free stock at ETNLTD/OnHand. Required = 1500 , Available = 1110.
+   at HKSupply.PRJ_Stocks.Classes.Stocks.AsgnSockItem(Warehouse WareORIG, String idItem, Int32 Qtt, String idOwner, String remarks, List`1 LstidDoc, String IdUser)
+   at HKSupply.Services.Implementations.EFSupplyDocs.AssignStockForDoc(HKSupplyContext db, DocHead docHead, DocHead docHeadOriginal)
+   at HKSupply.Services.Implementations.EFSupplyDocs.UpdateDoc(DocHead doc, Boolean finishDoc)
+2017-10-31 17:39:29,959 ERROR [1] HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs - Incorrect syntax near '2017'.
+Unclosed quotation mark after the character string ', GETDATE())'.
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '2017'.
+Unclosed quotation mark after the character string ', GETDATE())'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass59.<ExecuteStoreCommand>b__58()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass59.<ExecuteStoreCommand>b__57()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreCommand(TransactionalBehavior transactionalBehavior, String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs(HKSupplyContext db, Stocks STK)
+ClientConnectionId:5ed39ddb-33f6-456a-b450-f85365e0a6ac
+Error Number:102,State:1,Class:15
+2017-10-31 17:39:33,349 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDoc - Index #0
+Message: Incorrect syntax near '2017'.
+Error Number: 102
+LineNumber: 1
+Source: .Net SqlClient Data Provider
+Procedure: 
+
+2017-10-31 17:39:33,349 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDoc - Index #1
+Message: Unclosed quotation mark after the character string ', GETDATE())'.
+Error Number: 105
+LineNumber: 1
+Source: .Net SqlClient Data Provider
+Procedure: 
+

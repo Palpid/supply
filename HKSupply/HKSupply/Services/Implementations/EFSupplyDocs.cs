@@ -620,7 +620,6 @@ namespace HKSupply.Services.Implementations
 
                         db.DocsHead.Add(newDoc);
 
-
                         db.SaveChanges();
                         dbTrans.Commit();
 
@@ -680,6 +679,7 @@ namespace HKSupply.Services.Implementations
                         try
                         {
                             DocHead docToUpdate = GetDoc(doc.IdDoc);
+                            DocHead docDataBeforeUpdate = GetDoc(doc.IdDoc);
 
                             if (docToUpdate == null)
                                 throw new Exception("DOC error");
@@ -788,7 +788,10 @@ namespace HKSupply.Services.Implementations
 
                                 DocHead soHkFactory = GetSalesOrderHk2Factory(docToUpdate);
                                 db.DocsHead.Add(soHkFactory);
-                                
+
+                                AssignStockForDoc(db, soHkFactory, null);
+
+
                             }
 
                             /************************************* SO *************************************/
@@ -807,6 +810,9 @@ namespace HKSupply.Services.Implementations
                                         docToUpdate.IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE;
                                     }
                                 }
+
+                                //Actualizamos las reservas de stock
+                                AssignStockForDoc(db, docToUpdate, docDataBeforeUpdate);
                             }
 
 
@@ -838,6 +844,9 @@ namespace HKSupply.Services.Implementations
                                 //Generar la Invice de HK a la fábrica
                                 DocHead ivHkFactory = GetInvoiceHk2Factory(dnHkFactory);
                                 db.DocsHead.Add(ivHkFactory);
+
+                                //Hacer los movimientos de stock
+                                MoveStockForDoc(db, docToUpdate);
 
                             }
 
@@ -1463,6 +1472,97 @@ namespace HKSupply.Services.Implementations
                         db.SaveChanges();
                     }
                 }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        #endregion
+
+        #region Control de Stock
+
+        /// <summary>
+        /// Método para reservar stock (utiliza la API de improvops)
+        /// </summary>
+        /// <param name="db">database context</param>
+        /// <param name="docHead">modified document </param>
+        /// <param name="docHeadOriginal">Document with original data before modification, to see the diferences for assignment</param>
+        private void AssignStockForDoc(HKSupplyContext db, DocHead docHead, DocHead docHeadOriginal)
+        {
+            try
+            {
+                PRJ_Stocks.DB.Call_DB_Stocks CallDBS = new PRJ_Stocks.DB.Call_DB_Stocks();
+                PRJ_Stocks.Classes.Stocks STKAct = CallDBS.CallCargaStocks();
+
+                var whEtniaHkOnHand = STKAct.GetWareHouse(
+                    Constants.ETNIA_HK_COMPANY_CODE, 
+                    PRJ_Stocks.Classes.Stocks.StockWareHousesType.OnHand); //siempre reservaremos desde el on hand de Etnia HK
+
+                List<string> docs = new List<string>();
+                docs.Add(docHead.IdDoc);
+
+                foreach (var line in docHead.Lines)
+                {
+                    var lineOriginal = docHeadOriginal?.Lines?.Where(a => a.IdItemBcn.Equals(line.IdItemBcn) && a.IdItemGroup.Equals(line.IdItemGroup)).FirstOrDefault();
+                    var variationQty = line.Quantity - (lineOriginal == null ? 0 : lineOriginal.Quantity);
+
+                    STKAct.AsgnSockItem(
+                       WareORIG: whEtniaHkOnHand,
+                       idItem: line.IdItemBcn,
+                       Qtt: variationQty,
+                       idOwner: docHead.IdCustomer,
+                       remarks: string.Empty,
+                       LstidDoc: docs,
+                       IdUser: GlobalSetting.LoggedUser.UserLogin);
+                }
+
+                var BDSTK = new PRJ_Stocks.DB.BD_Stocks();
+                BDSTK.SaveCurrentStockMovs(db, STKAct);
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void MoveStockForDoc(HKSupplyContext db, DocHead docHead)
+        {
+            try
+            {
+                PRJ_Stocks.DB.Call_DB_Stocks CallDBS = new PRJ_Stocks.DB.Call_DB_Stocks();
+                PRJ_Stocks.Classes.Stocks STKAct = CallDBS.CallCargaStocks();
+
+                var whEtniaHkOnHand = STKAct.GetWareHouse(
+                    Constants.ETNIA_HK_COMPANY_CODE,
+                    PRJ_Stocks.Classes.Stocks.StockWareHousesType.OnHand); //origen on hand de Etnia HK
+
+                var whDestinationOnHand = STKAct.GetWareHouse(
+                    docHead.IdCustomer,
+                    PRJ_Stocks.Classes.Stocks.StockWareHousesType.OnHand); //origen on hand de Etnia HK
+
+                List<string> docs = new List<string>();
+                docs.Add(docHead.IdDoc);
+
+                foreach (var line in docHead.Lines)
+                {
+                    //STKAct.MoveSockItem(PRJ_Stocks.Classes.Stocks.StockMovementsType.Movement, whEtniaHkOnHand, whDestinationOnHand ,)
+                    STKAct.MoveSockItem(MoveType: PRJ_Stocks.Classes.Stocks.StockMovementsType.Movement,
+                        WareORIG: whEtniaHkOnHand,
+                        WareDEST: whDestinationOnHand,
+                        Qtt: line.Quantity,
+                        idItem: line.IdItemBcn,
+                        idOwner: docHead.IdCustomer,
+                        remarks: string.Empty,
+                        LstidDoc: docs,
+                        IdUser: GlobalSetting.LoggedUser.UserLogin);
+                }
+
+                var BDSTK = new PRJ_Stocks.DB.BD_Stocks();
+                BDSTK.SaveCurrentStockMovs(db, STKAct);
+
             }
             catch
             {

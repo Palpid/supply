@@ -23,19 +23,36 @@ namespace HKSupply.PRJ_Stocks.DB
                     var BDSTK = new BD_Stocks();
                     Classes.Stocks CurrentStock = BDSTK.GetCurrentStock(db);
                     return CurrentStock;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
 
-                    //using (var dbTrans = db.Database.BeginTransaction())
-                    //{
-                    //    try
-                    //    {
+        public void CallGuardarStocks(Classes.Stocks STK)
+        {
+            try
+            {
+                using (HKSupplyContext db = new HKSupplyContext())
+                {
 
-                    //        dbTrans.Commit();
-                    //    }
-                    //    catch
-                    //    {
-                    //        dbTrans.Rollback();
-                    //    }
-                    //}
+                    using (var dbTrans = db.Database.BeginTransaction())
+                    {
+                        try
+                        {
+                            var BDSTK = new BD_Stocks();
+
+                            BDSTK.SaveCurrentStockMovs(db, STK);
+                            dbTrans.Commit();
+
+                        }
+                        catch
+                        {
+                            dbTrans.Rollback();
+                        }
+                    }
                 }
             }
             catch

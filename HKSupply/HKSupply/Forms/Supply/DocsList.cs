@@ -670,21 +670,44 @@ namespace HKSupply.Forms.Supply
 
                     case Constants.SUPPLY_DOCTYPE_PL:
 
-                        PackingList packingListForm =
-                           Application.OpenForms.OfType<PackingList>()
-                           .Where(pre => pre.Name == nameof(PackingList))
-                           .SingleOrDefault();
+                        if (doc.IdCustomer == Constants.ETNIA_BCN_COMPANY_CODE)
+                        {
+                            PackingListBcn packingListBcnForm =
+                               Application.OpenForms.OfType<PackingListBcn>()
+                               .Where(pre => pre.Name == nameof(PackingListBcn))
+                               .SingleOrDefault();
 
-                        if (packingListForm != null)
-                            packingListForm.Close();
+                            if (packingListBcnForm != null)
+                                packingListBcnForm.Close();
 
-                        packingListForm = new PackingList();
-                        packingListForm.InitData(doc.IdDoc);
+                            packingListBcnForm = new PackingListBcn();
+                            packingListBcnForm.InitData(doc.IdDoc);
 
-                        packingListForm.MdiParent = MdiParent;
-                        packingListForm.ShowIcon = false;
-                        packingListForm.Show();
-                        packingListForm.WindowState = FormWindowState.Maximized;
+                            packingListBcnForm.MdiParent = MdiParent;
+                            packingListBcnForm.ShowIcon = false;
+                            packingListBcnForm.Show();
+                            packingListBcnForm.WindowState = FormWindowState.Maximized;
+                        }
+                        else
+                        {
+                            PackingList packingListForm =
+                               Application.OpenForms.OfType<PackingList>()
+                               .Where(pre => pre.Name == nameof(PackingList))
+                               .SingleOrDefault();
+
+                            if (packingListForm != null)
+                                packingListForm.Close();
+
+                            packingListForm = new PackingList();
+                            packingListForm.InitData(doc.IdDoc);
+
+                            packingListForm.MdiParent = MdiParent;
+                            packingListForm.ShowIcon = false;
+                            packingListForm.Show();
+                            packingListForm.WindowState = FormWindowState.Maximized;
+                        }
+
+
                         break;
 
                     case Constants.SUPPLY_DOCTYPE_IV:
