@@ -21,11 +21,27 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors.Repository;
+using HKSupply.PRJ_Stocks.Classes;
+using HKSupply.PRJ_Stocks.DB;
 
 namespace HKSupply.Forms.Supply
 {
     public partial class SalesOrder : RibbonFormBase
     {
+        #region Stocks (improvops)
+        private Stocks _STKAct = new Stocks();
+        private Stocks.Warehouse _whEtniaHkOnHand;
+        private Stocks.Warehouse _whEtniaHkAssigned;
+        private Stocks.Warehouse _whEtniaHkTransit;
+        #endregion
+
+        #region Constants
+        private const string TOTAL_AMOUNT_COLUMN = "TotalAmount";
+        private const string COL_STOCK_ONHAND = "StockOnHand";
+        private const string COL_STOCK_ASSIGNED = "Assigned";
+        private const string COL_STOCK_TRANSIT = "Transit";
+        #endregion
+
         #region Enums
         enum eGridSummaries
         {
@@ -76,6 +92,7 @@ namespace HKSupply.Forms.Supply
                 SetupPanelControl();
 
                 SetObjectsReadOnly();
+                GetAllStock();
             }
             catch (Exception ex)
             {
@@ -464,6 +481,45 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void GridViewLines_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)
+        {
+            try
+            {
+                DocLine docLine = e.Row as DocLine;
+
+                if (docLine == null)
+                    return;
+
+                switch (e.Column.FieldName)
+                {
+                    case COL_STOCK_ONHAND:
+
+                        var stockOnHand = _STKAct.GetStockItem(_whEtniaHkOnHand, docLine.IdItemBcn);
+                        e.Value = stockOnHand?.FreeStock;
+                        break;
+
+                    case COL_STOCK_ASSIGNED:
+
+                        //var stockAssigned = _STKAct.GetStockItem(_whEtniaHkAssigned, docLine.IdItemBcn);
+                        //e.Value = stockAssigned?.FreeStock;
+
+                        //Asignados en el stock on hand de Etnia HK a alguien, no los que están en almacén assigned
+                        var stockAssigned = _STKAct.GetStockItem(_whEtniaHkOnHand, docLine.IdItemBcn);
+                        e.Value = stockAssigned?.AsgnStock;
+                        break;
+
+                    case COL_STOCK_TRANSIT:
+
+                        var stockTransit = _STKAct.GetStockItem(_whEtniaHkTransit, docLine.IdItemBcn);
+                        e.Value = stockTransit?.FreeStock;
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         #region Public Methods
@@ -669,6 +725,9 @@ namespace HKSupply.Forms.Supply
                 GridColumn colTotalAmount = new GridColumn() { Caption = "TotalAmount", Visible = true, FieldName = nameof(DocLine.TotalAmount), Width = 120 };
                 GridColumn colIdIdSupplyStatus = new GridColumn() { Caption = "Status", Visible = true, FieldName = nameof(DocLine.IdSupplyStatus), Width = 75 };
                 GridColumn colRemarks = new GridColumn() { Caption = "Remarks", Visible = true, FieldName = nameof(DocLine.Remarks), Width = 350 };
+                GridColumn colStockOnHand = new GridColumn() { Caption = "On Hand HK", Visible = true, FieldName = COL_STOCK_ONHAND, Width = 100 };
+                GridColumn colStockAssigned = new GridColumn() { Caption = "Assigned to customers", Visible = true, FieldName = COL_STOCK_ASSIGNED, Width = 150 };
+                GridColumn colStockTransit = new GridColumn() { Caption = "Transit to HK", Visible = true, FieldName = COL_STOCK_TRANSIT, Width = 100 };
 
                 //Display Format
                 colUnitPrice.DisplayFormat.FormatType = FormatType.Numeric;
@@ -685,6 +744,11 @@ namespace HKSupply.Forms.Supply
 
                 colDeliveredQuantity.DisplayFormat.FormatType = FormatType.Numeric;
                 colDeliveredQuantity.DisplayFormat.FormatString = "n0";
+
+                //Unbound Columns
+                colStockOnHand.UnboundType = UnboundColumnType.Decimal;
+                colStockAssigned.UnboundType = UnboundColumnType.Decimal;
+                colStockTransit.UnboundType = UnboundColumnType.Decimal;
 
                 //Edit Repositories
 
@@ -733,6 +797,9 @@ namespace HKSupply.Forms.Supply
                 gridViewLines.Columns.Add(colUnitPrice);
                 gridViewLines.Columns.Add(colTotalAmount);
                 gridViewLines.Columns.Add(colIdIdSupplyStatus);
+                gridViewLines.Columns.Add(colStockOnHand);
+                gridViewLines.Columns.Add(colStockAssigned);
+                gridViewLines.Columns.Add(colStockTransit);
                 gridViewLines.Columns.Add(colRemarks);
 
                 //Events
@@ -740,6 +807,7 @@ namespace HKSupply.Forms.Supply
                 gridViewLines.ShowingEditor += GridViewLines_ShowingEditor;
                 gridViewLines.CellValueChanged += GridViewLines_CellValueChanged;
                 gridViewLines.RowCellStyle += GridViewLines_RowCellStyle;
+                gridViewLines.CustomUnboundColumnData += GridViewLines_CustomUnboundColumnData;
 
             }
             catch
@@ -996,6 +1064,9 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                //Actualizamos el stock por si ha habido algún movimiento
+                GetAllStock();
+
                 txtSONumber.ReadOnly = false;
                 memoEditRemarks.ReadOnly = true;
 
@@ -1014,6 +1085,32 @@ namespace HKSupply.Forms.Supply
         }
 
         #endregion
+
+        #endregion
+
+        #region Stocks
+        //Notes: La API de Stocks está desarrollada por improvops, sólo realizamos las llamadas a ella
+        private void GetAllStock()
+        {
+            try
+            {
+                //test Stocks
+                //FillMocking();
+
+                Call_DB_Stocks CallDBS = new Call_DB_Stocks();
+                _STKAct = CallDBS.CallCargaStocks();
+
+                _whEtniaHkOnHand = _STKAct.GetWareHouse(Constants.ETNIA_HK_COMPANY_CODE, Stocks.StockWareHousesType.OnHand);
+                _whEtniaHkAssigned = _STKAct.GetWareHouse(Constants.ETNIA_HK_COMPANY_CODE, Stocks.StockWareHousesType.Assigned);
+                _whEtniaHkTransit = _STKAct.GetWareHouse(Constants.ETNIA_HK_COMPANY_CODE, Stocks.StockWareHousesType.Transit);
+
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
 
         #endregion
     }

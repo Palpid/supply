@@ -463,7 +463,7 @@ namespace HKSupply.Forms.Supply
                 if (ValidateQP() == false)
                     return;
 
-                DialogResult result = MessageBox.Show("Save change and finish Purchase Order", "", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show("Save change and finish Quotation Proposal", "", MessageBoxButtons.YesNo);
 
                 if (result != DialogResult.Yes)
                     return;
@@ -769,8 +769,12 @@ namespace HKSupply.Forms.Supply
 
                     case COL_STOCK_ASSIGNED:
 
-                        var stockAssigned = _STKAct.GetStockItem(_whEtniaHkAssigned, docLine.IdItemBcn);
-                        e.Value = stockAssigned?.FreeStock;
+                        //var stockAssigned = _STKAct.GetStockItem(_whEtniaHkAssigned, docLine.IdItemBcn);
+                        //e.Value = stockAssigned?.FreeStock;
+
+                        //Asignados en el stock on hand de Etnia HK a alguien, no los que están en almacén assigned
+                        var stockAssigned = _STKAct.GetStockItem(_whEtniaHkOnHand, docLine.IdItemBcn);
+                        e.Value = stockAssigned?.AsgnStock;
                         break;
 
                     case COL_STOCK_TRANSIT:
@@ -975,9 +979,11 @@ namespace HKSupply.Forms.Supply
                 GridColumn colUnitPrice = new GridColumn() { Caption = "Unit Price", Visible = true, FieldName = nameof(DocLine.UnitPrice), Width = 85 };
                 GridColumn colTotalAmount = new GridColumn() { Caption = "TotalAmount", Visible = true, FieldName = nameof(DocLine.TotalAmount), Width = 120 };
                 GridColumn colRemarks = new GridColumn() { Caption = "Remarks", Visible = true, FieldName = nameof(DocLine.Remarks), Width = 350 };
-                GridColumn colStockOnHand = new GridColumn() { Caption = "Stock On Hand", Visible = true, FieldName = COL_STOCK_ONHAND, Width = 100 };
-                GridColumn colStockAssigned = new GridColumn() { Caption = "Assigned", Visible = true, FieldName = COL_STOCK_ASSIGNED, Width = 100 };
-                GridColumn colStockTransit = new GridColumn() { Caption = "Transit", Visible = true, FieldName = COL_STOCK_TRANSIT, Width = 100 };
+                GridColumn colStockOnHand = new GridColumn() { Caption = "On Hand HK", Visible = true, FieldName = COL_STOCK_ONHAND, Width = 100 };
+                GridColumn colStockAssigned = new GridColumn() { Caption = "Assigned to customers", Visible = true, FieldName = COL_STOCK_ASSIGNED, Width = 150 };
+                GridColumn colStockTransit = new GridColumn() { Caption = "Transit to HK", Visible = true, FieldName = COL_STOCK_TRANSIT, Width = 100 };
+
+                GridColumn colQuantityKg = new GridColumn() { Caption = "Quantity KG", Visible = true, FieldName = nameof(DocLine.QuantityKg), Width = 100 };
 
                 //Display Format
                 colUnitPrice.DisplayFormat.FormatType = FormatType.Numeric;
@@ -991,6 +997,9 @@ namespace HKSupply.Forms.Supply
 
                 colQuantityOriginal.DisplayFormat.FormatType = FormatType.Numeric;
                 colQuantityOriginal.DisplayFormat.FormatString = "n0";
+
+                colQuantityKg.DisplayFormat.FormatType = FormatType.Numeric;
+                colQuantityKg.DisplayFormat.FormatString = "n3";
 
                 //Unbound Columns
                 colStockOnHand.UnboundType = UnboundColumnType.Decimal;
@@ -1050,6 +1059,8 @@ namespace HKSupply.Forms.Supply
                 gridViewLines.Columns.Add(colStockAssigned);
                 gridViewLines.Columns.Add(colStockTransit);
                 gridViewLines.Columns.Add(colRemarks);
+
+                gridViewLines.Columns.Add(colQuantityKg);
 
                 //Events
                 gridViewLines.ShowingEditor += GridViewLines_ShowingEditor;
@@ -1455,6 +1466,9 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
+                //Actualizamos el stock por si ha habido algún movimiento
+                GetAllStock();
+
                 ResetForm();
                 gridViewLines.OptionsBehavior.Editable = false;
                 //Reload PO
@@ -1469,6 +1483,8 @@ namespace HKSupply.Forms.Supply
                 slueCustomer.ReadOnly = false;
                 dateEditQPCreationDate.ReadOnly = false;
                 memoEditRemarks.ReadOnly = true;
+
+                
             }
             catch
             {

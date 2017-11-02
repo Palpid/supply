@@ -914,7 +914,7 @@ namespace HKSupply.Forms.Supply
                 lblPKDeliveryWeek.Text = string.Empty;
 
                 slueDeliveryTerms.EditValue = null;
-                slueCurrency.EditValue = null;
+                //slueCurrency.EditValue = null;
                 sluePaymentTerm.EditValue = null;
 
                 txtManualReference.EditValue = null;
@@ -1140,7 +1140,7 @@ namespace HKSupply.Forms.Supply
             {
                 dateEditPKDelivery.ReadOnly = false; 
                 slueDeliveryTerms.ReadOnly = false;
-                slueCurrency.ReadOnly = false;
+                //slueCurrency.ReadOnly = false;
                 sluePaymentTerm.ReadOnly = false;
                 txtManualReference.ReadOnly = false;
                 memoEditRemarks.ReadOnly = false;
@@ -1620,6 +1620,7 @@ namespace HKSupply.Forms.Supply
                     lblTxtAddress.Text = customer.ShippingAddress;
                     lblTxtContact.Text = $"{customer.ContactName} ({customer.ContactPhone})";
                     sluePaymentTerm.EditValue = customer.IdPaymentTerms;
+                    slueCurrency.EditValue = customer.IdDefaultCurrency;
                 }
             }
             catch

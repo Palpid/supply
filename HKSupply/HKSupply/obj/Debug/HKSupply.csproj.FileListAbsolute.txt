@@ -352,6 +352,7 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Charts.v17.1.Core.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Data.v17.1.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.DataAccess.v17.1.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.DataAccess.v17.1.UI.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Docs.v17.1.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Office.v17.1.Core.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Pdf.v17.1.Core.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Pdf.v17.1.Drawing.dll
@@ -394,6 +395,7 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Xpo.v17.1.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.CodeParser.v17.1.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Diagram.v17.1.Core.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraDiagram.v17.1.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Snap.v17.1.Core.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraVerticalGrid.v17.1.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\stdole.dll
@@ -402,6 +404,7 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\CustomControls.pdb
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Data.v17.1.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.DataAccess.v17.1.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.DataAccess.v17.1.UI.xml
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Docs.v17.1.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Office.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Pdf.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Pdf.v17.1.Drawing.xml
@@ -429,6 +432,7 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\log4net.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Xpo.v17.1.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Diagram.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraDiagram.v17.1.xml
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Snap.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraVerticalGrid.v17.1.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\de\DevExpress.Data.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\es\DevExpress.Data.v17.1.resources.dll
@@ -530,6 +534,10 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\de\DevExpress.Diagram.v17.1.Core.resou
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\es\DevExpress.Diagram.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ja\DevExpress.Diagram.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ru\DevExpress.Diagram.v17.1.Core.resources.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\de\DevExpress.Snap.v17.1.Core.resources.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\es\DevExpress.Snap.v17.1.Core.resources.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ja\DevExpress.Snap.v17.1.Core.resources.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ru\DevExpress.Snap.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\de\DevExpress.XtraVerticalGrid.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\es\DevExpress.XtraVerticalGrid.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ja\DevExpress.XtraVerticalGrid.v17.1.resources.dll

@@ -126,7 +126,7 @@ namespace HKSupply.Forms.Supply
 
             try
             {
-                if (_docLinesList?.Count == 0)
+                if (_docLinesList == null || _docLinesList.Count == 0)
                 {
                     MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
                     RestoreInitState();
@@ -1284,6 +1284,7 @@ namespace HKSupply.Forms.Supply
                     lblTxtAddress.Text = supplier.ShippingAddress;
                     lblTxtContact.Text = $"{supplier.ContactName} ({supplier.ContactPhone})";
                     sluePaymentTerm.EditValue = supplier.IdPaymentTerms;
+                    slueCurrency.EditValue = supplier.IdDefaultCurrency;
                 }
             }
             catch
@@ -1724,7 +1725,7 @@ namespace HKSupply.Forms.Supply
             {
                 dateEditDelivery.ReadOnly = false;
                 slueDeliveryTerms.ReadOnly = false;
-                slueCurrency.ReadOnly = false;
+                //slueCurrency.ReadOnly = false;
                 sluePaymentTerm.ReadOnly = false;
                 memoEditRemarks.ReadOnly = false; ;
             }

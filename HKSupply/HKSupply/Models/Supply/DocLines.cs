@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.UnitConversion;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace HKSupply.Models.Supply
@@ -95,6 +96,36 @@ namespace HKSupply.Models.Supply
         /// </summary>
         [NotMapped]
         public int DummyQuantity { get; set; }
+
+        [NotMapped]
+        public double QuantityKg
+        {
+            get
+            {
+                if (Item?.GetType() == typeof(ItemMt))
+                {
+                    if((Item as ItemMt).Unit.ToUpper() == "GR")
+                    {
+                        QuantityValue<Mass> p = (Quantity).Grams();
+                        MetricUnitsConverter prefixConverter = new MetricUnitsConverter();
+                        var conv = prefixConverter.Convert(p.ToGrams(), MetricPrefix.None, MetricPrefix.Kilo);
+                        return conv;
+                    }
+                }
+
+                return Quantity;
+            }
+            set
+            {
+                if (Item?.GetType() == typeof(ItemMt))
+                {
+                    if ((Item as ItemMt).Unit.ToUpper() == "GR")
+                    {
+                        Quantity = Convert.ToInt32(value * 1000);
+                    }
+                }
+            }
+        }
 
         #endregion
 

@@ -167,6 +167,7 @@ namespace HKSupply.PRJ_Stocks.DB
 
                 // NO ES FA UNA TRANSACCIÓ. La funció esta pensada per a ser cridada dins una trasacció ja creada. 
                 string sSQL = "";
+                Guid G = Guid.NewGuid();
 
                 foreach (Stocks.StockMove SM in STK.LstStockMove)
                 {
@@ -177,39 +178,43 @@ namespace HKSupply.PRJ_Stocks.DB
                     int QTT = SM.QttMove;
                     string Rem = SM.Remarks;
                     string Usr = SM.idUser;
+                    List<string> Ldocs = SM.LstIdDocs;
 
                     DateTime DA = SM.DTArrival;
                     Stocks.StockMovementsType TypeM = SM.MoveType;
 
+                   
+
+                    // -- REGISTRE MOVIMENTS ASOCIATS
                     sSQL = $"INSERT INTO STK_MOVEMENTS (";
-                    sSQL += "idMoveType,idWareHouse,idWareHouseType,idItem,idOwner,Lot,QTT,MovDate,ArrivalDate,Remarks,idUser,TimeStamp";
-                    sSQL += ")  VALUES (";
-                    sSQL += SM.idMovementType + ",'" + idWareO + "'," + idWareTypeO + ",'" + IdIt + "','" + Ow + "',''," + QTT + ",";
-                    sSQL += "GETDATE(),convert(datetime,'" + DA.ToString("yyyy-MM-dd") + "',111),'" + Rem + "','" + Usr + "', GETDATE())";
+                    sSQL += $"idMoveType,idWareHouse,idWareHouseType,idItem,idOwner,Lot,QTT,MovDate,ArrivalDate,Remarks,idUser,TimeStamp,GUID";
+                    sSQL += $") VALUES (";
+                    sSQL += $"{SM.idMovementType},'{idWareO}',{idWareTypeO},'{IdIt}','{Ow}','',{QTT},";
+                    sSQL += $"GETDATE(),convert(datetime,'{DA.ToString("yyyy-MM-dd")}',111),'{Rem}','{Usr}',GETDATE(),'{G.ToString()}')";
                     db.Database.ExecuteSqlCommand(sSQL);
 
+                    // -- REGITRE STOCKS
                     // Si Existeix update, si no es crea
-                    // existeix?
-
+                    // existeix si count<>0
                     sSQL = $"SELECT COUNT(*) FROM STK_STOCK ";
-                    sSQL += "WHERE idWareHouse ='" + idWareO + "' AND idWareHouseType =" + idWareTypeO + " AND idItem ='" + IdIt + "' AND idOwner='" + Ow + "'";
+                    sSQL += $"WHERE idWareHouse ='{idWareO}' AND idWareHouseType ={idWareTypeO} AND idItem ='{IdIt}' AND idOwner='{Ow}'";
                     int NumRegs = db.Database.SqlQuery<int>(sSQL).First();
                     if (NumRegs > 0)
                     {
-                        sSQL = $"UPDATE STK_STOCK ";
-                        sSQL += "SET QTT=QTT+(" + QTT + ") ";
-                        sSQL += "WHERE idWareHouse ='" + idWareO + "' AND idWareHouseType =" + idWareTypeO + " AND idItem ='" + IdIt + "' AND idOwner='" + Ow + "'";
+                        sSQL = $"UPDATE STK_STOCK SET QTT=QTT+({QTT}) ";
+                        sSQL += $"WHERE idWareHouse ='{idWareO}' AND idWareHouseType ={idWareTypeO} AND idItem ='{IdIt}' AND idOwner='{Ow}'";
                     }
                     else
                     {
                         sSQL = $"INSERT INTO STK_STOCK (";
-                        sSQL += "idWareHouse,idWareHouseType,idItem,Lot,idOwner,QTT";
-                        sSQL += ") VALUES (";
-                        sSQL += "'" + idWareO + "'," + idWareTypeO + ",'" + IdIt + "','','" + Ow + "'," + QTT;
-                        sSQL += ")";
+                        sSQL += $"idWareHouse,idWareHouseType,idItem,Lot,idOwner,QTT";
+                        sSQL += $") VALUES (";
+                        sSQL += $"'{idWareO}',{idWareTypeO},'{IdIt}','','{Ow}',{QTT}";
+                        sSQL += $")";
                     }
-
                     db.Database.ExecuteSqlCommand(sSQL);
+
+                    // -- LLISTA DOCS ASOCIATS
 
                 }
 

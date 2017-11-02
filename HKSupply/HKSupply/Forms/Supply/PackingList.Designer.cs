@@ -391,11 +391,11 @@
             // 
             // xgrdSoSelection
             // 
-            this.xgrdSoSelection.Location = new System.Drawing.Point(-1, 3);
+            this.xgrdSoSelection.Location = new System.Drawing.Point(3, 3);
             this.xgrdSoSelection.MainView = this.gridViewSoSelection;
             this.xgrdSoSelection.MenuManager = this.ribbonControl;
             this.xgrdSoSelection.Name = "xgrdSoSelection";
-            this.xgrdSoSelection.Size = new System.Drawing.Size(890, 120);
+            this.xgrdSoSelection.Size = new System.Drawing.Size(886, 120);
             this.xgrdSoSelection.TabIndex = 1;
             this.xgrdSoSelection.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSoSelection});
@@ -410,11 +410,11 @@
             this.xgrdLinesSoSelection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.xgrdLinesSoSelection.Location = new System.Drawing.Point(0, 129);
+            this.xgrdLinesSoSelection.Location = new System.Drawing.Point(3, 129);
             this.xgrdLinesSoSelection.MainView = this.gridViewLinesSoSelection;
             this.xgrdLinesSoSelection.MenuManager = this.ribbonControl;
             this.xgrdLinesSoSelection.Name = "xgrdLinesSoSelection";
-            this.xgrdLinesSoSelection.Size = new System.Drawing.Size(1305, 207);
+            this.xgrdLinesSoSelection.Size = new System.Drawing.Size(1302, 207);
             this.xgrdLinesSoSelection.TabIndex = 0;
             this.xgrdLinesSoSelection.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewLinesSoSelection});
@@ -428,7 +428,7 @@
             // 
             this.xtpDeliveredGoods.Controls.Add(this.xgrdLinesDeliveredGoods);
             this.xtpDeliveredGoods.Name = "xtpDeliveredGoods";
-            this.xtpDeliveredGoods.Size = new System.Drawing.Size(1308, 351);
+            this.xtpDeliveredGoods.Size = new System.Drawing.Size(1308, 339);
             this.xtpDeliveredGoods.Text = "DELIVERED GOODS";
             // 
             // xgrdLinesDeliveredGoods
@@ -438,7 +438,7 @@
             this.xgrdLinesDeliveredGoods.MainView = this.gridViewLinesDeliveredGoods;
             this.xgrdLinesDeliveredGoods.MenuManager = this.ribbonControl;
             this.xgrdLinesDeliveredGoods.Name = "xgrdLinesDeliveredGoods";
-            this.xgrdLinesDeliveredGoods.Size = new System.Drawing.Size(1308, 351);
+            this.xgrdLinesDeliveredGoods.Size = new System.Drawing.Size(1308, 339);
             this.xgrdLinesDeliveredGoods.TabIndex = 1;
             this.xgrdLinesDeliveredGoods.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewLinesDeliveredGoods});
@@ -463,7 +463,7 @@
             this.xtpTerms.Controls.Add(this.lblAddress);
             this.xtpTerms.Controls.Add(this.lblCompany);
             this.xtpTerms.Name = "xtpTerms";
-            this.xtpTerms.Size = new System.Drawing.Size(1308, 351);
+            this.xtpTerms.Size = new System.Drawing.Size(1308, 339);
             this.xtpTerms.Text = "TERMS";
             // 
             // sluePaymentTerm

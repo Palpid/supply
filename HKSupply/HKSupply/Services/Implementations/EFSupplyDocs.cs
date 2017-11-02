@@ -783,6 +783,10 @@ namespace HKSupply.Services.Implementations
                             //Si es una Quotation Proposal y se finaliza hay que generar la Sales Order de Etnia Hk a la fábrica
                             if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_QP && finishDoc == true)
                             {
+                                //Cerramos la QP
+                                docToUpdate.IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE;
+
+
                                 //Guardamos los datos porque son necesarios los actualizados para generar la Sales Order
                                 db.SaveChanges();
 
