@@ -236,7 +236,7 @@ namespace HKSupply.Forms
                 PrivateFontCollection collection = new PrivateFontCollection();
                 collection.AddFontFile(@"Resources\Fonts\brandon_bld-webfont.ttf");
                 FontFamily fontFamily = new FontFamily("Brandon Grotesque Bold", collection);
-                Font font = new Font(fontFamily, 9);
+                Font font = new Font(fontFamily, 10);
                 msMainMenu.Font = font;
             }
             catch (Exception ex)
@@ -262,7 +262,8 @@ namespace HKSupply.Forms
                         chld = (MdiClient)ctrl;
                         chld.BackColor = Color.White;
                         BackgroundImageLayout = ImageLayout.Center;
-                        chld.BackgroundImage = Image.FromFile(@"Resources\Images\etnia_logo.jpg");
+                        //chld.BackgroundImage = Image.FromFile(@"Resources\Images\etnia_logo.jpg");
+                        chld.BackgroundImage = Image.FromFile(@"Resources\Images\logo_SupplyHongKong.png");
                     }
                     catch (InvalidCastException)
                     {

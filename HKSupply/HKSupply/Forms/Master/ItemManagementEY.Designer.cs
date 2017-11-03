@@ -383,7 +383,7 @@
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl.Size = new System.Drawing.Size(1338, 79);
+            this.ribbonControl.Size = new System.Drawing.Size(1338, 125);
             // 
             // ribbonPage1
             // 
@@ -399,11 +399,11 @@
             // xtcGeneral
             // 
             this.xtcGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtcGeneral.Location = new System.Drawing.Point(0, 79);
+            this.xtcGeneral.Location = new System.Drawing.Point(0, 125);
             this.xtcGeneral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtcGeneral.Name = "xtcGeneral";
             this.xtcGeneral.SelectedTabPage = this.xtpList;
-            this.xtcGeneral.Size = new System.Drawing.Size(1338, 605);
+            this.xtcGeneral.Size = new System.Drawing.Size(1338, 559);
             this.xtcGeneral.TabIndex = 2;
             this.xtcGeneral.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpList,
@@ -416,7 +416,7 @@
             this.xtpList.Controls.Add(this.xgrdItems);
             this.xtpList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtpList.Name = "xtpList";
-            this.xtpList.Size = new System.Drawing.Size(1332, 577);
+            this.xtpList.Size = new System.Drawing.Size(1332, 531);
             this.xtpList.Text = "List";
             // 
             // sbLoad
@@ -441,7 +441,7 @@
             this.xgrdItems.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xgrdItems.MenuManager = this.ribbonControl;
             this.xgrdItems.Name = "xgrdItems";
-            this.xgrdItems.Size = new System.Drawing.Size(1327, 537);
+            this.xgrdItems.Size = new System.Drawing.Size(1327, 491);
             this.xgrdItems.TabIndex = 2;
             this.xgrdItems.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.rootGridViewItems});
@@ -458,7 +458,7 @@
             this.xtpForm.Controls.Add(this.layoutControlForm);
             this.xtpForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xtpForm.Name = "xtpForm";
-            this.xtpForm.Size = new System.Drawing.Size(1332, 571);
+            this.xtpForm.Size = new System.Drawing.Size(1332, 577);
             this.xtpForm.Text = "Form";
             // 
             // gcHistory
@@ -560,13 +560,13 @@
             // 
             // lueHIdFamilyHK
             // 
-            this.lueHIdFamilyHK.Location = new System.Drawing.Point(447, 190);
+            this.lueHIdFamilyHK.Location = new System.Drawing.Point(446, 190);
             this.lueHIdFamilyHK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lueHIdFamilyHK.MenuManager = this.ribbonControl;
             this.lueHIdFamilyHK.Name = "lueHIdFamilyHK";
             this.lueHIdFamilyHK.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueHIdFamilyHK.Size = new System.Drawing.Size(205, 20);
+            this.lueHIdFamilyHK.Size = new System.Drawing.Size(206, 20);
             this.lueHIdFamilyHK.StyleController = this.layoutControlHistory;
             this.lueHIdFamilyHK.TabIndex = 53;
             // 
@@ -665,7 +665,7 @@
             this.txtHIdItemHK.Location = new System.Drawing.Point(130, 190);
             this.txtHIdItemHK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIdItemHK.Name = "txtHIdItemHK";
-            this.txtHIdItemHK.Size = new System.Drawing.Size(205, 20);
+            this.txtHIdItemHK.Size = new System.Drawing.Size(204, 20);
             this.txtHIdItemHK.StyleController = this.layoutControlHistory;
             this.txtHIdItemHK.TabIndex = 25;
             // 
@@ -728,7 +728,7 @@
             this.txtHIdStatusCial.Location = new System.Drawing.Point(130, 406);
             this.txtHIdStatusCial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIdStatusCial.Name = "txtHIdStatusCial";
-            this.txtHIdStatusCial.Size = new System.Drawing.Size(205, 20);
+            this.txtHIdStatusCial.Size = new System.Drawing.Size(204, 20);
             this.txtHIdStatusCial.StyleController = this.layoutControlHistory;
             this.txtHIdStatusCial.TabIndex = 32;
             // 
@@ -763,12 +763,12 @@
             // 
             // lueHIdStatusProd
             // 
-            this.lueHIdStatusProd.Location = new System.Drawing.Point(447, 406);
+            this.lueHIdStatusProd.Location = new System.Drawing.Point(446, 406);
             this.lueHIdStatusProd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lueHIdStatusProd.Name = "lueHIdStatusProd";
             this.lueHIdStatusProd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueHIdStatusProd.Size = new System.Drawing.Size(205, 20);
+            this.lueHIdStatusProd.Size = new System.Drawing.Size(206, 20);
             this.lueHIdStatusProd.StyleController = this.layoutControlHistory;
             this.lueHIdStatusProd.TabIndex = 40;
             // 
@@ -786,16 +786,16 @@
             this.txtHUnit.Location = new System.Drawing.Point(130, 502);
             this.txtHUnit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHUnit.Name = "txtHUnit";
-            this.txtHUnit.Size = new System.Drawing.Size(205, 20);
+            this.txtHUnit.Size = new System.Drawing.Size(204, 20);
             this.txtHUnit.StyleController = this.layoutControlHistory;
             this.txtHUnit.TabIndex = 43;
             // 
             // txtHCreateDate
             // 
-            this.txtHCreateDate.Location = new System.Drawing.Point(447, 502);
+            this.txtHCreateDate.Location = new System.Drawing.Point(446, 502);
             this.txtHCreateDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHCreateDate.Name = "txtHCreateDate";
-            this.txtHCreateDate.Size = new System.Drawing.Size(205, 20);
+            this.txtHCreateDate.Size = new System.Drawing.Size(206, 20);
             this.txtHCreateDate.StyleController = this.layoutControlHistory;
             this.txtHCreateDate.TabIndex = 41;
             // 
@@ -1040,7 +1040,7 @@
             this.layoutControlItem11.CustomizationFormText = "Item HK";
             this.layoutControlItem11.Location = new System.Drawing.Point(0, 168);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(317, 24);
+            this.layoutControlItem11.Size = new System.Drawing.Size(316, 24);
             this.layoutControlItem11.Text = "Item HK";
             this.layoutControlItem11.TextSize = new System.Drawing.Size(104, 13);
             // 
@@ -1110,7 +1110,7 @@
             this.layoutControlItem18.CustomizationFormText = "Status Cial";
             this.layoutControlItem18.Location = new System.Drawing.Point(0, 384);
             this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(317, 24);
+            this.layoutControlItem18.Size = new System.Drawing.Size(316, 24);
             this.layoutControlItem18.Text = "Status Cial";
             this.layoutControlItem18.TextSize = new System.Drawing.Size(104, 13);
             // 
@@ -1148,9 +1148,9 @@
             // 
             this.layoutControlItem22.Control = this.lueHIdStatusProd;
             this.layoutControlItem22.CustomizationFormText = "Status Prod";
-            this.layoutControlItem22.Location = new System.Drawing.Point(317, 384);
+            this.layoutControlItem22.Location = new System.Drawing.Point(316, 384);
             this.layoutControlItem22.Name = "layoutControlItem22";
-            this.layoutControlItem22.Size = new System.Drawing.Size(317, 24);
+            this.layoutControlItem22.Size = new System.Drawing.Size(318, 24);
             this.layoutControlItem22.Text = "Status Prod";
             this.layoutControlItem22.TextSize = new System.Drawing.Size(104, 13);
             // 
@@ -1171,7 +1171,7 @@
             this.layoutControlItem24.CustomizationFormText = "Unit";
             this.layoutControlItem24.Location = new System.Drawing.Point(0, 480);
             this.layoutControlItem24.Name = "layoutControlItem24";
-            this.layoutControlItem24.Size = new System.Drawing.Size(317, 24);
+            this.layoutControlItem24.Size = new System.Drawing.Size(316, 24);
             this.layoutControlItem24.Text = "Unit";
             this.layoutControlItem24.TextSize = new System.Drawing.Size(104, 13);
             // 
@@ -1179,9 +1179,9 @@
             // 
             this.layoutControlItem25.Control = this.txtHCreateDate;
             this.layoutControlItem25.CustomizationFormText = "Create Date";
-            this.layoutControlItem25.Location = new System.Drawing.Point(317, 480);
+            this.layoutControlItem25.Location = new System.Drawing.Point(316, 480);
             this.layoutControlItem25.Name = "layoutControlItem25";
-            this.layoutControlItem25.Size = new System.Drawing.Size(317, 24);
+            this.layoutControlItem25.Size = new System.Drawing.Size(318, 24);
             this.layoutControlItem25.Text = "Create Date";
             this.layoutControlItem25.TextSize = new System.Drawing.Size(104, 13);
             // 
@@ -1258,9 +1258,9 @@
             // lciHIdFamilyHK
             // 
             this.lciHIdFamilyHK.Control = this.lueHIdFamilyHK;
-            this.lciHIdFamilyHK.Location = new System.Drawing.Point(317, 168);
+            this.lciHIdFamilyHK.Location = new System.Drawing.Point(316, 168);
             this.lciHIdFamilyHK.Name = "lciHIdFamilyHK";
-            this.lciHIdFamilyHK.Size = new System.Drawing.Size(317, 24);
+            this.lciHIdFamilyHK.Size = new System.Drawing.Size(318, 24);
             this.lciHIdFamilyHK.TextSize = new System.Drawing.Size(104, 13);
             // 
             // layoutControlForm
@@ -2000,7 +2000,7 @@
             this.xtpDocs.Controls.Add(this.gbDocsHistory);
             this.xtpDocs.Controls.Add(this.gbLastDocs);
             this.xtpDocs.Name = "xtpDocs";
-            this.xtpDocs.Size = new System.Drawing.Size(1332, 577);
+            this.xtpDocs.Size = new System.Drawing.Size(1332, 531);
             this.xtpDocs.Text = "Docs";
             // 
             // peItemImage
@@ -2010,7 +2010,6 @@
             this.peItemImage.MenuManager = this.ribbonControl;
             this.peItemImage.Name = "peItemImage";
             this.peItemImage.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.peItemImage.Properties.ZoomAccelerationFactor = 1D;
             this.peItemImage.Size = new System.Drawing.Size(306, 187);
             this.peItemImage.TabIndex = 5;
             // 
@@ -2083,7 +2082,7 @@
             // 
             // sbViewNewDoc
             // 
-            this.sbViewNewDoc.Image = ((System.Drawing.Image)(resources.GetObject("sbViewNewDoc.Image")));
+            this.sbViewNewDoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbViewNewDoc.ImageOptions.Image")));
             this.sbViewNewDoc.Location = new System.Drawing.Point(119, 7);
             this.sbViewNewDoc.MaximumSize = new System.Drawing.Size(25, 25);
             this.sbViewNewDoc.MinimumSize = new System.Drawing.Size(25, 25);
@@ -2095,7 +2094,7 @@
             // 
             // sbOpenFileNewDoc
             // 
-            this.sbOpenFileNewDoc.Image = ((System.Drawing.Image)(resources.GetObject("sbOpenFileNewDoc.Image")));
+            this.sbOpenFileNewDoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbOpenFileNewDoc.ImageOptions.Image")));
             this.sbOpenFileNewDoc.Location = new System.Drawing.Point(148, 7);
             this.sbOpenFileNewDoc.MaximumSize = new System.Drawing.Size(25, 25);
             this.sbOpenFileNewDoc.MinimumSize = new System.Drawing.Size(25, 25);
@@ -2196,7 +2195,7 @@
             this.gbDocsHistory.Controls.Add(this.xgrdDocsHistory);
             this.gbDocsHistory.Location = new System.Drawing.Point(678, 3);
             this.gbDocsHistory.Name = "gbDocsHistory";
-            this.gbDocsHistory.Size = new System.Drawing.Size(611, 491);
+            this.gbDocsHistory.Size = new System.Drawing.Size(611, 481);
             this.gbDocsHistory.TabIndex = 3;
             this.gbDocsHistory.TabStop = false;
             this.gbDocsHistory.Text = "Docs History";
@@ -2208,7 +2207,7 @@
             this.xgrdDocsHistory.MainView = this.gridViewDocsHistory;
             this.xgrdDocsHistory.MenuManager = this.ribbonControl;
             this.xgrdDocsHistory.Name = "xgrdDocsHistory";
-            this.xgrdDocsHistory.Size = new System.Drawing.Size(605, 471);
+            this.xgrdDocsHistory.Size = new System.Drawing.Size(605, 461);
             this.xgrdDocsHistory.TabIndex = 1;
             this.xgrdDocsHistory.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewDocsHistory});

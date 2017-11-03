@@ -31,6 +31,7 @@
             this.xtcGeneral = new DevExpress.XtraTab.XtraTabControl();
             this.xtpQP = new DevExpress.XtraTab.XtraTabPage();
             this.pcFilter = new DevExpress.XtraEditors.PanelControl();
+            this.peRm = new DevExpress.XtraEditors.PictureEdit();
             this.memoEditRemarks = new DevExpress.XtraEditors.MemoEdit();
             this.sbOrder = new DevExpress.XtraEditors.SimpleButton();
             this.lblRemarks = new DevExpress.XtraEditors.LabelControl();
@@ -68,6 +69,7 @@
             this.xtpQP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcFilter)).BeginInit();
             this.pcFilter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.peRm.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditRemarks.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPONumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQPNumber.Properties)).BeginInit();
@@ -125,6 +127,7 @@
             // 
             this.pcFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pcFilter.Controls.Add(this.peRm);
             this.pcFilter.Controls.Add(this.memoEditRemarks);
             this.pcFilter.Controls.Add(this.sbOrder);
             this.pcFilter.Controls.Add(this.lblRemarks);
@@ -148,6 +151,16 @@
             this.pcFilter.Name = "pcFilter";
             this.pcFilter.Size = new System.Drawing.Size(1309, 102);
             this.pcFilter.TabIndex = 4;
+            // 
+            // peRm
+            // 
+            this.peRm.Cursor = System.Windows.Forms.Cursors.Default;
+            this.peRm.Location = new System.Drawing.Point(263, 14);
+            this.peRm.MenuManager = this.ribbonControl;
+            this.peRm.Name = "peRm";
+            this.peRm.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.peRm.Size = new System.Drawing.Size(60, 60);
+            this.peRm.TabIndex = 38;
             // 
             // memoEditRemarks
             // 
@@ -454,6 +467,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcFilter)).EndInit();
             this.pcFilter.ResumeLayout(false);
             this.pcFilter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.peRm.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditRemarks.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPONumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQPNumber.Properties)).EndInit();
@@ -510,5 +524,6 @@
         private DevExpress.XtraEditors.MemoEdit memoEditRemarks;
         private DevExpress.XtraEditors.LabelControl lblRemarks;
         private DevExpress.XtraEditors.PanelControl pcFilter;
+        private DevExpress.XtraEditors.PictureEdit peRm;
     }
 }

@@ -68,6 +68,7 @@ namespace HKSupply.Forms.Supply
                 SetUpEvents();
                 SetUpGrdLines();
                 SetupPanelControl();
+                SetUpPictureEdit();
                 SetVisiblePropertyByState();
                 SetObjectsReadOnly();
             }
@@ -1065,6 +1066,21 @@ namespace HKSupply.Forms.Supply
                 throw;
             }
         }
+
+        private void SetUpPictureEdit()
+        {
+            try
+            {
+                peEy.Properties.ShowMenu = false;
+                peEy.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+                peEy.Image = Image.FromFile(@"Resources\Images\glasses.png");
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         #endregion
 
         #region Loads / Resets

@@ -213,6 +213,7 @@ namespace HKSupply.Forms.Supply
                 SetUpEvents();
                 SetUpGrdLines();
                 SetupPanelControl();
+                SetUpPictureEdit();
 
                 SetVisiblePropertyByState();
                 SetObjectsReadOnly();
@@ -1084,6 +1085,20 @@ namespace HKSupply.Forms.Supply
                 x.UseDefaultLookAndFeel = false;
                 pcFilter.BackColor = AppStyles.BackColorAlternative;
 
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void SetUpPictureEdit()
+        {
+            try
+            {
+                peRm.Properties.ShowMenu = false;
+                peRm.Properties.SizeMode = PictureSizeMode.Zoom;
+                peRm.Image = Image.FromFile(@"Resources\Images\Acetate_244.jpg");
             }
             catch
             {

@@ -124,6 +124,10 @@ namespace HKSupply.Models.Supply
                         Quantity = Convert.ToInt32(value * 1000);
                     }
                 }
+                else
+                {
+                    Quantity = Convert.ToInt32(value);
+                }
             }
         }
 

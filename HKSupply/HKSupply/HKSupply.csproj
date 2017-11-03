@@ -849,6 +849,10 @@
     <Compile Include="Migrations\201709281513478_docHead_remarks_manualReference_01.Designer.cs">
       <DependentUpon>201709281513478_docHead_remarks_manualReference_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711031106348_address2.cs" />
+    <Compile Include="Migrations\201711031106348_address2.Designer.cs">
+      <DependentUpon>201711031106348_address2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Mocking\TestDb.cs" />
     <Compile Include="Models\BomBreakdown.cs" />
@@ -1018,10 +1022,16 @@
     <Compile Include="Services\Interfaces\IUserAttrDescription.cs" />
     <Compile Include="Styles\AppStyles.cs" />
     <None Include="Resources\formcaption_red.png" />
+    <Content Include="Resources\Images\Acetate_244.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\button_red.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\formcaption_red.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\glasses.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\import_export_excel_icon_16x16.png">
@@ -1031,6 +1041,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\logo_etnia-barcelona.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\logo_SupplyHongKong.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\tabheaderbackground_red.png">
@@ -1476,6 +1489,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709281513478_docHead_remarks_manualReference_01.resx">
       <DependentUpon>201709281513478_docHead_remarks_manualReference_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711031106348_address2.resx">
+      <DependentUpon>201711031106348_address2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRJ_Stocks\Forms\StockManagement.resx">
       <DependentUpon>StockManagement.cs</DependentUpon>

@@ -31,6 +31,7 @@
             this.xtcGeneral = new DevExpress.XtraTab.XtraTabControl();
             this.xtpPO = new DevExpress.XtraTab.XtraTabPage();
             this.pcFilter = new DevExpress.XtraEditors.PanelControl();
+            this.peEy = new DevExpress.XtraEditors.PictureEdit();
             this.memoEditRemarks = new DevExpress.XtraEditors.MemoEdit();
             this.sbImportExcel = new DevExpress.XtraEditors.SimpleButton();
             this.lblRemarks = new DevExpress.XtraEditors.LabelControl();
@@ -80,6 +81,7 @@
             this.xtpPO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcFilter)).BeginInit();
             this.pcFilter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.peEy.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditRemarks.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPONumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditDocDate.Properties.CalendarTimeProperties)).BeginInit();
@@ -142,6 +144,7 @@
             // 
             this.pcFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pcFilter.Controls.Add(this.peEy);
             this.pcFilter.Controls.Add(this.memoEditRemarks);
             this.pcFilter.Controls.Add(this.sbImportExcel);
             this.pcFilter.Controls.Add(this.lblRemarks);
@@ -169,6 +172,16 @@
             this.pcFilter.Size = new System.Drawing.Size(1313, 129);
             this.pcFilter.TabIndex = 4;
             // 
+            // peEy
+            // 
+            this.peEy.Cursor = System.Windows.Forms.Cursors.Default;
+            this.peEy.Location = new System.Drawing.Point(194, 74);
+            this.peEy.MenuManager = this.ribbonControl;
+            this.peEy.Name = "peEy";
+            this.peEy.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.peEy.Size = new System.Drawing.Size(122, 50);
+            this.peEy.TabIndex = 37;
+            // 
             // memoEditRemarks
             // 
             this.memoEditRemarks.Location = new System.Drawing.Point(568, 84);
@@ -179,7 +192,7 @@
             // 
             // sbImportExcel
             // 
-            this.sbImportExcel.Location = new System.Drawing.Point(1040, 53);
+            this.sbImportExcel.Location = new System.Drawing.Point(991, 87);
             this.sbImportExcel.Name = "sbImportExcel";
             this.sbImportExcel.Size = new System.Drawing.Size(43, 35);
             this.sbImportExcel.TabIndex = 19;
@@ -228,7 +241,7 @@
             // 
             // sbOrder
             // 
-            this.sbOrder.Location = new System.Drawing.Point(991, 52);
+            this.sbOrder.Location = new System.Drawing.Point(991, 46);
             this.sbOrder.Name = "sbOrder";
             this.sbOrder.Size = new System.Drawing.Size(43, 35);
             this.sbOrder.TabIndex = 17;
@@ -244,7 +257,7 @@
             // 
             // sbSearch
             // 
-            this.sbSearch.Location = new System.Drawing.Point(991, 10);
+            this.sbSearch.Location = new System.Drawing.Point(991, 5);
             this.sbSearch.Name = "sbSearch";
             this.sbSearch.Size = new System.Drawing.Size(43, 35);
             this.sbSearch.TabIndex = 16;
@@ -591,6 +604,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcFilter)).EndInit();
             this.pcFilter.ResumeLayout(false);
             this.pcFilter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.peEy.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditRemarks.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPONumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditDocDate.Properties.CalendarTimeProperties)).EndInit();
@@ -664,5 +678,6 @@
         private DevExpress.XtraEditors.MemoEdit memoEditRemarks;
         private DevExpress.XtraEditors.LabelControl lblRemarks;
         private DevExpress.XtraEditors.PanelControl pcFilter;
+        private DevExpress.XtraEditors.PictureEdit peEy;
     }
 }
