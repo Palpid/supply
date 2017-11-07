@@ -105,6 +105,8 @@ namespace HKSupply.DB
 
         public DbSet<FunctionalityReport> FunctionalityReports { get; set; }
 
+        public DbSet<Unit> Units { get; set; }
+
         //public HKSupplyContext()
         //    : base("name=SqlExpressConn")
         //{
@@ -181,6 +183,10 @@ namespace HKSupply.DB
 
             modelBuilder.Entity<DocLine>().Property(x => x.UnitPrice).HasPrecision(19,6);
             modelBuilder.Entity<DocLine>().Property(x => x.UnitPriceBaseCurrency).HasPrecision(19, 6);
+
+            modelBuilder.Entity<DocLine>().Property(x => x.Quantity).HasPrecision(19, 6);
+            modelBuilder.Entity<DocLine>().Property(x => x.QuantityOriginal).HasPrecision(19, 6);
+            modelBuilder.Entity<DocLine>().Property(x => x.DeliveredQuantity).HasPrecision(19, 6);
 
             base.OnModelCreating(modelBuilder);
         }

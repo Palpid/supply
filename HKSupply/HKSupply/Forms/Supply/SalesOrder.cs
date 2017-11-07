@@ -63,7 +63,7 @@ namespace HKSupply.Forms.Supply
         DocHead _docHeadSO;
         DocHead _docHeadAssociatedPO;
 
-        int _totalQuantityMt;
+        decimal _totalQuantityMt;
         int _totalQuantityHw;
 
         /// <summary>
@@ -353,7 +353,7 @@ namespace HKSupply.Forms.Supply
                         case eGridSummaries.totalQuantityMt:
 
                             if (row.IdItemGroup == Constants.ITEM_GROUP_MT)
-                                _totalQuantityMt += Convert.ToInt32(e.FieldValue);
+                                _totalQuantityMt += Convert.ToDecimal(e.FieldValue);
                             break;
 
                         case eGridSummaries.totalQuantityHw:
@@ -731,16 +731,16 @@ namespace HKSupply.Forms.Supply
 
                 //Display Format
                 colUnitPrice.DisplayFormat.FormatType = FormatType.Numeric;
-                colUnitPrice.DisplayFormat.FormatString = "n2";
+                colUnitPrice.DisplayFormat.FormatString = "n4";
 
                 colTotalAmount.DisplayFormat.FormatType = FormatType.Numeric;
-                colTotalAmount.DisplayFormat.FormatString = "n2";
+                colTotalAmount.DisplayFormat.FormatString = "n4";
 
                 colQuantityOriginal.DisplayFormat.FormatType = FormatType.Numeric;
-                colQuantityOriginal.DisplayFormat.FormatString = "n0";
+                colQuantityOriginal.DisplayFormat.FormatString = "n3";
 
                 colQuantity.DisplayFormat.FormatType = FormatType.Numeric;
-                colQuantity.DisplayFormat.FormatString = "n0";
+                colQuantity.DisplayFormat.FormatString = "n3";
 
                 colDeliveredQuantity.DisplayFormat.FormatType = FormatType.Numeric;
                 colDeliveredQuantity.DisplayFormat.FormatString = "n0";
@@ -780,10 +780,10 @@ namespace HKSupply.Forms.Supply
                 //Summaries
                 gridViewLines.OptionsView.ShowFooter = true;
 
-                colTotalAmount.Summary.Add(SummaryItemType.Sum, nameof(DocLine.TotalAmount), "{0:n2}");
+                colTotalAmount.Summary.Add(SummaryItemType.Sum, nameof(DocLine.TotalAmount), "{0:n4}");
 
                 colQuantity.Summary.AddRange(new GridSummaryItem[] {
-                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0} Gr", eGridSummaries.totalQuantityMt),
+                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0:n3} Kg", eGridSummaries.totalQuantityMt),
                     new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0} PC", eGridSummaries.totalQuantityHw) });
 
                 //Add columns to grid root view
@@ -1072,6 +1072,8 @@ namespace HKSupply.Forms.Supply
 
                 //Reload Sales Order
                 SearchSO();
+                //Hacer el grid no editable
+                gridViewLines.OptionsBehavior.Editable = false;
 
                 gridViewLines.OptionsBehavior.Editable = false;
 

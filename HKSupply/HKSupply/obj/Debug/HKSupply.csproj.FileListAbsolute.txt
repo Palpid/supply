@@ -323,11 +323,14 @@ C:\Git\HKSupply\HKSupply\obj\Debug\HKSupply.exe.licenses
 C:\Git\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
 C:\Git\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.PurchaseOrderSelection.resources
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\Acetate_244.jpg
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\button_red.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\formcaption_red.png
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\glasses.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\import_export_excel_icon_16x16.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\import_export_excel_icon_32x32.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\logo_etnia-barcelona.png
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\logo_SupplyHongKong.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\tabheaderbackground_red.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\HelpDocs\EN\BOM Flow and Application Help.pdf
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\HelpDocs\EN\SUPPLY Flow and Application Help.pdf
@@ -338,6 +341,7 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Fonts\brandon_bld-webfont.tt
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\Edit_16x16.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\etnia_icon.ico
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\etnia_logo.jpg
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Reports\Rpt\Supply\HK_SupplyDNDocument.rpt
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\log4net.config
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\HKSupply.exe.config
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\HKSupply.exe
@@ -690,6 +694,10 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.StatusPrototype_01
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.functionalityReport_01.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.functionalityReport_02.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.docHead_remarks_manualReference_01.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.address2.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.UnitsTable.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.UnitsOnPriceListTables.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.UnitsSupplyOnItems.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.PRJ_Stocks.Forms.StockManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Properties.Resources.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Reports.frmVisor.resources
@@ -699,7 +707,4 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe.licenses
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.csproj.CoreCompileInputs.cache
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
-C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\logo_SupplyHongKong.png
-C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\glasses.png
-C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\Acetate_244.jpg
-C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.address2.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.SuppluQttyDecimal.resources

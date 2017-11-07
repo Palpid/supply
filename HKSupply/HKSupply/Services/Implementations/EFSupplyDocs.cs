@@ -1165,7 +1165,7 @@ namespace HKSupply.Services.Implementations
             try
             {
                 SqlParameter param1 = new SqlParameter("@pIdDocPo", purchaseOrder.IdDoc);
-                SqlParameter param2 = new SqlParameter("@pIdCustomer", Constants.ETNIA_BCN_COMPANY_CODE);
+                SqlParameter param2 = new SqlParameter("@pIdCustomer", purchaseOrder.IdSupplier); //El supplier de la PO es un customer en la QP
                 List<DocLine> lines = db.Database.SqlQuery<DocLine>("GET_QUOTATIO_PROPOSAL_BOM_EXPLOSION @pIdDocPo, @pIdCustomer", param1, param2).ToList();
 
                 DocHead quotationProposal = new DocHead()
@@ -1515,7 +1515,7 @@ namespace HKSupply.Services.Implementations
                     STKAct.AsgnSockItem(
                        WareORIG: whEtniaHkOnHand,
                        idItem: line.IdItemBcn,
-                       Qtt: variationQty,
+                       Qtt: Decimal.ToInt32(variationQty),//TODO. CAMBIAR!!
                        idOwner: docHead.IdCustomer,
                        remarks: string.Empty,
                        LstidDoc: docs,
@@ -1556,7 +1556,7 @@ namespace HKSupply.Services.Implementations
                     STKAct.MoveSockItem(MoveType: PRJ_Stocks.Classes.Stocks.StockMovementsType.Movement,
                         WareORIG: whEtniaHkOnHand,
                         WareDEST: whDestinationOnHand,
-                        Qtt: line.Quantity,
+                        Qtt: Decimal.ToInt32(line.Quantity), //TODO.CAMBIAR!!
                         idItem: line.IdItemBcn,
                         idOwner: docHead.IdCustomer,
                         remarks: string.Empty,

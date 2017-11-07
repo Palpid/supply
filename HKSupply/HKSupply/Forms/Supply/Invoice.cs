@@ -47,7 +47,7 @@ namespace HKSupply.Forms.Supply
         DocHead _docInvoice;
         BindingList<DocLine> _docLinesInvoiceList;
 
-        int _totalQuantityMt;
+        decimal _totalQuantityMt;
         int _totalQuantityHw;
 
         #endregion
@@ -268,7 +268,7 @@ namespace HKSupply.Forms.Supply
                         case eGridLinesSummaries.totalQuantityMt:
 
                             if (row.IdItemGroup == Constants.ITEM_GROUP_MT)
-                                _totalQuantityMt += Convert.ToInt32(e.FieldValue);
+                                _totalQuantityMt += Convert.ToDecimal(e.FieldValue);
                             break;
 
                         case eGridLinesSummaries.totalQuantityHw:
@@ -606,21 +606,21 @@ namespace HKSupply.Forms.Supply
 
                 //Display Format
                 colUnitPrice.DisplayFormat.FormatType = FormatType.Numeric;
-                colUnitPrice.DisplayFormat.FormatString = "n2";
+                colUnitPrice.DisplayFormat.FormatString = "n4";
 
                 colTotalAmount.DisplayFormat.FormatType = FormatType.Numeric;
-                colTotalAmount.DisplayFormat.FormatString = "n2";
+                colTotalAmount.DisplayFormat.FormatString = "n4";
 
                 colQuantity.DisplayFormat.FormatType = FormatType.Numeric;
-                colQuantity.DisplayFormat.FormatString = "n0";
+                colQuantity.DisplayFormat.FormatString = "n3";
 
                 //Summaries
                 gridViewLines.OptionsView.ShowFooter = true;
 
-                colTotalAmount.Summary.Add(SummaryItemType.Sum, nameof(DocLine.TotalAmount), "{0:n2}");
+                colTotalAmount.Summary.Add(SummaryItemType.Sum, nameof(DocLine.TotalAmount), "{0:n4}");
 
                 colQuantity.Summary.AddRange(new GridSummaryItem[] {
-                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0} Gr", eGridLinesSummaries.totalQuantityMt),
+                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0:n3} Kg", eGridLinesSummaries.totalQuantityMt),
                     new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0} PC", eGridLinesSummaries.totalQuantityHw) });
 
                 //Add columns to grid root view

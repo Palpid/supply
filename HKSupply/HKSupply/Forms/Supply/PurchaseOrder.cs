@@ -1625,6 +1625,8 @@ namespace HKSupply.Forms.Supply
                 ResetPO();
                 ResetForm();
                 SetObjectsReadOnly();
+                //Hacer el grid no editable
+                gridViewLines.OptionsBehavior.Editable = false;
 
                 if (idPO != null )
                 {
@@ -2046,6 +2048,8 @@ namespace HKSupply.Forms.Supply
             {
                 //Reload PO
                 LoadPO();
+                //Hacer el grid no editable
+                gridViewLines.OptionsBehavior.Editable = false;
 
                 dateEditDocDate.ReadOnly = false;
                 slueSupplier.ReadOnly = false;

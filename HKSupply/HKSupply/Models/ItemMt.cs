@@ -100,6 +100,9 @@ namespace HKSupply.Models
         [Column("UNIT", TypeName = "NVARCHAR"), StringLength(2)]
         public string Unit { get; set; }
 
+        [Column("UNIT_SUPPLY", TypeName = "NVARCHAR"), StringLength(2)]
+        public string UnitSupply { get; set; }
+
         [Column("DOCS_LINK", TypeName = "NVARCHAR"), StringLength(512)]
         public string DocsLink { get; set; }
 
@@ -143,6 +146,7 @@ namespace HKSupply.Models
                 IdUserAttri2 == itemMt.IdUserAttri2 &&
                 IdUserAttri3 == itemMt.IdUserAttri3 &&
                 Unit == itemMt.Unit &&
+                UnitSupply == itemMt.UnitSupply &&
                 DocsLink == itemMt.DocsLink &&
                 CreateDate == itemMt.CreateDate &&
                 PhotoUrl == itemMt.PhotoUrl
@@ -178,6 +182,7 @@ namespace HKSupply.Models
                 (IdUserAttri2 == null ? 0 : IdUserAttri2.GetHashCode()) +
                 (IdUserAttri3 == null ? 0 : IdUserAttri3.GetHashCode()) +
                 (Unit == null ? 0 : Unit.GetHashCode()) +
+                (UnitSupply == null ? 0 : UnitSupply.GetHashCode()) +
                 (DocsLink == null ? 0 : DocsLink.GetHashCode()) +
                 CreateDate.GetHashCode() +
                 (PhotoUrl == null ? 0 : PhotoUrl.GetHashCode());

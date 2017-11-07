@@ -32,14 +32,14 @@ namespace HKSupply.Models.Supply
         [Column("BATCH", TypeName = "NVARCHAR"), StringLength(50)]
         public string Batch { get; set; }
 
-        [Column("QUANTITY")]
-        public int Quantity { get; set; }
+        [Column("QUANTITY", TypeName = "NUMERIC")]
+        public decimal Quantity { get; set; }
 
-        [Column("QUANTITY_ORIGINAL")]
-        public int QuantityOriginal { get; set; }
+        [Column("QUANTITY_ORIGINAL", TypeName = "NUMERIC")]
+        public decimal QuantityOriginal { get; set; }
 
-        [Column("DELIVERED_QUANTITY")]
-        public int DeliveredQuantity { get; set; }
+        [Column("DELIVERED_QUANTITY", TypeName = "NUMERIC")]
+        public decimal DeliveredQuantity { get; set; }
 
         [Column("REMARKS", TypeName = "NVARCHAR"), StringLength(4000)]
         public string Remarks { get; set; }
@@ -81,11 +81,11 @@ namespace HKSupply.Models.Supply
             get
             {
                 if (Item?.GetType() == typeof(ItemEy))
-                    return (Item as ItemEy).Unit;
+                    return (Item as ItemEy).UnitSupply;
                 else if (Item?.GetType() == typeof(ItemMt))
-                    return (Item as ItemMt).Unit;
+                    return (Item as ItemMt).UnitSupply;
                 else if (Item?.GetType() == typeof(ItemHw))
-                    return (Item as ItemHw).Unit;
+                    return (Item as ItemHw).UnitSupply;
                 else
                     return string.Empty;
             }
@@ -95,41 +95,7 @@ namespace HKSupply.Models.Supply
         /// Para algunos grids que va bien tener una cantidad auxiliar para ciertos cálculos/juegos
         /// </summary>
         [NotMapped]
-        public int DummyQuantity { get; set; }
-
-        [NotMapped]
-        public double QuantityKg
-        {
-            get
-            {
-                if (Item?.GetType() == typeof(ItemMt))
-                {
-                    if((Item as ItemMt).Unit.ToUpper() == "GR")
-                    {
-                        QuantityValue<Mass> p = (Quantity).Grams();
-                        MetricUnitsConverter prefixConverter = new MetricUnitsConverter();
-                        var conv = prefixConverter.Convert(p.ToGrams(), MetricPrefix.None, MetricPrefix.Kilo);
-                        return conv;
-                    }
-                }
-
-                return Quantity;
-            }
-            set
-            {
-                if (Item?.GetType() == typeof(ItemMt))
-                {
-                    if ((Item as ItemMt).Unit.ToUpper() == "GR")
-                    {
-                        Quantity = Convert.ToInt32(value * 1000);
-                    }
-                }
-                else
-                {
-                    Quantity = Convert.ToInt32(value);
-                }
-            }
-        }
+        public decimal DummyQuantity { get; set; }
 
         #endregion
 

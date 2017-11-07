@@ -853,6 +853,22 @@
     <Compile Include="Migrations\201711031106348_address2.Designer.cs">
       <DependentUpon>201711031106348_address2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711071011397_UnitsTable.cs" />
+    <Compile Include="Migrations\201711071011397_UnitsTable.Designer.cs">
+      <DependentUpon>201711071011397_UnitsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711071042587_UnitsOnPriceListTables.cs" />
+    <Compile Include="Migrations\201711071042587_UnitsOnPriceListTables.Designer.cs">
+      <DependentUpon>201711071042587_UnitsOnPriceListTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711071232174_UnitsSupplyOnItems.cs" />
+    <Compile Include="Migrations\201711071232174_UnitsSupplyOnItems.Designer.cs">
+      <DependentUpon>201711071232174_UnitsSupplyOnItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711071414172_SuppluQttyDecimal.cs" />
+    <Compile Include="Migrations\201711071414172_SuppluQttyDecimal.Designer.cs">
+      <DependentUpon>201711071414172_SuppluQttyDecimal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Mocking\TestDb.cs" />
     <Compile Include="Models\BomBreakdown.cs" />
@@ -918,6 +934,7 @@
     <Compile Include="Models\Supply\DocLines.cs" />
     <Compile Include="Models\Supply\SupplyDocType.cs" />
     <Compile Include="Models\Supply\SupplyStatus.cs" />
+    <Compile Include="Models\Unit.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserAttrDescription.cs" />
     <Compile Include="PRJ_Stocks\Classes\Stocks.cs" />
@@ -1021,6 +1038,9 @@
     <Compile Include="Services\Interfaces\IUser.cs" />
     <Compile Include="Services\Interfaces\IUserAttrDescription.cs" />
     <Compile Include="Styles\AppStyles.cs" />
+    <None Include="Reports\Rpt\Supply\HK_SupplyDNDocument.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\formcaption_red.png" />
     <Content Include="Resources\Images\Acetate_244.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -1492,6 +1512,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711031106348_address2.resx">
       <DependentUpon>201711031106348_address2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711071011397_UnitsTable.resx">
+      <DependentUpon>201711071011397_UnitsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711071042587_UnitsOnPriceListTables.resx">
+      <DependentUpon>201711071042587_UnitsOnPriceListTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711071232174_UnitsSupplyOnItems.resx">
+      <DependentUpon>201711071232174_UnitsSupplyOnItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711071414172_SuppluQttyDecimal.resx">
+      <DependentUpon>201711071414172_SuppluQttyDecimal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRJ_Stocks\Forms\StockManagement.resx">
       <DependentUpon>StockManagement.cs</DependentUpon>

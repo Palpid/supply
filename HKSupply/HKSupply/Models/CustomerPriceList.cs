@@ -37,6 +37,11 @@ namespace HKSupply.Models
         [Column("COMMENTS", TypeName = "NVARCHAR"), StringLength(2500)]
         public string Comments { get; set; }
 
+        [Column("UNIT_CODE", TypeName = "NVARCHAR"), StringLength(2)]
+        public string UnitCode { get; set; }
+        [ForeignKey("UnitCode")]
+        public Unit Unit { get; set; }
+
         [Column("ID_CURRENCY", TypeName = "NVARCHAR"), StringLength(4)]
         public string IdCurrency { get; set; }
         [ForeignKey("IdCurrency")]
@@ -75,6 +80,7 @@ namespace HKSupply.Models
                 IdCustomer == customerPriceList.IdCustomer &&
                 Price == customerPriceList.Price &&
                 Comments == customerPriceList.Comments &&
+                UnitCode == customerPriceList.UnitCode &&
                 IdCurrency == customerPriceList.IdCurrency &&
                 PriceBaseCurrency == customerPriceList.PriceBaseCurrency &&
                 ExchangeRateUsed == customerPriceList.ExchangeRateUsed &&
@@ -98,6 +104,7 @@ namespace HKSupply.Models
                 (IdCustomer == null ? 0 : IdCustomer.GetHashCode()) +
                 Price.GetHashCode() +
                 (Comments == null ? 0 : Comments.GetHashCode()) +
+                (UnitCode == null ? 0 : UnitCode.GetHashCode()) +
                 (IdCurrency == null ? 0 : IdCurrency.GetHashCode()) +
                 PriceBaseCurrency.GetHashCode() +
                 ExchangeRateUsed.GetHashCode() +
@@ -121,6 +128,7 @@ namespace HKSupply.Models
             cpl.IdCustomer = cplh.IdCustomer;
             cpl.Price = cplh.Price;
             cpl.Comments = cplh.Comments;
+            cpl.UnitCode = cplh.UnitCode;
             cpl.IdCurrency = cplh.IdCurrency;
             cpl.PriceBaseCurrency = cplh.PriceBaseCurrency;
             cpl.ExchangeRateUsed = cplh.ExchangeRateUsed;
