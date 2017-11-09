@@ -104,6 +104,7 @@ namespace HKSupply.General
         static EFEtnColor _etnColorEF = new EFEtnColor();
         static EFMyCompany _myCompanyEF = new EFMyCompany();
         static User _loggedUser;
+        static string _userFactory;
         static IEnumerable<FunctionalityRole> _functionalitiesRoles;
 
         static ResourceManager _resManager = new ResourceManager(typeof(HKSupply.Resources.HKSupplyRes));
@@ -556,6 +557,12 @@ namespace HKSupply.General
         {
             get { return _loggedUser; }
             set { _loggedUser = value; }
+        }
+
+        public static string UserFactory
+        {
+            get { return _userFactory; }
+            set { _userFactory = value; }
         }
 
         public static IEnumerable<FunctionalityRole> FunctionalitiesRoles 

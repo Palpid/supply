@@ -56,14 +56,20 @@
             this.CB_WareDEST = new System.Windows.Forms.ComboBox();
             this.BtnFreeOwner = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCerateXLTemplate = new System.Windows.Forms.Button();
+            this.BtnImportExcel = new System.Windows.Forms.Button();
+            this.BtnClearOwner = new System.Windows.Forms.Button();
+            this.BtnAdjustOwner = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
             this.tabStk = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.GC_Movs = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.BtnAdjustOwner = new System.Windows.Forms.Button();
-            this.BtnClearOwner = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.BtnExecuteImport = new System.Windows.Forms.Button();
+            this.GC_ImportExcel = new DevExpress.XtraGrid.GridControl();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.GC_Stocks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWare.Properties)).BeginInit();
@@ -80,6 +86,9 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GC_Movs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GC_ImportExcel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // GC_Stocks
@@ -340,6 +349,8 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.btnCerateXLTemplate);
+            this.groupBox1.Controls.Add(this.BtnImportExcel);
             this.groupBox1.Controls.Add(this.BtnClearOwner);
             this.groupBox1.Controls.Add(this.BtnAdjustOwner);
             this.groupBox1.Controls.Add(this.BtnSave);
@@ -375,12 +386,52 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stock Actions";
             // 
+            // btnCerateXLTemplate
+            // 
+            this.btnCerateXLTemplate.Location = new System.Drawing.Point(874, 102);
+            this.btnCerateXLTemplate.Name = "btnCerateXLTemplate";
+            this.btnCerateXLTemplate.Size = new System.Drawing.Size(111, 28);
+            this.btnCerateXLTemplate.TabIndex = 79;
+            this.btnCerateXLTemplate.Text = "Create XL Template";
+            this.btnCerateXLTemplate.UseVisualStyleBackColor = true;
+            this.btnCerateXLTemplate.Click += new System.EventHandler(this.btnCerateXLTemplate_Click);
+            // 
+            // BtnImportExcel
+            // 
+            this.BtnImportExcel.Location = new System.Drawing.Point(874, 135);
+            this.BtnImportExcel.Name = "BtnImportExcel";
+            this.BtnImportExcel.Size = new System.Drawing.Size(111, 28);
+            this.BtnImportExcel.TabIndex = 78;
+            this.BtnImportExcel.Text = "Import XL";
+            this.BtnImportExcel.UseVisualStyleBackColor = true;
+            this.BtnImportExcel.Click += new System.EventHandler(this.BtnImportExcel_Click);
+            // 
+            // BtnClearOwner
+            // 
+            this.BtnClearOwner.Location = new System.Drawing.Point(462, 124);
+            this.BtnClearOwner.Name = "BtnClearOwner";
+            this.BtnClearOwner.Size = new System.Drawing.Size(24, 21);
+            this.BtnClearOwner.TabIndex = 77;
+            this.BtnClearOwner.Text = "C";
+            this.BtnClearOwner.UseVisualStyleBackColor = true;
+            this.BtnClearOwner.Click += new System.EventHandler(this.BtnClearOwner_Click);
+            // 
+            // BtnAdjustOwner
+            // 
+            this.BtnAdjustOwner.Location = new System.Drawing.Point(367, 151);
+            this.BtnAdjustOwner.Name = "BtnAdjustOwner";
+            this.BtnAdjustOwner.Size = new System.Drawing.Size(64, 30);
+            this.BtnAdjustOwner.TabIndex = 76;
+            this.BtnAdjustOwner.Text = "Adjust";
+            this.BtnAdjustOwner.UseVisualStyleBackColor = true;
+            this.BtnAdjustOwner.Click += new System.EventHandler(this.BtnAdjustOwner_Click);
+            // 
             // BtnSave
             // 
             this.BtnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.BtnSave.Location = new System.Drawing.Point(884, 19);
+            this.BtnSave.Location = new System.Drawing.Point(872, 19);
             this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(107, 30);
+            this.BtnSave.Size = new System.Drawing.Size(111, 30);
             this.BtnSave.TabIndex = 75;
             this.BtnSave.Text = "Save Changes";
             this.BtnSave.UseVisualStyleBackColor = false;
@@ -393,6 +444,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabStk.Controls.Add(this.tabPage1);
             this.tabStk.Controls.Add(this.tabPage2);
+            this.tabStk.Controls.Add(this.tabPage3);
             this.tabStk.Location = new System.Drawing.Point(5, 200);
             this.tabStk.Name = "tabStk";
             this.tabStk.SelectedIndex = 0;
@@ -437,25 +489,45 @@
             this.gridView2.GridControl = this.GC_Movs;
             this.gridView2.Name = "gridView2";
             // 
-            // BtnAdjustOwner
+            // tabPage3
             // 
-            this.BtnAdjustOwner.Location = new System.Drawing.Point(367, 151);
-            this.BtnAdjustOwner.Name = "BtnAdjustOwner";
-            this.BtnAdjustOwner.Size = new System.Drawing.Size(64, 30);
-            this.BtnAdjustOwner.TabIndex = 76;
-            this.BtnAdjustOwner.Text = "Adjust";
-            this.BtnAdjustOwner.UseVisualStyleBackColor = true;
-            this.BtnAdjustOwner.Click += new System.EventHandler(this.BtnAdjustOwner_Click);
+            this.tabPage3.Controls.Add(this.BtnExecuteImport);
+            this.tabPage3.Controls.Add(this.GC_ImportExcel);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(990, 407);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "ImportData";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // BtnClearOwner
+            // BtnExecuteImport
             // 
-            this.BtnClearOwner.Location = new System.Drawing.Point(462, 124);
-            this.BtnClearOwner.Name = "BtnClearOwner";
-            this.BtnClearOwner.Size = new System.Drawing.Size(24, 21);
-            this.BtnClearOwner.TabIndex = 77;
-            this.BtnClearOwner.Text = "C";
-            this.BtnClearOwner.UseVisualStyleBackColor = true;
-            this.BtnClearOwner.Click += new System.EventHandler(this.BtnClearOwner_Click);
+            this.BtnExecuteImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnExecuteImport.Location = new System.Drawing.Point(881, 380);
+            this.BtnExecuteImport.Name = "BtnExecuteImport";
+            this.BtnExecuteImport.Size = new System.Drawing.Size(105, 24);
+            this.BtnExecuteImport.TabIndex = 79;
+            this.BtnExecuteImport.Text = "Import";
+            this.BtnExecuteImport.UseVisualStyleBackColor = true;
+            this.BtnExecuteImport.Click += new System.EventHandler(this.BtnExecuteImport_Click);
+            // 
+            // GC_ImportExcel
+            // 
+            this.GC_ImportExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GC_ImportExcel.Location = new System.Drawing.Point(3, 4);
+            this.GC_ImportExcel.MainView = this.gridView3;
+            this.GC_ImportExcel.Name = "GC_ImportExcel";
+            this.GC_ImportExcel.Size = new System.Drawing.Size(984, 372);
+            this.GC_ImportExcel.TabIndex = 2;
+            this.GC_ImportExcel.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3});
+            // 
+            // gridView3
+            // 
+            this.gridView3.GridControl = this.GC_ImportExcel;
+            this.gridView3.Name = "gridView3";
             // 
             // StockManagement
             // 
@@ -484,6 +556,9 @@
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GC_Movs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GC_ImportExcel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -525,5 +600,11 @@
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.Button BtnClearOwner;
         private System.Windows.Forms.Button BtnAdjustOwner;
+        private System.Windows.Forms.Button BtnImportExcel;
+        private System.Windows.Forms.TabPage tabPage3;
+        private DevExpress.XtraGrid.GridControl GC_ImportExcel;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private System.Windows.Forms.Button BtnExecuteImport;
+        private System.Windows.Forms.Button btnCerateXLTemplate;
     }
 }

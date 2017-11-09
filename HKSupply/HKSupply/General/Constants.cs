@@ -84,5 +84,8 @@ namespace HKSupply.General
         public const string ETNIA_HK_COMPANY_CODE = "ETNLTD";
         public const string ETNIA_BCN_COMPANY_CODE = "ETNBCN";
 
+        //**ROLES **//
+        public const string ROLE_FACTORY = "FACTORY";
+
     }
 }

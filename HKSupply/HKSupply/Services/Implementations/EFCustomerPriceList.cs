@@ -292,13 +292,20 @@ namespace HKSupply.Services.Implementations
             }
         }
 
-        public List<CustomerPriceList> GetCustomersPriceList()
+        public List<CustomerPriceList> GetCustomersPriceList(string idItemBcn = null, string idCustomer = null)
         {
             try
             {
                 using (var db = new HKSupplyContext())
                 {
-                    return db.CustomersPriceList.ToList();
+                    if (idItemBcn != null && idCustomer != null)
+                        return db.CustomersPriceList.Where(a => a.IdItemBcn.Equals(idItemBcn) && a.IdCustomer.Equals(idCustomer)).ToList();
+                    else if (idItemBcn != null && idCustomer == null)
+                        return db.CustomersPriceList.Where(a => a.IdItemBcn.Equals(idItemBcn)).ToList();
+                    else if (idItemBcn == null && idCustomer != null)
+                        return db.CustomersPriceList.Where(a => a.IdCustomer.Equals(idCustomer)).ToList();
+                    else
+                        return db.CustomersPriceList.ToList();
                 }
             }
             catch (SqlException sqlex)

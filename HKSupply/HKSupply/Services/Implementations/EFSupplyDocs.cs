@@ -599,8 +599,10 @@ namespace HKSupply.Services.Implementations
                         //número de línea
                         int numLin = 1;
 
-                        //Actualizar el precio por si han modificado alguno mientras dejaban el formulario de PO abierto
-                        var supplierPriceList = GlobalSetting.SupplierPriceListService.GetSuppliersPriceList(idItemBcn: null, idSupplier: newDoc.IdSupplier);
+                        //Actualizar el precio por si han modificado alguno mientras dejaban el formulario de PO abierto 
+                        List<Models.SupplierPriceList> supplierPriceList = null;
+                        if (newDoc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_PO)
+                            supplierPriceList = GlobalSetting.SupplierPriceListService.GetSuppliersPriceList(idItemBcn: null, idSupplier: newDoc.IdSupplier);
 
                         foreach (var line in newDoc.Lines)
                         {
@@ -608,10 +610,12 @@ namespace HKSupply.Services.Implementations
                             line.IdDoc = newDoc.IdDoc;
                             line.QuantityOriginal = line.Quantity;
 
-                            var supplierPrice = supplierPriceList.Where(a => a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
-
-                            line.UnitPrice = (supplierPrice == null ? 0 : (short)supplierPrice.Price);
-                            line.UnitPriceBaseCurrency = (supplierPrice == null ? 0 : (short)supplierPrice.PriceBaseCurrency);
+                            if (newDoc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_PO)
+                            {
+                                var supplierPrice = supplierPriceList.Where(a => a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
+                                line.UnitPrice = (supplierPrice == null ? 0 : (short)supplierPrice.Price);
+                                line.UnitPriceBaseCurrency = (supplierPrice == null ? 0 : (short)supplierPrice.PriceBaseCurrency);
+                            }
 
                             numLin++;
                         }
@@ -688,14 +692,31 @@ namespace HKSupply.Services.Implementations
                             //número de línea
                             int numLin = 1;
 
-                            bool existQP = (db.DocsHead.Where(a => a.IdDocRelated.Equals(doc.IdDoc) && a.IdSupplyDocType.Equals(Constants.SUPPLY_DOCTYPE_QP)).Count()) > 0;
+                            bool existQP = true;
+                            bool existSO = true;
+
+                            if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_PO)
+                            {
+                                existQP = (db.DocsHead.Where(a => a.IdDocRelated.Equals(doc.IdDoc) && a.IdSupplyDocType.Equals(Constants.SUPPLY_DOCTYPE_QP)).Count()) > 0;
+                            }
+
+                            if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_QP)
+                            {
+                                existSO = (db.DocsHead.Where(a => a.IdDocRelated.Equals(doc.IdDoc) && a.IdSupplyDocType.Equals(Constants.SUPPLY_DOCTYPE_SO)).Count()) > 0;
+                            }
+
 
                             //Actualizar el precio por si han modificado alguno mientras dejaban el formulario de PO abierto (siempre y cuando no exista ya la QP)
                             List<Models.SupplierPriceList> supplierPriceList = null;
-
+                            List<Models.CustomerPriceList> customerPriceList = null;
+                            
                             if (existQP == false)
                                 supplierPriceList = GlobalSetting.SupplierPriceListService.GetSuppliersPriceList(idItemBcn: null, idSupplier: doc.IdSupplier);
-                            
+
+                            if (existSO == false)
+                                customerPriceList = GlobalSetting.CustomerPriceListService.GetCustomersPriceList(idItemBcn: null, idCustomer: doc.IdCustomer);
+
+
                             foreach (var line in doc.Lines)
                             {
                                 line.NumLin = numLin;
@@ -704,12 +725,20 @@ namespace HKSupply.Services.Implementations
                                 if (line.LineState == DocLine.LineStates.New)
                                     line.QuantityOriginal = line.Quantity;
 
-                                if (existQP == false)
+                                if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_PO && existQP == false)
                                 {
                                     var supplierPrice = supplierPriceList?.Where(a => a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
 
                                     line.UnitPrice = (supplierPrice == null ? 0 : supplierPrice.Price);
                                     line.UnitPriceBaseCurrency = (supplierPrice == null ? 0 : supplierPrice.PriceBaseCurrency);
+                                }
+
+                                if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_QP && existSO == false)
+                                {
+                                    var customerPrice = customerPriceList?.Where(a => a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
+
+                                    line.UnitPrice = (customerPrice == null ? 0 : customerPrice.Price);
+                                    line.UnitPriceBaseCurrency = (customerPrice == null ? 0 : customerPrice.PriceBaseCurrency);
                                 }
 
                                 numLin++;
@@ -1515,7 +1544,8 @@ namespace HKSupply.Services.Implementations
                     STKAct.AsgnSockItem(
                        WareORIG: whEtniaHkOnHand,
                        idItem: line.IdItemBcn,
-                       Qtt: Decimal.ToInt32(variationQty),//TODO. CAMBIAR!!
+                       //Qtt: Decimal.ToInt32(variationQty),//TODO. CAMBIAR!!
+                       Qtt: variationQty,
                        idOwner: docHead.IdCustomer,
                        remarks: string.Empty,
                        LstidDoc: docs,
@@ -1556,7 +1586,8 @@ namespace HKSupply.Services.Implementations
                     STKAct.MoveSockItem(MoveType: PRJ_Stocks.Classes.Stocks.StockMovementsType.Movement,
                         WareORIG: whEtniaHkOnHand,
                         WareDEST: whDestinationOnHand,
-                        Qtt: Decimal.ToInt32(line.Quantity), //TODO.CAMBIAR!!
+                        //Qtt: Decimal.ToInt32(line.Quantity), //TODO.CAMBIAR!!
+                        Qtt: line.Quantity, //TODO.CAMBIAR!!
                         idItem: line.IdItemBcn,
                         idOwner: docHead.IdCustomer,
                         remarks: string.Empty,

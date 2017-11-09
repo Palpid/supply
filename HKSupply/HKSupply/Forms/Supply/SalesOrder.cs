@@ -716,11 +716,11 @@ namespace HKSupply.Forms.Supply
                 //Column Definition
                 GridColumn colIdItemBcn = new GridColumn() { Caption = "Item Code", Visible = true, FieldName = nameof(DocLine.IdItemBcn), Width = 200 };
                 GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = nameof(DocLine.ItemDesc), Width = 350 };
-                GridColumn colIdItemGroup = new GridColumn() { Caption = "Type", Visible = true, FieldName = nameof(DocLine.IdItemGroup), Width = 100 };
+                GridColumn colIdItemGroup = new GridColumn() { Caption = "Type", Visible = true, FieldName = nameof(DocLine.IdItemGroup), Width = 50 };
                 GridColumn colQuantityOriginal = new GridColumn() { Caption = "Quantity Original", Visible = true, FieldName = nameof(DocLine.QuantityOriginal), Width = 120 };
                 GridColumn colQuantity = new GridColumn() { Caption = "Quantity", Visible = true, FieldName = nameof(DocLine.Quantity), Width = 85 };
                 GridColumn colDeliveredQuantity = new GridColumn() { Caption = "Delivered Quantity", Visible = true, FieldName = nameof(DocLine.DeliveredQuantity), Width = 120 };
-                GridColumn colUnit = new GridColumn() { Caption = "Unit", Visible = true, FieldName = nameof(DocLine.ItemUnit), Width = 85 };
+                GridColumn colUnit = new GridColumn() { Caption = "Unit", Visible = true, FieldName = nameof(DocLine.ItemUnit), Width = 50 };
                 GridColumn colUnitPrice = new GridColumn() { Caption = "Unit Price", Visible = true, FieldName = nameof(DocLine.UnitPrice), Width = 85 };
                 GridColumn colTotalAmount = new GridColumn() { Caption = "TotalAmount", Visible = true, FieldName = nameof(DocLine.TotalAmount), Width = 120 };
                 GridColumn colIdIdSupplyStatus = new GridColumn() { Caption = "Status", Visible = true, FieldName = nameof(DocLine.IdSupplyStatus), Width = 75 };
@@ -743,7 +743,7 @@ namespace HKSupply.Forms.Supply
                 colQuantity.DisplayFormat.FormatString = "n3";
 
                 colDeliveredQuantity.DisplayFormat.FormatType = FormatType.Numeric;
-                colDeliveredQuantity.DisplayFormat.FormatString = "n0";
+                colDeliveredQuantity.DisplayFormat.FormatString = "n3";
 
                 //Unbound Columns
                 colStockOnHand.UnboundType = UnboundColumnType.Decimal;
@@ -760,12 +760,12 @@ namespace HKSupply.Forms.Supply
                 };
                 colRemarks.ColumnEdit = riTxtRemarks;
 
-                RepositoryItemTextEdit ritxtInt = new RepositoryItemTextEdit();
-                ritxtInt.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-                ritxtInt.Mask.EditMask = "N";
-                ritxtInt.AllowNullInput = DefaultBoolean.False;
+                RepositoryItemTextEdit ritxt3Dec = new RepositoryItemTextEdit();
+                ritxt3Dec.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                ritxt3Dec.Mask.EditMask = "F3";
+                ritxt3Dec.AllowNullInput = DefaultBoolean.False;
 
-                colQuantity.ColumnEdit = ritxtInt;
+                colQuantity.ColumnEdit = ritxt3Dec;
 
                 RepositoryItemSearchLookUpEdit riSupplyStatus = new RepositoryItemSearchLookUpEdit()
                 {

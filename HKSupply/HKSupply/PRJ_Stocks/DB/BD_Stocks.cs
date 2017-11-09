@@ -68,7 +68,7 @@ namespace HKSupply.PRJ_Stocks.DB
                     string IdIt = rec.idItem;
                     string IdLt = rec.idLot;
                     string Ow = rec.idOwner;
-                    int QTT = rec.QttMove;
+                    decimal QTT = rec.QttMove;
 
                     Classes.Stocks.StockItem STKi = new Stocks.StockItem(idWare, idWareType, WaraName, IdIt, Ow, QTT);
                     STK.CargaSockItem(STKi);
@@ -126,7 +126,7 @@ namespace HKSupply.PRJ_Stocks.DB
                     string WaraName = SM.Ware.Descr;
                     string IdIt = SM.idItem;
                     string Ow = SM.idOwner;
-                    int QTT = SM.QttMove;
+                    decimal QTT = SM.QttMove;
                     Stocks.StockMovementsType MType = SM.MoveType;
                     Stocks.StockMove STKm = new Stocks.StockMove(MType, idWareO, WaraName, idWareTypeO, IdIt, Ow, QTT);
                     StkAVerificar.Add(STKm);
@@ -153,8 +153,8 @@ namespace HKSupply.PRJ_Stocks.DB
 
                         foreach (Stocks.DetAsg DA in siEsp.LstDetRes)
                         {
-                            int ValStkEsp = DA.Qtt;
-                            int ValStkBD = siBD.item.StkOwner(DA.idOwner);
+                            decimal ValStkEsp = DA.Qtt;
+                            decimal ValStkBD = siBD.item.StkOwner(DA.idOwner);
                             if (ValStkEsp != ValStkBD)
                                 throw new System.InvalidOperationException("Expeted stock don't match. Item '" + SIv.idItem + "' assigned to '" + DA.idOwner + "' at '" + SIv.Ware.Descr + "' warehouse. Expected stock = " + ValStkEsp + " found = " + ValStkBD);
                         }
@@ -175,7 +175,7 @@ namespace HKSupply.PRJ_Stocks.DB
                     int idWareTypeO = SM.Ware.idWareHouseType;
                     string IdIt = SM.idItem;
                     string Ow = SM.idOwner;
-                    int QTT = SM.QttMove;
+                    decimal QTT = SM.QttMove;
                     string Rem = SM.Remarks;
                     string Usr = SM.idUser;
                     List<string> Ldocs = SM.LstIdDocs;
@@ -183,14 +183,14 @@ namespace HKSupply.PRJ_Stocks.DB
                     DateTime DA = SM.DTArrival;
                     Stocks.StockMovementsType TypeM = SM.MoveType;
 
-                   
 
                     // -- REGISTRE MOVIMENTS ASOCIATS
                     sSQL = $"INSERT INTO STK_MOVEMENTS (";
                     sSQL += $"idMoveType,idWareHouse,idWareHouseType,idItem,idOwner,Lot,QTT,MovDate,ArrivalDate,Remarks,idUser,TimeStamp,GUID";
                     sSQL += $") VALUES (";
-                    sSQL += $"{SM.idMovementType},'{idWareO}',{idWareTypeO},'{IdIt}','{Ow}','',{QTT},";
-                    sSQL += $"GETDATE(),convert(datetime,'{DA.ToString("yyyy-MM-dd")}',111),'{Rem}','{Usr}',GETDATE(),'{G.ToString()}')";
+                    sSQL += $"{SM.idMovementType},'{idWareO}',{idWareTypeO},'{IdIt}','{Ow}','',{QTT.ToString(System.Globalization.CultureInfo.InvariantCulture)},";
+                    sSQL += $"GETDATE(),convert(datetime,'{DA.ToString("yyyy-MM-dd")}',111),'{Rem}','{Usr}',GETDATE(),'{G.ToString()}'";
+                    sSQL += $")";
                     db.Database.ExecuteSqlCommand(sSQL);
 
                     // -- REGITRE STOCKS
@@ -201,7 +201,7 @@ namespace HKSupply.PRJ_Stocks.DB
                     int NumRegs = db.Database.SqlQuery<int>(sSQL).First();
                     if (NumRegs > 0)
                     {
-                        sSQL = $"UPDATE STK_STOCK SET QTT=QTT+({QTT}) ";
+                        sSQL = $"UPDATE STK_STOCK SET QTT=QTT+({QTT.ToString(System.Globalization.CultureInfo.InvariantCulture)}) ";
                         sSQL += $"WHERE idWareHouse ='{idWareO}' AND idWareHouseType ={idWareTypeO} AND idItem ='{IdIt}' AND idOwner='{Ow}'";
                     }
                     else
@@ -209,7 +209,7 @@ namespace HKSupply.PRJ_Stocks.DB
                         sSQL = $"INSERT INTO STK_STOCK (";
                         sSQL += $"idWareHouse,idWareHouseType,idItem,Lot,idOwner,QTT";
                         sSQL += $") VALUES (";
-                        sSQL += $"'{idWareO}',{idWareTypeO},'{IdIt}','','{Ow}',{QTT}";
+                        sSQL += $"'{idWareO}',{idWareTypeO},'{IdIt}','','{Ow}',{QTT.ToString(System.Globalization.CultureInfo.InvariantCulture)}";
                         sSQL += $")";
                     }
                     db.Database.ExecuteSqlCommand(sSQL);

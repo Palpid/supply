@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HKSupply.PRJ_Stocks.Classes
 {
-    class Stocks
+    public class Stocks
     {
         #region Def
 
@@ -88,7 +88,7 @@ namespace HKSupply.PRJ_Stocks.Classes
         public class DetAsg
         {
             public string idOwner { get; set; }
-            public int Qtt { get; set; }
+            public decimal Qtt { get; set; }
         }
 
         /// <summary>
@@ -99,13 +99,13 @@ namespace HKSupply.PRJ_Stocks.Classes
         public class Item
         {
             public string idItem { get; set; }
-            public Dictionary<String, int> _Resr = new Dictionary<String, int>(); // (ownner, qtt)
+            public Dictionary<String, decimal> _Resr = new Dictionary<String, decimal>(); // (ownner, qtt)
 
             ///    Modifica la QTT del stock. Si QttAfegir positiva incrementa, si negativa resta.
-            public int AddStk(int QttAfegir, string idOwner)
+            public decimal AddStk(decimal QttAfegir, string idOwner)
             {
-                int Variacio = 0;
-                int QTTAct = 0;
+                decimal Variacio = 0;
+                decimal QTTAct = 0;
                 if (!_Resr.ContainsKey(idOwner)) _Resr.Add(idOwner, 0);
                 QTTAct = _Resr[idOwner];
                 if ((QTTAct + QttAfegir) < 0) throw new System.InvalidOperationException("Final quantity is negative. No negative stocks allowed.)");
@@ -120,12 +120,12 @@ namespace HKSupply.PRJ_Stocks.Classes
             /// <summary>
             ///   Retorna el total stock de tots el lots del item.
             /// </summary>
-            public int TotalQTT
+            public decimal TotalQTT
             {
                 get
                 {
-                    int Total = 0;
-                    foreach (int V in _Resr.Values) Total += V;
+                    decimal Total = 0;
+                    foreach (var V in _Resr.Values) Total += V;
                     return Total;
                 }
                 set { }
@@ -134,11 +134,11 @@ namespace HKSupply.PRJ_Stocks.Classes
             /// <summary>
             ///   Retorna el stock reservat
             /// </summary>
-            public int TotalAssignedQTT
+            public decimal TotalAssignedQTT
             {
                 get
                 {
-                    int Total = 0;
+                    decimal Total = 0;
                     foreach (var Q in _Resr) if (Q.Key != "") Total += Q.Value;
                     return Total;
                 }
@@ -148,7 +148,7 @@ namespace HKSupply.PRJ_Stocks.Classes
             /// <summary>
             ///   Retorna el stock reservat
             /// </summary>
-            public int TotalFreeQTT
+            public decimal TotalFreeQTT
             {
                 get
                 {
@@ -174,7 +174,7 @@ namespace HKSupply.PRJ_Stocks.Classes
                 set { }
             }
 
-            public int StkOwner(string idOwner)
+            public decimal StkOwner(string idOwner)
             {
                 if (_Resr.ContainsKey(idOwner))
                     return _Resr[idOwner];
@@ -187,7 +187,7 @@ namespace HKSupply.PRJ_Stocks.Classes
         public class StockItem
         {
             public StockItem(string idWarehouse = "", int idWareHouseType = 0, string WareHouseName = "",
-                             string idItem = "", string idOwner = "", int QTT = 0)
+                             string idItem = "", string idOwner = "", decimal QTT = 0)
             {
                 ware = new Warehouse();
                 ware.idWareHouse = idWarehouse; ware.idWareHouseType = idWareHouseType; ware.Descr = WareHouseName;
@@ -259,12 +259,12 @@ namespace HKSupply.PRJ_Stocks.Classes
                 }
             }
 
-            public int FreeStock
+            public decimal FreeStock
             {
                 get { return item.TotalFreeQTT; }
             }
 
-            public int AsgnStock
+            public decimal AsgnStock
             {
                 get { return item.TotalAssignedQTT; }
             }
@@ -317,7 +317,7 @@ namespace HKSupply.PRJ_Stocks.Classes
 
         public class StockMove
         {
-            public StockMove(StockMovementsType MovType, string idWR, string DercsWR, int idWareType, string iditem, string owner, int qttmove)
+            public StockMove(StockMovementsType MovType, string idWR, string DercsWR, int idWareType, string iditem, string owner, decimal qttmove)
             {
                 Ware = new Warehouse();
                 Ware.idWareHouse = idWR;
@@ -342,7 +342,7 @@ namespace HKSupply.PRJ_Stocks.Classes
             public string idItem { get; set; }
             public string idLot { get; set; }
             public string idOwner { get; set; }
-            public int QttMove { get; set; }
+            public decimal QttMove { get; set; }
 
             public DateTime DTArrival { get; set; }
             public string Remarks { get; set; }
@@ -489,7 +489,7 @@ namespace HKSupply.PRJ_Stocks.Classes
         /// <exception cref="System.ArgumentException">IdWarehouse can't be empty/null</exception>
         /// <exception cref="System.ArgumentException">IdItem can't be empty/null</exception>
         /// <exception cref="System.InvalidOperationException">Not enough Stock on Warehouse</exception>
-        public void AddSockItem(StockMovementsType MoveType, Warehouse ware, int Qtt, string idItem, string idLot = "", string idOwner = "", string Remarks = "", List<string> LstidDoc = null, string IdUser = "")
+        public void AddSockItem(StockMovementsType MoveType, Warehouse ware, decimal Qtt, string idItem, string idLot = "", string idOwner = "", string Remarks = "", List<string> LstidDoc = null, string IdUser = "")
         {
             // -- Test Param --
             if (ware.idWareHouse == "" | ware.idWareHouse == null) throw new System.ArgumentException("IdWarehouse can't be empty/null");
@@ -520,13 +520,9 @@ namespace HKSupply.PRJ_Stocks.Classes
             }
 
             // -- REGISTRE MOVIMENTS ----------------------------------------------------------------------------------------
-            StockMove SM = new StockMove();
-            SM.Ware.idWareHouse = "";
-            SM.Ware.WareHouseType = StockWareHousesType.Undefined;
-            SM.idItem = idItem;
-            SM.idLot = idLot;
-            SM.idOwner = idOwner;
-            SM.QttMove = Qtt;
+            StockMove SM = new StockMove(StockMovementsType.Entry,
+                                "", "", 0,
+                                idItem, idOwner, Qtt);
 
             SM.DTArrival = System.DateTime.Now;
             SM.Remarks = Remarks;
@@ -539,7 +535,7 @@ namespace HKSupply.PRJ_Stocks.Classes
             _LstStockMove.Add(SM);
         }
 
-        public void MoveSockItem(StockMovementsType MoveType, Warehouse WareORIG, Warehouse WareDEST, int Qtt, string idItem, string idOwner, string remarks = "", List<string> LstidDoc = null, string IdUser = "")
+        public void MoveSockItem(StockMovementsType MoveType, Warehouse WareORIG, Warehouse WareDEST, decimal Qtt, string idItem, string idOwner, string remarks = "", List<string> LstidDoc = null, string IdUser = "")
         {
             // -- Test Param
             if (idItem == "" | idItem == null) throw new System.ArgumentException("IdItem can't be null");
@@ -553,7 +549,7 @@ namespace HKSupply.PRJ_Stocks.Classes
             if (SIO == null)
                 throw new System.InvalidOperationException("idITEM (" + idItem + ") does not exist on WarehouseORIG (" + WareORIG.idWareHouse + "/" + WareORIG.WareHouseType + ")");
 
-            int QAct = SIO.item.StkOwner(idOwner);
+            decimal QAct = SIO.item.StkOwner(idOwner);
             if (QAct < Qtt) throw new System.InvalidOperationException("Quantity to move (" + Qtt + ") is greather than existing quantity (" + QAct + ")");
 
             // -- LOCALITZA STOCK DESTI ----------------------------------------------------------------------------------------
@@ -575,13 +571,10 @@ namespace HKSupply.PRJ_Stocks.Classes
 
             // -- REGISTRE MOVIMENTS ----------------------------------------------------------------------------------------------
             // -- ORIG.
-            StockMove SM = new StockMove();
-            SM.Ware.idWareHouse = WareORIG.idWareHouse;
-            SM.Ware.WareHouseType = WareORIG.WareHouseType;
-            SM.idItem = idItem;
-            SM.idLot = "";
-            SM.idOwner = idOwner;
-            SM.QttMove = -Qtt;
+            StockMove SM = new StockMove(StockMovementsType.Movement,
+                            WareORIG.idWareHouse, WareORIG.Descr, WareORIG.idWareHouseType,
+                            idItem, idOwner,
+                            -Qtt);
             SM.DTArrival = System.DateTime.Now;
             SM.Remarks = remarks;
 
@@ -594,14 +587,9 @@ namespace HKSupply.PRJ_Stocks.Classes
             _LstStockMove.Add(SM);
 
             // -- DEST
-            SM = new StockMove();
-            SM.Ware.idWareHouse = WareDEST.idWareHouse;
-            SM.Ware.WareHouseType = WareDEST.WareHouseType;
-            SM.idItem = idItem;
-            SM.idLot = "";
-            SM.idOwner = idOwner;
-            SM.QttMove = Qtt;
-
+            SM = new StockMove(StockMovementsType.Movement,
+                               WareDEST.idWareHouse, WareDEST.Descr, WareDEST.idWareHouseType,
+                               idItem, idOwner, Qtt);
             SM.DTArrival = System.DateTime.Now;
             SM.Remarks = remarks;
 
@@ -614,9 +602,9 @@ namespace HKSupply.PRJ_Stocks.Classes
             _LstStockMove.Add(SM);
         }
 
-        public int FreeSockItem(Warehouse WareORIG, string idItem, string idOwner, string remarks = "", List<string> LstidDoc = null, string IdUser = "")
+        public decimal FreeSockItem(Warehouse WareORIG, string idItem, string idOwner, string remarks = "", List<string> LstidDoc = null, string IdUser = "")
         {
-            int StkLliberat = 0;
+            decimal StkLliberat = 0;
 
             // -- Test Param
             if (idItem == "" | idItem == null) throw new System.ArgumentException("IdItem can't be null");
@@ -629,20 +617,16 @@ namespace HKSupply.PRJ_Stocks.Classes
 
             if (!SIO.item._Resr.ContainsKey(idOwner)) throw new System.InvalidOperationException("idITEM (" + idItem + "), idOwner(" + idOwner + ") does not exist on WarehouseORIG (" + WareORIG.idWareHouse + "/" + WareORIG.WareHouseType + ")");
 
-            int QtAct = SIO.item._Resr[idOwner];
+            decimal QtAct = SIO.item._Resr[idOwner];
             SIO.item.AddStk(-QtAct, idOwner);
             SIO.item.AddStk(QtAct, "");
             StkLliberat += QtAct;
 
             // -- REGISTRE MOVIMENTS ----------------------------------------------------------------------------------------------
             // Descontamos Reserva
-            StockMove SM = new StockMove();
-            SM.Ware.idWareHouse = WareORIG.idWareHouse;
-            SM.Ware.WareHouseType = WareORIG.WareHouseType;
-            SM.idItem = idItem;
-            SM.idOwner = idOwner;
-            SM.QttMove = -QtAct;
-
+            StockMove SM = new StockMove(StockMovementsType.Release,
+                                        WareORIG.idWareHouse, WareORIG.Descr, WareORIG.idWareHouseType,
+                                        idItem, idOwner, -QtAct);
             SM.DTArrival = System.DateTime.Now;
             SM.Remarks = remarks;
 
@@ -655,13 +639,9 @@ namespace HKSupply.PRJ_Stocks.Classes
             _LstStockMove.Add(SM);
 
             // Añadimos a no reserva
-            SM = new StockMove();
-            SM.Ware.idWareHouse = WareORIG.idWareHouse;
-            SM.Ware.WareHouseType = WareORIG.WareHouseType;
-            SM.idItem = idItem;
-            SM.idOwner = "";
-            SM.QttMove = QtAct;
-
+            SM = new StockMove(StockMovementsType.Release,
+                                        WareORIG.idWareHouse, WareORIG.Descr, WareORIG.idWareHouseType,
+                                        idItem, "", QtAct);
             SM.DTArrival = System.DateTime.Now;
             SM.Remarks = remarks;
 
@@ -676,9 +656,9 @@ namespace HKSupply.PRJ_Stocks.Classes
             return StkLliberat;
         }
 
-        public int AdjustSockItem(Warehouse WareORIG, string idItem, int Qtt, string remarks = "", List<string> LstidDoc = null, string IdUser = "")
+        public decimal AdjustSockItem(Warehouse WareORIG, string idItem, decimal Qtt, string remarks = "", List<string> LstidDoc = null, string IdUser = "")
         {
-            int StkLliberat = 0;
+            decimal StkLliberat = 0;
 
             // -- Test Param
             if (idItem == "" | idItem == null) throw new System.ArgumentException("IdItem can't be null");
@@ -695,13 +675,9 @@ namespace HKSupply.PRJ_Stocks.Classes
             StkLliberat += Qtt;
 
             // -- REGISTRE MOVIMENTS ----------------------------------------------------------------------------------------------
-            StockMove SM = new StockMove();
-            SM.Ware.idWareHouse = WareORIG.idWareHouse;
-            SM.Ware.WareHouseType = WareORIG.WareHouseType;
-            SM.idItem = idItem;
-            SM.idOwner = "";
-            SM.QttMove = Qtt;
-
+            StockMove SM = new StockMove(StockMovementsType.Adjustment,
+                                          WareORIG.idWareHouse, WareORIG.Descr, WareORIG.idWareHouseType,
+                                          idItem, "", Qtt);
             SM.DTArrival = System.DateTime.Now;
             SM.Remarks = remarks;
 
@@ -716,9 +692,9 @@ namespace HKSupply.PRJ_Stocks.Classes
             return StkLliberat;
         }
 
-        public int AsgnSockItem(Warehouse WareORIG, string idItem, int Qtt, string idOwner, string remarks = "", List<string> LstidDoc = null, string IdUser = "")
+        public decimal AsgnSockItem(Warehouse WareORIG, string idItem, decimal Qtt, string idOwner, string remarks = "", List<string> LstidDoc = null, string IdUser = "")
         {
-            int StkReservat = 0;
+            decimal StkReservat = 0;
 
             // -- Test Param
             if (idItem == "" | idItem == null) throw new System.ArgumentException("IdItem can't be null");
@@ -732,7 +708,7 @@ namespace HKSupply.PRJ_Stocks.Classes
             //-- Asignem el stok LLUIRE --> idOwner=""
             if (!SIO.item._Resr.ContainsKey("")) throw new System.InvalidOperationException("idITEM (" + idItem + ") does not have free stock at" + WareORIG.idWareHouse + "/" + WareORIG.WareHouseType);
 
-            int QtAct = SIO.item._Resr[""];
+            decimal QtAct = SIO.item._Resr[""];
             if (QtAct < Qtt) throw new System.InvalidOperationException("idITEM (" + idItem + ") does not have enough free stock at " + WareORIG.idWareHouse + "/" + WareORIG.WareHouseType + ". Required = " + Qtt + " , Available = " + QtAct + ".");
 
             SIO.item.AddStk(Qtt, idOwner);
@@ -741,12 +717,9 @@ namespace HKSupply.PRJ_Stocks.Classes
 
             // -- REGISTRE MOVIMENTS ----------------------------------------------------------------------------------------------
             // Descomtem Origen
-            StockMove SM = new StockMove();
-            SM.Ware.idWareHouse = WareORIG.idWareHouse;
-            SM.Ware.WareHouseType = WareORIG.WareHouseType;
-            SM.idItem = idItem;
-            SM.idOwner = "";
-            SM.QttMove = -Qtt;
+            StockMove SM = new StockMove(StockMovementsType.Reservation,
+                                         WareORIG.idWareHouse, WareORIG.Descr, WareORIG.idWareHouseType,
+                                         idItem, "", -Qtt);
 
             SM.DTArrival = System.DateTime.Now;
             SM.Remarks = remarks;
@@ -760,13 +733,9 @@ namespace HKSupply.PRJ_Stocks.Classes
             _LstStockMove.Add(SM);
 
             // Afegim Destí
-            SM = new StockMove();
-            SM.Ware.idWareHouse = WareORIG.idWareHouse;
-            SM.Ware.WareHouseType = WareORIG.WareHouseType;
-            SM.idItem = idItem;
-            SM.idOwner = idOwner;
-            SM.QttMove = Qtt;
-
+            SM = new StockMove(StockMovementsType.Reservation,
+                                         WareORIG.idWareHouse, WareORIG.Descr, WareORIG.idWareHouseType,
+                                         idItem, idOwner, Qtt);
             SM.DTArrival = System.DateTime.Now;
             SM.Remarks = remarks;
 
@@ -780,9 +749,9 @@ namespace HKSupply.PRJ_Stocks.Classes
 
             return StkReservat;
         }
-        public int AdjustItemAssing(Warehouse WareORIG, string idItem, int Qtt, string idOwner, string remarks = "", List<string> LstidDoc = null, string IdUser = "")
+        public decimal AdjustItemAssing(Warehouse WareORIG, string idItem, decimal Qtt, string idOwner, string remarks = "", List<string> LstidDoc = null, string IdUser = "")
         {
-            int StkReservat = 0;
+            decimal StkReservat = 0;
 
             // -- Test Param
             if (idItem == "" | idItem == null) throw new System.ArgumentException("IdItem can't be null");
@@ -797,7 +766,7 @@ namespace HKSupply.PRJ_Stocks.Classes
             //-- Asignem el stok LLUIRE --> idOwner=""
             if (!SIO.item._Resr.ContainsKey(idOwner)) throw new System.InvalidOperationException("idITEM (" + idItem + ") does not have assigned stock to '" + idOwner + "' at" + WareORIG.idWareHouse + "/" + WareORIG.WareHouseType);
 
-            int QtAct = SIO.item._Resr[idOwner];
+            decimal QtAct = SIO.item._Resr[idOwner];
             if (QtAct + Qtt < 0) throw new System.InvalidOperationException("idITEM (" + idItem + ") does not have enough free stock at " + WareORIG.idWareHouse + "/" + WareORIG.WareHouseType + ". Required = " + Qtt + " , Available = " + QtAct + ".");
 
             SIO.item.AddStk(-Qtt, "");
@@ -806,12 +775,9 @@ namespace HKSupply.PRJ_Stocks.Classes
 
             // -- REGISTRE MOVIMENTS ----------------------------------------------------------------------------------------------
             // Descomtem Origen
-            StockMove SM = new StockMove();
-            SM.Ware.idWareHouse = WareORIG.idWareHouse;
-            SM.Ware.WareHouseType = WareORIG.WareHouseType;
-            SM.idItem = idItem;
-            SM.idOwner = idOwner;
-            SM.QttMove = Qtt;
+            StockMove SM = new StockMove(StockMovementsType.Adjustment,
+                                          WareORIG.idWareHouse, WareORIG.Descr, WareORIG.idWareHouseType,
+                                          idItem, idOwner, Qtt);
 
             SM.DTArrival = System.DateTime.Now;
             SM.Remarks = remarks;
@@ -825,13 +791,9 @@ namespace HKSupply.PRJ_Stocks.Classes
             _LstStockMove.Add(SM);
 
             // Afegim Destí
-            SM = new StockMove();
-            SM.Ware.idWareHouse = WareORIG.idWareHouse;
-            SM.Ware.WareHouseType = WareORIG.WareHouseType;
-            SM.idItem = idItem;
-            SM.idOwner = "";
-            SM.QttMove = -Qtt;
-
+            SM = new StockMove(StockMovementsType.Adjustment,
+                                          WareORIG.idWareHouse, WareORIG.Descr, WareORIG.idWareHouseType,
+                                          idItem, "", -Qtt);
             SM.DTArrival = System.DateTime.Now;
             SM.Remarks = remarks;
 
@@ -893,6 +855,21 @@ namespace HKSupply.PRJ_Stocks.Classes
                 foreach (Warehouse wr in _LstWarehouses)
                 {
                     if (wr.idWareHouse == idWareHouse && wr.WareHouseType == WareTYpe)
+                    {
+                        return wr;
+                    }
+                }
+            }
+            return null;
+        }
+
+        public Warehouse GetWareHouse(string idWareHouse, int idWareTYpe)
+        {
+            if (_LstWarehouses != null && _LstWarehouses.Count > 0)
+            {
+                foreach (Warehouse wr in _LstWarehouses)
+                {
+                    if (wr.idWareHouse == idWareHouse && wr.idWareHouseType == idWareTYpe)
                     {
                         return wr;
                     }

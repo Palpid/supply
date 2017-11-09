@@ -553,6 +553,21 @@ namespace HKSupply.Forms.Supply
                             _docLinesList.Add(new DocLine() { LineState = DocLine.LineStates.New });
 
                         break;
+
+                    case nameof(DocLine.Quantity):
+                        decimal qty = Convert.ToDecimal(e.Value);
+
+                        //Sólo los RM puede ser decimales
+                        if (row.IdItemGroup != Constants.ITEM_GROUP_MT)
+                        {
+                            bool isInteger = unchecked(qty == (int)qty);
+                            if (isInteger == false)
+                            {
+                                e.Valid = false;
+                                e.ErrorText = "Value must be integer";
+                            }
+                        }
+                        break;
                 }
             }
             catch (Exception ex)
@@ -884,6 +899,15 @@ namespace HKSupply.Forms.Supply
                 colQuantityOriginal.DisplayFormat.FormatType = FormatType.Numeric;
                 colQuantityOriginal.DisplayFormat.FormatString = "n3";
 
+                colStockOnHand.DisplayFormat.FormatType = FormatType.Numeric;
+                colStockOnHand.DisplayFormat.FormatString = "n3";
+
+                colStockAssigned.DisplayFormat.FormatType = FormatType.Numeric;
+                colStockAssigned.DisplayFormat.FormatString = "n3";
+
+                colStockTransit.DisplayFormat.FormatType = FormatType.Numeric;
+                colStockTransit.DisplayFormat.FormatString = "n3";
+
                 //Unbound Columns
                 colStockOnHand.UnboundType = UnboundColumnType.Decimal;
                 colStockAssigned.UnboundType = UnboundColumnType.Decimal;
@@ -901,12 +925,12 @@ namespace HKSupply.Forms.Supply
 
                 colIdItemGroup.ColumnEdit = riItemGroup;
 
-                RepositoryItemTextEdit ritxtInt = new RepositoryItemTextEdit();
-                ritxtInt.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-                ritxtInt.Mask.EditMask = "N";
-                ritxtInt.AllowNullInput = DefaultBoolean.True;
+                RepositoryItemTextEdit ritxt3Dec = new RepositoryItemTextEdit();
+                ritxt3Dec.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                ritxt3Dec.Mask.EditMask = "F3";
+                ritxt3Dec.AllowNullInput = DefaultBoolean.True;
 
-                colQuantity.ColumnEdit = ritxtInt;
+                colQuantity.ColumnEdit = ritxt3Dec;
 
                 //Summaries
                 gridViewLines.OptionsView.ShowFooter = true;

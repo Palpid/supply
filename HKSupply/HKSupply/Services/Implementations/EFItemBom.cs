@@ -277,6 +277,100 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Load item bom for a supplier + intranet (design) BOM
+        /// </summary>
+        /// <param name="idItemBcn"></param>
+        /// <param name="idSupplier"></param>
+        /// <returns></returns>
+        public List<ItemBom> GetItemBom(string idItemBcn, string idSupplier)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(idItemBcn))
+                    throw new ArgumentNullException(nameof(idItemBcn));
+
+                using (var db = new HKSupplyContext())
+                {
+
+                    List<string> supplierList = new List<string>();
+                    supplierList.Add(Constants.INTRANET_ETNIA_BCN);
+                    supplierList.Add(idSupplier);
+
+
+                    var bomList = db.ItemsBom
+                        .Where(a => a.IdItemBcn.Equals(idItemBcn) && supplierList.Contains(a.IdSupplier))
+                        .Include(h => h.Hardwares)
+                        .Include(hi => hi.Hardwares.Select(i => i.Item))
+                        .Include(m => m.Materials)
+                        .Include(mi => mi.Materials.Select(i => i.Item))
+
+                        .Include(hf => hf.HalfFinished)
+                        //.Include(hfi => hfi.HalfFinished.Select(i => i.DetailItemBom))
+                        //.Where(hf => hf.IdBom.Equals(1))
+                        .ToList();
+
+                    if (bomList != null)
+                    {
+                        foreach (var bom in bomList)
+                        {
+                            //En función del tipo cargamos el item, ya que no tiene un tipo definido para tener esta flexibilidad
+                            switch (bom.IdItemGroup)
+                            {
+                                case Constants.ITEM_GROUP_EY:
+                                    bom.Item = GlobalSetting.ItemEyService.GetItem(bom.IdItemBcn);
+                                    break;
+                                case Constants.ITEM_GROUP_HF:
+                                    bom.Item = GlobalSetting.ItemHfService.GetItem(bom.IdItemBcn);
+                                    break;
+                            }
+
+                            //cargamos los half-finished
+                            bom.HalfFinished = db.DetailsBomHf.Where(a => a.IdBom.Equals(bom.IdBom)).ToList();
+                            foreach (var hf in bom.HalfFinished)
+                            {
+                                hf.DetailItemBom = GetItemSupplierBom(db, hf.IdBomDetail, bom.IdSupplier);
+                            }
+                        }
+
+                    }
+
+                    return bomList;
+
+                }
+            }
+            catch (ArgumentNullException anex)
+            {
+                _log.Error(anex.Message, anex);
+                throw anex;
+            }
+            catch (SqlException sqlex)
+            {
+                for (int i = 0; i < sqlex.Errors.Count; i++)
+                {
+                    _log.Error("Index #" + i + "\n" +
+                        "Message: " + sqlex.Errors[i].Message + "\n" +
+                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                        "Source: " + sqlex.Errors[i].Source + "\n" +
+                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                    switch (sqlex.Errors[i].Number)
+                    {
+                        case -1: //connection broken
+                        case -2: //timeout
+                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                    }
+                }
+                throw sqlex;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
+            }
+        }
+
         //public bool EditItemBom(ItemBom bom)
         //{
         //    try

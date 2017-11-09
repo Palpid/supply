@@ -66,14 +66,14 @@ namespace HKSupply.Forms.Supply
         BindingList<DocLine> _docLinesSoSelectionList;
         BindingList<DocLine> _docLinesDeliveredGoodsList;
 
-        int _totalQuantityOrderedMtLinesSo;
+        decimal _totalQuantityOrderedMtLinesSo;
         int _totalQuantityOrderedHwLinesSo;
-        int _totalQuantityMtLinesSo;
+        decimal _totalQuantityMtLinesSo;
         int _totalQuantityHwLinesSo;
 
-        int _totalQuantityOrderedMtDeliveredGoods;
+        decimal _totalQuantityOrderedMtDeliveredGoods;
         int _totalQuantityOrderedHwDeliveredGoods;
-        int _totalQuantityMtDeliveredGoods;
+        decimal _totalQuantityMtDeliveredGoods;
         int _totalQuantityHwDeliveredGoods;
 
         bool _isLoadingPacking = false;
@@ -579,11 +579,27 @@ namespace HKSupply.Forms.Supply
 
                 switch(view.FocusedColumn.FieldName)
                 {
-                    case nameof(DocLine.Quantity):
-                        int qty = Convert.ToInt32(e.Value);
-                        if (qty > (line.QuantityOriginal - line.DeliveredQuantity))
+
+                    case nameof(DocLine.DummyQuantity):
+
+                        decimal qty = Convert.ToDecimal(e.Value);
+
+                        //Sólo los RM puede ser decimales
+                        if (line.IdItemGroup != Constants.ITEM_GROUP_MT)
+                        {
+                            bool isInteger = unchecked(qty == (int)qty);
+                            if (isInteger == false)
+                            {
+                                e.Valid = false;
+                                e.ErrorText = "Value must be integer";
+                            }
+                                
+                        }
+                        
+                        if (qty > (line.Quantity - line.DeliveredQuantity))
                         {
                             e.Valid = false;
+                            e.ErrorText = "Invalid quantity";
                         }
                         break;
                 }
@@ -637,7 +653,7 @@ namespace HKSupply.Forms.Supply
                         case eGridLinesSoSelectionSummaries.totalQuantityOrderedMt:
 
                             if (row.IdItemGroup == Constants.ITEM_GROUP_MT)
-                                _totalQuantityOrderedMtLinesSo += Convert.ToInt32(e.FieldValue);
+                                _totalQuantityOrderedMtLinesSo += Convert.ToDecimal(e.FieldValue);
                             break;
 
                         case eGridLinesSoSelectionSummaries.totalQuantityOrderedHw:
@@ -649,7 +665,7 @@ namespace HKSupply.Forms.Supply
                         case eGridLinesSoSelectionSummaries.totalQuantityMt:
 
                             if (row.IdItemGroup == Constants.ITEM_GROUP_MT && view.IsRowSelected(e.RowHandle) == true )
-                                _totalQuantityMtLinesSo += Convert.ToInt32(e.FieldValue);
+                                _totalQuantityMtLinesSo += Convert.ToDecimal(e.FieldValue);
                             break;
 
                         case eGridLinesSoSelectionSummaries.totalQuantityHw:
@@ -696,8 +712,8 @@ namespace HKSupply.Forms.Supply
                 GridView view = sender as GridView;
                 if (e.Column.FieldName == "PENDING_QTY" && e.IsGetData)
                     e.Value = (
-                        (int)view.GetRowCellValue(e.ListSourceRowIndex, nameof(DocLine.Quantity)) - 
-                        (int)view.GetRowCellValue(e.ListSourceRowIndex, nameof(DocLine.DeliveredQuantity))
+                        (decimal)view.GetRowCellValue(e.ListSourceRowIndex, nameof(DocLine.Quantity)) - 
+                        (decimal)view.GetRowCellValue(e.ListSourceRowIndex, nameof(DocLine.DeliveredQuantity))
                         );
             }
             catch (Exception ex)
@@ -733,7 +749,7 @@ namespace HKSupply.Forms.Supply
                         case eGridLinesDeliveredGoodsSummaries.totalQuantityOrderedMt:
 
                             if (row.IdItemGroup == Constants.ITEM_GROUP_MT)
-                                _totalQuantityOrderedMtDeliveredGoods += Convert.ToInt32(e.FieldValue);
+                                _totalQuantityOrderedMtDeliveredGoods += Convert.ToDecimal(e.FieldValue);
                             break;
 
                         case eGridLinesDeliveredGoodsSummaries.totalQuantityOrderedHw:
@@ -745,7 +761,7 @@ namespace HKSupply.Forms.Supply
                         case eGridLinesDeliveredGoodsSummaries.totalQuantityMt:
 
                             if (row.IdItemGroup == Constants.ITEM_GROUP_MT)
-                                _totalQuantityMtDeliveredGoods += Convert.ToInt32(e.FieldValue);
+                                _totalQuantityMtDeliveredGoods += Convert.ToDecimal(e.FieldValue);
                             break;
 
                         case eGridLinesDeliveredGoodsSummaries.totalQuantityHw:
@@ -1374,30 +1390,30 @@ namespace HKSupply.Forms.Supply
 
                 //Display Format
                 colUnitPrice.DisplayFormat.FormatType = FormatType.Numeric;
-                colUnitPrice.DisplayFormat.FormatString = "n2";
+                colUnitPrice.DisplayFormat.FormatString = "n4";
 
                 colTotalAmount.DisplayFormat.FormatType = FormatType.Numeric;
-                colTotalAmount.DisplayFormat.FormatString = "n2";
+                colTotalAmount.DisplayFormat.FormatString = "n4";
 
                 colQuantity.DisplayFormat.FormatType = FormatType.Numeric;
-                colQuantity.DisplayFormat.FormatString = "n0";
+                colQuantity.DisplayFormat.FormatString = "n3";
 
                 colDeliveredQuantity.DisplayFormat.FormatType = FormatType.Numeric;
-                colDeliveredQuantity.DisplayFormat.FormatString = "n0";
+                colDeliveredQuantity.DisplayFormat.FormatString = "n3";
 
                 colPendingQuantity.DisplayFormat.FormatType = FormatType.Numeric;
-                colPendingQuantity.DisplayFormat.FormatString = "n0";
+                colPendingQuantity.DisplayFormat.FormatString = "n3";
 
                 colDummyQuantity.DisplayFormat.FormatType = FormatType.Numeric;
-                colDummyQuantity.DisplayFormat.FormatString = "n0";
+                colDummyQuantity.DisplayFormat.FormatString = "n3";
 
                 //Edit Repositories
-                RepositoryItemTextEdit ritxtInt = new RepositoryItemTextEdit();
-                ritxtInt.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-                ritxtInt.Mask.EditMask = "N";
-                ritxtInt.AllowNullInput = DefaultBoolean.True;
+                RepositoryItemTextEdit ritxt3Dec = new RepositoryItemTextEdit();
+                ritxt3Dec.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                ritxt3Dec.Mask.EditMask = "F3";
+                ritxt3Dec.AllowNullInput = DefaultBoolean.True;
 
-                colQuantity.ColumnEdit = ritxtInt;
+                colDummyQuantity.ColumnEdit = ritxt3Dec;
 
                 RepositoryItemSearchLookUpEdit riSupplyStatus = new RepositoryItemSearchLookUpEdit()
                 {
@@ -1412,14 +1428,14 @@ namespace HKSupply.Forms.Supply
                 //Summaries
                 gridViewLinesSoSelection.OptionsView.ShowFooter = true;
 
-                colTotalAmount.Summary.Add(SummaryItemType.Sum, nameof(DocLine.TotalAmount), "{0:n2}");
+                colTotalAmount.Summary.Add(SummaryItemType.Sum, nameof(DocLine.TotalAmount), "{0:n4}");
 
                 colDummyQuantity.Summary.AddRange(new GridSummaryItem[] {
-                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.DummyQuantity), "{0} Gr", eGridLinesSoSelectionSummaries.totalQuantityMt),
+                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.DummyQuantity), "{0:n3} KG", eGridLinesSoSelectionSummaries.totalQuantityMt),
                     new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.DummyQuantity), "{0} PC", eGridLinesSoSelectionSummaries.totalQuantityHw) });
 
                 colQuantity.Summary.AddRange(new GridSummaryItem[] {
-                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0} Gr", eGridLinesSoSelectionSummaries.totalQuantityOrderedMt),
+                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0:n3} KG", eGridLinesSoSelectionSummaries.totalQuantityOrderedMt),
                     new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0} PC", eGridLinesSoSelectionSummaries.totalQuantityOrderedHw) });
 
                 //Add columns to grid root view
@@ -1481,28 +1497,28 @@ namespace HKSupply.Forms.Supply
 
                 //Display Format
                 colUnitPrice.DisplayFormat.FormatType = FormatType.Numeric;
-                colUnitPrice.DisplayFormat.FormatString = "n2";
+                colUnitPrice.DisplayFormat.FormatString = "n4";
 
                 colTotalAmount.DisplayFormat.FormatType = FormatType.Numeric;
-                colTotalAmount.DisplayFormat.FormatString = "n2";
+                colTotalAmount.DisplayFormat.FormatString = "n4";
 
                 colQuantity.DisplayFormat.FormatType = FormatType.Numeric;
-                colQuantity.DisplayFormat.FormatString = "n0";
+                colQuantity.DisplayFormat.FormatString = "n3";
 
                 colQuantityOriginal.DisplayFormat.FormatType = FormatType.Numeric;
-                colQuantityOriginal.DisplayFormat.FormatString = "n0";
+                colQuantityOriginal.DisplayFormat.FormatString = "n3";
 
                 //Summaries
                 gridViewLinesDeliveredGoods.OptionsView.ShowFooter = true;
 
-                colTotalAmount.Summary.Add(SummaryItemType.Sum, nameof(DocLine.TotalAmount), "{0:n2}");
+                colTotalAmount.Summary.Add(SummaryItemType.Sum, nameof(DocLine.TotalAmount), "{0:n4}");
 
                 colQuantityOriginal.Summary.AddRange(new GridSummaryItem[] {
-                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.QuantityOriginal), "{0} Gr", eGridLinesDeliveredGoodsSummaries.totalQuantityOrderedMt),
+                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.QuantityOriginal), "{0:n3} KG", eGridLinesDeliveredGoodsSummaries.totalQuantityOrderedMt),
                     new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.QuantityOriginal), "{0} PC", eGridLinesDeliveredGoodsSummaries.totalQuantityOrderedHw) });
 
                 colQuantity.Summary.AddRange(new GridSummaryItem[] {
-                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0} Gr", eGridLinesDeliveredGoodsSummaries.totalQuantityMt),
+                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0:n3} KG", eGridLinesDeliveredGoodsSummaries.totalQuantityMt),
                     new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0} PC", eGridLinesDeliveredGoodsSummaries.totalQuantityHw) });
 
                 //Add columns to grid root view

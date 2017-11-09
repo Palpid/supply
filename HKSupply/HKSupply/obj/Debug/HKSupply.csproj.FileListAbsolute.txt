@@ -698,6 +698,7 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.address2.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.UnitsTable.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.UnitsOnPriceListTables.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.UnitsSupplyOnItems.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.SuppluQttyDecimal.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.PRJ_Stocks.Forms.StockManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Properties.Resources.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Reports.frmVisor.resources
@@ -707,4 +708,3 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe.licenses
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.csproj.CoreCompileInputs.cache
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
-C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.SuppluQttyDecimal.resources

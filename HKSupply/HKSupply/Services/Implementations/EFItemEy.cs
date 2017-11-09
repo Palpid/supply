@@ -77,6 +77,62 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        public List<ItemEy> GetItems(string idDefaultSupplier, bool withDocWarning = false)
+        {
+            try
+            {
+                using (var db = new HKSupplyContext())
+                {
+
+                    var itemsEy = db.ItemsEy
+                        .Include(i => i.Model)
+                        .Include(i => i.Prototype)
+                        .Include(i => i.FamilyHK)
+                        .Include(i => i.StatusCial)
+                        .Include(i => i.StatusProd)
+                        .OrderBy(i => i.IdItemBcn)
+                        .Where(a => a.IdDefaultSupplier.Equals(idDefaultSupplier))
+                        .ToList();
+
+                    if (withDocWarning)
+                    {
+                        foreach (var item in itemsEy)
+                        {
+                            Classes.ItemDocWarning docWarning = db.Database.SqlQuery<Classes.ItemDocWarning>($"SELECT ID_ITEM_BCN,WARNING_COL_CODE,WARNING_COL_DESC,WARNING_COL_COLOR FROM dbo.V_DOCS_WARNINGS WHERE ID_ITEM_BCN = '{item.IdItemBcn}'").FirstOrDefault();
+                            item.DocWarning = docWarning;
+                        }
+                    }
+
+                    return itemsEy;
+                }
+            }
+            catch (SqlException sqlex)
+            {
+                for (int i = 0; i < sqlex.Errors.Count; i++)
+                {
+                    _log.Error("Index #" + i + "\n" +
+                        "Message: " + sqlex.Errors[i].Message + "\n" +
+                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                        "Source: " + sqlex.Errors[i].Source + "\n" +
+                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                    switch (sqlex.Errors[i].Number)
+                    {
+                        case -1: //connection broken
+                        case -2: //timeout
+                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                    }
+                }
+                throw sqlex;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
+            }
+        }
+
         public ItemEy GetItem(string idItemBcn)
         {
             try

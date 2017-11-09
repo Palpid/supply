@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors.Controls;
+using HKSupply.General;
 
 namespace HKSupply.Forms.Master.DialogForms
 {
@@ -149,7 +150,8 @@ namespace HKSupply.Forms.Master.DialogForms
 
                 foreach (var supplier in _suppliers)
                 {
-                    checkedListBoxSuppliersDestination.Items.Add(new CheckedListBoxItem(supplier, false));
+                    if (supplier != Constants.INTRANET_ETNIA_BCN)
+                        checkedListBoxSuppliersDestination.Items.Add(new CheckedListBoxItem(supplier, false));
                 }
             }
             catch

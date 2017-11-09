@@ -32,6 +32,9 @@ namespace HKSupply.Forms.Master
 
 
         #region Private Members
+
+        bool _isFactory;
+
         List<ItemEy> _itemsEyList;
         List<ItemHf> _itemsHfList;
         List<ItemHf> _itemsHfDetailBomList;
@@ -61,6 +64,15 @@ namespace HKSupply.Forms.Master
 
             try
             {
+
+                //Chech if logged is a factory
+                _isFactory = false;
+
+                if (GlobalSetting.LoggedUser.RoleId == Constants.ROLE_FACTORY)
+                {
+                    _isFactory = true;
+                }
+
                 ConfigureRibbonActions();
                 LoadAuxList();
                 SetBasicEvents();
@@ -1240,10 +1252,46 @@ namespace HKSupply.Forms.Master
                 dockPanelDrawing.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden; //Es el antiguo del plano cuando sólo había uno por SKU, lo dejo por si acaso
                 dockPanelPdfColor.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
                 dockPanelPhoto.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
-                dockPanelDrawingCR.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
-                dockPanelDrawingCV.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
-                dockPanelDrawingFA.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
-                dockPanelDrawingGB.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+
+                if (_isFactory)
+                {
+                    //Mostramos solo el panel del plano de la fábrica
+                    var panel = Controls.Find($"dockPanelDrawing{GlobalSetting.UserFactory }", true).FirstOrDefault() as DevExpress.XtraBars.Docking.DockPanel;
+                    if (panel != null)
+                    {
+                        panel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                    }
+
+                    if (dockPanelDrawingCR.Visibility != DevExpress.XtraBars.Docking.DockVisibility.AutoHide)
+                    {
+                        dockPanelDrawingCR.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+                    }
+
+                    if (dockPanelDrawingCV.Visibility != DevExpress.XtraBars.Docking.DockVisibility.AutoHide)
+                    {
+                        dockPanelDrawingCV.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+                    }
+
+                    if (dockPanelDrawingFA.Visibility != DevExpress.XtraBars.Docking.DockVisibility.AutoHide)
+                    {
+                        dockPanelDrawingFA.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+                    }
+
+                    if(dockPanelDrawingGB.Visibility != DevExpress.XtraBars.Docking.DockVisibility.AutoHide)
+                    {
+                        dockPanelDrawingGB.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+                    }
+                }
+                else
+                {
+                    dockPanelDrawingCR.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                    dockPanelDrawingCV.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                    dockPanelDrawingFA.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                    dockPanelDrawingGB.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+                }
+
+                if (_isFactory)
+                    dockPanelItemsHf.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
             }
             catch
             {
@@ -1255,7 +1303,11 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                slueSupplier.Properties.DataSource = _suppliersList;
+                if (_isFactory)
+                    slueSupplier.Properties.DataSource = _suppliersList.Where(a => a.IdSupplier.Equals(GlobalSetting.UserFactory)).ToList();
+                else
+                    slueSupplier.Properties.DataSource = _suppliersList;
+
                 slueSupplier.Properties.ValueMember = nameof(Supplier.IdSupplier);
                 slueSupplier.Properties.DisplayMember = nameof(Supplier.SupplierName);
                 slueSupplier.Properties.View.Columns.AddField(nameof(Supplier.IdSupplier)).Visible = true;
@@ -1780,7 +1832,11 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _itemsEyList = GlobalSetting.ItemEyService.GetItems();
+                if(_isFactory)
+                    _itemsEyList = GlobalSetting.ItemEyService.GetItems(GlobalSetting.UserFactory);
+                else
+                    _itemsEyList = GlobalSetting.ItemEyService.GetItems();
+
                 xgrdItemsEy.DataSource = _itemsEyList;
             }
             catch
@@ -1793,12 +1849,22 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                _itemsHfList = GlobalSetting.ItemHfService.GetItems();
-                xgrdItemsHf.DataSource = _itemsHfList;
+                //factories can't see half-finished
+                if (_isFactory)
+                {
+                    _itemsHfList = null;
+                    xgrdItemsHf.DataSource = _itemsHfList;
+                }
+                else
+                {
+                    _itemsHfList = GlobalSetting.ItemHfService.GetItems();
+                    xgrdItemsHf.DataSource = _itemsHfList;
 
-                //Para el detalle, ya que un semielaborado se puede editar independientemente su bom o formar parte del BOM de otro item
-                _itemsHfDetailBomList = GlobalSetting.ItemHfService.GetItems();
-                //xgrdItemsHfDetail.DataSource = _itemsHfDetailBomList;
+                    //Para el detalle, ya que un semielaborado se puede editar independientemente su bom o formar parte del BOM de otro item
+                    _itemsHfDetailBomList = GlobalSetting.ItemHfService.GetItems();
+                    //xgrdItemsHfDetail.DataSource = _itemsHfDetailBomList;
+                }
+
             }
             catch
             {
@@ -1859,7 +1925,10 @@ namespace HKSupply.Forms.Master
                     _itemLastDocsList = GlobalSetting.ItemDocService.GetLastItemsDocs((item as ItemHf).IdItemBcn, Constants.ITEM_GROUP_HF);
                 }
 
-                _itemBomList = GlobalSetting.ItemBomService.GetItemBom(idIdItemBcn);
+                if (_isFactory)
+                    _itemBomList = GlobalSetting.ItemBomService.GetItemBom(idIdItemBcn, GlobalSetting.UserFactory);
+                else
+                    _itemBomList = GlobalSetting.ItemBomService.GetItemBom(idIdItemBcn);
 
                 if (_itemBomList == null || _itemBomList.Count == 0)
                 {
