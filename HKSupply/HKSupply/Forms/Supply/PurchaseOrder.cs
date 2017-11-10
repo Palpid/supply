@@ -1297,7 +1297,7 @@ namespace HKSupply.Forms.Supply
                 if (supplier != null)
                 {
                     lblTxtCompany.Text = supplier.SupplierName;
-                    lblTxtAddress.Text = supplier.ShippingAddress;
+                    lblTxtAddress.Text = $"{supplier.ShippingAddress} {supplier.ShippingAddress2}";
                     lblTxtContact.Text = $"{supplier.ContactName} ({supplier.ContactPhone})";
                     sluePaymentTerm.EditValue = supplier.IdPaymentTerms;
                     slueCurrency.EditValue = supplier.IdDefaultCurrency;

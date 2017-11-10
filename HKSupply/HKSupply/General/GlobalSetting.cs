@@ -103,6 +103,7 @@ namespace HKSupply.General
         static EFDeliveryTerms _deliveryTermsEF = new EFDeliveryTerms();
         static EFEtnColor _etnColorEF = new EFEtnColor();
         static EFMyCompany _myCompanyEF = new EFMyCompany();
+        static EFUnit _unitEF = new EFUnit();
         static User _loggedUser;
         static string _userFactory;
         static IEnumerable<FunctionalityRole> _functionalitiesRoles;
@@ -550,6 +551,17 @@ namespace HKSupply.General
                     _myCompanyEF = new EFMyCompany();
 
                 return _myCompanyEF;
+            }
+        }
+
+        public static IUnit UnitService
+        {
+            get
+            {
+                if (_unitEF == null)
+                    _unitEF = new EFUnit();
+
+                return _unitEF;
             }
         }
 

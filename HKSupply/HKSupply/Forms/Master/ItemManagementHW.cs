@@ -59,6 +59,7 @@ namespace HKSupply.Forms.Master
         List<HwTypeL3> _hwTypeL3List;
         List<Prototype> _prototypeList;
         List<EtnColor> _etnColorsList;
+        List<Unit> _unitsList;
 
         //string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "lueIdFamilyHK", "txtIdItemHK", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };
         string[] _nonEditingFields = { "txtIdVersion", "txtIdSubversion", "txtTimestamp", "txtPrototypeName", "txtPrototypeDescription", "txtPrototypeStatus", "txtIdItemBcn", "txtCreateDate" };
@@ -92,6 +93,7 @@ namespace HKSupply.Forms.Master
                 SetUpSlueEtnColors();
                 SetUpLueHwLv();
                 SetUpLueDocType();
+                SetUpLueUnit();
                 SetUpLabelNameUserAttributes();
                 SetUpPictureEditItemImage();
                 ResetItemUpdate();
@@ -1203,7 +1205,6 @@ namespace HKSupply.Forms.Master
                 txtItemDescription.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.ItemDescription);
                 
                 txtComments.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.Comments);
-                txtUnit.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.Unit);
                 txtDocsLink.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.DocsLink);
                 txtCreateDate.DataBindings.Add<ItemHw>(_itemUpdate, (Control c) => c.Text, item => item.CreateDate);
 
@@ -1221,6 +1222,8 @@ namespace HKSupply.Forms.Master
                 lueIdHwTypeL1.DataBindings.Add<ItemHw>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdHwTypeL1);
                 lueIdHwTypeL2.DataBindings.Add<ItemHw>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdHwTypeL2);
                 lueIdHwTypeL3.DataBindings.Add<ItemHw>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdHwTypeL3);
+                lueIdUnit.DataBindings.Add<ItemHw>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.Unit);
+                lueIdUnitSupply.DataBindings.Add<ItemHw>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.UnitSupply);
 
                 //SearchLookUpEdit
                 slueIdPrototype.DataBindings.Add<ItemHw>(_itemUpdate, (SearchLookUpEdit e) => e.EditValue, item => item.IdPrototype);
@@ -1284,6 +1287,7 @@ namespace HKSupply.Forms.Master
                 txtHRemovalDate.DataBindings.Add<ItemHwHistory>(_itemHistory, (Control c) => c.Text, item => item.RemovalDate);
                 txtHIdStatusCial.DataBindings.Add<ItemHwHistory>(_itemHistory, (Control c) => c.Text, item => item.IdStatusCial);
                 txtHUnit.DataBindings.Add<ItemHwHistory>(_itemHistory, (Control c) => c.Text, item => item.Unit);
+                txtHUnitSupply.DataBindings.Add<ItemHwHistory>(_itemHistory, (Control c) => c.Text, item => item.UnitSupply);
                 txtHDocsLink.DataBindings.Add<ItemHwHistory>(_itemHistory, (Control c) => c.Text, item => item.DocsLink);
                 txtHCreateDate.DataBindings.Add<ItemHwHistory>(_itemHistory, (Control c) => c.Text, item => item.CreateDate);
 
@@ -1464,9 +1468,6 @@ namespace HKSupply.Forms.Master
         }
 
 
-
-        
-
         private void SetUpLueDocType()
         {
             try
@@ -1479,6 +1480,26 @@ namespace HKSupply.Forms.Master
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        private void SetUpLueUnit()
+        {
+            try
+            {
+                lueIdUnit.Properties.DataSource = _unitsList;
+                lueIdUnit.Properties.DisplayMember = nameof(Unit.UnitCode);
+                lueIdUnit.Properties.ValueMember = nameof(Unit.UnitCode);
+                lueIdUnit.Properties.NullText = "Select a unit...";
+
+                lueIdUnitSupply.Properties.DataSource = _unitsList;
+                lueIdUnitSupply.Properties.DisplayMember = nameof(Unit.UnitCode);
+                lueIdUnitSupply.Properties.ValueMember = nameof(Unit.UnitCode);
+                lueIdUnitSupply.Properties.NullText = "Select a unit...";
+            }
+            catch
+            {
+                throw;
             }
         }
 
@@ -1541,7 +1562,7 @@ namespace HKSupply.Forms.Master
                 _hwTypeL2List = GlobalSetting.HwTypeService.GetHwsTypeL2();
                 _hwTypeL3List = GlobalSetting.HwTypeService.GetHwsTypeL3();
                 _prototypeList = GlobalSetting.PrototypeService.GetPrototypes();
-
+                _unitsList = GlobalSetting.UnitService.GetUnits();
                 _etnColorsList = GlobalSetting.EtnColorService.GetEtnColors();
             }
             catch (Exception ex)

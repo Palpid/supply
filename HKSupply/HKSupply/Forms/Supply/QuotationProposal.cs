@@ -1073,6 +1073,10 @@ namespace HKSupply.Forms.Supply
 
                 memoEditRemarks.EditValue = _docHeadQP.Remarks;
 
+                lblTxtAddress.Text = $"{_docHeadQP.Customer?.ShippingAddress} {_docHeadQP.Customer?.ShippingAddress2}";
+                lblTxtCompany.Text = _docHeadQP.Customer.CustomerName;
+                lblTxtContact.Text = $"{_docHeadQP.Customer.ContactName} ({_docHeadQP.Customer.ContactPhone})";
+
                 _docLinesList = new BindingList<DocLine>(_docHeadQP.Lines);
 
                 xgrdLines.DataSource = null;

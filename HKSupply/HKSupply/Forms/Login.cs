@@ -137,7 +137,19 @@ namespace HKSupply.Forms
             try
             {
 
-                var windowsUser = Environment.UserName;
+                System.Security.Principal.WindowsIdentity currentUser = System.Security.Principal.WindowsIdentity.GetCurrent();
+                System.Security.Principal.IdentityReferenceCollection userGroups = currentUser.Groups;
+                foreach (System.Security.Principal.IdentityReference group in userGroups)
+                {
+                    System.Security.Principal.IdentityReference translated = group.Translate(typeof(System.Security.Principal.NTAccount));
+
+                    //if (groupName.Equals(translated.Value, StringComparison.CurrentCultureIgnoreCase))
+                    //{
+                    //    return true;
+                    //}
+                }
+
+                    var windowsUser = Environment.UserName;
                 var user = GlobalSetting.UserService.GetUserByLogin(windowsUser);
                 if (user != null)
                 {

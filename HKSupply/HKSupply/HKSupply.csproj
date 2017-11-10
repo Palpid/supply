@@ -998,6 +998,7 @@
     <Compile Include="Services\Implementations\EFSupplierFactoryCoeff.cs" />
     <Compile Include="Services\Implementations\EFSupplierPriceList.cs" />
     <Compile Include="Services\Implementations\EFSupplyDocs.cs" />
+    <Compile Include="Services\Implementations\EFUnit.cs" />
     <Compile Include="Services\Implementations\EFUser.cs" />
     <Compile Include="Services\Implementations\EFUserAttrDescription.cs" />
     <Compile Include="Services\Interfaces\IBomBreakdown.cs" />
@@ -1037,6 +1038,7 @@
     <Compile Include="Services\Interfaces\ISupplierFactoryCoeff.cs" />
     <Compile Include="Services\Interfaces\ISupplierPriceList.cs" />
     <Compile Include="Services\Interfaces\ISupplyDocs.cs" />
+    <Compile Include="Services\Interfaces\IUnit.cs" />
     <Compile Include="Services\Interfaces\IUser.cs" />
     <Compile Include="Services\Interfaces\IUserAttrDescription.cs" />
     <Compile Include="Styles\AppStyles.cs" />
