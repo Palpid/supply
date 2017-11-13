@@ -14,6 +14,7 @@ namespace HKSupply.Services.Interfaces
     {
         IEnumerable<User> GetAllUsers();
         User GetUserById(int userId);
+        User GetUserByLogin(string userLogin);
         User GetUserByLoginPassword(string UserLogin, string Password);
         User NewUser(User newUser);
         bool DisableUser(string userId, string remarks);

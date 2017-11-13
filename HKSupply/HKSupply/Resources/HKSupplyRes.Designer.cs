@@ -19,7 +19,7 @@ namespace HKSupply.Resources {
     // a través de una herramienta como ResGen o Visual Studio.
     // Para agregar o quitar un miembro, edite el archivo .ResX y, a continuación, vuelva a ejecutar ResGen
     // con la opción /str o recompile su proyecto de VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class HKSupplyRes {
@@ -205,11 +205,29 @@ namespace HKSupply.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Data Base.
+        /// </summary>
+        internal static string DataBase {
+            get {
+                return ResourceManager.GetString("DataBase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Date.
         /// </summary>
         internal static string Date {
             get {
                 return ResourceManager.GetString("Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a DB Server.
+        /// </summary>
+        internal static string DbServer {
+            get {
+                return ResourceManager.GetString("DbServer", resourceCulture);
             }
         }
         
@@ -1065,6 +1083,15 @@ namespace HKSupply.Resources {
         internal static string SupplierName {
             get {
                 return ResourceManager.GetString("SupplierName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a User.
+        /// </summary>
+        internal static string User {
+            get {
+                return ResourceManager.GetString("User", resourceCulture);
             }
         }
         

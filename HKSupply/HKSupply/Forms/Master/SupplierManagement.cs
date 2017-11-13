@@ -478,7 +478,9 @@ namespace HKSupply.Forms.Master
                 GridColumn colActive = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Active"), Visible = true, FieldName = eSupplierColumns.Active.ToString(), Width = 50 };
                 GridColumn colVATNum = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("VATNumber"), Visible = true, FieldName = eSupplierColumns.VATNum.ToString(), Width = 120 };
                 GridColumn colShippingAddress = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ShippingAddress"), Visible = true, FieldName = eSupplierColumns.ShippingAddress.ToString(), Width = 300 };
+                GridColumn colShippingAddress2 = new GridColumn() { Caption = "Shipping Address 2", Visible = true, FieldName = nameof(Supplier.ShippingAddress2), Width = 300 };
                 GridColumn colBillingAddress = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("BillingAddress"), Visible = true, FieldName = eSupplierColumns.BillingAddress.ToString(), Width = 300 };
+                GridColumn colBillingAddress2 = new GridColumn() { Caption = "Billing Address 2", Visible = true, FieldName = nameof(Supplier.BillingAddress2), Width = 300 };
                 GridColumn colContactName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ContactName"), Visible = true, FieldName = eSupplierColumns.ContactName.ToString(), Width = 200 };
                 GridColumn colContactPhone = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ContactPhone"), Visible = true, FieldName = eSupplierColumns.ContactPhone.ToString(), Width = 150 };
                 GridColumn colIdIncoterm = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Incoterm"), Visible = true, FieldName = eSupplierColumns.IdIncoterm.ToString(), Width = 70 };
@@ -497,7 +499,9 @@ namespace HKSupply.Forms.Master
                 rootGridViewSuppliers.Columns.Add(colActive);
                 rootGridViewSuppliers.Columns.Add(colVATNum);
                 rootGridViewSuppliers.Columns.Add(colShippingAddress);
+                rootGridViewSuppliers.Columns.Add(colShippingAddress2);
                 rootGridViewSuppliers.Columns.Add(colBillingAddress);
+                rootGridViewSuppliers.Columns.Add(colBillingAddress2);
                 rootGridViewSuppliers.Columns.Add(colContactName);
                 rootGridViewSuppliers.Columns.Add(colContactPhone);
                 rootGridViewSuppliers.Columns.Add(colIdIncoterm);
@@ -664,9 +668,13 @@ namespace HKSupply.Forms.Master
                 txtName.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.SupplierName);
                 txtVatNumber.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.VATNum);
                 txtShippingAddress.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.ShippingAddress);
+                txtShippingAddress2.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.ShippingAddress2);
                 txtShippingAddressZh.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.ShippingAddressZh);
+                txtShippingAddressZh2.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.ShippingAddressZh2);
                 txtBillingAddress.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.BillingAddress);
+                txtBillingAddress2.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.BillingAddress2);
                 txtBillingAddressZh.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.BillingAddressZh);
+                txtBillingAddressZh2.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.BillingAddressZh2);
                 txtContactName.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.ContactName);
                 txtContactNameZh.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.ContactNameZh);
                 txtContactPhone.DataBindings.Add<Supplier>(_supplierUpdate, (Control c) => c.Text, supplier => supplier.ContactPhone);
@@ -724,9 +732,13 @@ namespace HKSupply.Forms.Master
                 txtHName.DataBindings.Add<Supplier>(_supplierHistory, (Control c) => c.Text, supplier => supplier.SupplierName);
                 txtHVatNumber.DataBindings.Add<Supplier>(_supplierHistory, (Control c) => c.Text, supplier => supplier.VATNum);
                 txtHShippingAddress.DataBindings.Add<Supplier>(_supplierHistory, (Control c) => c.Text, supplier => supplier.ShippingAddress);
+                txtHShippingAddress2.DataBindings.Add<Supplier>(_supplierHistory, (Control c) => c.Text, supplier => supplier.ShippingAddress2);
                 txtHShippingAddressZh.DataBindings.Add<Supplier>(_supplierHistory, (Control c) => c.Text, supplier => supplier.ShippingAddressZh);
+                txtHShippingAddressZh2.DataBindings.Add<Supplier>(_supplierHistory, (Control c) => c.Text, supplier => supplier.ShippingAddressZh2);
                 txtHBillingAddress.DataBindings.Add<Supplier>(_supplierHistory, (Control c) => c.Text, supplier => supplier.BillingAddress);
+                txtHBillingAddress2.DataBindings.Add<Supplier>(_supplierHistory, (Control c) => c.Text, supplier => supplier.BillingAddress2);
                 txtHBillingAddressZh.DataBindings.Add<Supplier>(_supplierHistory, (Control c) => c.Text, supplier => supplier.BillingAddressZh);
+                txtHBillingAddressZh2.DataBindings.Add<Supplier>(_supplierHistory, (Control c) => c.Text, supplier => supplier.BillingAddressZh2);
                 txtHContactName.DataBindings.Add<Supplier>(_supplierHistory, (Control c) => c.Text, supplier => supplier.ContactName);
                 txtHContactNameZh.DataBindings.Add<Supplier>(_supplierHistory, (Control c) => c.Text, supplier => supplier.ContactNameZh);
                 txtHContactPhone.DataBindings.Add<Supplier>(_supplierHistory, (Control c) => c.Text, supplier => supplier.ContactPhone);

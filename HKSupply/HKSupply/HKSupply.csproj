@@ -42,21 +42,32 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.1.UI, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Images.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Pdf.v17.1.Drawing, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Spreadsheet.v17.1.Core, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPdfViewer.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
@@ -99,6 +110,7 @@
     <Compile Include="Classes\B1Report.cs" />
     <Compile Include="Classes\ItemDocWarning.cs" />
     <Compile Include="Classes\PlainBomAux.cs" />
+    <Compile Include="Classes\POSelection.cs" />
     <Compile Include="Classes\RowInfo.cs" />
     <Compile Include="DB\HKSupplyContext.cs" />
     <Compile Include="Exceptions\DBServerConnectionException.cs" />
@@ -264,6 +276,12 @@
     <Compile Include="Forms\Master\ItemsLevelsManagement.Designer.cs">
       <DependentUpon>ItemsLevelsManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Master\MyCompanyManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\MyCompanyManagement.designer.cs">
+      <DependentUpon>MyCompanyManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Master\PaymentTermsManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -336,9 +354,76 @@
     <Compile Include="Forms\RibbonFormBase.Designer.cs">
       <DependentUpon>RibbonFormBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Supply\DeliveryNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\DeliveryNote.designer.cs">
+      <DependentUpon>DeliveryNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\DialogForms\SelectDocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\DialogForms\SelectDocs.designer.cs">
+      <DependentUpon>SelectDocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\DocsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\DocsList.designer.cs">
+      <DependentUpon>DocsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\Invoice.designer.cs">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\PackingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\PackingList.designer.cs">
+      <DependentUpon>PackingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\PackingListBcn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\PackingListBcn.designer.cs">
+      <DependentUpon>PackingListBcn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\PurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\PurchaseOrder.Designer.cs">
+      <DependentUpon>PurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\PurchaseOrderSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\PurchaseOrderSelection.Designer.cs">
+      <DependentUpon>PurchaseOrderSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\QuotationProposal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\QuotationProposal.Designer.cs">
+      <DependentUpon>QuotationProposal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\SalesOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\SalesOrder.Designer.cs">
+      <DependentUpon>SalesOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="General\Constants.cs" />
     <Compile Include="General\GlobalSetting.cs" />
     <Compile Include="Helpers\CustomExtensions.cs" />
+    <Compile Include="Helpers\DbContextExtensions.cs" />
     <Compile Include="Helpers\DeepCopyByExpressionTrees.cs" />
     <Compile Include="Helpers\DocHelper.cs" />
     <Compile Include="Helpers\EntityFrameworkHelper.cs" />
@@ -643,6 +728,7 @@
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\CustomerPriceList.cs" />
     <Compile Include="Models\CustomerPriceListHistory.cs" />
+    <Compile Include="Models\DeliveryTerms.cs" />
     <Compile Include="Models\DetailBomHf.cs" />
     <Compile Include="Models\DetailBomHfHistory.cs" />
     <Compile Include="Models\DetailBomHw.cs" />
@@ -656,6 +742,7 @@
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\FamilyHK.cs" />
     <Compile Include="Models\Functionality.cs" />
+    <Compile Include="Models\FunctionalityReport.cs" />
     <Compile Include="Models\FunctionalityRole.cs" />
     <Compile Include="Models\HwTypeL1.cs" />
     <Compile Include="Models\HwTypeL2.cs" />
@@ -696,8 +783,23 @@
     <Compile Include="Models\SupplierHistory.cs" />
     <Compile Include="Models\SupplierPriceList.cs" />
     <Compile Include="Models\SupplierPriceListHistory.cs" />
+    <Compile Include="Models\Supply\DocHead.cs" />
+    <Compile Include="Models\Supply\DocLines.cs" />
+    <Compile Include="Models\Supply\SupplyDocType.cs" />
+    <Compile Include="Models\Supply\SupplyStatus.cs" />
+    <Compile Include="Models\Unit.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserAttrDescription.cs" />
+    <Compile Include="PRJ_Stocks\Classes\Stocks.cs" />
+    <Compile Include="PRJ_Stocks\DB\BD_Stocks.cs" />
+    <Compile Include="PRJ_Stocks\DB\Call_DB_Stocks.cs" />
+    <Compile Include="PRJ_Stocks\Forms\StockManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRJ_Stocks\Forms\StockManagement.designer.cs">
+      <DependentUpon>StockManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRJ_Stocks\Helpers\Excel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports\frmVisor.cs">
@@ -715,11 +817,13 @@
     <Compile Include="Services\Implementations\EFCurrency.cs" />
     <Compile Include="Services\Implementations\EFCustomer.cs" />
     <Compile Include="Services\Implementations\EFCustomerPriceList.cs" />
+    <Compile Include="Services\Implementations\EFDeliveryTerms.cs" />
     <Compile Include="Services\Implementations\EFDocType.cs" />
     <Compile Include="Services\Implementations\EFEchangeRate.cs" />
     <Compile Include="Services\Implementations\EFEtnColor.cs" />
     <Compile Include="Services\Implementations\EFFamilyHK.cs" />
     <Compile Include="Services\Implementations\EFFunctionality.cs" />
+    <Compile Include="Services\Implementations\EFFunctionalityReport.cs" />
     <Compile Include="Services\Implementations\EFFunctionalityRole.cs" />
     <Compile Include="Services\Implementations\EFHwType.cs" />
     <Compile Include="Services\Implementations\EFIncoterm.cs" />
@@ -745,17 +849,21 @@
     <Compile Include="Services\Implementations\EFSupplier.cs" />
     <Compile Include="Services\Implementations\EFSupplierFactoryCoeff.cs" />
     <Compile Include="Services\Implementations\EFSupplierPriceList.cs" />
+    <Compile Include="Services\Implementations\EFSupplyDocs.cs" />
+    <Compile Include="Services\Implementations\EFUnit.cs" />
     <Compile Include="Services\Implementations\EFUser.cs" />
     <Compile Include="Services\Implementations\EFUserAttrDescription.cs" />
     <Compile Include="Services\Interfaces\IBomBreakdown.cs" />
     <Compile Include="Services\Interfaces\ICurrency.cs" />
     <Compile Include="Services\Interfaces\ICustomer.cs" />
     <Compile Include="Services\Interfaces\ICustomerPriceList.cs" />
+    <Compile Include="Services\Interfaces\IDeliveryTerms.cs" />
     <Compile Include="Services\Interfaces\IDocType.cs" />
     <Compile Include="Services\Interfaces\IEchangeRate.cs" />
     <Compile Include="Services\Interfaces\IEtnColor.cs" />
     <Compile Include="Services\Interfaces\IFamilyHK.cs" />
     <Compile Include="Services\Interfaces\IFunctionality.cs" />
+    <Compile Include="Services\Interfaces\IFunctionalityReport.cs" />
     <Compile Include="Services\Interfaces\IFunctionalityRole.cs" />
     <Compile Include="Services\Interfaces\IHwType.cs" />
     <Compile Include="Services\Interfaces\IIncoterm.cs" />
@@ -781,9 +889,32 @@
     <Compile Include="Services\Interfaces\ISupplier.cs" />
     <Compile Include="Services\Interfaces\ISupplierFactoryCoeff.cs" />
     <Compile Include="Services\Interfaces\ISupplierPriceList.cs" />
+    <Compile Include="Services\Interfaces\ISupplyDocs.cs" />
+    <Compile Include="Services\Interfaces\IUnit.cs" />
     <Compile Include="Services\Interfaces\IUser.cs" />
     <Compile Include="Services\Interfaces\IUserAttrDescription.cs" />
     <Compile Include="Styles\AppStyles.cs" />
+    <Content Include="Resources\Images\formcaption_red.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\glasses.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\import_export_excel_icon_16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\import_export_excel_icon_32x32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\logo_etnia-barcelona.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\logo_SupplyHongKong.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\tabheaderbackground_red.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -859,6 +990,9 @@
     <EmbeddedResource Include="Forms\Master\ItemsLevelsManagement.resx">
       <DependentUpon>ItemsLevelsManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\MyCompanyManagement.resx">
+      <DependentUpon>MyCompanyManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\PaymentTermsManagement.resx">
       <DependentUpon>PaymentTermsManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -894,6 +1028,39 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RibbonFormBase.resx">
       <DependentUpon>RibbonFormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\DeliveryNote.resx">
+      <DependentUpon>DeliveryNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\DialogForms\SelectDocs.resx">
+      <DependentUpon>SelectDocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\DocsList.resx">
+      <DependentUpon>DocsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\Invoice.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\PackingList.resx">
+      <DependentUpon>PackingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\PackingListBcn.resx">
+      <DependentUpon>PackingListBcn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\PurchaseOrder.resx">
+      <DependentUpon>PurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\PurchaseOrderSelection.resx">
+      <DependentUpon>PurchaseOrderSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\QuotationProposal.resx">
+      <DependentUpon>QuotationProposal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\SalesOrder.resx">
+      <DependentUpon>SalesOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703081042226_Customer.resx">
       <DependentUpon>201703081042226_Customer.cs</DependentUpon>
@@ -1114,6 +1281,9 @@
     <EmbeddedResource Include="Migrations\201706160817447_BomBreakdown_20170616_03.resx">
       <DependentUpon>201706160817447_BomBreakdown_20170616_03.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PRJ_Stocks\Forms\StockManagement.resx">
+      <DependentUpon>StockManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -1123,6 +1293,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reports\frmVisor.resx">
       <DependentUpon>frmVisor.cs</DependentUpon>
@@ -1147,6 +1318,9 @@
     <Content Include="Reports\Rpt\BOM.rpt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Fonts\brandon_bld-webfont.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -1160,6 +1334,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="etnia_icon.ico" />
+    <Content Include="Resources\Images\Acetate_244.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\button_red.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\Edit_16x16.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1179,6 +1359,7 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <PropertyGroup>

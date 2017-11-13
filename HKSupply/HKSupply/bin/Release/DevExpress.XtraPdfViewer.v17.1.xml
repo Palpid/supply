@@ -178,6 +178,30 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraPdfViewer.PdfNavigationPaneVisibilityChangedEventHandler">
+
+            <summary>
+                <para>A method that will handle the <see cref="E:DevExpress.XtraPdfViewer.PdfViewer.NavigationPaneVisibilityChanged"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraPdfViewer.PdfNavigationPaneVisibilityChangedEventHandler.Invoke(System.Object,DevExpress.XtraPdfViewer.PdfNavigationPaneVisibilityChangedEventArgs)">
+            <summary>
+                <para>A method that will handle the <see cref="E:DevExpress.XtraPdfViewer.PdfViewer.NavigationPaneVisibilityChanged"/> event.
+</para>
+            </summary>
+            <param name="sender">
+		A <see cref="T:System.Object"/> value, specifying the event source.
+
+            </param>
+            <param name="e">
+		A <see cref="T:DevExpress.XtraPdfViewer.PdfNavigationPaneVisibilityChangedEventArgs"/> object that contains data related to the event.
+
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.XtraPdfViewer.PdfFileAttachmentOpeningEventHandler">
 
             <summary>
@@ -1289,30 +1313,6 @@ This option is not supported for the <see cref="P:DevExpress.XtraPdfViewer.PdfVi
             </summary>
             <value>A <see cref="T:DevExpress.XtraPdfViewer.PdfNavigationPaneVisibility"/> enumeration value defining the visibility of a navigation pane. 
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraPdfViewer.PdfNavigationPaneVisibilityChangedEventHandler">
-
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.XtraPdfViewer.PdfViewer.NavigationPaneVisibilityChanged"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraPdfViewer.PdfNavigationPaneVisibilityChangedEventHandler.Invoke(System.Object,DevExpress.XtraPdfViewer.PdfNavigationPaneVisibilityChangedEventArgs)">
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.XtraPdfViewer.PdfViewer.NavigationPaneVisibilityChanged"/> event.
-</para>
-            </summary>
-            <param name="sender">
-		A <see cref="T:System.Object"/> value, specifying the event source.
-
-            </param>
-            <param name="e">
-		A <see cref="T:DevExpress.XtraPdfViewer.PdfNavigationPaneVisibilityChangedEventArgs"/> object that contains data related to the event.
-
-            </param>
 
 
         </member>
@@ -5431,6 +5431,34 @@ This option is not supported for the <see cref="P:DevExpress.XtraPdfViewer.PdfVi
 
 
         </member>
+        <member name="T:DevExpress.XtraPdfViewer.PdfDocumentChangedEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.XtraPdfViewer.PdfViewer.DocumentChanged"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraPdfViewer.PdfDocumentChangedEventArgs.DocumentFilePath">
+            <summary>
+                <para>Gets the path to the document file.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value, specifying the path to the document.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPdfViewer.PdfDocumentChangedEventArgs.DocumentFileStream">
+            <summary>
+                <para>Indicates the file stream storing the document bytes.
+</para>
+            </summary>
+            <value>A <see cref="T:System.IO.Stream"/> value, identifying the file stream.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraPdfViewer.PdfNavigationPaneSelectedPageChangedEventHandler">
 
             <summary>
@@ -5953,6 +5981,22 @@ This option is not supported for the <see cref="P:DevExpress.XtraPdfViewer.PdfVi
             </param>
             <returns>A <see cref="T:DevExpress.Pdf.PdfTextSearchResults"/> object.
 </returns>
+
+
+        </member>
+        <member name="E:DevExpress.XtraPdfViewer.PdfViewer.FormFieldGotFocus">
+            <summary>
+                <para>Occurs when a form field receives input focus.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraPdfViewer.PdfViewer.FormFieldLostFocus">
+            <summary>
+                <para>Occurs when a form field loses input focus.
+</para>
+            </summary>
 
 
         </member>
@@ -6745,34 +6789,6 @@ This option is not supported for the <see cref="P:DevExpress.XtraPdfViewer.PdfVi
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPdfViewer.PdfZoomMode"/> enumeration value.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraPdfViewer.PdfDocumentChangedEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraPdfViewer.PdfViewer.DocumentChanged"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraPdfViewer.PdfDocumentChangedEventArgs.DocumentFilePath">
-            <summary>
-                <para>Gets the path to the document file.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value, specifying the path to the document.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPdfViewer.PdfDocumentChangedEventArgs.DocumentFileStream">
-            <summary>
-                <para>Indicates the file stream storing the document bytes.
-</para>
-            </summary>
-            <value>A <see cref="T:System.IO.Stream"/> value, identifying the file stream.
 </value>
 
 

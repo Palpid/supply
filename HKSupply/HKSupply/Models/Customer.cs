@@ -36,14 +36,26 @@ namespace HKSupply.Models
         [Column("SHIPING_ADDRESS", TypeName = "NVARCHAR"), StringLength(2500)]
         public string ShippingAddress { get; set; }
 
+        [Column("SHIPING_ADDRESS_2", TypeName = "NVARCHAR"), StringLength(2500)]
+        public string ShippingAddress2 { get; set; }
+
         [Column("SHIPING_ADDRESS_ZH", TypeName = "NVARCHAR"), StringLength(2500)]
         public string ShippingAddressZh { get; set; }
+
+        [Column("SHIPING_ADDRESS_ZH_2", TypeName = "NVARCHAR"), StringLength(2500)]
+        public string ShippingAddressZh2 { get; set; }
 
         [Column("BILLING_ADDRESS", TypeName = "NVARCHAR"), StringLength(2500)]
         public string BillingAddress { get; set; }
 
+        [Column("BILLING_ADDRESS_2", TypeName = "NVARCHAR"), StringLength(2500)]
+        public string BillingAddress2 { get; set; }
+
         [Column("BILLING_ADDRESS_ZH", TypeName = "NVARCHAR"), StringLength(2500)]
         public string BillingAddressZh { get; set; }
+
+        [Column("BILLING_ADDRESS_ZH_2", TypeName = "NVARCHAR"), StringLength(2500)]
+        public string BillingAddressZh2 { get; set; }
 
         [Column("CONTACT_NAME", TypeName = "NVARCHAR"), StringLength(100)]
         public string ContactName { get; set; }
@@ -90,9 +102,13 @@ namespace HKSupply.Models
                 Active == customer.Active &&
                 VATNum == customer.VATNum &&
                 ShippingAddress == customer.ShippingAddress &&
+                ShippingAddress2 == customer.ShippingAddress2 &&
                 ShippingAddressZh == customer.ShippingAddressZh &&
+                ShippingAddressZh2 == customer.ShippingAddressZh2 &&
                 BillingAddress == customer.BillingAddress &&
+                BillingAddress2 == customer.BillingAddress2 &&
                 BillingAddressZh == customer.BillingAddressZh &&
+                BillingAddressZh2 == customer.BillingAddressZh2 &&
                 ContactName == customer.ContactName &&
                 ContactNameZh == customer.ContactNameZh &&
                 ContactPhone == customer.ContactPhone &&
@@ -115,10 +131,14 @@ namespace HKSupply.Models
                 (CustomerName == null ? 0 : CustomerName.GetHashCode()) +
                 Active.GetHashCode() +
                 (VATNum == null ? 0 : VATNum.GetHashCode()) +
-                (ShippingAddress == null ? 0 : ShippingAddress.GetHashCode()) + 
+                (ShippingAddress == null ? 0 : ShippingAddress.GetHashCode()) +
+                (ShippingAddress2 == null ? 0 : ShippingAddress2.GetHashCode()) +
                 (ShippingAddressZh == null ? 0 : ShippingAddressZh.GetHashCode()) +
-                (BillingAddress == null ? 0 : BillingAddress.GetHashCode()) + 
-                (BillingAddressZh == null ? 0 : BillingAddressZh.GetHashCode()) + 
+                (ShippingAddressZh2 == null ? 0 : ShippingAddressZh2.GetHashCode()) +
+                (BillingAddress == null ? 0 : BillingAddress.GetHashCode()) +
+                (BillingAddress2 == null ? 0 : BillingAddress2.GetHashCode()) +
+                (BillingAddressZh == null ? 0 : BillingAddressZh.GetHashCode()) +
+                (BillingAddressZh2 == null ? 0 : BillingAddressZh2.GetHashCode()) +
                 (ContactName == null ? 0 : ContactName.GetHashCode()) + 
                 (ContactNameZh == null ? 0 : ContactNameZh.GetHashCode()) + 
                 (ContactPhone == null ? 0 : ContactPhone.GetHashCode()) + 
@@ -143,9 +163,13 @@ namespace HKSupply.Models
             c.Active = ch.Active;
             c.VATNum = ch.VATNum;
             c.ShippingAddress = ch.ShippingAddress;
+            c.ShippingAddress2 = ch.ShippingAddress2;
             c.ShippingAddressZh = ch.ShippingAddressZh;
+            c.ShippingAddressZh2 = ch.ShippingAddressZh2;
             c.BillingAddress = ch.BillingAddress;
+            c.BillingAddress2 = ch.BillingAddress2;
             c.BillingAddressZh = ch.BillingAddressZh;
+            c.BillingAddressZh2 = ch.BillingAddressZh2;
             c.ContactName = ch.ContactName;
             c.ContactNameZh = ch.ContactNameZh;
             c.ContactPhone = ch.ContactPhone;

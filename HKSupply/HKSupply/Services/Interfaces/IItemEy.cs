@@ -13,6 +13,7 @@ namespace HKSupply.Services.Interfaces
     public interface IItemEy
     {
         List<ItemEy> GetItems(bool withDocWarning = false);
+        List<ItemEy> GetItems(string idDefaultSupplier, bool withDocWarning = false);
         ItemEy GetItem(string idItemBcn);
         bool UpdateItem(ItemEy updateItem, bool newVersion = false);
         bool UpdateItemWithDoc(ItemEy updateItem, ItemDoc itemDoc, bool newVersion = false);

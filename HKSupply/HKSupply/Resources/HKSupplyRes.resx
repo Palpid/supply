@@ -462,4 +462,13 @@
   <data name="Scrap" xml:space="preserve">
     <value>Scrap</value>
   </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="DataBase" xml:space="preserve">
+    <value>Data Base</value>
+  </data>
+  <data name="DbServer" xml:space="preserve">
+    <value>DB Server</value>
+  </data>
 </root>

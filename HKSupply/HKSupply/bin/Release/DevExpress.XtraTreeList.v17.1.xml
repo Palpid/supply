@@ -158,6 +158,176 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraTreeList.Columns.TreeListOptionsFind">
+
+            <summary>
+                <para>Provides access to options controlling the view and behavior settings of the Find Panel.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.#ctor(DevExpress.XtraTreeList.TreeList)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="treeList">
+		 
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.AllowFindPanel">
+            <summary>
+                <para>Gets or sets whether the Find Panel can be invoked by an end-user.
+</para>
+            </summary>
+            <value><b>true</b> if the Find Panel can be invoked by an end-user; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.AllowIncrementalSearch">
+            <summary>
+                <para>Gets or sets whether or not end-users can utilize incremental search to find required records.
+</para>
+            </summary>
+            <value><b>true</b>, if end-users can utilize incremental search to find required records; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.AlwaysVisible">
+            <summary>
+                <para>Gets or sets whether the Find Panel is always visible.
+</para>
+            </summary>
+            <value><b>true</b> if the Find Panel is always visible; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.Assign(DevExpress.Utils.Controls.BaseOptions)">
+            <summary>
+                <para>Copies all the settings of the options object passed as this method's parameter to the current object.
+</para>
+            </summary>
+            <param name="options">
+		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> descendant whose settings are assigned to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.ClearFindOnClose">
+            <summary>
+                <para>Gets or sets whether the Find Panel's search (filter) string is cleared when the Find Panel is hidden.
+</para>
+            </summary>
+            <value><b>true</b> if the Find Panel's search string is cleared on hiding the control; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.DefaultFilterColumnsString">
+            <summary>
+                <para>Returns '*' which means that the search is performed against all visible columns.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.ExpandNodesOnIncrementalSearch">
+            <summary>
+                <para>Gets or sets whether or not the TreeList should expand collapsed nodes that contain records which match the text an end-user types.
+</para>
+            </summary>
+            <value><b>true</b>, if the TreeList should expand collapsed nodes that contain matching records; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.FindDelay">
+            <summary>
+                <para>Gets or sets the delay in milliseconds, after which a data search is initiated (if automatic search mode is active).
+</para>
+            </summary>
+            <value>An integer that specifies the delay in milliseconds, after which a data search is initiated.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.FindFilterColumns">
+            <summary>
+                <para>Gets or sets the field names against which searches are performed by the Find Panel.
+</para>
+            </summary>
+            <value>A string specifying the field names against which searches are performed.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.FindMode">
+            <summary>
+                <para>Gets or sets whether data searches start automatically, or must be started manually.
+
+</para>
+            </summary>
+            <value>The value that specifies whether a search starts automatically, or must be started manually.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.FindNullPrompt">
+            <summary>
+                <para>Gets or sets the text displayed grayed out when the search box is empty.
+</para>
+            </summary>
+            <value>The text displayed grayed out when the search box is empty.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.HighlightFindResults">
+            <summary>
+                <para>Gets or sets whether the search string is highlighted within located records.
+</para>
+            </summary>
+            <value><b>true</b> if the search string is highlighted within located records; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.ShowClearButton">
+            <summary>
+                <para>Gets or sets whether the Clear button is displayed within the Find Panel. 
+</para>
+            </summary>
+            <value><b>true</b> if the Clear button is displayed within the Find Panel; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.ShowCloseButton">
+            <summary>
+                <para>Gets or sets whether the close ('x') button is displayed within the Find Panel.
+</para>
+            </summary>
+            <value><b>true</b> if the close ('x') button is displayed within the Find Panel; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.ShowFindButton">
+            <summary>
+                <para>Gets or sets whether the Find button is displayed within the Find Panel.
+</para>
+            </summary>
+            <value><b>true</b> if the Find button is displayed within the Find Panel; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraTreeList.TreeListOptionsNavigation">
 
             <summary>
@@ -732,6 +902,46 @@
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.Utils.AppearanceObject"/> object that provides the appearance settings used to paint the vertical lines.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraTreeList.ValidateNodeEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.XtraTreeList.TreeList.ValidateNode"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraTreeList.ValidateNodeEventArgs.#ctor(DevExpress.XtraTreeList.Nodes.TreeListNode)">
+            <summary>
+                <para>Creates a new <see cref="T:DevExpress.XtraTreeList.ValidateNodeEventArgs"/> object.
+</para>
+            </summary>
+            <param name="node">
+		A <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> object representing the node. This value is assigned to the <see cref="P:DevExpress.XtraTreeList.NodeEventArgs.Node"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraTreeList.ValidateNodeEventArgs.ErrorText">
+            <summary>
+                <para>Gets or sets the error description.
+</para>
+            </summary>
+            <value>A string representing the error description.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraTreeList.ValidateNodeEventArgs.Valid">
+            <summary>
+                <para>Gets or sets whether the node's validation succeeds.
+</para>
+            </summary>
+            <value><b>true</b> to accept node cell values; otherwise, <b>false</b>.
 </value>
 
 
@@ -2450,70 +2660,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraTreeList.Data.UnboundColumnType">
-
-            <summary>
-                <para>Enumerates data types that columns can have in unbound mode.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.Boolean">
-            <summary>
-                <para>Indicates that the column contains Boolean values (the <see cref="T:System.Boolean"/> type).
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.Bound">
-            <summary>
-                <para>Indicates that the column is bound to a field in the control's underlying data source. The type of data this column contains is determined by the bound field.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.DateTime">
-            <summary>
-                <para>Indicates that the column contains date-time values (the <see cref="T:System.DateTime"/> type).
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.Decimal">
-            <summary>
-                <para>Indicates that the column contains decimal values (the <see cref="T:System.Decimal"/> type).
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.Integer">
-            <summary>
-                <para>Indicates that the column contains integer values (the <see cref="T:System.Int32"/> type).
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.Object">
-            <summary>
-                <para>Indicates that the column contains values of any type.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.String">
-            <summary>
-                <para>Indicates that the column contains string values (the <see cref="T:System.String"/> type).
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.XtraTreeList.VirtualTreeSetCellValueInfo">
 
             <summary>
@@ -2755,30 +2901,6 @@
             </param>
             <param name="e">
 		A <see cref="T:DevExpress.XtraTreeList.VirtualTreeGetChildNodesInfo"/> object that contains data for the event.
-
-            </param>
-
-
-        </member>
-        <member name="T:DevExpress.XtraTreeList.VirtualTreeGetCellValueEventHandler">
-
-            <summary>
-                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraTreeList.TreeList.VirtualTreeGetCellValue"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraTreeList.VirtualTreeGetCellValueEventHandler.Invoke(System.Object,DevExpress.XtraTreeList.VirtualTreeGetCellValueInfo)">
-            <summary>
-                <para>Represents the method for handling events which take a <see cref="T:DevExpress.XtraTreeList.VirtualTreeGetCellValueInfo"/> object as a parameter.
-</para>
-            </summary>
-            <param name="sender">
-		The event source. This identifies the Tree List control which fires the event.
-
-            </param>
-            <param name="e">
-		A <see cref="T:DevExpress.XtraTreeList.VirtualTreeGetCellValueInfo"/> object that contains data for the event.
 
             </param>
 
@@ -3082,174 +3204,6 @@
 </para>
             </summary>
             <value>The name of the column to which the current condition is applied.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraTreeList.Columns.TreeListOptionsFind">
-
-            <summary>
-                <para>Provides access to options controlling the view and behavior settings of the Find Panel.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.#ctor">
-            <summary>
-                <para>Initializes a new instance of the TreeListOptionsFind class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.AllowFindPanel">
-            <summary>
-                <para>Gets or sets whether the Find Panel can be invoked by an end-user.
-</para>
-            </summary>
-            <value><b>true</b> if the Find Panel can be invoked by an end-user; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.AllowIncrementalSearch">
-            <summary>
-                <para>Gets or sets whether or not end-users can utilize incremental search to find required records.
-</para>
-            </summary>
-            <value><b>true</b>, if end-users can utilize incremental search to find required records; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.AlwaysVisible">
-            <summary>
-                <para>Gets or sets whether the Find Panel is always visible.
-</para>
-            </summary>
-            <value><b>true</b> if the Find Panel is always visible; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.Assign(DevExpress.Utils.Controls.BaseOptions)">
-            <summary>
-                <para>Copies all the settings of the options object passed as this method's parameter to the current object.
-</para>
-            </summary>
-            <param name="options">
-		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> descendant whose settings are assigned to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.ClearFindOnClose">
-            <summary>
-                <para>Gets or sets whether the Find Panel's search (filter) string is cleared when the Find Panel is hidden.
-</para>
-            </summary>
-            <value><b>true</b> if the Find Panel's search string is cleared on hiding the control; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="F:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.DefaultFilterColumnsString">
-            <summary>
-                <para>Returns '*' which means that the search is performed against all visible columns.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.ExpandNodesOnIncrementalSearch">
-            <summary>
-                <para>Gets or sets whether or not the TreeList should expand collapsed nodes that contain records which match the text an end-user types.
-</para>
-            </summary>
-            <value><b>true</b>, if the TreeList should expand collapsed nodes that contain matching records; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.FindDelay">
-            <summary>
-                <para>Gets or sets the delay in milliseconds, after which a data search is initiated (if automatic search mode is active).
-</para>
-            </summary>
-            <value>An integer that specifies the delay in milliseconds, after which a data search is initiated.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.FindFilterColumns">
-            <summary>
-                <para>Gets or sets the field names against which searches are performed by the Find Panel.
-</para>
-            </summary>
-            <value>A string specifying the field names against which searches are performed.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.FindMode">
-            <summary>
-                <para>Gets or sets whether data searches start automatically, or must be started manually.
-
-</para>
-            </summary>
-            <value>The value that specifies whether a search starts automatically, or must be started manually.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.FindNullPrompt">
-            <summary>
-                <para>Gets or sets the text displayed grayed out when the search box is empty.
-</para>
-            </summary>
-            <value>The text displayed grayed out when the search box is empty.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.HighlightFindResults">
-            <summary>
-                <para>Gets or sets whether the search string is highlighted within located records.
-</para>
-            </summary>
-            <value><b>true</b> if the search string is highlighted within located records; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.ShowClearButton">
-            <summary>
-                <para>Gets or sets whether the Clear button is displayed within the Find Panel. 
-</para>
-            </summary>
-            <value><b>true</b> if the Clear button is displayed within the Find Panel; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.ShowCloseButton">
-            <summary>
-                <para>Gets or sets whether the close ('x') button is displayed within the Find Panel.
-</para>
-            </summary>
-            <value><b>true</b> if the close ('x') button is displayed within the Find Panel; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsFind.ShowFindButton">
-            <summary>
-                <para>Gets or sets whether the Find button is displayed within the Find Panel.
-</para>
-            </summary>
-            <value><b>true</b> if the Find button is displayed within the Find Panel; otherwise, <b>false</b>.
 </value>
 
 
@@ -3667,6 +3621,30 @@ For example, from a list with month names the <i>[Name] Like 'J%y'</i> filter ex
 </para>
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraTreeList.VirtualTreeGetCellValueEventHandler">
+
+            <summary>
+                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraTreeList.TreeList.VirtualTreeGetCellValue"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraTreeList.VirtualTreeGetCellValueEventHandler.Invoke(System.Object,DevExpress.XtraTreeList.VirtualTreeGetCellValueInfo)">
+            <summary>
+                <para>Represents the method for handling events which take a <see cref="T:DevExpress.XtraTreeList.VirtualTreeGetCellValueInfo"/> object as a parameter.
+</para>
+            </summary>
+            <param name="sender">
+		The event source. This identifies the Tree List control which fires the event.
+
+            </param>
+            <param name="e">
+		A <see cref="T:DevExpress.XtraTreeList.VirtualTreeGetCellValueInfo"/> object that contains data for the event.
+
+            </param>
 
 
         </member>
@@ -5194,6 +5172,70 @@ For example, from a list with month names the <i>[Name] Like 'J%y'</i> filter ex
 
 
         </member>
+        <member name="T:DevExpress.XtraTreeList.Data.UnboundColumnType">
+
+            <summary>
+                <para>Enumerates data types that columns can have in unbound mode.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.Boolean">
+            <summary>
+                <para>Indicates that the column contains Boolean values (the <see cref="T:System.Boolean"/> type).
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.Bound">
+            <summary>
+                <para>Indicates that the column is bound to a field in the control's underlying data source. The type of data this column contains is determined by the bound field.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.DateTime">
+            <summary>
+                <para>Indicates that the column contains date-time values (the <see cref="T:System.DateTime"/> type).
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.Decimal">
+            <summary>
+                <para>Indicates that the column contains decimal values (the <see cref="T:System.Decimal"/> type).
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.Integer">
+            <summary>
+                <para>Indicates that the column contains integer values (the <see cref="T:System.Int32"/> type).
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.Object">
+            <summary>
+                <para>Indicates that the column contains values of any type.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.String">
+            <summary>
+                <para>Indicates that the column contains string values (the <see cref="T:System.String"/> type).
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraTreeList.FilterPopupMode">
 
             <summary>
@@ -5994,46 +6036,6 @@ If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to
 		A <see cref="T:DevExpress.XtraTreeList.ValidateNodeEventArgs"/> object that contains event data.
 
             </param>
-
-
-        </member>
-        <member name="T:DevExpress.XtraTreeList.ValidateNodeEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraTreeList.TreeList.ValidateNode"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraTreeList.ValidateNodeEventArgs.#ctor(DevExpress.XtraTreeList.Nodes.TreeListNode)">
-            <summary>
-                <para>Creates a new <see cref="T:DevExpress.XtraTreeList.ValidateNodeEventArgs"/> object.
-</para>
-            </summary>
-            <param name="node">
-		A <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> object representing the node. This value is assigned to the <see cref="P:DevExpress.XtraTreeList.NodeEventArgs.Node"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraTreeList.ValidateNodeEventArgs.ErrorText">
-            <summary>
-                <para>Gets or sets the error description.
-</para>
-            </summary>
-            <value>A string representing the error description.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraTreeList.ValidateNodeEventArgs.Valid">
-            <summary>
-                <para>Gets or sets whether the node's validation succeeds.
-</para>
-            </summary>
-            <value><b>true</b> to accept node cell values; otherwise, <b>false</b>.
-</value>
 
 
         </member>
@@ -10441,11 +10443,13 @@ If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraTreeList.TreeListHitInfo.#ctor">
+        <member name="M:DevExpress.XtraTreeList.TreeListHitInfo.#ctor(DevExpress.XtraTreeList.TreeListHitTest)">
             <summary>
-                <para>Initializes a new <see cref="T:DevExpress.XtraTreeList.TreeListHitInfo"/> class instance.
-</para>
+                <para> </para>
             </summary>
+            <param name="ht">
+		 
+            </param>
 
 
         </member>

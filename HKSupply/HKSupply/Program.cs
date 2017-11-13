@@ -1,4 +1,5 @@
-﻿using HKSupply.Forms;
+﻿using DevExpress.LookAndFeel;
+using HKSupply.Forms;
 using log4net;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,11 @@ namespace HKSupply
             Application.SetCompatibleTextRenderingDefault(false);
 
             DevExpress.XtraEditors.WindowsFormsSettings.DefaultFont = new System.Drawing.Font("Source Sans Pro", 10);
+
+            //Change DevExpress Look and Feel skin for all application
+            UserLookAndFeel.Default.SetSkinStyle("Office 2016 Colorful");
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
 
             //Test: change culture to English
             System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-GB");

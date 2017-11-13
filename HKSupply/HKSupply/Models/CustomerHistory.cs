@@ -36,14 +36,26 @@ namespace HKSupply.Models
         [Column("SHIPING_ADDRESS", TypeName = "NVARCHAR"), StringLength(2500)]
         public string ShippingAddress { get; set; }
 
+        [Column("SHIPING_ADDRESS_2", TypeName = "NVARCHAR"), StringLength(2500)]
+        public string ShippingAddress2 { get; set; }
+
         [Column("SHIPING_ADDRESS_ZH", TypeName = "NVARCHAR"), StringLength(2500)]
         public string ShippingAddressZh { get; set; }
+
+        [Column("SHIPING_ADDRESS_ZH_2", TypeName = "NVARCHAR"), StringLength(2500)]
+        public string ShippingAddressZh2 { get; set; }
 
         [Column("BILLING_ADDRESS", TypeName = "NVARCHAR"), StringLength(2500)]
         public string BillingAddress { get; set; }
 
+        [Column("BILLING_ADDRESS_2", TypeName = "NVARCHAR"), StringLength(2500)]
+        public string BillingAddress2 { get; set; }
+
         [Column("BILLING_ADDRESS_ZH", TypeName = "NVARCHAR"), StringLength(2500)]
         public string BillingAddressZh { get; set; }
+
+        [Column("BILLING_ADDRESS_ZH_2", TypeName = "NVARCHAR"), StringLength(2500)]
+        public string BillingAddressZh2 { get; set; }
 
         [Column("CONTACT_NAME", TypeName = "NVARCHAR"), StringLength(100)]
         public string ContactName { get; set; }
@@ -108,9 +120,13 @@ namespace HKSupply.Models
                 Active == customerHistory.Active &&
                 VATNum == customerHistory.VATNum &&
                 ShippingAddress == customerHistory.ShippingAddress &&
+                ShippingAddress2 == customerHistory.ShippingAddress2 &&
                 ShippingAddressZh == customerHistory.ShippingAddressZh &&
+                ShippingAddressZh2 == customerHistory.ShippingAddressZh2 &&
                 BillingAddress == customerHistory.BillingAddress &&
+                BillingAddress2 == customerHistory.BillingAddress2 &&
                 BillingAddressZh == customerHistory.BillingAddressZh &&
+                BillingAddressZh2 == customerHistory.BillingAddressZh2 &&
                 ContactName == customerHistory.ContactName &&
                 ContactNameZh == customerHistory.ContactNameZh &&
                 ContactPhone == customerHistory.ContactPhone &&
@@ -135,9 +151,13 @@ namespace HKSupply.Models
                 Active.GetHashCode() +
                 (VATNum == null ? 0 : VATNum.GetHashCode()) +
                 (ShippingAddress == null ? 0 : ShippingAddress.GetHashCode()) +
+                (ShippingAddress2 == null ? 0 : ShippingAddress2.GetHashCode()) +
                 (ShippingAddressZh == null ? 0 : ShippingAddressZh.GetHashCode()) +
+                (ShippingAddressZh2 == null ? 0 : ShippingAddressZh2.GetHashCode()) +
                 (BillingAddress == null ? 0 : BillingAddress.GetHashCode()) +
+                (BillingAddress2 == null ? 0 : BillingAddress2.GetHashCode()) +
                 (BillingAddressZh == null ? 0 : BillingAddressZh.GetHashCode()) +
+                (BillingAddressZh2 == null ? 0 : BillingAddressZh2.GetHashCode()) +
                 (ContactName == null ? 0 : ContactName.GetHashCode()) +
                 (ContactNameZh == null ? 0 : ContactNameZh.GetHashCode()) +
                 (ContactPhone == null ? 0 : ContactPhone.GetHashCode()) +
@@ -163,9 +183,13 @@ namespace HKSupply.Models
             ch.Active = c.Active;
             ch.VATNum = c.VATNum;
             ch.ShippingAddress = c.ShippingAddress;
+            ch.ShippingAddress2 = c.ShippingAddress2;
             ch.ShippingAddressZh = c.ShippingAddressZh;
+            ch.ShippingAddressZh2 = c.ShippingAddressZh2;
             ch.BillingAddress = c.BillingAddress;
+            ch.BillingAddress2 = c.BillingAddress2;
             ch.BillingAddressZh = c.BillingAddressZh;
+            ch.BillingAddressZh2 = c.BillingAddressZh2;
             ch.ContactName = c.ContactName;
             ch.ContactNameZh = c.ContactNameZh;
             ch.ContactPhone = c.ContactPhone;

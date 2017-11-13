@@ -33,6 +33,9 @@ namespace HKSupply.Forms
         {
             try
             {
+                //Si el usuario logado en Windows existe en la aplicación no mostramos la pantalla de login local
+                //LoginWithWindowsUser();
+
                 InitializeFormStyles();
                 InitializeTexts();
                 txtPassword.KeyDown +=txtPassword_KeyDown;
@@ -123,6 +126,59 @@ namespace HKSupply.Forms
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        private void LoginWithWindowsUser()
+        {
+            try
+            {
+
+                if (System.Diagnostics.Debugger.IsAttached) return;
+
+                var windowsUser = Environment.UserName;
+                var user = GlobalSetting.UserService.GetUserByLogin(windowsUser);
+                if (user != null)
+                {
+                //    //Obtenemos si es un usuario de una fábrica. Tienen que estar en un grupo llamado FACT_DELIV_xxxx  donde xxxx es el código de la fábrica
+
+                    string userFactory = null;
+
+                //    //user.RoleId = Constants.ROLE_FACTORY; //TEST
+
+                //    if (user.RoleId == Constants.ROLE_FACTORY)
+                //    {
+                //        using (PrincipalContext ctx = new PrincipalContext(ContextType.Domain))
+                //        {
+                //            // find a user
+                //            UserPrincipal userPrincipal = UserPrincipal.FindByIdentity(ctx, Environment.UserName);
+
+                //            if (userPrincipal != null)
+                //            {
+                //                // get the user's groups
+                //                var groups = userPrincipal.GetAuthorizationGroups();
+
+                //                foreach (GroupPrincipal group in groups)
+                //                {
+                //                    //TODO: hacerlo, en para test lo pongo a piñon
+                                    //userFactory = "FA";
+                //                }
+                //            }
+
+                //        }
+                //    }
+
+                    GlobalSetting.UserFactory = userFactory;
+
+                    GlobalSetting.LoggedUser = user;
+                    var functionalitiesRoles = GlobalSetting.FunctionalityRoleService.GetFunctionalitiesRole(GlobalSetting.LoggedUser.RoleId);
+                    GlobalSetting.FunctionalitiesRoles = functionalitiesRoles;
+                    DialogResult = DialogResult.OK;
+                }
+            }
+            catch
+            {
+                throw;
             }
         }
 

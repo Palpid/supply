@@ -45,6 +45,7 @@
             // stackView1
             // 
             this.stackView1.AutoSize = true;
+            this.stackView1.BackColor = System.Drawing.Color.White;
             this.stackView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.stackView1.Location = new System.Drawing.Point(0, 0);
             this.stackView1.Name = "stackView1";

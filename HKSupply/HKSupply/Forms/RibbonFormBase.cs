@@ -22,7 +22,8 @@ namespace HKSupply.Forms
             OnlyEdit,
             OnlyEditNew,
             Edit,
-            New
+            New,
+            OnlyNew
         }
         #endregion
 
@@ -92,6 +93,10 @@ namespace HKSupply.Forms
             Modify = actions.Modify;
             //"Breadcrumb"
             SetRibbonText($"{actions.Functionality.Category} > {actions.Functionality.FunctionalityName}");
+
+            //Reports
+            GetFormReports(actions.FunctionalityId);
+
         }
 
         public void RestoreInitState()
@@ -174,6 +179,8 @@ namespace HKSupply.Forms
                 ConfigureByState(ActionsStates.OnlyEditNew);
             else if (Read == true && New == false && Modify == true)
                 ConfigureByState(ActionsStates.OnlyEdit);
+            else if (Read == true && New == true && Modify == false)
+                ConfigureByState(ActionsStates.OnlyNew);
         }
 
         private void ConfigureByState(ActionsStates state)
@@ -206,6 +213,12 @@ namespace HKSupply.Forms
                     bbiSave.Enabled = true;
                     bbiCancel.Enabled = true;
                     break;
+                case ActionsStates.OnlyNew:
+                    bbiEdit.Enabled = false;
+                    bbiNew.Enabled = true;
+                    bbiSave.Enabled = false;
+                    bbiCancel.Enabled = false;
+                    break;
             }
         }
 
@@ -214,6 +227,7 @@ namespace HKSupply.Forms
             try
             {
                 FormClosing += RibbonFormBase_FormClosing;
+                Load += RibbonFormBase_Load;
 
                 //Task buttons
                 bbiEdit.ItemClick += bbiEdit_ItemClick;
@@ -232,10 +246,72 @@ namespace HKSupply.Forms
 
                 bwmiLayouts.Popup += BwmiLayouts_Popup;
                 bwmiLayouts.WorkspaceManager.WorkspaceCollectionChanged += WorkspaceManager_WorkspaceCollectionChanged;
+
+                //test
+                ribbonControl.Paint += RibbonControl_Paint;
             }
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Draw Etnia Logo on right side of the ribbon
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RibbonControl_Paint(object sender, PaintEventArgs e)
+        {
+            try
+            {
+                DevExpress.XtraBars.Ribbon.ViewInfo.RibbonViewInfo ribbonViewInfo = ribbonControl.ViewInfo;
+                if (ribbonViewInfo == null)
+                    return;
+                DevExpress.XtraBars.Ribbon.ViewInfo.RibbonPanelViewInfo panelViewInfo = ribbonViewInfo.Panel;
+                if (panelViewInfo == null)
+                    return;
+                Rectangle bounds = panelViewInfo.Bounds;
+                int minX = bounds.X;
+                DevExpress.XtraBars.Ribbon.ViewInfo.RibbonPageGroupViewInfoCollection groups = panelViewInfo.Groups;
+                if (groups == null)
+                    return;
+                if (groups.Count > 0)
+                    minX = groups[groups.Count - 1].Bounds.Right;
+                //Image image = DevExpress.Utils.Frames.ApplicationCaption8_1.GetImageLogoEx(LookAndFeel);
+                //Image image = Image.FromFile(@"Resources\Images\logo_etnia-barcelona.png");
+                Image image = Properties.Resources.logo_etnia_barcelona;
+
+                if (bounds.Height < image.Height)
+                    return;
+                int offset = (bounds.Height - image.Height) / 2;
+                int width = image.Width + 15;
+                bounds.X = bounds.Width - width;
+                if (bounds.X < minX)
+                    return;
+                bounds.Width = width;
+                bounds.Y += offset;
+                bounds.Height = image.Height;
+                e.Graphics.DrawImage(image, bounds.Location);
+
+
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void RibbonFormBase_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                ConfigureStatusBar();
+            }
+            catch
+            {
+                throw;
             }
         }
 
@@ -253,13 +329,43 @@ namespace HKSupply.Forms
         private void ConfigureRibbonStyles()
         {
             //Cambiar a un estilo más minimalista en lugar del estilo Office 2010 de ribbon con iconos grandes
-            ribbonControl.RibbonStyle = RibbonControlStyle.OfficeUniversal;
+            //ribbonControl.RibbonStyle = RibbonControlStyle.OfficeUniversal;
 
             ribbonControl.ToolbarLocation = RibbonQuickAccessToolbarLocation.Hidden;
             ribbonControl.DrawGroupCaptions = DefaultBoolean.False;
 
             ribbonPage1.Appearance.Font = new Font(ribbonPage1.Appearance.Font, FontStyle.Bold);
 
+            //Aplicar styles Etnia al skin por defecto
+            Styles.AppStyles.SetEtniaSkinStyles(); 
+        }
+
+        private void ConfigureStatusBar()
+        {
+            try
+            {
+                //Si estamos diseñando no tiene que pasar por aquí. Al ser un form que se hereda se llama al constructor y peta el diseñador al no tener acceso estos parámetros
+                //if (DesignMode) return; //No detecta que está en modo diseño
+                if (System.ComponentModel.LicenseManager.UsageMode == System.ComponentModel.LicenseUsageMode.Designtime)
+                    return;
+                else if (System.Diagnostics.Process.GetCurrentProcess().ProcessName.ToUpper().Equals("DEVENV"))
+                    return;
+
+                
+
+                //Recuperamos los datos de la conexión de la DB
+                var connectionString = System.Configuration.ConfigurationManager.ConnectionStrings[GlobalSetting.ConnStringName].ConnectionString;
+                System.Data.SqlClient.SqlConnectionStringBuilder builder = new System.Data.SqlClient.SqlConnectionStringBuilder(connectionString);
+
+                barStaticItemAppVersion.Caption = $"v{Application.ProductVersion}";
+                barStaticItemUser.Caption = $"{GlobalSetting.ResManager.GetString("User")}: {GlobalSetting.LoggedUser.UserLogin}";
+                barStaticItemDbServer.Caption = $"{GlobalSetting.ResManager.GetString("DbServer")}: {builder.DataSource}";
+                barStaticItemDb.Caption = $"{GlobalSetting.ResManager.GetString("DataBase")}: {builder.InitialCatalog}";
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         private void SaveWorkspace(string name, string base64stringLayout)
@@ -336,6 +442,43 @@ namespace HKSupply.Forms
                 isLoadingWorkspace = false;
             }
         }
+
+        private void GetFormReports(int idFunctionality)
+        {
+            try
+            {
+                List<FunctionalityReport> reports = GlobalSetting.FunctionalityReportService.GetFunctionalityReports(idFunctionality);
+
+                List<BarButtonItem> reportList = new List<BarButtonItem>();
+
+                if (reports.Count() > 0)
+                {
+                    foreach (var report in reports)
+                    {
+                        BarButtonItem barButtonItem = new BarButtonItem();
+                        barButtonItem.Caption = report.ReportNameEn;
+                        barButtonItem.Tag = report;
+                        barButtonItem.ItemClick += BarButtonItemReport_ItemClick;
+
+                        reportList.Add(barButtonItem);
+                    }
+
+                    barLinkContainerItemReports.AddItems(reportList.ToArray());
+                    ribbonPageGroupReports.Visible = true;
+                }
+                else
+                {
+                    ribbonPageGroupReports.Visible = false;
+                }
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+
 
         #endregion
 
@@ -532,6 +675,13 @@ namespace HKSupply.Forms
 
         #endregion
 
+        #region Reports
+        public virtual void BarButtonItemReport_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            
+        }
+        #endregion
+
         #endregion
 
         #region Overrides
@@ -542,16 +692,28 @@ namespace HKSupply.Forms
 
                 string pdfHelp = string.Empty;
 
+                //Documentos de ayuda por formulario
                 switch (Name)
                 {
                     case nameof(Master.BomManagement):
                         pdfHelp = $"{Application.StartupPath}\\HelpDocs\\EN\\BOM Flow and Application Help.pdf";
-                        if(File.Exists(pdfHelp))
-                        {
-                            Helpers.DocHelper.OpenDoc(pdfHelp, showDialog: false);
-                        }
                         break;
                 }
+
+                //Documentos de ayuda por Categoría.
+                var category = GlobalSetting.FunctionalitiesRoles
+                    .Where(a => a.Functionality.FormName.Equals(Name))
+                    .Select(b => b.Functionality.Category).FirstOrDefault();
+
+                switch(category)
+                {
+                    case "Supply":
+                        pdfHelp = $"{Application.StartupPath}\\HelpDocs\\EN\\SUPPLY Flow and Application Help.pdf";
+                        break;
+                }
+
+                if (string.IsNullOrEmpty(pdfHelp) == false && File.Exists(pdfHelp))
+                    Helpers.DocHelper.OpenDoc(pdfHelp, showDialog: false);
 
                 return true;
             }

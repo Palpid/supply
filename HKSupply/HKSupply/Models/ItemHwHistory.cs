@@ -100,6 +100,9 @@ namespace HKSupply.Models
         [Column("UNIT", TypeName = "NVARCHAR"), StringLength(2)]
         public string Unit { get; set; }
 
+        [Column("UNIT_SUPPLY", TypeName = "NVARCHAR"), StringLength(2)]
+        public string UnitSupply { get; set; }
+
         [Column("DOCS_LINK", TypeName = "NVARCHAR"), StringLength(512)]
         public string DocsLink { get; set; }
 
@@ -150,6 +153,7 @@ namespace HKSupply.Models
                 IdUserAttri2 == itemHwHistory.IdUserAttri2 &&
                 IdUserAttri3 == itemHwHistory.IdUserAttri3 &&
                 Unit == itemHwHistory.Unit &&
+                UnitSupply == itemHwHistory.UnitSupply &&
                 DocsLink == itemHwHistory.DocsLink &&
                 CreateDate == itemHwHistory.CreateDate &&
                 PhotoUrl == itemHwHistory.PhotoUrl &&
@@ -187,6 +191,7 @@ namespace HKSupply.Models
                 (IdUserAttri2 == null ? 0 : IdUserAttri2.GetHashCode()) +
                 (IdUserAttri3 == null ? 0 : IdUserAttri3.GetHashCode()) +
                 (Unit == null ? 0 : Unit.GetHashCode()) +
+                (UnitSupply == null ? 0 : UnitSupply.GetHashCode()) +
                 (DocsLink == null ? 0 : DocsLink.GetHashCode()) +
                 CreateDate.GetHashCode() +
                 (PhotoUrl == null ? 0 : PhotoUrl.GetHashCode()) +
@@ -203,33 +208,34 @@ namespace HKSupply.Models
             ItemHwHistory ihwh = new ItemHwHistory();
 
              ihwh.IdVer = i.IdVer;
-                ihwh.IdSubVer = i.IdSubVer;
-                ihwh.Timestamp = i.Timestamp;
-                ihwh.IdPrototype = i.IdPrototype;
-                ihwh.IdItemBcn = i.IdItemBcn;
-                ihwh.IdHwTypeL1 = i.IdHwTypeL1;
-                ihwh.IdHwTypeL2 = i.IdHwTypeL2;
-                ihwh.IdHwTypeL3 = i.IdHwTypeL3;
-                ihwh.IdDefaultSupplier = i.IdDefaultSupplier;
-                ihwh.IdModel = i.IdModel;
-                ihwh.IdFamilyHK = i.IdFamilyHK;
-                ihwh.IdColor1 = i.IdColor1;
-                ihwh.IdColor2 = i.IdColor2;
-                ihwh.IdItemHK = i.IdItemHK;
-                ihwh.ItemDescription = i.ItemDescription;
-                ihwh.Comments = i.Comments;
-                ihwh.LaunchDate = i.LaunchDate;
-                ihwh.RemovalDate = i.RemovalDate;
-                ihwh.IdStatusCial = i.IdStatusCial;
-                ihwh.IdStatusProd = i.IdStatusProd;
-                ihwh.IdUserAttri1 = i.IdUserAttri1;
-                ihwh.IdUserAttri2 = i.IdUserAttri2;
-                ihwh.IdUserAttri3 = i.IdUserAttri3;
-                ihwh.Unit = i.Unit;
-                ihwh.DocsLink = i.DocsLink;
-                ihwh.CreateDate = i.CreateDate;
-                ihwh.PhotoUrl = i.PhotoUrl;
-                ihwh.IdGroupType = i.IdGroupType;
+            ihwh.IdSubVer = i.IdSubVer;
+            ihwh.Timestamp = i.Timestamp;
+            ihwh.IdPrototype = i.IdPrototype;
+            ihwh.IdItemBcn = i.IdItemBcn;
+            ihwh.IdHwTypeL1 = i.IdHwTypeL1;
+            ihwh.IdHwTypeL2 = i.IdHwTypeL2;
+            ihwh.IdHwTypeL3 = i.IdHwTypeL3;
+            ihwh.IdDefaultSupplier = i.IdDefaultSupplier;
+            ihwh.IdModel = i.IdModel;
+            ihwh.IdFamilyHK = i.IdFamilyHK;
+            ihwh.IdColor1 = i.IdColor1;
+            ihwh.IdColor2 = i.IdColor2;
+            ihwh.IdItemHK = i.IdItemHK;
+            ihwh.ItemDescription = i.ItemDescription;
+            ihwh.Comments = i.Comments;
+            ihwh.LaunchDate = i.LaunchDate;
+            ihwh.RemovalDate = i.RemovalDate;
+            ihwh.IdStatusCial = i.IdStatusCial;
+            ihwh.IdStatusProd = i.IdStatusProd;
+            ihwh.IdUserAttri1 = i.IdUserAttri1;
+            ihwh.IdUserAttri2 = i.IdUserAttri2;
+            ihwh.IdUserAttri3 = i.IdUserAttri3;
+            ihwh.Unit = i.Unit;
+            ihwh.UnitSupply = i.UnitSupply;
+            ihwh.DocsLink = i.DocsLink;
+            ihwh.CreateDate = i.CreateDate;
+            ihwh.PhotoUrl = i.PhotoUrl;
+            ihwh.IdGroupType = i.IdGroupType;
 
             return ihwh;
         }

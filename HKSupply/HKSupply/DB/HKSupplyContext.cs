@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using HKSupply.Models;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using HKSupply.Models.Supply;
 
 namespace HKSupply.DB
 {
@@ -89,12 +90,22 @@ namespace HKSupply.DB
 
         public DbSet<SupplierFactoryCoeff> SupplierFactoryCoeff { get; set; }
 
+        public DbSet<SupplyStatus> SupplyStatus { get; set; }
+        public DbSet<DeliveryTerm> DeliveryTerms { get; set; }
+        public DbSet<SupplyDocType> SupplyDocTypes { get; set; }
+
+        public DbSet<DocHead> DocsHead { get; set; }
+        public DbSet<DocLine> DocsLines { get; set; }
+
         public DbSet<MyCompany> MyCompany { get; set; }
 
         public DbSet<ItemType> ItemTypes { get; set; }
 
         public DbSet<StatusPrototype> StatusPrototype { get; set; }
 
+        public DbSet<FunctionalityReport> FunctionalityReports { get; set; }
+
+        public DbSet<Unit> Units { get; set; }
 
         //public HKSupplyContext()
         //    : base("name=SqlExpressConn")

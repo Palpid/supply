@@ -425,7 +425,7 @@ namespace HKSupply.Helpers
         {
             try
             {
-                var currentCulture = System.Globalization.CultureInfo.CurrentCulture;
+                var currentCulture = System.Globalization.CultureInfo.InvariantCulture;
                 var weekNo = currentCulture.Calendar.GetWeekOfYear(
                 date,
                 currentCulture.DateTimeFormat.CalendarWeekRule,
@@ -438,6 +438,21 @@ namespace HKSupply.Helpers
                 throw;
             }
 
+        }
+
+
+        /// <summary>
+        /// Obtener los valores de los Data Annotations de Entity Framework de las clases de modelos
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="instance"></param>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
+        public static T GetAttributeFrom<T>(this object instance, string propertyName) where T : Attribute
+        {
+            var attrType = typeof(T);
+            var property = instance.GetType().GetProperty(propertyName);
+            return (T)property.GetCustomAttributes(attrType, false).First();
         }
     }
 }

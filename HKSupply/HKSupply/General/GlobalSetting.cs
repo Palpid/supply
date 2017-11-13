@@ -66,6 +66,7 @@ namespace HKSupply.General
         static EFUser _userEF = new EFUser();
         static EFFunctionality _functionalityEF = new EFFunctionality();
         static EFFunctionalityRole _functionalityRoleEF = new EFFunctionalityRole();
+        static EFFunctionalityReport _functionalityReportEF = new EFFunctionalityReport();
         static EFCustomer _customerEF = new EFCustomer();
         static EFSupplier _supplierEF = new EFSupplier();
         static EFStore _storeEF = new EFStore();
@@ -96,11 +97,13 @@ namespace HKSupply.General
         static EFBomBreakdown _bomBreakdownEF = new EFBomBreakdown();
         static EFModel _modelEF = new EFModel();
         static EFSupplierFactoryCoeff _supplierFactoryCoeffEF = new EFSupplierFactoryCoeff();
-        //static EFSupplyDocs _supplyDocsEF = new EFSupplyDocs();
-        //static EFDeliveryTerms _deliveryTermsEF = new EFDeliveryTerms();
+        static EFSupplyDocs _supplyDocsEF = new EFSupplyDocs();
+        static EFDeliveryTerms _deliveryTermsEF = new EFDeliveryTerms();
         static EFEtnColor _etnColorEF = new EFEtnColor();
         static EFMyCompany _myCompanyEF = new EFMyCompany();
+        static EFUnit _unitEF = new EFUnit();
         static User _loggedUser;
+        static string _userFactory;
         static IEnumerable<FunctionalityRole> _functionalitiesRoles;
 
         static ResourceManager _resManager = new ResourceManager(typeof(HKSupply.Resources.HKSupplyRes));
@@ -160,6 +163,17 @@ namespace HKSupply.General
                     return new EFFunctionalityRole();
                 else
                     return _functionalityRoleEF;
+            }
+        }
+
+        public static IFunctionalityReport FunctionalityReportService
+        {
+            get
+            {
+                if (_functionalityReportEF == null)
+                    _functionalityReportEF = new EFFunctionalityReport();
+
+                return _functionalityReportEF;
             }
         }
 
@@ -494,27 +508,27 @@ namespace HKSupply.General
             }
         }
 
-        //public static ISupplyDocs SupplyDocsService
-        //{
-        //    get
-        //    {
-        //        if (_supplyDocsEF == null)
-        //            _supplyDocsEF = new EFSupplyDocs();
+        public static ISupplyDocs SupplyDocsService
+        {
+            get
+            {
+                if (_supplyDocsEF == null)
+                    _supplyDocsEF = new EFSupplyDocs();
 
-        //        return _supplyDocsEF;
-        //    }
-        //}
+                return _supplyDocsEF;
+            }
+        }
 
-        //public static IDeliveryTerms DeliveryTermsService
-        //{
-        //    get
-        //    {
-        //        if (_deliveryTermsEF == null)
-        //            _deliveryTermsEF = new EFDeliveryTerms();
+        public static IDeliveryTerms DeliveryTermsService
+        {
+            get
+            {
+                if (_deliveryTermsEF == null)
+                    _deliveryTermsEF = new EFDeliveryTerms();
 
-        //        return _deliveryTermsEF;
-        //    }
-        //}
+                return _deliveryTermsEF;
+            }
+        }
 
         public static IEtnColor EtnColorService
         {
@@ -538,10 +552,27 @@ namespace HKSupply.General
             }
         }
 
+        public static IUnit UnitService
+        {
+            get
+            {
+                if (_unitEF == null)
+                    _unitEF = new EFUnit();
+
+                return _unitEF;
+            }
+        }
+
         public static User LoggedUser 
         {
             get { return _loggedUser; }
             set { _loggedUser = value; }
+        }
+
+        public static string UserFactory
+        {
+            get { return _userFactory; }
+            set { _userFactory = value; }
         }
 
         public static IEnumerable<FunctionalityRole> FunctionalitiesRoles 

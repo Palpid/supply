@@ -99,6 +99,7 @@ namespace HKSupply.Forms.Master
         List<Supplier> _supplierList;
         List<StatusHK> _statusProdList;
         List<FamilyHK> _familiesHkList;
+        List<Unit> _unitsList;
         List<UserAttrDescription> _userAttrDescriptionList;
         List<DocType> _docsTypeList;
         List<DocType> _docsTypeShowSupplierList;
@@ -131,6 +132,7 @@ namespace HKSupply.Forms.Master
                 SetUpLueDefaultSupplier();
                 SetUpLueDocType();
                 SetUpSlueSupplier();
+                SetUpLueUnit();
                 SetUpLabelNameUserAttributes();
                 ResetItemUpdate();
                 SetFormBinding();
@@ -1133,7 +1135,6 @@ namespace HKSupply.Forms.Master
                 txtLaunchDate.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.LaunchDate);
                 txtRemovalDate.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.RemovalDate);
                 txtIdStatusCial.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.IdStatusCial);
-                txtUnit.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.Unit);
                 txtDocsLink.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.DocsLink);
                 txtCreateDate.DataBindings.Add<ItemEy>(_itemUpdate, (Control c) => c.Text, item => item.CreateDate);
 
@@ -1145,6 +1146,8 @@ namespace HKSupply.Forms.Master
                 lueIdDefaultSupplier.DataBindings.Add<ItemEy>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdDefaultSupplier);
                 lueIdStatusProd.DataBindings.Add<ItemEy>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdStatusProd);
                 lueIdFamilyHK.DataBindings.Add<ItemEy>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdFamilyHK);
+                lueIdUnit.DataBindings.Add<ItemEy>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.Unit);
+                lueIdUnitSupply.DataBindings.Add<ItemEy>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.UnitSupply);
 
             }
             catch (Exception ex)
@@ -1204,6 +1207,7 @@ namespace HKSupply.Forms.Master
                 txtHRemovalDate.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.RemovalDate);
                 txtHIdStatusCial.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.IdStatusCial);
                 txtHUnit.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.Unit);
+                txtHUnitSupply.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.UnitSupply);
                 txtHDocsLink.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.DocsLink);
                 txtHCreateDate.DataBindings.Add<ItemEyHistory>(_itemHistory, (Control c) => c.Text, item => item.CreateDate);
 
@@ -1329,6 +1333,27 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void SetUpLueUnit()
+        {
+            try
+            {
+                lueIdUnit.Properties.DataSource = _unitsList;
+                lueIdUnit.Properties.DisplayMember = nameof(Unit.UnitCode);
+                lueIdUnit.Properties.ValueMember = nameof(Unit.UnitCode);
+                lueIdUnit.Properties.NullText = "Select a unit...";
+
+                lueIdUnitSupply.Properties.DataSource = _unitsList;
+                lueIdUnitSupply.Properties.DisplayMember = nameof(Unit.UnitCode);
+                lueIdUnitSupply.Properties.ValueMember = nameof(Unit.UnitCode);
+                lueIdUnitSupply.Properties.NullText = "Select a unit...";
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+
         private void SetUpLabelNameUserAttributes()
         {
             try
@@ -1355,6 +1380,7 @@ namespace HKSupply.Forms.Master
                 _supplierList = GlobalSetting.SupplierService.GetSuppliers();
                 _docsTypeList = GlobalSetting.DocTypeService.GetDocsType(Constants.ITEM_GROUP_EY);
                 _userAttrDescriptionList = GlobalSetting.UserAttrDescriptionService.GetUserAttrsDescription(Constants.ITEM_GROUP_EY);
+                _unitsList = GlobalSetting.UnitService.GetUnits();
 
                 //Only drawing needs a supplier
                 _docsTypeShowSupplierList = _docsTypeList.Where(a => a.IdDocType.Contains("DRAWING")).ToList();

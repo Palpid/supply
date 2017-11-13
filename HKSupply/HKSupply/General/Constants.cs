@@ -79,10 +79,15 @@ namespace HKSupply.General
         public const string SUPPLY_DOCTYPE_PO = "PO"; //Purchase Order
         public const string SUPPLY_DOCTYPE_SO = "SO"; //Sales Order
         public const string SUPPLY_DOCTYPE_QP = "QP"; //Quotation Proposal
-        public const string SUPPLY_DOCTYPE_INV = "INVOICE";
+        public const string SUPPLY_DOCTYPE_IV = "IV"; //Invoice
+        public const string SUPPLY_DOCTYPE_PL = "PL"; //Paking List
+        public const string SUPPLY_DOCTYPE_DN = "DN"; //Delivery Note
 
         //** ETNIA HK/BCN CODE **//
         public const string ETNIA_HK_COMPANY_CODE = "ETNLTD";
         public const string ETNIA_BCN_COMPANY_CODE = "ETNBCN";
+
+        //**ROLES **//
+        public const string ROLE_FACTORY = "FACTORY";
     }
 }

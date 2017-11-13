@@ -53,9 +53,10 @@ namespace HKSupply.Forms.Master
         List<DocType> _docsTypeList;
         List<ItemDoc> _itemDocsList;
         List<ItemDoc> _itemLastDocsList;
+        List<Unit> _unitsList;
 
-        string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "lueIdFamilyHK", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };
-        string[] _editingCols = { nameof(ItemHf.IdDefaultSupplier), nameof(ItemHf.IdUserAttri1), nameof(ItemHf.IdUserAttri2), nameof(ItemHf.IdUserAttri3), nameof(ItemHf.IdStatusProd), nameof(ItemHf.IdFamilyHK) };
+        string[] _editingFields = { "lueIdDefaultSupplier", "lueIdStatusProd", "lueIdFamilyHK", "txtIdItemHK", "txtIdUserAttri1", "txtIdUserAttri2", "txtIdUserAttri3" };
+        string[] _editingCols = { nameof(ItemHf.IdDefaultSupplier), nameof(ItemHf.IdUserAttri1), nameof(ItemHf.IdUserAttri2), nameof(ItemHf.IdUserAttri3), nameof(ItemHf.IdStatusProd), nameof(ItemHf.IdFamilyHK), nameof(ItemHf.IdItemHK) };
 
         Dictionary<String, Bitmap> photosCache = new Dictionary<string, Bitmap>();
 
@@ -80,6 +81,7 @@ namespace HKSupply.Forms.Master
                 SetUpLueFamiliesHk();
                 SetUpLueDefaultSupplier();
                 SetUpLueDocType();
+                SetUpLueUnit();
                 SetUpLabelNameUserAttributes();
                 ResetItemUpdate();
                 SetFormBinding();
@@ -448,7 +450,7 @@ namespace HKSupply.Forms.Master
                 OpenFileDialog openFileDialog = new OpenFileDialog()
                 {
                     InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
-                    Filter = "PDF files (*.pdf)|*.pdf|JPG files(*.jpg)|*.jpg|PNG files (*.png)|*.png|DWG files (*.dwg|*.dwg|DXF files (*.dxf)|*.dxf",
+                    Filter = "PDF files (*.pdf)|*.pdf|JPG files(*.jpg)|*.jpg|PNG files (*.png)|*.png",
                     Multiselect = false,
                     RestoreDirectory = true,
                 };
@@ -1008,7 +1010,6 @@ namespace HKSupply.Forms.Master
                 txtLaunchDate.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.LaunchDate);
                 txtRemovalDate.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.RemovalDate);
                 txtIdStatusCial.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.IdStatusCial);
-                txtUnit.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.Unit);
                 txtDocsLink.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.DocsLink);
                 txtCreateDate.DataBindings.Add<ItemHf>(_itemUpdate, (Control c) => c.Text, item => item.CreateDate);
 
@@ -1020,6 +1021,8 @@ namespace HKSupply.Forms.Master
                 lueIdDefaultSupplier.DataBindings.Add<ItemHf>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdDefaultSupplier);
                 lueIdStatusProd.DataBindings.Add<ItemHf>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdStatusProd);
                 lueIdFamilyHK.DataBindings.Add<ItemHf>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.IdFamilyHK);
+                lueIdUnit.DataBindings.Add<ItemHf>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.Unit);
+                lueIdUnitSupply.DataBindings.Add<ItemHf>(_itemUpdate, (LookUpEdit e) => e.EditValue, item => item.UnitSupply);
 
             }
             catch (Exception ex)
@@ -1079,6 +1082,7 @@ namespace HKSupply.Forms.Master
                 txtHRemovalDate.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.RemovalDate);
                 txtHIdStatusCial.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.IdStatusCial);
                 txtHUnit.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.Unit);
+                txtHUnitSupply.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.UnitSupply);
                 txtHDocsLink.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.DocsLink);
                 txtHCreateDate.DataBindings.Add<ItemHfHistory>(_itemHistory, (Control c) => c.Text, item => item.CreateDate);
 
@@ -1185,6 +1189,27 @@ namespace HKSupply.Forms.Master
             }
         }
 
+        private void SetUpLueUnit()
+        {
+            try
+            {
+                lueIdUnit.Properties.DataSource = _unitsList;
+                lueIdUnit.Properties.DisplayMember = nameof(Unit.UnitCode);
+                lueIdUnit.Properties.ValueMember = nameof(Unit.UnitCode);
+                lueIdUnit.Properties.NullText = "Select a unit...";
+
+                lueIdUnitSupply.Properties.DataSource = _unitsList;
+                lueIdUnitSupply.Properties.DisplayMember = nameof(Unit.UnitCode);
+                lueIdUnitSupply.Properties.ValueMember = nameof(Unit.UnitCode);
+                lueIdUnitSupply.Properties.NullText = "Select a unit...";
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+
         private void SetUpLabelNameUserAttributes()
         {
             try
@@ -1211,6 +1236,7 @@ namespace HKSupply.Forms.Master
                 _supplierList = GlobalSetting.SupplierService.GetSuppliers();
                 _docsTypeList = GlobalSetting.DocTypeService.GetDocsType(Constants.ITEM_GROUP_HF);
                 _userAttrDescriptionList = GlobalSetting.UserAttrDescriptionService.GetUserAttrsDescription(Constants.ITEM_GROUP_HF);
+                _unitsList = GlobalSetting.UnitService.GetUnits();
             }
             catch (Exception ex)
             {
