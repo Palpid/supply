@@ -104,6 +104,7 @@ namespace HKSupply.General
         static EFEtnColor _etnColorEF = new EFEtnColor();
         static EFMyCompany _myCompanyEF = new EFMyCompany();
         static EFUnit _unitEF = new EFUnit();
+        static EFDocHeadAttachFile _docHeadAttachFileEF = new EFDocHeadAttachFile();
         static User _loggedUser;
         static string _userFactory;
         static IEnumerable<FunctionalityRole> _functionalitiesRoles;
@@ -562,6 +563,17 @@ namespace HKSupply.General
                     _unitEF = new EFUnit();
 
                 return _unitEF;
+            }
+        }
+
+        public static IDocHeadAttachFile DocHeadAttachFileService
+        {
+            get
+            {
+                if (_docHeadAttachFileEF == null)
+                    _docHeadAttachFileEF = new EFDocHeadAttachFile();
+
+                return _docHeadAttachFileEF;
             }
         }
 

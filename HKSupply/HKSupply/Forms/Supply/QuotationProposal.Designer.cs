@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuotationProposal));
             this.xtcGeneral = new DevExpress.XtraTab.XtraTabControl();
             this.xtpQP = new DevExpress.XtraTab.XtraTabPage();
             this.pcFilter = new DevExpress.XtraEditors.PanelControl();
@@ -63,6 +64,19 @@
             this.lblContact = new DevExpress.XtraEditors.LabelControl();
             this.lblAddress = new DevExpress.XtraEditors.LabelControl();
             this.lblCompany = new DevExpress.XtraEditors.LabelControl();
+            this.xtpFiles = new DevExpress.XtraTab.XtraTabPage();
+            this.pcFiles = new DevExpress.XtraEditors.PanelControl();
+            this.xgrdFiles = new DevExpress.XtraGrid.GridControl();
+            this.gridViewFiles = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.layoutControlNewFile = new DevExpress.XtraLayout.LayoutControl();
+            this.sbViewNewFile = new DevExpress.XtraEditors.SimpleButton();
+            this.sbOpenFile = new DevExpress.XtraEditors.SimpleButton();
+            this.txtPathNewFile = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem34 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.sbAttachFile = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
             this.xtcGeneral.SuspendLayout();
@@ -85,6 +99,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.xgrdLines)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLines)).BeginInit();
             this.xtpTerms.SuspendLayout();
+            this.xtpFiles.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcFiles)).BeginInit();
+            this.pcFiles.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdFiles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewFiles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlNewFile)).BeginInit();
+            this.layoutControlNewFile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPathNewFile.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -121,7 +147,7 @@
             this.xtpQP.Controls.Add(this.xtcPO);
             this.xtpQP.Name = "xtpQP";
             this.xtpQP.Size = new System.Drawing.Size(1332, 531);
-            this.xtpQP.Text = "PURCHASE ORDER";
+            this.xtpQP.Text = "QUOTATION PROPOSAL";
             // 
             // pcFilter
             // 
@@ -352,7 +378,8 @@
             this.xtcPO.TabIndex = 3;
             this.xtcPO.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpProposal,
-            this.xtpTerms});
+            this.xtpTerms,
+            this.xtpFiles});
             // 
             // xtpProposal
             // 
@@ -447,6 +474,140 @@
             this.lblCompany.TabIndex = 3;
             this.lblCompany.Text = "Company:";
             // 
+            // xtpFiles
+            // 
+            this.xtpFiles.Controls.Add(this.sbAttachFile);
+            this.xtpFiles.Controls.Add(this.layoutControlNewFile);
+            this.xtpFiles.Controls.Add(this.pcFiles);
+            this.xtpFiles.Name = "xtpFiles";
+            this.xtpFiles.Size = new System.Drawing.Size(1308, 379);
+            this.xtpFiles.Text = "Attached Files";
+            // 
+            // pcFiles
+            // 
+            this.pcFiles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pcFiles.Controls.Add(this.xgrdFiles);
+            this.pcFiles.Location = new System.Drawing.Point(3, 3);
+            this.pcFiles.Name = "pcFiles";
+            this.pcFiles.Size = new System.Drawing.Size(500, 373);
+            this.pcFiles.TabIndex = 0;
+            // 
+            // xgrdFiles
+            // 
+            this.xgrdFiles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xgrdFiles.Location = new System.Drawing.Point(2, 2);
+            this.xgrdFiles.MainView = this.gridViewFiles;
+            this.xgrdFiles.MenuManager = this.ribbonControl;
+            this.xgrdFiles.Name = "xgrdFiles";
+            this.xgrdFiles.Size = new System.Drawing.Size(496, 369);
+            this.xgrdFiles.TabIndex = 0;
+            this.xgrdFiles.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewFiles});
+            // 
+            // gridViewFiles
+            // 
+            this.gridViewFiles.GridControl = this.xgrdFiles;
+            this.gridViewFiles.Name = "gridViewFiles";
+            // 
+            // layoutControlNewFile
+            // 
+            this.layoutControlNewFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.layoutControlNewFile.Controls.Add(this.sbViewNewFile);
+            this.layoutControlNewFile.Controls.Add(this.sbOpenFile);
+            this.layoutControlNewFile.Controls.Add(this.txtPathNewFile);
+            this.layoutControlNewFile.Location = new System.Drawing.Point(516, 5);
+            this.layoutControlNewFile.Name = "layoutControlNewFile";
+            this.layoutControlNewFile.Root = this.layoutControlGroup3;
+            this.layoutControlNewFile.Size = new System.Drawing.Size(611, 55);
+            this.layoutControlNewFile.TabIndex = 1;
+            this.layoutControlNewFile.Text = "layoutControl1";
+            // 
+            // sbViewNewFile
+            // 
+            this.sbViewNewFile.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbViewNewDoc.ImageOptions.Image")));
+            this.sbViewNewFile.Location = new System.Drawing.Point(7, 7);
+            this.sbViewNewFile.MaximumSize = new System.Drawing.Size(25, 25);
+            this.sbViewNewFile.MinimumSize = new System.Drawing.Size(25, 25);
+            this.sbViewNewFile.Name = "sbViewNewFile";
+            this.sbViewNewFile.Size = new System.Drawing.Size(25, 25);
+            this.sbViewNewFile.StyleController = this.layoutControlNewFile;
+            this.sbViewNewFile.TabIndex = 54;
+            // 
+            // sbOpenFile
+            // 
+            this.sbOpenFile.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbOpenFileNewDoc.ImageOptions.Image")));
+            this.sbOpenFile.Location = new System.Drawing.Point(36, 7);
+            this.sbOpenFile.MaximumSize = new System.Drawing.Size(25, 25);
+            this.sbOpenFile.MinimumSize = new System.Drawing.Size(25, 25);
+            this.sbOpenFile.Name = "sbOpenFile";
+            this.sbOpenFile.Size = new System.Drawing.Size(25, 25);
+            this.sbOpenFile.StyleController = this.layoutControlNewFile;
+            this.sbOpenFile.TabIndex = 55;
+            // 
+            // txtPathNewFile
+            // 
+            this.txtPathNewFile.Location = new System.Drawing.Point(90, 7);
+            this.txtPathNewFile.Name = "txtPathNewFile";
+            this.txtPathNewFile.Size = new System.Drawing.Size(514, 20);
+            this.txtPathNewFile.StyleController = this.layoutControlNewFile;
+            this.txtPathNewFile.TabIndex = 53;
+            // 
+            // layoutControlGroup3
+            // 
+            this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup3.GroupBordersVisible = false;
+            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem34,
+            this.layoutControlItem35,
+            this.layoutControlItem36});
+            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup3.Name = "Root";
+            this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(611, 55);
+            this.layoutControlGroup3.TextVisible = false;
+            // 
+            // layoutControlItem34
+            // 
+            this.layoutControlItem34.Control = this.sbViewNewFile;
+            this.layoutControlItem34.CustomizationFormText = "PDF";
+            this.layoutControlItem34.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem34.Name = "layoutControlItem34";
+            this.layoutControlItem34.Size = new System.Drawing.Size(29, 45);
+            this.layoutControlItem34.Text = "PDF";
+            this.layoutControlItem34.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem34.TextVisible = false;
+            // 
+            // layoutControlItem35
+            // 
+            this.layoutControlItem35.Control = this.sbOpenFile;
+            this.layoutControlItem35.CustomizationFormText = "layoutControlItem33";
+            this.layoutControlItem35.Location = new System.Drawing.Point(29, 0);
+            this.layoutControlItem35.Name = "layoutControlItem35";
+            this.layoutControlItem35.Size = new System.Drawing.Size(29, 45);
+            this.layoutControlItem35.Text = "layoutControlItem33";
+            this.layoutControlItem35.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem35.TextVisible = false;
+            // 
+            // layoutControlItem36
+            // 
+            this.layoutControlItem36.Control = this.txtPathNewFile;
+            this.layoutControlItem36.CustomizationFormText = "PDF Path";
+            this.layoutControlItem36.Location = new System.Drawing.Point(58, 0);
+            this.layoutControlItem36.Name = "layoutControlItem36";
+            this.layoutControlItem36.Size = new System.Drawing.Size(543, 45);
+            this.layoutControlItem36.Text = "Path";
+            this.layoutControlItem36.TextSize = new System.Drawing.Size(22, 13);
+            // 
+            // sbAttachFile
+            // 
+            this.sbAttachFile.Location = new System.Drawing.Point(950, 66);
+            this.sbAttachFile.Name = "sbAttachFile";
+            this.sbAttachFile.Size = new System.Drawing.Size(170, 35);
+            this.sbAttachFile.TabIndex = 17;
+            this.sbAttachFile.Text = "Attach File";
+            // 
             // QuotationProposal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -483,6 +644,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.xgrdLines)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLines)).EndInit();
             this.xtpTerms.ResumeLayout(false);
+            this.xtpFiles.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcFiles)).EndInit();
+            this.pcFiles.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdFiles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewFiles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlNewFile)).EndInit();
+            this.layoutControlNewFile.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtPathNewFile.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -525,5 +698,18 @@
         private DevExpress.XtraEditors.LabelControl lblRemarks;
         private DevExpress.XtraEditors.PanelControl pcFilter;
         private DevExpress.XtraEditors.PictureEdit peRm;
+        private DevExpress.XtraTab.XtraTabPage xtpFiles;
+        private DevExpress.XtraEditors.PanelControl pcFiles;
+        private DevExpress.XtraGrid.GridControl xgrdFiles;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewFiles;
+        private DevExpress.XtraLayout.LayoutControl layoutControlNewFile;
+        private DevExpress.XtraEditors.SimpleButton sbViewNewFile;
+        private DevExpress.XtraEditors.SimpleButton sbOpenFile;
+        private DevExpress.XtraEditors.TextEdit txtPathNewFile;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem34;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem35;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem36;
+        private DevExpress.XtraEditors.SimpleButton sbAttachFile;
     }
 }

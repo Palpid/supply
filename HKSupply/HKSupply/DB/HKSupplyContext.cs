@@ -107,6 +107,8 @@ namespace HKSupply.DB
 
         public DbSet<Unit> Units { get; set; }
 
+        public DbSet<DocHeadAttachFile> DocHeadAttachFiles { get; set; }
+
         //public HKSupplyContext()
         //    : base("name=SqlExpressConn")
         //{

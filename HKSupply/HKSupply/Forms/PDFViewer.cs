@@ -33,6 +33,9 @@ namespace HKSupply.Forms
         {
             try
             {
+                //Ocultamos la quick access toolbar, ya que no tenemos nada en ella
+                ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
+
                 if (System.IO.File.Exists(pdfFile))
                     pdfViewer1.LoadDocument(pdfFile);
                 else

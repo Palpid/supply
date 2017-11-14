@@ -21,10 +21,11 @@ namespace HKSupply.General
         public const string ITEM_GROUP_HF = "HF";
         public const string ITEM_GROUP_PROTO = "PROTO";
 
-        //** DOCS FOLDERS **//
+        //** DOCS/FILES FOLDERS **//
         public const string ITEMS_DOCS_PATH = "C:\\Temp\\ITEM_DOCS\\";
         public const string PROTO_DOCS_PATH = "C:\\Temp\\PROTO_DOCS\\";
         public const string ITEMS_PHOTOSWEB_PATH = "C:\\Temp\\ITEM_WEB_PHOTOS\\";
+        public const string SUPPLY_ATTACH_FILES_PATH = "C:\\Temp\\SUPPLY_ATTACH_FILES\\";
 
         public const string COLOR_PDF_FOLDER = "PDFCOLOR\\";
         public const string DRAWING_PDF_FOLDER = "PDFDRAWING\\";
