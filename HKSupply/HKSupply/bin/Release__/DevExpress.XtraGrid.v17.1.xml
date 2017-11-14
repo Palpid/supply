@@ -2756,6 +2756,168 @@ Manual searching is enabled in the following cases: 1) a control functions in re
 
 
         </member>
+        <member name="T:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization">
+
+            <summary>
+                <para>Provides options that determine which operations are available for end-users in a Layout View.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.#ctor(DevExpress.XtraGrid.Views.Layout.LayoutView)">
+            <summary>
+                <para>Initializes a new instance of the LayoutViewOptionsCustomization class.
+</para>
+            </summary>
+            <param name="view">
+		A <see cref="T:DevExpress.XtraGrid.Views.Layout.LayoutView"/> object that will own the created object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.AllowFilter">
+            <summary>
+                <para>Gets or sets a value which specifies whether end-users can filter data in the View.
+</para>
+            </summary>
+            <value>A Boolean value that specifies whether the data can be filtered by end-users.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.AllowSort">
+            <summary>
+                <para>Gets or sets a value specifying whether end-users can sort data.
+</para>
+            </summary>
+            <value><b>true</b> if end-users can sort data; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.Assign(DevExpress.Utils.Controls.BaseOptions)">
+            <summary>
+                <para>Copies the properties of the specified object to the current object.
+</para>
+            </summary>
+            <param name="options">
+		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> descendant whose settings are assigned to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.ShowGroupCardCaptions">
+            <summary>
+                <para>Gets or sets whether the Captions group of edit controls is displayed within the Template Card tab in the Customization Form in advanced customization mode.
+</para>
+            </summary>
+            <value><b>true</b> if the corresponding group of edit controls is displayed in advanced customization mode; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.ShowGroupCardIndents">
+            <summary>
+                <para>Gets or sets whether the Indents group of edit controls is displayed within the Template Card tab in the Customization Form in advanced customization mode.
+</para>
+            </summary>
+            <value><b>true</b> if the corresponding group of edit controls is displayed in advanced customization mode; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.ShowGroupCards">
+            <summary>
+                <para>Gets or sets whether the Cards group of edit controls is displayed within the View Layout tab in the Customization Form in advanced customization mode.
+</para>
+            </summary>
+            <value><b>true</b> if the corresponding group of edit controls is displayed in advanced customization mode; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.ShowGroupFields">
+            <summary>
+                <para>Gets or sets whether the Fields group of edit controls is displayed within the View Layout tab in the Customization Form in advanced customization mode.
+</para>
+            </summary>
+            <value><b>true</b> if the corresponding group of edit controls is displayed in advanced customization mode; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.ShowGroupHiddenItems">
+            <summary>
+                <para>Gets or sets whether the Hidden Items list is displayed within the Template Card tab in the Customization Form in advanced customization mode.
+</para>
+            </summary>
+            <value><b>true</b> if the corresponding group of edit controls is displayed in advanced customization mode; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.ShowGroupLayout">
+            <summary>
+                <para>Gets or sets whether the Layout group of edit controls is displayed within the View Layout tab in the Customization Form in advanced customization mode.
+</para>
+            </summary>
+            <value><b>true</b> if the corresponding group of edit controls is displayed in advanced customization mode; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.ShowGroupLayoutTreeView">
+            <summary>
+                <para>Gets or sets whether the Layout Tree View is displayed within the Template Card tab in the Customization Form in advanced customization mode.
+</para>
+            </summary>
+            <value><b>true</b> if the corresponding group of edit controls is displayed in advanced customization mode; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.ShowGroupView">
+            <summary>
+                <para>Gets or sets whether the View group of edit controls is displayed within the View Layout tab in the Customization Form in advanced customization mode.
+</para>
+            </summary>
+            <value><b>true</b> if the corresponding group of edit controls is displayed in advanced customization mode; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.ShowResetShrinkButtons">
+            <summary>
+                <para>Gets or sets whether the Reset Template Card and Shrink Template Card buttons are displayed within the Template Card tab in the Customization Form in advanced customization mode.
+</para>
+            </summary>
+            <value><b>true</b> if these buttons are displayed in advanced customization mode; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.ShowSaveLoadLayoutButtons">
+            <summary>
+                <para>Gets or sets whether the Load Layout and Save Layout buttons are displayed within the View Layout tab in the Customization Form in advanced customization mode.
+</para>
+            </summary>
+            <value><b>true</b> if these buttons are displayed in advanced customization mode; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.UseAdvancedRuntimeCustomization">
+            <summary>
+                <para>Gets or sets whether additional edit controls providing advanced customization capabilities can be displayed within the LayoutView's Customization Form.
+</para>
+            </summary>
+            <value><b>true</b> if advanced customization edit controls are enabled; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraGrid.Views.Grid.GridOptionsClipboard">
 
             <summary>
@@ -2801,6 +2963,36 @@ Manual searching is enabled in the following cases: 1) a control functions in re
 		An object whose setting will be copied to the current object
 
             </param>
+
+
+        </member>
+        <member name="T:DevExpress.XtraGrid.Views.BandedGrid.BandedViewPrintAppearances">
+
+            <summary>
+                <para>Provides the appearance settings used to paint the elements in a Banded Grid View when the grid control is printed/exported.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.BandedGrid.BandedViewPrintAppearances.#ctor(DevExpress.XtraGrid.Views.Base.BaseView)">
+            <summary>
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraGrid.Views.BandedGrid.BandedViewPrintAppearances"/> class with the specified owning View.
+</para>
+            </summary>
+            <param name="view">
+		A <see cref="T:DevExpress.XtraGrid.Views.Base.BaseView"/> descendant representing the View that will own the created collection.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.BandedGrid.BandedViewPrintAppearances.BandPanel">
+            <summary>
+                <para>Gets the appearance settings used to paint band headers when the grid control is printed.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraGrid.Views.BandedGrid.BandedViewPrintAppearances"/> object that provides the appearance settings used to paint band headers when the grid control is printed.
+</value>
 
 
         </member>
@@ -2872,682 +3064,6 @@ Manual searching is enabled in the following cases: 1) a control functions in re
 </para>
             </summary>
             <returns> </returns>
-
-
-        </member>
-        <member name="T:DevExpress.XtraGrid.Views.Grid.NewItemRowPosition">
-
-            <summary>
-                <para>Specifies the position of the new item row within the View.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom">
-            <summary>
-                <para><para>The new item row is positioned at the bottom of the View.</para>
-
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.None">
-            <summary>
-                <para><para>The new item row is not shown.</para>
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top">
-            <summary>
-                <para><para>The new item row is positioned at the top of the View.</para>
-
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraGrid.Views.Card.CardView">
-
-            <summary>
-                <para>Presents data records as cards, arranged down and then across. Card fields are always arranged in a single column.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.#ctor">
-            <summary>
-                <para>Creates a new <see cref="T:DevExpress.XtraGrid.Views.Card.CardView"/> object with default settings. 
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.#ctor(DevExpress.XtraGrid.GridControl)">
-            <summary>
-                <para>Creates a new <see cref="T:DevExpress.XtraGrid.Views.Card.CardView"/> object with the specified owner.
-</para>
-            </summary>
-            <param name="ownerGrid">
-		A <see cref="T:DevExpress.XtraGrid.GridControl"/> object representing a grid control that will own the created View. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Views.Base.BaseView.GridControl"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.Appearance">
-            <summary>
-                <para>Provides access to the properties that control the appearance of the Card View's elements.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraGrid.Views.Card.CardViewAppearances"/> object providing the appearance settings for the View's elements.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.AppearancePrint">
-            <summary>
-                <para>Provides access to the properties that specify the appearances of View elements when they are printed/exported.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraGrid.Views.Card.CardViewPrintAppearances"/> object that provides appearance settings for View elements when they are printed/exported.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.Assign(DevExpress.XtraGrid.Views.Base.BaseView,System.Boolean)">
-            <summary>
-                <para>Copies property values and, optionally, event handlers from the View specified as a parameter.
-</para>
-            </summary>
-            <param name="v">
-		A <see cref="T:DevExpress.XtraGrid.Views.Base.BaseView"/> descendant representing the View whose settings should be copied to the current View.
-
-            </param>
-            <param name="copyEvents">
-		<b>true</b> to copy event handlers; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CalcFieldHeight">
-            <summary>
-                <para>Allows you provide custom height for individual card fields.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.CalcHitInfo(System.Drawing.Point)">
-            <summary>
-                <para>Returns information about View elements located at a specified point.
-</para>
-            </summary>
-            <param name="pt">
-		A <see cref="T:System.Drawing.Point"/> structure specifying the test point coordinates relative to the grid control's top-left corner.
-
-            </param>
-            <returns>A <see cref="T:DevExpress.XtraGrid.Views.Card.ViewInfo.CardHitInfo"/> object that contains information about View elements located at the test point.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.CalcHitInfo(System.Int32,System.Int32)">
-            <summary>
-                <para>Returns information about the View elements located at the specified point.
-
-</para>
-            </summary>
-            <param name="x">
-		An integer representing the X coordinate of the test point relative to the top-left corner of the grid control.
-
-            </param>
-            <param name="y">
-		An integer representing the Y coordinate of the test point relative to the top-left corner of the grid control.
-
-            </param>
-            <returns>A <see cref="T:DevExpress.XtraGrid.Views.Card.ViewInfo.CardHitInfo"/> object that contains information on the View elements located at the test point.
-
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.CanResizeCards">
-            <summary>
-                <para>Indicates whether it is possible to resize cards.
-</para>
-            </summary>
-            <value><b>true</b> if a user can resize cards; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.CardCaptionFormat">
-            <summary>
-                <para>Gets or sets the card caption text pattern.
-</para>
-            </summary>
-            <value>A string value specifying the card caption text pattern.
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CardCollapsed">
-            <summary>
-                <para>Fires immediately after a card has been collapsed.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CardCollapsing">
-            <summary>
-                <para>Provides the ability to prevent particular cards from being collapsed.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CardExpanded">
-            <summary>
-                <para>Fires immediately after a card has been expanded.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CardExpanding">
-            <summary>
-                <para>Provides the ability to prevent particular cards from being expanded.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.CardInterval">
-            <summary>
-                <para>Gets or sets the distance between neighboring cards.
-
-</para>
-            </summary>
-            <value>An integer value representing the distance between cards in pixels.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.CardScrollButtonBorderStyle">
-            <summary>
-                <para>Gets or sets the scroll buttons' paint style. 
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraEditors.Controls.BorderStyles"/> enumeration value specifying the scroll buttons' paint style. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.CardWidth">
-            <summary>
-                <para>Gets or sets card width.
-</para>
-            </summary>
-            <value>An integer value specifying card width in pixels.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.CollapseAll">
-            <summary>
-                <para>Collapses all the cards within the View.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.CollapseCard(System.Int32)">
-            <summary>
-                <para>Collapses the specified card.
-</para>
-            </summary>
-            <param name="rowHandle">
-		An integer value that identifies the card by its handle.
-
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.CreateExportLink(DevExpress.XtraExport.IExportProvider)">
-            <summary>
-                <para>Returns an object that enables you to export a View's data in a number of different formats.
-
-</para>
-            </summary>
-            <param name="provider">
-		An object implementing the <b>DevExpress.XtraExport.IExportProvider</b> interface that exports data to a particular format.
-
-            </param>
-            <returns>A <b>BaseExportLink</b> descendant (a <b>CardViewExportLink</b> object) providing exporting facilities.
-</returns>
-
-
-        </member>
-        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CustomCardCaptionImage">
-            <summary>
-                <para>Enables custom images to be shown in card captions.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CustomDrawCardCaption">
-            <summary>
-                <para>Enables card captions to be custom painted.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CustomDrawCardField">
-            <summary>
-                <para>Enables you to custom paint card fields.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CustomDrawCardFieldCaption">
-            <summary>
-                <para>Enables you to custom paint card field captions.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CustomDrawCardFieldValue">
-            <summary>
-                <para>Enables you to custom paint card field value cells.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.ExpandAll">
-            <summary>
-                <para>Expands all the cards within the View.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.ExpandCard(System.Int32)">
-            <summary>
-                <para>Expands the specified card.
-</para>
-            </summary>
-            <param name="rowHandle">
-		An integer value that identifies the card by its handle.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.FocusedCardTopFieldIndex">
-            <summary>
-                <para>Gets or sets the index of the top visible field within the focused card.
-</para>
-            </summary>
-            <value>An integer value specifying the zero-based index of the focused card's top visible field.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.GetCardCaption(System.Int32)">
-            <summary>
-                <para>Gets the specified card's caption text.
-</para>
-            </summary>
-            <param name="rowHandle">
-		An integer value specifying the card by its row handle.
-
-            </param>
-            <returns>A string value representing the specified card's caption text.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.GetCardCollapsed(System.Int32)">
-            <summary>
-                <para>Gets whether the specified card is collapsed.
-</para>
-            </summary>
-            <param name="rowHandle">
-		An integer value specifying the card's handle.
-
-            </param>
-            <returns><b>true</b> if the card is collapsed; <b>false</b> if the card is expanded.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.GetVisibleIndex(System.Int32)">
-            <summary>
-                <para>Gets the specified card's visible index.
-</para>
-            </summary>
-            <param name="rowHandle">
-		An integer value specifying the handle of the card to inspect.
-
-            </param>
-            <returns>An integer value representing the card's visible index. <see cref="F:DevExpress.XtraGrid.GridControl.InvalidRowHandle"/> if there isn't any card with the specified handle.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.GetVisibleRowHandle(System.Int32)">
-            <summary>
-                <para>Returns the handle of the card displayed at the specified position.
-</para>
-            </summary>
-            <param name="rowVisibleIndex">
-		An integer value representing the card's visible index.
-
-            </param>
-            <returns>An integer value representing the card's handle. <see cref="F:DevExpress.XtraGrid.GridControl.NewItemRowHandle"/> if no card is found or the specified index corresponds to a newly added card which is currently being edited.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.HideEditor">
-            <summary>
-                <para>Hides the currently active editor discarding changes made.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.InvalidateCard(System.Int32)">
-            <summary>
-                <para>Invalidates the specified card. 
-</para>
-            </summary>
-            <param name="rowHandle">
-		An integer value specifying the card by its row handle.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.InvalidateCardField(System.Int32,DevExpress.XtraGrid.Columns.GridColumn)">
-            <summary>
-                <para>Invalidates the specified card field.
-</para>
-            </summary>
-            <param name="rowHandle">
-		An integer value specifying the card by its row handle.
-
-            </param>
-            <param name="column">
-		A <see cref="T:DevExpress.XtraGrid.Columns.GridColumn"/> object specifying the column that corresponds to the card field.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.InvalidateHitObject(DevExpress.XtraGrid.Views.Base.ViewInfo.BaseHitInfo)">
-            <summary>
-                <para>Invalidates the View element located at the point specified by the hit information object.
-</para>
-            </summary>
-            <param name="hit">
-		A <see cref="T:DevExpress.XtraGrid.Views.Base.ViewInfo.BaseHitInfo"/> descendant (a <see cref="T:DevExpress.XtraGrid.Views.Card.ViewInfo.CardHitInfo"/> object) containing hit information.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.IsCardVisible(System.Int32)">
-            <summary>
-                <para>Indicates whether a card is visible, partially visible or hidden.
-</para>
-            </summary>
-            <param name="rowHandle">
-		The row handle of a card.
-
-            </param>
-            <returns>The <see cref="T:DevExpress.XtraGrid.Views.Card.CardVisibleState"/> enumerator value that specifies the visibility state of a card.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.IsDefaultState">
-            <summary>
-                <para>Gets a value indicating whether the View is in its normal state.
-</para>
-            </summary>
-            <value><b>true</b> if no specific operation is performed within the Card View; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.IsEditing">
-            <summary>
-                <para>Gets a value indicating whether a cell editor is presently active.
-</para>
-            </summary>
-            <value><b>true</b> if the View is in edit mode; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.IsSizingState">
-            <summary>
-                <para>Gets a value indicating whether the end-user is presently resizing cards.
-</para>
-            </summary>
-            <value><b>true</b> if the end-user is dragging a card separator; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.IsVisible">
-            <summary>
-                <para>Gets a value indicating whether the View is visible on screen.
-</para>
-            </summary>
-            <value><b>true</b> if the View is visible on screen; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.LayoutChanged">
-            <summary>
-                <para>Updates the View.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.MaximumCardColumns">
-            <summary>
-                <para>Gets or sets the maximum number of card columns which can be displayed simultaneously within a View.
-</para>
-            </summary>
-            <value>The maximum number of card columns displayed simultaneously within a View.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.MaximumCardRows">
-            <summary>
-                <para>Gets or sets the maximum number of card rows.
-</para>
-            </summary>
-            <value>The maximum number of card rows.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.OptionsBehavior">
-            <summary>
-                <para>Provides access to the View's behavior options.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraGrid.Views.Card.CardOptionsBehavior"/> object containing the View's behavior options.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.OptionsPrint">
-            <summary>
-                <para>Provides options that control how the View is printed/exported.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraGrid.Views.Card.CardOptionsPrint"/> object containing the View's print and export options.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.OptionsView">
-            <summary>
-                <para>Provides access to the View's appearance options.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraGrid.Views.Card.CardOptionsView"/> object containing the View's appearance options.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.PaintAppearance">
-            <summary>
-                <para>Provides access to the appearance settings currently used to paint the Card View's elements.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraGrid.Views.Card.CardViewAppearances"/> object which provides the appearance settings currently used to paint the Card View's elements.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.PrintMaximumCardColumns">
-            <summary>
-                <para>Gets or sets a value defining the maximum number of card columns for printing/exporting.
-</para>
-            </summary>
-            <value>The maximum number of printed/exported card columns.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.RowCount">
-            <summary>
-                <para>Gets the number of visible cards within a Card View.
-</para>
-            </summary>
-            <value>An integer value representing the number of visible cards within a View.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.SetCardCollapsed(System.Int32,System.Boolean)">
-            <summary>
-                <para>Collapses or expands the specified card.
-</para>
-            </summary>
-            <param name="rowHandle">
-		An integer value representing the card's handle.
-
-            </param>
-            <param name="collapsed">
-		<b>true</b> to collapse the specified card; <b>false</b> to expand the specified card.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.ShowEditor">
-            <summary>
-                <para>Invokes the focused cell's editor.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.ShowFilterPopup(DevExpress.XtraGrid.Columns.GridColumn)">
-            <summary>
-                <para>Displays a Filter DropDown for the specified column.
-</para>
-            </summary>
-            <param name="column">
-		A <see cref="T:DevExpress.XtraGrid.Columns.GridColumn"/> column for which the filter popup must be invoked.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.State">
-            <summary>
-                <para>Obtains the View's current state.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraGrid.Views.Card.CardState"/> enumeration member indicating the View's current state.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.SynchronizeVisual(DevExpress.XtraGrid.Views.Base.BaseView)">
-            <summary>
-                <para>Synchronizes a View's appearance settings with the specified View.
-</para>
-            </summary>
-            <param name="viewSource">
-		A <see cref="T:DevExpress.XtraGrid.Views.Base.BaseView"/> descendant representing the View whose appearance settings should be copied to the current View.
-
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.TopLeftCardChanged">
-            <summary>
-                <para>Occurs when a Card View is being scrolled.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.TopLeftCardIndex">
-            <summary>
-                <para>Gets or sets which card is displayed within the View's top-left corner.
-</para>
-            </summary>
-            <value>An integer value representing the visible index of the card located at the top-left corner.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.VertScrollVisibility">
-            <summary>
-                <para>Gets or sets a value specifying the Card Up And Down Buttons availability.
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraGrid.Views.Base.ScrollVisibility"/> enumeration value specifying the card's scroll buttons availability.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.ViewRect">
-            <summary>
-                <para>Gets the bounding rectangle of the View's visible area.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.Rectangle"/> structure representing the View's bounding rectangle. Coordinates are specified relative to the grid control's top-left corner.
-
-</value>
 
 
         </member>
@@ -6321,230 +5837,6 @@ If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to
 
 
         </member>
-        <member name="T:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter">
-
-            <summary>
-                <para>Provides filtering options for Views.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.#ctor">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter"/> class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.AllowColumnMRUFilterList">
-            <summary>
-                <para>Gets or sets whether the MRU feature is enabled in column filter dropdowns.
-
-</para>
-            </summary>
-            <value><b>true</b> if the columns' filter dropdown lists can display most recently used filter items; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.AllowFilterEditor">
-            <summary>
-                <para>Gets or sets whether the Filter Editor can be used to build complex filter criteria.
-</para>
-            </summary>
-            <value><b>true</b> to allow using the <b>Filter Editor</b>; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.AllowFilterIncrementalSearch">
-            <summary>
-                <para>Gets or sets whether incremental searching is supported in columns' Regular and Checked Filter Dropdown Lists.
-</para>
-            </summary>
-            <value><b>true</b> if incremental searching is supported in columns' Regular and Checked Filter Dropdown Lists; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.AllowMRUFilterList">
-            <summary>
-                <para>Gets or sets whether the View's MRU Filter List is enabled.
-</para>
-            </summary>
-            <value><b>true</b> if the MRU Filter List is enabled; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.AllowMultiSelectInCheckedFilterPopup">
-            <summary>
-                <para>Gets or sets whether multiple items can be simultaneously selected (highlighted) in a Checked Filter Dropdown List.
-</para>
-            </summary>
-            <value><b>true</b> if multiple items can be simultaneously selected (highlighted) in a Checked Filter Dropdown List; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.Assign(DevExpress.Utils.Controls.BaseOptions)">
-            <summary>
-                <para>Copies all the settings of the options object passed as this method's parameter to the current object.
-</para>
-            </summary>
-            <param name="options">
-		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> descendant whose settings are assigned to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.ColumnFilterPopupMaxRecordsCount">
-            <summary>
-                <para>Gets or sets the maximum number of records that are scanned to populate column filter dropdowns with unique filter values.
-</para>
-            </summary>
-            <value>An integer value specifying the maximum number of records whose field values can be displayed within filter dropdowns.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.ColumnFilterPopupMode">
-            <summary>
-                <para>Gets or sets the default display mode of filter dropdowns for columns in the current View.
-
-
-
-
-</para>
-            </summary>
-            <value>A value that specifies the default display mode of filter dropdowns for columns in the current View. 
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.ColumnFilterPopupRowCount">
-            <summary>
-                <para>Gets or sets the maximum number of items that regular filter dropdowns in columns, can display simultaneously.
-
-
-
-</para>
-            </summary>
-            <value>An integer value specifying the maximum height of regular filter dropdowns. The height is specified in rows. 
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.DefaultFilterEditorView">
-            <summary>
-                <para>Gets or sets how an end-user can edit criteria in the Filter Editor.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraEditors.FilterEditorViewMode"/> value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.FilterEditorAggregateEditing">
-            <summary>
-                <para>Gets or sets whether filters can be created against properties that are List objects.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraEditors.FilterControlAllowAggregateEditing"/> value that specifies if filters can be created against properties that are List objects.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.FilterEditorUseMenuForOperandsAndOperators">
-            <summary>
-                <para>Gets or sets whether a menu or combobox editor is used to select operands and operators in a Filter Editor. This property is not supported when filters are edited in a text form (see <see cref="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.DefaultFilterEditorView"/>).
-</para>
-            </summary>
-            <value><b>true</b> if a menu is used to select operands and operators in a Filter Editor; <b>false</b> if a combobox editor is used.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.MaxCheckedListItemCount">
-            <summary>
-                <para>Gets or sets the maximum number of items in a column's filter dropdown when the items are displayed as a check list.
-</para>
-            </summary>
-            <value>An integer value that specifies the maximum number of items in a column's filter dropdown in <b>CheckedList</b> display mode.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.MRUColumnFilterListCount">
-            <summary>
-                <para>Gets or sets the capacity of the MRU item lists in column filter dropdowns.
-</para>
-            </summary>
-            <value>An integer specifying the capacity of the lists that store the recently used filter items for the View's columns.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.MRUFilterListCount">
-            <summary>
-                <para>Gets or sets the capacity of the View's MRU Filter List.
-
-</para>
-            </summary>
-            <value>An integer that specifies the maximum number of filter conditions that have recently been applied to the View.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.MRUFilterListPopupCount">
-            <summary>
-                <para>Gets or sets the maximum number of items the View's MRU Filter List can display at once, in effect its height.
-
-</para>
-            </summary>
-            <value>An integer value that determines the maximum number of items that the View's MRU Filter List can display at once.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.ShowAllTableValuesInCheckedFilterPopup">
-            <summary>
-                <para>Gets or sets whether checked filter dropdown lists must display unique values from all the records in the View's data source or only from those records that meet the current filter criteria. This option is in effect for checked filter dropdown lists. 
-
-</para>
-            </summary>
-            <value><b>true</b> if checked filter dropdowns should contain unique values from all the records in the View's data source; <b>false</b> if the checked filter dropdowns of unfiltered columns should contain unique values from only the records that meet the current filter criteria.  
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.ShowAllTableValuesInFilterPopup">
-            <summary>
-                <para>Gets or sets whether filter dropdown lists must display unique values from all the records in the View's data source or only from those records that meet the current filter criteria. This option is in effect for regular and Excel-style Filter Dropdowns.
-</para>
-            </summary>
-            <value><b>true</b> if filter dropdowns should contain unique values from all the records in the View's data source; <b>false</b> if the filter dropdowns of unfiltered columns should contain unique values only from the records that meet the current filter criteria.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.UseNewCustomFilterDialog">
-            <summary>
-                <para>Gets or sets whether the advanced custom filter dialog is used instead of the standard one.
-</para>
-            </summary>
-            <value><b>true</b> to use the advanced custom filter dialog; <b>false</b> to use the standard filter dialog.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraGrid.Views.Base.RowPreviewCustomDrawEventArgs">
 
             <summary>
@@ -6579,202 +5871,6 @@ If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to
 </para>
             </summary>
             <value>A <see cref="T:System.Drawing.Rectangle"/> structure which specifies the boundaries of the preview section.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior">
-
-            <summary>
-                <para>Serves as the base for classes which provide behavior options for Views.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.#ctor">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior"/> class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.#ctor(DevExpress.XtraGrid.Views.Base.ColumnView)">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior"/> class with the specified owning View.
-</para>
-            </summary>
-            <param name="view">
-		A <see cref="T:DevExpress.XtraGrid.Views.Base.ColumnView"/> object whose behavior options are initialized.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.AllowAddRows">
-            <summary>
-                <para>Gets or sets whether the Data Navigator's Append button is enabled for the current View.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value that specifies whether the Data Navigator's Append button is enabled for the current View.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.AllowDeleteRows">
-            <summary>
-                <para>Gets or sets whether the Data Navigator's Delete button is enabled for the current View.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value that specifies whether the Data Navigator's Delete button is enabled for the current View.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.Assign(DevExpress.Utils.Controls.BaseOptions)">
-            <summary>
-                <para>Copies all the settings of the options object passed as this method's parameter to the current object.
-</para>
-            </summary>
-            <param name="options">
-		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> descendant whose settings are assigned to the current object.
-
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.AutoPopulateColumns">
-            <summary>
-                <para>Gets or sets whether columns should be created automatically for all fields in the underlying data source when the View doesn't contain any columns. When bound to a business object, the grid does not generate columns for properties of collection types.
-</para>
-            </summary>
-            <value><b>true</b>, if the columns are created automatically when the View doesn't contain any columns; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.AutoSelectAllInEditor">
-            <summary>
-                <para>Gets or sets whether activating a cell editor using the ENTER or F2 keys leads to the entire editor's content being selected.
-</para>
-            </summary>
-            <value><b>true</b> to select the entire cell's content when editing starts; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.CacheValuesOnRowUpdating">
-            <summary>
-                <para>Gets or sets whether the grid caches data for a row that is about to be saved to a data source. 
-</para>
-            </summary>
-            <value>A DevExpress.Data.CacheRowValesMode value that specifies the caching mode.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.Editable">
-            <summary>
-                <para>Gets or sets whether end-users are allowed to invoke cell editors.
-</para>
-            </summary>
-            <value><b>true</b> if end-users are allowed to invoke cell editors; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.EditorShowMode">
-            <summary>
-                <para>Gets or sets a value which specifies how a cell editor is activated by the mouse.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.EditorShowMode"/> enumeration value which specifies how a cell editor is activated by the mouse.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.FocusLeaveOnTab">
-            <summary>
-                <para>Gets or sets whether pressing the TAB key moves focus to the next control in the tab order, if moving focus via the TAB key within the View is prohibited (or cannot be performed).
-
-</para>
-            </summary>
-            <value><b>true</b> to allow focus to be moved away from the grid control when the TAB key is pressed; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.ImmediateUpdateRowPosition">
-            <summary>
-                <para>Gets or sets whether a row's position is immediately updated according to the current sorting, grouping and filtering settings after the row's modified data has been posted.
-
-</para>
-            </summary>
-            <value><b>true</b>, if a row's position is immediately updated after its data has been modified; otherwise, <b>false</b>. 
-
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.KeepFocusedRowOnUpdate">
-            <summary>
-                <para>Gets or sets whether the currently focused row retains focus when data is sorted, grouped or filtered or when records are added to/removed from the underlying data source. Disabling this property is in effect when the data source is not managed by the CurrencyManager (see <see cref="P:DevExpress.XtraGrid.Views.Base.ColumnView.DisableCurrencyManager"/>).
-</para>
-            </summary>
-            <value><b>true</b> if the currently focused row retains focus when data is sorted, grouped or filtered or when records are added to/removed from the underlying data source; <b>false</b> if the focused row handle (visual position) is kept when these actions are performed.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.ReadOnly">
-            <summary>
-                <para>Gets or sets whether the current View is read-only.
-</para>
-            </summary>
-            <value><b>true</b> if the current View is read-only; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.ShowAllTableValuesInFilterPopup">
-            <summary>
-                <para>Gets or sets whether the filter dropdowns should contain unique values from all the records in the View's data source or only from those records that meet the current filter criteria.
-</para>
-            </summary>
-            <value><b>true</b> if filter dropdowns should contain unique values from all the records in the View's data source; <b>false</b> if the filter dropdowns of unfiltered columns should contain unique values only from the records that meet the current filter criteria.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.ShowEditorOnMouseUp">
-            <summary>
-                <para>Gets or sets whether a cell's editor is activated when the mouse button is released from a click within the cell.
-</para>
-            </summary>
-            <value><b>true</b> to activate a cell's editor when the mouse button is released from a click within the cell; <b>false</b> to activate a cell's editor when the mouse button is initially pressed within the cell.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.UnboundColumnExpressionEditorMode">
-            <summary>
-                <para>Gets or sets the type of unbound expression editor that end-users can utilize to modify expressions for unbound columns owned by this View.
-</para>
-            </summary>
-            <value>An <see cref="ExpressionEditorMode"/> enumeration value that specifies the type of unbound expression editor end-users can utilize for unbound columns within this View.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.UseNewCustomFilterDialog">
-            <summary>
-                <para>Gets or sets whether the advanced custom filter dialog is used instead of the standard one.
-</para>
-            </summary>
-            <value><b>true</b> to use the advanced custom filter dialog; <b>false</b> to use the standard filter dialog.
 </value>
 
 
@@ -7426,34 +6522,6 @@ The <b>RowCount</b> property is in effect when the <see cref="P:DevExpress.XtraG
 
 
         </member>
-        <member name="T:DevExpress.XtraGrid.Views.Layout.Events.LayoutViewCustomRowCellEditEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraGrid.Views.Layout.LayoutView.CustomRowCellEdit"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Layout.Events.LayoutViewCustomRowCellEditEventArgs.#ctor(System.Int32,DevExpress.XtraGrid.Columns.GridColumn,DevExpress.XtraEditors.Repository.RepositoryItem)">
-            <summary>
-                <para>Initializes a new instance of the LayoutViewCustomRowCellEditEventArgs class with the specified settings.
-</para>
-            </summary>
-            <param name="rowHandle">
-		An integer value that specifies the handle of the current card. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Views.Base.CustomRowCellEventArgs.RowHandle"/> property.
-
-            </param>
-            <param name="column">
-		A <see cref="T:DevExpress.XtraGrid.Columns.GridColumn"/> object that identifies the current card field. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Views.Base.CustomRowCellEventArgs.Column"/> property.
-
-            </param>
-            <param name="repositoryItem">
-		A <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItem"/> descendant that specifies the editor to be assigned to the current cell. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventArgs.RepositoryItem"/> property.
-
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.XtraGrid.Views.Layout.Events.LayoutViewCustomCardLayoutEventHandler">
 
             <summary>
@@ -8014,6 +7082,50 @@ The <b>RowCount</b> property is in effect when the <see cref="P:DevExpress.XtraG
 </para>
             </summary>
             <value><b>true</b> if the element's text is visible; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraGrid.Views.Base.DragObjectOverEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.XtraGrid.Views.Grid.GridView.DragObjectOver"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Base.DragObjectOverEventArgs.#ctor(System.Object,DevExpress.XtraGrid.Dragging.PositionInfo)">
+            <summary>
+                <para>Creates a new <see cref="T:DevExpress.XtraGrid.Views.Base.DragObjectOverEventArgs"/> object.
+</para>
+            </summary>
+            <param name="dragObject">
+		An object representing the band or column whose header is being dragged. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Views.Base.DragObjectOverEventArgs.DragObject"/> property.
+
+            </param>
+            <param name="dropInfo">
+		An object providing information on the header's current position. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Views.Base.DragObjectOverEventArgs.DropInfo"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.DragObjectOverEventArgs.DragObject">
+            <summary>
+                <para>Gets the column or band whose header is being dragged.
+</para>
+            </summary>
+            <value>An object representing the column or band whose header has been dropped.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.DragObjectOverEventArgs.DropInfo">
+            <summary>
+                <para>Gets an object containing information about the dragged header's current position.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraGrid.Dragging.PositionInfo"/> descendant.
 </value>
 
 
@@ -9579,168 +8691,6 @@ The <b>RowCount</b> property is in effect when the <see cref="P:DevExpress.XtraG
 </para>
             </summary>
             <value><b>true</b> if the One Card button is displayed within the Header Panel; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization">
-
-            <summary>
-                <para>Provides options that determine which operations are available for end-users in a Layout View.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.#ctor(DevExpress.XtraGrid.Views.Layout.LayoutView)">
-            <summary>
-                <para>Initializes a new instance of the LayoutViewOptionsCustomization class.
-</para>
-            </summary>
-            <param name="view">
-		A <see cref="T:DevExpress.XtraGrid.Views.Layout.LayoutView"/> object that will own the created object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.AllowFilter">
-            <summary>
-                <para>Gets or sets a value which specifies whether end-users can filter data in the View.
-</para>
-            </summary>
-            <value>A Boolean value that specifies whether the data can be filtered by end-users.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.AllowSort">
-            <summary>
-                <para>Gets or sets a value specifying whether end-users can sort data.
-</para>
-            </summary>
-            <value><b>true</b> if end-users can sort data; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.Assign(DevExpress.Utils.Controls.BaseOptions)">
-            <summary>
-                <para>Copies the properties of the specified object to the current object.
-</para>
-            </summary>
-            <param name="options">
-		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> descendant whose settings are assigned to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.ShowGroupCardCaptions">
-            <summary>
-                <para>Gets or sets whether the Captions group of edit controls is displayed within the Template Card tab in the Customization Form in advanced customization mode.
-</para>
-            </summary>
-            <value><b>true</b> if the corresponding group of edit controls is displayed in advanced customization mode; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.ShowGroupCardIndents">
-            <summary>
-                <para>Gets or sets whether the Indents group of edit controls is displayed within the Template Card tab in the Customization Form in advanced customization mode.
-</para>
-            </summary>
-            <value><b>true</b> if the corresponding group of edit controls is displayed in advanced customization mode; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.ShowGroupCards">
-            <summary>
-                <para>Gets or sets whether the Cards group of edit controls is displayed within the View Layout tab in the Customization Form in advanced customization mode.
-</para>
-            </summary>
-            <value><b>true</b> if the corresponding group of edit controls is displayed in advanced customization mode; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.ShowGroupFields">
-            <summary>
-                <para>Gets or sets whether the Fields group of edit controls is displayed within the View Layout tab in the Customization Form in advanced customization mode.
-</para>
-            </summary>
-            <value><b>true</b> if the corresponding group of edit controls is displayed in advanced customization mode; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.ShowGroupHiddenItems">
-            <summary>
-                <para>Gets or sets whether the Hidden Items list is displayed within the Template Card tab in the Customization Form in advanced customization mode.
-</para>
-            </summary>
-            <value><b>true</b> if the corresponding group of edit controls is displayed in advanced customization mode; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.ShowGroupLayout">
-            <summary>
-                <para>Gets or sets whether the Layout group of edit controls is displayed within the View Layout tab in the Customization Form in advanced customization mode.
-</para>
-            </summary>
-            <value><b>true</b> if the corresponding group of edit controls is displayed in advanced customization mode; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.ShowGroupLayoutTreeView">
-            <summary>
-                <para>Gets or sets whether the Layout Tree View is displayed within the Template Card tab in the Customization Form in advanced customization mode.
-</para>
-            </summary>
-            <value><b>true</b> if the corresponding group of edit controls is displayed in advanced customization mode; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.ShowGroupView">
-            <summary>
-                <para>Gets or sets whether the View group of edit controls is displayed within the View Layout tab in the Customization Form in advanced customization mode.
-</para>
-            </summary>
-            <value><b>true</b> if the corresponding group of edit controls is displayed in advanced customization mode; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.ShowResetShrinkButtons">
-            <summary>
-                <para>Gets or sets whether the Reset Template Card and Shrink Template Card buttons are displayed within the Template Card tab in the Customization Form in advanced customization mode.
-</para>
-            </summary>
-            <value><b>true</b> if these buttons are displayed in advanced customization mode; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.ShowSaveLoadLayoutButtons">
-            <summary>
-                <para>Gets or sets whether the Load Layout and Save Layout buttons are displayed within the View Layout tab in the Customization Form in advanced customization mode.
-</para>
-            </summary>
-            <value><b>true</b> if these buttons are displayed in advanced customization mode; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewOptionsCustomization.UseAdvancedRuntimeCustomization">
-            <summary>
-                <para>Gets or sets whether additional edit controls providing advanced customization capabilities can be displayed within the LayoutView's Customization Form.
-</para>
-            </summary>
-            <value><b>true</b> if advanced customization edit controls are enabled; otherwise, <b>false</b>.
 </value>
 
 
@@ -12551,6 +11501,41 @@ The <b>RowCount</b> property is in effect when the <see cref="P:DevExpress.XtraG
 
 
         </member>
+        <member name="T:DevExpress.XtraGrid.Views.Grid.EditFormBindingMode">
+
+            <summary>
+                <para>Defines the set of values used to specify the binding mode.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraGrid.Views.Grid.EditFormBindingMode.Cached">
+            <summary>
+                <para>Edited field values in an <b>Edit Form</b> are collected in a proxy and passed back to the grid simultaneously when an end-user saves changes.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraGrid.Views.Grid.EditFormBindingMode.Default">
+            <summary>
+                <para>Defines the same behavior as the <see cref="F:DevExpress.XtraGrid.Views.Grid.EditFormBindingMode.Direct"/> mode.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraGrid.Views.Grid.EditFormBindingMode.Direct">
+            <summary>
+                <para>An edited field value in an <b>Edit Form</b> is passed back to the grid at the moment an end-user moves focus to another field in an <b>Edit Form</b>.
+
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraGrid.Views.Grid.EditFormModifiedAction">
 
             <summary>
@@ -14804,38 +13789,31 @@ If the <see cref="P:DevExpress.XtraGrid.Views.Tile.TileViewItemOptions.Orientati
 
 
         </member>
-        <member name="T:DevExpress.XtraGrid.Views.Grid.EditFormBindingMode">
+        <member name="T:DevExpress.XtraGrid.Views.Layout.Events.LayoutViewCustomRowCellEditEventArgs">
 
             <summary>
-                <para>Defines the set of values used to specify the binding mode.
-
+                <para>Provides data for the <see cref="E:DevExpress.XtraGrid.Views.Layout.LayoutView.CustomRowCellEdit"/> event.
 </para>
             </summary>
 
         </member>
-        <member name="F:DevExpress.XtraGrid.Views.Grid.EditFormBindingMode.Cached">
+        <member name="M:DevExpress.XtraGrid.Views.Layout.Events.LayoutViewCustomRowCellEditEventArgs.#ctor(System.Int32,DevExpress.XtraGrid.Columns.GridColumn,DevExpress.XtraEditors.Repository.RepositoryItem)">
             <summary>
-                <para>Edited field values in an <b>Edit Form</b> are collected in a proxy and passed back to the grid simultaneously when an end-user saves changes.
-
+                <para>Initializes a new instance of the LayoutViewCustomRowCellEditEventArgs class with the specified settings.
 </para>
             </summary>
+            <param name="rowHandle">
+		An integer value that specifies the handle of the current card. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Views.Base.CustomRowCellEventArgs.RowHandle"/> property.
 
+            </param>
+            <param name="column">
+		A <see cref="T:DevExpress.XtraGrid.Columns.GridColumn"/> object that identifies the current card field. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Views.Base.CustomRowCellEventArgs.Column"/> property.
 
-        </member>
-        <member name="F:DevExpress.XtraGrid.Views.Grid.EditFormBindingMode.Default">
-            <summary>
-                <para>Defines the same behavior as the <see cref="F:DevExpress.XtraGrid.Views.Grid.EditFormBindingMode.Direct"/> mode.
-</para>
-            </summary>
+            </param>
+            <param name="repositoryItem">
+		A <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItem"/> descendant that specifies the editor to be assigned to the current cell. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventArgs.RepositoryItem"/> property.
 
-
-        </member>
-        <member name="F:DevExpress.XtraGrid.Views.Grid.EditFormBindingMode.Direct">
-            <summary>
-                <para>An edited field value in an <b>Edit Form</b> is passed back to the grid at the moment an end-user moves focus to another field in an <b>Edit Form</b>.
-
-</para>
-            </summary>
+            </param>
 
 
         </member>
@@ -16040,36 +15018,6 @@ If the <see cref="P:DevExpress.XtraGrid.Views.Tile.TileViewItemOptions.Orientati
 
 
         </member>
-        <member name="T:DevExpress.XtraGrid.Views.BandedGrid.BandedViewPrintAppearances">
-
-            <summary>
-                <para>Provides the appearance settings used to paint the elements in a Banded Grid View when the grid control is printed/exported.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.BandedGrid.BandedViewPrintAppearances.#ctor(DevExpress.XtraGrid.Views.Base.BaseView)">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraGrid.Views.BandedGrid.BandedViewPrintAppearances"/> class with the specified owning View.
-</para>
-            </summary>
-            <param name="view">
-		A <see cref="T:DevExpress.XtraGrid.Views.Base.BaseView"/> descendant representing the View that will own the created collection.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.BandedGrid.BandedViewPrintAppearances.BandPanel">
-            <summary>
-                <para>Gets the appearance settings used to paint band headers when the grid control is printed.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraGrid.Views.BandedGrid.BandedViewPrintAppearances"/> object that provides the appearance settings used to paint band headers when the grid control is printed.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraGrid.Views.BandedGrid.BandedViewAppearances">
 
             <summary>
@@ -17026,6 +15974,42 @@ For example, from a list with month names the <i>[Name] Like 'J%y'</i> filter ex
 
 
         </member>
+        <member name="T:DevExpress.XtraGrid.Views.Grid.NewItemRowPosition">
+
+            <summary>
+                <para>Specifies the position of the new item row within the View.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom">
+            <summary>
+                <para><para>The new item row is positioned at the bottom of the View.</para>
+
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.None">
+            <summary>
+                <para><para>The new item row is not shown.</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top">
+            <summary>
+                <para><para>The new item row is positioned at the top of the View.</para>
+
+
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraGrid.Views.Grid.GroupDrawMode">
 
             <summary>
@@ -17768,6 +16752,426 @@ For instance, when the PaintStyleName property is set to "Default" and the "Offi
 </para>
             </summary>
             <value><b>true</b> to allow multiple row (card) selections; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter">
+
+            <summary>
+                <para>Provides filtering options for Views.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.#ctor">
+            <summary>
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter"/> class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.AllowColumnMRUFilterList">
+            <summary>
+                <para>Gets or sets whether the MRU feature is enabled in column filter dropdowns.
+
+</para>
+            </summary>
+            <value><b>true</b> if the columns' filter dropdown lists can display most recently used filter items; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.AllowFilterEditor">
+            <summary>
+                <para>Gets or sets whether the Filter Editor can be used to build complex filter criteria.
+</para>
+            </summary>
+            <value><b>true</b> to allow using the <b>Filter Editor</b>; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.AllowFilterIncrementalSearch">
+            <summary>
+                <para>Gets or sets whether incremental searching is supported in columns' Regular and Checked Filter Dropdown Lists.
+</para>
+            </summary>
+            <value><b>true</b> if incremental searching is supported in columns' Regular and Checked Filter Dropdown Lists; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.AllowMRUFilterList">
+            <summary>
+                <para>Gets or sets whether the View's MRU Filter List is enabled.
+</para>
+            </summary>
+            <value><b>true</b> if the MRU Filter List is enabled; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.AllowMultiSelectInCheckedFilterPopup">
+            <summary>
+                <para>Gets or sets whether multiple items can be simultaneously selected (highlighted) in a Checked Filter Dropdown List.
+</para>
+            </summary>
+            <value><b>true</b> if multiple items can be simultaneously selected (highlighted) in a Checked Filter Dropdown List; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.Assign(DevExpress.Utils.Controls.BaseOptions)">
+            <summary>
+                <para>Copies all the settings of the options object passed as this method's parameter to the current object.
+</para>
+            </summary>
+            <param name="options">
+		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> descendant whose settings are assigned to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.ColumnFilterPopupMaxRecordsCount">
+            <summary>
+                <para>Gets or sets the maximum number of records that are scanned to populate column filter dropdowns with unique filter values.
+</para>
+            </summary>
+            <value>An integer value specifying the maximum number of records whose field values can be displayed within filter dropdowns.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.ColumnFilterPopupMode">
+            <summary>
+                <para>Gets or sets the default display mode of filter dropdowns for columns in the current View.
+
+
+
+
+</para>
+            </summary>
+            <value>A value that specifies the default display mode of filter dropdowns for columns in the current View. 
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.ColumnFilterPopupRowCount">
+            <summary>
+                <para>Gets or sets the maximum number of items that regular filter dropdowns in columns, can display simultaneously.
+
+
+
+</para>
+            </summary>
+            <value>An integer value specifying the maximum height of regular filter dropdowns. The height is specified in rows. 
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.DefaultFilterEditorView">
+            <summary>
+                <para>Gets or sets how an end-user can edit criteria in the Filter Editor.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraEditors.FilterEditorViewMode"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.FilterEditorAggregateEditing">
+            <summary>
+                <para>Gets or sets whether filters can be created against properties that are List objects.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraEditors.FilterControlAllowAggregateEditing"/> value that specifies if filters can be created against properties that are List objects.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.FilterEditorUseMenuForOperandsAndOperators">
+            <summary>
+                <para>Gets or sets whether a menu or combobox editor is used to select operands and operators in a Filter Editor. This property is not supported when filters are edited in a text form (see <see cref="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.DefaultFilterEditorView"/>).
+</para>
+            </summary>
+            <value><b>true</b> if a menu is used to select operands and operators in a Filter Editor; <b>false</b> if a combobox editor is used.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.MaxCheckedListItemCount">
+            <summary>
+                <para>Gets or sets the maximum number of items in a column's filter dropdown when the items are displayed as a check list.
+</para>
+            </summary>
+            <value>An integer value that specifies the maximum number of items in a column's filter dropdown in <b>CheckedList</b> display mode.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.MRUColumnFilterListCount">
+            <summary>
+                <para>Gets or sets the capacity of the MRU item lists in column filter dropdowns.
+</para>
+            </summary>
+            <value>An integer specifying the capacity of the lists that store the recently used filter items for the View's columns.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.MRUFilterListCount">
+            <summary>
+                <para>Gets or sets the capacity of the View's MRU Filter List.
+
+</para>
+            </summary>
+            <value>An integer that specifies the maximum number of filter conditions that have recently been applied to the View.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.MRUFilterListPopupCount">
+            <summary>
+                <para>Gets or sets the maximum number of items the View's MRU Filter List can display at once, in effect its height.
+
+</para>
+            </summary>
+            <value>An integer value that determines the maximum number of items that the View's MRU Filter List can display at once.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.ShowAllTableValuesInCheckedFilterPopup">
+            <summary>
+                <para>Gets or sets whether checked filter dropdown lists must display unique values from all the records in the View's data source or only from those records that meet the current filter criteria. This option is in effect for checked filter dropdown lists. 
+
+</para>
+            </summary>
+            <value><b>true</b> if checked filter dropdowns should contain unique values from all the records in the View's data source; <b>false</b> if the checked filter dropdowns of unfiltered columns should contain unique values from only the records that meet the current filter criteria.  
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.ShowAllTableValuesInFilterPopup">
+            <summary>
+                <para>Gets or sets whether filter dropdown lists must display unique values from all the records in the View's data source or only from those records that meet the current filter criteria. This option is in effect for regular and Excel-style Filter Dropdowns.
+</para>
+            </summary>
+            <value><b>true</b> if filter dropdowns should contain unique values from all the records in the View's data source; <b>false</b> if the filter dropdowns of unfiltered columns should contain unique values only from the records that meet the current filter criteria.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.UseNewCustomFilterDialog">
+            <summary>
+                <para>Gets or sets whether the advanced custom filter dialog is used instead of the standard one.
+</para>
+            </summary>
+            <value><b>true</b> to use the advanced custom filter dialog; <b>false</b> to use the standard filter dialog.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior">
+
+            <summary>
+                <para>Serves as the base for classes which provide behavior options for Views.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.#ctor">
+            <summary>
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior"/> class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.#ctor(DevExpress.XtraGrid.Views.Base.ColumnView)">
+            <summary>
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior"/> class with the specified owning View.
+</para>
+            </summary>
+            <param name="view">
+		A <see cref="T:DevExpress.XtraGrid.Views.Base.ColumnView"/> object whose behavior options are initialized.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.AllowAddRows">
+            <summary>
+                <para>Gets or sets whether the Data Navigator's Append button is enabled for the current View.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value that specifies whether the Data Navigator's Append button is enabled for the current View.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.AllowDeleteRows">
+            <summary>
+                <para>Gets or sets whether the Data Navigator's Delete button is enabled for the current View.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value that specifies whether the Data Navigator's Delete button is enabled for the current View.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.Assign(DevExpress.Utils.Controls.BaseOptions)">
+            <summary>
+                <para>Copies all the settings of the options object passed as this method's parameter to the current object.
+</para>
+            </summary>
+            <param name="options">
+		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> descendant whose settings are assigned to the current object.
+
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.AutoPopulateColumns">
+            <summary>
+                <para>Gets or sets whether columns should be created automatically for all fields in the underlying data source when the View doesn't contain any columns. When bound to a business object, the grid does not generate columns for properties of collection types.
+</para>
+            </summary>
+            <value><b>true</b>, if the columns are created automatically when the View doesn't contain any columns; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.AutoSelectAllInEditor">
+            <summary>
+                <para>Gets or sets whether activating a cell editor using the ENTER or F2 keys leads to the entire editor's content being selected.
+</para>
+            </summary>
+            <value><b>true</b> to select the entire cell's content when editing starts; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.CacheValuesOnRowUpdating">
+            <summary>
+                <para>Gets or sets whether the grid caches data for a row that is about to be saved to a data source. 
+</para>
+            </summary>
+            <value>A DevExpress.Data.CacheRowValesMode value that specifies the caching mode.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.Editable">
+            <summary>
+                <para>Gets or sets whether end-users are allowed to invoke cell editors.
+</para>
+            </summary>
+            <value><b>true</b> if end-users are allowed to invoke cell editors; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.EditorShowMode">
+            <summary>
+                <para>Gets or sets a value which specifies how a cell editor is activated by the mouse.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.EditorShowMode"/> enumeration value which specifies how a cell editor is activated by the mouse.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.FocusLeaveOnTab">
+            <summary>
+                <para>Gets or sets whether pressing the TAB key moves focus to the next control in the tab order, if moving focus via the TAB key within the View is prohibited (or cannot be performed).
+
+</para>
+            </summary>
+            <value><b>true</b> to allow focus to be moved away from the grid control when the TAB key is pressed; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.ImmediateUpdateRowPosition">
+            <summary>
+                <para>Gets or sets whether a row's position is immediately updated according to the current sorting, grouping and filtering settings after the row's modified data has been posted.
+
+</para>
+            </summary>
+            <value><b>true</b>, if a row's position is immediately updated after its data has been modified; otherwise, <b>false</b>. 
+
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.KeepFocusedRowOnUpdate">
+            <summary>
+                <para>Gets or sets whether the currently focused row retains focus when data is sorted, grouped or filtered or when records are added to/removed from the underlying data source. Disabling this property is in effect when the data source is not managed by the CurrencyManager (see <see cref="P:DevExpress.XtraGrid.Views.Base.ColumnView.DisableCurrencyManager"/>).
+</para>
+            </summary>
+            <value><b>true</b> if the currently focused row retains focus when data is sorted, grouped or filtered or when records are added to/removed from the underlying data source; <b>false</b> if the focused row handle (visual position) is kept when these actions are performed.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.ReadOnly">
+            <summary>
+                <para>Gets or sets whether the current View is read-only.
+</para>
+            </summary>
+            <value><b>true</b> if the current View is read-only; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.ShowAllTableValuesInFilterPopup">
+            <summary>
+                <para>Gets or sets whether the filter dropdowns should contain unique values from all the records in the View's data source or only from those records that meet the current filter criteria.
+</para>
+            </summary>
+            <value><b>true</b> if filter dropdowns should contain unique values from all the records in the View's data source; <b>false</b> if the filter dropdowns of unfiltered columns should contain unique values only from the records that meet the current filter criteria.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.ShowEditorOnMouseUp">
+            <summary>
+                <para>Gets or sets whether a cell's editor is activated when the mouse button is released from a click within the cell.
+</para>
+            </summary>
+            <value><b>true</b> to activate a cell's editor when the mouse button is released from a click within the cell; <b>false</b> to activate a cell's editor when the mouse button is initially pressed within the cell.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.UnboundColumnExpressionEditorMode">
+            <summary>
+                <para>Gets or sets the type of unbound expression editor that end-users can utilize to modify expressions for unbound columns owned by this View.
+</para>
+            </summary>
+            <value>An <see cref="ExpressionEditorMode"/> enumeration value that specifies the type of unbound expression editor end-users can utilize for unbound columns within this View.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.UseNewCustomFilterDialog">
+            <summary>
+                <para>Gets or sets whether the advanced custom filter dialog is used instead of the standard one.
+</para>
+            </summary>
+            <value><b>true</b> to use the advanced custom filter dialog; <b>false</b> to use the standard filter dialog.
 </value>
 
 
@@ -20538,50 +19942,6 @@ It specifies whether selecting a date or date range via the embedded calendar fi
 		A <see cref="T:DevExpress.XtraGrid.Views.Base.DragObjectOverEventArgs"/> object that contains event data.
 
             </param>
-
-
-        </member>
-        <member name="T:DevExpress.XtraGrid.Views.Base.DragObjectOverEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraGrid.Views.Grid.GridView.DragObjectOver"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Base.DragObjectOverEventArgs.#ctor(System.Object,DevExpress.XtraGrid.Dragging.PositionInfo)">
-            <summary>
-                <para>Creates a new <see cref="T:DevExpress.XtraGrid.Views.Base.DragObjectOverEventArgs"/> object.
-</para>
-            </summary>
-            <param name="dragObject">
-		An object representing the band or column whose header is being dragged. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Views.Base.DragObjectOverEventArgs.DragObject"/> property.
-
-            </param>
-            <param name="dropInfo">
-		An object providing information on the header's current position. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Views.Base.DragObjectOverEventArgs.DropInfo"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.DragObjectOverEventArgs.DragObject">
-            <summary>
-                <para>Gets the column or band whose header is being dragged.
-</para>
-            </summary>
-            <value>An object representing the column or band whose header has been dropped.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.DragObjectOverEventArgs.DropInfo">
-            <summary>
-                <para>Gets an object containing information about the dragged header's current position.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraGrid.Dragging.PositionInfo"/> descendant.
-</value>
 
 
         </member>
@@ -33750,6 +33110,646 @@ to the specified file in XLSX (MS Excel 2007) format.
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraGrid.GridControlViewCollection"/> object containing Views that are currently displayed by the grid control.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraGrid.Views.Card.CardView">
+
+            <summary>
+                <para>Presents data records as cards, arranged down and then across. Card fields are always arranged in a single column.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.#ctor">
+            <summary>
+                <para>Creates a new <see cref="T:DevExpress.XtraGrid.Views.Card.CardView"/> object with default settings. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.#ctor(DevExpress.XtraGrid.GridControl)">
+            <summary>
+                <para>Creates a new <see cref="T:DevExpress.XtraGrid.Views.Card.CardView"/> object with the specified owner.
+</para>
+            </summary>
+            <param name="ownerGrid">
+		A <see cref="T:DevExpress.XtraGrid.GridControl"/> object representing a grid control that will own the created View. This value is assigned to the <see cref="P:DevExpress.XtraGrid.Views.Base.BaseView.GridControl"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.Appearance">
+            <summary>
+                <para>Provides access to the properties that control the appearance of the Card View's elements.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraGrid.Views.Card.CardViewAppearances"/> object providing the appearance settings for the View's elements.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.AppearancePrint">
+            <summary>
+                <para>Provides access to the properties that specify the appearances of View elements when they are printed/exported.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraGrid.Views.Card.CardViewPrintAppearances"/> object that provides appearance settings for View elements when they are printed/exported.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.Assign(DevExpress.XtraGrid.Views.Base.BaseView,System.Boolean)">
+            <summary>
+                <para>Copies property values and, optionally, event handlers from the View specified as a parameter.
+</para>
+            </summary>
+            <param name="v">
+		A <see cref="T:DevExpress.XtraGrid.Views.Base.BaseView"/> descendant representing the View whose settings should be copied to the current View.
+
+            </param>
+            <param name="copyEvents">
+		<b>true</b> to copy event handlers; otherwise, <b>false</b>.
+
+            </param>
+
+
+        </member>
+        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CalcFieldHeight">
+            <summary>
+                <para>Allows you provide custom height for individual card fields.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.CalcHitInfo(System.Drawing.Point)">
+            <summary>
+                <para>Returns information about View elements located at a specified point.
+</para>
+            </summary>
+            <param name="pt">
+		A <see cref="T:System.Drawing.Point"/> structure specifying the test point coordinates relative to the grid control's top-left corner.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraGrid.Views.Card.ViewInfo.CardHitInfo"/> object that contains information about View elements located at the test point.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.CalcHitInfo(System.Int32,System.Int32)">
+            <summary>
+                <para>Returns information about the View elements located at the specified point.
+
+</para>
+            </summary>
+            <param name="x">
+		An integer representing the X coordinate of the test point relative to the top-left corner of the grid control.
+
+            </param>
+            <param name="y">
+		An integer representing the Y coordinate of the test point relative to the top-left corner of the grid control.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraGrid.Views.Card.ViewInfo.CardHitInfo"/> object that contains information on the View elements located at the test point.
+
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.CanResizeCards">
+            <summary>
+                <para>Indicates whether it is possible to resize cards.
+</para>
+            </summary>
+            <value><b>true</b> if a user can resize cards; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.CardCaptionFormat">
+            <summary>
+                <para>Gets or sets the card caption text pattern.
+</para>
+            </summary>
+            <value>A string value specifying the card caption text pattern.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CardCollapsed">
+            <summary>
+                <para>Fires immediately after a card has been collapsed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CardCollapsing">
+            <summary>
+                <para>Provides the ability to prevent particular cards from being collapsed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CardExpanded">
+            <summary>
+                <para>Fires immediately after a card has been expanded.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CardExpanding">
+            <summary>
+                <para>Provides the ability to prevent particular cards from being expanded.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.CardInterval">
+            <summary>
+                <para>Gets or sets the distance between neighboring cards.
+
+</para>
+            </summary>
+            <value>An integer value representing the distance between cards in pixels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.CardScrollButtonBorderStyle">
+            <summary>
+                <para>Gets or sets the scroll buttons' paint style. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraEditors.Controls.BorderStyles"/> enumeration value specifying the scroll buttons' paint style. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.CardWidth">
+            <summary>
+                <para>Gets or sets card width.
+</para>
+            </summary>
+            <value>An integer value specifying card width in pixels.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.CollapseAll">
+            <summary>
+                <para>Collapses all the cards within the View.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.CollapseCard(System.Int32)">
+            <summary>
+                <para>Collapses the specified card.
+</para>
+            </summary>
+            <param name="rowHandle">
+		An integer value that identifies the card by its handle.
+
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.CreateExportLink(DevExpress.XtraExport.IExportProvider)">
+            <summary>
+                <para>Returns an object that enables you to export a View's data in a number of different formats.
+
+</para>
+            </summary>
+            <param name="provider">
+		An object implementing the <b>DevExpress.XtraExport.IExportProvider</b> interface that exports data to a particular format.
+
+            </param>
+            <returns>A <b>BaseExportLink</b> descendant (a <b>CardViewExportLink</b> object) providing exporting facilities.
+</returns>
+
+
+        </member>
+        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CustomCardCaptionImage">
+            <summary>
+                <para>Enables custom images to be shown in card captions.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CustomDrawCardCaption">
+            <summary>
+                <para>Enables card captions to be custom painted.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CustomDrawCardField">
+            <summary>
+                <para>Enables you to custom paint card fields.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CustomDrawCardFieldCaption">
+            <summary>
+                <para>Enables you to custom paint card field captions.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.CustomDrawCardFieldValue">
+            <summary>
+                <para>Enables you to custom paint card field value cells.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.ExpandAll">
+            <summary>
+                <para>Expands all the cards within the View.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.ExpandCard(System.Int32)">
+            <summary>
+                <para>Expands the specified card.
+</para>
+            </summary>
+            <param name="rowHandle">
+		An integer value that identifies the card by its handle.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.FocusedCardTopFieldIndex">
+            <summary>
+                <para>Gets or sets the index of the top visible field within the focused card.
+</para>
+            </summary>
+            <value>An integer value specifying the zero-based index of the focused card's top visible field.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.GetCardCaption(System.Int32)">
+            <summary>
+                <para>Gets the specified card's caption text.
+</para>
+            </summary>
+            <param name="rowHandle">
+		An integer value specifying the card by its row handle.
+
+            </param>
+            <returns>A string value representing the specified card's caption text.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.GetCardCollapsed(System.Int32)">
+            <summary>
+                <para>Gets whether the specified card is collapsed.
+</para>
+            </summary>
+            <param name="rowHandle">
+		An integer value specifying the card's handle.
+
+            </param>
+            <returns><b>true</b> if the card is collapsed; <b>false</b> if the card is expanded.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.GetVisibleIndex(System.Int32)">
+            <summary>
+                <para>Gets the specified card's visible index.
+</para>
+            </summary>
+            <param name="rowHandle">
+		An integer value specifying the handle of the card to inspect.
+
+            </param>
+            <returns>An integer value representing the card's visible index. <see cref="F:DevExpress.XtraGrid.GridControl.InvalidRowHandle"/> if there isn't any card with the specified handle.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.GetVisibleRowHandle(System.Int32)">
+            <summary>
+                <para>Returns the handle of the card displayed at the specified position.
+</para>
+            </summary>
+            <param name="rowVisibleIndex">
+		An integer value representing the card's visible index.
+
+            </param>
+            <returns>An integer value representing the card's handle. <see cref="F:DevExpress.XtraGrid.GridControl.NewItemRowHandle"/> if no card is found or the specified index corresponds to a newly added card which is currently being edited.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.HideEditor">
+            <summary>
+                <para>Hides the currently active editor discarding changes made.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.InvalidateCard(System.Int32)">
+            <summary>
+                <para>Invalidates the specified card. 
+</para>
+            </summary>
+            <param name="rowHandle">
+		An integer value specifying the card by its row handle.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.InvalidateCardField(System.Int32,DevExpress.XtraGrid.Columns.GridColumn)">
+            <summary>
+                <para>Invalidates the specified card field.
+</para>
+            </summary>
+            <param name="rowHandle">
+		An integer value specifying the card by its row handle.
+
+            </param>
+            <param name="column">
+		A <see cref="T:DevExpress.XtraGrid.Columns.GridColumn"/> object specifying the column that corresponds to the card field.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.InvalidateHitObject(DevExpress.XtraGrid.Views.Base.ViewInfo.BaseHitInfo)">
+            <summary>
+                <para>Invalidates the View element located at the point specified by the hit information object.
+</para>
+            </summary>
+            <param name="hit">
+		A <see cref="T:DevExpress.XtraGrid.Views.Base.ViewInfo.BaseHitInfo"/> descendant (a <see cref="T:DevExpress.XtraGrid.Views.Card.ViewInfo.CardHitInfo"/> object) containing hit information.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.IsCardVisible(System.Int32)">
+            <summary>
+                <para>Indicates whether a card is visible, partially visible or hidden.
+</para>
+            </summary>
+            <param name="rowHandle">
+		The row handle of a card.
+
+            </param>
+            <returns>The <see cref="T:DevExpress.XtraGrid.Views.Card.CardVisibleState"/> enumerator value that specifies the visibility state of a card.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.IsDefaultState">
+            <summary>
+                <para>Gets a value indicating whether the View is in its normal state.
+</para>
+            </summary>
+            <value><b>true</b> if no specific operation is performed within the Card View; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.IsEditing">
+            <summary>
+                <para>Gets a value indicating whether a cell editor is presently active.
+</para>
+            </summary>
+            <value><b>true</b> if the View is in edit mode; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.IsSizingState">
+            <summary>
+                <para>Gets a value indicating whether the end-user is presently resizing cards.
+</para>
+            </summary>
+            <value><b>true</b> if the end-user is dragging a card separator; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.IsVisible">
+            <summary>
+                <para>Gets a value indicating whether the View is visible on screen.
+</para>
+            </summary>
+            <value><b>true</b> if the View is visible on screen; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.LayoutChanged">
+            <summary>
+                <para>Updates the View.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.MaximumCardColumns">
+            <summary>
+                <para>Gets or sets the maximum number of card columns which can be displayed simultaneously within a View.
+</para>
+            </summary>
+            <value>The maximum number of card columns displayed simultaneously within a View.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.MaximumCardRows">
+            <summary>
+                <para>Gets or sets the maximum number of card rows.
+</para>
+            </summary>
+            <value>The maximum number of card rows.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.OptionsBehavior">
+            <summary>
+                <para>Provides access to the View's behavior options.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraGrid.Views.Card.CardOptionsBehavior"/> object containing the View's behavior options.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.OptionsPrint">
+            <summary>
+                <para>Provides options that control how the View is printed/exported.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraGrid.Views.Card.CardOptionsPrint"/> object containing the View's print and export options.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.OptionsView">
+            <summary>
+                <para>Provides access to the View's appearance options.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraGrid.Views.Card.CardOptionsView"/> object containing the View's appearance options.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.PaintAppearance">
+            <summary>
+                <para>Provides access to the appearance settings currently used to paint the Card View's elements.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraGrid.Views.Card.CardViewAppearances"/> object which provides the appearance settings currently used to paint the Card View's elements.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.PrintMaximumCardColumns">
+            <summary>
+                <para>Gets or sets a value defining the maximum number of card columns for printing/exporting.
+</para>
+            </summary>
+            <value>The maximum number of printed/exported card columns.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.RowCount">
+            <summary>
+                <para>Gets the number of visible cards within a Card View.
+</para>
+            </summary>
+            <value>An integer value representing the number of visible cards within a View.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.SetCardCollapsed(System.Int32,System.Boolean)">
+            <summary>
+                <para>Collapses or expands the specified card.
+</para>
+            </summary>
+            <param name="rowHandle">
+		An integer value representing the card's handle.
+
+            </param>
+            <param name="collapsed">
+		<b>true</b> to collapse the specified card; <b>false</b> to expand the specified card.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.ShowEditor">
+            <summary>
+                <para>Invokes the focused cell's editor.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.ShowFilterPopup(DevExpress.XtraGrid.Columns.GridColumn)">
+            <summary>
+                <para>Displays a Filter DropDown for the specified column.
+</para>
+            </summary>
+            <param name="column">
+		A <see cref="T:DevExpress.XtraGrid.Columns.GridColumn"/> column for which the filter popup must be invoked.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.State">
+            <summary>
+                <para>Obtains the View's current state.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraGrid.Views.Card.CardState"/> enumeration member indicating the View's current state.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Card.CardView.SynchronizeVisual(DevExpress.XtraGrid.Views.Base.BaseView)">
+            <summary>
+                <para>Synchronizes a View's appearance settings with the specified View.
+</para>
+            </summary>
+            <param name="viewSource">
+		A <see cref="T:DevExpress.XtraGrid.Views.Base.BaseView"/> descendant representing the View whose appearance settings should be copied to the current View.
+
+
+            </param>
+
+
+        </member>
+        <member name="E:DevExpress.XtraGrid.Views.Card.CardView.TopLeftCardChanged">
+            <summary>
+                <para>Occurs when a Card View is being scrolled.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.TopLeftCardIndex">
+            <summary>
+                <para>Gets or sets which card is displayed within the View's top-left corner.
+</para>
+            </summary>
+            <value>An integer value representing the visible index of the card located at the top-left corner.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.VertScrollVisibility">
+            <summary>
+                <para>Gets or sets a value specifying the Card Up And Down Buttons availability.
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraGrid.Views.Base.ScrollVisibility"/> enumeration value specifying the card's scroll buttons availability.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Card.CardView.ViewRect">
+            <summary>
+                <para>Gets the bounding rectangle of the View's visible area.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Rectangle"/> structure representing the View's bounding rectangle. Coordinates are specified relative to the grid control's top-left corner.
+
 </value>
 
 

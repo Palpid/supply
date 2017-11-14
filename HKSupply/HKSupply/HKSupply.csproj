@@ -1318,6 +1318,15 @@
     <Content Include="Reports\Rpt\BOM.rpt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Reports\Rpt\Supply\HK_SupplyDNDocument.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Rpt\Supply\HK_SupplyDocument.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Rpt\Supply\HK_SupplyPLDocument.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\Fonts\brandon_bld-webfont.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -210,3 +210,6 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Release\HKSuply.UnitTest.csprojResol
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Release\HKSuply.UnitTest.csproj.CoreCompileInputs.cache
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Release\HKSuply.UnitTest.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Release\HKSuply.UnitTest.pdb
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\Reports\Rpt\Supply\HK_SupplyDNDocument.rpt
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\Reports\Rpt\Supply\HK_SupplyDocument.rpt
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\Reports\Rpt\Supply\HK_SupplyPLDocument.rpt

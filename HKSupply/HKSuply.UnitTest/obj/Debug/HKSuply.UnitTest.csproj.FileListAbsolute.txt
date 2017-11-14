@@ -12,6 +12,9 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\button_red.pn
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\Edit_16x16.png
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\etnia_icon.ico
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Images\etnia_logo.jpg
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Reports\Rpt\Supply\HK_SupplyDNDocument.rpt
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Reports\Rpt\Supply\HK_SupplyDocument.rpt
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Reports\Rpt\Supply\HK_SupplyPLDocument.rpt
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\Resources\Fonts\brandon_bld-webfont.ttf
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\log4net.config
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Debug\HKSuply.UnitTest.dll.config

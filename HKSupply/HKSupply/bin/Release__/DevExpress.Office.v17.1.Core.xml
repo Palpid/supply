@@ -4,98 +4,6 @@
         <name>DevExpress.Office.v17.1.Core</name>
     </assembly>
     <members>
-        <member name="T:DevExpress.Office.Options.DataSourceTypes">
-
-            <summary>
-                <para>Lists values used to specify the data source types available in the <b>Data Source Wizard</b>.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Office.Options.DataSourceTypes.All">
-            <summary>
-                <para>Specifies that all data source types are available for data binding from the <b>Data Source Wizard</b>.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Options.DataSourceTypes.EntityFramework">
-            <summary>
-                <para>Specifies that an Entity Framework data source is available for data binding from the <b>Data Source Wizard</b>.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Options.DataSourceTypes.Excel">
-            <summary>
-                <para>Specifies that a data source used to extract data from Microsoft&#174; Excel&#174; documents is available for data binding from the <b>Data Source Wizard</b>.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Options.DataSourceTypes.Object">
-            <summary>
-                <para>Specifies that an object data source is available for data binding from the <b>Data Source Wizard</b>.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Options.DataSourceTypes.Sql">
-            <summary>
-                <para>Specifies that an SQL database is available for data binding from the <b>Data Source Wizard</b>.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Office.Drawing.TileFlipType">
-
-            <summary>
-                <para>Lists values used to specify how to flip the tile contents. 
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Office.Drawing.TileFlipType.Both">
-            <summary>
-                <para>Specifies that the tiles should be flipped both horizontally and vertically. 
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Drawing.TileFlipType.Horizontal">
-            <summary>
-                <para>Specifies that the tiles should be flipped horizontally. 
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Drawing.TileFlipType.None">
-            <summary>
-                <para>Specifies that the tiles should not be flipped. 
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Drawing.TileFlipType.Vertical">
-            <summary>
-                <para>Specifies that the tiles should be flipped vertically. 
-
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.Office.Utils.OfficeImageFormat">
 
             <summary>
@@ -192,6 +100,117 @@
 
 
         </member>
+        <member name="T:DevExpress.Office.Options.DataSourceTypes">
+
+            <summary>
+                <para>Lists values used to specify the data source types available in the <b>Data Source Wizard</b>.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Office.Options.DataSourceTypes.All">
+            <summary>
+                <para>Specifies that all data source types are available for data binding from the <b>Data Source Wizard</b>.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Options.DataSourceTypes.EntityFramework">
+            <summary>
+                <para>Specifies that an Entity Framework data source is available for data binding from the <b>Data Source Wizard</b>.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Options.DataSourceTypes.Excel">
+            <summary>
+                <para>Specifies that a data source used to extract data from Microsoft&#174; Excel&#174; documents is available for data binding from the <b>Data Source Wizard</b>.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Options.DataSourceTypes.Object">
+            <summary>
+                <para>Specifies that an object data source is available for data binding from the <b>Data Source Wizard</b>.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Options.DataSourceTypes.Sql">
+            <summary>
+                <para>Specifies that an SQL database is available for data binding from the <b>Data Source Wizard</b>.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Office.Drawing.TileFlipType">
+
+            <summary>
+                <para>Lists values used to specify how to flip the tile contents. 
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Office.Drawing.TileFlipType.Both">
+            <summary>
+                <para>Specifies that the tiles should be flipped both horizontally and vertically. 
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Drawing.TileFlipType.Horizontal">
+            <summary>
+                <para>Specifies that the tiles should be flipped horizontally. 
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Drawing.TileFlipType.None">
+            <summary>
+                <para>Specifies that the tiles should not be flipped. 
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Drawing.TileFlipType.Vertical">
+            <summary>
+                <para>Specifies that the tiles should be flipped vertically. 
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Office.AzureCompatibility">
+
+            <summary>
+                <para>Hidden. Use the <see cref="T:DevExpress.Utils.AzureCompatibility"/> class instead.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.Office.AzureCompatibility.Enable">
+            <summary>
+                <para>Use the <see cref="P:DevExpress.Utils.AzureCompatibility.Enable"/> property instead. 
+</para>
+            </summary>
+            <value><b>true</b> if the document export is Azure-compatible; otherwise <b>false</b>.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Office.Localization.OfficeResLocalizer">
 
             <summary>
@@ -259,6 +278,38 @@
 
 
         </member>
+        <member name="T:DevExpress.Office.DocumentLayoutUnit">
+
+            <summary>
+                <para>Lists measurement units used for the document layout.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Office.DocumentLayoutUnit.Document">
+            <summary>
+                <para>Specifies documents (one three-hundredths of an inch) as measurement units.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.DocumentLayoutUnit.Pixel">
+            <summary>
+                <para>Specifies pixels as measurement units.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.DocumentLayoutUnit.Twip">
+            <summary>
+                <para>Specifies twips (1,440 twips equal one inch, and 567 twips equal one centimeter) as measurement units.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.Office.Export.Html.HtmlExporterBase">
 
             <summary>
@@ -287,6 +338,58 @@
 		A <see cref="T:System.IO.TextWriter"/> descendant which writes exported data as a sequential series of characters.
 
             </param>
+
+
+        </member>
+        <member name="T:DevExpress.Office.Services.IUriProvider">
+
+            <summary>
+                <para>Defines the provider of the locations for external objects in a document export.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Office.Services.IUriProvider.CreateCssUri(System.String,System.String,System.String)">
+            <summary>
+                <para>Creates URI for CSS data.
+</para>
+            </summary>
+            <param name="rootUri">
+		A string that specifies the root URI.
+
+            </param>
+            <param name="styleText">
+		A string containing CSS definitions for which the URI is created.
+
+            </param>
+            <param name="relativeUri">
+		A string that specifies the relative part of the URI (path relative to the root).
+
+            </param>
+            <returns>A string that is the URI of CSS data.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Office.Services.IUriProvider.CreateImageUri(System.String,DevExpress.Office.Utils.OfficeImage,System.String)">
+            <summary>
+                <para>Creates an image URI.
+</para>
+            </summary>
+            <param name="rootUri">
+		A string that specifies the root URI.
+
+            </param>
+            <param name="image">
+		An <see cref="T:DevExpress.Office.Utils.OfficeImage"/> object for which the URI is created.
+
+            </param>
+            <param name="relativeUri">
+		A string that specifies the relative part of the URI (path relative to the root).
+
+            </param>
+            <returns>A string that is the image URI.
+</returns>
 
 
         </member>
@@ -415,55 +518,675 @@
 
 
         </member>
-        <member name="T:DevExpress.Office.Services.IUriProvider">
+        <member name="T:DevExpress.Office.Services.IUriStreamService">
 
             <summary>
-                <para>Defines the provider of the locations for external objects in a document export.
+                <para>Defines a service which is called to retrieve data from the URI specified in some types of document fields.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Office.Services.IUriProvider.CreateCssUri(System.String,System.String,System.String)">
+        <member name="M:DevExpress.Office.Services.IUriStreamService.GetStream(System.String)">
             <summary>
-                <para>Creates URI for CSS data.
+                <para>Provides the data stream for the specified Uri.
 </para>
             </summary>
-            <param name="rootUri">
-		A string that specifies the root URI.
+            <param name="url">
+		A string specifying the URI of the object that is the source of the stream.
 
             </param>
-            <param name="styleText">
-		A string containing CSS definitions for which the URI is created.
-
-            </param>
-            <param name="relativeUri">
-		A string that specifies the relative part of the URI (path relative to the root).
-
-            </param>
-            <returns>A string that is the URI of CSS data.
+            <returns>A <see cref="T:System.IO.Stream"/> object specifying a data stream.
 </returns>
 
 
         </member>
-        <member name="M:DevExpress.Office.Services.IUriProvider.CreateImageUri(System.String,DevExpress.Office.Utils.OfficeImage,System.String)">
+        <member name="M:DevExpress.Office.Services.IUriStreamService.RegisterProvider(DevExpress.Office.Services.IUriStreamProvider)">
             <summary>
-                <para>Creates an image URI.
+                <para>Registers the Uri data stream provider and makes it available to clients of the service.
 </para>
             </summary>
-            <param name="rootUri">
-		A string that specifies the root URI.
+            <param name="provider">
+		An object which exposes the <see cref="T:DevExpress.Office.Services.IUriStreamProvider"/> interface.
 
             </param>
-            <param name="image">
-		An <see cref="T:DevExpress.Office.Utils.OfficeImage"/> object for which the URI is created.
+
+
+        </member>
+        <member name="M:DevExpress.Office.Services.IUriStreamService.UnregisterProvider(DevExpress.Office.Services.IUriStreamProvider)">
+            <summary>
+                <para>Cancels the registration of an Uri data stream provider, and makes it unavailable to the clients of the service.
+
+</para>
+            </summary>
+            <param name="provider">
+		An object which exposes the <see cref="T:DevExpress.Office.Services.IUriStreamProvider"/> interface.
 
             </param>
-            <param name="relativeUri">
-		A string that specifies the relative part of the URI (path relative to the root).
+
+
+        </member>
+        <member name="T:DevExpress.Office.Services.IUriStreamProvider">
+
+            <summary>
+                <para>Defines the data stream provider for the <see cref="T:DevExpress.Office.Services.IUriStreamService"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Office.Services.IUriStreamProvider.GetStream(System.String)">
+            <summary>
+                <para>Provides the data stream for the specified Uri.
+</para>
+            </summary>
+            <param name="uri">
+		A string specifying the URI of the object that is the source of the stream.
 
             </param>
-            <returns>A string that is the image URI.
+            <returns>A <see cref="T:System.IO.Stream"/> object specifying a data stream or <b>null</b> (<b>Nothing</b> in Visual Basic).
 </returns>
+
+
+        </member>
+        <member name="T:DevExpress.Office.Utils.OfficeImage">
+
+            <summary>
+                <para>An image in the document.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Office.Utils.OfficeImage.CanGetImageBytes(DevExpress.Office.Utils.OfficeImageFormat)">
+            <summary>
+                <para>Indicates whether the OfficeImage descendant can get image data as an array of bytes.
+</para>
+            </summary>
+            <param name="imageFormat">
+		An <see cref="T:DevExpress.Office.Utils.OfficeImageFormat"/> enumeration member specifying the format of the resulting image data.
+
+            </param>
+            <returns><b>true</b> if the <b>OfficeImage</b> descendant implements the <b>GetImageBytes</b> method; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Office.Utils.OfficeImage.Clone(DevExpress.Office.IDocumentModel)">
+            <summary>
+                <para>For internal use only.
+</para>
+            </summary>
+            <param name="target">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Office.Utils.OfficeImage.CreateImage(System.Drawing.Image)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="nativeImage">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Office.Utils.OfficeImage.CreateImage(System.IO.Stream)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="stream">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Office.Utils.OfficeImage.CreateImage(DevExpress.Office.Utils.MemoryStreamBasedImage)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="streamBasedImage">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Office.Utils.OfficeImage.CreateImage(System.IO.Stream,DevExpress.Office.Model.IUniqueImageId)">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="stream">
+		 
+
+            </param>
+            <param name="id">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.DesiredSizeAfterLoad">
+            <summary>
+                <para>For internal use only.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Office.Utils.OfficeImage.DiscardCachedData">
+            <summary>
+                <para>Closes the current image stream and releases any resources associated with the current stream.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Office.Utils.OfficeImage.Dispose">
+            <summary>
+                <para>Releases all resources used by this object.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.EncapsulatedOfficeNativeImage">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="M:DevExpress.Office.Utils.OfficeImage.GetContentType(DevExpress.Office.Utils.OfficeImageFormat)">
+            <summary>
+                <para>Static method used to get the MIME content type by the <see cref="T:DevExpress.Office.Utils.OfficeImageFormat"/> value.
+</para>
+            </summary>
+            <param name="imageFormat">
+		An <see cref="T:DevExpress.Office.Utils.OfficeImageFormat"/> enumeration member specifying the image format.
+
+            </param>
+            <returns>A string indicating the mime content type.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Office.Utils.OfficeImage.GetExtension(DevExpress.Office.Utils.OfficeImageFormat)">
+            <summary>
+                <para>Static method used to obtain an extension by the <see cref="T:DevExpress.Office.Utils.OfficeImageFormat"/> value.
+</para>
+            </summary>
+            <param name="imageFormat">
+		An <see cref="T:DevExpress.Office.Utils.OfficeImageFormat"/> enumeration member specifying the image format.
+
+            </param>
+            <returns>A string specifying a file extension for a given image format.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Office.Utils.OfficeImage.GetImageBytes(DevExpress.Office.Utils.OfficeImageFormat)">
+            <summary>
+                <para>Returns a byte array of image data encoded in the specified format.
+</para>
+            </summary>
+            <param name="imageFormat">
+		An <see cref="T:DevExpress.Office.Utils.OfficeImageFormat"/> enumeration member specifying the format of the resulting image data.
+
+            </param>
+            <returns>A <see cref="T:System.Byte"/> array that contains the image data.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Office.Utils.OfficeImage.GetImageBytesSafe(DevExpress.Office.Utils.OfficeImageFormat)">
+            <summary>
+                <para>Attempts to get image data as an array of bytes in specified format, and in case of failure gets the data in PNG format.
+</para>
+            </summary>
+            <param name="imageFormat">
+		An <see cref="T:DevExpress.Office.Utils.OfficeImageFormat"/> enumeration member specifying the format of the resulting image data.
+
+            </param>
+            <returns>An array of bytes containing image data.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Office.Utils.OfficeImage.GetImageBytesStreamSafe(DevExpress.Office.Utils.OfficeImageFormat)">
+            <summary>
+                <para>Attempts to get image data as a stream in the specified format, and in case of a failure, gets the data in PNG format.
+</para>
+            </summary>
+            <param name="imageFormat">
+		An <see cref="T:DevExpress.Office.Utils.OfficeImageFormat"/> enumeration member specifying the format of the resulting image data.
+
+            </param>
+            <returns>A <see cref="T:System.IO.Stream"/> containing image data.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.HorizontalResolution">
+            <summary>
+                <para>Gets the horizontal resolution of the image in pixels per inch.
+</para>
+            </summary>
+            <value>The horizontal resolution of this image in pixels per inch.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.ImageCacheKey">
+            <summary>
+                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value>An integer value that represents a cache key under which an image is stored in the cache. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Office.Utils.OfficeImage.IsExportSupported(DevExpress.Office.Utils.OfficeImageFormat)">
+            <summary>
+                <para>This property is overridden in <b>OfficeImage</b> class descendants to indicate image formats not suitable for export.
+</para>
+            </summary>
+            <param name="rawFormat">
+		An <see cref="T:DevExpress.Office.Utils.OfficeImageFormat"/> enumeration member specifying the image format to export.
+
+            </param>
+            <returns>Always <b>true</b>.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.IsLoaded">
+            <summary>
+                <para>For internal use only.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.NativeImage">
+            <summary>
+                <para>Provides access to the native <see cref="T:System.Drawing.Image"/> object.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Image"/> object specifying a native image.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.Office.Utils.OfficeImage.NativeImageChanged">
+            <summary>
+                <para>Intended for internal use.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.Office.Utils.OfficeImage.NativeImageChanging">
+            <summary>
+                <para>Intended for internal use.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.PaletteLength">
+            <summary>
+                <para>Gets the number of colors in the image palette.
+
+</para>
+            </summary>
+            <value>A <see cref="T:System.Int32"/> value specifying the number of entries in the palette color table.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.PixelFormat">
+            <summary>
+                <para>Gets the pixel format of the image.
+
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Office.Utils.OfficePixelFormat"/> enumeration member specifying the pixel format.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.RawFormat">
+            <summary>
+                <para>Gets the file format of this image.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Office.Utils.OfficeImageFormat"/> enumeration member specifying the image file format.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.RootImage">
+            <summary>
+                <para>This property is overridden in <b>OfficeImage</b> descendants to point to a single instance of an image that can be incorporated in different objects.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Office.Utils.OfficeImage"/> object that is the image in the document.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.ShouldSetDesiredSizeAfterLoad">
+            <summary>
+                <para>For internal use only.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.SizedImage">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.SizeInDocuments">
+            <summary>
+                <para>Gets the size of an image in <see cref="F:DevExpress.Office.DocumentUnit.Document"/> units.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Size"/> structure specifying the image size measured in documents.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.SizeInHundredthsOfMillimeter">
+            <summary>
+                <para>Gets the size of an image in hundredths of a millimeter.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Size"/> structure specifying the image size measured in hundredths of a millimeter.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.SizeInOriginalUnits">
+            <summary>
+                <para>This property is overridden in <b>OfficeImage</b> descendants to get the size of a native image measured in original units.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Size"/> structure specifying the image size measured in original units.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.SizeInPixels">
+            <summary>
+                <para>Gets the size of an image in pixels.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Size"/> structure specifying the image size measured in pixels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.SizeInTwips">
+            <summary>
+                <para>Gets the size of an image in twips (1,440 twips equals one inch, and 567 twips equals one centimeter).
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Size"/> structure specifying the image size measured in twips.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.SupportsSizing">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.Uri">
+            <summary>
+                <para>This property is overridden in <b>OfficeImage</b> class descendants to get the URI of the image.
+</para>
+            </summary>
+            <value>A string specifying the URI of an image.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.VerticalResolution">
+            <summary>
+                <para>Gets the horizontal resolution of the image in pixels per inch.
+</para>
+            </summary>
+            <value>The horizontal resolution of this image in pixels per inch.
+
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Office.Utils.OfficePixelFormat">
+
+            <summary>
+                <para>Lists formats of the color data for each pixel in the image.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Alpha">
+            <summary>
+                <para>The pixel data contains alpha values that are not premultiplied.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Canonical">
+            <summary>
+                <para>The default pixel format of 32 bits per pixel. The format specifies 24-bit color depth and an 8-bit alpha channel.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.DontCare">
+            <summary>
+                <para>No pixel format is specified.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Extended">
+            <summary>
+                <para>Reserved.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format16bppArgb1555">
+            <summary>
+                <para>The pixel format is 16 bits per pixel. The color information specifies 32,768 shades of color, of which 5 bits are red, 5 bits are green, 5 bits are blue, and 1 bit is alpha.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format16bppGrayScale">
+            <summary>
+                <para>The pixel format is 16 bits per pixel. The color information specifies 65536 shades of gray.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format16bppRgb555">
+            <summary>
+                <para>Specifies that the format is 16 bits per pixel; 5 bits each are used for the red, green, and blue components. The remaining bit is not used.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format16bppRgb565">
+            <summary>
+                <para>Specifies that the format is 16 bits per pixel; 5 bits are used for the red component, 6 bits are used for the green component, and 5 bits are used for the blue component.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format1bppIndexed">
+            <summary>
+                <para>Specifies that the pixel format is 1 bit per pixel and that it uses indexed color. The color table therefore has two colors in it.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format24bppRgb">
+            <summary>
+                <para>Specifies that the format is 24 bits per pixel; 8 bits each are used for the red, green, and blue components.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format32bppArgb">
+            <summary>
+                <para>Specifies that the format is 32 bits per pixel; 8 bits each are used for the alpha, red, green, and blue components.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format32bppPArgb">
+            <summary>
+                <para>Specifies that the format is 32 bits per pixel; 8 bits each are used for the alpha, red, green, and blue components. The red, green, and blue components are premultiplied, according to the alpha component.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format32bppRgb">
+            <summary>
+                <para>Specifies that the format is 32 bits per pixel; 8 bits each are used for the red, green, and blue components. The remaining 8 bits are not used.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format48bppRgb">
+            <summary>
+                <para>Specifies that the format is 48 bits per pixel; 16 bits each are used for the red, green, and blue components.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format4bppIndexed">
+            <summary>
+                <para>Specifies that the format is 4 bits per pixel, indexed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format64bppArgb">
+            <summary>
+                <para>Specifies that the format is 64 bits per pixel; 16 bits each are used for the alpha, red, green, and blue components.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format64bppPArgb">
+            <summary>
+                <para>Specifies that the format is 64 bits per pixel; 16 bits each are used for the alpha, red, green, and blue components. The red, green, and blue components are premultiplied according to the alpha component.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format8bppIndexed">
+            <summary>
+                <para>Specifies that the format is 8 bits per pixel, indexed. The color table therefore has 256 colors in it.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Gdi">
+            <summary>
+                <para>The pixel data contains GDI colors.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Indexed">
+            <summary>
+                <para>The pixel data contains color-indexed values, which means the values are an index to colors in the system color table, as opposed to individual color values.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Max">
+            <summary>
+                <para>The maximum value for this enumeration.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.PAlpha">
+            <summary>
+                <para>The pixel format contains premultiplied alpha values.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Undefined">
+            <summary>
+                <para>The pixel format is undefined.
+</para>
+            </summary>
 
 
         </member>
@@ -485,35 +1208,21 @@
 
 
         </member>
-        <member name="T:DevExpress.Office.DocumentLayoutUnit">
+        <member name="T:DevExpress.Office.Export.IExporterOptions">
 
             <summary>
-                <para>Lists measurement units used for the document layout.
+                <para>Defines options for the document being exported. 
 </para>
             </summary>
 
         </member>
-        <member name="F:DevExpress.Office.DocumentLayoutUnit.Document">
+        <member name="P:DevExpress.Office.Export.IExporterOptions.TargetUri">
             <summary>
-                <para>Specifies documents (one three-hundredths of an inch) as measurement units.
+                <para>Gets or sets the URI of the document being exported. 
 </para>
             </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.DocumentLayoutUnit.Pixel">
-            <summary>
-                <para>Specifies pixels as measurement units.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.DocumentLayoutUnit.Twip">
-            <summary>
-                <para>Specifies twips (1,440 twips equal one inch, and 567 twips equal one centimeter) as measurement units.
-</para>
-            </summary>
+            <value>A string representing the document URI. 
+</value>
 
 
         </member>
@@ -2289,699 +2998,6 @@
             </param>
             <returns>A <see cref="T:System.Single"/> value.
 </returns>
-
-
-        </member>
-        <member name="T:DevExpress.Office.Services.IUriStreamService">
-
-            <summary>
-                <para>Defines a service which is called to retrieve data from the URI specified in some types of document fields.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Office.Services.IUriStreamService.GetStream(System.String)">
-            <summary>
-                <para>Provides the data stream for the specified Uri.
-</para>
-            </summary>
-            <param name="url">
-		A string specifying the URI of the object that is the source of the stream.
-
-            </param>
-            <returns>A <see cref="T:System.IO.Stream"/> object specifying a data stream.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Office.Services.IUriStreamService.RegisterProvider(DevExpress.Office.Services.IUriStreamProvider)">
-            <summary>
-                <para>Registers the Uri data stream provider and makes it available to clients of the service.
-</para>
-            </summary>
-            <param name="provider">
-		An object which exposes the <see cref="T:DevExpress.Office.Services.IUriStreamProvider"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Office.Services.IUriStreamService.UnregisterProvider(DevExpress.Office.Services.IUriStreamProvider)">
-            <summary>
-                <para>Cancels the registration of an Uri data stream provider, and makes it unavailable to the clients of the service.
-
-</para>
-            </summary>
-            <param name="provider">
-		An object which exposes the <see cref="T:DevExpress.Office.Services.IUriStreamProvider"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="T:DevExpress.Office.Services.IUriStreamProvider">
-
-            <summary>
-                <para>Defines the data stream provider for the <see cref="T:DevExpress.Office.Services.IUriStreamService"/>.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Office.Services.IUriStreamProvider.GetStream(System.String)">
-            <summary>
-                <para>Provides the data stream for the specified Uri.
-</para>
-            </summary>
-            <param name="uri">
-		A string specifying the URI of the object that is the source of the stream.
-
-            </param>
-            <returns>A <see cref="T:System.IO.Stream"/> object specifying a data stream or <b>null</b> (<b>Nothing</b> in Visual Basic).
-</returns>
-
-
-        </member>
-        <member name="T:DevExpress.Office.Utils.OfficeImage">
-
-            <summary>
-                <para>An image in the document.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Office.Utils.OfficeImage.CanGetImageBytes(DevExpress.Office.Utils.OfficeImageFormat)">
-            <summary>
-                <para>Indicates whether the OfficeImage descendant can get image data as an array of bytes.
-</para>
-            </summary>
-            <param name="imageFormat">
-		An <see cref="T:DevExpress.Office.Utils.OfficeImageFormat"/> enumeration member specifying the format of the resulting image data.
-
-            </param>
-            <returns><b>true</b> if the <b>OfficeImage</b> descendant implements the <b>GetImageBytes</b> method; otherwise, <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Office.Utils.OfficeImage.Clone(DevExpress.Office.IDocumentModel)">
-            <summary>
-                <para>For internal use only.
-</para>
-            </summary>
-            <param name="target">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Office.Utils.OfficeImage.CreateImage(System.Drawing.Image)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="nativeImage">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Office.Utils.OfficeImage.CreateImage(System.IO.Stream)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="stream">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Office.Utils.OfficeImage.CreateImage(DevExpress.Office.Utils.MemoryStreamBasedImage)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="streamBasedImage">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Office.Utils.OfficeImage.CreateImage(System.IO.Stream,DevExpress.Office.Model.IUniqueImageId)">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="stream">
-		 
-
-            </param>
-            <param name="id">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Office.Utils.OfficeImage.DesiredSizeAfterLoad">
-            <summary>
-                <para>For internal use only.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Office.Utils.OfficeImage.DiscardCachedData">
-            <summary>
-                <para>Closes the current image stream and releases any resources associated with the current stream.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Office.Utils.OfficeImage.Dispose">
-            <summary>
-                <para>Releases all resources used by this object.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Office.Utils.OfficeImage.EncapsulatedOfficeNativeImage">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="M:DevExpress.Office.Utils.OfficeImage.GetContentType(DevExpress.Office.Utils.OfficeImageFormat)">
-            <summary>
-                <para>Static method used to get the MIME content type by the <see cref="T:DevExpress.Office.Utils.OfficeImageFormat"/> value.
-</para>
-            </summary>
-            <param name="imageFormat">
-		An <see cref="T:DevExpress.Office.Utils.OfficeImageFormat"/> enumeration member specifying the image format.
-
-            </param>
-            <returns>A string indicating the mime content type.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Office.Utils.OfficeImage.GetExtension(DevExpress.Office.Utils.OfficeImageFormat)">
-            <summary>
-                <para>Static method used to obtain an extension by the <see cref="T:DevExpress.Office.Utils.OfficeImageFormat"/> value.
-</para>
-            </summary>
-            <param name="imageFormat">
-		An <see cref="T:DevExpress.Office.Utils.OfficeImageFormat"/> enumeration member specifying the image format.
-
-            </param>
-            <returns>A string specifying a file extension for a given image format.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Office.Utils.OfficeImage.GetImageBytes(DevExpress.Office.Utils.OfficeImageFormat)">
-            <summary>
-                <para>Returns a byte array of image data encoded in the specified format.
-</para>
-            </summary>
-            <param name="imageFormat">
-		An <see cref="T:DevExpress.Office.Utils.OfficeImageFormat"/> enumeration member specifying the format of the resulting image data.
-
-            </param>
-            <returns>A <see cref="T:System.Byte"/> array that contains the image data.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Office.Utils.OfficeImage.GetImageBytesSafe(DevExpress.Office.Utils.OfficeImageFormat)">
-            <summary>
-                <para>Attempts to get image data as an array of bytes in specified format, and in case of failure gets the data in PNG format.
-</para>
-            </summary>
-            <param name="imageFormat">
-		An <see cref="T:DevExpress.Office.Utils.OfficeImageFormat"/> enumeration member specifying the format of the resulting image data.
-
-            </param>
-            <returns>An array of bytes containing image data.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Office.Utils.OfficeImage.GetImageBytesStreamSafe(DevExpress.Office.Utils.OfficeImageFormat)">
-            <summary>
-                <para>Attempts to get image data as a stream in the specified format, and in case of a failure, gets the data in PNG format.
-</para>
-            </summary>
-            <param name="imageFormat">
-		An <see cref="T:DevExpress.Office.Utils.OfficeImageFormat"/> enumeration member specifying the format of the resulting image data.
-
-            </param>
-            <returns>A <see cref="T:System.IO.Stream"/> containing image data.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Office.Utils.OfficeImage.HorizontalResolution">
-            <summary>
-                <para>Gets the horizontal resolution of the image in pixels per inch.
-</para>
-            </summary>
-            <value>The horizontal resolution of this image in pixels per inch.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Office.Utils.OfficeImage.ImageCacheKey">
-            <summary>
-                <para>This member supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value>An integer value that represents a cache key under which an image is stored in the cache. 
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Office.Utils.OfficeImage.IsExportSupported(DevExpress.Office.Utils.OfficeImageFormat)">
-            <summary>
-                <para>This property is overridden in <b>OfficeImage</b> class descendants to indicate image formats not suitable for export.
-</para>
-            </summary>
-            <param name="rawFormat">
-		An <see cref="T:DevExpress.Office.Utils.OfficeImageFormat"/> enumeration member specifying the image format to export.
-
-            </param>
-            <returns>Always <b>true</b>.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Office.Utils.OfficeImage.IsLoaded">
-            <summary>
-                <para>For internal use only.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Office.Utils.OfficeImage.NativeImage">
-            <summary>
-                <para>Provides access to the native <see cref="T:System.Drawing.Image"/> object.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.Image"/> object specifying a native image.
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.Office.Utils.OfficeImage.NativeImageChanged">
-            <summary>
-                <para>Intended for internal use.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.Office.Utils.OfficeImage.NativeImageChanging">
-            <summary>
-                <para>Intended for internal use.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Office.Utils.OfficeImage.PaletteLength">
-            <summary>
-                <para>Gets the number of colors in the image palette.
-
-</para>
-            </summary>
-            <value>A <see cref="T:System.Int32"/> value specifying the number of entries in the palette color table.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Office.Utils.OfficeImage.PixelFormat">
-            <summary>
-                <para>Gets the pixel format of the image.
-
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Office.Utils.OfficePixelFormat"/> enumeration member specifying the pixel format.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Office.Utils.OfficeImage.RawFormat">
-            <summary>
-                <para>Gets the file format of this image.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Office.Utils.OfficeImageFormat"/> enumeration member specifying the image file format.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Office.Utils.OfficeImage.RootImage">
-            <summary>
-                <para>This property is overridden in <b>OfficeImage</b> descendants to point to a single instance of an image that can be incorporated in different objects.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Office.Utils.OfficeImage"/> object that is the image in the document.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Office.Utils.OfficeImage.ShouldSetDesiredSizeAfterLoad">
-            <summary>
-                <para>For internal use only.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Office.Utils.OfficeImage.SizeInDocuments">
-            <summary>
-                <para>Gets the size of an image in <see cref="F:DevExpress.Office.DocumentUnit.Document"/> units.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.Size"/> structure specifying the image size measured in documents.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Office.Utils.OfficeImage.SizeInHundredthsOfMillimeter">
-            <summary>
-                <para>Gets the size of an image in hundredths of a millimeter.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.Size"/> structure specifying the image size measured in hundredths of a millimeter.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Office.Utils.OfficeImage.SizeInOriginalUnits">
-            <summary>
-                <para>This property is overridden in <b>OfficeImage</b> descendants to get the size of a native image measured in original units.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.Size"/> structure specifying the image size measured in original units.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Office.Utils.OfficeImage.SizeInPixels">
-            <summary>
-                <para>Gets the size of an image in pixels.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.Size"/> structure specifying the image size measured in pixels.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Office.Utils.OfficeImage.SizeInTwips">
-            <summary>
-                <para>Gets the size of an image in twips (1,440 twips equals one inch, and 567 twips equals one centimeter).
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.Size"/> structure specifying the image size measured in twips.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Office.Utils.OfficeImage.Uri">
-            <summary>
-                <para>This property is overridden in <b>OfficeImage</b> class descendants to get the URI of the image.
-</para>
-            </summary>
-            <value>A string specifying the URI of an image.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Office.Utils.OfficeImage.VerticalResolution">
-            <summary>
-                <para>Gets the horizontal resolution of the image in pixels per inch.
-</para>
-            </summary>
-            <value>The horizontal resolution of this image in pixels per inch.
-
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Office.Utils.OfficePixelFormat">
-
-            <summary>
-                <para>Lists formats of the color data for each pixel in the image.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Alpha">
-            <summary>
-                <para>The pixel data contains alpha values that are not premultiplied.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Canonical">
-            <summary>
-                <para>The default pixel format of 32 bits per pixel. The format specifies 24-bit color depth and an 8-bit alpha channel.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.DontCare">
-            <summary>
-                <para>No pixel format is specified.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Extended">
-            <summary>
-                <para>Reserved.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format16bppArgb1555">
-            <summary>
-                <para>The pixel format is 16 bits per pixel. The color information specifies 32,768 shades of color, of which 5 bits are red, 5 bits are green, 5 bits are blue, and 1 bit is alpha.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format16bppGrayScale">
-            <summary>
-                <para>The pixel format is 16 bits per pixel. The color information specifies 65536 shades of gray.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format16bppRgb555">
-            <summary>
-                <para>Specifies that the format is 16 bits per pixel; 5 bits each are used for the red, green, and blue components. The remaining bit is not used.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format16bppRgb565">
-            <summary>
-                <para>Specifies that the format is 16 bits per pixel; 5 bits are used for the red component, 6 bits are used for the green component, and 5 bits are used for the blue component.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format1bppIndexed">
-            <summary>
-                <para>Specifies that the pixel format is 1 bit per pixel and that it uses indexed color. The color table therefore has two colors in it.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format24bppRgb">
-            <summary>
-                <para>Specifies that the format is 24 bits per pixel; 8 bits each are used for the red, green, and blue components.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format32bppArgb">
-            <summary>
-                <para>Specifies that the format is 32 bits per pixel; 8 bits each are used for the alpha, red, green, and blue components.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format32bppPArgb">
-            <summary>
-                <para>Specifies that the format is 32 bits per pixel; 8 bits each are used for the alpha, red, green, and blue components. The red, green, and blue components are premultiplied, according to the alpha component.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format32bppRgb">
-            <summary>
-                <para>Specifies that the format is 32 bits per pixel; 8 bits each are used for the red, green, and blue components. The remaining 8 bits are not used.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format48bppRgb">
-            <summary>
-                <para>Specifies that the format is 48 bits per pixel; 16 bits each are used for the red, green, and blue components.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format4bppIndexed">
-            <summary>
-                <para>Specifies that the format is 4 bits per pixel, indexed.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format64bppArgb">
-            <summary>
-                <para>Specifies that the format is 64 bits per pixel; 16 bits each are used for the alpha, red, green, and blue components.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format64bppPArgb">
-            <summary>
-                <para>Specifies that the format is 64 bits per pixel; 16 bits each are used for the alpha, red, green, and blue components. The red, green, and blue components are premultiplied according to the alpha component.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Format8bppIndexed">
-            <summary>
-                <para>Specifies that the format is 8 bits per pixel, indexed. The color table therefore has 256 colors in it.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Gdi">
-            <summary>
-                <para>The pixel data contains GDI colors.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Indexed">
-            <summary>
-                <para>The pixel data contains color-indexed values, which means the values are an index to colors in the system color table, as opposed to individual color values.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Max">
-            <summary>
-                <para>The maximum value for this enumeration.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.PAlpha">
-            <summary>
-                <para>The pixel format contains premultiplied alpha values.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Office.Utils.OfficePixelFormat.Undefined">
-            <summary>
-                <para>The pixel format is undefined.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Office.Export.IExporterOptions">
-
-            <summary>
-                <para>Defines options for the document being exported. 
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.Office.Export.IExporterOptions.TargetUri">
-            <summary>
-                <para>Gets or sets the URI of the document being exported. 
-</para>
-            </summary>
-            <value>A string representing the document URI. 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Office.AzureCompatibility">
-
-            <summary>
-                <para>Hidden. Use the <see cref="T:DevExpress.Utils.AzureCompatibility"/> class instead.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.Office.AzureCompatibility.Enable">
-            <summary>
-                <para>Use the <see cref="P:DevExpress.Utils.AzureCompatibility.Enable"/> property instead. 
-</para>
-            </summary>
-            <value><b>true</b> if the document export is Azure-compatible; otherwise <b>false</b>.
-</value>
 
 
         </member>

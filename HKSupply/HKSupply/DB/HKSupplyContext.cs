@@ -181,6 +181,13 @@ namespace HKSupply.DB
             modelBuilder.Entity<SupplierFactoryCoeff>().Property(x => x.Scrap).HasPrecision(19, 6);
             modelBuilder.Entity<SupplierFactoryCoeff>().Property(x => x.Density).HasPrecision(19, 6);
 
+            modelBuilder.Entity<DocLine>().Property(x => x.UnitPrice).HasPrecision(19, 6);
+            modelBuilder.Entity<DocLine>().Property(x => x.UnitPriceBaseCurrency).HasPrecision(19, 6);
+
+            modelBuilder.Entity<DocLine>().Property(x => x.Quantity).HasPrecision(19, 6);
+            modelBuilder.Entity<DocLine>().Property(x => x.QuantityOriginal).HasPrecision(19, 6);
+            modelBuilder.Entity<DocLine>().Property(x => x.DeliveredQuantity).HasPrecision(19, 6);
+
             base.OnModelCreating(modelBuilder);
         }
 

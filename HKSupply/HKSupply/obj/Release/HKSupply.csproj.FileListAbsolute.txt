@@ -335,3 +335,6 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Release\HKSupply.exe.licenses
 C:\Git\Supply\HKSupply\HKSupply\obj\Release\HKSupply.csproj.CoreCompileInputs.cache
 C:\Git\Supply\HKSupply\HKSupply\obj\Release\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Release\HKSupply.pdb
+C:\Git\Supply\HKSupply\HKSupply\bin\Release\Reports\Rpt\Supply\HK_SupplyDNDocument.rpt
+C:\Git\Supply\HKSupply\HKSupply\bin\Release\Reports\Rpt\Supply\HK_SupplyDocument.rpt
+C:\Git\Supply\HKSupply\HKSupply\bin\Release\Reports\Rpt\Supply\HK_SupplyPLDocument.rpt
