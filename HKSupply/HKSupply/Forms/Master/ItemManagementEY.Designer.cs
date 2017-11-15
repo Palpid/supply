@@ -2096,13 +2096,13 @@
             // 
             // slueSupplier
             // 
-            this.slueSupplier.Location = new System.Drawing.Point(177, 31);
+            this.slueSupplier.Location = new System.Drawing.Point(180, 31);
             this.slueSupplier.MenuManager = this.ribbonControl;
             this.slueSupplier.Name = "slueSupplier";
             this.slueSupplier.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.slueSupplier.Properties.View = this.gridView1;
-            this.slueSupplier.Size = new System.Drawing.Size(410, 20);
+            this.slueSupplier.Size = new System.Drawing.Size(424, 20);
             this.slueSupplier.StyleController = this.layoutControlNewDoc;
             this.slueSupplier.TabIndex = 18;
             // 
@@ -2118,7 +2118,7 @@
             this.lblSupplier.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblSupplier.Location = new System.Drawing.Point(7, 31);
             this.lblSupplier.Name = "lblSupplier";
-            this.lblSupplier.Size = new System.Drawing.Size(108, 13);
+            this.lblSupplier.Size = new System.Drawing.Size(111, 13);
             this.lblSupplier.StyleController = this.layoutControlNewDoc;
             this.lblSupplier.TabIndex = 19;
             this.lblSupplier.Text = "Supplier";
@@ -2130,14 +2130,14 @@
             this.lueDocType.Name = "lueDocType";
             this.lueDocType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueDocType.Size = new System.Drawing.Size(108, 20);
+            this.lueDocType.Size = new System.Drawing.Size(111, 20);
             this.lueDocType.StyleController = this.layoutControlNewDoc;
             this.lueDocType.TabIndex = 56;
             // 
             // sbViewNewDoc
             // 
             this.sbViewNewDoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbViewNewDoc.ImageOptions.Image")));
-            this.sbViewNewDoc.Location = new System.Drawing.Point(119, 7);
+            this.sbViewNewDoc.Location = new System.Drawing.Point(122, 7);
             this.sbViewNewDoc.MaximumSize = new System.Drawing.Size(25, 25);
             this.sbViewNewDoc.MinimumSize = new System.Drawing.Size(25, 25);
             this.sbViewNewDoc.Name = "sbViewNewDoc";
@@ -2149,7 +2149,7 @@
             // sbOpenFileNewDoc
             // 
             this.sbOpenFileNewDoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbOpenFileNewDoc.ImageOptions.Image")));
-            this.sbOpenFileNewDoc.Location = new System.Drawing.Point(148, 7);
+            this.sbOpenFileNewDoc.Location = new System.Drawing.Point(151, 7);
             this.sbOpenFileNewDoc.MaximumSize = new System.Drawing.Size(25, 25);
             this.sbOpenFileNewDoc.MinimumSize = new System.Drawing.Size(25, 25);
             this.sbOpenFileNewDoc.Name = "sbOpenFileNewDoc";
@@ -2160,9 +2160,9 @@
             // 
             // txtPathNewDoc
             // 
-            this.txtPathNewDoc.Location = new System.Drawing.Point(202, 7);
+            this.txtPathNewDoc.Location = new System.Drawing.Point(205, 7);
             this.txtPathNewDoc.Name = "txtPathNewDoc";
-            this.txtPathNewDoc.Size = new System.Drawing.Size(385, 20);
+            this.txtPathNewDoc.Size = new System.Drawing.Size(399, 20);
             this.txtPathNewDoc.StyleController = this.layoutControlNewDoc;
             this.txtPathNewDoc.TabIndex = 53;
             // 
@@ -2180,14 +2180,14 @@
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "Root";
             this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
-            this.layoutControlGroup3.Size = new System.Drawing.Size(594, 58);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(611, 58);
             this.layoutControlGroup3.TextVisible = false;
             // 
             // layoutControlItem34
             // 
             this.layoutControlItem34.Control = this.sbViewNewDoc;
             this.layoutControlItem34.CustomizationFormText = "PDF";
-            this.layoutControlItem34.Location = new System.Drawing.Point(112, 0);
+            this.layoutControlItem34.Location = new System.Drawing.Point(115, 0);
             this.layoutControlItem34.Name = "layoutControlItem34";
             this.layoutControlItem34.Size = new System.Drawing.Size(29, 48);
             this.layoutControlItem34.Text = "PDF";
@@ -2198,7 +2198,7 @@
             // 
             this.layoutControlItem35.Control = this.sbOpenFileNewDoc;
             this.layoutControlItem35.CustomizationFormText = "layoutControlItem33";
-            this.layoutControlItem35.Location = new System.Drawing.Point(141, 0);
+            this.layoutControlItem35.Location = new System.Drawing.Point(144, 0);
             this.layoutControlItem35.Name = "layoutControlItem35";
             this.layoutControlItem35.Size = new System.Drawing.Size(29, 48);
             this.layoutControlItem35.Text = "layoutControlItem33";
@@ -2209,9 +2209,9 @@
             // 
             this.layoutControlItem36.Control = this.txtPathNewDoc;
             this.layoutControlItem36.CustomizationFormText = "PDF Path";
-            this.layoutControlItem36.Location = new System.Drawing.Point(170, 0);
+            this.layoutControlItem36.Location = new System.Drawing.Point(173, 0);
             this.layoutControlItem36.Name = "layoutControlItem36";
-            this.layoutControlItem36.Size = new System.Drawing.Size(414, 24);
+            this.layoutControlItem36.Size = new System.Drawing.Size(428, 24);
             this.layoutControlItem36.Text = "Path";
             this.layoutControlItem36.TextSize = new System.Drawing.Size(22, 13);
             // 
@@ -2220,16 +2220,16 @@
             this.lcilueDocType.Control = this.lueDocType;
             this.lcilueDocType.Location = new System.Drawing.Point(0, 0);
             this.lcilueDocType.Name = "lcilueDocType";
-            this.lcilueDocType.Size = new System.Drawing.Size(112, 24);
+            this.lcilueDocType.Size = new System.Drawing.Size(115, 24);
             this.lcilueDocType.TextSize = new System.Drawing.Size(0, 0);
             this.lcilueDocType.TextVisible = false;
             // 
             // layoutControlItem31
             // 
             this.layoutControlItem31.Control = this.slueSupplier;
-            this.layoutControlItem31.Location = new System.Drawing.Point(170, 24);
+            this.layoutControlItem31.Location = new System.Drawing.Point(173, 24);
             this.layoutControlItem31.Name = "layoutControlItem31";
-            this.layoutControlItem31.Size = new System.Drawing.Size(414, 24);
+            this.layoutControlItem31.Size = new System.Drawing.Size(428, 24);
             this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem31.TextVisible = false;
             // 
@@ -2238,7 +2238,7 @@
             this.lciSupplier.Control = this.lblSupplier;
             this.lciSupplier.Location = new System.Drawing.Point(0, 24);
             this.lciSupplier.Name = "lciSupplier";
-            this.lciSupplier.Size = new System.Drawing.Size(112, 24);
+            this.lciSupplier.Size = new System.Drawing.Size(115, 24);
             this.lciSupplier.TextSize = new System.Drawing.Size(0, 0);
             this.lciSupplier.TextVisible = false;
             // 

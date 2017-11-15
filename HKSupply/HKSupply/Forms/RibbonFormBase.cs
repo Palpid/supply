@@ -319,11 +319,31 @@ namespace HKSupply.Forms
         {
             if (_currentState == ActionsStates.Edit)
             {
-                DialogResult result = MessageBox.Show("Pending changes. Close?", "", MessageBoxButtons.YesNo);
+                //DialogResult result = MessageBox.Show("Pending changes. Close?", "", MessageBoxButtons.YesNo);
 
-                if (result != DialogResult.Yes)
+                //if (result != DialogResult.Yes)
+                //    e.Cancel = true;
+
+                DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction action = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction() { Caption = "Confirm", Description = "Pending changes. Close?" };
+                Predicate<DialogResult> predicate = canCloseFunc;
+                DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand command1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand() { Text = "Close", Result = DialogResult.Yes };
+                DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand command2 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand() { Text = "Cancel", Result = DialogResult.No };
+                action.Commands.Add(command1);
+                action.Commands.Add(command2);
+                DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties properties = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutProperties();
+                properties.ButtonSize = new Size(100, 40);
+                properties.Style = DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutStyle.MessageBox;
+
+                if (DevExpress.XtraBars.Docking2010.Customization.FlyoutDialog.Show(this, action, properties, predicate) == DialogResult.Yes)
+                    e.Cancel = false;
+                else
                     e.Cancel = true;
             }
+        }
+
+        private static bool canCloseFunc(DialogResult parameter)
+        {
+            return parameter != DialogResult.Cancel;
         }
 
         private void ConfigureRibbonStyles()

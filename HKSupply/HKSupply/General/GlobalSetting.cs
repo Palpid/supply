@@ -89,7 +89,7 @@ namespace HKSupply.General
         static EFMaterial _materialEF = new EFMaterial();
         static EFMatType _matTypeEF = new EFMatType();
         static EFHwType _hwTypeEF = new EFHwType();
-        static EFFamilyHK _familyHKEF = new EFFamilyHK(); 
+        static EFFamilyHK _familyHKEF = new EFFamilyHK();
         static EFDocType _docTypeEF = new EFDocType();
         static EFItemDoc _itemDocEF = new EFItemDoc();
         static EFPrototype _prototypeEF = new EFPrototype();
@@ -516,7 +516,7 @@ namespace HKSupply.General
             get
             {
                 if (_supplyDocsEF == null)
-                    _supplyDocsEF =  new EFSupplyDocs();
+                    _supplyDocsEF = new EFSupplyDocs();
 
                 return _supplyDocsEF;
             }
@@ -527,7 +527,7 @@ namespace HKSupply.General
             get
             {
                 if (_deliveryTermsEF == null)
-                    _deliveryTermsEF =  new EFDeliveryTerms();
+                    _deliveryTermsEF = new EFDeliveryTerms();
 
                 return _deliveryTermsEF;
             }

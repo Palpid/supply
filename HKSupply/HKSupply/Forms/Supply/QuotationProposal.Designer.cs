@@ -65,9 +65,7 @@
             this.lblAddress = new DevExpress.XtraEditors.LabelControl();
             this.lblCompany = new DevExpress.XtraEditors.LabelControl();
             this.xtpFiles = new DevExpress.XtraTab.XtraTabPage();
-            this.pcFiles = new DevExpress.XtraEditors.PanelControl();
-            this.xgrdFiles = new DevExpress.XtraGrid.GridControl();
-            this.gridViewFiles = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.sbAttachFile = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlNewFile = new DevExpress.XtraLayout.LayoutControl();
             this.sbViewNewFile = new DevExpress.XtraEditors.SimpleButton();
             this.sbOpenFile = new DevExpress.XtraEditors.SimpleButton();
@@ -76,7 +74,9 @@
             this.layoutControlItem34 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.sbAttachFile = new DevExpress.XtraEditors.SimpleButton();
+            this.pcFiles = new DevExpress.XtraEditors.PanelControl();
+            this.xgrdFiles = new DevExpress.XtraGrid.GridControl();
+            this.gridViewFiles = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
             this.xtcGeneral.SuspendLayout();
@@ -100,10 +100,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLines)).BeginInit();
             this.xtpTerms.SuspendLayout();
             this.xtpFiles.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcFiles)).BeginInit();
-            this.pcFiles.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xgrdFiles)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewFiles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlNewFile)).BeginInit();
             this.layoutControlNewFile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPathNewFile.Properties)).BeginInit();
@@ -111,6 +107,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcFiles)).BeginInit();
+            this.pcFiles.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdFiles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewFiles)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -483,37 +483,16 @@
             this.xtpFiles.Size = new System.Drawing.Size(1308, 379);
             this.xtpFiles.Text = "Attached Files";
             // 
-            // pcFiles
+            // sbAttachFile
             // 
-            this.pcFiles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pcFiles.Controls.Add(this.xgrdFiles);
-            this.pcFiles.Location = new System.Drawing.Point(3, 3);
-            this.pcFiles.Name = "pcFiles";
-            this.pcFiles.Size = new System.Drawing.Size(500, 373);
-            this.pcFiles.TabIndex = 0;
-            // 
-            // xgrdFiles
-            // 
-            this.xgrdFiles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xgrdFiles.Location = new System.Drawing.Point(2, 2);
-            this.xgrdFiles.MainView = this.gridViewFiles;
-            this.xgrdFiles.MenuManager = this.ribbonControl;
-            this.xgrdFiles.Name = "xgrdFiles";
-            this.xgrdFiles.Size = new System.Drawing.Size(496, 369);
-            this.xgrdFiles.TabIndex = 0;
-            this.xgrdFiles.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewFiles});
-            // 
-            // gridViewFiles
-            // 
-            this.gridViewFiles.GridControl = this.xgrdFiles;
-            this.gridViewFiles.Name = "gridViewFiles";
+            this.sbAttachFile.Location = new System.Drawing.Point(950, 66);
+            this.sbAttachFile.Name = "sbAttachFile";
+            this.sbAttachFile.Size = new System.Drawing.Size(170, 35);
+            this.sbAttachFile.TabIndex = 17;
+            this.sbAttachFile.Text = "Attach File";
             // 
             // layoutControlNewFile
             // 
-            this.layoutControlNewFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.layoutControlNewFile.Controls.Add(this.sbViewNewFile);
             this.layoutControlNewFile.Controls.Add(this.sbOpenFile);
             this.layoutControlNewFile.Controls.Add(this.txtPathNewFile);
@@ -526,7 +505,7 @@
             // 
             // sbViewNewFile
             // 
-            this.sbViewNewFile.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbViewNewDoc.ImageOptions.Image")));
+            this.sbViewNewFile.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbViewNewFile.ImageOptions.Image")));
             this.sbViewNewFile.Location = new System.Drawing.Point(7, 7);
             this.sbViewNewFile.MaximumSize = new System.Drawing.Size(25, 25);
             this.sbViewNewFile.MinimumSize = new System.Drawing.Size(25, 25);
@@ -537,7 +516,7 @@
             // 
             // sbOpenFile
             // 
-            this.sbOpenFile.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbOpenFileNewDoc.ImageOptions.Image")));
+            this.sbOpenFile.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbOpenFile.ImageOptions.Image")));
             this.sbOpenFile.Location = new System.Drawing.Point(36, 7);
             this.sbOpenFile.MaximumSize = new System.Drawing.Size(25, 25);
             this.sbOpenFile.MinimumSize = new System.Drawing.Size(25, 25);
@@ -600,13 +579,32 @@
             this.layoutControlItem36.Text = "Path";
             this.layoutControlItem36.TextSize = new System.Drawing.Size(22, 13);
             // 
-            // sbAttachFile
+            // pcFiles
             // 
-            this.sbAttachFile.Location = new System.Drawing.Point(950, 66);
-            this.sbAttachFile.Name = "sbAttachFile";
-            this.sbAttachFile.Size = new System.Drawing.Size(170, 35);
-            this.sbAttachFile.TabIndex = 17;
-            this.sbAttachFile.Text = "Attach File";
+            this.pcFiles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pcFiles.Controls.Add(this.xgrdFiles);
+            this.pcFiles.Location = new System.Drawing.Point(3, 3);
+            this.pcFiles.Name = "pcFiles";
+            this.pcFiles.Size = new System.Drawing.Size(500, 373);
+            this.pcFiles.TabIndex = 0;
+            // 
+            // xgrdFiles
+            // 
+            this.xgrdFiles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xgrdFiles.Location = new System.Drawing.Point(2, 2);
+            this.xgrdFiles.MainView = this.gridViewFiles;
+            this.xgrdFiles.MenuManager = this.ribbonControl;
+            this.xgrdFiles.Name = "xgrdFiles";
+            this.xgrdFiles.Size = new System.Drawing.Size(496, 369);
+            this.xgrdFiles.TabIndex = 0;
+            this.xgrdFiles.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewFiles});
+            // 
+            // gridViewFiles
+            // 
+            this.gridViewFiles.GridControl = this.xgrdFiles;
+            this.gridViewFiles.Name = "gridViewFiles";
             // 
             // QuotationProposal
             // 
@@ -645,10 +643,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLines)).EndInit();
             this.xtpTerms.ResumeLayout(false);
             this.xtpFiles.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcFiles)).EndInit();
-            this.pcFiles.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.xgrdFiles)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewFiles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlNewFile)).EndInit();
             this.layoutControlNewFile.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtPathNewFile.Properties)).EndInit();
@@ -656,6 +650,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcFiles)).EndInit();
+            this.pcFiles.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdFiles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewFiles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
