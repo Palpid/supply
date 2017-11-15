@@ -25,9 +25,11 @@ namespace HKSupply.General
         //public const string ITEMS_DOCS_PATH = "C:\\Temp\\ITEM_DOCS\\";
         //public const string PROTO_DOCS_PATH = "C:\\Temp\\PROTO_DOCS\\";
         //public const string ITEMS_PHOTOSWEB_PATH = "C:\\Temp\\ITEM_WEB_PHOTOS\\";
+        //public const string SUPPLY_ATTACH_FILES_PATH = "C:\\Temp\\SUPPLY_ATTACH_FILES\\";
         public const string ITEMS_DOCS_PATH = "\\\\sql\\SPTdata$\\ITEM_DOCS\\";
         public const string PROTO_DOCS_PATH = "\\\\sql\\SPTdata$\\PROTO_DOCS\\";
         public const string ITEMS_PHOTOSWEB_PATH = "\\\\sql\\SPTdata$\\ITEM_WEB_PHOTOS\\";
+        public const string SUPPLY_ATTACH_FILES_PATH = "\\\\sql\\SPTdata$\\SUPPLY_ATTACH_FILES\\";
 
         public const string COLOR_PDF_FOLDER = "PDFCOLOR\\";
         public const string DRAWING_PDF_FOLDER = "PDFDRAWING\\";

@@ -29,6 +29,7 @@ using DevExpress.Export;
 using DevExpress.Export.Xl;
 using HKSupply.PRJ_Stocks.Classes;
 using HKSupply.PRJ_Stocks.DB;
+using System.IO;
 
 namespace HKSupply.Forms.Supply
 {
@@ -41,7 +42,10 @@ namespace HKSupply.Forms.Supply
         private Stocks.Warehouse _whEtniaHkTransit;
         #endregion
 
-        
+        #region Constants
+        private const string VIEW_COLUMN = "View";
+        #endregion
+
         #region Constants
         private const string TOTAL_AMOUNT_COLUMN = "TotalAmount";
         private const string COL_STOCK_ONHAND = "StockOnHand";
@@ -74,6 +78,7 @@ namespace HKSupply.Forms.Supply
         DocHead _docHeadQP;
         DocHead _docHeadAssociatedPO;
         DocHead _docHeadAssociatedSO;
+        BindingList<DocHeadAttachFile> _docHeadAttachFileList;
 
         decimal _totalQuantityBomMt;
         int _totalQuantityBomHw;
@@ -99,6 +104,7 @@ namespace HKSupply.Forms.Supply
                 SetUpSearchLookUpEdit();
                 SetUpEvents();
                 SetUpGrdLines();
+                SetUpGrdFiles();
                 SetupPanelControl();
                 SetUpPictureEdit();
 
@@ -692,6 +698,82 @@ namespace HKSupply.Forms.Supply
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void SbViewNewFile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(txtPathNewFile.Text) == false)
+                {
+                    DocHelper.OpenDoc(txtPathNewFile.Text);
+                }
+                else
+                {
+                    XtraMessageBox.Show(GlobalSetting.ResManager.GetString("NoFileSelected"), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SbOpenFile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog()
+                {
+                    InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                    Filter = "PDF files (*.pdf)|*.pdf|JPG files(*.jpg)|*.jpg|PNG files (*.png)|*.png",
+                    Multiselect = false,
+                    RestoreDirectory = true,
+                };
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    txtPathNewFile.Text = openFileDialog.FileName;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SbAttachFile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(string.IsNullOrEmpty(txtPathNewFile.Text) == false || System.IO.File.Exists(txtPathNewFile.Text))
+                {
+                    AttachFile();
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void RepoButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DocHeadAttachFile attachFile = gridViewFiles.GetRow(gridViewFiles.FocusedRowHandle) as DocHeadAttachFile;
+
+                if (attachFile !=null)
+                {
+                    DocHelper.OpenDoc(Constants.SUPPLY_ATTACH_FILES_PATH + attachFile.FilePath);
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         #endregion
 
         #region Public Methods
@@ -814,6 +896,9 @@ namespace HKSupply.Forms.Supply
                 txtQPNumber.EditValueChanged += TxtQPNumber_EditValueChanged;
                 slueCustomer.EditValueChanged += SlueCustomer_EditValueChanged;
                 dateEditQPCreationDate.EditValueChanged += DateEditQPCreationDate_EditValueChanged;
+                sbViewNewFile.Click += SbViewNewFile_Click;
+                sbOpenFile.Click += SbOpenFile_Click;
+                sbAttachFile.Click += SbAttachFile_Click;
             }
             catch
             {
@@ -984,6 +1069,54 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void SetUpGrdFiles()
+        {
+            try
+            {
+                //Para que aparezca el scroll horizontal hay que desactivar el auto width y poner a mano el width de cada columna
+                gridViewFiles.OptionsView.ColumnAutoWidth = false;
+                gridViewFiles.HorzScrollVisibility = ScrollVisibility.Auto;
+
+                //Columns definition
+                GridColumn colFileName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("FileName"), Visible = true, FieldName = nameof(DocHeadAttachFile.FileName), Width = 350 };
+                GridColumn colUser= new GridColumn() { Caption = GlobalSetting.ResManager.GetString("User"), Visible = true, FieldName = nameof(DocHeadAttachFile.User), Width = 100 };
+                GridColumn colCreateDate = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("CreateDate"), Visible = true, FieldName = nameof(DocHeadAttachFile.CreateDate), Width = 130 };
+                GridColumn colViewButton = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("View"), Visible = true, FieldName = VIEW_COLUMN, Width = 50 };
+
+                //Display Format
+                colCreateDate.DisplayFormat.FormatType = FormatType.DateTime;
+
+                //View button
+                colViewButton.UnboundType = UnboundColumnType.Object;
+                RepositoryItemButtonEdit repoButtonViewFile = new RepositoryItemButtonEdit()
+                {
+                    Name = "btnViewFile",
+                    TextEditStyle = TextEditStyles.HideTextEditor
+                };
+
+                repoButtonViewFile.Click += RepoButton_Click;
+
+                colViewButton.ShowButtonMode = ShowButtonModeEnum.ShowAlways;
+                colViewButton.ColumnEdit = repoButtonViewFile;
+
+                //Only allow edit the button to allow click
+                colFileName.OptionsColumn.AllowEdit = false;
+                colUser.OptionsColumn.AllowEdit = false;
+                colCreateDate.OptionsColumn.AllowEdit = false;
+
+                //Add columns to grid root view
+                gridViewFiles.Columns.Add(colFileName);
+                gridViewFiles.Columns.Add(colUser);
+                gridViewFiles.Columns.Add(colCreateDate);
+                gridViewFiles.Columns.Add(colViewButton);
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         private void SetupPanelControl()
         {
             try
@@ -1044,6 +1177,8 @@ namespace HKSupply.Forms.Supply
                 _docHeadQP = null;
                 _docLinesList = null;
                 xgrdLines.DataSource = null;
+                _docLinesList = null;
+                xgrdFiles.DataSource = null;
             }
             catch
             {
@@ -1081,6 +1216,9 @@ namespace HKSupply.Forms.Supply
 
                 xgrdLines.DataSource = null;
                 xgrdLines.DataSource = _docLinesList;
+
+                xgrdFiles.DataSource = null;
+                xgrdFiles.DataSource = _docHeadAttachFileList;
 
             }
             catch
@@ -1162,6 +1300,7 @@ namespace HKSupply.Forms.Supply
                     {
                         _docHeadAssociatedPO = GlobalSetting.SupplyDocsService.GetDoc(_docHeadQP.IdDocRelated);
                         _docHeadAssociatedSO = GlobalSetting.SupplyDocsService.GetDocByRelated(_docHeadQP.IdDoc);
+                        _docHeadAttachFileList = new BindingList<DocHeadAttachFile>(GlobalSetting.DocHeadAttachFileService.GetDocHeadAttachFile(_docHeadQP.IdDoc));
                         LoadQP();
                     }
                   
@@ -1420,6 +1559,50 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void AttachFile()
+        {
+            try
+            {
+                string fileName = Path.GetFileName(txtPathNewFile.Text);
+                string fileNameNoExtension = Path.GetFileNameWithoutExtension(txtPathNewFile.Text);
+                string extension = Path.GetExtension(txtPathNewFile.Text);
+
+                string attachedFilename = $"{fileNameNoExtension}_{DateTime.Now.ToString("yyyyMMddHHmmss")}{extension}";
+
+                //Creamos los directorios si no existen
+                new FileInfo(Constants.SUPPLY_ATTACH_FILES_PATH + _docHeadQP.IdDoc + "\\").Directory.Create();
+
+                DocHeadAttachFile attachFile = new DocHeadAttachFile()
+                {
+                    IdDocHead = _docHeadQP.IdDoc,
+                    FileName = fileName,
+                    FileExtension = extension,
+                    FilePath = _docHeadQP.IdDoc + "\\" + attachedFilename,
+                    User = GlobalSetting.LoggedUser.UserLogin,
+                    CreateDate = DateTime.Now
+                };
+
+                //move to file server
+                File.Copy(txtPathNewFile.Text, Constants.SUPPLY_ATTACH_FILES_PATH + attachFile.FilePath, overwrite: true);
+
+                //Save to database
+                GlobalSetting.DocHeadAttachFileService.AddDocHeadAttachFile(attachFile);
+
+                MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
+
+                txtPathNewFile.Text = string.Empty;
+
+                //Reaload grid
+                _docHeadAttachFileList = new BindingList<DocHeadAttachFile>(GlobalSetting.DocHeadAttachFileService.GetDocHeadAttachFile(_docHeadQP.IdDoc));
+                xgrdFiles.DataSource = null;
+                xgrdFiles.DataSource = _docHeadAttachFileList;
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
         #endregion
 
         #region Stocks
@@ -1428,9 +1611,6 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                //test Stocks
-                //FillMocking();
-
                 Call_DB_Stocks CallDBS = new Call_DB_Stocks();
                 _STKAct = CallDBS.CallCargaStocks();
 

@@ -784,6 +784,7 @@
     <Compile Include="Models\SupplierPriceList.cs" />
     <Compile Include="Models\SupplierPriceListHistory.cs" />
     <Compile Include="Models\Supply\DocHead.cs" />
+    <Compile Include="Models\Supply\DocHeadAttachFile.cs" />
     <Compile Include="Models\Supply\DocLines.cs" />
     <Compile Include="Models\Supply\SupplyDocType.cs" />
     <Compile Include="Models\Supply\SupplyStatus.cs" />
@@ -818,6 +819,7 @@
     <Compile Include="Services\Implementations\EFCustomer.cs" />
     <Compile Include="Services\Implementations\EFCustomerPriceList.cs" />
     <Compile Include="Services\Implementations\EFDeliveryTerms.cs" />
+    <Compile Include="Services\Implementations\EFDocHeadAttachFile.cs" />
     <Compile Include="Services\Implementations\EFDocType.cs" />
     <Compile Include="Services\Implementations\EFEchangeRate.cs" />
     <Compile Include="Services\Implementations\EFEtnColor.cs" />
@@ -858,6 +860,7 @@
     <Compile Include="Services\Interfaces\ICustomer.cs" />
     <Compile Include="Services\Interfaces\ICustomerPriceList.cs" />
     <Compile Include="Services\Interfaces\IDeliveryTerms.cs" />
+    <Compile Include="Services\Interfaces\IDocHeadAttachFile.cs" />
     <Compile Include="Services\Interfaces\IDocType.cs" />
     <Compile Include="Services\Interfaces\IEchangeRate.cs" />
     <Compile Include="Services\Interfaces\IEtnColor.cs" />
