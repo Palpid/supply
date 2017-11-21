@@ -105,6 +105,7 @@ namespace HKSupply.General
         static EFMyCompany _myCompanyEF = new EFMyCompany();
         static EFUnit _unitEF = new EFUnit();
         static EFDocHeadAttachFile _docHeadAttachFileEF = new EFDocHeadAttachFile();
+        static EFSupplyDashboard _supplyDashboardEF = new EFSupplyDashboard();
         static User _loggedUser;
         static string _userFactory;
         static IEnumerable<FunctionalityRole> _functionalitiesRoles;
@@ -574,6 +575,17 @@ namespace HKSupply.General
                     _docHeadAttachFileEF = new EFDocHeadAttachFile();
 
                 return _docHeadAttachFileEF;
+            }
+        }
+
+        public static ISupplyDashboard SupplyDashboardService
+        {
+            get
+            {
+                if (_supplyDashboardEF == null)
+                    _supplyDashboardEF = new EFSupplyDashboard();
+
+                return _supplyDashboardEF;
             }
         }
 

@@ -72,6 +72,7 @@
     <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Pdf.v17.1.Drawing, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -79,6 +80,7 @@
     <Reference Include="DevExpress.Utils.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.UI, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v17.1.Wizard, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -86,6 +88,7 @@
     <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPdfViewer.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraRichEdit.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraSpreadsheet.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -381,6 +384,18 @@
     </Compile>
     <Compile Include="Forms\RibbonFormBase.Designer.cs">
       <DependentUpon>RibbonFormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\Dashboard\DashboardQP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\Dashboard\DashboardQP.Designer.cs">
+      <DependentUpon>DashboardQP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\Dashboard\DashboardQPTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\Dashboard\DashboardQPTest.Designer.cs">
+      <DependentUpon>DashboardQPTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Supply\DeliveryNote.cs">
       <SubType>Form</SubType>
@@ -1003,6 +1018,7 @@
     <Compile Include="Services\Implementations\EFSupplier.cs" />
     <Compile Include="Services\Implementations\EFSupplierFactoryCoeff.cs" />
     <Compile Include="Services\Implementations\EFSupplierPriceList.cs" />
+    <Compile Include="Services\Implementations\EFSupplyDashboard.cs" />
     <Compile Include="Services\Implementations\EFSupplyDocs.cs" />
     <Compile Include="Services\Implementations\EFUnit.cs" />
     <Compile Include="Services\Implementations\EFUser.cs" />
@@ -1044,6 +1060,7 @@
     <Compile Include="Services\Interfaces\ISupplier.cs" />
     <Compile Include="Services\Interfaces\ISupplierFactoryCoeff.cs" />
     <Compile Include="Services\Interfaces\ISupplierPriceList.cs" />
+    <Compile Include="Services\Interfaces\ISupplyDashboard.cs" />
     <Compile Include="Services\Interfaces\ISupplyDocs.cs" />
     <Compile Include="Services\Interfaces\IUnit.cs" />
     <Compile Include="Services\Interfaces\IUser.cs" />
@@ -1196,6 +1213,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RibbonFormBase.resx">
       <DependentUpon>RibbonFormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\Dashboard\DashboardQP.resx">
+      <DependentUpon>DashboardQP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\Dashboard\DashboardQPTest.resx">
+      <DependentUpon>DashboardQPTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\DeliveryNote.resx">
       <DependentUpon>DeliveryNote.cs</DependentUpon>

@@ -137,30 +137,35 @@ namespace HKSupply.Forms
             try
             {
 
-                System.Security.Principal.WindowsIdentity currentUser = System.Security.Principal.WindowsIdentity.GetCurrent();
-                System.Security.Principal.IdentityReferenceCollection userGroups = currentUser.Groups;
-                foreach (System.Security.Principal.IdentityReference group in userGroups)
-                {
-                    System.Security.Principal.IdentityReference translated = group.Translate(typeof(System.Security.Principal.NTAccount));
+                //if (System.Diagnostics.Debugger.IsAttached) return;
 
-                    //if (groupName.Equals(translated.Value, StringComparison.CurrentCultureIgnoreCase))
-                    //{
-                    //    return true;
-                    //}
-                }
-
-                    var windowsUser = Environment.UserName;
+                var windowsUser = Environment.UserName;
                 var user = GlobalSetting.UserService.GetUserByLogin(windowsUser);
                 if (user != null)
                 {
-                    //Obtenemos si es un usuario de una fábrica. Tienen que estar en un grupo llamado FACT_DELIV_xxxx  donde xxxx es el código de la fábrica
+                    //    //Obtenemos si es un usuario de una fábrica. Tienen que estar en un grupo llamado FACT_xxxx  donde xxxx es el código de la fábrica
 
                     string userFactory = null;
 
-                    //user.RoleId = Constants.ROLE_FACTORY; //TEST
+                    //    //user.RoleId = Constants.ROLE_FACTORY; //TEST
 
                     if (user.RoleId == Constants.ROLE_FACTORY)
                     {
+                        string groupFactoriesName = "FACT_";
+
+                        //System.Security.Principal.WindowsIdentity currentUser = System.Security.Principal.WindowsIdentity.GetCurrent();
+                        //System.Security.Principal.IdentityReferenceCollection userGroups = currentUser.Groups;
+                        //foreach (System.Security.Principal.IdentityReference group in userGroups)
+                        //{
+                        //    System.Security.Principal.IdentityReference translated = group.Translate(typeof(System.Security.Principal.NTAccount));
+
+                        //    //if (groupName.Equals(translated.Value, StringComparison.CurrentCultureIgnoreCase))
+                        //    if (translated.Value.Contains(groupFactoriesName))
+                        //    {
+                        //        userFactory = translated.Value.Replace(groupFactoriesName, string.Empty);
+                        //    }
+                        //}
+
                         using (PrincipalContext ctx = new PrincipalContext(ContextType.Domain))
                         {
                             // find a user
@@ -173,8 +178,10 @@ namespace HKSupply.Forms
 
                                 foreach (GroupPrincipal group in groups)
                                 {
-                                    //TODO: hacerlo, en para test lo pongo a piñon
-                                    userFactory = "CV";
+                                    if (group.ToString().Contains(groupFactoriesName))
+                                    {
+                                        userFactory = group.ToString().Replace(groupFactoriesName, string.Empty);
+                                    }
                                 }
                             }
 

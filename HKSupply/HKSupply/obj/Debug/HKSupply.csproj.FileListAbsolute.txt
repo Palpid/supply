@@ -360,6 +360,7 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Docs.v17.1.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Office.v17.1.Core.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Pdf.v17.1.Core.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Pdf.v17.1.Drawing.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.PivotGrid.v17.1.Core.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Printing.v17.1.Core.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.RichEdit.v17.1.Core.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Sparkline.v17.1.Core.dll
@@ -368,12 +369,14 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Utils.v17.1.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Utils.v17.1.UI.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraBars.v17.1.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraCharts.v17.1.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraCharts.v17.1.UI.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraCharts.v17.1.Wizard.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraEditors.v17.1.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraGrid.v17.1.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraLayout.v17.1.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraNavBar.v17.1.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraPdfViewer.v17.1.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraPivotGrid.v17.1.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraPrinting.v17.1.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraRichEdit.v17.1.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraSpreadsheet.v17.1.dll
@@ -412,6 +415,7 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Docs.v17.1.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Office.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Pdf.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Pdf.v17.1.Drawing.xml
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.PivotGrid.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Printing.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.RichEdit.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Sparkline.v17.1.Core.xml
@@ -419,6 +423,7 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Spreadsheet.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Utils.v17.1.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.Utils.v17.1.UI.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraBars.v17.1.xml
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraCharts.v17.1.UI.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraCharts.v17.1.Wizard.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraCharts.v17.1.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraEditors.v17.1.xml
@@ -426,6 +431,7 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraGrid.v17.1.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraLayout.v17.1.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraNavBar.v17.1.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraPdfViewer.v17.1.xml
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraPivotGrid.v17.1.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraPrinting.v17.1.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraRichEdit.v17.1.xml
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\DevExpress.XtraSpreadsheet.v17.1.xml
@@ -458,6 +464,10 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\de\DevExpress.Pdf.v17.1.Core.resources
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\es\DevExpress.Pdf.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ja\DevExpress.Pdf.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ru\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\de\DevExpress.PivotGrid.v17.1.Core.resources.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\es\DevExpress.PivotGrid.v17.1.Core.resources.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ja\DevExpress.PivotGrid.v17.1.Core.resources.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ru\DevExpress.PivotGrid.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\de\DevExpress.Printing.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\es\DevExpress.Printing.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ja\DevExpress.Printing.v17.1.Core.resources.dll
@@ -514,6 +524,10 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\de\DevExpress.XtraPdfViewer.v17.1.reso
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\es\DevExpress.XtraPdfViewer.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ja\DevExpress.XtraPdfViewer.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ru\DevExpress.XtraPdfViewer.v17.1.resources.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\de\DevExpress.XtraPivotGrid.v17.1.resources.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\es\DevExpress.XtraPivotGrid.v17.1.resources.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ja\DevExpress.XtraPivotGrid.v17.1.resources.dll
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ru\DevExpress.XtraPivotGrid.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\de\DevExpress.XtraPrinting.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\es\DevExpress.XtraPrinting.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ja\DevExpress.XtraPrinting.v17.1.resources.dll
@@ -586,6 +600,8 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Master.UserManagement.r
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.PDFViewer.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Reports.BOMReport.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.RibbonFormBase.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.Dashboard.DashboardQP.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.Dashboard.DashboardQPTest.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.DeliveryNote.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.DialogForms.SelectDocs.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.DocsList.resources
@@ -699,6 +715,7 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.UnitsTable.resourc
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.UnitsOnPriceListTables.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.UnitsSupplyOnItems.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.SuppluQttyDecimal.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.DOC_HEAD_ATTACH_FILES_01.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.PRJ_Stocks.Forms.StockManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Properties.Resources.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Reports.frmVisor.resources
@@ -708,4 +725,3 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe.licenses
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.csproj.CoreCompileInputs.cache
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
-C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.DOC_HEAD_ATTACH_FILES_01.resources
