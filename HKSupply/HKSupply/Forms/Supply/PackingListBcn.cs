@@ -575,8 +575,8 @@ namespace HKSupply.Forms.Supply
                 GridView view = sender as GridView;
                 if (e.Column.FieldName == "PENDING_QTY" && e.IsGetData)
                     e.Value = (
-                        (int)view.GetRowCellValue(e.ListSourceRowIndex, nameof(DocLine.Quantity)) -
-                        (int)view.GetRowCellValue(e.ListSourceRowIndex, nameof(DocLine.DeliveredQuantity))
+                        (decimal)view.GetRowCellValue(e.ListSourceRowIndex, nameof(DocLine.Quantity)) -
+                        (decimal)view.GetRowCellValue(e.ListSourceRowIndex, nameof(DocLine.DeliveredQuantity))
                         );
             }
             catch (Exception ex)

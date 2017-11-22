@@ -12,6 +12,9 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\Resources\Images\button_red.
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\Resources\Images\Edit_16x16.png
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\Resources\Images\etnia_icon.ico
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\Resources\Images\etnia_logo.jpg
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\Reports\Rpt\Supply\HK_SupplyDNDocument.rpt
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\Reports\Rpt\Supply\HK_SupplyDocument.rpt
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\Reports\Rpt\Supply\HK_SupplyPLDocument.rpt
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\Resources\Fonts\brandon_bld-webfont.ttf
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\log4net.config
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\HKSuply.UnitTest.dll.config
@@ -31,8 +34,8 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\DevExpress.XtraEditors.v17.1
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\DevExpress.Data.v17.1.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\DevExpress.XtraPdfViewer.v17.1.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\DevExpress.XtraBars.v17.1.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\DevExpress.Printing.v17.1.Core.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\DevExpress.XtraLayout.v17.1.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\DevExpress.Printing.v17.1.Core.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\CrystalDecisions.CrystalReports.Engine.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\CrystalDecisions.Shared.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\CrystalDecisions.Windows.Forms.dll
@@ -87,8 +90,8 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\DevExpress.XtraEditors.v17.1
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\DevExpress.Data.v17.1.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\DevExpress.XtraPdfViewer.v17.1.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\DevExpress.XtraBars.v17.1.xml
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\DevExpress.Printing.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\DevExpress.XtraLayout.v17.1.xml
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\DevExpress.Printing.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\DevExpress.Utils.v17.1.UI.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\DevExpress.Office.v17.1.Core.xml
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\DevExpress.XtraTreeList.v17.1.xml
@@ -138,14 +141,14 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\de\DevExpress.XtraBars.v17.1
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\es\DevExpress.XtraBars.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\ja\DevExpress.XtraBars.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\ru\DevExpress.XtraBars.v17.1.resources.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\de\DevExpress.Printing.v17.1.Core.resources.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\es\DevExpress.Printing.v17.1.Core.resources.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\ja\DevExpress.Printing.v17.1.Core.resources.dll
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\ru\DevExpress.Printing.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\de\DevExpress.XtraLayout.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\es\DevExpress.XtraLayout.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\ja\DevExpress.XtraLayout.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\ru\DevExpress.XtraLayout.v17.1.resources.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\de\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\es\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\ja\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\ru\DevExpress.Printing.v17.1.Core.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\de\DevExpress.Utils.v17.1.UI.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\es\DevExpress.Utils.v17.1.UI.resources.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\ja\DevExpress.Utils.v17.1.UI.resources.dll
@@ -210,6 +213,3 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Release\HKSuply.UnitTest.csprojResol
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Release\HKSuply.UnitTest.csproj.CoreCompileInputs.cache
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Release\HKSuply.UnitTest.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Release\HKSuply.UnitTest.pdb
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\Reports\Rpt\Supply\HK_SupplyDNDocument.rpt
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\Reports\Rpt\Supply\HK_SupplyDocument.rpt
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\Reports\Rpt\Supply\HK_SupplyPLDocument.rpt

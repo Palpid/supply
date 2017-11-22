@@ -1130,10 +1130,11 @@ namespace HKSupply.Services.Implementations
         {
             try
             {
+                //Nota: finalmente el precio de "venta" a Etnia Barcelona es el mismo que el de fábrica, así que se queda directamente el precio que había en la PO de HK -> factory
                 //obtenemos la lista de precios de venta a Etnia Barcelona
-                var etniaBcnPriceList = db.CustomersPriceList
-                    .Where(a => a.IdCustomer.Equals(Constants.ETNIA_BCN_COMPANY_CODE))
-                    .ToList();
+                //var etniaBcnPriceList = db.CustomersPriceList
+                //    .Where(a => a.IdCustomer.Equals(Constants.ETNIA_BCN_COMPANY_CODE))
+                //    .ToList();
 
                 //copiamos las líneas tal cual y actualizamos los importes
                 List<DocLine> linesPoBcnHk = new List<DocLine>();
@@ -1145,38 +1146,39 @@ namespace HKSupply.Services.Implementations
                     lineSoBcnHk.IdDoc = $"{Constants.SUPPLY_DOCTYPE_PO}{purchaseOrderHk2Factory.IdDoc}";
                     lineSoBcnHk.IdDocRelated = purchaseOrderHk2Factory.IdDoc;
                     //Calculamos el precio
-                    var price = etniaBcnPriceList?.Where(a => a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
-                    lineSoBcnHk.UnitPrice = (price != null ? price.Price : 0);
-                    lineSoBcnHk.UnitPriceBaseCurrency = (price != null ? price.PriceBaseCurrency : 0);
+                    //var price = etniaBcnPriceList?.Where(a => a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
+                    //lineSoBcnHk.UnitPrice = (price != null ? price.Price : 0);
+                    //lineSoBcnHk.UnitPriceBaseCurrency = (price != null ? price.PriceBaseCurrency : 0);
 
                     //agregamos la línea a la lista de lineas de la PO
                     linesPoBcnHk.Add(lineSoBcnHk);
                 }
 
+                //Nota: envía la fábrica directamente a BCN, la devlery date es la misma que en la PO de HK -> Factory
                 //Calculamos la delivery date para Etnia Barcelona
-                var itemsList = linesPoBcnHk.Select(a => a.IdItemBcn).ToList();
-                float maxLeadTime = etniaBcnPriceList
-                    .Where(a => a.IdCustomer.Equals(Constants.ETNIA_BCN_COMPANY_CODE) && itemsList.Contains(a.IdItemBcn))
-                    .Select(b => b.LeadTime)
-                    .DefaultIfEmpty(0).Max();
-                DateTime deliveryDate = purchaseOrderHk2Factory.DocDate.AddDays(maxLeadTime);
+                //var itemsList = linesPoBcnHk.Select(a => a.IdItemBcn).ToList();
+                //float maxLeadTime = etniaBcnPriceList
+                //    .Where(a => a.IdCustomer.Equals(Constants.ETNIA_BCN_COMPANY_CODE) && itemsList.Contains(a.IdItemBcn))
+                //    .Select(b => b.LeadTime)
+                //    .DefaultIfEmpty(0).Max();
+                //DateTime deliveryDate = purchaseOrderHk2Factory.DocDate.AddDays(maxLeadTime);
 
                 DocHead poBcnHk = new DocHead()
                 {
-                    IdDoc = $"{Constants.SUPPLY_DOCTYPE_PO}{purchaseOrderHk2Factory.IdDoc}", //ID? Cómo se linka por el la PO de fábrica
+                    IdDoc = $"{Constants.SUPPLY_DOCTYPE_PO}{purchaseOrderHk2Factory.IdDoc}", 
                     IdDocRelated = purchaseOrderHk2Factory.IdDoc,
                     IdSupplyDocType = Constants.SUPPLY_DOCTYPE_PO,
                     CreationDate = DateTime.Now,
-                    DeliveryDate = deliveryDate, 
+                    DeliveryDate = purchaseOrderHk2Factory.DeliveryDate, //deliveryDate, 
                     DocDate = purchaseOrderHk2Factory.DocDate,
                     User = GlobalSetting.LoggedUser.UserLogin.ToUpper(),
                     //TODO: que datos ponemos ??
-                    IdSupplyStatus = Constants.SUPPLY_STATUS_OPEN, //STATUS?
-                    IdSupplier = Constants.ETNIA_HK_COMPANY_CODE, //Etnia HK??
-                    IdCustomer = Constants.ETNIA_BCN_COMPANY_CODE, //Etnia BCN a piñon??
+                    IdSupplyStatus = Constants.SUPPLY_STATUS_OPEN, 
+                    IdSupplier = Constants.ETNIA_HK_COMPANY_CODE, 
+                    IdCustomer = Constants.ETNIA_BCN_COMPANY_CODE, 
                     //DeliveryTerm = slueDeliveryTerms.EditValue as string,
                     //IdPaymentTerms = sluePaymentTerm.EditValue as string,
-                    //IdCurrency = slueCurrency.EditValue as string,
+                    IdCurrency = purchaseOrderHk2Factory.IdCurrency,
                     Remarks = purchaseOrderHk2Factory.Remarks,
                     Lines = linesPoBcnHk,
                 };

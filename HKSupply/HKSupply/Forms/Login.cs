@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.DirectoryServices.AccountManagement;
 using System.Drawing;
 using System.Linq;
 using System.Resources;
@@ -34,7 +35,7 @@ namespace HKSupply.Forms
             try
             {
                 //Si el usuario logado en Windows existe en la aplicación no mostramos la pantalla de login local
-                //LoginWithWindowsUser();
+                LoginWithWindowsUser();
 
                 InitializeFormStyles();
                 InitializeTexts();
@@ -134,7 +135,7 @@ namespace HKSupply.Forms
             try
             {
 
-                if (System.Diagnostics.Debugger.IsAttached) return;
+                //if (System.Diagnostics.Debugger.IsAttached) return;
 
                 var windowsUser = Environment.UserName;
                 var user = GlobalSetting.UserService.GetUserByLogin(windowsUser);
@@ -146,27 +147,44 @@ namespace HKSupply.Forms
 
                 //    //user.RoleId = Constants.ROLE_FACTORY; //TEST
 
-                //    if (user.RoleId == Constants.ROLE_FACTORY)
-                //    {
-                //        using (PrincipalContext ctx = new PrincipalContext(ContextType.Domain))
-                //        {
-                //            // find a user
-                //            UserPrincipal userPrincipal = UserPrincipal.FindByIdentity(ctx, Environment.UserName);
+                    if (user.RoleId == Constants.ROLE_FACTORY)
+                    {
+                        string groupFactoriesName = "FACT_";
 
-                //            if (userPrincipal != null)
-                //            {
-                //                // get the user's groups
-                //                var groups = userPrincipal.GetAuthorizationGroups();
+                        //System.Security.Principal.WindowsIdentity currentUser = System.Security.Principal.WindowsIdentity.GetCurrent();
+                        //System.Security.Principal.IdentityReferenceCollection userGroups = currentUser.Groups;
+                        //foreach (System.Security.Principal.IdentityReference group in userGroups)
+                        //{
+                        //    System.Security.Principal.IdentityReference translated = group.Translate(typeof(System.Security.Principal.NTAccount));
 
-                //                foreach (GroupPrincipal group in groups)
-                //                {
-                //                    //TODO: hacerlo, en para test lo pongo a piñon
-                                    //userFactory = "FA";
-                //                }
-                //            }
+                        //    //if (groupName.Equals(translated.Value, StringComparison.CurrentCultureIgnoreCase))
+                        //    if (translated.Value.Contains(groupFactoriesName))
+                        //    {
+                        //        userFactory = translated.Value.Replace(groupFactoriesName, string.Empty);
+                        //    }
+                        //}
 
-                //        }
-                //    }
+                        using (PrincipalContext ctx = new PrincipalContext(ContextType.Domain))
+                        {
+                            // find a user
+                            UserPrincipal userPrincipal = UserPrincipal.FindByIdentity(ctx, Environment.UserName);
+
+                            if (userPrincipal != null)
+                            {
+                                // get the user's groups
+                                var groups = userPrincipal.GetAuthorizationGroups();
+
+                                foreach (GroupPrincipal group in groups)
+                                {
+                                    if (group.ToString().Contains(groupFactoriesName))
+                                    {
+                                        userFactory = group.ToString().Replace(groupFactoriesName, string.Empty);
+                                    }
+                                }
+                            }
+
+                        }
+                    }
 
                     GlobalSetting.UserFactory = userFactory;
 
