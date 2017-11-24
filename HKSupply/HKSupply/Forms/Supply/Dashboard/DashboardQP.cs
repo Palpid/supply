@@ -260,26 +260,67 @@ namespace HKSupply.Forms.Supply.Dashboard
             }
         }
 
-
-        #endregion
-
-        #region Chart Events
-        private void ChartObject_CustomDrawAxisLabel(object sender, CustomDrawAxisLabelEventArgs e)
+        private void PivotGridDashboardQP_CellDoubleClick(object sender, PivotCellEventArgs e)
         {
             try
             {
-                AxisBase axis = e.Item.Axis;
-                if (axis is AxisX || axis is AxisX3D || axis is RadarAxisX)
-                {
-                    double axisValue = (double)e.Item.AxisValue;
-                    e.Item.Text = Math.Truncate(axisValue).ToString();
-                }
+                ShowDrilldown(e.CreateDrillDownDataSource());
             }
             catch (Exception ex)
             {
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void PivotGridDashboardQP_CustomDrawFieldValue(object sender, PivotCustomDrawFieldValueEventArgs e)
+        {
+            try
+            {
+                if (e.Area == PivotArea.ColumnArea)
+                {
+                    Rectangle rect = e.Bounds;
+                    ControlPaint.DrawBorder3D(e.Graphics, e.Bounds);
+                    Brush brush = e.GraphicsCache.GetSolidBrush(Color.AliceBlue);
+                    rect.Inflate(-1, -1);
+                    e.Graphics.FillRectangle(brush, rect);
+                    e.Appearance.DrawString(e.GraphicsCache, e.Info.Caption, e.Info.CaptionRect);
+                    e.Painter.DrawIndicator(e.Info);
+                    e.Handled = true;
+                }
+                else if (e.Area == PivotArea.RowArea)
+                {
+                    e.Painter.DrawObject(e.Info);
+                    e.Painter.DrawIndicator(e.Info);
+                    //e.Graphics.FillRectangle(e.GraphicsCache.GetSolidBrush(Color.FromArgb(50, 0, 0, 200)), e.Bounds);
+                    e.Graphics.FillRectangle(e.GraphicsCache.GetSolidBrush(Color.FromArgb(100, 200, 0, 0)), e.Bounds);
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        #endregion
+
+        #region Chart Events
+        //private void ChartObject_CustomDrawAxisLabel(object sender, CustomDrawAxisLabelEventArgs e)
+        //{
+        //    try
+        //    {
+        //        AxisBase axis = e.Item.Axis;
+        //        if (axis is AxisX || axis is AxisX3D || axis is RadarAxisX)
+        //        {
+        //            double axisValue = (double)e.Item.AxisValue;
+        //            e.Item.Text = Math.Truncate(axisValue).ToString();
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
         #endregion
 
         #endregion
@@ -506,10 +547,10 @@ namespace HKSupply.Forms.Supply.Dashboard
                 PivotGridField fieldIdItemBcn = new PivotGridField() { FieldName = nameof(AuxDashboardQPStoredProcedure.ID_ITEM_BCN), Caption = "Item", Area = PivotArea.RowArea, Width = 150 };
                 PivotGridField fieldIdItemGroup = new PivotGridField() { FieldName = nameof(AuxDashboardQPStoredProcedure.ID_ITEM_GROUP), Caption = "Type", Area = PivotArea.RowArea, Width = 70 };
                 PivotGridField fieldUnit = new PivotGridField() { FieldName = nameof(AuxDashboardQPStoredProcedure.UNIT), Caption = "Unit", Area = PivotArea.RowArea, Width = 70 };
-                PivotGridField fieldTotalQtyOriginal = new PivotGridField() { FieldName = nameof(AuxDashboardQPStoredProcedure.TOTAL_QTY_ORIGINAL), Caption = "QTY Original", Area = PivotArea.DataArea, Width = 100, Name = "XX" };
+                PivotGridField fieldTotalQtyOriginal = new PivotGridField() { FieldName = nameof(AuxDashboardQPStoredProcedure.TOTAL_QTY_ORIGINAL), Caption = "QTY Original", Area = PivotArea.DataArea, Width = 100};
                 PivotGridField fieldTotalQty = new PivotGridField() { FieldName = nameof(AuxDashboardQPStoredProcedure.TOTAL_QTY), Caption = "QTY Real", Area = PivotArea.DataArea, Width = 100 };
-                PivotGridField fieldAbsoluteDeviation = new PivotGridField() { FieldName = nameof(AuxDashboardQPStoredProcedure.ABSOLUTE_DEVIATION), Caption = "Abs Deviation", Area = PivotArea.DataArea, Width = 100 };
-                PivotGridField fieldPorcentualDeviation = new PivotGridField() { FieldName = nameof(AuxDashboardQPStoredProcedure.PERCENTAGE_DEVIATION), Caption = "% Deviation", Area = PivotArea.DataArea, Width = 85 };
+                PivotGridField fieldAbsoluteDeviation = new PivotGridField() { FieldName = nameof(AuxDashboardQPStoredProcedure.ABSOLUTE_DEVIATION), Caption = "Abs Deviation", Area = PivotArea.DataArea, Width = 105 };
+                PivotGridField fieldPorcentualDeviation = new PivotGridField() { FieldName = nameof(AuxDashboardQPStoredProcedure.PERCENTAGE_DEVIATION), Caption = "% Deviation", Area = PivotArea.DataArea, Width = 95 };
 
                 //Devuelve el valor correcto desde la db para después hacer el % y nos ahorramos el cálculo (ex : 0.24 -> 24%, en lugar de devolver el 24 directamente)
                 //Unbound field para el % porque si le das formato porcentual a la celda multiplica por 100
@@ -594,11 +635,21 @@ namespace HKSupply.Forms.Supply.Dashboard
                 pivotGridDashboardQP.Fields.Add(fieldAbsoluteDeviation);
                 pivotGridDashboardQP.Fields.Add(fieldPorcentualDeviation);
 
+                //Headers in bold
+                var currentFont = pivotGridDashboardQP.Appearance.FieldValue.Font;
+                pivotGridDashboardQP.Appearance.FieldValue.Font = new Font(currentFont.Name, currentFont.Size, FontStyle.Bold);
+                pivotGridDashboardQP.Appearance.FieldValue.Options.UseFont = true;
+
                 //Events
                 //pivotGridDashboardQP.CustomUnboundFieldData += PivotGridDashboardQP_CustomUnboundFieldData;
                 pivotGridDashboardQP.CustomAppearance += PivotGridDashboardQP_CustomAppearance;
                 pivotGridDashboardQP.CustomCellValue += PivotGridDashboardQP_CustomCellValue;
                 pivotGridDashboardQP.FieldValueDisplayText += PivotGridDashboardQP_FieldValueDisplayText;
+                pivotGridDashboardQP.CellDoubleClick += PivotGridDashboardQP_CellDoubleClick;
+                pivotGridDashboardQP.CustomDrawFieldValue += PivotGridDashboardQP_CustomDrawFieldValue;
+
+                
+
 
             }
             catch
@@ -607,6 +658,7 @@ namespace HKSupply.Forms.Supply.Dashboard
             }
         }
 
+        
         private void SetUpSplitContainer()
         {
             try
@@ -897,9 +949,9 @@ namespace HKSupply.Forms.Supply.Dashboard
                             tmpSeriesQtyReal.Points.Add(new SeriesPoint(reg.WEEK_NUM, reg.TOTAL_QTY));
                         }
 
-                        // Set the numerical argument scale types for the series, as it is qualitative, by default.
-                        tmpSeriesQtyOriginal.ArgumentScaleType = ScaleType.Numerical;
-                        tmpSeriesQtyReal.ArgumentScaleType = ScaleType.Numerical;
+                        // Set the numerical argument scale types for the series
+                        tmpSeriesQtyOriginal.ArgumentScaleType = ScaleType.Qualitative;
+                        tmpSeriesQtyReal.ArgumentScaleType = ScaleType.Qualitative;
 
                         // Access the view-type-specific options of the series.
                         ((LineSeriesView)tmpSeriesQtyOriginal.View).LineMarkerOptions.Kind = MarkerKind.Triangle;
@@ -912,11 +964,7 @@ namespace HKSupply.Forms.Supply.Dashboard
                         //Add series to list
                         chartSeriesList.Add(tmpSeriesQtyOriginal);
                         chartSeriesList.Add(tmpSeriesQtyReal);
-
-
                     }
-
-
                 }
 
                 // Add the series to the chart.
@@ -938,7 +986,7 @@ namespace HKSupply.Forms.Supply.Dashboard
                 chartObject.Titles.Add(new ChartTitle());
                 chartObject.Titles[0].Text = chartTitle;
 
-                chartObject.CustomDrawAxisLabel += ChartObject_CustomDrawAxisLabel;
+                //chartObject.CustomDrawAxisLabel += ChartObject_CustomDrawAxisLabel;
             }
             catch
             {
@@ -966,7 +1014,7 @@ namespace HKSupply.Forms.Supply.Dashboard
                 {
                     Series tmpPercentageDesv = new Series(factory, ViewType.Bar);
 
-                    //Calculos el dato
+                    //Calculos el datos
 
                     var tmpData = charData
                         .Where(a => a.ID_CUSTOMER.Equals(factory))
@@ -984,71 +1032,43 @@ namespace HKSupply.Forms.Supply.Dashboard
                         .Where(a => a.ID_CUSTOMER.Equals(factory) && a.PERCENTAGE_DEVIATION > 0)
                         .Count();
 
+                    foreach(var reg in tmpData)
+                    {
+                        Series tmp = new Series($"{factory} - Week {reg.WeekNum}", ViewType.Bar);
+                        tmp.Points.Add(new SeriesPoint(reg.WeekNum, (reg.Total / countNum)));
+                        tmp.ArgumentScaleType = ScaleType.Qualitative; //para que aparezca sólo el valor de la semana y no haga unas escala entre ellas
+                        chartObject.Series.Add(tmp);
+                    }
+
                 }
 
-                //string currentFactory = string.Empty;
+                (chartObject.SeriesTemplate.View as BarSeriesView).AxisY.Label.TextPattern = "{V:P2}"; //Y axis percentage
 
-                    //foreach (var factory in factories)
-                    //{
-                    //    if (factory != currentFactory)
-                    //    {
-                    //        currentFactory = factory;
-                    //        Series tmpSeriesQtyOriginal = new Series($"{factory} - Original", ViewType.Bar);
-                    //        Series tmpSeriesQtyReal = new Series(factory, ViewType.Bar);
+                chartObject.Titles.Add(new ChartTitle());
+                chartObject.Titles[0].Text = chartTitle;
+            }
+            catch
+            {
+                throw;
+            }
+        }
 
-                    //        //Buscamos los datos de esa fábrica
-                    //        var factoryData = charData
-                    //            .Where(a => a.ID_CUSTOMER.Equals(factory))
-                    //            .OrderBy(b => b.WEEK_NUM).ToList();
-
-                    //        foreach (var reg in factoryData)
-                    //        {
-                    //            tmpSeriesQtyOriginal.Points.Add(new SeriesPoint(reg.WEEK_NUM, reg.TOTAL_QTY_ORIGINAL));
-                    //            tmpSeriesQtyReal.Points.Add(new SeriesPoint(reg.WEEK_NUM, reg.TOTAL_QTY));
-                    //        }
-
-                    //        // Set the numerical argument scale types for the series, as it is qualitative, by default.
-                    //        tmpSeriesQtyOriginal.ArgumentScaleType = ScaleType.Numerical;
-                    //        tmpSeriesQtyReal.ArgumentScaleType = ScaleType.Numerical;
-
-                    //        // Access the view-type-specific options of the series.
-                    //        ((LineSeriesView)tmpSeriesQtyOriginal.View).LineMarkerOptions.Kind = MarkerKind.Triangle;
-                    //        ((LineSeriesView)tmpSeriesQtyOriginal.View).LineStyle.DashStyle = DashStyle.Dash;
-
-                    //        ((LineSeriesView)tmpSeriesQtyReal.View).LineMarkerOptions.Kind = MarkerKind.Triangle;
-                    //        ((LineSeriesView)tmpSeriesQtyReal.View).LineStyle.DashStyle = DashStyle.Dash;
-
-
-                    //        //Add series to list
-                    //        chartSeriesList.Add(tmpSeriesQtyOriginal);
-                    //        chartSeriesList.Add(tmpSeriesQtyReal);
-
-
-                    //    }
-
-
-            //}
-
-            //    // Add the series to the chart.
-            //    foreach (var serie in chartSeriesList)
-            //    {
-            //        chartObject.Series.Add(serie);
-            //    }
-
-            //    // Access the type-specific options of the diagram.
-            //    ((XYDiagram)chartObject.Diagram).EnableAxisXZooming = true;
-
-
-            //    //((XYDiagram)chartObject.Diagram).AxisX.Label.TextPattern = "{A:d}";
-
-            //    // Hide the legend (if necessary).
-            //    //chartObject.Legend.Visibility = DefaultBoolean.False;
-
-            //    // Add a title to the chart (if necessary).
-            //    chartObject.Titles.Add(new ChartTitle());
-            //    chartObject.Titles[0].Text = chartTitle;
-
-            //    chartObject.CustomDrawAxisLabel += ChartObject_CustomDrawAxisLabel;
+        void ShowDrilldown(PivotDrillDownDataSource ds)
+        {
+            try
+            {
+                XtraForm form = new XtraForm();
+                form.Text = "Detail";
+                form.StartPosition = FormStartPosition.CenterParent;
+                DataGridView grid = new DataGridView();
+                grid.Parent = form;
+                grid.Dock = DockStyle.Fill;
+                grid.DataSource = ds;
+                form.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath); 
+                form.Width = 820;
+                form.Height = 400;
+                form.ShowDialog();
+                form.Dispose();
             }
             catch
             {
