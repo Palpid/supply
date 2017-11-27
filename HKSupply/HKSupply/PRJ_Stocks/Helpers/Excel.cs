@@ -15,7 +15,8 @@ namespace HKSupply.PRJ_Stocks.Helpers
 
         public static List<Stocks.StockMove> OpenFileImportStk(string FileName, Classes.Stocks STK)
         {
-            try {
+            try
+            {
                 List<Stocks.StockMove> LS = new List<Classes.Stocks.StockMove>();
                 var fullFileName = string.Format("{0}\\{1}", Directory.GetCurrentDirectory(), FileName);
                 if (!File.Exists(FileName))
@@ -47,19 +48,17 @@ namespace HKSupply.PRJ_Stocks.Helpers
                             decimal QTT = Convert.ToDecimal(ws.Columns[4][i].Value.ToString());
 
                             Stocks.Warehouse wr = new Stocks.Warehouse();
-                            wr = STK.GetWareHouse(idWAre, idWAreType);
-                            if (wr != null) { 
-                                Stocks.StockMove mv = new Stocks.StockMove(
-                                    Stocks.StockMovementsType.Entry, idWAre, wr.Descr, idWAreType, idItem, "", QTT);
-                                LS.Add(mv);
-                            }
+                            wr.idWareHouse = idWAre;
+                            wr.idWareHouseType = idWAreType;
+                            Stocks.StockMove mv = new Stocks.StockMove(Stocks.StockMovementsType.Entry, idWAre, wr.Descr, idWAreType, idItem, "", QTT, Lot);
+                            LS.Add(mv);
                         }
                     }
                     else
                     {
                         throw new Exception("Incorrect extel template");
                     }
-                        
+
                 }
                 return LS;
             }
@@ -69,7 +68,7 @@ namespace HKSupply.PRJ_Stocks.Helpers
             }
         }
 
-        public static void CreateTemplate(string FileName, List<Stocks.Warehouse> LstWares)
+        public static void CreateTemplate(string FileName, List<Stocks.Warehouse> LstWares, List<Stocks.ItemBcn> LstItemsBCN)
         {
             //var fullFileName = string.Format("{0}\\{1}", Directory.GetCurrentDirectory(), fileName);            
 
@@ -94,7 +93,7 @@ namespace HKSupply.PRJ_Stocks.Helpers
                 ws2.Columns[0][2].Value = "WAREHOUSE NAME";
                 ws2.Columns[1][2].Value = "ID_WAREHOUSE";
                 ws2.Columns[2][2].Value = "WAREHOUSE_TYPE";
-                
+
                 int FilaAct = 3;
                 foreach (Stocks.Warehouse wr in LstWares)
                 {
@@ -104,9 +103,29 @@ namespace HKSupply.PRJ_Stocks.Helpers
                     FilaAct += 1;
                 }
 
+                DevExpress.Spreadsheet.IWorkbook WB2 = spreadsheet.Document;
+                WB.Worksheets.Add("ITEMS");
+
+                DevExpress.Spreadsheet.Worksheet ws3 = WB.Worksheets["ITEMS"];
+
+                ws3.Columns[0][0].Value = "ITEMS LIST. For your reference.";
+
+                ws3.Columns[0][2].Value = "ID ITEM";
+                ws3.Columns[1][2].Value = "ITEM DESCRIPTION";
+                ws3.Columns[2][2].Value = "ITEM GROUP";
+
+                FilaAct = 3;
+                foreach (Stocks.ItemBcn itm in LstItemsBCN)
+                {
+                    ws3.Columns[0][FilaAct].Value = itm.ID_ITEM_BCN;
+                    ws3.Columns[1][FilaAct].Value = itm.ITEM_DESCRIPTION;
+                    ws3.Columns[2][FilaAct].Value = itm.ID_ITEM_GROUP;
+                    FilaAct += 1;
+                }
+
                 WB.Worksheets.ActiveWorksheet = ws;
-       
-                WB.SaveDocument(FileName, DevExpress.Spreadsheet.DocumentFormat.OpenXml);                
+
+                WB.SaveDocument(FileName, DevExpress.Spreadsheet.DocumentFormat.OpenXml);
             }
         }
     }

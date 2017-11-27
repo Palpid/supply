@@ -1,4 +1,0 @@
-﻿2017-05-24 10:12:45,626 ERROR [1] HKSupply.Services.Implementations.EFItemBom.EditIteBom - The method or operation is not implemented.
-System.NotImplementedException: The method or operation is not implemented.
-   at HKSupply.Services.Implementations.EFItemBom.GetItemBom(Int32 IdBom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 25
-   at HKSupply.Services.Implementations.EFItemBom.EditIteBom(ItemBom bom) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFItemBom.cs:line 131

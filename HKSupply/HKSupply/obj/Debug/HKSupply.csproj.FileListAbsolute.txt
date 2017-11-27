@@ -6,6 +6,7 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\logo_etnia-barcelona.
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\logo_SupplyHongKong.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\tabheaderbackground_red.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\HelpDocs\EN\BOM Flow and Application Help.pdf
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\HelpDocs\EN\SUPPLY Flow and Application Help.pdf
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Reports\Rpt\BOM.rpt
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\Acetate_244.jpg
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\button_red.png

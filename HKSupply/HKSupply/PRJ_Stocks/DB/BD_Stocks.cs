@@ -45,6 +45,10 @@ namespace HKSupply.PRJ_Stocks.DB
                 sSQL = $"SELECT idWarehouse,idWareHouseType,Descr,Remarks,idOwner FROM STK_WAREHOUSES ORDER BY idWarehouse";
                 STK.LstWarehouses = db.Database.SqlQuery<Stocks.Warehouse>(sSQL).ToList();
 
+                // ITEMS                
+                sSQL = $"SELECT ID_ITEM_BCN, ITEM_DESCRIPTION, ID_ITEM_GROUP FROM V_ALL_ITEMS ORDER BY ID_ITEM_BCN";
+                STK.LstItemsBcn = db.Database.SqlQuery<Stocks.ItemBcn>(sSQL).ToList();
+
                 // OWNERS
                 sSQL = $"SELECT distinct ID_CUSTOMER as idOwner, CUSTOMER_NAME as OwnerName FROM CUSTOMERS";
                 sSQL += " union ";
@@ -74,7 +78,21 @@ namespace HKSupply.PRJ_Stocks.DB
                     STK.CargaSockItem(STKi);
                 }
 
+                // LOTS
+                sSQL = $"SELECT idItem, Lot as idlot,QTT";
+                sSQL += " FROM STK_LOTS ";
+                sSQL += " ORDER BY idItem,Lot";
+                List<Stocks.LotItem> DTRows2 = db.Database.SqlQuery<Stocks.LotItem>(sSQL).ToList();
 
+                foreach (Stocks.LotItem rec in DTRows2)
+                {
+                    string IdIt = rec.iditem;
+                    string IdLt = rec.idlot;
+                    decimal QTT = rec.qtt;
+
+                    Classes.Stocks.LotItem LTM = new Stocks.LotItem(IdLt, IdIt, QTT);
+                    STK.LstLots.Add(LTM);
+                }
 
                 //- Copiem el stock actual a la llsita StockBase per establir el punt base on es guarda.
                 STK.SetStockBase();
@@ -162,7 +180,7 @@ namespace HKSupply.PRJ_Stocks.DB
                 }
 
                 // Es Ok Guardar, el stock esperat a la BD es el que tenim. 
-                //Fem un recorregut sobre els moviments per a modificar el que toca.
+                // Fem un recorregut sobre els moviments per a modificar el que toca.
 
 
                 // NO ES FA UNA TRANSACCIÓ. La funció esta pensada per a ser cridada dins una trasacció ja creada. 
@@ -218,15 +236,70 @@ namespace HKSupply.PRJ_Stocks.DB
 
                 }
 
+                // ***** LOTES *****************************************************************************
+
+                foreach (Stocks.LotMove LM in STK.LstLotsMove)
+                {
+                    string IdLot = LM.idLot;
+                    string IdIt = LM.idItem;
+                    decimal QTT = LM.QttMove;
+                    string Rem = LM.Remarks;
+                    string Usr = LM.idUser;
+                    List<string> Ldocs = LM.LstIdDocs;
+
+                    DateTime DA = LM.DTArrival;
+                    Stocks.StockMovementsType TypeM = LM.MoveType;
+
+
+                    // -- REGISTRE MOVIMENTS LOTS ASOCIATS
+                    sSQL = $"INSERT INTO STK_LOT_MOVEMENTS (";
+                    sSQL += $"idMoveType,idItem,Lot,QTT,MovDate,ArrivalDate,Remarks,idUser,TimeStamp,GUID";
+                    sSQL += $") VALUES (";
+                    sSQL += $"{LM.idMovementType},'{IdIt}','{IdLot}',{QTT.ToString(System.Globalization.CultureInfo.InvariantCulture)},";
+                    sSQL += $"GETDATE(),convert(datetime,'{DA.ToString("yyyy-MM-dd")}',111),'{Rem}','{Usr}',GETDATE(),'{G.ToString()}'";
+                    sSQL += $")";
+                    db.Database.ExecuteSqlCommand(sSQL);
+
+                    // -- REGITRE LOTS STOCKS
+                    // Si Existeix update, si no es crea
+                    // existeix si count<>0
+                    sSQL = $"SELECT COUNT(*) FROM STK_LOTS ";
+                    sSQL += $"WHERE idItem ='{IdIt}' AND Lot='{IdLot}'";
+                    int NumRegs = db.Database.SqlQuery<int>(sSQL).First();
+                    if (NumRegs > 0)
+                    {
+                        sSQL = $"UPDATE STK_LOTS SET QTT=QTT+({QTT.ToString(System.Globalization.CultureInfo.InvariantCulture)}) ";
+                        sSQL += $"WHERE idItem ='{IdIt}' AND Lot='{IdLot}'";
+                    }
+                    else
+                    {
+                        sSQL = $"INSERT INTO STK_LOTS (";
+                        sSQL += $"idItem,Lot,QTT";
+                        sSQL += $") VALUES (";
+                        sSQL += $"'{IdIt}','{IdLot}',{QTT.ToString(System.Globalization.CultureInfo.InvariantCulture)}";
+                        sSQL += $")";
+                    }
+                    db.Database.ExecuteSqlCommand(sSQL);
+
+                    // -- LLISTA DOCS ASOCIATS
+
+                }
+
 
                 // Purga STK = 0;
                 sSQL = $"DELETE FROM STK_STOCK WHERE QTT<=0";
                 db.Database.ExecuteSqlCommand(sSQL);
+                sSQL = $"DELETE FROM STK_LOTS WHERE QTT<=0";
+                db.Database.ExecuteSqlCommand(sSQL);
 
                 // Esborrem els moviemnts.  
                 STK.LstStockMove.Clear();
+                STK.LstLotsMove.Clear();
 
+
+                // NO CARREGUEM STOKS DE NOU PERQUE HI HA UNA TRANSACCIO OBERTA. Ho farem despres de guardar.
                 //STK = GetCurrentStock(db);
+                STK.SetStockBase();
 
                 return true; // si arriba aqui es que tot es ok. Si no ha petat el SQL i ha sortit per el catch
 

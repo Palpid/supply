@@ -338,3 +338,4 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Release\HKSupply.exe.licenses
 C:\Git\Supply\HKSupply\HKSupply\obj\Release\HKSupply.csproj.CoreCompileInputs.cache
 C:\Git\Supply\HKSupply\HKSupply\obj\Release\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Release\HKSupply.pdb
+C:\Git\Supply\HKSupply\HKSupply\bin\Release\HelpDocs\EN\SUPPLY Flow and Application Help.pdf

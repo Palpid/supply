@@ -48,9 +48,10 @@ namespace HKSupply.PRJ_Stocks.DB
                             dbTrans.Commit();
 
                         }
-                        catch
+                        catch (Exception ex)
                         {
                             dbTrans.Rollback();
+                            throw ex;
                         }
                     }
                 }

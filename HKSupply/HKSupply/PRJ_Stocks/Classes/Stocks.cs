@@ -31,6 +31,39 @@ namespace HKSupply.PRJ_Stocks.Classes
             Transit = 4
         }
 
+
+        #region ItemBcn
+        public class ItemBcn
+        {
+            private string _Id;
+            private string _Descr;
+            private string _Group;
+
+            public string ID_ITEM_BCN { get { return _Id; } set { _Id = value; } }
+            public string ITEM_DESCRIPTION { get { return _Descr; } set { _Descr = value; } }
+            public string ID_ITEM_GROUP { get { return _Group; } set { _Group = value; } }
+        }
+
+        private List<ItemBcn> _LstItemsBcn = new List<ItemBcn>();
+        public List<ItemBcn> LstItemsBcn
+        {
+            get { return _LstItemsBcn; }
+            set { _LstItemsBcn = value; }
+        }
+        public void AddItemBcn(ItemBcn itmBcn)
+        {
+            _LstItemsBcn.Add(itmBcn);
+        }
+        public bool ItemBcnExists(string idItemBcn)
+        {
+            foreach (ItemBcn iB in _LstItemsBcn)
+            { if (iB.ID_ITEM_BCN == idItemBcn) return true; }
+            return false;
+        }
+        #endregion ItemBcn
+
+        #region Owners
+
         // owners
         public class Owner
         {
@@ -48,6 +81,9 @@ namespace HKSupply.PRJ_Stocks.Classes
         {
             _LstOwners.Add(Own);
         }
+        #endregion Owners
+
+        #region Warehouses
 
         // warehouses
         public class Warehouse
@@ -67,7 +103,6 @@ namespace HKSupply.PRJ_Stocks.Classes
                     WareHouseType = (StockWareHousesType)value;
                 }
             }
-
             public string Key()
             {
                 return idWareHouse + "|" + idWareHouseType;
@@ -84,12 +119,24 @@ namespace HKSupply.PRJ_Stocks.Classes
         {
             _LstWarehouses.Add(Ware);
         }
+        public bool WareHouseExists(string idWare, int idTypeWare)
+        {
+            foreach (Warehouse W in _LstWarehouses)
+            {
+                if ((W.idWareHouse == idWare) && (W.idWareHouseType == idTypeWare)) return true;
+            }
+            return false;
+        }
+        #endregion
+
 
         public class DetAsg
         {
             public string idOwner { get; set; }
             public decimal Qtt { get; set; }
         }
+
+        #region Item
 
         /// <summary>
         ///   Guarda les dades del stock de un item i els seus lots.
@@ -114,8 +161,6 @@ namespace HKSupply.PRJ_Stocks.Classes
                 if (_Resr[idOwner] == 0) _Resr.Remove(idOwner);
                 return Variacio;
             }
-
-
 
             /// <summary>
             ///   Retorna el total stock de tots el lots del item.
@@ -183,6 +228,7 @@ namespace HKSupply.PRJ_Stocks.Classes
             }
 
         }
+        #endregion Item
 
         public class StockItem
         {
@@ -298,10 +344,34 @@ namespace HKSupply.PRJ_Stocks.Classes
 
         }
 
+        public class LotItem
+        {
+            public LotItem()
+            {
+                idlot = "";
+                iditem = "";
+                qtt = 0;
+
+            }
+            public LotItem(string IdLot, string idItem, decimal QTT)
+            {
+                idlot = IdLot;
+                iditem = idItem;
+                qtt = QTT;
+
+            }
+            public string iditem { get; set; }
+            public string idlot { get; set; }
+            public decimal qtt { get; set; }
+        }
+
 
         private List<StockMove> _LstStockMove = new List<StockMove>();
         private List<StockItem> _LstStock = new List<StockItem>();
         private List<StockItem> _LstStocksOrig = new List<StockItem>();
+
+        private List<LotItem> _LstLots = new List<LotItem>();
+        private List<LotMove> _LstLotsMove = new List<LotMove>();
 
         public List<StockMove> LstStockMove
         {
@@ -315,9 +385,21 @@ namespace HKSupply.PRJ_Stocks.Classes
             set { _LstStock = value; }
         }
 
+        public List<LotMove> LstLotsMove
+        {
+            get { return _LstLotsMove; }
+            set { _LstLotsMove = value; }
+        }
+
+        public List<LotItem> LstLots
+        {
+            get { return _LstLots; }
+            set { _LstLots = value; }
+        }
+
         public class StockMove
         {
-            public StockMove(StockMovementsType MovType, string idWR, string DercsWR, int idWareType, string iditem, string owner, decimal qttmove)
+            public StockMove(StockMovementsType MovType, string idWR, string DercsWR, int idWareType, string iditem, string owner, decimal qttmove, string Lot = "")
             {
                 Ware = new Warehouse();
                 Ware.idWareHouse = idWR;
@@ -328,8 +410,11 @@ namespace HKSupply.PRJ_Stocks.Classes
 
                 idItem = iditem;
                 idOwner = owner;
+                idLot = Lot;
                 QttMove = qttmove;
                 DTArrival = DTArrival;
+
+                MoveType = MovType;
             }
 
             public StockMove()
@@ -402,15 +487,63 @@ namespace HKSupply.PRJ_Stocks.Classes
 
             public int idMovementType
             {
-                get
-                { return (int)MoveType; }
-                set
-                {
-                    MoveType = (StockMovementsType)value;
-                }
+                get { return (int)MoveType; }
+                set { MoveType = (StockMovementsType)value; }
+            }
+            public string MovementTypeName
+            {
+                get { return (string)MoveType.ToString(); }
+                set { }
             }
 
         }
+
+        #region LotMove
+        public class LotMove
+        {
+            public LotMove(StockMovementsType MovType, string Lot, string iditem, decimal qttmove)
+            {
+                LstIdDocs = new List<string>();
+
+                idItem = iditem;
+                idLot = Lot;
+                QttMove = qttmove;
+                DTArrival = DTArrival;
+                MoveType = MovType;
+            }
+
+            public LotMove()
+            {
+                LstIdDocs = new List<string>();
+            }
+
+            public string idItem { get; set; }
+            public string idLot { get; set; }
+            public decimal QttMove { get; set; }
+
+            public DateTime DTArrival { get; set; }
+            public string Remarks { get; set; }
+            public List<string> LstIdDocs { get; set; }
+
+            public DateTime TimeStamp { get; set; }
+            public string idUser { get; set; }
+
+            public StockMovementsType MoveType { get; set; }
+
+            public int idMovementType
+            {
+                get { return (int)MoveType; }
+                set { MoveType = (StockMovementsType)value; }
+            }
+            public string MovementTypeName
+            {
+                get { return (string)MoveType.ToString(); }
+                set { }
+            }
+
+        }
+        #endregion
+
         #endregion
 
         #region OperacionsSobreDomini
@@ -438,6 +571,12 @@ namespace HKSupply.PRJ_Stocks.Classes
             return null;
         }
 
+        /// <summary>
+        /// Retorna el valor del item del stock "congelat" al carregar. Per a detectar canvis en STOCK externs (concurencia) en el proces de guardar
+        /// </summary>
+        /// <param name="ware"></param>
+        /// <param name="idItem"></param>
+        /// <returns></returns>
         public StockItem GetStockItemOrig(Warehouse ware, string idItem)
         {
             if (_LstStocksOrig != null && _LstStocksOrig.Count > 0)
@@ -445,11 +584,19 @@ namespace HKSupply.PRJ_Stocks.Classes
                 foreach (StockItem si in _LstStocksOrig)
                 {
                     if (si.ware.idWareHouse == ware.idWareHouse && si.ware.WareHouseType == ware.WareHouseType && si.item.idItem == idItem)
-
                     {
                         return si;
                     }
                 }
+            }
+            return null;
+        }
+
+        public LotItem GetLotItem(string idLot, string idItem)
+        {
+            if (_LstLots != null && _LstLots.Count > 0)
+            {
+                foreach (LotItem li in _LstLots) { if (li.idlot == idLot && li.iditem == idItem) return li; }
             }
             return null;
         }
@@ -499,13 +646,14 @@ namespace HKSupply.PRJ_Stocks.Classes
             StockItem SI = GetStockItem(ware, idItem);
             if (SI == null)
             {
-                if (Qtt < 0)
-                    throw new System.InvalidOperationException("Not enough Stock on Warehouse Available: " + SI.item.TotalQTT + ", Requested: " + Qtt.ToString("###,###,###,###.00") + ")");
+                if (Qtt < 0) // SI es ZERO!!!
+                    throw new System.InvalidOperationException("Not enough Stock on Warehouse Available: 0, Requested: " + Qtt.ToString("###,###,###,###.00") + ")");
                 else
                 {
                     SI = new StockItem();
                     SI.ware.idWareHouse = ware.idWareHouse;
                     SI.ware.WareHouseType = ware.WareHouseType;
+                    SI.ware.Descr = ware.Descr;
                     SI.item.idItem = idItem;
                     SI.item.AddStk(Qtt, idOwner);
                     _LstStock.Add(SI);
@@ -521,8 +669,8 @@ namespace HKSupply.PRJ_Stocks.Classes
 
             // -- REGISTRE MOVIMENTS ----------------------------------------------------------------------------------------
             StockMove SM = new StockMove(StockMovementsType.Entry,
-                                "", "", 0,
-                                idItem, idOwner, Qtt);
+                                ware.idWareHouse, ware.Descr, ware.idWareHouseType,
+                                idItem, idOwner, Qtt, idLot);
 
             SM.DTArrival = System.DateTime.Now;
             SM.Remarks = Remarks;
@@ -533,6 +681,40 @@ namespace HKSupply.PRJ_Stocks.Classes
             SM.idUser = IdUser;
 
             _LstStockMove.Add(SM);
+
+            // ** LOTS **********************************************************************************************************************
+            // -- REGISTRE LOTS ----------------------------------------------------------------------------------------
+            if (idLot != "")
+            {
+                LotItem LI = GetLotItem(idLot, idItem);
+                if (LI == null)
+                {
+                    if (Qtt < 0) // LI es ZERO
+                        throw new System.InvalidOperationException("Not enough Stock on LOT Available: 0 , Requested: " + Qtt.ToString("###,###,###,###.00") + ")");
+                    else
+                    {
+                        LI = new LotItem(idLot, idItem, Qtt);
+                        _LstLots.Add(LI);
+                    }
+                }
+                else
+                {
+                    if (LI.qtt + Qtt < 0)
+                        throw new System.InvalidOperationException("Not enough Stock on LOT (Available: " + LI.qtt.ToString("###,###,###,###.00") + ", Requested: " + Qtt.ToString("###,###,###,###.00") + ")");
+                    else
+                        LI.qtt += Qtt;
+                }
+
+                // -- REGISTRE MOVIMENTS ----------------------------------------------------------------------------------------
+                LotMove LM = new LotMove(StockMovementsType.Entry, idLot, idItem, Qtt);
+
+                LM.DTArrival = System.DateTime.Now;
+                LM.Remarks = Remarks;
+                LM.LstIdDocs = new List<string>(); if (LstidDoc != null && LstidDoc.Count > 0) foreach (string iD in LstidDoc) SM.LstIdDocs.Add(iD);
+                LM.TimeStamp = System.DateTime.Now;
+                LM.idUser = IdUser;
+                _LstLotsMove.Add(LM);
+            }
         }
 
         public void MoveSockItem(StockMovementsType MoveType, Warehouse WareORIG, Warehouse WareDEST, decimal Qtt, string idItem, string idOwner, string remarks = "", List<string> LstidDoc = null, string IdUser = "")
