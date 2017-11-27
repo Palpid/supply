@@ -26,6 +26,7 @@ namespace HKSupply.PRJ_Stocks.Forms
         
         private Stocks gSTKAct = new Stocks();
         private Stocks.StockItem gSIAct = new Stocks.StockItem();
+        private List<Stocks.StockMove> gDataImport = new List<Stocks.StockMove>();
 
         public StockManagement()
             
@@ -49,8 +50,13 @@ namespace HKSupply.PRJ_Stocks.Forms
 
                 FormatejaGridStk(this.GC_Stocks);
                 FormatejaGridMovs(this.GC_Movs);
+                
+                FormatejaGridLots(this.GC_Lots);
+                FormatejaGridMovsLots(this.GC_LotsMovements);
+
                 FormatejaGridMovsImport(this.GC_ImportExcel);
-                                
+
+
                 this.txtFreeStk.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
                 this.txtAsgStk.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
                 this.txtTotalStk.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -62,8 +68,10 @@ namespace HKSupply.PRJ_Stocks.Forms
 
                 GC_Stocks.DataSource = gSTKAct.LstStocks;
                 GC_Movs.DataSource = gSTKAct.LstStockMove;
-                               
 
+                GC_Lots.DataSource = gSTKAct.LstLots;
+                GC_LotsMovements.DataSource = gSTKAct.LstLotsMove;
+                               
                 //- Inicialitzem els combos dest
                 UpdateCombo(CB_OwnDEST, gSTKAct.GetLstOwnerIds());
                 UpdateCombo(CB_WareDEST, gSTKAct.GetLstWarehouseNames());
@@ -308,7 +316,160 @@ namespace HKSupply.PRJ_Stocks.Forms
             CL = new DevExpress.XtraGrid.Columns.GridColumn();
             V.Columns.Add(CL);
             CL.FieldName = "idMovementType";
-            CL.Caption = "idMov";
+            CL.Caption = "idMovT";
+            CL.OptionsColumn.AllowEdit = false;
+            CL.Width = 90;
+            CL.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            CL.DisplayFormat.FormatString = "n0";
+            CL.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            CL.VisibleIndex = VI;
+            //CL.BestFit();
+
+            VI++;
+            CL = new DevExpress.XtraGrid.Columns.GridColumn();
+            V.Columns.Add(CL);
+            CL.FieldName = "MovementTypeName";
+            CL.Caption = "Movevent Type";
+            CL.OptionsColumn.AllowEdit = false;
+            CL.Width = 90;
+            CL.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            CL.DisplayFormat.FormatString = "n0";
+            CL.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            CL.VisibleIndex = VI;
+            //CL.BestFit();
+        }
+
+        private void FormatejaGridLots(DevExpress.XtraGrid.GridControl GC)
+        {
+            var GV = GC.MainView as DevExpress.XtraGrid.Views.Grid.GridView;
+            GV.OptionsView.ColumnAutoWidth = false;
+            GV.HorzScrollVisibility = ScrollVisibility.Auto;
+            GV.VertScrollVisibility = ScrollVisibility.Auto;
+
+            GV.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.VisibleAlways;
+            GV.OptionsView.ShowFooter = true;
+            GV.OptionsView.ShowFilterPanelMode = ShowFilterPanelMode.ShowAlways;
+            GV.OptionsView.ShowAutoFilterRow = true;
+
+            ColumnView V = GC.MainView as ColumnView;
+            V.Columns.Clear();
+            V.OptionsBehavior.AutoPopulateColumns = false;
+            V.OptionsBehavior.Editable = false;
+            
+            GV.OptionsView.ShowFooter = true;
+
+
+            DevExpress.XtraGrid.Columns.GridColumn CL;
+            int VI = 0;
+
+            CL = new DevExpress.XtraGrid.Columns.GridColumn();
+            V.Columns.Add(CL);
+            CL.FieldName = "idlot";
+            CL.Caption = "Lot";
+            CL.OptionsColumn.AllowEdit = false;
+            CL.Width = 260;
+            CL.DisplayFormat.FormatType = DevExpress.Utils.FormatType.None;
+            CL.VisibleIndex = VI;
+            CL.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            //CL.BestFit();
+                        
+            VI++;
+            CL = new DevExpress.XtraGrid.Columns.GridColumn();
+            V.Columns.Add(CL);
+            CL.FieldName = "iditem";
+            CL.Caption = "Item";
+            CL.OptionsColumn.AllowEdit = false;
+            CL.Width = 180;
+            CL.DisplayFormat.FormatType = DevExpress.Utils.FormatType.None;
+            CL.VisibleIndex = VI;
+            CL.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            //CL.BestFit();
+                       
+
+            VI++;
+            CL = new DevExpress.XtraGrid.Columns.GridColumn();
+            V.Columns.Add(CL);
+            CL.FieldName = "qtt";
+            CL.Caption = "Quantity";
+            CL.OptionsColumn.AllowEdit = false;
+            CL.Width = 90;
+            CL.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            CL.DisplayFormat.FormatString = "n2";
+            CL.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            CL.VisibleIndex = VI;
+            //CL.BestFit();
+        }
+
+        private void FormatejaGridMovsLots(DevExpress.XtraGrid.GridControl GC)
+        {
+            var GV = GC.MainView as DevExpress.XtraGrid.Views.Grid.GridView;
+            GV.OptionsView.ColumnAutoWidth = false;
+            GV.HorzScrollVisibility = ScrollVisibility.Auto;
+            GV.VertScrollVisibility = ScrollVisibility.Auto;
+
+            ColumnView V = GC.MainView as ColumnView;
+            V.Columns.Clear();
+            V.OptionsBehavior.AutoPopulateColumns = false;
+            V.OptionsBehavior.Editable = false;
+
+            DevExpress.XtraGrid.Columns.GridColumn CL;
+            int VI = -1;
+            
+            VI++;
+            CL = new DevExpress.XtraGrid.Columns.GridColumn();
+            V.Columns.Add(CL);
+            CL.FieldName = "idItem";
+            CL.Caption = "Item";
+            CL.OptionsColumn.AllowEdit = false;
+            CL.Width = 180;
+            CL.DisplayFormat.FormatType = DevExpress.Utils.FormatType.None;
+            CL.VisibleIndex = VI;
+            CL.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            //CL.BestFit();
+
+            VI++;
+            CL = new DevExpress.XtraGrid.Columns.GridColumn();
+            V.Columns.Add(CL);
+            CL.FieldName = "idLot";
+            CL.Caption = "Lot";
+            CL.OptionsColumn.AllowEdit = false;
+            CL.Width = 60;
+            CL.DisplayFormat.FormatType = DevExpress.Utils.FormatType.None;
+            CL.VisibleIndex = VI;
+            CL.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            //CL.BestFit();
+            
+            VI++;
+            CL = new DevExpress.XtraGrid.Columns.GridColumn();
+            V.Columns.Add(CL);
+            CL.FieldName = "QttMove";
+            CL.Caption = "Quantity";
+            CL.OptionsColumn.AllowEdit = false;
+            CL.Width = 90;
+            CL.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            CL.DisplayFormat.FormatString = "n2";
+            CL.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            CL.VisibleIndex = VI;
+            //CL.BestFit();
+
+            VI++;
+            CL = new DevExpress.XtraGrid.Columns.GridColumn();
+            V.Columns.Add(CL);
+            CL.FieldName = "idMovementType";
+            CL.Caption = "idMovT";
+            CL.OptionsColumn.AllowEdit = false;
+            CL.Width = 90;
+            CL.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            CL.DisplayFormat.FormatString = "n0";
+            CL.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            CL.VisibleIndex = VI;
+            //CL.BestFit();
+
+            VI++;
+            CL = new DevExpress.XtraGrid.Columns.GridColumn();
+            V.Columns.Add(CL);
+            CL.FieldName = "MovementTypeName";
+            CL.Caption = "Movevent Type";
             CL.OptionsColumn.AllowEdit = false;
             CL.Width = 90;
             CL.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -349,19 +510,7 @@ namespace HKSupply.PRJ_Stocks.Forms
 
             DevExpress.XtraGrid.Columns.GridColumn CL;
             int VI = -1;
-
-            VI++;
-            CL = new DevExpress.XtraGrid.Columns.GridColumn();
-            V.Columns.Add(CL);
-            CL.FieldName = "WareHouseName";
-            CL.Caption = "Warehouse";
-            CL.OptionsColumn.AllowEdit = false;
-            CL.Width = 260;
-            CL.DisplayFormat.FormatType = DevExpress.Utils.FormatType.None;
-            CL.VisibleIndex = VI;
-            CL.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
-            //CL.BestFit();
-
+                        
             VI++;
             CL = new DevExpress.XtraGrid.Columns.GridColumn();
             V.Columns.Add(CL);
@@ -434,10 +583,7 @@ namespace HKSupply.PRJ_Stocks.Forms
             CL.DisplayFormat.FormatString = "n2";
             CL.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             CL.VisibleIndex = VI;
-            //CL.BestFit();
-                        
-
-            //public StockMove(StockMovementsType MovType, string idWR, string DercsWR, int idWareType, string iditem, string owner, decimal qttmove)
+            //CL.BestFit();                                              
         }
 
 
@@ -515,7 +661,12 @@ namespace HKSupply.PRJ_Stocks.Forms
             if (idOwner != "")
             {
                 decimal StkReleased = gSTKAct.FreeSockItem(SIO.ware, SIO.idItem, idOwner);
-                this.BtnFreeOwner.Enabled = false;                             
+                this.BtnFreeOwner.Enabled = false;
+                GC_Movs.RefreshDataSource();
+                GC_Stocks.RefreshDataSource();
+                GC_Lots.RefreshDataSource();
+                GC_LotsMovements.RefreshDataSource();
+                GC_ImportExcel.RefreshDataSource();
             };
 
             ActulitzaPanel(gSIAct);
@@ -547,6 +698,11 @@ namespace HKSupply.PRJ_Stocks.Forms
                 decimal FreeStk = SIO.item.TotalFreeQTT;
                 decimal Variacio = ValVol - FreeStk;
                 decimal StkAjustat = gSTKAct.AdjustSockItem(gSIAct.ware, gSIAct.idItem, Variacio);
+                GC_Movs.RefreshDataSource();
+                GC_Stocks.RefreshDataSource();
+                GC_Lots.RefreshDataSource();
+                GC_LotsMovements.RefreshDataSource();
+                GC_ImportExcel.RefreshDataSource();
             }
 
             this.Refresh();    
@@ -594,7 +750,11 @@ namespace HKSupply.PRJ_Stocks.Forms
                 ActulitzaPanel(gSIAct);
                 this.Refresh();
             }
-           
+            GC_Movs.RefreshDataSource();
+            GC_Stocks.RefreshDataSource();
+            GC_Lots.RefreshDataSource();
+            GC_LotsMovements.RefreshDataSource();
+            GC_ImportExcel.RefreshDataSource();
         }
 
         private void CB_WareDEST_SelectedIndexChanged(object sender, EventArgs e)
@@ -636,19 +796,38 @@ namespace HKSupply.PRJ_Stocks.Forms
                     this.Refresh();
                 }
             }
+            GC_Movs.RefreshDataSource();
+            GC_Stocks.RefreshDataSource();
+            GC_Lots.RefreshDataSource();
+            GC_LotsMovements.RefreshDataSource();
+            GC_ImportExcel.RefreshDataSource();
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
             Call_DB_Stocks CallDBS = new Call_DB_Stocks();
-            CallDBS.CallGuardarStocks(gSTKAct);
-            gSTKAct.LstStockMove.Clear();
-            GC_Movs.RefreshDataSource();
-            GC_ImportExcel.RefreshDataSource();
-            GC_Stocks.RefreshDataSource();
-            MessageBox.Show("Data has been saved", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Cursor = Cursors.Default;
+
+            try
+            {
+                CallDBS.CallGuardarStocks(gSTKAct);
+
+                gSTKAct = CallDBS.CallCargaStocks();
+
+                GC_Movs.RefreshDataSource();
+                GC_Stocks.RefreshDataSource();
+                GC_Lots.RefreshDataSource();
+                GC_LotsMovements.RefreshDataSource();
+                GC_ImportExcel.RefreshDataSource();
+
+
+                MessageBox.Show("Data has been saved", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Cursor = Cursors.Default;
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show("Error: " + ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BtnClearOwner_Click(object sender, EventArgs e)
@@ -670,6 +849,11 @@ namespace HKSupply.PRJ_Stocks.Forms
                 gSTKAct.AdjustItemAssing(gSIAct.ware, gSIAct.idItem, ValVol, idOwn);
                 ActulitzaPanel(gSIAct);
                 this.Refresh();
+                GC_Movs.RefreshDataSource();
+                GC_Stocks.RefreshDataSource();
+                GC_Lots.RefreshDataSource();
+                GC_LotsMovements.RefreshDataSource();
+                GC_ImportExcel.RefreshDataSource();
             }
         }
 
@@ -677,7 +861,7 @@ namespace HKSupply.PRJ_Stocks.Forms
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-            openFileDialog1.InitialDirectory = "c:\\";
+            openFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             openFileDialog1.Filter = "MS-Excel files (*.xls*)|*.xls*|All files (*.*)|*.*";
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
@@ -687,16 +871,51 @@ namespace HKSupply.PRJ_Stocks.Forms
                 try
                 {
                     string FileName = openFileDialog1.FileName;
-                    var Data = Helpers.Excel.OpenFileImportStk(FileName,gSTKAct);
+                    var Data = Helpers.Excel.OpenFileImportStk(FileName, gSTKAct);
+                    gDataImport.Clear();
                     if (Data != null)
                     {
-                        this.tabStk.TabIndex = 3;
-                        this.GC_ImportExcel.DataSource = Data;
-                        this.Refresh();
+                        // TODO : VALIDAR QUE DATA te WAREHOUSE i ITEM correctes (EXISTEIXEN)
+                        int Line = 0;
+                        bool ErrL = false;
+                        List<string> Err = new List<string>();
+                        List<int> ErrLin = new List<int>();
+                        foreach (Stocks.StockMove dr in Data)
+                        {
+                            ErrL = false;             
+                            if (!gSTKAct.WareHouseExists(dr.Ware.idWareHouse, dr.Ware.idWareHouseType))
+                            {
+                                Err.Add($"Error on line {Line + 2} : Bad Warehouse id/Type {dr.Ware.idWareHouse}-{dr.Ware.idWareHouseType}");
+                                ErrL = true;
+                            }
+                            if (!gSTKAct.ItemBcnExists(dr.idItem))
+                            {
+                                Err.Add($"Error on line {Line + 2} : Bad Item {dr.idItem}");
+                                ErrL = true;
+                            }
+                            if (!ErrL) gDataImport.Add(dr);
+                            Line += 1;
+                        }
 
-                        string m = "Excel file loaded succesfully. " + Environment.NewLine + Environment.NewLine;
-                        m += "Press import to update data";
-                        MessageBox.Show(m, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (Err.Count > 0)
+                        {
+                            string m = "Excel file loaded with errors. The following lines have been ignored: " + Environment.NewLine + Environment.NewLine;
+                            foreach (string S in Err) m += S + Environment.NewLine;
+                            m += Environment.NewLine;
+                            m += "Press import to update data";
+                            MessageBox.Show(m, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            string m = "Excel file loaded succesfully. " + Environment.NewLine + Environment.NewLine;
+                            m += "Press import to update data";
+                            MessageBox.Show(m, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                        this.GC_ImportExcel.DataSource = gDataImport;
+                        this.GC_ImportExcel.RefreshDataSource();
+                        this.tabStk.SelectedIndex = 4;
+                        this.Refresh();
                     }
                 }
                 catch (Exception ex)
@@ -704,6 +923,11 @@ namespace HKSupply.PRJ_Stocks.Forms
                     MessageBox.Show(ex.Message);
                 }
 
+            }
+            else
+            {
+                string m = "Excel file load cancelled";                
+                MessageBox.Show(m, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -713,7 +937,7 @@ namespace HKSupply.PRJ_Stocks.Forms
         {
             SaveFileDialog openFileDialog1 = new SaveFileDialog();
 
-            openFileDialog1.InitialDirectory = "c:\\";
+            openFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             openFileDialog1.Filter = "MS-Excel files (*.xls*)|*.xls*|All files (*.*)|*.*";
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
@@ -722,7 +946,7 @@ namespace HKSupply.PRJ_Stocks.Forms
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string FileName = openFileDialog1.FileName;
-                Helpers.Excel.CreateTemplate(FileName, gSTKAct.LstWarehouses);
+                Helpers.Excel.CreateTemplate(FileName, gSTKAct.LstWarehouses, gSTKAct.LstItemsBcn);
 
                 MessageBox.Show($"Template created succesfully in '{FileName}'.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -730,7 +954,21 @@ namespace HKSupply.PRJ_Stocks.Forms
 
         private void BtnExecuteImport_Click(object sender, EventArgs e)
         {
-
+            foreach (Stocks.StockMove sm in gDataImport)
+            {
+                Stocks.Warehouse wr =  gSTKAct.GetWareHouse(sm.idWareHouse, sm.idWareHouseType);
+                Stocks.Warehouse nwr = new Stocks.Warehouse();
+                nwr.Descr = wr.Descr;
+                nwr.idWareHouse = wr.idWareHouse;
+                nwr.idWareHouseType = wr.idWareHouseType; 
+                gSTKAct.AddSockItem(Stocks.StockMovementsType.Entry, nwr, sm.QttMove,sm.idItem, sm.idLot);
+            }
+            gDataImport.Clear();
+            GC_Movs.RefreshDataSource();
+            GC_Stocks.RefreshDataSource();
+            GC_Lots.RefreshDataSource();
+            GC_LotsMovements.RefreshDataSource();
+            GC_ImportExcel.RefreshDataSource();
         }
     }
 }

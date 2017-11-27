@@ -48,6 +48,7 @@ namespace HKSupply.Forms.Supply.Dashboard
                 ConfigureRibbonActions();
                 LoadAuxList();
                 SetUpLabels();
+                SetUpEditText();
                 SetUpCheckedComboBoxEdit();
                 SetUpLookUpEdit();
                 SetUpEvents();
@@ -75,7 +76,7 @@ namespace HKSupply.Forms.Supply.Dashboard
                 SetActions();
                 RestoreInitState();
                 //Print and export buttons
-                EnablePrintPreview = false;
+                EnablePrintPreview = true;
                 EnableExportExcel = true;
                 EnableExportCsv = false;
                 ConfigurePrintExportOptions();
@@ -89,6 +90,18 @@ namespace HKSupply.Forms.Supply.Dashboard
             }
         }
 
+        public override void bbiPrintPreview_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                pivotGridDashboardQP.ShowPrintPreview();
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public override void bbiExportExcel_ItemClick(object sender, ItemClickEventArgs e)
         {
 
@@ -97,6 +110,7 @@ namespace HKSupply.Forms.Supply.Dashboard
 
             try
             {
+
                 if (string.IsNullOrEmpty(ExportExcelFile) == false)
                 {
                     pivotGridDashboardQP.ExportToXlsx(ExportExcelFile);
@@ -127,8 +141,7 @@ namespace HKSupply.Forms.Supply.Dashboard
         {
             try
             {
-                lblDateIniWeek.Text = dateEditDateIni.DateTime.GetWeek().ToString();
-
+                txtDateIniWeek.Text = dateEditDateIni.DateTime.GetWeek().ToString();
             }
             catch (Exception ex)
             {
@@ -140,8 +153,7 @@ namespace HKSupply.Forms.Supply.Dashboard
         {
             try
             {
-                lblDateEndWeek.Text = dateEditDateEnd.DateTime.GetWeek().ToString();
-
+                txtDateEndWeek.Text = dateEditDateEnd.DateTime.GetWeek().ToString();
             }
             catch (Exception ex)
             {
@@ -372,7 +384,7 @@ namespace HKSupply.Forms.Supply.Dashboard
                 var weeks = string.Empty;
                 var type = (string)lueType.EditValue;
 
-                for (int i = Int32.Parse(lblDateIniWeek.Text); i<=Int32.Parse(lblDateEndWeek.Text); i++)
+                for (int i = Int32.Parse(txtDateIniWeek.Text); i<=Int32.Parse(txtDateEndWeek.Text); i++)
                 {
                     weeks += i.ToString() + ",";
                 }
@@ -404,7 +416,7 @@ namespace HKSupply.Forms.Supply.Dashboard
                 var itemGroupType = ccbeItemGroup.Properties.GetCheckedItems();
                 var weeks = string.Empty;
 
-                for (int i = Int32.Parse(lblDateIniWeek.Text); i <= Int32.Parse(lblDateEndWeek.Text); i++)
+                for (int i = Int32.Parse(txtDateIniWeek.Text); i <= Int32.Parse(txtDateEndWeek.Text); i++)
                 {
                     weeks += i.ToString() + ",";
                 }
@@ -451,13 +463,9 @@ namespace HKSupply.Forms.Supply.Dashboard
                 lblDateEnd.Text = "END";
                 lblDate.Text = "Date";
                 lblWeek.Text = "Week";
-                lblDateIniWeek.Text = string.Empty;
-                lblDateEndWeek.Text = string.Empty;
 
                 /********* Align **********/
                 //Headers
-                lblDateIniWeek.Appearance.TextOptions.HAlignment = HorzAlignment.Center;
-                lblDateEndWeek.Appearance.TextOptions.HAlignment = HorzAlignment.Center;
                 lblDate.Appearance.TextOptions.HAlignment = HorzAlignment.Center;
                 lblWeek.Appearance.TextOptions.HAlignment = HorzAlignment.Center;
 
@@ -467,7 +475,102 @@ namespace HKSupply.Forms.Supply.Dashboard
                 throw;
             }
         }
-        
+
+        private void SetUpEditText()
+        {
+            try
+            {
+                /********* Fonts **********/
+                txtDateIniWeek.Font = _labelDefaultFontBold;
+                txtDateEndWeek.Font = _labelDefaultFontBold;
+
+                /********* Align **********/
+                txtDateIniWeek.Properties.Appearance.TextOptions.HAlignment = HorzAlignment.Center;
+                txtDateEndWeek.Properties.Appearance.TextOptions.HAlignment = HorzAlignment.Center;
+
+                /********* Format **********/
+                txtDateIniWeek.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                txtDateEndWeek.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+                txtDateIniWeek.Properties.Mask.EditMask = "D";
+                txtDateEndWeek.Properties.Mask.EditMask = "D";
+
+                /********* Events **********/
+                txtDateIniWeek.Validating += TxtDateWeek_Validating;
+                txtDateEndWeek.Validating += TxtDateWeek_Validating;
+                txtDateIniWeek.Validated += TxtDateIniWeek_Validated;
+                txtDateEndWeek.Validated += TxtDateEndWeek_Validated;
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void TxtDateIniWeek_Validated(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtDateIniWeek.EditValue != null)
+                {
+                    int weekNum;
+                    Int32.TryParse(txtDateIniWeek.EditValue.ToString(), out weekNum);
+                    var date = DatetimeHelper.FirtDateOfWeek(DateTime.Now.Year, weekNum);
+                    dateEditDateIni.EditValue = date;
+                }
+                else
+                {
+                    dateEditDateIni.EditValue = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void TxtDateEndWeek_Validated(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtDateEndWeek.EditValue != null)
+                {
+                    int weekNum;
+                    Int32.TryParse(txtDateEndWeek.EditValue.ToString(), out weekNum);
+                    var date = DatetimeHelper.FirtDateOfWeek(DateTime.Now.Year, weekNum);
+                    dateEditDateEnd.EditValue = date;
+                }
+                else
+                {
+                    dateEditDateEnd.EditValue = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void TxtDateWeek_Validating(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                if (((TextEdit)sender).EditValue == null)
+                    return;
+                
+                int week;
+                Int32.TryParse(((TextEdit)sender).EditValue.ToString(), out week);
+                if (week < 1 || week > 53)
+                {
+                    e.Cancel = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void SetUpCheckedComboBoxEdit()
         {
             try
@@ -648,9 +751,6 @@ namespace HKSupply.Forms.Supply.Dashboard
                 pivotGridDashboardQP.CellDoubleClick += PivotGridDashboardQP_CellDoubleClick;
                 pivotGridDashboardQP.CustomDrawFieldValue += PivotGridDashboardQP_CustomDrawFieldValue;
 
-                
-
-
             }
             catch
             {
@@ -658,7 +758,6 @@ namespace HKSupply.Forms.Supply.Dashboard
             }
         }
 
-        
         private void SetUpSplitContainer()
         {
             try
@@ -880,7 +979,7 @@ namespace HKSupply.Forms.Supply.Dashboard
                     return false;
                 }
 
-                if (Int32.Parse(lblDateIniWeek.Text) > Int32.Parse(lblDateEndWeek.Text))
+                if (Int32.Parse(txtDateIniWeek.Text) > Int32.Parse(txtDateEndWeek.Text))
                 {
                     XtraMessageBox.Show($"End date must be greater than end date", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
@@ -1079,7 +1178,6 @@ namespace HKSupply.Forms.Supply.Dashboard
         #endregion
 
         #endregion
-
 
     }
 

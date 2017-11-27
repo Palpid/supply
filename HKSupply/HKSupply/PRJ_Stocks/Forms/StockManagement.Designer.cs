@@ -70,6 +70,12 @@
             this.BtnExecuteImport = new System.Windows.Forms.Button();
             this.GC_ImportExcel = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.GC_Lots = new DevExpress.XtraGrid.GridControl();
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.GC_LotsMovements = new DevExpress.XtraGrid.GridControl();
+            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.GC_Stocks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWare.Properties)).BeginInit();
@@ -89,6 +95,12 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GC_ImportExcel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GC_Lots)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GC_LotsMovements)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             this.SuspendLayout();
             // 
             // GC_Stocks
@@ -444,6 +456,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabStk.Controls.Add(this.tabPage1);
             this.tabStk.Controls.Add(this.tabPage2);
+            this.tabStk.Controls.Add(this.tabPage4);
+            this.tabStk.Controls.Add(this.tabPage5);
             this.tabStk.Controls.Add(this.tabPage3);
             this.tabStk.Location = new System.Drawing.Point(5, 200);
             this.tabStk.Name = "tabStk";
@@ -503,12 +517,13 @@
             // BtnExecuteImport
             // 
             this.BtnExecuteImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnExecuteImport.Location = new System.Drawing.Point(881, 380);
+            this.BtnExecuteImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnExecuteImport.Location = new System.Drawing.Point(877, 374);
             this.BtnExecuteImport.Name = "BtnExecuteImport";
-            this.BtnExecuteImport.Size = new System.Drawing.Size(105, 24);
+            this.BtnExecuteImport.Size = new System.Drawing.Size(109, 29);
             this.BtnExecuteImport.TabIndex = 79;
             this.BtnExecuteImport.Text = "Import";
-            this.BtnExecuteImport.UseVisualStyleBackColor = true;
+            this.BtnExecuteImport.UseVisualStyleBackColor = false;
             this.BtnExecuteImport.Click += new System.EventHandler(this.BtnExecuteImport_Click);
             // 
             // GC_ImportExcel
@@ -519,7 +534,7 @@
             this.GC_ImportExcel.Location = new System.Drawing.Point(3, 4);
             this.GC_ImportExcel.MainView = this.gridView3;
             this.GC_ImportExcel.Name = "GC_ImportExcel";
-            this.GC_ImportExcel.Size = new System.Drawing.Size(984, 372);
+            this.GC_ImportExcel.Size = new System.Drawing.Size(984, 367);
             this.GC_ImportExcel.TabIndex = 2;
             this.GC_ImportExcel.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -528,6 +543,58 @@
             // 
             this.gridView3.GridControl = this.GC_ImportExcel;
             this.gridView3.Name = "gridView3";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.GC_Lots);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(990, 407);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Lots";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.GC_LotsMovements);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(990, 407);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Lot Movements";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // GC_Lots
+            // 
+            this.GC_Lots.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GC_Lots.Location = new System.Drawing.Point(0, 0);
+            this.GC_Lots.MainView = this.gridView4;
+            this.GC_Lots.Name = "GC_Lots";
+            this.GC_Lots.Size = new System.Drawing.Size(990, 407);
+            this.GC_Lots.TabIndex = 3;
+            this.GC_Lots.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView4});
+            // 
+            // gridView4
+            // 
+            this.gridView4.GridControl = this.GC_Lots;
+            this.gridView4.Name = "gridView4";
+            // 
+            // GC_LotsMovements
+            // 
+            this.GC_LotsMovements.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GC_LotsMovements.Location = new System.Drawing.Point(0, 0);
+            this.GC_LotsMovements.MainView = this.gridView5;
+            this.GC_LotsMovements.Name = "GC_LotsMovements";
+            this.GC_LotsMovements.Size = new System.Drawing.Size(990, 407);
+            this.GC_LotsMovements.TabIndex = 3;
+            this.GC_LotsMovements.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView5});
+            // 
+            // gridView5
+            // 
+            this.gridView5.GridControl = this.GC_LotsMovements;
+            this.gridView5.Name = "gridView5";
             // 
             // StockManagement
             // 
@@ -559,6 +626,12 @@
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GC_ImportExcel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GC_Lots)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GC_LotsMovements)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -606,5 +679,11 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private System.Windows.Forms.Button BtnExecuteImport;
         private System.Windows.Forms.Button btnCerateXLTemplate;
+        private System.Windows.Forms.TabPage tabPage4;
+        private DevExpress.XtraGrid.GridControl GC_Lots;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
+        private System.Windows.Forms.TabPage tabPage5;
+        private DevExpress.XtraGrid.GridControl GC_LotsMovements;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
     }
 }

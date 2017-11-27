@@ -31,6 +31,8 @@
             this.xtcGeneral = new DevExpress.XtraTab.XtraTabControl();
             this.xtpDashboard = new DevExpress.XtraTab.XtraTabPage();
             this.pcFilter = new DevExpress.XtraEditors.PanelControl();
+            this.txtDateEndWeek = new DevExpress.XtraEditors.TextEdit();
+            this.txtDateIniWeek = new DevExpress.XtraEditors.TextEdit();
             this.lblType = new DevExpress.XtraEditors.LabelControl();
             this.lueType = new DevExpress.XtraEditors.LookUpEdit();
             this.ccbeItemGroup = new DevExpress.XtraEditors.CheckedComboBoxEdit();
@@ -42,8 +44,6 @@
             this.dateEditDateIni = new DevExpress.XtraEditors.DateEdit();
             this.dateEditDateEnd = new DevExpress.XtraEditors.DateEdit();
             this.lblDate = new DevExpress.XtraEditors.LabelControl();
-            this.lblDateIniWeek = new DevExpress.XtraEditors.LabelControl();
-            this.lblDateEndWeek = new DevExpress.XtraEditors.LabelControl();
             this.lblWeek = new DevExpress.XtraEditors.LabelControl();
             this.lblCustomer = new DevExpress.XtraEditors.LabelControl();
             this.xtcDashboard = new DevExpress.XtraTab.XtraTabControl();
@@ -61,6 +61,8 @@
             this.xtpDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcFilter)).BeginInit();
             this.pcFilter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDateEndWeek.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDateIniWeek.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ccbeItemGroup.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ccbeCustomer.Properties)).BeginInit();
@@ -118,6 +120,8 @@
             // 
             this.pcFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pcFilter.Controls.Add(this.txtDateEndWeek);
+            this.pcFilter.Controls.Add(this.txtDateIniWeek);
             this.pcFilter.Controls.Add(this.lblType);
             this.pcFilter.Controls.Add(this.lueType);
             this.pcFilter.Controls.Add(this.ccbeItemGroup);
@@ -129,14 +133,28 @@
             this.pcFilter.Controls.Add(this.dateEditDateIni);
             this.pcFilter.Controls.Add(this.dateEditDateEnd);
             this.pcFilter.Controls.Add(this.lblDate);
-            this.pcFilter.Controls.Add(this.lblDateIniWeek);
-            this.pcFilter.Controls.Add(this.lblDateEndWeek);
             this.pcFilter.Controls.Add(this.lblWeek);
             this.pcFilter.Controls.Add(this.lblCustomer);
             this.pcFilter.Location = new System.Drawing.Point(11, 13);
             this.pcFilter.Name = "pcFilter";
             this.pcFilter.Size = new System.Drawing.Size(1039, 142);
             this.pcFilter.TabIndex = 5;
+            // 
+            // txtDateEndWeek
+            // 
+            this.txtDateEndWeek.Location = new System.Drawing.Point(554, 60);
+            this.txtDateEndWeek.MenuManager = this.ribbonControl;
+            this.txtDateEndWeek.Name = "txtDateEndWeek";
+            this.txtDateEndWeek.Size = new System.Drawing.Size(65, 20);
+            this.txtDateEndWeek.TabIndex = 26;
+            // 
+            // txtDateIniWeek
+            // 
+            this.txtDateIniWeek.Location = new System.Drawing.Point(554, 33);
+            this.txtDateIniWeek.MenuManager = this.ribbonControl;
+            this.txtDateIniWeek.Name = "txtDateIniWeek";
+            this.txtDateIniWeek.Size = new System.Drawing.Size(65, 20);
+            this.txtDateIniWeek.TabIndex = 25;
             // 
             // lblType
             // 
@@ -196,7 +214,7 @@
             // 
             // lblDateIni
             // 
-            this.lblDateIni.Location = new System.Drawing.Point(367, 34);
+            this.lblDateIni.Location = new System.Drawing.Point(367, 37);
             this.lblDateIni.Name = "lblDateIni";
             this.lblDateIni.Size = new System.Drawing.Size(32, 13);
             this.lblDateIni.TabIndex = 2;
@@ -204,7 +222,7 @@
             // 
             // lblDateEnd
             // 
-            this.lblDateEnd.Location = new System.Drawing.Point(367, 53);
+            this.lblDateEnd.Location = new System.Drawing.Point(367, 67);
             this.lblDateEnd.Name = "lblDateEnd";
             this.lblDateEnd.Size = new System.Drawing.Size(20, 13);
             this.lblDateEnd.TabIndex = 3;
@@ -226,7 +244,7 @@
             // dateEditDateEnd
             // 
             this.dateEditDateEnd.EditValue = null;
-            this.dateEditDateEnd.Location = new System.Drawing.Point(442, 52);
+            this.dateEditDateEnd.Location = new System.Drawing.Point(442, 60);
             this.dateEditDateEnd.MenuManager = this.ribbonControl;
             this.dateEditDateEnd.Name = "dateEditDateEnd";
             this.dateEditDateEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -243,27 +261,6 @@
             this.lblDate.Size = new System.Drawing.Size(23, 13);
             this.lblDate.TabIndex = 6;
             this.lblDate.Text = "Date";
-            // 
-            // lblDateIniWeek
-            // 
-            this.lblDateIniWeek.AccessibleRole = System.Windows.Forms.AccessibleRole.Animation;
-            this.lblDateIniWeek.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblDateIniWeek.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lblDateIniWeek.Location = new System.Drawing.Point(554, 33);
-            this.lblDateIniWeek.Name = "lblDateIniWeek";
-            this.lblDateIniWeek.Size = new System.Drawing.Size(65, 20);
-            this.lblDateIniWeek.TabIndex = 7;
-            this.lblDateIniWeek.Text = "XX";
-            // 
-            // lblDateEndWeek
-            // 
-            this.lblDateEndWeek.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblDateEndWeek.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lblDateEndWeek.Location = new System.Drawing.Point(554, 53);
-            this.lblDateEndWeek.Name = "lblDateEndWeek";
-            this.lblDateEndWeek.Size = new System.Drawing.Size(65, 19);
-            this.lblDateEndWeek.TabIndex = 8;
-            this.lblDateEndWeek.Text = "XX";
             // 
             // lblWeek
             // 
@@ -395,6 +392,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcFilter)).EndInit();
             this.pcFilter.ResumeLayout(false);
             this.pcFilter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDateEndWeek.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDateIniWeek.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ccbeItemGroup.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ccbeCustomer.Properties)).EndInit();
@@ -429,8 +428,6 @@
         private DevExpress.XtraEditors.DateEdit dateEditDateIni;
         private DevExpress.XtraEditors.DateEdit dateEditDateEnd;
         private DevExpress.XtraEditors.LabelControl lblDate;
-        private DevExpress.XtraEditors.LabelControl lblDateIniWeek;
-        private DevExpress.XtraEditors.LabelControl lblDateEndWeek;
         private DevExpress.XtraEditors.LabelControl lblWeek;
         private DevExpress.XtraEditors.LabelControl lblCustomer;
         private DevExpress.XtraTab.XtraTabControl xtcDashboard;
@@ -447,5 +444,7 @@
         private DevExpress.XtraEditors.LookUpEdit lueType;
         private DevExpress.XtraTab.XtraTabPage xtpBarChart;
         private DevExpress.XtraCharts.ChartControl chartControlPercDesv;
+        private DevExpress.XtraEditors.TextEdit txtDateIniWeek;
+        private DevExpress.XtraEditors.TextEdit txtDateEndWeek;
     }
 }

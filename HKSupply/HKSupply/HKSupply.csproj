@@ -469,6 +469,7 @@
     <Compile Include="Helpers\CurrencyConverter\ICurrencyConverter.cs" />
     <Compile Include="Helpers\CurrencyConverter\Rates.cs" />
     <Compile Include="Helpers\CustomExtensions.cs" />
+    <Compile Include="Helpers\DatetimeHelper.cs" />
     <Compile Include="Helpers\DbContextExtensions.cs" />
     <Compile Include="Helpers\DeepCopyByExpressionTrees.cs" />
     <Compile Include="Helpers\DocHelper.cs" />
