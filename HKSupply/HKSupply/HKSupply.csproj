@@ -433,6 +433,12 @@
     <Compile Include="Forms\Supply\PackingListBcn.Designer.cs">
       <DependentUpon>PackingListBcn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Supply\PackingList_v2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\PackingList_v2.Designer.cs">
+      <DependentUpon>PackingList_v2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Supply\PurchaseOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1238,6 +1244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\PackingListBcn.resx">
       <DependentUpon>PackingListBcn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\PackingList_v2.resx">
+      <DependentUpon>PackingList_v2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\PurchaseOrder.resx">
       <DependentUpon>PurchaseOrder.cs</DependentUpon>
