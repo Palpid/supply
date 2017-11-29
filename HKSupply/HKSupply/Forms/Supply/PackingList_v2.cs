@@ -1512,6 +1512,8 @@ namespace HKSupply.Forms.Supply
                 GridColumn colUnitPrice = new GridColumn() { Caption = "Unit Price", Visible = true, FieldName = nameof(DocLine.UnitPrice), Width = 85 };
                 GridColumn colTotalAmount = new GridColumn() { Caption = "Total Amount", Visible = true, FieldName = nameof(DocLine.TotalAmount), Width = 120 };
                 GridColumn colRemarks = new GridColumn() { Caption = "Notes", Visible = true, FieldName = nameof(DocLine.Remarks), Width = 300 };
+                //Test Item Batch
+                GridColumn colBoxNumber = new GridColumn() { Caption = "Box Number", Visible = true, FieldName = nameof(DocLine.BoxNumber), Width = 100 };
 
                 //Display Format
                 colUnitPrice.DisplayFormat.FormatType = FormatType.Numeric;
@@ -1539,6 +1541,41 @@ namespace HKSupply.Forms.Supply
                     new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0:n3} KG", eGridLinesDeliveredGoodsSummaries.totalQuantityMt),
                     new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0} PC", eGridLinesDeliveredGoodsSummaries.totalQuantityHw) });
 
+                //Test Item Batch INI
+                //Edit Repositories
+                //Es necesario crear una lista tonta donde hayan varias cajas, porque aunque se filtra después en el shownEditor, al salir tiene que mostrar el valor 
+                //del datasource original. Meto 50 cajas, no creo que se llegue a tanto
+                List<PackingListBoxes> tmpBoxesList = new List<PackingListBoxes>();
+                for (int i = 1; i <= 50; i++)
+                {
+                    tmpBoxesList.Add(new PackingListBoxes() { BoxNumber = i });
+                }
+
+                //RepositoryItemSearchLookUpEdit riPackingBoxes = new RepositoryItemSearchLookUpEdit()
+                //{
+                //    DataSource = tmpBoxesList, 
+                //    //DataSource = _packingListBoxes,
+                //    ValueMember = nameof(PackingListBoxes.BoxNumber),
+                //    DisplayMember = nameof(PackingListBoxes.BoxNumber),
+                //    NullText = "Select Box",
+                //    ShowClearButton = false
+                //};
+                //colBoxNumber.ColumnEdit = riPackingBoxes;
+                //riPackingBoxes.View.Columns.AddField(nameof(PackingListBoxes.BoxNumber)).Visible = true;
+
+                RepositoryItemLookUpEdit riPackingBoxes = new RepositoryItemLookUpEdit()
+                {
+                    DataSource = tmpBoxesList, 
+                    //DataSource = _packingListBoxes,
+                    ValueMember = nameof(PackingListBoxes.BoxNumber),
+                    DisplayMember = nameof(PackingListBoxes.BoxNumber),
+                    NullText = "Select Box",
+                };
+                riPackingBoxes.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo(nameof(PackingListBoxes.BoxNumber), "Box Number"));
+                colBoxNumber.ColumnEdit = riPackingBoxes;
+
+                //Test Item Batch END
+
                 //Add columns to grid root view
                 gridViewLinesDeliveredGoods.Columns.Add(colIdDocRelated);
                 gridViewLinesDeliveredGoods.Columns.Add(colIdItemBcn);
@@ -1550,11 +1587,12 @@ namespace HKSupply.Forms.Supply
                 gridViewLinesDeliveredGoods.Columns.Add(colUnitPrice);
                 gridViewLinesDeliveredGoods.Columns.Add(colTotalAmount);
                 gridViewLinesDeliveredGoods.Columns.Add(colRemarks);
+                gridViewLinesDeliveredGoods.Columns.Add(colBoxNumber);//Test Item Batch
 
                 //Events
                 gridViewLinesDeliveredGoods.CustomSummaryCalculate += GridViewLinesDeliveredGoods_CustomSummaryCalculate;
                 gridViewLinesDeliveredGoods.FocusedRowChanged += GridViewLinesDeliveredGoods_FocusedRowChanged; //Test Item Batch
-
+                gridViewLinesDeliveredGoods.ShownEditor += GridViewLinesDeliveredGoods_ShownEditor; //Test Item Batch
             }
             catch
             {
@@ -1784,6 +1822,14 @@ namespace HKSupply.Forms.Supply
                     return false;
                 }
 
+                //Test Item Batch INI
+                if (ValidatePackingBoxes() == false)
+                    return false;
+
+                if (ValidatePackingItemsBatch() == false)
+                    return false;
+                //Test Item Batch END
+
                 return true;
             }
             catch
@@ -1810,7 +1856,8 @@ namespace HKSupply.Forms.Supply
 
                 foreach (GridColumn col in gridViewLinesDeliveredGoods.Columns)
                 {
-                    if (col.FieldName != nameof(DocLine.Remarks))
+                    //if (col.FieldName != nameof(DocLine.Remarks))
+                    if (col.FieldName != nameof(DocLine.Remarks) && col.FieldName != nameof(DocLine.BoxNumber)) //Test Item Batch
                         col.OptionsColumn.AllowEdit = false;
                 }
 
@@ -2283,10 +2330,33 @@ namespace HKSupply.Forms.Supply
 
                 //Events
                 xgrdItemsBatch.ProcessGridKey += XgrdItemsBatch_ProcessGridKey;
+                gridViewItemsBatch.CellValueChanged += GridViewItemsBatch_CellValueChanged;
             }
             catch
             {
                 throw;
+            }
+        }
+
+        private void GridViewItemsBatch_CellValueChanged(object sender, CellValueChangedEventArgs e)
+        {
+            try
+            {
+                switch (e.Column.FieldName)
+                {
+                    case nameof(PackingListItemBatch.Batch):
+                        GridView view = sender as GridView;
+                        PackingListItemBatch itemBatch = view.GetRow(view.FocusedRowHandle) as PackingListItemBatch;
+
+                        if (itemBatch == null)
+                            return;
+                        CopyToItemBatchList(itemBatch);
+                        break;
+                }
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -2336,6 +2406,7 @@ namespace HKSupply.Forms.Supply
                     ValueMember = nameof(Box.Id),
                     DisplayMember = nameof(Box.Name),
                     NullText = "Select Item",
+                    ShowClearButton = false,
                 };
                 riBoxes.View.Columns.AddField(nameof(Box.Name)).Visible = true;
 
@@ -2347,6 +2418,9 @@ namespace HKSupply.Forms.Supply
                 gridViewPackingBoxes.Columns.Add(colNetWeight);
                 gridViewPackingBoxes.Columns.Add(colGrossWeight);
 
+                //Disable sorting
+                foreach (GridColumn column in gridViewPackingBoxes.Columns)
+                    column.OptionsColumn.AllowSort = DefaultBoolean.False;
 
                 //Events
                 xgrdPackingBoxes.ProcessGridKey += XgrdPackingBoxes_ProcessGridKey;
@@ -2382,7 +2456,7 @@ namespace HKSupply.Forms.Supply
                     {
                         if (String.IsNullOrEmpty(itemBatch.Batch) == false && itemBatch.Quantity > 0)
                         {
-                            _auxItemsBatchList.Add(new PackingListItemBatch() { IdItem = itemBatch.IdItem });
+                            _auxItemsBatchList.Add(new PackingListItemBatch() { IdDoc = itemBatch.IdDoc, IdItem = itemBatch.IdItem });
                         }
                     }
                 }
@@ -2410,6 +2484,8 @@ namespace HKSupply.Forms.Supply
                         return;
 
                     _packingListBoxes.Remove(packingListBox);
+                    UpdateBoxNumber();
+                    UpdateBoxNumberDeliveredGood(packingListBox.BoxNumber);
                 }
 
                 if (e.KeyCode == Keys.Enter)
@@ -2439,18 +2515,14 @@ namespace HKSupply.Forms.Supply
                 if (lineDeliveredGoods == null)
                     return;
 
-                //Antes de cambiar de item copiamos los lotes actuales
-                CopyToItemBatchList();
-
                 //Buscamos los lotes referentes a ese item
-                //xgrdItemsBatch.DataSource = _packingListItemBatchList.Where(a => a.IdItem.Equals(lineDeliveredGoods.IdItemBcn)).ToList();
                 _auxItemsBatchList = new BindingList<PackingListItemBatch>(_itemsBatchList.Where(a => a.IdItem.Equals(lineDeliveredGoods.IdItemBcn)).ToList());
                 xgrdItemsBatch.DataSource = null;
                 xgrdItemsBatch.DataSource = _auxItemsBatchList;
 
                 if (CurrentState == ActionsStates.New || CurrentState == ActionsStates.Edit)
                 {
-                    _auxItemsBatchList.Add(new PackingListItemBatch() { IdItem = lineDeliveredGoods.IdItemBcn });
+                    _auxItemsBatchList.Add(new PackingListItemBatch() {IdDoc = lineDeliveredGoods.IdDocRelated, IdItem = lineDeliveredGoods.IdItemBcn });
                 }
             }
             catch(Exception ex)
@@ -2459,28 +2531,45 @@ namespace HKSupply.Forms.Supply
             }
         }
 
-        /// <summary>
-        /// Copia la lista del lotes del item actual a la lista general donde se guardan todos
-        /// </summary>
-        private void CopyToItemBatchList()
+        private void GridViewLinesDeliveredGoods_ShownEditor(object sender, EventArgs e)
         {
             try
             {
-                //Borramos todo lo relacionado con el item seleccionado
-                string currentItem = _auxItemsBatchList.Select(a => a.IdItem).FirstOrDefault();
-                if (string.IsNullOrEmpty(currentItem))
-                    return;
-                DeleteFromItemsBatchList(currentItem);
-                
-                //Copiamos los lotes actuales introducidos a la lista real
-                foreach (var itemBatch in _auxItemsBatchList)
-                {
-                    if (String.IsNullOrEmpty(itemBatch.Batch) == false && itemBatch.Quantity > 0)
-                    {
-                        _itemsBatchList.Add(itemBatch.DeepCopyByExpressionTree());
-                    }
-                }
+                Cursor = Cursors.WaitCursor;
 
+                GridView view = sender as GridView;
+
+                switch (view.FocusedColumn.FieldName)
+                {
+                    case nameof(DocLine.BoxNumber):
+                        //SearchLookUpEdit riPackingBoxes = (SearchLookUpEdit)view.ActiveEditor;
+                        LookUpEdit riPackingBoxes = (LookUpEdit)view.ActiveEditor;
+                        riPackingBoxes.Properties.DataSource = _packingListBoxes.Where(a => a.IdBox > 0).ToList();
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
+        }
+
+        private void CopyToItemBatchList(PackingListItemBatch itemBatch)
+        {
+            try
+            {
+                var reg = _itemsBatchList
+                    .Where(a => a.IdDoc.Equals(itemBatch.IdDoc) && a.IdItem.Equals(itemBatch.IdItem) && a.Batch.Equals(itemBatch.Batch))
+                    .FirstOrDefault();
+
+                if (reg == null)
+                    _itemsBatchList.Add(itemBatch);
+                else
+                    reg.Batch = itemBatch.Batch;
             }
             catch
             {
@@ -2499,6 +2588,101 @@ namespace HKSupply.Forms.Supply
                     _itemsBatchList.Remove(itemBatch);
                 }
 
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        //Actualizar el número de caja cuando se borra una
+        private void UpdateBoxNumber()
+        {
+            try
+            {
+                int boxNumber = 1;
+                foreach(var box in _packingListBoxes)
+                {
+                    box.BoxNumber = boxNumber++;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void UpdateBoxNumberDeliveredGood(int boxNumber)
+        {
+            foreach(var line in _docLinesDeliveredGoodsList)
+            {
+                if (line.BoxNumber >= boxNumber)
+                    line.BoxNumber = 0;
+            }
+            gridViewLinesDeliveredGoods.RefreshData();
+        }
+
+        private bool ValidatePackingBoxes()
+        {
+            try
+            {
+                foreach (var box in _packingListBoxes)
+                {
+                    if (box.IdBox > 0)
+                    {
+                        if (box.NetWeight == 0 || box.GrossWeight == 0)
+                        {
+                            MessageBox.Show("You must indicate Net Weight and Gross Weight for all boxes", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            xgrdPackingBoxes.Focus();
+                            return false;
+                        }
+                    }
+                }
+
+                foreach (var line in _docLinesDeliveredGoodsList)
+                {
+                    if (line.BoxNumber == 0)
+                    {
+                        MessageBox.Show($"You must indicate box for item {line.IdItemBcn} ({line.IdDocRelated})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        xgrdLinesDeliveredGoods.Focus();
+                        return false;
+                    }
+                }
+                    return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private bool ValidatePackingItemsBatch()
+        {
+            try
+            {
+                //Validamos que siempre 
+                foreach(var itemBatch in _itemsBatchList)
+                {
+                    if (string.IsNullOrEmpty(itemBatch.Batch))
+                    {
+                        MessageBox.Show($"You must indicate a bath for {itemBatch.IdItem} ({itemBatch.IdDoc})", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        xgrdItemsBatch.Focus();
+                        return false;
+                    }
+                }
+
+                foreach (var line in _docLinesDeliveredGoodsList)
+                {
+                    decimal qtyItemBatch = _itemsBatchList.Where(a => a.IdDoc.Equals(line.IdDocRelated) && a.IdItem.Equals(line.IdItemBcn)).Sum(b => b.Quantity);
+                    if (line.Quantity != qtyItemBatch)
+                    {
+                        MessageBox.Show($"{line.IdItemBcn} ({line.IdDocRelated}): Batch quantity error", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        xgrdLinesDeliveredGoods.Focus();
+                        return false;
+                    }
+                }
+
+                return true;
             }
             catch
             {
@@ -2571,6 +2755,7 @@ namespace HKSupply.Forms.Supply
 
     class PackingListItemBatch
     {
+        public string IdDoc { get; set; }
         public string IdItem { get; set; }
         public string Batch { get; set; }
         public decimal Quantity { get; set; }
