@@ -13,6 +13,7 @@ namespace HKSupply.Services.Interfaces
         List<DocHead> GetSalesOrderFromPackingList(string idDocPK);
         DocHead NewDoc(DocHead newDoc);
         DocHead GetDoc(string idDoc);
+        DocHead GetDocPackingList(string idDoc);
         DocHead GetDocByRelated(string idDocRelated);
         List<DocHead> GetDocsByRelated(string idDocRelated);
         DocHead UpdateDoc(DocHead doc, bool finishDoc = false);

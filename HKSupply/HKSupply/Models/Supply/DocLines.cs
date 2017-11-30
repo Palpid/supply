@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace HKSupply.Models.Supply
@@ -52,6 +53,9 @@ namespace HKSupply.Models.Supply
         [Column("ID_DOC_RELATED", TypeName = "NVARCHAR"), StringLength(50)]
         public string IdDocRelated { get; set; }
 
+        [Column("BOX_NUMBER")]
+        public int? BoxNumber { get; set; }
+
         #region Not Mapped
         [NotMapped]
         public decimal TotalAmount { get { return Quantity * UnitPrice; } }
@@ -96,9 +100,6 @@ namespace HKSupply.Models.Supply
         [NotMapped]
         public decimal DummyQuantity { get; set; }
 
-
-        [NotMapped]
-        public int BoxNumber { get; set; }
         #endregion
 
         #region Foreign Keys

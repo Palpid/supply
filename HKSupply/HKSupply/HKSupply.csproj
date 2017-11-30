@@ -896,9 +896,26 @@
     <Compile Include="Migrations\201711141337575_DOC_HEAD_ATTACH_FILES_01.Designer.cs">
       <DependentUpon>201711141337575_DOC_HEAD_ATTACH_FILES_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711300820295_boxes_01.cs" />
+    <Compile Include="Migrations\201711300820295_boxes_01.Designer.cs">
+      <DependentUpon>201711300820295_boxes_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711300927413_docBoxes_01.cs" />
+    <Compile Include="Migrations\201711300927413_docBoxes_01.Designer.cs">
+      <DependentUpon>201711300927413_docBoxes_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711301057049_PackingListItemsBatch_ModDocHead_01.cs" />
+    <Compile Include="Migrations\201711301057049_PackingListItemsBatch_ModDocHead_01.Designer.cs">
+      <DependentUpon>201711301057049_PackingListItemsBatch_ModDocHead_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711301557398_DocLineBoxNumer_01.cs" />
+    <Compile Include="Migrations\201711301557398_DocLineBoxNumer_01.Designer.cs">
+      <DependentUpon>201711301557398_DocLineBoxNumer_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Mocking\TestDb.cs" />
     <Compile Include="Models\BomBreakdown.cs" />
+    <Compile Include="Models\Supply\Box.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\CustomerPriceList.cs" />
     <Compile Include="Models\CustomerPriceListHistory.cs" />
@@ -957,9 +974,11 @@
     <Compile Include="Models\SupplierHistory.cs" />
     <Compile Include="Models\SupplierPriceList.cs" />
     <Compile Include="Models\SupplierPriceListHistory.cs" />
+    <Compile Include="Models\Supply\DocBox.cs" />
     <Compile Include="Models\Supply\DocHead.cs" />
     <Compile Include="Models\Supply\DocHeadAttachFile.cs" />
     <Compile Include="Models\Supply\DocLines.cs" />
+    <Compile Include="Models\Supply\PackingListItemBatch.cs" />
     <Compile Include="Models\Supply\SupplyDocType.cs" />
     <Compile Include="Models\Supply\SupplyStatus.cs" />
     <Compile Include="Models\Unit.cs" />
@@ -989,6 +1008,7 @@
       <DependentUpon>HKSupplyRes.resx</DependentUpon>
     </Compile>
     <Compile Include="Services\Implementations\EFBomBreakdown.cs" />
+    <Compile Include="Services\Implementations\EFBox.cs" />
     <Compile Include="Services\Implementations\EFCurrency.cs" />
     <Compile Include="Services\Implementations\EFCustomer.cs" />
     <Compile Include="Services\Implementations\EFCustomerPriceList.cs" />
@@ -1031,6 +1051,7 @@
     <Compile Include="Services\Implementations\EFUser.cs" />
     <Compile Include="Services\Implementations\EFUserAttrDescription.cs" />
     <Compile Include="Services\Interfaces\IBomBreakdown.cs" />
+    <Compile Include="Services\Interfaces\IBox.cs" />
     <Compile Include="Services\Interfaces\ICurrency.cs" />
     <Compile Include="Services\Interfaces\ICustomer.cs" />
     <Compile Include="Services\Interfaces\ICustomerPriceList.cs" />
@@ -1571,6 +1592,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711141337575_DOC_HEAD_ATTACH_FILES_01.resx">
       <DependentUpon>201711141337575_DOC_HEAD_ATTACH_FILES_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711300820295_boxes_01.resx">
+      <DependentUpon>201711300820295_boxes_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711300927413_docBoxes_01.resx">
+      <DependentUpon>201711300927413_docBoxes_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711301057049_PackingListItemsBatch_ModDocHead_01.resx">
+      <DependentUpon>201711301057049_PackingListItemsBatch_ModDocHead_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711301557398_DocLineBoxNumer_01.resx">
+      <DependentUpon>201711301557398_DocLineBoxNumer_01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRJ_Stocks\Forms\StockManagement.resx">
       <DependentUpon>StockManagement.cs</DependentUpon>

@@ -608,6 +608,7 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.DocsList.resourc
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.Invoice.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.PackingList.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.PackingListBcn.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.PackingList_v2.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.PurchaseOrder.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.PurchaseOrderSelection.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.QuotationProposal.resources
@@ -716,6 +717,9 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.UnitsOnPriceListTa
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.UnitsSupplyOnItems.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.SuppluQttyDecimal.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.DOC_HEAD_ATTACH_FILES_01.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.boxes_01.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.docBoxes_01.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.PackingListItemsBatch_ModDocHead_01.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.PRJ_Stocks.Forms.StockManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Properties.Resources.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Reports.frmVisor.resources
@@ -725,4 +729,4 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe.licenses
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.csproj.CoreCompileInputs.cache
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
-C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.PackingList_v2.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.DocLineBoxNumer_01.resources

@@ -53,7 +53,13 @@ namespace HKSupply.Models.Supply
         [Column("MANUAL_REFERENCE", TypeName = "NVARCHAR"), StringLength(50)]
         public string ManualReference { get; set; }
 
+        #region Virtual
         public virtual List<DocLine> Lines { get; set; }
+
+        public virtual List<DocBox> Boxes { get; set; }
+
+        public virtual List<PackingListItemBatch> PackingListItemBatches { get; set; }
+        #endregion
 
         #region Foreign keys
 

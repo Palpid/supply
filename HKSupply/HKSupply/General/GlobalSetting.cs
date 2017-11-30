@@ -106,6 +106,7 @@ namespace HKSupply.General
         static EFUnit _unitEF = new EFUnit();
         static EFDocHeadAttachFile _docHeadAttachFileEF = new EFDocHeadAttachFile();
         static EFSupplyDashboard _supplyDashboardEF = new EFSupplyDashboard();
+        static EFBox _boxEF = new EFBox();
         static User _loggedUser;
         static string _userFactory;
         static IEnumerable<FunctionalityRole> _functionalitiesRoles;
@@ -586,6 +587,17 @@ namespace HKSupply.General
                     _supplyDashboardEF = new EFSupplyDashboard();
 
                 return _supplyDashboardEF;
+            }
+        }
+
+        public static IBox BoxService
+        {
+            get
+            {
+                if (_boxEF == null)
+                    _boxEF = new EFBox();
+
+                return _boxEF;
             }
         }
 
