@@ -6,6 +6,7 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\Resources\Images\logo_etnia-
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\Resources\Images\logo_SupplyHongKong.png
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\Resources\Images\tabheaderbackground_red.png
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\HelpDocs\EN\BOM Flow and Application Help.pdf
+C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\HelpDocs\EN\SUPPLY Flow and Application Help.pdf
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\Reports\Rpt\BOM.rpt
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\Resources\Images\Acetate_244.jpg
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\Resources\Images\button_red.png
@@ -213,4 +214,3 @@ C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Release\HKSuply.UnitTest.csprojResol
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Release\HKSuply.UnitTest.csproj.CoreCompileInputs.cache
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Release\HKSuply.UnitTest.dll
 C:\Git\Supply\HKSupply\HKSuply.UnitTest\obj\Release\HKSuply.UnitTest.pdb
-C:\Git\Supply\HKSupply\HKSuply.UnitTest\bin\Release\HelpDocs\EN\SUPPLY Flow and Application Help.pdf

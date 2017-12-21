@@ -6,6 +6,7 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Release\Resources\Images\logo_etnia-barcelon
 C:\Git\Supply\HKSupply\HKSupply\bin\Release\Resources\Images\logo_SupplyHongKong.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Release\Resources\Images\tabheaderbackground_red.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Release\HelpDocs\EN\BOM Flow and Application Help.pdf
+C:\Git\Supply\HKSupply\HKSupply\bin\Release\HelpDocs\EN\SUPPLY Flow and Application Help.pdf
 C:\Git\Supply\HKSupply\HKSupply\bin\Release\Reports\Rpt\BOM.rpt
 C:\Git\Supply\HKSupply\HKSupply\bin\Release\Resources\Images\Acetate_244.jpg
 C:\Git\Supply\HKSupply\HKSupply\bin\Release\Resources\Images\button_red.png
@@ -338,4 +339,3 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Release\HKSupply.exe.licenses
 C:\Git\Supply\HKSupply\HKSupply\obj\Release\HKSupply.csproj.CoreCompileInputs.cache
 C:\Git\Supply\HKSupply\HKSupply\obj\Release\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Release\HKSupply.pdb
-C:\Git\Supply\HKSupply\HKSupply\bin\Release\HelpDocs\EN\SUPPLY Flow and Application Help.pdf
