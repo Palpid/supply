@@ -113,16 +113,21 @@ namespace HKSupply.Services.Implementations
                 using (var db = new HKSupplyContext())
                 {
                     //TODO: intentar unificar esto en una sola consulta
+                    //var idDocs = db.ItemsDoc
+                    //    .Where(a => idItemBcnList.Contains(a.IdItemBcn) && a.IdItemGroup.Equals(idItemGroup))
+                    //    .GroupBy(x => new { x.IdDocType, x.IdSupplier })
+                    //    .Select(i => i.Max(a => a.IdDoc)).ToList();
                     var idDocs = db.ItemsDoc
                         .Where(a => idItemBcnList.Contains(a.IdItemBcn) && a.IdItemGroup.Equals(idItemGroup))
-                        .GroupBy(x => new { x.IdDocType, x.IdSupplier })
+                        .GroupBy(x => new { x.IdDocType, x.IdSupplier, x.IdItemBcn })
                         .Select(i => i.Max(a => a.IdDoc)).ToList();
 
                     var docs = db.ItemsDoc
                         .Where(a => idDocs.Contains(a.IdDoc))
                         .Include(b => b.DocType)
-                        .OrderBy(c => c.IdItemBcn)
-                        .ThenBy(d => d.CreateDate)
+                        .OrderBy(c => c.IdDocType)
+                        .ThenBy(d => d.IdItemBcn)
+                        .ThenBy(e => e.CreateDate)
                         .ToList();
 
                     return docs;

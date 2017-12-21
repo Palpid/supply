@@ -24,6 +24,7 @@ namespace HKSupply.Forms.Master
     public partial class ItemDocs : RibbonFormBase
     {
         #region Private Members
+        bool _isFactory;
 
         List<Model> _modelList;
         List<ItemEy> _itemEyList;
@@ -41,6 +42,19 @@ namespace HKSupply.Forms.Master
 
             try
             {
+                //Chech if logged is a factory
+                _isFactory = false;
+
+                /** test*/
+                //GlobalSetting.LoggedUser.RoleId = Constants.ROLE_FACTORY;
+                //GlobalSetting.UserFactory = "FA";
+                /**/
+
+                if (GlobalSetting.LoggedUser.RoleId == Constants.ROLE_FACTORY)
+                {
+                    _isFactory = true;
+                }
+
                 ConfigureRibbonActions();
                 LoadAuxList();
                 SetUpSlueModel();
@@ -49,7 +63,6 @@ namespace HKSupply.Forms.Master
                 SetUpLueDocType();
                 SetUpEvents();
                 SetUpGrdLastDocs();
-                //SetUpGrdBomBreakdown();
             }
             catch (Exception ex)
             {
@@ -266,7 +279,19 @@ namespace HKSupply.Forms.Master
             try
             {
                 _modelList = GlobalSetting.ModelService.GetModels();
-                _itemEyList = GlobalSetting.ItemEyService.GetItems();
+                //_itemEyList = GlobalSetting.ItemEyService.GetItems();
+
+                if (_isFactory)
+                {
+                    _itemEyList = GlobalSetting.ItemEyService.GetItems(GlobalSetting.UserFactory);
+                    var tmpModels = _itemEyList.Select(a => a.IdModel).Distinct().ToList();
+                    _modelList = _modelList.Where(a => tmpModels.Contains(a.IdModel)).ToList();
+                }
+                else
+                {
+                    _itemEyList = GlobalSetting.ItemEyService.GetItems();
+                }
+
                 _docsTypeList = GlobalSetting.DocTypeService.GetDocsType(Constants.ITEM_GROUP_EY);
                 _suppliersList = GlobalSetting.SupplierService.GetSuppliers();
 
@@ -308,7 +333,20 @@ namespace HKSupply.Forms.Master
                 var tmpModelosList = _itemsModelList.Select(a => a.IdItemBcn).ToList();
                 var listDocs = GlobalSetting.ItemDocService.GetLastItemsDocsListItems(tmpModelosList, Constants.ITEM_GROUP_EY);
                 xgrdLastDocs.DataSource = null;
-                xgrdLastDocs.DataSource = listDocs;
+                //xgrdLastDocs.DataSource = listDocs;
+
+                //factories only can see/edit drawings documents
+                if (_isFactory)
+                {
+                    //Es un poco cutre, pero de momento es algo puntual sólo de esta pantalla
+                    xgrdLastDocs.DataSource = listDocs
+                        .Where(a => a.IdDocType.Contains("DRAWING") && a.IdSupplier != null && a.IdSupplier.Equals(GlobalSetting.UserFactory))
+                        .ToList();
+                }
+                else
+                {
+                    xgrdLastDocs.DataSource = listDocs;
+                }
             }
             catch
             {
@@ -341,7 +379,15 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                slueSupplier.Properties.DataSource = _suppliersList;
+                //slueSupplier.Properties.DataSource = _suppliersList;
+                if (_isFactory)
+                {
+                    slueSupplier.Properties.DataSource = _suppliersList.Where(a => a.IdSupplier.Equals(GlobalSetting.UserFactory)).ToList();
+                }
+                else
+                    slueSupplier.Properties.DataSource = _suppliersList;
+
+
                 slueSupplier.Properties.ValueMember = nameof(Supplier.IdSupplier);
                 slueSupplier.Properties.DisplayMember = nameof(Supplier.SupplierName);
                 slueSupplier.Properties.View.Columns.AddField(nameof(Supplier.IdSupplier)).Visible = true;
@@ -372,7 +418,16 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                lueDocType.Properties.DataSource = _docsTypeList;
+                //lueDocType.Properties.DataSource = _docsTypeList;
+                if (_isFactory)
+                {
+                    lueDocType.Properties.DataSource = _docsTypeList.Where(a => a.IdDocType.Contains("DRAWING")).ToList();
+                }
+                else
+                {
+                    lueDocType.Properties.DataSource = _docsTypeList;
+                }
+
                 lueDocType.Properties.DisplayMember = nameof(DocType.Description);
                 lueDocType.Properties.ValueMember = nameof(DocType.IdDocType);
                 lueDocType.Properties.Columns.Add(new LookUpColumnInfo(nameof(DocType.Description), 100, GlobalSetting.ResManager.GetString("Description")));

@@ -84,6 +84,21 @@ namespace HKSupply.Services.Implementations
                 using (var db = new HKSupplyContext())
                 {
 
+                    //var itemsEy = db.ItemsEy
+                    //    .Include(i => i.Model)
+                    //    .Include(i => i.Prototype)
+                    //    .Include(i => i.FamilyHK)
+                    //    .Include(i => i.StatusCial)
+                    //    .Include(i => i.StatusProd)
+                    //    .OrderBy(i => i.IdItemBcn)
+                    //    .Where(a => a.IdDefaultSupplier.Equals(idDefaultSupplier))
+                    //    .ToList();
+
+                    //Recuperamos los items que tengan ese proveedor por defecto o que en algun momento hayan trabajado con el item
+                    var itemsBom = db.ItemsBom
+                        .Where(a => a.IdItemGroup.Equals(Constants.ITEM_GROUP_EY) && a.IdSupplier.Equals(idDefaultSupplier))
+                        .Select(b => b.IdItemBcn).ToList();
+
                     var itemsEy = db.ItemsEy
                         .Include(i => i.Model)
                         .Include(i => i.Prototype)
@@ -92,6 +107,16 @@ namespace HKSupply.Services.Implementations
                         .Include(i => i.StatusProd)
                         .OrderBy(i => i.IdItemBcn)
                         .Where(a => a.IdDefaultSupplier.Equals(idDefaultSupplier))
+                        .Union(
+                        db.ItemsEy
+                        .Include(i => i.Model)
+                        .Include(i => i.Prototype)
+                        .Include(i => i.FamilyHK)
+                        .Include(i => i.StatusCial)
+                        .Include(i => i.StatusProd)
+                        .OrderBy(i => i.IdItemBcn)
+                        .Where(a => itemsBom.Contains(a.IdItemBcn))
+                        )
                         .ToList();
 
                     if (withDocWarning)
