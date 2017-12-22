@@ -25,7 +25,7 @@ namespace HKSupply.Forms.Master
     {
 
         #region Enums
-        private enum eCustomerColumns
+        /*private enum eCustomerColumns
         {
             IdVer,
             IdSubVer,
@@ -42,7 +42,7 @@ namespace HKSupply.Forms.Master
             IdIncoterm,
             IdPaymentTerms,
             IdDefaultCurrency,
-        }
+        }*/
         #endregion
 
         #region Private Members
@@ -348,7 +348,7 @@ namespace HKSupply.Forms.Master
             try
             {
                 GridView view = (GridView)sender;
-                object idCustomer = view.GetRowCellValue(view.FocusedRowHandle, eCustomerColumns.IdCustomer.ToString());
+                object idCustomer = view.GetRowCellValue(view.FocusedRowHandle, nameof(Customer.IdCustomer));
                 if (idCustomer != null)
                 {
                     LoadCustomerForm(idCustomer.ToString());
@@ -469,23 +469,24 @@ namespace HKSupply.Forms.Master
                 rootGridViewCustomers.OptionsBehavior.Editable = false;
 
                 //Columns definition
-                GridColumn colIdVer = new GridColumn() { Caption = "Version Id", Visible = true, FieldName = eCustomerColumns.IdVer.ToString(), Width = 70 };
-                GridColumn colIdSubVer = new GridColumn() { Caption = "Subversion Id", Visible = true, FieldName = eCustomerColumns.IdSubVer.ToString(), Width = 80 };
-                GridColumn colTimestamp = new GridColumn() { Caption = "Timestamp", Visible = true, FieldName = eCustomerColumns.Timestamp.ToString(), Width = 130 };
-                GridColumn colIdCustomer = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("IdCustomer"), Visible = true, FieldName = eCustomerColumns.IdCustomer.ToString(), Width = 100 };
-                GridColumn colCustomerName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("CustomerName"), Visible = true, FieldName = eCustomerColumns.CustomerName.ToString(), Width = 200 };
-                GridColumn colActive = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Active"), Visible = true, FieldName = eCustomerColumns.Active.ToString(), Width = 50 };
-                GridColumn colVATNum = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("VATNumber"), Visible = true, FieldName = eCustomerColumns.VATNum.ToString(), Width = 120 };
-                GridColumn colShippingAddress = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ShippingAddress"), Visible = true, FieldName = eCustomerColumns.ShippingAddress.ToString(), Width = 300 };
+                GridColumn colIdVer = new GridColumn() { Caption = "Version Id", Visible = true, FieldName = nameof(Customer.IdVer), Width = 70 };
+                GridColumn colIdSubVer = new GridColumn() { Caption = "Subversion Id", Visible = true, FieldName = nameof(Customer.IdSubVer), Width = 80 };
+                GridColumn colTimestamp = new GridColumn() { Caption = "Timestamp", Visible = true, FieldName = nameof(Customer.Timestamp), Width = 130 };
+                GridColumn colIdCustomer = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("IdCustomer"), Visible = true, FieldName = nameof(Customer.IdCustomer), Width = 100 };
+                GridColumn colCustomerName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("CustomerName"), Visible = true, FieldName = nameof(Customer.CustomerName), Width = 200 };
+                GridColumn colActive = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Active"), Visible = true, FieldName = nameof(Customer.Active), Width = 50 };
+                GridColumn colFactory = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Factory"), Visible = true, FieldName = nameof(Customer.Factory), Width = 50 };
+                GridColumn colVATNum = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("VATNumber"), Visible = true, FieldName = nameof(Customer.VATNum), Width = 120 };
+                GridColumn colShippingAddress = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ShippingAddress"), Visible = true, FieldName = nameof(Customer.ShippingAddress), Width = 300 };
                 GridColumn colShippingAddress2 = new GridColumn() { Caption = "Shipping Address 2", Visible = true, FieldName = nameof(Customer.ShippingAddress2), Width = 300 };
-                GridColumn colBillingAddress = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("BillingAddress"), Visible = true, FieldName = eCustomerColumns.BillingAddress.ToString(), Width = 300 };
+                GridColumn colBillingAddress = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("BillingAddress"), Visible = true, FieldName = nameof(Customer.BillingAddress), Width = 300 };
                 GridColumn colBillingAddress2 = new GridColumn() { Caption = "Billing Address 2", Visible = true, FieldName = nameof(Customer.BillingAddress2), Width = 300 };
-                GridColumn colContactName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ContactName"), Visible = true, FieldName = eCustomerColumns.ContactName.ToString(), Width = 200 };
-                GridColumn colContactPhone = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ContactPhone"), Visible = true, FieldName = eCustomerColumns.ContactPhone.ToString(), Width = 150 };
-                GridColumn colComments = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Comments"), Visible = true, FieldName = eCustomerColumns.Comments.ToString(), Width = 300 };
-                GridColumn colIdIncoterm = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Incoterm"), Visible = true, FieldName = eCustomerColumns.IdIncoterm.ToString(), Width = 70 };
-                GridColumn colIdPaymentTerms = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("PaymentTerms"), Visible = true, FieldName = eCustomerColumns.IdPaymentTerms.ToString(), Width = 100 };
-                GridColumn colCurrency = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Currency"), Visible = true, FieldName = eCustomerColumns.IdDefaultCurrency.ToString(), Width = 70 };
+                GridColumn colContactName = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ContactName"), Visible = true, FieldName = nameof(Customer.ContactName), Width = 200 };
+                GridColumn colContactPhone = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("ContactPhone"), Visible = true, FieldName = nameof(Customer.ContactPhone), Width = 150 };
+                GridColumn colComments = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Comments"), Visible = true, FieldName = nameof(Customer.Comments), Width = 300 };
+                GridColumn colIdIncoterm = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Incoterm"), Visible = true, FieldName = nameof(Customer.IdIncoterm), Width = 70 };
+                GridColumn colIdPaymentTerms = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("PaymentTerms"), Visible = true, FieldName = nameof(Customer.IdPaymentTerms), Width = 100 };
+                GridColumn colCurrency = new GridColumn() { Caption = GlobalSetting.ResManager.GetString("Currency"), Visible = true, FieldName = nameof(Customer.IdDefaultCurrency), Width = 70 };
 
                 //Format type 
                 colTimestamp.DisplayFormat.FormatType = FormatType.DateTime;
@@ -497,6 +498,7 @@ namespace HKSupply.Forms.Master
                 rootGridViewCustomers.Columns.Add(colIdCustomer);
                 rootGridViewCustomers.Columns.Add(colCustomerName);
                 rootGridViewCustomers.Columns.Add(colActive);
+                rootGridViewCustomers.Columns.Add(colFactory);
                 rootGridViewCustomers.Columns.Add(colVATNum);
                 rootGridViewCustomers.Columns.Add(colShippingAddress);
                 rootGridViewCustomers.Columns.Add(colShippingAddress2);
@@ -692,6 +694,7 @@ namespace HKSupply.Forms.Master
 
                 //CheckEdit
                 chkActive.DataBindings.Add<Customer>(_customerUpdate, (CheckEdit chk) => chk.Checked, supplier => supplier.Active);
+                chkFactory.DataBindings.Add<Customer>(_customerUpdate, (CheckEdit chk) => chk.Checked, supplier => supplier.Factory);
 
                 //LookUpEdit
                 lueIdIncoterm.DataBindings.Add<Customer>(_customerUpdate, (LookUpEdit e) => e.EditValue, supplier => supplier.IdIncoterm);
@@ -759,6 +762,7 @@ namespace HKSupply.Forms.Master
 
                 //CheckEdit
                 chkHActive.DataBindings.Add<CustomerHistory>(_customerHistory, (CheckEdit chk) => chk.Checked, customer => customer.Active);
+                chkHFactory.DataBindings.Add<CustomerHistory>(_customerHistory, (CheckEdit chk) => chk.Checked, customer => customer.Factory);
 
             }
             catch (Exception ex)
@@ -879,7 +883,7 @@ namespace HKSupply.Forms.Master
         {
             try
             {
-                GridColumn column = rootGridViewCustomers.Columns[eCustomerColumns.IdCustomer.ToString()];
+                GridColumn column = rootGridViewCustomers.Columns[nameof(Customer.IdCustomer)];
                 if (column != null)
                 {
                     // locating the row 

@@ -78,6 +78,9 @@ namespace HKSupply.Models
         [Column("ID_DEFAULT_CURRENCY", TypeName = "NVARCHAR"), StringLength(4)]
         public string IdDefaultCurrency { get; set; }
 
+        [Column("FACTORY")]
+        public bool Factory { get; set; }
+
         [ForeignKey("IdIncoterm")]
         public Incoterm Incoterm { get; set; }
         [ForeignKey("IdPaymentTerms")]
@@ -115,7 +118,8 @@ namespace HKSupply.Models
                 Comments == customer.Comments &&
                 IdIncoterm == customer.IdIncoterm &&
                 IdPaymentTerms == customer.IdPaymentTerms &&
-                IdDefaultCurrency == customer.IdDefaultCurrency);
+                IdDefaultCurrency == customer.IdDefaultCurrency) &&
+                Factory == customer.Factory;
 
             return res;
 
@@ -145,7 +149,8 @@ namespace HKSupply.Models
                 (Comments == null ? 0 : Comments.GetHashCode()) + 
                 (IdIncoterm == null ? 0 : IdIncoterm.GetHashCode()) + 
                 (IdPaymentTerms == null ? 0 : IdPaymentTerms.GetHashCode()) + 
-                (IdDefaultCurrency == null ? 0 : IdDefaultCurrency.GetHashCode());
+                (IdDefaultCurrency == null ? 0 : IdDefaultCurrency.GetHashCode()) +
+                Factory.GetHashCode();
 
             return hashCode;
         }
@@ -177,6 +182,7 @@ namespace HKSupply.Models
             c.IdIncoterm = ch.IdIncoterm;
             c.IdPaymentTerms = ch.IdPaymentTerms;
             c.IdDefaultCurrency = ch.IdDefaultCurrency;
+            c.Factory = ch.Factory;
 
             return c;
         }

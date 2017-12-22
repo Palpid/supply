@@ -267,7 +267,7 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                _suppliersList = GlobalSetting.SupplierService.GetSuppliers(withEtniaHk: true);
+                _suppliersList = GlobalSetting.SupplierService.GetSuppliers(withEtniaHk: true).Where(a => a.Factory == true).ToList();
                 _supplyStatusList = GlobalSetting.SupplyDocsService.GetSupplyStatus();
             }
             catch

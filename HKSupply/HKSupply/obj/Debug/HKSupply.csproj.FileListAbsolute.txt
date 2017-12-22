@@ -730,3 +730,4 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.csproj.CoreCompileInputs.cach
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.DocLineBoxNumer_01.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.factorySupplierCustomer.resources

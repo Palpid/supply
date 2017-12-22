@@ -912,6 +912,10 @@
     <Compile Include="Migrations\201711301557398_DocLineBoxNumer_01.Designer.cs">
       <DependentUpon>201711301557398_DocLineBoxNumer_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712220810049_factorySupplierCustomer.cs" />
+    <Compile Include="Migrations\201712220810049_factorySupplierCustomer.Designer.cs">
+      <DependentUpon>201712220810049_factorySupplierCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Mocking\TestDb.cs" />
     <Compile Include="Models\BomBreakdown.cs" />
@@ -1604,6 +1608,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711301557398_DocLineBoxNumer_01.resx">
       <DependentUpon>201711301557398_DocLineBoxNumer_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712220810049_factorySupplierCustomer.resx">
+      <DependentUpon>201712220810049_factorySupplierCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRJ_Stocks\Forms\StockManagement.resx">
       <DependentUpon>StockManagement.cs</DependentUpon>

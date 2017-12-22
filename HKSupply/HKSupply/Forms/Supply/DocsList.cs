@@ -294,7 +294,7 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                _suppliersList = GlobalSetting.SupplierService.GetSuppliers();
+                _suppliersList = GlobalSetting.SupplierService.GetSuppliers().Where(a => a.Factory == true).ToList();
                 _customersList = GlobalSetting.CustomerService.GetCustomers();
                 _supplyStatusList = GlobalSetting.SupplyDocsService.GetSupplyStatus();
                 _supplyDocTypeList = GlobalSetting.SupplyDocsService.GetSupplyDocTypes();

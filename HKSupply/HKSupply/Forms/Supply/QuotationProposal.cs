@@ -1154,7 +1154,7 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                _customersList = GlobalSetting.CustomerService.GetCustomers();
+                _customersList = GlobalSetting.CustomerService.GetCustomers().Where(a => a.Factory == true).ToList();
 
                 _itemsMtList = GlobalSetting.ItemMtService.GetItems();
                 _itemsHwList = GlobalSetting.ItemHwService.GetItems();

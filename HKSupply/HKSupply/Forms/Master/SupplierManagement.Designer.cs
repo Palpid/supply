@@ -59,6 +59,10 @@
             this.txtHBillingAddressZh = new DevExpress.XtraEditors.TextEdit();
             this.txtHContactNameZh = new DevExpress.XtraEditors.TextEdit();
             this.txtHComments = new DevExpress.XtraEditors.TextEdit();
+            this.txtHShippingAddress2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtHBillingAddress2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtHShippingAddressZh2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtHBillingAddressZh2 = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup5 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciHIdSupplier = new DevExpress.XtraLayout.LayoutControlItem();
@@ -80,6 +84,10 @@
             this.lciHIdDefaultCurrency = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciHIdPaymentTerms = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciHIdIncoterm = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciHShippigAddress2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciHShippingAddressZh2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciHBillingAddress1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciHBillingAddressZh2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.sbNewVersion = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlForm = new DevExpress.XtraLayout.LayoutControl();
             this.lueIdIncoterm = new DevExpress.XtraEditors.LookUpEdit();
@@ -100,6 +108,10 @@
             this.txtIdSubversion = new DevExpress.XtraEditors.TextEdit();
             this.txtIdVersion = new DevExpress.XtraEditors.TextEdit();
             this.txtIdSupplier = new DevExpress.XtraEditors.TextEdit();
+            this.txtShippingAddress2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBillingAddress2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtShippingAddressZh2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBillingAddressZh2 = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciIdSupplier = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -120,6 +132,10 @@
             this.lciComments = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciIdPaymentTerms = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciIdIncoterm = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciShippigAddress2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciShippingAddressZh2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciBillingAddress2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciBillingAddressZh2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gcHistory = new DevExpress.XtraEditors.GroupControl();
             this.xtraScrollableControlHistory = new DevExpress.XtraEditors.XtraScrollableControl();
             this.layoutControlHistory = new DevExpress.XtraLayout.LayoutControl();
@@ -190,22 +206,10 @@
             this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem32 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtShippingAddress2 = new DevExpress.XtraEditors.TextEdit();
-            this.txtShippingAddressZh2 = new DevExpress.XtraEditors.TextEdit();
-            this.txtBillingAddressZh2 = new DevExpress.XtraEditors.TextEdit();
-            this.txtBillingAddress2 = new DevExpress.XtraEditors.TextEdit();
-            this.lciShippigAddress2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciBillingAddress2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciShippingAddressZh2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciBillingAddressZh2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtHBillingAddressZh2 = new DevExpress.XtraEditors.TextEdit();
-            this.txtHBillingAddress2 = new DevExpress.XtraEditors.TextEdit();
-            this.txtHShippingAddressZh2 = new DevExpress.XtraEditors.TextEdit();
-            this.txtHShippingAddress2 = new DevExpress.XtraEditors.TextEdit();
-            this.lciHShippigAddress2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciHBillingAddress1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciHShippingAddressZh2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciHBillingAddressZh2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.chkFactory = new DevExpress.XtraEditors.CheckEdit();
+            this.lciFactory = new DevExpress.XtraLayout.LayoutControlItem();
+            this.chkHFactory = new DevExpress.XtraEditors.CheckEdit();
+            this.lciHFactory = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
             this.xtcGeneral.SuspendLayout();
@@ -236,6 +240,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtHBillingAddressZh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHContactNameZh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHComments.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHShippingAddress2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHBillingAddress2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHShippingAddressZh2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHBillingAddressZh2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHIdSupplier)).BeginInit();
@@ -257,6 +265,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciHIdDefaultCurrency)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHIdPaymentTerms)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHIdIncoterm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHShippigAddress2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHShippingAddressZh2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHBillingAddress1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHBillingAddressZh2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlForm)).BeginInit();
             this.layoutControlForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lueIdIncoterm.Properties)).BeginInit();
@@ -277,6 +289,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtIdSubversion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdVersion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdSupplier.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShippingAddress2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBillingAddress2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShippingAddressZh2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBillingAddressZh2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIdSupplier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
@@ -297,6 +313,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciComments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIdPaymentTerms)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIdIncoterm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciShippigAddress2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciShippingAddressZh2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBillingAddress2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBillingAddressZh2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcHistory)).BeginInit();
             this.xtraScrollableControlHistory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlHistory)).BeginInit();
@@ -368,22 +388,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShippingAddress2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShippingAddressZh2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBillingAddressZh2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBillingAddress2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciShippigAddress2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciBillingAddress2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciShippingAddressZh2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciBillingAddressZh2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHBillingAddressZh2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHBillingAddress2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHShippingAddressZh2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHShippingAddress2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHShippigAddress2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHBillingAddress1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHShippingAddressZh2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHBillingAddressZh2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkFactory.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciFactory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkHFactory.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHFactory)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -571,6 +579,7 @@
             this.layoutControlSupplierHistory.Controls.Add(this.txtHBillingAddress2);
             this.layoutControlSupplierHistory.Controls.Add(this.txtHShippingAddressZh2);
             this.layoutControlSupplierHistory.Controls.Add(this.txtHBillingAddressZh2);
+            this.layoutControlSupplierHistory.Controls.Add(this.chkHFactory);
             this.layoutControlSupplierHistory.Location = new System.Drawing.Point(3, 5);
             this.layoutControlSupplierHistory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.layoutControlSupplierHistory.Name = "layoutControlSupplierHistory";
@@ -581,7 +590,7 @@
             // 
             // txtHIdIncoterm
             // 
-            this.txtHIdIncoterm.Location = new System.Drawing.Point(166, 339);
+            this.txtHIdIncoterm.Location = new System.Drawing.Point(166, 472);
             this.txtHIdIncoterm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIdIncoterm.MenuManager = this.ribbonControl;
             this.txtHIdIncoterm.Name = "txtHIdIncoterm";
@@ -591,7 +600,7 @@
             // 
             // txtHIdPaymentTerms
             // 
-            this.txtHIdPaymentTerms.Location = new System.Drawing.Point(166, 363);
+            this.txtHIdPaymentTerms.Location = new System.Drawing.Point(166, 496);
             this.txtHIdPaymentTerms.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIdPaymentTerms.MenuManager = this.ribbonControl;
             this.txtHIdPaymentTerms.Name = "txtHIdPaymentTerms";
@@ -601,7 +610,7 @@
             // 
             // txtHIdDefaultCurrency
             // 
-            this.txtHIdDefaultCurrency.Location = new System.Drawing.Point(166, 387);
+            this.txtHIdDefaultCurrency.Location = new System.Drawing.Point(166, 520);
             this.txtHIdDefaultCurrency.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIdDefaultCurrency.MenuManager = this.ribbonControl;
             this.txtHIdDefaultCurrency.Name = "txtHIdDefaultCurrency";
@@ -611,7 +620,7 @@
             // 
             // txtHIdSupplier
             // 
-            this.txtHIdSupplier.Location = new System.Drawing.Point(166, -116);
+            this.txtHIdSupplier.Location = new System.Drawing.Point(166, 17);
             this.txtHIdSupplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIdSupplier.Name = "txtHIdSupplier";
             this.txtHIdSupplier.Size = new System.Drawing.Size(469, 20);
@@ -620,7 +629,7 @@
             // 
             // txtHIdVersion
             // 
-            this.txtHIdVersion.Location = new System.Drawing.Point(166, -92);
+            this.txtHIdVersion.Location = new System.Drawing.Point(166, 41);
             this.txtHIdVersion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIdVersion.Name = "txtHIdVersion";
             this.txtHIdVersion.Size = new System.Drawing.Size(469, 20);
@@ -629,7 +638,7 @@
             // 
             // txtHIdSubversion
             // 
-            this.txtHIdSubversion.Location = new System.Drawing.Point(166, -68);
+            this.txtHIdSubversion.Location = new System.Drawing.Point(166, 65);
             this.txtHIdSubversion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHIdSubversion.Name = "txtHIdSubversion";
             this.txtHIdSubversion.Size = new System.Drawing.Size(469, 20);
@@ -638,7 +647,7 @@
             // 
             // txtHTimestamp
             // 
-            this.txtHTimestamp.Location = new System.Drawing.Point(166, -44);
+            this.txtHTimestamp.Location = new System.Drawing.Point(166, 89);
             this.txtHTimestamp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHTimestamp.Name = "txtHTimestamp";
             this.txtHTimestamp.Size = new System.Drawing.Size(469, 20);
@@ -647,7 +656,7 @@
             // 
             // txtHName
             // 
-            this.txtHName.Location = new System.Drawing.Point(166, -20);
+            this.txtHName.Location = new System.Drawing.Point(166, 113);
             this.txtHName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHName.Name = "txtHName";
             this.txtHName.Size = new System.Drawing.Size(469, 20);
@@ -656,17 +665,17 @@
             // 
             // chkHActive
             // 
-            this.chkHActive.Location = new System.Drawing.Point(166, 4);
+            this.chkHActive.Location = new System.Drawing.Point(166, 137);
             this.chkHActive.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkHActive.Name = "chkHActive";
             this.chkHActive.Properties.Caption = "";
-            this.chkHActive.Size = new System.Drawing.Size(469, 19);
+            this.chkHActive.Size = new System.Drawing.Size(160, 19);
             this.chkHActive.StyleController = this.layoutControlSupplierHistory;
             this.chkHActive.TabIndex = 9;
             // 
             // txtHVatNumber
             // 
-            this.txtHVatNumber.Location = new System.Drawing.Point(166, 27);
+            this.txtHVatNumber.Location = new System.Drawing.Point(166, 160);
             this.txtHVatNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHVatNumber.Name = "txtHVatNumber";
             this.txtHVatNumber.Size = new System.Drawing.Size(469, 20);
@@ -675,7 +684,7 @@
             // 
             // txtHShippingAddress
             // 
-            this.txtHShippingAddress.Location = new System.Drawing.Point(166, 51);
+            this.txtHShippingAddress.Location = new System.Drawing.Point(166, 184);
             this.txtHShippingAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHShippingAddress.Name = "txtHShippingAddress";
             this.txtHShippingAddress.Size = new System.Drawing.Size(469, 20);
@@ -684,7 +693,7 @@
             // 
             // txtHBillingAddress
             // 
-            this.txtHBillingAddress.Location = new System.Drawing.Point(166, 147);
+            this.txtHBillingAddress.Location = new System.Drawing.Point(166, 280);
             this.txtHBillingAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHBillingAddress.Name = "txtHBillingAddress";
             this.txtHBillingAddress.Size = new System.Drawing.Size(469, 20);
@@ -693,7 +702,7 @@
             // 
             // txtHContactName
             // 
-            this.txtHContactName.Location = new System.Drawing.Point(166, 243);
+            this.txtHContactName.Location = new System.Drawing.Point(166, 376);
             this.txtHContactName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHContactName.Name = "txtHContactName";
             this.txtHContactName.Size = new System.Drawing.Size(469, 20);
@@ -702,7 +711,7 @@
             // 
             // txtHContactPhone
             // 
-            this.txtHContactPhone.Location = new System.Drawing.Point(166, 291);
+            this.txtHContactPhone.Location = new System.Drawing.Point(166, 424);
             this.txtHContactPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHContactPhone.Name = "txtHContactPhone";
             this.txtHContactPhone.Size = new System.Drawing.Size(469, 20);
@@ -711,7 +720,7 @@
             // 
             // txtHShippingAddressZh
             // 
-            this.txtHShippingAddressZh.Location = new System.Drawing.Point(166, 99);
+            this.txtHShippingAddressZh.Location = new System.Drawing.Point(166, 232);
             this.txtHShippingAddressZh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHShippingAddressZh.Name = "txtHShippingAddressZh";
             this.txtHShippingAddressZh.Size = new System.Drawing.Size(469, 20);
@@ -720,7 +729,7 @@
             // 
             // txtHBillingAddressZh
             // 
-            this.txtHBillingAddressZh.Location = new System.Drawing.Point(166, 195);
+            this.txtHBillingAddressZh.Location = new System.Drawing.Point(166, 328);
             this.txtHBillingAddressZh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHBillingAddressZh.Name = "txtHBillingAddressZh";
             this.txtHBillingAddressZh.Size = new System.Drawing.Size(469, 20);
@@ -729,7 +738,7 @@
             // 
             // txtHContactNameZh
             // 
-            this.txtHContactNameZh.Location = new System.Drawing.Point(166, 267);
+            this.txtHContactNameZh.Location = new System.Drawing.Point(166, 400);
             this.txtHContactNameZh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHContactNameZh.Name = "txtHContactNameZh";
             this.txtHContactNameZh.Size = new System.Drawing.Size(469, 20);
@@ -738,12 +747,48 @@
             // 
             // txtHComments
             // 
-            this.txtHComments.Location = new System.Drawing.Point(166, 315);
+            this.txtHComments.Location = new System.Drawing.Point(166, 448);
             this.txtHComments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHComments.Name = "txtHComments";
             this.txtHComments.Size = new System.Drawing.Size(469, 20);
             this.txtHComments.StyleController = this.layoutControlSupplierHistory;
             this.txtHComments.TabIndex = 21;
+            // 
+            // txtHShippingAddress2
+            // 
+            this.txtHShippingAddress2.Location = new System.Drawing.Point(166, 208);
+            this.txtHShippingAddress2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtHShippingAddress2.Name = "txtHShippingAddress2";
+            this.txtHShippingAddress2.Size = new System.Drawing.Size(469, 20);
+            this.txtHShippingAddress2.StyleController = this.layoutControlSupplierHistory;
+            this.txtHShippingAddress2.TabIndex = 11;
+            // 
+            // txtHBillingAddress2
+            // 
+            this.txtHBillingAddress2.Location = new System.Drawing.Point(166, 304);
+            this.txtHBillingAddress2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtHBillingAddress2.Name = "txtHBillingAddress2";
+            this.txtHBillingAddress2.Size = new System.Drawing.Size(469, 20);
+            this.txtHBillingAddress2.StyleController = this.layoutControlSupplierHistory;
+            this.txtHBillingAddress2.TabIndex = 12;
+            // 
+            // txtHShippingAddressZh2
+            // 
+            this.txtHShippingAddressZh2.Location = new System.Drawing.Point(166, 256);
+            this.txtHShippingAddressZh2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtHShippingAddressZh2.Name = "txtHShippingAddressZh2";
+            this.txtHShippingAddressZh2.Size = new System.Drawing.Size(469, 20);
+            this.txtHShippingAddressZh2.StyleController = this.layoutControlSupplierHistory;
+            this.txtHShippingAddressZh2.TabIndex = 18;
+            // 
+            // txtHBillingAddressZh2
+            // 
+            this.txtHBillingAddressZh2.Location = new System.Drawing.Point(166, 352);
+            this.txtHBillingAddressZh2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtHBillingAddressZh2.Name = "txtHBillingAddressZh2";
+            this.txtHBillingAddressZh2.Size = new System.Drawing.Size(469, 20);
+            this.txtHBillingAddressZh2.StyleController = this.layoutControlSupplierHistory;
+            this.txtHBillingAddressZh2.TabIndex = 19;
             // 
             // layoutControlGroup3
             // 
@@ -751,7 +796,7 @@
             this.layoutControlGroup3.GroupBordersVisible = false;
             this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup5});
-            this.layoutControlGroup3.Location = new System.Drawing.Point(0, -138);
+            this.layoutControlGroup3.Location = new System.Drawing.Point(0, -5);
             this.layoutControlGroup3.Name = "Root";
             this.layoutControlGroup3.OptionsItemText.TextToControlDistance = 4;
             this.layoutControlGroup3.Size = new System.Drawing.Size(657, 577);
@@ -785,7 +830,8 @@
             this.lciHShippigAddress2,
             this.lciHShippingAddressZh2,
             this.lciHBillingAddress1,
-            this.lciHBillingAddressZh2});
+            this.lciHBillingAddressZh2,
+            this.lciHFactory});
             this.layoutControlGroup5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup5.Name = "layoutControlGroup5";
             this.layoutControlGroup5.OptionsItemText.TextToControlDistance = 4;
@@ -860,7 +906,7 @@
             this.lciHActive.CustomizationFormText = "Active";
             this.lciHActive.Location = new System.Drawing.Point(0, 120);
             this.lciHActive.Name = "lciHActive";
-            this.lciHActive.Size = new System.Drawing.Size(617, 23);
+            this.lciHActive.Size = new System.Drawing.Size(308, 23);
             this.lciHActive.Text = "Active";
             this.lciHActive.TextSize = new System.Drawing.Size(140, 13);
             // 
@@ -981,6 +1027,46 @@
             this.lciHIdIncoterm.Text = "Incoterm";
             this.lciHIdIncoterm.TextSize = new System.Drawing.Size(140, 13);
             // 
+            // lciHShippigAddress2
+            // 
+            this.lciHShippigAddress2.Control = this.txtHShippingAddress2;
+            this.lciHShippigAddress2.CustomizationFormText = "Shipping Address";
+            this.lciHShippigAddress2.Location = new System.Drawing.Point(0, 191);
+            this.lciHShippigAddress2.Name = "lciHShippigAddress2";
+            this.lciHShippigAddress2.Size = new System.Drawing.Size(617, 24);
+            this.lciHShippigAddress2.Text = "Shipping Address 2";
+            this.lciHShippigAddress2.TextSize = new System.Drawing.Size(140, 13);
+            // 
+            // lciHShippingAddressZh2
+            // 
+            this.lciHShippingAddressZh2.Control = this.txtHShippingAddressZh2;
+            this.lciHShippingAddressZh2.CustomizationFormText = "Shipping Address (Chinese)";
+            this.lciHShippingAddressZh2.Location = new System.Drawing.Point(0, 239);
+            this.lciHShippingAddressZh2.Name = "lciHShippingAddressZh2";
+            this.lciHShippingAddressZh2.Size = new System.Drawing.Size(617, 24);
+            this.lciHShippingAddressZh2.Text = "Shipping Address 2 (Chinese)";
+            this.lciHShippingAddressZh2.TextSize = new System.Drawing.Size(140, 13);
+            // 
+            // lciHBillingAddress1
+            // 
+            this.lciHBillingAddress1.Control = this.txtHBillingAddress2;
+            this.lciHBillingAddress1.CustomizationFormText = "Billing Address";
+            this.lciHBillingAddress1.Location = new System.Drawing.Point(0, 287);
+            this.lciHBillingAddress1.Name = "lciHBillingAddress1";
+            this.lciHBillingAddress1.Size = new System.Drawing.Size(617, 24);
+            this.lciHBillingAddress1.Text = "Billing Address";
+            this.lciHBillingAddress1.TextSize = new System.Drawing.Size(140, 13);
+            // 
+            // lciHBillingAddressZh2
+            // 
+            this.lciHBillingAddressZh2.Control = this.txtHBillingAddressZh2;
+            this.lciHBillingAddressZh2.CustomizationFormText = "Billing Address (Chinese)";
+            this.lciHBillingAddressZh2.Location = new System.Drawing.Point(0, 335);
+            this.lciHBillingAddressZh2.Name = "lciHBillingAddressZh2";
+            this.lciHBillingAddressZh2.Size = new System.Drawing.Size(617, 24);
+            this.lciHBillingAddressZh2.Text = "Billing Address 2 (Chinese)";
+            this.lciHBillingAddressZh2.TextSize = new System.Drawing.Size(140, 13);
+            // 
             // sbNewVersion
             // 
             this.sbNewVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -1020,6 +1106,7 @@
             this.layoutControlForm.Controls.Add(this.txtBillingAddress2);
             this.layoutControlForm.Controls.Add(this.txtShippingAddressZh2);
             this.layoutControlForm.Controls.Add(this.txtBillingAddressZh2);
+            this.layoutControlForm.Controls.Add(this.chkFactory);
             this.layoutControlForm.Location = new System.Drawing.Point(5, 11);
             this.layoutControlForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.layoutControlForm.Name = "layoutControlForm";
@@ -1030,7 +1117,7 @@
             // 
             // lueIdIncoterm
             // 
-            this.lueIdIncoterm.Location = new System.Drawing.Point(156, 344);
+            this.lueIdIncoterm.Location = new System.Drawing.Point(156, 460);
             this.lueIdIncoterm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lueIdIncoterm.MenuManager = this.ribbonControl;
             this.lueIdIncoterm.Name = "lueIdIncoterm";
@@ -1042,7 +1129,7 @@
             // 
             // lueIdPaymentTerms
             // 
-            this.lueIdPaymentTerms.Location = new System.Drawing.Point(156, 368);
+            this.lueIdPaymentTerms.Location = new System.Drawing.Point(156, 484);
             this.lueIdPaymentTerms.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lueIdPaymentTerms.MenuManager = this.ribbonControl;
             this.lueIdPaymentTerms.Name = "lueIdPaymentTerms";
@@ -1054,7 +1141,7 @@
             // 
             // lueIdDefaultCurrency
             // 
-            this.lueIdDefaultCurrency.Location = new System.Drawing.Point(156, 392);
+            this.lueIdDefaultCurrency.Location = new System.Drawing.Point(156, 508);
             this.lueIdDefaultCurrency.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lueIdDefaultCurrency.MenuManager = this.ribbonControl;
             this.lueIdDefaultCurrency.Name = "lueIdDefaultCurrency";
@@ -1066,7 +1153,7 @@
             // 
             // txtComments
             // 
-            this.txtComments.Location = new System.Drawing.Point(156, 320);
+            this.txtComments.Location = new System.Drawing.Point(156, 436);
             this.txtComments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtComments.MenuManager = this.ribbonControl;
             this.txtComments.Name = "txtComments";
@@ -1076,7 +1163,7 @@
             // 
             // txtContactNameZh
             // 
-            this.txtContactNameZh.Location = new System.Drawing.Point(156, 272);
+            this.txtContactNameZh.Location = new System.Drawing.Point(156, 388);
             this.txtContactNameZh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContactNameZh.MenuManager = this.ribbonControl;
             this.txtContactNameZh.Name = "txtContactNameZh";
@@ -1086,7 +1173,7 @@
             // 
             // txtBillingAddressZh
             // 
-            this.txtBillingAddressZh.Location = new System.Drawing.Point(156, 200);
+            this.txtBillingAddressZh.Location = new System.Drawing.Point(156, 316);
             this.txtBillingAddressZh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBillingAddressZh.MenuManager = this.ribbonControl;
             this.txtBillingAddressZh.Name = "txtBillingAddressZh";
@@ -1096,7 +1183,7 @@
             // 
             // txtShippingAddressZh
             // 
-            this.txtShippingAddressZh.Location = new System.Drawing.Point(156, 104);
+            this.txtShippingAddressZh.Location = new System.Drawing.Point(156, 220);
             this.txtShippingAddressZh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtShippingAddressZh.MenuManager = this.ribbonControl;
             this.txtShippingAddressZh.Name = "txtShippingAddressZh";
@@ -1106,7 +1193,7 @@
             // 
             // txtContactPhone
             // 
-            this.txtContactPhone.Location = new System.Drawing.Point(156, 296);
+            this.txtContactPhone.Location = new System.Drawing.Point(156, 412);
             this.txtContactPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContactPhone.MenuManager = this.ribbonControl;
             this.txtContactPhone.Name = "txtContactPhone";
@@ -1116,7 +1203,7 @@
             // 
             // txtContactName
             // 
-            this.txtContactName.Location = new System.Drawing.Point(156, 248);
+            this.txtContactName.Location = new System.Drawing.Point(156, 364);
             this.txtContactName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContactName.MenuManager = this.ribbonControl;
             this.txtContactName.Name = "txtContactName";
@@ -1126,7 +1213,7 @@
             // 
             // txtBillingAddress
             // 
-            this.txtBillingAddress.Location = new System.Drawing.Point(156, 152);
+            this.txtBillingAddress.Location = new System.Drawing.Point(156, 268);
             this.txtBillingAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBillingAddress.MenuManager = this.ribbonControl;
             this.txtBillingAddress.Name = "txtBillingAddress";
@@ -1136,7 +1223,7 @@
             // 
             // txtShippingAddress
             // 
-            this.txtShippingAddress.Location = new System.Drawing.Point(156, 56);
+            this.txtShippingAddress.Location = new System.Drawing.Point(156, 172);
             this.txtShippingAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtShippingAddress.MenuManager = this.ribbonControl;
             this.txtShippingAddress.Name = "txtShippingAddress";
@@ -1146,7 +1233,7 @@
             // 
             // txtVatNumber
             // 
-            this.txtVatNumber.Location = new System.Drawing.Point(156, 32);
+            this.txtVatNumber.Location = new System.Drawing.Point(156, 148);
             this.txtVatNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVatNumber.MenuManager = this.ribbonControl;
             this.txtVatNumber.Name = "txtVatNumber";
@@ -1156,18 +1243,18 @@
             // 
             // chkActive
             // 
-            this.chkActive.Location = new System.Drawing.Point(156, 9);
+            this.chkActive.Location = new System.Drawing.Point(156, 125);
             this.chkActive.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkActive.MenuManager = this.ribbonControl;
             this.chkActive.Name = "chkActive";
             this.chkActive.Properties.Caption = "";
-            this.chkActive.Size = new System.Drawing.Size(310, 19);
+            this.chkActive.Size = new System.Drawing.Size(81, 19);
             this.chkActive.StyleController = this.layoutControlForm;
             this.chkActive.TabIndex = 9;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(156, -15);
+            this.txtName.Location = new System.Drawing.Point(156, 101);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.MenuManager = this.ribbonControl;
             this.txtName.Name = "txtName";
@@ -1177,7 +1264,7 @@
             // 
             // txtTimestamp
             // 
-            this.txtTimestamp.Location = new System.Drawing.Point(156, -39);
+            this.txtTimestamp.Location = new System.Drawing.Point(156, 77);
             this.txtTimestamp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTimestamp.MenuManager = this.ribbonControl;
             this.txtTimestamp.Name = "txtTimestamp";
@@ -1187,7 +1274,7 @@
             // 
             // txtIdSubversion
             // 
-            this.txtIdSubversion.Location = new System.Drawing.Point(156, -63);
+            this.txtIdSubversion.Location = new System.Drawing.Point(156, 53);
             this.txtIdSubversion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdSubversion.MenuManager = this.ribbonControl;
             this.txtIdSubversion.Name = "txtIdSubversion";
@@ -1197,7 +1284,7 @@
             // 
             // txtIdVersion
             // 
-            this.txtIdVersion.Location = new System.Drawing.Point(156, -87);
+            this.txtIdVersion.Location = new System.Drawing.Point(156, 29);
             this.txtIdVersion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdVersion.MenuManager = this.ribbonControl;
             this.txtIdVersion.Name = "txtIdVersion";
@@ -1207,13 +1294,49 @@
             // 
             // txtIdSupplier
             // 
-            this.txtIdSupplier.Location = new System.Drawing.Point(156, -111);
+            this.txtIdSupplier.Location = new System.Drawing.Point(156, 5);
             this.txtIdSupplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdSupplier.MenuManager = this.ribbonControl;
             this.txtIdSupplier.Name = "txtIdSupplier";
             this.txtIdSupplier.Size = new System.Drawing.Size(310, 20);
             this.txtIdSupplier.StyleController = this.layoutControlForm;
             this.txtIdSupplier.TabIndex = 4;
+            // 
+            // txtShippingAddress2
+            // 
+            this.txtShippingAddress2.Location = new System.Drawing.Point(156, 196);
+            this.txtShippingAddress2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtShippingAddress2.Name = "txtShippingAddress2";
+            this.txtShippingAddress2.Size = new System.Drawing.Size(310, 20);
+            this.txtShippingAddress2.StyleController = this.layoutControlForm;
+            this.txtShippingAddress2.TabIndex = 11;
+            // 
+            // txtBillingAddress2
+            // 
+            this.txtBillingAddress2.Location = new System.Drawing.Point(156, 292);
+            this.txtBillingAddress2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBillingAddress2.Name = "txtBillingAddress2";
+            this.txtBillingAddress2.Size = new System.Drawing.Size(310, 20);
+            this.txtBillingAddress2.StyleController = this.layoutControlForm;
+            this.txtBillingAddress2.TabIndex = 12;
+            // 
+            // txtShippingAddressZh2
+            // 
+            this.txtShippingAddressZh2.Location = new System.Drawing.Point(156, 244);
+            this.txtShippingAddressZh2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtShippingAddressZh2.Name = "txtShippingAddressZh2";
+            this.txtShippingAddressZh2.Size = new System.Drawing.Size(310, 20);
+            this.txtShippingAddressZh2.StyleController = this.layoutControlForm;
+            this.txtShippingAddressZh2.TabIndex = 18;
+            // 
+            // txtBillingAddressZh2
+            // 
+            this.txtBillingAddressZh2.Location = new System.Drawing.Point(156, 340);
+            this.txtBillingAddressZh2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBillingAddressZh2.Name = "txtBillingAddressZh2";
+            this.txtBillingAddressZh2.Size = new System.Drawing.Size(310, 20);
+            this.txtBillingAddressZh2.StyleController = this.layoutControlForm;
+            this.txtBillingAddressZh2.TabIndex = 19;
             // 
             // layoutControlGroup1
             // 
@@ -1242,8 +1365,9 @@
             this.lciShippigAddress2,
             this.lciShippingAddressZh2,
             this.lciBillingAddress2,
-            this.lciBillingAddressZh2});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, -123);
+            this.lciBillingAddressZh2,
+            this.lciFactory});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, -7);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.OptionsItemText.TextToControlDistance = 4;
             this.layoutControlGroup1.Size = new System.Drawing.Size(478, 557);
@@ -1307,7 +1431,7 @@
             this.lciActive.Control = this.chkActive;
             this.lciActive.Location = new System.Drawing.Point(0, 120);
             this.lciActive.Name = "lciActive";
-            this.lciActive.Size = new System.Drawing.Size(458, 23);
+            this.lciActive.Size = new System.Drawing.Size(229, 23);
             this.lciActive.Text = "Active";
             this.lciActive.TextSize = new System.Drawing.Size(140, 13);
             // 
@@ -1418,6 +1542,46 @@
             this.lciIdIncoterm.Size = new System.Drawing.Size(458, 24);
             this.lciIdIncoterm.Text = "Incoterm";
             this.lciIdIncoterm.TextSize = new System.Drawing.Size(140, 13);
+            // 
+            // lciShippigAddress2
+            // 
+            this.lciShippigAddress2.Control = this.txtShippingAddress2;
+            this.lciShippigAddress2.CustomizationFormText = "Shipping Address";
+            this.lciShippigAddress2.Location = new System.Drawing.Point(0, 191);
+            this.lciShippigAddress2.Name = "lciShippigAddress2";
+            this.lciShippigAddress2.Size = new System.Drawing.Size(458, 24);
+            this.lciShippigAddress2.Text = "Shipping Address 2";
+            this.lciShippigAddress2.TextSize = new System.Drawing.Size(140, 13);
+            // 
+            // lciShippingAddressZh2
+            // 
+            this.lciShippingAddressZh2.Control = this.txtShippingAddressZh2;
+            this.lciShippingAddressZh2.CustomizationFormText = "Shipping Address (Chinese)";
+            this.lciShippingAddressZh2.Location = new System.Drawing.Point(0, 239);
+            this.lciShippingAddressZh2.Name = "lciShippingAddressZh2";
+            this.lciShippingAddressZh2.Size = new System.Drawing.Size(458, 24);
+            this.lciShippingAddressZh2.Text = "Shipping Address 2 (Chinese)";
+            this.lciShippingAddressZh2.TextSize = new System.Drawing.Size(140, 13);
+            // 
+            // lciBillingAddress2
+            // 
+            this.lciBillingAddress2.Control = this.txtBillingAddress2;
+            this.lciBillingAddress2.CustomizationFormText = "Billing Address";
+            this.lciBillingAddress2.Location = new System.Drawing.Point(0, 287);
+            this.lciBillingAddress2.Name = "lciBillingAddress2";
+            this.lciBillingAddress2.Size = new System.Drawing.Size(458, 24);
+            this.lciBillingAddress2.Text = "Billing Address 2";
+            this.lciBillingAddress2.TextSize = new System.Drawing.Size(140, 13);
+            // 
+            // lciBillingAddressZh2
+            // 
+            this.lciBillingAddressZh2.Control = this.txtBillingAddressZh2;
+            this.lciBillingAddressZh2.CustomizationFormText = "Billing Address (Chinese)";
+            this.lciBillingAddressZh2.Location = new System.Drawing.Point(0, 335);
+            this.lciBillingAddressZh2.Name = "lciBillingAddressZh2";
+            this.lciBillingAddressZh2.Size = new System.Drawing.Size(458, 24);
+            this.lciBillingAddressZh2.Text = "Billing Address 2 (Chinese)";
+            this.lciBillingAddressZh2.TextSize = new System.Drawing.Size(140, 13);
             // 
             // gcHistory
             // 
@@ -2133,157 +2297,45 @@
             this.layoutControlItem32.Text = "lciIdUserAttri3";
             this.layoutControlItem32.TextSize = new System.Drawing.Size(104, 13);
             // 
-            // txtShippingAddress2
+            // chkFactory
             // 
-            this.txtShippingAddress2.Location = new System.Drawing.Point(156, 80);
-            this.txtShippingAddress2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtShippingAddress2.Name = "txtShippingAddress2";
-            this.txtShippingAddress2.Size = new System.Drawing.Size(310, 20);
-            this.txtShippingAddress2.StyleController = this.layoutControlForm;
-            this.txtShippingAddress2.TabIndex = 11;
+            this.chkFactory.Location = new System.Drawing.Point(385, 125);
+            this.chkFactory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkFactory.Name = "chkFactory";
+            this.chkFactory.Properties.Caption = "";
+            this.chkFactory.Size = new System.Drawing.Size(81, 19);
+            this.chkFactory.StyleController = this.layoutControlForm;
+            this.chkFactory.TabIndex = 9;
             // 
-            // txtShippingAddressZh2
+            // lciFactory
             // 
-            this.txtShippingAddressZh2.Location = new System.Drawing.Point(156, 128);
-            this.txtShippingAddressZh2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtShippingAddressZh2.Name = "txtShippingAddressZh2";
-            this.txtShippingAddressZh2.Size = new System.Drawing.Size(310, 20);
-            this.txtShippingAddressZh2.StyleController = this.layoutControlForm;
-            this.txtShippingAddressZh2.TabIndex = 18;
+            this.lciFactory.Control = this.chkFactory;
+            this.lciFactory.CustomizationFormText = "Active";
+            this.lciFactory.Location = new System.Drawing.Point(229, 120);
+            this.lciFactory.Name = "lciFactory";
+            this.lciFactory.Size = new System.Drawing.Size(229, 23);
+            this.lciFactory.Text = "Factory";
+            this.lciFactory.TextSize = new System.Drawing.Size(140, 13);
             // 
-            // txtBillingAddressZh2
+            // chkHFactory
             // 
-            this.txtBillingAddressZh2.Location = new System.Drawing.Point(156, 224);
-            this.txtBillingAddressZh2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtBillingAddressZh2.Name = "txtBillingAddressZh2";
-            this.txtBillingAddressZh2.Size = new System.Drawing.Size(310, 20);
-            this.txtBillingAddressZh2.StyleController = this.layoutControlForm;
-            this.txtBillingAddressZh2.TabIndex = 19;
+            this.chkHFactory.Location = new System.Drawing.Point(474, 137);
+            this.chkHFactory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkHFactory.Name = "chkHFactory";
+            this.chkHFactory.Properties.Caption = "";
+            this.chkHFactory.Size = new System.Drawing.Size(161, 19);
+            this.chkHFactory.StyleController = this.layoutControlSupplierHistory;
+            this.chkHFactory.TabIndex = 9;
             // 
-            // txtBillingAddress2
+            // lciHFactory
             // 
-            this.txtBillingAddress2.Location = new System.Drawing.Point(156, 176);
-            this.txtBillingAddress2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtBillingAddress2.Name = "txtBillingAddress2";
-            this.txtBillingAddress2.Size = new System.Drawing.Size(310, 20);
-            this.txtBillingAddress2.StyleController = this.layoutControlForm;
-            this.txtBillingAddress2.TabIndex = 12;
-            // 
-            // lciShippigAddress2
-            // 
-            this.lciShippigAddress2.Control = this.txtShippingAddress2;
-            this.lciShippigAddress2.CustomizationFormText = "Shipping Address";
-            this.lciShippigAddress2.Location = new System.Drawing.Point(0, 191);
-            this.lciShippigAddress2.Name = "lciShippigAddress2";
-            this.lciShippigAddress2.Size = new System.Drawing.Size(458, 24);
-            this.lciShippigAddress2.Text = "Shipping Address 2";
-            this.lciShippigAddress2.TextSize = new System.Drawing.Size(140, 13);
-            // 
-            // lciBillingAddress2
-            // 
-            this.lciBillingAddress2.Control = this.txtBillingAddress2;
-            this.lciBillingAddress2.CustomizationFormText = "Billing Address";
-            this.lciBillingAddress2.Location = new System.Drawing.Point(0, 287);
-            this.lciBillingAddress2.Name = "lciBillingAddress2";
-            this.lciBillingAddress2.Size = new System.Drawing.Size(458, 24);
-            this.lciBillingAddress2.Text = "Billing Address 2";
-            this.lciBillingAddress2.TextSize = new System.Drawing.Size(140, 13);
-            // 
-            // lciShippingAddressZh2
-            // 
-            this.lciShippingAddressZh2.Control = this.txtShippingAddressZh2;
-            this.lciShippingAddressZh2.CustomizationFormText = "Shipping Address (Chinese)";
-            this.lciShippingAddressZh2.Location = new System.Drawing.Point(0, 239);
-            this.lciShippingAddressZh2.Name = "lciShippingAddressZh2";
-            this.lciShippingAddressZh2.Size = new System.Drawing.Size(458, 24);
-            this.lciShippingAddressZh2.Text = "Shipping Address 2 (Chinese)";
-            this.lciShippingAddressZh2.TextSize = new System.Drawing.Size(140, 13);
-            // 
-            // lciBillingAddressZh2
-            // 
-            this.lciBillingAddressZh2.Control = this.txtBillingAddressZh2;
-            this.lciBillingAddressZh2.CustomizationFormText = "Billing Address (Chinese)";
-            this.lciBillingAddressZh2.Location = new System.Drawing.Point(0, 335);
-            this.lciBillingAddressZh2.Name = "lciBillingAddressZh2";
-            this.lciBillingAddressZh2.Size = new System.Drawing.Size(458, 24);
-            this.lciBillingAddressZh2.Text = "Billing Address 2 (Chinese)";
-            this.lciBillingAddressZh2.TextSize = new System.Drawing.Size(140, 13);
-            // 
-            // txtHBillingAddressZh2
-            // 
-            this.txtHBillingAddressZh2.Location = new System.Drawing.Point(166, 219);
-            this.txtHBillingAddressZh2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtHBillingAddressZh2.Name = "txtHBillingAddressZh2";
-            this.txtHBillingAddressZh2.Size = new System.Drawing.Size(469, 20);
-            this.txtHBillingAddressZh2.StyleController = this.layoutControlSupplierHistory;
-            this.txtHBillingAddressZh2.TabIndex = 19;
-            // 
-            // txtHBillingAddress2
-            // 
-            this.txtHBillingAddress2.Location = new System.Drawing.Point(166, 171);
-            this.txtHBillingAddress2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtHBillingAddress2.Name = "txtHBillingAddress2";
-            this.txtHBillingAddress2.Size = new System.Drawing.Size(469, 20);
-            this.txtHBillingAddress2.StyleController = this.layoutControlSupplierHistory;
-            this.txtHBillingAddress2.TabIndex = 12;
-            // 
-            // txtHShippingAddressZh2
-            // 
-            this.txtHShippingAddressZh2.Location = new System.Drawing.Point(166, 123);
-            this.txtHShippingAddressZh2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtHShippingAddressZh2.Name = "txtHShippingAddressZh2";
-            this.txtHShippingAddressZh2.Size = new System.Drawing.Size(469, 20);
-            this.txtHShippingAddressZh2.StyleController = this.layoutControlSupplierHistory;
-            this.txtHShippingAddressZh2.TabIndex = 18;
-            // 
-            // txtHShippingAddress2
-            // 
-            this.txtHShippingAddress2.Location = new System.Drawing.Point(166, 75);
-            this.txtHShippingAddress2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtHShippingAddress2.Name = "txtHShippingAddress2";
-            this.txtHShippingAddress2.Size = new System.Drawing.Size(469, 20);
-            this.txtHShippingAddress2.StyleController = this.layoutControlSupplierHistory;
-            this.txtHShippingAddress2.TabIndex = 11;
-            // 
-            // lciHShippigAddress2
-            // 
-            this.lciHShippigAddress2.Control = this.txtHShippingAddress2;
-            this.lciHShippigAddress2.CustomizationFormText = "Shipping Address";
-            this.lciHShippigAddress2.Location = new System.Drawing.Point(0, 191);
-            this.lciHShippigAddress2.Name = "lciHShippigAddress2";
-            this.lciHShippigAddress2.Size = new System.Drawing.Size(617, 24);
-            this.lciHShippigAddress2.Text = "Shipping Address 2";
-            this.lciHShippigAddress2.TextSize = new System.Drawing.Size(140, 13);
-            // 
-            // lciHBillingAddress1
-            // 
-            this.lciHBillingAddress1.Control = this.txtHBillingAddress2;
-            this.lciHBillingAddress1.CustomizationFormText = "Billing Address";
-            this.lciHBillingAddress1.Location = new System.Drawing.Point(0, 287);
-            this.lciHBillingAddress1.Name = "lciHBillingAddress1";
-            this.lciHBillingAddress1.Size = new System.Drawing.Size(617, 24);
-            this.lciHBillingAddress1.Text = "Billing Address";
-            this.lciHBillingAddress1.TextSize = new System.Drawing.Size(140, 13);
-            // 
-            // lciHShippingAddressZh2
-            // 
-            this.lciHShippingAddressZh2.Control = this.txtHShippingAddressZh2;
-            this.lciHShippingAddressZh2.CustomizationFormText = "Shipping Address (Chinese)";
-            this.lciHShippingAddressZh2.Location = new System.Drawing.Point(0, 239);
-            this.lciHShippingAddressZh2.Name = "lciHShippingAddressZh2";
-            this.lciHShippingAddressZh2.Size = new System.Drawing.Size(617, 24);
-            this.lciHShippingAddressZh2.Text = "Shipping Address 2 (Chinese)";
-            this.lciHShippingAddressZh2.TextSize = new System.Drawing.Size(140, 13);
-            // 
-            // lciHBillingAddressZh2
-            // 
-            this.lciHBillingAddressZh2.Control = this.txtHBillingAddressZh2;
-            this.lciHBillingAddressZh2.CustomizationFormText = "Billing Address (Chinese)";
-            this.lciHBillingAddressZh2.Location = new System.Drawing.Point(0, 335);
-            this.lciHBillingAddressZh2.Name = "lciHBillingAddressZh2";
-            this.lciHBillingAddressZh2.Size = new System.Drawing.Size(617, 24);
-            this.lciHBillingAddressZh2.Text = "Billing Address 2 (Chinese)";
-            this.lciHBillingAddressZh2.TextSize = new System.Drawing.Size(140, 13);
+            this.lciHFactory.Control = this.chkHFactory;
+            this.lciHFactory.CustomizationFormText = "Active";
+            this.lciHFactory.Location = new System.Drawing.Point(308, 120);
+            this.lciHFactory.Name = "lciHFactory";
+            this.lciHFactory.Size = new System.Drawing.Size(309, 23);
+            this.lciHFactory.Text = "Factory";
+            this.lciHFactory.TextSize = new System.Drawing.Size(140, 13);
             // 
             // SupplierManagement
             // 
@@ -2328,6 +2380,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtHBillingAddressZh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHContactNameZh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHComments.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHShippingAddress2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHBillingAddress2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHShippingAddressZh2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHBillingAddressZh2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHIdSupplier)).EndInit();
@@ -2349,6 +2405,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciHIdDefaultCurrency)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHIdPaymentTerms)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciHIdIncoterm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHShippigAddress2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHShippingAddressZh2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHBillingAddress1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHBillingAddressZh2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlForm)).EndInit();
             this.layoutControlForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lueIdIncoterm.Properties)).EndInit();
@@ -2369,6 +2429,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtIdSubversion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdVersion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdSupplier.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShippingAddress2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBillingAddress2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShippingAddressZh2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBillingAddressZh2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIdSupplier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
@@ -2389,6 +2453,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciComments)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIdPaymentTerms)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciIdIncoterm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciShippigAddress2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciShippingAddressZh2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBillingAddress2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBillingAddressZh2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcHistory)).EndInit();
             this.xtraScrollableControlHistory.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlHistory)).EndInit();
@@ -2460,22 +2528,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShippingAddress2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtShippingAddressZh2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBillingAddressZh2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBillingAddress2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciShippigAddress2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciBillingAddress2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciShippingAddressZh2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciBillingAddressZh2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHBillingAddressZh2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHBillingAddress2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHShippingAddressZh2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHShippingAddress2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHShippigAddress2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHBillingAddress1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHShippingAddressZh2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciHBillingAddressZh2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkFactory.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciFactory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkHFactory.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciHFactory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2661,5 +2717,9 @@
         private DevExpress.XtraLayout.LayoutControlItem lciHShippingAddressZh2;
         private DevExpress.XtraLayout.LayoutControlItem lciHBillingAddress1;
         private DevExpress.XtraLayout.LayoutControlItem lciHBillingAddressZh2;
+        private DevExpress.XtraEditors.CheckEdit chkFactory;
+        private DevExpress.XtraLayout.LayoutControlItem lciFactory;
+        private DevExpress.XtraEditors.CheckEdit chkHFactory;
+        private DevExpress.XtraLayout.LayoutControlItem lciHFactory;
     }
 }
