@@ -107,7 +107,7 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Margin = new System.Windows.Forms.Padding(4);
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonControl.Size = new System.Drawing.Size(1338, 125);
             // 
             // ribbonPage1
@@ -118,7 +118,7 @@
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 684);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonStatusBar.Size = new System.Drawing.Size(1338, 31);
             // 
             // xtcGeneral
@@ -414,7 +414,7 @@
             this.xtcPO.Location = new System.Drawing.Point(11, 149);
             this.xtcPO.Name = "xtcPO";
             this.xtcPO.SelectedTabPage = this.xtpOrderedGoods;
-            this.xtcPO.Size = new System.Drawing.Size(1314, 378);
+            this.xtcPO.Size = new System.Drawing.Size(1314, 377);
             this.xtcPO.TabIndex = 3;
             this.xtcPO.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpOrderedGoods,
@@ -424,7 +424,7 @@
             // 
             this.xtpOrderedGoods.Controls.Add(this.xgrdLines);
             this.xtpOrderedGoods.Name = "xtpOrderedGoods";
-            this.xtpOrderedGoods.Size = new System.Drawing.Size(1308, 350);
+            this.xtpOrderedGoods.Size = new System.Drawing.Size(1308, 349);
             this.xtpOrderedGoods.Text = "ORDERED GOODS";
             // 
             // xgrdLines
@@ -434,7 +434,7 @@
             this.xgrdLines.MainView = this.gridViewLines;
             this.xgrdLines.MenuManager = this.ribbonControl;
             this.xgrdLines.Name = "xgrdLines";
-            this.xgrdLines.Size = new System.Drawing.Size(1308, 350);
+            this.xgrdLines.Size = new System.Drawing.Size(1308, 349);
             this.xgrdLines.TabIndex = 0;
             this.xgrdLines.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewLines});
@@ -459,7 +459,7 @@
             this.xtpTerms.Controls.Add(this.lblAddress);
             this.xtpTerms.Controls.Add(this.lblCompany);
             this.xtpTerms.Name = "xtpTerms";
-            this.xtpTerms.Size = new System.Drawing.Size(1308, 350);
+            this.xtpTerms.Size = new System.Drawing.Size(1308, 341);
             this.xtpTerms.Text = "TERMS";
             // 
             // sluePaymentTerm
@@ -590,7 +590,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1338, 715);
             this.Controls.Add(this.xtcGeneral);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PurchaseOrder";
             this.Text = "Purchase Order";
             this.Load += new System.EventHandler(this.PurchaseOrder_Load);

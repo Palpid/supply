@@ -280,7 +280,7 @@ namespace HKSupply.Forms.Supply
                 }
                 else
                 {
-                    XtraMessageBox.Show("No Delivery Note Selected", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    XtraMessageBox.Show("No Purchase Order Selected", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch(Exception ex)
@@ -319,7 +319,7 @@ namespace HKSupply.Forms.Supply
 
                 if (dateEditDocDate.EditValue != null)
                 {
-                    lblDocDateWeek.Text = dateEditDocDate.DateTime.GetWeek().ToString();
+                    lblDocDateWeek.Text = dateEditDocDate.DateTime.GetWeek().ToString().PadLeft(2, '0');
                     GetDeliveryDate();
                     if (CurrentState == ActionsStates.New)
                     { 
@@ -340,7 +340,7 @@ namespace HKSupply.Forms.Supply
             {
                 if (dateEditDelivery.EditValue != null)
                 {
-                    lblDeliveryWeek.Text = dateEditDelivery.DateTime.GetWeek().ToString();
+                    lblDeliveryWeek.Text = dateEditDelivery.DateTime.GetWeek().ToString().PadLeft(2, '0');
                 }
             }
             catch (Exception ex)
@@ -1970,7 +1970,12 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                List<DocLine> sortedLines = _docLinesList.Where(lin => lin.IdItemBcn != null).OrderBy(a => a.Batch).ThenBy(b => b.IdItemBcn).ToList();
+                //para quedarse sólo con la parte final del batch (el número)
+                List<DocLine> sortedLines = _docLinesList
+                    .Where(lin => lin.IdItemBcn != null)
+                    .OrderBy(a => Convert.ToInt32(System.Text.RegularExpressions.Regex.Match(a.Batch, @"\d+$").Value))
+                    .ThenBy(b => b.IdItemBcn)
+                    .ToList();
 
                 DocHead purchaseOrder = new DocHead()
                 {

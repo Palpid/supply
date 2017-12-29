@@ -463,6 +463,24 @@
     <Compile Include="Forms\Supply\SalesOrder.Designer.cs">
       <DependentUpon>SalesOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Supply\SupplyMaterials\PackingListMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\SupplyMaterials\PackingListMaterials.Designer.cs">
+      <DependentUpon>PackingListMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\SupplyMaterials\PurchaseOrderMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\SupplyMaterials\PurchaseOrderMaterials.Designer.cs">
+      <DependentUpon>PurchaseOrderMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\SupplyMaterials\PurchaseOrderMaterialsSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\SupplyMaterials\PurchaseOrderMaterialsSelection.Designer.cs">
+      <DependentUpon>PurchaseOrderMaterialsSelection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\WaitForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1284,6 +1302,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\SalesOrder.resx">
       <DependentUpon>SalesOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\SupplyMaterials\PackingListMaterials.resx">
+      <DependentUpon>PackingListMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\SupplyMaterials\PurchaseOrderMaterials.resx">
+      <DependentUpon>PurchaseOrderMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\SupplyMaterials\PurchaseOrderMaterialsSelection.resx">
+      <DependentUpon>PurchaseOrderMaterialsSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\WaitForm1.resx">
       <DependentUpon>WaitForm1.cs</DependentUpon>

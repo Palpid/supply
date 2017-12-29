@@ -544,7 +544,7 @@ namespace HKSupply.Services.Implementations
             }
         }
 
-        public List<POSelection> GetPOSelection(string idDocPo, string idSupplyStatus, string idSupplier, DateTime PODateIni, DateTime PODateEnd)
+        public List<POSelection> GetPOSelection(string idDocPo, string idSupplyStatus, string idSupplier, DateTime PODateIni, DateTime PODateEnd, bool factory = true)
         {
             try
             {
@@ -567,6 +567,7 @@ namespace HKSupply.Services.Implementations
                 query.Append($",@pIdSupplier = '{idSupplier}'");
                 query.Append($",@pPODateIni = '{txtPODateIni}'");
                 query.Append($",@pPODateEnd = '{txtPODateEnd}'");
+                query.Append($",@pFactory = {Convert.ToInt32(factory).ToString()}");
 
                 using (var db = new HKSupplyContext())
                 {
@@ -1216,6 +1217,148 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        #region Supply Materials
+
+        /*****************************************************************************************************************************************  
+         *      Por facilidad y que se va más claro separo los documentos para la gestión del pedido de frames y venta de manterial a fábricas   *
+         *      y la compra (aprovisionamiento) de materiales
+         *****************************************************************************************************************************************/
+        public DocHead UpdateDocSupplyMaterials(DocHead doc, bool finishDoc = false)
+        {
+            try
+            {
+                if (doc == null)
+                    throw new ArgumentNullException(nameof(doc));
+
+                using (var db = new HKSupplyContext())
+                {
+                    using (var dbTrans = db.Database.BeginTransaction())
+                    {
+                        try
+                        {
+
+                            DocHead docToUpdate = GetDoc(doc.IdDoc);
+                            DocHead docDataBeforeUpdate = GetDoc(doc.IdDoc);
+
+                            if (docToUpdate == null)
+                                throw new Exception("DOC error");
+
+                            //número de línea
+                            int numLin = 1;
+
+                            //TODO: Actualizar precios, en qué momento y bajo qué condiciones??
+
+                            foreach (var line in doc.Lines)
+                            {
+                                line.NumLin = numLin;
+                                line.IdDoc = doc.IdDoc;
+
+                                if (line.LineState == DocLine.LineStates.New)
+                                    line.QuantityOriginal = line.Quantity;
+
+                                //if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_PO && existQP == false)
+                                //{
+                                //    var supplierPrice = supplierPriceList?.Where(a => a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
+
+                                //    line.UnitPrice = (supplierPrice == null ? 0 : supplierPrice.Price);
+                                //    line.UnitPriceBaseCurrency = (supplierPrice == null ? 0 : supplierPrice.PriceBaseCurrency);
+                                //}
+
+                                //if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_QP && existSO == false)
+                                //{
+                                //    var customerPrice = customerPriceList?.Where(a => a.IdItemBcn.Equals(line.IdItemBcn)).FirstOrDefault();
+
+                                //    line.UnitPrice = (customerPrice == null ? 0 : customerPrice.Price);
+                                //    line.UnitPriceBaseCurrency = (customerPrice == null ? 0 : customerPrice.PriceBaseCurrency);
+                                //}
+
+                                numLin++;
+                            }
+
+                            //Hay que agregarlo al contexto actual para que lo actualice
+                            db.DocsHead.Attach(docToUpdate);
+
+                            //actualizamos el estado, manual ref y remarks
+                            docToUpdate.IdSupplyStatus = doc.IdSupplyStatus;
+                            docToUpdate.ManualReference = doc.ManualReference;
+                            docToUpdate.Remarks = doc.Remarks;
+
+                            //Borramos las líneas de la base de datos para insertarla de nuevo
+                            var lines = db.DocsLines.Where(a => a.IdDoc.Equals(doc.IdDoc));
+
+                            foreach (var line in lines)
+                                db.DocsLines.Remove(line);
+
+                            //y los insertamos de nuevo
+                            foreach (var line in doc.Lines)
+                                db.DocsLines.Add(line);
+
+                            //user
+                            docToUpdate.User = GlobalSetting.LoggedUser.UserLogin.ToUpper();
+
+                            db.SaveChanges();
+
+                            /************************************* PK *************************************/
+                            //Si es un Packing List y se finaliza hay que insertar en el stock de tránsito de Etnia HK
+                            if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_PL && finishDoc == true)
+                            {
+
+                                //Hacer los movimientos de stock hacía el almacén de tránsito
+                                AddStockToTransit(db, docToUpdate);
+
+                            }
+
+                            //********** Save last changes and commit **********//
+                            db.SaveChanges();
+                            dbTrans.Commit();
+
+                            db.Entry(docToUpdate).GetDatabaseValues();
+                            return docToUpdate;
+
+                        }
+                        catch (SqlException sqlex)
+                        {
+                            dbTrans.Rollback();
+
+                            for (int i = 0; i < sqlex.Errors.Count; i++)
+                            {
+                                _log.Error("Index #" + i + "\n" +
+                                    "Message: " + sqlex.Errors[i].Message + "\n" +
+                                    "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                                    "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                                    "Source: " + sqlex.Errors[i].Source + "\n" +
+                                    "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                                switch (sqlex.Errors[i].Number)
+                                {
+                                    case -1: //connection broken
+                                    case -2: //timeout
+                                        throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                                }
+                            }
+                            throw sqlex;
+                        }
+                        catch (Exception ex)
+                        {
+                            dbTrans.Rollback();
+                            _log.Error(ex.Message, ex);
+                            throw ex;
+                        }
+                    }
+                }
+
+            }
+            catch (ArgumentNullException anex)
+            {
+                _log.Error(anex.Message, anex);
+                throw anex;
+            }
+
+        }
+
+        #endregion
+
+
         #region Private Methods
 
         private DocHead GetPurchaseOrderBcn2Hk(HKSupplyContext db, DocHead purchaseOrderHk2Factory)
@@ -1687,6 +1830,45 @@ namespace HKSupply.Services.Implementations
                         remarks: string.Empty,
                         LstidDoc: docs,
                         IdUser: GlobalSetting.LoggedUser.UserLogin);
+                }
+
+                var BDSTK = new PRJ_Stocks.DB.BD_Stocks();
+                BDSTK.SaveCurrentStockMovs(db, STKAct);
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void AddStockToTransit(HKSupplyContext db, DocHead docHead)
+        {
+            try
+            {
+                PRJ_Stocks.DB.Call_DB_Stocks CallDBS = new PRJ_Stocks.DB.Call_DB_Stocks();
+                PRJ_Stocks.Classes.Stocks STKAct = CallDBS.CallCargaStocks();
+
+                var whEtniaHkTransit = STKAct.GetWareHouse(
+                    Constants.ETNIA_HK_COMPANY_CODE,
+                    PRJ_Stocks.Classes.Stocks.StockWareHousesType.Transit);
+
+                List<string> docs = new List<string>();
+                docs.Add(docHead.IdDoc);
+
+                foreach (var line in docHead.Lines)
+                {
+                    STKAct.AddSockItem(
+                        MoveType: PRJ_Stocks.Classes.Stocks.StockMovementsType.Transit,
+                        ware: whEtniaHkTransit,
+                        Qtt: line.Quantity,
+                        idItem: line.IdItemBcn,
+                        idLot: string.Empty,
+                        idOwner: string.Empty,
+                        Remarks: string.Empty,
+                        LstidDoc: docs,
+                        IdUser: GlobalSetting.LoggedUser.UserLogin
+                        );
                 }
 
                 var BDSTK = new PRJ_Stocks.DB.BD_Stocks();

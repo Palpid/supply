@@ -613,6 +613,8 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.PurchaseOrder.re
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.PurchaseOrderSelection.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.QuotationProposal.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.SalesOrder.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.SupplyMaterials.PurchaseOrderMaterials.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.SupplyMaterials.PurchaseOrderMaterialsSelection.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.WaitForm1.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.Customer.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.ObjectVersion.resources
@@ -720,6 +722,8 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.DOC_HEAD_ATTACH_FI
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.boxes_01.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.docBoxes_01.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.PackingListItemsBatch_ModDocHead_01.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.DocLineBoxNumer_01.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.factorySupplierCustomer.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.PRJ_Stocks.Forms.StockManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Properties.Resources.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Reports.frmVisor.resources
@@ -729,5 +733,4 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe.licenses
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.csproj.CoreCompileInputs.cache
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
-C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.DocLineBoxNumer_01.resources
-C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.factorySupplierCustomer.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.SupplyMaterials.PackingListMaterials.resources

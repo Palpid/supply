@@ -30,39 +30,39 @@
         {
             this.xtcGeneral = new DevExpress.XtraTab.XtraTabControl();
             this.xtpPOSection = new DevExpress.XtraTab.XtraTabPage();
-            this.xgrdLines = new DevExpress.XtraGrid.GridControl();
-            this.gridViewLines = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.pcFilter = new DevExpress.XtraEditors.PanelControl();
             this.sbFilter = new DevExpress.XtraEditors.SimpleButton();
             this.lblAnd = new DevExpress.XtraEditors.LabelControl();
+            this.lblSupplier = new DevExpress.XtraEditors.LabelControl();
             this.lblDocDate = new DevExpress.XtraEditors.LabelControl();
+            this.slueSupplier = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.dateEditPODateEnd = new DevExpress.XtraEditors.DateEdit();
+            this.lblPONumber = new DevExpress.XtraEditors.LabelControl();
             this.dateEditPODateIni = new DevExpress.XtraEditors.DateEdit();
+            this.txtPONumber = new DevExpress.XtraEditors.TextEdit();
             this.slueStatus = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.lblStatus = new DevExpress.XtraEditors.LabelControl();
-            this.txtPONumber = new DevExpress.XtraEditors.TextEdit();
-            this.lblPONumber = new DevExpress.XtraEditors.LabelControl();
-            this.slueSupplier = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.lblSupplier = new DevExpress.XtraEditors.LabelControl();
-            this.pcFilter = new DevExpress.XtraEditors.PanelControl();
+            this.xgrdLines = new DevExpress.XtraGrid.GridControl();
+            this.gridViewLines = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
             this.xtcGeneral.SuspendLayout();
             this.xtpPOSection.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xgrdLines)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewLines)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcFilter)).BeginInit();
+            this.pcFilter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.slueSupplier.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditPODateEnd.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditPODateEnd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditPODateIni.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditPODateIni.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPONumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.slueStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPONumber.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.slueSupplier.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcFilter)).BeginInit();
-            this.pcFilter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdLines)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewLines)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -99,24 +99,25 @@
             this.xtpPOSection.Size = new System.Drawing.Size(1332, 531);
             this.xtpPOSection.Text = "PURCHASE ORDER SELECTION";
             // 
-            // xgrdLines
+            // pcFilter
             // 
-            this.xgrdLines.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.pcFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.xgrdLines.Location = new System.Drawing.Point(6, 110);
-            this.xgrdLines.MainView = this.gridViewLines;
-            this.xgrdLines.MenuManager = this.ribbonControl;
-            this.xgrdLines.Name = "xgrdLines";
-            this.xgrdLines.Size = new System.Drawing.Size(1320, 418);
-            this.xgrdLines.TabIndex = 2;
-            this.xgrdLines.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewLines});
-            // 
-            // gridViewLines
-            // 
-            this.gridViewLines.GridControl = this.xgrdLines;
-            this.gridViewLines.Name = "gridViewLines";
+            this.pcFilter.Controls.Add(this.sbFilter);
+            this.pcFilter.Controls.Add(this.lblAnd);
+            this.pcFilter.Controls.Add(this.lblSupplier);
+            this.pcFilter.Controls.Add(this.lblDocDate);
+            this.pcFilter.Controls.Add(this.slueSupplier);
+            this.pcFilter.Controls.Add(this.dateEditPODateEnd);
+            this.pcFilter.Controls.Add(this.lblPONumber);
+            this.pcFilter.Controls.Add(this.dateEditPODateIni);
+            this.pcFilter.Controls.Add(this.txtPONumber);
+            this.pcFilter.Controls.Add(this.slueStatus);
+            this.pcFilter.Controls.Add(this.lblStatus);
+            this.pcFilter.Location = new System.Drawing.Point(6, 13);
+            this.pcFilter.Name = "pcFilter";
+            this.pcFilter.Size = new System.Drawing.Size(1319, 91);
+            this.pcFilter.TabIndex = 3;
             // 
             // sbFilter
             // 
@@ -135,6 +136,15 @@
             this.lblAnd.TabIndex = 23;
             this.lblAnd.Text = "and";
             // 
+            // lblSupplier
+            // 
+            this.lblSupplier.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblSupplier.Location = new System.Drawing.Point(10, 39);
+            this.lblSupplier.Name = "lblSupplier";
+            this.lblSupplier.Size = new System.Drawing.Size(84, 13);
+            this.lblSupplier.TabIndex = 14;
+            this.lblSupplier.Text = "Supplier";
+            // 
             // lblDocDate
             // 
             this.lblDocDate.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
@@ -143,6 +153,24 @@
             this.lblDocDate.Size = new System.Drawing.Size(115, 13);
             this.lblDocDate.TabIndex = 22;
             this.lblDocDate.Text = "PO Date          between";
+            // 
+            // slueSupplier
+            // 
+            this.slueSupplier.Location = new System.Drawing.Point(117, 36);
+            this.slueSupplier.MenuManager = this.ribbonControl;
+            this.slueSupplier.Name = "slueSupplier";
+            this.slueSupplier.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.slueSupplier.Properties.View = this.searchLookUpEdit1View;
+            this.slueSupplier.Size = new System.Drawing.Size(142, 20);
+            this.slueSupplier.TabIndex = 15;
+            // 
+            // searchLookUpEdit1View
+            // 
+            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
+            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
             // dateEditPODateEnd
             // 
@@ -157,6 +185,15 @@
             this.dateEditPODateEnd.Size = new System.Drawing.Size(106, 20);
             this.dateEditPODateEnd.TabIndex = 21;
             // 
+            // lblPONumber
+            // 
+            this.lblPONumber.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblPONumber.Location = new System.Drawing.Point(10, 13);
+            this.lblPONumber.Name = "lblPONumber";
+            this.lblPONumber.Size = new System.Drawing.Size(84, 13);
+            this.lblPONumber.TabIndex = 16;
+            this.lblPONumber.Text = "PO Number";
+            // 
             // dateEditPODateIni
             // 
             this.dateEditPODateIni.EditValue = null;
@@ -169,6 +206,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditPODateIni.Size = new System.Drawing.Size(106, 20);
             this.dateEditPODateIni.TabIndex = 20;
+            // 
+            // txtPONumber
+            // 
+            this.txtPONumber.Location = new System.Drawing.Point(117, 10);
+            this.txtPONumber.MenuManager = this.ribbonControl;
+            this.txtPONumber.Name = "txtPONumber";
+            this.txtPONumber.Size = new System.Drawing.Size(142, 20);
+            this.txtPONumber.TabIndex = 17;
             // 
             // slueStatus
             // 
@@ -197,69 +242,24 @@
             this.lblStatus.TabIndex = 18;
             this.lblStatus.Text = "Status";
             // 
-            // txtPONumber
+            // xgrdLines
             // 
-            this.txtPONumber.Location = new System.Drawing.Point(117, 10);
-            this.txtPONumber.MenuManager = this.ribbonControl;
-            this.txtPONumber.Name = "txtPONumber";
-            this.txtPONumber.Size = new System.Drawing.Size(142, 20);
-            this.txtPONumber.TabIndex = 17;
-            // 
-            // lblPONumber
-            // 
-            this.lblPONumber.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblPONumber.Location = new System.Drawing.Point(10, 13);
-            this.lblPONumber.Name = "lblPONumber";
-            this.lblPONumber.Size = new System.Drawing.Size(84, 13);
-            this.lblPONumber.TabIndex = 16;
-            this.lblPONumber.Text = "PO Number";
-            // 
-            // slueSupplier
-            // 
-            this.slueSupplier.Location = new System.Drawing.Point(117, 36);
-            this.slueSupplier.MenuManager = this.ribbonControl;
-            this.slueSupplier.Name = "slueSupplier";
-            this.slueSupplier.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.slueSupplier.Properties.View = this.searchLookUpEdit1View;
-            this.slueSupplier.Size = new System.Drawing.Size(142, 20);
-            this.slueSupplier.TabIndex = 15;
-            // 
-            // searchLookUpEdit1View
-            // 
-            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
-            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-            // 
-            // lblSupplier
-            // 
-            this.lblSupplier.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblSupplier.Location = new System.Drawing.Point(10, 39);
-            this.lblSupplier.Name = "lblSupplier";
-            this.lblSupplier.Size = new System.Drawing.Size(84, 13);
-            this.lblSupplier.TabIndex = 14;
-            this.lblSupplier.Text = "Supplier";
-            // 
-            // pcFilter
-            // 
-            this.pcFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.xgrdLines.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pcFilter.Controls.Add(this.sbFilter);
-            this.pcFilter.Controls.Add(this.lblAnd);
-            this.pcFilter.Controls.Add(this.lblSupplier);
-            this.pcFilter.Controls.Add(this.lblDocDate);
-            this.pcFilter.Controls.Add(this.slueSupplier);
-            this.pcFilter.Controls.Add(this.dateEditPODateEnd);
-            this.pcFilter.Controls.Add(this.lblPONumber);
-            this.pcFilter.Controls.Add(this.dateEditPODateIni);
-            this.pcFilter.Controls.Add(this.txtPONumber);
-            this.pcFilter.Controls.Add(this.slueStatus);
-            this.pcFilter.Controls.Add(this.lblStatus);
-            this.pcFilter.Location = new System.Drawing.Point(6, 13);
-            this.pcFilter.Name = "pcFilter";
-            this.pcFilter.Size = new System.Drawing.Size(1319, 91);
-            this.pcFilter.TabIndex = 3;
+            this.xgrdLines.Location = new System.Drawing.Point(6, 110);
+            this.xgrdLines.MainView = this.gridViewLines;
+            this.xgrdLines.MenuManager = this.ribbonControl;
+            this.xgrdLines.Name = "xgrdLines";
+            this.xgrdLines.Size = new System.Drawing.Size(1320, 418);
+            this.xgrdLines.TabIndex = 2;
+            this.xgrdLines.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewLines});
+            // 
+            // gridViewLines
+            // 
+            this.gridViewLines.GridControl = this.xgrdLines;
+            this.gridViewLines.Name = "gridViewLines";
             // 
             // PurchaseOrderSelection
             // 
@@ -277,19 +277,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).EndInit();
             this.xtcGeneral.ResumeLayout(false);
             this.xtpPOSection.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.xgrdLines)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewLines)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcFilter)).EndInit();
+            this.pcFilter.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.slueSupplier.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditPODateEnd.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditPODateEnd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditPODateIni.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditPODateIni.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPONumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.slueStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPONumber.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.slueSupplier.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcFilter)).EndInit();
-            this.pcFilter.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdLines)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewLines)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
