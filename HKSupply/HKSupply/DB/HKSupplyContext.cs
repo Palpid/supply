@@ -193,6 +193,7 @@ namespace HKSupply.DB
             modelBuilder.Entity<DocLine>().Property(x => x.Quantity).HasPrecision(19, 6);
             modelBuilder.Entity<DocLine>().Property(x => x.QuantityOriginal).HasPrecision(19, 6);
             modelBuilder.Entity<DocLine>().Property(x => x.DeliveredQuantity).HasPrecision(19, 6);
+            modelBuilder.Entity<DocLine>().Property(x => x.RequestedQuantity).HasPrecision(19, 6);
 
             modelBuilder.Entity<DocBox>().Property(x => x.NetWeight).HasPrecision(19, 6);
             modelBuilder.Entity<DocBox>().Property(x => x.GrossWeight).HasPrecision(19, 6);

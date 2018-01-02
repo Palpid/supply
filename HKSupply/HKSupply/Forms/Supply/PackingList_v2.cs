@@ -1032,7 +1032,22 @@ namespace HKSupply.Forms.Supply
                 xgrdSoSelection.DataSource = null;
                 xgrdSoSelection.DataSource = _docSoSelectionList;
 
-                //***** Grid Delivered Goods*****/
+                //Test Item Batch INI
+
+                //***** Grid Packing Boxes *****/
+                _docBoxList = new BindingList<DocBox>(_docHeadPK.Boxes);
+                xgrdPackingBoxes.DataSource = null;
+                xgrdPackingBoxes.DataSource = _docBoxList;
+
+                //***** Grid Batches *****/
+                _auxItemsBatchList = new BindingList<PackingListItemBatch>();
+                _itemsBatchList = _docHeadPK.PackingListItemBatches;
+                //Remarks: Hacemos antes la carga de los lotes y después cargamos el grid de delivered goods, al cargar lanzará el evento de cambio de foco en la fila
+                //y cargará los datos que corresponden a esa fila en el grid de lotes
+
+                //Test Item Batch END
+
+                //***** Grid Delivered Goods *****/
                 _docLinesDeliveredGoodsList = new BindingList<DocLine>(_docHeadPK.Lines);
 
                 xgrdLinesDeliveredGoods.DataSource = null;
@@ -1264,7 +1279,7 @@ namespace HKSupply.Forms.Supply
             {
                 slueDeliveryTerms.Properties.DataSource = _deliveryTermList;
                 slueDeliveryTerms.Properties.ValueMember = nameof(DeliveryTerm.IdDeliveryTerm);
-                slueDeliveryTerms.Properties.DisplayMember = nameof(DeliveryTerm.IdDeliveryTerm);
+                slueDeliveryTerms.Properties.DisplayMember = nameof(DeliveryTerm.Description);
                 slueDeliveryTerms.Properties.View.Columns.AddField(nameof(DeliveryTerm.IdDeliveryTerm)).Visible = true;
                 slueDeliveryTerms.Properties.View.Columns.AddField(nameof(DeliveryTerm.Description)).Visible = true;
                 slueDeliveryTerms.Properties.NullText = "Select Delivery Term...";
@@ -1282,7 +1297,7 @@ namespace HKSupply.Forms.Supply
             {
                 sluePaymentTerm.Properties.DataSource = _paymentTermsList;
                 sluePaymentTerm.Properties.ValueMember = nameof(PaymentTerms.IdPaymentTerms);
-                sluePaymentTerm.Properties.DisplayMember = nameof(PaymentTerms.IdPaymentTerms);
+                sluePaymentTerm.Properties.DisplayMember = nameof(PaymentTerms.Description);
                 sluePaymentTerm.Properties.View.Columns.AddField(nameof(PaymentTerms.IdPaymentTerms)).Visible = true;
                 sluePaymentTerm.Properties.View.Columns.AddField(nameof(PaymentTerms.Description)).Visible = true;
                 sluePaymentTerm.Properties.NullText = "Select Payment Term...";
@@ -1962,7 +1977,7 @@ namespace HKSupply.Forms.Supply
                 xgrdItemsBatch.DataSource = null; 
                 xgrdItemsBatch.DataSource = _auxItemsBatchList; 
                 _docBoxList = new BindingList<DocBox>();
-                _docBoxList.Add(new DocBox() { BoxNumber = 1});
+                _docBoxList.Add(new DocBox() { BoxNumber = 1, IdDoc = txtPKNumber.Text });
                 xgrdPackingBoxes.DataSource = null;
                 xgrdPackingBoxes.DataSource = _docBoxList;
                 //Test Item Batch END
@@ -2127,6 +2142,7 @@ namespace HKSupply.Forms.Supply
             try
             {
                 List<DocLine> sortedLines = _docLinesDeliveredGoodsList.OrderBy(a => a.IdItemGroup).ThenBy(b => b.IdItemBcn).ToList();
+                List<DocBox> boxes = _docBoxList.Where(a => a.IdBox != null).OrderBy(b => b.BoxNumber).ToList();
 
                 DocHead packingList = new DocHead()
                 {
@@ -2143,7 +2159,9 @@ namespace HKSupply.Forms.Supply
                     IdCurrency = slueCurrency.EditValue as string,
                     ManualReference = txtManualReference.EditValue as string,
                     Remarks = memoEditRemarks.EditValue as string,
-                    Lines = sortedLines
+                    Lines = sortedLines,
+                    Boxes = boxes,
+                    PackingListItemBatches = _itemsBatchList
                 };
 
                 DocHead createdDoc = GlobalSetting.SupplyDocsService.NewDoc(packingList);
@@ -2163,6 +2181,7 @@ namespace HKSupply.Forms.Supply
             try
             {
                 List<DocLine> sortedLines = _docLinesDeliveredGoodsList.OrderBy(a => a.IdItemGroup).ThenBy(b => b.IdItemBcn).ToList();
+                List<DocBox> boxes = _docBoxList.Where(a => a.IdBox != null).OrderBy(b => b.BoxNumber).ToList();
 
                 DocHead packingList = new DocHead()
                 {
@@ -2181,7 +2200,9 @@ namespace HKSupply.Forms.Supply
                     IdCurrency = slueCurrency.EditValue as string,
                     ManualReference = txtManualReference.EditValue as string,
                     Remarks = memoEditRemarks.EditValue as string,
-                    Lines = sortedLines
+                    Lines = sortedLines,
+                    Boxes = boxes,
+                    PackingListItemBatches = _itemsBatchList
                 };
 
                 DocHead updatedDoc = GlobalSetting.SupplyDocsService.UpdateDoc(packingList, finishDoc: finishPK);
@@ -2204,6 +2225,9 @@ namespace HKSupply.Forms.Supply
                 txtPKNumber.ReadOnly = false;
                 SetObjectsReadOnly();
 
+                //Restore de ribbon to initial states
+                RestoreInitState();
+
                 //Clear grids
                 xgrdSoSelection.DataSource = null;
                 xgrdLinesSoSelection.DataSource = null;
@@ -2214,8 +2238,8 @@ namespace HKSupply.Forms.Supply
                 gridViewSoSelection.OptionsBehavior.Editable = false;
                 gridViewLinesSoSelection.OptionsBehavior.Editable = false;
                 gridViewLinesDeliveredGoods.OptionsBehavior.Editable = false;
-                //Restore de ribbon to initial states
-                RestoreInitState();
+                gridViewItemsBatch.OptionsBehavior.Editable = false; //Test Item Batch
+                gridViewPackingBoxes.OptionsBehavior.Editable = false; //Test Item Batch
 
                 SetVisiblePropertyByState();
             }
@@ -2447,6 +2471,7 @@ namespace HKSupply.Forms.Supply
                             _auxItemsBatchList.Add(
                                 new PackingListItemBatch()
                                 {
+                                    IdDoc = itemBatch.IdDoc,
                                     IdDocRelated = itemBatch.IdDocRelated,
                                     IdItemBcn = itemBatch.IdItemBcn,
                                     IdItemGroup = itemBatch.IdItemGroup
@@ -2488,7 +2513,7 @@ namespace HKSupply.Forms.Supply
                     {
                         if (string.IsNullOrEmpty(packingListBox.IdBox) == false)
                         {
-                            _docBoxList.Add(new DocBox() { BoxNumber = view.RowCount + 1 });
+                            _docBoxList.Add(new DocBox() { BoxNumber = view.RowCount + 1, IdDoc = txtPKNumber.Text});
                         }
                     }
                 }
@@ -2520,7 +2545,14 @@ namespace HKSupply.Forms.Supply
 
                 if (CurrentState == ActionsStates.New || CurrentState == ActionsStates.Edit)
                 {
-                    _auxItemsBatchList.Add(new PackingListItemBatch() {IdDocRelated = lineDeliveredGoods.IdDocRelated, IdItemBcn = lineDeliveredGoods.IdItemBcn, IdItemGroup = lineDeliveredGoods.IdItemGroup });
+                    _auxItemsBatchList.Add(
+                        new PackingListItemBatch()
+                        {
+                            IdDoc = lineDeliveredGoods.IdDoc,
+                            IdDocRelated = lineDeliveredGoods.IdDocRelated,
+                            IdItemBcn = lineDeliveredGoods.IdItemBcn,
+                            IdItemGroup = lineDeliveredGoods.IdItemGroup
+                        });
                 }
             }
             catch(Exception ex)

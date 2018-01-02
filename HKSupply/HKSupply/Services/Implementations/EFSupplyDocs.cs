@@ -775,8 +775,22 @@ namespace HKSupply.Services.Implementations
                     {
                         try
                         {
-                            DocHead docToUpdate = GetDoc(doc.IdDoc);
-                            DocHead docDataBeforeUpdate = GetDoc(doc.IdDoc);
+                            //DocHead docToUpdate = GetDoc(doc.IdDoc);
+                            //DocHead docDataBeforeUpdate = GetDoc(doc.IdDoc);
+
+                            DocHead docToUpdate = null;
+                            DocHead docDataBeforeUpdate = null;
+
+                            if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_PL)
+                            {
+                                docToUpdate = GetDocPackingList(doc.IdDoc);
+                                docDataBeforeUpdate = GetDocPackingList(doc.IdDoc);
+                            }
+                            else
+                            {
+                                docToUpdate = GetDoc(doc.IdDoc);
+                                docDataBeforeUpdate = GetDoc(doc.IdDoc);
+                            }
 
                             if (docToUpdate == null)
                                 throw new Exception("DOC error");
@@ -845,6 +859,7 @@ namespace HKSupply.Services.Implementations
                             docToUpdate.ManualReference = doc.ManualReference;
                             docToUpdate.Remarks = doc.Remarks;
 
+                            /********** DOC LINES **********/
                             //Borramos las líneas de la base de datos para insertarla de nuevo
                             var lines = db.DocsLines.Where(a => a.IdDoc.Equals(doc.IdDoc));
 
@@ -854,6 +869,25 @@ namespace HKSupply.Services.Implementations
                             //y los insertamos de nuevo
                             foreach (var line in doc.Lines)
                                 db.DocsLines.Add(line);
+
+                            /********** BOXES (packing list) **********/
+                            var boxes = db.DocBoxes.Where(a => a.IdDoc.Equals(doc.IdDoc));
+
+                            foreach (var box in boxes.EmptyIfNull())
+                                db.DocBoxes.Remove(box);
+
+                            foreach (var box in doc.Boxes.EmptyIfNull())
+                                db.DocBoxes.Add(box);
+
+                            /********** MATERIAL BATCHES (packing list)  **********/
+                            var packingBatches = db.PackingListItemsBatch.Where(a => a.IdDoc.Equals(doc.IdDoc));
+
+                            foreach (var packingBatch in packingBatches.EmptyIfNull())
+                                db.PackingListItemsBatch.Remove(packingBatch);
+
+                            foreach (var packingBatch in doc.PackingListItemBatches.EmptyIfNull())
+                                db.PackingListItemsBatch.Add(packingBatch);
+
 
                             //user
                             docToUpdate.User = GlobalSetting.LoggedUser.UserLogin.ToUpper();
@@ -1449,7 +1483,7 @@ namespace HKSupply.Services.Implementations
                     IdCustomer = purchaseOrder.IdSupplier, //Se invierte el proveedor/cliente?
                     //DeliveryTerm = slueDeliveryTerms.EditValue as string,
                     //IdPaymentTerms = sluePaymentTerm.EditValue as string,
-                    //IdCurrency = slueCurrency.EditValue as string,
+                    IdCurrency = purchaseOrder.IdCurrency,
                     Remarks = purchaseOrder.Remarks,
                     Lines = lines,
                 };

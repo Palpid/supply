@@ -59,7 +59,9 @@ namespace HKSupply.Forms.Supply
             totalQuantityBomMt,
             totalQuantityBomHw,
             totalQuantityMt,
-            totalQuantityHw
+            totalQuantityHw,
+            totalRequestedQuantityMt,
+            totalRequestedQuantityHw
         }
         #endregion
 
@@ -84,6 +86,8 @@ namespace HKSupply.Forms.Supply
         int _totalQuantityBomHw;
         decimal _totalQuantityMt;
         int _totalQuantityHw;
+        decimal _totalRequestedQuantityMt;
+        int _totalRequestedQuantityHw;
 
         bool _isLoadingQP = false;
         #endregion
@@ -563,7 +567,7 @@ namespace HKSupply.Forms.Supply
                     case nameof(DocLine.Quantity):
                         decimal qty = Convert.ToDecimal(e.Value);
 
-                        //Sólo los RM puede ser decimales
+                        //Sólo los RM pueden ser cantidades decimales
                         if (row.IdItemGroup != Constants.ITEM_GROUP_MT)
                         {
                             bool isInteger = unchecked(qty == (int)qty);
@@ -573,6 +577,22 @@ namespace HKSupply.Forms.Supply
                                 e.ErrorText = "Value must be integer";
                             }
                         }
+                        break;
+
+                    case nameof(DocLine.RequestedQuantity):
+                        decimal requestedQty = Convert.ToDecimal(e.Value);
+
+                        //Sólo los RM pueden ser cantidades decimales 
+                        if (row.IdItemGroup != Constants.ITEM_GROUP_MT)
+                        {
+                            bool isInteger = unchecked(requestedQty == (int)requestedQty);
+                            if(isInteger == false)
+                            {
+                                e.Valid = false;
+                                e.ErrorText = "Value must be integer";
+                            }
+                        }
+
                         break;
                 }
             }
@@ -597,6 +617,8 @@ namespace HKSupply.Forms.Supply
                     _totalQuantityBomMt = 0;
                     _totalQuantityHw = 0;
                     _totalQuantityMt = 0;
+                    _totalRequestedQuantityHw = 0;
+                    _totalRequestedQuantityMt = 0;
                 }
 
                 // Calculation 
@@ -629,6 +651,16 @@ namespace HKSupply.Forms.Supply
                             if (row.IdItemGroup == Constants.ITEM_GROUP_HW)
                                 _totalQuantityHw += Convert.ToInt32(e.FieldValue);
                             break;
+
+                        case eGridSummaries.totalRequestedQuantityMt:
+                            if (row.IdItemGroup == Constants.ITEM_GROUP_MT)
+                                _totalRequestedQuantityMt += Convert.ToDecimal(e.FieldValue);
+                            break;
+
+                        case eGridSummaries.totalRequestedQuantityHw:
+                            if (row.IdItemGroup == Constants.ITEM_GROUP_HW)
+                                _totalRequestedQuantityHw += Convert.ToInt32(e.FieldValue);
+                            break;
                     }
 
                 }
@@ -649,6 +681,12 @@ namespace HKSupply.Forms.Supply
                             break;
                         case eGridSummaries.totalQuantityHw:
                             e.TotalValue = _totalQuantityHw;
+                            break;
+                        case eGridSummaries.totalRequestedQuantityMt:
+                            e.TotalValue = _totalRequestedQuantityMt;
+                            break;
+                        case eGridSummaries.totalRequestedQuantityHw:
+                            e.TotalValue = _totalRequestedQuantityHw;
                             break;
                     }
                 }
@@ -963,6 +1001,7 @@ namespace HKSupply.Forms.Supply
                 GridColumn colDescription = new GridColumn() { Caption = "Description", Visible = true, FieldName = nameof(DocLine.ItemDesc), Width = 350 };
                 GridColumn colBatch = new GridColumn() { Caption = "Batch", Visible = true, FieldName = nameof(DocLine.Batch), Width = 100 };
                 GridColumn colQuantityOriginal = new GridColumn() { Caption = "Quantity BOM", Visible = true, FieldName = nameof(DocLine.QuantityOriginal), Width = 110 };
+                GridColumn colRequestedQuantity = new GridColumn() { Caption = "Requested QTY", Visible = true, FieldName = nameof(DocLine.RequestedQuantity), Width = 110 };
                 GridColumn colQuantity = new GridColumn() { Caption = "Quantity", Visible = true, FieldName = nameof(DocLine.Quantity), Width = 85 };
                 GridColumn colUnit = new GridColumn() { Caption = "Unit", Visible = true, FieldName = nameof(DocLine.ItemUnit), Width = 85 };
                 GridColumn colUnitPrice = new GridColumn() { Caption = "Unit Price", Visible = true, FieldName = nameof(DocLine.UnitPrice), Width = 85 };
@@ -981,6 +1020,9 @@ namespace HKSupply.Forms.Supply
 
                 colQuantity.DisplayFormat.FormatType = FormatType.Numeric;
                 colQuantity.DisplayFormat.FormatString = "n3";
+
+                colRequestedQuantity.DisplayFormat.FormatType = FormatType.Numeric;
+                colRequestedQuantity.DisplayFormat.FormatString = "n3";
 
                 colQuantityOriginal.DisplayFormat.FormatType = FormatType.Numeric;
                 colQuantityOriginal.DisplayFormat.FormatString = "n3";
@@ -1017,6 +1059,7 @@ namespace HKSupply.Forms.Supply
                 ritxt3Dec.AllowNullInput = DefaultBoolean.True;
 
                 colQuantity.ColumnEdit = ritxt3Dec;
+                colRequestedQuantity.ColumnEdit = ritxt3Dec;
 
                 //Summaries
                 gridViewLines.OptionsView.ShowFooter = true;
@@ -1026,6 +1069,10 @@ namespace HKSupply.Forms.Supply
                 colQuantityOriginal.Summary.AddRange(new GridSummaryItem[] {
                     new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.QuantityOriginal), "{0:n3} Kg", eGridSummaries.totalQuantityBomMt),
                     new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.QuantityOriginal), "{0} PC", eGridSummaries.totalQuantityBomHw) });
+
+                colRequestedQuantity.Summary.AddRange(new GridSummaryItem[] {
+                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.RequestedQuantity), "{0:n3} Kg", eGridSummaries.totalRequestedQuantityMt),
+                    new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.RequestedQuantity), "{0} PC", eGridSummaries.totalRequestedQuantityHw) });
 
                 colQuantity.Summary.AddRange(new GridSummaryItem[] {
                     new GridColumnSummaryItem(SummaryItemType.Custom, nameof(DocLine.Quantity), "{0:n3} Kg", eGridSummaries.totalQuantityMt),
@@ -1047,6 +1094,7 @@ namespace HKSupply.Forms.Supply
                 gridViewLines.Columns.Add(colDescription);
                 gridViewLines.Columns.Add(colBatch);
                 gridViewLines.Columns.Add(colQuantityOriginal);
+                gridViewLines.Columns.Add(colRequestedQuantity);
                 gridViewLines.Columns.Add(colQuantity);
                 gridViewLines.Columns.Add(colUnit);
                 gridViewLines.Columns.Add(colUnitPrice);
@@ -1429,6 +1477,10 @@ namespace HKSupply.Forms.Supply
                 gridViewLines.Columns[nameof(DocLine.QuantityOriginal)].OptionsColumn.AllowEdit = false;
                 gridViewLines.Columns[nameof(DocLine.UnitPrice)].OptionsColumn.AllowEdit = false;
                 gridViewLines.Columns[TOTAL_AMOUNT_COLUMN].OptionsColumn.AllowEdit = false;
+                gridViewLines.Columns[nameof(DocLine.ItemUnit)].OptionsColumn.AllowEdit = false;
+                gridViewLines.Columns[COL_STOCK_ONHAND].OptionsColumn.AllowEdit = false;
+                gridViewLines.Columns[COL_STOCK_ASSIGNED].OptionsColumn.AllowEdit = false;
+                gridViewLines.Columns[COL_STOCK_TRANSIT].OptionsColumn.AllowEdit = false;
 
 
                 //agregamos una línea nueva

@@ -1,1 +1,82 @@
-﻿
+﻿2018-01-02 10:09:37,062 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDoc - The data reader is incompatible with the specified 'HKSupply.DB.DocLine'. A member of the type, 'RequestedQuantity', does not have a corresponding column in the data reader with the same name.
+System.Data.Entity.Core.EntityCommandExecutionException: The data reader is incompatible with the specified 'HKSupply.DB.DocLine'. A member of the type, 'RequestedQuantity', does not have a corresponding column in the data reader with the same name.
+   at System.Data.Entity.Core.Query.InternalTrees.ColumnMapFactory.GetMemberOrdinalFromReader(DbDataReader storeDataReader, EdmMember member, EdmType currentType, Dictionary`2 renameList)
+   at System.Data.Entity.Core.Query.InternalTrees.ColumnMapFactory.GetColumnMapsForType(DbDataReader storeDataReader, EdmType edmType, Dictionary`2 renameList)
+   at System.Data.Entity.Core.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Entity.Core.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean streaming, EntitySet& entitySet, TypeUsage& edmType)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__64()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__63()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at HKSupply.Services.Implementations.EFSupplyDocs.GetQuotationProposal(HKSupplyContext db, DocHead purchaseOrder) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFSupplyDocs.cs:line 1461
+   at HKSupply.Services.Implementations.EFSupplyDocs.UpdateDoc(DocHead doc, Boolean finishDoc) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFSupplyDocs.cs:line 899
+2018-01-02 10:13:09,827 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDoc - The data reader is incompatible with the specified 'HKSupply.DB.DocLine'. A member of the type, 'RequestedQuantity', does not have a corresponding column in the data reader with the same name.
+System.Data.Entity.Core.EntityCommandExecutionException: The data reader is incompatible with the specified 'HKSupply.DB.DocLine'. A member of the type, 'RequestedQuantity', does not have a corresponding column in the data reader with the same name.
+   at System.Data.Entity.Core.Query.InternalTrees.ColumnMapFactory.GetMemberOrdinalFromReader(DbDataReader storeDataReader, EdmMember member, EdmType currentType, Dictionary`2 renameList)
+   at System.Data.Entity.Core.Query.InternalTrees.ColumnMapFactory.GetColumnMapsForType(DbDataReader storeDataReader, EdmType edmType, Dictionary`2 renameList)
+   at System.Data.Entity.Core.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Entity.Core.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean streaming, EntitySet& entitySet, TypeUsage& edmType)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__64()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__63()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at HKSupply.Services.Implementations.EFSupplyDocs.GetQuotationProposal(HKSupplyContext db, DocHead purchaseOrder) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFSupplyDocs.cs:line 1461
+   at HKSupply.Services.Implementations.EFSupplyDocs.UpdateDoc(DocHead doc, Boolean finishDoc) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFSupplyDocs.cs:line 899
+2018-01-02 10:18:54,292 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDoc - The data reader is incompatible with the specified 'HKSupply.DB.DocLine'. A member of the type, 'BoxNumber', does not have a corresponding column in the data reader with the same name.
+System.Data.Entity.Core.EntityCommandExecutionException: The data reader is incompatible with the specified 'HKSupply.DB.DocLine'. A member of the type, 'BoxNumber', does not have a corresponding column in the data reader with the same name.
+   at System.Data.Entity.Core.Query.InternalTrees.ColumnMapFactory.GetMemberOrdinalFromReader(DbDataReader storeDataReader, EdmMember member, EdmType currentType, Dictionary`2 renameList)
+   at System.Data.Entity.Core.Query.InternalTrees.ColumnMapFactory.GetColumnMapsForType(DbDataReader storeDataReader, EdmType edmType, Dictionary`2 renameList)
+   at System.Data.Entity.Core.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Entity.Core.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean streaming, EntitySet& entitySet, TypeUsage& edmType)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__64()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__63()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at HKSupply.Services.Implementations.EFSupplyDocs.GetQuotationProposal(HKSupplyContext db, DocHead purchaseOrder) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFSupplyDocs.cs:line 1461
+   at HKSupply.Services.Implementations.EFSupplyDocs.UpdateDoc(DocHead doc, Boolean finishDoc) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFSupplyDocs.cs:line 899
+2018-01-02 12:25:05,667 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.NewDoc - Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: The IdDoc field is required.; 
+The IdDoc field is required.; 
+The IdDoc field is required.; 
+The IdDoc field is required.; 
+The IdDoc field is required.; 
+The IdDoc field is required.; 
+The IdDoc field is required.
+System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. The validation errors are: The IdDoc field is required.; 
+The IdDoc field is required.; 
+The IdDoc field is required.; 
+The IdDoc field is required.; 
+The IdDoc field is required.; 
+The IdDoc field is required.; 
+The IdDoc field is required.
+   at HKSupply.DB.HKSupplyContext.SaveChanges()
+   at HKSupply.Services.Implementations.EFSupplyDocs.NewDoc(DocHead newDoc)
+2018-01-02 15:05:44,970 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDoc - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HKSupply.Services.Implementations.EFSupplyDocs.UpdateDoc(DocHead doc, Boolean finishDoc) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFSupplyDocs.cs:line 865
+2018-01-02 15:10:20,835 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDoc - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HKSupply.Services.Implementations.EFSupplyDocs.UpdateDoc(DocHead doc, Boolean finishDoc)
+2018-01-02 15:16:39,857 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDoc - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at HKSupply.Services.Implementations.EFSupplyDocs.UpdateDoc(DocHead doc, Boolean finishDoc)

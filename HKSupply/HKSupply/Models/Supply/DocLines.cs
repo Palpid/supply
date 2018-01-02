@@ -41,6 +41,9 @@ namespace HKSupply.Models.Supply
         [Column("DELIVERED_QUANTITY", TypeName = "NUMERIC")]
         public decimal DeliveredQuantity { get; set; }
 
+        [Column("REQUESTED_QUANTITY", TypeName = "NUMERIC")]
+        public decimal RequestedQuantity { get; set; }
+
         [Column("REMARKS", TypeName = "NVARCHAR"), StringLength(4000)]
         public string Remarks { get; set; }
 
@@ -139,6 +142,7 @@ namespace HKSupply.Models.Supply
                 Quantity == docLine.Quantity &&
                 QuantityOriginal == docLine.QuantityOriginal  &&
                 DeliveredQuantity == docLine.DeliveredQuantity &&
+                RequestedQuantity == docLine.RequestedQuantity &&
                 Remarks == docLine.Remarks &&
                 UnitPrice == docLine.UnitPrice &&
                 UnitPriceBaseCurrency == docLine.UnitPriceBaseCurrency
@@ -158,7 +162,8 @@ namespace HKSupply.Models.Supply
                 (Batch == null ? 0 : Batch.GetHashCode()) +
                 (Quantity.GetHashCode()) + 
                 (QuantityOriginal.GetHashCode()) +
-                (DeliveredQuantity.GetHashCode()) + 
+                (DeliveredQuantity.GetHashCode()) +
+                (RequestedQuantity.GetHashCode()) +
                 (Remarks == null ? 0 : Remarks.GetHashCode()) +
                 (UnitPrice.GetHashCode()) + 
                 (UnitPriceBaseCurrency.GetHashCode())

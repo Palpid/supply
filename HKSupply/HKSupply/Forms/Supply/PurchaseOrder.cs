@@ -688,7 +688,7 @@ namespace HKSupply.Forms.Supply
             {
                 sluePaymentTerm.Properties.DataSource = _paymentTermsList;
                 sluePaymentTerm.Properties.ValueMember = nameof(PaymentTerms.IdPaymentTerms);
-                sluePaymentTerm.Properties.DisplayMember = nameof(PaymentTerms.IdPaymentTerms);
+                sluePaymentTerm.Properties.DisplayMember = nameof(PaymentTerms.Description);
                 sluePaymentTerm.Properties.View.Columns.AddField(nameof(PaymentTerms.IdPaymentTerms)).Visible = true;
                 sluePaymentTerm.Properties.View.Columns.AddField(nameof(PaymentTerms.Description)).Visible = true;
                 sluePaymentTerm.Properties.NullText = "Select Payment Term...";
@@ -706,7 +706,7 @@ namespace HKSupply.Forms.Supply
             {
                 slueDeliveryTerms.Properties.DataSource = _deliveryTermList;
                 slueDeliveryTerms.Properties.ValueMember = nameof(DeliveryTerm.IdDeliveryTerm);
-                slueDeliveryTerms.Properties.DisplayMember = nameof(DeliveryTerm.IdDeliveryTerm);
+                slueDeliveryTerms.Properties.DisplayMember = nameof(DeliveryTerm.Description);
                 slueDeliveryTerms.Properties.View.Columns.AddField(nameof(DeliveryTerm.IdDeliveryTerm)).Visible = true;
                 slueDeliveryTerms.Properties.View.Columns.AddField(nameof(DeliveryTerm.Description)).Visible = true;
                 slueDeliveryTerms.Properties.NullText = "Select Delivery Term...";
@@ -1020,6 +1020,10 @@ namespace HKSupply.Forms.Supply
             try
             {
                 if (CurrentState != ActionsStates.Edit && CurrentState != ActionsStates.New)
+                    return;
+
+                //si hemos generado la QP ya no se pueden borrar líneas
+                if (_existQP == true)
                     return;
 
                 if (e.KeyCode == Keys.F4)
@@ -1914,7 +1918,7 @@ namespace HKSupply.Forms.Supply
                     return false;
                 }
 
-                if(_docLinesList.Count == 1)
+                if((_existQP == false && _docLinesList.Count == 1) || (_existQP == true && _docLinesList.Count == 0))
                 {
                     MessageBox.Show("Document without lines", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
