@@ -36,9 +36,9 @@
             this.sbSearch = new DevExpress.XtraEditors.SimpleButton();
             this.lblRemarks = new DevExpress.XtraEditors.LabelControl();
             this.txtPKNumber = new DevExpress.XtraEditors.TextEdit();
-            this.txtManualReference = new DevExpress.XtraEditors.TextEdit();
+            this.txtSupplierReference = new DevExpress.XtraEditors.TextEdit();
             this.lblPKNumber = new DevExpress.XtraEditors.LabelControl();
-            this.lblManualReference = new DevExpress.XtraEditors.LabelControl();
+            this.lblSupplierReference = new DevExpress.XtraEditors.LabelControl();
             this.lblPKDocDate = new DevExpress.XtraEditors.LabelControl();
             this.lbltxtStatus = new DevExpress.XtraEditors.LabelControl();
             this.lblPKDelivery = new DevExpress.XtraEditors.LabelControl();
@@ -102,7 +102,7 @@
             this.pcFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditRemarks.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPKNumber.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtManualReference.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSupplierReference.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditPKDocDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditPKDocDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.slueCurrency.Properties)).BeginInit();
@@ -182,9 +182,9 @@
             this.pcFilter.Controls.Add(this.sbSearch);
             this.pcFilter.Controls.Add(this.lblRemarks);
             this.pcFilter.Controls.Add(this.txtPKNumber);
-            this.pcFilter.Controls.Add(this.txtManualReference);
+            this.pcFilter.Controls.Add(this.txtSupplierReference);
             this.pcFilter.Controls.Add(this.lblPKNumber);
-            this.pcFilter.Controls.Add(this.lblManualReference);
+            this.pcFilter.Controls.Add(this.lblSupplierReference);
             this.pcFilter.Controls.Add(this.lblPKDocDate);
             this.pcFilter.Controls.Add(this.lbltxtStatus);
             this.pcFilter.Controls.Add(this.lblPKDelivery);
@@ -238,13 +238,13 @@
             this.txtPKNumber.Size = new System.Drawing.Size(120, 20);
             this.txtPKNumber.TabIndex = 1;
             // 
-            // txtManualReference
+            // txtSupplierReference
             // 
-            this.txtManualReference.Location = new System.Drawing.Point(324, 97);
-            this.txtManualReference.MenuManager = this.ribbonControl;
-            this.txtManualReference.Name = "txtManualReference";
-            this.txtManualReference.Size = new System.Drawing.Size(177, 20);
-            this.txtManualReference.TabIndex = 30;
+            this.txtSupplierReference.Location = new System.Drawing.Point(324, 97);
+            this.txtSupplierReference.MenuManager = this.ribbonControl;
+            this.txtSupplierReference.Name = "txtSupplierReference";
+            this.txtSupplierReference.Size = new System.Drawing.Size(177, 20);
+            this.txtSupplierReference.TabIndex = 30;
             // 
             // lblPKNumber
             // 
@@ -254,13 +254,13 @@
             this.lblPKNumber.TabIndex = 0;
             this.lblPKNumber.Text = "PK Number";
             // 
-            // lblManualReference
+            // lblSupplierReference
             // 
-            this.lblManualReference.Location = new System.Drawing.Point(214, 100);
-            this.lblManualReference.Name = "lblManualReference";
-            this.lblManualReference.Size = new System.Drawing.Size(87, 13);
-            this.lblManualReference.TabIndex = 29;
-            this.lblManualReference.Text = "Manual Reference";
+            this.lblSupplierReference.Location = new System.Drawing.Point(214, 100);
+            this.lblSupplierReference.Name = "lblSupplierReference";
+            this.lblSupplierReference.Size = new System.Drawing.Size(91, 13);
+            this.lblSupplierReference.TabIndex = 29;
+            this.lblSupplierReference.Text = "Supplier Reference";
             // 
             // lblPKDocDate
             // 
@@ -439,7 +439,7 @@
             this.lblSupplier.Name = "lblSupplier";
             this.lblSupplier.Size = new System.Drawing.Size(84, 13);
             this.lblSupplier.TabIndex = 10;
-            this.lblSupplier.Text = "CUSTOMER";
+            this.lblSupplier.Text = "SUPPLIER";
             // 
             // xtcPK
             // 
@@ -816,7 +816,7 @@
             this.pcFilter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditRemarks.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPKNumber.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtManualReference.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSupplierReference.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditPKDocDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditPKDocDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.slueCurrency.Properties)).EndInit();
@@ -866,9 +866,9 @@
         private DevExpress.XtraEditors.SimpleButton sbSearch;
         private DevExpress.XtraEditors.LabelControl lblRemarks;
         private DevExpress.XtraEditors.TextEdit txtPKNumber;
-        private DevExpress.XtraEditors.TextEdit txtManualReference;
+        private DevExpress.XtraEditors.TextEdit txtSupplierReference;
         private DevExpress.XtraEditors.LabelControl lblPKNumber;
-        private DevExpress.XtraEditors.LabelControl lblManualReference;
+        private DevExpress.XtraEditors.LabelControl lblSupplierReference;
         private DevExpress.XtraEditors.LabelControl lblPKDocDate;
         private DevExpress.XtraEditors.LabelControl lbltxtStatus;
         private DevExpress.XtraEditors.LabelControl lblPKDelivery;

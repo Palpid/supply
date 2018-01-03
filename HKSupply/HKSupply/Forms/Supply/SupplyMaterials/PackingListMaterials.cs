@@ -780,7 +780,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 slueDeliveryTerms.EditValue = null;
                 sluePaymentTerm.EditValue = null;
 
-                txtManualReference.EditValue = null;
+                txtSupplierReference.EditValue = null;
                 memoEditRemarks.EditValue = null;
 
                 gridViewPoSelection.BeginSelection();
@@ -854,7 +854,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 lblPKDocDateWeek.Text = dateEditPKDocDate.DateTime.GetWeek().ToString();
                 lblPKDeliveryWeek.Text = dateEditPKDelivery.DateTime.GetWeek().ToString();
 
-                txtManualReference.Text = _docHeadPK.ManualReference;
+                txtSupplierReference.Text = _docHeadPK.ManualReference;
                 memoEditRemarks.Text = _docHeadPK.Remarks;
 
                 //***** Grid SO Selection *****/
@@ -912,7 +912,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 txtPKNumber.Font = _labelDefaultFontBold;
                 lblTermsOfDelivery.Font = _labelDefaultFont;
                 lblCurrency.Font = _labelDefaultFont;
-                lblManualReference.Font = _labelDefaultFont;
+                lblSupplierReference.Font = _labelDefaultFont;
                 lblRemarks.Font = _labelDefaultFont;
 
                 //Terms Tab
@@ -941,7 +941,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 lblPKDeliveryWeek.Text = string.Empty;
                 lblTermsOfDelivery.Text = "Terms of Delivery";
                 lblCurrency.Text = "Currency";
-                lblManualReference.Text = "Manual Reference";
+                lblSupplierReference.Text = "Supplier Reference";
                 lblRemarks.Text = "Remarks";
 
                 //Terms Tab
@@ -992,7 +992,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 slueDeliveryTerms.ReadOnly = true;
                 slueCurrency.ReadOnly = true;
                 sluePaymentTerm.ReadOnly = true;
-                txtManualReference.ReadOnly = true;
+                txtSupplierReference.ReadOnly = true;
                 memoEditRemarks.ReadOnly = true;
             }
             catch
@@ -1009,7 +1009,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 slueDeliveryTerms.ReadOnly = false;
                 //slueCurrency.ReadOnly = false;
                 sluePaymentTerm.ReadOnly = false;
-                txtManualReference.ReadOnly = false;
+                txtSupplierReference.ReadOnly = false;
                 memoEditRemarks.ReadOnly = false;
             }
             catch
@@ -1022,7 +1022,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
         {
             try
             {
-                txtManualReference.ReadOnly = false;
+                txtSupplierReference.ReadOnly = false;
                 memoEditRemarks.ReadOnly = false;
             }
             catch
@@ -1499,7 +1499,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 if (resetSupplier) slueSupplier.EditValue = null;
                 slueDeliveryTerms.EditValue = null;
                 slueCurrency.EditValue = null;
-                txtManualReference.EditValue = null;
+                txtSupplierReference.EditValue = null;
                 memoEditRemarks.EditValue = null;
 
                 /********* Terms Tab *********/
@@ -1626,10 +1626,10 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
             {
                 //TODO! Revisar las validaciones
 
-                if (string.IsNullOrEmpty(txtManualReference.Text))
+                if (string.IsNullOrEmpty(txtSupplierReference.Text))
                 {
                     MessageBox.Show("Field Required: Manual Reference", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtManualReference.Focus();
+                    txtSupplierReference.Focus();
                     return false;
                 }
 
@@ -1913,7 +1913,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                     IdDeliveryTerm = slueDeliveryTerms.EditValue as string,
                     IdPaymentTerms = sluePaymentTerm.EditValue as string,
                     IdCurrency = slueCurrency.EditValue as string,
-                    ManualReference = txtManualReference.EditValue as string,
+                    ManualReference = txtSupplierReference.EditValue as string,
                     Remarks = memoEditRemarks.EditValue as string,
                     Lines = sortedLines
                 };
@@ -1951,7 +1951,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                     IdDeliveryTerm = slueDeliveryTerms.EditValue as string,
                     IdPaymentTerms = sluePaymentTerm.EditValue as string,
                     IdCurrency = slueCurrency.EditValue as string,
-                    ManualReference = txtManualReference.EditValue as string,
+                    ManualReference = txtSupplierReference.EditValue as string,
                     Remarks = memoEditRemarks.EditValue as string,
                     Lines = sortedLines
                 };

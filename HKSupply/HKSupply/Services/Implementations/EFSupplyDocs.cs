@@ -326,6 +326,79 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        public List<DocHead> GetDocsByReference(string manualReference)
+        {
+            try
+            {
+                if (manualReference == null)
+                    throw new ArgumentNullException(nameof(manualReference));
+
+                using (var db = new HKSupplyContext())
+                {
+                    var docs = db.DocsHead
+                        .Where(a => a.ManualReference.Equals(manualReference))
+                        .Include(l => l.Lines)
+                        .Include(s => s.SupplyDocType)
+                        .Include(c => c.Customer)
+                        .ToList();
+
+                    if (docs.Count > 0)
+                    {
+                        foreach (var doc in docs)
+                        {
+                            foreach (var line in doc.Lines)
+                            {
+                                line.LineState = DocLine.LineStates.Loaded;
+
+                                switch (line.IdItemGroup)
+                                {
+                                    case Constants.ITEM_GROUP_EY:
+                                        line.Item = GlobalSetting.ItemEyService.GetItem(line.IdItemBcn);
+                                        break;
+
+                                    case Constants.ITEM_GROUP_MT:
+                                        line.Item = GlobalSetting.ItemMtService.GetItem(line.IdItemBcn);
+                                        break;
+
+                                    case Constants.ITEM_GROUP_HW:
+                                        line.Item = GlobalSetting.ItemHwService.GetItem(line.IdItemBcn);
+                                        break;
+                                }
+                            }
+                        }
+
+                    }
+
+                    return docs;
+                }
+            }
+            catch (SqlException sqlex)
+            {
+                for (int i = 0; i < sqlex.Errors.Count; i++)
+                {
+                    _log.Error("Index #" + i + "\n" +
+                        "Message: " + sqlex.Errors[i].Message + "\n" +
+                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                        "Source: " + sqlex.Errors[i].Source + "\n" +
+                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                    switch (sqlex.Errors[i].Number)
+                    {
+                        case -1: //connection broken
+                        case -2: //timeout
+                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                    }
+                }
+                throw sqlex;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
+            }
+        }
+
         public List<DocHead> GetDocs(string idSupplier, string idCustomer, DateTime docDate, string IdSupplyDocType, string idSupplyStatus)
         {
             try            {

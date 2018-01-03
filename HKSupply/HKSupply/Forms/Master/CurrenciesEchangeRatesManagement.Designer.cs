@@ -30,18 +30,18 @@
         {
             this.xtraTabControlGeneral = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPageCurrency = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPageEchangeRates = new DevExpress.XtraTab.XtraTabPage();
             this.xgrdCurrencies = new DevExpress.XtraGrid.GridControl();
             this.gridViewCurrencies = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.xtraTabPageEchangeRates = new DevExpress.XtraTab.XtraTabPage();
             this.xgrdEchangeRates = new DevExpress.XtraGrid.GridControl();
             this.gridViewEchangeRates = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlGeneral)).BeginInit();
             this.xtraTabControlGeneral.SuspendLayout();
             this.xtraTabPageCurrency.SuspendLayout();
-            this.xtraTabPageEchangeRates.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xgrdCurrencies)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCurrencies)).BeginInit();
+            this.xtraTabPageEchangeRates.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xgrdEchangeRates)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewEchangeRates)).BeginInit();
             this.SuspendLayout();
@@ -49,14 +49,24 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
+            this.ribbonControl.Size = new System.Drawing.Size(790, 125);
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.ribbonPage1.Appearance.Options.UseFont = true;
+            // 
+            // ribbonStatusBar
+            // 
+            this.ribbonStatusBar.Size = new System.Drawing.Size(790, 27);
             // 
             // xtraTabControlGeneral
             // 
             this.xtraTabControlGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControlGeneral.Location = new System.Drawing.Point(0, 143);
+            this.xtraTabControlGeneral.Location = new System.Drawing.Point(0, 125);
             this.xtraTabControlGeneral.Name = "xtraTabControlGeneral";
             this.xtraTabControlGeneral.SelectedTabPage = this.xtraTabPageCurrency;
-            this.xtraTabControlGeneral.Size = new System.Drawing.Size(790, 425);
+            this.xtraTabControlGeneral.Size = new System.Drawing.Size(790, 447);
             this.xtraTabControlGeneral.TabIndex = 2;
             this.xtraTabControlGeneral.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPageCurrency,
@@ -66,15 +76,8 @@
             // 
             this.xtraTabPageCurrency.Controls.Add(this.xgrdCurrencies);
             this.xtraTabPageCurrency.Name = "xtraTabPageCurrency";
-            this.xtraTabPageCurrency.Size = new System.Drawing.Size(784, 397);
+            this.xtraTabPageCurrency.Size = new System.Drawing.Size(784, 419);
             this.xtraTabPageCurrency.Text = "Currency";
-            // 
-            // xtraTabPageEchangeRates
-            // 
-            this.xtraTabPageEchangeRates.Controls.Add(this.xgrdEchangeRates);
-            this.xtraTabPageEchangeRates.Name = "xtraTabPageEchangeRates";
-            this.xtraTabPageEchangeRates.Size = new System.Drawing.Size(784, 397);
-            this.xtraTabPageEchangeRates.Text = "Echange Rates";
             // 
             // xgrdCurrencies
             // 
@@ -83,7 +86,7 @@
             this.xgrdCurrencies.MainView = this.gridViewCurrencies;
             this.xgrdCurrencies.MenuManager = this.ribbonControl;
             this.xgrdCurrencies.Name = "xgrdCurrencies";
-            this.xgrdCurrencies.Size = new System.Drawing.Size(784, 397);
+            this.xgrdCurrencies.Size = new System.Drawing.Size(784, 419);
             this.xgrdCurrencies.TabIndex = 0;
             this.xgrdCurrencies.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewCurrencies});
@@ -92,6 +95,13 @@
             // 
             this.gridViewCurrencies.GridControl = this.xgrdCurrencies;
             this.gridViewCurrencies.Name = "gridViewCurrencies";
+            // 
+            // xtraTabPageEchangeRates
+            // 
+            this.xtraTabPageEchangeRates.Controls.Add(this.xgrdEchangeRates);
+            this.xtraTabPageEchangeRates.Name = "xtraTabPageEchangeRates";
+            this.xtraTabPageEchangeRates.Size = new System.Drawing.Size(784, 397);
+            this.xtraTabPageEchangeRates.Text = "Echange Rates";
             // 
             // xgrdEchangeRates
             // 
@@ -126,9 +136,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlGeneral)).EndInit();
             this.xtraTabControlGeneral.ResumeLayout(false);
             this.xtraTabPageCurrency.ResumeLayout(false);
-            this.xtraTabPageEchangeRates.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xgrdCurrencies)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCurrencies)).EndInit();
+            this.xtraTabPageEchangeRates.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xgrdEchangeRates)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewEchangeRates)).EndInit();
             this.ResumeLayout(false);

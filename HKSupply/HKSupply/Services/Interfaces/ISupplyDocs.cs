@@ -10,6 +10,7 @@ namespace HKSupply.Services.Interfaces
         List<SupplyStatus> GetSupplyStatus();
         List<DocHead> GetDocs(string idSupplier, string idCustomer, DateTime docDate, string IdSupplyDocType, string idSupplyStatus);
         List<DocHead> GetDocs(string idDoc, string idSupplier, string idCustomer, DateTime docDateIni, DateTime docDateEnd, string IdSupplyDocType, string idSupplyStatus);
+        List<DocHead> GetDocsByReference(string manualReference);
         List<DocHead> GetSalesOrderFromPackingList(string idDocPK);
         DocHead NewDoc(DocHead newDoc);
         DocHead GetDoc(string idDoc);

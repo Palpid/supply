@@ -193,6 +193,12 @@
     <Compile Include="Forms\Master\BomManagement.Designer.cs">
       <DependentUpon>BomManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Master\BoxManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Master\BoxManagement.Designer.cs">
+      <DependentUpon>BoxManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Master\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -480,6 +486,12 @@
     </Compile>
     <Compile Include="Forms\Supply\SupplyMaterials\PurchaseOrderMaterialsSelection.Designer.cs">
       <DependentUpon>PurchaseOrderMaterialsSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Supply\SupplyMaterials\ReceiptAndQuality.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\SupplyMaterials\ReceiptAndQuality.Designer.cs">
+      <DependentUpon>ReceiptAndQuality.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\WaitForm1.cs">
       <SubType>Form</SubType>
@@ -938,6 +950,10 @@
     <Compile Include="Migrations\201801020743541_DocLinesRequestedQuantity_01.Designer.cs">
       <DependentUpon>201801020743541_DocLinesRequestedQuantity_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801031553368_docLineRejectedQty_01.cs" />
+    <Compile Include="Migrations\201801031553368_docLineRejectedQty_01.Designer.cs">
+      <DependentUpon>201801031553368_docLineRejectedQty_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Mocking\TestDb.cs" />
     <Compile Include="Models\BomBreakdown.cs" />
@@ -1172,6 +1188,9 @@
     <EmbeddedResource Include="Forms\Master\BomManagement.resx">
       <DependentUpon>BomManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Master\BoxManagement.resx">
+      <DependentUpon>BoxManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Master\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -1315,6 +1334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\SupplyMaterials\PurchaseOrderMaterialsSelection.resx">
       <DependentUpon>PurchaseOrderMaterialsSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\SupplyMaterials\ReceiptAndQuality.resx">
+      <DependentUpon>ReceiptAndQuality.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\WaitForm1.resx">
       <DependentUpon>WaitForm1.cs</DependentUpon>
@@ -1645,6 +1667,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801020743541_DocLinesRequestedQuantity_01.resx">
       <DependentUpon>201801020743541_DocLinesRequestedQuantity_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801031553368_docLineRejectedQty_01.resx">
+      <DependentUpon>201801031553368_docLineRejectedQty_01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRJ_Stocks\Forms\StockManagement.resx">
       <DependentUpon>StockManagement.cs</DependentUpon>
