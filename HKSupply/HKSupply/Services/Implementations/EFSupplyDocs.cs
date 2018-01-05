@@ -340,6 +340,8 @@ namespace HKSupply.Services.Implementations
                         .Include(l => l.Lines)
                         .Include(s => s.SupplyDocType)
                         .Include(c => c.Customer)
+                        .Include(b => b.Boxes)
+                        .Include(ib => ib.PackingListItemBatches)
                         .ToList();
 
                     if (docs.Count > 0)
@@ -350,19 +352,34 @@ namespace HKSupply.Services.Implementations
                             {
                                 line.LineState = DocLine.LineStates.Loaded;
 
+                                object item = null;
+
                                 switch (line.IdItemGroup)
                                 {
                                     case Constants.ITEM_GROUP_EY:
-                                        line.Item = GlobalSetting.ItemEyService.GetItem(line.IdItemBcn);
+                                        item = GlobalSetting.ItemEyService.GetItem(line.IdItemBcn);
+                                        line.Item = item;
                                         break;
 
                                     case Constants.ITEM_GROUP_MT:
-                                        line.Item = GlobalSetting.ItemMtService.GetItem(line.IdItemBcn);
+                                        item = GlobalSetting.ItemMtService.GetItem(line.IdItemBcn);
+                                        line.Item = item;
                                         break;
 
                                     case Constants.ITEM_GROUP_HW:
-                                        line.Item = GlobalSetting.ItemHwService.GetItem(line.IdItemBcn);
+                                        item = GlobalSetting.ItemHwService.GetItem(line.IdItemBcn);
+                                        line.Item = item;
                                         break;
+                                }
+
+                                //aprovechamos y cargamos el item de los batches
+                                var itemsBatches = doc
+                                    .PackingListItemBatches
+                                    .Where(a => a.IdItemBcn.Equals(line.IdItemBcn) && a.IdItemGroup.Equals(line.IdItemGroup))
+                                    .ToList();
+                                foreach (var itemBatch in itemsBatches)
+                                {
+                                    itemBatch.Item = item;
                                 }
                             }
                         }
@@ -1271,28 +1288,51 @@ namespace HKSupply.Services.Implementations
             }
         }
 
-        public string GetPackingListNumber(string idCustomer, DateTime date)
+        public string GetPackingListNumber(string idCustomer, string idSupplier, DateTime date)
         {
             try
             {
-                if (idCustomer == null)
-                    throw new ArgumentNullException(nameof(idCustomer));
+                //if (idCustomer == null)
+                //    throw new ArgumentNullException(nameof(idCustomer));
+
+                //using (var db = new HKSupplyContext())
+                //{
+
+                //    string strCont;
+                //    string pkNumber = string.Empty;
+
+                //    var pakingsDocs = db.DocsHead
+                //        .Where(a => a.IdSupplyDocType.Equals(Constants.SUPPLY_DOCTYPE_PL) && a.IdCustomer.Equals(idCustomer) &&
+                //        System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", date) &&
+                //        System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", date))
+                //        .ToList();
+
+                //    strCont = $"{(pakingsDocs.Count + 1).ToString().PadLeft(3, '0')}";
+
+                //    pkNumber = $"{Constants.SUPPLY_DOCTYPE_PL}{idCustomer}{DateTime.Now.Year.ToString()}{DateTime.Now.Month.ToString("d2")}{strCont}";
+
+                //    return pkNumber;
+                //}
+
 
                 using (var db = new HKSupplyContext())
                 {
 
                     string strCont;
                     string pkNumber = string.Empty;
+                    string code = string.Empty;
 
                     var pakingsDocs = db.DocsHead
-                        .Where(a => a.IdSupplyDocType.Equals(Constants.SUPPLY_DOCTYPE_PL) && a.IdCustomer.Equals(idCustomer) &&
-                        System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", date) &&
-                        System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", date))
-                        .ToList();
+                           .Where(a => a.IdSupplyDocType.Equals(Constants.SUPPLY_DOCTYPE_PL) && 
+                           (string.IsNullOrEmpty(idSupplier) == true || a.IdSupplier.Equals(idSupplier)) &&
+                           (string.IsNullOrEmpty(idCustomer) == true || a.IdCustomer.Equals(idCustomer)) &&
+                           System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", date) &&
+                           System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", date))
+                           .ToList();
 
                     strCont = $"{(pakingsDocs.Count + 1).ToString().PadLeft(3, '0')}";
 
-                    pkNumber = $"{Constants.SUPPLY_DOCTYPE_PL}{idCustomer}{DateTime.Now.Year.ToString()}{DateTime.Now.Month.ToString("d2")}{strCont}";
+                    pkNumber = $"{Constants.SUPPLY_DOCTYPE_PL}{code}{DateTime.Now.Year.ToString()}{DateTime.Now.Month.ToString("d2")}{strCont}";
 
                     return pkNumber;
                 }
@@ -1344,8 +1384,19 @@ namespace HKSupply.Services.Implementations
                         try
                         {
 
-                            DocHead docToUpdate = GetDoc(doc.IdDoc);
-                            DocHead docDataBeforeUpdate = GetDoc(doc.IdDoc);
+                            DocHead docToUpdate = null;
+                            DocHead docDataBeforeUpdate = null;
+
+                            if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_PL)
+                            {
+                                docToUpdate = GetDocPackingList(doc.IdDoc);
+                                docDataBeforeUpdate = GetDocPackingList(doc.IdDoc);
+                            }
+                            else
+                            {
+                                docToUpdate = GetDoc(doc.IdDoc);
+                                docDataBeforeUpdate = GetDoc(doc.IdDoc);
+                            }
 
                             if (docToUpdate == null)
                                 throw new Exception("DOC error");
@@ -1388,7 +1439,9 @@ namespace HKSupply.Services.Implementations
                             //actualizamos el estado, manual ref y remarks
                             docToUpdate.IdSupplyStatus = doc.IdSupplyStatus;
                             docToUpdate.ManualReference = doc.ManualReference;
+                            docToUpdate.DeliveryDate = doc.DeliveryDate;
                             docToUpdate.Remarks = doc.Remarks;
+
 
                             //Borramos las líneas de la base de datos para insertarla de nuevo
                             var lines = db.DocsLines.Where(a => a.IdDoc.Equals(doc.IdDoc));
@@ -1400,18 +1453,53 @@ namespace HKSupply.Services.Implementations
                             foreach (var line in doc.Lines)
                                 db.DocsLines.Add(line);
 
+                            /********** MATERIAL BATCHES (packing list)  **********/
+                            var packingBatches = db.PackingListItemsBatch.Where(a => a.IdDoc.Equals(doc.IdDoc));
+
+                            foreach (var packingBatch in packingBatches.EmptyIfNull())
+                                db.PackingListItemsBatch.Remove(packingBatch);
+
+                            foreach (var packingBatch in doc.PackingListItemBatches.EmptyIfNull())
+                                db.PackingListItemsBatch.Add(packingBatch);
+
                             //user
                             docToUpdate.User = GlobalSetting.LoggedUser.UserLogin.ToUpper();
 
                             db.SaveChanges();
 
                             /************************************* PK *************************************/
-                            //Si es un Packing List y se finaliza hay que insertar en el stock de tránsito de Etnia HK
-                            if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_PL && finishDoc == true)
+                            UpdatePoAssociatedToPkSupplyMaterial(db, docToUpdate); //TEST BORRAR
+                            //Si es un Packing List, se ha pasado al estado de "TRN" (tránsito) y se finaliza hay que insertar en el stock de tránsito de Etnia HK
+                            if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_PL && 
+                                doc.IdSupplyStatus == Constants.SUPPLY_STATUS_TRANSIT &&
+                                docDataBeforeUpdate.IdSupplyStatus == Constants.SUPPLY_STATUS_OPEN &&
+                                finishDoc == true)
                             {
 
                                 //Hacer los movimientos de stock hacía el almacén de tránsito
                                 AddStockToTransit(db, docToUpdate);
+
+                            }
+
+                            //Si es un packing y se cierra:
+                            //  - Las items recibidos y aceptados se pasan al almacén de OnHand, sin propietario y con el lote correspondiente
+                            //  - Los rechazados se pasan al almacén de QC Pending y se genera un documento de QCPendieng para después gestionar los rechazos
+                            //  - Se actualizan los datos en la PO asociada
+                            if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_PL &&
+                                doc.IdSupplyStatus == Constants.SUPPLY_STATUS_CLOSE &&
+                                docDataBeforeUpdate.IdSupplyStatus == Constants.SUPPLY_STATUS_TRANSIT &&
+                                finishDoc == true)
+                            {
+
+                                if ((docToUpdate.Lines.Where(a => a.RejectedQuantity > 0).Count()) > 0)
+                                {
+                                    var docQualityControlPending = GetQualityControlPending(db, docToUpdate);
+                                    //TODO: añadir a la db el documento generado
+                                }
+
+                                //actualizar los datos en las purchase orders asociadas. Aunque en el método ponga SO, 
+                                //internamente funcionará igual para las PO asociadas a un packing de compra de materiales
+                                UpdatePoAssociatedToPkSupplyMaterial(db, docToUpdate);
 
                             }
 
@@ -1856,6 +1944,188 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        #region Supply Materials
+
+        private string GetQualityControlPendingNumber(HKSupplyContext db, string idSupplier, DateTime date)
+        {
+            try
+            {
+                if (idSupplier == null)
+                    throw new ArgumentNullException(nameof(idSupplier));
+
+                string strCont;
+                string pkNumber = string.Empty;
+
+                var docs = db.DocsHead
+                    .Where(a => a.IdSupplyDocType.Equals(Constants.SUPPLY_DOCTYPE_QCP) && a.IdSupplier.Equals(idSupplier) &&
+                    System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", date) &&
+                    System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", date))
+                    .ToList();
+
+                strCont = $"{(docs.Count + 1).ToString().PadLeft(3, '0')}";
+
+                pkNumber = $"{Constants.SUPPLY_DOCTYPE_QCP}{idSupplier}{DateTime.Now.Year.ToString()}{DateTime.Now.Month.ToString("d2")}{strCont}";
+
+                return pkNumber;
+                
+            }
+            catch (SqlException sqlex)
+            {
+                for (int i = 0; i < sqlex.Errors.Count; i++)
+                {
+                    _log.Error("Index #" + i + "\n" +
+                        "Message: " + sqlex.Errors[i].Message + "\n" +
+                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                        "Source: " + sqlex.Errors[i].Source + "\n" +
+                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                    switch (sqlex.Errors[i].Number)
+                    {
+                        case -1: //connection broken
+                        case -2: //timeout
+                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                    }
+                }
+                throw sqlex;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// generar el documento con los items rechazados de un packing de materiales
+        /// </summary>
+        /// <param name="packingList"></param>
+        /// <returns></returns>
+        private DocHead GetQualityControlPending(HKSupplyContext db, DocHead packingList)
+        {
+            try
+            {
+                List<DocLine> linesQualityControlPending = new List<DocLine>();
+                var rejectedLines = packingList.Lines.Where(a => a.RejectedQuantity > 0).ToList();
+                var idDocQcp = GetQualityControlPendingNumber(db, packingList.IdSupplier, DateTime.Now);
+                int lineNum = 1;
+
+                foreach(var line in rejectedLines)
+                {
+                    DocLine docLine = new DocLine()
+                    {
+                        IdDoc = idDocQcp,
+                        NumLin = lineNum,
+                        IdItemBcn = line.IdItemBcn,
+                        IdItemGroup = line.IdItemGroup,
+                        IdSupplyStatus = Constants.SUPPLY_STATUS_OPEN,
+                        Batch = null,
+                        Quantity = line.RejectedQuantity,
+                        QuantityOriginal = line.RejectedQuantity,
+                        DeliveredQuantity = 0,
+                        RequestedQuantity = 0,
+                        RejectedQuantity = 0,
+                        Remarks = line.Remarks, 
+                        UnitPrice = line.UnitPrice,
+                        UnitPriceBaseCurrency = line.UnitPriceBaseCurrency,
+                        IdDocRelated = line.IdDocRelated,
+                        BoxNumber = null
+                    };
+
+                    linesQualityControlPending.Add(docLine);
+
+                    lineNum++;
+                }
+
+                DocHead docQualityControlPending = new DocHead()
+                {
+                    IdDoc = idDocQcp,
+                    IdDocRelated = packingList.IdDoc,
+                    IdSupplyDocType = Constants.SUPPLY_DOCTYPE_QCP,
+                    CreationDate = DateTime.Now,
+                    DeliveryDate = packingList.DeliveryDate,
+                    DocDate = DateTime.Now,
+                    IdSupplyStatus = Constants.SUPPLY_STATUS_OPEN,
+                    IdSupplier = packingList.IdSupplier,
+                    IdCustomer = packingList.IdCustomer,
+                    DeliveryTerm = null,
+                    IdPaymentTerms = null,
+                    IdCurrency = null,
+                    ManualReference = packingList.ManualReference,
+                    Remarks = packingList.Remarks,
+                    Lines = linesQualityControlPending,
+                    User = GlobalSetting.LoggedUser.UserLogin.ToUpper()
+                };
+
+                return docQualityControlPending;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private bool UpdatePoAssociatedToPkSupplyMaterial(HKSupplyContext db, DocHead packingList)
+        {
+            try
+            {
+                // ******* Tenemos que actualizar los datos de la/s Purchase Order asociadas a cada línea del packing ******* //
+                foreach (var line in packingList.Lines)
+                {
+                    var doclinePo = db.DocsLines
+                        .Join(db.DocsHead, 
+                        lines => lines.IdDoc, 
+                        head => head.IdDoc, 
+                        (lines, head) => new { DocLine = lines, DocHead = head})
+                        .Where(headAndLines => headAndLines.DocHead.IdSupplyDocType.Equals(Constants.SUPPLY_DOCTYPE_PO) &&
+                        headAndLines.DocLine.IdDoc.Equals(line.IdDocRelated) &&
+                        headAndLines.DocLine.IdItemBcn.Equals(line.IdItemBcn))
+                        .Select(s => s.DocLine)
+                        .FirstOrDefault();
+
+                    if (doclinePo != null)
+                    {
+                        doclinePo.DeliveredQuantity += line.DeliveredQuantity;
+
+                        if (doclinePo.DeliveredQuantity >= doclinePo.Quantity)
+                            doclinePo.IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE;
+
+                        db.SaveChanges();
+                    }
+                }
+
+                // ******* Hay que comprobar si se ha entregado todo para cerrar la/s purchase order asociadas al packing ******* //
+                // Obtenemos el listado de Purchase Order
+                List<string> purchaseOrdersList = packingList.Lines.Select(a => a.IdDocRelated).Distinct().ToList();
+
+                foreach (var purchaseOrder in purchaseOrdersList)
+                {
+                    SqlParameter param1 = new SqlParameter("@pIdDoc", purchaseOrder);
+                    bool checkClose = db.Database.SqlQuery<bool>("CHECK_CLOSE_DOC @pIdDoc", param1).FirstOrDefault();
+
+                    if (checkClose == true)
+                    {
+                        //Cerramos la PO
+                        var soDoc = db.DocsHead.Where(a => a.IdDoc.Equals(purchaseOrder)).FirstOrDefault();
+                        if (soDoc != null)
+                        {
+                            soDoc.IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE;
+                            db.SaveChanges();
+                        }
+                    }
+
+                }
+
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        #endregion
+
         #endregion
 
         #region Control de Stock
@@ -1971,7 +2241,7 @@ namespace HKSupply.Services.Implementations
                         Qtt: line.Quantity,
                         idItem: line.IdItemBcn,
                         idLot: string.Empty,
-                        idOwner: string.Empty,
+                        idOwner: docHead.IdSupplier,
                         Remarks: string.Empty,
                         LstidDoc: docs,
                         IdUser: GlobalSetting.LoggedUser.UserLogin

@@ -1818,7 +1818,7 @@ namespace HKSupply.Forms.Supply
 
                 //pkNumber = $"{Constants.SUPPLY_DOCTYPE_PL}{slueCustomer.EditValue}{DateTime.Now.Year.ToString()}{DateTime.Now.Month.ToString("d2")}{strCont}";
 
-                string pkNumber = GlobalSetting.SupplyDocsService.GetPackingListNumber(_customersEtniaBcn.IdCustomer, DateTime.Now);
+                string pkNumber = GlobalSetting.SupplyDocsService.GetPackingListNumber(idCustomer: _customersEtniaBcn.IdCustomer, idSupplier: string.Empty, date: DateTime.Now);
 
                 txtPKNumber.Text = pkNumber;
             }

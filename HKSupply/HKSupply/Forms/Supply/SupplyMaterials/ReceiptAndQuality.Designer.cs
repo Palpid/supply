@@ -55,6 +55,8 @@
             this.xtpPLDetail = new DevExpress.XtraTab.XtraTabPage();
             this.xgrdLinesPL = new DevExpress.XtraGrid.GridControl();
             this.gridViewLinesPL = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.xgrdItemsBatch = new DevExpress.XtraGrid.GridControl();
+            this.gridViewItemsBatch = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
             this.xtcGeneral.SuspendLayout();
@@ -75,6 +77,8 @@
             this.xtpPLDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xgrdLinesPL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLinesPL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdItemsBatch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewItemsBatch)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -335,6 +339,7 @@
             // 
             // xtpPLDetail
             // 
+            this.xtpPLDetail.Controls.Add(this.xgrdItemsBatch);
             this.xtpPLDetail.Controls.Add(this.xgrdLinesPL);
             this.xtpPLDetail.Name = "xtpPLDetail";
             this.xtpPLDetail.Size = new System.Drawing.Size(1308, 339);
@@ -349,7 +354,7 @@
             this.xgrdLinesPL.MainView = this.gridViewLinesPL;
             this.xgrdLinesPL.MenuManager = this.ribbonControl;
             this.xgrdLinesPL.Name = "xgrdLinesPL";
-            this.xgrdLinesPL.Size = new System.Drawing.Size(1302, 333);
+            this.xgrdLinesPL.Size = new System.Drawing.Size(1302, 214);
             this.xgrdLinesPL.TabIndex = 0;
             this.xgrdLinesPL.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewLinesPL});
@@ -358,6 +363,23 @@
             // 
             this.gridViewLinesPL.GridControl = this.xgrdLinesPL;
             this.gridViewLinesPL.Name = "gridViewLinesPL";
+            // 
+            // xgrdItemsBatch
+            // 
+            this.xgrdItemsBatch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.xgrdItemsBatch.Location = new System.Drawing.Point(3, 223);
+            this.xgrdItemsBatch.MainView = this.gridViewItemsBatch;
+            this.xgrdItemsBatch.MenuManager = this.ribbonControl;
+            this.xgrdItemsBatch.Name = "xgrdItemsBatch";
+            this.xgrdItemsBatch.Size = new System.Drawing.Size(500, 113);
+            this.xgrdItemsBatch.TabIndex = 4;
+            this.xgrdItemsBatch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewItemsBatch});
+            // 
+            // gridViewItemsBatch
+            // 
+            this.gridViewItemsBatch.GridControl = this.xgrdItemsBatch;
+            this.gridViewItemsBatch.Name = "gridViewItemsBatch";
             // 
             // ReceiptAndQuality
             // 
@@ -392,6 +414,8 @@
             this.xtpPLDetail.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xgrdLinesPL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLinesPL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdItemsBatch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewItemsBatch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -426,5 +450,7 @@
         private DevExpress.XtraTab.XtraTabPage xtpPLDetail;
         private DevExpress.XtraGrid.GridControl xgrdLinesPL;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewLinesPL;
+        private DevExpress.XtraGrid.GridControl xgrdItemsBatch;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewItemsBatch;
     }
 }

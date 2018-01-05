@@ -72,6 +72,7 @@ namespace HKSupply.General
         public const string SUPPLY_STATUS_OPEN = "OPN";
         public const string SUPPLY_STATUS_CLOSE = "CLS";
         public const string SUPPLY_STATUS_CANCEL = "CNL";
+        public const string SUPPLY_STATUS_TRANSIT = "TRN";
 
         //** SUPPLY DOC TYPES **//
         public const string SUPPLY_DOCTYPE_PO = "PO"; //Purchase Order
@@ -80,6 +81,7 @@ namespace HKSupply.General
         public const string SUPPLY_DOCTYPE_IV = "IV"; //Invoice
         public const string SUPPLY_DOCTYPE_PL = "PL"; //Paking List
         public const string SUPPLY_DOCTYPE_DN = "DN"; //Delivery Note
+        public const string SUPPLY_DOCTYPE_QCP = "QCP"; //Quality Control Pending
 
         //** ETNIA HK/BCN CODE **//
         public const string ETNIA_HK_COMPANY_CODE = "ETNLTD";

@@ -2123,7 +2123,7 @@ namespace HKSupply.Forms.Supply
 
                 //pkNumber = $"{Constants.SUPPLY_DOCTYPE_PL}{slueCustomer.EditValue}{DateTime.Now.Year.ToString()}{DateTime.Now.Month.ToString("d2")}{strCont}";
 
-                string pkNumber = GlobalSetting.SupplyDocsService.GetPackingListNumber((string)slueCustomer.EditValue, DateTime.Now);
+                string pkNumber = GlobalSetting.SupplyDocsService.GetPackingListNumber(idCustomer: (string)slueCustomer.EditValue, idSupplier:string.Empty, date: DateTime.Now);
 
                 txtPKNumber.Text = pkNumber;
             }
@@ -2340,6 +2340,11 @@ namespace HKSupply.Forms.Supply
                 gridViewItemsBatch.Columns.Add(colBatch);
                 gridViewItemsBatch.Columns.Add(colQuantity);
 
+
+                //Disable sorting
+                foreach (GridColumn column in gridViewItemsBatch.Columns)
+                    column.OptionsColumn.AllowSort = DefaultBoolean.False;
+
                 //Events
                 xgrdItemsBatch.ProcessGridKey += XgrdItemsBatch_ProcessGridKey;
                 gridViewItemsBatch.CellValueChanged += GridViewItemsBatch_CellValueChanged;
@@ -2459,7 +2464,10 @@ namespace HKSupply.Forms.Supply
                     if (result != DialogResult.Yes)
                         return;
 
+                    var batchTmp = _itemsBatchList.Where(a => a.IdItemBcn.Equals(itemBatch.IdItemBcn) && a.Batch.Equals(itemBatch.Batch)).FirstOrDefault();
+
                     _auxItemsBatchList.Remove(itemBatch);
+                    _itemsBatchList.Remove(batchTmp);
                 }
 
                 if (e.KeyCode == Keys.Enter)

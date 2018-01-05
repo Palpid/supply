@@ -1880,7 +1880,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
             {
                 Cursor = Cursors.WaitCursor;
 
-                string pkNumber = GlobalSetting.SupplyDocsService.GetPackingListNumber((string)slueSupplier.EditValue, DateTime.Now);
+                string pkNumber = GlobalSetting.SupplyDocsService.GetPackingListNumber(idCustomer:string.Empty, idSupplier: (string)slueSupplier.EditValue, date: DateTime.Now);
 
                 txtPKNumber.Text = pkNumber;
             }
@@ -1945,7 +1945,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                     CreationDate = _docHeadPK.CreationDate,
                     DeliveryDate = dateEditPKDelivery.DateTime,
                     DocDate = _docHeadPK.DocDate,
-                    IdSupplyStatus = (finishPK ? Constants.SUPPLY_STATUS_CLOSE : Constants.SUPPLY_STATUS_OPEN),
+                    IdSupplyStatus = (finishPK ? Constants.SUPPLY_STATUS_TRANSIT : Constants.SUPPLY_STATUS_OPEN),
                     IdSupplier = _docHeadPK.IdSupplier,
                     IdCustomer = _docHeadPK.IdCustomer,
                     IdDeliveryTerm = slueDeliveryTerms.EditValue as string,
@@ -1956,7 +1956,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                     Lines = sortedLines
                 };
 
-                DocHead updatedDoc = GlobalSetting.SupplyDocsService.UpdateDocSupplyMaterials(packingList, finishDoc: finishPK);
+                DocHead updatedDoc = GlobalSetting.SupplyDocsService.UpdateDocSupplyMaterials(packingList, finishPK); 
 
                 _docHeadPK = updatedDoc;
 
