@@ -675,7 +675,6 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
         {
             try
             {
-                //TODO
                 sbSearch.Click += SbSearch_Click;
                 sbFinishQC.Click += SbFinishQC_Click;
                 dateEditPKDocDate.EditValueChanged += DateEditPKDocDate_EditValueChanged;
@@ -951,7 +950,6 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
         {
             try
             {
-                validateQuantities = true; //TEST, quitar
 
                 foreach (var line in _docLinesList)
                 {

@@ -82,6 +82,7 @@ namespace HKSupply.General
         public const string SUPPLY_DOCTYPE_PL = "PL"; //Paking List
         public const string SUPPLY_DOCTYPE_DN = "DN"; //Delivery Note
         public const string SUPPLY_DOCTYPE_QCP = "QCP"; //Quality Control Pending
+        public const string SUPPLY_DOCTYPE_RT = "RT"; //Return goods
 
         //** ETNIA HK/BCN CODE **//
         public const string ETNIA_HK_COMPANY_CODE = "ETNLTD";

@@ -53,10 +53,10 @@
             this.lblSupplier = new DevExpress.XtraEditors.LabelControl();
             this.xtcPK = new DevExpress.XtraTab.XtraTabControl();
             this.xtpPLDetail = new DevExpress.XtraTab.XtraTabPage();
-            this.xgrdLinesPL = new DevExpress.XtraGrid.GridControl();
-            this.gridViewLinesPL = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xgrdItemsBatch = new DevExpress.XtraGrid.GridControl();
             this.gridViewItemsBatch = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.xgrdLinesPL = new DevExpress.XtraGrid.GridControl();
+            this.gridViewLinesPL = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
             this.xtcGeneral.SuspendLayout();
@@ -75,10 +75,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtcPK)).BeginInit();
             this.xtcPK.SuspendLayout();
             this.xtpPLDetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xgrdLinesPL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewLinesPL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xgrdItemsBatch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewItemsBatch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdLinesPL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewLinesPL)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -345,6 +345,23 @@
             this.xtpPLDetail.Size = new System.Drawing.Size(1308, 339);
             this.xtpPLDetail.Text = "Packing Detail";
             // 
+            // xgrdItemsBatch
+            // 
+            this.xgrdItemsBatch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.xgrdItemsBatch.Location = new System.Drawing.Point(3, 223);
+            this.xgrdItemsBatch.MainView = this.gridViewItemsBatch;
+            this.xgrdItemsBatch.MenuManager = this.ribbonControl;
+            this.xgrdItemsBatch.Name = "xgrdItemsBatch";
+            this.xgrdItemsBatch.Size = new System.Drawing.Size(500, 113);
+            this.xgrdItemsBatch.TabIndex = 4;
+            this.xgrdItemsBatch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewItemsBatch});
+            // 
+            // gridViewItemsBatch
+            // 
+            this.gridViewItemsBatch.GridControl = this.xgrdItemsBatch;
+            this.gridViewItemsBatch.Name = "gridViewItemsBatch";
+            // 
             // xgrdLinesPL
             // 
             this.xgrdLinesPL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -363,23 +380,6 @@
             // 
             this.gridViewLinesPL.GridControl = this.xgrdLinesPL;
             this.gridViewLinesPL.Name = "gridViewLinesPL";
-            // 
-            // xgrdItemsBatch
-            // 
-            this.xgrdItemsBatch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.xgrdItemsBatch.Location = new System.Drawing.Point(3, 223);
-            this.xgrdItemsBatch.MainView = this.gridViewItemsBatch;
-            this.xgrdItemsBatch.MenuManager = this.ribbonControl;
-            this.xgrdItemsBatch.Name = "xgrdItemsBatch";
-            this.xgrdItemsBatch.Size = new System.Drawing.Size(500, 113);
-            this.xgrdItemsBatch.TabIndex = 4;
-            this.xgrdItemsBatch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewItemsBatch});
-            // 
-            // gridViewItemsBatch
-            // 
-            this.gridViewItemsBatch.GridControl = this.xgrdItemsBatch;
-            this.gridViewItemsBatch.Name = "gridViewItemsBatch";
             // 
             // ReceiptAndQuality
             // 
@@ -412,10 +412,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtcPK)).EndInit();
             this.xtcPK.ResumeLayout(false);
             this.xtpPLDetail.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.xgrdLinesPL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewLinesPL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xgrdItemsBatch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewItemsBatch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xgrdLinesPL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewLinesPL)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

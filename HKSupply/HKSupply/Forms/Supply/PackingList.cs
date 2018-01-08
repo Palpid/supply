@@ -2025,7 +2025,12 @@ namespace HKSupply.Forms.Supply
 
                 //pkNumber = $"{Constants.SUPPLY_DOCTYPE_PL}{slueCustomer.EditValue}{DateTime.Now.Year.ToString()}{DateTime.Now.Month.ToString("d2")}{strCont}";
 
-                string pkNumber = GlobalSetting.SupplyDocsService.GetPackingListNumber(idCustomer:(string)slueCustomer.EditValue, idSupplier: string.Empty, date: DateTime.Now);
+                //string pkNumber = GlobalSetting.SupplyDocsService.GetPackingListNumber(idCustomer:(string)slueCustomer.EditValue, idSupplier: string.Empty, date: DateTime.Now);
+                string pkNumber = GlobalSetting.SupplyDocsService.GetGenericDocHeadNumber(
+                    idSupplyDocType: Constants.SUPPLY_DOCTYPE_PL, 
+                    idCustomer: (string)slueCustomer.EditValue, 
+                    idSupplier: string.Empty, 
+                    date: DateTime.Now);
 
                 txtPKNumber.Text = pkNumber;
             }

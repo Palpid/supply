@@ -24,6 +24,7 @@ namespace HKSupply.Services.Interfaces
         bool UpdateLinesRemarks(List<DocLine> lines);
         List<SupplyDocType> GetSupplyDocTypes();
 
-        String GetPackingListNumber(string idCustomer, string idSupplier, DateTime date);
+        //string GetPackingListNumber(string idCustomer, string idSupplier, DateTime date);
+        string GetGenericDocHeadNumber(string idSupplyDocType, string idCustomer, string idSupplier, DateTime date);
     }
 }

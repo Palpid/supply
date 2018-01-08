@@ -617,6 +617,8 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.SalesOrder.resou
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.SupplyMaterials.PackingListMaterials.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.SupplyMaterials.PurchaseOrderMaterials.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.SupplyMaterials.PurchaseOrderMaterialsSelection.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.WaitForm1.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.Customer.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.ObjectVersion.resources
@@ -727,6 +729,7 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.PackingListItemsBa
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.DocLineBoxNumer_01.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.factorySupplierCustomer.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.DocLinesRequestedQuantity_01.resources
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.docLineRejectedQty_01.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.PRJ_Stocks.Forms.StockManagement.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Properties.Resources.resources
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Reports.frmVisor.resources
@@ -736,5 +739,3 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe.licenses
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.csproj.CoreCompileInputs.cache
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
-C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.resources
-C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Migrations.docLineRejectedQty_01.resources

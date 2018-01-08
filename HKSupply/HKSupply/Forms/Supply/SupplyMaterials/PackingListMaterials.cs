@@ -1880,7 +1880,12 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
             {
                 Cursor = Cursors.WaitCursor;
 
-                string pkNumber = GlobalSetting.SupplyDocsService.GetPackingListNumber(idCustomer:string.Empty, idSupplier: (string)slueSupplier.EditValue, date: DateTime.Now);
+                //string pkNumber = GlobalSetting.SupplyDocsService.GetPackingListNumber(idCustomer:string.Empty, idSupplier: (string)slueSupplier.EditValue, date: DateTime.Now);
+                string pkNumber = GlobalSetting.SupplyDocsService.GetGenericDocHeadNumber(
+                    idSupplyDocType: Constants.SUPPLY_DOCTYPE_PL,
+                    idCustomer: string.Empty, 
+                    idSupplier: (string)slueSupplier.EditValue, 
+                    date: DateTime.Now);
 
                 txtPKNumber.Text = pkNumber;
             }

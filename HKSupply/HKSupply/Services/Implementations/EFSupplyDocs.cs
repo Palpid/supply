@@ -1288,52 +1288,68 @@ namespace HKSupply.Services.Implementations
             }
         }
 
-        public string GetPackingListNumber(string idCustomer, string idSupplier, DateTime date)
+        //public string GetPackingListNumber(string idCustomer, string idSupplier, DateTime date)
+        //{
+        //    try
+        //    {
+        //        using (var db = new HKSupplyContext())
+        //        {
+
+        //            string strCont;
+        //            string pkNumber = string.Empty;
+        //            string code = string.Empty;
+
+        //            var pakingsDocs = db.DocsHead
+        //                   .Where(a => a.IdSupplyDocType.Equals(Constants.SUPPLY_DOCTYPE_PL) && 
+        //                   (string.IsNullOrEmpty(idSupplier) == true || a.IdSupplier.Equals(idSupplier)) &&
+        //                   (string.IsNullOrEmpty(idCustomer) == true || a.IdCustomer.Equals(idCustomer)) &&
+        //                   System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", date) &&
+        //                   System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", date))
+        //                   .ToList();
+
+        //            strCont = $"{(pakingsDocs.Count + 1).ToString().PadLeft(3, '0')}";
+
+        //            pkNumber = $"{Constants.SUPPLY_DOCTYPE_PL}{code}{DateTime.Now.Year.ToString()}{DateTime.Now.Month.ToString("d2")}{strCont}";
+
+        //            return pkNumber;
+        //        }
+        //    }
+        //    catch (SqlException sqlex)
+        //    {
+        //        for (int i = 0; i < sqlex.Errors.Count; i++)
+        //        {
+        //            _log.Error("Index #" + i + "\n" +
+        //                "Message: " + sqlex.Errors[i].Message + "\n" +
+        //                "Error Number: " + sqlex.Errors[i].Number + "\n" +
+        //                "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+        //                "Source: " + sqlex.Errors[i].Source + "\n" +
+        //                "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+        //            switch (sqlex.Errors[i].Number)
+        //            {
+        //                case -1: //connection broken
+        //                case -2: //timeout
+        //                    throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+        //            }
+        //        }
+        //        throw sqlex;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _log.Error(ex.Message, ex);
+        //        throw ex;
+        //    }
+        //}
+
+        #region Get Generic Doc Number
+        public string GetGenericDocHeadNumber(string idSupplyDocType, string idCustomer, string idSupplier, DateTime date)
         {
             try
             {
-                //if (idCustomer == null)
-                //    throw new ArgumentNullException(nameof(idCustomer));
-
-                //using (var db = new HKSupplyContext())
-                //{
-
-                //    string strCont;
-                //    string pkNumber = string.Empty;
-
-                //    var pakingsDocs = db.DocsHead
-                //        .Where(a => a.IdSupplyDocType.Equals(Constants.SUPPLY_DOCTYPE_PL) && a.IdCustomer.Equals(idCustomer) &&
-                //        System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", date) &&
-                //        System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", date))
-                //        .ToList();
-
-                //    strCont = $"{(pakingsDocs.Count + 1).ToString().PadLeft(3, '0')}";
-
-                //    pkNumber = $"{Constants.SUPPLY_DOCTYPE_PL}{idCustomer}{DateTime.Now.Year.ToString()}{DateTime.Now.Month.ToString("d2")}{strCont}";
-
-                //    return pkNumber;
-                //}
-
-
                 using (var db = new HKSupplyContext())
                 {
 
-                    string strCont;
-                    string pkNumber = string.Empty;
-                    string code = string.Empty;
-
-                    var pakingsDocs = db.DocsHead
-                           .Where(a => a.IdSupplyDocType.Equals(Constants.SUPPLY_DOCTYPE_PL) && 
-                           (string.IsNullOrEmpty(idSupplier) == true || a.IdSupplier.Equals(idSupplier)) &&
-                           (string.IsNullOrEmpty(idCustomer) == true || a.IdCustomer.Equals(idCustomer)) &&
-                           System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", date) &&
-                           System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", date))
-                           .ToList();
-
-                    strCont = $"{(pakingsDocs.Count + 1).ToString().PadLeft(3, '0')}";
-
-                    pkNumber = $"{Constants.SUPPLY_DOCTYPE_PL}{code}{DateTime.Now.Year.ToString()}{DateTime.Now.Month.ToString("d2")}{strCont}";
-
+                    string pkNumber = GetGenericDocHeadNumber(db, idSupplyDocType, idCustomer, idSupplier, date);
                     return pkNumber;
                 }
             }
@@ -1364,10 +1380,40 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        private string GetGenericDocHeadNumber(HKSupplyContext db, string idSupplyDocType, string idCustomer, string idSupplier, DateTime date)
+        {
+            try
+            {
+                    string strCont;
+                    string docNumber = string.Empty;
+                    string code = string.Empty;
+
+                    var pakingsDocs = db.DocsHead
+                           .Where(a => a.IdSupplyDocType.Equals(idSupplyDocType) &&
+                           (string.IsNullOrEmpty(idSupplier) == true || a.IdSupplier.Equals(idSupplier)) &&
+                           (string.IsNullOrEmpty(idCustomer) == true || a.IdCustomer.Equals(idCustomer)) &&
+                           System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", date) &&
+                           System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", date))
+                           .ToList();
+
+                    strCont = $"{(pakingsDocs.Count + 1).ToString().PadLeft(3, '0')}";
+
+                    docNumber = $"{idSupplyDocType}{code}{DateTime.Now.Year.ToString()}{DateTime.Now.Month.ToString("d2")}{strCont}";
+
+                    return docNumber;
+                
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        #endregion
+
         #region Supply Materials
 
         /*****************************************************************************************************************************************  
-         *      Por facilidad y que se va más claro separo los documentos para la gestión del pedido de frames y venta de manterial a fábricas   *
+         *      Por facilidad y para que se va más claro separo los documentos para la gestión del pedido de frames y venta de manterial a fábricas   *
          *      y la compra (aprovisionamiento) de materiales
          *****************************************************************************************************************************************/
         public DocHead UpdateDocSupplyMaterials(DocHead doc, bool finishDoc = false)
@@ -1467,8 +1513,7 @@ namespace HKSupply.Services.Implementations
 
                             db.SaveChanges();
 
-                            /************************************* PK *************************************/
-                            UpdatePoAssociatedToPkSupplyMaterial(db, docToUpdate); //TEST BORRAR
+                            //************************************* PK *************************************//
                             //Si es un Packing List, se ha pasado al estado de "TRN" (tránsito) y se finaliza hay que insertar en el stock de tránsito de Etnia HK
                             if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_PL && 
                                 doc.IdSupplyStatus == Constants.SUPPLY_STATUS_TRANSIT &&
@@ -1501,6 +1546,20 @@ namespace HKSupply.Services.Implementations
                                 //internamente funcionará igual para las PO asociadas a un packing de compra de materiales
                                 UpdatePoAssociatedToPkSupplyMaterial(db, docToUpdate);
 
+                            }
+
+                            //************************************* QCP *************************************//
+
+                            //Si es un Quality Control Pending y se cierra:
+                            //  - las cantidades aceptadas pasan al stock on-hand con su correspondiente lote
+                            //  - las cantidades rechazadas se genera un documento de devolución
+                            if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_QCP && finishDoc == true)
+                            {
+                                //agregamos las cantidades aceptadas al stock on hand
+
+                                //generamos el documento de devolución
+                                var docReturnGoods = GetReturnGoodsDoc(db, docToUpdate);
+                                //TODO: añadir a la db el documento generado
                             }
 
                             //********** Save last changes and commit **********//
@@ -1946,55 +2005,55 @@ namespace HKSupply.Services.Implementations
 
         #region Supply Materials
 
-        private string GetQualityControlPendingNumber(HKSupplyContext db, string idSupplier, DateTime date)
-        {
-            try
-            {
-                if (idSupplier == null)
-                    throw new ArgumentNullException(nameof(idSupplier));
+        //private string GetQualityControlPendingNumber(HKSupplyContext db, string idSupplier, DateTime date)
+        //{
+        //    try
+        //    {
+        //        if (idSupplier == null)
+        //            throw new ArgumentNullException(nameof(idSupplier));
 
-                string strCont;
-                string pkNumber = string.Empty;
+        //        string strCont;
+        //        string pkNumber = string.Empty;
 
-                var docs = db.DocsHead
-                    .Where(a => a.IdSupplyDocType.Equals(Constants.SUPPLY_DOCTYPE_QCP) && a.IdSupplier.Equals(idSupplier) &&
-                    System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", date) &&
-                    System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", date))
-                    .ToList();
+        //        var docs = db.DocsHead
+        //            .Where(a => a.IdSupplyDocType.Equals(Constants.SUPPLY_DOCTYPE_QCP) && a.IdSupplier.Equals(idSupplier) &&
+        //            System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", date) &&
+        //            System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", date))
+        //            .ToList();
 
-                strCont = $"{(docs.Count + 1).ToString().PadLeft(3, '0')}";
+        //        strCont = $"{(docs.Count + 1).ToString().PadLeft(3, '0')}";
 
-                pkNumber = $"{Constants.SUPPLY_DOCTYPE_QCP}{idSupplier}{DateTime.Now.Year.ToString()}{DateTime.Now.Month.ToString("d2")}{strCont}";
+        //        pkNumber = $"{Constants.SUPPLY_DOCTYPE_QCP}{idSupplier}{DateTime.Now.Year.ToString()}{DateTime.Now.Month.ToString("d2")}{strCont}";
 
-                return pkNumber;
+        //        return pkNumber;
                 
-            }
-            catch (SqlException sqlex)
-            {
-                for (int i = 0; i < sqlex.Errors.Count; i++)
-                {
-                    _log.Error("Index #" + i + "\n" +
-                        "Message: " + sqlex.Errors[i].Message + "\n" +
-                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
-                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
-                        "Source: " + sqlex.Errors[i].Source + "\n" +
-                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+        //    }
+        //    catch (SqlException sqlex)
+        //    {
+        //        for (int i = 0; i < sqlex.Errors.Count; i++)
+        //        {
+        //            _log.Error("Index #" + i + "\n" +
+        //                "Message: " + sqlex.Errors[i].Message + "\n" +
+        //                "Error Number: " + sqlex.Errors[i].Number + "\n" +
+        //                "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+        //                "Source: " + sqlex.Errors[i].Source + "\n" +
+        //                "Procedure: " + sqlex.Errors[i].Procedure + "\n");
 
-                    switch (sqlex.Errors[i].Number)
-                    {
-                        case -1: //connection broken
-                        case -2: //timeout
-                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
-                    }
-                }
-                throw sqlex;
-            }
-            catch (Exception ex)
-            {
-                _log.Error(ex.Message, ex);
-                throw ex;
-            }
-        }
+        //            switch (sqlex.Errors[i].Number)
+        //            {
+        //                case -1: //connection broken
+        //                case -2: //timeout
+        //                    throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+        //            }
+        //        }
+        //        throw sqlex;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _log.Error(ex.Message, ex);
+        //        throw ex;
+        //    }
+        //}
 
         /// <summary>
         /// generar el documento con los items rechazados de un packing de materiales
@@ -2007,7 +2066,14 @@ namespace HKSupply.Services.Implementations
             {
                 List<DocLine> linesQualityControlPending = new List<DocLine>();
                 var rejectedLines = packingList.Lines.Where(a => a.RejectedQuantity > 0).ToList();
-                var idDocQcp = GetQualityControlPendingNumber(db, packingList.IdSupplier, DateTime.Now);
+                //var idDocQcp = GetQualityControlPendingNumber(db, packingList.IdSupplier, DateTime.Now);
+                var idDocQcp = GetGenericDocHeadNumber(
+                    db: db, 
+                    idSupplyDocType: Constants.SUPPLY_DOCTYPE_QCP, 
+                    idSupplier: packingList.IdSupplier, 
+                    idCustomer: string.Empty, 
+                    date: DateTime.Now);
+
                 int lineNum = 1;
 
                 foreach(var line in rejectedLines)
@@ -2065,6 +2131,12 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Actualizar los datos en la PO asociada a un packing de proveedor
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="packingList"></param>
+        /// <returns></returns>
         private bool UpdatePoAssociatedToPkSupplyMaterial(HKSupplyContext db, DocHead packingList)
         {
             try
@@ -2117,6 +2189,77 @@ namespace HKSupply.Services.Implementations
                 }
 
                 return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private DocHead GetReturnGoodsDoc(HKSupplyContext db, DocHead qualityControlPending)
+        {
+            try
+            {
+                List<DocLine> linesReturnGoods = new List<DocLine>();
+                var rejectedLines = qualityControlPending.Lines.Where(a => a.RejectedQuantity > 0).ToList();
+                //var idDocQcp = GetQualityControlPendingNumber(db, packingList.IdSupplier, DateTime.Now);
+                var idDocQcp = GetGenericDocHeadNumber(
+                    db: db,
+                    idSupplyDocType: Constants.SUPPLY_DOCTYPE_RT,
+                    idSupplier: qualityControlPending.IdSupplier,
+                    idCustomer: string.Empty,
+                    date: DateTime.Now);
+
+                int lineNum = 1;
+
+                foreach (var line in rejectedLines)
+                {
+                    DocLine docLine = new DocLine()
+                    {
+                        IdDoc = idDocQcp,
+                        NumLin = lineNum,
+                        IdItemBcn = line.IdItemBcn,
+                        IdItemGroup = line.IdItemGroup,
+                        IdSupplyStatus = Constants.SUPPLY_STATUS_OPEN,
+                        Batch = null,
+                        Quantity = line.RejectedQuantity,
+                        QuantityOriginal = line.RejectedQuantity,
+                        DeliveredQuantity = 0,
+                        RequestedQuantity = 0,
+                        RejectedQuantity = 0,
+                        Remarks = line.Remarks,
+                        UnitPrice = line.UnitPrice,
+                        UnitPriceBaseCurrency = line.UnitPriceBaseCurrency,
+                        IdDocRelated = line.IdDocRelated,
+                        BoxNumber = null
+                    };
+
+                    linesReturnGoods.Add(docLine);
+
+                    lineNum++;
+                }
+
+                DocHead docReturnGoods = new DocHead()
+                {
+                    IdDoc = idDocQcp,
+                    IdDocRelated = qualityControlPending.IdDoc,
+                    IdSupplyDocType = Constants.SUPPLY_DOCTYPE_RT,
+                    CreationDate = DateTime.Now,
+                    DeliveryDate = qualityControlPending.DeliveryDate,
+                    DocDate = DateTime.Now,
+                    IdSupplyStatus = Constants.SUPPLY_STATUS_OPEN,
+                    IdSupplier = qualityControlPending.IdSupplier,
+                    IdCustomer = qualityControlPending.IdCustomer,
+                    DeliveryTerm = null,
+                    IdPaymentTerms = null,
+                    IdCurrency = null,
+                    ManualReference = qualityControlPending.ManualReference,
+                    Remarks = qualityControlPending.Remarks,
+                    Lines = linesReturnGoods,
+                    User = GlobalSetting.LoggedUser.UserLogin.ToUpper()
+                };
+
+                return docReturnGoods;
             }
             catch
             {

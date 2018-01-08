@@ -487,6 +487,12 @@
     <Compile Include="Forms\Supply\SupplyMaterials\PurchaseOrderMaterialsSelection.Designer.cs">
       <DependentUpon>PurchaseOrderMaterialsSelection.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Supply\SupplyMaterials\QualityControlPending.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\SupplyMaterials\QualityControlPending.Designer.cs">
+      <DependentUpon>QualityControlPending.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Supply\SupplyMaterials\ReceiptAndQuality.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1334,6 +1340,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\SupplyMaterials\PurchaseOrderMaterialsSelection.resx">
       <DependentUpon>PurchaseOrderMaterialsSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\SupplyMaterials\QualityControlPending.resx">
+      <DependentUpon>QualityControlPending.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\SupplyMaterials\ReceiptAndQuality.resx">
       <DependentUpon>ReceiptAndQuality.cs</DependentUpon>
