@@ -9,6 +9,7 @@ using HKSupply.General;
 using HKSupply.Helpers;
 using HKSupply.Models;
 using HKSupply.Models.Supply;
+using HKSupply.Styles;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,8 +38,8 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
         #endregion
 
         #region Private Members
-        Font _labelDefaultFontBold = new Font("SourceSansProRegular", 8, FontStyle.Bold);
-        Font _labelDefaultFont = new Font("SourceSansProRegular", 8, FontStyle.Regular);
+        Font _labelDefaultFontBold = AppStyles.LabelDefaultFontBold;
+        Font _labelDefaultFont = AppStyles.LabelDefaultFont;
 
         List<SupplyStatus> _supplyStatusList;
         List<Supplier> _suppliersList;

@@ -1288,59 +1288,6 @@ namespace HKSupply.Services.Implementations
             }
         }
 
-        //public string GetPackingListNumber(string idCustomer, string idSupplier, DateTime date)
-        //{
-        //    try
-        //    {
-        //        using (var db = new HKSupplyContext())
-        //        {
-
-        //            string strCont;
-        //            string pkNumber = string.Empty;
-        //            string code = string.Empty;
-
-        //            var pakingsDocs = db.DocsHead
-        //                   .Where(a => a.IdSupplyDocType.Equals(Constants.SUPPLY_DOCTYPE_PL) && 
-        //                   (string.IsNullOrEmpty(idSupplier) == true || a.IdSupplier.Equals(idSupplier)) &&
-        //                   (string.IsNullOrEmpty(idCustomer) == true || a.IdCustomer.Equals(idCustomer)) &&
-        //                   System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("year", date) &&
-        //                   System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", a.DocDate) == System.Data.Entity.SqlServer.SqlFunctions.DatePart("month", date))
-        //                   .ToList();
-
-        //            strCont = $"{(pakingsDocs.Count + 1).ToString().PadLeft(3, '0')}";
-
-        //            pkNumber = $"{Constants.SUPPLY_DOCTYPE_PL}{code}{DateTime.Now.Year.ToString()}{DateTime.Now.Month.ToString("d2")}{strCont}";
-
-        //            return pkNumber;
-        //        }
-        //    }
-        //    catch (SqlException sqlex)
-        //    {
-        //        for (int i = 0; i < sqlex.Errors.Count; i++)
-        //        {
-        //            _log.Error("Index #" + i + "\n" +
-        //                "Message: " + sqlex.Errors[i].Message + "\n" +
-        //                "Error Number: " + sqlex.Errors[i].Number + "\n" +
-        //                "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
-        //                "Source: " + sqlex.Errors[i].Source + "\n" +
-        //                "Procedure: " + sqlex.Errors[i].Procedure + "\n");
-
-        //            switch (sqlex.Errors[i].Number)
-        //            {
-        //                case -1: //connection broken
-        //                case -2: //timeout
-        //                    throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
-        //            }
-        //        }
-        //        throw sqlex;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _log.Error(ex.Message, ex);
-        //        throw ex;
-        //    }
-        //}
-
         #region Get Generic Doc Number
         public string GetGenericDocHeadNumber(string idSupplyDocType, string idCustomer, string idSupplier, DateTime date)
         {
@@ -1608,6 +1555,60 @@ namespace HKSupply.Services.Implementations
                 throw anex;
             }
 
+        }
+
+        public List<DocHead> GetAssociatedPoPacking(string idDoc, List<string> idDocRelated, string idSupplyDocType)
+        {
+            try
+            {
+                List<DocHead> associatedPoPacking = new List<DocHead>();
+
+                using (var db = new HKSupplyContext())
+                {
+                    associatedPoPacking = db.DocsHead
+                        //.Include(l => l.Lines)
+                        .Join(db.DocsLines,
+                        head => head.IdDoc,
+                        lines => lines.IdDoc,
+                        (head, lines) => new { DocHead = head, DocLine = lines })
+                        .Where(headAndLines => headAndLines.DocHead.IdSupplyDocType.Equals(Constants.SUPPLY_DOCTYPE_PL) &&
+                        headAndLines.DocHead.IdDoc != idDoc &&
+                        idDocRelated.Contains(headAndLines.DocLine.IdDocRelated))
+                        //.Select(a => a.DocHead.IdDoc)
+                        .Select(a => a.DocHead)
+                        .Include(x => x.Lines)
+                        .Distinct()
+                        .ToList();
+
+                }
+
+                return associatedPoPacking;
+            }
+            catch (SqlException sqlex)
+            {
+                for (int i = 0; i < sqlex.Errors.Count; i++)
+                {
+                    _log.Error("Index #" + i + "\n" +
+                        "Message: " + sqlex.Errors[i].Message + "\n" +
+                        "Error Number: " + sqlex.Errors[i].Number + "\n" +
+                        "LineNumber: " + sqlex.Errors[i].LineNumber + "\n" +
+                        "Source: " + sqlex.Errors[i].Source + "\n" +
+                        "Procedure: " + sqlex.Errors[i].Procedure + "\n");
+
+                    switch (sqlex.Errors[i].Number)
+                    {
+                        case -1: //connection broken
+                        case -2: //timeout
+                            throw new DBServerConnectionException(GlobalSetting.ResManager.GetString("DBServerConnectionError"));
+                    }
+                }
+                throw sqlex;
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message, ex);
+                throw ex;
+            }
         }
 
         #endregion
@@ -2196,13 +2197,19 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Generar el documento de devolución de material que no pasa el control de calidad
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="qualityControlPending"></param>
+        /// <returns></returns>
         private DocHead GetReturnGoodsDoc(HKSupplyContext db, DocHead qualityControlPending)
         {
             try
             {
                 List<DocLine> linesReturnGoods = new List<DocLine>();
                 var rejectedLines = qualityControlPending.Lines.Where(a => a.RejectedQuantity > 0).ToList();
-                //var idDocQcp = GetQualityControlPendingNumber(db, packingList.IdSupplier, DateTime.Now);
+
                 var idDocQcp = GetGenericDocHeadNumber(
                     db: db,
                     idSupplyDocType: Constants.SUPPLY_DOCTYPE_RT,

@@ -28,6 +28,11 @@ namespace HKSupply.Styles
         public static Color SupplyStatusClsBKGD1 = Color.LightSlateGray;
         public static Color SupplyStatusClsBKGD2 = Color.LightSlateGray; //Color.LightGray;
 
+
+        //***** Fonts *****//
+        public static Font LabelDefaultFontBold = new Font("SourceSansProRegular", 8, FontStyle.Bold);
+        public static Font LabelDefaultFont = new Font("SourceSansProRegular", 8, FontStyle.Regular);
+
         #region Public Methods
 
         #region Private Members

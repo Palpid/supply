@@ -51,8 +51,8 @@ namespace HKSupply.Forms.Supply
 
         #region Private Members
 
-        Font _labelDefaultFontBold = new Font("SourceSansProRegular", 8, FontStyle.Bold);
-        Font _labelDefaultFont = new Font("SourceSansProRegular", 8, FontStyle.Regular);
+        Font _labelDefaultFontBold = AppStyles.LabelDefaultFontBold;
+        Font _labelDefaultFont = AppStyles.LabelDefaultFont;
 
         List<SupplyStatus> _supplyStatusList;
 

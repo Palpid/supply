@@ -8,6 +8,7 @@ using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using HKSupply.General;
 using HKSupply.Helpers;
 using HKSupply.Models;
@@ -31,12 +32,14 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
         #region Constants
         private const string COL_SELECTED = "Selected";
         private const string VIEW_COLUMN = "View";
+        private const string COL_PENDING_QTY = "PENDING_QTY";
+        private const string COL_QTY_IN_OTHER_PK = "QTY_IN_OTHERS_PK";
         #endregion
 
         #region Private Members
 
-        Font _labelDefaultFontBold = new Font("SourceSansProRegular", 8, FontStyle.Bold);
-        Font _labelDefaultFont = new Font("SourceSansProRegular", 8, FontStyle.Regular);
+        Font _labelDefaultFontBold = AppStyles.LabelDefaultFontBold; 
+        Font _labelDefaultFont = AppStyles.LabelDefaultFont; 
 
         List<SupplyStatus> _supplyStatusList;
 
@@ -51,8 +54,12 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
         BindingList<DocLine> _docLinesDeliveredGoodsList;
         BindingList<DocHeadAttachFile> _docHeadAttachFileList;
 
+        List<DocHead> _associatedPoPacking;
+
         bool _isLoadingPacking = false;
         bool _isCreatingPacking = false;
+
+        Stream _gridviewPoLinesDefaultLayputStr = new MemoryStream();
         #endregion
 
         #region Constructor
@@ -77,6 +84,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 SetUpGrdFiles();
                 SetupPanelControl();
                 SetVisiblePropertyByState();
+
             }
             catch (Exception ex)
             {
@@ -87,6 +95,8 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 Cursor = Cursors.Default;
             }
         }
+
+
         #endregion
 
         #region Ribbon
@@ -502,6 +512,54 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
             }
         }
 
+        private void ToolTipController1_GetActiveObjectInfo(object sender, ToolTipControllerGetActiveObjectInfoEventArgs e)
+        {
+            try
+            {
+                if (e.Info == null && e.SelectedControl == xgrdLinesPoSelection)
+                {
+                    GridView view = xgrdLinesPoSelection.FocusedView as GridView;
+                    GridHitInfo info = view.CalcHitInfo(e.ControlMousePosition);
+                    if (info.InRowCell)
+                    {
+                        if (info.Column.FieldName == COL_QTY_IN_OTHER_PK)
+                        {
+                            var rowHandle = info.RowHandle;
+                            var row = view.GetRow(rowHandle) as DocLine;
+                            string cellKey = $"{info.RowHandle.ToString()} - {info.Column.FieldName}";
+
+                            //Obtenemos los packing para esa cantidad acumulada de la celda
+                            var docPo = gridViewPoSelection.GetRow(gridViewPoSelection.FocusedRowHandle) as DocHead;
+                            if (docPo == null)
+                                return;
+
+                            var tmpPKs = _associatedPoPacking
+                                .Where(b => (b.Lines.Where(c => c.IdItemBcn.Equals(row.IdItemBcn) && c.IdDocRelated.Equals(docPo.IdDoc))).Count() > 0)
+                                .Select(c => c.IdDoc)
+                                .ToList();
+
+                            string msg = string.Empty;
+
+                            if (tmpPKs.Count > 0)
+                            {
+                                foreach (var pl in tmpPKs)
+                                    msg += $"{pl}{Environment.NewLine}";
+
+                                //mostramos el tooltip
+                                e.Info = new ToolTipControlInfo(cellKey, msg, "Packing List:", ToolTipIconType.Information);
+                            }
+
+                        }
+                        
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void GridViewPoSelection_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
@@ -679,11 +737,31 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
             try
             {
                 GridView view = sender as GridView;
-                if (e.Column.FieldName == "PENDING_QTY" && e.IsGetData)
+                if (e.Column.FieldName == COL_PENDING_QTY && e.IsGetData)
                     e.Value = (
                         (decimal)view.GetRowCellValue(e.ListSourceRowIndex, nameof(DocLine.Quantity)) -
                         (decimal)view.GetRowCellValue(e.ListSourceRowIndex, nameof(DocLine.DeliveredQuantity))
                         );
+
+                if (e.Column.FieldName == COL_QTY_IN_OTHER_PK && e.IsGetData)
+                {
+                    var idItemBcn = (string)view.GetRowCellValue(e.ListSourceRowIndex, nameof(DocLine.IdItemBcn));
+                    var docPo = gridViewPoSelection.GetRow(gridViewPoSelection.FocusedRowHandle) as DocHead;
+                    if (docPo == null)
+                        return;
+
+                    var tmp = _associatedPoPacking
+                        //.Where(a => a.Lines.Any(b => b.IdItemBcn.Equals(idItemBcn)))
+                        .Select(b => b.Lines.Where(c => c.IdItemBcn.Equals(idItemBcn) && c.IdDocRelated.Equals(docPo.IdDoc)))
+                        .ToList();
+
+                    if (tmp != null)
+                    {
+                        var qty = tmp.Select(a => a.Sum(b => b.Quantity)).FirstOrDefault();
+                        e.Value = qty;
+                    }
+
+                }
             }
             catch (Exception ex)
             {
@@ -857,20 +935,20 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 txtSupplierReference.Text = _docHeadPK.ManualReference;
                 memoEditRemarks.Text = _docHeadPK.Remarks;
 
-                //***** Grid SO Selection *****/
+                //***** Grid SO Selection *****//
                 ResetSupplierPOs();
                 var packingSOs = GlobalSetting.SupplyDocsService.GetSalesOrderFromPackingList(_docHeadPK.IdDoc);
                 _docPoSelectionList = new BindingList<DocHead>(packingSOs);
                 xgrdPoSelection.DataSource = null;
                 xgrdPoSelection.DataSource = _docPoSelectionList;
 
-                //***** Grid Delivered Goods*****/
+                //***** Grid Delivered Goods*****//
                 _docLinesDeliveredGoodsList = new BindingList<DocLine>(_docHeadPK.Lines);
 
                 xgrdLinesDeliveredGoods.DataSource = null;
                 xgrdLinesDeliveredGoods.DataSource = _docLinesDeliveredGoodsList;
 
-                //***** Terms Tab *****/
+                //***** Terms Tab *****//
                 lblTxtCompany.Text = supplier.SupplierName;
                 lblTxtAddress.Text = supplier.ShippingAddress;
                 lblTxtContact.Text = $"{supplier.ContactName} ({supplier.ContactPhone})";
@@ -878,10 +956,17 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 lblTxtInvoiceTo.Text = "??"; //TODO
                 sluePaymentTerm.EditValue = _docHeadPK.IdPaymentTerms;
 
-                //***** Files Tab *****/
+                //***** Files Tab *****//
                 xgrdFiles.DataSource = null;
                 xgrdFiles.DataSource = _docHeadAttachFileList;
                 xtpFiles.PageVisible = true;
+
+                //*****Buscamos los packing asociados a las PO para la columna de "cantidad en otros packings" *****//
+                List<string> poList = _docPoSelectionList.Select(a => a.IdDoc).ToList();
+                _associatedPoPacking = GlobalSetting.SupplyDocsService.GetAssociatedPoPacking(
+                    idDoc: txtPKNumber.Text, 
+                    idDocRelated: poList, 
+                    idSupplyDocType: Constants.SUPPLY_DOCTYPE_PL);
 
             }
             catch
@@ -1142,6 +1227,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 sbViewNewFile.Click += SbViewNewFile_Click;
                 sbOpenFile.Click += SbOpenFile_Click;
                 sbAttachFile.Click += SbAttachFile_Click;
+                toolTipController1.GetActiveObjectInfo += ToolTipController1_GetActiveObjectInfo;
             }
             catch
             {
@@ -1236,18 +1322,20 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 GridColumn colDeliveredQuantity = new GridColumn() { Caption = "Delivered Qty", Visible = true, FieldName = nameof(DocLine.DeliveredQuantity), Width = 110 };
                 GridColumn colDummyQuantity = new GridColumn() { Caption = "Packing Quantity", Visible = true, FieldName = nameof(DocLine.DummyQuantity), Width = 110 };
                 GridColumn colUnit = new GridColumn() { Caption = "Unit", Visible = true, FieldName = nameof(DocLine.ItemUnit), Width = 85 };
-                GridColumn colUnitPrice = new GridColumn() { Caption = "Unit Price", Visible = true, FieldName = nameof(DocLine.UnitPrice), Width = 85 };
-                GridColumn colTotalAmount = new GridColumn() { Caption = "TotalAmount", Visible = true, FieldName = nameof(DocLine.TotalAmount), Width = 120 };
+                //GridColumn colUnitPrice = new GridColumn() { Caption = "Unit Price", Visible = true, FieldName = nameof(DocLine.UnitPrice), Width = 85 };
+                //GridColumn colTotalAmount = new GridColumn() { Caption = "TotalAmount", Visible = true, FieldName = nameof(DocLine.TotalAmount), Width = 120 };
                 GridColumn colIdIdSupplyStatus = new GridColumn() { Caption = "Status", Visible = true, FieldName = nameof(DocLine.IdSupplyStatus), Width = 75 };
                 //Unbound Column. Para calcular la cantidad pendiente
-                GridColumn colPendingQuantity = new GridColumn() { Caption = "Pending Qty", Visible = true, FieldName = "PENDING_QTY", Width = 110, UnboundType = UnboundColumnType.Integer };
+                GridColumn colPendingQuantity = new GridColumn() { Caption = "Pending Qty", Visible = true, FieldName = COL_PENDING_QTY, Width = 110, UnboundType = UnboundColumnType.Integer };
+                //Unbound Column. Para calcular la cantidad que hay del item/PO en otros packings 
+                GridColumn colQtyInOthersPackings = new GridColumn() { Caption = "Qty in others Packings", Visible = true, FieldName = COL_QTY_IN_OTHER_PK, Width = 150, UnboundType = UnboundColumnType.Decimal };
 
                 //Display Format
-                colUnitPrice.DisplayFormat.FormatType = FormatType.Numeric;
-                colUnitPrice.DisplayFormat.FormatString = "n4";
+                //colUnitPrice.DisplayFormat.FormatType = FormatType.Numeric;
+                //colUnitPrice.DisplayFormat.FormatString = "n4";
 
-                colTotalAmount.DisplayFormat.FormatType = FormatType.Numeric;
-                colTotalAmount.DisplayFormat.FormatString = "n4";
+                //colTotalAmount.DisplayFormat.FormatType = FormatType.Numeric;
+                //colTotalAmount.DisplayFormat.FormatString = "n4";
 
                 colQuantity.DisplayFormat.FormatType = FormatType.Numeric;
                 colQuantity.DisplayFormat.FormatString = "n3";
@@ -1260,6 +1348,9 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
 
                 colDummyQuantity.DisplayFormat.FormatType = FormatType.Numeric;
                 colDummyQuantity.DisplayFormat.FormatString = "n3";
+
+                colQtyInOthersPackings.DisplayFormat.FormatType = FormatType.Numeric;
+                colQtyInOthersPackings.DisplayFormat.FormatString = "n3";
 
                 //Edit Repositories
                 RepositoryItemTextEdit ritxt3Dec = new RepositoryItemTextEdit();
@@ -1282,8 +1373,12 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 //Summaries
                 gridViewLinesPoSelection.OptionsView.ShowFooter = true;
 
-                colTotalAmount.Summary.Add(SummaryItemType.Sum, nameof(DocLine.TotalAmount), "{0:n4}");
-                colDummyQuantity.Summary.Add(SummaryItemType.Sum, nameof(DocLine.TotalAmount), "{0}");
+                //colTotalAmount.Summary.Add(SummaryItemType.Sum, nameof(DocLine.TotalAmount), "{0:n4}");
+                colDummyQuantity.Summary.Add(SummaryItemType.Sum, nameof(DocLine.DummyQuantity), "{0:n3}");
+                colQuantity.Summary.Add(SummaryItemType.Sum, nameof(DocLine.Quantity), "{0:n3}");
+                colDeliveredQuantity.Summary.Add(SummaryItemType.Sum, nameof(DocLine.DeliveredQuantity), "{0:n3}");
+                colPendingQuantity.Summary.Add(SummaryItemType.Sum, COL_PENDING_QTY, "{0:n3}");
+                colQtyInOthersPackings.Summary.Add(SummaryItemType.Sum, COL_QTY_IN_OTHER_PK, "{0:n3}");
 
                 //Add columns to grid root view
                 gridViewLinesPoSelection.Columns.Add(colIdItemBcn);
@@ -1294,9 +1389,10 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 gridViewLinesPoSelection.Columns.Add(colPendingQuantity);
                 gridViewLinesPoSelection.Columns.Add(colDummyQuantity);
                 gridViewLinesPoSelection.Columns.Add(colUnit);
-                gridViewLinesPoSelection.Columns.Add(colUnitPrice);
-                gridViewLinesPoSelection.Columns.Add(colTotalAmount);
+                //gridViewLinesPoSelection.Columns.Add(colUnitPrice);
+                //gridViewLinesPoSelection.Columns.Add(colTotalAmount);
                 gridViewLinesPoSelection.Columns.Add(colIdIdSupplyStatus);
+                gridViewLinesPoSelection.Columns.Add(colQtyInOthersPackings);
 
                 //Events
                 gridViewLinesPoSelection.SelectionChanged += GridViewLinesPoSelection_SelectionChanged;
@@ -1304,6 +1400,16 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 gridViewLinesPoSelection.ValidatingEditor += GridViewLinesPoSelection_ValidatingEditor;
                 gridViewLinesPoSelection.ShowingEditor += GridViewLinesPoSelection_ShowingEditor;
                 gridViewLinesPoSelection.CustomUnboundColumnData += GridViewLinesPoSelection_CustomUnboundColumnData;
+
+                //tooltip
+                xgrdLinesPoSelection.ToolTipController = toolTipController1;
+
+                gridViewLinesPoSelection.OptionsLayout.StoreAppearance = true;
+                gridViewLinesPoSelection.OptionsLayout.StoreVisualOptions = true;
+                gridViewLinesPoSelection.SaveLayoutToStream(_gridviewPoLinesDefaultLayputStr);
+                _gridviewPoLinesDefaultLayputStr.Seek(0, SeekOrigin.Begin);
+                gridViewLinesPoSelection.Tag = _gridviewPoLinesDefaultLayputStr;
+
             }
             catch
             {
@@ -1337,16 +1443,16 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 GridColumn colQuantityOriginal = new GridColumn() { Caption = "Order Quantity", Visible = true, FieldName = nameof(DocLine.QuantityOriginal), Width = 110 };
                 GridColumn colQuantity = new GridColumn() { Caption = "Quantity", Visible = true, FieldName = nameof(DocLine.Quantity), Width = 85 };
                 GridColumn colUnit = new GridColumn() { Caption = "Unit", Visible = true, FieldName = nameof(DocLine.ItemUnit), Width = 85 };
-                GridColumn colUnitPrice = new GridColumn() { Caption = "Unit Price", Visible = true, FieldName = nameof(DocLine.UnitPrice), Width = 85 };
-                GridColumn colTotalAmount = new GridColumn() { Caption = "Total Amount", Visible = true, FieldName = nameof(DocLine.TotalAmount), Width = 120 };
+                //GridColumn colUnitPrice = new GridColumn() { Caption = "Unit Price", Visible = true, FieldName = nameof(DocLine.UnitPrice), Width = 85 };
+                //GridColumn colTotalAmount = new GridColumn() { Caption = "Total Amount", Visible = true, FieldName = nameof(DocLine.TotalAmount), Width = 120 };
                 GridColumn colRemarks = new GridColumn() { Caption = "Notes", Visible = true, FieldName = nameof(DocLine.Remarks), Width = 300 };
 
                 //Display Format
-                colUnitPrice.DisplayFormat.FormatType = FormatType.Numeric;
-                colUnitPrice.DisplayFormat.FormatString = "n4";
+                //colUnitPrice.DisplayFormat.FormatType = FormatType.Numeric;
+                //colUnitPrice.DisplayFormat.FormatString = "n4";
 
-                colTotalAmount.DisplayFormat.FormatType = FormatType.Numeric;
-                colTotalAmount.DisplayFormat.FormatString = "n4";
+                //colTotalAmount.DisplayFormat.FormatType = FormatType.Numeric;
+                //colTotalAmount.DisplayFormat.FormatString = "n4";
 
                 colQuantity.DisplayFormat.FormatType = FormatType.Numeric;
                 colQuantity.DisplayFormat.FormatString = "n3";
@@ -1357,10 +1463,10 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 //Summaries
                 gridViewLinesDeliveredGoods.OptionsView.ShowFooter = true;
 
-                colTotalAmount.Summary.Add(SummaryItemType.Sum, nameof(DocLine.TotalAmount), "{0:n4}");
+                //colTotalAmount.Summary.Add(SummaryItemType.Sum, nameof(DocLine.TotalAmount), "{0:n4}");
 
-                colQuantityOriginal.Summary.Add(SummaryItemType.Sum, nameof(DocLine.TotalAmount), "{0}");
-                colQuantity.Summary.Add(SummaryItemType.Sum, nameof(DocLine.TotalAmount), "{0}");
+                colQuantityOriginal.Summary.Add(SummaryItemType.Sum, nameof(DocLine.QuantityOriginal), "{0}");
+                colQuantity.Summary.Add(SummaryItemType.Sum, nameof(DocLine.Quantity), "{0}");
 
                 //Add columns to grid root view
                 gridViewLinesDeliveredGoods.Columns.Add(colIdDocRelated);
@@ -1370,8 +1476,8 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 gridViewLinesDeliveredGoods.Columns.Add(colQuantityOriginal);
                 gridViewLinesDeliveredGoods.Columns.Add(colQuantity);
                 gridViewLinesDeliveredGoods.Columns.Add(colUnit);
-                gridViewLinesDeliveredGoods.Columns.Add(colUnitPrice);
-                gridViewLinesDeliveredGoods.Columns.Add(colTotalAmount);
+                //gridViewLinesDeliveredGoods.Columns.Add(colUnitPrice);
+                //gridViewLinesDeliveredGoods.Columns.Add(colTotalAmount);
                 gridViewLinesDeliveredGoods.Columns.Add(colRemarks);
 
                 //Events
@@ -1714,6 +1820,10 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 //txtPKNumber.Text = string.Empty;
                 SetObjectsReadOnly();
 
+                //not allow grid editing
+                gridViewLinesPoSelection.OptionsBehavior.Editable = false;
+                gridViewLinesDeliveredGoods.OptionsBehavior.Editable = false;
+
                 if (idPk != null)
                 {
                     txtPKNumber.Text = idPk;
@@ -1721,6 +1831,8 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 }
                 RestoreInitState();
                 SetVisiblePropertyByState();
+
+                gridViewLinesPoSelection.SetEditingStyles(); //aki
             }
             catch
             {
@@ -1759,6 +1871,9 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 SetGridsEnabled();
 
                 SetVisiblePropertyByState();
+
+                gridViewLinesPoSelection.SetEditingStyles(); //aki
+
             }
             catch
             {
@@ -1797,6 +1912,12 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
 
                 xgrdLinesPoSelection.DataSource = null;
 
+                //Buscamos los packing asociados a las PO para la columna de "cantidad en otros packings"
+                List<string> poList = _docPoSelectionList.Select(a => a.IdDoc).ToList();
+                _associatedPoPacking = GlobalSetting.SupplyDocsService.GetAssociatedPoPacking(
+                    idDoc: txtPKNumber.Text, 
+                    idDocRelated: poList, 
+                    idSupplyDocType: Constants.SUPPLY_DOCTYPE_PL);
 
                 SetGridsEnabled(); //habilitar los grids para edición
                 SetVisiblePropertyByState();
@@ -1837,6 +1958,13 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
 
                     xgrdPoSelection.DataSource = null;
                     xgrdPoSelection.DataSource = _docPoSelectionList;
+
+                    //Buscamos los packing asociados a las PO para la columna de "cantidad en otros packings"
+                    List<string> poList = _docPoSelectionList.Select(a => a.IdDoc).ToList();
+                    _associatedPoPacking = GlobalSetting.SupplyDocsService.GetAssociatedPoPacking(
+                        idDoc: txtPKNumber.Text, 
+                        idDocRelated: poList, 
+                        idSupplyDocType: Constants.SUPPLY_DOCTYPE_PL);
                 }
             }
             catch
@@ -2051,5 +2179,6 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
         #endregion
 
         #endregion
+
     }
 }

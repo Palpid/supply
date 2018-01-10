@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PackingListMaterials));
             this.xtcGeneral = new DevExpress.XtraTab.XtraTabControl();
             this.xtpPakingList = new DevExpress.XtraTab.XtraTabPage();
@@ -94,6 +95,7 @@
             this.pcFiles = new DevExpress.XtraEditors.PanelControl();
             this.xgrdFiles = new DevExpress.XtraGrid.GridControl();
             this.gridViewFiles = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.toolTipController1 = new DevExpress.Utils.ToolTipController(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcGeneral)).BeginInit();
             this.xtcGeneral.SuspendLayout();
@@ -924,5 +926,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem35;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem36;
         private DevExpress.XtraEditors.SimpleButton sbAttachFile;
+        private DevExpress.Utils.ToolTipController toolTipController1;
     }
 }

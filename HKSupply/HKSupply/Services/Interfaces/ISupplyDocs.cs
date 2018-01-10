@@ -26,5 +26,6 @@ namespace HKSupply.Services.Interfaces
 
         //string GetPackingListNumber(string idCustomer, string idSupplier, DateTime date);
         string GetGenericDocHeadNumber(string idSupplyDocType, string idCustomer, string idSupplier, DateTime date);
+        List<DocHead> GetAssociatedPoPacking(string idDoc, List<string> idDocRelated, string idSupplyDocType);
     }
 }

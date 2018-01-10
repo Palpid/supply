@@ -29,8 +29,8 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
     {
         #region Private Members
 
-        Font _labelDefaultFontBold = new Font("SourceSansProRegular", 8, FontStyle.Bold);
-        Font _labelDefaultFont = new Font("SourceSansProRegular", 8, FontStyle.Regular);
+        Font _labelDefaultFontBold = AppStyles.LabelDefaultFontBold;
+        Font _labelDefaultFont = AppStyles.LabelDefaultFont;
 
         List<Supplier> _suppliersList;
         List<Currency> _currenciesList;
@@ -133,6 +133,11 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                     MessageBox.Show(GlobalSetting.ResManager.GetString("NoDataSelected"));
                     RestoreInitState();
 
+                }
+                else if (_docHeadPO.IdSupplyStatus != Constants.SUPPLY_STATUS_OPEN)
+                {
+                    MessageBox.Show("Only OPEN Purchase Orders can be edited");
+                    RestoreInitState();
                 }
                 else
                 {
@@ -348,6 +353,43 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
             catch (Exception ex)
             {
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SbClosePO_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bool res = false;
+
+                DialogResult result = MessageBox.Show("This action will close the Purchase Order and cannot be edited", "", MessageBoxButtons.YesNo);
+
+                if (result != DialogResult.Yes)
+                    return;
+
+                Cursor = Cursors.WaitCursor;
+
+                if (CurrentState == ActionsStates.Edit)
+                {
+                    res = UpdatePO(closePO: true);
+                }
+
+                if (res == true)
+                {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
+                    ActionsAfterCU();
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
             }
         }
 
@@ -586,7 +628,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 sbSearch.Click += SbSearch_Click;
                 sbOrder.Click += SbOrder_Click;
                 sbImportExcel.Click += SbImportExcel_Click;
-                //sbFinishPO.Click += SbFinishPO_Click;
+                sbClosePO.Click += SbClosePO_Click;
                 dateEditDelivery.EditValueChanged += DateEditDelivery_EditValueChanged;
                 dateEditDocDate.EditValueChanged += DateEditDocDate_EditValueChanged;
                 slueSupplier.EditValueChanged += SlueSupplier_EditValueChanged;
@@ -1422,16 +1464,23 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 switch (CurrentState)
                 {
                     case ActionsStates.Edit:
-                    case ActionsStates.New:
-
                         sbImportExcel.Visible = true;
                         sbOrder.Visible = true;
                         sbSearch.Visible = false;
+                        sbClosePO.Visible = true;
+                        break;
+
+                    case ActionsStates.New:
+                        sbImportExcel.Visible = true;
+                        sbOrder.Visible = true;
+                        sbSearch.Visible = false;
+                        sbClosePO.Visible = false;
                         break;
                     default:
                         sbOrder.Visible = false;
                         sbImportExcel.Visible = false;
                         sbSearch.Visible = true;
+                        sbClosePO.Visible = false;
                         break;
                 }
             }
@@ -2012,7 +2061,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
             }
         }
 
-        private bool UpdatePO()
+        private bool UpdatePO(bool closePO = false)
         {
             try
             {
@@ -2023,6 +2072,13 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                     .ThenBy(b => b.IdItemBcn)
                     .ToList();
 
+                //Si se cierra el documento cerramos todas las líneas también
+                if (closePO)
+                {
+                    //The ToList is needed in order to evaluate the select immediately due to lazy evaluation.
+                    sortedLines.Select(a => { a.IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE; return a; }).ToList();
+                }
+
                 DocHead purchaseOrder = new DocHead()
                 {
                     IdDoc = txtPONumber.Text,
@@ -2030,7 +2086,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                     CreationDate = _docHeadPO.CreationDate,
                     DeliveryDate = dateEditDelivery.DateTime,
                     DocDate = dateEditDocDate.DateTime,
-                    IdSupplyStatus = Constants.SUPPLY_STATUS_OPEN,
+                    IdSupplyStatus = (closePO ? Constants.SUPPLY_STATUS_CLOSE: Constants.SUPPLY_STATUS_OPEN) ,
                     IdSupplier = slueSupplier.EditValue as string,
                     IdCustomer = Constants.ETNIA_HK_COMPANY_CODE,
                     IdDeliveryTerm = slueDeliveryTerms.EditValue as string,
