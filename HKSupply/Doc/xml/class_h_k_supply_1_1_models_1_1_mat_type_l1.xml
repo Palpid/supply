@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_mat_type_l1" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::MatTypeL1</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_mat_type_l1_1a64db0f8d7e4b0340df49dde2318a502d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.MatTypeL1.IdMatTypeL1</definition>
+        <argsstring></argsstring>
+        <name>IdMatTypeL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MatTypeL1.cs" line="16" column="1" bodyfile="HKSupply/Models/MatTypeL1.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_mat_type_l1_1aada8220899249bf0985036a5a090e86b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.MatTypeL1.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MatTypeL1.cs" line="18" column="1" bodyfile="HKSupply/Models/MatTypeL1.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_mat_type_l1_1a3eb3b404fd126366080f9cafcfed397d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.MatTypeL1.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MatTypeL1.cs" line="20" column="1" bodyfile="HKSupply/Models/MatTypeL1.cs" bodystart="20" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_mat_type_l1_1a15e69846adbedd8a5b96f8900bde7e4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.MatTypeL1.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MatTypeL1.cs" line="30" column="1" bodyfile="HKSupply/Models/MatTypeL1.cs" bodystart="30" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/MatTypeL1.cs" line="14" column="1" bodyfile="HKSupply/Models/MatTypeL1.cs" bodystart="13" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_mat_type_l1_1aada8220899249bf0985036a5a090e86b" prot="public" virt="non-virtual"><scope>HKSupply::Models::MatTypeL1</scope><name>Description</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_mat_type_l1_1a3eb3b404fd126366080f9cafcfed397d" prot="public" virt="non-virtual"><scope>HKSupply::Models::MatTypeL1</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_mat_type_l1_1a15e69846adbedd8a5b96f8900bde7e4a" prot="public" virt="non-virtual"><scope>HKSupply::Models::MatTypeL1</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_mat_type_l1_1a64db0f8d7e4b0340df49dde2318a502d" prot="public" virt="non-virtual"><scope>HKSupply::Models::MatTypeL1</scope><name>IdMatTypeL1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

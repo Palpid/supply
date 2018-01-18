@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_master_1_1_exchange_rate_update" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Master::ExchangeRateUpdate</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_exchange_rate_update_1acbdda152d3a56e4828a0750018657c6f" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Master.ExchangeRateUpdate.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ExchangeRateUpdate.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Master/ExchangeRateUpdate.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_exchange_rate_update_1ac269557f690e3f16863f838db3899926" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Master.ExchangeRateUpdate.ExchangeRateUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>ExchangeRateUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ExchangeRateUpdate.cs" line="12" column="1" bodyfile="HKSupply/Forms/Master/ExchangeRateUpdate.cs" bodystart="12" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_exchange_rate_update_1ab92b2e4dbdfa5b643d6a5321f116d2ec" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ExchangeRateUpdate.ExchangeRateUpdate_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ExchangeRateUpdate_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ExchangeRateUpdate.cs" line="18" column="1" bodyfile="HKSupply/Forms/Master/ExchangeRateUpdate.cs" bodystart="18" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_exchange_rate_update_1a40bf6ff771f8e1b4caece211457dbfbc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ExchangeRateUpdate.OpenWaitFormToUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>OpenWaitFormToUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ExchangeRateUpdate.cs" line="32" column="1" bodyfile="HKSupply/Forms/Master/ExchangeRateUpdate.cs" bodystart="32" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_exchange_rate_update_1aad3418340e5530cda5da71b577b5809e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ExchangeRateUpdate.UpdateRates</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateRates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ExchangeRateUpdate.cs" line="51" column="1" bodyfile="HKSupply/Forms/Master/ExchangeRateUpdate.cs" bodystart="51" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_exchange_rate_update_1add8feab65dbc58cb849ae1beec73a967" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ExchangeRateUpdate.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ExchangeRateUpdate.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/ExchangeRateUpdate.Designer.cs" bodystart="29" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_exchange_rate_update_1a8a6183a88689de494ee620f85b19dbc5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.ExchangeRateUpdate.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ExchangeRateUpdate.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Master/ExchangeRateUpdate.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="586">
+        <label>Form</label>
+      </node>
+      <node id="585">
+        <label>HKSupply.Forms.Master.ExchangeRateUpdate</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_exchange_rate_update"/>
+        <childnode refid="586" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="588">
+        <label>Form</label>
+      </node>
+      <node id="587">
+        <label>HKSupply.Forms.Master.ExchangeRateUpdate</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_exchange_rate_update"/>
+        <childnode refid="588" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Master/ExchangeRateUpdate.cs" line="11" column="1" bodyfile="HKSupply/Forms/Master/ExchangeRateUpdate.cs" bodystart="10" bodyend="63"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_exchange_rate_update_1acbdda152d3a56e4828a0750018657c6f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ExchangeRateUpdate</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_exchange_rate_update_1a8a6183a88689de494ee620f85b19dbc5" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::ExchangeRateUpdate</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_exchange_rate_update_1ac269557f690e3f16863f838db3899926" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ExchangeRateUpdate</scope><name>ExchangeRateUpdate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_exchange_rate_update_1ab92b2e4dbdfa5b643d6a5321f116d2ec" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ExchangeRateUpdate</scope><name>ExchangeRateUpdate_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_exchange_rate_update_1add8feab65dbc58cb849ae1beec73a967" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ExchangeRateUpdate</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_exchange_rate_update_1a40bf6ff771f8e1b4caece211457dbfbc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ExchangeRateUpdate</scope><name>OpenWaitFormToUpdate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_exchange_rate_update_1aad3418340e5530cda5da71b577b5809e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ExchangeRateUpdate</scope><name>UpdateRates</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

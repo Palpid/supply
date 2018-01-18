@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_h_k_supply_1_1_properties_1_1_resources" kind="class" language="C#" prot="package">
     <compoundname>HKSupply::Properties::Resources</compoundname>
       <sectiondef kind="private-static-attrib">
@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Properties/Resources.Designer.cs" line="28" column="1" bodyfile="HKSupply/Properties/Resources.Designer.cs" bodystart="28" bodyend="-1"/>
+        <location file="HKSupply/Properties/Resources.Designer.cs" line="27" column="1" bodyfile="HKSupply/Properties/Resources.Designer.cs" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_h_k_supply_1_1_properties_1_1_resources_1a4a70d51d5e5fb3fc1dcb45194931a55b" prot="private" static="yes" mutable="no">
         <type>global::System.Globalization.CultureInfo</type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Properties/Resources.Designer.cs" line="30" column="1" bodyfile="HKSupply/Properties/Resources.Designer.cs" bodystart="30" bodyend="-1"/>
+        <location file="HKSupply/Properties/Resources.Designer.cs" line="29" column="1" bodyfile="HKSupply/Properties/Resources.Designer.cs" bodystart="29" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="property">
@@ -37,12 +37,12 @@
         <argsstring></argsstring>
         <name>ResourceManager</name>
         <briefdescription>
-<para>Devuelve la instancia ResourceManager almacenada en caché utilizada por esta clase. </para>        </briefdescription>
+<para>Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Properties/Resources.Designer.cs" line="41" column="1" bodyfile="HKSupply/Properties/Resources.Designer.cs" bodystart="42" bodyend="-1"/>
+        <location file="HKSupply/Properties/Resources.Designer.cs" line="39" column="1" bodyfile="HKSupply/Properties/Resources.Designer.cs" bodystart="39" bodyend="47"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_properties_1_1_resources_1a9a73deabb0aacc70c625dfeb7f625566" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>global::System.Globalization.CultureInfo</type>
@@ -50,12 +50,51 @@
         <argsstring></argsstring>
         <name>Culture</name>
         <briefdescription>
-<para>Invalida la propiedad CurrentUICulture del subproceso actual para todas las búsquedas de recursos usando esta clase de recursos fuertemente tipados. </para>        </briefdescription>
+<para>Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las búsquedas de recursos mediante esta clase de recurso fuertemente tipado. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Properties/Resources.Designer.cs" line="59" column="1" bodyfile="HKSupply/Properties/Resources.Designer.cs" bodystart="60" bodyend="-1"/>
+        <location file="HKSupply/Properties/Resources.Designer.cs" line="54" column="1" bodyfile="HKSupply/Properties/Resources.Designer.cs" bodystart="54" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_properties_1_1_resources_1a64643f578190c27a6f2a114e788b6e6f" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap HKSupply.Properties.Resources.formcaption_red</definition>
+        <argsstring></argsstring>
+        <name>formcaption_red</name>
+        <briefdescription>
+<para>Busca un recurso adaptado de tipo System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Properties/Resources.Designer.cs" line="66" column="1" bodyfile="HKSupply/Properties/Resources.Designer.cs" bodystart="66" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_properties_1_1_resources_1a6bc0f192e13d93dc62747cfe38e6c1d9" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap HKSupply.Properties.Resources.logo_etnia_barcelona</definition>
+        <argsstring></argsstring>
+        <name>logo_etnia_barcelona</name>
+        <briefdescription>
+<para>Busca un recurso adaptado de tipo System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Properties/Resources.Designer.cs" line="76" column="1" bodyfile="HKSupply/Properties/Resources.Designer.cs" bodystart="76" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_properties_1_1_resources_1ab894f14256b4fd86756a921995e075fe" prot="package" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap HKSupply.Properties.Resources.tabheaderbackground_red</definition>
+        <argsstring></argsstring>
+        <name>tabheaderbackground_red</name>
+        <briefdescription>
+<para>Busca un recurso adaptado de tipo System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Properties/Resources.Designer.cs" line="86" column="1" bodyfile="HKSupply/Properties/Resources.Designer.cs" bodystart="86" bodyend="91"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="package-func">
@@ -70,20 +109,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Properties/Resources.Designer.cs" line="33" column="1" bodyfile="HKSupply/Properties/Resources.Designer.cs" bodystart="33" bodyend="35"/>
+        <location file="HKSupply/Properties/Resources.Designer.cs" line="32" column="1" bodyfile="HKSupply/Properties/Resources.Designer.cs" bodystart="32" bodyend="33"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Clase de recurso fuertemente tipado para buscar cadenas traducidas, etc. </para>    </briefdescription>
+<para>Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="HKSupply/Properties/Resources.Designer.cs" line="26" column="1" bodyfile="HKSupply/Properties/Resources.Designer.cs" bodystart="25" bodyend="70"/>
+    <location file="HKSupply/Properties/Resources.Designer.cs" line="25" column="1" bodyfile="HKSupply/Properties/Resources.Designer.cs" bodystart="25" bodyend="92"/>
     <listofallmembers>
       <member refid="class_h_k_supply_1_1_properties_1_1_resources_1a9a73deabb0aacc70c625dfeb7f625566" prot="package" virt="non-virtual"><scope>HKSupply::Properties::Resources</scope><name>Culture</name></member>
+      <member refid="class_h_k_supply_1_1_properties_1_1_resources_1a64643f578190c27a6f2a114e788b6e6f" prot="package" virt="non-virtual"><scope>HKSupply::Properties::Resources</scope><name>formcaption_red</name></member>
+      <member refid="class_h_k_supply_1_1_properties_1_1_resources_1a6bc0f192e13d93dc62747cfe38e6c1d9" prot="package" virt="non-virtual"><scope>HKSupply::Properties::Resources</scope><name>logo_etnia_barcelona</name></member>
       <member refid="class_h_k_supply_1_1_properties_1_1_resources_1a4a70d51d5e5fb3fc1dcb45194931a55b" prot="private" virt="non-virtual"><scope>HKSupply::Properties::Resources</scope><name>resourceCulture</name></member>
       <member refid="class_h_k_supply_1_1_properties_1_1_resources_1a9e7f638e80b3ce0e64cec6b4ae0d71c0" prot="private" virt="non-virtual"><scope>HKSupply::Properties::Resources</scope><name>resourceMan</name></member>
       <member refid="class_h_k_supply_1_1_properties_1_1_resources_1aabe39f99cba09b389b258ffb017cbad5" prot="package" virt="non-virtual"><scope>HKSupply::Properties::Resources</scope><name>ResourceManager</name></member>
       <member refid="class_h_k_supply_1_1_properties_1_1_resources_1a3bd9b90455ef5bcb87f8524bd2821510" prot="package" virt="non-virtual"><scope>HKSupply::Properties::Resources</scope><name>Resources</name></member>
+      <member refid="class_h_k_supply_1_1_properties_1_1_resources_1ab894f14256b4fd86756a921995e075fe" prot="package" virt="non-virtual"><scope>HKSupply::Properties::Resources</scope><name>tabheaderbackground_red</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

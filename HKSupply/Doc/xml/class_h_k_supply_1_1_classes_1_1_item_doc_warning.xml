@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_classes_1_1_item_doc_warning" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Classes::ItemDocWarning</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_classes_1_1_item_doc_warning_1a9f4d2eef74b88785b4ea17a033489880" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Classes.ItemDocWarning.ID_ITEM_BCN</definition>
+        <argsstring></argsstring>
+        <name>ID_ITEM_BCN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/ItemDocWarning.cs" line="11" column="1" bodyfile="HKSupply/Classes/ItemDocWarning.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_classes_1_1_item_doc_warning_1a3614d83a40b6b0b6fa6115a538b88f48" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Classes.ItemDocWarning.WARNING_COL_CODE</definition>
+        <argsstring></argsstring>
+        <name>WARNING_COL_CODE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/ItemDocWarning.cs" line="12" column="1" bodyfile="HKSupply/Classes/ItemDocWarning.cs" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_classes_1_1_item_doc_warning_1a5a5db189db3e3184985a25ff0953c894" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Classes.ItemDocWarning.WARNING_COL_DESC</definition>
+        <argsstring></argsstring>
+        <name>WARNING_COL_DESC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/ItemDocWarning.cs" line="13" column="1" bodyfile="HKSupply/Classes/ItemDocWarning.cs" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_classes_1_1_item_doc_warning_1aafe26269fff73612e58996f3e70fef1e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Classes.ItemDocWarning.WARNING_COL_COLOR</definition>
+        <argsstring></argsstring>
+        <name>WARNING_COL_COLOR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/ItemDocWarning.cs" line="14" column="1" bodyfile="HKSupply/Classes/ItemDocWarning.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Classes/ItemDocWarning.cs" line="10" column="1" bodyfile="HKSupply/Classes/ItemDocWarning.cs" bodystart="9" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_classes_1_1_item_doc_warning_1a9f4d2eef74b88785b4ea17a033489880" prot="public" virt="non-virtual"><scope>HKSupply::Classes::ItemDocWarning</scope><name>ID_ITEM_BCN</name></member>
+      <member refid="class_h_k_supply_1_1_classes_1_1_item_doc_warning_1a3614d83a40b6b0b6fa6115a538b88f48" prot="public" virt="non-virtual"><scope>HKSupply::Classes::ItemDocWarning</scope><name>WARNING_COL_CODE</name></member>
+      <member refid="class_h_k_supply_1_1_classes_1_1_item_doc_warning_1aafe26269fff73612e58996f3e70fef1e" prot="public" virt="non-virtual"><scope>HKSupply::Classes::ItemDocWarning</scope><name>WARNING_COL_COLOR</name></member>
+      <member refid="class_h_k_supply_1_1_classes_1_1_item_doc_warning_1a5a5db189db3e3184985a25ff0953c894" prot="public" virt="non-virtual"><scope>HKSupply::Classes::ItemDocWarning</scope><name>WARNING_COL_DESC</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

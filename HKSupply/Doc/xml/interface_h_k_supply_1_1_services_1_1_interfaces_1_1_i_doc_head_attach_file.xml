@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_head_attach_file" kind="interface" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Interfaces::IDocHeadAttachFile</compoundname>
+    <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_head_attach_file" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFDocHeadAttachFile</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_head_attach_file_1aea26daa01b08dbc2c4a1366cc6cafaee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file" kindref="compound">DocHeadAttachFile</ref> &gt;</type>
+        <definition>List&lt;DocHeadAttachFile&gt; HKSupply.Services.Interfaces.IDocHeadAttachFile.GetDocHeadAttachFile</definition>
+        <argsstring>(string idDoc)</argsstring>
+        <name>GetDocHeadAttachFile</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_head_attach_file_1a7f150dcc2a280bf681c53b6cd0921561">GetDocHeadAttachFile</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>idDoc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IDocHeadAttachFile.cs" line="8" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_head_attach_file_1a9521d0bf1c63fc9ca5d53075a9836276" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file" kindref="compound">DocHeadAttachFile</ref></type>
+        <definition>DocHeadAttachFile HKSupply.Services.Interfaces.IDocHeadAttachFile.AddDocHeadAttachFile</definition>
+        <argsstring>(DocHeadAttachFile attachFile)</argsstring>
+        <name>AddDocHeadAttachFile</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_head_attach_file_1a6c6eab5d9a147b6475e36eb1ad2585d0">AddDocHeadAttachFile</reimplementedby>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file" kindref="compound">DocHeadAttachFile</ref></type>
+          <declname>attachFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IDocHeadAttachFile.cs" line="9" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="733">
+        <label>HKSupply.Services.Interfaces.IDocHeadAttachFile</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_head_attach_file"/>
+      </node>
+      <node id="734">
+        <label>HKSupply.Services.Implementations.EFDocHeadAttachFile</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_head_attach_file"/>
+        <childnode refid="733" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="HKSupply/Services/Interfaces/IDocHeadAttachFile.cs" line="7" column="1" bodyfile="HKSupply/Services/Interfaces/IDocHeadAttachFile.cs" bodystart="6" bodyend="10"/>
+    <listofallmembers>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_head_attach_file_1a9521d0bf1c63fc9ca5d53075a9836276" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IDocHeadAttachFile</scope><name>AddDocHeadAttachFile</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_head_attach_file_1aea26daa01b08dbc2c4a1366cc6cafaee" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IDocHeadAttachFile</scope><name>GetDocHeadAttachFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

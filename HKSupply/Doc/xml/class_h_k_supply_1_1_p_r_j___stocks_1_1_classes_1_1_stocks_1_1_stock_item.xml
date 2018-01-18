@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::PRJ_Stocks::Classes::Stocks::StockItem</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1a65539bf016af14b10aa83c237f1e53ec" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse" kindref="compound">Warehouse</ref></type>
+        <definition>Warehouse HKSupply.PRJ_Stocks.Classes.Stocks.StockItem.ware</definition>
+        <argsstring></argsstring>
+        <name>ware</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="317" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="317" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1a83253df9d65ea00b2d74d77cd648609d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item" kindref="compound">Item</ref></type>
+        <definition>Item HKSupply.PRJ_Stocks.Classes.Stocks.StockItem.item</definition>
+        <argsstring></argsstring>
+        <name>item</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="318" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="318" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1af4ac19a2aca0c6c61bc57aaaf0ab5d37" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.PRJ_Stocks.Classes.Stocks.StockItem.idWareHouse</definition>
+        <argsstring></argsstring>
+        <name>idWareHouse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="320" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="321" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1a49e1d09aa7464a79884bd4fde7b444e7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.PRJ_Stocks.Classes.Stocks.StockItem.WareHouseName</definition>
+        <argsstring></argsstring>
+        <name>WareHouseName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="330" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="331" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1afcc7d340c2adea35c59ba9dac5b6b5fd" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.PRJ_Stocks.Classes.Stocks.StockItem.idWareHouseType</definition>
+        <argsstring></argsstring>
+        <name>idWareHouseType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="340" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="341" bodyend="349"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1a4be66a38281ee9d03068e5c13369e4f2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>StockWareHousesType</type>
+        <definition>StockWareHousesType HKSupply.PRJ_Stocks.Classes.Stocks.StockItem.WareHouseType</definition>
+        <argsstring></argsstring>
+        <name>WareHouseType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="350" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="351" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1a42e4de548784f4a8ea56832294e15230" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.PRJ_Stocks.Classes.Stocks.StockItem.WareHouseTypeName</definition>
+        <argsstring></argsstring>
+        <name>WareHouseTypeName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="360" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="361" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1a2d18c5e477577edd209ddcd9c34301ae" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.PRJ_Stocks.Classes.Stocks.StockItem.idItem</definition>
+        <argsstring></argsstring>
+        <name>idItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="367" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="368" bodyend="376"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1a679d2f3383bce4604239ddd7c5499aef" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.PRJ_Stocks.Classes.Stocks.StockItem.FreeStock</definition>
+        <argsstring></argsstring>
+        <name>FreeStock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="378" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="379" bodyend="381"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1a580d3913d97be6cf6bbfe0f602f95fe1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.PRJ_Stocks.Classes.Stocks.StockItem.AsgnStock</definition>
+        <argsstring></argsstring>
+        <name>AsgnStock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="383" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="384" bodyend="386"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1aff38f20fc6f38ec1a1226770e24c9330" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.PRJ_Stocks.Classes.Stocks.StockItem.FreeLot</definition>
+        <argsstring></argsstring>
+        <name>FreeLot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="388" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="389" bodyend="391"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1a2069248e5f288483d45428977233928a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_det_asg" kindref="compound">DetAsg</ref> &gt;</type>
+        <definition>List&lt;DetAsg&gt; HKSupply.PRJ_Stocks.Classes.Stocks.StockItem.LstDetRes</definition>
+        <argsstring></argsstring>
+        <name>LstDetRes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="414" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="415" bodyend="429"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1a05d16432409014d00a6675fc7aa2c380" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_det_lot" kindref="compound">DetLot</ref> &gt;</type>
+        <definition>List&lt;DetLot&gt; HKSupply.PRJ_Stocks.Classes.Stocks.StockItem.LstDetLots</definition>
+        <argsstring></argsstring>
+        <name>LstDetLots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="431" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="432" bodyend="446"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1ad3043b41c8a6a5392f82044c053ffeca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.PRJ_Stocks.Classes.Stocks.StockItem.StockItem</definition>
+        <argsstring>(string idWarehouse=&quot;&quot;, int idWareHouseType=0, string WareHouseName=&quot;&quot;, string idItem=&quot;&quot;, string idOwner=&quot;&quot;, string idLot=&quot;&quot;, decimal QTT=0)</argsstring>
+        <name>StockItem</name>
+        <param>
+          <type>string</type>
+          <declname>idWarehouse</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>idWareHouseType</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>WareHouseName</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idItem</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idOwner</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idLot</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>decimal</type>
+          <declname>QTT</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="303" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="303" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1af3da7245ac778d55aef00a495ede3e0d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; HKSupply.PRJ_Stocks.Classes.Stocks.StockItem.LstidOwners</definition>
+        <argsstring>()</argsstring>
+        <name>LstidOwners</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="394" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="394" bodyend="402"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1ad59b9f9fdad532b10568b8f89785411d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; HKSupply.PRJ_Stocks.Classes.Stocks.StockItem.LstLots</definition>
+        <argsstring>()</argsstring>
+        <name>LstLots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="404" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="404" bodyend="412"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="302" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="301" bodyend="448"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1a580d3913d97be6cf6bbfe0f602f95fe1" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::StockItem</scope><name>AsgnStock</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1aff38f20fc6f38ec1a1226770e24c9330" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::StockItem</scope><name>FreeLot</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1a679d2f3383bce4604239ddd7c5499aef" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::StockItem</scope><name>FreeStock</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1a2d18c5e477577edd209ddcd9c34301ae" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::StockItem</scope><name>idItem</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1af4ac19a2aca0c6c61bc57aaaf0ab5d37" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::StockItem</scope><name>idWareHouse</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1afcc7d340c2adea35c59ba9dac5b6b5fd" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::StockItem</scope><name>idWareHouseType</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1a83253df9d65ea00b2d74d77cd648609d" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::StockItem</scope><name>item</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1a05d16432409014d00a6675fc7aa2c380" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::StockItem</scope><name>LstDetLots</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1a2069248e5f288483d45428977233928a" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::StockItem</scope><name>LstDetRes</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1af3da7245ac778d55aef00a495ede3e0d" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::StockItem</scope><name>LstidOwners</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1ad59b9f9fdad532b10568b8f89785411d" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::StockItem</scope><name>LstLots</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1ad3043b41c8a6a5392f82044c053ffeca" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::StockItem</scope><name>StockItem</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1a65539bf016af14b10aa83c237f1e53ec" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::StockItem</scope><name>ware</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1a49e1d09aa7464a79884bd4fde7b444e7" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::StockItem</scope><name>WareHouseName</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1a4be66a38281ee9d03068e5c13369e4f2" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::StockItem</scope><name>WareHouseType</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item_1a42e4de548784f4a8ea56832294e15230" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::StockItem</scope><name>WareHouseTypeName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

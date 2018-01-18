@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_attr_description" kind="interface" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Interfaces::IUserAttrDescription</compoundname>
+    <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user_attr_description" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFUserAttrDescription</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_attr_description_1a7399e8a05ed44470b652d16027756432" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_user_attr_description" kindref="compound">UserAttrDescription</ref> &gt;</type>
+        <definition>List&lt;UserAttrDescription&gt; HKSupply.Services.Interfaces.IUserAttrDescription.GetUserAttrsDescription</definition>
+        <argsstring>(string idItemGroup)</argsstring>
+        <name>GetUserAttrsDescription</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user_attr_description_1a60a8125d27c5c353f3732cd724e8f0ad">GetUserAttrsDescription</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>idItemGroup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IUserAttrDescription.cs" line="12" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1116">
+        <label>HKSupply.Services.Implementations.EFUserAttrDescription</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user_attr_description"/>
+        <childnode refid="1115" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1115">
+        <label>HKSupply.Services.Interfaces.IUserAttrDescription</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_attr_description"/>
+      </node>
+    </inheritancegraph>
+    <location file="HKSupply/Services/Interfaces/IUserAttrDescription.cs" line="11" column="1" bodyfile="HKSupply/Services/Interfaces/IUserAttrDescription.cs" bodystart="10" bodyend="13"/>
+    <listofallmembers>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_attr_description_1a7399e8a05ed44470b652d16027756432" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IUserAttrDescription</scope><name>GetUserAttrsDescription</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

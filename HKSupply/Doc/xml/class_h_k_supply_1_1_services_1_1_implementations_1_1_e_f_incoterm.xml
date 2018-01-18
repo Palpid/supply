@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_incoterm" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFIncoterm</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_incoterm" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IIncoterm</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_incoterm_1ab1bcdc74538c05738898d1e152ec89f5" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFIncoterm._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_currency" kindref="compound">EFCurrency</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFIncoterm.cs" line="19" column="1" bodyfile="HKSupply/Services/Implementations/EFIncoterm.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_incoterm_1afea217306f38a85bba4d0e77416b5823" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_incoterm" kindref="compound">Incoterm</ref> &gt;</type>
+        <definition>List&lt;Incoterm&gt; HKSupply.Services.Implementations.EFIncoterm.GetIIncoterms</definition>
+        <argsstring>()</argsstring>
+        <name>GetIIncoterms</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_incoterm_1a1b1e3e9d219809c9d1c2d72cfc7b1a9d">GetIIncoterms</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFIncoterm.cs" line="21" column="1" bodyfile="HKSupply/Services/Implementations/EFIncoterm.cs" bodystart="21" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_incoterm_1a08462932e1c8b3ca21b5f40e2da0893b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_incoterm" kindref="compound">Incoterm</ref></type>
+        <definition>Incoterm HKSupply.Services.Implementations.EFIncoterm.GetIncotermById</definition>
+        <argsstring>(string idIncoterm)</argsstring>
+        <name>GetIncotermById</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_incoterm_1a9c89e75c8dc8594cfd635509b1aad08e">GetIncotermById</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idIncoterm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFIncoterm.cs" line="58" column="1" bodyfile="HKSupply/Services/Implementations/EFIncoterm.cs" bodystart="58" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_incoterm_1ad8687c3d4cecfbd89f62213fe4f4d601" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_incoterm" kindref="compound">Incoterm</ref></type>
+        <definition>Incoterm HKSupply.Services.Implementations.EFIncoterm.NewIncoterm</definition>
+        <argsstring>(Incoterm newIncoterm)</argsstring>
+        <name>NewIncoterm</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_incoterm_1a7832108fd1629b59553c5db3a8b3eacb">NewIncoterm</reimplements>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_incoterm" kindref="compound">Incoterm</ref></type>
+          <declname>newIncoterm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFIncoterm.cs" line="114" column="1" bodyfile="HKSupply/Services/Implementations/EFIncoterm.cs" bodystart="114" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_incoterm_1af5a346e48cfad695150c6094e22243e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFIncoterm.UpdateIncoterm</definition>
+        <argsstring>(IEnumerable&lt; Incoterm &gt; incotermsToUpdate)</argsstring>
+        <name>UpdateIncoterm</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_incoterm_1a283e29240c35683e51f5dfefb672c251">UpdateIncoterm</reimplements>
+        <param>
+          <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_incoterm" kindref="compound">Incoterm</ref> &gt;</type>
+          <declname>incotermsToUpdate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFIncoterm.cs" line="186" column="1" bodyfile="HKSupply/Services/Implementations/EFIncoterm.cs" bodystart="186" bodyend="257"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="465">
+        <label>HKSupply.Services.Implementations.EFIncoterm</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_incoterm"/>
+        <childnode refid="466" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="466">
+        <label>IIncoterm</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_incoterm"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="467">
+        <label>HKSupply.Services.Implementations.EFIncoterm</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_incoterm"/>
+        <childnode refid="468" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="468">
+        <label>IIncoterm</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_incoterm"/>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFIncoterm.cs" line="18" column="1" bodyfile="HKSupply/Services/Implementations/EFIncoterm.cs" bodystart="17" bodyend="258"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_incoterm_1ab1bcdc74538c05738898d1e152ec89f5" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFIncoterm</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_incoterm_1afea217306f38a85bba4d0e77416b5823" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFIncoterm</scope><name>GetIIncoterms</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_incoterm_1a08462932e1c8b3ca21b5f40e2da0893b" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFIncoterm</scope><name>GetIncotermById</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_incoterm_1ad8687c3d4cecfbd89f62213fe4f4d601" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFIncoterm</scope><name>NewIncoterm</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_incoterm_1af5a346e48cfad695150c6094e22243e1" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFIncoterm</scope><name>UpdateIncoterm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

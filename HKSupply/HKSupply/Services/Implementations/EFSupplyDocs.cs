@@ -1335,6 +1335,8 @@ namespace HKSupply.Services.Implementations
                     string docNumber = string.Empty;
                     string code = string.Empty;
 
+                code = (string.IsNullOrEmpty(idCustomer) ? idSupplier : idCustomer);
+
                     var pakingsDocs = db.DocsHead
                            .Where(a => a.IdSupplyDocType.Equals(idSupplyDocType) &&
                            (string.IsNullOrEmpty(idSupplier) == true || a.IdSupplier.Equals(idSupplier)) &&
@@ -1380,7 +1382,7 @@ namespace HKSupply.Services.Implementations
                             DocHead docToUpdate = null;
                             DocHead docDataBeforeUpdate = null;
 
-                            if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_PL)
+                            if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_PL || doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_QCP)
                             {
                                 docToUpdate = GetDocPackingList(doc.IdDoc);
                                 docDataBeforeUpdate = GetDocPackingList(doc.IdDoc);
@@ -1486,8 +1488,17 @@ namespace HKSupply.Services.Implementations
                                 if ((docToUpdate.Lines.Where(a => a.RejectedQuantity > 0).Count()) > 0)
                                 {
                                     var docQualityControlPending = GetQualityControlPending(db, docToUpdate);
-                                    //TODO: añadir a la db el documento generado
+                                    db.DocsHead.Add(docQualityControlPending);
+
+                                    //Agregamos el material rechazado al almacén de "rejected";
+                                    AddRejectedStock(db, docQualityControlPending);
                                 }
+                                
+                                //agregamos las cantidades aceptadas al stock on hand con sus correspondientes lotes
+                                AcceptGoodsMaterials(db, docToUpdate);
+
+                                //Ajustamos el tránsito
+                                AjustTransitGoodMaterials(db, docToUpdate);
 
                                 //actualizar los datos en las purchase orders asociadas. Aunque en el método ponga SO, 
                                 //internamente funcionará igual para las PO asociadas a un packing de compra de materiales
@@ -1502,11 +1513,21 @@ namespace HKSupply.Services.Implementations
                             //  - las cantidades rechazadas se genera un documento de devolución
                             if (doc.IdSupplyDocType == Constants.SUPPLY_DOCTYPE_QCP && finishDoc == true)
                             {
-                                //agregamos las cantidades aceptadas al stock on hand
+                                //Aceptado a on hand y rechazado lo eliminamos
+                                AcceptGoodsMaterials(db, docToUpdate);
+                                DelRejectedStock(db, docToUpdate);
+
+                                //actualizar los datos en las purchase orders asociadas. Aunque en el método ponga SO, 
+                                //internamente funcionará igual para las PO asociadas a un packing de compra de materiales
+                                UpdatePoAssociatedToPkSupplyMaterial(db, docToUpdate);
 
                                 //generamos el documento de devolución
-                                var docReturnGoods = GetReturnGoodsDoc(db, docToUpdate);
-                                //TODO: añadir a la db el documento generado
+                                if ((docToUpdate.Lines.Where(a => a.RejectedQuantity > 0).Count()) > 0)
+                                {
+                                    var docReturnGoods = GetReturnGoodsDoc(db, docToUpdate);
+                                    db.DocsHead.Add(docReturnGoods);
+                                }
+
                             }
 
                             //********** Save last changes and commit **********//
@@ -2274,6 +2295,326 @@ namespace HKSupply.Services.Implementations
             }
         }
 
+        /// <summary>
+        /// Traspasar del almacén de tránsito al on hand el material de un packing aceptado
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="docHead"></param>
+        /// <remarks>
+        ///     Si se ha aceptado material extra la diferencia se pasa directamente al almacén de on hand
+        ///     para no mover de tránsito stock de otro packing o que salte el error de que no hay stock suficiente
+        /// </remarks>
+        private void AcceptGoodsMaterials(HKSupplyContext db, DocHead docHead)
+        {
+            try
+            {
+                var BDSTK = new PRJ_Stocks.DB.BD_Stocks();
+                PRJ_Stocks.Classes.Stocks STKAct = BDSTK.GetCurrentStock(db);
+
+                //*************************************************************** V2 INI ***************************************************************//
+                //Debido a la que una PO puede ser entregada en diferentes packing, con cantidades dispares y es el usuario el que decide si se acepta o no,
+                //Finalmente lo aceptado se hace una entrada directa a On han (no un traspaso de tránsito), después ya eliminaremos de tránsito si se puede
+
+                var whDestinationEtniaHkOnHand = STKAct.GetWareHouse(
+                    Constants.ETNIA_HK_COMPANY_CODE,
+                    PRJ_Stocks.Classes.Stocks.StockWareHousesType.OnHand); //destino on hand de Etnia HK
+
+                List<string> docs = new List<string>();
+                docs.Add(docHead.IdDoc);
+
+                foreach (var line in docHead.Lines.Where(a => a.DeliveredQuantity > 0))
+                {
+                    STKAct.AddSockItem(
+                        MoveType: PRJ_Stocks.Classes.Stocks.StockMovementsType.Entry,
+                        ware: whDestinationEtniaHkOnHand,
+                        Qtt: line.DeliveredQuantity, 
+                        idItem: line.IdItemBcn,
+                        idLot: string.Empty,
+                        idOwner: string.Empty,
+                        Remarks: string.Empty,
+                        LstidDoc: docs,
+                        IdUser: GlobalSetting.LoggedUser.UserLogin.ToUpper());
+
+                    //buscamos los lotes de cada línea para asignarle el lote
+                    var batches = docHead.PackingListItemBatches.Where(a => a.IdItemBcn.Equals(line.IdItemBcn) && a.IdDocRelated.Equals(line.IdDocRelated)).ToList();
+                    foreach (var batch in batches)
+                    {
+                        STKAct.AsgnLotItem(WareORIG: whDestinationEtniaHkOnHand,
+                            idItem: batch.IdItemBcn,
+                            Qtt: batch.Quantity,
+                            idLot: batch.Batch,
+                            remarks: line.Remarks,
+                            LstidDoc: docs,
+                            IdUser: GlobalSetting.LoggedUser.UserLogin.ToUpper());
+                    }
+                }
+
+                //*************************************************************** V2 FIN ***************************************************************//
+
+                //*************************************************************** V1 INI ***************************************************************//
+                //var whEtniaHkTransit = STKAct.GetWareHouse(
+                //    Constants.ETNIA_HK_COMPANY_CODE,
+                //    PRJ_Stocks.Classes.Stocks.StockWareHousesType.Transit); //origen Tránsito de Etnia HK
+
+                //var whDestinationEtniaHkOnHand = STKAct.GetWareHouse(
+                //    Constants.ETNIA_HK_COMPANY_CODE,
+                //    PRJ_Stocks.Classes.Stocks.StockWareHousesType.OnHand); //destino on hand de Etnia HK
+
+                //List<string> docs = new List<string>();
+                //docs.Add(docHead.IdDoc);
+
+                //foreach (var line in docHead.Lines.Where(a => a.Quantity > 0))
+                //{
+                //    //tenemos que comprobar si indican más cantidad de la del packing, hay que liberar como tope la cantidad que hemos pasado a tránsito (al generar la PO) 
+                //    //para no liberar un posible stock de otra PO. si hay de más el excedente se pasa directamente a On Hand
+                //    decimal qty = 0;
+                //    decimal extra = 0;
+                //    if (line.DeliveredQuantity > line.Quantity)
+                //    {
+                //        qty = line.Quantity;
+                //        extra = line.DeliveredQuantity - line.Quantity;
+                //    }
+                //    else
+                //    {
+                //        qty = line.DeliveredQuantity;
+                //        extra = 0;
+
+                //    }
+
+                //    //liberamos el stock que tiene owner el proveedor
+                //    STKAct.FreeSockItem(WareORIG: whEtniaHkTransit,
+                //        idItem: line.IdItemBcn,
+                //        idOwner: docHead.IdSupplier,
+                //        LstidDoc: docs,
+                //        IdUser: GlobalSetting.LoggedUser.UserLogin.ToUpper(),
+                //        Qtt: qty);
+
+                //    //Una vez liberado traspasamos la cantidad de tránsito a on hand (sin lote)
+                //    STKAct.MoveSockItem(
+                //            MoveType: PRJ_Stocks.Classes.Stocks.StockMovementsType.Movement,
+                //            WareORIG: whEtniaHkTransit,
+                //            WareDEST: whDestinationEtniaHkOnHand,
+                //            Qtt: qty,
+                //            idItem: line.IdItemBcn,
+                //            idOwner: string.Empty,
+                //            idlot: string.Empty,
+                //            remarks: line.Remarks,
+                //            LstidDoc: docs,
+                //            IdUser: GlobalSetting.LoggedUser.UserLogin.ToUpper());
+
+                //    //si tenemos un extra lo pasamos directamente a on hand
+                //    if (extra > 0)
+                //    {
+                //        STKAct.AddSockItem(MoveType: PRJ_Stocks.Classes.Stocks.StockMovementsType.Entry,
+                //                                ware: whDestinationEtniaHkOnHand,
+                //                                Qtt: extra, idItem: line.IdItemBcn,
+                //                                idLot: string.Empty,
+                //                                idOwner: string.Empty,
+                //                                Remarks: "Extra qty accepted",
+                //                                LstidDoc: docs,
+                //                                IdUser: GlobalSetting.LoggedUser.UserLogin.ToUpper());
+                //    }
+
+                //    //buscamos los lotes de cada línea para asignarle el lote
+                //    var batches = docHead.PackingListItemBatches.Where(a => a.IdItemBcn.Equals(line.IdItemBcn) && a.IdDocRelated.Equals(line.IdDocRelated)).ToList();
+                //    foreach (var batch in batches)
+                //    {
+                //        STKAct.AsgnLotItem(WareORIG: whDestinationEtniaHkOnHand,
+                //            idItem: batch.IdItemBcn,
+                //            Qtt: batch.Quantity,
+                //            idLot: batch.Batch,
+                //            remarks: line.Remarks,
+                //            LstidDoc: docs,
+                //            IdUser: GlobalSetting.LoggedUser.UserLogin.ToUpper());
+                //    }
+                //}
+
+                //*************************************************************** V1 FIN ***************************************************************//
+
+                BDSTK.SaveCurrentStockMovs(db, STKAct);
+
+            }
+            catch
+            {
+                throw;
+            }
+            
+        }
+
+        /// <summary>
+        /// Agregar material rechazado al almacén de "rejected"
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="docHead"></param>
+        private void AddRejectedStock(HKSupplyContext db, DocHead docHead)
+        {
+            try
+            {
+                var BDSTK = new PRJ_Stocks.DB.BD_Stocks();
+                PRJ_Stocks.Classes.Stocks STKAct = BDSTK.GetCurrentStock(db);
+
+                var whEtniaHkRejected = STKAct.GetWareHouse(
+                    Constants.ETNIA_HK_COMPANY_CODE,
+                    PRJ_Stocks.Classes.Stocks.StockWareHousesType.Rejected);
+
+                List<string> docs = new List<string>();
+                docs.Add(docHead.IdDoc);
+
+                foreach (var line in docHead.Lines)
+                {
+                    STKAct.AddSockItem(
+                        MoveType: PRJ_Stocks.Classes.Stocks.StockMovementsType.Entry,
+                        ware: whEtniaHkRejected,
+                        Qtt: line.Quantity,
+                        idItem: line.IdItemBcn,
+                        idLot: string.Empty,
+                        idOwner: docHead.IdSupplier,
+                        Remarks: line.Remarks,
+                        LstidDoc: docs,
+                        IdUser: GlobalSetting.LoggedUser.UserLogin.ToUpper());
+                }
+
+                BDSTK.SaveCurrentStockMovs(db, STKAct);
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Ajustar el tránsito de una recepción de material.
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="docHead"></param>
+        /// <remarks>
+        ///     Del material recibido (aceptado y rechazado) se mria si hay en tránsito
+        ///     para cada item/supplier y si hay suficiente se quita del stock.
+        ///     O bien se quita la cantidad que haya disponible, ya que las cantidades
+        ///     que llegan pueden no corresponder con lo que se ha pedido y aun así
+        ///     se puede aceptar la cantidad
+        /// </remarks>
+        private void AjustTransitGoodMaterials(HKSupplyContext db, DocHead docHead)
+        {
+            try
+            {
+                var BDSTK = new PRJ_Stocks.DB.BD_Stocks();
+                PRJ_Stocks.Classes.Stocks STKAct = BDSTK.GetCurrentStock(db);
+
+
+                var whEtniaHkTransit = STKAct.GetWareHouse(
+                    Constants.ETNIA_HK_COMPANY_CODE,
+                    PRJ_Stocks.Classes.Stocks.StockWareHousesType.Transit);
+
+                List<string> docs = new List<string>();
+                docs.Add(docHead.IdDoc);
+
+                foreach (var line in docHead.Lines)
+                {
+
+                    var qty = line.DeliveredQuantity + line.RejectedQuantity;
+
+                    if (qty > 0)
+                    {
+                        decimal qtyDelTransit = 0;
+                        //obtenemos el stock de tránsito para ese item y miramos si tiene algo asignado al proveedor
+                        var stockItemWare = STKAct.GetStockItem(ware: whEtniaHkTransit, idItem: line.IdItemBcn);
+                        decimal qtyTransitSupplier = stockItemWare.LstDetRes
+                            .Where(a => a.idOwner.Equals(docHead.IdSupplier))
+                            .Select(b => b.Qtt).FirstOrDefault();
+
+                        //Si hay suficiente quitamos esa cantidad, sino quitamos hasta lo máximo posible
+                        if (qtyTransitSupplier > 0)
+                        {
+                            if (qtyTransitSupplier >= qty)
+                                qtyDelTransit = qty;
+                            else
+                                qtyDelTransit = qtyTransitSupplier;
+
+                            //liberamos la cantidad
+                            STKAct.FreeSockItem(
+                                WareORIG: whEtniaHkTransit,
+                                idItem: line.IdItemBcn,
+                                idOwner: docHead.IdSupplier,
+                                Qtt: qtyDelTransit,
+                                remarks: string.Empty,
+                                LstidDoc: docs,
+                                IdUser: GlobalSetting.LoggedUser.UserLogin.ToUpper());
+
+                            //la quitamos (un add en negativo)
+                            STKAct.AddSockItem(
+                                MoveType: PRJ_Stocks.Classes.Stocks.StockMovementsType.Exit,
+                                ware: whEtniaHkTransit,
+                                Qtt: (qtyDelTransit * -1),
+                                idItem: line.IdItemBcn,
+                                idLot: string.Empty,
+                                idOwner: string.Empty,
+                                Remarks: string.Empty,
+                                LstidDoc: docs,
+                                IdUser: GlobalSetting.LoggedUser.UserLogin.ToUpper());
+                        }
+
+                    }
+                }
+
+                BDSTK.SaveCurrentStockMovs(db, STKAct);
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void DelRejectedStock(HKSupplyContext db, DocHead docHead)
+        {
+            try
+            {
+                var BDSTK = new PRJ_Stocks.DB.BD_Stocks();
+                PRJ_Stocks.Classes.Stocks STKAct = BDSTK.GetCurrentStock(db);
+
+                var whEtniaHkRejected = STKAct.GetWareHouse(
+                    Constants.ETNIA_HK_COMPANY_CODE,
+                    PRJ_Stocks.Classes.Stocks.StockWareHousesType.Rejected);
+
+                List<string> docs = new List<string>();
+                docs.Add(docHead.IdDoc);
+
+                foreach (var line in docHead.Lines)
+                {
+                    //liberamos
+                    STKAct.FreeSockItem(
+                                WareORIG: whEtniaHkRejected,
+                                idItem: line.IdItemBcn,
+                                idOwner: docHead.IdSupplier,
+                                Qtt: line.QuantityOriginal,
+                                remarks: string.Empty,
+                                LstidDoc: docs,
+                                IdUser: GlobalSetting.LoggedUser.UserLogin.ToUpper());
+
+                    //eliminamos (añadir en negativo)
+                    STKAct.AddSockItem(
+                        MoveType: PRJ_Stocks.Classes.Stocks.StockMovementsType.Exit,
+                        ware: whEtniaHkRejected,
+                        Qtt: (line.QuantityOriginal * -1),
+                        idItem: line.IdItemBcn,
+                        idLot: string.Empty,
+                        idOwner: string.Empty,
+                        Remarks: line.Remarks,
+                        LstidDoc: docs,
+                        IdUser: GlobalSetting.LoggedUser.UserLogin.ToUpper());
+                }
+
+                BDSTK.SaveCurrentStockMovs(db, STKAct);
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         #endregion
 
         #endregion
@@ -2290,8 +2631,10 @@ namespace HKSupply.Services.Implementations
         {
             try
             {
-                PRJ_Stocks.DB.Call_DB_Stocks CallDBS = new PRJ_Stocks.DB.Call_DB_Stocks();
-                PRJ_Stocks.Classes.Stocks STKAct = CallDBS.CallCargaStocks();
+                //PRJ_Stocks.DB.Call_DB_Stocks CallDBS = new PRJ_Stocks.DB.Call_DB_Stocks();
+                //PRJ_Stocks.Classes.Stocks STKAct = CallDBS.CallCargaStocks();
+                var BDSTK = new PRJ_Stocks.DB.BD_Stocks();
+                PRJ_Stocks.Classes.Stocks STKAct = BDSTK.GetCurrentStock(db);
 
                 var whEtniaHkOnHand = STKAct.GetWareHouse(
                     Constants.ETNIA_HK_COMPANY_CODE, 
@@ -2316,7 +2659,6 @@ namespace HKSupply.Services.Implementations
                        IdUser: GlobalSetting.LoggedUser.UserLogin);
                 }
 
-                var BDSTK = new PRJ_Stocks.DB.BD_Stocks();
                 BDSTK.SaveCurrentStockMovs(db, STKAct);
 
             }
@@ -2330,8 +2672,10 @@ namespace HKSupply.Services.Implementations
         {
             try
             {
-                PRJ_Stocks.DB.Call_DB_Stocks CallDBS = new PRJ_Stocks.DB.Call_DB_Stocks();
-                PRJ_Stocks.Classes.Stocks STKAct = CallDBS.CallCargaStocks();
+                //PRJ_Stocks.DB.Call_DB_Stocks CallDBS = new PRJ_Stocks.DB.Call_DB_Stocks();
+                //PRJ_Stocks.Classes.Stocks STKAct = CallDBS.CallCargaStocks();
+                var BDSTK = new PRJ_Stocks.DB.BD_Stocks();
+                PRJ_Stocks.Classes.Stocks STKAct = BDSTK.GetCurrentStock(db);
 
                 var whEtniaHkOnHand = STKAct.GetWareHouse(
                     Constants.ETNIA_HK_COMPANY_CODE,
@@ -2344,22 +2688,22 @@ namespace HKSupply.Services.Implementations
                 List<string> docs = new List<string>();
                 docs.Add(docHead.IdDoc);
 
-                foreach (var line in docHead.Lines)
-                {
-                    //STKAct.MoveSockItem(PRJ_Stocks.Classes.Stocks.StockMovementsType.Movement, whEtniaHkOnHand, whDestinationOnHand ,)
-                    STKAct.MoveSockItem(MoveType: PRJ_Stocks.Classes.Stocks.StockMovementsType.Movement,
-                        WareORIG: whEtniaHkOnHand,
-                        WareDEST: whDestinationOnHand,
-                        //Qtt: Decimal.ToInt32(line.Quantity), //TODO.CAMBIAR!!
-                        Qtt: line.Quantity, //TODO.CAMBIAR!!
-                        idItem: line.IdItemBcn,
-                        idOwner: docHead.IdCustomer,
-                        remarks: string.Empty,
-                        LstidDoc: docs,
-                        IdUser: GlobalSetting.LoggedUser.UserLogin);
-                }
+                //TODO!! Nuevo API STOCKS con LOTES
+                //foreach (var line in docHead.Lines)
+                //{
+                //    //STKAct.MoveSockItem(PRJ_Stocks.Classes.Stocks.StockMovementsType.Movement, whEtniaHkOnHand, whDestinationOnHand ,)
+                //    STKAct.MoveSockItem(MoveType: PRJ_Stocks.Classes.Stocks.StockMovementsType.Movement,
+                //        WareORIG: whEtniaHkOnHand,
+                //        WareDEST: whDestinationOnHand,
+                //        //Qtt: Decimal.ToInt32(line.Quantity), //TODO.CAMBIAR!!
+                //        Qtt: line.Quantity, //TODO.CAMBIAR!!
+                //        idItem: line.IdItemBcn,
+                //        idOwner: docHead.IdCustomer,
+                //        remarks: string.Empty,
+                //        LstidDoc: docs,
+                //        IdUser: GlobalSetting.LoggedUser.UserLogin);
+                //}
 
-                var BDSTK = new PRJ_Stocks.DB.BD_Stocks();
                 BDSTK.SaveCurrentStockMovs(db, STKAct);
 
             }
@@ -2373,8 +2717,10 @@ namespace HKSupply.Services.Implementations
         {
             try
             {
-                PRJ_Stocks.DB.Call_DB_Stocks CallDBS = new PRJ_Stocks.DB.Call_DB_Stocks();
-                PRJ_Stocks.Classes.Stocks STKAct = CallDBS.CallCargaStocks();
+                //PRJ_Stocks.DB.Call_DB_Stocks CallDBS = new PRJ_Stocks.DB.Call_DB_Stocks();
+                //PRJ_Stocks.Classes.Stocks STKAct = CallDBS.CallCargaStocks();
+                var BDSTK = new PRJ_Stocks.DB.BD_Stocks();
+                PRJ_Stocks.Classes.Stocks STKAct = BDSTK.GetCurrentStock(db);
 
                 var whEtniaHkTransit = STKAct.GetWareHouse(
                     Constants.ETNIA_HK_COMPANY_CODE,
@@ -2398,7 +2744,6 @@ namespace HKSupply.Services.Implementations
                         );
                 }
 
-                var BDSTK = new PRJ_Stocks.DB.BD_Stocks();
                 BDSTK.SaveCurrentStockMovs(db, STKAct);
 
             }

@@ -1,0 +1,1417 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Supply::Invoice</compoundname>
+    <basecompoundref refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" prot="public" virt="non-virtual">HKSupply.Forms.RibbonFormBase</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a2c425ecdf00475af5328079a743ee9ce" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>eGridLinesSummaries</name>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a2c425ecdf00475af5328079a743ee9cea318ea9f3f23edc9a55c7d8ef7d600bda" prot="private">
+          <name>totalQuantityMt</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a2c425ecdf00475af5328079a743ee9cead313b43ee4b93a0d53957137dbecc1f9" prot="private">
+          <name>totalQuantityHw</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="31" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="30" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1af8bf300ae27bc7a074e42dd61084f813" prot="private" static="no" mutable="no">
+        <type>Font</type>
+        <definition>Font HKSupply.Forms.Supply.Invoice._labelDefaultFontBold</definition>
+        <argsstring></argsstring>
+        <name>_labelDefaultFontBold</name>
+        <initializer>= AppStyles.LabelDefaultFontBold</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="39" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a3156843c882d24553e31edd9ca9bffbe" prot="private" static="no" mutable="no">
+        <type>Font</type>
+        <definition>Font HKSupply.Forms.Supply.Invoice._labelDefaultFont</definition>
+        <argsstring></argsstring>
+        <name>_labelDefaultFont</name>
+        <initializer>= AppStyles.LabelDefaultFont</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="40" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a43bbf252779bff3a574877ff06f28a39" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_customer" kindref="compound">Customer</ref> &gt;</type>
+        <definition>List&lt;Customer&gt; HKSupply.Forms.Supply.Invoice._customersList</definition>
+        <argsstring></argsstring>
+        <name>_customersList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="42" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a7c02c5e513cafcd8d134a6d81235a96b" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_currency" kindref="compound">Currency</ref> &gt;</type>
+        <definition>List&lt;Currency&gt; HKSupply.Forms.Supply.Invoice._currenciesList</definition>
+        <argsstring></argsstring>
+        <name>_currenciesList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="43" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a58b5e088dbfa8bd1083a5e72d31d0e57" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_delivery_term" kindref="compound">DeliveryTerm</ref> &gt;</type>
+        <definition>List&lt;DeliveryTerm&gt; HKSupply.Forms.Supply.Invoice._deliveryTermList</definition>
+        <argsstring></argsstring>
+        <name>_deliveryTermList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="44" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ae59c8c6c88a9a9c9722d710b4dc547fe" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_payment_terms" kindref="compound">PaymentTerms</ref> &gt;</type>
+        <definition>List&lt;PaymentTerms&gt; HKSupply.Forms.Supply.Invoice._paymentTermsList</definition>
+        <argsstring></argsstring>
+        <name>_paymentTermsList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="45" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a0ce394532ac8cddd6f52035a77e95f23" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Forms.Supply.Invoice._docInvoice</definition>
+        <argsstring></argsstring>
+        <name>_docInvoice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="47" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a40d76c4a1be136f060c52e842572ff4f" prot="private" static="no" mutable="no">
+        <type>BindingList&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line" kindref="compound">DocLine</ref> &gt;</type>
+        <definition>BindingList&lt;DocLine&gt; HKSupply.Forms.Supply.Invoice._docLinesInvoiceList</definition>
+        <argsstring></argsstring>
+        <name>_docLinesInvoiceList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="48" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ad946245051ae44e9f3946c2c34b159b4" prot="private" static="no" mutable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Forms.Supply.Invoice._totalQuantityMt</definition>
+        <argsstring></argsstring>
+        <name>_totalQuantityMt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="50" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a4938f8613eea03692d7c9fdceeb88add" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HKSupply.Forms.Supply.Invoice._totalQuantityHw</definition>
+        <argsstring></argsstring>
+        <name>_totalQuantityHw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="51" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ae1d21c19367e79e7db4bd53b4b7ebb3c" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Supply.Invoice.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ac40316d0470f5dd7d7a875e6b2a9b19a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Supply.Invoice.xtcGeneral</definition>
+        <argsstring></argsstring>
+        <name>xtcGeneral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="594" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="594" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a64b37886f25cf6da19a7f8e9fb82664f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.Invoice.xtpINV</definition>
+        <argsstring></argsstring>
+        <name>xtpINV</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="595" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="595" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ab1af9f07774da722859983b2e59a4bf1" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Supply.Invoice.xtcPO</definition>
+        <argsstring></argsstring>
+        <name>xtcPO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="596" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="596" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a001bcfdab5763cd329cfcb962aec9a08" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.Invoice.xtpGoods</definition>
+        <argsstring></argsstring>
+        <name>xtpGoods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="597" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="597" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a5d0af47c1947d2e36f8c89491a2bae24" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Supply.Invoice.xgrdLines</definition>
+        <argsstring></argsstring>
+        <name>xgrdLines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="598" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="598" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a8fc79176853b4cdcca11b48842c8f9e7" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.Invoice.gridViewLines</definition>
+        <argsstring></argsstring>
+        <name>gridViewLines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="599" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="599" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1aa18b6ce997dfa0f49e90cf1cc33e6beb" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.Invoice.xtpTerms</definition>
+        <argsstring></argsstring>
+        <name>xtpTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="600" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="600" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a453bdd18e288327d034d8e982f4d8b41" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Supply.Invoice.sluePaymentTerm</definition>
+        <argsstring></argsstring>
+        <name>sluePaymentTerm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="601" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="601" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a327d9d4a9f17cb2c499e1a9500516bf6" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.Invoice.gridView3</definition>
+        <argsstring></argsstring>
+        <name>gridView3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="602" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="602" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ab8357e9d0d07c481afe335df0d162964" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblTxtInvoiceTo</definition>
+        <argsstring></argsstring>
+        <name>lblTxtInvoiceTo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="603" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="603" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a93d3c859bfcf94cd62bf8880b81526df" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblTxtShipTo</definition>
+        <argsstring></argsstring>
+        <name>lblTxtShipTo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="604" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="604" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a4219388de30da36e5c1127adc78fdfd7" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblTxtContact</definition>
+        <argsstring></argsstring>
+        <name>lblTxtContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="605" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="605" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ad5c06603adba9b727875cb4eb35451f7" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblTxtAddress</definition>
+        <argsstring></argsstring>
+        <name>lblTxtAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="606" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="606" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a9f9a9628d525cd6c797ef4608fd29f93" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblTxtCompany</definition>
+        <argsstring></argsstring>
+        <name>lblTxtCompany</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="607" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="607" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a227784e9e45210d45e9dc418db76b97a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblInvoiceTo</definition>
+        <argsstring></argsstring>
+        <name>lblInvoiceTo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="608" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="608" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a2a5b9cc59c15f9a7a6aac707bfaf7302" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblTermPayment</definition>
+        <argsstring></argsstring>
+        <name>lblTermPayment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="609" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="609" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a1b3c5308442947be7a31e6ae16de9b19" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblShipTo</definition>
+        <argsstring></argsstring>
+        <name>lblShipTo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="610" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="610" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ae863d7ab47223f2272f5c67d573d768d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblContact</definition>
+        <argsstring></argsstring>
+        <name>lblContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="611" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="611" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ae16803b356a6343aff1319dea60bb084" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblAddress</definition>
+        <argsstring></argsstring>
+        <name>lblAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="612" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="612" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a8e2b47d97e8d1e3e124187636f50e25a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblCompany</definition>
+        <argsstring></argsstring>
+        <name>lblCompany</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="613" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="613" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a60be2347c5680f74309f5d1e1881aeaa" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Supply.Invoice.slueCurrency</definition>
+        <argsstring></argsstring>
+        <name>slueCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="614" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="614" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a4a5339787728287a62006a893b80a74f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.Invoice.gridView2</definition>
+        <argsstring></argsstring>
+        <name>gridView2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="615" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="615" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a7d9afb0463b8c4b8bb61ba0ea7fc6fd4" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Supply.Invoice.slueDeliveryTerms</definition>
+        <argsstring></argsstring>
+        <name>slueDeliveryTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="616" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="616" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1aa852f24a239e88f97d1a79638e8e4d74" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.Invoice.gridView1</definition>
+        <argsstring></argsstring>
+        <name>gridView1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="617" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="617" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a3a25dc6ec8083dbc428aeafde5e686b2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblCurrency</definition>
+        <argsstring></argsstring>
+        <name>lblCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="618" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="618" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1abcab6102cadd80d7ba6ba0ba901b5633" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblTermsOfDelivery</definition>
+        <argsstring></argsstring>
+        <name>lblTermsOfDelivery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="619" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="619" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1adf7c460801f2066a34e25f1219d8518f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Supply.Invoice.slueCustomer</definition>
+        <argsstring></argsstring>
+        <name>slueCustomer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="620" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="620" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ab13663db308e07a5069868c4bb0dc965" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.Invoice.searchLookUpEdit1View</definition>
+        <argsstring></argsstring>
+        <name>searchLookUpEdit1View</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="621" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="621" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1af55b78a31dbf8357386939ed828753e9" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblCustomer</definition>
+        <argsstring></argsstring>
+        <name>lblCustomer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="622" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="622" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a806fcc818eb1b4fb37667f363f8ad82d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblINVNumber</definition>
+        <argsstring></argsstring>
+        <name>lblINVNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="623" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="623" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1aae685bb9980b247029b4d5ae1bdc9b16" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Supply.Invoice.txtINVNumber</definition>
+        <argsstring></argsstring>
+        <name>txtINVNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="624" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="624" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a02a5677883f383b574cd2338c9cd33f6" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Supply.Invoice.sbSearch</definition>
+        <argsstring></argsstring>
+        <name>sbSearch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="625" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="625" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ab1d13bff70bf879d3e5af43b337f281d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblWeek</definition>
+        <argsstring></argsstring>
+        <name>lblWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="626" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="626" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a6ea8b1e68cedb58c3c1fbe3e6ebbc7cf" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblINVDateWeek</definition>
+        <argsstring></argsstring>
+        <name>lblINVDateWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="627" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="627" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a0e5545725ea432088c3d8a476816170f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblDate</definition>
+        <argsstring></argsstring>
+        <name>lblDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="628" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="628" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1abdea1c9a9a4e3ce1d2725367300a05da" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.DateEdit</type>
+        <definition>DevExpress.XtraEditors.DateEdit HKSupply.Forms.Supply.Invoice.dateEditINVDate</definition>
+        <argsstring></argsstring>
+        <name>dateEditINVDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="629" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="629" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1aed069b13791d825a1d4e12bf95fc8821" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblINVDate</definition>
+        <argsstring></argsstring>
+        <name>lblINVDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="630" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="630" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a3cabdd4f5b2fae6f9835ab4421d8520b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblDNNumber</definition>
+        <argsstring></argsstring>
+        <name>lblDNNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="631" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="631" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a1f92b659991112be830577c55b88c1a6" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Supply.Invoice.txtDNNumber</definition>
+        <argsstring></argsstring>
+        <name>txtDNNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="632" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="632" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a83468a764098a8b51340e221db9d2c2f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.MemoEdit</type>
+        <definition>DevExpress.XtraEditors.MemoEdit HKSupply.Forms.Supply.Invoice.memoEditRemarks</definition>
+        <argsstring></argsstring>
+        <name>memoEditRemarks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="633" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="633" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ab045e7be0af054bf59b40f38aa4a6f7b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblRemarks</definition>
+        <argsstring></argsstring>
+        <name>lblRemarks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="634" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="634" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a58ef074a08027d0f9685f95e12516b33" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Supply.Invoice.txtManualReference</definition>
+        <argsstring></argsstring>
+        <name>txtManualReference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="635" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="635" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ad360030d045bef0456deaa503c7b6599" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Invoice.lblManualReference</definition>
+        <argsstring></argsstring>
+        <name>lblManualReference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="636" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="636" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ad0d1c5dc0430c64116c4ebcc6b83f784" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.PanelControl</type>
+        <definition>DevExpress.XtraEditors.PanelControl HKSupply.Forms.Supply.Invoice.pcFilter</definition>
+        <argsstring></argsstring>
+        <name>pcFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="637" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="637" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1aeae8c2d2dc89820471089d2a6a461114" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Supply.Invoice.Invoice</definition>
+        <argsstring>()</argsstring>
+        <name>Invoice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="56" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="56" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a979428593ea34009a5ba17e72223d4e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.Invoice.bbiExportCsv_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportCsv_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a">bbiExportCsv_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="110" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="110" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1aa5aeb6cfaf08afaaa507b69647104442" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.Invoice.bbiExportExcel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportExcel_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811">bbiExportExcel_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="140" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="140" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a3572ffc2114fc9004f7d074f5bf37e6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.Invoice.BarButtonItemReport_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>BarButtonItemReport_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f">BarButtonItemReport_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="170" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="170" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a406fd069dfe625324a39d71e6b2c5657" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.InitData</definition>
+        <argsstring>(string idDoc)</argsstring>
+        <name>InitData</name>
+        <param>
+          <type>string</type>
+          <declname>idDoc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="305" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="305" bodyend="316"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ab14c2e07d2b9b5919dbf871893a4856b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.ConfigureRibbonActions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="88" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="88" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ae2c314734acf93f64f9a307c1a77a3fc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.Invoice_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>Invoice_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="194" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="194" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a4df1fc90151d108b36cfc1987c8dfc4b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.SbSearch_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbSearch_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="199" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="199" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ab9654300ca0671a70683269b2c6178ed" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.TxtDNNumber_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>TxtDNNumber_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="218" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="218" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a004c74b59d521606ec84d09d5b420494" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.TxtINVNumber_KeyDown</definition>
+        <argsstring>(object sender, KeyEventArgs e)</argsstring>
+        <name>TxtINVNumber_KeyDown</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="231" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="231" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a5a759ab4a614ae007b01bea7bcc10ab7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.GridViewLines_CustomSummaryCalculate</definition>
+        <argsstring>(object sender, CustomSummaryEventArgs e)</argsstring>
+        <name>GridViewLines_CustomSummaryCalculate</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CustomSummaryEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="246" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="246" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ae3921301e3a7d6b601ece8f5a4548446" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.LoadAuxList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAuxList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="323" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="323" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1afbfc87d716b8dab4133936aa7ec4e131" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.ResetCurrentInvoice</definition>
+        <argsstring>()</argsstring>
+        <name>ResetCurrentInvoice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="338" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="338" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a9e745237655ea6b824a7e2fa1cf1cfa3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.SetUpLabels</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpLabels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="357" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="357" bodyend="439"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a80ed59f3e6fa2159a450662de7ede118" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.SetObjectsReadOnly</definition>
+        <argsstring>()</argsstring>
+        <name>SetObjectsReadOnly</name>
+        <briefdescription>
+<para>Pone como readonly los objetos relaciones con la cabecera del documento. Es una pantalla de visualización principalmente, no hay edición en ella. </para>        </briefdescription>
+        <detaileddescription>
+<para>Son pocos, los pongo a mano en lugar de hacer en bucle.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="445" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="445" bodyend="465"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a580b7d0c1d316391b230e6648f72e33e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.SetUpButtons</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpButtons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="467" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="467" bodyend="477"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a85a8b95b1b0ea9ba9c050e9428a42e8f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.SetUpSearchLookUpEdit</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSearchLookUpEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="479" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="479" bodyend="492"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a295fe4547c9eaaea20e947b89a31394a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.SetUpSlueCustomer</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSlueCustomer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="494" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="494" bodyend="509"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ae7fc7d444bf8512062e6a191e729a1bc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.SetUpSlueCurrency</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSlueCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="511" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="511" bodyend="526"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a6286dd17228aa4be450f3e60b719e542" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.SetUpSlueDeliveryTerms</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSlueDeliveryTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="528" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="528" bodyend="544"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a7634ec7b7669d08d2d580e9eebc79387" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.SetUpSluePaymentTerms</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSluePaymentTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="546" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="546" bodyend="562"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a2c468f71818e141a9bc3c6eef372c3cf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.SetUpEvents</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="564" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="564" bodyend="576"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a121f8c8e77af291eaec5682d48e3d903" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.SetUpGrdLines</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdLines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="578" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="578" bodyend="644"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a686991431decb5d6327bb6090356cd67" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.SetupPanelControl</definition>
+        <argsstring>()</argsstring>
+        <name>SetupPanelControl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="646" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="646" bodyend="659"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ae17be9a71791c020a23b20473101c243" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.ResetForm</definition>
+        <argsstring>()</argsstring>
+        <name>ResetForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="665" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="665" bodyend="691"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a8e5c023da78ee7fa06f3d6ae8a2dc897" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.SetFormDocHeadInfo</definition>
+        <argsstring>()</argsstring>
+        <name>SetFormDocHeadInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="693" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="693" bodyend="721"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a5755c82bb2dd68752f303bf8f1eae4e1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.SearchInvoice</definition>
+        <argsstring>()</argsstring>
+        <name>SearchInvoice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="727" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="727" bodyend="761"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a6ccc5781c9ac68d7a3558822d32c0e5f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.OpenReport</definition>
+        <argsstring>(FunctionalityReport functionalityReport)</argsstring>
+        <name>OpenReport</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_functionality_report" kindref="compound">FunctionalityReport</ref></type>
+          <declname>functionalityReport</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.cs" line="767" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="767" bodyend="802"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ae4c29f553b28b394e699ff4306cdfad1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Invoice.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="29" bodyend="590"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ad2cc44687b4f9a51d32a8d8a8544e283" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.Invoice.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Invoice.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="814">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="813">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="814" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="812">
+        <label>HKSupply.Forms.Supply.Invoice</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice"/>
+        <childnode refid="813" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="817">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="818">
+        <label>XtraBars</label>
+      </node>
+      <node id="816">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="817" relation="public-inheritance">
+        </childnode>
+        <childnode refid="818" relation="usage">
+          <edgelabel>bbiCancel</edgelabel>
+          <edgelabel>ribbonStatusBar</edgelabel>
+          <edgelabel>bbiPrintPreview</edgelabel>
+          <edgelabel>bbiSave</edgelabel>
+          <edgelabel>bbiNew</edgelabel>
+          <edgelabel>bbiEdit</edgelabel>
+          <edgelabel>ribbonControl</edgelabel>
+          <edgelabel>ribbonPageGroup1</edgelabel>
+          <edgelabel>ribbonPage1</edgelabel>
+          <edgelabel>ribbonPageGroup2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="815">
+        <label>HKSupply.Forms.Supply.Invoice</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice"/>
+        <childnode refid="816" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Supply/Invoice.cs" line="28" column="1" bodyfile="HKSupply/Forms/Supply/Invoice.cs" bodystart="27" bodyend="807"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a7c02c5e513cafcd8d134a6d81235a96b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>_currenciesList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a43bbf252779bff3a574877ff06f28a39" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>_customersList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a58b5e088dbfa8bd1083a5e72d31d0e57" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>_deliveryTermList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a0ce394532ac8cddd6f52035a77e95f23" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>_docInvoice</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a40d76c4a1be136f060c52e842572ff4f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>_docLinesInvoiceList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a3156843c882d24553e31edd9ca9bffbe" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>_labelDefaultFont</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1af8bf300ae27bc7a074e42dd61084f813" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>_labelDefaultFontBold</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ae59c8c6c88a9a9c9722d710b4dc547fe" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>_paymentTermsList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a4938f8613eea03692d7c9fdceeb88add" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>_totalQuantityHw</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ad946245051ae44e9f3946c2c34b159b4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>_totalQuantityMt</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>ActionsStates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>AddRestoreLayoutItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a3572ffc2114fc9004f7d074f5bf37e6e" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>BarButtonItemReport_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>bbiCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>bbiEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a979428593ea34009a5ba17e72223d4e2" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>bbiExportCsv_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1aa5aeb6cfaf08afaaa507b69647104442" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>bbiExportExcel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>bbiNew</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>bbiPrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>bbiPrintPreview_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>bbiSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>BbiSaveLayout_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ae1d21c19367e79e7db4bd53b4b7ebb3c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>ConfigureLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>ConfigurePrintExportOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ab14c2e07d2b9b5919dbf871893a4856b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>ConfigureRibbonActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>CurrentLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>CurrentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1abdea1c9a9a4e3ce1d2725367300a05da" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>dateEditINVDate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ad2cc44687b4f9a51d32a8d8a8544e283" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a2c425ecdf00475af5328079a743ee9ce" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>eGridLinesSummaries</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>EnableExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>EnableExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>EnableLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>EnablePrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>ExportCsvFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>ExportExcelFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1aa852f24a239e88f97d1a79638e8e4d74" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>gridView1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a4a5339787728287a62006a893b80a74f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>gridView2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a327d9d4a9f17cb2c499e1a9500516bf6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>gridView3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a8fc79176853b4cdcca11b48842c8f9e7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>gridViewLines</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a5a759ab4a614ae007b01bea7bcc10ab7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>GridViewLines_CustomSummaryCalculate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a406fd069dfe625324a39d71e6b2c5657" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>InitData</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ae4c29f553b28b394e699ff4306cdfad1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1aeae8c2d2dc89820471089d2a6a461114" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>Invoice</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ae2c314734acf93f64f9a307c1a77a3fc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>Invoice_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>LayoutButton_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ae16803b356a6343aff1319dea60bb084" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblAddress</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a8e2b47d97e8d1e3e124187636f50e25a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblCompany</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ae863d7ab47223f2272f5c67d573d768d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblContact</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a3a25dc6ec8083dbc428aeafde5e686b2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1af55b78a31dbf8357386939ed828753e9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblCustomer</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a0e5545725ea432088c3d8a476816170f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblDate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a3cabdd4f5b2fae6f9835ab4421d8520b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblDNNumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1aed069b13791d825a1d4e12bf95fc8821" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblINVDate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a6ea8b1e68cedb58c3c1fbe3e6ebbc7cf" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblINVDateWeek</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a806fcc818eb1b4fb37667f363f8ad82d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblINVNumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a227784e9e45210d45e9dc418db76b97a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblInvoiceTo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ad360030d045bef0456deaa503c7b6599" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblManualReference</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ab045e7be0af054bf59b40f38aa4a6f7b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblRemarks</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a1b3c5308442947be7a31e6ae16de9b19" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblShipTo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a2a5b9cc59c15f9a7a6aac707bfaf7302" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblTermPayment</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1abcab6102cadd80d7ba6ba0ba901b5633" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblTermsOfDelivery</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ad5c06603adba9b727875cb4eb35451f7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblTxtAddress</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a9f9a9628d525cd6c797ef4608fd29f93" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblTxtCompany</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a4219388de30da36e5c1127adc78fdfd7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblTxtContact</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ab8357e9d0d07c481afe335df0d162964" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblTxtInvoiceTo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a93d3c859bfcf94cd62bf8880b81526df" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblTxtShipTo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ab1d13bff70bf879d3e5af43b337f281d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>lblWeek</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ae3921301e3a7d6b601ece8f5a4548446" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>LoadAuxList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a83468a764098a8b51340e221db9d2c2f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>memoEditRemarks</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>Modify</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>New</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a6ccc5781c9ac68d7a3558822d32c0e5f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>OpenReport</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ad0d1c5dc0430c64116c4ebcc6b83f784" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>pcFilter</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>ProcessCmdKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>Read</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1afbfc87d716b8dab4133936aa7ec4e131" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>ResetCurrentInvoice</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ae17be9a71791c020a23b20473101c243" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>ResetForm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>RestoreInitState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>ribbonControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>RibbonFormBase</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>ribbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>ribbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>ribbonPageGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>ribbonStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a02a5677883f383b574cd2338c9cd33f6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>sbSearch</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a4df1fc90151d108b36cfc1987c8dfc4b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>SbSearch_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a5755c82bb2dd68752f303bf8f1eae4e1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>SearchInvoice</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ab13663db308e07a5069868c4bb0dc965" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>searchLookUpEdit1View</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>SetActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a8e5c023da78ee7fa06f3d6ae8a2dc897" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>SetFormDocHeadInfo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a80ed59f3e6fa2159a450662de7ede118" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>SetObjectsReadOnly</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>SetRibbonText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a580b7d0c1d316391b230e6648f72e33e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>SetUpButtons</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a2c468f71818e141a9bc3c6eef372c3cf" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>SetUpEvents</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a121f8c8e77af291eaec5682d48e3d903" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>SetUpGrdLines</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a9e745237655ea6b824a7e2fa1cf1cfa3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>SetUpLabels</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a686991431decb5d6327bb6090356cd67" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>SetupPanelControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a85a8b95b1b0ea9ba9c050e9428a42e8f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>SetUpSearchLookUpEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ae7fc7d444bf8512062e6a191e729a1bc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>SetUpSlueCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a295fe4547c9eaaea20e947b89a31394a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>SetUpSlueCustomer</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a6286dd17228aa4be450f3e60b719e542" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>SetUpSlueDeliveryTerms</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a7634ec7b7669d08d2d580e9eebc79387" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>SetUpSluePaymentTerms</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a60be2347c5680f74309f5d1e1881aeaa" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>slueCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1adf7c460801f2066a34e25f1219d8518f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>slueCustomer</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a7d9afb0463b8c4b8bb61ba0ea7fc6fd4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>slueDeliveryTerms</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a453bdd18e288327d034d8e982f4d8b41" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>sluePaymentTerm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a1f92b659991112be830577c55b88c1a6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>txtDNNumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ab9654300ca0671a70683269b2c6178ed" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>TxtDNNumber_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1aae685bb9980b247029b4d5ae1bdc9b16" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>txtINVNumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a004c74b59d521606ec84d09d5b420494" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>TxtINVNumber_KeyDown</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a58ef074a08027d0f9685f95e12516b33" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>txtManualReference</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a5d0af47c1947d2e36f8c89491a2bae24" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>xgrdLines</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ac40316d0470f5dd7d7a875e6b2a9b19a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>xtcGeneral</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1ab1af9f07774da722859983b2e59a4bf1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>xtcPO</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a001bcfdab5763cd329cfcb962aec9a08" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>xtpGoods</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a64b37886f25cf6da19a7f8e9fb82664f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>xtpINV</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1aa18b6ce997dfa0f49e90cf1cc33e6beb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Invoice</scope><name>xtpTerms</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,22 +1,74 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="namespace_h_k_supply_1_1_models" kind="namespace" language="C#">
     <compoundname>HKSupply::Models</compoundname>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_bom_breakdown" prot="public">HKSupply::Models::BomBreakdown</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_currency" prot="public">HKSupply::Models::Currency</innerclass>
     <innerclass refid="class_h_k_supply_1_1_models_1_1_customer" prot="public">HKSupply::Models::Customer</innerclass>
     <innerclass refid="class_h_k_supply_1_1_models_1_1_customer_history" prot="public">HKSupply::Models::CustomerHistory</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_customer_price_list" prot="public">HKSupply::Models::CustomerPriceList</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_customer_price_list_history" prot="public">HKSupply::Models::CustomerPriceListHistory</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_delivery_term" prot="public">HKSupply::Models::DeliveryTerm</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_detail_bom_hf" prot="public">HKSupply::Models::DetailBomHf</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history" prot="public">HKSupply::Models::DetailBomHfHistory</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_detail_bom_hw" prot="public">HKSupply::Models::DetailBomHw</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_detail_bom_hw_history" prot="public">HKSupply::Models::DetailBomHwHistory</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_detail_bom_mt" prot="public">HKSupply::Models::DetailBomMt</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_detail_bom_mt_history" prot="public">HKSupply::Models::DetailBomMtHistory</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_doc_type" prot="public">HKSupply::Models::DocType</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_etn_color" prot="public">HKSupply::Models::EtnColor</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_exchange_rate" prot="public">HKSupply::Models::ExchangeRate</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_family_h_k" prot="public">HKSupply::Models::FamilyHK</innerclass>
     <innerclass refid="class_h_k_supply_1_1_models_1_1_functionality" prot="public">HKSupply::Models::Functionality</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_functionality_report" prot="public">HKSupply::Models::FunctionalityReport</innerclass>
     <innerclass refid="class_h_k_supply_1_1_models_1_1_functionality_role" prot="public">HKSupply::Models::FunctionalityRole</innerclass>
-    <innerclass refid="class_h_k_supply_1_1_models_1_1_item" prot="public">HKSupply::Models::Item</innerclass>
-    <innerclass refid="class_h_k_supply_1_1_models_1_1_item_history" prot="public">HKSupply::Models::ItemHistory</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_hw_type_l1" prot="public">HKSupply::Models::HwTypeL1</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_hw_type_l2" prot="public">HKSupply::Models::HwTypeL2</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_hw_type_l3" prot="public">HKSupply::Models::HwTypeL3</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_incoterm" prot="public">HKSupply::Models::Incoterm</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_item_bcn" prot="public">HKSupply::Models::ItemBcn</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_item_bom" prot="public">HKSupply::Models::ItemBom</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_item_doc" prot="public">HKSupply::Models::ItemDoc</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_item_ey" prot="public">HKSupply::Models::ItemEy</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_item_ey_history" prot="public">HKSupply::Models::ItemEyHistory</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_item_group" prot="public">HKSupply::Models::ItemGroup</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_item_hf" prot="public">HKSupply::Models::ItemHf</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_item_hf_history" prot="public">HKSupply::Models::ItemHfHistory</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_item_hw" prot="public">HKSupply::Models::ItemHw</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_item_hw_history" prot="public">HKSupply::Models::ItemHwHistory</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_item_mt" prot="public">HKSupply::Models::ItemMt</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_item_mt_history" prot="public">HKSupply::Models::ItemMtHistory</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_item_type" prot="public">HKSupply::Models::ItemType</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_layout" prot="public">HKSupply::Models::Layout</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_material_l1" prot="public">HKSupply::Models::MaterialL1</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_material_l2" prot="public">HKSupply::Models::MaterialL2</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_material_l3" prot="public">HKSupply::Models::MaterialL3</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_mat_type_l1" prot="public">HKSupply::Models::MatTypeL1</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_mat_type_l2" prot="public">HKSupply::Models::MatTypeL2</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_mat_type_l3" prot="public">HKSupply::Models::MatTypeL3</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_model" prot="public">HKSupply::Models::Model</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_my_company" prot="public">HKSupply::Models::MyCompany</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_payment_terms" prot="public">HKSupply::Models::PaymentTerms</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_prototype" prot="public">HKSupply::Models::Prototype</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_prototype_doc" prot="public">HKSupply::Models::PrototypeDoc</innerclass>
     <innerclass refid="class_h_k_supply_1_1_models_1_1_role" prot="public">HKSupply::Models::Role</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_status_cial" prot="public">HKSupply::Models::StatusCial</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_status_h_k" prot="public">HKSupply::Models::StatusHK</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_status_prototype" prot="public">HKSupply::Models::StatusPrototype</innerclass>
     <innerclass refid="class_h_k_supply_1_1_models_1_1_store" prot="public">HKSupply::Models::Store</innerclass>
     <innerclass refid="class_h_k_supply_1_1_models_1_1_supplier" prot="public">HKSupply::Models::Supplier</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff" prot="public">HKSupply::Models::SupplierFactoryCoeff</innerclass>
     <innerclass refid="class_h_k_supply_1_1_models_1_1_supplier_history" prot="public">HKSupply::Models::SupplierHistory</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_supplier_price_list" prot="public">HKSupply::Models::SupplierPriceList</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_supplier_price_list_history" prot="public">HKSupply::Models::SupplierPriceListHistory</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_unit" prot="public">HKSupply::Models::Unit</innerclass>
     <innerclass refid="class_h_k_supply_1_1_models_1_1_user" prot="public">HKSupply::Models::User</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_user_attr_description" prot="public">HKSupply::Models::UserAttrDescription</innerclass>
+    <innernamespace refid="namespace_h_k_supply_1_1_models_1_1_supply">HKSupply::Models::Supply</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="HKSupply/Models/Customer.cs" line="11" column="1"/>
+    <location file="HKSupply/Models/BomBreakdown.cs" line="6" column="1"/>
   </compounddef>
 </doxygen>

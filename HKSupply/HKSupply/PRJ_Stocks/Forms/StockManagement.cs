@@ -50,27 +50,27 @@ namespace HKSupply.PRJ_Stocks.Forms
 
                 FormatejaGridStk(this.GC_Stocks);
                 FormatejaGridMovs(this.GC_Movs);
-                
-                FormatejaGridLots(this.GC_Lots);
-                FormatejaGridMovsLots(this.GC_LotsMovements);
 
                 FormatejaGridMovsImport(this.GC_ImportExcel);
 
 
                 this.txtFreeStk.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
                 this.txtAsgStk.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+
+                this.txtFreeLot.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+                this.txtLotStk.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+
                 this.txtTotalStk.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+
                 this.txtOnwStk.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-                this.txtNewQTT.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+                this.txtLotStk.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
 
                 Call_DB_Stocks CallDBS = new Call_DB_Stocks();
                 gSTKAct = CallDBS.CallCargaStocks();
 
                 GC_Stocks.DataSource = gSTKAct.LstStocks;
                 GC_Movs.DataSource = gSTKAct.LstStockMove;
-
-                GC_Lots.DataSource = gSTKAct.LstLots;
-                GC_LotsMovements.DataSource = gSTKAct.LstLotsMove;
+                               
                                
                 //- Inicialitzem els combos dest
                 UpdateCombo(CB_OwnDEST, gSTKAct.GetLstOwnerIds());
@@ -438,7 +438,43 @@ namespace HKSupply.PRJ_Stocks.Forms
             CL.VisibleIndex = VI;
             CL.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             //CL.BestFit();
-            
+
+            VI++;
+            CL = new DevExpress.XtraGrid.Columns.GridColumn();
+            V.Columns.Add(CL);
+            CL.FieldName = "WareHouseName";
+            CL.Caption = "Warehouse";
+            CL.OptionsColumn.AllowEdit = false;
+            CL.Width = 260;
+            CL.DisplayFormat.FormatType = DevExpress.Utils.FormatType.None;
+            CL.VisibleIndex = VI;
+            CL.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            //CL.BestFit();
+
+            VI++;
+            CL = new DevExpress.XtraGrid.Columns.GridColumn();
+            V.Columns.Add(CL);
+            CL.FieldName = "idWareHouse";
+            CL.Caption = "id Wr";
+            CL.OptionsColumn.AllowEdit = false;
+            CL.Width = 60;
+            CL.DisplayFormat.FormatType = DevExpress.Utils.FormatType.None;
+            CL.VisibleIndex = VI;
+            CL.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            //CL.BestFit();
+
+            VI++;
+            CL = new DevExpress.XtraGrid.Columns.GridColumn();
+            V.Columns.Add(CL);
+            CL.FieldName = "WareHouseType";
+            CL.Caption = "Warehouse Type";
+            CL.OptionsColumn.AllowEdit = false;
+            CL.Width = 125;
+            CL.DisplayFormat.FormatType = DevExpress.Utils.FormatType.None;
+            CL.VisibleIndex = VI;
+            CL.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            //CL.BestFit();
+
             VI++;
             CL = new DevExpress.XtraGrid.Columns.GridColumn();
             V.Columns.Add(CL);
@@ -630,47 +666,77 @@ namespace HKSupply.PRJ_Stocks.Forms
         private void ActulitzaPanel(Stocks.StockItem SI)
         {
             BtnFreeOwner.Enabled = false;
-            BtnStkAdjust.Enabled = false;
-            BtnAsingToOwner.Enabled = false;
+            BtnFreeLot.Enabled = false;
+            btnAssignLot.Enabled = false;
+            btnAssignOwner.Enabled = false;
+
+            BtnAdjustFree.Enabled = false;
             BtnMoveStk.Enabled = false;
-                                    
-            this.txtWare.Text = SI.WareHouseName;
-            this.txtWareType.Text = SI.WareHouseTypeName;
-            this.txtItem.Text = SI.item.idItem;
-            this.txtFreeStk.Text = SI.item.TotalFreeQTT.ToString("n0");
-            this.txtAsgStk.Text = SI.item.TotalAssignedQTT.ToString("n0");
-            this.txtTotalStk.Text = SI.item.TotalQTT.ToString("n0");
-            this.txtOnwStk.Text = "0";            
-            this.txtNewQTT.Text = "0";
-            UpdateCombo(CB_Owner, SI.LstidOwners());            
-            UpdateCombo(CB_WareDEST, gSTKAct.GetLstWarehouseNames());
 
-            if (CB_Owner.SelectedIndex > 1) BtnFreeOwner.Enabled = true;
+            this.txtIAsgnLot.Enabled = true;
 
-            if(CB_OwnDEST.SelectedIndex>0 && CB_OwnDEST.SelectedItem.ToString() != "" && SI.item.TotalFreeQTT > 0) BtnAsingToOwner.Enabled = true;
-            
+            this.txtIAsgnLot.Text = "";
+            this.txtOnwStk.Text = "0";
+            this.txtLotStk.Text = "0";
+            this.txtAdjustFreeStk.Text = "0";
+            this.txtIAsgnLot.Text = "";
+
+            CB_Lots.Items.Clear();
+            CB_Owner.Items.Clear();
+
+            CB_OwnDEST.Items.Clear();
+            CB_WareDEST.Items.Clear();            
+
+            if (SI != null)
+            {
+                UpdateCombo(CB_OwnDEST, gSTKAct.GetLstOwnerNames());
+                UpdateCombo(CB_WareDEST, gSTKAct.GetLstWarehouseNames());
+
+                this.txtWare.Text = SI.WareHouseName;
+                this.txtWareType.Text = SI.WareHouseTypeName;
+                this.txtItem.Text = SI.item.idItem;
+                this.txtTotalStk.Text = SI.item.TotalQTT.ToString("n0");
+
+                this.txtFreeStk.Text = SI.item.TotalFreeQTT.ToString("n0");
+                this.txtAsgStk.Text = SI.item.TotalAssignedQTT.ToString("n0");
+
+                this.txtFreeLot.Text = SI.item.TotalFreeLotQTT.ToString("n0");
+                this.txtAsgLot.Text = SI.item.TotalAssignedLotQTT.ToString("n0");
+
+                UpdateCombo(CB_Owner, SI.LstidOwners());
+                UpdateCombo(CB_Lots, SI.LstLots());
+
+                if (CB_Owner.SelectedIndex > 1) BtnFreeOwner.Enabled = true;
+                if (CB_Lots.SelectedIndex > 1) BtnFreeLot.Enabled = true;
+            }
+
+
         }
 
         private void BtnFreeOwner_Click(object sender, EventArgs e)
         {
             //Desasignem tot el STOCK de un Owner del item i magazemt donats.
-            Classes.Stocks.StockItem SIO = gSIAct;
-
-            string idOwner = (string)CB_Owner.SelectedItem;
-
-            if (idOwner != "")
+            try
             {
-                decimal StkReleased = gSTKAct.FreeSockItem(SIO.ware, SIO.idItem, idOwner);
-                this.BtnFreeOwner.Enabled = false;
-                GC_Movs.RefreshDataSource();
-                GC_Stocks.RefreshDataSource();
-                GC_Lots.RefreshDataSource();
-                GC_LotsMovements.RefreshDataSource();
-                GC_ImportExcel.RefreshDataSource();
-            };
+                Classes.Stocks.StockItem SIO = gSIAct;
 
-            ActulitzaPanel(gSIAct);
-            this.Refresh();
+                string idOwner = (string)CB_Owner.SelectedItem;
+
+                if (idOwner != "")
+                {
+                    decimal StkReleased = gSTKAct.FreeSockItem(SIO.ware, SIO.idItem, idOwner);
+                    this.BtnFreeOwner.Enabled = false;
+                    GC_Movs.RefreshDataSource();
+                    GC_Stocks.RefreshDataSource();
+                };
+
+                ActulitzaPanel(gSIAct);
+                this.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Can't be done. {ex.Message}");
+            };
                         
         }
 
@@ -682,80 +748,14 @@ namespace HKSupply.PRJ_Stocks.Forms
             txtOnwStk.Text = gSIAct.item.StkOwner(idOwn).ToString("n0");
             this.Refresh();
         }
-
-        private void BtnStkAdjust_Click(object sender, EventArgs e)
-        {
-            //el BOTO només esta "viu" si hi a un stockitem seleccionat que te més d'un owner No cal validar gSIAact estigui carregat.
-            Classes.Stocks.StockItem SIO = gSIAct;
-
-            if(CB_Owner.SelectedIndex>=0)            
-            {
-                MessageBox.Show("Only free stock can be adjusted.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                decimal ValVol = decimal.Parse(txtNewQTT.Text); // es >0, controlat per el txtbox
-                decimal FreeStk = SIO.item.TotalFreeQTT;
-                decimal Variacio = ValVol - FreeStk;
-                decimal StkAjustat = gSTKAct.AdjustSockItem(gSIAct.ware, gSIAct.idItem, Variacio);
-                GC_Movs.RefreshDataSource();
-                GC_Stocks.RefreshDataSource();
-                GC_Lots.RefreshDataSource();
-                GC_LotsMovements.RefreshDataSource();
-                GC_ImportExcel.RefreshDataSource();
-            }
-
-            this.Refresh();    
-                    
-        }
-            
+                  
         
-
         private void CB_OwnDEST_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // no cal fer res.
+            this.txtQttAssignOwn.Enabled = true;
+            this.txtQttAssignOwn.Text = "0";            
         }
-
-        private void txtNewQTT_EditValueChanged(object sender, EventArgs e)
-        {
-            BtnStkAdjust.Enabled = false;
-            int Val = 0;
-            bool ok = false;
-
-            if (int.TryParse(txtNewQTT.Text, out Val)){
-                if (Val >= 0) {
-                    ok = true; BtnStkAdjust.Enabled = true;
-                }
-                else
-                    ok= false;
-                }
-            else
-            {
-                ok = false;                
-            }
-
-            if (!ok) MessageBox.Show("New Quantity must be a positive number or zero.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);                
-        }
-
-        private void BtnAsingToOwner_Click(object sender, EventArgs e)
-        {
-            decimal QttFree = gSIAct.item.TotalFreeQTT;
-            decimal ValVol = decimal.Parse(txtNewQTT.Text);
-
-            if (ValVol > QttFree)
-                MessageBox.Show("There is no enough Free stock to be asgined.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else {
-                string idOwn = CB_OwnDEST.SelectedItem.ToString();
-                gSTKAct.AsgnSockItem(gSIAct.ware, gSIAct.idItem, ValVol, idOwn);
-                ActulitzaPanel(gSIAct);
-                this.Refresh();
-            }
-            GC_Movs.RefreshDataSource();
-            GC_Stocks.RefreshDataSource();
-            GC_Lots.RefreshDataSource();
-            GC_LotsMovements.RefreshDataSource();
-            GC_ImportExcel.RefreshDataSource();
-        }
+            
 
         private void CB_WareDEST_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -764,43 +764,47 @@ namespace HKSupply.PRJ_Stocks.Forms
 
         private void BtnMoveStk_Click(object sender, EventArgs e)
         {
-            string idOwnOrig = "";
-            if (CB_Owner.SelectedIndex>=0) idOwnOrig = CB_Owner.SelectedItem.ToString();
+            try
+            { 
+                string idOwnOrig = "";
+                if (CB_Owner.SelectedIndex>=0) idOwnOrig = CB_Owner.SelectedItem.ToString();
 
-            string idOwnDest = "";
-            if (CB_OwnDEST.SelectedIndex>=0) idOwnDest = CB_OwnDEST.SelectedItem.ToString();
+                string idOwnDest = "";
+                if (CB_OwnDEST.SelectedIndex>=0) idOwnDest = CB_OwnDEST.SelectedItem.ToString();
 
 
-            Classes.Stocks.Warehouse WDst = new Stocks.Warehouse();
-            WDst =  gSTKAct.GetWareHouse(CB_WareDEST.SelectedItem.ToString());
-            Classes.Stocks.Warehouse WOrg = gSIAct.ware;
-            string idIem = gSIAct.idItem;
+                Classes.Stocks.Warehouse WDst = new Stocks.Warehouse();
+                WDst =  gSTKAct.GetWareHouse(CB_WareDEST.SelectedItem.ToString());
+                Classes.Stocks.Warehouse WOrg = gSIAct.ware;
+                string idIem = gSIAct.idItem;
 
-            decimal ValVol = decimal.Parse(txtNewQTT.Text);
-            if (ValVol <=0 )
-                MessageBox.Show("Qunatity to be moved must be greather than zero.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
-            {
-                decimal QttOrigen = 0;
-                if (idOwnOrig == "")
-                    QttOrigen = gSIAct.item.TotalFreeQTT;
-                else
-                    QttOrigen = gSIAct.item.StkOwner(idOwnOrig);
-
-                if (ValVol > QttOrigen)
-                    MessageBox.Show("There is no enough stock to be moved.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                decimal ValVol = 0; //decimal.Parse(txtNewQTT.Text);
+                if (ValVol <=0 )
+                    MessageBox.Show("Qunatity to be moved must be greather than zero.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                 {
-                    gSTKAct.MoveSockItem(Stocks.StockMovementsType.Transit,WOrg,WDst,ValVol,idIem,idOwnDest);
-                    ActulitzaPanel(gSIAct);
-                    this.Refresh();
+                    decimal QttOrigen = 0;
+                    if (idOwnOrig == "")
+                        QttOrigen = gSIAct.item.TotalFreeQTT;
+                    else
+                        QttOrigen = gSIAct.item.StkOwner(idOwnOrig);
+
+                    if (ValVol > QttOrigen)
+                        MessageBox.Show("There is no enough stock to be moved.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                    {
+                        gSTKAct.MoveSockItem(Stocks.StockMovementsType.Transit,WOrg,WDst,ValVol,idIem,idOwnDest,"");
+                        ActulitzaPanel(gSIAct);
+                        this.Refresh();
+                    }
                 }
+                GC_Movs.RefreshDataSource();
+                GC_Stocks.RefreshDataSource();
             }
-            GC_Movs.RefreshDataSource();
-            GC_Stocks.RefreshDataSource();
-            GC_Lots.RefreshDataSource();
-            GC_LotsMovements.RefreshDataSource();
-            GC_ImportExcel.RefreshDataSource();
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Can't be done. {ex.Message}");
+            };
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -816,8 +820,6 @@ namespace HKSupply.PRJ_Stocks.Forms
 
                 GC_Movs.RefreshDataSource();
                 GC_Stocks.RefreshDataSource();
-                GC_Lots.RefreshDataSource();
-                GC_LotsMovements.RefreshDataSource();
                 GC_ImportExcel.RefreshDataSource();
 
 
@@ -838,23 +840,27 @@ namespace HKSupply.PRJ_Stocks.Forms
 
         private void BtnAdjustOwner_Click(object sender, EventArgs e)
         {
-            decimal QttFree = gSIAct.item.TotalFreeQTT;
-            decimal ValVol = decimal.Parse(txtNewQTT.Text);
-
-            if (ValVol > QttFree)
-                MessageBox.Show("There is no enough Free stock to be asgined.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
+            try
             {
-                string idOwn = CB_Owner.SelectedItem.ToString();
-                gSTKAct.AdjustItemAssing(gSIAct.ware, gSIAct.idItem, ValVol, idOwn);
-                ActulitzaPanel(gSIAct);
-                this.Refresh();
-                GC_Movs.RefreshDataSource();
-                GC_Stocks.RefreshDataSource();
-                GC_Lots.RefreshDataSource();
-                GC_LotsMovements.RefreshDataSource();
-                GC_ImportExcel.RefreshDataSource();
+                decimal QttFree = gSIAct.item.TotalFreeQTT;
+                decimal ValVol = decimal.Parse(txtAdjustFreeStk.Text);
+
+                if (ValVol > QttFree)
+                    MessageBox.Show("There is no enough Free stock to be asgined.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                {
+                    string idOwn = CB_Owner.SelectedItem.ToString();
+                    gSTKAct.AdjustItemAssing(gSIAct.ware, gSIAct.idItem, ValVol, idOwn);
+                    ActulitzaPanel(gSIAct);
+                    this.Refresh();
+                    GC_Movs.RefreshDataSource();
+                    GC_Stocks.RefreshDataSource();                
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Can't be done. {ex.Message}");
+            };
         }
 
         private void BtnImportExcel_Click(object sender, EventArgs e)
@@ -944,7 +950,7 @@ namespace HKSupply.PRJ_Stocks.Forms
 
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
+            {                
                 string FileName = openFileDialog1.FileName;
                 Helpers.Excel.CreateTemplate(FileName, gSTKAct.LstWarehouses, gSTKAct.LstItemsBcn);
 
@@ -966,9 +972,130 @@ namespace HKSupply.PRJ_Stocks.Forms
             gDataImport.Clear();
             GC_Movs.RefreshDataSource();
             GC_Stocks.RefreshDataSource();
-            GC_Lots.RefreshDataSource();
-            GC_LotsMovements.RefreshDataSource();
             GC_ImportExcel.RefreshDataSource();
+        }
+
+        private void btnAssignOwner_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                decimal QttFree = gSIAct.item.TotalFreeQTT;
+                decimal ValVol = decimal.Parse(txtQttAssignOwn.Text);
+
+                if (ValVol > QttFree)
+                    MessageBox.Show("There is no enough Free stock to be asgined.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                {
+                    string idOwn = CB_OwnDEST.SelectedItem.ToString();
+                    gSTKAct.AsgnSockItem(gSIAct.ware, gSIAct.idItem, ValVol, idOwn);
+                    ActulitzaPanel(gSIAct);
+                    this.Refresh();
+                }
+                GC_Movs.RefreshDataSource();
+                GC_Stocks.RefreshDataSource();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Can't be done. {ex.Message}");
+            };
+}
+
+        private void txtIAsgnLot_EditValueChanged(object sender, EventArgs e)
+        {
+            if (txtIAsgnLot.Text != "")
+            { btnAssignLot.Enabled = true; txtQttAssignLot.Enabled = true; txtQttAssignLot.Text = "0"; }
+            else
+            { btnAssignLot.Enabled = false; txtQttAssignLot.Enabled = false; txtQttAssignLot.Text = ""; };
+        }
+
+        private void btnAssignLot_Click(object sender, EventArgs e)
+        {
+            try
+            { 
+                string IdLot = txtIAsgnLot.Text;
+                int Qtt = Convert.ToInt32(txtQttAssignLot.Text);
+
+                gSTKAct.AsgnLotItem(gSIAct.ware, gSIAct.idItem, Qtt, IdLot);
+                GC_Movs.RefreshDataSource();
+                GC_Stocks.RefreshDataSource();
+                this.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Can't be done. {ex.Message}");
+            };
+}
+
+        private void txtQttAssignLot_EditValueChanged(object sender, EventArgs e)
+        {
+            btnAssignLot.Enabled = false;
+            int ValVol = 0;
+            if (int.TryParse(this.txtQttAssignLot.Text, out ValVol)) btnAssignLot.Enabled = true;            
+        }
+              
+
+        private void BtnFreeLot_Click(object sender, EventArgs e)
+        {
+            //Desasignem tot el STOCK de un Owner del item i magazemt donats.
+            try
+            { 
+                Classes.Stocks.StockItem SIO = gSIAct;
+
+                string idLot = (string)CB_Lots.SelectedItem;
+
+                if (idLot != "")
+                {
+                    decimal StkReleased = gSTKAct.FreeLotItem(SIO.ware, SIO.idItem, idLot);
+                    this.BtnFreeLot.Enabled = false;
+                    GC_Movs.RefreshDataSource();
+                    GC_Stocks.RefreshDataSource();                
+                };
+
+                ActulitzaPanel(gSIAct);
+                this.Refresh();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Can't be done. {ex.Message}");
+            };
+        }
+
+        private void txtAdjustFreeStk_EditValueChanged(object sender, EventArgs e)
+        {
+            BtnAdjustFree.Enabled = false;
+            int ValVol = 0;
+            if (int.TryParse(this.txtAdjustFreeStk.Text, out ValVol)) BtnAdjustFree.Enabled = true;
+        }
+
+        private void txtQttMov_EditValueChanged(object sender, EventArgs e)
+        {
+            BtnMoveStk.Enabled = false;
+            int ValVol = 0;
+            if (int.TryParse(this.txtQttMov.Text, out ValVol) && ValVol!=0) BtnAdjustFree.Enabled = true;
+        }
+
+        private void CB_Lots_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //el combo només esta "viu" si hi a un stockitem seleccionat que te més d'un lot No cal validar gSIAact estigui carregat.
+            BtnFreeLot.Enabled = true;
+            string idLot = CB_Lots.SelectedItem.ToString();
+            txtLotStk.Text = gSIAct.item.StkOwner(idLot).ToString("n0");
+            this.Refresh();
+        }
+
+        private void txtLotStk_EditValueChanged(object sender, EventArgs e)
+        {
+            BtnFreeLot.Enabled = false;
+            int ValVol = 0;
+            if (int.TryParse(this.txtLotStk.Text, out ValVol) && ValVol != 0) BtnFreeLot.Enabled = true;
+        }
+
+        private void txtQttAssignOwn_EditValueChanged(object sender, EventArgs e)
+        {
+            btnAssignOwner.Enabled = false;
+            int ValVol = 0;
+            if (int.TryParse(this.txtQttAssignOwn.Text, out ValVol) && ValVol != 0) btnAssignOwner.Enabled = true;
         }
     }
 }

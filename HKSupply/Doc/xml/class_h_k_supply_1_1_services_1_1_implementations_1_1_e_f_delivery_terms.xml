@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_delivery_terms" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFDeliveryTerms</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_delivery_terms" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IDeliveryTerms</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_delivery_terms_1a18a9d465c998f974765099f86d3a287a" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFDeliveryTerms._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_delivery_terms" kindref="compound">EFDeliveryTerms</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFDeliveryTerms.cs" line="19" column="1" bodyfile="HKSupply/Services/Implementations/EFDeliveryTerms.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_delivery_terms_1a8c1b9f2f41db6e5f61c20bb93a2d99f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_delivery_term" kindref="compound">DeliveryTerm</ref> &gt;</type>
+        <definition>List&lt;DeliveryTerm&gt; HKSupply.Services.Implementations.EFDeliveryTerms.GetDeliveryTerms</definition>
+        <argsstring>()</argsstring>
+        <name>GetDeliveryTerms</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_delivery_terms_1a659607888b92ab195e9f2cac9456f6e0">GetDeliveryTerms</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFDeliveryTerms.cs" line="21" column="1" bodyfile="HKSupply/Services/Implementations/EFDeliveryTerms.cs" bodystart="21" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="425">
+        <label>HKSupply.Services.Implementations.EFDeliveryTerms</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_delivery_terms"/>
+        <childnode refid="426" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="426">
+        <label>IDeliveryTerms</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_delivery_terms"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="427">
+        <label>HKSupply.Services.Implementations.EFDeliveryTerms</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_delivery_terms"/>
+        <childnode refid="428" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="428">
+        <label>IDeliveryTerms</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_delivery_terms"/>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFDeliveryTerms.cs" line="18" column="1" bodyfile="HKSupply/Services/Implementations/EFDeliveryTerms.cs" bodystart="17" bodyend="57"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_delivery_terms_1a18a9d465c998f974765099f86d3a287a" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFDeliveryTerms</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_delivery_terms_1a8c1b9f2f41db6e5f61c20bb93a2d99f0" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFDeliveryTerms</scope><name>GetDeliveryTerms</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

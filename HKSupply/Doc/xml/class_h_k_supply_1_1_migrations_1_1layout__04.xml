@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_migrations_1_1layout__04" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Migrations::layout_04</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IMigrationMetadata</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">DbMigration</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_migrations_1_1layout__04_1afcfb0a9f2d73ce2ead2c4a4f858c6168" prot="private" static="no" mutable="no">
+        <type>readonly ResourceManager</type>
+        <definition>readonly ResourceManager HKSupply.Migrations.layout_04.Resources</definition>
+        <argsstring></argsstring>
+        <name>Resources</name>
+        <initializer>= new ResourceManager(typeof(<ref refid="class_h_k_supply_1_1_migrations_1_1layout__04" kindref="compound">layout_04</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201705171202405_layout_04.Designer.cs" line="12" column="1" bodyfile="HKSupply/Migrations/201705171202405_layout_04.Designer.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_migrations_1_1layout__04_1a799f2d7f304c7be4929ab1c3f3e8842c" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string IMigrationMetadata.</type>
+        <definition>string IMigrationMetadata. HKSupply.Migrations.layout_04.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201705171202405_layout_04.Designer.cs" line="14" column="1" bodyfile="HKSupply/Migrations/201705171202405_layout_04.Designer.cs" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_migrations_1_1layout__04_1a8c5443336c925f5119c450f8d17f7674" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string IMigrationMetadata.</type>
+        <definition>string IMigrationMetadata. HKSupply.Migrations.layout_04.Source</definition>
+        <argsstring></argsstring>
+        <name>Source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201705171202405_layout_04.Designer.cs" line="19" column="1" bodyfile="HKSupply/Migrations/201705171202405_layout_04.Designer.cs" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_migrations_1_1layout__04_1a41e9ab2743cd7265be7ff1203ed6b4ec" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string IMigrationMetadata.</type>
+        <definition>string IMigrationMetadata. HKSupply.Migrations.layout_04.Target</definition>
+        <argsstring></argsstring>
+        <name>Target</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201705171202405_layout_04.Designer.cs" line="24" column="1" bodyfile="HKSupply/Migrations/201705171202405_layout_04.Designer.cs" bodystart="25" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_migrations_1_1layout__04_1aaf16c84b3b6fdd25ad95abc85cbb4bcf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Migrations.layout_04.Up</definition>
+        <argsstring>()</argsstring>
+        <name>Up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201705171202405_layout_04.cs" line="8" column="1" bodyfile="HKSupply/Migrations/201705171202405_layout_04.cs" bodystart="8" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_migrations_1_1layout__04_1aa352334e324d1deb168ccc03c3c56423" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Migrations.layout_04.Down</definition>
+        <argsstring>()</argsstring>
+        <name>Down</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201705171202405_layout_04.cs" line="16" column="1" bodyfile="HKSupply/Migrations/201705171202405_layout_04.cs" bodystart="16" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1144">
+        <label>HKSupply.Migrations.layout_04</label>
+        <link refid="class_h_k_supply_1_1_migrations_1_1layout__04"/>
+        <childnode refid="1145" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1146" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1146">
+        <label>DbMigration</label>
+      </node>
+      <node id="1145">
+        <label>IMigrationMetadata</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1147">
+        <label>HKSupply.Migrations.layout_04</label>
+        <link refid="class_h_k_supply_1_1_migrations_1_1layout__04"/>
+        <childnode refid="1148" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1149" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1149">
+        <label>DbMigration</label>
+      </node>
+      <node id="1148">
+        <label>IMigrationMetadata</label>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Migrations/201705171202405_layout_04.cs" line="7" column="1" bodyfile="HKSupply/Migrations/201705171202405_layout_04.cs" bodystart="6" bodyend="23"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_migrations_1_1layout__04_1aa352334e324d1deb168ccc03c3c56423" prot="public" virt="non-virtual"><scope>HKSupply::Migrations::layout_04</scope><name>Down</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1layout__04_1a799f2d7f304c7be4929ab1c3f3e8842c" prot="private" virt="non-virtual"><scope>HKSupply::Migrations::layout_04</scope><name>Id</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1layout__04_1afcfb0a9f2d73ce2ead2c4a4f858c6168" prot="private" virt="non-virtual"><scope>HKSupply::Migrations::layout_04</scope><name>Resources</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1layout__04_1a8c5443336c925f5119c450f8d17f7674" prot="private" virt="non-virtual"><scope>HKSupply::Migrations::layout_04</scope><name>Source</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1layout__04_1a41e9ab2743cd7265be7ff1203ed6b4ec" prot="private" virt="non-virtual"><scope>HKSupply::Migrations::layout_04</scope><name>Target</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1layout__04_1aaf16c84b3b6fdd25ad95abc85cbb4bcf" prot="public" virt="non-virtual"><scope>HKSupply::Migrations::layout_04</scope><name>Up</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

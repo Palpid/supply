@@ -1,0 +1,1385 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</compoundname>
+    <basecompoundref refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" prot="public" virt="non-virtual">HKSupply.Forms.RibbonFormBase</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1aba2724db2ae2209a65d5b38e38d22eae" prot="private" static="no" mutable="no">
+        <type>Font</type>
+        <definition>Font HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality._labelDefaultFontBold</definition>
+        <argsstring></argsstring>
+        <name>_labelDefaultFontBold</name>
+        <initializer>= AppStyles.LabelDefaultFontBold</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="30" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a69ded19191b6cedb91f8e4e67f92c42b" prot="private" static="no" mutable="no">
+        <type>Font</type>
+        <definition>Font HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality._labelDefaultFont</definition>
+        <argsstring></argsstring>
+        <name>_labelDefaultFont</name>
+        <initializer>= AppStyles.LabelDefaultFont</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="31" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1aab1033b6b28731c80c3b061ebf689ca4" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_supply_status" kindref="compound">SupplyStatus</ref> &gt;</type>
+        <definition>List&lt;SupplyStatus&gt; HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality._supplyStatusList</definition>
+        <argsstring></argsstring>
+        <name>_supplyStatusList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="33" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a8af73a993ddbcee67656303e8b08bc91" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier" kindref="compound">Supplier</ref> &gt;</type>
+        <definition>List&lt;Supplier&gt; HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality._suppliersList</definition>
+        <argsstring></argsstring>
+        <name>_suppliersList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="34" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a6dc4e132a8ff8205d34a5d2d65a0024a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality._docHeadPK</definition>
+        <argsstring></argsstring>
+        <name>_docHeadPK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="36" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1af5cb41821a432e5be6695ae9728e44ad" prot="private" static="no" mutable="no">
+        <type>BindingList&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line" kindref="compound">DocLine</ref> &gt;</type>
+        <definition>BindingList&lt;DocLine&gt; HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality._docLinesList</definition>
+        <argsstring></argsstring>
+        <name>_docLinesList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="37" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1aa9970921c24505bebd39c7fec147be81" prot="private" static="no" mutable="no">
+        <type>BindingList&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch" kindref="compound">PackingListItemBatch</ref> &gt;</type>
+        <definition>BindingList&lt;PackingListItemBatch&gt; HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality._auxItemsBatchList</definition>
+        <argsstring></argsstring>
+        <name>_auxItemsBatchList</name>
+        <initializer>= new BindingList&lt;<ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch" kindref="compound">PackingListItemBatch</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="38" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1aee0979ca93ce4d67513a617e320cb163" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch" kindref="compound">PackingListItemBatch</ref> &gt;</type>
+        <definition>List&lt;PackingListItemBatch&gt; HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality._itemsBatchList</definition>
+        <argsstring></argsstring>
+        <name>_itemsBatchList</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch" kindref="compound">PackingListItemBatch</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="39" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a4a9603bc156469bf5c945fd5a312ff09" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality._isLoadingPacking</definition>
+        <argsstring></argsstring>
+        <name>_isLoadingPacking</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="41" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a188f8b77ffbbcb6fec019b6e2cf85cf8" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1afb43515fa8ab6c0124d7da6be2a22518" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.xtcGeneral</definition>
+        <argsstring></argsstring>
+        <name>xtcGeneral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="426" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a02ba4f808f2520a06a5264bb5f6fa547" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.xtpReceiptAndQuality</definition>
+        <argsstring></argsstring>
+        <name>xtpReceiptAndQuality</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="427" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="427" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1adf59fe8c99acb722dbb7084ca1c1ab0e" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.PanelControl</type>
+        <definition>DevExpress.XtraEditors.PanelControl HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.pcFilter</definition>
+        <argsstring></argsstring>
+        <name>pcFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="428" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="428" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ad619805287730b74fa44e8477e21af80" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.MemoEdit</type>
+        <definition>DevExpress.XtraEditors.MemoEdit HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.memoEditRemarks</definition>
+        <argsstring></argsstring>
+        <name>memoEditRemarks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="429" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="429" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1adb912cf800ddb28e6ff575a803e7b169" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.sbSearch</definition>
+        <argsstring></argsstring>
+        <name>sbSearch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="430" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="430" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a59aed4378fd7e7a0e91efd5b0bdc5ee4" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.lblRemarks</definition>
+        <argsstring></argsstring>
+        <name>lblRemarks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="431" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="431" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a9408d97283a56711230f7e54335bd7fc" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.txtPKNumber</definition>
+        <argsstring></argsstring>
+        <name>txtPKNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="432" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="432" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ae31418726ef6e4e7dbf2aeaf6a5ae2fe" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.txtSupplierReference</definition>
+        <argsstring></argsstring>
+        <name>txtSupplierReference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="433" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="433" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1af711e83745d0e9c292e54d4ed3a6747f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.lblPKNumber</definition>
+        <argsstring></argsstring>
+        <name>lblPKNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="434" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="434" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a80cf314954d2fef7cefdbcfd63526ec6" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.lblSupplierReference</definition>
+        <argsstring></argsstring>
+        <name>lblSupplierReference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="435" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="435" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ac0ebf6cd6be89431311cc2d00484ea1a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.lblPKDocDate</definition>
+        <argsstring></argsstring>
+        <name>lblPKDocDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="436" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="436" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ae77a33818986a0bb4c113fa32f197ca3" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.lbltxtStatus</definition>
+        <argsstring></argsstring>
+        <name>lbltxtStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="437" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="437" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ac4828a0d40d7e0ae1e07db27dbbf3121" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.lblPKDelivery</definition>
+        <argsstring></argsstring>
+        <name>lblPKDelivery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="438" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="438" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ac972dddf2412ea43ae1c8d67322100d3" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.sbFinishQC</definition>
+        <argsstring></argsstring>
+        <name>sbFinishQC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="439" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="439" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a2b2f32ee357ad20e82e6b5301c020371" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.DateEdit</type>
+        <definition>DevExpress.XtraEditors.DateEdit HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.dateEditPKDocDate</definition>
+        <argsstring></argsstring>
+        <name>dateEditPKDocDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="440" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="440" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a0e79078790bfc358d727b7bbcdaf0b63" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.DateEdit</type>
+        <definition>DevExpress.XtraEditors.DateEdit HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.dateEditPKDelivery</definition>
+        <argsstring></argsstring>
+        <name>dateEditPKDelivery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="441" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="441" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a7516edb8797e31ef163f1622a3cc4aa1" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.lblDate</definition>
+        <argsstring></argsstring>
+        <name>lblDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="442" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="442" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1aa251a91190222bb9523930a436e48e0b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.lblPKDocDateWeek</definition>
+        <argsstring></argsstring>
+        <name>lblPKDocDateWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="443" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="443" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ada2302add0e9fcb045ba3405ce3d37d8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.lblPKDeliveryWeek</definition>
+        <argsstring></argsstring>
+        <name>lblPKDeliveryWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="444" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="444" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1aa4d09a196286135da2fc5db0dd431f92" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.lblWeek</definition>
+        <argsstring></argsstring>
+        <name>lblWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="445" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="445" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a6e466959ba4faa65a9f0846c87f3a475" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.slueSupplier</definition>
+        <argsstring></argsstring>
+        <name>slueSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="446" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="446" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a618df530b7d66a264a4d2c96660fcc00" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.searchLookUpEdit1View</definition>
+        <argsstring></argsstring>
+        <name>searchLookUpEdit1View</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="447" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="447" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a400bc2ec081a0364c0212d4d2c36aed8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.lblSupplier</definition>
+        <argsstring></argsstring>
+        <name>lblSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="448" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="448" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a49c3d23440369e7f817f4484bede66db" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.xtcPK</definition>
+        <argsstring></argsstring>
+        <name>xtcPK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="449" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="449" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1aab096bded0d402cc433aefc563d2701d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.xtpPLDetail</definition>
+        <argsstring></argsstring>
+        <name>xtpPLDetail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="450" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="450" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1aaaacfef88f86b746ed4b9778f95f51b6" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.xgrdLinesPL</definition>
+        <argsstring></argsstring>
+        <name>xgrdLinesPL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="451" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="451" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1acd61c6b2dfe4f287d1b1bc6c8dddcdcb" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.gridViewLinesPL</definition>
+        <argsstring></argsstring>
+        <name>gridViewLinesPL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="452" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="452" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ad1ea6e294ad78c93e4ab858c2d5df86f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.xgrdItemsBatch</definition>
+        <argsstring></argsstring>
+        <name>xgrdItemsBatch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="453" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="453" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a7d83ba576b2f4f98e1910054236321c2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.gridViewItemsBatch</definition>
+        <argsstring></argsstring>
+        <name>gridViewItemsBatch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="454" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="454" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1afa99c7812a9624289e423e340de1d99d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.ReceiptAndQuality</definition>
+        <argsstring>()</argsstring>
+        <name>ReceiptAndQuality</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="46" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="46" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1afcfb35daf4f0d79f0a0883163ef4aaef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.bbiCancel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiCancel_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318">bbiCancel_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="99" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="99" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a9b81a57f56ac02aa93813b05e07c4e0a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.bbiEdit_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiEdit_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3">bbiEdit_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="113" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="113" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a325482a9502d8b87a9ddfa81ecf17acd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.bbiSave_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiSave_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9">bbiSave_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="140" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="140" bodyend="177"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ad355646777fec7eb04e943424fe44050" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.ConfigureRibbonActions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="77" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="77" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1af279e6c7a69c7dc2fb6756303295d669" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.ReceiptAndQuality_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ReceiptAndQuality_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="182" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="182" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1abc418b1deb1c33359f2c767b9047618a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.SbSearch_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbSearch_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="187" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="187" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ac4efc0bbb0e2f3cdceebbb280473a8ad" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.SbFinishQC_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbFinishQC_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="202" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="202" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a7a23203766d6f7db298e58db85e98f94" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.DateEditPKDocDate_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DateEditPKDocDate_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="240" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="240" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a426d237e63b9d52b1cbf305d6f45ccb5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.DateEditPKDelivery_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DateEditPKDelivery_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="253" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="253" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ae23c8d8e534b9f7345936bc4a2a84dae" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.TxtPKNumber_KeyDown</definition>
+        <argsstring>(object sender, KeyEventArgs e)</argsstring>
+        <name>TxtPKNumber_KeyDown</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="265" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="265" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a57c41f394d96a270e21b20d2d142dd55" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.TxtPKNumber_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>TxtPKNumber_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="283" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="283" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1af27b69ef14d1f7667ec79e6c7a5df2c1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.TxtSupplierReference_KeyDown</definition>
+        <argsstring>(object sender, KeyEventArgs e)</argsstring>
+        <name>TxtSupplierReference_KeyDown</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="299" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="299" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a4fd72862cda9036d22fde418d5e9e08e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.TxtSupplierReference_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>TxtSupplierReference_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="317" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="317" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1abe10508e840143db6da24675de994702" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.GridViewLinesPL_FocusedRowChanged</definition>
+        <argsstring>(object sender, FocusedRowChangedEventArgs e)</argsstring>
+        <name>GridViewLinesPL_FocusedRowChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>FocusedRowChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="334" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="334" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a4e7e8f0f8f5748337e514592afda7fab" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.XgrdItemsBatch_ProcessGridKey</definition>
+        <argsstring>(object sender, KeyEventArgs e)</argsstring>
+        <name>XgrdItemsBatch_ProcessGridKey</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="371" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="371" bodyend="415"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a2f94e15431b84f942f76cd51e608add8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.GridViewItemsBatch_CellValueChanged</definition>
+        <argsstring>(object sender, CellValueChangedEventArgs e)</argsstring>
+        <name>GridViewItemsBatch_CellValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CellValueChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="417" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="417" bodyend="437"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a3cb0221943921cf75ad635bbe20cf513" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.LoadAuxList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAuxList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="446" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="446" bodyend="457"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a702f2d935e210072ef980d6607b4b770" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.SearchPK</definition>
+        <argsstring>()</argsstring>
+        <name>SearchPK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="459" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="459" bodyend="518"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1adc9950058a2a0e33d90a17627aa61fd0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.LoadPK</definition>
+        <argsstring>()</argsstring>
+        <name>LoadPK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="520" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="520" bodyend="557"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a2dafce76c472eb3479526a35561b514a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.ResetPK</definition>
+        <argsstring>()</argsstring>
+        <name>ResetPK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="559" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="559" bodyend="574"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a4e8df86244fdd6b3e17ad60ad9332c72" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.SetUpLabels</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpLabels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="580" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="580" bodyend="630"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a87266c3a95cdd1dc1fdf22f268c21aba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.SetObjectsReadOnly</definition>
+        <argsstring>()</argsstring>
+        <name>SetObjectsReadOnly</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="632" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="632" bodyend="645"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a6ddb2076e800e2644c57896b71e3d9b7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.SetUpSearchLookUpEdit</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSearchLookUpEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="647" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="647" bodyend="657"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a7b7b68b009619c7d26c8b221ffb4d533" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.SetUpSlueSupplier</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSlueSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="659" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="659" bodyend="674"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a83425d6b376bd8078c3a4b055d6872a7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.SetUpEvents</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="676" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="676" bodyend="693"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a962caae162ad4bb2ff21a0544c2365a1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.SetUpGrdLinesPL</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdLinesPL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="695" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="695" bodyend="774"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a88dc952ab3b035594626ad0031bf70b2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.SetupGrdItemsBatch</definition>
+        <argsstring>()</argsstring>
+        <name>SetupGrdItemsBatch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="776" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="776" bodyend="828"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a661222ae58c5a73479df7dd180d394f1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.SetVisiblePropertyByState</definition>
+        <argsstring>()</argsstring>
+        <name>SetVisiblePropertyByState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="834" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="834" bodyend="858"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a02f4e0decbb231ad5c4cc0295b000227" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.ResetForm</definition>
+        <argsstring>(bool resetPkNumber=true, bool resetSupplier=true, bool resetSupplierReference=true)</argsstring>
+        <name>ResetForm</name>
+        <param>
+          <type>bool</type>
+          <declname>resetPkNumber</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>resetSupplier</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>resetSupplierReference</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="860" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="860" bodyend="879"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a8822ebbf4515bdb85242341c1fd90c5d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.CancelEdit</definition>
+        <argsstring>()</argsstring>
+        <name>CancelEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="881" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="881" bodyend="906"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a64ef862e9789d9bc173ef33d87d8c494" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.CopyToItemBatchList</definition>
+        <argsstring>(PackingListItemBatch itemBatch)</argsstring>
+        <name>CopyToItemBatchList</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch" kindref="compound">PackingListItemBatch</ref></type>
+          <declname>itemBatch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="908" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="908" bodyend="928"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a7e27b2975edacea3b37b049889f0b0d9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.ValidatePK</definition>
+        <argsstring>()</argsstring>
+        <name>ValidatePK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="933" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="933" bodyend="949"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1af2a2d91e40bee8a27966b08cd848cfa5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.ValidateValidatePackingLines</definition>
+        <argsstring>(bool validateQuantities=false)</argsstring>
+        <name>ValidateValidatePackingLines</name>
+        <param>
+          <type>bool</type>
+          <declname>validateQuantities</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="951" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="951" bodyend="976"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a2561b6990eed92e071f9ddb2e533f01c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.ValidatePackingItemsBatch</definition>
+        <argsstring>()</argsstring>
+        <name>ValidatePackingItemsBatch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="978" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="978" bodyend="1025"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1acfb02de9b3527ad3ce89dbb08eaa45a1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.ConfigureActionsStackViewEditing</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackViewEditing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="1031" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="1031" bodyend="1065"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1aab4ab7b6715569fbb869d5b8806bead4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.UpdatePK</definition>
+        <argsstring>(bool finishPK=false)</argsstring>
+        <name>UpdatePK</name>
+        <param>
+          <type>bool</type>
+          <declname>finishPK</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="1072" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="1072" bodyend="1118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ac6d4cc1bf969f634a4d5b4143e928014" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.ActionsAfterCU</definition>
+        <argsstring>()</argsstring>
+        <name>ActionsAfterCU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="1120" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="1120" bodyend="1145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1af5d7eeb4208f8b55658c2b9b24ea8c05" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="29" bodyend="422"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a23307e30e1325b6e3d7541e84c2942e0" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1415">
+        <label>HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality"/>
+        <childnode refid="1416" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1417">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1416">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1417" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1418">
+        <label>HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality"/>
+        <childnode refid="1419" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1420">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1421">
+        <label>XtraBars</label>
+      </node>
+      <node id="1419">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1420" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1421" relation="usage">
+          <edgelabel>bbiCancel</edgelabel>
+          <edgelabel>ribbonStatusBar</edgelabel>
+          <edgelabel>bbiPrintPreview</edgelabel>
+          <edgelabel>bbiSave</edgelabel>
+          <edgelabel>bbiNew</edgelabel>
+          <edgelabel>bbiEdit</edgelabel>
+          <edgelabel>ribbonControl</edgelabel>
+          <edgelabel>ribbonPageGroup1</edgelabel>
+          <edgelabel>ribbonPage1</edgelabel>
+          <edgelabel>ribbonPageGroup2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" line="26" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/ReceiptAndQuality.cs" bodystart="25" bodyend="1150"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1aa9970921c24505bebd39c7fec147be81" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>_auxItemsBatchList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a6dc4e132a8ff8205d34a5d2d65a0024a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>_docHeadPK</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1af5cb41821a432e5be6695ae9728e44ad" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>_docLinesList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a4a9603bc156469bf5c945fd5a312ff09" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>_isLoadingPacking</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1aee0979ca93ce4d67513a617e320cb163" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>_itemsBatchList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a69ded19191b6cedb91f8e4e67f92c42b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>_labelDefaultFont</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1aba2724db2ae2209a65d5b38e38d22eae" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>_labelDefaultFontBold</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a8af73a993ddbcee67656303e8b08bc91" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>_suppliersList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1aab1033b6b28731c80c3b061ebf689ca4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>_supplyStatusList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ac6d4cc1bf969f634a4d5b4143e928014" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ActionsAfterCU</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ActionsStates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>AddRestoreLayoutItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>BarButtonItemReport_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>bbiCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1afcfb35daf4f0d79f0a0883163ef4aaef" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>bbiEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a9b81a57f56ac02aa93813b05e07c4e0a" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>bbiExportCsv_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>bbiExportExcel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>bbiNew</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>bbiPrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>bbiPrintPreview_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>bbiSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a325482a9502d8b87a9ddfa81ecf17acd" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>BbiSaveLayout_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a8822ebbf4515bdb85242341c1fd90c5d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>CancelEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a188f8b77ffbbcb6fec019b6e2cf85cf8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1acfb02de9b3527ad3ce89dbb08eaa45a1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ConfigureActionsStackViewEditing</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ConfigureLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ConfigurePrintExportOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ad355646777fec7eb04e943424fe44050" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ConfigureRibbonActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a64ef862e9789d9bc173ef33d87d8c494" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>CopyToItemBatchList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>CurrentLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>CurrentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a0e79078790bfc358d727b7bbcdaf0b63" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>dateEditPKDelivery</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a426d237e63b9d52b1cbf305d6f45ccb5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>DateEditPKDelivery_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a2b2f32ee357ad20e82e6b5301c020371" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>dateEditPKDocDate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a7a23203766d6f7db298e58db85e98f94" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>DateEditPKDocDate_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a23307e30e1325b6e3d7541e84c2942e0" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>EnableExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>EnableExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>EnableLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>EnablePrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ExportCsvFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ExportExcelFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a7d83ba576b2f4f98e1910054236321c2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>gridViewItemsBatch</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a2f94e15431b84f942f76cd51e608add8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>GridViewItemsBatch_CellValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1acd61c6b2dfe4f287d1b1bc6c8dddcdcb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>gridViewLinesPL</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1abe10508e840143db6da24675de994702" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>GridViewLinesPL_FocusedRowChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1af5d7eeb4208f8b55658c2b9b24ea8c05" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>LayoutButton_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a7516edb8797e31ef163f1622a3cc4aa1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>lblDate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ac4828a0d40d7e0ae1e07db27dbbf3121" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>lblPKDelivery</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ada2302add0e9fcb045ba3405ce3d37d8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>lblPKDeliveryWeek</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ac0ebf6cd6be89431311cc2d00484ea1a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>lblPKDocDate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1aa251a91190222bb9523930a436e48e0b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>lblPKDocDateWeek</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1af711e83745d0e9c292e54d4ed3a6747f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>lblPKNumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a59aed4378fd7e7a0e91efd5b0bdc5ee4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>lblRemarks</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a400bc2ec081a0364c0212d4d2c36aed8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>lblSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a80cf314954d2fef7cefdbcfd63526ec6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>lblSupplierReference</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ae77a33818986a0bb4c113fa32f197ca3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>lbltxtStatus</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1aa4d09a196286135da2fc5db0dd431f92" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>lblWeek</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a3cb0221943921cf75ad635bbe20cf513" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>LoadAuxList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1adc9950058a2a0e33d90a17627aa61fd0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>LoadPK</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ad619805287730b74fa44e8477e21af80" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>memoEditRemarks</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>Modify</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>New</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1adf59fe8c99acb722dbb7084ca1c1ab0e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>pcFilter</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ProcessCmdKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>Read</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1afa99c7812a9624289e423e340de1d99d" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ReceiptAndQuality</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1af279e6c7a69c7dc2fb6756303295d669" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ReceiptAndQuality_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a02f4e0decbb231ad5c4cc0295b000227" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ResetForm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a2dafce76c472eb3479526a35561b514a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ResetPK</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>RestoreInitState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ribbonControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>RibbonFormBase</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ribbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ribbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ribbonPageGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ribbonStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ac972dddf2412ea43ae1c8d67322100d3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>sbFinishQC</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ac4efc0bbb0e2f3cdceebbb280473a8ad" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>SbFinishQC_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1adb912cf800ddb28e6ff575a803e7b169" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>sbSearch</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1abc418b1deb1c33359f2c767b9047618a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>SbSearch_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a618df530b7d66a264a4d2c96660fcc00" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>searchLookUpEdit1View</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a702f2d935e210072ef980d6607b4b770" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>SearchPK</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>SetActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a87266c3a95cdd1dc1fdf22f268c21aba" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>SetObjectsReadOnly</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>SetRibbonText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a83425d6b376bd8078c3a4b055d6872a7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>SetUpEvents</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a88dc952ab3b035594626ad0031bf70b2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>SetupGrdItemsBatch</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a962caae162ad4bb2ff21a0544c2365a1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>SetUpGrdLinesPL</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a4e8df86244fdd6b3e17ad60ad9332c72" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>SetUpLabels</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a6ddb2076e800e2644c57896b71e3d9b7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>SetUpSearchLookUpEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a7b7b68b009619c7d26c8b221ffb4d533" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>SetUpSlueSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a661222ae58c5a73479df7dd180d394f1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>SetVisiblePropertyByState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a6e466959ba4faa65a9f0846c87f3a475" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>slueSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a9408d97283a56711230f7e54335bd7fc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>txtPKNumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a57c41f394d96a270e21b20d2d142dd55" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>TxtPKNumber_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ae23c8d8e534b9f7345936bc4a2a84dae" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>TxtPKNumber_KeyDown</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ae31418726ef6e4e7dbf2aeaf6a5ae2fe" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>txtSupplierReference</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a4fd72862cda9036d22fde418d5e9e08e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>TxtSupplierReference_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1af27b69ef14d1f7667ec79e6c7a5df2c1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>TxtSupplierReference_KeyDown</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1aab4ab7b6715569fbb869d5b8806bead4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>UpdatePK</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a2561b6990eed92e071f9ddb2e533f01c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ValidatePackingItemsBatch</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a7e27b2975edacea3b37b049889f0b0d9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ValidatePK</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1af2a2d91e40bee8a27966b08cd848cfa5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>ValidateValidatePackingLines</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1ad1ea6e294ad78c93e4ab858c2d5df86f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>xgrdItemsBatch</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a4e7e8f0f8f5748337e514592afda7fab" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>XgrdItemsBatch_ProcessGridKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1aaaacfef88f86b746ed4b9778f95f51b6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>xgrdLinesPL</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1afb43515fa8ab6c0124d7da6be2a22518" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>xtcGeneral</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a49c3d23440369e7f817f4484bede66db" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>xtcPK</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1aab096bded0d402cc433aefc563d2701d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>xtpPLDetail</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a02ba4f808f2520a06a5264bb5f6fa547" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::ReceiptAndQuality</scope><name>xtpReceiptAndQuality</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

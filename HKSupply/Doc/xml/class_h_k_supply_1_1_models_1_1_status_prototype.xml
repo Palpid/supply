@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_status_prototype" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::StatusPrototype</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_status_prototype_1abaa9fba2f8076ef3c7d9d6d0590a8036" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.StatusPrototype.IdStatusPrototype</definition>
+        <argsstring></argsstring>
+        <name>IdStatusPrototype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/StatusPrototype.cs" line="11" column="1" bodyfile="HKSupply/Models/StatusPrototype.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_status_prototype_1a01e51823d03ed620036d7522d152d25b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.StatusPrototype.DescriptionEn</definition>
+        <argsstring></argsstring>
+        <name>DescriptionEn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/StatusPrototype.cs" line="14" column="1" bodyfile="HKSupply/Models/StatusPrototype.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_status_prototype_1ac86a07a847a790169e6be38290b34952" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.StatusPrototype.Order</definition>
+        <argsstring></argsstring>
+        <name>Order</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/StatusPrototype.cs" line="17" column="1" bodyfile="HKSupply/Models/StatusPrototype.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_status_prototype_1ade6418085f372db070034705ff782747" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.StatusPrototype.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/StatusPrototype.cs" line="20" column="1" bodyfile="HKSupply/Models/StatusPrototype.cs" bodystart="20" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_status_prototype_1ae74f84d0212f33afa0b67be9a532b431" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.StatusPrototype.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/StatusPrototype.cs" line="35" column="1" bodyfile="HKSupply/Models/StatusPrototype.cs" bodystart="35" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/StatusPrototype.cs" line="9" column="1" bodyfile="HKSupply/Models/StatusPrototype.cs" bodystart="8" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_status_prototype_1a01e51823d03ed620036d7522d152d25b" prot="public" virt="non-virtual"><scope>HKSupply::Models::StatusPrototype</scope><name>DescriptionEn</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_status_prototype_1ade6418085f372db070034705ff782747" prot="public" virt="non-virtual"><scope>HKSupply::Models::StatusPrototype</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_status_prototype_1ae74f84d0212f33afa0b67be9a532b431" prot="public" virt="non-virtual"><scope>HKSupply::Models::StatusPrototype</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_status_prototype_1abaa9fba2f8076ef3c7d9d6d0590a8036" prot="public" virt="non-virtual"><scope>HKSupply::Models::StatusPrototype</scope><name>IdStatusPrototype</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_status_prototype_1ac86a07a847a790169e6be38290b34952" prot="public" virt="non-virtual"><scope>HKSupply::Models::StatusPrototype</scope><name>Order</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

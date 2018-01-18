@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_etn_color" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFEtnColor</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_etn_color" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IEtnColor</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_etn_color_1a48d939a04c611fb0f8fe499cd342ef93" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFEtnColor._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_etn_color" kindref="compound">EFEtnColor</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFEtnColor.cs" line="23" column="1" bodyfile="HKSupply/Services/Implementations/EFEtnColor.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_etn_color_1a2e61d3fae7f2a6eb0e70fcb959f2e568" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_etn_color" kindref="compound">EtnColor</ref> &gt;</type>
+        <definition>List&lt;EtnColor&gt; HKSupply.Services.Implementations.EFEtnColor.GetEtnColors</definition>
+        <argsstring>()</argsstring>
+        <name>GetEtnColors</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_etn_color_1abdffe01089d0dad706eb92e957987971">GetEtnColors</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFEtnColor.cs" line="25" column="1" bodyfile="HKSupply/Services/Implementations/EFEtnColor.cs" bodystart="25" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="438">
+        <label>IEtnColor</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_etn_color"/>
+      </node>
+      <node id="437">
+        <label>HKSupply.Services.Implementations.EFEtnColor</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_etn_color"/>
+        <childnode refid="438" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="440">
+        <label>IEtnColor</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_etn_color"/>
+      </node>
+      <node id="439">
+        <label>HKSupply.Services.Implementations.EFEtnColor</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_etn_color"/>
+        <childnode refid="440" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFEtnColor.cs" line="22" column="1" bodyfile="HKSupply/Services/Implementations/EFEtnColor.cs" bodystart="21" bodyend="60"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_etn_color_1a48d939a04c611fb0f8fe499cd342ef93" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFEtnColor</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_etn_color_1a2e61d3fae7f2a6eb0e70fcb959f2e568" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFEtnColor</scope><name>GetEtnColors</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

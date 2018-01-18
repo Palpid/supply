@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::Supply::DocHeadAttachFile</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file_1a8f928bfe86e6c5bfa04332a1863a8d07" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.Supply.DocHeadAttachFile.IdFile</definition>
+        <argsstring></argsstring>
+        <name>IdFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocHeadAttachFile.cs" line="12" column="1" bodyfile="HKSupply/Models/Supply/DocHeadAttachFile.cs" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file_1af38efefff94884cb6da9944537398c34" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.DocHeadAttachFile.IdDocHead</definition>
+        <argsstring></argsstring>
+        <name>IdDocHead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocHeadAttachFile.cs" line="15" column="1" bodyfile="HKSupply/Models/Supply/DocHeadAttachFile.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file_1a1d7c2d5323577a9c9a9f6d731ac0a011" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.DocHeadAttachFile.FileName</definition>
+        <argsstring></argsstring>
+        <name>FileName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocHeadAttachFile.cs" line="18" column="1" bodyfile="HKSupply/Models/Supply/DocHeadAttachFile.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file_1a39d7898f256061c3398371e537e8698d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.DocHeadAttachFile.FileExtension</definition>
+        <argsstring></argsstring>
+        <name>FileExtension</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocHeadAttachFile.cs" line="21" column="1" bodyfile="HKSupply/Models/Supply/DocHeadAttachFile.cs" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file_1ac201dd1664fb04977d2fcafd5edb730b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.DocHeadAttachFile.FilePath</definition>
+        <argsstring></argsstring>
+        <name>FilePath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocHeadAttachFile.cs" line="24" column="1" bodyfile="HKSupply/Models/Supply/DocHeadAttachFile.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file_1a62980a3efc345876606b5e126e29a85b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.DocHeadAttachFile.User</definition>
+        <argsstring></argsstring>
+        <name>User</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocHeadAttachFile.cs" line="27" column="1" bodyfile="HKSupply/Models/Supply/DocHeadAttachFile.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file_1acc5ffdfae813256e88a60a44da3bfc60" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime HKSupply.Models.Supply.DocHeadAttachFile.CreateDate</definition>
+        <argsstring></argsstring>
+        <name>CreateDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocHeadAttachFile.cs" line="30" column="1" bodyfile="HKSupply/Models/Supply/DocHeadAttachFile.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file_1ad54a233b8e7d98541508fd627c8a4914" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.Supply.DocHeadAttachFile.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocHeadAttachFile.cs" line="34" column="1" bodyfile="HKSupply/Models/Supply/DocHeadAttachFile.cs" bodystart="34" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file_1a7b48fb6149e02a1b369f1b69815afff1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.Supply.DocHeadAttachFile.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocHeadAttachFile.cs" line="52" column="1" bodyfile="HKSupply/Models/Supply/DocHeadAttachFile.cs" bodystart="52" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/Supply/DocHeadAttachFile.cs" line="10" column="1" bodyfile="HKSupply/Models/Supply/DocHeadAttachFile.cs" bodystart="9" bodyend="67"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file_1acc5ffdfae813256e88a60a44da3bfc60" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocHeadAttachFile</scope><name>CreateDate</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file_1ad54a233b8e7d98541508fd627c8a4914" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocHeadAttachFile</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file_1a39d7898f256061c3398371e537e8698d" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocHeadAttachFile</scope><name>FileExtension</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file_1a1d7c2d5323577a9c9a9f6d731ac0a011" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocHeadAttachFile</scope><name>FileName</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file_1ac201dd1664fb04977d2fcafd5edb730b" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocHeadAttachFile</scope><name>FilePath</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file_1a7b48fb6149e02a1b369f1b69815afff1" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocHeadAttachFile</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file_1af38efefff94884cb6da9944537398c34" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocHeadAttachFile</scope><name>IdDocHead</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file_1a8f928bfe86e6c5bfa04332a1863a8d07" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocHeadAttachFile</scope><name>IdFile</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file_1a62980a3efc345876606b5e126e29a85b" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocHeadAttachFile</scope><name>User</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

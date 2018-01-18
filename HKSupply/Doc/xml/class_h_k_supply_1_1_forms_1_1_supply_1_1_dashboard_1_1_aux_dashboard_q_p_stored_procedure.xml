@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStoredProcedure</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure_1aa1342f183f20561163219fad581bf57e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Forms.Supply.Dashboard.AuxDashboardQPStoredProcedure.WEEK_NUM</definition>
+        <argsstring></argsstring>
+        <name>WEEK_NUM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="1187" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="1187" bodyend="1187"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure_1ad579a1b2b046ab1a124667db33617073" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.Supply.Dashboard.AuxDashboardQPStoredProcedure.ID_CUSTOMER</definition>
+        <argsstring></argsstring>
+        <name>ID_CUSTOMER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="1188" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="1188" bodyend="1188"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure_1a8dcf5e0fb122c5cccbf65cc1a86f373d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.Supply.Dashboard.AuxDashboardQPStoredProcedure.ID_ITEM_BCN</definition>
+        <argsstring></argsstring>
+        <name>ID_ITEM_BCN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="1189" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="1189" bodyend="1189"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure_1ac92b0d2b25f344d15cc87edff4274b36" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.Supply.Dashboard.AuxDashboardQPStoredProcedure.ID_ITEM_GROUP</definition>
+        <argsstring></argsstring>
+        <name>ID_ITEM_GROUP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="1190" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="1190" bodyend="1190"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure_1ad8a0b35cfe614a54bcbde3fdecec9293" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.Supply.Dashboard.AuxDashboardQPStoredProcedure.UNIT</definition>
+        <argsstring></argsstring>
+        <name>UNIT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="1191" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="1191" bodyend="1191"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure_1a0ca1bb9f86f948ac9d9818736b1c8a90" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Forms.Supply.Dashboard.AuxDashboardQPStoredProcedure.TOTAL_QTY_ORIGINAL</definition>
+        <argsstring></argsstring>
+        <name>TOTAL_QTY_ORIGINAL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="1192" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="1192" bodyend="1192"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure_1a0c4e2241accd4ca53dc65064f32c3fcc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Forms.Supply.Dashboard.AuxDashboardQPStoredProcedure.TOTAL_QTY</definition>
+        <argsstring></argsstring>
+        <name>TOTAL_QTY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="1193" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="1193" bodyend="1193"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure_1a1780e1741b239124ae64f96421af7990" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Forms.Supply.Dashboard.AuxDashboardQPStoredProcedure.ABSOLUTE_DEVIATION</definition>
+        <argsstring></argsstring>
+        <name>ABSOLUTE_DEVIATION</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="1194" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="1194" bodyend="1194"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure_1a480895d3b22731429210d1438ba038f2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Forms.Supply.Dashboard.AuxDashboardQPStoredProcedure.PERCENTAGE_DEVIATION</definition>
+        <argsstring></argsstring>
+        <name>PERCENTAGE_DEVIATION</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="1195" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="1195" bodyend="1195"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="1185" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="1184" bodyend="1196"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure_1a1780e1741b239124ae64f96421af7990" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStoredProcedure</scope><name>ABSOLUTE_DEVIATION</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure_1ad579a1b2b046ab1a124667db33617073" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStoredProcedure</scope><name>ID_CUSTOMER</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure_1a8dcf5e0fb122c5cccbf65cc1a86f373d" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStoredProcedure</scope><name>ID_ITEM_BCN</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure_1ac92b0d2b25f344d15cc87edff4274b36" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStoredProcedure</scope><name>ID_ITEM_GROUP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure_1a480895d3b22731429210d1438ba038f2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStoredProcedure</scope><name>PERCENTAGE_DEVIATION</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure_1a0c4e2241accd4ca53dc65064f32c3fcc" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStoredProcedure</scope><name>TOTAL_QTY</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure_1a0ca1bb9f86f948ac9d9818736b1c8a90" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStoredProcedure</scope><name>TOTAL_QTY_ORIGINAL</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure_1ad8a0b35cfe614a54bcbde3fdecec9293" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStoredProcedure</scope><name>UNIT</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure_1aa1342f183f20561163219fad581bf57e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStoredProcedure</scope><name>WEEK_NUM</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

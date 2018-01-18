@@ -1,8 +1,22 @@
 var searchData=
 [
-  ['newfunctionality',['NewFunctionality',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality.html#a43852b181d280c78c7c00b9d11c6d6c4',1,'HKSupply::Services::Implementations::EFFunctionality']]],
-  ['newfunctionalityrole',['NewFunctionalityRole',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role.html#a07805a2c9809f3771b7ae34deb15b94b',1,'HKSupply::Services::Implementations::EFFunctionalityRole']]],
-  ['newrole',['NewRole',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role.html#a549317ad8c8fb3353382a8cd36fa1b22',1,'HKSupply::Services::Implementations::EFRole']]],
-  ['newuser',['NewUser',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user.html#a12abd287dc0491eed772d88b17fc9618',1,'HKSupply::Services::Implementations::EFUser']]],
-  ['nullabledatetimepicker',['NullableDateTimePicker',['../class_custom_controls_1_1_nullable_date_time_picker.html#ae34b0db983f9509c0442e730a8baa417',1,'CustomControls::NullableDateTimePicker']]]
+  ['getallfunctionalities',['GetAllFunctionalities',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality.html#ab92f666d01076cffafbddbb91c5cf6af',1,'HKSupply::Services::Implementations::EFFunctionality']]],
+  ['getallfunctionalitiesrole',['GetAllFunctionalitiesRole',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role.html#a6c0fd4aad39788ef597f701f47032a85',1,'HKSupply::Services::Implementations::EFFunctionalityRole']]],
+  ['getallusers',['GetAllUsers',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user.html#a145638eeeb9e29780d17cbac23476a8d',1,'HKSupply::Services::Implementations::EFUser']]],
+  ['getcurrencylist',['GetCurrencyList',['../class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter.html#a5aee715203b5d6854d21aae80d4aa577',1,'HKSupply.Helpers.CurrencyConverter.CurrencyConverter.GetCurrencyList()'],['../interface_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_i_currency_converter.html#af9f4bce7c890c7d5fb61575a641cd5ec',1,'HKSupply.Helpers.CurrencyConverter.ICurrencyConverter.GetCurrencyList()']]],
+  ['getcurrentstock',['GetCurrentStock',['../class_h_k_supply_1_1_p_r_j___stocks_1_1_d_b_1_1_b_d___stocks.html#a918727d0820627dd4a4f6facf54eb7da',1,'HKSupply::PRJ_Stocks::DB::BD_Stocks']]],
+  ['getdocpackinglist',['GetDocPackingList',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs.html#acc782dbf38c03242efdcbfd2e49f31e5',1,'HKSupply::Services::Implementations::EFSupplyDocs']]],
+  ['getfunctionalitiescategoriesrole',['GetFunctionalitiesCategoriesRole',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role.html#a1625ffb6313337132a446f831d357453',1,'HKSupply::Services::Implementations::EFFunctionalityRole']]],
+  ['getfunctionalitybyid',['GetFunctionalityById',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality.html#a0aa6fc75b8f1ddf6532f39a84bc50ad9',1,'HKSupply::Services::Implementations::EFFunctionality']]],
+  ['getfunctionalitybyname',['GetFunctionalityByName',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality.html#a655784ce048904e9f27a827ccf2a7a79',1,'HKSupply::Services::Implementations::EFFunctionality']]],
+  ['getfunctionalityrole',['GetFunctionalityRole',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role.html#a1900a194c92ba75d17fe42830190895f',1,'HKSupply::Services::Implementations::EFFunctionalityRole']]],
+  ['getitembom',['GetItemBom',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom.html#a11dbd453a2f553e3e00e163a846397e6',1,'HKSupply::Services::Implementations::EFItemBom']]],
+  ['getlinqfilterstring',['GetLinqFilterString',['../class_h_k_supply_1_1_forms_1_1_model_linq_filtering.html#acae6326ecf09c74070e6d5155c7eb067',1,'HKSupply::Forms::ModelLinqFiltering']]],
+  ['getratestable',['GetRatesTable',['../class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter.html#a9b5ebe58cdabdaec1f1053574a7d792a',1,'HKSupply.Helpers.CurrencyConverter.CurrencyConverter.GetRatesTable()'],['../interface_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_i_currency_converter.html#a3b1e96fafb375bda812c9d7a6e9fc983',1,'HKSupply.Helpers.CurrencyConverter.ICurrencyConverter.GetRatesTable()']]],
+  ['getrolebyid',['GetRoleById',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role.html#ad4eb9194531a9215c4f1a20ab0d9aa54',1,'HKSupply::Services::Implementations::EFRole']]],
+  ['getroles',['GetRoles',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role.html#a7fd2f7f9bae498128f23ad0659e3ec4a',1,'HKSupply::Services::Implementations::EFRole']]],
+  ['getstockitem',['GetStockItem',['../class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks.html#ae482ad0dc6d9a62c330f1e929a49666b',1,'HKSupply::PRJ_Stocks::Classes::Stocks']]],
+  ['getstockitemorig',['GetStockItemOrig',['../class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks.html#a9f91bf0312629b1ea7fc09f56a5e442c',1,'HKSupply::PRJ_Stocks::Classes::Stocks']]],
+  ['getuserbyid',['GetUserById',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user.html#a322969baaacbf15223b17f8117dd1545',1,'HKSupply::Services::Implementations::EFUser']]],
+  ['getuserbyloginpassword',['GetUserByLoginPassword',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user.html#a69f04e0ab5ba947fc315c60abc7cdbf1',1,'HKSupply::Services::Implementations::EFUser']]]
 ];

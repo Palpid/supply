@@ -1,0 +1,355 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Helpers::CurrencyConverter::CurrencyConverter</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_i_currency_converter" prot="public" virt="non-virtual">HKSupply.Helpers.CurrencyConverter.ICurrencyConverter</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1addd8497204b76ac459f1980861ae0181" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HKSupply.Helpers.CurrencyConverter.CurrencyConverter.sourceUrl</definition>
+        <argsstring></argsstring>
+        <name>sourceUrl</name>
+        <initializer>= @&quot;http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" line="22" column="1" bodyfile="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a5d5e8cd3ad2a94fc343612bfea8ebf01" prot="private" static="no" mutable="no">
+        <type>XmlTextReader</type>
+        <definition>XmlTextReader HKSupply.Helpers.CurrencyConverter.CurrencyConverter.xml</definition>
+        <argsstring></argsstring>
+        <name>xml</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" line="23" column="1" bodyfile="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a63a103b82ff028586e7b81225c407303" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HKSupply.Helpers.CurrencyConverter.CurrencyConverter.baseCurrency</definition>
+        <argsstring></argsstring>
+        <name>baseCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" line="24" column="1" bodyfile="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a7aa3845160e1ca9fa9e8f7d77337a080" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; string, decimal &gt;</type>
+        <definition>Dictionary&lt;string, decimal&gt; HKSupply.Helpers.CurrencyConverter.CurrencyConverter.exchangeRates</definition>
+        <argsstring></argsstring>
+        <name>exchangeRates</name>
+        <initializer>= new Dictionary&lt;string, decimal&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" line="25" column="1" bodyfile="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a526625c086420ab57e2ed40816333d56" prot="private" static="no" mutable="no">
+        <type>DateTime</type>
+        <definition>DateTime HKSupply.Helpers.CurrencyConverter.CurrencyConverter.date</definition>
+        <argsstring></argsstring>
+        <name>date</name>
+        <initializer>= new DateTime()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" line="26" column="1" bodyfile="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1ac04f5d20c06db53f3ae34378ed5d1bd5" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HKSupply.Helpers.CurrencyConverter.CurrencyConverter.currency</definition>
+        <argsstring></argsstring>
+        <name>currency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" line="27" column="1" bodyfile="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1ac0512ce653dfa7315c277a8fffbd6635" prot="private" static="no" mutable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Helpers.CurrencyConverter.CurrencyConverter.rate</definition>
+        <argsstring></argsstring>
+        <name>rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" line="28" column="1" bodyfile="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a12acac379c89eb42f7dd164e5a5a56a2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime HKSupply.Helpers.CurrencyConverter.CurrencyConverter.Date</definition>
+        <argsstring></argsstring>
+        <name>Date</name>
+        <briefdescription>
+<para>Use this readonly property to check the actual date for the rates </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" line="35" column="1" bodyfile="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a0ae9bc9af8a7d08f47cd3ad12030f48c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Helpers.CurrencyConverter.CurrencyConverter.BaseCurrency</definition>
+        <argsstring></argsstring>
+        <name>BaseCurrency</name>
+        <briefdescription>
+<para>Use this property to get or set base currency Base currency is used for displaying rates table and convertions. All calculations are performed according to base currency! EUR by default Throws ApplicationException if value is not in currency list </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" line="43" column="1" bodyfile="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" bodystart="44" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a3e90f483d9610529b321addc48623049" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Helpers.CurrencyConverter.CurrencyConverter.CurrencyConverter</definition>
+        <argsstring>()</argsstring>
+        <name>CurrencyConverter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" line="71" column="1" bodyfile="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" bodystart="71" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a1a4ceafe9630b15bd2eabd7783175087" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string HKSupply.Helpers.CurrencyConverter.CurrencyConverter.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+<para>Converts Exchange Rate Table to String </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" line="130" column="1" bodyfile="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" bodystart="130" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1af9501a149c0ed63c5cdd2faaac3b5e44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Helpers.CurrencyConverter.CurrencyConverter.Exchange</definition>
+        <argsstring>(decimal amount, string from, string to=null)</argsstring>
+        <name>Exchange</name>
+        <reimplements refid="interface_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_i_currency_converter_1afc064d13f2989af64d7887d3b3aa8767">Exchange</reimplements>
+        <param>
+          <type>decimal</type>
+          <declname>amount</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>to</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Exchanges the givven amount from one currency to the other </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount to be exchanged</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Currency of the amount (three letter code)</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>to</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Currency to witch we wish to exchange. Base currency if not specified.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the exchanged amount on success</para></simplesect>
+</para><para>Throws ApplicationException if currency is not in currency list</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" line="166" column="1" bodyfile="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" bodystart="166" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a9b5ebe58cdabdaec1f1053574a7d792a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerable&lt; <ref refid="struct_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_rates" kindref="compound">Rates</ref> &gt;</type>
+        <definition>IEnumerable&lt;Rates&gt; HKSupply.Helpers.CurrencyConverter.CurrencyConverter.GetRatesTable</definition>
+        <argsstring>(string currencyList=null)</argsstring>
+        <name>GetRatesTable</name>
+        <reimplements refid="interface_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_i_currency_converter_1a3b1e96fafb375bda812c9d7a6e9fc983">GetRatesTable</reimplements>
+        <param>
+          <type>string</type>
+          <declname>currencyList</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Gets the rates table based on Base currency </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>currencyList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of comma separated Currencies to be included in the table. All currencies by default</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>IEnumerable&lt;Rates&gt; containing desired currencies and rates</para></simplesect>
+</para><para>Throws ApplicationException if currency is not in currency list</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" line="194" column="1" bodyfile="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" bodystart="194" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a5aee715203b5d6854d21aae80d4aa577" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerable&lt; string &gt;</type>
+        <definition>IEnumerable&lt;string&gt; HKSupply.Helpers.CurrencyConverter.CurrencyConverter.GetCurrencyList</definition>
+        <argsstring>(bool sorted=false)</argsstring>
+        <name>GetCurrencyList</name>
+        <reimplements refid="interface_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_i_currency_converter_1af9f4bce7c890c7d5fb61575a641cd5ec">GetCurrencyList</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>sorted</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Gets the list of currencies. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sorted</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If sorted is true, the returned list is sorted. False by default</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>IEnumerable&lt;string&gt; of all available currencies </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" line="236" column="1" bodyfile="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" bodystart="236" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1ab81665e2cf99100e2358d8e1e27dec35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Helpers.CurrencyConverter.CurrencyConverter.UpdateDbExchangeRates</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateDbExchangeRates</name>
+        <reimplements refid="interface_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_i_currency_converter_1a6f4f245fc08bd5af0703c73a0c7ff001">UpdateDbExchangeRates</reimplements>
+        <briefdescription>
+<para>Update echange rates on data base </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if update is success</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" line="257" column="1" bodyfile="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" bodystart="257" bodyend="282"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a03be6669f81796cd7d3a833fd550bd4b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Helpers.CurrencyConverter.CurrencyConverter.CheckCurrency</definition>
+        <argsstring>(string currency)</argsstring>
+        <name>CheckCurrency</name>
+        <param>
+          <type>string</type>
+          <declname>currency</declname>
+        </param>
+        <briefdescription>
+<para>checks if currency is in currency list and throws exception if not </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>currency</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" line="147" column="1" bodyfile="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" bodystart="147" bodyend="153"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helper Class for Currencies conversions. Connect to European Central Bank to get a XML with rates. Options to update <ref refid="namespace_h_k_supply_1_1_d_b" kindref="compound">DB</ref> with rates </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="157">
+        <label>HKSupply.Helpers.CurrencyConverter.CurrencyConverter</label>
+        <link refid="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter"/>
+        <childnode refid="158" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="158">
+        <label>ICurrencyConverter</label>
+        <link refid="interface_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_i_currency_converter"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="159">
+        <label>HKSupply.Helpers.CurrencyConverter.CurrencyConverter</label>
+        <link refid="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter"/>
+        <childnode refid="160" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="160">
+        <label>ICurrencyConverter</label>
+        <link refid="interface_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_i_currency_converter"/>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" line="20" column="1" bodyfile="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" bodystart="19" bodyend="286"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a63a103b82ff028586e7b81225c407303" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::CurrencyConverter::CurrencyConverter</scope><name>baseCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a0ae9bc9af8a7d08f47cd3ad12030f48c" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CurrencyConverter::CurrencyConverter</scope><name>BaseCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a03be6669f81796cd7d3a833fd550bd4b" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::CurrencyConverter::CurrencyConverter</scope><name>CheckCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1ac04f5d20c06db53f3ae34378ed5d1bd5" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::CurrencyConverter::CurrencyConverter</scope><name>currency</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a3e90f483d9610529b321addc48623049" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CurrencyConverter::CurrencyConverter</scope><name>CurrencyConverter</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a526625c086420ab57e2ed40816333d56" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::CurrencyConverter::CurrencyConverter</scope><name>date</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a12acac379c89eb42f7dd164e5a5a56a2" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CurrencyConverter::CurrencyConverter</scope><name>Date</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1af9501a149c0ed63c5cdd2faaac3b5e44" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CurrencyConverter::CurrencyConverter</scope><name>Exchange</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a7aa3845160e1ca9fa9e8f7d77337a080" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::CurrencyConverter::CurrencyConverter</scope><name>exchangeRates</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a5aee715203b5d6854d21aae80d4aa577" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CurrencyConverter::CurrencyConverter</scope><name>GetCurrencyList</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a9b5ebe58cdabdaec1f1053574a7d792a" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CurrencyConverter::CurrencyConverter</scope><name>GetRatesTable</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1ac0512ce653dfa7315c277a8fffbd6635" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::CurrencyConverter::CurrencyConverter</scope><name>rate</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1addd8497204b76ac459f1980861ae0181" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::CurrencyConverter::CurrencyConverter</scope><name>sourceUrl</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a1a4ceafe9630b15bd2eabd7783175087" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CurrencyConverter::CurrencyConverter</scope><name>ToString</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1ab81665e2cf99100e2358d8e1e27dec35" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CurrencyConverter::CurrencyConverter</scope><name>UpdateDbExchangeRates</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_1a5d5e8cd3ad2a94fc343612bfea8ebf01" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::CurrencyConverter::CurrencyConverter</scope><name>xml</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

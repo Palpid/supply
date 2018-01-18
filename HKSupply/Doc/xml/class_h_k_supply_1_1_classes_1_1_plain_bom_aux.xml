@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_classes_1_1_plain_bom_aux" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Classes::PlainBomAux</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_classes_1_1_plain_bom_aux_1a9aefd20063255cca2bd538bd3c66d001" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Classes.PlainBomAux.IdSupplier</definition>
+        <argsstring></argsstring>
+        <name>IdSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/PlainBomAux.cs" line="16" column="1" bodyfile="HKSupply/Classes/PlainBomAux.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_classes_1_1_plain_bom_aux_1aa0b0262c7501657cbcf2e206a6c8107b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Classes.PlainBomAux.IdItemBcn</definition>
+        <argsstring></argsstring>
+        <name>IdItemBcn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/PlainBomAux.cs" line="17" column="1" bodyfile="HKSupply/Classes/PlainBomAux.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_classes_1_1_plain_bom_aux_1a19dfccd2efef27eaaf73ed70c5b48b62" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Classes.PlainBomAux.ItemDescription</definition>
+        <argsstring></argsstring>
+        <name>ItemDescription</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/PlainBomAux.cs" line="18" column="1" bodyfile="HKSupply/Classes/PlainBomAux.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_classes_1_1_plain_bom_aux_1aee2e2f82f8d6dbb5e89761d66496c02b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Classes.PlainBomAux.ItemGroup</definition>
+        <argsstring></argsstring>
+        <name>ItemGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/PlainBomAux.cs" line="19" column="1" bodyfile="HKSupply/Classes/PlainBomAux.cs" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_classes_1_1_plain_bom_aux_1adbce64859b04c445fa3535fce2122f65" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Classes.PlainBomAux.Quantity</definition>
+        <argsstring></argsstring>
+        <name>Quantity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/PlainBomAux.cs" line="20" column="1" bodyfile="HKSupply/Classes/PlainBomAux.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_classes_1_1_plain_bom_aux_1abf5f17a6d2a6f97507c02f1ed6d2de8a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Classes.PlainBomAux.Scrap</definition>
+        <argsstring></argsstring>
+        <name>Scrap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/PlainBomAux.cs" line="21" column="1" bodyfile="HKSupply/Classes/PlainBomAux.cs" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_classes_1_1_plain_bom_aux_1a991b32367eaa69e08219e3e644d6ea60" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Classes.PlainBomAux.Unit</definition>
+        <argsstring></argsstring>
+        <name>Unit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/PlainBomAux.cs" line="22" column="1" bodyfile="HKSupply/Classes/PlainBomAux.cs" bodystart="22" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_classes_1_1_plain_bom_aux_1aca24ee721d570372663de70f5d0bb3b8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>implicit</type>
+        <definition>static implicit HKSupply.Classes.PlainBomAux.operator PlainBomAux</definition>
+        <argsstring>(DetailBomMt detailBomMt)</argsstring>
+        <name>operator PlainBomAux</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_detail_bom_mt" kindref="compound">DetailBomMt</ref></type>
+          <declname>detailBomMt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/PlainBomAux.cs" line="24" column="1" bodyfile="HKSupply/Classes/PlainBomAux.cs" bodystart="24" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_classes_1_1_plain_bom_aux_1aba6fce3b6120f2457f2f3de2de2371d3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>implicit</type>
+        <definition>static implicit HKSupply.Classes.PlainBomAux.operator PlainBomAux</definition>
+        <argsstring>(DetailBomHw detailBomHw)</argsstring>
+        <name>operator PlainBomAux</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_detail_bom_hw" kindref="compound">DetailBomHw</ref></type>
+          <declname>detailBomHw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/PlainBomAux.cs" line="39" column="1" bodyfile="HKSupply/Classes/PlainBomAux.cs" bodystart="39" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Clase auxiliar para representar el bom en un grid plano en lugar del arbol </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Classes/PlainBomAux.cs" line="15" column="1" bodyfile="HKSupply/Classes/PlainBomAux.cs" bodystart="14" bodyend="53"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_classes_1_1_plain_bom_aux_1aa0b0262c7501657cbcf2e206a6c8107b" prot="public" virt="non-virtual"><scope>HKSupply::Classes::PlainBomAux</scope><name>IdItemBcn</name></member>
+      <member refid="class_h_k_supply_1_1_classes_1_1_plain_bom_aux_1a9aefd20063255cca2bd538bd3c66d001" prot="public" virt="non-virtual"><scope>HKSupply::Classes::PlainBomAux</scope><name>IdSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_classes_1_1_plain_bom_aux_1a19dfccd2efef27eaaf73ed70c5b48b62" prot="public" virt="non-virtual"><scope>HKSupply::Classes::PlainBomAux</scope><name>ItemDescription</name></member>
+      <member refid="class_h_k_supply_1_1_classes_1_1_plain_bom_aux_1aee2e2f82f8d6dbb5e89761d66496c02b" prot="public" virt="non-virtual"><scope>HKSupply::Classes::PlainBomAux</scope><name>ItemGroup</name></member>
+      <member refid="class_h_k_supply_1_1_classes_1_1_plain_bom_aux_1aca24ee721d570372663de70f5d0bb3b8" prot="public" virt="non-virtual"><scope>HKSupply::Classes::PlainBomAux</scope><name>operator PlainBomAux</name></member>
+      <member refid="class_h_k_supply_1_1_classes_1_1_plain_bom_aux_1aba6fce3b6120f2457f2f3de2de2371d3" prot="public" virt="non-virtual"><scope>HKSupply::Classes::PlainBomAux</scope><name>operator PlainBomAux</name></member>
+      <member refid="class_h_k_supply_1_1_classes_1_1_plain_bom_aux_1adbce64859b04c445fa3535fce2122f65" prot="public" virt="non-virtual"><scope>HKSupply::Classes::PlainBomAux</scope><name>Quantity</name></member>
+      <member refid="class_h_k_supply_1_1_classes_1_1_plain_bom_aux_1abf5f17a6d2a6f97507c02f1ed6d2de8a" prot="public" virt="non-virtual"><scope>HKSupply::Classes::PlainBomAux</scope><name>Scrap</name></member>
+      <member refid="class_h_k_supply_1_1_classes_1_1_plain_bom_aux_1a991b32367eaa69e08219e3e644d6ea60" prot="public" virt="non-virtual"><scope>HKSupply::Classes::PlainBomAux</scope><name>Unit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_388ed64b06d8078c6c31afdda0419b98" kind="dir">
+    <compoundname>HKSupply/Forms/Supply/DialogForms</compoundname>
+    <innerfile refid="_select_docs_8cs">SelectDocs.cs</innerfile>
+    <innerfile refid="_select_docs_8_designer_8cs">SelectDocs.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Forms/Supply/DialogForms/"/>
+  </compounddef>
+</doxygen>

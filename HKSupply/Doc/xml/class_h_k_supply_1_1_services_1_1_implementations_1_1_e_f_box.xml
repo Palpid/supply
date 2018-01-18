@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_box" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFBox</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_box" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IBox</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_box_1a73fcbd050ee2705732aa216d59fa2e9f" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFBox._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_box" kindref="compound">EFBox</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFBox.cs" line="17" column="1" bodyfile="HKSupply/Services/Implementations/EFBox.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_box_1afbe52ad0083ded136a2b83c0c4483524" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_box" kindref="compound">Box</ref> &gt;</type>
+        <definition>List&lt;Box&gt; HKSupply.Services.Implementations.EFBox.GetBoxes</definition>
+        <argsstring>()</argsstring>
+        <name>GetBoxes</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_box_1abe6a1954fb7bee8607c127f2d0012a20">GetBoxes</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFBox.cs" line="19" column="1" bodyfile="HKSupply/Services/Implementations/EFBox.cs" bodystart="19" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_box_1ac85520755ea3f2ba7197da66a5d75d6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFBox.CreateBoxes</definition>
+        <argsstring>(IEnumerable&lt; Box &gt; boxesToUpdate)</argsstring>
+        <name>CreateBoxes</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_box_1af39b2d9e4210ec8bd0651800b59d66fb">CreateBoxes</reimplements>
+        <param>
+          <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_box" kindref="compound">Box</ref> &gt;</type>
+          <declname>boxesToUpdate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFBox.cs" line="59" column="1" bodyfile="HKSupply/Services/Implementations/EFBox.cs" bodystart="59" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_box_1a779c937421ef90adea6371a2908216af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFBox.UpdateBoxes</definition>
+        <argsstring>(IEnumerable&lt; Box &gt; boxesToUpdate)</argsstring>
+        <name>UpdateBoxes</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_box_1a44aafc2aa9d036511d738f86ae6b3657">UpdateBoxes</reimplements>
+        <param>
+          <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_box" kindref="compound">Box</ref> &gt;</type>
+          <declname>boxesToUpdate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFBox.cs" line="130" column="1" bodyfile="HKSupply/Services/Implementations/EFBox.cs" bodystart="130" bodyend="202"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="409">
+        <label>HKSupply.Services.Implementations.EFBox</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_box"/>
+        <childnode refid="410" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="410">
+        <label>IBox</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_box"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="411">
+        <label>HKSupply.Services.Implementations.EFBox</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_box"/>
+        <childnode refid="412" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="412">
+        <label>IBox</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_box"/>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFBox.cs" line="16" column="1" bodyfile="HKSupply/Services/Implementations/EFBox.cs" bodystart="15" bodyend="203"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_box_1a73fcbd050ee2705732aa216d59fa2e9f" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFBox</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_box_1ac85520755ea3f2ba7197da66a5d75d6e" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFBox</scope><name>CreateBoxes</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_box_1afbe52ad0083ded136a2b83c0c4483524" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFBox</scope><name>GetBoxes</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_box_1a779c937421ef90adea6371a2908216af" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFBox</scope><name>UpdateBoxes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

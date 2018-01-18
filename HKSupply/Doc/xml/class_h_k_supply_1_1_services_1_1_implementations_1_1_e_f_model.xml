@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_model" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFModel</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_model" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IModel</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_model_1a354410d71e939bcd6d87b0bffa89376e" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFModel._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_model" kindref="compound">EFModel</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFModel.cs" line="20" column="1" bodyfile="HKSupply/Services/Implementations/EFModel.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_model_1ab94677b204ca440c9f7d4637c4d39330" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_model" kindref="compound">Model</ref> &gt;</type>
+        <definition>List&lt;Model&gt; HKSupply.Services.Implementations.EFModel.GetModels</definition>
+        <argsstring>()</argsstring>
+        <name>GetModels</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_model_1aac979c04b2d02050e754c95f938957c4">GetModels</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFModel.cs" line="22" column="1" bodyfile="HKSupply/Services/Implementations/EFModel.cs" bodystart="22" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="510">
+        <label>IModel</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_model"/>
+      </node>
+      <node id="509">
+        <label>HKSupply.Services.Implementations.EFModel</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_model"/>
+        <childnode refid="510" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="512">
+        <label>IModel</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_model"/>
+      </node>
+      <node id="511">
+        <label>HKSupply.Services.Implementations.EFModel</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_model"/>
+        <childnode refid="512" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFModel.cs" line="19" column="1" bodyfile="HKSupply/Services/Implementations/EFModel.cs" bodystart="18" bodyend="57"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_model_1a354410d71e939bcd6d87b0bffa89376e" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFModel</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_model_1ab94677b204ca440c9f7d4637c4d39330" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFModel</scope><name>GetModels</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

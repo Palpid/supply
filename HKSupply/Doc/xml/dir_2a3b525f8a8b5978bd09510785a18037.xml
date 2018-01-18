@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_2a3b525f8a8b5978bd09510785a18037" kind="dir">
+    <compoundname>HKSupply/Forms/Supply</compoundname>
+    <innerdir refid="dir_d79802f525e99c9886bc3108b82559b4">HKSupply/Forms/Supply/Dashboard</innerdir>
+    <innerdir refid="dir_388ed64b06d8078c6c31afdda0419b98">HKSupply/Forms/Supply/DialogForms</innerdir>
+    <innerdir refid="dir_6dcdcdb03a9cf771dfb94497bfc1cc7b">HKSupply/Forms/Supply/SupplyMaterials</innerdir>
+    <innerfile refid="_delivery_note_8cs">DeliveryNote.cs</innerfile>
+    <innerfile refid="_delivery_note_8_designer_8cs">DeliveryNote.Designer.cs</innerfile>
+    <innerfile refid="_docs_list_8cs">DocsList.cs</innerfile>
+    <innerfile refid="_docs_list_8_designer_8cs">DocsList.Designer.cs</innerfile>
+    <innerfile refid="_invoice_8cs">Invoice.cs</innerfile>
+    <innerfile refid="_invoice_8_designer_8cs">Invoice.Designer.cs</innerfile>
+    <innerfile refid="_packing_list_8cs">PackingList.cs</innerfile>
+    <innerfile refid="_packing_list_8_designer_8cs">PackingList.Designer.cs</innerfile>
+    <innerfile refid="_packing_list__v2_8cs">PackingList_v2.cs</innerfile>
+    <innerfile refid="_packing_list__v2_8_designer_8cs">PackingList_v2.Designer.cs</innerfile>
+    <innerfile refid="_packing_list_bcn_8cs">PackingListBcn.cs</innerfile>
+    <innerfile refid="_packing_list_bcn_8_designer_8cs">PackingListBcn.Designer.cs</innerfile>
+    <innerfile refid="_purchase_order_8cs">PurchaseOrder.cs</innerfile>
+    <innerfile refid="_purchase_order_8_designer_8cs">PurchaseOrder.Designer.cs</innerfile>
+    <innerfile refid="_purchase_order_selection_8cs">PurchaseOrderSelection.cs</innerfile>
+    <innerfile refid="_purchase_order_selection_8_designer_8cs">PurchaseOrderSelection.Designer.cs</innerfile>
+    <innerfile refid="_quotation_proposal_8cs">QuotationProposal.cs</innerfile>
+    <innerfile refid="_quotation_proposal_8_designer_8cs">QuotationProposal.Designer.cs</innerfile>
+    <innerfile refid="_sales_order_8cs">SalesOrder.cs</innerfile>
+    <innerfile refid="_sales_order_8_designer_8cs">SalesOrder.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Forms/Supply/"/>
+  </compounddef>
+</doxygen>

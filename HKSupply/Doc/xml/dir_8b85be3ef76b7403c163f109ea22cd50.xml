@@ -1,15 +1,50 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="dir_8b85be3ef76b7403c163f109ea22cd50" kind="dir">
     <compoundname>HKSupply/Services/Interfaces</compoundname>
+    <innerfile refid="_i_bom_breakdown_8cs">IBomBreakdown.cs</innerfile>
+    <innerfile refid="_i_box_8cs">IBox.cs</innerfile>
+    <innerfile refid="_i_currency_8cs">ICurrency.cs</innerfile>
     <innerfile refid="_i_customer_8cs">ICustomer.cs</innerfile>
+    <innerfile refid="_i_customer_price_list_8cs">ICustomerPriceList.cs</innerfile>
+    <innerfile refid="_i_delivery_terms_8cs">IDeliveryTerms.cs</innerfile>
+    <innerfile refid="_i_doc_head_attach_file_8cs">IDocHeadAttachFile.cs</innerfile>
+    <innerfile refid="_i_doc_type_8cs">IDocType.cs</innerfile>
+    <innerfile refid="_i_etn_color_8cs">IEtnColor.cs</innerfile>
+    <innerfile refid="_i_exchange_rate_8cs">IExchangeRate.cs</innerfile>
+    <innerfile refid="_i_family_h_k_8cs">IFamilyHK.cs</innerfile>
     <innerfile refid="_i_functionality_8cs">IFunctionality.cs</innerfile>
+    <innerfile refid="_i_functionality_report_8cs">IFunctionalityReport.cs</innerfile>
     <innerfile refid="_i_functionality_role_8cs">IFunctionalityRole.cs</innerfile>
-    <innerfile refid="_i_item_8cs">IItem.cs</innerfile>
+    <innerfile refid="_i_hw_type_8cs">IHwType.cs</innerfile>
+    <innerfile refid="_i_incoterm_8cs">IIncoterm.cs</innerfile>
+    <innerfile refid="_i_item_bcn_8cs">IItemBcn.cs</innerfile>
+    <innerfile refid="_i_item_bom_8cs">IItemBom.cs</innerfile>
+    <innerfile refid="_i_item_doc_8cs">IItemDoc.cs</innerfile>
+    <innerfile refid="_i_item_ey_8cs">IItemEy.cs</innerfile>
+    <innerfile refid="_i_item_hf_8cs">IItemHf.cs</innerfile>
+    <innerfile refid="_i_item_hw_8cs">IItemHw.cs</innerfile>
+    <innerfile refid="_i_item_mt_8cs">IItemMt.cs</innerfile>
+    <innerfile refid="_i_layout_8cs">ILayout.cs</innerfile>
+    <innerfile refid="_i_material_8cs">IMaterial.cs</innerfile>
+    <innerfile refid="_i_mat_type_8cs">IMatType.cs</innerfile>
+    <innerfile refid="_i_model_8cs">IModel.cs</innerfile>
+    <innerfile refid="_i_my_company_8cs">IMyCompany.cs</innerfile>
+    <innerfile refid="_i_payment_terms_8cs">IPaymentTerms.cs</innerfile>
+    <innerfile refid="_i_prototype_8cs">IPrototype.cs</innerfile>
+    <innerfile refid="_i_prototype_doc_8cs">IPrototypeDoc.cs</innerfile>
     <innerfile refid="_i_role_8cs">IRole.cs</innerfile>
+    <innerfile refid="_i_status_cial_8cs">IStatusCial.cs</innerfile>
+    <innerfile refid="_i_status_prod_8cs">IStatusProd.cs</innerfile>
     <innerfile refid="_i_store_8cs">IStore.cs</innerfile>
     <innerfile refid="_i_supplier_8cs">ISupplier.cs</innerfile>
+    <innerfile refid="_i_supplier_factory_coeff_8cs">ISupplierFactoryCoeff.cs</innerfile>
+    <innerfile refid="_i_supplier_price_list_8cs">ISupplierPriceList.cs</innerfile>
+    <innerfile refid="_i_supply_dashboard_8cs">ISupplyDashboard.cs</innerfile>
+    <innerfile refid="_i_supply_docs_8cs">ISupplyDocs.cs</innerfile>
+    <innerfile refid="_i_unit_8cs">IUnit.cs</innerfile>
     <innerfile refid="_i_user_8cs">IUser.cs</innerfile>
+    <innerfile refid="_i_user_attr_description_8cs">IUserAttrDescription.cs</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

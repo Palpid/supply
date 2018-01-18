@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="dir_00003665e338c4a270f9192c26fb051b" kind="dir">
     <compoundname>HKSuply.UnitTest</compoundname>
     <innerdir refid="dir_bd87b4e953eeb4ac3113fd8a5f5bc83f">HKSuply.UnitTest/obj</innerdir>

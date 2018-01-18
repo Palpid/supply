@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_head_attach_file" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFDocHeadAttachFile</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_head_attach_file" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IDocHeadAttachFile</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_head_attach_file_1aa61bc9b9e946bd754af7f4c1ed90b679" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFDocHeadAttachFile._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_head_attach_file" kindref="compound">EFDocHeadAttachFile</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFDocHeadAttachFile.cs" line="18" column="1" bodyfile="HKSupply/Services/Implementations/EFDocHeadAttachFile.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_head_attach_file_1a6c6eab5d9a147b6475e36eb1ad2585d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file" kindref="compound">DocHeadAttachFile</ref></type>
+        <definition>DocHeadAttachFile HKSupply.Services.Implementations.EFDocHeadAttachFile.AddDocHeadAttachFile</definition>
+        <argsstring>(DocHeadAttachFile attachFile)</argsstring>
+        <name>AddDocHeadAttachFile</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_head_attach_file_1a9521d0bf1c63fc9ca5d53075a9836276">AddDocHeadAttachFile</reimplements>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file" kindref="compound">DocHeadAttachFile</ref></type>
+          <declname>attachFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFDocHeadAttachFile.cs" line="20" column="1" bodyfile="HKSupply/Services/Implementations/EFDocHeadAttachFile.cs" bodystart="20" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_head_attach_file_1a7f150dcc2a280bf681c53b6cd0921561" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file" kindref="compound">DocHeadAttachFile</ref> &gt;</type>
+        <definition>List&lt;DocHeadAttachFile&gt; HKSupply.Services.Implementations.EFDocHeadAttachFile.GetDocHeadAttachFile</definition>
+        <argsstring>(string idDoc)</argsstring>
+        <name>GetDocHeadAttachFile</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_head_attach_file_1aea26daa01b08dbc2c4a1366cc6cafaee">GetDocHeadAttachFile</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idDoc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFDocHeadAttachFile.cs" line="64" column="1" bodyfile="HKSupply/Services/Implementations/EFDocHeadAttachFile.cs" bodystart="64" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="429">
+        <label>HKSupply.Services.Implementations.EFDocHeadAttachFile</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_head_attach_file"/>
+        <childnode refid="430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="430">
+        <label>IDocHeadAttachFile</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_head_attach_file"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="431">
+        <label>HKSupply.Services.Implementations.EFDocHeadAttachFile</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_head_attach_file"/>
+        <childnode refid="432" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="432">
+        <label>IDocHeadAttachFile</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_head_attach_file"/>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFDocHeadAttachFile.cs" line="17" column="1" bodyfile="HKSupply/Services/Implementations/EFDocHeadAttachFile.cs" bodystart="16" bodyend="105"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_head_attach_file_1aa61bc9b9e946bd754af7f4c1ed90b679" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFDocHeadAttachFile</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_head_attach_file_1a6c6eab5d9a147b6475e36eb1ad2585d0" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFDocHeadAttachFile</scope><name>AddDocHeadAttachFile</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_head_attach_file_1a7f150dcc2a280bf681c53b6cd0921561" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFDocHeadAttachFile</scope><name>GetDocHeadAttachFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

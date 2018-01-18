@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_custom_controls_1_1_nullable_date_time_picker" kind="class" language="C#" prot="public">
     <compoundname>CustomControls::NullableDateTimePicker</compoundname>
     <basecompoundref prot="public" virt="non-virtual">DateTimePicker</basecompoundref>
@@ -97,7 +97,7 @@
 <para>The DateTime value assigned to the control </para><para>If the <bold>Value</bold> property has not been changed in code or by the user, it is set to the current date and time (DateTime.Now).</para><para>If <bold>Value</bold> is <bold>null</bold>, the DateTimePicker shows <ref refid="class_custom_controls_1_1_nullable_date_time_picker_1a9efcb8f7340f813306a8e2ca388e156e" kindref="member">NullValue</ref>.</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/NullableDateTimePicker.cs" line="62" column="1" bodyfile="CustomControls/NullableDateTimePicker.cs" bodystart="63" bodyend="-1"/>
+        <location file="CustomControls/NullableDateTimePicker.cs" line="62" column="1" bodyfile="CustomControls/NullableDateTimePicker.cs" bodystart="63" bodyend="83"/>
       </memberdef>
       <memberdef kind="property" id="class_custom_controls_1_1_nullable_date_time_picker_1a7e3ba070bcfbb12d9b954679652e9093" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>new DateTimePickerFormat</type>
@@ -110,7 +110,7 @@
 <para>One of the DateTimePickerFormat values. The default is DateTimePickerFormat.Long.</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/NullableDateTimePicker.cs" line="92" column="1" bodyfile="CustomControls/NullableDateTimePicker.cs" bodystart="93" bodyend="-1"/>
+        <location file="CustomControls/NullableDateTimePicker.cs" line="92" column="1" bodyfile="CustomControls/NullableDateTimePicker.cs" bodystart="93" bodyend="101"/>
       </memberdef>
       <memberdef kind="property" id="class_custom_controls_1_1_nullable_date_time_picker_1a1be4007c2054e1d58ee0c211aa2d4d12" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>new String</type>
@@ -123,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/NullableDateTimePicker.cs" line="108" column="1" bodyfile="CustomControls/NullableDateTimePicker.cs" bodystart="109" bodyend="-1"/>
+        <location file="CustomControls/NullableDateTimePicker.cs" line="108" column="1" bodyfile="CustomControls/NullableDateTimePicker.cs" bodystart="109" bodyend="115"/>
       </memberdef>
       <memberdef kind="property" id="class_custom_controls_1_1_nullable_date_time_picker_1a9efcb8f7340f813306a8e2ca388e156e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>String</type>
@@ -136,7 +136,7 @@
 <para>The string value assigned to the control as null value.</para><para>If the <ref refid="class_custom_controls_1_1_nullable_date_time_picker_1a10ca9af18d1ba8e6985257fcf374748b" kindref="member">Value</ref> is <bold>null</bold>, <bold>NullValue</bold> is shown in the <bold>DateTimePicker</bold> control. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/NullableDateTimePicker.cs" line="129" column="1" bodyfile="CustomControls/NullableDateTimePicker.cs" bodystart="130" bodyend="-1"/>
+        <location file="CustomControls/NullableDateTimePicker.cs" line="129" column="1" bodyfile="CustomControls/NullableDateTimePicker.cs" bodystart="130" bodyend="133"/>
       </memberdef>
       <memberdef kind="property" id="class_custom_controls_1_1_nullable_date_time_picker_1aba2751e1aa82f7ac850e78b40b2917ea" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -149,7 +149,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/NullableDateTimePicker.cs" line="140" column="1" bodyfile="CustomControls/NullableDateTimePicker.cs" bodystart="141" bodyend="-1"/>
+        <location file="CustomControls/NullableDateTimePicker.cs" line="140" column="1" bodyfile="CustomControls/NullableDateTimePicker.cs" bodystart="141" bodyend="148"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -303,24 +303,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="226">
+      <node id="1261">
         <label>CustomControls.NullableDateTimePicker</label>
         <link refid="class_custom_controls_1_1_nullable_date_time_picker"/>
-        <childnode refid="227" relation="public-inheritance">
+        <childnode refid="1262" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="227">
+      <node id="1262">
         <label>System::Windows::Forms::DateTimePicker</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="228">
+      <node id="1263">
         <label>CustomControls.NullableDateTimePicker</label>
         <link refid="class_custom_controls_1_1_nullable_date_time_picker"/>
-        <childnode refid="229" relation="public-inheritance">
+        <childnode refid="1264" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="229">
+      <node id="1264">
         <label>System::Windows::Forms::DateTimePicker</label>
       </node>
     </collaborationgraph>

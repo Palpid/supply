@@ -1,19 +1,54 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="namespace_h_k_supply_1_1_services_1_1_interfaces" kind="namespace" language="C#">
     <compoundname>HKSupply::Services::Interfaces</compoundname>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_bom_breakdown" prot="public">HKSupply::Services::Interfaces::IBomBreakdown</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_box" prot="public">HKSupply::Services::Interfaces::IBox</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_currency" prot="public">HKSupply::Services::Interfaces::ICurrency</innerclass>
     <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer" prot="public">HKSupply::Services::Interfaces::ICustomer</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_price_list" prot="public">HKSupply::Services::Interfaces::ICustomerPriceList</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_delivery_terms" prot="public">HKSupply::Services::Interfaces::IDeliveryTerms</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_head_attach_file" prot="public">HKSupply::Services::Interfaces::IDocHeadAttachFile</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_type" prot="public">HKSupply::Services::Interfaces::IDocType</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_etn_color" prot="public">HKSupply::Services::Interfaces::IEtnColor</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_exchange_rate" prot="public">HKSupply::Services::Interfaces::IExchangeRate</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_family_h_k" prot="public">HKSupply::Services::Interfaces::IFamilyHK</innerclass>
     <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality" prot="public">HKSupply::Services::Interfaces::IFunctionality</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_report" prot="public">HKSupply::Services::Interfaces::IFunctionalityReport</innerclass>
     <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_role" prot="public">HKSupply::Services::Interfaces::IFunctionalityRole</innerclass>
-    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item" prot="public">HKSupply::Services::Interfaces::IItem</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_hw_type" prot="public">HKSupply::Services::Interfaces::IHwType</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_incoterm" prot="public">HKSupply::Services::Interfaces::IIncoterm</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bcn" prot="public">HKSupply::Services::Interfaces::IItemBcn</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom" prot="public">HKSupply::Services::Interfaces::IItemBom</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_doc" prot="public">HKSupply::Services::Interfaces::IItemDoc</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_ey" prot="public">HKSupply::Services::Interfaces::IItemEy</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_hf" prot="public">HKSupply::Services::Interfaces::IItemHf</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_hw" prot="public">HKSupply::Services::Interfaces::IItemHw</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_mt" prot="public">HKSupply::Services::Interfaces::IItemMt</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_layout" prot="public">HKSupply::Services::Interfaces::ILayout</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_material" prot="public">HKSupply::Services::Interfaces::IMaterial</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_mat_type" prot="public">HKSupply::Services::Interfaces::IMatType</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_model" prot="public">HKSupply::Services::Interfaces::IModel</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_my_company" prot="public">HKSupply::Services::Interfaces::IMyCompany</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_payment_terms" prot="public">HKSupply::Services::Interfaces::IPaymentTerms</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_prototype" prot="public">HKSupply::Services::Interfaces::IPrototype</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_prototype_doc" prot="public">HKSupply::Services::Interfaces::IPrototypeDoc</innerclass>
     <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_role" prot="public">HKSupply::Services::Interfaces::IRole</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_status_cial" prot="public">HKSupply::Services::Interfaces::IStatusCial</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_status_prod" prot="public">HKSupply::Services::Interfaces::IStatusProd</innerclass>
     <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_store" prot="public">HKSupply::Services::Interfaces::IStore</innerclass>
     <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier" prot="public">HKSupply::Services::Interfaces::ISupplier</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_factory_coeff" prot="public">HKSupply::Services::Interfaces::ISupplierFactoryCoeff</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_price_list" prot="public">HKSupply::Services::Interfaces::ISupplierPriceList</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_dashboard" prot="public">HKSupply::Services::Interfaces::ISupplyDashboard</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs" prot="public">HKSupply::Services::Interfaces::ISupplyDocs</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_unit" prot="public">HKSupply::Services::Interfaces::IUnit</innerclass>
     <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user" prot="public">HKSupply::Services::Interfaces::IUser</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_attr_description" prot="public">HKSupply::Services::Interfaces::IUserAttrDescription</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="HKSupply/Services/Interfaces/ICustomer.cs" line="9" column="1"/>
+    <location file="HKSupply/Services/Interfaces/IBomBreakdown.cs" line="5" column="1"/>
   </compounddef>
 </doxygen>

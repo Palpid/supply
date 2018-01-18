@@ -1,0 +1,2396 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Master::SupplierPriceListManagement</compoundname>
+    <basecompoundref refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" prot="public" virt="non-virtual">HKSupply.Forms.RibbonFormBase</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a7a0e256a5ab28e3761268108834c8ccc" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supplier_price_list" kindref="compound">SupplierPriceList</ref></type>
+        <definition>SupplierPriceList HKSupply.Forms.Master.SupplierPriceListManagement._supplierPriceListUpdate</definition>
+        <argsstring></argsstring>
+        <name>_supplierPriceListUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="43" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aef2f6af9eb455900dd68175f391ed763" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supplier_price_list" kindref="compound">SupplierPriceList</ref></type>
+        <definition>SupplierPriceList HKSupply.Forms.Master.SupplierPriceListManagement._supplierPriceListOriginal</definition>
+        <argsstring></argsstring>
+        <name>_supplierPriceListOriginal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="44" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a254f247bdd0ab5e7d2af04d1cd1cff3b" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supplier_price_list_history" kindref="compound">SupplierPriceListHistory</ref></type>
+        <definition>SupplierPriceListHistory HKSupply.Forms.Master.SupplierPriceListManagement._supplierPriceListHistory</definition>
+        <argsstring></argsstring>
+        <name>_supplierPriceListHistory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="45" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a171d0b3013f184cb6688cea983d261d4" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier_price_list" kindref="compound">SupplierPriceList</ref> &gt;</type>
+        <definition>List&lt;SupplierPriceList&gt; HKSupply.Forms.Master.SupplierPriceListManagement._suppliersPriceListList</definition>
+        <argsstring></argsstring>
+        <name>_suppliersPriceListList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="47" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1afd07c2d8674e7fda2739090f6ee3846e" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier_price_list_history" kindref="compound">SupplierPriceListHistory</ref> &gt;</type>
+        <definition>List&lt;SupplierPriceListHistory&gt; HKSupply.Forms.Master.SupplierPriceListManagement._supplierPriceListHistoryList</definition>
+        <argsstring></argsstring>
+        <name>_supplierPriceListHistoryList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="48" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ace4bb8c23127608d4248ed672b5883e5" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier_price_list" kindref="compound">SupplierPriceList</ref> &gt;</type>
+        <definition>List&lt;SupplierPriceList&gt; HKSupply.Forms.Master.SupplierPriceListManagement._modifiedRowsList</definition>
+        <argsstring></argsstring>
+        <name>_modifiedRowsList</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_models_1_1_supplier_price_list" kindref="compound">SupplierPriceList</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="50" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a441c4ae7d779e7228eef80b6491525df" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_bcn" kindref="compound">ItemBcn</ref> &gt;</type>
+        <definition>List&lt;ItemBcn&gt; HKSupply.Forms.Master.SupplierPriceListManagement._itemBcnList</definition>
+        <argsstring></argsstring>
+        <name>_itemBcnList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="52" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1af4ecefdda0a68b827f648496a1df3ca5" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier" kindref="compound">Supplier</ref> &gt;</type>
+        <definition>List&lt;Supplier&gt; HKSupply.Forms.Master.SupplierPriceListManagement._suppliersList</definition>
+        <argsstring></argsstring>
+        <name>_suppliersList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="53" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a8ad002379341438bbf15a59f47b7e8bd" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_currency" kindref="compound">Currency</ref> &gt;</type>
+        <definition>List&lt;Currency&gt; HKSupply.Forms.Master.SupplierPriceListManagement._currenciesList</definition>
+        <argsstring></argsstring>
+        <name>_currenciesList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="54" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a3b8e5ba051b4a0cf387f199bad36fe21" prot="private" static="no" mutable="no">
+        <type>string []</type>
+        <definition>string [] HKSupply.Forms.Master.SupplierPriceListManagement._nonEditingFields</definition>
+        <argsstring></argsstring>
+        <name>_nonEditingFields</name>
+        <initializer>= { &quot;slueIdItemBcn&quot;, &quot;lueIdSupplier&quot;, &quot;txtIdVersion&quot;, &quot;txtIdSubversion&quot;, &quot;txtTimestamp&quot; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="56" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aa1a8d1ec41d36f58f81344c318f07bf4" prot="private" static="no" mutable="no">
+        <type>string []</type>
+        <definition>string [] HKSupply.Forms.Master.SupplierPriceListManagement._mandatoryEditingFields</definition>
+        <argsstring></argsstring>
+        <name>_mandatoryEditingFields</name>
+        <initializer>= { &quot;slueIdItemBcn&quot;, &quot;lueIdSupplier&quot;, &quot;txtPrice&quot;, &quot;lueIdCurrency&quot;, &quot;txtPriceBaseCurrency&quot;, &quot;txtExchangeRateUsed&quot; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="57" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a0e41548272b0f44dcfb8ac3e7b4961ef" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HKSupply.Forms.Master.SupplierPriceListManagement._currentHistoryNumList</definition>
+        <argsstring></argsstring>
+        <name>_currentHistoryNumList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="59" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ad6d02cbcacf706926f09df908a5ed9d8" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Master.SupplierPriceListManagement.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a4b6316a18ce2596ccefab9c9f7b1f0ee" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Master.SupplierPriceListManagement.xtcGeneral</definition>
+        <argsstring></argsstring>
+        <name>xtcGeneral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1178" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a947fbea36006f39a5742c3b484e9098d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.SupplierPriceListManagement.xtpList</definition>
+        <argsstring></argsstring>
+        <name>xtpList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1179" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ab0e7d4a0bf66e86d4d23f97c1ce58d0e" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Master.SupplierPriceListManagement.sbLoad</definition>
+        <argsstring></argsstring>
+        <name>sbLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1180" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a710aeafdbe805795d40558b503a60863" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.SupplierPriceListManagement.xgrdSuppliersPriceList</definition>
+        <argsstring></argsstring>
+        <name>xgrdSuppliersPriceList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1181" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a29505a42b645d9d175e808c2f64a2454" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.SupplierPriceListManagement.rootGridViewSuppliersPriceList</definition>
+        <argsstring></argsstring>
+        <name>rootGridViewSuppliersPriceList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1182" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a77790866080386435585301d2b729440" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.SupplierPriceListManagement.xtpForm</definition>
+        <argsstring></argsstring>
+        <name>xtpForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1183" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a588c275d4c32a1276e29af959cd0355d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.GroupControl</type>
+        <definition>DevExpress.XtraEditors.GroupControl HKSupply.Forms.Master.SupplierPriceListManagement.groupControlHistory</definition>
+        <argsstring></argsstring>
+        <name>groupControlHistory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1184" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a2ed54ce522743c2da7a66e9f1a912e06" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.XtraScrollableControl</type>
+        <definition>DevExpress.XtraEditors.XtraScrollableControl HKSupply.Forms.Master.SupplierPriceListManagement.xtraScrollableControl1</definition>
+        <argsstring></argsstring>
+        <name>xtraScrollableControl1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1185" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a3b1cea095c3943cd8fa561a2b9bc8dc7" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Master.SupplierPriceListManagement.sbSetCurrentSubversion</definition>
+        <argsstring></argsstring>
+        <name>sbSetCurrentSubversion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1186" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ae1fe4fa39b92067aa64c7e2a5b143858" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Master.SupplierPriceListManagement.sbSetCurrentVersion</definition>
+        <argsstring></argsstring>
+        <name>sbSetCurrentVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1187" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1af432f36a134ed27a19d6c4426a5d2b07" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Master.SupplierPriceListManagement.sbBackward</definition>
+        <argsstring></argsstring>
+        <name>sbBackward</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1188" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a456b96bd8dd7a71d4176641c186c8529" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Master.SupplierPriceListManagement.sbForward</definition>
+        <argsstring></argsstring>
+        <name>sbForward</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1189" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1adeb8ea09bce44ce1c0669d444edac41d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControl</type>
+        <definition>DevExpress.XtraLayout.LayoutControl HKSupply.Forms.Master.SupplierPriceListManagement.layoutControlSupplierHistory</definition>
+        <argsstring></argsstring>
+        <name>layoutControlSupplierHistory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1190" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a05b24afa8c2aae37734ed20b7147a157" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtHIdCurrency</definition>
+        <argsstring></argsstring>
+        <name>txtHIdCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1191" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a5b0cdd2fa578c57df953bd89cd3244b2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtHIdSupplier</definition>
+        <argsstring></argsstring>
+        <name>txtHIdSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1192" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a5b8ab4133864ca7562e7dc5240b710fa" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtHIdVersion</definition>
+        <argsstring></argsstring>
+        <name>txtHIdVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1193" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a3cac8ee234b1096db09d382b1805e473" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtHIdSubversion</definition>
+        <argsstring></argsstring>
+        <name>txtHIdSubversion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1194" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a0138921e82749567030ad91a17b9edaf" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtHTimestamp</definition>
+        <argsstring></argsstring>
+        <name>txtHTimestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1195" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a2f22cc94245158b3ac7fe48d2bcd6cd2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtHIdItemBcn</definition>
+        <argsstring></argsstring>
+        <name>txtHIdItemBcn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1196" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ac220e20f74697425686b0cf005015278" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtHPrice</definition>
+        <argsstring></argsstring>
+        <name>txtHPrice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1197" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ade609fe2056bf69a5e624ef79a8a4952" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtHPriceBaseCurrency</definition>
+        <argsstring></argsstring>
+        <name>txtHPriceBaseCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1198" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a53e5a34b5e427c18ea6bb3bcff544e31" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtHMinLot</definition>
+        <argsstring></argsstring>
+        <name>txtHMinLot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1199" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ab5d4230707a0a2524609a020340d3f54" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtHLeadTime</definition>
+        <argsstring></argsstring>
+        <name>txtHLeadTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1200" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aa1b0e8f258efd1de561496f198175cec" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtHExchangeRateUsed</definition>
+        <argsstring></argsstring>
+        <name>txtHExchangeRateUsed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1201" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1adee84d909d48372176033a19a274d70c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtHIncrLot</definition>
+        <argsstring></argsstring>
+        <name>txtHIncrLot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1202" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a61ac6da50995ea5d55fbaa2c01528c45" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtHComments</definition>
+        <argsstring></argsstring>
+        <name>txtHComments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1203" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a78054a7fd12c3d6e45922a052b66b18c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlGroup</type>
+        <definition>DevExpress.XtraLayout.LayoutControlGroup HKSupply.Forms.Master.SupplierPriceListManagement.layoutControlGroup3</definition>
+        <argsstring></argsstring>
+        <name>layoutControlGroup3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1204" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a8c422b3f911885c53c321a7696745375" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlGroup</type>
+        <definition>DevExpress.XtraLayout.LayoutControlGroup HKSupply.Forms.Master.SupplierPriceListManagement.layoutControlGroup5</definition>
+        <argsstring></argsstring>
+        <name>layoutControlGroup5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1205" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a513d34aa827a12c47aa2b779a00aba4c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciHIdSupplier</definition>
+        <argsstring></argsstring>
+        <name>lciHIdSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1206" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a48d1fb4bf5ceeb8dfba9ee83b2fa225b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.EmptySpaceItem</type>
+        <definition>DevExpress.XtraLayout.EmptySpaceItem HKSupply.Forms.Master.SupplierPriceListManagement.emptySpaceItem3</definition>
+        <argsstring></argsstring>
+        <name>emptySpaceItem3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1207" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a5f7cf82a05053ab06ec8010b1b9dc953" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciHIdVersion</definition>
+        <argsstring></argsstring>
+        <name>lciHIdVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1208" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a66c023e1198724a6d8fa900d41112514" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciHIdSubversion</definition>
+        <argsstring></argsstring>
+        <name>lciHIdSubversion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1209" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a9d913c3c0ca7fb39c76fa263dc994b6e" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciHTimestamp</definition>
+        <argsstring></argsstring>
+        <name>lciHTimestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1210" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a321bbcd3d102a3158c291a6298900ddb" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciHIdItemBcn</definition>
+        <argsstring></argsstring>
+        <name>lciHIdItemBcn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1211" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1afb4614b4368bff6097d3187a13412e56" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciHPrice</definition>
+        <argsstring></argsstring>
+        <name>lciHPrice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1212" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aba473ea9594822a0adb7a4468e4e5810" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciHPriceBaseCurrency</definition>
+        <argsstring></argsstring>
+        <name>lciHPriceBaseCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1213" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a9bff33319d7028b802c6358175e3653b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciHMinLot</definition>
+        <argsstring></argsstring>
+        <name>lciHMinLot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1214" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aa0eb329266389222942d8f2cbf0b0b6d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciHLeadTime</definition>
+        <argsstring></argsstring>
+        <name>lciHLeadTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1215" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ac729aba1622cd04c1ebf48ec8473f0f2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciHExchangeRateUsed</definition>
+        <argsstring></argsstring>
+        <name>lciHExchangeRateUsed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1216" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a0cffd52a902da31984d1088c34278a9b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciHIncrLot</definition>
+        <argsstring></argsstring>
+        <name>lciHIncrLot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1217" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1af9ba6f89e79e9cf3bc51054707555b57" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciHComments</definition>
+        <argsstring></argsstring>
+        <name>lciHComments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1218" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aa245e6cfee841f5f26c62c2458970342" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciHIdCurrency</definition>
+        <argsstring></argsstring>
+        <name>lciHIdCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1219" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a982e4dba9b9ac416f38e42a78e8fc3f3" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Master.SupplierPriceListManagement.sbNewVersion</definition>
+        <argsstring></argsstring>
+        <name>sbNewVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1220" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a57803aecc94fea9faf3511c2dc3adcde" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControl</type>
+        <definition>DevExpress.XtraLayout.LayoutControl HKSupply.Forms.Master.SupplierPriceListManagement.layoutControlForm</definition>
+        <argsstring></argsstring>
+        <name>layoutControlForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1221" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aa6269a7339bb8a7b9c8654cef83a8222" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LookUpEdit</type>
+        <definition>DevExpress.XtraEditors.LookUpEdit HKSupply.Forms.Master.SupplierPriceListManagement.lueIdSupplier</definition>
+        <argsstring></argsstring>
+        <name>lueIdSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1222" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ad62f54a355a9480e72bed1a9ad85b039" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LookUpEdit</type>
+        <definition>DevExpress.XtraEditors.LookUpEdit HKSupply.Forms.Master.SupplierPriceListManagement.lueIdCurrency</definition>
+        <argsstring></argsstring>
+        <name>lueIdCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1223" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a5466a941a8e49a10eb93694b159523f3" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtComments</definition>
+        <argsstring></argsstring>
+        <name>txtComments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1224" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a5af2330f757f5b5525263dde76cd3f8d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtIncrLot</definition>
+        <argsstring></argsstring>
+        <name>txtIncrLot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1225" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a8c371ea4fe6e892fcfc0a9c0ef4989ae" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtLeadTime</definition>
+        <argsstring></argsstring>
+        <name>txtLeadTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1226" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a4e078eae5d2047f3f71f0096bdef7cd8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtMinLot</definition>
+        <argsstring></argsstring>
+        <name>txtMinLot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1227" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ae9a2c8bfc22d9bde103fd55160489837" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtExchangeRateUsed</definition>
+        <argsstring></argsstring>
+        <name>txtExchangeRateUsed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1228" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1abbaf0a1145b7ba54ebb7a241d457b7d7" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtPrice</definition>
+        <argsstring></argsstring>
+        <name>txtPrice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1229" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a36dcedd8d3d62b194f52727126571230" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtTimestamp</definition>
+        <argsstring></argsstring>
+        <name>txtTimestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1230" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a6d839c454a969840a2a4bd4ddd3e59e1" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtIdSubversion</definition>
+        <argsstring></argsstring>
+        <name>txtIdSubversion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1231" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a175b855f8db340cfbb2cf4c000fddfa3" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtIdVersion</definition>
+        <argsstring></argsstring>
+        <name>txtIdVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1232" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a488046ba40de85635ad5513cedc07bb4" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtPriceBaseCurrency</definition>
+        <argsstring></argsstring>
+        <name>txtPriceBaseCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1233" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a4d4d884e0d8dc8d732fb21f2af4d28bc" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlGroup</type>
+        <definition>DevExpress.XtraLayout.LayoutControlGroup HKSupply.Forms.Master.SupplierPriceListManagement.layoutControlGroup1</definition>
+        <argsstring></argsstring>
+        <name>layoutControlGroup1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1234" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a6b566e6cf25aceb28afbad244b4de346" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciPriceBaseCurrency</definition>
+        <argsstring></argsstring>
+        <name>lciPriceBaseCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1235" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a281c23dd6b7d889a39e40d01628ea82f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.EmptySpaceItem</type>
+        <definition>DevExpress.XtraLayout.EmptySpaceItem HKSupply.Forms.Master.SupplierPriceListManagement.emptySpaceItem1</definition>
+        <argsstring></argsstring>
+        <name>emptySpaceItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1236" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a95c1b7aa8e7f15caad65456b193b6864" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciIdVersion</definition>
+        <argsstring></argsstring>
+        <name>lciIdVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1237" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a54065a04088c911b49ffa4803b95aace" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciIdSubversion</definition>
+        <argsstring></argsstring>
+        <name>lciIdSubversion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1238" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a1aec4a2ad1793f56579d7f16f540e116" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciTimestamp</definition>
+        <argsstring></argsstring>
+        <name>lciTimestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1239" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a874c6208f5630a97dacf28f8075fd5b6" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciPrice</definition>
+        <argsstring></argsstring>
+        <name>lciPrice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1240" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a4bd638a441c13aadbd2472c2dd01cde8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciExchangeRateUsed</definition>
+        <argsstring></argsstring>
+        <name>lciExchangeRateUsed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1241" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ab9828f150f57895ebdc4ad60a332ec98" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciMinLot</definition>
+        <argsstring></argsstring>
+        <name>lciMinLot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1242" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a9354dc43631148d6a4d8a24c330791e6" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciLeadTime</definition>
+        <argsstring></argsstring>
+        <name>lciLeadTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1243" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ac6150b5b6c9f98d41c14e4065a354ce1" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciIncrLot</definition>
+        <argsstring></argsstring>
+        <name>lciIncrLot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1244" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1af4f97e4b345660c51857769c06672e2b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciIdCurrency</definition>
+        <argsstring></argsstring>
+        <name>lciIdCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1245" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a1c4d8729322ff52e668922d0f150eef6" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciComments</definition>
+        <argsstring></argsstring>
+        <name>lciComments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1246" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1afe12bde5996024377b0036a1035fd4fd" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciIdSupplier</definition>
+        <argsstring></argsstring>
+        <name>lciIdSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1247" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a1069c54c919c5c0b175018b7ff43a7be" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.SupplierPriceListManagement.txtUser</definition>
+        <argsstring></argsstring>
+        <name>txtUser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1248" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a09984f59f2144a40e17c18a12e92c565" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciUser</definition>
+        <argsstring></argsstring>
+        <name>lciUser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1249" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1adef81cc52f26fc760cd5bdb2845fa80f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Master.SupplierPriceListManagement.slueItemBcn</definition>
+        <argsstring></argsstring>
+        <name>slueItemBcn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1250" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ae2bcf7e44ee95bc9cd5d97ff45647752" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.SupplierPriceListManagement.gridView1</definition>
+        <argsstring></argsstring>
+        <name>gridView1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1251" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a24de8d6382ce4e3b32803faf4d306950" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Master.SupplierPriceListManagement.slueSupplier</definition>
+        <argsstring></argsstring>
+        <name>slueSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1252" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a4b2383555be0443ff354c58350f639f2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.SupplierPriceListManagement.searchLookUpEdit1View</definition>
+        <argsstring></argsstring>
+        <name>searchLookUpEdit1View</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1253" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aba6c2c55a09051e29bf559a514c740f9" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.SupplierPriceListManagement.lblItemBcn</definition>
+        <argsstring></argsstring>
+        <name>lblItemBcn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1254" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1af909d3e96a60b4d30925f8f1bccc67ae" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.SupplierPriceListManagement.lblSupplier</definition>
+        <argsstring></argsstring>
+        <name>lblSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1255" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a5e3ed3043e62e09b56c9bca7130050cd" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Master.SupplierPriceListManagement.slueIdItemBcn</definition>
+        <argsstring></argsstring>
+        <name>slueIdItemBcn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1256" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ad1c6012aa3bce6a4789903e2d1744962" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.SupplierPriceListManagement.gridView2</definition>
+        <argsstring></argsstring>
+        <name>gridView2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1257" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a3f89683788db110ab1fc6b30240ac483" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.SupplierPriceListManagement.lciIdItemBcn</definition>
+        <argsstring></argsstring>
+        <name>lciIdItemBcn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="1258" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="1258" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a9796b4f7fafff4f13d1f28fcecfea736" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Master.SupplierPriceListManagement.SupplierPriceListManagement</definition>
+        <argsstring>()</argsstring>
+        <name>SupplierPriceListManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="64" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="64" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1af49f8bb1d8c6ab132c35cfbb79092fcb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.SupplierPriceListManagement.bbiCancel_ItemClick</definition>
+        <argsstring>(object sender, DevExpress.XtraBars.ItemClickEventArgs e)</argsstring>
+        <name>bbiCancel_ItemClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraBars.ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="109" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="109" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a3aaf16113c98ec5d7d7a8a0b5ae200d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.SupplierPriceListManagement.bbiEdit_ItemClick</definition>
+        <argsstring>(object sender, DevExpress.XtraBars.ItemClickEventArgs e)</argsstring>
+        <name>bbiEdit_ItemClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraBars.ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="133" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="133" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a0abd68df64bee5ee456a573441a189db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.SupplierPriceListManagement.bbiNew_ItemClick</definition>
+        <argsstring>(object sender, DevExpress.XtraBars.ItemClickEventArgs e)</argsstring>
+        <name>bbiNew_ItemClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraBars.ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="161" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="161" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a65532d8b754e6dcb6af8095c065fc28e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.SupplierPriceListManagement.bbiSave_ItemClick</definition>
+        <argsstring>(object sender, DevExpress.XtraBars.ItemClickEventArgs e)</argsstring>
+        <name>bbiSave_ItemClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraBars.ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="175" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="175" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a3bd81a55c347f3d363fa84af4388c3c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.SupplierPriceListManagement.bbiExportExcel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportExcel_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811">bbiExportExcel_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="240" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="240" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a292d0e1b64b0997cc5e1ef1dd224e30e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.SupplierPriceListManagement.bbiExportCsv_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportCsv_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a">bbiExportCsv_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="270" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="270" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a903b4b6a74eeb7d2924281cb36017c60" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.InitData</definition>
+        <argsstring>(string idSupplier, string idItemBcn)</argsstring>
+        <name>InitData</name>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idItemBcn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="1371" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="1371" bodyend="1388"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a6bebff1ced1b9d69ad08d24fd342747d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.ConfigureRibbonActions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="90" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="90" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a4ac2f789ebbda7794dd54e5b861cf842" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.SupplierPriceListManagement_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SupplierPriceListManagement_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="304" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="304" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a02e765205527b68bee93c63b09311356" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.sbLoad_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>sbLoad_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="318" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="318" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ac17571b4a9b3d55cf61d8c07d4581cb5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.rootGridViewSuppliersPriceList_DoubleClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>rootGridViewSuppliersPriceList_DoubleClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="335" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="335" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a3f5a8d382170cfa08a049003a4997ef1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.rootGridViewSuppliersPriceList_CellValueChanged</definition>
+        <argsstring>(object sender, CellValueChangedEventArgs e)</argsstring>
+        <name>rootGridViewSuppliersPriceList_CellValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CellValueChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="353" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="353" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a486fdf2fb284cdcb9f9bb348b0351878" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.sbNewVersion_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>sbNewVersion_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="373" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="373" bodyend="402"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ab922a58687bf773dd966e40680b90c78" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.sbSetCurrentSubversion_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>sbSetCurrentSubversion_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="404" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="404" bodyend="432"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1af71248ad759fa019dd06312aa4c732ad" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.sbSetCurrentVersion_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>sbSetCurrentVersion_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="434" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="434" bodyend="462"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ab4ae120a91152ead8d7f33a107b332bb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.sbBackward_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>sbBackward_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="464" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="464" bodyend="474"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ac287fa210fe38230523213c368c33d0e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.sbForward_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>sbForward_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="476" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="476" bodyend="486"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ae027779775a47f75e61e04a02ddc5548" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.slueSupplier_KeyDown</definition>
+        <argsstring>(object sender, KeyEventArgs e)</argsstring>
+        <name>slueSupplier_KeyDown</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="488" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="488" bodyend="499"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a342fa29b1ee658bfc5c08deab6e52b90" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.slueItemBcn_KeyDown</definition>
+        <argsstring>(object sender, KeyEventArgs e)</argsstring>
+        <name>slueItemBcn_KeyDown</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="501" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="501" bodyend="512"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a706589d0a1c031df628411596df182e8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.ResetSupplierPriceListUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>ResetSupplierPriceListUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="518" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="518" bodyend="521"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aad0fa64c53d1b503297e6e59f7816d74" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.SetUpGrdSuppliersPriceList</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdSuppliersPriceList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="525" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="525" bodyend="616"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ac56396f1e8c05af5729d2e3797367e6d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.SetUpTextEdit</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpTextEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="618" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="618" bodyend="688"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1af60baac548d9292def0db231ae024f12" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.SetUpSearchLueSupplier</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSearchLueSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="690" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="690" bodyend="707"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a987b4ebfd411dfec75e4b319051cd47b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.SlueSupplier_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SlueSupplier_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="709" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="709" bodyend="719"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a6270006ff7e1d7cdd64634b5088612b3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.SetUpSearchLueItemBcn</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSearchLueItemBcn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="721" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="721" bodyend="736"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ab9e597fa3046fd061cbb7f2fecd1c66a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.SlueItemBcn_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SlueItemBcn_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="738" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="738" bodyend="748"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a5b550ec373db9643e91486155141f0a5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.LoadCurrenciesList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadCurrenciesList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="752" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="752" bodyend="765"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a27a6c0686132e47e7358b329b7b828f0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.LoadItemBcnList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadItemBcnList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="767" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="767" bodyend="781"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aee5915a7cce9108e24434727eff6b650" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.LoadSuppliersList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadSuppliersList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="783" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="783" bodyend="803"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a8d581f10de9e9921ff69983e8a383b41" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.LoadSuppliersPriceList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadSuppliersPriceList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="805" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="805" bodyend="816"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ad414b7a353c17a7dae7649d163ffd7d0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.LoadSupplierPriceListForm</definition>
+        <argsstring>(SupplierPriceList supplierPriceList)</argsstring>
+        <name>LoadSupplierPriceListForm</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supplier_price_list" kindref="compound">SupplierPriceList</ref></type>
+          <declname>supplierPriceList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="818" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="818" bodyend="832"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ad67fd8a258bfb860c29dc3f6b163c8ea" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.LoadSupplierPriceListHistory</definition>
+        <argsstring>(string idItembcn, string idSupplier)</argsstring>
+        <name>LoadSupplierPriceListHistory</name>
+        <param>
+          <type>string</type>
+          <declname>idItembcn</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="834" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="834" bodyend="846"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a574056babbf9b084c11c8b76cce68a2e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.SetCurrentSupplierPriceListHistory</definition>
+        <argsstring>(int historyNum)</argsstring>
+        <name>SetCurrentSupplierPriceListHistory</name>
+        <param>
+          <type>int</type>
+          <declname>historyNum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="848" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="848" bodyend="864"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ac020fbd6af7af183e3eec4709a96bb9c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.SetFormBinding</definition>
+        <argsstring>()</argsstring>
+        <name>SetFormBinding</name>
+        <briefdescription>
+<para>Crear los bindings de los campos del formulario </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="869" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="869" bodyend="927"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ac6ffc6bf21c80d403b0d69cd127678f0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.SetHistoryBinding</definition>
+        <argsstring>()</argsstring>
+        <name>SetHistoryBinding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="929" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="929" bodyend="980"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a3ecaeb6dd7571a7c2ddcc3e4177b87dd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.ConfigureRibbonActionsEditing</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActionsEditing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="983" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="983" bodyend="1028"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aada8bb2555f0223b671a2300e38e832d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.ConfigureRibbonActionsCreating</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActionsCreating</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="1030" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="1030" bodyend="1047"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a782dbbb3d25daec913bb0f7b5eaa376b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.SetEditingFieldsEnabled</definition>
+        <argsstring>()</argsstring>
+        <name>SetEditingFieldsEnabled</name>
+        <briefdescription>
+<para>Poner como editables los campos para el modo de edición </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="1052" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="1052" bodyend="1083"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a8ce03880c990446b8fc37145307bf716" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.SetCreatingFieldsEnabled</definition>
+        <argsstring>()</argsstring>
+        <name>SetCreatingFieldsEnabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="1085" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="1085" bodyend="1113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a9c97b4a23156f879e03913ef9be3011a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.SetNonCreatingFieldsVisibility</definition>
+        <argsstring>(LayoutVisibility visibility)</argsstring>
+        <name>SetNonCreatingFieldsVisibility</name>
+        <param>
+          <type>LayoutVisibility</type>
+          <declname>visibility</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="1115" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="1115" bodyend="1127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ab36b19c7f04cd8db23affffec0c44afc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.AddModifiedRowToList</definition>
+        <argsstring>(SupplierPriceList modifiedRow)</argsstring>
+        <name>AddModifiedRowToList</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supplier_price_list" kindref="compound">SupplierPriceList</ref></type>
+          <declname>modifiedRow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="1129" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="1129" bodyend="1155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aae77c5d7222994efe2bdedda5fa6fe7d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.MoveGridToSupplier</definition>
+        <argsstring>(string idItemBcn, string idSupplier)</argsstring>
+        <name>MoveGridToSupplier</name>
+        <param>
+          <type>string</type>
+          <declname>idItemBcn</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <briefdescription>
+<para>Mover la fila activa a la de un supplier en concreto </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idSupplier</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="1161" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="1161" bodyend="1186"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ae917901a09f0ac3b623f03d7f26209ca" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.SupplierPriceListManagement.IsValidSupplierPriceList</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidSupplierPriceList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="1188" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="1188" bodyend="1202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1af0f8b8a3c4a8cee848e996b6ce98b1d1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.SupplierPriceListManagement.IsValidSupplierPriceListForm</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidSupplierPriceListForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="1204" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="1204" bodyend="1244"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a9a33c9835572cb7177d12875c3dac339" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.SupplierPriceListManagement.IsValidSupplierPriceListGrid</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidSupplierPriceListGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="1246" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="1246" bodyend="1283"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ad95e18c353d100c77ef4f4f65ac4c4db" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.SupplierPriceListManagement.UpdateSupplierPriceList</definition>
+        <argsstring>(bool newVersion=false)</argsstring>
+        <name>UpdateSupplierPriceList</name>
+        <param>
+          <type>bool</type>
+          <declname>newVersion</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Actualizar los datos de un supplier </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newVersion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Si es una versión nueva o una actualización de la existente</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="1292" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="1292" bodyend="1302"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a5d1a8c965b7faf6d1f8134464590081d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.SupplierPriceListManagement.UpdateSuppliersPricesList</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateSuppliersPricesList</name>
+        <briefdescription>
+<para>Actualizar los datos de varios supplier si se ha editado desde el grid </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newVersion</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="1309" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="1309" bodyend="1319"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1af1cd0a0a14185493f307bd2e743bc4b0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.SupplierPriceListManagement.CreateSupplierPriceList</definition>
+        <argsstring>()</argsstring>
+        <name>CreateSupplierPriceList</name>
+        <briefdescription>
+<para>Crear un nuevo Supplier </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="1325" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="1325" bodyend="1336"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a76d83bcbf4fedbdd32f55ebd2de389ee" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.ActionsAfterCU</definition>
+        <argsstring>()</argsstring>
+        <name>ActionsAfterCU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="1338" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="1338" bodyend="1364"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ade22f264c188c385b8558c5603959a72" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.SupplierPriceListManagement.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="29" bodyend="1174"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ab6ae07e9f5e469cd185bba736f621135" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.SupplierPriceListManagement.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1629">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1627">
+        <label>HKSupply.Forms.Master.SupplierPriceListManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management"/>
+        <childnode refid="1628" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1628">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1629" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1632">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1630">
+        <label>HKSupply.Forms.Master.SupplierPriceListManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management"/>
+        <childnode refid="1631" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1633">
+        <label>XtraBars</label>
+      </node>
+      <node id="1631">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1632" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1633" relation="usage">
+          <edgelabel>bbiCancel</edgelabel>
+          <edgelabel>ribbonStatusBar</edgelabel>
+          <edgelabel>bbiPrintPreview</edgelabel>
+          <edgelabel>bbiSave</edgelabel>
+          <edgelabel>bbiNew</edgelabel>
+          <edgelabel>bbiEdit</edgelabel>
+          <edgelabel>ribbonControl</edgelabel>
+          <edgelabel>ribbonPageGroup1</edgelabel>
+          <edgelabel>ribbonPage1</edgelabel>
+          <edgelabel>ribbonPageGroup2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Master/SupplierPriceListManagement.cs" line="21" column="1" bodyfile="HKSupply/Forms/Master/SupplierPriceListManagement.cs" bodystart="20" bodyend="1390"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a8ad002379341438bbf15a59f47b7e8bd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>_currenciesList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a0e41548272b0f44dcfb8ac3e7b4961ef" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>_currentHistoryNumList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a441c4ae7d779e7228eef80b6491525df" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>_itemBcnList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aa1a8d1ec41d36f58f81344c318f07bf4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>_mandatoryEditingFields</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ace4bb8c23127608d4248ed672b5883e5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>_modifiedRowsList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a3b8e5ba051b4a0cf387f199bad36fe21" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>_nonEditingFields</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a254f247bdd0ab5e7d2af04d1cd1cff3b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>_supplierPriceListHistory</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1afd07c2d8674e7fda2739090f6ee3846e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>_supplierPriceListHistoryList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aef2f6af9eb455900dd68175f391ed763" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>_supplierPriceListOriginal</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a7a0e256a5ab28e3761268108834c8ccc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>_supplierPriceListUpdate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1af4ecefdda0a68b827f648496a1df3ca5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>_suppliersList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a171d0b3013f184cb6688cea983d261d4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>_suppliersPriceListList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a76d83bcbf4fedbdd32f55ebd2de389ee" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>ActionsAfterCU</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>ActionsStates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ab36b19c7f04cd8db23affffec0c44afc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>AddModifiedRowToList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>AddRestoreLayoutItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>BarButtonItemReport_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>bbiCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1af49f8bb1d8c6ab132c35cfbb79092fcb" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318" prot="public" virt="virtual" ambiguityscope="HKSupply::Forms::RibbonFormBase."><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>bbiEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a3aaf16113c98ec5d7d7a8a0b5ae200d3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3" prot="public" virt="virtual" ambiguityscope="HKSupply::Forms::RibbonFormBase."><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a292d0e1b64b0997cc5e1ef1dd224e30e" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>bbiExportCsv_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a3bd81a55c347f3d363fa84af4388c3c0" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>bbiExportExcel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>bbiNew</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a0abd68df64bee5ee456a573441a189db" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a" prot="public" virt="virtual" ambiguityscope="HKSupply::Forms::RibbonFormBase."><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>bbiPrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>bbiPrintPreview_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>bbiSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a65532d8b754e6dcb6af8095c065fc28e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9" prot="public" virt="virtual" ambiguityscope="HKSupply::Forms::RibbonFormBase."><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>BbiSaveLayout_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ad6d02cbcacf706926f09df908a5ed9d8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>ConfigureLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>ConfigurePrintExportOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a6bebff1ced1b9d69ad08d24fd342747d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>ConfigureRibbonActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aada8bb2555f0223b671a2300e38e832d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>ConfigureRibbonActionsCreating</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a3ecaeb6dd7571a7c2ddcc3e4177b87dd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>ConfigureRibbonActionsEditing</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1af1cd0a0a14185493f307bd2e743bc4b0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>CreateSupplierPriceList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>CurrentLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>CurrentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ab6ae07e9f5e469cd185bba736f621135" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a281c23dd6b7d889a39e40d01628ea82f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>emptySpaceItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a48d1fb4bf5ceeb8dfba9ee83b2fa225b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>emptySpaceItem3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>EnableExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>EnableExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>EnableLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>EnablePrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>ExportCsvFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>ExportExcelFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ae2bcf7e44ee95bc9cd5d97ff45647752" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>gridView1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ad1c6012aa3bce6a4789903e2d1744962" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>gridView2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a588c275d4c32a1276e29af959cd0355d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>groupControlHistory</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a903b4b6a74eeb7d2924281cb36017c60" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>InitData</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ade22f264c188c385b8558c5603959a72" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ae917901a09f0ac3b623f03d7f26209ca" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>IsValidSupplierPriceList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1af0f8b8a3c4a8cee848e996b6ce98b1d1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>IsValidSupplierPriceListForm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a9a33c9835572cb7177d12875c3dac339" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>IsValidSupplierPriceListGrid</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>LayoutButton_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a57803aecc94fea9faf3511c2dc3adcde" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>layoutControlForm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a4d4d884e0d8dc8d732fb21f2af4d28bc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>layoutControlGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a78054a7fd12c3d6e45922a052b66b18c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>layoutControlGroup3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a8c422b3f911885c53c321a7696745375" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>layoutControlGroup5</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1adeb8ea09bce44ce1c0669d444edac41d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>layoutControlSupplierHistory</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aba6c2c55a09051e29bf559a514c740f9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lblItemBcn</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1af909d3e96a60b4d30925f8f1bccc67ae" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lblSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a1c4d8729322ff52e668922d0f150eef6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciComments</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a4bd638a441c13aadbd2472c2dd01cde8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciExchangeRateUsed</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1af9ba6f89e79e9cf3bc51054707555b57" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciHComments</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ac729aba1622cd04c1ebf48ec8473f0f2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciHExchangeRateUsed</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aa245e6cfee841f5f26c62c2458970342" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciHIdCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a321bbcd3d102a3158c291a6298900ddb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciHIdItemBcn</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a66c023e1198724a6d8fa900d41112514" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciHIdSubversion</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a513d34aa827a12c47aa2b779a00aba4c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciHIdSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a5f7cf82a05053ab06ec8010b1b9dc953" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciHIdVersion</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a0cffd52a902da31984d1088c34278a9b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciHIncrLot</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aa0eb329266389222942d8f2cbf0b0b6d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciHLeadTime</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a9bff33319d7028b802c6358175e3653b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciHMinLot</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1afb4614b4368bff6097d3187a13412e56" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciHPrice</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aba473ea9594822a0adb7a4468e4e5810" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciHPriceBaseCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a9d913c3c0ca7fb39c76fa263dc994b6e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciHTimestamp</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1af4f97e4b345660c51857769c06672e2b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciIdCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a3f89683788db110ab1fc6b30240ac483" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciIdItemBcn</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a54065a04088c911b49ffa4803b95aace" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciIdSubversion</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1afe12bde5996024377b0036a1035fd4fd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciIdSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a95c1b7aa8e7f15caad65456b193b6864" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciIdVersion</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ac6150b5b6c9f98d41c14e4065a354ce1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciIncrLot</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a9354dc43631148d6a4d8a24c330791e6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciLeadTime</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ab9828f150f57895ebdc4ad60a332ec98" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciMinLot</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a874c6208f5630a97dacf28f8075fd5b6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciPrice</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a6b566e6cf25aceb28afbad244b4de346" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciPriceBaseCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a1aec4a2ad1793f56579d7f16f540e116" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciTimestamp</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a09984f59f2144a40e17c18a12e92c565" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lciUser</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a5b550ec373db9643e91486155141f0a5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>LoadCurrenciesList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a27a6c0686132e47e7358b329b7b828f0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>LoadItemBcnList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ad414b7a353c17a7dae7649d163ffd7d0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>LoadSupplierPriceListForm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ad67fd8a258bfb860c29dc3f6b163c8ea" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>LoadSupplierPriceListHistory</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aee5915a7cce9108e24434727eff6b650" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>LoadSuppliersList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a8d581f10de9e9921ff69983e8a383b41" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>LoadSuppliersPriceList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ad62f54a355a9480e72bed1a9ad85b039" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lueIdCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aa6269a7339bb8a7b9c8654cef83a8222" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>lueIdSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>Modify</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aae77c5d7222994efe2bdedda5fa6fe7d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>MoveGridToSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>New</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>ProcessCmdKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>Read</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a706589d0a1c031df628411596df182e8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>ResetSupplierPriceListUpdate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>RestoreInitState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>ribbonControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>RibbonFormBase</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>ribbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>ribbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>ribbonPageGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>ribbonStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a29505a42b645d9d175e808c2f64a2454" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>rootGridViewSuppliersPriceList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a3f5a8d382170cfa08a049003a4997ef1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>rootGridViewSuppliersPriceList_CellValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ac17571b4a9b3d55cf61d8c07d4581cb5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>rootGridViewSuppliersPriceList_DoubleClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1af432f36a134ed27a19d6c4426a5d2b07" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>sbBackward</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ab4ae120a91152ead8d7f33a107b332bb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>sbBackward_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a456b96bd8dd7a71d4176641c186c8529" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>sbForward</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ac287fa210fe38230523213c368c33d0e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>sbForward_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ab0e7d4a0bf66e86d4d23f97c1ce58d0e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>sbLoad</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a02e765205527b68bee93c63b09311356" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>sbLoad_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a982e4dba9b9ac416f38e42a78e8fc3f3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>sbNewVersion</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a486fdf2fb284cdcb9f9bb348b0351878" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>sbNewVersion_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a3b1cea095c3943cd8fa561a2b9bc8dc7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>sbSetCurrentSubversion</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ab922a58687bf773dd966e40680b90c78" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>sbSetCurrentSubversion_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ae1fe4fa39b92067aa64c7e2a5b143858" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>sbSetCurrentVersion</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1af71248ad759fa019dd06312aa4c732ad" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>sbSetCurrentVersion_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a4b2383555be0443ff354c58350f639f2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>searchLookUpEdit1View</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>SetActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a8ce03880c990446b8fc37145307bf716" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>SetCreatingFieldsEnabled</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a574056babbf9b084c11c8b76cce68a2e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>SetCurrentSupplierPriceListHistory</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a782dbbb3d25daec913bb0f7b5eaa376b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>SetEditingFieldsEnabled</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ac020fbd6af7af183e3eec4709a96bb9c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>SetFormBinding</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ac6ffc6bf21c80d403b0d69cd127678f0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>SetHistoryBinding</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a9c97b4a23156f879e03913ef9be3011a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>SetNonCreatingFieldsVisibility</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>SetRibbonText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aad0fa64c53d1b503297e6e59f7816d74" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>SetUpGrdSuppliersPriceList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a6270006ff7e1d7cdd64634b5088612b3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>SetUpSearchLueItemBcn</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1af60baac548d9292def0db231ae024f12" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>SetUpSearchLueSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ac56396f1e8c05af5729d2e3797367e6d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>SetUpTextEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a5e3ed3043e62e09b56c9bca7130050cd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>slueIdItemBcn</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1adef81cc52f26fc760cd5bdb2845fa80f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>slueItemBcn</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ab9e597fa3046fd061cbb7f2fecd1c66a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>SlueItemBcn_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a342fa29b1ee658bfc5c08deab6e52b90" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>slueItemBcn_KeyDown</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a24de8d6382ce4e3b32803faf4d306950" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>slueSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a987b4ebfd411dfec75e4b319051cd47b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>SlueSupplier_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ae027779775a47f75e61e04a02ddc5548" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>slueSupplier_KeyDown</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a9796b4f7fafff4f13d1f28fcecfea736" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>SupplierPriceListManagement</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a4ac2f789ebbda7794dd54e5b861cf842" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>SupplierPriceListManagement_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a5466a941a8e49a10eb93694b159523f3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtComments</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ae9a2c8bfc22d9bde103fd55160489837" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtExchangeRateUsed</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a61ac6da50995ea5d55fbaa2c01528c45" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtHComments</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1aa1b0e8f258efd1de561496f198175cec" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtHExchangeRateUsed</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a05b24afa8c2aae37734ed20b7147a157" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtHIdCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a2f22cc94245158b3ac7fe48d2bcd6cd2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtHIdItemBcn</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a3cac8ee234b1096db09d382b1805e473" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtHIdSubversion</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a5b0cdd2fa578c57df953bd89cd3244b2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtHIdSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a5b8ab4133864ca7562e7dc5240b710fa" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtHIdVersion</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1adee84d909d48372176033a19a274d70c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtHIncrLot</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ab5d4230707a0a2524609a020340d3f54" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtHLeadTime</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a53e5a34b5e427c18ea6bb3bcff544e31" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtHMinLot</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ac220e20f74697425686b0cf005015278" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtHPrice</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ade609fe2056bf69a5e624ef79a8a4952" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtHPriceBaseCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a0138921e82749567030ad91a17b9edaf" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtHTimestamp</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a6d839c454a969840a2a4bd4ddd3e59e1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtIdSubversion</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a175b855f8db340cfbb2cf4c000fddfa3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtIdVersion</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a5af2330f757f5b5525263dde76cd3f8d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtIncrLot</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a8c371ea4fe6e892fcfc0a9c0ef4989ae" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtLeadTime</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a4e078eae5d2047f3f71f0096bdef7cd8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtMinLot</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1abbaf0a1145b7ba54ebb7a241d457b7d7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtPrice</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a488046ba40de85635ad5513cedc07bb4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtPriceBaseCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a36dcedd8d3d62b194f52727126571230" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtTimestamp</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a1069c54c919c5c0b175018b7ff43a7be" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>txtUser</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1ad95e18c353d100c77ef4f4f65ac4c4db" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>UpdateSupplierPriceList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a5d1a8c965b7faf6d1f8134464590081d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>UpdateSuppliersPricesList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a710aeafdbe805795d40558b503a60863" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>xgrdSuppliersPriceList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a4b6316a18ce2596ccefab9c9f7b1f0ee" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>xtcGeneral</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a77790866080386435585301d2b729440" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>xtpForm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a947fbea36006f39a5742c3b484e9098d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>xtpList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a2ed54ce522743c2da7a66e9f1a912e06" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::SupplierPriceListManagement</scope><name>xtraScrollableControl1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

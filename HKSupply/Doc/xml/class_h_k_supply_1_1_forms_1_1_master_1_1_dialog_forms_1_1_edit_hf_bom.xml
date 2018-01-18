@@ -1,0 +1,750 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Master::DialogForms::EditHfBom</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a8c5778847480e9ea15b739e814e9c85e" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref> &gt;</type>
+        <definition>List&lt;ItemBom&gt; HKSupply.Forms.Master.DialogForms.EditHfBom._itemBomList</definition>
+        <argsstring></argsstring>
+        <name>_itemBomList</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="25" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a2ad7bd6652230dd99a9ade2892b88eaf" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.Master.DialogForms.EditHfBom._idItemBcn</definition>
+        <argsstring></argsstring>
+        <name>_idItemBcn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="26" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a3df54902192132ae47bab6135b66f284" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_hf" kindref="compound">ItemHf</ref> &gt;</type>
+        <definition>List&lt;ItemHf&gt; HKSupply.Forms.Master.DialogForms.EditHfBom._itemsHfList</definition>
+        <argsstring></argsstring>
+        <name>_itemsHfList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="28" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1acdb1f38396db65b3fa00b9161c80c5a4" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_mt" kindref="compound">ItemMt</ref> &gt;</type>
+        <definition>List&lt;ItemMt&gt; HKSupply.Forms.Master.DialogForms.EditHfBom._itemsMtList</definition>
+        <argsstring></argsstring>
+        <name>_itemsMtList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1ad62bf9e0afc37b3560c8757fd82c354f" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_hw" kindref="compound">ItemHw</ref> &gt;</type>
+        <definition>List&lt;ItemHw&gt; HKSupply.Forms.Master.DialogForms.EditHfBom._itemsHwList</definition>
+        <argsstring></argsstring>
+        <name>_itemsHwList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="30" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1abd5c54712a6859fccac9cc8b976b058f" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Master.DialogForms.EditHfBom.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1ac8e5008ada1a06685ff6560314e3569c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Master.DialogForms.EditHfBom.sbSave</definition>
+        <argsstring></argsstring>
+        <name>sbSave</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.Designer.cs" line="91" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.Designer.cs" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a3c6adb1dab95ff78aedcc4f8569c10ad" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Master.DialogForms.EditHfBom.sbCancel</definition>
+        <argsstring></argsstring>
+        <name>sbCancel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.Designer.cs" line="92" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.Designer.cs" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1ae0b53392a2a17c961d39ed84a8c3d2c9" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.DialogForms.EditHfBom.xgrdItemBom</definition>
+        <argsstring></argsstring>
+        <name>xgrdItemBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.Designer.cs" line="93" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.Designer.cs" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1ac31b36c3dc4ea53fca02846e5ba4deb3" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.DialogForms.EditHfBom.gridViewItemBom</definition>
+        <argsstring></argsstring>
+        <name>gridViewItemBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.Designer.cs" line="94" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.Designer.cs" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a1663bb1d0544dc4aef08e1228562730b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Master.DialogForms.EditHfBom.EditHfBom</definition>
+        <argsstring>()</argsstring>
+        <name>EditHfBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="34" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="34" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a983b61cafc310ca60b63d29d0ee23935" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.InitData</definition>
+        <argsstring>(string idItemBcn, string idSupplier)</argsstring>
+        <name>InitData</name>
+        <param>
+          <type>string</type>
+          <declname>idItemBcn</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="893" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="893" bodyend="908"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a86b7f2fd113edf926af2b2f6bd3e0ad3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.EditHfBom_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>EditHfBom_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="54" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a6b20afa1c3adb90ffc769b701cbc5c12" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.XgrdItemBom_ViewRegistered</definition>
+        <argsstring>(object sender, DevExpress.XtraGrid.ViewOperationEventArgs e)</argsstring>
+        <name>XgrdItemBom_ViewRegistered</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraGrid.ViewOperationEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="60" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="60" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1ae51e6174232c91c265eb964983d092f4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.BomManagementMaterials_ValidatingEditor</definition>
+        <argsstring>(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)</argsstring>
+        <name>BomManagementMaterials_ValidatingEditor</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="349" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="349" bodyend="549"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a6355525e69977812936cb13ed986dc96" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.BomManagementHardwares_ValidatingEditor</definition>
+        <argsstring>(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)</argsstring>
+        <name>BomManagementHardwares_ValidatingEditor</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="551" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="551" bodyend="591"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a03d1cc003409db316412b811ae12289d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.BomManagementHalfFinished_ValidatingEditor</definition>
+        <argsstring>(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)</argsstring>
+        <name>BomManagementHalfFinished_ValidatingEditor</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="593" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="593" bodyend="656"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a87865713ecb5fd8fe5981745cd5ebc83" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.BomManagementHalfFinished_ShownEditor</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BomManagementHalfFinished_ShownEditor</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="658" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="658" bodyend="690"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1af0bd5fbb1b3a25ebae83f0d06accab2b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.XgrdItemBom_ProcessGridKey</definition>
+        <argsstring>(object sender, KeyEventArgs e)</argsstring>
+        <name>XgrdItemBom_ProcessGridKey</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="692" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="692" bodyend="847"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a1be39a6524c9a4a434a10893c004e0c6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.SbSave_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbSave_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="852" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="852" bodyend="872"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1ab92e5b4376edf451b7d971cec867eec0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.SetFormStyle</definition>
+        <argsstring>()</argsstring>
+        <name>SetFormStyle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="915" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="915" bodyend="931"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1afd4eb01bec14132d9556281282692fbd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.SetEvents</definition>
+        <argsstring>()</argsstring>
+        <name>SetEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="933" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="933" bodyend="950"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1af15cf7b2eb7b33bb12b9d8cf5bef04ec" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.SetUpGrdItemBom</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdItemBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="952" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="952" bodyend="988"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a85640afc3fd2457a955ee3d3a27b87cf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.LoadAuxList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAuxList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="994" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="994" bodyend="1006"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a2213d3577878c7ca4bc1dce877de71ef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.LoadGridBom</definition>
+        <argsstring>()</argsstring>
+        <name>LoadGridBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="1008" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="1008" bodyend="1020"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a2f9bbffc1909339f2f36657f8c7a1b48" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.SetGrdBomEditColumns</definition>
+        <argsstring>()</argsstring>
+        <name>SetGrdBomEditColumns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="1026" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="1026" bodyend="1177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a5c8bd1587541250ff3ecca9684b85097" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.grdBomRefreshAndExpand</definition>
+        <argsstring>()</argsstring>
+        <name>grdBomRefreshAndExpand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="1183" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="1183" bodyend="1187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1ab3d8df6ed9f195d75889f464e9688871" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.ExpandAllRows</definition>
+        <argsstring>(GridView view)</argsstring>
+        <name>ExpandAllRows</name>
+        <param>
+          <type>GridView</type>
+          <declname>view</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="1189" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="1189" bodyend="1204"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a7ae35af2597ff0937d54efccebf9c870" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.GridViewItemBom_PopupMenuShowing</definition>
+        <argsstring>(object sender, PopupMenuShowingEventArgs e)</argsstring>
+        <name>GridViewItemBom_PopupMenuShowing</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>PopupMenuShowingEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="1209" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="1209" bodyend="1244"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a3af204beef50e82631921ac3a056857c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DevExpress.Utils.Menu.DXMenuItem</type>
+        <definition>DevExpress.Utils.Menu.DXMenuItem HKSupply.Forms.Master.DialogForms.EditHfBom.CreateMenuItemAddINewLineMaterial</definition>
+        <argsstring>(GridView view, int rowHandle)</argsstring>
+        <name>CreateMenuItemAddINewLineMaterial</name>
+        <param>
+          <type>GridView</type>
+          <declname>view</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rowHandle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="1246" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="1246" bodyend="1252"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1ace56587c5c0fc088fd06339dbfa35903" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DevExpress.Utils.Menu.DXMenuItem</type>
+        <definition>DevExpress.Utils.Menu.DXMenuItem HKSupply.Forms.Master.DialogForms.EditHfBom.CreateMenuItemAddINewLineHardware</definition>
+        <argsstring>(GridView view, int rowHandle)</argsstring>
+        <name>CreateMenuItemAddINewLineHardware</name>
+        <param>
+          <type>GridView</type>
+          <declname>view</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rowHandle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="1254" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="1254" bodyend="1260"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a4509e9143c71fb922e61304f0e76a1f4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DevExpress.Utils.Menu.DXMenuItem</type>
+        <definition>DevExpress.Utils.Menu.DXMenuItem HKSupply.Forms.Master.DialogForms.EditHfBom.CreateMenuItemAddINewLineHalfFinished</definition>
+        <argsstring>(GridView view, int rowHandle)</argsstring>
+        <name>CreateMenuItemAddINewLineHalfFinished</name>
+        <param>
+          <type>GridView</type>
+          <declname>view</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rowHandle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="1262" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="1262" bodyend="1268"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1aa700ff0ca949f12f7adfd494008af438" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.OnMenuItemAddnewLineMaterialClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>OnMenuItemAddnewLineMaterialClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="1270" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="1270" bodyend="1286"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a6a27b5f5543c6c0f5f06df029f60be1a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.OnMenuItemAddnewLineHardwareClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>OnMenuItemAddnewLineHardwareClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="1288" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="1288" bodyend="1304"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a14cd3db4053aeb9606ddb02bb3e31e4e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.OnMenuItemAddnewLineHalfFinishedClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>OnMenuItemAddnewLineHalfFinishedClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="1306" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="1306" bodyend="1326"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a5f77b91d25d0a6944dc982a0becebc17" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.DialogForms.EditHfBom.IsValidBom</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="1332" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="1332" bodyend="1373"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a9007057535e84529cfa53ee7fb011838" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.DeleteLastRowIfEmpty</definition>
+        <argsstring>()</argsstring>
+        <name>DeleteLastRowIfEmpty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="1375" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="1375" bodyend="1413"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1aa96ee4964f455c695c35d53a38cb306d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.DialogForms.EditHfBom.EditBom</definition>
+        <argsstring>()</argsstring>
+        <name>EditBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="1415" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="1415" bodyend="1425"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a04d210f56a6b69638e082011b39ea1ba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.EditHfBom.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.Designer.cs" bodystart="29" bodyend="87"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a56a84e67848b0f496a4b7987f24d7fab" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.DialogForms.EditHfBom.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="402">
+        <label>Form</label>
+      </node>
+      <node id="401">
+        <label>HKSupply.Forms.Master.DialogForms.EditHfBom</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom"/>
+        <childnode refid="402" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="404">
+        <label>Form</label>
+      </node>
+      <node id="403">
+        <label>HKSupply.Forms.Master.DialogForms.EditHfBom</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom"/>
+        <childnode refid="404" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" line="22" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/EditHfBom.cs" bodystart="21" bodyend="1431"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a2ad7bd6652230dd99a9ade2892b88eaf" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>_idItemBcn</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a8c5778847480e9ea15b739e814e9c85e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>_itemBomList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a3df54902192132ae47bab6135b66f284" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>_itemsHfList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1ad62bf9e0afc37b3560c8757fd82c354f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>_itemsHwList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1acdb1f38396db65b3fa00b9161c80c5a4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>_itemsMtList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a87865713ecb5fd8fe5981745cd5ebc83" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>BomManagementHalfFinished_ShownEditor</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a03d1cc003409db316412b811ae12289d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>BomManagementHalfFinished_ValidatingEditor</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a6355525e69977812936cb13ed986dc96" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>BomManagementHardwares_ValidatingEditor</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1ae51e6174232c91c265eb964983d092f4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>BomManagementMaterials_ValidatingEditor</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1abd5c54712a6859fccac9cc8b976b058f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a4509e9143c71fb922e61304f0e76a1f4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>CreateMenuItemAddINewLineHalfFinished</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1ace56587c5c0fc088fd06339dbfa35903" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>CreateMenuItemAddINewLineHardware</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a3af204beef50e82631921ac3a056857c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>CreateMenuItemAddINewLineMaterial</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a9007057535e84529cfa53ee7fb011838" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>DeleteLastRowIfEmpty</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a56a84e67848b0f496a4b7987f24d7fab" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1aa96ee4964f455c695c35d53a38cb306d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>EditBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a1663bb1d0544dc4aef08e1228562730b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>EditHfBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a86b7f2fd113edf926af2b2f6bd3e0ad3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>EditHfBom_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1ab3d8df6ed9f195d75889f464e9688871" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>ExpandAllRows</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a5c8bd1587541250ff3ecca9684b85097" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>grdBomRefreshAndExpand</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1ac31b36c3dc4ea53fca02846e5ba4deb3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>gridViewItemBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a7ae35af2597ff0937d54efccebf9c870" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>GridViewItemBom_PopupMenuShowing</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a983b61cafc310ca60b63d29d0ee23935" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>InitData</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a04d210f56a6b69638e082011b39ea1ba" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a5f77b91d25d0a6944dc982a0becebc17" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>IsValidBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a85640afc3fd2457a955ee3d3a27b87cf" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>LoadAuxList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a2213d3577878c7ca4bc1dce877de71ef" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>LoadGridBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a14cd3db4053aeb9606ddb02bb3e31e4e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>OnMenuItemAddnewLineHalfFinishedClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a6a27b5f5543c6c0f5f06df029f60be1a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>OnMenuItemAddnewLineHardwareClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1aa700ff0ca949f12f7adfd494008af438" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>OnMenuItemAddnewLineMaterialClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a3c6adb1dab95ff78aedcc4f8569c10ad" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>sbCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1ac8e5008ada1a06685ff6560314e3569c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>sbSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a1be39a6524c9a4a434a10893c004e0c6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>SbSave_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1afd4eb01bec14132d9556281282692fbd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>SetEvents</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1ab92e5b4376edf451b7d971cec867eec0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>SetFormStyle</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a2f9bbffc1909339f2f36657f8c7a1b48" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>SetGrdBomEditColumns</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1af15cf7b2eb7b33bb12b9d8cf5bef04ec" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>SetUpGrdItemBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1ae0b53392a2a17c961d39ed84a8c3d2c9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>xgrdItemBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1af0bd5fbb1b3a25ebae83f0d06accab2b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>XgrdItemBom_ProcessGridKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_edit_hf_bom_1a6b20afa1c3adb90ffc769b701cbc5c12" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::EditHfBom</scope><name>XgrdItemBom_ViewRegistered</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

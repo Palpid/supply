@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_exchange_rate" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFExchangeRate</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_exchange_rate" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IExchangeRate</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_exchange_rate_1a3a5d19d0e64b900c98187ae125269712" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFExchangeRate._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_currency" kindref="compound">EFCurrency</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFExchangeRate.cs" line="19" column="1" bodyfile="HKSupply/Services/Implementations/EFExchangeRate.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_exchange_rate_1aae3728ce3ea879cca4caab3d2673e19a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_exchange_rate" kindref="compound">ExchangeRate</ref> &gt;</type>
+        <definition>List&lt;ExchangeRate&gt; HKSupply.Services.Implementations.EFExchangeRate.GetEchangeRates</definition>
+        <argsstring>()</argsstring>
+        <name>GetEchangeRates</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_exchange_rate_1a815c14ce3b1e3abfd7baa3697fa6791c">GetEchangeRates</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFExchangeRate.cs" line="21" column="1" bodyfile="HKSupply/Services/Implementations/EFExchangeRate.cs" bodystart="21" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_exchange_rate_1af12c7fc9ec718f66d202e43dd1bad8a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFExchangeRate.UpdateEchangeRates</definition>
+        <argsstring>(IEnumerable&lt; ExchangeRate &gt; echangeRates)</argsstring>
+        <name>UpdateEchangeRates</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_exchange_rate_1ae748229433829786b74f28cad6eebe74">UpdateEchangeRates</reimplements>
+        <param>
+          <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_exchange_rate" kindref="compound">ExchangeRate</ref> &gt;</type>
+          <declname>echangeRates</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFExchangeRate.cs" line="57" column="1" bodyfile="HKSupply/Services/Implementations/EFExchangeRate.cs" bodystart="57" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="441">
+        <label>HKSupply.Services.Implementations.EFExchangeRate</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_exchange_rate"/>
+        <childnode refid="442" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="442">
+        <label>IExchangeRate</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_exchange_rate"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="443">
+        <label>HKSupply.Services.Implementations.EFExchangeRate</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_exchange_rate"/>
+        <childnode refid="444" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="444">
+        <label>IExchangeRate</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_exchange_rate"/>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFExchangeRate.cs" line="18" column="1" bodyfile="HKSupply/Services/Implementations/EFExchangeRate.cs" bodystart="17" bodyend="148"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_exchange_rate_1a3a5d19d0e64b900c98187ae125269712" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFExchangeRate</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_exchange_rate_1aae3728ce3ea879cca4caab3d2673e19a" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFExchangeRate</scope><name>GetEchangeRates</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_exchange_rate_1af12c7fc9ec718f66d202e43dd1bad8a2" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFExchangeRate</scope><name>UpdateEchangeRates</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

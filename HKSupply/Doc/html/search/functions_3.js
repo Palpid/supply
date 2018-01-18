@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['initdata',['InitData',['../class_h_k_supply_1_1_forms_1_1_dynamic_filters.html#a3fb309c2a83dbe6c5826c25007c5336f',1,'HKSupply::Forms::DynamicFilters']]],
-  ['isvaliddata',['IsValidData',['../class_h_k_supply_1_1_forms_1_1_model_linq_filtering.html#a66694e21272523c30da7198388f59b0f',1,'HKSupply::Forms::ModelLinqFiltering']]]
+  ['edititemsuppliersbom',['EditItemSuppliersBom',['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom.html#a66d0c1f604104f7e54d059db6423ceb3',1,'HKSupply::Services::Implementations::EFItemBom']]],
+  ['exchange',['Exchange',['../class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter.html#af9501a149c0ed63c5cdd2faaac3b5e44',1,'HKSupply.Helpers.CurrencyConverter.CurrencyConverter.Exchange()'],['../interface_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_i_currency_converter.html#afc064d13f2989af64d7887d3b3aa8767',1,'HKSupply.Helpers.CurrencyConverter.ICurrencyConverter.Exchange()']]]
 ];

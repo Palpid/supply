@@ -1,29 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view" kind="interface" language="C#" prot="public">
     <compoundname>HKSupply::Forms::IActionsStackView</compoundname>
-    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.CustomerManagement</derivedcompoundref>
-    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.FunctionalityManagement</derivedcompoundref>
-    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.FunctionalityRoleManagement</derivedcompoundref>
-    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.ItemManagement</derivedcompoundref>
-    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.RoleManagement</derivedcompoundref>
-    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.StoreManagement</derivedcompoundref>
-    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.SupplierManagement</derivedcompoundref>
-    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.UserManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management__v1" prot="public" virt="non-virtual">HKSupply.Forms.Master.CustomerManagement_v1</derivedcompoundref>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view_1ae8deb0cdeaa1b41f48e9a497acce9334" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void HKSupply.Forms.IActionsStackView.actionsStackView_EditButtonClick</definition>
         <argsstring>(object sender, EventArgs e)</argsstring>
         <name>actionsStackView_EditButtonClick</name>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1a3423588318d2f747206eff34fd1168fd">actionsStackView_EditButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a029527589b55752c810c410fb7b7ec73">actionsStackView_EditButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1ad8f36ecae11021e4d8d2f5b06de7b881">actionsStackView_EditButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a3d72cc9c48dd79d936535dbb386ca304">actionsStackView_EditButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a6af4060ab989941e08d01b4dfa674ada">actionsStackView_EditButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1aaf36a1454800bebf5643ef97aef0b392">actionsStackView_EditButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a3f43cfeb43b387ecaed7c55e2e18e100">actionsStackView_EditButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_1a760aba0348089b7c2fb353a509775741">actionsStackView_EditButtonClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management__v1_1af88bd2df444413cebd33e14c2effb0e5">actionsStackView_EditButtonClick</reimplementedby>
         <param>
           <type>object</type>
           <declname>sender</declname>
@@ -45,14 +31,7 @@
         <definition>void HKSupply.Forms.IActionsStackView.actionsStackView_NewButtonClick</definition>
         <argsstring>(object sender, EventArgs e)</argsstring>
         <name>actionsStackView_NewButtonClick</name>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1ad513d0db35efd5de069ee7c7f1cd9aa1">actionsStackView_NewButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a9cee7b3dda5de12cd3612ad66b27e302">actionsStackView_NewButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1a3bed94c9724e4256dd85fcc8d4c2f276">actionsStackView_NewButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a124bbeebef7a1f06573a032342571c8f">actionsStackView_NewButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a1fa53bdd2a95798e874167e333294520">actionsStackView_NewButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ae7e48c41376deac783ad8ee182c585ff">actionsStackView_NewButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1abc0dcd4189499ba45709340d6fcead00">actionsStackView_NewButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_1a32edb1b0900c7d9961a5bae7e417b08d">actionsStackView_NewButtonClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management__v1_1a3fb6447acbfb050f9ae46ba91273f0d1">actionsStackView_NewButtonClick</reimplementedby>
         <param>
           <type>object</type>
           <declname>sender</declname>
@@ -74,14 +53,7 @@
         <definition>void HKSupply.Forms.IActionsStackView.actionsStackView_SaveButtonClick</definition>
         <argsstring>(object sender, EventArgs e)</argsstring>
         <name>actionsStackView_SaveButtonClick</name>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1af0af8ae26d581bc291916b5e9c8ddc5c">actionsStackView_SaveButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a6f9ce17d9dbd5e01886e7ffebb428cac">actionsStackView_SaveButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1a8aed80ca8eb88d632fa3501141f4399d">actionsStackView_SaveButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a775ec1a63caa9faf229f704d14bd11a5">actionsStackView_SaveButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1abbad8b29b95cc3352c4a55f7cfbf2742">actionsStackView_SaveButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a089d87f1eef008c0313ff970b173dff3">actionsStackView_SaveButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a995afa91b41c02399fb9d20b5b20bbb9">actionsStackView_SaveButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_1ab2d275c709c803627d8ddc617367d11e">actionsStackView_SaveButtonClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management__v1_1aa69dd5455cdea167d6f7e542ece0cc66">actionsStackView_SaveButtonClick</reimplementedby>
         <param>
           <type>object</type>
           <declname>sender</declname>
@@ -103,14 +75,7 @@
         <definition>void HKSupply.Forms.IActionsStackView.actionsStackView_CancelButtonClick</definition>
         <argsstring>(object sender, EventArgs e)</argsstring>
         <name>actionsStackView_CancelButtonClick</name>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1ada75d7ab80b8363fcd8d84c0b80b426f">actionsStackView_CancelButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a9651949eef33db6a0600a919bb30f8e8">actionsStackView_CancelButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1a00fc25391f0a3d782823871e2d897b4b">actionsStackView_CancelButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a7bcf668b3f862d8ee0c60ef08e2075ff">actionsStackView_CancelButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a812df0823003cc8a80516aee863190a9">actionsStackView_CancelButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a0c38d36d2bf825744763acecfa4b7f1f">actionsStackView_CancelButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1aad8235c651699d44b7670e79d9ea9d7b">actionsStackView_CancelButtonClick</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_1a3cb0dae020f09b83c71e6b59a4985868">actionsStackView_CancelButtonClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management__v1_1a82fcaa58f069f4c8004e81e224735606">actionsStackView_CancelButtonClick</reimplementedby>
         <param>
           <type>object</type>
           <declname>sender</declname>
@@ -132,14 +97,7 @@
         <definition>void HKSupply.Forms.IActionsStackView.ConfigureActionsStackView</definition>
         <argsstring>()</argsstring>
         <name>ConfigureActionsStackView</name>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management_1aeb4b46af8352b4de5baf2abd6b8105ce">ConfigureActionsStackView</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management_1a022e071b082ef46f206426f75db34fa8">ConfigureActionsStackView</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management_1adcf6dece3abda929fb54cec2bec5a708">ConfigureActionsStackView</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management_1a5c2909260f97b980620f3a81bf9aaa5a">ConfigureActionsStackView</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management_1a276207364c74bbbfd746980cdd9b9f7d">ConfigureActionsStackView</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a1f350e08a1376078c3b0a707b67545d5">ConfigureActionsStackView</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1aeeb0dd460b047375cad59b4e6053636b">ConfigureActionsStackView</reimplementedby>
-        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_1ad9299981fa7630ccaae87fd985fb0053">ConfigureActionsStackView</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management__v1_1a0082f1b8932943afd01506be6fbe00fb">ConfigureActionsStackView</reimplementedby>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -154,56 +112,14 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="115">
-        <label>HKSupply.Forms.Master.FunctionalityRoleManagement</label>
-        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management"/>
-        <childnode refid="112" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="117">
-        <label>HKSupply.Forms.Master.RoleManagement</label>
-        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management"/>
-        <childnode refid="112" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="119">
-        <label>HKSupply.Forms.Master.SupplierManagement</label>
-        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management"/>
-        <childnode refid="112" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="116">
-        <label>HKSupply.Forms.Master.ItemManagement</label>
-        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management"/>
-        <childnode refid="112" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="114">
-        <label>HKSupply.Forms.Master.FunctionalityManagement</label>
-        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management"/>
-        <childnode refid="112" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="113">
-        <label>HKSupply.Forms.Master.CustomerManagement</label>
-        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management"/>
-        <childnode refid="112" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="120">
-        <label>HKSupply.Forms.Master.UserManagement</label>
-        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management"/>
-        <childnode refid="112" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="112">
+      <node id="703">
         <label>HKSupply.Forms.IActionsStackView</label>
         <link refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view"/>
       </node>
-      <node id="118">
-        <label>HKSupply.Forms.Master.StoreManagement</label>
-        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management"/>
-        <childnode refid="112" relation="public-inheritance">
+      <node id="704">
+        <label>HKSupply.Forms.Master.CustomerManagement_v1</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management__v1"/>
+        <childnode refid="703" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

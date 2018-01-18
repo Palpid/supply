@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_reports_1_1frm_visor" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Reports::frmVisor</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_reports_1_1frm_visor_1a1851716dcfe1dfe76957371b3437f325" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Reports.frmVisor.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Variable del diseñador requerida. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Reports/frmVisor.designer.cs" line="8" column="1" bodyfile="HKSupply/Reports/frmVisor.designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_reports_1_1frm_visor_1ad10c195b523d201f4c39e9365a8c8304" prot="public" static="no" mutable="no">
+        <type>CrystalDecisions.Windows.Forms.CrystalReportViewer</type>
+        <definition>CrystalDecisions.Windows.Forms.CrystalReportViewer HKSupply.Reports.frmVisor.crystalReportViewer1</definition>
+        <argsstring></argsstring>
+        <name>crystalReportViewer1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Reports/frmVisor.designer.cs" line="63" column="1" bodyfile="HKSupply/Reports/frmVisor.designer.cs" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_reports_1_1frm_visor_1a9706e499d8b17562d37e1a955649c18d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Reports.frmVisor.frmVisor</definition>
+        <argsstring>()</argsstring>
+        <name>frmVisor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Reports/frmVisor.cs" line="9" column="1" bodyfile="HKSupply/Reports/frmVisor.cs" bodystart="9" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_reports_1_1frm_visor_1aa1276de4dc8aaf89f0a5306d29a47659" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Reports.frmVisor.frmVisor_FormClosed</definition>
+        <argsstring>(object sender, FormClosedEventArgs e)</argsstring>
+        <name>frmVisor_FormClosed</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>FormClosedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Reports/frmVisor.cs" line="15" column="1" bodyfile="HKSupply/Reports/frmVisor.cs" bodystart="15" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_reports_1_1frm_visor_1a39be6709ff0a029a98a53a8d1b632587" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Reports.frmVisor.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Método necesario para admitir el Diseñador. No se puede modificar el contenido del método con el editor de código. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Reports/frmVisor.designer.cs" line="29" column="1" bodyfile="HKSupply/Reports/frmVisor.designer.cs" bodystart="29" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_reports_1_1frm_visor_1ac193655c1e328134a59faef0ab211ad6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Reports.frmVisor.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Limpiar los recursos que se estén utilizando. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true si los recursos administrados se deben eliminar; false en caso contrario, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Reports/frmVisor.designer.cs" line="14" column="1" bodyfile="HKSupply/Reports/frmVisor.designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="625">
+        <label>Form</label>
+      </node>
+      <node id="624">
+        <label>HKSupply.Reports.frmVisor</label>
+        <link refid="class_h_k_supply_1_1_reports_1_1frm_visor"/>
+        <childnode refid="625" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="627">
+        <label>Form</label>
+      </node>
+      <node id="626">
+        <label>HKSupply.Reports.frmVisor</label>
+        <link refid="class_h_k_supply_1_1_reports_1_1frm_visor"/>
+        <childnode refid="627" relation="public-inheritance">
+        </childnode>
+        <childnode refid="628" relation="usage">
+          <edgelabel>crystalReportViewer1</edgelabel>
+        </childnode>
+      </node>
+      <node id="628">
+        <label>Forms</label>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Reports/frmVisor.cs" line="7" column="1" bodyfile="HKSupply/Reports/frmVisor.cs" bodystart="6" bodyend="23"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_reports_1_1frm_visor_1a1851716dcfe1dfe76957371b3437f325" prot="private" virt="non-virtual"><scope>HKSupply::Reports::frmVisor</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1frm_visor_1ad10c195b523d201f4c39e9365a8c8304" prot="public" virt="non-virtual"><scope>HKSupply::Reports::frmVisor</scope><name>crystalReportViewer1</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1frm_visor_1ac193655c1e328134a59faef0ab211ad6" prot="protected" virt="non-virtual"><scope>HKSupply::Reports::frmVisor</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1frm_visor_1a9706e499d8b17562d37e1a955649c18d" prot="public" virt="non-virtual"><scope>HKSupply::Reports::frmVisor</scope><name>frmVisor</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1frm_visor_1aa1276de4dc8aaf89f0a5306d29a47659" prot="private" virt="non-virtual"><scope>HKSupply::Reports::frmVisor</scope><name>frmVisor_FormClosed</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1frm_visor_1a39be6709ff0a029a98a53a8d1b632587" prot="private" virt="non-virtual"><scope>HKSupply::Reports::frmVisor</scope><name>InitializeComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

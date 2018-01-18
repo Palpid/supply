@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_report" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFFunctionalityReport</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_report" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IFunctionalityReport</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_report_1a6c5a6e6ed80c49ef6fa140488a7ac001" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFFunctionalityReport._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_report" kindref="compound">EFFunctionalityReport</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFFunctionalityReport.cs" line="21" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityReport.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_report_1a3fd0213e6dd29f7af0d096c7ffb9bea5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_functionality_report" kindref="compound">FunctionalityReport</ref> &gt;</type>
+        <definition>List&lt;FunctionalityReport&gt; HKSupply.Services.Implementations.EFFunctionalityReport.GetFunctionalityReports</definition>
+        <argsstring>(int idFunctionality)</argsstring>
+        <name>GetFunctionalityReports</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_report_1a7a541357c70f99dc2bb851ec53f4c66b">GetFunctionalityReports</reimplements>
+        <param>
+          <type>int</type>
+          <declname>idFunctionality</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFFunctionalityReport.cs" line="23" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityReport.cs" bodystart="23" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="454">
+        <label>IFunctionalityReport</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_report"/>
+      </node>
+      <node id="453">
+        <label>HKSupply.Services.Implementations.EFFunctionalityReport</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_report"/>
+        <childnode refid="454" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="456">
+        <label>IFunctionalityReport</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_report"/>
+      </node>
+      <node id="455">
+        <label>HKSupply.Services.Implementations.EFFunctionalityReport</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_report"/>
+        <childnode refid="456" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFFunctionalityReport.cs" line="19" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityReport.cs" bodystart="18" bodyend="61"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_report_1a6c5a6e6ed80c49ef6fa140488a7ac001" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFFunctionalityReport</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_report_1a3fd0213e6dd29f7af0d096c7ffb9bea5" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFFunctionalityReport</scope><name>GetFunctionalityReports</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

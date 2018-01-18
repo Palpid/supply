@@ -1,0 +1,573 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Master::BomBreakdownManagement</compoundname>
+    <basecompoundref refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" prot="public" virt="non-virtual">HKSupply.Forms.RibbonFormBase</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a1d70d8fc155e608bd2a536187185eea4" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_bom_breakdown" kindref="compound">BomBreakdown</ref> &gt;</type>
+        <definition>List&lt;BomBreakdown&gt; HKSupply.Forms.Master.BomBreakdownManagement._modifiedBomBreakdowns</definition>
+        <argsstring></argsstring>
+        <name>_modifiedBomBreakdowns</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_models_1_1_bom_breakdown" kindref="compound">BomBreakdown</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="26" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a8908ae60a4f476851868ef54f9fc247c" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_bom_breakdown" kindref="compound">BomBreakdown</ref> &gt;</type>
+        <definition>List&lt;BomBreakdown&gt; HKSupply.Forms.Master.BomBreakdownManagement._createdBomBreakdowns</definition>
+        <argsstring></argsstring>
+        <name>_createdBomBreakdowns</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_models_1_1_bom_breakdown" kindref="compound">BomBreakdown</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="27" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a9bf4a3db697b878256534f5aae96d167" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Master.BomBreakdownManagement.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a3e663a0cf388e664069353f63953907d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.BomBreakdownManagement.xgrdBomBreakdown</definition>
+        <argsstring></argsstring>
+        <name>xgrdBomBreakdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.Designer.cs" line="86" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.Designer.cs" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a563efe23ca2965b3e8539752711ff558" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.BomBreakdownManagement.gridViewBomBreakdown</definition>
+        <argsstring></argsstring>
+        <name>gridViewBomBreakdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.Designer.cs" line="87" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.Designer.cs" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a8b2517e874d5df0fbed2e803563b6e08" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Master.BomBreakdownManagement.BomBreakdownManagement</definition>
+        <argsstring>()</argsstring>
+        <name>BomBreakdownManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="31" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="31" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a2af0c446dc41887a28f0b1d0554041e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.BomBreakdownManagement.bbiCancel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiCancel_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318">bbiCancel_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="72" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="72" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a8d25e7ac514f27e41fa9e0e3277d72d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.BomBreakdownManagement.bbiEdit_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiEdit_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3">bbiEdit_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="86" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="86" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a5d136cef37f3fe72306bff1a2e32fbad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.BomBreakdownManagement.bbiNew_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiNew_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a">bbiNew_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="108" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="108" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a116b1f85bb67a59a2ed275eb568a4a56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.BomBreakdownManagement.bbiSave_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiSave_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9">bbiSave_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="122" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="122" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1af33085a47f35f09c57ef0e16728e43ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.BomBreakdownManagement.bbiExportCsv_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportCsv_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a">bbiExportCsv_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="168" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="168" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a7276b2b885d3de6327978855b8bb9266" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.BomBreakdownManagement.bbiExportExcel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportExcel_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811">bbiExportExcel_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="182" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="182" bodyend="194"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a1f814c202f4f984d66a30f1e802cfd33" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomBreakdownManagement.ConfigureRibbonActions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="49" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="49" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a70df326769d68d0ff7df5e4fc474d756" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomBreakdownManagement.BomBreakdownManagement_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BomBreakdownManagement_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="199" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="199" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1ad7155a3f07d832d50168192f8aa40990" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomBreakdownManagement.GridViewBomBreakdown_CellValueChanged</definition>
+        <argsstring>(object sender, CellValueChangedEventArgs e)</argsstring>
+        <name>GridViewBomBreakdown_CellValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CellValueChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="211" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="211" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a3a1bddc6fc7beb4d20ff5ac17fce4f71" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomBreakdownManagement.SetUpGrdBomBreakdown</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdBomBreakdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="236" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="236" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a46677e5a65aaa9075cc4795b0435323b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomBreakdownManagement.LoadAllBomBreakdown</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAllBomBreakdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="273" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="273" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a1ec4722081ac4b5fbd62c5c8b2d86a26" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomBreakdownManagement.ConfigureRibbonActionsEditing</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActionsEditing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="294" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="294" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1add96063386d461c88948d161b176c3fb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomBreakdownManagement.ConfigureActionsStackViewCreating</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackViewCreating</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="308" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="308" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a288795b11e4d3cf5d447674bb833b77b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomBreakdownManagement.AddModifiedBreakdownToList</definition>
+        <argsstring>(BomBreakdown modifiedBreakdown)</argsstring>
+        <name>AddModifiedBreakdownToList</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_bom_breakdown" kindref="compound">BomBreakdown</ref></type>
+          <declname>modifiedBreakdown</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="326" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="326" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1afe06e79377b0350924e638ba8eea7376" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.BomBreakdownManagement.IsValidBreakdown</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidBreakdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="349" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="349" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a4ae9df5b01c65c6a25e7798748e44d2f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.BomBreakdownManagement.IsValidModifiedBreakdowns</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidModifiedBreakdowns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="366" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="366" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a89f2f83bb5ea8e258c390b23d58d85d4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.BomBreakdownManagement.IsValidCreatedBreakdowns</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidCreatedBreakdowns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="386" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="386" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1af35634d3ed0e6cda83d2b3248ab132f0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.BomBreakdownManagement.UpdateBomBreakdowns</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateBomBreakdowns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="419" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="419" bodyend="429"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a3163031c677c6c128cc9ba53eadd9282" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.BomBreakdownManagement.CreateBomBrakdown</definition>
+        <argsstring>()</argsstring>
+        <name>CreateBomBrakdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="431" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="431" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1ab0ce170d77831a7f91a614f5c440fd96" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomBreakdownManagement.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.Designer.cs" bodystart="29" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a4a926b84f748154b3f113f4968529944" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.BomBreakdownManagement.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomBreakdownManagement.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="60">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="58">
+        <label>HKSupply.Forms.Master.BomBreakdownManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management"/>
+        <childnode refid="59" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="60" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="63">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="64">
+        <label>XtraBars</label>
+      </node>
+      <node id="61">
+        <label>HKSupply.Forms.Master.BomBreakdownManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management"/>
+        <childnode refid="62" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="63" relation="public-inheritance">
+        </childnode>
+        <childnode refid="64" relation="usage">
+          <edgelabel>bbiCancel</edgelabel>
+          <edgelabel>ribbonStatusBar</edgelabel>
+          <edgelabel>bbiPrintPreview</edgelabel>
+          <edgelabel>bbiSave</edgelabel>
+          <edgelabel>bbiNew</edgelabel>
+          <edgelabel>bbiEdit</edgelabel>
+          <edgelabel>ribbonControl</edgelabel>
+          <edgelabel>ribbonPageGroup1</edgelabel>
+          <edgelabel>ribbonPage1</edgelabel>
+          <edgelabel>ribbonPageGroup2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="23" column="1" bodyfile="HKSupply/Forms/Master/BomBreakdownManagement.cs" bodystart="22" bodyend="448"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a8908ae60a4f476851868ef54f9fc247c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>_createdBomBreakdowns</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a1d70d8fc155e608bd2a536187185eea4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>_modifiedBomBreakdowns</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>ActionsStates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a288795b11e4d3cf5d447674bb833b77b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>AddModifiedBreakdownToList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>AddRestoreLayoutItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>BarButtonItemReport_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>bbiCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a2af0c446dc41887a28f0b1d0554041e0" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>bbiEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a8d25e7ac514f27e41fa9e0e3277d72d4" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1af33085a47f35f09c57ef0e16728e43ed" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>bbiExportCsv_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a7276b2b885d3de6327978855b8bb9266" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>bbiExportExcel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>bbiNew</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a5d136cef37f3fe72306bff1a2e32fbad" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>bbiPrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>bbiPrintPreview_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>bbiSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a116b1f85bb67a59a2ed275eb568a4a56" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>BbiSaveLayout_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a8b2517e874d5df0fbed2e803563b6e08" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>BomBreakdownManagement</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a70df326769d68d0ff7df5e4fc474d756" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>BomBreakdownManagement_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a9bf4a3db697b878256534f5aae96d167" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1add96063386d461c88948d161b176c3fb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>ConfigureActionsStackViewCreating</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>ConfigureLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>ConfigurePrintExportOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a1f814c202f4f984d66a30f1e802cfd33" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>ConfigureRibbonActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a1ec4722081ac4b5fbd62c5c8b2d86a26" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>ConfigureRibbonActionsEditing</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a3163031c677c6c128cc9ba53eadd9282" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>CreateBomBrakdown</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>CurrentLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>CurrentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a4a926b84f748154b3f113f4968529944" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>EnableExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>EnableExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>EnableLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>EnablePrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>ExportCsvFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>ExportExcelFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a563efe23ca2965b3e8539752711ff558" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>gridViewBomBreakdown</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1ad7155a3f07d832d50168192f8aa40990" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>GridViewBomBreakdown_CellValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1ab0ce170d77831a7f91a614f5c440fd96" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1afe06e79377b0350924e638ba8eea7376" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>IsValidBreakdown</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a89f2f83bb5ea8e258c390b23d58d85d4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>IsValidCreatedBreakdowns</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a4ae9df5b01c65c6a25e7798748e44d2f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>IsValidModifiedBreakdowns</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>LayoutButton_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a46677e5a65aaa9075cc4795b0435323b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>LoadAllBomBreakdown</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>Modify</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>New</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>ProcessCmdKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>Read</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>RestoreInitState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>ribbonControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>RibbonFormBase</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>ribbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>ribbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>ribbonPageGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>ribbonStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>SetActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>SetRibbonText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a3a1bddc6fc7beb4d20ff5ac17fce4f71" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>SetUpGrdBomBreakdown</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1af35634d3ed0e6cda83d2b3248ab132f0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>UpdateBomBreakdowns</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a3e663a0cf388e664069353f63953907d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomBreakdownManagement</scope><name>xgrdBomBreakdown</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

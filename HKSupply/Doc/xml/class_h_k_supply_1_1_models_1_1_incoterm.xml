@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_incoterm" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::Incoterm</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_incoterm_1af6613e0282b4e63d78fdfcad1dd75da5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Incoterm.IdIncoterm</definition>
+        <argsstring></argsstring>
+        <name>IdIncoterm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Incoterm.cs" line="16" column="1" bodyfile="HKSupply/Models/Incoterm.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_incoterm_1a3b03f36cbbd8df1efe60cfd6bede1585" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Incoterm.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Incoterm.cs" line="18" column="1" bodyfile="HKSupply/Models/Incoterm.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_incoterm_1ad9cab47ec4f903b62dfa87bf66027667" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Incoterm.DescriptionZh</definition>
+        <argsstring></argsstring>
+        <name>DescriptionZh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Incoterm.cs" line="20" column="1" bodyfile="HKSupply/Models/Incoterm.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_incoterm_1a9dccd041787d69695b1fc96bb0d1ebc1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.Incoterm.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Incoterm.cs" line="22" column="1" bodyfile="HKSupply/Models/Incoterm.cs" bodystart="22" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_incoterm_1a1976815be0a29915d1951975100c358c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.Incoterm.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Incoterm.cs" line="32" column="1" bodyfile="HKSupply/Models/Incoterm.cs" bodystart="32" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/Incoterm.cs" line="14" column="1" bodyfile="HKSupply/Models/Incoterm.cs" bodystart="13" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_incoterm_1a3b03f36cbbd8df1efe60cfd6bede1585" prot="public" virt="non-virtual"><scope>HKSupply::Models::Incoterm</scope><name>Description</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_incoterm_1ad9cab47ec4f903b62dfa87bf66027667" prot="public" virt="non-virtual"><scope>HKSupply::Models::Incoterm</scope><name>DescriptionZh</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_incoterm_1a9dccd041787d69695b1fc96bb0d1ebc1" prot="public" virt="non-virtual"><scope>HKSupply::Models::Incoterm</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_incoterm_1a1976815be0a29915d1951975100c358c" prot="public" virt="non-virtual"><scope>HKSupply::Models::Incoterm</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_incoterm_1af6613e0282b4e63d78fdfcad1dd75da5" prot="public" virt="non-virtual"><scope>HKSupply::Models::Incoterm</scope><name>IdIncoterm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

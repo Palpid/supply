@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard" kind="namespace" language="C#">
+    <compoundname>HKSupply::Forms::Supply::Dashboard</compoundname>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored" prot="public">HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStored</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored2" prot="public">HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStored2</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure" prot="public">HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStoredProcedure</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p" prot="public">HKSupply::Forms::Supply::Dashboard::DashboardQP</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test" prot="public">HKSupply::Forms::Supply::Dashboard::DashboardQPTest</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="22" column="1"/>
+  </compounddef>
+</doxygen>

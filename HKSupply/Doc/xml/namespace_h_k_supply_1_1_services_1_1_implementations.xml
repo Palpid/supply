@@ -1,19 +1,54 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="namespace_h_k_supply_1_1_services_1_1_implementations" kind="namespace" language="C#">
     <compoundname>HKSupply::Services::Implementations</compoundname>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_bom_breakdown" prot="public">HKSupply::Services::Implementations::EFBomBreakdown</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_box" prot="public">HKSupply::Services::Implementations::EFBox</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_currency" prot="public">HKSupply::Services::Implementations::EFCurrency</innerclass>
     <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer" prot="public">HKSupply::Services::Implementations::EFCustomer</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_price_list" prot="public">HKSupply::Services::Implementations::EFCustomerPriceList</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_delivery_terms" prot="public">HKSupply::Services::Implementations::EFDeliveryTerms</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_head_attach_file" prot="public">HKSupply::Services::Implementations::EFDocHeadAttachFile</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_type" prot="public">HKSupply::Services::Implementations::EFDocType</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_etn_color" prot="public">HKSupply::Services::Implementations::EFEtnColor</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_exchange_rate" prot="public">HKSupply::Services::Implementations::EFExchangeRate</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_family_h_k" prot="public">HKSupply::Services::Implementations::EFFamilyHK</innerclass>
     <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality" prot="public">HKSupply::Services::Implementations::EFFunctionality</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_report" prot="public">HKSupply::Services::Implementations::EFFunctionalityReport</innerclass>
     <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role" prot="public">HKSupply::Services::Implementations::EFFunctionalityRole</innerclass>
-    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item" prot="public">HKSupply::Services::Implementations::EFItem</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_hw_type" prot="public">HKSupply::Services::Implementations::EFHwType</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_incoterm" prot="public">HKSupply::Services::Implementations::EFIncoterm</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bcn" prot="public">HKSupply::Services::Implementations::EFItemBcn</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom" prot="public">HKSupply::Services::Implementations::EFItemBom</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_doc" prot="public">HKSupply::Services::Implementations::EFItemDoc</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_ey" prot="public">HKSupply::Services::Implementations::EFItemEy</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_hf" prot="public">HKSupply::Services::Implementations::EFItemHf</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_hw" prot="public">HKSupply::Services::Implementations::EFItemHw</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_mt" prot="public">HKSupply::Services::Implementations::EFItemMt</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_layout" prot="public">HKSupply::Services::Implementations::EFLayout</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_material" prot="public">HKSupply::Services::Implementations::EFMaterial</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_mat_type" prot="public">HKSupply::Services::Implementations::EFMatType</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_model" prot="public">HKSupply::Services::Implementations::EFModel</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_my_company" prot="public">HKSupply::Services::Implementations::EFMyCompany</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_payment_terms" prot="public">HKSupply::Services::Implementations::EFPaymentTerms</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_prototype" prot="public">HKSupply::Services::Implementations::EFPrototype</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_prototype_doc" prot="public">HKSupply::Services::Implementations::EFPrototypeDoc</innerclass>
     <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_role" prot="public">HKSupply::Services::Implementations::EFRole</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_status_cial" prot="public">HKSupply::Services::Implementations::EFStatusCial</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_status_prod" prot="public">HKSupply::Services::Implementations::EFStatusProd</innerclass>
     <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_store" prot="public">HKSupply::Services::Implementations::EFStore</innerclass>
     <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier" prot="public">HKSupply::Services::Implementations::EFSupplier</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_factory_coeff" prot="public">HKSupply::Services::Implementations::EFSupplierFactoryCoeff</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_price_list" prot="public">HKSupply::Services::Implementations::EFSupplierPriceList</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_dashboard" prot="public">HKSupply::Services::Implementations::EFSupplyDashboard</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs" prot="public">HKSupply::Services::Implementations::EFSupplyDocs</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_unit" prot="public">HKSupply::Services::Implementations::EFUnit</innerclass>
     <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user" prot="public">HKSupply::Services::Implementations::EFUser</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user_attr_description" prot="public">HKSupply::Services::Implementations::EFUserAttrDescription</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="HKSupply/Services/Implementations/EFCustomer.cs" line="19" column="1"/>
+    <location file="HKSupply/Services/Implementations/EFBomBreakdown.cs" line="16" column="1"/>
   </compounddef>
 </doxygen>

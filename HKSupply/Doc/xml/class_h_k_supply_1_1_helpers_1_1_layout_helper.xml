@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_helpers_1_1_layout_helper" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Helpers::LayoutHelper</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_layout_helper_1a8aab6ab176fdde3718b41bbdd4233b90" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string HKSupply.Helpers.LayoutHelper.SaveLayoutAsBase64String</definition>
+        <argsstring>(ISupportXtraSerializer source)</argsstring>
+        <name>SaveLayoutAsBase64String</name>
+        <param>
+          <type>ISupportXtraSerializer</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/LayoutHelper.cs" line="14" column="1" bodyfile="HKSupply/Helpers/LayoutHelper.cs" bodystart="14" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_layout_helper_1a9dd67ec725a57e2393d94fe317f83012" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Helpers.LayoutHelper.RestoreLayoutFromBase64String</definition>
+        <argsstring>(ISupportXtraSerializer target, string base64String)</argsstring>
+        <name>RestoreLayoutFromBase64String</name>
+        <param>
+          <type>ISupportXtraSerializer</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>base64String</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/LayoutHelper.cs" line="31" column="1" bodyfile="HKSupply/Helpers/LayoutHelper.cs" bodystart="31" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_layout_helper_1a7c3a27f942bcd5437df58896a29193e5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string HKSupply.Helpers.LayoutHelper.GetObjectLayout</definition>
+        <argsstring>(List&lt; Models.Layout &gt; layouts, string layoutName, string objectName)</argsstring>
+        <name>GetObjectLayout</name>
+        <param>
+          <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_layout" kindref="compound">Models.Layout</ref> &gt;</type>
+          <declname>layouts</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>layoutName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>objectName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/LayoutHelper.cs" line="47" column="1" bodyfile="HKSupply/Helpers/LayoutHelper.cs" bodystart="47" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_layout_helper_1aabd67a28876fd81eda4590fa45baceb8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_layout" kindref="compound">Models.Layout</ref> &gt;</type>
+        <definition>static List&lt;Models.Layout&gt; HKSupply.Helpers.LayoutHelper.GetFormLayouts</definition>
+        <argsstring>(string formName)</argsstring>
+        <name>GetFormLayouts</name>
+        <param>
+          <type>string</type>
+          <declname>formName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/LayoutHelper.cs" line="63" column="1" bodyfile="HKSupply/Helpers/LayoutHelper.cs" bodystart="63" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_layout_helper_1a703dd3e51d59798c145c69a5e1a9c455" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_layout" kindref="compound">Models.Layout</ref> &gt;</type>
+        <definition>static List&lt;Models.Layout&gt; HKSupply.Helpers.LayoutHelper.GetRibbonWorkSpaceLayouts</definition>
+        <argsstring>(string formName, string workSpaceMenuItemName)</argsstring>
+        <name>GetRibbonWorkSpaceLayouts</name>
+        <param>
+          <type>string</type>
+          <declname>formName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>workSpaceMenuItemName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/LayoutHelper.cs" line="77" column="1" bodyfile="HKSupply/Helpers/LayoutHelper.cs" bodystart="77" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Helpers/LayoutHelper.cs" line="13" column="1" bodyfile="HKSupply/Helpers/LayoutHelper.cs" bodystart="12" bodyend="93"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_layout_helper_1aabd67a28876fd81eda4590fa45baceb8" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::LayoutHelper</scope><name>GetFormLayouts</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_layout_helper_1a7c3a27f942bcd5437df58896a29193e5" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::LayoutHelper</scope><name>GetObjectLayout</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_layout_helper_1a703dd3e51d59798c145c69a5e1a9c455" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::LayoutHelper</scope><name>GetRibbonWorkSpaceLayouts</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_layout_helper_1a9dd67ec725a57e2393d94fe317f83012" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::LayoutHelper</scope><name>RestoreLayoutFromBase64String</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_layout_helper_1a8aab6ab176fdde3718b41bbdd4233b90" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::LayoutHelper</scope><name>SaveLayoutAsBase64String</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

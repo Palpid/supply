@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_incoterm" kind="interface" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Interfaces::IIncoterm</compoundname>
+    <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_incoterm" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFIncoterm</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_incoterm_1a1b1e3e9d219809c9d1c2d72cfc7b1a9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_incoterm" kindref="compound">Incoterm</ref> &gt;</type>
+        <definition>List&lt;Incoterm&gt; HKSupply.Services.Interfaces.IIncoterm.GetIIncoterms</definition>
+        <argsstring>()</argsstring>
+        <name>GetIIncoterms</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_incoterm_1afea217306f38a85bba4d0e77416b5823">GetIIncoterms</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IIncoterm.cs" line="12" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_incoterm_1a9c89e75c8dc8594cfd635509b1aad08e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_incoterm" kindref="compound">Incoterm</ref></type>
+        <definition>Incoterm HKSupply.Services.Interfaces.IIncoterm.GetIncotermById</definition>
+        <argsstring>(string idIncoterm)</argsstring>
+        <name>GetIncotermById</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_incoterm_1a08462932e1c8b3ca21b5f40e2da0893b">GetIncotermById</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>idIncoterm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IIncoterm.cs" line="13" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_incoterm_1a7832108fd1629b59553c5db3a8b3eacb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_incoterm" kindref="compound">Incoterm</ref></type>
+        <definition>Incoterm HKSupply.Services.Interfaces.IIncoterm.NewIncoterm</definition>
+        <argsstring>(Incoterm newIncoterm)</argsstring>
+        <name>NewIncoterm</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_incoterm_1ad8687c3d4cecfbd89f62213fe4f4d601">NewIncoterm</reimplementedby>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_incoterm" kindref="compound">Incoterm</ref></type>
+          <declname>newIncoterm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IIncoterm.cs" line="14" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_incoterm_1a283e29240c35683e51f5dfefb672c251" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.IIncoterm.UpdateIncoterm</definition>
+        <argsstring>(IEnumerable&lt; Incoterm &gt; incotermsToUpdate)</argsstring>
+        <name>UpdateIncoterm</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_incoterm_1af5a346e48cfad695150c6094e22243e1">UpdateIncoterm</reimplementedby>
+        <param>
+          <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_incoterm" kindref="compound">Incoterm</ref> &gt;</type>
+          <declname>incotermsToUpdate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IIncoterm.cs" line="15" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="761">
+        <label>HKSupply.Services.Implementations.EFIncoterm</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_incoterm"/>
+        <childnode refid="760" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="760">
+        <label>HKSupply.Services.Interfaces.IIncoterm</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_incoterm"/>
+      </node>
+    </inheritancegraph>
+    <location file="HKSupply/Services/Interfaces/IIncoterm.cs" line="11" column="1" bodyfile="HKSupply/Services/Interfaces/IIncoterm.cs" bodystart="10" bodyend="16"/>
+    <listofallmembers>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_incoterm_1a1b1e3e9d219809c9d1c2d72cfc7b1a9d" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IIncoterm</scope><name>GetIIncoterms</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_incoterm_1a9c89e75c8dc8594cfd635509b1aad08e" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IIncoterm</scope><name>GetIncotermById</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_incoterm_1a7832108fd1629b59553c5db3a8b3eacb" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IIncoterm</scope><name>NewIncoterm</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_incoterm_1a283e29240c35683e51f5dfefb672c251" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IIncoterm</scope><name>UpdateIncoterm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

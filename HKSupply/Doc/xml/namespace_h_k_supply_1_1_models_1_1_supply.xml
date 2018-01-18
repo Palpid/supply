@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_h_k_supply_1_1_models_1_1_supply" kind="namespace" language="C#">
+    <compoundname>HKSupply::Models::Supply</compoundname>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_supply_1_1_box" prot="public">HKSupply::Models::Supply::Box</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_box" prot="public">HKSupply::Models::Supply::DocBox</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" prot="public">HKSupply::Models::Supply::DocHead</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file" prot="public">HKSupply::Models::Supply::DocHeadAttachFile</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line" prot="public">HKSupply::Models::Supply::DocLine</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch" prot="public">HKSupply::Models::Supply::PackingListItemBatch</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_supply_1_1_supply_doc_type" prot="public">HKSupply::Models::Supply::SupplyDocType</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_models_1_1_supply_1_1_supply_status" prot="public">HKSupply::Models::Supply::SupplyStatus</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/Supply/Box.cs" line="7" column="1"/>
+  </compounddef>
+</doxygen>

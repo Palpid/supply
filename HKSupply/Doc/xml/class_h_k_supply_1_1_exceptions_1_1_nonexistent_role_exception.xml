@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_h_k_supply_1_1_exceptions_1_1_nonexistent_role_exception" kind="class" language="C#" prot="public">
     <compoundname>HKSupply::Exceptions::NonexistentRoleException</compoundname>
     <basecompoundref prot="public" virt="non-virtual">Exception</basecompoundref>
@@ -84,24 +84,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="215">
+      <node id="1250">
         <label>System::Exception</label>
       </node>
-      <node id="214">
+      <node id="1249">
         <label>HKSupply.Exceptions.NonexistentRoleException</label>
         <link refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_role_exception"/>
-        <childnode refid="215" relation="public-inheritance">
+        <childnode refid="1250" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="217">
+      <node id="1252">
         <label>System::Exception</label>
       </node>
-      <node id="216">
+      <node id="1251">
         <label>HKSupply.Exceptions.NonexistentRoleException</label>
         <link refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_role_exception"/>
-        <childnode refid="217" relation="public-inheritance">
+        <childnode refid="1252" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

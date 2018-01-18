@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_h_k_supply_1_1_helpers_1_1_currency_converter" kind="namespace" language="C#">
+    <compoundname>HKSupply::Helpers::CurrencyConverter</compoundname>
+    <innerclass refid="class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter" prot="public">HKSupply::Helpers::CurrencyConverter::CurrencyConverter</innerclass>
+    <innerclass refid="interface_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_i_currency_converter" prot="public">HKSupply::Helpers::CurrencyConverter::ICurrencyConverter</innerclass>
+    <innerclass refid="struct_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_rates" prot="public">HKSupply::Helpers::CurrencyConverter::Rates</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Helpers/CurrencyConverter/CurrencyConverter.cs" line="13" column="1"/>
+  </compounddef>
+</doxygen>

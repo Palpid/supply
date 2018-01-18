@@ -1,0 +1,1804 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::RibbonFormBase</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">RibbonForm</basecompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.BomBreakdownManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.BomManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_box_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.BoxManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.CurrenciesEchangeRatesManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.CustomerManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_price_list_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.CustomerPriceListManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_families_hk_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.FamiliesHkManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.FunctionalityManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.FunctionalityRoleManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_incoterms_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.IncotermsManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs" prot="public" virt="non-virtual">HKSupply.Forms.Master.ItemDocs</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_e_y" prot="public" virt="non-virtual">HKSupply.Forms.Master.ItemManagementEY</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_h_f" prot="public" virt="non-virtual">HKSupply.Forms.Master.ItemManagementHF</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_h_w" prot="public" virt="non-virtual">HKSupply.Forms.Master.ItemManagementHW</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_m_t" prot="public" virt="non-virtual">HKSupply.Forms.Master.ItemManagementMT</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.ItemsLevelsManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.MyCompanyManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.PaymentTermsManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.PrototypeManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.RoleManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.StatusManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.StoreManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_factory_coeff_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.SupplierFactoryCoeffManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.SupplierManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.SupplierPriceListManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management" prot="public" virt="non-virtual">HKSupply.Forms.Master.UserManagement</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report" prot="public" virt="non-virtual">HKSupply.Forms.Reports.BOMReport</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p" prot="public" virt="non-virtual">HKSupply.Forms.Supply.Dashboard.DashboardQP</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test" prot="public" virt="non-virtual">HKSupply.Forms.Supply.Dashboard.DashboardQPTest</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_delivery_note" prot="public" virt="non-virtual">HKSupply.Forms.Supply.DeliveryNote</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_docs_list" prot="public" virt="non-virtual">HKSupply.Forms.Supply.DocsList</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice" prot="public" virt="non-virtual">HKSupply.Forms.Supply.Invoice</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list" prot="public" virt="non-virtual">HKSupply.Forms.Supply.PackingList</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list__v2" prot="public" virt="non-virtual">HKSupply.Forms.Supply.PackingList_v2</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_bcn" prot="public" virt="non-virtual">HKSupply.Forms.Supply.PackingListBcn</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order" prot="public" virt="non-virtual">HKSupply.Forms.Supply.PurchaseOrder</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_selection" prot="public" virt="non-virtual">HKSupply.Forms.Supply.PurchaseOrderSelection</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal" prot="public" virt="non-virtual">HKSupply.Forms.Supply.QuotationProposal</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_sales_order" prot="public" virt="non-virtual">HKSupply.Forms.Supply.SalesOrder</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_packing_list_materials" prot="public" virt="non-virtual">HKSupply.Forms.Supply.SupplyMaterials.PackingListMaterials</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_purchase_order_materials" prot="public" virt="non-virtual">HKSupply.Forms.Supply.SupplyMaterials.PurchaseOrderMaterials</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_purchase_order_materials_selection" prot="public" virt="non-virtual">HKSupply.Forms.Supply.SupplyMaterials.PurchaseOrderMaterialsSelection</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending" prot="public" virt="non-virtual">HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending</derivedcompoundref>
+    <derivedcompoundref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality" prot="public" virt="non-virtual">HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality</derivedcompoundref>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ActionsStates</name>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61ca94e0b3cd0db6a39fad24d0ff351d84b3" prot="public">
+          <name>OnlyRead</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61ca470c033766986f184236ddae97ba49cb" prot="public">
+          <name>OnlyEdit</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61cad9cfc7ec1efcc42119f4489d81f45c4b" prot="public">
+          <name>OnlyEditNew</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61ca7dce122004969d56ae2e0245cb754d35" prot="public">
+          <name>Edit</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61ca03c2e7e41ffc181a4e84080b4710e81e" prot="public">
+          <name>New</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61caede91184c71014194167340aed65b70f" prot="public">
+          <name>OnlyNew</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="20" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="19" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4cb9efd50965b77dcc397e3bf25f9130" prot="private" static="no" mutable="no">
+        <type>ActionsStates</type>
+        <definition>ActionsStates HKSupply.Forms.RibbonFormBase._currentState</definition>
+        <argsstring></argsstring>
+        <name>_currentState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="32" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4bafa0581c3296e6bd90abc93c61c303" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.RibbonFormBase.isLoadingWorkspace</definition>
+        <argsstring></argsstring>
+        <name>isLoadingWorkspace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="34" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a5011040f031c98ad2fb099876abf36d6" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.RibbonFormBase.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a89751a171c9864970eef08aa63893263" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Ribbon.RibbonPageGroup</type>
+        <definition>DevExpress.XtraBars.Ribbon.RibbonPageGroup HKSupply.Forms.RibbonFormBase.ribbonPageGroup3</definition>
+        <argsstring></argsstring>
+        <name>ribbonPageGroup3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="299" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0ca65d3a9c5dd7598177d1aba086a9d2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.BarButtonItem</type>
+        <definition>DevExpress.XtraBars.BarButtonItem HKSupply.Forms.RibbonFormBase.bbiClose</definition>
+        <argsstring></argsstring>
+        <name>bbiClose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="300" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a475b0213eb6cb4069f13ddd82fd1fd31" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.BarButtonItem</type>
+        <definition>DevExpress.XtraBars.BarButtonItem HKSupply.Forms.RibbonFormBase.bbiExportExcel</definition>
+        <argsstring></argsstring>
+        <name>bbiExportExcel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="301" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a87d597644937e5b15f866bd40e4415f9" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.BarButtonItem</type>
+        <definition>DevExpress.XtraBars.BarButtonItem HKSupply.Forms.RibbonFormBase.bbiExportCsv</definition>
+        <argsstring></argsstring>
+        <name>bbiExportCsv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="302" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aafae103d563742ed38952e93e8057a3d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Ribbon.RibbonPageGroup</type>
+        <definition>DevExpress.XtraBars.Ribbon.RibbonPageGroup HKSupply.Forms.RibbonFormBase.ribbonPageGroupLayout</definition>
+        <argsstring></argsstring>
+        <name>ribbonPageGroupLayout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="303" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17e2ce7a4541ce5cc643c99854f80f1d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.BarButtonItem</type>
+        <definition>DevExpress.XtraBars.BarButtonItem HKSupply.Forms.RibbonFormBase.bbiSaveLayout</definition>
+        <argsstring></argsstring>
+        <name>bbiSaveLayout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="304" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a76eee6339ceff918c645c6668e414c5b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.BarSubItem</type>
+        <definition>DevExpress.XtraBars.BarSubItem HKSupply.Forms.RibbonFormBase.bsiRestoreLayout</definition>
+        <argsstring></argsstring>
+        <name>bsiRestoreLayout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="305" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac478b96ca2d6cf4e422286e6439eba99" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.BarWorkspaceMenuItem</type>
+        <definition>DevExpress.XtraBars.BarWorkspaceMenuItem HKSupply.Forms.RibbonFormBase.bwmiLayouts</definition>
+        <argsstring></argsstring>
+        <name>bwmiLayouts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="306" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab01600144050813f55e4e4cac006fb28" prot="private" static="no" mutable="no">
+        <type>DevExpress.Utils.WorkspaceManager</type>
+        <definition>DevExpress.Utils.WorkspaceManager HKSupply.Forms.RibbonFormBase.workspaceManager1</definition>
+        <argsstring></argsstring>
+        <name>workspaceManager1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="307" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aabd906e1acb7e1fb25782bb32271272f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.BarStaticItem</type>
+        <definition>DevExpress.XtraBars.BarStaticItem HKSupply.Forms.RibbonFormBase.barStaticItemUser</definition>
+        <argsstring></argsstring>
+        <name>barStaticItemUser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="308" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="308" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acd38425d605d9cbbfc68847c030fcaaa" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.BarStaticItem</type>
+        <definition>DevExpress.XtraBars.BarStaticItem HKSupply.Forms.RibbonFormBase.barStaticItemDbServer</definition>
+        <argsstring></argsstring>
+        <name>barStaticItemDbServer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="309" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a24126f5808b15992a0415ac4dad023e1" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.BarStaticItem</type>
+        <definition>DevExpress.XtraBars.BarStaticItem HKSupply.Forms.RibbonFormBase.barStaticItemDb</definition>
+        <argsstring></argsstring>
+        <name>barStaticItemDb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="310" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="310" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6731159e60cdc26912cba901863d72ac" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.BarStaticItem</type>
+        <definition>DevExpress.XtraBars.BarStaticItem HKSupply.Forms.RibbonFormBase.barStaticItemAppVersion</definition>
+        <argsstring></argsstring>
+        <name>barStaticItemAppVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="311" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae45c9805db9cdf8c3a0f7df7a3bfb1d1" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.BarLinkContainerItem</type>
+        <definition>DevExpress.XtraBars.BarLinkContainerItem HKSupply.Forms.RibbonFormBase.barLinkContainerItemReports</definition>
+        <argsstring></argsstring>
+        <name>barLinkContainerItemReports</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="312" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="312" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa6bff23b7369092e5d7761f39c4e1661" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Ribbon.RibbonPageGroup</type>
+        <definition>DevExpress.XtraBars.Ribbon.RibbonPageGroup HKSupply.Forms.RibbonFormBase.ribbonPageGroupReports</definition>
+        <argsstring></argsstring>
+        <name>ribbonPageGroupReports</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="313" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="313" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.RibbonFormBase.Read</definition>
+        <argsstring></argsstring>
+        <name>Read</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="40" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.RibbonFormBase.New</definition>
+        <argsstring></argsstring>
+        <name>New</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="41" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.RibbonFormBase.Modify</definition>
+        <argsstring></argsstring>
+        <name>Modify</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="42" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.RibbonFormBase.EnablePrintPreview</definition>
+        <argsstring></argsstring>
+        <name>EnablePrintPreview</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="44" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.RibbonFormBase.EnableExportExcel</definition>
+        <argsstring></argsstring>
+        <name>EnableExportExcel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="45" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.RibbonFormBase.EnableExportCsv</definition>
+        <argsstring></argsstring>
+        <name>EnableExportCsv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="46" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.RibbonFormBase.EnableLayoutOptions</definition>
+        <argsstring></argsstring>
+        <name>EnableLayoutOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="47" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.RibbonFormBase.ExportExcelFile</definition>
+        <argsstring></argsstring>
+        <name>ExportExcelFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="49" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.RibbonFormBase.ExportCsvFile</definition>
+        <argsstring></argsstring>
+        <name>ExportCsvFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="50" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.RibbonFormBase.CurrentLayout</definition>
+        <argsstring></argsstring>
+        <name>CurrentLayout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="52" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>ActionsStates</type>
+        <definition>ActionsStates HKSupply.Forms.RibbonFormBase.CurrentState</definition>
+        <argsstring></argsstring>
+        <name>CurrentState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="54" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="55" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Ribbon.RibbonControl</type>
+        <definition>DevExpress.XtraBars.Ribbon.RibbonControl HKSupply.Forms.RibbonFormBase.ribbonControl</definition>
+        <argsstring></argsstring>
+        <name>ribbonControl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="289" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Ribbon.RibbonPage</type>
+        <definition>DevExpress.XtraBars.Ribbon.RibbonPage HKSupply.Forms.RibbonFormBase.ribbonPage1</definition>
+        <argsstring></argsstring>
+        <name>ribbonPage1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="290" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Ribbon.RibbonPageGroup</type>
+        <definition>DevExpress.XtraBars.Ribbon.RibbonPageGroup HKSupply.Forms.RibbonFormBase.ribbonPageGroup1</definition>
+        <argsstring></argsstring>
+        <name>ribbonPageGroup1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="291" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" static="no" mutable="no">
+        <type>DevExpress.XtraBars.BarButtonItem</type>
+        <definition>DevExpress.XtraBars.BarButtonItem HKSupply.Forms.RibbonFormBase.bbiPrintPreview</definition>
+        <argsstring></argsstring>
+        <name>bbiPrintPreview</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="292" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Ribbon.RibbonPageGroup</type>
+        <definition>DevExpress.XtraBars.Ribbon.RibbonPageGroup HKSupply.Forms.RibbonFormBase.ribbonPageGroup2</definition>
+        <argsstring></argsstring>
+        <name>ribbonPageGroup2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="293" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Ribbon.RibbonStatusBar</type>
+        <definition>DevExpress.XtraBars.Ribbon.RibbonStatusBar HKSupply.Forms.RibbonFormBase.ribbonStatusBar</definition>
+        <argsstring></argsstring>
+        <name>ribbonStatusBar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="294" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" static="no" mutable="no">
+        <type>DevExpress.XtraBars.BarButtonItem</type>
+        <definition>DevExpress.XtraBars.BarButtonItem HKSupply.Forms.RibbonFormBase.bbiNew</definition>
+        <argsstring></argsstring>
+        <name>bbiNew</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="295" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" static="no" mutable="no">
+        <type>DevExpress.XtraBars.BarButtonItem</type>
+        <definition>DevExpress.XtraBars.BarButtonItem HKSupply.Forms.RibbonFormBase.bbiEdit</definition>
+        <argsstring></argsstring>
+        <name>bbiEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="296" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" static="no" mutable="no">
+        <type>DevExpress.XtraBars.BarButtonItem</type>
+        <definition>DevExpress.XtraBars.BarButtonItem HKSupply.Forms.RibbonFormBase.bbiCancel</definition>
+        <argsstring></argsstring>
+        <name>bbiCancel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="297" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" static="no" mutable="no">
+        <type>DevExpress.XtraBars.BarButtonItem</type>
+        <definition>DevExpress.XtraBars.BarButtonItem HKSupply.Forms.RibbonFormBase.bbiSave</definition>
+        <argsstring></argsstring>
+        <name>bbiSave</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="298" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.RibbonFormBase.RibbonFormBase</definition>
+        <argsstring>()</argsstring>
+        <name>RibbonFormBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="67" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="67" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.SetActions</definition>
+        <argsstring>()</argsstring>
+        <name>SetActions</name>
+        <briefdescription>
+<para>Lee las acciones que tiene permitido un formulario. </para>        </briefdescription>
+        <detaileddescription>
+<para>No hay que llamarlo desde dentro porque el &quot;Name&quot; es el de &quot;RibbonFormBase&quot;, hay que llamarlo desde los que lo herendan para que coja su nombre </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="87" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="87" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.RestoreInitState</definition>
+        <argsstring>()</argsstring>
+        <name>RestoreInitState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="102" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="102" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.ConfigurePrintExportOptions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigurePrintExportOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="107" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="107" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.ConfigureLayoutOptions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureLayoutOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="123" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="123" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.SetRibbonText</definition>
+        <argsstring>(string title)</argsstring>
+        <name>SetRibbonText</name>
+        <param>
+          <type>string</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="141" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="141" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.AddRestoreLayoutItems</definition>
+        <argsstring>(List&lt; Layout &gt; layouts)</argsstring>
+        <name>AddRestoreLayoutItems</name>
+        <param>
+          <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_layout" kindref="compound">Layout</ref> &gt;</type>
+          <declname>layouts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="146" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="146" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void HKSupply.Forms.RibbonFormBase.bbiSave_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiSave_ItemClick</name>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1ad8ea4ef203c7a13ab3c3714a4f4f256f">bbiSave_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a66d86ca3ec4a3b255cbd45f5383303f4">bbiSave_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_box_management_1a8d2d747c4ee9a86161abe1225bb0932c">bbiSave_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a116b1f85bb67a59a2ed275eb568a4a56">bbiSave_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_factory_coeff_management_1ae28c98b3b2a6bb3bc225ed3a75a70854">bbiSave_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a99f3e89dba7c8032523a8653b26303e3">bbiSave_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a325482a9502d8b87a9ddfa81ecf17acd">bbiSave_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a00a943e19de89cbdffc33d387085cedf">bbiSave_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_purchase_order_materials_1ab2a7a5d480f9af2bb5eb5aa701fd0bdd">bbiSave_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5be15ec8e02d12d776fff1eee75708c9">bbiSave_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a255a54a2f14812d5bc902693cfbc9b38">bbiSave_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_h_f_1a8e66a8f3b77c4f0604fc07ed8ae224e0">bbiSave_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a8f67d5dd75c2106c5f5b85fcef22f800">bbiSave_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_packing_list_materials_1a6624066d1ea76851b82fc41a24aac45c">bbiSave_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_bcn_1a1211f027782b72965e8e80f48dfdb66a">bbiSave_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a5a52f82a2012ee16af69234a8d8e2f1d">bbiSave_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_sales_order_1ad1f40a0b624c33420e0900d5037bd1d0">bbiSave_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list__v2_1abe10aa1e028a71d3dde98bbbdbbbb3a2">bbiSave_ItemClick</reimplementedby>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="509" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="509" bodyend="520"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void HKSupply.Forms.RibbonFormBase.bbiCancel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiCancel_ItemClick</name>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a2af0c446dc41887a28f0b1d0554041e0">bbiCancel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_factory_coeff_management_1aae2aeba19943f73cb47fb8cbd554c73b">bbiCancel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_box_management_1ae42fcb1e28a845656ec1da5fa0dfc9b0">bbiCancel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a05f42f6e060e08dae31ccc1a9c864f02">bbiCancel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a64fdc25d71bf7a17265f7dc01f7204a1">bbiCancel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1afcfb35daf4f0d79f0a0883163ef4aaef">bbiCancel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1abb22d56af1fb18a825c2770c0adf9160">bbiCancel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a8d43fe9a3464454e6a4815c3ee878fed">bbiCancel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_purchase_order_materials_1a42a4d1e62e0da8010eb3c751196632b8">bbiCancel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_h_f_1aedc20370f078d14e2647f9ad250399b8">bbiCancel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a83d6aecc7ddd4f198b53998ed75da16c">bbiCancel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_packing_list_materials_1a1947be74d474bc0e602630dcc1043214">bbiCancel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ad8c2ca5fa36a97d9430985ede0f6dfd3">bbiCancel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_bcn_1adc2970e02074214b4bd1724a9613954c">bbiCancel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ad74b2ff0a6c56b75ca3825e5de6149db">bbiCancel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list__v2_1a2e0c9fcde026cee9f293b2a49f311432">bbiCancel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9eb2a03f288c2b87bf8d2e05c98eb636">bbiCancel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_sales_order_1a8fd39393346b4b7486bc33d02404c5a4">bbiCancel_ItemClick</reimplementedby>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="522" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="522" bodyend="532"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void HKSupply.Forms.RibbonFormBase.bbiNew_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiNew_ItemClick</name>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_box_management_1ac93efc4c340f946d3f794c030e1c6887">bbiNew_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a5d136cef37f3fe72306bff1a2e32fbad">bbiNew_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_factory_coeff_management_1adc52be36ad4ecec0d9a06467cf25dda1">bbiNew_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a55a053868a8a27b002a67d0c6c821ae7">bbiNew_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_purchase_order_materials_1a2627d9cd9e28ea10d791c00e725d5613">bbiNew_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_packing_list_materials_1ad7a68d121f04ddf0a7284f6383ea3996">bbiNew_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_bcn_1addced1a4040cc74f344362048734c337">bbiNew_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ae037b634643249e624fbc920411b291d">bbiNew_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list__v2_1a7657e83825e84f8aec8c780ba3655fa7">bbiNew_ItemClick</reimplementedby>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="534" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="534" bodyend="544"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void HKSupply.Forms.RibbonFormBase.bbiEdit_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiEdit_ItemClick</name>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a2f30331fde9444efdd733d592cbd5a20">bbiEdit_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a8d25e7ac514f27e41fa9e0e3277d72d4">bbiEdit_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_factory_coeff_management_1ac572813c2fd7cc22767fe0a82fbe17ed">bbiEdit_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_box_management_1a871b43f1380a575f7420caae226f1906">bbiEdit_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality_1a9b81a57f56ac02aa93813b05e07c4e0a">bbiEdit_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1ae1b12395b731a978ca2d5c7404846978">bbiEdit_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a4f11eef669d90908dc4016330068d6ae">bbiEdit_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_purchase_order_materials_1ae693ac76bb0cce9fd082177cf18c1f07">bbiEdit_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_packing_list_materials_1aa966c73fa60524d8e4e92189931ab205">bbiEdit_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a968d0043e7f099cacec265b58d29aa4a">bbiEdit_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a22cdd3e371d02ab126463e8bce0026fd">bbiEdit_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_h_f_1ad82bcd5c1f3b71d546cfc9d6cbd24c03">bbiEdit_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_bcn_1a680a64bd464e687546e533afa81e3ec4">bbiEdit_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a6876175233bce57209c7cd144973b1f2">bbiEdit_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list__v2_1af29c58994f65a6ebcce40160a754873a">bbiEdit_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a23e27c6099bba45e2000219646eaf314">bbiEdit_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_sales_order_1aa66814e5db7fe85338ab3abe85bf44ba">bbiEdit_ItemClick</reimplementedby>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="546" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="546" bodyend="556"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void HKSupply.Forms.RibbonFormBase.bbiPrintPreview_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiPrintPreview_ItemClick</name>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a639021caf4c7c42056b3557f5feb1f55">bbiPrintPreview_ItemClick</reimplementedby>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="588" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="588" bodyend="591"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void HKSupply.Forms.RibbonFormBase.bbiExportExcel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportExcel_ItemClick</name>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1ae8aca5d8c5e8c5340ad2b5dd327ae255">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_docs_list_1a3ff0df976f3a4074168df3b4d142cff4">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a840ebdb92f22e16c3e002fb40e8d130d">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_selection_1a410a11f29ca427b7e11e07514b531ae5">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_purchase_order_materials_selection_1a8ccada6666e59862230f18386d6765c6">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1aa5aeb6cfaf08afaaa507b69647104442">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_delivery_note_1a559016df87ee47caf064fefb47d09982">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_sales_order_1aca5732fac828237b559fb75e84e4578c">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1a7276b2b885d3de6327978855b8bb9266">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_box_management_1a0f13a95b00d2864e2dd3b32a42a9d3a6">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1a2a6d8f892da5c2b3af8715fef9a4e44f">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_purchase_order_materials_1a00f9157657df5151e9daafef6b8cac3a">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1a627bfffeb5b2332dae8a7e176bbc0b10">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_price_list_management_1a844f125c7f7f9498b54a194f59b75d79">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1acb2989469ba865f565c6d7555d65d565">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a3bd81a55c347f3d363fa84af4388c3c0">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ac7d46e96b181c3ac4afda83abf2826dc">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1aaba39df0aa7642a380a4304d00ba111e">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_h_f_1ac2cb02ac40d28fbfc3e90421ad44e957">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_h_w_1a0e1142a53e72a0350a3331ab3aec84ff">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a881d07707b884fc97bff4d886c2e43ba">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_packing_list_materials_1acedd704b6aa0f804dd0eb4908f3fc7f3">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_bcn_1a62a7f563e1088a4702f4688927f61993">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_m_t_1ae3e40845046022379416bea6a29bec60">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_e_y_1a6895391e8f78917d95fbc59e46a0fffe">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1abb76e89f3f632bd65e8305d2e921a988">bbiExportExcel_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list__v2_1aa311ff0c03ea28bfc602e200243ac271">bbiExportExcel_ItemClick</reimplementedby>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="593" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="593" bodyend="618"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void HKSupply.Forms.RibbonFormBase.bbiExportCsv_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportCsv_ItemClick</name>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a57c5e746cf575f86b0cf0e500487f7aa">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_selection_1af05caa366cd71b7dc9e10bf8f7ab0074">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_purchase_order_materials_selection_1aeab7ab5f49edf33b4e0ee8726bd9bcad">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a979428593ea34009a5ba17e72223d4e2">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_delivery_note_1a42a07e4eb12fdc36e2ef02c85661b430">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_docs_list_1ab497e3a629ea56e701d81c3db8d18c27">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_sales_order_1a74af3977b2b6b6634d1d47d12896e123">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_box_management_1a3e0a372699fd11e6913b7fca938c9af9">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management_1af33085a47f35f09c57ef0e16728e43ed">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a4d1d9ebc16764613be7af849963cf313">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aa130202d283caf79f3854ebc27965af5">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management_1ac2899ae37c7c5d7d506fe4fea49c3708">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ad9ab8964536ed7add5e5530fb13cc46b">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_h_f_1a99a96049632b1f93b4afdfedf4917db3">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_purchase_order_materials_1ac52b0ff3382dc2c054b99cd3f56cdd42">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a2394e9e649ae35cc0c387860f8c5e379">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management_1ae3f835c6866a83311a076ad8012b00f6">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_packing_list_materials_1adf07fce9c4c2e1ee477c6a17acc1ce28">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_bcn_1ac37c646f635c9c25bc7e25ff2a673757">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ad950fadaf3f4809043f8e78218363e21">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_price_list_management_1ae9367a5961fdcf552142c7b60c191edf">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management_1a292d0e1b64b0997cc5e1ef1dd224e30e">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list__v2_1aa5f2989eced1c2ea7488335abc0e3218">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_h_w_1a2e0c7d2bc22170070316703da119f0a1">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_m_t_1a76a287df5f365ebe75a3cd932fb94ca4">bbiExportCsv_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_e_y_1a1ff58c61649a31e913c96b1eff8ba167">bbiExportCsv_ItemClick</reimplementedby>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="620" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="620" bodyend="645"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void HKSupply.Forms.RibbonFormBase.BbiSaveLayout_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>BbiSaveLayout_ItemClick</name>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a0081b5bd9372bf7d3048f408f1670376">BbiSaveLayout_ItemClick</reimplementedby>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="650" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="650" bodyend="653"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void HKSupply.Forms.RibbonFormBase.LayoutButton_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>LayoutButton_ItemClick</name>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3e33bc3261e99113b5afaf9115120627">LayoutButton_ItemClick</reimplementedby>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="655" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="655" bodyend="658"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void HKSupply.Forms.RibbonFormBase.BarButtonItemReport_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>BarButtonItemReport_ItemClick</name>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice_1a3572ffc2114fc9004f7d074f5bf37e6e">BarButtonItemReport_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_delivery_note_1ad2bc10d21deebf3e9308a3f69479f6a6">BarButtonItemReport_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a6d4eae0844f1635706cc7edab3086186">BarButtonItemReport_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_purchase_order_materials_1aa529970106218e306f2ffd0ff802f47c">BarButtonItemReport_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ad8c7e2de9c27570b03f2a0e57fd7521b">BarButtonItemReport_ItemClick</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list__v2_1a1e801085ddec17e296631578f395dec4">BarButtonItemReport_ItemClick</reimplementedby>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="699" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="699" bodyend="702"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1b6f5a66672e1d31c0833525b3c3f342" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.ConfigureActions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="174" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="174" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad0b4b33900439bded4ea4ed66c81459d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.ConfigureByState</definition>
+        <argsstring>(ActionsStates state)</argsstring>
+        <name>ConfigureByState</name>
+        <param>
+          <type>ActionsStates</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="186" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="186" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a97df6cc1657b61f0c20e145828f0274f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.ConfigureRibbonEvents</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="225" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="225" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a9f92892bfbe71b2218b29048b535d883" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.RibbonControl_Paint</definition>
+        <argsstring>(object sender, PaintEventArgs e)</argsstring>
+        <name>RibbonControl_Paint</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>PaintEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Draw Etnia Logo on right side of the ribbon </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="264" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="264" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1abdf73e00e3b23a9621ddff96dd49eff5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.RibbonFormBase_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>RibbonFormBase_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="306" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="306" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a7bef19f003339761ae0833d681ae388c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.RibbonFormBase_FormClosing</definition>
+        <argsstring>(object sender, FormClosingEventArgs e)</argsstring>
+        <name>RibbonFormBase_FormClosing</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>FormClosingEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="318" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="318" bodyend="342"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a093b558d0a0da68aff6178539b682669" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.ConfigureRibbonStyles</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonStyles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="349" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="349" bodyend="361"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af7ad076b6d5c058cafa3be7ad22ea730" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.ConfigureStatusBar</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureStatusBar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="363" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="363" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab20724a4ae318b4c8cdc0e5a53c78716" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.SaveWorkspace</definition>
+        <argsstring>(string name, string base64stringLayout)</argsstring>
+        <name>SaveWorkspace</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>base64stringLayout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="391" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="391" bodyend="414"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad5d5e7bb48eba38d88a2e2894ff0ed9b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.UpdateWorkspace</definition>
+        <argsstring>(string name, string base64stringLayout)</argsstring>
+        <name>UpdateWorkspace</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>base64stringLayout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="416" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="416" bodyend="437"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a25811af7dd7c62f9262664700ee40389" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.LoadWorkspacesLayouts</definition>
+        <argsstring>()</argsstring>
+        <name>LoadWorkspacesLayouts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="439" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="439" bodyend="464"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a05ccc4575233d5645ee007293e78b7a7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.GetFormReports</definition>
+        <argsstring>(int idFunctionality)</argsstring>
+        <name>GetFormReports</name>
+        <param>
+          <type>int</type>
+          <declname>idFunctionality</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="466" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="466" bodyend="499"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac9175d0081b73d029f8981daa567b6d6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.bbiClose_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiClose_ItemClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="558" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="558" bodyend="582"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad1c9d525a8910275ea52ff17f5ed4323" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.BwmiLayouts_Popup</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BwmiLayouts_Popup</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="660" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="660" bodyend="664"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a8ad7cc8391a45b2a36178287b3ff7f66" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.WorkspaceManager_WorkspaceCollectionChanged</definition>
+        <argsstring>(object sender, WorkspaceCollectionChangedEventArgs ea)</argsstring>
+        <name>WorkspaceManager_WorkspaceCollectionChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>WorkspaceCollectionChangedEventArgs</type>
+          <declname>ea</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="666" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="666" bodyend="694"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a12479ca0b0ae985e51bcdc8332b814e7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.RibbonFormBase.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="29" bodyend="285"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad952c7d8376a8e6d8cc61c75be3f03fd" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool HKSupply.Forms.RibbonFormBase.canCloseFunc</definition>
+        <argsstring>(DialogResult parameter)</argsstring>
+        <name>canCloseFunc</name>
+        <param>
+          <type>DialogResult</type>
+          <declname>parameter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="344" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="344" bodyend="347"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Forms.RibbonFormBase.ProcessCmdKey</definition>
+        <argsstring>(ref Message msg, Keys keyData)</argsstring>
+        <name>ProcessCmdKey</name>
+        <param>
+          <type>ref Message</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>Keys</type>
+          <declname>keyData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.cs" line="708" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="708" bodyend="742"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a550191c92b26d28e11d1f68f66f57d30" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.RibbonFormBase.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/RibbonFormBase.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1437">
+        <label>HKSupply.Forms.Master.CustomerPriceListManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_price_list_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1440">
+        <label>HKSupply.Forms.Master.FunctionalityRoleManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1474">
+        <label>HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1468">
+        <label>HKSupply.Forms.Supply.PurchaseOrderSelection</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_selection"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1447">
+        <label>HKSupply.Forms.Master.ItemsLevelsManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1466">
+        <label>HKSupply.Forms.Supply.PackingListBcn</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_bcn"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1475">
+        <label>HKSupply.Forms.Supply.SupplyMaterials.ReceiptAndQuality</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_receipt_and_quality"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1451">
+        <label>HKSupply.Forms.Master.RoleManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1443">
+        <label>HKSupply.Forms.Master.ItemManagementEY</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_e_y"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1430">
+        <label>HKSupply.Forms.RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1431" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1473">
+        <label>HKSupply.Forms.Supply.SupplyMaterials.PurchaseOrderMaterialsSelection</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_purchase_order_materials_selection"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1445">
+        <label>HKSupply.Forms.Master.ItemManagementHW</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_h_w"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1452">
+        <label>HKSupply.Forms.Master.StatusManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1444">
+        <label>HKSupply.Forms.Master.ItemManagementHF</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_h_f"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1431">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1455">
+        <label>HKSupply.Forms.Master.SupplierManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1470">
+        <label>HKSupply.Forms.Supply.SalesOrder</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_sales_order"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1446">
+        <label>HKSupply.Forms.Master.ItemManagementMT</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_m_t"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1458">
+        <label>HKSupply.Forms.Reports.BOMReport</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1462">
+        <label>HKSupply.Forms.Supply.DocsList</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_docs_list"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1464">
+        <label>HKSupply.Forms.Supply.PackingList</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1439">
+        <label>HKSupply.Forms.Master.FunctionalityManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1461">
+        <label>HKSupply.Forms.Supply.DeliveryNote</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_delivery_note"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1471">
+        <label>HKSupply.Forms.Supply.SupplyMaterials.PackingListMaterials</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_packing_list_materials"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1460">
+        <label>HKSupply.Forms.Supply.Dashboard.DashboardQPTest</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1438">
+        <label>HKSupply.Forms.Master.FamiliesHkManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_families_hk_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1436">
+        <label>HKSupply.Forms.Master.CustomerManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1456">
+        <label>HKSupply.Forms.Master.SupplierPriceListManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1465">
+        <label>HKSupply.Forms.Supply.PackingList_v2</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list__v2"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1450">
+        <label>HKSupply.Forms.Master.PrototypeManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1448">
+        <label>HKSupply.Forms.Master.MyCompanyManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1457">
+        <label>HKSupply.Forms.Master.UserManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1432">
+        <label>HKSupply.Forms.Master.BomBreakdownManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1435">
+        <label>HKSupply.Forms.Master.CurrenciesEchangeRatesManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1454">
+        <label>HKSupply.Forms.Master.SupplierFactoryCoeffManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_factory_coeff_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1433">
+        <label>HKSupply.Forms.Master.BomManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1469">
+        <label>HKSupply.Forms.Supply.QuotationProposal</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1467">
+        <label>HKSupply.Forms.Supply.PurchaseOrder</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1434">
+        <label>HKSupply.Forms.Master.BoxManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_box_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1449">
+        <label>HKSupply.Forms.Master.PaymentTermsManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1441">
+        <label>HKSupply.Forms.Master.IncotermsManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_incoterms_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1442">
+        <label>HKSupply.Forms.Master.ItemDocs</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1453">
+        <label>HKSupply.Forms.Master.StoreManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1459">
+        <label>HKSupply.Forms.Supply.Dashboard.DashboardQP</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1472">
+        <label>HKSupply.Forms.Supply.SupplyMaterials.PurchaseOrderMaterials</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_purchase_order_materials"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1463">
+        <label>HKSupply.Forms.Supply.Invoice</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_invoice"/>
+        <childnode refid="1430" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1476">
+        <label>HKSupply.Forms.RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1477" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1478" relation="usage">
+          <edgelabel>bbiCancel</edgelabel>
+          <edgelabel>ribbonStatusBar</edgelabel>
+          <edgelabel>bbiPrintPreview</edgelabel>
+          <edgelabel>bbiSave</edgelabel>
+          <edgelabel>bbiNew</edgelabel>
+          <edgelabel>bbiEdit</edgelabel>
+          <edgelabel>ribbonControl</edgelabel>
+          <edgelabel>ribbonPageGroup1</edgelabel>
+          <edgelabel>ribbonPage1</edgelabel>
+          <edgelabel>ribbonPageGroup2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="1477">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1478">
+        <label>XtraBars</label>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/RibbonFormBase.cs" line="16" column="1" bodyfile="HKSupply/Forms/RibbonFormBase.cs" bodystart="15" bodyend="744"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4cb9efd50965b77dcc397e3bf25f9130" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>_currentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>ActionsStates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>AddRestoreLayoutItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f" prot="public" virt="virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>BarButtonItemReport_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae45c9805db9cdf8c3a0f7df7a3bfb1d1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>barLinkContainerItemReports</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6731159e60cdc26912cba901863d72ac" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>barStaticItemAppVersion</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a24126f5808b15992a0415ac4dad023e1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>barStaticItemDb</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acd38425d605d9cbbfc68847c030fcaaa" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>barStaticItemDbServer</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aabd906e1acb7e1fb25782bb32271272f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>barStaticItemUser</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>bbiCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318" prot="public" virt="virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0ca65d3a9c5dd7598177d1aba086a9d2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>bbiClose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac9175d0081b73d029f8981daa567b6d6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>bbiClose_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>bbiEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3" prot="public" virt="virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a87d597644937e5b15f866bd40e4415f9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>bbiExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a" prot="public" virt="virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>bbiExportCsv_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a475b0213eb6cb4069f13ddd82fd1fd31" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>bbiExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811" prot="public" virt="virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>bbiExportExcel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>bbiNew</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a" prot="public" virt="virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>bbiPrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61" prot="public" virt="virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>bbiPrintPreview_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>bbiSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9" prot="public" virt="virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17e2ce7a4541ce5cc643c99854f80f1d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>bbiSaveLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58" prot="public" virt="virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>BbiSaveLayout_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a76eee6339ceff918c645c6668e414c5b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>bsiRestoreLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac478b96ca2d6cf4e422286e6439eba99" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>bwmiLayouts</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad1c9d525a8910275ea52ff17f5ed4323" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>BwmiLayouts_Popup</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad952c7d8376a8e6d8cc61c75be3f03fd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>canCloseFunc</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a5011040f031c98ad2fb099876abf36d6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1b6f5a66672e1d31c0833525b3c3f342" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>ConfigureActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad0b4b33900439bded4ea4ed66c81459d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>ConfigureByState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>ConfigureLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>ConfigurePrintExportOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a97df6cc1657b61f0c20e145828f0274f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>ConfigureRibbonEvents</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a093b558d0a0da68aff6178539b682669" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>ConfigureRibbonStyles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af7ad076b6d5c058cafa3be7ad22ea730" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>ConfigureStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>CurrentLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>CurrentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a550191c92b26d28e11d1f68f66f57d30" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>EnableExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>EnableExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>EnableLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>EnablePrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>ExportCsvFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>ExportExcelFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a05ccc4575233d5645ee007293e78b7a7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>GetFormReports</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a12479ca0b0ae985e51bcdc8332b814e7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4bafa0581c3296e6bd90abc93c61c303" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>isLoadingWorkspace</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d" prot="public" virt="virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>LayoutButton_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a25811af7dd7c62f9262664700ee40389" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>LoadWorkspacesLayouts</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>Modify</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>New</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>ProcessCmdKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>Read</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>RestoreInitState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>ribbonControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a9f92892bfbe71b2218b29048b535d883" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>RibbonControl_Paint</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>RibbonFormBase</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a7bef19f003339761ae0833d681ae388c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>RibbonFormBase_FormClosing</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1abdf73e00e3b23a9621ddff96dd49eff5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>RibbonFormBase_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>ribbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>ribbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>ribbonPageGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a89751a171c9864970eef08aa63893263" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>ribbonPageGroup3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aafae103d563742ed38952e93e8057a3d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>ribbonPageGroupLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa6bff23b7369092e5d7761f39c4e1661" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>ribbonPageGroupReports</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>ribbonStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab20724a4ae318b4c8cdc0e5a53c78716" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>SaveWorkspace</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>SetActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>SetRibbonText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad5d5e7bb48eba38d88a2e2894ff0ed9b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>UpdateWorkspace</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab01600144050813f55e4e4cac006fb28" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>workspaceManager1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a8ad7cc8391a45b2a36178287b3ff7f66" prot="private" virt="non-virtual"><scope>HKSupply::Forms::RibbonFormBase</scope><name>WorkspaceManager_WorkspaceCollectionChanged</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

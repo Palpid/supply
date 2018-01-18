@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_7ad30724f264550af663426dcddcff2f" kind="dir">
+    <compoundname>HKSupply/Classes</compoundname>
+    <innerfile refid="_b1_report_8cs">B1Report.cs</innerfile>
+    <innerfile refid="_item_doc_warning_8cs">ItemDocWarning.cs</innerfile>
+    <innerfile refid="_plain_bom_aux_8cs">PlainBomAux.cs</innerfile>
+    <innerfile refid="_p_o_selection_8cs">POSelection.cs</innerfile>
+    <innerfile refid="_row_info_8cs">RowInfo.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Classes/"/>
+  </compounddef>
+</doxygen>

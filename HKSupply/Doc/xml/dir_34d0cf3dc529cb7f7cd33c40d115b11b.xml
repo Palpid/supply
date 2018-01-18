@@ -1,15 +1,50 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="dir_34d0cf3dc529cb7f7cd33c40d115b11b" kind="dir">
     <compoundname>HKSupply/Services/Implementations</compoundname>
+    <innerfile refid="_e_f_bom_breakdown_8cs">EFBomBreakdown.cs</innerfile>
+    <innerfile refid="_e_f_box_8cs">EFBox.cs</innerfile>
+    <innerfile refid="_e_f_currency_8cs">EFCurrency.cs</innerfile>
     <innerfile refid="_e_f_customer_8cs">EFCustomer.cs</innerfile>
+    <innerfile refid="_e_f_customer_price_list_8cs">EFCustomerPriceList.cs</innerfile>
+    <innerfile refid="_e_f_delivery_terms_8cs">EFDeliveryTerms.cs</innerfile>
+    <innerfile refid="_e_f_doc_head_attach_file_8cs">EFDocHeadAttachFile.cs</innerfile>
+    <innerfile refid="_e_f_doc_type_8cs">EFDocType.cs</innerfile>
+    <innerfile refid="_e_f_etn_color_8cs">EFEtnColor.cs</innerfile>
+    <innerfile refid="_e_f_exchange_rate_8cs">EFExchangeRate.cs</innerfile>
+    <innerfile refid="_e_f_family_h_k_8cs">EFFamilyHK.cs</innerfile>
     <innerfile refid="_e_f_functionality_8cs">EFFunctionality.cs</innerfile>
+    <innerfile refid="_e_f_functionality_report_8cs">EFFunctionalityReport.cs</innerfile>
     <innerfile refid="_e_f_functionality_role_8cs">EFFunctionalityRole.cs</innerfile>
-    <innerfile refid="_e_f_item_8cs">EFItem.cs</innerfile>
+    <innerfile refid="_e_f_hw_type_8cs">EFHwType.cs</innerfile>
+    <innerfile refid="_e_f_incoterm_8cs">EFIncoterm.cs</innerfile>
+    <innerfile refid="_e_f_item_bcn_8cs">EFItemBcn.cs</innerfile>
+    <innerfile refid="_e_f_item_bom_8cs">EFItemBom.cs</innerfile>
+    <innerfile refid="_e_f_item_doc_8cs">EFItemDoc.cs</innerfile>
+    <innerfile refid="_e_f_item_ey_8cs">EFItemEy.cs</innerfile>
+    <innerfile refid="_e_f_item_hf_8cs">EFItemHf.cs</innerfile>
+    <innerfile refid="_e_f_item_hw_8cs">EFItemHw.cs</innerfile>
+    <innerfile refid="_e_f_item_mt_8cs">EFItemMt.cs</innerfile>
+    <innerfile refid="_e_f_layout_8cs">EFLayout.cs</innerfile>
+    <innerfile refid="_e_f_material_8cs">EFMaterial.cs</innerfile>
+    <innerfile refid="_e_f_mat_type_8cs">EFMatType.cs</innerfile>
+    <innerfile refid="_e_f_model_8cs">EFModel.cs</innerfile>
+    <innerfile refid="_e_f_my_company_8cs">EFMyCompany.cs</innerfile>
+    <innerfile refid="_e_f_payment_terms_8cs">EFPaymentTerms.cs</innerfile>
+    <innerfile refid="_e_f_prototype_8cs">EFPrototype.cs</innerfile>
+    <innerfile refid="_e_f_prototype_doc_8cs">EFPrototypeDoc.cs</innerfile>
     <innerfile refid="_e_f_role_8cs">EFRole.cs</innerfile>
+    <innerfile refid="_e_f_status_cial_8cs">EFStatusCial.cs</innerfile>
+    <innerfile refid="_e_f_status_prod_8cs">EFStatusProd.cs</innerfile>
     <innerfile refid="_e_f_store_8cs">EFStore.cs</innerfile>
     <innerfile refid="_e_f_supplier_8cs">EFSupplier.cs</innerfile>
+    <innerfile refid="_e_f_supplier_factory_coeff_8cs">EFSupplierFactoryCoeff.cs</innerfile>
+    <innerfile refid="_e_f_supplier_price_list_8cs">EFSupplierPriceList.cs</innerfile>
+    <innerfile refid="_e_f_supply_dashboard_8cs">EFSupplyDashboard.cs</innerfile>
+    <innerfile refid="_e_f_supply_docs_8cs">EFSupplyDocs.cs</innerfile>
+    <innerfile refid="_e_f_unit_8cs">EFUnit.cs</innerfile>
     <innerfile refid="_e_f_user_8cs">EFUser.cs</innerfile>
+    <innerfile refid="_e_f_user_attr_description_8cs">EFUserAttrDescription.cs</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

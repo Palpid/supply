@@ -1,18 +1,24 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="namespace_h_k_supply_1_1_forms" kind="namespace" language="C#">
     <compoundname>HKSupply::Forms</compoundname>
     <innerclass refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors" prot="package">HKSupply::Forms::CustomProfessionalColors</innerclass>
     <innerclass refid="class_h_k_supply_1_1_forms_1_1_dynamic_filters" prot="public">HKSupply::Forms::DynamicFilters</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_form1" prot="public">HKSupply::Forms::Form1</innerclass>
     <innerclass refid="interface_h_k_supply_1_1_forms_1_1_i_actions_stack_view" prot="public">HKSupply::Forms::IActionsStackView</innerclass>
     <innerclass refid="class_h_k_supply_1_1_forms_1_1_login" prot="public">HKSupply::Forms::Login</innerclass>
     <innerclass refid="class_h_k_supply_1_1_forms_1_1_main" prot="public">HKSupply::Forms::Main</innerclass>
     <innerclass refid="class_h_k_supply_1_1_forms_1_1_model_linq_filtering" prot="public">HKSupply::Forms::ModelLinqFiltering</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer" prot="public">HKSupply::Forms::PDFViewer</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" prot="public">HKSupply::Forms::RibbonFormBase</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_wait_form1" prot="public">HKSupply::Forms::WaitForm1</innerclass>
     <innernamespace refid="namespace_h_k_supply_1_1_forms_1_1_master">HKSupply::Forms::Master</innernamespace>
+    <innernamespace refid="namespace_h_k_supply_1_1_forms_1_1_reports">HKSupply::Forms::Reports</innernamespace>
+    <innernamespace refid="namespace_h_k_supply_1_1_forms_1_1_supply">HKSupply::Forms::Supply</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="HKSupply/Forms/DynamicFilters.cs" line="16" column="1"/>
+    <location file="HKSupply/Forms/DynamicFilters.cs" line="17" column="1"/>
   </compounddef>
 </doxygen>

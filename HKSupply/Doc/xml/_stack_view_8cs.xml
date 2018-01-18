@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="_stack_view_8cs" kind="file" language="C#">
     <compoundname>StackView.cs</compoundname>
     <innerclass refid="class_custom_controls_1_1_stack_view" prot="public">CustomControls::StackView</innerclass>
@@ -656,7 +656,7 @@
 <codeline lineno="666"><highlight class="normal"></highlight></codeline>
 <codeline lineno="667"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>StackRenderer()</highlight></codeline>
 <codeline lineno="668"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="669"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>titleBarGripBmp<sp/>=<sp/><ref refid="class_custom_controls_1_1_stack_view" kindref="compound">StackView</ref>.DeserializeFromBase64Bmp(titleBarGripEnc);</highlight></codeline>
+<codeline lineno="669"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>titleBarGripBmp<sp/>=<sp/>StackView.DeserializeFromBase64Bmp(titleBarGripEnc);</highlight></codeline>
 <codeline lineno="670"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="671"><highlight class="normal"></highlight></codeline>
 <codeline lineno="672"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>StackRenderer()</highlight></codeline>
@@ -666,7 +666,7 @@
 <codeline lineno="676"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>StackRenderer(ProfessionalColorTable<sp/>professionalColorTable)</highlight></codeline>
 <codeline lineno="677"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>base(professionalColorTable)</highlight></codeline>
 <codeline lineno="678"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="679"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>titleBarGripBmp<sp/>=<sp/><ref refid="class_custom_controls_1_1_stack_view" kindref="compound">StackView</ref>.DeserializeFromBase64Bmp(titleBarGripEnc);</highlight></codeline>
+<codeline lineno="679"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>titleBarGripBmp<sp/>=<sp/>StackView.DeserializeFromBase64Bmp(titleBarGripEnc);</highlight></codeline>
 <codeline lineno="680"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="681"><highlight class="normal"></highlight></codeline>
 <codeline lineno="682"><highlight class="normal"></highlight></codeline>

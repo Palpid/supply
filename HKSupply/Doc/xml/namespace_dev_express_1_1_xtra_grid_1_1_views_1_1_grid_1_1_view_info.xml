@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_dev_express_1_1_xtra_grid_1_1_views_1_1_grid_1_1_view_info" kind="namespace" language="Unknown">
+    <compoundname>DevExpress::XtraGrid::Views::Grid::ViewInfo</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Forms/Master/BomManagement.cs" line="16" column="1"/>
+  </compounddef>
+</doxygen>

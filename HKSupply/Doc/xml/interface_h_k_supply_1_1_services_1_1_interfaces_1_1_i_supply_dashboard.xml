@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_dashboard" kind="interface" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Interfaces::ISupplyDashboard</compoundname>
+    <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_dashboard" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFSupplyDashboard</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_dashboard_1ab1f89fa3557f732b5bfd46584777e553" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure" kindref="compound">AuxDashboardQPStoredProcedure</ref> &gt;</type>
+        <definition>List&lt;AuxDashboardQPStoredProcedure&gt; HKSupply.Services.Interfaces.ISupplyDashboard.GetDashboardQP</definition>
+        <argsstring>(string queryType, string factories, string weeks, string itemGroup)</argsstring>
+        <name>GetDashboardQP</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_dashboard_1a6a05abcfe3eeec185c3069d09d3f242a">GetDashboardQP</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>queryType</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>factories</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>weeks</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>itemGroup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/ISupplyDashboard.cs" line="12" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="850">
+        <label>HKSupply.Services.Implementations.EFSupplyDashboard</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_dashboard"/>
+        <childnode refid="849" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="849">
+        <label>HKSupply.Services.Interfaces.ISupplyDashboard</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_dashboard"/>
+      </node>
+    </inheritancegraph>
+    <location file="HKSupply/Services/Interfaces/ISupplyDashboard.cs" line="11" column="1" bodyfile="HKSupply/Services/Interfaces/ISupplyDashboard.cs" bodystart="10" bodyend="13"/>
+    <listofallmembers>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_dashboard_1ab1f89fa3557f732b5bfd46584777e553" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ISupplyDashboard</scope><name>GetDashboardQP</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

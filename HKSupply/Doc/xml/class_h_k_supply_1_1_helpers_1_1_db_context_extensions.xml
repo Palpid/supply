@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_helpers_1_1_db_context_extensions" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Helpers::DbContextExtensions</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_db_context_extensions_1a773bdce7634b9ac1ec89d8f4f7f15709" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DataTable</type>
+        <definition>static DataTable HKSupply.Helpers.DbContextExtensions.DataTable</definition>
+        <argsstring>(this DbContext context, string sqlQuery)</argsstring>
+        <name>DataTable</name>
+        <param>
+          <type>this DbContext</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>sqlQuery</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DbContextExtensions.cs" line="14" column="1" bodyfile="HKSupply/Helpers/DbContextExtensions.cs" bodystart="14" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Helpers/DbContextExtensions.cs" line="13" column="1" bodyfile="HKSupply/Helpers/DbContextExtensions.cs" bodystart="12" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_db_context_extensions_1a773bdce7634b9ac1ec89d8f4f7f15709" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::DbContextExtensions</scope><name>DataTable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

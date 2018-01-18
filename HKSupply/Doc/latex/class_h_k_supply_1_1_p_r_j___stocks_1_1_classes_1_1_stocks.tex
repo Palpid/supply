@@ -1,0 +1,364 @@
+\hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks}{}\section{H\+K\+Supply.\+P\+R\+J\+\_\+\+Stocks.\+Classes.\+Stocks Class Reference}
+\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks}\index{H\+K\+Supply.\+P\+R\+J\+\_\+\+Stocks.\+Classes.\+Stocks@{H\+K\+Supply.\+P\+R\+J\+\_\+\+Stocks.\+Classes.\+Stocks}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_det_asg}{Det\+Asg}}
+\item 
+class \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_det_lot}{Det\+Lot}}
+\item 
+class \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item}{Item}}
+\begin{DoxyCompactList}\small\item\em Guarda les dades del stock de un item i els seus lots. Es crea sempre un lot N\+U\+LL per a les qtt que no tenen lot. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_bcn}{Item\+Bcn}}
+\item 
+class \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_owner}{Owner}}
+\item 
+class \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item}{Stock\+Item}}
+\item 
+class \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_move}{Stock\+Move}}
+\item 
+class \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a23e4731e2f60498707439dbbeca97aee}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a23e4731e2f60498707439dbbeca97aee}} 
+enum {\bfseries Stock\+Movements\+Type} \+: int \{ \newline
+{\bfseries Undefined} = 0, 
+{\bfseries Entry} = 1, 
+{\bfseries Exit} = 2, 
+{\bfseries Adjustment} = 3, 
+\newline
+{\bfseries Reservation} = 4, 
+{\bfseries Release} = 5, 
+{\bfseries Transit} = 6, 
+{\bfseries Movement} = 7
+ \}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a593da3bed551ce1d6a581927a569c1a8}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a593da3bed551ce1d6a581927a569c1a8}} 
+enum {\bfseries Stock\+Ware\+Houses\+Type} \+: int \{ \newline
+{\bfseries Undefined} = 0, 
+{\bfseries On\+Hand} = 1, 
+{\bfseries Assigned} = 2, 
+{\bfseries Deliveries} = 3, 
+\newline
+{\bfseries Transit} = 4, 
+{\bfseries Rejected} = 5
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_ad5efe212971f8e2035dd7ba2ca431e15}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_ad5efe212971f8e2035dd7ba2ca431e15}} 
+void {\bfseries Add\+Item\+Bcn} (\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_bcn}{Item\+Bcn}} itm\+Bcn)
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a353faac2877a1de177ef3c338e27de2f}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a353faac2877a1de177ef3c338e27de2f}} 
+bool {\bfseries Item\+Bcn\+Exists} (string id\+Item\+Bcn)
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a2d4dd80c6d8f430b38f840fb0118b24a}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a2d4dd80c6d8f430b38f840fb0118b24a}} 
+void {\bfseries Add\+Owner} (\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_owner}{Owner}} Own)
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a8fc20b842605474fbf9949c550951049}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a8fc20b842605474fbf9949c550951049}} 
+void {\bfseries Add\+Ware\+House} (\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}} Ware)
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a874f3df18d2530aafa61367e24ec9966}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a874f3df18d2530aafa61367e24ec9966}} 
+bool {\bfseries Ware\+House\+Exists} (string id\+Ware, int id\+Type\+Ware)
+\item 
+\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item}{Stock\+Item}} \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_ae482ad0dc6d9a62c330f1e929a49666b}{Get\+Stock\+Item}} (\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}} ware, string id\+Item)
+\begin{DoxyCompactList}\small\item\em Retorna el item amb la informació del stock en el magatzme \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item}{Stock\+Item}} \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a9f91bf0312629b1ea7fc09f56a5e442c}{Get\+Stock\+Item\+Orig}} (\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}} ware, string id\+Item)
+\begin{DoxyCompactList}\small\item\em Retorna el valor del item del stock \char`\"{}congelat\char`\"{} al carregar. Per a detectar canvis en S\+T\+O\+CK externs (concurencia) en el proces de guardar \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a67e7ea646fc0436283d053902a4eccb2}{Carga\+Sock\+Item}} (\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item}{Stock\+Item}} S\+T\+Ki)
+\begin{DoxyCompactList}\small\item\em Afegim un S\+T\+Kitem a la llista S\+T\+O\+KS. Usat en la càrrega only. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_ac9f4ca2a80f2c759ddc67d127d65c974}{Carga\+Lot\+Item}} (\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item}{Stock\+Item}} S\+T\+Ki)
+\begin{DoxyCompactList}\small\item\em Afegim un S\+T\+Kitem a la llista S\+T\+O\+KS. Usat en la càrrega only. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a8d5d9d499ae9b864319d1abf46ac7705}{Add\+Sock\+Item}} (Stock\+Movements\+Type Move\+Type, \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}} ware, decimal Qtt, string id\+Item, string id\+Lot=\char`\"{}\char`\"{}, string id\+Owner=\char`\"{}\char`\"{}, string Remarks=\char`\"{}\char`\"{}, List$<$ string $>$ Lstid\+Doc=null, string Id\+User=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Aumenta o resta la Q\+TT asginada del iditem/lot al magatzem. Si el Lot (dins item) es null o buit \char`\"{}\char`\"{} s\textquotesingle{}ignora el lot. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a7ef7e411726bffb2660b88c9d00df4d8}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a7ef7e411726bffb2660b88c9d00df4d8}} 
+void {\bfseries Move\+Sock\+Item} (Stock\+Movements\+Type Move\+Type, \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}} Ware\+O\+R\+IG, \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}} Ware\+D\+E\+ST, decimal Qtt, string id\+Item, string id\+Owner, string idlot, string remarks=\char`\"{}\char`\"{}, List$<$ string $>$ Lstid\+Doc=null, string Id\+User=\char`\"{}\char`\"{})
+\item 
+decimal \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_aee55b8b123dc0495548917a36ebb35fa}{Free\+Sock\+Item}} (\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}} Ware\+O\+R\+IG, string id\+Item, string id\+Owner, decimal Qtt, string remarks=\char`\"{}\char`\"{}, List$<$ string $>$ Lstid\+Doc=null, string Id\+User=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Libera la reserva de stock (quita el stock owner) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_aa420a8612b2de086fdf1529a709d9b5f}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_aa420a8612b2de086fdf1529a709d9b5f}} 
+decimal {\bfseries Free\+Sock\+Item} (\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}} Ware\+O\+R\+IG, string id\+Item, string id\+Owner, string remarks=\char`\"{}\char`\"{}, List$<$ string $>$ Lstid\+Doc=null, string Id\+User=\char`\"{}\char`\"{})
+\item 
+decimal \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a2055a94e7ade97891e36fd0a8c930378}{Free\+Lot\+Item}} (\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}} Ware\+O\+R\+IG, string id\+Item, string idlot, decimal Qtt, string remarks=\char`\"{}\char`\"{}, List$<$ string $>$ Lstid\+Doc=null, string Id\+User=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Libera Q\+TT del lote del stock (quita el lote) \end{DoxyCompactList}\item 
+decimal \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a419182d036c725d60949c07e201f5825}{Free\+Lot\+Item}} (\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}} Ware\+O\+R\+IG, string id\+Item, string idlot, string remarks=\char`\"{}\char`\"{}, List$<$ string $>$ Lstid\+Doc=null, string Id\+User=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Libera T\+O\+DO del lote del stock (quita el lote) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a4049cf0a6e6e3ef5f7f9ba5915babaec}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a4049cf0a6e6e3ef5f7f9ba5915babaec}} 
+decimal {\bfseries Adjust\+Sock\+Item} (\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}} Ware\+O\+R\+IG, string id\+Item, decimal Qtt, string remarks=\char`\"{}\char`\"{}, List$<$ string $>$ Lstid\+Doc=null, string Id\+User=\char`\"{}\char`\"{})
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a3442f25c6cd2fcc0639ffbc3b1e5cb33}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a3442f25c6cd2fcc0639ffbc3b1e5cb33}} 
+decimal {\bfseries Asgn\+Sock\+Item} (\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}} Ware\+O\+R\+IG, string id\+Item, decimal Qtt, string id\+Owner, string remarks=\char`\"{}\char`\"{}, List$<$ string $>$ Lstid\+Doc=null, string Id\+User=\char`\"{}\char`\"{})
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a95ea783773bc81bafa55c803ff1e14fa}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a95ea783773bc81bafa55c803ff1e14fa}} 
+decimal {\bfseries Asgn\+Lot\+Item} (\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}} Ware\+O\+R\+IG, string id\+Item, decimal Qtt, string id\+Lot, string remarks=\char`\"{}\char`\"{}, List$<$ string $>$ Lstid\+Doc=null, string Id\+User=\char`\"{}\char`\"{})
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_ae118fdaa3b1abf91c2a6ba59be636869}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_ae118fdaa3b1abf91c2a6ba59be636869}} 
+decimal {\bfseries Adjust\+Item\+Assing} (\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}} Ware\+O\+R\+IG, string id\+Item, decimal Qtt, string id\+Owner, string remarks=\char`\"{}\char`\"{}, List$<$ string $>$ Lstid\+Doc=null, string Id\+User=\char`\"{}\char`\"{})
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a01519953043fea14eccef7449ec8f584}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a01519953043fea14eccef7449ec8f584}} 
+void {\bfseries Set\+Stock\+Base} ()
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_ad57faa95276e30fae2edf12fdcab29e5}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_ad57faa95276e30fae2edf12fdcab29e5}} 
+List$<$ \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item}{Stock\+Item}} $>$ {\bfseries Lst\+Stk\+Base} ()
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a9be7b6fe1ff5a2e61cba109cf23315e4}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a9be7b6fe1ff5a2e61cba109cf23315e4}} 
+\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}} {\bfseries Get\+Ware\+House} (string Ware\+House\+Descr)
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a9540d96f6fcd4d11994bf48e850d2bf7}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a9540d96f6fcd4d11994bf48e850d2bf7}} 
+\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}} {\bfseries Get\+Ware\+House} (string id\+Ware\+House, Stock\+Ware\+Houses\+Type Ware\+T\+Ype)
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a7e2a15814fded08f3adbae46bce216f8}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a7e2a15814fded08f3adbae46bce216f8}} 
+\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}} {\bfseries Get\+Ware\+House} (string id\+Ware\+House, int id\+Ware\+T\+Ype)
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a7c76db3b61206d0bdbbfcfc2dd8e9b20}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a7c76db3b61206d0bdbbfcfc2dd8e9b20}} 
+List$<$ \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}} $>$ {\bfseries Get\+Lst\+Warehouses} ()
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_afe9a5e035258b60e162d4208b3fc1f42}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_afe9a5e035258b60e162d4208b3fc1f42}} 
+List$<$ string $>$ {\bfseries Get\+Lst\+Warehouse\+Names} ()
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a817dc8802815997b0329d984d2e6d5aa}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a817dc8802815997b0329d984d2e6d5aa}} 
+List$<$ string $>$ {\bfseries Get\+Lst\+Warehouses\+Types} ()
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_afd0e6aa8f5c5d9ddb84aa9ebaf9eaccb}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_afd0e6aa8f5c5d9ddb84aa9ebaf9eaccb}} 
+List$<$ string $>$ {\bfseries Get\+Lst\+Owner\+Names} ()
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a340fc1cbe2e52c5457081097c2e59d02}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a340fc1cbe2e52c5457081097c2e59d02}} 
+List$<$ string $>$ {\bfseries Get\+Lst\+Owner\+Ids} ()
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_ac4f18be5d5ade84f7eb9855c29088209}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_ac4f18be5d5ade84f7eb9855c29088209}} 
+List$<$ \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_bcn}{Item\+Bcn}} $>$ {\bfseries Lst\+Items\+Bcn}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_aa69093f2c547ae4c65a4e3c207211826}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_aa69093f2c547ae4c65a4e3c207211826}} 
+List$<$ \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_owner}{Owner}} $>$ {\bfseries Lst\+Owners}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a59efd5b3dc1a1573467d7581955c4b36}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a59efd5b3dc1a1573467d7581955c4b36}} 
+List$<$ \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}} $>$ {\bfseries Lst\+Warehouses}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a72ba68daf0e4d0baa7bd5b356788bd97}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a72ba68daf0e4d0baa7bd5b356788bd97}} 
+List$<$ \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_move}{Stock\+Move}} $>$ {\bfseries Lst\+Stock\+Move}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a08cfecbcb1e702a3095b311a100c74f4}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a08cfecbcb1e702a3095b311a100c74f4}} 
+List$<$ \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item}{Stock\+Item}} $>$ {\bfseries Lst\+Stocks}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a8d5d9d499ae9b864319d1abf46ac7705}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a8d5d9d499ae9b864319d1abf46ac7705}} 
+\index{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks}!Add\+Sock\+Item@{Add\+Sock\+Item}}
+\index{Add\+Sock\+Item@{Add\+Sock\+Item}!H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks}}
+\subsubsection{\texorpdfstring{Add\+Sock\+Item()}{AddSockItem()}}
+{\footnotesize\ttfamily void H\+K\+Supply.\+P\+R\+J\+\_\+\+Stocks.\+Classes.\+Stocks.\+Add\+Sock\+Item (\begin{DoxyParamCaption}\item[{Stock\+Movements\+Type}]{Move\+Type,  }\item[{\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}}}]{ware,  }\item[{decimal}]{Qtt,  }\item[{string}]{id\+Item,  }\item[{string}]{id\+Lot = {\ttfamily \char`\"{}\char`\"{}},  }\item[{string}]{id\+Owner = {\ttfamily \char`\"{}\char`\"{}},  }\item[{string}]{Remarks = {\ttfamily \char`\"{}\char`\"{}},  }\item[{List$<$ string $>$}]{Lstid\+Doc = {\ttfamily null},  }\item[{string}]{Id\+User = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Aumenta o resta la Q\+TT asginada del iditem/lot al magatzem. Si el Lot (dins item) es null o buit \char`\"{}\char`\"{} s\textquotesingle{}ignora el lot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Move\+Type} & Tipus moviement, per al log.\\
+\hline
+{\em ware} & Magatzem en el que es modifica la qtt \\
+\hline
+{\em Qtt} & La Qtt. Positiva suma, negativa resta. Si queda negativa es llença una excepció\\
+\hline
+{\em idtem} & id\+Item del que es modifica la Q\+TT.\\
+\hline
+{\em id\+Lot} & id\+Lot es null o \char`\"{}\char`\"{} s\textquotesingle{}ignora el lot.\\
+\hline
+{\em id\+Owner} & El client assignat al stock.\\
+\hline
+{\em Remarks} & Notes del usuari/sistema\\
+\hline
+{\em Lstid\+Doc} & Llista iddocs associats al moviment\\
+\hline
+{\em Id\+User} & Id\+User logat que fa la operació. Per al log.\\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em System.\+Argument\+Exception} & Id\+Warehouse can\textquotesingle{}t be empty/null\\
+\hline
+{\em System.\+Argument\+Exception} & Id\+Item can\textquotesingle{}t be empty/null\\
+\hline
+{\em System.\+Invalid\+Operation\+Exception} & Not enough Stock on \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}}\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_ac9f4ca2a80f2c759ddc67d127d65c974}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_ac9f4ca2a80f2c759ddc67d127d65c974}} 
+\index{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks}!Carga\+Lot\+Item@{Carga\+Lot\+Item}}
+\index{Carga\+Lot\+Item@{Carga\+Lot\+Item}!H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks}}
+\subsubsection{\texorpdfstring{Carga\+Lot\+Item()}{CargaLotItem()}}
+{\footnotesize\ttfamily void H\+K\+Supply.\+P\+R\+J\+\_\+\+Stocks.\+Classes.\+Stocks.\+Carga\+Lot\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item}{Stock\+Item}}}]{S\+T\+Ki }\end{DoxyParamCaption})}
+
+
+
+Afegim un S\+T\+Kitem a la llista S\+T\+O\+KS. Usat en la càrrega only. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+T\+Ki} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a67e7ea646fc0436283d053902a4eccb2}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a67e7ea646fc0436283d053902a4eccb2}} 
+\index{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks}!Carga\+Sock\+Item@{Carga\+Sock\+Item}}
+\index{Carga\+Sock\+Item@{Carga\+Sock\+Item}!H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks}}
+\subsubsection{\texorpdfstring{Carga\+Sock\+Item()}{CargaSockItem()}}
+{\footnotesize\ttfamily void H\+K\+Supply.\+P\+R\+J\+\_\+\+Stocks.\+Classes.\+Stocks.\+Carga\+Sock\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item}{Stock\+Item}}}]{S\+T\+Ki }\end{DoxyParamCaption})}
+
+
+
+Afegim un S\+T\+Kitem a la llista S\+T\+O\+KS. Usat en la càrrega only. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+T\+Ki} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a2055a94e7ade97891e36fd0a8c930378}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a2055a94e7ade97891e36fd0a8c930378}} 
+\index{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks}!Free\+Lot\+Item@{Free\+Lot\+Item}}
+\index{Free\+Lot\+Item@{Free\+Lot\+Item}!H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks}}
+\subsubsection{\texorpdfstring{Free\+Lot\+Item()}{FreeLotItem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily decimal H\+K\+Supply.\+P\+R\+J\+\_\+\+Stocks.\+Classes.\+Stocks.\+Free\+Lot\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}}}]{Ware\+O\+R\+IG,  }\item[{string}]{id\+Item,  }\item[{string}]{idlot,  }\item[{decimal}]{Qtt,  }\item[{string}]{remarks = {\ttfamily \char`\"{}\char`\"{}},  }\item[{List$<$ string $>$}]{Lstid\+Doc = {\ttfamily null},  }\item[{string}]{Id\+User = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Libera Q\+TT del lote del stock (quita el lote) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Ware\+O\+R\+IG} & \\
+\hline
+{\em id\+Item} & \\
+\hline
+{\em id\+Owner} & \\
+\hline
+{\em idlot} & \\
+\hline
+{\em remarks} & \\
+\hline
+{\em Lstid\+Doc} & \\
+\hline
+{\em Id\+User} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a419182d036c725d60949c07e201f5825}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a419182d036c725d60949c07e201f5825}} 
+\index{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks}!Free\+Lot\+Item@{Free\+Lot\+Item}}
+\index{Free\+Lot\+Item@{Free\+Lot\+Item}!H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks}}
+\subsubsection{\texorpdfstring{Free\+Lot\+Item()}{FreeLotItem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily decimal H\+K\+Supply.\+P\+R\+J\+\_\+\+Stocks.\+Classes.\+Stocks.\+Free\+Lot\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}}}]{Ware\+O\+R\+IG,  }\item[{string}]{id\+Item,  }\item[{string}]{idlot,  }\item[{string}]{remarks = {\ttfamily \char`\"{}\char`\"{}},  }\item[{List$<$ string $>$}]{Lstid\+Doc = {\ttfamily null},  }\item[{string}]{Id\+User = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Libera T\+O\+DO del lote del stock (quita el lote) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Ware\+O\+R\+IG} & \\
+\hline
+{\em id\+Item} & \\
+\hline
+{\em id\+Owner} & \\
+\hline
+{\em idlot} & \\
+\hline
+{\em remarks} & \\
+\hline
+{\em Lstid\+Doc} & \\
+\hline
+{\em Id\+User} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_aee55b8b123dc0495548917a36ebb35fa}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_aee55b8b123dc0495548917a36ebb35fa}} 
+\index{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks}!Free\+Sock\+Item@{Free\+Sock\+Item}}
+\index{Free\+Sock\+Item@{Free\+Sock\+Item}!H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks}}
+\subsubsection{\texorpdfstring{Free\+Sock\+Item()}{FreeSockItem()}}
+{\footnotesize\ttfamily decimal H\+K\+Supply.\+P\+R\+J\+\_\+\+Stocks.\+Classes.\+Stocks.\+Free\+Sock\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}}}]{Ware\+O\+R\+IG,  }\item[{string}]{id\+Item,  }\item[{string}]{id\+Owner,  }\item[{decimal}]{Qtt,  }\item[{string}]{remarks = {\ttfamily \char`\"{}\char`\"{}},  }\item[{List$<$ string $>$}]{Lstid\+Doc = {\ttfamily null},  }\item[{string}]{Id\+User = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Libera la reserva de stock (quita el stock owner) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Ware\+O\+R\+IG} & \\
+\hline
+{\em id\+Item} & \\
+\hline
+{\em id\+Owner} & \\
+\hline
+{\em idlot} & \\
+\hline
+{\em remarks} & \\
+\hline
+{\em Lstid\+Doc} & \\
+\hline
+{\em Id\+User} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_ae482ad0dc6d9a62c330f1e929a49666b}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_ae482ad0dc6d9a62c330f1e929a49666b}} 
+\index{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks}!Get\+Stock\+Item@{Get\+Stock\+Item}}
+\index{Get\+Stock\+Item@{Get\+Stock\+Item}!H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks}}
+\subsubsection{\texorpdfstring{Get\+Stock\+Item()}{GetStockItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item}{Stock\+Item}} H\+K\+Supply.\+P\+R\+J\+\_\+\+Stocks.\+Classes.\+Stocks.\+Get\+Stock\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}}}]{ware,  }\item[{string}]{id\+Item }\end{DoxyParamCaption})}
+
+
+
+Retorna el item amb la informació del stock en el magatzme 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ware} & \\
+\hline
+{\em id\+Item} & \\
+\hline
+\end{DoxyParams}
+~\newline
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Owner} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a9f91bf0312629b1ea7fc09f56a5e442c}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_a9f91bf0312629b1ea7fc09f56a5e442c}} 
+\index{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks}!Get\+Stock\+Item\+Orig@{Get\+Stock\+Item\+Orig}}
+\index{Get\+Stock\+Item\+Orig@{Get\+Stock\+Item\+Orig}!H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks}}
+\subsubsection{\texorpdfstring{Get\+Stock\+Item\+Orig()}{GetStockItemOrig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item}{Stock\+Item}} H\+K\+Supply.\+P\+R\+J\+\_\+\+Stocks.\+Classes.\+Stocks.\+Get\+Stock\+Item\+Orig (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse}{Warehouse}}}]{ware,  }\item[{string}]{id\+Item }\end{DoxyParamCaption})}
+
+
+
+Retorna el valor del item del stock \char`\"{}congelat\char`\"{} al carregar. Per a detectar canvis en S\+T\+O\+CK externs (concurencia) en el proces de guardar 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ware} & \\
+\hline
+{\em id\+Item} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+H\+K\+Supply/\+P\+R\+J\+\_\+\+Stocks/\+Classes/Stocks.\+cs\end{DoxyCompactItemize}

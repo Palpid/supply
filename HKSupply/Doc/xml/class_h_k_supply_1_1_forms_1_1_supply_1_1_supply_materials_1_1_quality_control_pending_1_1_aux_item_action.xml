@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1_1_aux_item_action" kind="class" language="C#" prot="private">
+    <compoundname>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending::AuxItemAction</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1_1_aux_item_action_1ad36a6dd0ede5bf9be68ba8098971cea9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.AuxItemAction.IdDocRelated</definition>
+        <argsstring></argsstring>
+        <name>IdDocRelated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="34" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1_1_aux_item_action_1a865b0d2b04fbd3f9355750f40bc68062" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.AuxItemAction.IdItem</definition>
+        <argsstring></argsstring>
+        <name>IdItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="35" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1_1_aux_item_action_1a7a4bf6eec2af0f05dcbdf6de75382f59" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.AuxItemAction.Action</definition>
+        <argsstring></argsstring>
+        <name>Action</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="36" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="33" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="32" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1_1_aux_item_action_1a7a4bf6eec2af0f05dcbdf6de75382f59" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending::AuxItemAction</scope><name>Action</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1_1_aux_item_action_1ad36a6dd0ede5bf9be68ba8098971cea9" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending::AuxItemAction</scope><name>IdDocRelated</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1_1_aux_item_action_1a865b0d2b04fbd3f9355750f40bc68062" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending::AuxItemAction</scope><name>IdItem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user" kind="interface" language="C#" prot="public">
     <compoundname>HKSupply::Services::Interfaces::IUser</compoundname>
     <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFUser</derivedcompoundref>
@@ -36,6 +36,24 @@
         </inbodydescription>
         <location file="HKSupply/Services/Interfaces/IUser.cs" line="16" column="1"/>
       </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1afe1079dfae7c77234d9120d3e51fd35b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_user" kindref="compound">User</ref></type>
+        <definition>User HKSupply.Services.Interfaces.IUser.GetUserByLogin</definition>
+        <argsstring>(string userLogin)</argsstring>
+        <name>GetUserByLogin</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user_1a330c2846df2d0fc7f7baa70889ebb3ed">GetUserByLogin</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>userLogin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IUser.cs" line="17" column="1"/>
+      </memberdef>
       <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1a814c835f9375a134f01ad961e27d7314" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_h_k_supply_1_1_models_1_1_user" kindref="compound">User</ref></type>
         <definition>User HKSupply.Services.Interfaces.IUser.GetUserByLoginPassword</definition>
@@ -56,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Interfaces/IUser.cs" line="17" column="1"/>
+        <location file="HKSupply/Services/Interfaces/IUser.cs" line="18" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1a0f68a7ca2668977e45d199ea21522a98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_h_k_supply_1_1_models_1_1_user" kindref="compound">User</ref></type>
@@ -74,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Interfaces/IUser.cs" line="18" column="1"/>
+        <location file="HKSupply/Services/Interfaces/IUser.cs" line="19" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1af241b1a787265f454b2d5b33a8514ff0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -96,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Interfaces/IUser.cs" line="19" column="1"/>
+        <location file="HKSupply/Services/Interfaces/IUser.cs" line="20" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1a437f1837393b7a306de3fecdce176c97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -118,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Interfaces/IUser.cs" line="20" column="1"/>
+        <location file="HKSupply/Services/Interfaces/IUser.cs" line="21" column="1"/>
       </memberdef>
       <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1a61282883d17b0cf41a07a93e9bd49db7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -136,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Interfaces/IUser.cs" line="21" column="1"/>
+        <location file="HKSupply/Services/Interfaces/IUser.cs" line="22" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -144,23 +162,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="169">
+      <node id="1112">
         <label>HKSupply.Services.Interfaces.IUser</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user"/>
       </node>
-      <node id="170">
+      <node id="1113">
         <label>HKSupply.Services.Implementations.EFUser</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user"/>
-        <childnode refid="169" relation="public-inheritance">
+        <childnode refid="1112" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="HKSupply/Services/Interfaces/IUser.cs" line="14" column="1" bodyfile="HKSupply/Services/Interfaces/IUser.cs" bodystart="13" bodyend="22"/>
+    <location file="HKSupply/Services/Interfaces/IUser.cs" line="14" column="1" bodyfile="HKSupply/Services/Interfaces/IUser.cs" bodystart="13" bodyend="23"/>
     <listofallmembers>
       <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1a437f1837393b7a306de3fecdce176c97" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IUser</scope><name>ChangePassword</name></member>
       <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1af241b1a787265f454b2d5b33a8514ff0" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IUser</scope><name>DisableUser</name></member>
       <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1ab18e28f31a3a14a63df31f17991aeb43" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IUser</scope><name>GetAllUsers</name></member>
       <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1a49a1d525d5ab93f26cbe66b1f22abe1a" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IUser</scope><name>GetUserById</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1afe1079dfae7c77234d9120d3e51fd35b" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IUser</scope><name>GetUserByLogin</name></member>
       <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1a814c835f9375a134f01ad961e27d7314" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IUser</scope><name>GetUserByLoginPassword</name></member>
       <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1a0f68a7ca2668977e45d199ea21522a98" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IUser</scope><name>NewUser</name></member>
       <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_user_1a61282883d17b0cf41a07a93e9bd49db7" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IUser</scope><name>UpdateUsers</name></member>

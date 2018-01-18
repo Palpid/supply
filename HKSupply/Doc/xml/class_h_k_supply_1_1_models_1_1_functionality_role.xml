@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_h_k_supply_1_1_models_1_1_functionality_role" kind="class" language="C#" prot="public">
     <compoundname>HKSupply::Models::FunctionalityRole</compoundname>
       <sectiondef kind="property">
@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/FunctionalityRole.cs" line="17" column="1" bodyfile="HKSupply/Models/FunctionalityRole.cs" bodystart="17" bodyend="-1"/>
+        <location file="HKSupply/Models/FunctionalityRole.cs" line="17" column="1" bodyfile="HKSupply/Models/FunctionalityRole.cs" bodystart="17" bodyend="17"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_functionality_role_1a765b8678a9661752e6f2899d98e661d4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/FunctionalityRole.cs" line="22" column="1" bodyfile="HKSupply/Models/FunctionalityRole.cs" bodystart="22" bodyend="-1"/>
+        <location file="HKSupply/Models/FunctionalityRole.cs" line="22" column="1" bodyfile="HKSupply/Models/FunctionalityRole.cs" bodystart="22" bodyend="22"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_functionality_role_1aed71c97ac0caf396dc15a24c45d56fab" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>bool</type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/FunctionalityRole.cs" line="27" column="1" bodyfile="HKSupply/Models/FunctionalityRole.cs" bodystart="27" bodyend="-1"/>
+        <location file="HKSupply/Models/FunctionalityRole.cs" line="27" column="1" bodyfile="HKSupply/Models/FunctionalityRole.cs" bodystart="27" bodyend="27"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_functionality_role_1a6faad04d06f87ef7121acb504c3c6759" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>bool</type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/FunctionalityRole.cs" line="32" column="1" bodyfile="HKSupply/Models/FunctionalityRole.cs" bodystart="32" bodyend="-1"/>
+        <location file="HKSupply/Models/FunctionalityRole.cs" line="32" column="1" bodyfile="HKSupply/Models/FunctionalityRole.cs" bodystart="32" bodyend="32"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_functionality_role_1a26b7d361ba1ab93b2f393b1b99e5fc39" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>bool</type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/FunctionalityRole.cs" line="37" column="1" bodyfile="HKSupply/Models/FunctionalityRole.cs" bodystart="37" bodyend="-1"/>
+        <location file="HKSupply/Models/FunctionalityRole.cs" line="37" column="1" bodyfile="HKSupply/Models/FunctionalityRole.cs" bodystart="37" bodyend="37"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_functionality_role_1ae6697fdcf6d2cdcbcf86736b5abbc3ae" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type><ref refid="class_h_k_supply_1_1_models_1_1_functionality" kindref="compound">Functionality</ref></type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/FunctionalityRole.cs" line="40" column="1" bodyfile="HKSupply/Models/FunctionalityRole.cs" bodystart="40" bodyend="-1"/>
+        <location file="HKSupply/Models/FunctionalityRole.cs" line="40" column="1" bodyfile="HKSupply/Models/FunctionalityRole.cs" bodystart="40" bodyend="40"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_functionality_role_1a94917c7d388484877ef08df62449f747" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type><ref refid="class_h_k_supply_1_1_models_1_1_role" kindref="compound">Role</ref></type>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/FunctionalityRole.cs" line="43" column="1" bodyfile="HKSupply/Models/FunctionalityRole.cs" bodystart="43" bodyend="-1"/>
+        <location file="HKSupply/Models/FunctionalityRole.cs" line="43" column="1" bodyfile="HKSupply/Models/FunctionalityRole.cs" bodystart="43" bodyend="43"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">

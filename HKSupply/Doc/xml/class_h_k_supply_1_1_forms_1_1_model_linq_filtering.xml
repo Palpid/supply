@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_h_k_supply_1_1_forms_1_1_model_linq_filtering" kind="class" language="C#" prot="public">
     <compoundname>HKSupply::Forms::ModelLinqFiltering</compoundname>
       <sectiondef kind="property">
@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/DynamicFilters.cs" line="616" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="616" bodyend="-1"/>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="711" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="711" bodyend="711"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1aa017ef3e2d3751c84df6887132b49715" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/DynamicFilters.cs" line="617" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="617" bodyend="-1"/>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="712" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="712" bodyend="712"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1a05bec8b82b848ed91399514fc34b5fde" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/DynamicFilters.cs" line="618" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="618" bodyend="-1"/>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="713" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="713" bodyend="713"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1ab1063badeec96c88372aac2b1d57886b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/DynamicFilters.cs" line="619" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="619" bodyend="-1"/>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="714" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="714" bodyend="714"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1a900fece0760e7e0c290c4ccc3f2e84dd" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>DateTime</type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/DynamicFilters.cs" line="620" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="620" bodyend="-1"/>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="715" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="715" bodyend="715"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1a8e717b94e0d388959d8b9d1e38a9fdb5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/DynamicFilters.cs" line="621" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="621" bodyend="-1"/>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="716" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="716" bodyend="716"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -95,7 +95,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/DynamicFilters.cs" line="627" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="627" bodyend="646"/>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="722" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="722" bodyend="741"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1a66694e21272523c30da7198388f59b0f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -106,10 +106,10 @@
 <para>Validar los datos que ha indicado el usuario para filtrar. </para>        </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para></para></simplesect>
-</para>        </detaileddescription>
+</para><para>Con los números con decimales tengo un &quot;problema&quot;, si los parseo desde un string el decimal lo marca el caracter &quot;,&quot; pero en el teclado numérico es el &quot;.&quot; Al parsear tengo que cambiar el punt (&quot;.&quot;) por coma(&quot;,&quot;), pero después para que lo coja el linq tiene que ser punto (&quot;.&quot;), así que hay que hacer el juego de reemplazar dos veces mientras no encuentre algo mejor. </para>        </detaileddescription>
         <inbodydescription>
-        </inbodydescription>
-        <location file="HKSupply/Forms/DynamicFilters.cs" line="652" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="652" bodyend="736"/>
+<para>El separador decimal varía entre punto (&quot;.&quot;) y coma(&quot;,&quot;) según la cultura. Para trabajar con ello usaremos InvariantCulture </para>        </inbodydescription>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="754" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="754" bodyend="842"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -125,14 +125,14 @@
 </para><para>Para las cadenas, es case sensitive, lo pasamos a ´minúsculas, tanto el campo a filtrar como el texto introducido por el usuario </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/DynamicFilters.cs" line="746" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="746" bodyend="790"/>
+        <location file="HKSupply/Forms/DynamicFilters.cs" line="852" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="852" bodyend="901"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Clase que representa una filtro dynámico de linq sobre una propiedad de un modelo. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="HKSupply/Forms/DynamicFilters.cs" line="615" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="614" bodyend="791"/>
+    <location file="HKSupply/Forms/DynamicFilters.cs" line="710" column="1" bodyfile="HKSupply/Forms/DynamicFilters.cs" bodystart="709" bodyend="902"/>
     <listofallmembers>
       <member refid="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1a05bec8b82b848ed91399514fc34b5fde" prot="public" virt="non-virtual"><scope>HKSupply::Forms::ModelLinqFiltering</scope><name>Condition</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_model_linq_filtering_1a900fece0760e7e0c290c4ccc3f2e84dd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::ModelLinqFiltering</scope><name>DateFilter</name></member>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_model" kind="interface" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Interfaces::IModel</compoundname>
+    <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_model" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFModel</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_model_1aac979c04b2d02050e754c95f938957c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_model" kindref="compound">Model</ref> &gt;</type>
+        <definition>List&lt;Model&gt; HKSupply.Services.Interfaces.IModel.GetModels</definition>
+        <argsstring>()</argsstring>
+        <name>GetModels</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_model_1ab94677b204ca440c9f7d4637c4d39330">GetModels</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IModel.cs" line="8" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="793">
+        <label>HKSupply.Services.Interfaces.IModel</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_model"/>
+      </node>
+      <node id="794">
+        <label>HKSupply.Services.Implementations.EFModel</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_model"/>
+        <childnode refid="793" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="HKSupply/Services/Interfaces/IModel.cs" line="7" column="1" bodyfile="HKSupply/Services/Interfaces/IModel.cs" bodystart="6" bodyend="9"/>
+    <listofallmembers>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_model_1aac979c04b2d02050e754c95f938957c4" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IModel</scope><name>GetModels</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

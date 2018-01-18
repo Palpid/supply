@@ -1,0 +1,420 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::Supply::DocLine</compoundname>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a68b8c2956cea864916ae9bcba560c3da" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>LineStates</name>
+        <enumvalue id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a68b8c2956cea864916ae9bcba560c3daa03c2e7e41ffc181a4e84080b4710e81e" prot="public">
+          <name>New</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a68b8c2956cea864916ae9bcba560c3daa67ed6ddb7d890b23166c1bef771e9451" prot="public">
+          <name>Edited</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a68b8c2956cea864916ae9bcba560c3daa7381d487d18845b379422325c0a768d6" prot="public">
+          <name>Loaded</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="123" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="122" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1afbc63791ed8de175403fce640f99a375" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.DocLine.IdDoc</definition>
+        <argsstring></argsstring>
+        <name>IdDoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="11" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a115c09205cd8113d191492c5191a695f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.Supply.DocLine.NumLin</definition>
+        <argsstring></argsstring>
+        <name>NumLin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="14" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a97c39e7b5e0fa047ab525693a2ef84a8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.DocLine.IdItemBcn</definition>
+        <argsstring></argsstring>
+        <name>IdItemBcn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="17" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a2906a81d728477297e382ea387d92f33" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>object</type>
+        <definition>object HKSupply.Models.Supply.DocLine.Item</definition>
+        <argsstring></argsstring>
+        <name>Item</name>
+        <briefdescription>
+<para>Debido a que el item puede ser de diferentes clases, lo defino como object y desde la aplicación ya controlaremos el casteo al tipo correspondiente según su item group </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="24" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1aea0b697eff58572777c5f37cf01b6c73" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.DocLine.IdItemGroup</definition>
+        <argsstring></argsstring>
+        <name>IdItemGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="27" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1aae61886662cbcca15b7269feaf333005" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.DocLine.IdSupplyStatus</definition>
+        <argsstring></argsstring>
+        <name>IdSupplyStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="30" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a7d8822708a68534d8497513fe2090bc6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.DocLine.Batch</definition>
+        <argsstring></argsstring>
+        <name>Batch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="33" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a71cfaf8e6f850433da98ea577473b791" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.Supply.DocLine.Quantity</definition>
+        <argsstring></argsstring>
+        <name>Quantity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="36" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1af343c04302b5e6f8c2b5556659ab8a7c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.Supply.DocLine.QuantityOriginal</definition>
+        <argsstring></argsstring>
+        <name>QuantityOriginal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="39" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a7d2b476ed92b3cb58dbab044dcf01323" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.Supply.DocLine.DeliveredQuantity</definition>
+        <argsstring></argsstring>
+        <name>DeliveredQuantity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="42" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a54a7e2e45adeed3ecd2efe4af2158a17" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.Supply.DocLine.RequestedQuantity</definition>
+        <argsstring></argsstring>
+        <name>RequestedQuantity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="45" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1afb335f31e78697a062fdfa6a02a754c3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.Supply.DocLine.RejectedQuantity</definition>
+        <argsstring></argsstring>
+        <name>RejectedQuantity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="48" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1ab6e70887d970afa63acf826a5ca69ac7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.DocLine.Remarks</definition>
+        <argsstring></argsstring>
+        <name>Remarks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="51" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a3813d927dc8b8b00efa4a77f79800412" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.Supply.DocLine.UnitPrice</definition>
+        <argsstring></argsstring>
+        <name>UnitPrice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="54" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a9dd3614f75a2443dc6b4d9d57a4e8632" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.Supply.DocLine.UnitPriceBaseCurrency</definition>
+        <argsstring></argsstring>
+        <name>UnitPriceBaseCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="57" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1ae1af1fa8dc36378bb2fef3cccede6342" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.DocLine.IdDocRelated</definition>
+        <argsstring></argsstring>
+        <name>IdDocRelated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="60" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a8ad5acd96dd0ff70c20085b46a13623f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.Supply.DocLine.BoxNumber</definition>
+        <argsstring></argsstring>
+        <name>BoxNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="63" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a53ef3a1584289716eaf5678a6ee296e6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.Supply.DocLine.TotalAmount</definition>
+        <argsstring></argsstring>
+        <name>TotalAmount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="67" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a731793a0142cf7a5a39f36eaf489a9cd" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>LineStates</type>
+        <definition>LineStates HKSupply.Models.Supply.DocLine.LineState</definition>
+        <argsstring></argsstring>
+        <name>LineState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="70" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a5f0372a87501b03fe4aa7b4cc9e6a573" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.DocLine.ItemDesc</definition>
+        <argsstring></argsstring>
+        <name>ItemDesc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="73" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="74" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a5037775a91543f65303f9277334cbe3d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.DocLine.ItemUnit</definition>
+        <argsstring></argsstring>
+        <name>ItemUnit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="88" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="89" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1aaff88766d02c0bf4a0c5606bb35bd7d9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.Supply.DocLine.DummyQuantity</definition>
+        <argsstring></argsstring>
+        <name>DummyQuantity</name>
+        <briefdescription>
+<para>Para algunos grids que va bien tener una cantidad auxiliar para ciertos cálculos/juegos </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="107" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a42f540de502b21bd0670a9ea786bf441" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_item_group" kindref="compound">ItemGroup</ref></type>
+        <definition>ItemGroup HKSupply.Models.Supply.DocLine.ItemGroup</definition>
+        <argsstring></argsstring>
+        <name>ItemGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="114" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="114" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a42dc3fd925df96a4d8187a02ad7e6ecc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_supply_status" kindref="compound">SupplyStatus</ref></type>
+        <definition>SupplyStatus HKSupply.Models.Supply.DocLine.SupplyStatus</definition>
+        <argsstring></argsstring>
+        <name>SupplyStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="117" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="117" bodyend="117"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a5a8c95da2c1486d7f75ab44a2c1b7771" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.Supply.DocLine.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="131" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="131" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a56c0291300e2c7b0c25782f94f6d7b29" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.Supply.DocLine.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocLines.cs" line="158" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="158" bodyend="178"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/Supply/DocLines.cs" line="9" column="1" bodyfile="HKSupply/Models/Supply/DocLines.cs" bodystart="8" bodyend="183"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a7d8822708a68534d8497513fe2090bc6" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>Batch</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a8ad5acd96dd0ff70c20085b46a13623f" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>BoxNumber</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a7d2b476ed92b3cb58dbab044dcf01323" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>DeliveredQuantity</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1aaff88766d02c0bf4a0c5606bb35bd7d9" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>DummyQuantity</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a5a8c95da2c1486d7f75ab44a2c1b7771" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a56c0291300e2c7b0c25782f94f6d7b29" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1afbc63791ed8de175403fce640f99a375" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>IdDoc</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1ae1af1fa8dc36378bb2fef3cccede6342" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>IdDocRelated</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a97c39e7b5e0fa047ab525693a2ef84a8" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>IdItemBcn</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1aea0b697eff58572777c5f37cf01b6c73" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>IdItemGroup</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1aae61886662cbcca15b7269feaf333005" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>IdSupplyStatus</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a2906a81d728477297e382ea387d92f33" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>Item</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a5f0372a87501b03fe4aa7b4cc9e6a573" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>ItemDesc</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a42f540de502b21bd0670a9ea786bf441" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>ItemGroup</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a5037775a91543f65303f9277334cbe3d" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>ItemUnit</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a731793a0142cf7a5a39f36eaf489a9cd" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>LineState</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a68b8c2956cea864916ae9bcba560c3da" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>LineStates</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a115c09205cd8113d191492c5191a695f" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>NumLin</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a71cfaf8e6f850433da98ea577473b791" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>Quantity</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1af343c04302b5e6f8c2b5556659ab8a7c" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>QuantityOriginal</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1afb335f31e78697a062fdfa6a02a754c3" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>RejectedQuantity</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1ab6e70887d970afa63acf826a5ca69ac7" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>Remarks</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a54a7e2e45adeed3ecd2efe4af2158a17" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>RequestedQuantity</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a42dc3fd925df96a4d8187a02ad7e6ecc" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>SupplyStatus</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a53ef3a1584289716eaf5678a6ee296e6" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>TotalAmount</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a3813d927dc8b8b00efa4a77f79800412" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>UnitPrice</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line_1a9dd3614f75a2443dc6b4d9d57a4e8632" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocLine</scope><name>UnitPriceBaseCurrency</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_p_r_j___stocks_1_1_d_b_1_1_call___d_b___stocks" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::PRJ_Stocks::DB::Call_DB_Stocks</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_d_b_1_1_call___d_b___stocks_1aa243739dbcff579ad0e98c7eaa162239" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks" kindref="compound">Classes.Stocks</ref></type>
+        <definition>Classes.Stocks HKSupply.PRJ_Stocks.DB.Call_DB_Stocks.CallCargaStocks</definition>
+        <argsstring>()</argsstring>
+        <name>CallCargaStocks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/DB/Call_DB_Stocks.cs" line="17" column="1" bodyfile="HKSupply/PRJ_Stocks/DB/Call_DB_Stocks.cs" bodystart="17" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_d_b_1_1_call___d_b___stocks_1a6ad1c1e537a2951a283ad0fa997d4bd8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.DB.Call_DB_Stocks.CallGuardarStocks</definition>
+        <argsstring>(Classes.Stocks STK)</argsstring>
+        <name>CallGuardarStocks</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks" kindref="compound">Classes.Stocks</ref></type>
+          <declname>STK</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/DB/Call_DB_Stocks.cs" line="34" column="1" bodyfile="HKSupply/PRJ_Stocks/DB/Call_DB_Stocks.cs" bodystart="34" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/PRJ_Stocks/DB/Call_DB_Stocks.cs" line="14" column="1" bodyfile="HKSupply/PRJ_Stocks/DB/Call_DB_Stocks.cs" bodystart="13" bodyend="64"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_d_b_1_1_call___d_b___stocks_1aa243739dbcff579ad0e98c7eaa162239" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::DB::Call_DB_Stocks</scope><name>CallCargaStocks</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_d_b_1_1_call___d_b___stocks_1a6ad1c1e537a2951a283ad0fa997d4bd8" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::DB::Call_DB_Stocks</scope><name>CallGuardarStocks</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

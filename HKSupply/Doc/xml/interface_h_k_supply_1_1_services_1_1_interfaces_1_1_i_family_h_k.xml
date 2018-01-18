@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_family_h_k" kind="interface" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Interfaces::IFamilyHK</compoundname>
+    <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_family_h_k" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFFamilyHK</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_family_h_k_1a498a480fe81de602f0fd3cedcde3658e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_family_h_k" kindref="compound">FamilyHK</ref> &gt;</type>
+        <definition>List&lt;FamilyHK&gt; HKSupply.Services.Interfaces.IFamilyHK.GetFamiliesHK</definition>
+        <argsstring>()</argsstring>
+        <name>GetFamiliesHK</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_family_h_k_1ae26fb30b964c5992716e773398d078c7">GetFamiliesHK</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IFamilyHK.cs" line="12" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_family_h_k_1ae53fdf1e7f8544d2465811148ed4f8c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_family_h_k" kindref="compound">FamilyHK</ref></type>
+        <definition>FamilyHK HKSupply.Services.Interfaces.IFamilyHK.GetFamilyHKById</definition>
+        <argsstring>(string idFamilyHk)</argsstring>
+        <name>GetFamilyHKById</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_family_h_k_1a78c6a98aec512c5437cd99fa7187e952">GetFamilyHKById</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>idFamilyHk</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IFamilyHK.cs" line="13" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_family_h_k_1a4d9b68dde602a2971ec0d44b495a05fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_family_h_k" kindref="compound">FamilyHK</ref></type>
+        <definition>FamilyHK HKSupply.Services.Interfaces.IFamilyHK.NewFamilyHK</definition>
+        <argsstring>(FamilyHK newFamilyHK)</argsstring>
+        <name>NewFamilyHK</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_family_h_k_1a834b50dbc8cdb8b5b47f1a1cea9951a7">NewFamilyHK</reimplementedby>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_family_h_k" kindref="compound">FamilyHK</ref></type>
+          <declname>newFamilyHK</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IFamilyHK.cs" line="14" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_family_h_k_1a9f394c2a3051c5a38370448b2f603295" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.IFamilyHK.UpdateFamilyHK</definition>
+        <argsstring>(IEnumerable&lt; FamilyHK &gt; familiesHkToUpdate)</argsstring>
+        <name>UpdateFamilyHK</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_family_h_k_1a59ea7dd852c489352c6d5e0289fea7d7">UpdateFamilyHK</reimplementedby>
+        <param>
+          <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_family_h_k" kindref="compound">FamilyHK</ref> &gt;</type>
+          <declname>familiesHkToUpdate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IFamilyHK.cs" line="15" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="745">
+        <label>HKSupply.Services.Interfaces.IFamilyHK</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_family_h_k"/>
+      </node>
+      <node id="746">
+        <label>HKSupply.Services.Implementations.EFFamilyHK</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_family_h_k"/>
+        <childnode refid="745" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="HKSupply/Services/Interfaces/IFamilyHK.cs" line="11" column="1" bodyfile="HKSupply/Services/Interfaces/IFamilyHK.cs" bodystart="10" bodyend="16"/>
+    <listofallmembers>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_family_h_k_1a498a480fe81de602f0fd3cedcde3658e" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IFamilyHK</scope><name>GetFamiliesHK</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_family_h_k_1ae53fdf1e7f8544d2465811148ed4f8c2" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IFamilyHK</scope><name>GetFamilyHKById</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_family_h_k_1a4d9b68dde602a2971ec0d44b495a05fc" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IFamilyHK</scope><name>NewFamilyHK</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_family_h_k_1a9f394c2a3051c5a38370448b2f603295" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IFamilyHK</scope><name>UpdateFamilyHK</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

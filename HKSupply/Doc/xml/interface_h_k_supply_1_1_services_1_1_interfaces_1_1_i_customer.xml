@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer" kind="interface" language="C#" prot="public">
     <compoundname>HKSupply::Services::Interfaces::ICustomer</compoundname>
     <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFCustomer</derivedcompoundref>
@@ -63,12 +63,17 @@
         </inbodydescription>
         <location file="HKSupply/Services/Interfaces/ICustomer.cs" line="17" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a9191f24189f44e76aad505edfdf7e057" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a38deeb756609f096eb6fcbd9561d2d97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_customer" kindref="compound">Customer</ref> &gt;</type>
         <definition>List&lt;Customer&gt; HKSupply.Services.Interfaces.ICustomer.GetCustomers</definition>
-        <argsstring>()</argsstring>
+        <argsstring>(bool withEtniaHk=false)</argsstring>
         <name>GetCustomers</name>
-        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1a2688e050817d243a2c424293b2922005">GetCustomers</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1a46dcd4d00e35c397796283e099675547">GetCustomers</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>withEtniaHk</declname>
+          <defval>false</defval>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -77,27 +82,46 @@
         </inbodydescription>
         <location file="HKSupply/Services/Interfaces/ICustomer.cs" line="18" column="1"/>
       </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a2bfc5dd11d443814660429003b9db42c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_customer_history" kindref="compound">CustomerHistory</ref> &gt;</type>
+        <definition>List&lt;CustomerHistory&gt; HKSupply.Services.Interfaces.ICustomer.GetCustomerHistory</definition>
+        <argsstring>(string idCustomer)</argsstring>
+        <name>GetCustomerHistory</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1abf8c1b2099630d5ca64afb2fb773699e">GetCustomerHistory</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>idCustomer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/ICustomer.cs" line="19" column="1"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Interface para el sevice de Customer </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="122">
+      <node id="718">
         <label>HKSupply.Services.Interfaces.ICustomer</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer"/>
       </node>
-      <node id="123">
+      <node id="719">
         <label>HKSupply.Services.Implementations.EFCustomer</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer"/>
-        <childnode refid="122" relation="public-inheritance">
+        <childnode refid="718" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="HKSupply/Services/Interfaces/ICustomer.cs" line="14" column="1" bodyfile="HKSupply/Services/Interfaces/ICustomer.cs" bodystart="13" bodyend="19"/>
+    <location file="HKSupply/Services/Interfaces/ICustomer.cs" line="14" column="1" bodyfile="HKSupply/Services/Interfaces/ICustomer.cs" bodystart="13" bodyend="20"/>
     <listofallmembers>
       <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a0ce0dce4e042cf94014fbc1487bf7789" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ICustomer</scope><name>GetCustomerById</name></member>
-      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a9191f24189f44e76aad505edfdf7e057" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ICustomer</scope><name>GetCustomers</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a2bfc5dd11d443814660429003b9db42c" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ICustomer</scope><name>GetCustomerHistory</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a38deeb756609f096eb6fcbd9561d2d97" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ICustomer</scope><name>GetCustomers</name></member>
       <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a4eae770f8e05c2a16b30d11ca2b6a3e8" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ICustomer</scope><name>NewCustomer</name></member>
       <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a2f446e665b10feef3e8373887a138048" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ICustomer</scope><name>UpdateCustomer</name></member>
     </listofallmembers>

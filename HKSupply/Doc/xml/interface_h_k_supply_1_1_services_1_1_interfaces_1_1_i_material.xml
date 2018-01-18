@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_material" kind="interface" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Interfaces::IMaterial</compoundname>
+    <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_material" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFMaterial</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_material_1a8bbab7383473bd8e5df808d059ec53d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_material_l1" kindref="compound">MaterialL1</ref> &gt;</type>
+        <definition>List&lt;MaterialL1&gt; HKSupply.Services.Interfaces.IMaterial.GetMaterialsL1</definition>
+        <argsstring>()</argsstring>
+        <name>GetMaterialsL1</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_material_1a88b9fb1aabda2d23ce6df8df14abb3c1">GetMaterialsL1</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IMaterial.cs" line="12" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_material_1abd205e1ab349bdac03fbfacbba80186b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_material_l2" kindref="compound">MaterialL2</ref> &gt;</type>
+        <definition>List&lt;MaterialL2&gt; HKSupply.Services.Interfaces.IMaterial.GetMaterialsL2</definition>
+        <argsstring>()</argsstring>
+        <name>GetMaterialsL2</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_material_1ad49c8541d6e73fd90d9d13da0ea67ec1">GetMaterialsL2</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IMaterial.cs" line="13" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_material_1ad97c2528504207b4ff8c6b173650242b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_material_l3" kindref="compound">MaterialL3</ref> &gt;</type>
+        <definition>List&lt;MaterialL3&gt; HKSupply.Services.Interfaces.IMaterial.GetMaterialsL3</definition>
+        <argsstring>()</argsstring>
+        <name>GetMaterialsL3</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_material_1a2d717ac090bb69d23091e27829875a17">GetMaterialsL3</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IMaterial.cs" line="14" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="788">
+        <label>HKSupply.Services.Implementations.EFMaterial</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_material"/>
+        <childnode refid="787" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="787">
+        <label>HKSupply.Services.Interfaces.IMaterial</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_material"/>
+      </node>
+    </inheritancegraph>
+    <location file="HKSupply/Services/Interfaces/IMaterial.cs" line="11" column="1" bodyfile="HKSupply/Services/Interfaces/IMaterial.cs" bodystart="10" bodyend="15"/>
+    <listofallmembers>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_material_1a8bbab7383473bd8e5df808d059ec53d9" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IMaterial</scope><name>GetMaterialsL1</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_material_1abd205e1ab349bdac03fbfacbba80186b" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IMaterial</scope><name>GetMaterialsL2</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_material_1ad97c2528504207b4ff8c6b173650242b" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IMaterial</scope><name>GetMaterialsL3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

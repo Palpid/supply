@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bcn" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFItemBcn</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bcn" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IItemBcn</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bcn_1af8d3c8188ae682816dc2c3cefb682e35" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFItemBcn._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bcn" kindref="compound">EFItemBcn</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFItemBcn.cs" line="17" column="1" bodyfile="HKSupply/Services/Implementations/EFItemBcn.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bcn_1a6d513ae8f1148a20be50f2bf93b04385" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_bcn" kindref="compound">Models.ItemBcn</ref> &gt;</type>
+        <definition>List&lt;Models.ItemBcn&gt; HKSupply.Services.Implementations.EFItemBcn.GetItemsBcn</definition>
+        <argsstring>()</argsstring>
+        <name>GetItemsBcn</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bcn_1adf6c08f67bebc21df6305faa151d298d">GetItemsBcn</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFItemBcn.cs" line="19" column="1" bodyfile="HKSupply/Services/Implementations/EFItemBcn.cs" bodystart="19" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="470">
+        <label>IItemBcn</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bcn"/>
+      </node>
+      <node id="469">
+        <label>HKSupply.Services.Implementations.EFItemBcn</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bcn"/>
+        <childnode refid="470" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="472">
+        <label>IItemBcn</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bcn"/>
+      </node>
+      <node id="471">
+        <label>HKSupply.Services.Implementations.EFItemBcn</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bcn"/>
+        <childnode refid="472" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFItemBcn.cs" line="16" column="1" bodyfile="HKSupply/Services/Implementations/EFItemBcn.cs" bodystart="15" bodyend="54"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bcn_1af8d3c8188ae682816dc2c3cefb682e35" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFItemBcn</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bcn_1a6d513ae8f1148a20be50f2bf93b04385" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFItemBcn</scope><name>GetItemsBcn</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

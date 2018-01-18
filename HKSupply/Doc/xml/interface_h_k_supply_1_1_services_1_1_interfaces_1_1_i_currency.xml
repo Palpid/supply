@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_currency" kind="interface" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Interfaces::ICurrency</compoundname>
+    <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_currency" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFCurrency</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_currency_1a37f43c962bdc73bea846c56025261cda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_currency" kindref="compound">Currency</ref> &gt;</type>
+        <definition>List&lt;Currency&gt; HKSupply.Services.Interfaces.ICurrency.GetCurrencies</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurrencies</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_currency_1a0ccba73a596c248bf16649b861394389">GetCurrencies</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/ICurrency.cs" line="12" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_currency_1a7f6b03b3591e08e38432f45b9293a24a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_currency" kindref="compound">Currency</ref></type>
+        <definition>Currency HKSupply.Services.Interfaces.ICurrency.GetCurrency</definition>
+        <argsstring>(string idCurrency)</argsstring>
+        <name>GetCurrency</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_currency_1a37d248dd256b7310f19b0d9c8f011129">GetCurrency</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>idCurrency</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/ICurrency.cs" line="13" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="713">
+        <label>HKSupply.Services.Implementations.EFCurrency</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_currency"/>
+        <childnode refid="712" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="712">
+        <label>HKSupply.Services.Interfaces.ICurrency</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_currency"/>
+      </node>
+    </inheritancegraph>
+    <location file="HKSupply/Services/Interfaces/ICurrency.cs" line="11" column="1" bodyfile="HKSupply/Services/Interfaces/ICurrency.cs" bodystart="10" bodyend="14"/>
+    <listofallmembers>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_currency_1a37f43c962bdc73bea846c56025261cda" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ICurrency</scope><name>GetCurrencies</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_currency_1a7f6b03b3591e08e38432f45b9293a24a" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ICurrency</scope><name>GetCurrency</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

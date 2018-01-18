@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_hf" kind="interface" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Interfaces::IItemHf</compoundname>
+    <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_hf" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFItemHf</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_hf_1af440feba69dc66cbf9c25a2db0018214" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_hf" kindref="compound">ItemHf</ref> &gt;</type>
+        <definition>List&lt;ItemHf&gt; HKSupply.Services.Interfaces.IItemHf.GetItems</definition>
+        <argsstring>()</argsstring>
+        <name>GetItems</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_hf_1aae8637a3c1397a938102ccd1c49d045c">GetItems</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IItemHf.cs" line="11" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_hf_1a458b5182410a12747cbbd80900cee18d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_item_hf" kindref="compound">ItemHf</ref></type>
+        <definition>ItemHf HKSupply.Services.Interfaces.IItemHf.GetItem</definition>
+        <argsstring>(string idItemBcn)</argsstring>
+        <name>GetItem</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_hf_1a23329c98e03ea535a8d6af30bf733407">GetItem</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>idItemBcn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IItemHf.cs" line="12" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_hf_1abf94057ba92f89effa5b5b2215ac8889" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.IItemHf.UpdateItem</definition>
+        <argsstring>(ItemHf updateItem, bool newVersion=false)</argsstring>
+        <name>UpdateItem</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_hf_1a1486506956c70f9a72d1bab22b48fdf0">UpdateItem</reimplementedby>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_item_hf" kindref="compound">ItemHf</ref></type>
+          <declname>updateItem</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>newVersion</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IItemHf.cs" line="13" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_hf_1a8072dae9f707c9fe372e06f0902fa665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.IItemHf.UpdateItemWithDoc</definition>
+        <argsstring>(ItemHf updateItem, ItemDoc itemDoc, bool newVersion=false)</argsstring>
+        <name>UpdateItemWithDoc</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_hf_1abfe2f5f9b526923218b04960d3bf2c8f">UpdateItemWithDoc</reimplementedby>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_item_hf" kindref="compound">ItemHf</ref></type>
+          <declname>updateItem</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_item_doc" kindref="compound">ItemDoc</ref></type>
+          <declname>itemDoc</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>newVersion</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IItemHf.cs" line="14" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_hf_1a3b14e3dd45854e82a7f98f7d451bb5eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.IItemHf.UpdateItems</definition>
+        <argsstring>(IEnumerable&lt; ItemHf &gt; itemsToUpdate)</argsstring>
+        <name>UpdateItems</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_hf_1af1ee4a116684bc906cffe37bd6d7657a">UpdateItems</reimplementedby>
+        <param>
+          <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_hf" kindref="compound">ItemHf</ref> &gt;</type>
+          <declname>itemsToUpdate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IItemHf.cs" line="15" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_hf_1a0a8aba5283006eeff141d15494e1173a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_hf_history" kindref="compound">ItemHfHistory</ref> &gt;</type>
+        <definition>List&lt;ItemHfHistory&gt; HKSupply.Services.Interfaces.IItemHf.GetItemHfHistory</definition>
+        <argsstring>(string idItemBcn)</argsstring>
+        <name>GetItemHfHistory</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_hf_1a3255a45650fd0599f82ed52cc50fd66d">GetItemHfHistory</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>idItemBcn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IItemHf.cs" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_hf_1ad166151446ac3fc70a58a3b5eee0457c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_hf" kindref="compound">ItemHf</ref> &gt;</type>
+        <definition>List&lt;ItemHf&gt; HKSupply.Services.Interfaces.IItemHf.GetISupplierHfItems</definition>
+        <argsstring>(string idSupplier)</argsstring>
+        <name>GetISupplierHfItems</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_hf_1aba346af79b0a7b8c8bf22f60ed1f103c">GetISupplierHfItems</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IItemHf.cs" line="17" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface para el sevice de ItemHf (half-finished) </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="775">
+        <label>HKSupply.Services.Interfaces.IItemHf</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_hf"/>
+      </node>
+      <node id="776">
+        <label>HKSupply.Services.Implementations.EFItemHf</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_hf"/>
+        <childnode refid="775" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="HKSupply/Services/Interfaces/IItemHf.cs" line="10" column="1" bodyfile="HKSupply/Services/Interfaces/IItemHf.cs" bodystart="9" bodyend="18"/>
+    <listofallmembers>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_hf_1ad166151446ac3fc70a58a3b5eee0457c" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IItemHf</scope><name>GetISupplierHfItems</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_hf_1a458b5182410a12747cbbd80900cee18d" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IItemHf</scope><name>GetItem</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_hf_1a0a8aba5283006eeff141d15494e1173a" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IItemHf</scope><name>GetItemHfHistory</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_hf_1af440feba69dc66cbf9c25a2db0018214" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IItemHf</scope><name>GetItems</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_hf_1abf94057ba92f89effa5b5b2215ac8889" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IItemHf</scope><name>UpdateItem</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_hf_1a3b14e3dd45854e82a7f98f7d451bb5eb" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IItemHf</scope><name>UpdateItems</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_hf_1a8072dae9f707c9fe372e06f0902fa665" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IItemHf</scope><name>UpdateItemWithDoc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

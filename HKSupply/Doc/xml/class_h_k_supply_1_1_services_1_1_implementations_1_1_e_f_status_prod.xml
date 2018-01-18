@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_status_prod" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFStatusProd</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_status_prod" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IStatusProd</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_status_prod_1a039e20d71edef240c3799f6042eb79c8" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFStatusProd._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_status_prod" kindref="compound">EFStatusProd</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFStatusProd.cs" line="18" column="1" bodyfile="HKSupply/Services/Implementations/EFStatusProd.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_status_prod_1a792bdf101ee1aa593d25ab2abc99feca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_status_h_k" kindref="compound">StatusHK</ref> &gt;</type>
+        <definition>List&lt;StatusHK&gt; HKSupply.Services.Implementations.EFStatusProd.GetStatusProd</definition>
+        <argsstring>()</argsstring>
+        <name>GetStatusProd</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_status_prod_1a4b8db7006c0a0625c9f81ad2a7c81b28">GetStatusProd</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFStatusProd.cs" line="20" column="1" bodyfile="HKSupply/Services/Implementations/EFStatusProd.cs" bodystart="20" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="538">
+        <label>IStatusProd</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_status_prod"/>
+      </node>
+      <node id="537">
+        <label>HKSupply.Services.Implementations.EFStatusProd</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_status_prod"/>
+        <childnode refid="538" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="540">
+        <label>IStatusProd</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_status_prod"/>
+      </node>
+      <node id="539">
+        <label>HKSupply.Services.Implementations.EFStatusProd</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_status_prod"/>
+        <childnode refid="540" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFStatusProd.cs" line="17" column="1" bodyfile="HKSupply/Services/Implementations/EFStatusProd.cs" bodystart="16" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_status_prod_1a039e20d71edef240c3799f6042eb79c8" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFStatusProd</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_status_prod_1a792bdf101ee1aa593d25ab2abc99feca" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFStatusProd</scope><name>GetStatusProd</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

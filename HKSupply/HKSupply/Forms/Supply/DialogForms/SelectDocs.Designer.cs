@@ -35,36 +35,40 @@
             // 
             // sbOk
             // 
-            this.sbOk.Location = new System.Drawing.Point(199, 262);
+            this.sbOk.Location = new System.Drawing.Point(298, 403);
+            this.sbOk.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sbOk.Name = "sbOk";
-            this.sbOk.Size = new System.Drawing.Size(78, 23);
+            this.sbOk.Size = new System.Drawing.Size(117, 35);
             this.sbOk.TabIndex = 13;
             this.sbOk.Text = "OK";
             // 
             // sbCancel
             // 
-            this.sbCancel.Location = new System.Drawing.Point(118, 262);
+            this.sbCancel.Location = new System.Drawing.Point(177, 403);
+            this.sbCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sbCancel.Name = "sbCancel";
-            this.sbCancel.Size = new System.Drawing.Size(78, 23);
+            this.sbCancel.Size = new System.Drawing.Size(117, 35);
             this.sbCancel.TabIndex = 12;
             this.sbCancel.Text = "Cancel";
             // 
             // checkedListBoxDocs
             // 
             this.checkedListBoxDocs.FormattingEnabled = true;
-            this.checkedListBoxDocs.Location = new System.Drawing.Point(12, 12);
+            this.checkedListBoxDocs.Location = new System.Drawing.Point(18, 18);
+            this.checkedListBoxDocs.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkedListBoxDocs.Name = "checkedListBoxDocs";
-            this.checkedListBoxDocs.Size = new System.Drawing.Size(264, 244);
+            this.checkedListBoxDocs.Size = new System.Drawing.Size(394, 361);
             this.checkedListBoxDocs.TabIndex = 10;
             // 
             // SelectDocs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 302);
+            this.ClientSize = new System.Drawing.Size(432, 465);
             this.Controls.Add(this.sbOk);
             this.Controls.Add(this.sbCancel);
             this.Controls.Add(this.checkedListBoxDocs);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SelectDocs";
             this.Text = "SelectDocs";
             this.Load += new System.EventHandler(this.SelectDocs_Load);

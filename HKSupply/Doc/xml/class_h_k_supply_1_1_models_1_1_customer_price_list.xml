@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_customer_price_list" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::CustomerPriceList</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1a23377dfdc751397ebb5c9e47e0e716fa" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.CustomerPriceList.IdVer</definition>
+        <argsstring></argsstring>
+        <name>IdVer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="16" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1aa2b7ec67b0a8bf147029656646d420a4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.CustomerPriceList.IdSubVer</definition>
+        <argsstring></argsstring>
+        <name>IdSubVer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="19" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1a980acbde928ec654782c979a4d7cfdaa" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime HKSupply.Models.CustomerPriceList.Timestamp</definition>
+        <argsstring></argsstring>
+        <name>Timestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="22" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1a43f0547136cebe05cd62fd7bcc97b4da" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.CustomerPriceList.IdItemBcn</definition>
+        <argsstring></argsstring>
+        <name>IdItemBcn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="25" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1a2bbce9ce5b7f1192612e8eae3651c448" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_item_bcn" kindref="compound">ItemBcn</ref></type>
+        <definition>ItemBcn HKSupply.Models.CustomerPriceList.ItemBcn</definition>
+        <argsstring></argsstring>
+        <name>ItemBcn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="27" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1a68f771208a99fc1c511cf6d33ac63f45" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.CustomerPriceList.IdCustomer</definition>
+        <argsstring></argsstring>
+        <name>IdCustomer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="30" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1a6f91d7adeacfdfe2c88520362e6b03a4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_customer" kindref="compound">Customer</ref></type>
+        <definition>Customer HKSupply.Models.CustomerPriceList.Customer</definition>
+        <argsstring></argsstring>
+        <name>Customer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="32" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1aebc1dbaa6112104a841e9a80acdbe0e0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Decimal</type>
+        <definition>Decimal HKSupply.Models.CustomerPriceList.Price</definition>
+        <argsstring></argsstring>
+        <name>Price</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="35" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1a1bf739faf081ca617ef05641a1c2fdfa" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.CustomerPriceList.Comments</definition>
+        <argsstring></argsstring>
+        <name>Comments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="38" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1ab74fda0249f3239a4f1f7c201510c9f7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.CustomerPriceList.UnitCode</definition>
+        <argsstring></argsstring>
+        <name>UnitCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="41" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1a232e857ae83822cd7ff73d0dad3613aa" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_unit" kindref="compound">Unit</ref></type>
+        <definition>Unit HKSupply.Models.CustomerPriceList.Unit</definition>
+        <argsstring></argsstring>
+        <name>Unit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="43" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1a27590463d16101636d6c4d6ef08c1456" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.CustomerPriceList.IdCurrency</definition>
+        <argsstring></argsstring>
+        <name>IdCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="46" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1ab4884f3eb09114c5c0bd8a104c37bffc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_currency" kindref="compound">Currency</ref></type>
+        <definition>Currency HKSupply.Models.CustomerPriceList.Currency</definition>
+        <argsstring></argsstring>
+        <name>Currency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="48" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1a39eee57ce6980b94d099ea3294ed01f1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Decimal</type>
+        <definition>Decimal HKSupply.Models.CustomerPriceList.PriceBaseCurrency</definition>
+        <argsstring></argsstring>
+        <name>PriceBaseCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="51" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1ab80c6ee58019bf9449b2794c3a3bd833" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Decimal</type>
+        <definition>Decimal HKSupply.Models.CustomerPriceList.ExchangeRateUsed</definition>
+        <argsstring></argsstring>
+        <name>ExchangeRateUsed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="54" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1a5ee47e0dc8ca2a8386492e975ede29a5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.CustomerPriceList.MinLot</definition>
+        <argsstring></argsstring>
+        <name>MinLot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="57" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1ad84770e4300c2c1330a3d058a4034361" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.CustomerPriceList.IncrLot</definition>
+        <argsstring></argsstring>
+        <name>IncrLot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="60" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1a7a5978dabdffe3f73b39113920c84fed" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>float</type>
+        <definition>float HKSupply.Models.CustomerPriceList.LeadTime</definition>
+        <argsstring></argsstring>
+        <name>LeadTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="63" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="63" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1ae551975ef63846e1fbbe9365ee7bec13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.CustomerPriceList.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="66" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="66" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1a38fc8bd8cc56f4de7b4c4a42b981033a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.CustomerPriceList.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="95" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="95" bodyend="117"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_customer_price_list_1ae1e26345bf4d53c695afe4cba578a663" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>implicit</type>
+        <definition>static implicit HKSupply.Models.CustomerPriceList.operator CustomerPriceList</definition>
+        <argsstring>(CustomerPriceListHistory cplh)</argsstring>
+        <name>operator CustomerPriceList</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_customer_price_list_history" kindref="compound">CustomerPriceListHistory</ref></type>
+          <declname>cplh</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/CustomerPriceList.cs" line="120" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="120" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/CustomerPriceList.cs" line="14" column="1" bodyfile="HKSupply/Models/CustomerPriceList.cs" bodystart="13" bodyend="142"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1a1bf739faf081ca617ef05641a1c2fdfa" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>Comments</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1ab4884f3eb09114c5c0bd8a104c37bffc" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>Currency</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1a6f91d7adeacfdfe2c88520362e6b03a4" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>Customer</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1ae551975ef63846e1fbbe9365ee7bec13" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1ab80c6ee58019bf9449b2794c3a3bd833" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>ExchangeRateUsed</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1a38fc8bd8cc56f4de7b4c4a42b981033a" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1a27590463d16101636d6c4d6ef08c1456" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>IdCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1a68f771208a99fc1c511cf6d33ac63f45" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>IdCustomer</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1a43f0547136cebe05cd62fd7bcc97b4da" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>IdItemBcn</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1aa2b7ec67b0a8bf147029656646d420a4" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>IdSubVer</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1a23377dfdc751397ebb5c9e47e0e716fa" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>IdVer</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1ad84770e4300c2c1330a3d058a4034361" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>IncrLot</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1a2bbce9ce5b7f1192612e8eae3651c448" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>ItemBcn</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1a7a5978dabdffe3f73b39113920c84fed" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>LeadTime</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1a5ee47e0dc8ca2a8386492e975ede29a5" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>MinLot</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1ae1e26345bf4d53c695afe4cba578a663" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>operator CustomerPriceList</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1aebc1dbaa6112104a841e9a80acdbe0e0" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>Price</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1a39eee57ce6980b94d099ea3294ed01f1" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>PriceBaseCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1a980acbde928ec654782c979a4d7cfdaa" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>Timestamp</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1a232e857ae83822cd7ff73d0dad3613aa" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>Unit</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_customer_price_list_1ab74fda0249f3239a4f1f7c201510c9f7" prot="public" virt="non-virtual"><scope>HKSupply::Models::CustomerPriceList</scope><name>UnitCode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

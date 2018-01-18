@@ -1,23 +1,64 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="dir_2842df661c91fd653ac1cef3c187bca2" kind="dir">
     <compoundname>HKSupply/Forms/Master</compoundname>
+    <innerdir refid="dir_6d6157fa78dc4666cc608a439842b876">HKSupply/Forms/Master/DialogForms</innerdir>
+    <innerfile refid="_bom_breakdown_management_8cs">BomBreakdownManagement.cs</innerfile>
+    <innerfile refid="_bom_breakdown_management_8_designer_8cs">BomBreakdownManagement.Designer.cs</innerfile>
+    <innerfile refid="_bom_management_8cs">BomManagement.cs</innerfile>
+    <innerfile refid="_bom_management_8_designer_8cs">BomManagement.Designer.cs</innerfile>
+    <innerfile refid="_box_management_8cs">BoxManagement.cs</innerfile>
+    <innerfile refid="_box_management_8_designer_8cs">BoxManagement.Designer.cs</innerfile>
     <innerfile refid="_change_password_8cs">ChangePassword.cs</innerfile>
     <innerfile refid="_change_password_8_designer_8cs">ChangePassword.Designer.cs</innerfile>
+    <innerfile refid="_currencies_echange_rates_management_8cs">CurrenciesEchangeRatesManagement.cs</innerfile>
+    <innerfile refid="_currencies_echange_rates_management_8_designer_8cs">CurrenciesEchangeRatesManagement.Designer.cs</innerfile>
     <innerfile refid="_customer_management_8cs">CustomerManagement.cs</innerfile>
     <innerfile refid="_customer_management_8_designer_8cs">CustomerManagement.Designer.cs</innerfile>
+    <innerfile refid="_customer_management__v1_8cs">CustomerManagement_v1.cs</innerfile>
+    <innerfile refid="_customer_management__v1_8_designer_8cs">CustomerManagement_v1.Designer.cs</innerfile>
+    <innerfile refid="_customer_price_list_management_8cs">CustomerPriceListManagement.cs</innerfile>
+    <innerfile refid="_customer_price_list_management_8_designer_8cs">CustomerPriceListManagement.Designer.cs</innerfile>
+    <innerfile refid="_exchange_rate_update_8cs">ExchangeRateUpdate.cs</innerfile>
+    <innerfile refid="_exchange_rate_update_8_designer_8cs">ExchangeRateUpdate.Designer.cs</innerfile>
+    <innerfile refid="_families_hk_management_8cs">FamiliesHkManagement.cs</innerfile>
+    <innerfile refid="_families_hk_management_8_designer_8cs">FamiliesHkManagement.Designer.cs</innerfile>
     <innerfile refid="_functionality_management_8cs">FunctionalityManagement.cs</innerfile>
     <innerfile refid="_functionality_management_8_designer_8cs">FunctionalityManagement.Designer.cs</innerfile>
     <innerfile refid="_functionality_role_management_8cs">FunctionalityRoleManagement.cs</innerfile>
     <innerfile refid="_functionality_role_management_8_designer_8cs">FunctionalityRoleManagement.Designer.cs</innerfile>
-    <innerfile refid="_item_management_8cs">ItemManagement.cs</innerfile>
-    <innerfile refid="_item_management_8_designer_8cs">ItemManagement.Designer.cs</innerfile>
+    <innerfile refid="_incoterms_management_8cs">IncotermsManagement.cs</innerfile>
+    <innerfile refid="_incoterms_management_8_designer_8cs">IncotermsManagement.Designer.cs</innerfile>
+    <innerfile refid="_item_docs_8cs">ItemDocs.cs</innerfile>
+    <innerfile refid="_item_docs_8_designer_8cs">ItemDocs.Designer.cs</innerfile>
+    <innerfile refid="_item_management_e_y_8cs">ItemManagementEY.cs</innerfile>
+    <innerfile refid="_item_management_e_y_8_designer_8cs">ItemManagementEY.Designer.cs</innerfile>
+    <innerfile refid="_item_management_h_f_8cs">ItemManagementHF.cs</innerfile>
+    <innerfile refid="_item_management_h_f_8_designer_8cs">ItemManagementHF.Designer.cs</innerfile>
+    <innerfile refid="_item_management_h_w_8cs">ItemManagementHW.cs</innerfile>
+    <innerfile refid="_item_management_h_w_8_designer_8cs">ItemManagementHW.Designer.cs</innerfile>
+    <innerfile refid="_item_management_m_t_8cs">ItemManagementMT.cs</innerfile>
+    <innerfile refid="_item_management_m_t_8_designer_8cs">ItemManagementMT.Designer.cs</innerfile>
+    <innerfile refid="_items_levels_management_8cs">ItemsLevelsManagement.cs</innerfile>
+    <innerfile refid="_items_levels_management_8_designer_8cs">ItemsLevelsManagement.Designer.cs</innerfile>
+    <innerfile refid="_my_company_management_8cs">MyCompanyManagement.cs</innerfile>
+    <innerfile refid="_my_company_management_8_designer_8cs">MyCompanyManagement.Designer.cs</innerfile>
+    <innerfile refid="_payment_terms_management_8cs">PaymentTermsManagement.cs</innerfile>
+    <innerfile refid="_payment_terms_management_8_designer_8cs">PaymentTermsManagement.Designer.cs</innerfile>
+    <innerfile refid="_prototype_management_8cs">PrototypeManagement.cs</innerfile>
+    <innerfile refid="_prototype_management_8_designer_8cs">PrototypeManagement.Designer.cs</innerfile>
     <innerfile refid="_role_management_8cs">RoleManagement.cs</innerfile>
     <innerfile refid="_role_management_8_designer_8cs">RoleManagement.Designer.cs</innerfile>
+    <innerfile refid="_status_management_8cs">StatusManagement.cs</innerfile>
+    <innerfile refid="_status_management_8_designer_8cs">StatusManagement.Designer.cs</innerfile>
     <innerfile refid="_store_management_8cs">StoreManagement.cs</innerfile>
     <innerfile refid="_store_management_8_designer_8cs">StoreManagement.Designer.cs</innerfile>
+    <innerfile refid="_supplier_factory_coeff_management_8cs">SupplierFactoryCoeffManagement.cs</innerfile>
+    <innerfile refid="_supplier_factory_coeff_management_8_designer_8cs">SupplierFactoryCoeffManagement.Designer.cs</innerfile>
     <innerfile refid="_supplier_management_8cs">SupplierManagement.cs</innerfile>
     <innerfile refid="_supplier_management_8_designer_8cs">SupplierManagement.Designer.cs</innerfile>
+    <innerfile refid="_supplier_price_list_management_8cs">SupplierPriceListManagement.cs</innerfile>
+    <innerfile refid="_supplier_price_list_management_8_designer_8cs">SupplierPriceListManagement.Designer.cs</innerfile>
     <innerfile refid="_user_management_8cs">UserManagement.cs</innerfile>
     <innerfile refid="_user_management_8_designer_8cs">UserManagement.Designer.cs</innerfile>
     <briefdescription>

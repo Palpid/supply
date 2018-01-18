@@ -1,0 +1,1113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Master::ItemsLevelsManagement</compoundname>
+    <basecompoundref refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" prot="public" virt="non-virtual">HKSupply.Forms.RibbonFormBase</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1afdbac39088fac2bf1cb86b0647cd1d5a" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_material_l1" kindref="compound">MaterialL1</ref> &gt;</type>
+        <definition>List&lt;MaterialL1&gt; HKSupply.Forms.Master.ItemsLevelsManagement._materialL1List</definition>
+        <argsstring></argsstring>
+        <name>_materialL1List</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="96" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a823b45c3b04590bda8dedbe194f31ec0" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_material_l2" kindref="compound">MaterialL2</ref> &gt;</type>
+        <definition>List&lt;MaterialL2&gt; HKSupply.Forms.Master.ItemsLevelsManagement._materialL2List</definition>
+        <argsstring></argsstring>
+        <name>_materialL2List</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="97" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a2599c22648b0cfb0dc9de5b349a42771" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_material_l3" kindref="compound">MaterialL3</ref> &gt;</type>
+        <definition>List&lt;MaterialL3&gt; HKSupply.Forms.Master.ItemsLevelsManagement._materialL3List</definition>
+        <argsstring></argsstring>
+        <name>_materialL3List</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="98" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ae5aa23627a0c61fb8645b6dabab5205e" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_mat_type_l1" kindref="compound">MatTypeL1</ref> &gt;</type>
+        <definition>List&lt;MatTypeL1&gt; HKSupply.Forms.Master.ItemsLevelsManagement._matTypeL1</definition>
+        <argsstring></argsstring>
+        <name>_matTypeL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="100" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1abd3fe576a37b0d5287f9dacb135061ab" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_mat_type_l2" kindref="compound">MatTypeL2</ref> &gt;</type>
+        <definition>List&lt;MatTypeL2&gt; HKSupply.Forms.Master.ItemsLevelsManagement._matTypeL2</definition>
+        <argsstring></argsstring>
+        <name>_matTypeL2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="101" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a28a2e5b178447a7ce67f6751857bbbc4" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_mat_type_l3" kindref="compound">MatTypeL3</ref> &gt;</type>
+        <definition>List&lt;MatTypeL3&gt; HKSupply.Forms.Master.ItemsLevelsManagement._matTypeL3</definition>
+        <argsstring></argsstring>
+        <name>_matTypeL3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="102" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a8b40d4d1bd8c06d04bec4f73495e5051" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_hw_type_l1" kindref="compound">HwTypeL1</ref> &gt;</type>
+        <definition>List&lt;HwTypeL1&gt; HKSupply.Forms.Master.ItemsLevelsManagement._hwTypeL1</definition>
+        <argsstring></argsstring>
+        <name>_hwTypeL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="104" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a0aa80df0d39c307503ac4f04aa8aee9c" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_hw_type_l2" kindref="compound">HwTypeL2</ref> &gt;</type>
+        <definition>List&lt;HwTypeL2&gt; HKSupply.Forms.Master.ItemsLevelsManagement._hwTypeL2</definition>
+        <argsstring></argsstring>
+        <name>_hwTypeL2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="105" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a82610b4b15702403ef64820592559861" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_hw_type_l3" kindref="compound">HwTypeL3</ref> &gt;</type>
+        <definition>List&lt;HwTypeL3&gt; HKSupply.Forms.Master.ItemsLevelsManagement._hwTypeL3</definition>
+        <argsstring></argsstring>
+        <name>_hwTypeL3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="106" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1abc40bd37dbe2e6df1c09fbc1b06c6336" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Master.ItemsLevelsManagement.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ad6a9830aa252f2805c576ab76de2b0ba" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Master.ItemsLevelsManagement.xtraTabControlGeneral</definition>
+        <argsstring></argsstring>
+        <name>xtraTabControlGeneral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="457" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="457" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a003aef9c066d9039c00768fd448bf187" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.ItemsLevelsManagement.xtraTabPageMaterial</definition>
+        <argsstring></argsstring>
+        <name>xtraTabPageMaterial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="458" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="458" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a29df1031db8935c27a827b38e7b2065f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.ItemsLevelsManagement.xtraTabPageMatType</definition>
+        <argsstring></argsstring>
+        <name>xtraTabPageMatType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="459" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="459" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a92e5046b595d561bb93ad1560996e7af" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.ItemsLevelsManagement.xtraTabPageHwType</definition>
+        <argsstring></argsstring>
+        <name>xtraTabPageHwType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="460" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="460" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ae33865e500c910fecb2712a9e76a6ba2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Master.ItemsLevelsManagement.xtraTabControlMaterial</definition>
+        <argsstring></argsstring>
+        <name>xtraTabControlMaterial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="461" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="461" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a9218821029132d4c671a3c6b480f5a7e" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.ItemsLevelsManagement.xtraTabPageMaterialL1</definition>
+        <argsstring></argsstring>
+        <name>xtraTabPageMaterialL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="462" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="462" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a860d4060479d089c56d88b038b8716bb" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.ItemsLevelsManagement.xtraTabPageMaterialL2</definition>
+        <argsstring></argsstring>
+        <name>xtraTabPageMaterialL2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="463" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="463" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a75ed3028bd266e3c916e2ead358eafe8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.ItemsLevelsManagement.xtraTabPageMaterialL3</definition>
+        <argsstring></argsstring>
+        <name>xtraTabPageMaterialL3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="464" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="464" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a15c14c0db9dfda608a3047a35c8b844e" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Master.ItemsLevelsManagement.xtraTabControlMatType</definition>
+        <argsstring></argsstring>
+        <name>xtraTabControlMatType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="465" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="465" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1aa0b534cb8c01cb8c78f1a2b237cd1a7b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.ItemsLevelsManagement.xtraTabPageMatTypeL1</definition>
+        <argsstring></argsstring>
+        <name>xtraTabPageMatTypeL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="466" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="466" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a5d6100e7ffcea8fc472ed94604dc9377" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.ItemsLevelsManagement.xtraTabPageMatTypeL2</definition>
+        <argsstring></argsstring>
+        <name>xtraTabPageMatTypeL2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="467" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="467" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a12dea40e1776cf658f9925d616cb724c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.ItemsLevelsManagement.xtraTabPageMatTypeL3</definition>
+        <argsstring></argsstring>
+        <name>xtraTabPageMatTypeL3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="468" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="468" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ab745e2c48f13756778607b5ecde49084" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Master.ItemsLevelsManagement.xtraTabControlHwType</definition>
+        <argsstring></argsstring>
+        <name>xtraTabControlHwType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="469" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="469" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a61095ae2251749b518f1e8fa6357979d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.ItemsLevelsManagement.xtraTabPageHwTypeL1</definition>
+        <argsstring></argsstring>
+        <name>xtraTabPageHwTypeL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="470" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="470" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1aee755dc19bdac21f66f467efdc8be62c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.ItemsLevelsManagement.xtraTabPageHwTypeL2</definition>
+        <argsstring></argsstring>
+        <name>xtraTabPageHwTypeL2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="471" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="471" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ad2dc0f4873a8ba0f2990d3159cf34fb1" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.ItemsLevelsManagement.xtraTabPageHwTypeL3</definition>
+        <argsstring></argsstring>
+        <name>xtraTabPageHwTypeL3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="472" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="472" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1aa75d5bfd041fef677a3148bf464f1020" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.ItemsLevelsManagement.xgrdMaterialL1</definition>
+        <argsstring></argsstring>
+        <name>xgrdMaterialL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="473" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="473" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a39603c46343acd3ef7e582f02d320171" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.ItemsLevelsManagement.gridViewMaterialL1</definition>
+        <argsstring></argsstring>
+        <name>gridViewMaterialL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="474" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="474" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a0915c17aeaeefc29ffe000276683dcc8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.ItemsLevelsManagement.xgrdMaterialL2</definition>
+        <argsstring></argsstring>
+        <name>xgrdMaterialL2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="475" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="475" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a125c0158d8a37e3d16945dffdc0a4c25" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.ItemsLevelsManagement.gridViewMaterialL2</definition>
+        <argsstring></argsstring>
+        <name>gridViewMaterialL2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="476" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="476" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ab00666827426ee70a6fcc85c21329c25" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.ItemsLevelsManagement.xgrdMaterialL3</definition>
+        <argsstring></argsstring>
+        <name>xgrdMaterialL3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="477" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="477" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a4c73d033adcd72e049c794e325110df8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.ItemsLevelsManagement.gridViewMaterialL3</definition>
+        <argsstring></argsstring>
+        <name>gridViewMaterialL3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="478" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="478" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a9c7c92192c2df1b5e6f7cb6d72a67144" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.ItemsLevelsManagement.xgrdMatTypeL1</definition>
+        <argsstring></argsstring>
+        <name>xgrdMatTypeL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="479" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="479" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1acc4352772599736a4be2e6014d91a056" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.ItemsLevelsManagement.gridViewMatTypeL1</definition>
+        <argsstring></argsstring>
+        <name>gridViewMatTypeL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="480" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="480" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ae4e91d97c0590e35bb37dd9bcb9db68d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.ItemsLevelsManagement.xgrdMatTypeL2</definition>
+        <argsstring></argsstring>
+        <name>xgrdMatTypeL2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="481" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="481" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a6f231876684e40a2fa80709ae8941379" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.ItemsLevelsManagement.gridViewMatTypeL2</definition>
+        <argsstring></argsstring>
+        <name>gridViewMatTypeL2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="482" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="482" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1acad4fcd2b9ade924d48a642bef86d9b1" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.ItemsLevelsManagement.xgrdMatTypeL3</definition>
+        <argsstring></argsstring>
+        <name>xgrdMatTypeL3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="483" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="483" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1aee8f7050b8b1b3ffa368c6d4b529efde" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.ItemsLevelsManagement.gridViewMatTypeL3</definition>
+        <argsstring></argsstring>
+        <name>gridViewMatTypeL3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="484" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="484" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a3acaf2f6130ce2b58a1beaa7dae1746b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.ItemsLevelsManagement.xgrdHwTypeL1</definition>
+        <argsstring></argsstring>
+        <name>xgrdHwTypeL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="485" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="485" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a4415685535a3eab60b4180e752598375" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.ItemsLevelsManagement.gridViewHwTypeL1</definition>
+        <argsstring></argsstring>
+        <name>gridViewHwTypeL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="486" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="486" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a84316a0eb0e5eb3f6e62a0009bf8fbfd" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.ItemsLevelsManagement.xgrdHwTypeL2</definition>
+        <argsstring></argsstring>
+        <name>xgrdHwTypeL2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="487" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="487" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a42d4abf8d452d7c5819dabd1133846a0" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.ItemsLevelsManagement.gridViewHwTypeL2</definition>
+        <argsstring></argsstring>
+        <name>gridViewHwTypeL2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="488" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="488" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a05512cc429ba15006c6f66b5951936e6" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.ItemsLevelsManagement.xgrdHwTypeL3</definition>
+        <argsstring></argsstring>
+        <name>xgrdHwTypeL3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="489" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="489" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ada5fe87f8da702aca9f0ba0a757d5f77" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.ItemsLevelsManagement.gridViewHwTypeL3</definition>
+        <argsstring></argsstring>
+        <name>gridViewHwTypeL3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="490" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="490" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1acdfc08413c51ddc96459b9109b4ba0d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Master.ItemsLevelsManagement.ItemsLevelsManagement</definition>
+        <argsstring>()</argsstring>
+        <name>ItemsLevelsManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="110" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="110" bodyend="134"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a7baa007f925c94063527afcab173c59d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.ConfigureRibbonActions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="138" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="138" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a1284f231f7c74556c3c4cd263cbea86b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.ItemsLevelsManagement_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ItemsLevelsManagement_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="154" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="154" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1aa1344fba1e8ab4e5e4a1c5391184464c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.SetUpGrdMaterialL1</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdMaterialL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="172" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="172" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1af035a31b9050ba57a1522e156d9da84e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.SetUpGrdMaterialL2</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdMaterialL2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="200" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="200" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1af8c2032a5647bc9966e34ff985c76cfc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.SetUpGrdMaterialL3</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdMaterialL3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="229" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="229" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1aaf77b1f8a5b325c85c689261ac922e7e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.SetUpGrdMatTypeL1</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdMatTypeL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="260" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="260" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a2c076aacaf663aa2082084030b57fe44" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.SetUpGrdMatTypeL2</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdMatTypeL2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="287" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="287" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1aadab91f2c961e57ae0835276203be045" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.SetUpGrdMatTypelL3</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdMatTypelL3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="315" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="315" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1affe703fc28471def8575a44282e26f99" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.SetUpGrdHwTypeL1</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdHwTypeL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="345" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="345" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a651380070e83f6a44e0619a7f3cb0bbc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.SetUpGrdHwTypeL2</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdHwTypeL2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="371" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="371" bodyend="397"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a1f0b7c927c76e9e8b9857f3a4d878361" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.SetUpGrdHwTypeL3</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdHwTypeL3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="399" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="399" bodyend="427"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a2fac1322859695f841d68a7cf753f26a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.LoadMaterials</definition>
+        <argsstring>()</argsstring>
+        <name>LoadMaterials</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="431" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="431" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1adf69dd560b0384529b6e52a1033c0635" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.LoadMaterialL1</definition>
+        <argsstring>()</argsstring>
+        <name>LoadMaterialL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="445" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="445" bodyend="457"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ae1c1c8934ede73d9053de0b72dac45e1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.LoadMaterialL2</definition>
+        <argsstring>()</argsstring>
+        <name>LoadMaterialL2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="459" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="459" bodyend="470"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1afbd9aa0a672ab2a69cba1192748ff71a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.LoadMaterialL3</definition>
+        <argsstring>()</argsstring>
+        <name>LoadMaterialL3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="472" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="472" bodyend="483"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a9353fd1eb8feffc1ab8fab0fea889212" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.LoadMatsType</definition>
+        <argsstring>()</argsstring>
+        <name>LoadMatsType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="485" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="485" bodyend="497"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ace2ce23ce0cd4c6b47db54e5f54dbb5a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.LoadMatTypeL1</definition>
+        <argsstring>()</argsstring>
+        <name>LoadMatTypeL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="499" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="499" bodyend="510"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a6549479cc3e56c5a39fed3e6decec330" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.LoadMatTypeL2</definition>
+        <argsstring>()</argsstring>
+        <name>LoadMatTypeL2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="512" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="512" bodyend="523"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a8beb75acc7c48d5a4530e868a8c52515" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.LoadMatTypeL3</definition>
+        <argsstring>()</argsstring>
+        <name>LoadMatTypeL3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="525" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="525" bodyend="536"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a299a84a7ed3522a6257319da84f0d0fa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.LoadHwsType</definition>
+        <argsstring>()</argsstring>
+        <name>LoadHwsType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="538" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="538" bodyend="550"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1adda35a6e2c15e479fdb0d4c0f9181aab" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.LoadHwTypeL1</definition>
+        <argsstring>()</argsstring>
+        <name>LoadHwTypeL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="552" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="552" bodyend="563"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1aa2d2dda6b968d926f10ed60f4d2a8942" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.LoadHwTypeL2</definition>
+        <argsstring>()</argsstring>
+        <name>LoadHwTypeL2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="565" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="565" bodyend="576"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ae0ce0d20a8e16063ea0fcd452436826e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.LoadHwTypeL3</definition>
+        <argsstring>()</argsstring>
+        <name>LoadHwTypeL3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="578" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="578" bodyend="589"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a95c176efc066e16614648537fb8867f2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemsLevelsManagement.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="29" bodyend="453"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a942fc202cad65362e5bc54017702252c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.ItemsLevelsManagement.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1082">
+        <label>HKSupply.Forms.Master.ItemsLevelsManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management"/>
+        <childnode refid="1083" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1084">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1083">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1084" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1085">
+        <label>HKSupply.Forms.Master.ItemsLevelsManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management"/>
+        <childnode refid="1086" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1087">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1088">
+        <label>XtraBars</label>
+      </node>
+      <node id="1086">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1087" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1088" relation="usage">
+          <edgelabel>bbiCancel</edgelabel>
+          <edgelabel>ribbonStatusBar</edgelabel>
+          <edgelabel>bbiPrintPreview</edgelabel>
+          <edgelabel>bbiSave</edgelabel>
+          <edgelabel>bbiNew</edgelabel>
+          <edgelabel>bbiEdit</edgelabel>
+          <edgelabel>ribbonControl</edgelabel>
+          <edgelabel>ribbonPageGroup1</edgelabel>
+          <edgelabel>ribbonPage1</edgelabel>
+          <edgelabel>ribbonPageGroup2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Master/ItemsLevelsManagement.cs" line="20" column="1" bodyfile="HKSupply/Forms/Master/ItemsLevelsManagement.cs" bodystart="19" bodyend="593"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a8b40d4d1bd8c06d04bec4f73495e5051" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>_hwTypeL1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a0aa80df0d39c307503ac4f04aa8aee9c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>_hwTypeL2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a82610b4b15702403ef64820592559861" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>_hwTypeL3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1afdbac39088fac2bf1cb86b0647cd1d5a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>_materialL1List</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a823b45c3b04590bda8dedbe194f31ec0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>_materialL2List</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a2599c22648b0cfb0dc9de5b349a42771" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>_materialL3List</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ae5aa23627a0c61fb8645b6dabab5205e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>_matTypeL1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1abd3fe576a37b0d5287f9dacb135061ab" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>_matTypeL2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a28a2e5b178447a7ce67f6751857bbbc4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>_matTypeL3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>ActionsStates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>AddRestoreLayoutItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>BarButtonItemReport_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>bbiCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>bbiEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>bbiExportCsv_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>bbiExportExcel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>bbiNew</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>bbiPrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>bbiPrintPreview_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>bbiSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>BbiSaveLayout_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1abc40bd37dbe2e6df1c09fbc1b06c6336" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>ConfigureLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>ConfigurePrintExportOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a7baa007f925c94063527afcab173c59d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>ConfigureRibbonActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>CurrentLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>CurrentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a942fc202cad65362e5bc54017702252c" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>EnableExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>EnableExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>EnableLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>EnablePrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>ExportCsvFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>ExportExcelFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a4415685535a3eab60b4180e752598375" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>gridViewHwTypeL1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a42d4abf8d452d7c5819dabd1133846a0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>gridViewHwTypeL2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ada5fe87f8da702aca9f0ba0a757d5f77" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>gridViewHwTypeL3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a39603c46343acd3ef7e582f02d320171" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>gridViewMaterialL1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a125c0158d8a37e3d16945dffdc0a4c25" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>gridViewMaterialL2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a4c73d033adcd72e049c794e325110df8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>gridViewMaterialL3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1acc4352772599736a4be2e6014d91a056" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>gridViewMatTypeL1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a6f231876684e40a2fa80709ae8941379" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>gridViewMatTypeL2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1aee8f7050b8b1b3ffa368c6d4b529efde" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>gridViewMatTypeL3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a95c176efc066e16614648537fb8867f2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1acdfc08413c51ddc96459b9109b4ba0d1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>ItemsLevelsManagement</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a1284f231f7c74556c3c4cd263cbea86b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>ItemsLevelsManagement_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>LayoutButton_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a299a84a7ed3522a6257319da84f0d0fa" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>LoadHwsType</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1adda35a6e2c15e479fdb0d4c0f9181aab" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>LoadHwTypeL1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1aa2d2dda6b968d926f10ed60f4d2a8942" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>LoadHwTypeL2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ae0ce0d20a8e16063ea0fcd452436826e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>LoadHwTypeL3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1adf69dd560b0384529b6e52a1033c0635" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>LoadMaterialL1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ae1c1c8934ede73d9053de0b72dac45e1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>LoadMaterialL2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1afbd9aa0a672ab2a69cba1192748ff71a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>LoadMaterialL3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a2fac1322859695f841d68a7cf753f26a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>LoadMaterials</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a9353fd1eb8feffc1ab8fab0fea889212" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>LoadMatsType</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ace2ce23ce0cd4c6b47db54e5f54dbb5a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>LoadMatTypeL1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a6549479cc3e56c5a39fed3e6decec330" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>LoadMatTypeL2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a8beb75acc7c48d5a4530e868a8c52515" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>LoadMatTypeL3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>Modify</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>New</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>ProcessCmdKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>Read</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>RestoreInitState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>ribbonControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>RibbonFormBase</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>ribbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>ribbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>ribbonPageGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>ribbonStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>SetActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>SetRibbonText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1affe703fc28471def8575a44282e26f99" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>SetUpGrdHwTypeL1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a651380070e83f6a44e0619a7f3cb0bbc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>SetUpGrdHwTypeL2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a1f0b7c927c76e9e8b9857f3a4d878361" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>SetUpGrdHwTypeL3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1aa1344fba1e8ab4e5e4a1c5391184464c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>SetUpGrdMaterialL1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1af035a31b9050ba57a1522e156d9da84e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>SetUpGrdMaterialL2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1af8c2032a5647bc9966e34ff985c76cfc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>SetUpGrdMaterialL3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1aaf77b1f8a5b325c85c689261ac922e7e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>SetUpGrdMatTypeL1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a2c076aacaf663aa2082084030b57fe44" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>SetUpGrdMatTypeL2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1aadab91f2c961e57ae0835276203be045" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>SetUpGrdMatTypelL3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a3acaf2f6130ce2b58a1beaa7dae1746b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xgrdHwTypeL1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a84316a0eb0e5eb3f6e62a0009bf8fbfd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xgrdHwTypeL2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a05512cc429ba15006c6f66b5951936e6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xgrdHwTypeL3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1aa75d5bfd041fef677a3148bf464f1020" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xgrdMaterialL1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a0915c17aeaeefc29ffe000276683dcc8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xgrdMaterialL2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ab00666827426ee70a6fcc85c21329c25" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xgrdMaterialL3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a9c7c92192c2df1b5e6f7cb6d72a67144" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xgrdMatTypeL1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ae4e91d97c0590e35bb37dd9bcb9db68d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xgrdMatTypeL2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1acad4fcd2b9ade924d48a642bef86d9b1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xgrdMatTypeL3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ad6a9830aa252f2805c576ab76de2b0ba" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xtraTabControlGeneral</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ab745e2c48f13756778607b5ecde49084" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xtraTabControlHwType</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ae33865e500c910fecb2712a9e76a6ba2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xtraTabControlMaterial</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a15c14c0db9dfda608a3047a35c8b844e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xtraTabControlMatType</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a92e5046b595d561bb93ad1560996e7af" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xtraTabPageHwType</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a61095ae2251749b518f1e8fa6357979d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xtraTabPageHwTypeL1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1aee755dc19bdac21f66f467efdc8be62c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xtraTabPageHwTypeL2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1ad2dc0f4873a8ba0f2990d3159cf34fb1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xtraTabPageHwTypeL3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a003aef9c066d9039c00768fd448bf187" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xtraTabPageMaterial</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a9218821029132d4c671a3c6b480f5a7e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xtraTabPageMaterialL1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a860d4060479d089c56d88b038b8716bb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xtraTabPageMaterialL2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a75ed3028bd266e3c916e2ead358eafe8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xtraTabPageMaterialL3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a29df1031db8935c27a827b38e7b2065f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xtraTabPageMatType</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1aa0b534cb8c01cb8c78f1a2b237cd1a7b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xtraTabPageMatTypeL1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a5d6100e7ffcea8fc472ed94604dc9377" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xtraTabPageMatTypeL2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management_1a12dea40e1776cf658f9925d616cb724c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemsLevelsManagement</scope><name>xtraTabPageMatTypeL3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

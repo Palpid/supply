@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_detail_bom_mt" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::DetailBomMt</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1a7270ef40b18a272be8ab5319710d1221" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.DetailBomMt.IdBom</definition>
+        <argsstring></argsstring>
+        <name>IdBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomMt.cs" line="11" column="1" bodyfile="HKSupply/Models/DetailBomMt.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1abb84c32cf8fe564734ddc4e26f25c1eb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.DetailBomMt.IdItemBcn</definition>
+        <argsstring></argsstring>
+        <name>IdItemBcn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomMt.cs" line="14" column="1" bodyfile="HKSupply/Models/DetailBomMt.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1a2c8fafe2a4c8c91ea71431e4331254db" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_item_mt" kindref="compound">ItemMt</ref></type>
+        <definition>ItemMt HKSupply.Models.DetailBomMt.Item</definition>
+        <argsstring></argsstring>
+        <name>Item</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomMt.cs" line="17" column="1" bodyfile="HKSupply/Models/DetailBomMt.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1a4e12a90506fd6fbe16753864ae31fa28" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.DetailBomMt.IdBomBreakdown</definition>
+        <argsstring></argsstring>
+        <name>IdBomBreakdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomMt.cs" line="20" column="1" bodyfile="HKSupply/Models/DetailBomMt.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1a8801bd54e719c0c022a29275173d386e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_bom_breakdown" kindref="compound">BomBreakdown</ref></type>
+        <definition>BomBreakdown HKSupply.Models.DetailBomMt.BomBreakdown</definition>
+        <argsstring></argsstring>
+        <name>BomBreakdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomMt.cs" line="23" column="1" bodyfile="HKSupply/Models/DetailBomMt.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1a2d3b933ed0f66a4f699881598b08f809" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.DetailBomMt.Length</definition>
+        <argsstring></argsstring>
+        <name>Length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomMt.cs" line="26" column="1" bodyfile="HKSupply/Models/DetailBomMt.cs" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1a4cf5345d16551f8099a9f08b3a7a507d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.DetailBomMt.Width</definition>
+        <argsstring></argsstring>
+        <name>Width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomMt.cs" line="29" column="1" bodyfile="HKSupply/Models/DetailBomMt.cs" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1a79be56435832e62463cbcdb0fe6d1261" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.DetailBomMt.Height</definition>
+        <argsstring></argsstring>
+        <name>Height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomMt.cs" line="32" column="1" bodyfile="HKSupply/Models/DetailBomMt.cs" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1ae62401acdb9ec95d57f397a8e59ccb54" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.DetailBomMt.Density</definition>
+        <argsstring></argsstring>
+        <name>Density</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomMt.cs" line="35" column="1" bodyfile="HKSupply/Models/DetailBomMt.cs" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1ac2ef5a3864b231c1776cd4a5b3a0f3ee" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.DetailBomMt.NumberOfParts</definition>
+        <argsstring></argsstring>
+        <name>NumberOfParts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomMt.cs" line="38" column="1" bodyfile="HKSupply/Models/DetailBomMt.cs" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1ac112acdd6d93a8e915fcf7acfe3f537e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.DetailBomMt.Coefficient1</definition>
+        <argsstring></argsstring>
+        <name>Coefficient1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomMt.cs" line="41" column="1" bodyfile="HKSupply/Models/DetailBomMt.cs" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1a64f4a13332c2522ad308f0291de4483f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.DetailBomMt.Coefficient2</definition>
+        <argsstring></argsstring>
+        <name>Coefficient2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomMt.cs" line="44" column="1" bodyfile="HKSupply/Models/DetailBomMt.cs" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1aeae6ce4888a8be4337964e1fd51e64e2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.DetailBomMt.Scrap</definition>
+        <argsstring></argsstring>
+        <name>Scrap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomMt.cs" line="47" column="1" bodyfile="HKSupply/Models/DetailBomMt.cs" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1aa859270454c3bfbe1355bc2f8fd7ce22" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.DetailBomMt.Quantity</definition>
+        <argsstring></argsstring>
+        <name>Quantity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomMt.cs" line="50" column="1" bodyfile="HKSupply/Models/DetailBomMt.cs" bodystart="50" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1ab79fe1948be3cf2562da976663711235" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.DetailBomMt.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomMt.cs" line="54" column="1" bodyfile="HKSupply/Models/DetailBomMt.cs" bodystart="54" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1a09e035caa47cdb38e7571f90c8641354" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.DetailBomMt.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomMt.cs" line="79" column="1" bodyfile="HKSupply/Models/DetailBomMt.cs" bodystart="79" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/DetailBomMt.cs" line="9" column="1" bodyfile="HKSupply/Models/DetailBomMt.cs" bodystart="8" bodyend="100"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1a8801bd54e719c0c022a29275173d386e" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomMt</scope><name>BomBreakdown</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1ac112acdd6d93a8e915fcf7acfe3f537e" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomMt</scope><name>Coefficient1</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1a64f4a13332c2522ad308f0291de4483f" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomMt</scope><name>Coefficient2</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1ae62401acdb9ec95d57f397a8e59ccb54" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomMt</scope><name>Density</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1ab79fe1948be3cf2562da976663711235" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomMt</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1a09e035caa47cdb38e7571f90c8641354" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomMt</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1a79be56435832e62463cbcdb0fe6d1261" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomMt</scope><name>Height</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1a7270ef40b18a272be8ab5319710d1221" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomMt</scope><name>IdBom</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1a4e12a90506fd6fbe16753864ae31fa28" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomMt</scope><name>IdBomBreakdown</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1abb84c32cf8fe564734ddc4e26f25c1eb" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomMt</scope><name>IdItemBcn</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1a2c8fafe2a4c8c91ea71431e4331254db" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomMt</scope><name>Item</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1a2d3b933ed0f66a4f699881598b08f809" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomMt</scope><name>Length</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1ac2ef5a3864b231c1776cd4a5b3a0f3ee" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomMt</scope><name>NumberOfParts</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1aa859270454c3bfbe1355bc2f8fd7ce22" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomMt</scope><name>Quantity</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1aeae6ce4888a8be4337964e1fd51e64e2" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomMt</scope><name>Scrap</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_mt_1a4cf5345d16551f8099a9f08b3a7a507d" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomMt</scope><name>Width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

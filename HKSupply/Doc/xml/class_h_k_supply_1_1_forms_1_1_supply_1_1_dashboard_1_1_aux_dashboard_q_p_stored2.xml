@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored2" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStored2</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored2_1ae6d72cde397c9033a9573240c7b73f58" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.Supply.Dashboard.AuxDashboardQPStored2.ID_DOC</definition>
+        <argsstring></argsstring>
+        <name>ID_DOC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="737" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="737" bodyend="737"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored2_1ab795f73e2b9a79136c7d4b7582d189ea" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Forms.Supply.Dashboard.AuxDashboardQPStored2.WEEK_NUM</definition>
+        <argsstring></argsstring>
+        <name>WEEK_NUM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="738" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="738" bodyend="738"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored2_1ae7303480b0733eeeb4d263e840c65784" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.Supply.Dashboard.AuxDashboardQPStored2.ID_CUSTOMER</definition>
+        <argsstring></argsstring>
+        <name>ID_CUSTOMER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="739" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="739" bodyend="739"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored2_1a4ebea5cabaf1bac9501578e56213e750" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.Supply.Dashboard.AuxDashboardQPStored2.ID_ITEM_BCN</definition>
+        <argsstring></argsstring>
+        <name>ID_ITEM_BCN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="740" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="740" bodyend="740"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored2_1ae3a1b3962845dfa49bd6a15455134ede" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.Supply.Dashboard.AuxDashboardQPStored2.ID_ITEM_GROUP</definition>
+        <argsstring></argsstring>
+        <name>ID_ITEM_GROUP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="741" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="741" bodyend="741"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored2_1a210abcd219a706902e31caa86b727f9e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.Supply.Dashboard.AuxDashboardQPStored2.UNIT</definition>
+        <argsstring></argsstring>
+        <name>UNIT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="742" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="742" bodyend="742"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored2_1a17054606efa1cd8ca71b43b477375a3d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Forms.Supply.Dashboard.AuxDashboardQPStored2.TOTAL_QTY_ORIGINAL</definition>
+        <argsstring></argsstring>
+        <name>TOTAL_QTY_ORIGINAL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="743" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="743" bodyend="743"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored2_1a2a13c2059fdfa5f3c044f806e5ecd9dd" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Forms.Supply.Dashboard.AuxDashboardQPStored2.TOTAL_QTY</definition>
+        <argsstring></argsstring>
+        <name>TOTAL_QTY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="744" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="744" bodyend="744"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="735" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="734" bodyend="746"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored2_1ae7303480b0733eeeb4d263e840c65784" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStored2</scope><name>ID_CUSTOMER</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored2_1ae6d72cde397c9033a9573240c7b73f58" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStored2</scope><name>ID_DOC</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored2_1a4ebea5cabaf1bac9501578e56213e750" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStored2</scope><name>ID_ITEM_BCN</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored2_1ae3a1b3962845dfa49bd6a15455134ede" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStored2</scope><name>ID_ITEM_GROUP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored2_1a2a13c2059fdfa5f3c044f806e5ecd9dd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStored2</scope><name>TOTAL_QTY</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored2_1a17054606efa1cd8ca71b43b477375a3d" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStored2</scope><name>TOTAL_QTY_ORIGINAL</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored2_1a210abcd219a706902e31caa86b727f9e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStored2</scope><name>UNIT</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored2_1ab795f73e2b9a79136c7d4b7582d189ea" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::AuxDashboardQPStored2</scope><name>WEEK_NUM</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

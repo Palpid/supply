@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_hw_type" kind="interface" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Interfaces::IHwType</compoundname>
+    <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_hw_type" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFHwType</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_hw_type_1a487125374c12f73a42142a072aeac798" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_hw_type_l1" kindref="compound">HwTypeL1</ref> &gt;</type>
+        <definition>List&lt;HwTypeL1&gt; HKSupply.Services.Interfaces.IHwType.GetHwsTypeL1</definition>
+        <argsstring>()</argsstring>
+        <name>GetHwsTypeL1</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_hw_type_1a684629eaef0472b06f3fbdc6c592ca6f">GetHwsTypeL1</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IHwType.cs" line="12" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_hw_type_1a58aad3fff7ec0fc71ae2634a4054fa5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_hw_type_l2" kindref="compound">HwTypeL2</ref> &gt;</type>
+        <definition>List&lt;HwTypeL2&gt; HKSupply.Services.Interfaces.IHwType.GetHwsTypeL2</definition>
+        <argsstring>()</argsstring>
+        <name>GetHwsTypeL2</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_hw_type_1adc178a2459f96725b1c086ba3b81c070">GetHwsTypeL2</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IHwType.cs" line="13" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_hw_type_1a325852bd678ea5eb2d2fb30ebf4663a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_hw_type_l3" kindref="compound">HwTypeL3</ref> &gt;</type>
+        <definition>List&lt;HwTypeL3&gt; HKSupply.Services.Interfaces.IHwType.GetHwsTypeL3</definition>
+        <argsstring>()</argsstring>
+        <name>GetHwsTypeL3</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_hw_type_1a7edde3e8dc05aa70ae5c0d95e06d4c04">GetHwsTypeL3</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IHwType.cs" line="14" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="757">
+        <label>HKSupply.Services.Interfaces.IHwType</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_hw_type"/>
+      </node>
+      <node id="758">
+        <label>HKSupply.Services.Implementations.EFHwType</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_hw_type"/>
+        <childnode refid="757" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="HKSupply/Services/Interfaces/IHwType.cs" line="11" column="1" bodyfile="HKSupply/Services/Interfaces/IHwType.cs" bodystart="10" bodyend="15"/>
+    <listofallmembers>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_hw_type_1a487125374c12f73a42142a072aeac798" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IHwType</scope><name>GetHwsTypeL1</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_hw_type_1a58aad3fff7ec0fc71ae2634a4054fa5e" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IHwType</scope><name>GetHwsTypeL2</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_hw_type_1a325852bd678ea5eb2d2fb30ebf4663a6" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IHwType</scope><name>GetHwsTypeL3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

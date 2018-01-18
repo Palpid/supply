@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_layout" kind="interface" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Interfaces::ILayout</compoundname>
+    <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_layout" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFLayout</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_layout_1a08cfe2347106876e4c16d2d9f245d939" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_layout" kindref="compound">Layout</ref> &gt;</type>
+        <definition>IEnumerable&lt;Layout&gt; HKSupply.Services.Interfaces.ILayout.GetLayouts</definition>
+        <argsstring>(int functionalityId, string user)</argsstring>
+        <name>GetLayouts</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_layout_1a07d91cea5164b984ff538c830980dad1">GetLayouts</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>functionalityId</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/ILayout.cs" line="11" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_layout_1ae81035ab858e4d7d1b471c9fffbf7ed7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_layout" kindref="compound">Layout</ref> &gt;</type>
+        <definition>IEnumerable&lt;Layout&gt; HKSupply.Services.Interfaces.ILayout.GetLayouts</definition>
+        <argsstring>(int functionalityId, string objectName, string user)</argsstring>
+        <name>GetLayouts</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_layout_1a36f49bec7f019186d7f51135da2b5c68">GetLayouts</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>functionalityId</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>objectName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/ILayout.cs" line="12" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_layout_1ad083e059f5734c1cd4df7355701d6f7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.ILayout.SaveLayout</definition>
+        <argsstring>(Layout newLayout)</argsstring>
+        <name>SaveLayout</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_layout_1a2a6caa6d5c642a3999ff838d8bc9abdb">SaveLayout</reimplementedby>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_layout" kindref="compound">Layout</ref></type>
+          <declname>newLayout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/ILayout.cs" line="13" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_layout_1afa7ecd559d260cfdd2aefdd68191b1f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.ILayout.SaveLayout</definition>
+        <argsstring>(List&lt; Layout &gt; layouts)</argsstring>
+        <name>SaveLayout</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_layout_1a6d402c97ed65fe6d6148541832abeb3a">SaveLayout</reimplementedby>
+        <param>
+          <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_layout" kindref="compound">Layout</ref> &gt;</type>
+          <declname>layouts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/ILayout.cs" line="14" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_layout_1a15677db354cc020d6acdf7818f803474" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.ILayout.UpdateLayout</definition>
+        <argsstring>(Layout updateLayout)</argsstring>
+        <name>UpdateLayout</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_layout_1ac7e895cd7c46794220b498f89328fee0">UpdateLayout</reimplementedby>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_layout" kindref="compound">Layout</ref></type>
+          <declname>updateLayout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/ILayout.cs" line="15" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface para el service de Layout </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="784">
+        <label>HKSupply.Services.Interfaces.ILayout</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_layout"/>
+      </node>
+      <node id="785">
+        <label>HKSupply.Services.Implementations.EFLayout</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_layout"/>
+        <childnode refid="784" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="HKSupply/Services/Interfaces/ILayout.cs" line="10" column="1" bodyfile="HKSupply/Services/Interfaces/ILayout.cs" bodystart="9" bodyend="16"/>
+    <listofallmembers>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_layout_1a08cfe2347106876e4c16d2d9f245d939" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ILayout</scope><name>GetLayouts</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_layout_1ae81035ab858e4d7d1b471c9fffbf7ed7" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ILayout</scope><name>GetLayouts</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_layout_1ad083e059f5734c1cd4df7355701d6f7a" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ILayout</scope><name>SaveLayout</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_layout_1afa7ecd559d260cfdd2aefdd68191b1f0" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ILayout</scope><name>SaveLayout</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_layout_1a15677db354cc020d6acdf7818f803474" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ILayout</scope><name>UpdateLayout</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

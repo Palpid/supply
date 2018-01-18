@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_helpers_1_1_entity_framework_helper" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Helpers::EntityFrameworkHelper</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_entity_framework_helper_1ad8b45e38c95a70d5c33b8a4a90ce50ae" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>static T HKSupply.Helpers.EntityFrameworkHelper.UnProxy&lt; T &gt;</definition>
+        <argsstring>(DbContext context, T proxyObject)</argsstring>
+        <name>UnProxy&lt; T &gt;</name>
+        <param>
+          <type>DbContext</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>proxyObject</declname>
+        </param>
+        <briefdescription>
+<para>Devuelve el objeto POCO de un proxy generado por EF </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>context</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>proxyObject</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para><para>Cuando se hace una consulta de EF, realmente no se devuelve el objeto &quot;model&quot;, sino uno heredado de este que aparte incluye todas las funcionalidades de EF (tracking de los cambios del objeto por si queremos modificarlo en la db, lazy loading, etc. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/EntityFrameworkHelper.cs" line="27" column="1" bodyfile="HKSupply/Helpers/EntityFrameworkHelper.cs" bodystart="27" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="namespace_h_k_supply_1_1_helpers" kindref="compound">Helpers</ref> para Entity Framework </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Helpers/EntityFrameworkHelper.cs" line="14" column="1" bodyfile="HKSupply/Helpers/EntityFrameworkHelper.cs" bodystart="13" bodyend="42"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_entity_framework_helper_1ad8b45e38c95a70d5c33b8a4a90ce50ae" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::EntityFrameworkHelper</scope><name>UnProxy&lt; T &gt;</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

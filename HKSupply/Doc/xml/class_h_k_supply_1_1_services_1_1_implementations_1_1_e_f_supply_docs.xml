@@ -1,0 +1,1084 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFSupplyDocs</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.ISupplyDocs</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a9ec277cff0c87695210b3bb913d0f11e" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFSupplyDocs._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs" kindref="compound">EFSupplyDocs</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="24" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a0d08519e2f9c127b2eb064c7cf964e5d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Services.Implementations.EFSupplyDocs.GetDoc</definition>
+        <argsstring>(string idDoc)</argsstring>
+        <name>GetDoc</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs_1a1296cae0452d0436716a3d2e06906a79">GetDoc</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idDoc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="26" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="26" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1acc782dbf38c03242efdcbfd2e49f31e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Services.Implementations.EFSupplyDocs.GetDocPackingList</definition>
+        <argsstring>(string idDoc)</argsstring>
+        <name>GetDocPackingList</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs_1a6c55e551cc63fe906c01b0ab0a127b48">GetDocPackingList</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idDoc</declname>
+        </param>
+        <briefdescription>
+<para>El packing es un poco especial y puede cargar más cosas que un documento normal. Lo separo para cuando interesa obtener el packing con todo lo asociado </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idDoc</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="101" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="101" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a21e0ea74ffc13e260e91811c90d10005" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Services.Implementations.EFSupplyDocs.GetDocByRelated</definition>
+        <argsstring>(string idDocRelated)</argsstring>
+        <name>GetDocByRelated</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs_1a67799890fa2dbb73cd2604f985a15741">GetDocByRelated</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idDocRelated</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="187" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="187" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1af2bf5689815967809440fd64b8de7660" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref> &gt;</type>
+        <definition>List&lt;DocHead&gt; HKSupply.Services.Implementations.EFSupplyDocs.GetDocsByRelated</definition>
+        <argsstring>(string idDocRelated)</argsstring>
+        <name>GetDocsByRelated</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs_1aa747988e723ca9dcdcc47c24b9d02f39">GetDocsByRelated</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idDocRelated</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="256" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="256" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1af806670684c64f878f23491575a1fa9e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref> &gt;</type>
+        <definition>List&lt;DocHead&gt; HKSupply.Services.Implementations.EFSupplyDocs.GetDocsByReference</definition>
+        <argsstring>(string manualReference)</argsstring>
+        <name>GetDocsByReference</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs_1a6e51dc052c284e3f2f86e05d1f7203f2">GetDocsByReference</reimplements>
+        <param>
+          <type>string</type>
+          <declname>manualReference</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="329" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="329" bodyend="417"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a1784bc4416968abe82bea0a133641d79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref> &gt;</type>
+        <definition>List&lt;DocHead&gt; HKSupply.Services.Implementations.EFSupplyDocs.GetDocs</definition>
+        <argsstring>(string idSupplier, string idCustomer, DateTime docDate, string IdSupplyDocType, string idSupplyStatus)</argsstring>
+        <name>GetDocs</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs_1a00ab4983c5a2a4afd1d1f27700f870f6">GetDocs</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idCustomer</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>docDate</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>IdSupplyDocType</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplyStatus</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="419" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="419" bodyend="492"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a711ac4672ffab767bd3758810b844ea1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref> &gt;</type>
+        <definition>List&lt;DocHead&gt; HKSupply.Services.Implementations.EFSupplyDocs.GetDocs</definition>
+        <argsstring>(string idDoc, string idSupplier, string idCustomer, DateTime docDateIni, DateTime docDateEnd, string IdSupplyDocType, string idSupplyStatus)</argsstring>
+        <name>GetDocs</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs_1a1c62306236d38824f24d083953806d9f">GetDocs</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idDoc</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idCustomer</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>docDateIni</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>docDateEnd</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>IdSupplyDocType</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplyStatus</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="494" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="494" bodyend="568"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a49512f67624320df93dfc1482f8bc98e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref> &gt;</type>
+        <definition>List&lt;DocHead&gt; HKSupply.Services.Implementations.EFSupplyDocs.GetSalesOrderFromPackingList</definition>
+        <argsstring>(string idDocPK)</argsstring>
+        <name>GetSalesOrderFromPackingList</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs_1af6b115d3561ed27103c5237ff9857c68">GetSalesOrderFromPackingList</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idDocPK</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="570" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="570" bodyend="635"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a501b1e47372831da791900b7cfdc5e3c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_classes_1_1_p_o_selection" kindref="compound">POSelection</ref> &gt;</type>
+        <definition>List&lt;POSelection&gt; HKSupply.Services.Implementations.EFSupplyDocs.GetPOSelection</definition>
+        <argsstring>(string idDocPo, string idSupplyStatus, string idSupplier, DateTime PODateIni, DateTime PODateEnd, bool factory=true)</argsstring>
+        <name>GetPOSelection</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs_1a1591ceb6eae5d9007a23f8eabdbd83c5">GetPOSelection</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idDocPo</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplyStatus</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>PODateIni</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>PODateEnd</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>factory</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="637" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="637" bodyend="695"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a291ca96ed40dacb85b8151d14602e664" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_supply_doc_type" kindref="compound">SupplyDocType</ref> &gt;</type>
+        <definition>List&lt;SupplyDocType&gt; HKSupply.Services.Implementations.EFSupplyDocs.GetSupplyDocTypes</definition>
+        <argsstring>()</argsstring>
+        <name>GetSupplyDocTypes</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs_1a4619ccf9eb79b4e48337b411b42b5cf1">GetSupplyDocTypes</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="697" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="697" bodyend="731"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a9a08a77117ec26e7f34d596daf7c3017" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_supply_status" kindref="compound">SupplyStatus</ref> &gt;</type>
+        <definition>List&lt;SupplyStatus&gt; HKSupply.Services.Implementations.EFSupplyDocs.GetSupplyStatus</definition>
+        <argsstring>()</argsstring>
+        <name>GetSupplyStatus</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs_1a3b1f4eb5d54d862d209f15783dd5b4c6">GetSupplyStatus</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="733" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="733" bodyend="767"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1af6bc7e6615474ecdcbda71afc5a7aec6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Services.Implementations.EFSupplyDocs.NewDoc</definition>
+        <argsstring>(DocHead newDoc)</argsstring>
+        <name>NewDoc</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs_1ac090652c1948de2812cd8319fad00da5">NewDoc</reimplements>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>newDoc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="769" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="769" bodyend="853"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a3d63a8148ad8a9693ed0b9c55ec0e94b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Services.Implementations.EFSupplyDocs.UpdateDoc</definition>
+        <argsstring>(DocHead doc, bool finishDoc=false)</argsstring>
+        <name>UpdateDoc</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs_1a8550d93efdeafcab971b3781b1a98c18">UpdateDoc</reimplements>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>doc</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>finishDoc</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="855" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="855" bodyend="1149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a23373cc9e667bb45d69a725e92d105e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFSupplyDocs.UpdateLinesRemarks</definition>
+        <argsstring>(List&lt; DocLine &gt; lines)</argsstring>
+        <name>UpdateLinesRemarks</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs_1aeeaf5a3d7cab2a466749afeceb9a4917">UpdateLinesRemarks</reimplements>
+        <param>
+          <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line" kindref="compound">DocLine</ref> &gt;</type>
+          <declname>lines</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="1151" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="1151" bodyend="1218"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a6be682ec0a0fdc0592ee74c0b39043fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFSupplyDocs.ValidateBomSupplierLines</definition>
+        <argsstring>(string idSupplier, List&lt; DocLine &gt; lines, out List&lt; string &gt; itemWithouBom)</argsstring>
+        <name>ValidateBomSupplierLines</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs_1ad351c551f80ba1946fd728e06bbc23f8">ValidateBomSupplierLines</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line" kindref="compound">DocLine</ref> &gt;</type>
+          <declname>lines</declname>
+        </param>
+        <param>
+          <type>out List&lt; string &gt;</type>
+          <declname>itemWithouBom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="1220" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="1220" bodyend="1289"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a4e393a5c93c1e1adfb71498dd1bbc894" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string HKSupply.Services.Implementations.EFSupplyDocs.GetGenericDocHeadNumber</definition>
+        <argsstring>(string idSupplyDocType, string idCustomer, string idSupplier, DateTime date)</argsstring>
+        <name>GetGenericDocHeadNumber</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs_1ac9ac6aa0c10faae1d4442130830d5873">GetGenericDocHeadNumber</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idSupplyDocType</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idCustomer</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="1292" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="1292" bodyend="1328"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a5254a208bf212855f1a47086c8e1f156" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Services.Implementations.EFSupplyDocs.UpdateDocSupplyMaterials</definition>
+        <argsstring>(DocHead doc, bool finishDoc=false)</argsstring>
+        <name>UpdateDocSupplyMaterials</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs_1aadd1be8e4f0fa43b21133ce38f05c809">UpdateDocSupplyMaterials</reimplements>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>doc</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>finishDoc</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="1368" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="1368" bodyend="1579"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a5bb94831f3617b4b1523fe4c4628e360" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref> &gt;</type>
+        <definition>List&lt;DocHead&gt; HKSupply.Services.Implementations.EFSupplyDocs.GetAssociatedPoPacking</definition>
+        <argsstring>(string idDoc, List&lt; string &gt; idDocRelated, string idSupplyDocType)</argsstring>
+        <name>GetAssociatedPoPacking</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs_1ad69306dba6afdc479bbf39258af1a117">GetAssociatedPoPacking</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idDoc</declname>
+        </param>
+        <param>
+          <type>List&lt; string &gt;</type>
+          <declname>idDocRelated</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplyDocType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="1581" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="1581" bodyend="1633"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1aca1e46506522a94e5cc5be7c489439bd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string HKSupply.Services.Implementations.EFSupplyDocs.GetGenericDocHeadNumber</definition>
+        <argsstring>(HKSupplyContext db, string idSupplyDocType, string idCustomer, string idSupplier, DateTime date)</argsstring>
+        <name>GetGenericDocHeadNumber</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplyDocType</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idCustomer</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="1330" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="1330" bodyend="1359"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1aaf763f633449b2e70e9f3f3789e73df0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Services.Implementations.EFSupplyDocs.GetPurchaseOrderBcn2Hk</definition>
+        <argsstring>(HKSupplyContext db, DocHead purchaseOrderHk2Factory)</argsstring>
+        <name>GetPurchaseOrderBcn2Hk</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>purchaseOrderHk2Factory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="1640" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="1640" bodyend="1703"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a85fe60dbe8a35cef237dadf1b509027a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Services.Implementations.EFSupplyDocs.GetQuotationProposal</definition>
+        <argsstring>(HKSupplyContext db, DocHead purchaseOrder)</argsstring>
+        <name>GetQuotationProposal</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>purchaseOrder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="1705" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="1705" bodyend="1739"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a0e1dd322ecbd5df7d295b7b58427ed62" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Services.Implementations.EFSupplyDocs.GetSalesOrderHk2Factory</definition>
+        <argsstring>(DocHead quotationProposal)</argsstring>
+        <name>GetSalesOrderHk2Factory</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>quotationProposal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="1741" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="1741" bodyend="1783"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1aa38c535beaaac3356908af5389d4f29e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Services.Implementations.EFSupplyDocs.GetDeliveryNoteHk2Factory</definition>
+        <argsstring>(DocHead packingList)</argsstring>
+        <name>GetDeliveryNoteHk2Factory</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>packingList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="1785" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="1785" bodyend="1827"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1ac67fd2708162cc9594c9f241e3861bb6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Services.Implementations.EFSupplyDocs.GetInvoiceHk2Factory</definition>
+        <argsstring>(DocHead deliveryNote)</argsstring>
+        <name>GetInvoiceHk2Factory</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>deliveryNote</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="1829" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="1829" bodyend="1871"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1affc88a2e360eea5c1ff9cbbd801566ed" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFSupplyDocs.UpdateSoAssociatedToPk</definition>
+        <argsstring>(HKSupplyContext db, DocHead packingList)</argsstring>
+        <name>UpdateSoAssociatedToPk</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>packingList</declname>
+        </param>
+        <briefdescription>
+<para>Actualizar las Sales Orders asociadas a un packing list </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="1877" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="1877" bodyend="1925"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1af3376ff81785e03a342cbf930bffc4c5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFSupplyDocs.UpdatePoAssociatedToPkBcn</definition>
+        <argsstring>(HKSupplyContext db, DocHead packingList)</argsstring>
+        <name>UpdatePoAssociatedToPkBcn</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>packingList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="1927" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="1927" bodyend="1974"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a8ae24aebf1dd7fc8ce1f4832d3a98997" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Services.Implementations.EFSupplyDocs.UpdateLineQty</definition>
+        <argsstring>(HKSupplyContext db, string idDoc, List&lt; DocLine &gt; lines)</argsstring>
+        <name>UpdateLineQty</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idDoc</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line" kindref="compound">DocLine</ref> &gt;</type>
+          <declname>lines</declname>
+        </param>
+        <briefdescription>
+<para>Actualizar las cantidades de un documento, cuando se modifica uno y hay que modificar también los documentos relacionados que tiene </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>db</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idDoc</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lines</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="1982" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="1982" bodyend="2003"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1afa34f389fe798904ef1c9b674c4ee99d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Services.Implementations.EFSupplyDocs.UpdateLineQtyOriginal</definition>
+        <argsstring>(HKSupplyContext db, string idDoc, List&lt; DocLine &gt; lines)</argsstring>
+        <name>UpdateLineQtyOriginal</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idDoc</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line" kindref="compound">DocLine</ref> &gt;</type>
+          <declname>lines</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="2005" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="2005" bodyend="2026"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1add5c4cd96c6ff73cca8beb38bace0268" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Services.Implementations.EFSupplyDocs.GetQualityControlPending</definition>
+        <argsstring>(HKSupplyContext db, DocHead packingList)</argsstring>
+        <name>GetQualityControlPending</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>packingList</declname>
+        </param>
+        <briefdescription>
+<para>generar el documento con los items rechazados de un packing de materiales </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>packingList</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="2085" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="2085" bodyend="2154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1ae65b2c83c2d487b4064d99729e48f2cb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFSupplyDocs.UpdatePoAssociatedToPkSupplyMaterial</definition>
+        <argsstring>(HKSupplyContext db, DocHead packingList)</argsstring>
+        <name>UpdatePoAssociatedToPkSupplyMaterial</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>packingList</declname>
+        </param>
+        <briefdescription>
+<para>Actualizar los datos en la PO asociada a un packing de proveedor </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>db</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>packingList</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="2162" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="2162" bodyend="2219"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a08133aaf4f43e01e0fed5c5e65cf800d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Services.Implementations.EFSupplyDocs.GetReturnGoodsDoc</definition>
+        <argsstring>(HKSupplyContext db, DocHead qualityControlPending)</argsstring>
+        <name>GetReturnGoodsDoc</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>qualityControlPending</declname>
+        </param>
+        <briefdescription>
+<para>Generar el documento de devolución de material que no pasa el control de calidad </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>db</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qualityControlPending</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="2227" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="2227" bodyend="2296"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a620e8548d40b29e78c7012e6924fba2d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Services.Implementations.EFSupplyDocs.AcceptGoodsMaterials</definition>
+        <argsstring>(HKSupplyContext db, DocHead docHead)</argsstring>
+        <name>AcceptGoodsMaterials</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>docHead</declname>
+        </param>
+        <briefdescription>
+<para>Traspasar del almacén de tránsito al on hand el material de un packing aceptado </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>db</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>docHead</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para><para>Si se ha aceptado material extra la diferencia se pasa directamente al almacén de on hand para no mover de tránsito stock de otro packing o que salte el error de que no hay stock suficiente </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="2307" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="2307" bodyend="2441"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a2d95c7bbc573d2141a8bc5d53005f3c3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Services.Implementations.EFSupplyDocs.AddRejectedStock</definition>
+        <argsstring>(HKSupplyContext db, DocHead docHead)</argsstring>
+        <name>AddRejectedStock</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>docHead</declname>
+        </param>
+        <briefdescription>
+<para>Agregar material rechazado al almacén de &quot;rejected&quot; </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>db</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>docHead</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="2448" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="2448" bodyend="2483"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a1804dd2e966ffd765128c36ad8b8add5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Services.Implementations.EFSupplyDocs.AjustTransitGoodMaterials</definition>
+        <argsstring>(HKSupplyContext db, DocHead docHead)</argsstring>
+        <name>AjustTransitGoodMaterials</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>docHead</declname>
+        </param>
+        <briefdescription>
+<para>Ajustar el tránsito de una recepción de material. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>db</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>docHead</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para><para>Del material recibido (aceptado y rechazado) se mria si hay en tránsito para cada item/supplier y si hay suficiente se quita del stock. O bien se quita la cantidad que haya disponible, ya que las cantidades que llegan pueden no corresponder con lo que se ha pedido y aun así se puede aceptar la cantidad </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="2497" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="2497" bodyend="2567"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a858c89179ff4b89c0216742540560ca2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Services.Implementations.EFSupplyDocs.DelRejectedStock</definition>
+        <argsstring>(HKSupplyContext db, DocHead docHead)</argsstring>
+        <name>DelRejectedStock</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>docHead</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="2569" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="2569" bodyend="2615"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1aa932afe988187f78ef95227cec5a2a2e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Services.Implementations.EFSupplyDocs.AssignStockForDoc</definition>
+        <argsstring>(HKSupplyContext db, DocHead docHead, DocHead docHeadOriginal)</argsstring>
+        <name>AssignStockForDoc</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>docHead</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>docHeadOriginal</declname>
+        </param>
+        <briefdescription>
+<para>Método para reservar stock (utiliza la API de improvops) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>db</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>database context</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>docHead</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>modified document </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>docHeadOriginal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Document with original data before modification, to see the diferences for assignment</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="2629" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="2629" bodyend="2668"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a666a54b1f05ebab780967cadeb7a67da" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Services.Implementations.EFSupplyDocs.MoveStockForDoc</definition>
+        <argsstring>(HKSupplyContext db, DocHead docHead)</argsstring>
+        <name>MoveStockForDoc</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>docHead</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="2670" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="2670" bodyend="2713"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1af542b0d354d6e59f311048cbed5658f1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Services.Implementations.EFSupplyDocs.AddStockToTransit</definition>
+        <argsstring>(HKSupplyContext db, DocHead docHead)</argsstring>
+        <name>AddStockToTransit</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+          <declname>docHead</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="2715" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="2715" bodyend="2753"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="561">
+        <label>HKSupply.Services.Implementations.EFSupplyDocs</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs"/>
+        <childnode refid="562" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="562">
+        <label>ISupplyDocs</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="563">
+        <label>HKSupply.Services.Implementations.EFSupplyDocs</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs"/>
+        <childnode refid="564" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="564">
+        <label>ISupplyDocs</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supply_docs"/>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFSupplyDocs.cs" line="23" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplyDocs.cs" bodystart="22" bodyend="2756"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a9ec277cff0c87695210b3bb913d0f11e" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a620e8548d40b29e78c7012e6924fba2d" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>AcceptGoodsMaterials</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a2d95c7bbc573d2141a8bc5d53005f3c3" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>AddRejectedStock</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1af542b0d354d6e59f311048cbed5658f1" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>AddStockToTransit</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a1804dd2e966ffd765128c36ad8b8add5" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>AjustTransitGoodMaterials</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1aa932afe988187f78ef95227cec5a2a2e" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>AssignStockForDoc</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a858c89179ff4b89c0216742540560ca2" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>DelRejectedStock</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a5bb94831f3617b4b1523fe4c4628e360" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetAssociatedPoPacking</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1aa38c535beaaac3356908af5389d4f29e" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetDeliveryNoteHk2Factory</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a0d08519e2f9c127b2eb064c7cf964e5d" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetDoc</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a21e0ea74ffc13e260e91811c90d10005" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetDocByRelated</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1acc782dbf38c03242efdcbfd2e49f31e5" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetDocPackingList</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a1784bc4416968abe82bea0a133641d79" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetDocs</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a711ac4672ffab767bd3758810b844ea1" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetDocs</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1af806670684c64f878f23491575a1fa9e" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetDocsByReference</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1af2bf5689815967809440fd64b8de7660" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetDocsByRelated</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a4e393a5c93c1e1adfb71498dd1bbc894" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetGenericDocHeadNumber</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1aca1e46506522a94e5cc5be7c489439bd" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetGenericDocHeadNumber</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1ac67fd2708162cc9594c9f241e3861bb6" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetInvoiceHk2Factory</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a501b1e47372831da791900b7cfdc5e3c" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetPOSelection</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1aaf763f633449b2e70e9f3f3789e73df0" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetPurchaseOrderBcn2Hk</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1add5c4cd96c6ff73cca8beb38bace0268" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetQualityControlPending</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a85fe60dbe8a35cef237dadf1b509027a" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetQuotationProposal</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a08133aaf4f43e01e0fed5c5e65cf800d" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetReturnGoodsDoc</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a49512f67624320df93dfc1482f8bc98e" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetSalesOrderFromPackingList</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a0e1dd322ecbd5df7d295b7b58427ed62" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetSalesOrderHk2Factory</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a291ca96ed40dacb85b8151d14602e664" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetSupplyDocTypes</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a9a08a77117ec26e7f34d596daf7c3017" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>GetSupplyStatus</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a666a54b1f05ebab780967cadeb7a67da" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>MoveStockForDoc</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1af6bc7e6615474ecdcbda71afc5a7aec6" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>NewDoc</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a3d63a8148ad8a9693ed0b9c55ec0e94b" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>UpdateDoc</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a5254a208bf212855f1a47086c8e1f156" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>UpdateDocSupplyMaterials</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a8ae24aebf1dd7fc8ce1f4832d3a98997" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>UpdateLineQty</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1afa34f389fe798904ef1c9b674c4ee99d" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>UpdateLineQtyOriginal</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a23373cc9e667bb45d69a725e92d105e7" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>UpdateLinesRemarks</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1af3376ff81785e03a342cbf930bffc4c5" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>UpdatePoAssociatedToPkBcn</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1ae65b2c83c2d487b4064d99729e48f2cb" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>UpdatePoAssociatedToPkSupplyMaterial</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1affc88a2e360eea5c1ff9cbbd801566ed" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>UpdateSoAssociatedToPk</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supply_docs_1a6be682ec0a0fdc0592ee74c0b39043fe" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplyDocs</scope><name>ValidateBomSupplierLines</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

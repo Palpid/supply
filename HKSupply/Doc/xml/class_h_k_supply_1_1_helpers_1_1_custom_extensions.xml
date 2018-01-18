@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_h_k_supply_1_1_helpers_1_1_custom_extensions" kind="class" language="C#" prot="public">
     <compoundname>HKSupply::Helpers::CustomExtensions</compoundname>
       <sectiondef kind="public-static-func">
@@ -35,7 +35,75 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Helpers/CustomExtensions.cs" line="23" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="23" bodyend="32"/>
+        <location file="HKSupply/Helpers/CustomExtensions.cs" line="26" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="26" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1abf42e58dcc8d6ed159c6d16ee6ef68f3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>static T HKSupply.Helpers.CustomExtensions.CloneObject&lt; T &gt;</definition>
+        <argsstring>(this T objSource)</argsstring>
+        <name>CloneObject&lt; T &gt;</name>
+        <param>
+          <type>this T</type>
+          <declname>objSource</declname>
+        </param>
+        <briefdescription>
+<para>Clonar un objecto usando reflection </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>objSource</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para><para>En pruebas</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CustomExtensions.cs" line="46" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="46" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1a7e8bb9aa8f225c290ad8ab62e42e6969" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IList&lt; T &gt;</type>
+        <definition>static IList&lt;T&gt; HKSupply.Helpers.CustomExtensions.Clone&lt; T &gt;</definition>
+        <argsstring>(this IList&lt; T &gt; listToClone)</argsstring>
+        <name>Clone&lt; T &gt;</name>
+        <param>
+          <type>this IList&lt; T &gt;</type>
+          <declname>listToClone</declname>
+        </param>
+        <briefdescription>
+<para>Extensión para clonar listas de objetos </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listToClone</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CustomExtensions.cs" line="91" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="91" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1aa6fc08aa8e4ab65d734d75323a13067b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -71,16 +139,571 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Helpers/CustomExtensions.cs" line="39" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="39" bodyend="59"/>
+        <location file="HKSupply/Helpers/CustomExtensions.cs" line="101" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="101" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1aa2d7acc05becf04bb5d076faa5dcb229" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Binding</type>
+        <definition>static Binding HKSupply.Helpers.CustomExtensions.Add&lt; T &gt;</definition>
+        <argsstring>(this ControlBindingsCollection dataBindings, object dataSource, Expression&lt; Func&lt; System.Windows.Forms.Control, object &gt;&gt; controlLambda, Expression&lt; Func&lt; T, object &gt;&gt; objectLambda)</argsstring>
+        <name>Add&lt; T &gt;</name>
+        <param>
+          <type>this ControlBindingsCollection</type>
+          <declname>dataBindings</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>dataSource</declname>
+        </param>
+        <param>
+          <type>Expression&lt; Func&lt; System.Windows.Forms.Control, object &gt;&gt;</type>
+          <declname>controlLambda</declname>
+        </param>
+        <param>
+          <type>Expression&lt; Func&lt; T, object &gt;&gt;</type>
+          <declname>objectLambda</declname>
+        </param>
+        <briefdescription>
+<para>Extensión para hacer un binding tipado y evitar posibles errores al no depender del string para las propiedades bindeadas entre el objeto y el source </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataBindings</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataSource</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>controlLambda</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>objectLambda</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para><para>Objetos sencillos que queramos bindear la propiedad Text</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CustomExtensions.cs" line="135" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="135" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1abf6cf0c82fad9011f2521f5c8e28716a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Binding</type>
+        <definition>static Binding HKSupply.Helpers.CustomExtensions.Add&lt; T &gt;</definition>
+        <argsstring>(this ControlBindingsCollection dataBindings, object dataSource, Expression&lt; Func&lt; CheckEdit, object &gt;&gt; controlLambda, Expression&lt; Func&lt; T, object &gt;&gt; objectLambda)</argsstring>
+        <name>Add&lt; T &gt;</name>
+        <param>
+          <type>this ControlBindingsCollection</type>
+          <declname>dataBindings</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>dataSource</declname>
+        </param>
+        <param>
+          <type>Expression&lt; Func&lt; CheckEdit, object &gt;&gt;</type>
+          <declname>controlLambda</declname>
+        </param>
+        <param>
+          <type>Expression&lt; Func&lt; T, object &gt;&gt;</type>
+          <declname>objectLambda</declname>
+        </param>
+        <briefdescription>
+<para>Extensión para hacer un binding tipado y evitar posibles errores al no depender del string para las propiedades bindeadas entre el objeto y el source </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataBindings</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataSource</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>controlLambda</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>objectLambda</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para><para>Para CheckEdit de DevExpress</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CustomExtensions.cs" line="178" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="178" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1af4b2cc5187c367da7d5bcec90afaba31" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Binding</type>
+        <definition>static Binding HKSupply.Helpers.CustomExtensions.Add&lt; T &gt;</definition>
+        <argsstring>(this ControlBindingsCollection dataBindings, object dataSource, Expression&lt; Func&lt; DateEdit, object &gt;&gt; controlLambda, Expression&lt; Func&lt; T, object &gt;&gt; objectLambda)</argsstring>
+        <name>Add&lt; T &gt;</name>
+        <param>
+          <type>this ControlBindingsCollection</type>
+          <declname>dataBindings</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>dataSource</declname>
+        </param>
+        <param>
+          <type>Expression&lt; Func&lt; DateEdit, object &gt;&gt;</type>
+          <declname>controlLambda</declname>
+        </param>
+        <param>
+          <type>Expression&lt; Func&lt; T, object &gt;&gt;</type>
+          <declname>objectLambda</declname>
+        </param>
+        <briefdescription>
+<para>Extensión para hacer un binding tipado y evitar posibles errores al no depender del string para las propiedades bindeadas entre el objeto y el source </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataBindings</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataSource</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>controlLambda</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>objectLambda</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para><para>Para DateEdit de DevExpress</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CustomExtensions.cs" line="223" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="223" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1a9087a193ce64c5e8da922307553f8b77" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Binding</type>
+        <definition>static Binding HKSupply.Helpers.CustomExtensions.Add&lt; T &gt;</definition>
+        <argsstring>(this ControlBindingsCollection dataBindings, object dataSource, Expression&lt; Func&lt; LookUpEdit, object &gt;&gt; controlLambda, Expression&lt; Func&lt; T, object &gt;&gt; objectLambda)</argsstring>
+        <name>Add&lt; T &gt;</name>
+        <param>
+          <type>this ControlBindingsCollection</type>
+          <declname>dataBindings</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>dataSource</declname>
+        </param>
+        <param>
+          <type>Expression&lt; Func&lt; LookUpEdit, object &gt;&gt;</type>
+          <declname>controlLambda</declname>
+        </param>
+        <param>
+          <type>Expression&lt; Func&lt; T, object &gt;&gt;</type>
+          <declname>objectLambda</declname>
+        </param>
+        <briefdescription>
+<para>Extensión para hacer un binding tipado y evitar posibles errores al no depender del string para las propiedades bindeadas entre el objeto y el source </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataBindings</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataSource</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>controlLambda</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>objectLambda</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para><para>Para LookUpEdit de DevExpress</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CustomExtensions.cs" line="268" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="268" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1a3b5a242f3fc4e376494e62eda0f78db5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Binding</type>
+        <definition>static Binding HKSupply.Helpers.CustomExtensions.Add&lt; T &gt;</definition>
+        <argsstring>(this ControlBindingsCollection dataBindings, object dataSource, Expression&lt; Func&lt; SearchLookUpEdit, object &gt;&gt; controlLambda, Expression&lt; Func&lt; T, object &gt;&gt; objectLambda)</argsstring>
+        <name>Add&lt; T &gt;</name>
+        <param>
+          <type>this ControlBindingsCollection</type>
+          <declname>dataBindings</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>dataSource</declname>
+        </param>
+        <param>
+          <type>Expression&lt; Func&lt; SearchLookUpEdit, object &gt;&gt;</type>
+          <declname>controlLambda</declname>
+        </param>
+        <param>
+          <type>Expression&lt; Func&lt; T, object &gt;&gt;</type>
+          <declname>objectLambda</declname>
+        </param>
+        <briefdescription>
+<para>Extensión para hacer un binding tipado y evitar posibles errores al no depender del string para las propiedades bindeadas entre el objeto y el source </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataBindings</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataSource</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>controlLambda</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>objectLambda</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CustomExtensions.cs" line="312" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="312" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1a230a81017b9bb1d2c53ab76cb171910f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; T &gt;</type>
+        <definition>static List&lt;T&gt; HKSupply.Helpers.CustomExtensions.EmptyIfNull&lt; T &gt;</definition>
+        <argsstring>(this List&lt; T &gt; list)</argsstring>
+        <name>EmptyIfNull&lt; T &gt;</name>
+        <param>
+          <type>this List&lt; T &gt;</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+<para>Devuelve la lista vacía si es nula </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CustomExtensions.cs" line="352" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="352" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1ad445bd5abafc5981227455d2e4588dc0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T []</type>
+        <definition>static T [] HKSupply.Helpers.CustomExtensions.EmptyIfNull&lt; T &gt;</definition>
+        <argsstring>(this T[] arr)</argsstring>
+        <name>EmptyIfNull&lt; T &gt;</name>
+        <param>
+          <type>this T []</type>
+          <declname>arr</declname>
+        </param>
+        <briefdescription>
+<para>Devuelve el array vacío si es nulo </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arr</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CustomExtensions.cs" line="363" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="363" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1a33da7203c54ee2bf43e526c69d2e0b53" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerable&lt; T &gt;</type>
+        <definition>static IEnumerable&lt;T&gt; HKSupply.Helpers.CustomExtensions.EmptyIfNull&lt; T &gt;</definition>
+        <argsstring>(this IEnumerable&lt; T &gt; enumerable)</argsstring>
+        <name>EmptyIfNull&lt; T &gt;</name>
+        <param>
+          <type>this IEnumerable&lt; T &gt;</type>
+          <declname>enumerable</declname>
+        </param>
+        <briefdescription>
+<para>Devuelve el IEnumerable vacío si es nulo </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enumerable</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CustomExtensions.cs" line="374" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="374" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1ab92e3d0ac5ca0055e2a675d930277bbd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; T &gt;</type>
+        <definition>static List&lt;T&gt; HKSupply.Helpers.CustomExtensions.DataTableToList&lt; T &gt;</definition>
+        <argsstring>(this DataTable table)</argsstring>
+        <name>DataTableToList&lt; T &gt;</name>
+        <param>
+          <type>this DataTable</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+<para>Convierte un DataTable a una lista con objectos genéricos </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objecto Genérico object</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DataTable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lista con objectos genéricos </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CustomExtensions.cs" line="385" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="385" bodyend="417"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1a5fdb528f54c25ba3ef8aaa029ffd9106" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int HKSupply.Helpers.CustomExtensions.GetWeek</definition>
+        <argsstring>(this DateTime date)</argsstring>
+        <name>GetWeek</name>
+        <param>
+          <type>this DateTime</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+<para>Obtiene el número de la semana a partir de una fecha. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>date</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CustomExtensions.cs" line="424" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="424" bodyend="441"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1a087f0809f8280025134b643a1b5badfc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>static T HKSupply.Helpers.CustomExtensions.GetAttributeFrom&lt; T &gt;</definition>
+        <argsstring>(this object instance, string propertyName)</argsstring>
+        <name>GetAttributeFrom&lt; T &gt;</name>
+        <param>
+          <type>this object</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>propertyName</declname>
+        </param>
+        <briefdescription>
+<para>Obtener los valores de los Data Annotations de Entity Framework de las clases de modelos </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>instance</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>propertyName</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/CustomExtensions.cs" line="451" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="451" bodyend="456"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Extensiones personalizadas </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="HKSupply/Helpers/CustomExtensions.cs" line="16" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="15" bodyend="60"/>
+    <location file="HKSupply/Helpers/CustomExtensions.cs" line="19" column="1" bodyfile="HKSupply/Helpers/CustomExtensions.cs" bodystart="18" bodyend="484"/>
     <listofallmembers>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1aa2d7acc05becf04bb5d076faa5dcb229" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CustomExtensions</scope><name>Add&lt; T &gt;</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1abf6cf0c82fad9011f2521f5c8e28716a" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CustomExtensions</scope><name>Add&lt; T &gt;</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1af4b2cc5187c367da7d5bcec90afaba31" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CustomExtensions</scope><name>Add&lt; T &gt;</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1a9087a193ce64c5e8da922307553f8b77" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CustomExtensions</scope><name>Add&lt; T &gt;</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1a3b5a242f3fc4e376494e62eda0f78db5" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CustomExtensions</scope><name>Add&lt; T &gt;</name></member>
       <member refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1a9610f835b92947f6dfb1dff43d674e75" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CustomExtensions</scope><name>Clone&lt; T &gt;</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1a7e8bb9aa8f225c290ad8ab62e42e6969" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CustomExtensions</scope><name>Clone&lt; T &gt;</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1abf42e58dcc8d6ed159c6d16ee6ef68f3" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CustomExtensions</scope><name>CloneObject&lt; T &gt;</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1ab92e3d0ac5ca0055e2a675d930277bbd" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CustomExtensions</scope><name>DataTableToList&lt; T &gt;</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1a230a81017b9bb1d2c53ab76cb171910f" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CustomExtensions</scope><name>EmptyIfNull&lt; T &gt;</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1ad445bd5abafc5981227455d2e4588dc0" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CustomExtensions</scope><name>EmptyIfNull&lt; T &gt;</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1a33da7203c54ee2bf43e526c69d2e0b53" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CustomExtensions</scope><name>EmptyIfNull&lt; T &gt;</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1a087f0809f8280025134b643a1b5badfc" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CustomExtensions</scope><name>GetAttributeFrom&lt; T &gt;</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1a5fdb528f54c25ba3ef8aaa029ffd9106" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CustomExtensions</scope><name>GetWeek</name></member>
       <member refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions_1aa6fc08aa8e4ab65d734d75323a13067b" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::CustomExtensions</scope><name>RemoveRow</name></member>
     </listofallmembers>
   </compounddef>

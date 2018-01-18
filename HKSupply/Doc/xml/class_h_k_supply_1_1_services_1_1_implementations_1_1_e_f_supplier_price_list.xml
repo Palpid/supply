@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_price_list" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFSupplierPriceList</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_price_list" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.ISupplierPriceList</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_price_list_1a44b0a7ac637bff79519233163409a6de" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFSupplierPriceList._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_price_list" kindref="compound">EFSupplierPriceList</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplierPriceList.cs" line="21" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplierPriceList.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_price_list_1a7ffdeda9be6ccb89e5a66f9302354c36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFSupplierPriceList.NewSupplierPriceList</definition>
+        <argsstring>(SupplierPriceList newSupplierPriceList)</argsstring>
+        <name>NewSupplierPriceList</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_price_list_1a7f6bc8eb46de01f7c89aeaaee9790498">NewSupplierPriceList</reimplements>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supplier_price_list" kindref="compound">SupplierPriceList</ref></type>
+          <declname>newSupplierPriceList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplierPriceList.cs" line="23" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplierPriceList.cs" bodystart="23" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_price_list_1a8c2a1e9286648f464db23fd2569cba7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFSupplierPriceList.UpdateSupplierPriceList</definition>
+        <argsstring>(SupplierPriceList updateSupplierPriceList, bool newVer=false)</argsstring>
+        <name>UpdateSupplierPriceList</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_price_list_1add4ac07cfe7bb3c8f3178e4850d09212">UpdateSupplierPriceList</reimplements>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supplier_price_list" kindref="compound">SupplierPriceList</ref></type>
+          <declname>updateSupplierPriceList</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>newVer</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplierPriceList.cs" line="95" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplierPriceList.cs" bodystart="95" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_price_list_1a0a4ad00099dda143bf391fbd182071b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFSupplierPriceList.UpdateSuppliersPricesList</definition>
+        <argsstring>(IEnumerable&lt; SupplierPriceList &gt; pricesListToUpdate)</argsstring>
+        <name>UpdateSuppliersPricesList</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_price_list_1ab769ce0e643dda0b271c71784d5796bb">UpdateSuppliersPricesList</reimplements>
+        <param>
+          <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier_price_list" kindref="compound">SupplierPriceList</ref> &gt;</type>
+          <declname>pricesListToUpdate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplierPriceList.cs" line="170" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplierPriceList.cs" bodystart="170" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_price_list_1a573b81b54f0ea34e3b661a8dbf94384b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supplier_price_list" kindref="compound">SupplierPriceList</ref></type>
+        <definition>SupplierPriceList HKSupply.Services.Implementations.EFSupplierPriceList.GetSupplierPriceList</definition>
+        <argsstring>(string idItemBcn, string idSupplier)</argsstring>
+        <name>GetSupplierPriceList</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_price_list_1a7de518a8839cd36e629c769c536a574a">GetSupplierPriceList</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idItemBcn</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplierPriceList.cs" line="247" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplierPriceList.cs" bodystart="247" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_price_list_1a470196eba9fff7dce929eea916f380cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier_price_list" kindref="compound">SupplierPriceList</ref> &gt;</type>
+        <definition>List&lt;SupplierPriceList&gt; HKSupply.Services.Implementations.EFSupplierPriceList.GetSuppliersPriceList</definition>
+        <argsstring>(string idItemBcn=null, string idSupplier=null)</argsstring>
+        <name>GetSuppliersPriceList</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_price_list_1a50e62f83d3f2a2f036c74f8ef805b2e0">GetSuppliersPriceList</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idItemBcn</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplierPriceList.cs" line="295" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplierPriceList.cs" bodystart="295" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_price_list_1afdc00acf0b987fd15641cf3ce99c5173" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier_price_list_history" kindref="compound">SupplierPriceListHistory</ref> &gt;</type>
+        <definition>List&lt;SupplierPriceListHistory&gt; HKSupply.Services.Implementations.EFSupplierPriceList.GetSupplierPriceListHistory</definition>
+        <argsstring>(string idItemBcn, string idSupplier)</argsstring>
+        <name>GetSupplierPriceListHistory</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_price_list_1acd162b1599a5866e185eb06b827efc5f">GetSupplierPriceListHistory</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idItemBcn</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplierPriceList.cs" line="339" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplierPriceList.cs" bodystart="339" bodyend="382"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="553">
+        <label>HKSupply.Services.Implementations.EFSupplierPriceList</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_price_list"/>
+        <childnode refid="554" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="554">
+        <label>ISupplierPriceList</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_price_list"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="555">
+        <label>HKSupply.Services.Implementations.EFSupplierPriceList</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_price_list"/>
+        <childnode refid="556" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="556">
+        <label>ISupplierPriceList</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_price_list"/>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFSupplierPriceList.cs" line="20" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplierPriceList.cs" bodystart="19" bodyend="384"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_price_list_1a44b0a7ac637bff79519233163409a6de" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplierPriceList</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_price_list_1a573b81b54f0ea34e3b661a8dbf94384b" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplierPriceList</scope><name>GetSupplierPriceList</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_price_list_1afdc00acf0b987fd15641cf3ce99c5173" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplierPriceList</scope><name>GetSupplierPriceListHistory</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_price_list_1a470196eba9fff7dce929eea916f380cf" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplierPriceList</scope><name>GetSuppliersPriceList</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_price_list_1a7ffdeda9be6ccb89e5a66f9302354c36" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplierPriceList</scope><name>NewSupplierPriceList</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_price_list_1a8c2a1e9286648f464db23fd2569cba7f" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplierPriceList</scope><name>UpdateSupplierPriceList</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_price_list_1a0a4ad00099dda143bf391fbd182071b5" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplierPriceList</scope><name>UpdateSuppliersPricesList</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

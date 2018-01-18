@@ -1,0 +1,112 @@
+\hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item}{}\section{H\+K\+Supply.\+P\+R\+J\+\_\+\+Stocks.\+Classes.\+Stocks.\+Item Class Reference}
+\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item}\index{H\+K\+Supply.\+P\+R\+J\+\_\+\+Stocks.\+Classes.\+Stocks.\+Item@{H\+K\+Supply.\+P\+R\+J\+\_\+\+Stocks.\+Classes.\+Stocks.\+Item}}
+
+
+Guarda les dades del stock de un item i els seus lots. Es crea sempre un lot N\+U\+LL per a les qtt que no tenen lot.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_aaf3e2edf25336af385d1b82d05cf49df}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_aaf3e2edf25336af385d1b82d05cf49df}} 
+decimal \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_aaf3e2edf25336af385d1b82d05cf49df}{Add\+Stk}} (decimal Qtt\+Afegir, string id\+Owner)
+\begin{DoxyCompactList}\small\item\em Modifica la Q\+TT del stock. Si Qtt\+Afegir positiva incrementa, si negativa resta. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a33427d6dd0eddd6bbb1f9321cad9b25c}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a33427d6dd0eddd6bbb1f9321cad9b25c}} 
+decimal {\bfseries Add\+Lot} (decimal Qtt\+Afegir, string id\+Lot)
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a9ff5d936d515998434e4dd40d9dac833}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a9ff5d936d515998434e4dd40d9dac833}} 
+decimal {\bfseries Stk\+Owner} (string id\+Owner)
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a49584d4ec9731ab9258331081d9be238}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a49584d4ec9731ab9258331081d9be238}} 
+decimal {\bfseries Stk\+Lot} (string id\+Lot)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a66f320d48d90233fdacbd290a55cb467}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a66f320d48d90233fdacbd290a55cb467}} 
+Dictionary$<$ String, decimal $>$ {\bfseries \+\_\+\+Resr} = new Dictionary$<$String, decimal$>$()
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a771fc2d71e86d30d1697bec48a88ea81}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a771fc2d71e86d30d1697bec48a88ea81}} 
+Dictionary$<$ String, decimal $>$ {\bfseries \+\_\+\+Lots} = new Dictionary$<$String, decimal$>$()
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_afcc42fc748f9fe2a5c1c241e4882b304}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_afcc42fc748f9fe2a5c1c241e4882b304}} 
+string {\bfseries id\+Item}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+decimal \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a76abf0f349a59b2de193fb77c600a8a5}{Total\+Q\+TT}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Retorna el total stock de tots el lots del item. \end{DoxyCompactList}\item 
+decimal \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a8ccbe83cc666b87e18013c1097b84b13}{Total\+Assigned\+Q\+TT}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Retorna el stock reservat \end{DoxyCompactList}\item 
+decimal \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a552fb47c225ce03aa591ae1a45eca555}{Total\+Assigned\+Lot\+Q\+TT}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Retorna el stock reservat \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a1a432d2bb23094b014fc92b915ebb27d}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a1a432d2bb23094b014fc92b915ebb27d}} 
+decimal {\bfseries Total\+Free\+Lot\+Q\+TT}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+decimal \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a2bee7e18e2b400093383e5531b4aa53f}{Total\+Free\+Q\+TT}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Retorna el stock reservat \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_acd1d1ba5729e8d3223cded0caec408dd}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_acd1d1ba5729e8d3223cded0caec408dd}} 
+List$<$ \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_det_asg}{Det\+Asg}} $>$ {\bfseries Lst\+Asigs}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a0595882b94550a901bff84b9789be59a}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a0595882b94550a901bff84b9789be59a}} 
+List$<$ \mbox{\hyperlink{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_det_lot}{Det\+Lot}} $>$ {\bfseries Lst\+Lots}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Guarda les dades del stock de un item i els seus lots. Es crea sempre un lot N\+U\+LL per a les qtt que no tenen lot. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em System.\+Invalid\+Operation\+Exception} & No existeix el lot indicat;"\\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a552fb47c225ce03aa591ae1a45eca555}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a552fb47c225ce03aa591ae1a45eca555}} 
+\index{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks\+::\+Item@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks\+::\+Item}!Total\+Assigned\+Lot\+Q\+TT@{Total\+Assigned\+Lot\+Q\+TT}}
+\index{Total\+Assigned\+Lot\+Q\+TT@{Total\+Assigned\+Lot\+Q\+TT}!H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks\+::\+Item@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks\+::\+Item}}
+\subsubsection{\texorpdfstring{Total\+Assigned\+Lot\+Q\+TT}{TotalAssignedLotQTT}}
+{\footnotesize\ttfamily decimal H\+K\+Supply.\+P\+R\+J\+\_\+\+Stocks.\+Classes.\+Stocks.\+Item.\+Total\+Assigned\+Lot\+Q\+TT\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Retorna el stock reservat 
+
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a8ccbe83cc666b87e18013c1097b84b13}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a8ccbe83cc666b87e18013c1097b84b13}} 
+\index{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks\+::\+Item@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks\+::\+Item}!Total\+Assigned\+Q\+TT@{Total\+Assigned\+Q\+TT}}
+\index{Total\+Assigned\+Q\+TT@{Total\+Assigned\+Q\+TT}!H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks\+::\+Item@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks\+::\+Item}}
+\subsubsection{\texorpdfstring{Total\+Assigned\+Q\+TT}{TotalAssignedQTT}}
+{\footnotesize\ttfamily decimal H\+K\+Supply.\+P\+R\+J\+\_\+\+Stocks.\+Classes.\+Stocks.\+Item.\+Total\+Assigned\+Q\+TT\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Retorna el stock reservat 
+
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a2bee7e18e2b400093383e5531b4aa53f}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a2bee7e18e2b400093383e5531b4aa53f}} 
+\index{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks\+::\+Item@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks\+::\+Item}!Total\+Free\+Q\+TT@{Total\+Free\+Q\+TT}}
+\index{Total\+Free\+Q\+TT@{Total\+Free\+Q\+TT}!H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks\+::\+Item@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks\+::\+Item}}
+\subsubsection{\texorpdfstring{Total\+Free\+Q\+TT}{TotalFreeQTT}}
+{\footnotesize\ttfamily decimal H\+K\+Supply.\+P\+R\+J\+\_\+\+Stocks.\+Classes.\+Stocks.\+Item.\+Total\+Free\+Q\+TT\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Retorna el stock reservat 
+
+\mbox{\Hypertarget{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a76abf0f349a59b2de193fb77c600a8a5}\label{class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_a76abf0f349a59b2de193fb77c600a8a5}} 
+\index{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks\+::\+Item@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks\+::\+Item}!Total\+Q\+TT@{Total\+Q\+TT}}
+\index{Total\+Q\+TT@{Total\+Q\+TT}!H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks\+::\+Item@{H\+K\+Supply\+::\+P\+R\+J\+\_\+\+Stocks\+::\+Classes\+::\+Stocks\+::\+Item}}
+\subsubsection{\texorpdfstring{Total\+Q\+TT}{TotalQTT}}
+{\footnotesize\ttfamily decimal H\+K\+Supply.\+P\+R\+J\+\_\+\+Stocks.\+Classes.\+Stocks.\+Item.\+Total\+Q\+TT\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Retorna el total stock de tots el lots del item. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+H\+K\+Supply/\+P\+R\+J\+\_\+\+Stocks/\+Classes/Stocks.\+cs\end{DoxyCompactItemize}

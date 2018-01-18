@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_363361331aa5867b505744c835d6ee17" kind="dir">
+    <compoundname>HKSupply/Mocking</compoundname>
+    <innerfile refid="_test_db_8cs">TestDb.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Mocking/"/>
+  </compounddef>
+</doxygen>

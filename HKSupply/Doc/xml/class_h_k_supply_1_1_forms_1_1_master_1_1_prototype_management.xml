@@ -1,0 +1,1053 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Master::PrototypeManagement</compoundname>
+    <basecompoundref refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" prot="public" virt="non-virtual">HKSupply.Forms.RibbonFormBase</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a422e8128a6c1877e25bc9cf783a98f4c" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.Forms.Master.PrototypeManagement.VIEW_COLUMN</definition>
+        <argsstring></argsstring>
+        <name>VIEW_COLUMN</name>
+        <initializer>= &quot;View&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="28" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a16bb57759d406a9d53868dfab25cfdc4" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_prototype" kindref="compound">Prototype</ref> &gt;</type>
+        <definition>List&lt;Prototype&gt; HKSupply.Forms.Master.PrototypeManagement._prototypesList</definition>
+        <argsstring></argsstring>
+        <name>_prototypesList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="32" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a4605d4369830743de7516144f54acb62" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_prototype" kindref="compound">Prototype</ref></type>
+        <definition>Prototype HKSupply.Forms.Master.PrototypeManagement._prototypeCurrent</definition>
+        <argsstring></argsstring>
+        <name>_prototypeCurrent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="33" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a15e2c821e868de123d85ea1c8e2c06a6" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_doc_type" kindref="compound">DocType</ref> &gt;</type>
+        <definition>List&lt;DocType&gt; HKSupply.Forms.Master.PrototypeManagement._docsTypeList</definition>
+        <argsstring></argsstring>
+        <name>_docsTypeList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="35" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1af90d8adf8e5014f7cdfd1f6b5f824a70" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_prototype_doc" kindref="compound">PrototypeDoc</ref> &gt;</type>
+        <definition>List&lt;PrototypeDoc&gt; HKSupply.Forms.Master.PrototypeManagement._prototypeDocsList</definition>
+        <argsstring></argsstring>
+        <name>_prototypeDocsList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="36" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1af1e1c0a2d8863e487855a780d42f6c31" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_prototype_doc" kindref="compound">PrototypeDoc</ref> &gt;</type>
+        <definition>List&lt;PrototypeDoc&gt; HKSupply.Forms.Master.PrototypeManagement._prototypeLastDocsList</definition>
+        <argsstring></argsstring>
+        <name>_prototypeLastDocsList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="37" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1abaccd5d777fddd34210610730eb6541d" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Master.PrototypeManagement.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a12efdaf8f9accaebf5e57a6b0b0f675a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Master.PrototypeManagement.xtcGeneral</definition>
+        <argsstring></argsstring>
+        <name>xtcGeneral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="397" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a0a82dea2dd1bb1e900c4d59b63fc640b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.PrototypeManagement.xtpList</definition>
+        <argsstring></argsstring>
+        <name>xtpList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="398" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="398" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a897c127cf4c37ea9bb0f129c07708342" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.PrototypeManagement.xgrdProtos</definition>
+        <argsstring></argsstring>
+        <name>xgrdProtos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="399" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a0f7dc8f55ced343aaae81fb5ce45ad4d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.PrototypeManagement.rootGridViewProtos</definition>
+        <argsstring></argsstring>
+        <name>rootGridViewProtos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="400" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="400" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a51acf6a4ffdbaada06d06a41fdb6d38a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.PrototypeManagement.xtpDocs</definition>
+        <argsstring></argsstring>
+        <name>xtpDocs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="401" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a3fa9b35714a171b0fb1840cbdef08578" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox HKSupply.Forms.Master.PrototypeManagement.gbLastDocs</definition>
+        <argsstring></argsstring>
+        <name>gbLastDocs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="402" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="402" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a6a228474dc1930c3d99103e7cbba9bd0" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.PrototypeManagement.xgrdLastDocs</definition>
+        <argsstring></argsstring>
+        <name>xgrdLastDocs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="403" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1aa5331ccd736ed3dcfd3842ce0a1ec477" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.PrototypeManagement.gridViewLastDocs</definition>
+        <argsstring></argsstring>
+        <name>gridViewLastDocs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="404" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a8630ce2668ca33a96870b914c29fe771" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox HKSupply.Forms.Master.PrototypeManagement.gbNewDoc</definition>
+        <argsstring></argsstring>
+        <name>gbNewDoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="405" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1ad619d41242c1899b030df4291820b3b0" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControl</type>
+        <definition>DevExpress.XtraLayout.LayoutControl HKSupply.Forms.Master.PrototypeManagement.layoutControlNewDoc</definition>
+        <argsstring></argsstring>
+        <name>layoutControlNewDoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="406" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1abfa550f90ef0734db5c96342166bbb33" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LookUpEdit</type>
+        <definition>DevExpress.XtraEditors.LookUpEdit HKSupply.Forms.Master.PrototypeManagement.lueDocType</definition>
+        <argsstring></argsstring>
+        <name>lueDocType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="407" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a7f51f0d003de58205831727f5255828d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Master.PrototypeManagement.sbViewNewDoc</definition>
+        <argsstring></argsstring>
+        <name>sbViewNewDoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="408" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1adb91c6d54859650c4907245c2fdb4ae5" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Master.PrototypeManagement.sbOpenFileNewDoc</definition>
+        <argsstring></argsstring>
+        <name>sbOpenFileNewDoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="409" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a47e4b591f97938b9a633ffb26af24a32" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.PrototypeManagement.txtPathNewDoc</definition>
+        <argsstring></argsstring>
+        <name>txtPathNewDoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="410" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a75c1a7adec511b07f9ad7854a6cd12b1" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlGroup</type>
+        <definition>DevExpress.XtraLayout.LayoutControlGroup HKSupply.Forms.Master.PrototypeManagement.layoutControlGroup3</definition>
+        <argsstring></argsstring>
+        <name>layoutControlGroup3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="411" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a3cb123a4f3bcf9891ed84751af0a3ff5" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.PrototypeManagement.layoutControlItem34</definition>
+        <argsstring></argsstring>
+        <name>layoutControlItem34</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="412" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a5be584eec374a21da82d2ce379a688df" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.PrototypeManagement.layoutControlItem35</definition>
+        <argsstring></argsstring>
+        <name>layoutControlItem35</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="413" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a46c0540b382ba8d4830cb9397339e4c5" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.PrototypeManagement.layoutControlItem36</definition>
+        <argsstring></argsstring>
+        <name>layoutControlItem36</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="414" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1af1176bee50cf7160562f0cdfb1be2975" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.PrototypeManagement.lcilueDocType</definition>
+        <argsstring></argsstring>
+        <name>lcilueDocType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="415" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a6c260d6949cb9edddeac3563eeaa3e2d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox HKSupply.Forms.Master.PrototypeManagement.gbDocsHistory</definition>
+        <argsstring></argsstring>
+        <name>gbDocsHistory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="416" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a3469e0368d20b9cfdf2eb64772688aa4" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.PrototypeManagement.xgrdDocsHistory</definition>
+        <argsstring></argsstring>
+        <name>xgrdDocsHistory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="417" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1aaae6728e5d44d5bcdf44ac300e24c16a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.PrototypeManagement.gridViewDocsHistory</definition>
+        <argsstring></argsstring>
+        <name>gridViewDocsHistory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="418" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a12ed8525ff446f63c95de86d6a79f926" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox HKSupply.Forms.Master.PrototypeManagement.gbProtoInfo</definition>
+        <argsstring></argsstring>
+        <name>gbProtoInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="419" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1ade275be09c0d1db2ec109388822ecf96" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.PrototypeManagement.lblIdProto</definition>
+        <argsstring></argsstring>
+        <name>lblIdProto</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="420" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="420" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1ae5949f6b01864314527dd6297b619e1c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.PrototypeManagement.lblProtoName</definition>
+        <argsstring></argsstring>
+        <name>lblProtoName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="421" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="421" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a2f97e42ce46cbffbc697d7b6cc0516c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Master.PrototypeManagement.PrototypeManagement</definition>
+        <argsstring>()</argsstring>
+        <name>PrototypeManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="41" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="41" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1ae8aca5d8c5e8c5340ad2b5dd327ae255" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.PrototypeManagement.bbiExportExcel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportExcel_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811">bbiExportExcel_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="83" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a57c5e746cf575f86b0cf0e500487f7aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.PrototypeManagement.bbiExportCsv_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportCsv_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a">bbiExportCsv_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="88" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a64fdc25d71bf7a17265f7dc01f7204a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.PrototypeManagement.bbiCancel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiCancel_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318">bbiCancel_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="93" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="93" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1ae1b12395b731a978ca2d5c7404846978" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.PrototypeManagement.bbiEdit_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiEdit_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3">bbiEdit_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="114" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="114" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a99f3e89dba7c8032523a8653b26303e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.PrototypeManagement.bbiSave_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiSave_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9">bbiSave_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="137" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="137" bodyend="181"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a9bddb0cdce9b43fa79d00024adbdd926" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PrototypeManagement.ConfigureRibbonActions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="64" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="64" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a89fe9a500010b7c27e2a18f76e37121e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PrototypeManagement.PrototypesManagement_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>PrototypesManagement_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="187" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="187" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a6a03ee12117331851b28d8d266203e84" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PrototypeManagement.RootGridViewProtos_DoubleClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>RootGridViewProtos_DoubleClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="199" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="199" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a86cba3dbc46c0960777d9b79651bd22a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PrototypeManagement.RepButtonLastDoc_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>RepButtonLastDoc_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="215" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="215" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a2d11cf9e10d184d028deef966f6e8df9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PrototypeManagement.repButtonHistDoc_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>repButtonHistDoc_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="232" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="232" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a9495fad45198cedff74b3d22a3e492e4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PrototypeManagement.sbViewNewDoc_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>sbViewNewDoc_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="249" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="249" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a2e572acfef517c755f96d77b5219fb2f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PrototypeManagement.sbOpenFileNewDoc_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>sbOpenFileNewDoc_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="269" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="269" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1adcdf9506c7af6a94b6ab0eaf08a5077c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PrototypeManagement.SetUpGrdProtos</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdProtos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="297" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="297" bodyend="345"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a611dbcb27c2deb34f7427320ca59eba5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PrototypeManagement.SetUpGrdLastDocs</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdLastDocs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="347" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="347" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a798c4f851fe89c4a927e7bf467221cdb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PrototypeManagement.SetUpGrdDocsHistory</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdDocsHistory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="410" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="410" bodyend="470"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1aa1b992a69a75c002cb53ac25c8a57477" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PrototypeManagement.SetUpLueDocType</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpLueDocType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="472" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="472" bodyend="485"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a04b93e4915ea00dcc1cf00fec988505b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PrototypeManagement.LoadAuxList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAuxList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="491" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="491" bodyend="501"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a75bc960e706e05546447b26201639f61" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PrototypeManagement.LoadPrototypesList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadPrototypesList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="503" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="503" bodyend="514"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a1103ee5e86a71a04c5ce1ba4fa24c6f7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PrototypeManagement.LoadProtoDocs</definition>
+        <argsstring>(Prototype proto)</argsstring>
+        <name>LoadProtoDocs</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_prototype" kindref="compound">Prototype</ref></type>
+          <declname>proto</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="516" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="516" bodyend="543"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1ab8cbc2a03565ff1e3672da4a43742244" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PrototypeManagement.ConfigureRibbonActionsEditing</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActionsEditing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="547" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="547" bodyend="557"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a86801d40838a559b3403d12ed31eb5ad" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.PrototypeManagement.IsValidProto</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidProto</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="559" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="559" bodyend="583"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a086f0b0419710d021be2bf5fe3957d7c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PrototypeManagement.MoveGridToProto</definition>
+        <argsstring>(string idProto)</argsstring>
+        <name>MoveGridToProto</name>
+        <param>
+          <type>string</type>
+          <declname>idProto</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="585" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="585" bodyend="606"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a04cb4fa55ad8d34bd9e2c52777d47655" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.PrototypeManagement.AddPrototypeDoc</definition>
+        <argsstring>(bool newVersion=false)</argsstring>
+        <name>AddPrototypeDoc</name>
+        <param>
+          <type>bool</type>
+          <declname>newVersion</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="610" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="610" bodyend="642"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1ab99b918f571d16fe146af1ec15acbc9b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PrototypeManagement.ActionsAfterCU</definition>
+        <argsstring>()</argsstring>
+        <name>ActionsAfterCU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="644" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="644" bodyend="663"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a06b771cf60ca4e881d6cfc0b7b95e10a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PrototypeManagement.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="29" bodyend="393"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a4c4a0740e023fa6eed0d1648fb5f7c33" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.PrototypeManagement.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1366">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1364">
+        <label>HKSupply.Forms.Master.PrototypeManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management"/>
+        <childnode refid="1365" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1365">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1366" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1369">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1367">
+        <label>HKSupply.Forms.Master.PrototypeManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management"/>
+        <childnode refid="1368" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1370">
+        <label>XtraBars</label>
+      </node>
+      <node id="1368">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1369" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1370" relation="usage">
+          <edgelabel>bbiCancel</edgelabel>
+          <edgelabel>ribbonStatusBar</edgelabel>
+          <edgelabel>bbiPrintPreview</edgelabel>
+          <edgelabel>bbiSave</edgelabel>
+          <edgelabel>bbiNew</edgelabel>
+          <edgelabel>bbiEdit</edgelabel>
+          <edgelabel>ribbonControl</edgelabel>
+          <edgelabel>ribbonPageGroup1</edgelabel>
+          <edgelabel>ribbonPage1</edgelabel>
+          <edgelabel>ribbonPageGroup2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Master/PrototypeManagement.cs" line="26" column="1" bodyfile="HKSupply/Forms/Master/PrototypeManagement.cs" bodystart="25" bodyend="668"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a15e2c821e868de123d85ea1c8e2c06a6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>_docsTypeList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a4605d4369830743de7516144f54acb62" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>_prototypeCurrent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1af90d8adf8e5014f7cdfd1f6b5f824a70" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>_prototypeDocsList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1af1e1c0a2d8863e487855a780d42f6c31" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>_prototypeLastDocsList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a16bb57759d406a9d53868dfab25cfdc4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>_prototypesList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1ab99b918f571d16fe146af1ec15acbc9b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>ActionsAfterCU</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>ActionsStates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a04cb4fa55ad8d34bd9e2c52777d47655" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>AddPrototypeDoc</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>AddRestoreLayoutItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>BarButtonItemReport_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>bbiCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a64fdc25d71bf7a17265f7dc01f7204a1" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>bbiEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1ae1b12395b731a978ca2d5c7404846978" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a57c5e746cf575f86b0cf0e500487f7aa" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>bbiExportCsv_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1ae8aca5d8c5e8c5340ad2b5dd327ae255" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>bbiExportExcel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>bbiNew</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>bbiPrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>bbiPrintPreview_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>bbiSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a99f3e89dba7c8032523a8653b26303e3" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>BbiSaveLayout_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1abaccd5d777fddd34210610730eb6541d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>ConfigureLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>ConfigurePrintExportOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a9bddb0cdce9b43fa79d00024adbdd926" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>ConfigureRibbonActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1ab8cbc2a03565ff1e3672da4a43742244" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>ConfigureRibbonActionsEditing</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>CurrentLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>CurrentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a4c4a0740e023fa6eed0d1648fb5f7c33" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>EnableExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>EnableExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>EnableLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>EnablePrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>ExportCsvFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>ExportExcelFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a6c260d6949cb9edddeac3563eeaa3e2d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>gbDocsHistory</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a3fa9b35714a171b0fb1840cbdef08578" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>gbLastDocs</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a8630ce2668ca33a96870b914c29fe771" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>gbNewDoc</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a12ed8525ff446f63c95de86d6a79f926" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>gbProtoInfo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1aaae6728e5d44d5bcdf44ac300e24c16a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>gridViewDocsHistory</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1aa5331ccd736ed3dcfd3842ce0a1ec477" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>gridViewLastDocs</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a06b771cf60ca4e881d6cfc0b7b95e10a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a86801d40838a559b3403d12ed31eb5ad" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>IsValidProto</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>LayoutButton_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a75c1a7adec511b07f9ad7854a6cd12b1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>layoutControlGroup3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a3cb123a4f3bcf9891ed84751af0a3ff5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>layoutControlItem34</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a5be584eec374a21da82d2ce379a688df" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>layoutControlItem35</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a46c0540b382ba8d4830cb9397339e4c5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>layoutControlItem36</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1ad619d41242c1899b030df4291820b3b0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>layoutControlNewDoc</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1ade275be09c0d1db2ec109388822ecf96" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>lblIdProto</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1ae5949f6b01864314527dd6297b619e1c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>lblProtoName</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1af1176bee50cf7160562f0cdfb1be2975" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>lcilueDocType</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a04b93e4915ea00dcc1cf00fec988505b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>LoadAuxList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a1103ee5e86a71a04c5ce1ba4fa24c6f7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>LoadProtoDocs</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a75bc960e706e05546447b26201639f61" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>LoadPrototypesList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1abfa550f90ef0734db5c96342166bbb33" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>lueDocType</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>Modify</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a086f0b0419710d021be2bf5fe3957d7c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>MoveGridToProto</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>New</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>ProcessCmdKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a2f97e42ce46cbffbc697d7b6cc0516c8" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>PrototypeManagement</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a89fe9a500010b7c27e2a18f76e37121e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>PrototypesManagement_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>Read</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a2d11cf9e10d184d028deef966f6e8df9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>repButtonHistDoc_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a86cba3dbc46c0960777d9b79651bd22a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>RepButtonLastDoc_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>RestoreInitState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>ribbonControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>RibbonFormBase</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>ribbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>ribbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>ribbonPageGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>ribbonStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a0f7dc8f55ced343aaae81fb5ce45ad4d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>rootGridViewProtos</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a6a03ee12117331851b28d8d266203e84" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>RootGridViewProtos_DoubleClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1adb91c6d54859650c4907245c2fdb4ae5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>sbOpenFileNewDoc</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a2e572acfef517c755f96d77b5219fb2f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>sbOpenFileNewDoc_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a7f51f0d003de58205831727f5255828d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>sbViewNewDoc</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a9495fad45198cedff74b3d22a3e492e4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>sbViewNewDoc_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>SetActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>SetRibbonText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a798c4f851fe89c4a927e7bf467221cdb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>SetUpGrdDocsHistory</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a611dbcb27c2deb34f7427320ca59eba5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>SetUpGrdLastDocs</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1adcdf9506c7af6a94b6ab0eaf08a5077c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>SetUpGrdProtos</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1aa1b992a69a75c002cb53ac25c8a57477" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>SetUpLueDocType</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a47e4b591f97938b9a633ffb26af24a32" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>txtPathNewDoc</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a422e8128a6c1877e25bc9cf783a98f4c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>VIEW_COLUMN</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a3469e0368d20b9cfdf2eb64772688aa4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>xgrdDocsHistory</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a6a228474dc1930c3d99103e7cbba9bd0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>xgrdLastDocs</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a897c127cf4c37ea9bb0f129c07708342" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>xgrdProtos</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a12efdaf8f9accaebf5e57a6b0b0f675a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>xtcGeneral</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a51acf6a4ffdbaada06d06a41fdb6d38a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>xtpDocs</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management_1a0a82dea2dd1bb1e900c4d59b63fc640b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PrototypeManagement</scope><name>xtpList</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

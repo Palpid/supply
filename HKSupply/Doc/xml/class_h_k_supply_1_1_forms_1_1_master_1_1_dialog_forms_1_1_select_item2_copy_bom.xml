@@ -1,0 +1,417 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a843d16e1986d7d41ae2f16a59aa436c0" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom._idItemDestination</definition>
+        <argsstring></argsstring>
+        <name>_idItemDestination</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" line="20" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1afbccdfc70c5b5eb75f5de6d29f1a6efc" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom._model</definition>
+        <argsstring></argsstring>
+        <name>_model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" line="21" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a1d054152dd298ac883df945f272f5d20" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom._supplier</definition>
+        <argsstring></argsstring>
+        <name>_supplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" line="22" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1adce900483d9adf45b43e6be96d5f4df9" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref></type>
+        <definition>ItemBom HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom._selectedBom</definition>
+        <argsstring></argsstring>
+        <name>_selectedBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" line="23" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a9d50fcd1cd83845addd510e4e86e1412" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a8407fc19aeefd8e650e8e28db5c294d8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom.lblSupplier</definition>
+        <argsstring></argsstring>
+        <name>lblSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.Designer.cs" line="98" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.Designer.cs" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a7769a6b4eb1bbe665f7acd3a179b3447" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.CheckedListBox</type>
+        <definition>System.Windows.Forms.CheckedListBox HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom.checkedListBoxItems</definition>
+        <argsstring></argsstring>
+        <name>checkedListBoxItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.Designer.cs" line="99" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.Designer.cs" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1af812499d010fe6b5b35cb230167a8662" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom.sbOk</definition>
+        <argsstring></argsstring>
+        <name>sbOk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.Designer.cs" line="100" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.Designer.cs" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a4c2fc72caca5956c48f926736064b72e" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom.sbCancel</definition>
+        <argsstring></argsstring>
+        <name>sbCancel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.Designer.cs" line="101" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.Designer.cs" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1ad23e0d914274bedf64edb5f2e115c76d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom.lbltxtSupplier</definition>
+        <argsstring></argsstring>
+        <name>lbltxtSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.Designer.cs" line="102" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.Designer.cs" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a323acfa4c23e8d31b3d67cb93d4f5461" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref></type>
+        <definition>ItemBom HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom.SelectedBom</definition>
+        <argsstring></argsstring>
+        <name>SelectedBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" line="27" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" bodystart="28" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a13b9bd903e7abdfd2f29f3d77e564378" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom.SelectItem2CopyBom</definition>
+        <argsstring>()</argsstring>
+        <name>SelectItem2CopyBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" line="34" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" bodystart="34" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a03a5d8ef3a4134992736079cda014aca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom.InitData</definition>
+        <argsstring>(string idItemDestination, string model, string supplier)</argsstring>
+        <name>InitData</name>
+        <param>
+          <type>string</type>
+          <declname>idItemDestination</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>supplier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" line="89" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" bodystart="89" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1affd9abb1c068ec811a23f527579c5425" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom.SelectItem2CopyBom_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SelectItem2CopyBom_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" line="51" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a290685b1b3f322eebed8fdb5ed4bdf32" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom.CheckedListBoxItems_ItemCheck</definition>
+        <argsstring>(object sender, System.Windows.Forms.ItemCheckEventArgs e)</argsstring>
+        <name>CheckedListBoxItems_ItemCheck</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.Windows.Forms.ItemCheckEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" line="56" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" bodystart="56" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a6ea379ca5ee3d8680fb3764237f6c8ff" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom.SbOk_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbOk_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" line="74" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" bodystart="74" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a1f872e73175957d382a36efd8cb1b512" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom.LoadCheckedListBoxItems</definition>
+        <argsstring>()</argsstring>
+        <name>LoadCheckedListBoxItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" line="108" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" bodystart="108" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a136976116370e02427586c5424079ef6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom.SetFormStyle</definition>
+        <argsstring>()</argsstring>
+        <name>SetFormStyle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" line="148" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" bodystart="148" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1aead53d51cb99e6f71f40113b5a1eee9b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom.SetEvents</definition>
+        <argsstring>()</argsstring>
+        <name>SetEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" line="167" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" bodystart="167" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a4227fdd28cf84997f518281fdb53b89d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom.ReturnSelectedBom</definition>
+        <argsstring>()</argsstring>
+        <name>ReturnSelectedBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" line="182" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" bodystart="182" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a7ffe3e9bc57c36f86a75ff72de388f35" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom.ValidateForm</definition>
+        <argsstring>()</argsstring>
+        <name>ValidateForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" line="200" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" bodystart="200" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a6753ddaff19f3ce4356df2aaf94a826c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.Designer.cs" bodystart="29" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a2f3441993b283eb01930010719c378a8" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1510">
+        <label>Form</label>
+      </node>
+      <node id="1509">
+        <label>HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom"/>
+        <childnode refid="1510" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1512">
+        <label>Form</label>
+      </node>
+      <node id="1511">
+        <label>HKSupply.Forms.Master.DialogForms.SelectItem2CopyBom</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom"/>
+        <childnode refid="1512" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" line="18" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectItem2CopyBom.cs" bodystart="17" bodyend="219"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a843d16e1986d7d41ae2f16a59aa436c0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>_idItemDestination</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1afbccdfc70c5b5eb75f5de6d29f1a6efc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>_model</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1adce900483d9adf45b43e6be96d5f4df9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>_selectedBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a1d054152dd298ac883df945f272f5d20" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>_supplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a7769a6b4eb1bbe665f7acd3a179b3447" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>checkedListBoxItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a290685b1b3f322eebed8fdb5ed4bdf32" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>CheckedListBoxItems_ItemCheck</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a9d50fcd1cd83845addd510e4e86e1412" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a2f3441993b283eb01930010719c378a8" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a03a5d8ef3a4134992736079cda014aca" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>InitData</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a6753ddaff19f3ce4356df2aaf94a826c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a8407fc19aeefd8e650e8e28db5c294d8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>lblSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1ad23e0d914274bedf64edb5f2e115c76d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>lbltxtSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a1f872e73175957d382a36efd8cb1b512" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>LoadCheckedListBoxItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a4227fdd28cf84997f518281fdb53b89d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>ReturnSelectedBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a4c2fc72caca5956c48f926736064b72e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>sbCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1af812499d010fe6b5b35cb230167a8662" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>sbOk</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a6ea379ca5ee3d8680fb3764237f6c8ff" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>SbOk_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a323acfa4c23e8d31b3d67cb93d4f5461" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>SelectedBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a13b9bd903e7abdfd2f29f3d77e564378" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>SelectItem2CopyBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1affd9abb1c068ec811a23f527579c5425" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>SelectItem2CopyBom_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1aead53d51cb99e6f71f40113b5a1eee9b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>SetEvents</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a136976116370e02427586c5424079ef6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>SetFormStyle</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_item2_copy_bom_1a7ffe3e9bc57c36f86a75ff72de388f35" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectItem2CopyBom</scope><name>ValidateForm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_mocking_1_1_respose_test" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Mocking::ResposeTest</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_mocking_1_1_respose_test_1a62901a07ef47944a0c174e5775a210e3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Mocking.ResposeTest.ID_DOC</definition>
+        <argsstring></argsstring>
+        <name>ID_DOC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Mocking/TestDb.cs" line="19" column="1" bodyfile="HKSupply/Mocking/TestDb.cs" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_mocking_1_1_respose_test_1a6303843d0b14a2706aed3af0c1530418" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Mocking.ResposeTest.ID_SUPPLY_DOC_TYPE</definition>
+        <argsstring></argsstring>
+        <name>ID_SUPPLY_DOC_TYPE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Mocking/TestDb.cs" line="20" column="1" bodyfile="HKSupply/Mocking/TestDb.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Mocking/TestDb.cs" line="18" column="1" bodyfile="HKSupply/Mocking/TestDb.cs" bodystart="17" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_mocking_1_1_respose_test_1a62901a07ef47944a0c174e5775a210e3" prot="public" virt="non-virtual"><scope>HKSupply::Mocking::ResposeTest</scope><name>ID_DOC</name></member>
+      <member refid="class_h_k_supply_1_1_mocking_1_1_respose_test_1a6303843d0b14a2706aed3af0c1530418" prot="public" virt="non-virtual"><scope>HKSupply::Mocking::ResposeTest</scope><name>ID_SUPPLY_DOC_TYPE</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

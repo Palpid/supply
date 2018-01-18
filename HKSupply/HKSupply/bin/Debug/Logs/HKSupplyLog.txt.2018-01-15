@@ -1,0 +1,251 @@
+﻿2018-01-15 09:59:34,995 ERROR [1] HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs - Invalid column name 'Lot'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Lot'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass59.<ExecuteStoreCommand>b__58()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass59.<ExecuteStoreCommand>b__57()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreCommand(TransactionalBehavior transactionalBehavior, String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs(HKSupplyContext db, Stocks STK) in C:\Git\Supply\HKSupply\HKSupply\PRJ_Stocks\DB\BD_Stocks.cs:line 261
+ClientConnectionId:6b3bb8c6-071e-4214-be94-591ed3ac607c
+Error Number:207,State:1,Class:16
+2018-01-15 09:59:35,123 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDocSupplyMaterials - Index #0
+Message: Invalid column name 'Lot'.
+Error Number: 207
+LineNumber: 1
+Source: .Net SqlClient Data Provider
+Procedure: 
+
+2018-01-15 10:02:10,593 ERROR [1] HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs - Invalid column name 'Lot'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Lot'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass59.<ExecuteStoreCommand>b__58()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass59.<ExecuteStoreCommand>b__57()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreCommand(TransactionalBehavior transactionalBehavior, String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs(HKSupplyContext db, Stocks STK) in C:\Git\Supply\HKSupply\HKSupply\PRJ_Stocks\DB\BD_Stocks.cs:line 261
+ClientConnectionId:6b3bb8c6-071e-4214-be94-591ed3ac607c
+Error Number:207,State:1,Class:16
+2018-01-15 10:02:13,594 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDocSupplyMaterials - Index #0
+Message: Invalid column name 'Lot'.
+Error Number: 207
+LineNumber: 1
+Source: .Net SqlClient Data Provider
+Procedure: 
+
+2018-01-15 12:50:09,616 ERROR [1] HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs - Invalid column name 'Lot'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Lot'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass59.<ExecuteStoreCommand>b__58()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass59.<ExecuteStoreCommand>b__57()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreCommand(TransactionalBehavior transactionalBehavior, String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs(HKSupplyContext db, Stocks STK) in C:\Git\Supply\HKSupply\HKSupply\PRJ_Stocks\DB\BD_Stocks.cs:line 261
+ClientConnectionId:7be7dc40-20ef-4d78-8191-faf81d70b412
+Error Number:207,State:1,Class:16
+2018-01-15 12:50:09,779 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDocSupplyMaterials - Index #0
+Message: Invalid column name 'Lot'.
+Error Number: 207
+LineNumber: 1
+Source: .Net SqlClient Data Provider
+Procedure: 
+
+2018-01-15 12:55:21,580 ERROR [1] HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs - Invalid column name 'GUID_Move'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'GUID_Move'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass59.<ExecuteStoreCommand>b__58()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass59.<ExecuteStoreCommand>b__57()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreCommand(TransactionalBehavior transactionalBehavior, String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs(HKSupplyContext db, Stocks STK) in C:\Git\Supply\HKSupply\HKSupply\PRJ_Stocks\DB\BD_Stocks.cs:line 297
+ClientConnectionId:17c16f33-7c8f-42d4-952e-6506dc881802
+Error Number:207,State:1,Class:16
+2018-01-15 12:55:22,664 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDocSupplyMaterials - Index #0
+Message: Invalid column name 'GUID_Move'.
+Error Number: 207
+LineNumber: 1
+Source: .Net SqlClient Data Provider
+Procedure: 
+
+2018-01-15 12:59:17,132 ERROR [1] HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs - Violation of PRIMARY KEY constraint 'PK_STK_MOVEMENTS_DOCS'. Cannot insert duplicate key in object 'dbo.STK_MOVEMENTS_DOCS'. The duplicate key value is (968b7bc5-fbc9-426e-8e7f-1f633ee04cb6, PL201801001).
+The statement has been terminated.
+System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_STK_MOVEMENTS_DOCS'. Cannot insert duplicate key in object 'dbo.STK_MOVEMENTS_DOCS'. The duplicate key value is (968b7bc5-fbc9-426e-8e7f-1f633ee04cb6, PL201801001).
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass59.<ExecuteStoreCommand>b__58()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass59.<ExecuteStoreCommand>b__57()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreCommand(TransactionalBehavior transactionalBehavior, String commandText, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(TransactionalBehavior transactionalBehavior, String sql, Object[] parameters)
+   at System.Data.Entity.Database.ExecuteSqlCommand(String sql, Object[] parameters)
+   at HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs(HKSupplyContext db, Stocks STK) in C:\Git\Supply\HKSupply\HKSupply\PRJ_Stocks\DB\BD_Stocks.cs:line 297
+ClientConnectionId:f7dcdce1-a74a-45cd-a808-a54665c49fd1
+Error Number:2627,State:1,Class:14
+2018-01-15 12:59:17,285 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDocSupplyMaterials - Index #0
+Message: Violation of PRIMARY KEY constraint 'PK_STK_MOVEMENTS_DOCS'. Cannot insert duplicate key in object 'dbo.STK_MOVEMENTS_DOCS'. The duplicate key value is (968b7bc5-fbc9-426e-8e7f-1f633ee04cb6, PL201801001).
+Error Number: 2627
+LineNumber: 1
+Source: .Net SqlClient Data Provider
+Procedure: 
+
+2018-01-15 12:59:17,287 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDocSupplyMaterials - Index #1
+Message: The statement has been terminated.
+Error Number: 3621
+LineNumber: 1
+Source: .Net SqlClient Data Provider
+Procedure: 
+
+2018-01-15 15:41:36,173 ERROR [1] HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs - The specified cast from a materialized 'System.Decimal' type to the 'System.Int32' type is not valid.
+System.InvalidOperationException: The specified cast from a materialized 'System.Decimal' type to the 'System.Int32' type is not valid.
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs(HKSupplyContext db, Stocks STK) in C:\Git\Supply\HKSupply\HKSupply\PRJ_Stocks\DB\BD_Stocks.cs:line 242
+2018-01-15 15:41:36,369 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDocSupplyMaterials - The specified cast from a materialized 'System.Decimal' type to the 'System.Int32' type is not valid.
+System.InvalidOperationException: The specified cast from a materialized 'System.Decimal' type to the 'System.Int32' type is not valid.
+   at HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs(HKSupplyContext db, Stocks STK) in C:\Git\Supply\HKSupply\HKSupply\PRJ_Stocks\DB\BD_Stocks.cs:line 329
+   at HKSupply.Services.Implementations.EFSupplyDocs.AddStockToTransit(HKSupplyContext db, DocHead docHead) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFSupplyDocs.cs:line 2467
+   at HKSupply.Services.Implementations.EFSupplyDocs.UpdateDocSupplyMaterials(DocHead doc, Boolean finishDoc) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFSupplyDocs.cs:line 1472
+2018-01-15 15:42:45,030 ERROR [1] HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs - The specified cast from a materialized 'System.Decimal' type to the 'System.Int32' type is not valid.
+System.InvalidOperationException: The specified cast from a materialized 'System.Decimal' type to the 'System.Int32' type is not valid.
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs(HKSupplyContext db, Stocks STK) in C:\Git\Supply\HKSupply\HKSupply\PRJ_Stocks\DB\BD_Stocks.cs:line 242
+2018-01-15 15:42:50,342 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDocSupplyMaterials - The specified cast from a materialized 'System.Decimal' type to the 'System.Int32' type is not valid.
+System.InvalidOperationException: The specified cast from a materialized 'System.Decimal' type to the 'System.Int32' type is not valid.
+   at HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs(HKSupplyContext db, Stocks STK) in C:\Git\Supply\HKSupply\HKSupply\PRJ_Stocks\DB\BD_Stocks.cs:line 329
+   at HKSupply.Services.Implementations.EFSupplyDocs.AddStockToTransit(HKSupplyContext db, DocHead docHead) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFSupplyDocs.cs:line 2467
+   at HKSupply.Services.Implementations.EFSupplyDocs.UpdateDocSupplyMaterials(DocHead doc, Boolean finishDoc) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFSupplyDocs.cs:line 1472
+2018-01-15 15:48:16,389 ERROR [1] HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs - Incorrect syntax near the keyword 'Identity'.
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near the keyword 'Identity'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__64()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__63()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs(HKSupplyContext db, Stocks STK) in C:\Git\Supply\HKSupply\HKSupply\PRJ_Stocks\DB\BD_Stocks.cs:line 242
+ClientConnectionId:d1d734b4-c0bc-4a77-a42a-d69d88c4d948
+Error Number:156,State:1,Class:15
+2018-01-15 15:48:17,791 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDocSupplyMaterials - Index #0
+Message: Incorrect syntax near the keyword 'Identity'.
+Error Number: 156
+LineNumber: 1
+Source: .Net SqlClient Data Provider
+Procedure: 
+
+2018-01-15 15:49:51,178 ERROR [1] HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs - The specified cast from a materialized 'System.Decimal' type to the 'System.Int32' type is not valid.
+System.InvalidOperationException: The specified cast from a materialized 'System.Decimal' type to the 'System.Int32' type is not valid.
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs(HKSupplyContext db, Stocks STK) in C:\Git\Supply\HKSupply\HKSupply\PRJ_Stocks\DB\BD_Stocks.cs:line 242
+2018-01-15 15:50:02,403 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDocSupplyMaterials - The specified cast from a materialized 'System.Decimal' type to the 'System.Int32' type is not valid.
+System.InvalidOperationException: The specified cast from a materialized 'System.Decimal' type to the 'System.Int32' type is not valid.
+   at HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs(HKSupplyContext db, Stocks STK) in C:\Git\Supply\HKSupply\HKSupply\PRJ_Stocks\DB\BD_Stocks.cs:line 329
+   at HKSupply.Services.Implementations.EFSupplyDocs.AddStockToTransit(HKSupplyContext db, DocHead docHead) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFSupplyDocs.cs:line 2467
+   at HKSupply.Services.Implementations.EFSupplyDocs.UpdateDocSupplyMaterials(DocHead doc, Boolean finishDoc) in C:\Git\Supply\HKSupply\HKSupply\Services\Implementations\EFSupplyDocs.cs:line 1472
+2018-01-15 16:17:35,494 ERROR [1] HKSupply.Services.Implementations.EFSupplyDocs.UpdateDocSupplyMaterials - Lot quantity to move (15) is greather than existing quantity (28,000000)
+System.InvalidOperationException: Lot quantity to move (15) is greather than existing quantity (28,000000)
+   at HKSupply.PRJ_Stocks.Classes.Stocks.MoveSockItem(StockMovementsType MoveType, Warehouse WareORIG, Warehouse WareDEST, Decimal Qtt, String idItem, String idOwner, String idlot, String remarks, List`1 LstidDoc, String IdUser)
+   at HKSupply.Services.Implementations.EFSupplyDocs.AcceptGoodsMaterials(HKSupplyContext db, DocHead docHead)
+   at HKSupply.Services.Implementations.EFSupplyDocs.UpdateDocSupplyMaterials(DocHead doc, Boolean finishDoc)

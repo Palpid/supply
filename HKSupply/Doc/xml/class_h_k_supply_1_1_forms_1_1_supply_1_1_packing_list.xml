@@ -1,0 +1,2429 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Supply::PackingList</compoundname>
+    <basecompoundref refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" prot="public" virt="non-virtual">HKSupply.Forms.RibbonFormBase</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a3e81eb68153142644cd26a8d9ba913ad" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>eGridLinesSoSelectionSummaries</name>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a3e81eb68153142644cd26a8d9ba913ada2412ddb61d4b981e41a386a0b0a8ac04" prot="private">
+          <name>totalQuantityOrderedMt</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a3e81eb68153142644cd26a8d9ba913ada269d911c8555dcc7a01bf80df98383c0" prot="private">
+          <name>totalQuantityOrderedHw</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a3e81eb68153142644cd26a8d9ba913ada318ea9f3f23edc9a55c7d8ef7d600bda" prot="private">
+          <name>totalQuantityMt</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a3e81eb68153142644cd26a8d9ba913adad313b43ee4b93a0d53957137dbecc1f9" prot="private">
+          <name>totalQuantityHw</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="36" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="35" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a7e7eae5eddeeb57fbc2806483aeba57f" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>eGridLinesDeliveredGoodsSummaries</name>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a7e7eae5eddeeb57fbc2806483aeba57fa2412ddb61d4b981e41a386a0b0a8ac04" prot="private">
+          <name>totalQuantityOrderedMt</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a7e7eae5eddeeb57fbc2806483aeba57fa269d911c8555dcc7a01bf80df98383c0" prot="private">
+          <name>totalQuantityOrderedHw</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a7e7eae5eddeeb57fbc2806483aeba57fa318ea9f3f23edc9a55c7d8ef7d600bda" prot="private">
+          <name>totalQuantityMt</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a7e7eae5eddeeb57fbc2806483aeba57fad313b43ee4b93a0d53957137dbecc1f9" prot="private">
+          <name>totalQuantityHw</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="44" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="43" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a28f7627d4e4b6fb6989df0d767fe3f2b" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.Forms.Supply.PackingList.COL_SELECTED</definition>
+        <argsstring></argsstring>
+        <name>COL_SELECTED</name>
+        <initializer>= &quot;Selected&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="31" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a2193d6b3557f12d23153fd2baaadd108" prot="private" static="no" mutable="no">
+        <type>Font</type>
+        <definition>Font HKSupply.Forms.Supply.PackingList._labelDefaultFontBold</definition>
+        <argsstring></argsstring>
+        <name>_labelDefaultFontBold</name>
+        <initializer>= AppStyles.LabelDefaultFontBold</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="54" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a0e0b0acddc1d4ab849c5a3ceda5cf4fe" prot="private" static="no" mutable="no">
+        <type>Font</type>
+        <definition>Font HKSupply.Forms.Supply.PackingList._labelDefaultFont</definition>
+        <argsstring></argsstring>
+        <name>_labelDefaultFont</name>
+        <initializer>= AppStyles.LabelDefaultFont</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="55" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a71f48efc0c82d19578a2dcba94e3d3b4" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_supply_status" kindref="compound">SupplyStatus</ref> &gt;</type>
+        <definition>List&lt;SupplyStatus&gt; HKSupply.Forms.Supply.PackingList._supplyStatusList</definition>
+        <argsstring></argsstring>
+        <name>_supplyStatusList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="57" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a1dfef25629b1a5fde6c7352c76b2dad5" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_customer" kindref="compound">Customer</ref> &gt;</type>
+        <definition>List&lt;Customer&gt; HKSupply.Forms.Supply.PackingList._customersList</definition>
+        <argsstring></argsstring>
+        <name>_customersList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="59" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a2092dad8a6ac29131a802945ecc00cdf" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_currency" kindref="compound">Currency</ref> &gt;</type>
+        <definition>List&lt;Currency&gt; HKSupply.Forms.Supply.PackingList._currenciesList</definition>
+        <argsstring></argsstring>
+        <name>_currenciesList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="60" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ade559d5a1ca3c37373b7e85685bef796" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_delivery_term" kindref="compound">DeliveryTerm</ref> &gt;</type>
+        <definition>List&lt;DeliveryTerm&gt; HKSupply.Forms.Supply.PackingList._deliveryTermList</definition>
+        <argsstring></argsstring>
+        <name>_deliveryTermList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="61" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a8c4412d94ca434e895181a3babadd7ac" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_payment_terms" kindref="compound">PaymentTerms</ref> &gt;</type>
+        <definition>List&lt;PaymentTerms&gt; HKSupply.Forms.Supply.PackingList._paymentTermsList</definition>
+        <argsstring></argsstring>
+        <name>_paymentTermsList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="62" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a9458dcf41bcc0e69b1cca89f4b131867" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Forms.Supply.PackingList._docHeadPK</definition>
+        <argsstring></argsstring>
+        <name>_docHeadPK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="64" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aa1f0c8eb8668566b096263521986f9fc" prot="private" static="no" mutable="no">
+        <type>BindingList&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref> &gt;</type>
+        <definition>BindingList&lt;DocHead&gt; HKSupply.Forms.Supply.PackingList._docSoSelectionList</definition>
+        <argsstring></argsstring>
+        <name>_docSoSelectionList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="65" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aa800dba85d4414ed149f15a44ddf134c" prot="private" static="no" mutable="no">
+        <type>BindingList&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line" kindref="compound">DocLine</ref> &gt;</type>
+        <definition>BindingList&lt;DocLine&gt; HKSupply.Forms.Supply.PackingList._docLinesSoSelectionList</definition>
+        <argsstring></argsstring>
+        <name>_docLinesSoSelectionList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="66" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a1d683201148dc06c16ccd999d98f7578" prot="private" static="no" mutable="no">
+        <type>BindingList&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line" kindref="compound">DocLine</ref> &gt;</type>
+        <definition>BindingList&lt;DocLine&gt; HKSupply.Forms.Supply.PackingList._docLinesDeliveredGoodsList</definition>
+        <argsstring></argsstring>
+        <name>_docLinesDeliveredGoodsList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="67" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1abd9b947271f533e379da8e422fa1ca60" prot="private" static="no" mutable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Forms.Supply.PackingList._totalQuantityOrderedMtLinesSo</definition>
+        <argsstring></argsstring>
+        <name>_totalQuantityOrderedMtLinesSo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="69" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a524127e131a8553369eedae34b032941" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HKSupply.Forms.Supply.PackingList._totalQuantityOrderedHwLinesSo</definition>
+        <argsstring></argsstring>
+        <name>_totalQuantityOrderedHwLinesSo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="70" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1acac541d2f2af5b8a808b15f3f3541d80" prot="private" static="no" mutable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Forms.Supply.PackingList._totalQuantityMtLinesSo</definition>
+        <argsstring></argsstring>
+        <name>_totalQuantityMtLinesSo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="71" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a367e6961848efa422bac8be5eed90d3d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HKSupply.Forms.Supply.PackingList._totalQuantityHwLinesSo</definition>
+        <argsstring></argsstring>
+        <name>_totalQuantityHwLinesSo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="72" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a52947656f6c196e3f71d65d1bd44d8d6" prot="private" static="no" mutable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Forms.Supply.PackingList._totalQuantityOrderedMtDeliveredGoods</definition>
+        <argsstring></argsstring>
+        <name>_totalQuantityOrderedMtDeliveredGoods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="74" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1afea02dbd1b2cea393b494f97090e5d5d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HKSupply.Forms.Supply.PackingList._totalQuantityOrderedHwDeliveredGoods</definition>
+        <argsstring></argsstring>
+        <name>_totalQuantityOrderedHwDeliveredGoods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="75" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a5707ef7125bac717bfd067eb7a7fe2dc" prot="private" static="no" mutable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Forms.Supply.PackingList._totalQuantityMtDeliveredGoods</definition>
+        <argsstring></argsstring>
+        <name>_totalQuantityMtDeliveredGoods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="76" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a319c8422b33618172acb334d3988a33c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HKSupply.Forms.Supply.PackingList._totalQuantityHwDeliveredGoods</definition>
+        <argsstring></argsstring>
+        <name>_totalQuantityHwDeliveredGoods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="77" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a3483b757a2858fb09391ed7e5fe542fd" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.PackingList._isLoadingPacking</definition>
+        <argsstring></argsstring>
+        <name>_isLoadingPacking</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="79" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a94381218e3feff893c3f76a36064fce0" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.PackingList._isCreatingPacking</definition>
+        <argsstring></argsstring>
+        <name>_isCreatingPacking</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="80" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aa6ef26b7986eac2d1c46adf69ff06e73" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Supply.PackingList.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1adf82768f936be427353919a027c72818" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Supply.PackingList.sbSearch</definition>
+        <argsstring></argsstring>
+        <name>sbSearch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="694" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="694" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a1438502559e7292106a6d1339c5ec292" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Supply.PackingList.slueCustomer</definition>
+        <argsstring></argsstring>
+        <name>slueCustomer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="695" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="695" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aceb9692d7253db6540f36f1692abfc68" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.PackingList.searchLookUpEdit1View</definition>
+        <argsstring></argsstring>
+        <name>searchLookUpEdit1View</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="696" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="696" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a4b8a69f3755f48da3ff7512462b7b1af" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblCustomer</definition>
+        <argsstring></argsstring>
+        <name>lblCustomer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="697" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="697" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aab9eb3896d972602206bdfc17f76fc44" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblWeek</definition>
+        <argsstring></argsstring>
+        <name>lblWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="698" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="698" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a9e1019fba9e2a6b8eafee1144b9c4ac4" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblPKDeliveryWeek</definition>
+        <argsstring></argsstring>
+        <name>lblPKDeliveryWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="699" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="699" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ad8de706697c3e332f8212fbde0f80c17" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblPKDocDateWeek</definition>
+        <argsstring></argsstring>
+        <name>lblPKDocDateWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="700" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="700" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1afdc18919f5e3fd153d3402e1d09155d0" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblDate</definition>
+        <argsstring></argsstring>
+        <name>lblDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="701" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="701" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a4fda9033f8041c9870b695e4a63977e2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.DateEdit</type>
+        <definition>DevExpress.XtraEditors.DateEdit HKSupply.Forms.Supply.PackingList.dateEditPKDelivery</definition>
+        <argsstring></argsstring>
+        <name>dateEditPKDelivery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="702" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="702" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1afb434adeeea5b435e133a0ef33ec3d6b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.DateEdit</type>
+        <definition>DevExpress.XtraEditors.DateEdit HKSupply.Forms.Supply.PackingList.dateEditPKDocDate</definition>
+        <argsstring></argsstring>
+        <name>dateEditPKDocDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="703" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="703" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a7ca320cda69a4d9923a30e99943458b5" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblPKDelivery</definition>
+        <argsstring></argsstring>
+        <name>lblPKDelivery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="704" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="704" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a5fd83d541cf48e09a2a770c8fef76b77" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblPKDocDate</definition>
+        <argsstring></argsstring>
+        <name>lblPKDocDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="705" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="705" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a6c8f7c08fa12e7d725549957009fb51a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblPKNumber</definition>
+        <argsstring></argsstring>
+        <name>lblPKNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="706" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="706" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a9ba51ab9b2a3948800458a55bf17513f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Supply.PackingList.txtPKNumber</definition>
+        <argsstring></argsstring>
+        <name>txtPKNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="707" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="707" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a0d2f0fe9a929e7c64dab9ae818a51a13" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Supply.PackingList.xtcPK</definition>
+        <argsstring></argsstring>
+        <name>xtcPK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="708" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="708" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a47a41bfe5c9e5f19fd8a8e58954f39c0" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.PackingList.xtpSOSelection</definition>
+        <argsstring></argsstring>
+        <name>xtpSOSelection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="709" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="709" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a04d7f103c0c41e0e743db282fa183504" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Supply.PackingList.xgrdLinesSoSelection</definition>
+        <argsstring></argsstring>
+        <name>xgrdLinesSoSelection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="710" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="710" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a65ba3261caa966999eef419b814d94b1" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.PackingList.gridViewLinesSoSelection</definition>
+        <argsstring></argsstring>
+        <name>gridViewLinesSoSelection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="711" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="711" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ad44b93702586f2955c1c5294fadbeb91" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.PackingList.xtpTerms</definition>
+        <argsstring></argsstring>
+        <name>xtpTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="712" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="712" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a763cf83ce92b826c33bad90eb07e9c6a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.PackingList.xtpDeliveredGoods</definition>
+        <argsstring></argsstring>
+        <name>xtpDeliveredGoods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="713" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="713" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ae3a3f64a47b50903b80033070aa374dd" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Supply.PackingList.xgrdSoSelection</definition>
+        <argsstring></argsstring>
+        <name>xgrdSoSelection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="714" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="714" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a26b7f880cfebfe9003a77f3416359c7d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.PackingList.gridViewSoSelection</definition>
+        <argsstring></argsstring>
+        <name>gridViewSoSelection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="715" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="715" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a18b65b09f80e8ab39817e0932443c8e0" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Supply.PackingList.slueCurrency</definition>
+        <argsstring></argsstring>
+        <name>slueCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="716" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="716" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a26c93390f9d652721fd98bbafca497ab" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.PackingList.gridView2</definition>
+        <argsstring></argsstring>
+        <name>gridView2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="717" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="717" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a7c67104b429e2330a4c006696446425d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Supply.PackingList.slueDeliveryTerms</definition>
+        <argsstring></argsstring>
+        <name>slueDeliveryTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="718" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="718" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a2da4092b34299f396c4628a26505fd12" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.PackingList.gridView1</definition>
+        <argsstring></argsstring>
+        <name>gridView1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="719" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="719" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a679d64fe42ada914129f8c06b97560eb" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblCurrency</definition>
+        <argsstring></argsstring>
+        <name>lblCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="720" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="720" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ac3cd5d792ab2d4f58921e30cab5020d0" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblTermsOfDelivery</definition>
+        <argsstring></argsstring>
+        <name>lblTermsOfDelivery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="721" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="721" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aa89d888f855e6bee3863261f6f406d61" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Supply.PackingList.xtcGeneral</definition>
+        <argsstring></argsstring>
+        <name>xtcGeneral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="722" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="722" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a6397aceaf003e03be17d6018d3c75bbe" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.PackingList.xtpPakingList</definition>
+        <argsstring></argsstring>
+        <name>xtpPakingList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="723" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="723" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a6f6d68079b073bf7a8448f4f6761af70" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Supply.PackingList.xgrdLinesDeliveredGoods</definition>
+        <argsstring></argsstring>
+        <name>xgrdLinesDeliveredGoods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="724" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="724" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a2d029fbea4c17ee40d9935876db6008a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.PackingList.gridViewLinesDeliveredGoods</definition>
+        <argsstring></argsstring>
+        <name>gridViewLinesDeliveredGoods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="725" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="725" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a8207e59abaab31fc343770712a736935" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Supply.PackingList.sluePaymentTerm</definition>
+        <argsstring></argsstring>
+        <name>sluePaymentTerm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="726" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="726" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a5cf08543670201ea64fbdecbb0a1310c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.PackingList.gridView3</definition>
+        <argsstring></argsstring>
+        <name>gridView3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="727" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="727" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aa1cef9ef0dd79bc077e3deeb6367f586" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblTxtInvoiceTo</definition>
+        <argsstring></argsstring>
+        <name>lblTxtInvoiceTo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="728" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="728" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ae7903ec36d8d4edcbcbd097a32b07af0" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblTxtShipTo</definition>
+        <argsstring></argsstring>
+        <name>lblTxtShipTo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="729" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="729" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a73315e5fa694d8415c5cdb2fd46bd0e4" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblTxtContact</definition>
+        <argsstring></argsstring>
+        <name>lblTxtContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="730" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="730" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1acdc7beb1ca683d71694442154d6979c0" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblTxtAddress</definition>
+        <argsstring></argsstring>
+        <name>lblTxtAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="731" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="731" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a8901fef705ad88966a270826257e83ca" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblTxtCompany</definition>
+        <argsstring></argsstring>
+        <name>lblTxtCompany</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="732" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="732" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aa71a43b6ff26c5893d50ca1486d5fe02" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblInvoiceTo</definition>
+        <argsstring></argsstring>
+        <name>lblInvoiceTo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="733" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="733" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a76207240f6c2424901cb72801f90ae36" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblTermPayment</definition>
+        <argsstring></argsstring>
+        <name>lblTermPayment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="734" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="734" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1afa9f4df8fb762b44b3e43db04962a091" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblShipTo</definition>
+        <argsstring></argsstring>
+        <name>lblShipTo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="735" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="735" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aa5c5f69427697d2a04f0774182921e30" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblContact</definition>
+        <argsstring></argsstring>
+        <name>lblContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="736" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="736" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a9131cc518ca4f9079b0d819f79a032f2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblAddress</definition>
+        <argsstring></argsstring>
+        <name>lblAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="737" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="737" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aeac5997f8fb4b47f3537e78ad337db59" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblCompany</definition>
+        <argsstring></argsstring>
+        <name>lblCompany</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="738" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="738" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a79de5af10bea66f6cdb11c3f840b18b0" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Supply.PackingList.sbFinishPK</definition>
+        <argsstring></argsstring>
+        <name>sbFinishPK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="739" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="739" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a582d5fec04207aca0e242c4b792518fa" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lbltxtStatus</definition>
+        <argsstring></argsstring>
+        <name>lbltxtStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="740" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="740" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a585c76a8a5760f00d574fb04107852fc" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.MemoEdit</type>
+        <definition>DevExpress.XtraEditors.MemoEdit HKSupply.Forms.Supply.PackingList.memoEditRemarks</definition>
+        <argsstring></argsstring>
+        <name>memoEditRemarks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="741" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="741" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1abce6d2ea0ed439213ccb8a82a19c3eef" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblRemarks</definition>
+        <argsstring></argsstring>
+        <name>lblRemarks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="742" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="742" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1af532592bf45dc40a0652a09cb97a0c07" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Supply.PackingList.txtManualReference</definition>
+        <argsstring></argsstring>
+        <name>txtManualReference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="743" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="743" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ae8f4ce884cd3b9a03448e42d3867cf8f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PackingList.lblManualReference</definition>
+        <argsstring></argsstring>
+        <name>lblManualReference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="744" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="744" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ac746127a4cfaf7a4c1f9c41a7037b906" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.PanelControl</type>
+        <definition>DevExpress.XtraEditors.PanelControl HKSupply.Forms.Supply.PackingList.pcFilter</definition>
+        <argsstring></argsstring>
+        <name>pcFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="745" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="745" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ac101e18c95af53a7dce8e25e6d734844" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Supply.PackingList.PackingList</definition>
+        <argsstring>()</argsstring>
+        <name>PackingList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="84" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="84" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ad74b2ff0a6c56b75ca3825e5de6149db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.PackingList.bbiCancel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiCancel_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318">bbiCancel_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="140" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="140" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a6876175233bce57209c7cd144973b1f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.PackingList.bbiEdit_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiEdit_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3">bbiEdit_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="155" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="155" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ae037b634643249e624fbc920411b291d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.PackingList.bbiNew_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiNew_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a">bbiNew_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="182" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="182" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a5a52f82a2012ee16af69234a8d8e2f1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.PackingList.bbiSave_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiSave_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9">bbiSave_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="220" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="220" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ad950fadaf3f4809043f8e78218363e21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.PackingList.bbiExportCsv_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportCsv_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a">bbiExportCsv_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="266" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="266" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1abb76e89f3f632bd65e8305d2e921a988" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.PackingList.bbiExportExcel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportExcel_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811">bbiExportExcel_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="298" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="298" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ad8c7e2de9c27570b03f2a0e57fd7521b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.PackingList.BarButtonItemReport_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>BarButtonItemReport_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f">BarButtonItemReport_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="329" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="329" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aa1fb263dbf241bd431ab624f6bcdae79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.InitData</definition>
+        <argsstring>(string idDoc)</argsstring>
+        <name>InitData</name>
+        <param>
+          <type>string</type>
+          <declname>idDoc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="853" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="853" bodyend="865"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a5519352c203e2c381ee323f23eac25a7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.ConfigureRibbonActions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="118" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="118" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ac4d486b4af281a9fa34b502ea40e7b81" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.PackingList_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>PackingList_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="352" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="352" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a8af38d3f315b8894f3caf0ec069ef5fa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SbSearch_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbSearch_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="357" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="357" bodyend="375"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aff362b4aac487cc5d5d83e2b679af44f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.TxtPKNumber_KeyDown</definition>
+        <argsstring>(object sender, KeyEventArgs e)</argsstring>
+        <name>TxtPKNumber_KeyDown</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="377" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="377" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a484cc6679f8b9634c765a0b5812d79e3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.TxtPKNumber_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>TxtPKNumber_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="395" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="395" bodyend="409"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ac9b22fb25f7d712db2cd3cca646cc959" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SbFinishPK_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbFinishPK_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="411" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="411" bodyend="456"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ac20795deb02dc90f49d3afe5b144c689" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.GridViewSoSelection_SelectionChanged</definition>
+        <argsstring>(object sender, DevExpress.Data.SelectionChangedEventArgs e)</argsstring>
+        <name>GridViewSoSelection_SelectionChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.Data.SelectionChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="458" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="458" bodyend="491"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a1e01a8045bcb0925f331b730c91fca53" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.GridViewLinesSoSelection_SelectionChanged</definition>
+        <argsstring>(object sender, SelectionChangedEventArgs e)</argsstring>
+        <name>GridViewLinesSoSelection_SelectionChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>SelectionChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="493" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="493" bodyend="555"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ac3427f7b879d01847a06d5881b567963" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.GridViewLinesSoSelection_CellValueChanged</definition>
+        <argsstring>(object sender, CellValueChangedEventArgs e)</argsstring>
+        <name>GridViewLinesSoSelection_CellValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CellValueChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="557" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="557" bodyend="570"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aa784c8a4f63f7ba66ad5988184a0f8fe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.GridViewLinesSoSelection_ValidatingEditor</definition>
+        <argsstring>(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)</argsstring>
+        <name>GridViewLinesSoSelection_ValidatingEditor</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="572" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="572" bodyend="611"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1afea54820a1a2016bdb66221405c0bab2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.GridViewLinesSoSelection_ShowingEditor</definition>
+        <argsstring>(object sender, CancelEventArgs e)</argsstring>
+        <name>GridViewLinesSoSelection_ShowingEditor</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CancelEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="613" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="613" bodyend="627"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ae0eb9f0a121738bac4a6cf4c2003b2f7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.GridViewLinesSoSelection_CustomSummaryCalculate</definition>
+        <argsstring>(object sender, CustomSummaryEventArgs e)</argsstring>
+        <name>GridViewLinesSoSelection_CustomSummaryCalculate</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CustomSummaryEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="629" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="629" bodyend="706"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a499e280c19cac6f1c3b52aa99a36a2b6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.GridViewLinesSoSelection_CustomUnboundColumnData</definition>
+        <argsstring>(object sender, CustomColumnDataEventArgs e)</argsstring>
+        <name>GridViewLinesSoSelection_CustomUnboundColumnData</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CustomColumnDataEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="708" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="708" bodyend="723"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a9d013008d73f37a7f0063d5e299ff882" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.GridViewLinesDeliveredGoods_CustomSummaryCalculate</definition>
+        <argsstring>(object sender, CustomSummaryEventArgs e)</argsstring>
+        <name>GridViewLinesDeliveredGoods_CustomSummaryCalculate</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CustomSummaryEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="725" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="725" bodyend="801"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a2e393d4f5cfd220ce5121fd69da5790a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.DateEditPKCreation_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DateEditPKCreation_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="803" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="803" bodyend="814"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1af009c62888091c6431842737cc642282" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.DateEditPKDelivery_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DateEditPKDelivery_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="816" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="816" bodyend="826"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a2ae0f84e4c25af4307f308990bf920ba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SlueCustomer_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SlueCustomer_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="828" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="828" bodyend="849"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aae41f77a576c956b1585474839877893" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.LoadAuxList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAuxList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="871" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="871" bodyend="885"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a55619358a262abb1d0ce35e5dc325d97" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.ResetCustomerSOs</definition>
+        <argsstring>()</argsstring>
+        <name>ResetCustomerSOs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="887" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="887" bodyend="899"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a293439455f601e7ca758ed423066b65d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.ResetPK</definition>
+        <argsstring>()</argsstring>
+        <name>ResetPK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="901" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="901" bodyend="916"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ab805338cf8d328350fc25dd85ac9b25f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.Reset4NewPk</definition>
+        <argsstring>()</argsstring>
+        <name>Reset4NewPk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="918" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="918" bodyend="948"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a6f25f62eb707b7450359907c2afd1497" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SearchPK</definition>
+        <argsstring>()</argsstring>
+        <name>SearchPK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="950" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="950" bodyend="987"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ab619633dd2ba44d999e2a6b07c589b87" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.LoadPK</definition>
+        <argsstring>()</argsstring>
+        <name>LoadPK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="989" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="989" bodyend="1037"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a3aa69cac62782b1b9fa995e5d7e05a73" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SetUpLabels</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpLabels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1043" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1043" bodyend="1133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a8987e8d0445956aeaba6343e5c81903d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SetObjectsReadOnly</definition>
+        <argsstring>()</argsstring>
+        <name>SetObjectsReadOnly</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1135" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1135" bodyend="1151"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ad5b2bf9811f7e24f4a42cac2430fd49d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SetObjectsEnableToCreate</definition>
+        <argsstring>()</argsstring>
+        <name>SetObjectsEnableToCreate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1153" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1153" bodyend="1168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a36adbb48319956972bfb58ba38af2f75" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SetObjectsEnableToEdit</definition>
+        <argsstring>()</argsstring>
+        <name>SetObjectsEnableToEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1170" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1170" bodyend="1181"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a2742d20484cbf60974782020597114a2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SetUpButtons</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpButtons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1183" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1183" bodyend="1193"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a64393ff35ac8ac24015b153cae897295" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SetUpSearchLookUpEdit</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSearchLookUpEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1195" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1195" bodyend="1208"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a227b363eb213e69c97924ee43d65931f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SetUpSlueCustomer</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSlueCustomer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1210" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1210" bodyend="1225"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aeb6c26c5ddb02cc3b202c1ebcf9caa67" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SetUpSlueCurrency</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSlueCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1227" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1227" bodyend="1242"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aaee3d0966f39d54268c482907cc87363" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SetUpSlueDeliveryTerms</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSlueDeliveryTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1244" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1244" bodyend="1260"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ac7bd2b2906a9070f51ee52ade3e24a82" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SetUpSluePaymentTerms</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSluePaymentTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1262" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1262" bodyend="1278"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ab586e503763273bb36c4c071bbb0c0d4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SetUpEvents</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1280" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1280" bodyend="1296"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a1706bc64d2e8e02fe71c0f505a75119e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SetUpGrdSoSelection</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdSoSelection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1298" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1298" bodyend="1352"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1abbb17caf62cb75d85ec3afef9311976d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SetUpGrdLinesSoSelection</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdLinesSoSelection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1354" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1354" bodyend="1466"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a8f96d3c555f27484bb2f09402e048cda" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SetUpGrdLinesDeliveredGoods</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdLinesDeliveredGoods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1468" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1468" bodyend="1543"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a60de1c3c5d0e3ac915d3881f84b2ffae" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SetupPanelControl</definition>
+        <argsstring>()</argsstring>
+        <name>SetupPanelControl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1545" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1545" bodyend="1558"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1adcce7fe0f76c61da798f5ad4366e2a37" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SetVisiblePropertyByState</definition>
+        <argsstring>()</argsstring>
+        <name>SetVisiblePropertyByState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1564" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1564" bodyend="1594"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ac4c649bb86a700d09d009566b8f63396" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.ResetForm</definition>
+        <argsstring>(bool resetPkNumber=true, bool resetCustomer=true)</argsstring>
+        <name>ResetForm</name>
+        <param>
+          <type>bool</type>
+          <declname>resetPkNumber</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>resetCustomer</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1596" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1596" bodyend="1625"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a5fbd6a1c1cdffcb7dc274d9382e7e3a5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SetCustomerInfo</definition>
+        <argsstring>()</argsstring>
+        <name>SetCustomerInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1627" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1627" bodyend="1646"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a9d3d010bced25feeab5b144d0430669a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.CopyToDeliveredGood</definition>
+        <argsstring>(DocLine line)</argsstring>
+        <name>CopyToDeliveredGood</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line" kindref="compound">DocLine</ref></type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1648" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1648" bodyend="1680"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a36dd0a3f3c3d3f4e28bceaf3ef8c8ea7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.DeleteDeliveredGood</definition>
+        <argsstring>(DocLine line)</argsstring>
+        <name>DeleteDeliveredGood</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line" kindref="compound">DocLine</ref></type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1682" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1682" bodyend="1694"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a4afc54a40661a744592b859c5a307b90" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.MarkSoSelectionFromDeliveredGoods</definition>
+        <argsstring>()</argsstring>
+        <name>MarkSoSelectionFromDeliveredGoods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1696" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1696" bodyend="1725"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a3fbdb77a91af589bd994cb0357e2371c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.PackingList.ValidatePK</definition>
+        <argsstring>()</argsstring>
+        <name>ValidatePK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1727" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1727" bodyend="1773"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1af06ea84f3016d85f00c5e5a6dc2751ff" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SetGridsEnabled</definition>
+        <argsstring>()</argsstring>
+        <name>SetGridsEnabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1775" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1775" bodyend="1799"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aad72c999e69794163a5fd4b295c0db55" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.CancelEdit</definition>
+        <argsstring>()</argsstring>
+        <name>CancelEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1801" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1801" bodyend="1827"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a9a11961a3389459d5118cded06388f32" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.ShowMessageDocsGenerated</definition>
+        <argsstring>()</argsstring>
+        <name>ShowMessageDocsGenerated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1829" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1829" bodyend="1860"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a1a6b63e34b835cf4936ec0de2ff64b59" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.ConfigureActionsStackViewCreating</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackViewCreating</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1866" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1866" bodyend="1901"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a409f270b11b290a65517b782323451c8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.ConfigureActionsStackViewEditing</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackViewEditing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1903" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1903" bodyend="1939"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a05183b5366bb6148dd563d00a483c369" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.SearchCustomersSOs</definition>
+        <argsstring>()</argsstring>
+        <name>SearchCustomersSOs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1945" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1945" bodyend="1976"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a8c9360a664cf46ec2aec556d68110d2b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.PackingList.ValidateIfExistOpenPK</definition>
+        <argsstring>()</argsstring>
+        <name>ValidateIfExistOpenPK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="1978" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="1978" bodyend="2006"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a45bef103bf8930221448e62db5011c4f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.CreatePkNumber</definition>
+        <argsstring>()</argsstring>
+        <name>CreatePkNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="2008" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="2008" bodyend="2045"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ae9c3d27c5d4c220ca71a248937dd4838" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.PackingList.CreatePK</definition>
+        <argsstring>()</argsstring>
+        <name>CreatePK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="2047" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="2047" bodyend="2081"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a89194fcbdd75bd7c3b9930b1ad810add" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.PackingList.UpdatePK</definition>
+        <argsstring>(bool finishPK=false)</argsstring>
+        <name>UpdatePK</name>
+        <param>
+          <type>bool</type>
+          <declname>finishPK</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="2083" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="2083" bodyend="2120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a877e3246957a504c007a5a14128d3309" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.ActionsAfterCU</definition>
+        <argsstring>()</argsstring>
+        <name>ActionsAfterCU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="2122" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="2122" bodyend="2148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a247efcf552191df1c9ce74b17fb0d91a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.OpenReport</definition>
+        <argsstring>(FunctionalityReport functionalityReport)</argsstring>
+        <name>OpenReport</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_functionality_report" kindref="compound">FunctionalityReport</ref></type>
+          <declname>functionalityReport</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.cs" line="2153" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="2153" bodyend="2192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a6a4a45472be94c34fd0457cec7967f25" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PackingList.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="29" bodyend="691"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ac3e5f6d9e9d27b8d1695e58dae35abef" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.PackingList.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PackingList.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1281">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1279">
+        <label>HKSupply.Forms.Supply.PackingList</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list"/>
+        <childnode refid="1280" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1280">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1281" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1284">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1282">
+        <label>HKSupply.Forms.Supply.PackingList</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list"/>
+        <childnode refid="1283" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1285">
+        <label>XtraBars</label>
+      </node>
+      <node id="1283">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1284" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1285" relation="usage">
+          <edgelabel>bbiCancel</edgelabel>
+          <edgelabel>ribbonStatusBar</edgelabel>
+          <edgelabel>bbiPrintPreview</edgelabel>
+          <edgelabel>bbiSave</edgelabel>
+          <edgelabel>bbiNew</edgelabel>
+          <edgelabel>bbiEdit</edgelabel>
+          <edgelabel>ribbonControl</edgelabel>
+          <edgelabel>ribbonPageGroup1</edgelabel>
+          <edgelabel>ribbonPage1</edgelabel>
+          <edgelabel>ribbonPageGroup2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Supply/PackingList.cs" line="29" column="1" bodyfile="HKSupply/Forms/Supply/PackingList.cs" bodystart="28" bodyend="2197"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a2092dad8a6ac29131a802945ecc00cdf" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_currenciesList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a1dfef25629b1a5fde6c7352c76b2dad5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_customersList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ade559d5a1ca3c37373b7e85685bef796" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_deliveryTermList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a9458dcf41bcc0e69b1cca89f4b131867" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_docHeadPK</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a1d683201148dc06c16ccd999d98f7578" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_docLinesDeliveredGoodsList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aa800dba85d4414ed149f15a44ddf134c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_docLinesSoSelectionList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aa1f0c8eb8668566b096263521986f9fc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_docSoSelectionList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a94381218e3feff893c3f76a36064fce0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_isCreatingPacking</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a3483b757a2858fb09391ed7e5fe542fd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_isLoadingPacking</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a0e0b0acddc1d4ab849c5a3ceda5cf4fe" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_labelDefaultFont</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a2193d6b3557f12d23153fd2baaadd108" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_labelDefaultFontBold</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a8c4412d94ca434e895181a3babadd7ac" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_paymentTermsList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a71f48efc0c82d19578a2dcba94e3d3b4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_supplyStatusList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a319c8422b33618172acb334d3988a33c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_totalQuantityHwDeliveredGoods</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a367e6961848efa422bac8be5eed90d3d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_totalQuantityHwLinesSo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a5707ef7125bac717bfd067eb7a7fe2dc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_totalQuantityMtDeliveredGoods</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1acac541d2f2af5b8a808b15f3f3541d80" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_totalQuantityMtLinesSo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1afea02dbd1b2cea393b494f97090e5d5d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_totalQuantityOrderedHwDeliveredGoods</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a524127e131a8553369eedae34b032941" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_totalQuantityOrderedHwLinesSo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a52947656f6c196e3f71d65d1bd44d8d6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_totalQuantityOrderedMtDeliveredGoods</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1abd9b947271f533e379da8e422fa1ca60" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>_totalQuantityOrderedMtLinesSo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a877e3246957a504c007a5a14128d3309" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ActionsAfterCU</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ActionsStates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>AddRestoreLayoutItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ad8c7e2de9c27570b03f2a0e57fd7521b" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>BarButtonItemReport_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>bbiCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ad74b2ff0a6c56b75ca3825e5de6149db" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>bbiEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a6876175233bce57209c7cd144973b1f2" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ad950fadaf3f4809043f8e78218363e21" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>bbiExportCsv_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1abb76e89f3f632bd65e8305d2e921a988" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>bbiExportExcel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>bbiNew</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ae037b634643249e624fbc920411b291d" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>bbiPrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>bbiPrintPreview_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>bbiSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a5a52f82a2012ee16af69234a8d8e2f1d" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>BbiSaveLayout_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aad72c999e69794163a5fd4b295c0db55" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>CancelEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a28f7627d4e4b6fb6989df0d767fe3f2b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>COL_SELECTED</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aa6ef26b7986eac2d1c46adf69ff06e73" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a1a6b63e34b835cf4936ec0de2ff64b59" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ConfigureActionsStackViewCreating</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a409f270b11b290a65517b782323451c8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ConfigureActionsStackViewEditing</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ConfigureLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ConfigurePrintExportOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a5519352c203e2c381ee323f23eac25a7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ConfigureRibbonActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a9d3d010bced25feeab5b144d0430669a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>CopyToDeliveredGood</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ae9c3d27c5d4c220ca71a248937dd4838" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>CreatePK</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a45bef103bf8930221448e62db5011c4f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>CreatePkNumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>CurrentLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>CurrentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a2e393d4f5cfd220ce5121fd69da5790a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>DateEditPKCreation_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a4fda9033f8041c9870b695e4a63977e2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>dateEditPKDelivery</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1af009c62888091c6431842737cc642282" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>DateEditPKDelivery_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1afb434adeeea5b435e133a0ef33ec3d6b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>dateEditPKDocDate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a36dd0a3f3c3d3f4e28bceaf3ef8c8ea7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>DeleteDeliveredGood</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ac3e5f6d9e9d27b8d1695e58dae35abef" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a7e7eae5eddeeb57fbc2806483aeba57f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>eGridLinesDeliveredGoodsSummaries</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a3e81eb68153142644cd26a8d9ba913ad" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>eGridLinesSoSelectionSummaries</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>EnableExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>EnableExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>EnableLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>EnablePrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ExportCsvFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ExportExcelFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a2da4092b34299f396c4628a26505fd12" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>gridView1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a26c93390f9d652721fd98bbafca497ab" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>gridView2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a5cf08543670201ea64fbdecbb0a1310c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>gridView3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a2d029fbea4c17ee40d9935876db6008a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>gridViewLinesDeliveredGoods</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a9d013008d73f37a7f0063d5e299ff882" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>GridViewLinesDeliveredGoods_CustomSummaryCalculate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a65ba3261caa966999eef419b814d94b1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>gridViewLinesSoSelection</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ac3427f7b879d01847a06d5881b567963" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>GridViewLinesSoSelection_CellValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ae0eb9f0a121738bac4a6cf4c2003b2f7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>GridViewLinesSoSelection_CustomSummaryCalculate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a499e280c19cac6f1c3b52aa99a36a2b6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>GridViewLinesSoSelection_CustomUnboundColumnData</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a1e01a8045bcb0925f331b730c91fca53" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>GridViewLinesSoSelection_SelectionChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1afea54820a1a2016bdb66221405c0bab2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>GridViewLinesSoSelection_ShowingEditor</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aa784c8a4f63f7ba66ad5988184a0f8fe" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>GridViewLinesSoSelection_ValidatingEditor</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a26b7f880cfebfe9003a77f3416359c7d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>gridViewSoSelection</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ac20795deb02dc90f49d3afe5b144c689" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>GridViewSoSelection_SelectionChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aa1fb263dbf241bd431ab624f6bcdae79" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>InitData</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a6a4a45472be94c34fd0457cec7967f25" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>LayoutButton_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a9131cc518ca4f9079b0d819f79a032f2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblAddress</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aeac5997f8fb4b47f3537e78ad337db59" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblCompany</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aa5c5f69427697d2a04f0774182921e30" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblContact</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a679d64fe42ada914129f8c06b97560eb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a4b8a69f3755f48da3ff7512462b7b1af" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblCustomer</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1afdc18919f5e3fd153d3402e1d09155d0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblDate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aa71a43b6ff26c5893d50ca1486d5fe02" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblInvoiceTo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ae8f4ce884cd3b9a03448e42d3867cf8f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblManualReference</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a7ca320cda69a4d9923a30e99943458b5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblPKDelivery</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a9e1019fba9e2a6b8eafee1144b9c4ac4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblPKDeliveryWeek</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a5fd83d541cf48e09a2a770c8fef76b77" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblPKDocDate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ad8de706697c3e332f8212fbde0f80c17" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblPKDocDateWeek</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a6c8f7c08fa12e7d725549957009fb51a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblPKNumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1abce6d2ea0ed439213ccb8a82a19c3eef" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblRemarks</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1afa9f4df8fb762b44b3e43db04962a091" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblShipTo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a76207240f6c2424901cb72801f90ae36" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblTermPayment</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ac3cd5d792ab2d4f58921e30cab5020d0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblTermsOfDelivery</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1acdc7beb1ca683d71694442154d6979c0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblTxtAddress</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a8901fef705ad88966a270826257e83ca" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblTxtCompany</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a73315e5fa694d8415c5cdb2fd46bd0e4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblTxtContact</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aa1cef9ef0dd79bc077e3deeb6367f586" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblTxtInvoiceTo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ae7903ec36d8d4edcbcbd097a32b07af0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblTxtShipTo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a582d5fec04207aca0e242c4b792518fa" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lbltxtStatus</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aab9eb3896d972602206bdfc17f76fc44" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>lblWeek</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aae41f77a576c956b1585474839877893" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>LoadAuxList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ab619633dd2ba44d999e2a6b07c589b87" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>LoadPK</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a4afc54a40661a744592b859c5a307b90" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>MarkSoSelectionFromDeliveredGoods</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a585c76a8a5760f00d574fb04107852fc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>memoEditRemarks</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>Modify</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>New</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a247efcf552191df1c9ce74b17fb0d91a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>OpenReport</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ac101e18c95af53a7dce8e25e6d734844" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>PackingList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ac4d486b4af281a9fa34b502ea40e7b81" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>PackingList_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ac746127a4cfaf7a4c1f9c41a7037b906" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>pcFilter</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ProcessCmdKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>Read</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ab805338cf8d328350fc25dd85ac9b25f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>Reset4NewPk</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a55619358a262abb1d0ce35e5dc325d97" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ResetCustomerSOs</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ac4c649bb86a700d09d009566b8f63396" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ResetForm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a293439455f601e7ca758ed423066b65d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ResetPK</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>RestoreInitState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ribbonControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>RibbonFormBase</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ribbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ribbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ribbonPageGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ribbonStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a79de5af10bea66f6cdb11c3f840b18b0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>sbFinishPK</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ac9b22fb25f7d712db2cd3cca646cc959" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SbFinishPK_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1adf82768f936be427353919a027c72818" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>sbSearch</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a8af38d3f315b8894f3caf0ec069ef5fa" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SbSearch_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a05183b5366bb6148dd563d00a483c369" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SearchCustomersSOs</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aceb9692d7253db6540f36f1692abfc68" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>searchLookUpEdit1View</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a6f25f62eb707b7450359907c2afd1497" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SearchPK</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SetActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a5fbd6a1c1cdffcb7dc274d9382e7e3a5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SetCustomerInfo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1af06ea84f3016d85f00c5e5a6dc2751ff" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SetGridsEnabled</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ad5b2bf9811f7e24f4a42cac2430fd49d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SetObjectsEnableToCreate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a36adbb48319956972bfb58ba38af2f75" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SetObjectsEnableToEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a8987e8d0445956aeaba6343e5c81903d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SetObjectsReadOnly</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SetRibbonText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a2742d20484cbf60974782020597114a2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SetUpButtons</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ab586e503763273bb36c4c071bbb0c0d4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SetUpEvents</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a8f96d3c555f27484bb2f09402e048cda" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SetUpGrdLinesDeliveredGoods</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1abbb17caf62cb75d85ec3afef9311976d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SetUpGrdLinesSoSelection</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a1706bc64d2e8e02fe71c0f505a75119e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SetUpGrdSoSelection</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a3aa69cac62782b1b9fa995e5d7e05a73" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SetUpLabels</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a60de1c3c5d0e3ac915d3881f84b2ffae" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SetupPanelControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a64393ff35ac8ac24015b153cae897295" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SetUpSearchLookUpEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aeb6c26c5ddb02cc3b202c1ebcf9caa67" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SetUpSlueCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a227b363eb213e69c97924ee43d65931f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SetUpSlueCustomer</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aaee3d0966f39d54268c482907cc87363" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SetUpSlueDeliveryTerms</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ac7bd2b2906a9070f51ee52ade3e24a82" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SetUpSluePaymentTerms</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1adcce7fe0f76c61da798f5ad4366e2a37" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SetVisiblePropertyByState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a9a11961a3389459d5118cded06388f32" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ShowMessageDocsGenerated</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a18b65b09f80e8ab39817e0932443c8e0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>slueCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a1438502559e7292106a6d1339c5ec292" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>slueCustomer</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a2ae0f84e4c25af4307f308990bf920ba" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>SlueCustomer_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a7c67104b429e2330a4c006696446425d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>slueDeliveryTerms</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a8207e59abaab31fc343770712a736935" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>sluePaymentTerm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1af532592bf45dc40a0652a09cb97a0c07" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>txtManualReference</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a9ba51ab9b2a3948800458a55bf17513f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>txtPKNumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a484cc6679f8b9634c765a0b5812d79e3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>TxtPKNumber_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aff362b4aac487cc5d5d83e2b679af44f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>TxtPKNumber_KeyDown</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a89194fcbdd75bd7c3b9930b1ad810add" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>UpdatePK</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a8c9360a664cf46ec2aec556d68110d2b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ValidateIfExistOpenPK</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a3fbdb77a91af589bd994cb0357e2371c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>ValidatePK</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a6f6d68079b073bf7a8448f4f6761af70" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>xgrdLinesDeliveredGoods</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a04d7f103c0c41e0e743db282fa183504" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>xgrdLinesSoSelection</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ae3a3f64a47b50903b80033070aa374dd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>xgrdSoSelection</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1aa89d888f855e6bee3863261f6f406d61" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>xtcGeneral</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a0d2f0fe9a929e7c64dab9ae818a51a13" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>xtcPK</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a763cf83ce92b826c33bad90eb07e9c6a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>xtpDeliveredGoods</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a6397aceaf003e03be17d6018d3c75bbe" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>xtpPakingList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1a47a41bfe5c9e5f19fd8a8e58954f39c0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>xtpSOSelection</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_packing_list_1ad44b93702586f2955c1c5294fadbeb91" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PackingList</scope><name>xtpTerms</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

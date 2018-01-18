@@ -1,0 +1,987 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Master::ItemDocs</compoundname>
+    <basecompoundref refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" prot="public" virt="non-virtual">HKSupply.Forms.RibbonFormBase</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1af46e4e16c6465af4421e66201bebfc57" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.ItemDocs._isFactory</definition>
+        <argsstring></argsstring>
+        <name>_isFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="27" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a5bb15510079680937fcf2b271d07c736" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_model" kindref="compound">Model</ref> &gt;</type>
+        <definition>List&lt;Model&gt; HKSupply.Forms.Master.ItemDocs._modelList</definition>
+        <argsstring></argsstring>
+        <name>_modelList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a07082acd9a76f9fc8f2240903b0ecd27" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_ey" kindref="compound">ItemEy</ref> &gt;</type>
+        <definition>List&lt;ItemEy&gt; HKSupply.Forms.Master.ItemDocs._itemEyList</definition>
+        <argsstring></argsstring>
+        <name>_itemEyList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="30" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a335dfa1026b0b9c4d6ce0a721dbbbc44" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_ey" kindref="compound">ItemEy</ref> &gt;</type>
+        <definition>List&lt;ItemEy&gt; HKSupply.Forms.Master.ItemDocs._itemsModelList</definition>
+        <argsstring></argsstring>
+        <name>_itemsModelList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="31" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a465fa5f9c056170ccc75200871c04311" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_doc_type" kindref="compound">DocType</ref> &gt;</type>
+        <definition>List&lt;DocType&gt; HKSupply.Forms.Master.ItemDocs._docsTypeList</definition>
+        <argsstring></argsstring>
+        <name>_docsTypeList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="32" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1aa623ebdb9e4cfa9285a8b1e429be95ae" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_doc_type" kindref="compound">DocType</ref> &gt;</type>
+        <definition>List&lt;DocType&gt; HKSupply.Forms.Master.ItemDocs._docsTypeShowSupplierList</definition>
+        <argsstring></argsstring>
+        <name>_docsTypeShowSupplierList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="33" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1af3b3ece55c4dff69e76584afdec652b5" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier" kindref="compound">Supplier</ref> &gt;</type>
+        <definition>List&lt;Supplier&gt; HKSupply.Forms.Master.ItemDocs._suppliersList</definition>
+        <argsstring></argsstring>
+        <name>_suppliersList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="34" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a0e69d6fb1e86d04ea4f5ead5d20c4252" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Master.ItemDocs.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1abeda922668e301707a2d38beecbaf266" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Master.ItemDocs.xtcGeneral</definition>
+        <argsstring></argsstring>
+        <name>xtcGeneral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="390" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="390" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1acea97278ed1a7e6091c433b1a5a8dc45" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.ItemDocs.xtpMain</definition>
+        <argsstring></argsstring>
+        <name>xtpMain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="391" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="391" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1ae79898d436c4a641e8525710d879d37c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.ItemDocs.lblModel</definition>
+        <argsstring></argsstring>
+        <name>lblModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="392" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="392" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1ad100904d3b4d55ffcfbffe96e4e5e70a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Master.ItemDocs.slueModel</definition>
+        <argsstring></argsstring>
+        <name>slueModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="393" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="393" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a0afbb17e698dfab7e91224dd1214c83b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.ItemDocs.gridView2</definition>
+        <argsstring></argsstring>
+        <name>gridView2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="394" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="394" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1ae684d36f92cda0c4ccd44adf308f7489" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.CheckedListBoxControl</type>
+        <definition>DevExpress.XtraEditors.CheckedListBoxControl HKSupply.Forms.Master.ItemDocs.checkedListBoxControlItems</definition>
+        <argsstring></argsstring>
+        <name>checkedListBoxControlItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="395" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="395" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a3fb938fbce4209716ce7e135b24e6e04" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox HKSupply.Forms.Master.ItemDocs.gbNewDoc</definition>
+        <argsstring></argsstring>
+        <name>gbNewDoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="396" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="396" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a201feed432a3b533f99a225eb959aec6" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControl</type>
+        <definition>DevExpress.XtraLayout.LayoutControl HKSupply.Forms.Master.ItemDocs.layoutControlNewDoc</definition>
+        <argsstring></argsstring>
+        <name>layoutControlNewDoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="397" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1ae8cb38d161a84170329a365fc2f8b68b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LookUpEdit</type>
+        <definition>DevExpress.XtraEditors.LookUpEdit HKSupply.Forms.Master.ItemDocs.lueDocType</definition>
+        <argsstring></argsstring>
+        <name>lueDocType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="398" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="398" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a86b2403f64116053d519429c1fb33049" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Master.ItemDocs.sbViewNewDoc</definition>
+        <argsstring></argsstring>
+        <name>sbViewNewDoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="399" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a11efe2ad4bc21522d533410b364fb3e5" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Master.ItemDocs.sbOpenFileNewDoc</definition>
+        <argsstring></argsstring>
+        <name>sbOpenFileNewDoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="400" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="400" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a602284592c69153a2e1438738c6b57a8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.ItemDocs.txtPathNewDoc</definition>
+        <argsstring></argsstring>
+        <name>txtPathNewDoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="401" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a3856409df459cb435ec4c590e1db37da" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlGroup</type>
+        <definition>DevExpress.XtraLayout.LayoutControlGroup HKSupply.Forms.Master.ItemDocs.layoutControlGroup3</definition>
+        <argsstring></argsstring>
+        <name>layoutControlGroup3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="402" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="402" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a873dbad5492252ae1b163b59bf53ec7f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.ItemDocs.layoutControlItem34</definition>
+        <argsstring></argsstring>
+        <name>layoutControlItem34</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="403" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1ada119faf5cda7430a05701ec1536cf8c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.ItemDocs.layoutControlItem35</definition>
+        <argsstring></argsstring>
+        <name>layoutControlItem35</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="404" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a8fd2d322b515b19b521bf62bfdab476e" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.ItemDocs.layoutControlItem36</definition>
+        <argsstring></argsstring>
+        <name>layoutControlItem36</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="405" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a433da93da9d5deb9584ba69b1f7ce80b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Master.ItemDocs.lcilueDocType</definition>
+        <argsstring></argsstring>
+        <name>lcilueDocType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="406" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a7f6db5044e73f273a4ebdf4dc0109243" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox HKSupply.Forms.Master.ItemDocs.gbSupplier</definition>
+        <argsstring></argsstring>
+        <name>gbSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="407" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a369c57c9c9f398f14dbadd6d419c1b0b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.ItemDocs.lblSupplier</definition>
+        <argsstring></argsstring>
+        <name>lblSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="408" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1aece6fdbb6e1113c94571bc855f7bc62c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Master.ItemDocs.slueSupplier</definition>
+        <argsstring></argsstring>
+        <name>slueSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="409" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a8a8db0dacc42a7617eebf69e33fb546a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.ItemDocs.gridView1</definition>
+        <argsstring></argsstring>
+        <name>gridView1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="410" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a3aec7f307610d3d574e379a7e2067308" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.ItemDocs.xgrdLastDocs</definition>
+        <argsstring></argsstring>
+        <name>xgrdLastDocs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="411" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a011540f97e11015a5d44b376d573f27d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.ItemDocs.gridViewLastDocs</definition>
+        <argsstring></argsstring>
+        <name>gridViewLastDocs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="412" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1ae5ea15c74c081b37a29eb08e3811dc68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Master.ItemDocs.ItemDocs</definition>
+        <argsstring>()</argsstring>
+        <name>ItemDocs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>test </para>        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="39" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="39" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1abb22d56af1fb18a825c2770c0adf9160" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.ItemDocs.bbiCancel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiCancel_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318">bbiCancel_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="100" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="100" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a66d86ca3ec4a3b255cbd45f5383303f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.ItemDocs.bbiSave_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiSave_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9">bbiSave_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="114" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="114" bodyend="149"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a2080064bf55db17132476e26f37130d7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemDocs.ConfigureRibbonActions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="75" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="75" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1aebff4cf949890edbb079db465f5b5f90" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemDocs.ItemDocs_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ItemDocs_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="154" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="154" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a3ad8d964a9642595b64f98183f351fcf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemDocs.SlueModel_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SlueModel_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="159" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="159" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1aea36a98f4de0af302e8e483db9d4df7d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemDocs.CheckedListBoxControlItems_ItemCheck</definition>
+        <argsstring>(object sender, DevExpress.XtraEditors.Controls.ItemCheckEventArgs e)</argsstring>
+        <name>CheckedListBoxControlItems_ItemCheck</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraEditors.Controls.ItemCheckEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="177" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="177" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a8c2703c72cbfa3edebc704ea51e4c928" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemDocs.sbViewNewDoc_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>sbViewNewDoc_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="201" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="201" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a8e4f179d700cb14d7ba88ac8102fa7b0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemDocs.sbOpenFileNewDoc_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>sbOpenFileNewDoc_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="221" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="221" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1ab5d8547a691201ac306f465502a02059" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemDocs.LueDocType_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>LueDocType_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="243" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="243" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1ac2fb34b0618273c749959c913dc681dd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemDocs.LoadAuxList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAuxList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="277" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="277" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a626cfce76839ab7664e0df11db239dc5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemDocs.LoadCheckedList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadCheckedList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="307" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="307" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a162c09bf61bab6422fe97aa65d97f3bd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemDocs.LoadLastDocsGrid</definition>
+        <argsstring>()</argsstring>
+        <name>LoadLastDocsGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="325" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="325" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a9b6d82d411a8230f8de9f28e89d93353" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemDocs.SetUpSlueModel</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSlueModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="361" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="361" bodyend="376"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a1e36719bbbf1850d2a1801c8007612a2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemDocs.SetUpSlueSupplier</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSlueSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="378" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="378" bodyend="401"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a2b84da0a43167b036e8e036478e6d170" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemDocs.SetUpCheckedListBoxControlItems</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpCheckedListBoxControlItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="403" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="403" bodyend="415"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a9b67cb70906444a04c6c7848ff0efc03" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemDocs.SetUpLueDocType</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpLueDocType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="417" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="417" bodyend="440"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1aa6f0ed1c2a6ebb94dafbd1009cdcd646" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemDocs.SetUpEvents</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="442" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="442" bodyend="452"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a9650468fee7eacbd1aa72ac6f91a3f0c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemDocs.SetUpGrdLastDocs</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdLastDocs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="454" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="454" bodyend="520"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1acc24a73b9b74fc1166f0f15376e8ba54" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.ItemDocs.IsValid</definition>
+        <argsstring>()</argsstring>
+        <name>IsValid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="526" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="526" bodyend="568"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1adc38f05171a7e2975dc71c63cc3641c6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.ItemDocs.UpdateItemsDoc</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateItemsDoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="570" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="570" bodyend="588"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a55b1e789ebb08d5056df2682ad950a16" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.ItemDocs.UpdateItemWithDoc</definition>
+        <argsstring>(ItemEy itemUpdate, bool newVersion=false)</argsstring>
+        <name>UpdateItemWithDoc</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_item_ey" kindref="compound">ItemEy</ref></type>
+          <declname>itemUpdate</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>newVersion</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="590" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="590" bodyend="622"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1acb17f9106db948565102710105ed4b87" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemDocs.ResetForm</definition>
+        <argsstring>(bool all=true)</argsstring>
+        <name>ResetForm</name>
+        <param>
+          <type>bool</type>
+          <declname>all</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.cs" line="626" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="626" bodyend="648"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1acd541a6752ac98a31c61ebb50a3f4839" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.ItemDocs.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="29" bodyend="386"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1acf5dfceeeafc8ca2d893ff9eecd9c943" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.ItemDocs.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/ItemDocs.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="891">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="890">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="891" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="889">
+        <label>HKSupply.Forms.Master.ItemDocs</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs"/>
+        <childnode refid="890" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="894">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="895">
+        <label>XtraBars</label>
+      </node>
+      <node id="893">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="894" relation="public-inheritance">
+        </childnode>
+        <childnode refid="895" relation="usage">
+          <edgelabel>bbiCancel</edgelabel>
+          <edgelabel>ribbonStatusBar</edgelabel>
+          <edgelabel>bbiPrintPreview</edgelabel>
+          <edgelabel>bbiSave</edgelabel>
+          <edgelabel>bbiNew</edgelabel>
+          <edgelabel>bbiEdit</edgelabel>
+          <edgelabel>ribbonControl</edgelabel>
+          <edgelabel>ribbonPageGroup1</edgelabel>
+          <edgelabel>ribbonPage1</edgelabel>
+          <edgelabel>ribbonPageGroup2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="892">
+        <label>HKSupply.Forms.Master.ItemDocs</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs"/>
+        <childnode refid="893" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Master/ItemDocs.cs" line="25" column="1" bodyfile="HKSupply/Forms/Master/ItemDocs.cs" bodystart="24" bodyend="651"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a465fa5f9c056170ccc75200871c04311" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>_docsTypeList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1aa623ebdb9e4cfa9285a8b1e429be95ae" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>_docsTypeShowSupplierList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1af46e4e16c6465af4421e66201bebfc57" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>_isFactory</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a07082acd9a76f9fc8f2240903b0ecd27" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>_itemEyList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a335dfa1026b0b9c4d6ce0a721dbbbc44" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>_itemsModelList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a5bb15510079680937fcf2b271d07c736" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>_modelList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1af3b3ece55c4dff69e76584afdec652b5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>_suppliersList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>ActionsStates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>AddRestoreLayoutItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>BarButtonItemReport_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>bbiCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1abb22d56af1fb18a825c2770c0adf9160" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>bbiEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>bbiExportCsv_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>bbiExportExcel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>bbiNew</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>bbiPrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>bbiPrintPreview_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>bbiSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a66d86ca3ec4a3b255cbd45f5383303f4" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>BbiSaveLayout_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1ae684d36f92cda0c4ccd44adf308f7489" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>checkedListBoxControlItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1aea36a98f4de0af302e8e483db9d4df7d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>CheckedListBoxControlItems_ItemCheck</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a0e69d6fb1e86d04ea4f5ead5d20c4252" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>ConfigureLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>ConfigurePrintExportOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a2080064bf55db17132476e26f37130d7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>ConfigureRibbonActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>CurrentLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>CurrentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1acf5dfceeeafc8ca2d893ff9eecd9c943" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>EnableExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>EnableExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>EnableLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>EnablePrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>ExportCsvFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>ExportExcelFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a3fb938fbce4209716ce7e135b24e6e04" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>gbNewDoc</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a7f6db5044e73f273a4ebdf4dc0109243" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>gbSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a8a8db0dacc42a7617eebf69e33fb546a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>gridView1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a0afbb17e698dfab7e91224dd1214c83b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>gridView2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a011540f97e11015a5d44b376d573f27d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>gridViewLastDocs</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1acd541a6752ac98a31c61ebb50a3f4839" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1acc24a73b9b74fc1166f0f15376e8ba54" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>IsValid</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1ae5ea15c74c081b37a29eb08e3811dc68" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>ItemDocs</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1aebff4cf949890edbb079db465f5b5f90" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>ItemDocs_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>LayoutButton_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a3856409df459cb435ec4c590e1db37da" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>layoutControlGroup3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a873dbad5492252ae1b163b59bf53ec7f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>layoutControlItem34</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1ada119faf5cda7430a05701ec1536cf8c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>layoutControlItem35</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a8fd2d322b515b19b521bf62bfdab476e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>layoutControlItem36</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a201feed432a3b533f99a225eb959aec6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>layoutControlNewDoc</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1ae79898d436c4a641e8525710d879d37c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>lblModel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a369c57c9c9f398f14dbadd6d419c1b0b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>lblSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a433da93da9d5deb9584ba69b1f7ce80b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>lcilueDocType</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1ac2fb34b0618273c749959c913dc681dd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>LoadAuxList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a626cfce76839ab7664e0df11db239dc5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>LoadCheckedList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a162c09bf61bab6422fe97aa65d97f3bd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>LoadLastDocsGrid</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1ae8cb38d161a84170329a365fc2f8b68b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>lueDocType</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1ab5d8547a691201ac306f465502a02059" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>LueDocType_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>Modify</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>New</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>ProcessCmdKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>Read</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1acb17f9106db948565102710105ed4b87" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>ResetForm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>RestoreInitState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>ribbonControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>RibbonFormBase</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>ribbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>ribbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>ribbonPageGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>ribbonStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a11efe2ad4bc21522d533410b364fb3e5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>sbOpenFileNewDoc</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a8e4f179d700cb14d7ba88ac8102fa7b0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>sbOpenFileNewDoc_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a86b2403f64116053d519429c1fb33049" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>sbViewNewDoc</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a8c2703c72cbfa3edebc704ea51e4c928" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>sbViewNewDoc_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>SetActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>SetRibbonText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a2b84da0a43167b036e8e036478e6d170" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>SetUpCheckedListBoxControlItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1aa6f0ed1c2a6ebb94dafbd1009cdcd646" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>SetUpEvents</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a9650468fee7eacbd1aa72ac6f91a3f0c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>SetUpGrdLastDocs</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a9b67cb70906444a04c6c7848ff0efc03" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>SetUpLueDocType</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a9b6d82d411a8230f8de9f28e89d93353" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>SetUpSlueModel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a1e36719bbbf1850d2a1801c8007612a2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>SetUpSlueSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1ad100904d3b4d55ffcfbffe96e4e5e70a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>slueModel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a3ad8d964a9642595b64f98183f351fcf" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>SlueModel_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1aece6fdbb6e1113c94571bc855f7bc62c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>slueSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a602284592c69153a2e1438738c6b57a8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>txtPathNewDoc</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1adc38f05171a7e2975dc71c63cc3641c6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>UpdateItemsDoc</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a55b1e789ebb08d5056df2682ad950a16" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>UpdateItemWithDoc</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1a3aec7f307610d3d574e379a7e2067308" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>xgrdLastDocs</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1abeda922668e301707a2d38beecbaf266" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>xtcGeneral</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs_1acea97278ed1a7e6091c433b1a5a8dc45" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::ItemDocs</scope><name>xtpMain</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

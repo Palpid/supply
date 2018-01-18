@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_h_k_supply_1_1_models_1_1_supplier_history" kind="class" language="C#" prot="public">
     <compoundname>HKSupply::Models::SupplierHistory</compoundname>
       <sectiondef kind="property">
@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/SupplierHistory.cs" line="15" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="15" bodyend="-1"/>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="15" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="15" bodyend="15"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1abef5f64c19995b5b491a0bbb9726d14c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>int</type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/SupplierHistory.cs" line="18" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="18" bodyend="-1"/>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="18" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="18" bodyend="18"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1a4af749dce8a8819195d1c74892ca264d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>DateTime</type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/SupplierHistory.cs" line="21" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="21" bodyend="-1"/>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="21" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="21" bodyend="21"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1a0601f55e68a9efb2590ad14a9a0d9364" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/SupplierHistory.cs" line="24" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="24" bodyend="-1"/>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="24" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="24" bodyend="24"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1a6cbb5c54ea47db99499c8e10c30b9a93" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/SupplierHistory.cs" line="27" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="27" bodyend="-1"/>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="27" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="27" bodyend="27"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1aa147929cbbd7c638d36227f39d2ff184" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>bool</type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/SupplierHistory.cs" line="30" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="30" bodyend="-1"/>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="30" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="30" bodyend="30"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1a6675cc5bcf105463abdd5bdaf70cbc3d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/SupplierHistory.cs" line="33" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="33" bodyend="-1"/>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="33" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="33" bodyend="33"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1a43efb7fddc721c13e629ac8f890f85a5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -105,7 +105,46 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/SupplierHistory.cs" line="36" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="36" bodyend="-1"/>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="36" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1ad7a0686dd59c6360f8e03676b3e248f4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.SupplierHistory.ShippingAddress2</definition>
+        <argsstring></argsstring>
+        <name>ShippingAddress2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="39" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1a81514f020577d35f4f4058230cb87139" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.SupplierHistory.ShippingAddressZh</definition>
+        <argsstring></argsstring>
+        <name>ShippingAddressZh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="42" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1a03995e18746377e1e306af575396ee0e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.SupplierHistory.ShippingAddressZh2</definition>
+        <argsstring></argsstring>
+        <name>ShippingAddressZh2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="45" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="45" bodyend="45"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1ae2f5fdcd9278c119fceed2a9ba9da184" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -118,7 +157,46 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/SupplierHistory.cs" line="39" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="39" bodyend="-1"/>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="48" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1a4cff037ea3c8cc00bc29fedb30a57197" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.SupplierHistory.BillingAddress2</definition>
+        <argsstring></argsstring>
+        <name>BillingAddress2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="51" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1a5b3e6d25473317af9779fc27a7d94b2c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.SupplierHistory.BillingAddressZh</definition>
+        <argsstring></argsstring>
+        <name>BillingAddressZh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="54" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1aef470a1c516c22d3c4c818df486e11bd" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.SupplierHistory.BillingAddressZh2</definition>
+        <argsstring></argsstring>
+        <name>BillingAddressZh2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="57" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="57" bodyend="57"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1a267b20071a81f3002cf8d35efb0caf95" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -131,7 +209,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/SupplierHistory.cs" line="42" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="42" bodyend="-1"/>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="60" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1a708197de228c3eb608b8c1722423f008" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.SupplierHistory.ContactNameZh</definition>
+        <argsstring></argsstring>
+        <name>ContactNameZh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="63" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="63" bodyend="63"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1a02ad40069617500a5e249ae6b0086d1f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -144,11 +235,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/SupplierHistory.cs" line="45" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="45" bodyend="-1"/>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="66" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="66" bodyend="66"/>
       </memberdef>
-      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1a86e2d99cc0c9498a7cae7e7f8ae1783b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
-        <type>int</type>
-        <definition>int HKSupply.Models.SupplierHistory.IdIncoterm</definition>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1aaa023f2aa1d4cfebaac9bf7be4ec7622" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.SupplierHistory.Comments</definition>
+        <argsstring></argsstring>
+        <name>Comments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="69" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1aa7229b68a3c55688b4e5c3e127fdf346" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.SupplierHistory.IdIncoterm</definition>
         <argsstring></argsstring>
         <name>IdIncoterm</name>
         <briefdescription>
@@ -157,11 +261,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/SupplierHistory.cs" line="48" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="48" bodyend="-1"/>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="72" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="72" bodyend="72"/>
       </memberdef>
-      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1a7e36f010d3c4546d0efffe45a9388718" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
-        <type>int</type>
-        <definition>int HKSupply.Models.SupplierHistory.IdPaymentTerms</definition>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1ac0acead5174fbdba109f1d326d92d324" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.SupplierHistory.IdPaymentTerms</definition>
         <argsstring></argsstring>
         <name>IdPaymentTerms</name>
         <briefdescription>
@@ -170,20 +274,46 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/SupplierHistory.cs" line="51" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="51" bodyend="-1"/>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="75" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="75" bodyend="75"/>
       </memberdef>
-      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1a68540cf27c3fbe004e566b3567975306" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1a32fa585606f39ead9ca1000374efe2a2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
-        <definition>string HKSupply.Models.SupplierHistory.Currency</definition>
+        <definition>string HKSupply.Models.SupplierHistory.IdDefaultCurrency</definition>
         <argsstring></argsstring>
-        <name>Currency</name>
+        <name>IdDefaultCurrency</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/SupplierHistory.cs" line="54" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="54" bodyend="-1"/>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="78" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1aa3cfb5045972498de8dd0196c153a196" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Models.SupplierHistory.Factory</definition>
+        <argsstring></argsstring>
+        <name>Factory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="81" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_history_1a5f4348ac2c4f2e9bd6dc796000f66722" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.SupplierHistory.User</definition>
+        <argsstring></argsstring>
+        <name>User</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="84" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="84" bodyend="84"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -202,7 +332,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/SupplierHistory.cs" line="57" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="57" bodyend="82"/>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="89" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="89" bodyend="125"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_supplier_history_1a51a4cb1261602017493e723c90b6b3f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override int</type>
@@ -215,7 +345,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/SupplierHistory.cs" line="84" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="84" bodyend="103"/>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="127" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="127" bodyend="156"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -234,31 +364,41 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Models/SupplierHistory.cs" line="106" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="106" bodyend="126"/>
+        <location file="HKSupply/Models/SupplierHistory.cs" line="159" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="159" bodyend="188"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="HKSupply/Models/SupplierHistory.cs" line="13" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="12" bodyend="127"/>
+    <location file="HKSupply/Models/SupplierHistory.cs" line="13" column="1" bodyfile="HKSupply/Models/SupplierHistory.cs" bodystart="12" bodyend="189"/>
     <listofallmembers>
       <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1aa147929cbbd7c638d36227f39d2ff184" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>Active</name></member>
       <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1ae2f5fdcd9278c119fceed2a9ba9da184" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>BillingAddress</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a4cff037ea3c8cc00bc29fedb30a57197" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>BillingAddress2</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a5b3e6d25473317af9779fc27a7d94b2c" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>BillingAddressZh</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1aef470a1c516c22d3c4c818df486e11bd" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>BillingAddressZh2</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1aaa023f2aa1d4cfebaac9bf7be4ec7622" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>Comments</name></member>
       <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a267b20071a81f3002cf8d35efb0caf95" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>ContactName</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a708197de228c3eb608b8c1722423f008" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>ContactNameZh</name></member>
       <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a02ad40069617500a5e249ae6b0086d1f" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>ContactPhone</name></member>
-      <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a68540cf27c3fbe004e566b3567975306" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>Currency</name></member>
       <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a8d2399aa38d8a0680878200b257b609d" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1aa3cfb5045972498de8dd0196c153a196" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>Factory</name></member>
       <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a51a4cb1261602017493e723c90b6b3f7" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>GetHashCode</name></member>
-      <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a86e2d99cc0c9498a7cae7e7f8ae1783b" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>IdIncoterm</name></member>
-      <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a7e36f010d3c4546d0efffe45a9388718" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>IdPaymentTerms</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a32fa585606f39ead9ca1000374efe2a2" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>IdDefaultCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1aa7229b68a3c55688b4e5c3e127fdf346" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>IdIncoterm</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1ac0acead5174fbdba109f1d326d92d324" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>IdPaymentTerms</name></member>
       <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1abef5f64c19995b5b491a0bbb9726d14c" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>IdSubVer</name></member>
       <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a0601f55e68a9efb2590ad14a9a0d9364" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>IdSupplier</name></member>
       <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a457298096991a1b63750c2b3f83fd865" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>IdVer</name></member>
       <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a661b8838c54d3dfd38d5698cbb8eb204" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>operator SupplierHistory</name></member>
       <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a43efb7fddc721c13e629ac8f890f85a5" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>ShippingAddress</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1ad7a0686dd59c6360f8e03676b3e248f4" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>ShippingAddress2</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a81514f020577d35f4f4058230cb87139" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>ShippingAddressZh</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a03995e18746377e1e306af575396ee0e" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>ShippingAddressZh2</name></member>
       <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a6cbb5c54ea47db99499c8e10c30b9a93" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>SupplierName</name></member>
       <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a4af749dce8a8819195d1c74892ca264d" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>Timestamp</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a5f4348ac2c4f2e9bd6dc796000f66722" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>User</name></member>
       <member refid="class_h_k_supply_1_1_models_1_1_supplier_history_1a6675cc5bcf105463abdd5bdaf70cbc3d" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierHistory</scope><name>VATNum</name></member>
     </listofallmembers>
   </compounddef>

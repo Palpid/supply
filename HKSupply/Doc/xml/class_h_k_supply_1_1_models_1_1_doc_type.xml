@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_doc_type" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::DocType</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_doc_type_1a168e6a50dba848339deb1038d5d545fa" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.DocType.IdDocType</definition>
+        <argsstring></argsstring>
+        <name>IdDocType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DocType.cs" line="16" column="1" bodyfile="HKSupply/Models/DocType.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_doc_type_1a3553d8105fc7d4d1dd0f4467ba77c3d9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.DocType.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DocType.cs" line="19" column="1" bodyfile="HKSupply/Models/DocType.cs" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_doc_type_1a962bce1bcfed5714aede2d18fe78528a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.DocType.IdItemGroup</definition>
+        <argsstring></argsstring>
+        <name>IdItemGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DocType.cs" line="22" column="1" bodyfile="HKSupply/Models/DocType.cs" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_doc_type_1a9cb617b8fb0c5e0a493037dbe9c6855e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_item_group" kindref="compound">ItemGroup</ref></type>
+        <definition>ItemGroup HKSupply.Models.DocType.ItemGroup</definition>
+        <argsstring></argsstring>
+        <name>ItemGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DocType.cs" line="24" column="1" bodyfile="HKSupply/Models/DocType.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_doc_type_1a77e38eddf91872e81687f1442faba903" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.DocType.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DocType.cs" line="27" column="1" bodyfile="HKSupply/Models/DocType.cs" bodystart="27" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_doc_type_1a979b2be536b1c3978514e6217c59c654" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.DocType.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DocType.cs" line="41" column="1" bodyfile="HKSupply/Models/DocType.cs" bodystart="41" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/DocType.cs" line="14" column="1" bodyfile="HKSupply/Models/DocType.cs" bodystart="13" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_doc_type_1a3553d8105fc7d4d1dd0f4467ba77c3d9" prot="public" virt="non-virtual"><scope>HKSupply::Models::DocType</scope><name>Description</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_doc_type_1a77e38eddf91872e81687f1442faba903" prot="public" virt="non-virtual"><scope>HKSupply::Models::DocType</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_doc_type_1a979b2be536b1c3978514e6217c59c654" prot="public" virt="non-virtual"><scope>HKSupply::Models::DocType</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_doc_type_1a168e6a50dba848339deb1038d5d545fa" prot="public" virt="non-virtual"><scope>HKSupply::Models::DocType</scope><name>IdDocType</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_doc_type_1a962bce1bcfed5714aede2d18fe78528a" prot="public" virt="non-virtual"><scope>HKSupply::Models::DocType</scope><name>IdItemGroup</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_doc_type_1a9cb617b8fb0c5e0a493037dbe9c6855e" prot="public" virt="non-virtual"><scope>HKSupply::Models::DocType</scope><name>ItemGroup</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

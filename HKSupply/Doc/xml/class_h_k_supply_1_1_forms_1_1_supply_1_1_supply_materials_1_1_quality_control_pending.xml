@@ -1,0 +1,1536 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</compoundname>
+    <basecompoundref refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" prot="public" virt="non-virtual">HKSupply.Forms.RibbonFormBase</basecompoundref>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1_1_aux_item_action" prot="private">HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending::AuxItemAction</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1aa96b7e48e1f693a5e440f63c3b6fd219" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>eActionCodes</name>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1aa96b7e48e1f693a5e440f63c3b6fd219ac4408d335012a56ff58937d78050efad" prot="private">
+          <name>Accept</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1aa96b7e48e1f693a5e440f63c3b6fd219a988fd738de9c6d177440c5dcf69e73ce" prot="private">
+          <name>Return</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="61" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="60" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a49217cda946c1b5c6bef8cf9004921e9" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>eActionDescriptions</name>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a49217cda946c1b5c6bef8cf9004921e9ac4408d335012a56ff58937d78050efad" prot="private">
+          <name>Accept</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a49217cda946c1b5c6bef8cf9004921e9a988fd738de9c6d177440c5dcf69e73ce" prot="private">
+          <name>Return</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="67" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="66" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a88b97830cebf6d839200981a5e6603f6" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.COL_ACTIONS</definition>
+        <argsstring></argsstring>
+        <name>COL_ACTIONS</name>
+        <initializer>= &quot;Actions&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="28" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a637883c112dcaedb188743f9d95dca06" prot="private" static="no" mutable="no">
+        <type>Font</type>
+        <definition>Font HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending._labelDefaultFontBold</definition>
+        <argsstring></argsstring>
+        <name>_labelDefaultFontBold</name>
+        <initializer>= AppStyles.LabelDefaultFontBold</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="41" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a1606d13c1413a0d6d083ab389f26efdc" prot="private" static="no" mutable="no">
+        <type>Font</type>
+        <definition>Font HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending._labelDefaultFont</definition>
+        <argsstring></argsstring>
+        <name>_labelDefaultFont</name>
+        <initializer>= AppStyles.LabelDefaultFont</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="42" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ac6f7b4952a67fd61c91f764534a69010" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_supply_status" kindref="compound">SupplyStatus</ref> &gt;</type>
+        <definition>List&lt;SupplyStatus&gt; HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending._supplyStatusList</definition>
+        <argsstring></argsstring>
+        <name>_supplyStatusList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="44" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a7574b4ec85d39c04ead52942cbc083ab" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier" kindref="compound">Supplier</ref> &gt;</type>
+        <definition>List&lt;Supplier&gt; HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending._suppliersList</definition>
+        <argsstring></argsstring>
+        <name>_suppliersList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="45" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a62f98f5c9a5d9dc8e2bd91b69c12f7b0" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending._docHeadQCP</definition>
+        <argsstring></argsstring>
+        <name>_docHeadQCP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="47" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a82e061cf8c5b1228e7f3772d7a6d08c4" prot="private" static="no" mutable="no">
+        <type>BindingList&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line" kindref="compound">DocLine</ref> &gt;</type>
+        <definition>BindingList&lt;DocLine&gt; HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending._docLinesList</definition>
+        <argsstring></argsstring>
+        <name>_docLinesList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="48" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ad5901e045498647e9b17e77c64c21e51" prot="private" static="no" mutable="no">
+        <type>BindingList&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch" kindref="compound">PackingListItemBatch</ref> &gt;</type>
+        <definition>BindingList&lt;PackingListItemBatch&gt; HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending._auxItemsBatchList</definition>
+        <argsstring></argsstring>
+        <name>_auxItemsBatchList</name>
+        <initializer>= new BindingList&lt;<ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch" kindref="compound">PackingListItemBatch</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="49" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a5ca5d4d2859c3a9aae4958ddc503254c" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch" kindref="compound">PackingListItemBatch</ref> &gt;</type>
+        <definition>List&lt;PackingListItemBatch&gt; HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending._itemsBatchList</definition>
+        <argsstring></argsstring>
+        <name>_itemsBatchList</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch" kindref="compound">PackingListItemBatch</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="50" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a13d79be30965d56c4a183ebee83f8086" prot="private" static="no" mutable="no">
+        <type>List&lt; AuxItemAction &gt;</type>
+        <definition>List&lt;AuxItemAction&gt; HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending._auxItemActionList</definition>
+        <argsstring></argsstring>
+        <name>_auxItemActionList</name>
+        <initializer>= new List&lt;AuxItemAction&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="52" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a09731c557c5729f3f10eb4a033124ee1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending._isLoadingQCPending</definition>
+        <argsstring></argsstring>
+        <name>_isLoadingQCPending</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="54" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a594af12b13d8813173ed1a9d7a1f8ff9" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1aacf1826b8496a02a5ae9de671a569c7c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.xtcGeneral</definition>
+        <argsstring></argsstring>
+        <name>xtcGeneral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="426" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ab29686b4cdf3ac8fc9bdf88fb54ee6c1" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.xtpQualityControlPending</definition>
+        <argsstring></argsstring>
+        <name>xtpQualityControlPending</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="427" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="427" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a38c845be16b0d038bcb053e614fb5d76" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.PanelControl</type>
+        <definition>DevExpress.XtraEditors.PanelControl HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.pcFilter</definition>
+        <argsstring></argsstring>
+        <name>pcFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="428" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="428" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a79eb0ea71d4ee7b667f98243707140ab" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.MemoEdit</type>
+        <definition>DevExpress.XtraEditors.MemoEdit HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.memoEditRemarks</definition>
+        <argsstring></argsstring>
+        <name>memoEditRemarks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="429" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="429" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1adf0cca737bc03c77f9c72362e951d7be" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.sbSearch</definition>
+        <argsstring></argsstring>
+        <name>sbSearch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="430" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="430" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1af8094933e365d3feed7ed83098e4663e" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.lblRemarks</definition>
+        <argsstring></argsstring>
+        <name>lblRemarks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="431" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="431" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a0b6645ef2653794e2447d5faeef63e0b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.txtQCPNumber</definition>
+        <argsstring></argsstring>
+        <name>txtQCPNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="432" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="432" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a92ba0bca62b0bca0cec851c36c3e2d7d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.txtSupplierReference</definition>
+        <argsstring></argsstring>
+        <name>txtSupplierReference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="433" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="433" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1afad31f76b84c59151708b83c1e33fe68" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.lblQCPNumber</definition>
+        <argsstring></argsstring>
+        <name>lblQCPNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="434" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="434" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ad8689591734c32c6efc4d90c957605be" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.lblSupplierReference</definition>
+        <argsstring></argsstring>
+        <name>lblSupplierReference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="435" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="435" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a5447072708574541f09218cfec6b813a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.lblPKDocDate</definition>
+        <argsstring></argsstring>
+        <name>lblPKDocDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="436" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="436" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ab5064956d28fbc14fe1e000eba754e4b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.lbltxtStatus</definition>
+        <argsstring></argsstring>
+        <name>lbltxtStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="437" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="437" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a9a9e530e1799db3756326300b249586a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.lblPKDelivery</definition>
+        <argsstring></argsstring>
+        <name>lblPKDelivery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="438" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="438" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1aaf4a686d709e2f4e51d5ce68df57cb65" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.sbFinishQCP</definition>
+        <argsstring></argsstring>
+        <name>sbFinishQCP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="439" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="439" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a3927dfc1e775e8d2046b7412b933b1f8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.DateEdit</type>
+        <definition>DevExpress.XtraEditors.DateEdit HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.dateEditQCPDocDate</definition>
+        <argsstring></argsstring>
+        <name>dateEditQCPDocDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="440" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="440" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1aff2d385c40289aaae5ffdc76572ebe20" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.DateEdit</type>
+        <definition>DevExpress.XtraEditors.DateEdit HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.dateEditQCPDelivery</definition>
+        <argsstring></argsstring>
+        <name>dateEditQCPDelivery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="441" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="441" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a707a6662f759fc5dbe5214e86c416bb2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.lblDate</definition>
+        <argsstring></argsstring>
+        <name>lblDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="442" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="442" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a15346b9c2e2b34a5e92c8a29080e5159" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.lblQCPDocDateWeek</definition>
+        <argsstring></argsstring>
+        <name>lblQCPDocDateWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="443" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="443" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ad11dc8548c62c0b28092e2c7f2c64417" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.lblQCPDeliveryWeek</definition>
+        <argsstring></argsstring>
+        <name>lblQCPDeliveryWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="444" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="444" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a153bc8511b2d5085efcf7e3721acd195" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.lblWeek</definition>
+        <argsstring></argsstring>
+        <name>lblWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="445" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="445" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ac2a1ff193ebb34ad5e511d4393803e72" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.slueSupplier</definition>
+        <argsstring></argsstring>
+        <name>slueSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="446" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="446" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a54c621b04b4da3084c71be3798cf57e0" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.searchLookUpEdit1View</definition>
+        <argsstring></argsstring>
+        <name>searchLookUpEdit1View</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="447" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="447" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a48eb0a17c2f3141f166575444117f03b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.lblSupplier</definition>
+        <argsstring></argsstring>
+        <name>lblSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="448" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="448" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a989bff7ef877d9a1d7c21f08029a21c4" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.xtcQCP</definition>
+        <argsstring></argsstring>
+        <name>xtcQCP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="449" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="449" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1adbb96ffb63081c4633a62e4381f2c8b9" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.xtpQCPDetail</definition>
+        <argsstring></argsstring>
+        <name>xtpQCPDetail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="450" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="450" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a90a37dede1b6fb3d12beed03e716b705" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.xgrdItemsBatch</definition>
+        <argsstring></argsstring>
+        <name>xgrdItemsBatch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="451" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="451" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1aa9be38e5b1d8aac377e5c6f9b2c012ce" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.gridViewItemsBatch</definition>
+        <argsstring></argsstring>
+        <name>gridViewItemsBatch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="452" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="452" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a2209eecdbd0f7df798a2318a7afbb558" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.xgrdLinesQCP</definition>
+        <argsstring></argsstring>
+        <name>xgrdLinesQCP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="453" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="453" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1afa1b9775ad957c17bbc907167ba9c934" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.gridViewLinesQCP</definition>
+        <argsstring></argsstring>
+        <name>gridViewLinesQCP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="454" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="454" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a6e5c2a8445e5923e48ed6aed38f8694e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.QualityControlPending</definition>
+        <argsstring>()</argsstring>
+        <name>QualityControlPending</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="75" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="75" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ad8c2ca5fa36a97d9430985ede0f6dfd3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.bbiCancel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiCancel_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318">bbiCancel_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="129" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="129" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a22cdd3e371d02ab126463e8bce0026fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.bbiEdit_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiEdit_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3">bbiEdit_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="143" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="143" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a255a54a2f14812d5bc902693cfbc9b38" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.bbiSave_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiSave_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9">bbiSave_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="170" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="170" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a4d1d9ebc16764613be7af849963cf313" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.bbiExportCsv_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportCsv_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a">bbiExportCsv_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="210" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="210" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ac7d46e96b181c3ac4afda83abf2826dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.bbiExportExcel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportExcel_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811">bbiExportExcel_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="241" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="241" bodyend="270"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a421e923597045db29e8a8cb5ddcf8529" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.ConfigureRibbonActions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="107" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="107" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ad0c50893db1d5267555ae5007bec1436" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.QualityControlPending_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>QualityControlPending_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="276" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="276" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a084555a75f07311e7a336a72a9699055" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.SbSearch_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbSearch_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="281" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="281" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a0f7867bf4f4387d2620059607eeb93cb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.SbFinishQCP_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbFinishQCP_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="296" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="296" bodyend="332"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a01b5aa9317a8c03a7d2d017e3800acdd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.DateEditQCPDocDate_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DateEditQCPDocDate_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="334" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="334" bodyend="345"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a30ac73a776728e41ac6336cad8b79e3e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.DateEditQCPDelivery_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DateEditQCPDelivery_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="347" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="347" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ae71190cc92a082db5c43e823077d3123" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.TxtQCPNumber_KeyDown</definition>
+        <argsstring>(object sender, KeyEventArgs e)</argsstring>
+        <name>TxtQCPNumber_KeyDown</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="359" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="359" bodyend="375"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a13427ae5a227a5564499e10758e2cb4d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.TxtQCPNumber_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>TxtQCPNumber_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="377" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="377" bodyend="391"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1aad71cabdd5abe53abb8c21fc24128f79" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.TxtSupplierReference_KeyDown</definition>
+        <argsstring>(object sender, KeyEventArgs e)</argsstring>
+        <name>TxtSupplierReference_KeyDown</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="393" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="393" bodyend="409"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a83c1405c0e7149d81f47ed57d5b27051" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.TxtSupplierReference_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>TxtSupplierReference_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="411" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="411" bodyend="425"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a0147c1a866b306e80e5a7c9a47f62b48" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.GridViewLinesQCP_FocusedRowChanged</definition>
+        <argsstring>(object sender, FocusedRowChangedEventArgs e)</argsstring>
+        <name>GridViewLinesQCP_FocusedRowChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>FocusedRowChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="429" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="429" bodyend="464"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a8cac3bcd6d66ff30e856785c56aeaee4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.GridViewLinesQCP_CellValueChanged</definition>
+        <argsstring>(object sender, CellValueChangedEventArgs e)</argsstring>
+        <name>GridViewLinesQCP_CellValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CellValueChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="495" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="495" bodyend="539"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a9cf81bc609f2319a097b805fda038385" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.XgrdItemsBatch_ProcessGridKey</definition>
+        <argsstring>(object sender, KeyEventArgs e)</argsstring>
+        <name>XgrdItemsBatch_ProcessGridKey</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="541" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="541" bodyend="585"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1adee9351e35139e38abbac4b8834e0e63" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.GridViewItemsBatch_CellValueChanged</definition>
+        <argsstring>(object sender, CellValueChangedEventArgs e)</argsstring>
+        <name>GridViewItemsBatch_CellValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CellValueChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="587" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="587" bodyend="607"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ae2e6bb11e252cf3c03abfc5636d9d099" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.LoadAuxList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAuxList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="617" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="617" bodyend="631"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a0825a394d895c26138b3d5ac991e0b19" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.SearchQCP</definition>
+        <argsstring>()</argsstring>
+        <name>SearchQCP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="633" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="633" bodyend="692"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a6fe2f53d9c5a4b492a85d5ebdf2bee19" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.LoadQCP</definition>
+        <argsstring>()</argsstring>
+        <name>LoadQCP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="694" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="694" bodyend="734"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a7c8db40b31ed07fe74d2b4cb05f4244f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.ResetQCP</definition>
+        <argsstring>()</argsstring>
+        <name>ResetQCP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="736" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="736" bodyend="752"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a52fa44ed872a872324e525a5ccaea7ba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.SetUpLabels</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpLabels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="758" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="758" bodyend="808"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a8591f1a5d8daed52e2fee057b279d244" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.SetObjectsReadOnly</definition>
+        <argsstring>()</argsstring>
+        <name>SetObjectsReadOnly</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="810" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="810" bodyend="823"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a6c9095eac5c8c9cbb8760447a7e1dbcd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.SetUpSearchLookUpEdit</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSearchLookUpEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="825" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="825" bodyend="835"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a3c8342ba43ecdc336d27d0856341cab2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.SetUpSlueSupplier</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSlueSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="837" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="837" bodyend="852"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a15da3858c17d25cae9e82d98cdb9c30d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.SetUpEvents</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="854" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="854" bodyend="871"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a3b43d9885575a9794eaa97525fa37d37" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.SetUpGrdLinesQCP</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdLinesQCP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="873" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="873" bodyend="967"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a63db7987e8e65301719631be054d948d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.SetupGrdItemsBatch</definition>
+        <argsstring>()</argsstring>
+        <name>SetupGrdItemsBatch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="969" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="969" bodyend="1021"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a21e94cdf65940cf89b6fe6b2ca81ca57" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.SetVisiblePropertyByState</definition>
+        <argsstring>()</argsstring>
+        <name>SetVisiblePropertyByState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="1027" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="1027" bodyend="1051"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a23db4ce50c9d971bd34e483584ff708a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.ResetForm</definition>
+        <argsstring>(bool resetQcpNumber=true, bool resetSupplier=true, bool resetSupplierReference=true)</argsstring>
+        <name>ResetForm</name>
+        <param>
+          <type>bool</type>
+          <declname>resetQcpNumber</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>resetSupplier</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>resetSupplierReference</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="1053" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="1053" bodyend="1072"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a90f11a8a43f890b8a2d617c65ee68d48" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.CancelEdit</definition>
+        <argsstring>()</argsstring>
+        <name>CancelEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="1074" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="1074" bodyend="1099"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a1a5b02d6145cbcb7a8eee0ab2b025069" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.CopyToItemBatchList</definition>
+        <argsstring>(PackingListItemBatch itemBatch)</argsstring>
+        <name>CopyToItemBatchList</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch" kindref="compound">PackingListItemBatch</ref></type>
+          <declname>itemBatch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="1101" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="1101" bodyend="1121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a12c4a14c1957bd77ae47befc7d45f5fc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.ConfigureActionsStackViewEditing</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackViewEditing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="1126" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="1126" bodyend="1165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a01112e60306a896fcf2e5c27ba484ba2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.ValidateQCP</definition>
+        <argsstring>()</argsstring>
+        <name>ValidateQCP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="1170" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="1170" bodyend="1186"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1aaaf7df5c94cd50c6dc008d7f6f73c437" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.ValidateValidatePQCPendingLines</definition>
+        <argsstring>(bool validateQuantities=false)</argsstring>
+        <name>ValidateValidatePQCPendingLines</name>
+        <param>
+          <type>bool</type>
+          <declname>validateQuantities</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="1188" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="1188" bodyend="1213"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1adea5a2158e2154fbcd96328a3ef12006" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.ValidatePackingItemsBatch</definition>
+        <argsstring>()</argsstring>
+        <name>ValidatePackingItemsBatch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="1215" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="1215" bodyend="1268"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a2dcc6ad21443e0670d30922784dd891e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.UpdateQCP</definition>
+        <argsstring>(bool finishQCP=false)</argsstring>
+        <name>UpdateQCP</name>
+        <param>
+          <type>bool</type>
+          <declname>finishQCP</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="1274" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="1274" bodyend="1323"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a47facfaed41eb25f55401a6fea98f3bf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.ActionsAfterCU</definition>
+        <argsstring>()</argsstring>
+        <name>ActionsAfterCU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="1325" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="1325" bodyend="1350"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a0b5b032681908d07b9ba1a676cf8db49" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="29" bodyend="422"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1aba1df8d428e1f4b44f9d96bcde7cc59b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1399">
+        <label>HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending"/>
+        <childnode refid="1400" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1401">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1400">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1401" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1402">
+        <label>HKSupply.Forms.Supply.SupplyMaterials.QualityControlPending</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending"/>
+        <childnode refid="1403" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1404">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1405">
+        <label>XtraBars</label>
+      </node>
+      <node id="1403">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1404" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1405" relation="usage">
+          <edgelabel>bbiCancel</edgelabel>
+          <edgelabel>ribbonStatusBar</edgelabel>
+          <edgelabel>bbiPrintPreview</edgelabel>
+          <edgelabel>bbiSave</edgelabel>
+          <edgelabel>bbiNew</edgelabel>
+          <edgelabel>bbiEdit</edgelabel>
+          <edgelabel>ribbonControl</edgelabel>
+          <edgelabel>ribbonPageGroup1</edgelabel>
+          <edgelabel>ribbonPage1</edgelabel>
+          <edgelabel>ribbonPageGroup2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" line="26" column="1" bodyfile="HKSupply/Forms/Supply/SupplyMaterials/QualityControlPending.cs" bodystart="25" bodyend="1357"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a13d79be30965d56c4a183ebee83f8086" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>_auxItemActionList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ad5901e045498647e9b17e77c64c21e51" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>_auxItemsBatchList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a62f98f5c9a5d9dc8e2bd91b69c12f7b0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>_docHeadQCP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a82e061cf8c5b1228e7f3772d7a6d08c4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>_docLinesList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a09731c557c5729f3f10eb4a033124ee1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>_isLoadingQCPending</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a5ca5d4d2859c3a9aae4958ddc503254c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>_itemsBatchList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a1606d13c1413a0d6d083ab389f26efdc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>_labelDefaultFont</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a637883c112dcaedb188743f9d95dca06" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>_labelDefaultFontBold</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a7574b4ec85d39c04ead52942cbc083ab" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>_suppliersList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ac6f7b4952a67fd61c91f764534a69010" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>_supplyStatusList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a47facfaed41eb25f55401a6fea98f3bf" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>ActionsAfterCU</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>ActionsStates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>AddRestoreLayoutItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>BarButtonItemReport_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>bbiCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ad8c2ca5fa36a97d9430985ede0f6dfd3" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>bbiEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a22cdd3e371d02ab126463e8bce0026fd" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a4d1d9ebc16764613be7af849963cf313" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>bbiExportCsv_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ac7d46e96b181c3ac4afda83abf2826dc" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>bbiExportExcel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>bbiNew</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>bbiPrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>bbiPrintPreview_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>bbiSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a255a54a2f14812d5bc902693cfbc9b38" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>BbiSaveLayout_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a90f11a8a43f890b8a2d617c65ee68d48" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>CancelEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a88b97830cebf6d839200981a5e6603f6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>COL_ACTIONS</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a594af12b13d8813173ed1a9d7a1f8ff9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a12c4a14c1957bd77ae47befc7d45f5fc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>ConfigureActionsStackViewEditing</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>ConfigureLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>ConfigurePrintExportOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a421e923597045db29e8a8cb5ddcf8529" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>ConfigureRibbonActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a1a5b02d6145cbcb7a8eee0ab2b025069" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>CopyToItemBatchList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>CurrentLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>CurrentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1aff2d385c40289aaae5ffdc76572ebe20" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>dateEditQCPDelivery</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a30ac73a776728e41ac6336cad8b79e3e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>DateEditQCPDelivery_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a3927dfc1e775e8d2046b7412b933b1f8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>dateEditQCPDocDate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a01b5aa9317a8c03a7d2d017e3800acdd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>DateEditQCPDocDate_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1aba1df8d428e1f4b44f9d96bcde7cc59b" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1aa96b7e48e1f693a5e440f63c3b6fd219" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>eActionCodes</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a49217cda946c1b5c6bef8cf9004921e9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>eActionDescriptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>EnableExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>EnableExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>EnableLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>EnablePrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>ExportCsvFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>ExportExcelFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1aa9be38e5b1d8aac377e5c6f9b2c012ce" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>gridViewItemsBatch</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1adee9351e35139e38abbac4b8834e0e63" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>GridViewItemsBatch_CellValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1afa1b9775ad957c17bbc907167ba9c934" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>gridViewLinesQCP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a8cac3bcd6d66ff30e856785c56aeaee4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>GridViewLinesQCP_CellValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a0147c1a866b306e80e5a7c9a47f62b48" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>GridViewLinesQCP_FocusedRowChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a0b5b032681908d07b9ba1a676cf8db49" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>LayoutButton_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a707a6662f759fc5dbe5214e86c416bb2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>lblDate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a9a9e530e1799db3756326300b249586a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>lblPKDelivery</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a5447072708574541f09218cfec6b813a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>lblPKDocDate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ad11dc8548c62c0b28092e2c7f2c64417" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>lblQCPDeliveryWeek</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a15346b9c2e2b34a5e92c8a29080e5159" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>lblQCPDocDateWeek</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1afad31f76b84c59151708b83c1e33fe68" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>lblQCPNumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1af8094933e365d3feed7ed83098e4663e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>lblRemarks</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a48eb0a17c2f3141f166575444117f03b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>lblSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ad8689591734c32c6efc4d90c957605be" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>lblSupplierReference</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ab5064956d28fbc14fe1e000eba754e4b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>lbltxtStatus</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a153bc8511b2d5085efcf7e3721acd195" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>lblWeek</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ae2e6bb11e252cf3c03abfc5636d9d099" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>LoadAuxList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a6fe2f53d9c5a4b492a85d5ebdf2bee19" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>LoadQCP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a79eb0ea71d4ee7b667f98243707140ab" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>memoEditRemarks</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>Modify</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>New</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a38c845be16b0d038bcb053e614fb5d76" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>pcFilter</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>ProcessCmdKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a6e5c2a8445e5923e48ed6aed38f8694e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>QualityControlPending</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ad0c50893db1d5267555ae5007bec1436" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>QualityControlPending_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>Read</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a23db4ce50c9d971bd34e483584ff708a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>ResetForm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a7c8db40b31ed07fe74d2b4cb05f4244f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>ResetQCP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>RestoreInitState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>ribbonControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>RibbonFormBase</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>ribbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>ribbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>ribbonPageGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>ribbonStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1aaf4a686d709e2f4e51d5ce68df57cb65" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>sbFinishQCP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a0f7867bf4f4387d2620059607eeb93cb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>SbFinishQCP_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1adf0cca737bc03c77f9c72362e951d7be" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>sbSearch</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a084555a75f07311e7a336a72a9699055" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>SbSearch_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a54c621b04b4da3084c71be3798cf57e0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>searchLookUpEdit1View</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a0825a394d895c26138b3d5ac991e0b19" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>SearchQCP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>SetActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a8591f1a5d8daed52e2fee057b279d244" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>SetObjectsReadOnly</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>SetRibbonText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a15da3858c17d25cae9e82d98cdb9c30d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>SetUpEvents</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a63db7987e8e65301719631be054d948d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>SetupGrdItemsBatch</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a3b43d9885575a9794eaa97525fa37d37" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>SetUpGrdLinesQCP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a52fa44ed872a872324e525a5ccaea7ba" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>SetUpLabels</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a6c9095eac5c8c9cbb8760447a7e1dbcd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>SetUpSearchLookUpEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a3c8342ba43ecdc336d27d0856341cab2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>SetUpSlueSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a21e94cdf65940cf89b6fe6b2ca81ca57" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>SetVisiblePropertyByState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ac2a1ff193ebb34ad5e511d4393803e72" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>slueSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a0b6645ef2653794e2447d5faeef63e0b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>txtQCPNumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a13427ae5a227a5564499e10758e2cb4d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>TxtQCPNumber_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ae71190cc92a082db5c43e823077d3123" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>TxtQCPNumber_KeyDown</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a92ba0bca62b0bca0cec851c36c3e2d7d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>txtSupplierReference</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a83c1405c0e7149d81f47ed57d5b27051" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>TxtSupplierReference_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1aad71cabdd5abe53abb8c21fc24128f79" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>TxtSupplierReference_KeyDown</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a2dcc6ad21443e0670d30922784dd891e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>UpdateQCP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1adea5a2158e2154fbcd96328a3ef12006" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>ValidatePackingItemsBatch</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a01112e60306a896fcf2e5c27ba484ba2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>ValidateQCP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1aaaf7df5c94cd50c6dc008d7f6f73c437" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>ValidateValidatePQCPendingLines</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a90a37dede1b6fb3d12beed03e716b705" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>xgrdItemsBatch</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a9cf81bc609f2319a097b805fda038385" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>XgrdItemsBatch_ProcessGridKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a2209eecdbd0f7df798a2318a7afbb558" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>xgrdLinesQCP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1aacf1826b8496a02a5ae9de671a569c7c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>xtcGeneral</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1a989bff7ef877d9a1d7c21f08029a21c4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>xtcQCP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1adbb96ffb63081c4633a62e4381f2c8b9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>xtpQCPDetail</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_supply_materials_1_1_quality_control_pending_1ab29686b4cdf3ac8fc9bdf88fb54ee6c1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::SupplyMaterials::QualityControlPending</scope><name>xtpQualityControlPending</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

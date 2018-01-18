@@ -1,0 +1,840 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_general_1_1_constants" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::General::Constants</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a943a9a17ca55e4ef0056a6e0d0269598" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.SQL_EXPRESS_CONN</definition>
+        <argsstring></argsstring>
+        <name>SQL_EXPRESS_CONN</name>
+        <initializer>= &quot;name=SqlExpressConn&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="12" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a734255384f24d864e64d0ddb3666b1be" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.SQL_DEV_SERVER_CONN</definition>
+        <argsstring></argsstring>
+        <name>SQL_DEV_SERVER_CONN</name>
+        <initializer>= &quot;name=SqlDevServerConn&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="13" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a114c283527fb986d264e0e5791d538b3" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.SQL_DEV_EF_SERVER_CONN</definition>
+        <argsstring></argsstring>
+        <name>SQL_DEV_EF_SERVER_CONN</name>
+        <initializer>= &quot;name=SqlDevEFServerConn&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="14" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1acad6f72547ef0e07eed98fea1a16b233" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.SQL_PROD_SERVER_CONN</definition>
+        <argsstring></argsstring>
+        <name>SQL_PROD_SERVER_CONN</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="15" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1abd97aaafbec92e0fdd5663b7720cbf11" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.ITEM_GROUP_EY</definition>
+        <argsstring></argsstring>
+        <name>ITEM_GROUP_EY</name>
+        <initializer>= &quot;EY&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="18" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1ab30e9294f5d2ec256bcf61272a756186" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.ITEM_GROUP_HW</definition>
+        <argsstring></argsstring>
+        <name>ITEM_GROUP_HW</name>
+        <initializer>= &quot;HW&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="19" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a4fc23996acc9cc3c534812df3194f4f4" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.ITEM_GROUP_MT</definition>
+        <argsstring></argsstring>
+        <name>ITEM_GROUP_MT</name>
+        <initializer>= &quot;MT&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="20" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a8d6c8f076e52f8981bfe3cf584162dde" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.ITEM_GROUP_HF</definition>
+        <argsstring></argsstring>
+        <name>ITEM_GROUP_HF</name>
+        <initializer>= &quot;HF&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="21" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a198974a578413221f064559cc078205b" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.ITEM_GROUP_PROTO</definition>
+        <argsstring></argsstring>
+        <name>ITEM_GROUP_PROTO</name>
+        <initializer>= &quot;PROTO&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="22" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1ab16976309f2e068e734646b5c62f5728" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.ITEMS_DOCS_PATH</definition>
+        <argsstring></argsstring>
+        <name>ITEMS_DOCS_PATH</name>
+        <initializer>= &quot;C:\\Temp\\ITEM_DOCS\\&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="25" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a38fae37671621df4a4770042ea918408" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.PROTO_DOCS_PATH</definition>
+        <argsstring></argsstring>
+        <name>PROTO_DOCS_PATH</name>
+        <initializer>= &quot;C:\\Temp\\PROTO_DOCS\\&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="26" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1acaf803ec4c4df747ca94e9967b8e02c2" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.ITEMS_PHOTOSWEB_PATH</definition>
+        <argsstring></argsstring>
+        <name>ITEMS_PHOTOSWEB_PATH</name>
+        <initializer>= &quot;C:\\Temp\\ITEM_WEB_PHOTOS\\&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="27" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a1ba5b7f5d760e5f3189084548b6612a4" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.SUPPLY_ATTACH_FILES_PATH</definition>
+        <argsstring></argsstring>
+        <name>SUPPLY_ATTACH_FILES_PATH</name>
+        <initializer>= &quot;C:\\Temp\\SUPPLY_ATTACH_FILES\\&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="28" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1aae7e850455a2212f558e3c408de3a828" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.COLOR_PDF_FOLDER</definition>
+        <argsstring></argsstring>
+        <name>COLOR_PDF_FOLDER</name>
+        <initializer>= &quot;PDFCOLOR\\&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="30" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a6bddc94afeb79f54b47bd33e95b1e106" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.DRAWING_PDF_FOLDER</definition>
+        <argsstring></argsstring>
+        <name>DRAWING_PDF_FOLDER</name>
+        <initializer>= &quot;PDFDRAWING\\&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="31" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1afb3e1a201b246813af569df895da4f08" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.DRAWING_DWG_FOLDER</definition>
+        <argsstring></argsstring>
+        <name>DRAWING_DWG_FOLDER</name>
+        <initializer>= &quot;DWGDRAWING\\&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="32" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1af4d7b2bec0bd52e79b1ae8485836204b" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.ITEM_PHOTO_FOLDER</definition>
+        <argsstring></argsstring>
+        <name>ITEM_PHOTO_FOLDER</name>
+        <initializer>= &quot;ITEMIMG\\&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="33" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a321b9dc1a5549b9bb795c71bb9be5091" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.ITEM_PHOTOWEB_FOLDER</definition>
+        <argsstring></argsstring>
+        <name>ITEM_PHOTOWEB_FOLDER</name>
+        <initializer>= &quot;640x350\\&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="34" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1abeedc4ee496db69ca7af0cf3772427c9" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.EY_USER_ATTR_01</definition>
+        <argsstring></argsstring>
+        <name>EY_USER_ATTR_01</name>
+        <initializer>= &quot;EYATTR01&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="37" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a455a5fc0530ee4d2876c1d225aa9230c" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.EY_USER_ATTR_02</definition>
+        <argsstring></argsstring>
+        <name>EY_USER_ATTR_02</name>
+        <initializer>= &quot;EYATTR02&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="38" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a90533484825bec69313923d15adae6d0" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.EY_USER_ATTR_03</definition>
+        <argsstring></argsstring>
+        <name>EY_USER_ATTR_03</name>
+        <initializer>= &quot;EYATTR03&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="39" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a848fce635f8eacbd4a01692e933f5f37" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.HW_USER_ATTR_01</definition>
+        <argsstring></argsstring>
+        <name>HW_USER_ATTR_01</name>
+        <initializer>= &quot;HWATTR01&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="41" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1afac8cb4f80a92a453992b1b6ca1780d3" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.HW_USER_ATTR_02</definition>
+        <argsstring></argsstring>
+        <name>HW_USER_ATTR_02</name>
+        <initializer>= &quot;HWATTR02&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="42" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a7f398a5c90ba12600f7c34df20a0a63a" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.HW_USER_ATTR_03</definition>
+        <argsstring></argsstring>
+        <name>HW_USER_ATTR_03</name>
+        <initializer>= &quot;HWATTR03&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="43" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1aaf7f1bfc16744e65701723454e5afd59" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.MT_USER_ATTR_01</definition>
+        <argsstring></argsstring>
+        <name>MT_USER_ATTR_01</name>
+        <initializer>= &quot;MTATTR01&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="45" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a329c87da2e27e9d9c67ae9e73153a934" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.MT_USER_ATTR_02</definition>
+        <argsstring></argsstring>
+        <name>MT_USER_ATTR_02</name>
+        <initializer>= &quot;MTATTR02&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="46" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1ab53ddb741ceb6f1d288a6b2f8763838b" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.MT_USER_ATTR_03</definition>
+        <argsstring></argsstring>
+        <name>MT_USER_ATTR_03</name>
+        <initializer>= &quot;MTATTR03&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="47" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a0248f33c09c4af58f842da71de6c45bc" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.HF_USER_ATTR_01</definition>
+        <argsstring></argsstring>
+        <name>HF_USER_ATTR_01</name>
+        <initializer>= &quot;HFATTR01&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="49" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1abd0090edfe73f265929b41bd653f8741" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.HF_USER_ATTR_02</definition>
+        <argsstring></argsstring>
+        <name>HF_USER_ATTR_02</name>
+        <initializer>= &quot;HFATTR02&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="50" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a9ee1d0e1216c0606ade3de8e24e29292" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.HF_USER_ATTR_03</definition>
+        <argsstring></argsstring>
+        <name>HF_USER_ATTR_03</name>
+        <initializer>= &quot;HFATTR03&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="51" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1aa173f169585edb03572ed519165cf00f" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.HW_GROUP_TYPE_DESING</definition>
+        <argsstring></argsstring>
+        <name>HW_GROUP_TYPE_DESING</name>
+        <initializer>= &quot;DESIGN&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="54" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a84abdcf9a2cc427f2f520c240201b171" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.HW_GROUP_TYPE_PRODUCTION</definition>
+        <argsstring></argsstring>
+        <name>HW_GROUP_TYPE_PRODUCTION</name>
+        <initializer>= &quot;PRODUCTION&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="55" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a6a1d9a6ba50e367ea467358e431f9e53" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.ITEM_TYPE_FRONT</definition>
+        <argsstring></argsstring>
+        <name>ITEM_TYPE_FRONT</name>
+        <initializer>= &quot;02&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="58" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a86e437af9aa1d79bcb81dc62a403af9a" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.ITEM_TYPE_LEFT_TEMPLE</definition>
+        <argsstring></argsstring>
+        <name>ITEM_TYPE_LEFT_TEMPLE</name>
+        <initializer>= &quot;03&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="59" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a4275883807eb3bcb3f7ab2b67fe35326" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.ITEM_TYPE_RIGHT_TEMPLE</definition>
+        <argsstring></argsstring>
+        <name>ITEM_TYPE_RIGHT_TEMPLE</name>
+        <initializer>= &quot;04&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="60" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a0ad1f134252480f3857e1bd22f876dcb" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.BREAKDOWN_SUBGROUP_FRONT</definition>
+        <argsstring></argsstring>
+        <name>BREAKDOWN_SUBGROUP_FRONT</name>
+        <initializer>= &quot;FRONT&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="63" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a7e84057cdf3269a5355d444003178613" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.BREAKDOWN_SUBGROUP_TEMPLE</definition>
+        <argsstring></argsstring>
+        <name>BREAKDOWN_SUBGROUP_TEMPLE</name>
+        <initializer>= &quot;TEMPLE&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="64" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a6bf906bcf32937b085d44c014be0b53a" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.BREAKDOWN_SUBGROUP_TEMPLE_LEFT</definition>
+        <argsstring></argsstring>
+        <name>BREAKDOWN_SUBGROUP_TEMPLE_LEFT</name>
+        <initializer>= &quot;TEMPLE_LEFT&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="65" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a8c34279cdddef6d73526395e0a7eaff7" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.BREAKDOWN_SUBGROUP_TEMPLE_RIGHT</definition>
+        <argsstring></argsstring>
+        <name>BREAKDOWN_SUBGROUP_TEMPLE_RIGHT</name>
+        <initializer>= &quot;TEMPLE_RIGHT&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="66" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1aef82abb7a6e96e3a90ab942dd727a20c" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.INTRANET_ETNIA_BCN</definition>
+        <argsstring></argsstring>
+        <name>INTRANET_ETNIA_BCN</name>
+        <initializer>= &quot;INTRANET&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="69" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1acaa7734d30b3b2e6175655e6d84c7baf" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.SUPPLY_STATUS_OPEN</definition>
+        <argsstring></argsstring>
+        <name>SUPPLY_STATUS_OPEN</name>
+        <initializer>= &quot;OPN&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="72" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a62540b4e8d9868de36ea218e83a108f5" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.SUPPLY_STATUS_CLOSE</definition>
+        <argsstring></argsstring>
+        <name>SUPPLY_STATUS_CLOSE</name>
+        <initializer>= &quot;CLS&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="73" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a26a9644b2106911e6579203ab9197303" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.SUPPLY_STATUS_CANCEL</definition>
+        <argsstring></argsstring>
+        <name>SUPPLY_STATUS_CANCEL</name>
+        <initializer>= &quot;CNL&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="74" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a13024a5e8dd3e699ef5390d8fd1aa2b5" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.SUPPLY_STATUS_TRANSIT</definition>
+        <argsstring></argsstring>
+        <name>SUPPLY_STATUS_TRANSIT</name>
+        <initializer>= &quot;TRN&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="75" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1ab0f58f82fb1b7c96a375ec4a5996af0e" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.SUPPLY_DOCTYPE_PO</definition>
+        <argsstring></argsstring>
+        <name>SUPPLY_DOCTYPE_PO</name>
+        <initializer>= &quot;PO&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="78" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1af2aaeefacfbf6f61db9af6645eab5d15" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.SUPPLY_DOCTYPE_SO</definition>
+        <argsstring></argsstring>
+        <name>SUPPLY_DOCTYPE_SO</name>
+        <initializer>= &quot;SO&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="79" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a86eb384a730014a07126ba21dfa4123b" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.SUPPLY_DOCTYPE_QP</definition>
+        <argsstring></argsstring>
+        <name>SUPPLY_DOCTYPE_QP</name>
+        <initializer>= &quot;QP&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="80" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1ac057cd2ecf7ed3cf9b9f1f8d7bac71b5" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.SUPPLY_DOCTYPE_IV</definition>
+        <argsstring></argsstring>
+        <name>SUPPLY_DOCTYPE_IV</name>
+        <initializer>= &quot;IV&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="81" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a8ac94b1ce3c4cbbf81b96e80dd893887" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.SUPPLY_DOCTYPE_PL</definition>
+        <argsstring></argsstring>
+        <name>SUPPLY_DOCTYPE_PL</name>
+        <initializer>= &quot;PL&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="82" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a160bfed26ac24af600a3cde1f979ea0d" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.SUPPLY_DOCTYPE_DN</definition>
+        <argsstring></argsstring>
+        <name>SUPPLY_DOCTYPE_DN</name>
+        <initializer>= &quot;DN&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="83" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a3031410536a1a98cf1cad75a112dec3a" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.SUPPLY_DOCTYPE_QCP</definition>
+        <argsstring></argsstring>
+        <name>SUPPLY_DOCTYPE_QCP</name>
+        <initializer>= &quot;QCP&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="84" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a29e638728d29532ec1bcbe5bade36134" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.SUPPLY_DOCTYPE_RT</definition>
+        <argsstring></argsstring>
+        <name>SUPPLY_DOCTYPE_RT</name>
+        <initializer>= &quot;RT&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="85" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a2536d6f25ff5a47039311b40084841ee" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.ETNIA_HK_COMPANY_CODE</definition>
+        <argsstring></argsstring>
+        <name>ETNIA_HK_COMPANY_CODE</name>
+        <initializer>= &quot;ETNLTD&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="88" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a2555a05d54dd7341fa88f3f7602799a0" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.ETNIA_BCN_COMPANY_CODE</definition>
+        <argsstring></argsstring>
+        <name>ETNIA_BCN_COMPANY_CODE</name>
+        <initializer>= &quot;ETNBCN&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="89" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_general_1_1_constants_1a9c97f640be3a9ad13c778c56f8225ae3" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.General.Constants.ROLE_FACTORY</definition>
+        <argsstring></argsstring>
+        <name>ROLE_FACTORY</name>
+        <initializer>= &quot;FACTORY&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/General/Constants.cs" line="92" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/General/Constants.cs" line="10" column="1" bodyfile="HKSupply/General/Constants.cs" bodystart="9" bodyend="94"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a0ad1f134252480f3857e1bd22f876dcb" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>BREAKDOWN_SUBGROUP_FRONT</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a7e84057cdf3269a5355d444003178613" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>BREAKDOWN_SUBGROUP_TEMPLE</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a6bf906bcf32937b085d44c014be0b53a" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>BREAKDOWN_SUBGROUP_TEMPLE_LEFT</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a8c34279cdddef6d73526395e0a7eaff7" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>BREAKDOWN_SUBGROUP_TEMPLE_RIGHT</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1aae7e850455a2212f558e3c408de3a828" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>COLOR_PDF_FOLDER</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1afb3e1a201b246813af569df895da4f08" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>DRAWING_DWG_FOLDER</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a6bddc94afeb79f54b47bd33e95b1e106" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>DRAWING_PDF_FOLDER</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a2555a05d54dd7341fa88f3f7602799a0" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>ETNIA_BCN_COMPANY_CODE</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a2536d6f25ff5a47039311b40084841ee" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>ETNIA_HK_COMPANY_CODE</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1abeedc4ee496db69ca7af0cf3772427c9" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>EY_USER_ATTR_01</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a455a5fc0530ee4d2876c1d225aa9230c" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>EY_USER_ATTR_02</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a90533484825bec69313923d15adae6d0" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>EY_USER_ATTR_03</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a0248f33c09c4af58f842da71de6c45bc" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>HF_USER_ATTR_01</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1abd0090edfe73f265929b41bd653f8741" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>HF_USER_ATTR_02</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a9ee1d0e1216c0606ade3de8e24e29292" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>HF_USER_ATTR_03</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1aa173f169585edb03572ed519165cf00f" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>HW_GROUP_TYPE_DESING</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a84abdcf9a2cc427f2f520c240201b171" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>HW_GROUP_TYPE_PRODUCTION</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a848fce635f8eacbd4a01692e933f5f37" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>HW_USER_ATTR_01</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1afac8cb4f80a92a453992b1b6ca1780d3" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>HW_USER_ATTR_02</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a7f398a5c90ba12600f7c34df20a0a63a" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>HW_USER_ATTR_03</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1aef82abb7a6e96e3a90ab942dd727a20c" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>INTRANET_ETNIA_BCN</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1abd97aaafbec92e0fdd5663b7720cbf11" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>ITEM_GROUP_EY</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a8d6c8f076e52f8981bfe3cf584162dde" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>ITEM_GROUP_HF</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1ab30e9294f5d2ec256bcf61272a756186" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>ITEM_GROUP_HW</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a4fc23996acc9cc3c534812df3194f4f4" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>ITEM_GROUP_MT</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a198974a578413221f064559cc078205b" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>ITEM_GROUP_PROTO</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1af4d7b2bec0bd52e79b1ae8485836204b" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>ITEM_PHOTO_FOLDER</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a321b9dc1a5549b9bb795c71bb9be5091" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>ITEM_PHOTOWEB_FOLDER</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a6a1d9a6ba50e367ea467358e431f9e53" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>ITEM_TYPE_FRONT</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a86e437af9aa1d79bcb81dc62a403af9a" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>ITEM_TYPE_LEFT_TEMPLE</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a4275883807eb3bcb3f7ab2b67fe35326" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>ITEM_TYPE_RIGHT_TEMPLE</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1ab16976309f2e068e734646b5c62f5728" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>ITEMS_DOCS_PATH</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1acaf803ec4c4df747ca94e9967b8e02c2" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>ITEMS_PHOTOSWEB_PATH</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1aaf7f1bfc16744e65701723454e5afd59" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>MT_USER_ATTR_01</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a329c87da2e27e9d9c67ae9e73153a934" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>MT_USER_ATTR_02</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1ab53ddb741ceb6f1d288a6b2f8763838b" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>MT_USER_ATTR_03</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a38fae37671621df4a4770042ea918408" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>PROTO_DOCS_PATH</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a9c97f640be3a9ad13c778c56f8225ae3" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>ROLE_FACTORY</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a114c283527fb986d264e0e5791d538b3" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>SQL_DEV_EF_SERVER_CONN</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a734255384f24d864e64d0ddb3666b1be" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>SQL_DEV_SERVER_CONN</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a943a9a17ca55e4ef0056a6e0d0269598" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>SQL_EXPRESS_CONN</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1acad6f72547ef0e07eed98fea1a16b233" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>SQL_PROD_SERVER_CONN</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a1ba5b7f5d760e5f3189084548b6612a4" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>SUPPLY_ATTACH_FILES_PATH</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a160bfed26ac24af600a3cde1f979ea0d" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>SUPPLY_DOCTYPE_DN</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1ac057cd2ecf7ed3cf9b9f1f8d7bac71b5" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>SUPPLY_DOCTYPE_IV</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a8ac94b1ce3c4cbbf81b96e80dd893887" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>SUPPLY_DOCTYPE_PL</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1ab0f58f82fb1b7c96a375ec4a5996af0e" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>SUPPLY_DOCTYPE_PO</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a3031410536a1a98cf1cad75a112dec3a" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>SUPPLY_DOCTYPE_QCP</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a86eb384a730014a07126ba21dfa4123b" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>SUPPLY_DOCTYPE_QP</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a29e638728d29532ec1bcbe5bade36134" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>SUPPLY_DOCTYPE_RT</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1af2aaeefacfbf6f61db9af6645eab5d15" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>SUPPLY_DOCTYPE_SO</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a26a9644b2106911e6579203ab9197303" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>SUPPLY_STATUS_CANCEL</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a62540b4e8d9868de36ea218e83a108f5" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>SUPPLY_STATUS_CLOSE</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1acaa7734d30b3b2e6175655e6d84c7baf" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>SUPPLY_STATUS_OPEN</name></member>
+      <member refid="class_h_k_supply_1_1_general_1_1_constants_1a13024a5e8dd3e699ef5390d8fd1aa2b5" prot="public" virt="non-virtual"><scope>HKSupply::General::Constants</scope><name>SUPPLY_STATUS_TRANSIT</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

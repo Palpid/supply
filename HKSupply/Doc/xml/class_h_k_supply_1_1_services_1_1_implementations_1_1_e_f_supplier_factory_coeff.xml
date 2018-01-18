@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_factory_coeff" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFSupplierFactoryCoeff</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_factory_coeff" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.ISupplierFactoryCoeff</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_factory_coeff_1adfaca8c02644d09cdc7d1d22ffb17d9a" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFSupplierFactoryCoeff._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_factory_coeff" kindref="compound">EFSupplierFactoryCoeff</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplierFactoryCoeff.cs" line="19" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplierFactoryCoeff.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_factory_coeff_1a0af4a4a476051c700029ba142b25631e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff" kindref="compound">SupplierFactoryCoeff</ref> &gt;</type>
+        <definition>List&lt;SupplierFactoryCoeff&gt; HKSupply.Services.Implementations.EFSupplierFactoryCoeff.GetAllSupplierFactoryCoeff</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllSupplierFactoryCoeff</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_factory_coeff_1a5eca0f2a6594747b766893457c014eda">GetAllSupplierFactoryCoeff</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplierFactoryCoeff.cs" line="21" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplierFactoryCoeff.cs" bodystart="21" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_factory_coeff_1ac1ce0f280000d9ffb6d941590583ca6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff" kindref="compound">SupplierFactoryCoeff</ref></type>
+        <definition>SupplierFactoryCoeff HKSupply.Services.Implementations.EFSupplierFactoryCoeff.NewSupplierFactoryCoeff</definition>
+        <argsstring>(SupplierFactoryCoeff newSupplierFactoryCoeff)</argsstring>
+        <name>NewSupplierFactoryCoeff</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_factory_coeff_1af3be896c152f9c31c528cd0ec06f576e">NewSupplierFactoryCoeff</reimplements>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff" kindref="compound">SupplierFactoryCoeff</ref></type>
+          <declname>newSupplierFactoryCoeff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplierFactoryCoeff.cs" line="61" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplierFactoryCoeff.cs" bodystart="61" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_factory_coeff_1ac9387e9c71f905828cf9f7ec45c1cbe0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFSupplierFactoryCoeff.UpdateSupplierFactoryCoeff</definition>
+        <argsstring>(IEnumerable&lt; SupplierFactoryCoeff &gt; SupplierFactoryCoeffsToUpdate)</argsstring>
+        <name>UpdateSupplierFactoryCoeff</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_factory_coeff_1aac15ec046b7f8e79e3a90e2c88a8c2e8">UpdateSupplierFactoryCoeff</reimplements>
+        <param>
+          <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff" kindref="compound">SupplierFactoryCoeff</ref> &gt;</type>
+          <declname>SupplierFactoryCoeffsToUpdate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFSupplierFactoryCoeff.cs" line="130" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplierFactoryCoeff.cs" bodystart="130" bodyend="206"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="550">
+        <label>ISupplierFactoryCoeff</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_factory_coeff"/>
+      </node>
+      <node id="549">
+        <label>HKSupply.Services.Implementations.EFSupplierFactoryCoeff</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_factory_coeff"/>
+        <childnode refid="550" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="552">
+        <label>ISupplierFactoryCoeff</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_factory_coeff"/>
+      </node>
+      <node id="551">
+        <label>HKSupply.Services.Implementations.EFSupplierFactoryCoeff</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_factory_coeff"/>
+        <childnode refid="552" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFSupplierFactoryCoeff.cs" line="18" column="1" bodyfile="HKSupply/Services/Implementations/EFSupplierFactoryCoeff.cs" bodystart="17" bodyend="207"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_factory_coeff_1adfaca8c02644d09cdc7d1d22ffb17d9a" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplierFactoryCoeff</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_factory_coeff_1a0af4a4a476051c700029ba142b25631e" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplierFactoryCoeff</scope><name>GetAllSupplierFactoryCoeff</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_factory_coeff_1ac1ce0f280000d9ffb6d941590583ca6c" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplierFactoryCoeff</scope><name>NewSupplierFactoryCoeff</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_factory_coeff_1ac9387e9c71f905828cf9f7ec45c1cbe0" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFSupplierFactoryCoeff</scope><name>UpdateSupplierFactoryCoeff</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_p_r_j___stocks_1_1_helpers_1_1_excel" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::PRJ_Stocks::Helpers::Excel</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_helpers_1_1_excel_1a85d584f94097099ea467a04cfccdc399" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_move" kindref="compound">Stocks.StockMove</ref> &gt;</type>
+        <definition>static List&lt;Stocks.StockMove&gt; HKSupply.PRJ_Stocks.Helpers.Excel.OpenFileImportStk</definition>
+        <argsstring>(string FileName, Classes.Stocks STK)</argsstring>
+        <name>OpenFileImportStk</name>
+        <param>
+          <type>string</type>
+          <declname>FileName</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks" kindref="compound">Classes.Stocks</ref></type>
+          <declname>STK</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Helpers/Excel.cs" line="16" column="1" bodyfile="HKSupply/PRJ_Stocks/Helpers/Excel.cs" bodystart="16" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_helpers_1_1_excel_1a40f6912be018cdc8d437fe1650b7299d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.PRJ_Stocks.Helpers.Excel.CreateTemplate</definition>
+        <argsstring>(string FileName, List&lt; Stocks.Warehouse &gt; LstWares, List&lt; Stocks.ItemBcn &gt; LstItemsBCN)</argsstring>
+        <name>CreateTemplate</name>
+        <param>
+          <type>string</type>
+          <declname>FileName</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse" kindref="compound">Stocks.Warehouse</ref> &gt;</type>
+          <declname>LstWares</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_bcn" kindref="compound">Stocks.ItemBcn</ref> &gt;</type>
+          <declname>LstItemsBCN</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Helpers/Excel.cs" line="70" column="1" bodyfile="HKSupply/PRJ_Stocks/Helpers/Excel.cs" bodystart="70" bodyend="136"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/PRJ_Stocks/Helpers/Excel.cs" line="14" column="1" bodyfile="HKSupply/PRJ_Stocks/Helpers/Excel.cs" bodystart="13" bodyend="137"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_helpers_1_1_excel_1a40f6912be018cdc8d437fe1650b7299d" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Helpers::Excel</scope><name>CreateTemplate</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_helpers_1_1_excel_1a85d584f94097099ea467a04cfccdc399" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Helpers::Excel</scope><name>OpenFileImportStk</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

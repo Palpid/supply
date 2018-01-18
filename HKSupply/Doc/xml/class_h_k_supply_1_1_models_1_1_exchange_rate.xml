@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_exchange_rate" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::ExchangeRate</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_exchange_rate_1adc5aaf8d8a6d29225c64238a9949a7ce" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime HKSupply.Models.ExchangeRate.Date</definition>
+        <argsstring></argsstring>
+        <name>Date</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ExchangeRate.cs" line="19" column="1" bodyfile="HKSupply/Models/ExchangeRate.cs" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_exchange_rate_1a9460942864a5d01cd369d29f1ed9f9fb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ExchangeRate.IdCurrency1</definition>
+        <argsstring></argsstring>
+        <name>IdCurrency1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ExchangeRate.cs" line="21" column="1" bodyfile="HKSupply/Models/ExchangeRate.cs" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_exchange_rate_1ab77ac54a267be84b869459630c408e48" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ExchangeRate.IdCurrency2</definition>
+        <argsstring></argsstring>
+        <name>IdCurrency2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ExchangeRate.cs" line="23" column="1" bodyfile="HKSupply/Models/ExchangeRate.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_exchange_rate_1a6451f8fcefd88dffaf2e76ebd8d0b541" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.ExchangeRate.Ratio</definition>
+        <argsstring></argsstring>
+        <name>Ratio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ExchangeRate.cs" line="25" column="1" bodyfile="HKSupply/Models/ExchangeRate.cs" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_exchange_rate_1a1e617625dfe3bcfd61adcca9ff1fba07" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_currency" kindref="compound">Currency</ref></type>
+        <definition>Currency HKSupply.Models.ExchangeRate.Currency1</definition>
+        <argsstring></argsstring>
+        <name>Currency1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ExchangeRate.cs" line="28" column="1" bodyfile="HKSupply/Models/ExchangeRate.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_exchange_rate_1a6f5535b18d27bde1ae2c75dcc571cad3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_currency" kindref="compound">Currency</ref></type>
+        <definition>Currency HKSupply.Models.ExchangeRate.Currency2</definition>
+        <argsstring></argsstring>
+        <name>Currency2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ExchangeRate.cs" line="30" column="1" bodyfile="HKSupply/Models/ExchangeRate.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_exchange_rate_1a747d3d081ffcc9fd4f5cfe68f694dc1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.ExchangeRate.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ExchangeRate.cs" line="32" column="1" bodyfile="HKSupply/Models/ExchangeRate.cs" bodystart="32" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_exchange_rate_1a4d6cde27199225c167b1dd644806fa4e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.ExchangeRate.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ExchangeRate.cs" line="47" column="1" bodyfile="HKSupply/Models/ExchangeRate.cs" bodystart="47" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Está mal escrito, lo sé... </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/ExchangeRate.cs" line="17" column="1" bodyfile="HKSupply/Models/ExchangeRate.cs" bodystart="16" bodyend="57"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_exchange_rate_1a1e617625dfe3bcfd61adcca9ff1fba07" prot="public" virt="non-virtual"><scope>HKSupply::Models::ExchangeRate</scope><name>Currency1</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_exchange_rate_1a6f5535b18d27bde1ae2c75dcc571cad3" prot="public" virt="non-virtual"><scope>HKSupply::Models::ExchangeRate</scope><name>Currency2</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_exchange_rate_1adc5aaf8d8a6d29225c64238a9949a7ce" prot="public" virt="non-virtual"><scope>HKSupply::Models::ExchangeRate</scope><name>Date</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_exchange_rate_1a747d3d081ffcc9fd4f5cfe68f694dc1d" prot="public" virt="non-virtual"><scope>HKSupply::Models::ExchangeRate</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_exchange_rate_1a4d6cde27199225c167b1dd644806fa4e" prot="public" virt="non-virtual"><scope>HKSupply::Models::ExchangeRate</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_exchange_rate_1a9460942864a5d01cd369d29f1ed9f9fb" prot="public" virt="non-virtual"><scope>HKSupply::Models::ExchangeRate</scope><name>IdCurrency1</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_exchange_rate_1ab77ac54a267be84b869459630c408e48" prot="public" virt="non-virtual"><scope>HKSupply::Models::ExchangeRate</scope><name>IdCurrency2</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_exchange_rate_1a6451f8fcefd88dffaf2e76ebd8d0b541" prot="public" virt="non-virtual"><scope>HKSupply::Models::ExchangeRate</scope><name>Ratio</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

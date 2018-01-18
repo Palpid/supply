@@ -1,15 +1,25 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="dir_9526147bc1e8ec6e35c7db0b834d201e" kind="dir">
     <compoundname>HKSupply/Forms</compoundname>
     <innerdir refid="dir_2842df661c91fd653ac1cef3c187bca2">HKSupply/Forms/Master</innerdir>
+    <innerdir refid="dir_97fc9814ed39824192f28412cba3d1d6">HKSupply/Forms/Reports</innerdir>
+    <innerdir refid="dir_2a3b525f8a8b5978bd09510785a18037">HKSupply/Forms/Supply</innerdir>
     <innerfile refid="_dynamic_filters_8cs">DynamicFilters.cs</innerfile>
     <innerfile refid="_dynamic_filters_8_designer_8cs">DynamicFilters.Designer.cs</innerfile>
+    <innerfile refid="_forms_2_form1_8cs">Form1.cs</innerfile>
+    <innerfile refid="_forms_2_form1_8_designer_8cs">Form1.Designer.cs</innerfile>
     <innerfile refid="_i_actions_stack_view_8cs">IActionsStackView.cs</innerfile>
     <innerfile refid="_login_8cs">Login.cs</innerfile>
     <innerfile refid="_login_8_designer_8cs">Login.Designer.cs</innerfile>
     <innerfile refid="_main_8cs">Main.cs</innerfile>
     <innerfile refid="_main_8_designer_8cs">Main.Designer.cs</innerfile>
+    <innerfile refid="_p_d_f_viewer_8cs">PDFViewer.cs</innerfile>
+    <innerfile refid="_p_d_f_viewer_8_designer_8cs">PDFViewer.Designer.cs</innerfile>
+    <innerfile refid="_ribbon_form_base_8cs">RibbonFormBase.cs</innerfile>
+    <innerfile refid="_ribbon_form_base_8_designer_8cs">RibbonFormBase.Designer.cs</innerfile>
+    <innerfile refid="_wait_form1_8cs">WaitForm1.cs</innerfile>
+    <innerfile refid="_wait_form1_8_designer_8cs">WaitForm1.Designer.cs</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

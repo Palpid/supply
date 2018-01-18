@@ -1,0 +1,183 @@
+\hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base}{}\section{H\+K\+Supply.\+Forms.\+Ribbon\+Form\+Base Class Reference}
+\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base}\index{H\+K\+Supply.\+Forms.\+Ribbon\+Form\+Base@{H\+K\+Supply.\+Forms.\+Ribbon\+Form\+Base}}
+Inheritance diagram for H\+K\+Supply.\+Forms.\+Ribbon\+Form\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_h_k_supply_1_1_forms_1_1_ribbon_form_base}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a19b5d159bbd49a901457982a3ccae61c}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a19b5d159bbd49a901457982a3ccae61c}} 
+enum {\bfseries Actions\+States} \{ \newline
+{\bfseries Only\+Read}, 
+{\bfseries Only\+Edit}, 
+{\bfseries Only\+Edit\+New}, 
+{\bfseries Edit}, 
+\newline
+{\bfseries New}, 
+{\bfseries Only\+New}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a3e00a9c3ea88e57573dd6cfb730f0906}{Set\+Actions}} ()
+\begin{DoxyCompactList}\small\item\em Lee las acciones que tiene permitido un formulario. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ab1d3918d11343c8e8e953cc1ec84fe28}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ab1d3918d11343c8e8e953cc1ec84fe28}} 
+void {\bfseries Restore\+Init\+State} ()
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a96c09cd86882c5b71cc60345943d4b2b}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a96c09cd86882c5b71cc60345943d4b2b}} 
+void {\bfseries Configure\+Print\+Export\+Options} ()
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a52752c5a289899abff7185220b7d966b}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a52752c5a289899abff7185220b7d966b}} 
+void {\bfseries Configure\+Layout\+Options} ()
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ad291a5222a82a2bf33637f8dd0f5e0ac}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ad291a5222a82a2bf33637f8dd0f5e0ac}} 
+void {\bfseries Set\+Ribbon\+Text} (string title)
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a14d5ff785c8dd3e468ae9d598e2b202b}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a14d5ff785c8dd3e468ae9d598e2b202b}} 
+void {\bfseries Add\+Restore\+Layout\+Items} (List$<$ \mbox{\hyperlink{class_h_k_supply_1_1_models_1_1_layout}{Layout}} $>$ layouts)
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a2b9ece8fa41398d9d23e6d0dcb7c1ba9}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a2b9ece8fa41398d9d23e6d0dcb7c1ba9}} 
+virtual void {\bfseries bbi\+Save\+\_\+\+Item\+Click} (object sender, Item\+Click\+Event\+Args e)
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_acf595abe27b25dc339e95176b840d318}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_acf595abe27b25dc339e95176b840d318}} 
+virtual void {\bfseries bbi\+Cancel\+\_\+\+Item\+Click} (object sender, Item\+Click\+Event\+Args e)
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ad57212705cc492e7a8b25c1ee65de37a}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ad57212705cc492e7a8b25c1ee65de37a}} 
+virtual void {\bfseries bbi\+New\+\_\+\+Item\+Click} (object sender, Item\+Click\+Event\+Args e)
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_af810662672614a80a41f09f0dadcbee3}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_af810662672614a80a41f09f0dadcbee3}} 
+virtual void {\bfseries bbi\+Edit\+\_\+\+Item\+Click} (object sender, Item\+Click\+Event\+Args e)
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a3261a304d32dac9f2d658eb430528f61}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a3261a304d32dac9f2d658eb430528f61}} 
+virtual void {\bfseries bbi\+Print\+Preview\+\_\+\+Item\+Click} (object sender, Item\+Click\+Event\+Args e)
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ac5b520f58dbca59a2bffb6cb7ca51811}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ac5b520f58dbca59a2bffb6cb7ca51811}} 
+virtual void {\bfseries bbi\+Export\+Excel\+\_\+\+Item\+Click} (object sender, Item\+Click\+Event\+Args e)
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a1cb63ed00f841e9a3ad90de4bf48912a}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a1cb63ed00f841e9a3ad90de4bf48912a}} 
+virtual void {\bfseries bbi\+Export\+Csv\+\_\+\+Item\+Click} (object sender, Item\+Click\+Event\+Args e)
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a0d67163f46c55b3dd2203591b18f1e58}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a0d67163f46c55b3dd2203591b18f1e58}} 
+virtual void {\bfseries Bbi\+Save\+Layout\+\_\+\+Item\+Click} (object sender, Item\+Click\+Event\+Args e)
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_af6655859725d01e608331026f38a160d}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_af6655859725d01e608331026f38a160d}} 
+virtual void {\bfseries Layout\+Button\+\_\+\+Item\+Click} (object sender, Item\+Click\+Event\+Args e)
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_afc105d49fb2be36f7ecaac564c71c34f}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_afc105d49fb2be36f7ecaac564c71c34f}} 
+virtual void {\bfseries Bar\+Button\+Item\+Report\+\_\+\+Item\+Click} (object sender, Item\+Click\+Event\+Args e)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a580f0ead3ebf8727b9b18718b5fb52e6}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a580f0ead3ebf8727b9b18718b5fb52e6}} 
+Dev\+Express.\+Xtra\+Bars.\+Ribbon.\+Ribbon\+Control {\bfseries ribbon\+Control}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_aa2fd598d8dce0cf3ade5f2e4286b1a63}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_aa2fd598d8dce0cf3ade5f2e4286b1a63}} 
+Dev\+Express.\+Xtra\+Bars.\+Ribbon.\+Ribbon\+Page {\bfseries ribbon\+Page1}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ae7e0b8e80346713b6f0924eac3b90244}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ae7e0b8e80346713b6f0924eac3b90244}} 
+Dev\+Express.\+Xtra\+Bars.\+Ribbon.\+Ribbon\+Page\+Group {\bfseries ribbon\+Page\+Group1}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a1a497488427f08eac431ef74c5fa4ebd}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a1a497488427f08eac431ef74c5fa4ebd}} 
+Dev\+Express.\+Xtra\+Bars.\+Bar\+Button\+Item {\bfseries bbi\+Print\+Preview}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a56392f3fb3ffe03c6056226f7a4e9cc4}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a56392f3fb3ffe03c6056226f7a4e9cc4}} 
+Dev\+Express.\+Xtra\+Bars.\+Ribbon.\+Ribbon\+Page\+Group {\bfseries ribbon\+Page\+Group2}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a17f7eab51489ad84d039270fdadd94e3}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a17f7eab51489ad84d039270fdadd94e3}} 
+Dev\+Express.\+Xtra\+Bars.\+Ribbon.\+Ribbon\+Status\+Bar {\bfseries ribbon\+Status\+Bar}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_afe282e9cf1935592ab30454a8cb007f7}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_afe282e9cf1935592ab30454a8cb007f7}} 
+Dev\+Express.\+Xtra\+Bars.\+Bar\+Button\+Item {\bfseries bbi\+New}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a1f152497f1ed4ab950f1efc905cf9855}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a1f152497f1ed4ab950f1efc905cf9855}} 
+Dev\+Express.\+Xtra\+Bars.\+Bar\+Button\+Item {\bfseries bbi\+Edit}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a761c21a5b057fb7024f0cabb5db7d3e3}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a761c21a5b057fb7024f0cabb5db7d3e3}} 
+Dev\+Express.\+Xtra\+Bars.\+Bar\+Button\+Item {\bfseries bbi\+Cancel}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ab7dea0c7ad75ee898b48d3e87799a295}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ab7dea0c7ad75ee898b48d3e87799a295}} 
+Dev\+Express.\+Xtra\+Bars.\+Bar\+Button\+Item {\bfseries bbi\+Save}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_af86b4cc87ab6354fa29f481044ffc9c9}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_af86b4cc87ab6354fa29f481044ffc9c9}} 
+override bool {\bfseries Process\+Cmd\+Key} (ref Message msg, Keys key\+Data)
+\item 
+override void \mbox{\hyperlink{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a550191c92b26d28e11d1f68f66f57d30}{Dispose}} (bool disposing)
+\begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ad7e0b8936df83d7b543b80f7c952d4f4}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ad7e0b8936df83d7b543b80f7c952d4f4}} 
+bool {\bfseries Read}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a3708233c73e4213ad662a497dd910dff}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a3708233c73e4213ad662a497dd910dff}} 
+bool {\bfseries New}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a98c58ab1bbba3cdca52218ee2654e56b}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a98c58ab1bbba3cdca52218ee2654e56b}} 
+bool {\bfseries Modify}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ab1b3526d9b979c58143e8bf6168ee9c2}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ab1b3526d9b979c58143e8bf6168ee9c2}} 
+bool {\bfseries Enable\+Print\+Preview}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_af6f8de6655c2d81c207b48a01daabed7}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_af6f8de6655c2d81c207b48a01daabed7}} 
+bool {\bfseries Enable\+Export\+Excel}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_aff9ab2ae4cd1f4af498a2e15da4fbfed}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_aff9ab2ae4cd1f4af498a2e15da4fbfed}} 
+bool {\bfseries Enable\+Export\+Csv}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a6063d840bd6d815d0ded970a4f692335}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a6063d840bd6d815d0ded970a4f692335}} 
+bool {\bfseries Enable\+Layout\+Options}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ae1067b098f733b9d83a196950c033965}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ae1067b098f733b9d83a196950c033965}} 
+string {\bfseries Export\+Excel\+File}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a4c49d0366a5aefcbfeb9ffc8a73d7eee}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a4c49d0366a5aefcbfeb9ffc8a73d7eee}} 
+string {\bfseries Export\+Csv\+File}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ab9d07b216d885241427a38a34ac0e63e}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ab9d07b216d885241427a38a34ac0e63e}} 
+string {\bfseries Current\+Layout}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ac278443a5e6b29829ff8c5744f202471}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_ac278443a5e6b29829ff8c5744f202471}} 
+Actions\+States {\bfseries Current\+State}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a550191c92b26d28e11d1f68f66f57d30}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a550191c92b26d28e11d1f68f66f57d30}} 
+\index{H\+K\+Supply\+::\+Forms\+::\+Ribbon\+Form\+Base@{H\+K\+Supply\+::\+Forms\+::\+Ribbon\+Form\+Base}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!H\+K\+Supply\+::\+Forms\+::\+Ribbon\+Form\+Base@{H\+K\+Supply\+::\+Forms\+::\+Ribbon\+Form\+Base}}
+\subsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily override void H\+K\+Supply.\+Forms.\+Ribbon\+Form\+Base.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Clean up any resources being used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a3e00a9c3ea88e57573dd6cfb730f0906}\label{class_h_k_supply_1_1_forms_1_1_ribbon_form_base_a3e00a9c3ea88e57573dd6cfb730f0906}} 
+\index{H\+K\+Supply\+::\+Forms\+::\+Ribbon\+Form\+Base@{H\+K\+Supply\+::\+Forms\+::\+Ribbon\+Form\+Base}!Set\+Actions@{Set\+Actions}}
+\index{Set\+Actions@{Set\+Actions}!H\+K\+Supply\+::\+Forms\+::\+Ribbon\+Form\+Base@{H\+K\+Supply\+::\+Forms\+::\+Ribbon\+Form\+Base}}
+\subsubsection{\texorpdfstring{Set\+Actions()}{SetActions()}}
+{\footnotesize\ttfamily void H\+K\+Supply.\+Forms.\+Ribbon\+Form\+Base.\+Set\+Actions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Lee las acciones que tiene permitido un formulario. 
+
+No hay que llamarlo desde dentro porque el \char`\"{}\+Name\char`\"{} es el de \char`\"{}\+Ribbon\+Form\+Base\char`\"{}, hay que llamarlo desde los que lo herendan para que coja su nombre 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+H\+K\+Supply/\+Forms/Ribbon\+Form\+Base.\+cs\item 
+H\+K\+Supply/\+Forms/Ribbon\+Form\+Base.\+Designer.\+cs\end{DoxyCompactItemize}

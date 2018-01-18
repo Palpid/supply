@@ -323,6 +323,7 @@ C:\Git\HKSupply\HKSupply\obj\Debug\HKSupply.exe.licenses
 C:\Git\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
 C:\Git\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.PurchaseOrderSelection.resources
+C:\Git\Supply\HKSupply\HKSupply\bin\Debug\es\DevExpress.XtraRichEdit.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\Acetate_244.jpg
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\button_red.png
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\Resources\Images\formcaption_red.png
@@ -533,7 +534,6 @@ C:\Git\Supply\HKSupply\HKSupply\bin\Debug\es\DevExpress.XtraPrinting.v17.1.resou
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ja\DevExpress.XtraPrinting.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ru\DevExpress.XtraPrinting.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\de\DevExpress.XtraRichEdit.v17.1.resources.dll
-C:\Git\Supply\HKSupply\HKSupply\bin\Debug\es\DevExpress.XtraRichEdit.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ja\DevExpress.XtraRichEdit.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\ru\DevExpress.XtraRichEdit.v17.1.resources.dll
 C:\Git\Supply\HKSupply\HKSupply\bin\Debug\de\DevExpress.XtraSpreadsheet.v17.1.resources.dll
@@ -739,3 +739,4 @@ C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe.licenses
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.csproj.CoreCompileInputs.cache
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.exe
 C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.pdb
+C:\Git\Supply\HKSupply\HKSupply\obj\Debug\HKSupply.Forms.Supply.DialogForms.AddReceiptItem.resources

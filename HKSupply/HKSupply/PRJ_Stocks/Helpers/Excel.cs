@@ -15,8 +15,7 @@ namespace HKSupply.PRJ_Stocks.Helpers
 
         public static List<Stocks.StockMove> OpenFileImportStk(string FileName, Classes.Stocks STK)
         {
-            try
-            {
+            try {
                 List<Stocks.StockMove> LS = new List<Classes.Stocks.StockMove>();
                 var fullFileName = string.Format("{0}\\{1}", Directory.GetCurrentDirectory(), FileName);
                 if (!File.Exists(FileName))
@@ -49,16 +48,16 @@ namespace HKSupply.PRJ_Stocks.Helpers
 
                             Stocks.Warehouse wr = new Stocks.Warehouse();
                             wr.idWareHouse = idWAre;
-                            wr.idWareHouseType = idWAreType;
-                            Stocks.StockMove mv = new Stocks.StockMove(Stocks.StockMovementsType.Entry, idWAre, wr.Descr, idWAreType, idItem, "", QTT, Lot);
-                            LS.Add(mv);
+                            wr.idWareHouseType = idWAreType;                            
+                            Stocks.StockMove mv = new Stocks.StockMove(Stocks.StockMovementsType.Entry, idWAre, wr.Descr, idWAreType, idItem, "", Lot,QTT);
+                            LS.Add(mv);                            
                         }
                     }
                     else
                     {
                         throw new Exception("Incorrect extel template");
                     }
-
+                        
                 }
                 return LS;
             }
@@ -93,7 +92,7 @@ namespace HKSupply.PRJ_Stocks.Helpers
                 ws2.Columns[0][2].Value = "WAREHOUSE NAME";
                 ws2.Columns[1][2].Value = "ID_WAREHOUSE";
                 ws2.Columns[2][2].Value = "WAREHOUSE_TYPE";
-
+                
                 int FilaAct = 3;
                 foreach (Stocks.Warehouse wr in LstWares)
                 {
@@ -125,7 +124,14 @@ namespace HKSupply.PRJ_Stocks.Helpers
 
                 WB.Worksheets.ActiveWorksheet = ws;
 
-                WB.SaveDocument(FileName, DevExpress.Spreadsheet.DocumentFormat.OpenXml);
+                try
+                {
+                    WB.SaveDocument(FileName, DevExpress.Spreadsheet.DocumentFormat.OpenXml);
+                }
+                catch 
+                {                   
+                    throw new Exception($"Unable to acces '{FileName}'. Is the file opened on XL?");
+                }                
             }
         }
     }

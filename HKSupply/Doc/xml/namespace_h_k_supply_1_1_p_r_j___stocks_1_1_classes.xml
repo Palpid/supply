@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_h_k_supply_1_1_p_r_j___stocks_1_1_classes" kind="namespace" language="C#">
+    <compoundname>HKSupply::PRJ_Stocks::Classes</compoundname>
+    <innerclass refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks" prot="public">HKSupply::PRJ_Stocks::Classes::Stocks</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="8" column="1"/>
+  </compounddef>
+</doxygen>

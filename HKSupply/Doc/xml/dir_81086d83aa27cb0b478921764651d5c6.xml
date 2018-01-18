@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_81086d83aa27cb0b478921764651d5c6" kind="dir">
+    <compoundname>HKSupply/Reports</compoundname>
+    <innerfile refid="frm_visor_8cs">frmVisor.cs</innerfile>
+    <innerfile refid="frm_visor_8designer_8cs">frmVisor.designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Reports/"/>
+  </compounddef>
+</doxygen>

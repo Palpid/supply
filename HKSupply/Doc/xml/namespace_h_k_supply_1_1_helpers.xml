@@ -1,15 +1,22 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="namespace_h_k_supply_1_1_helpers" kind="namespace" language="C#">
     <compoundname>HKSupply::Helpers</compoundname>
     <innerclass refid="class_h_k_supply_1_1_helpers_1_1_custom_extensions" prot="public">HKSupply::Helpers::CustomExtensions</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_helpers_1_1_datetime_helper" prot="public">HKSupply::Helpers::DatetimeHelper</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_helpers_1_1_db_context_extensions" prot="public">HKSupply::Helpers::DbContextExtensions</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees" prot="public">HKSupply::Helpers::DeepCopyByExpressionTrees</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_helpers_1_1_doc_helper" prot="public">HKSupply::Helpers::DocHelper</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_helpers_1_1_entity_framework_helper" prot="public">HKSupply::Helpers::EntityFrameworkHelper</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_helpers_1_1_layout_helper" prot="public">HKSupply::Helpers::LayoutHelper</innerclass>
     <innerclass refid="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support" prot="public">HKSupply::Helpers::MDIClientSupport</innerclass>
     <innerclass refid="class_h_k_supply_1_1_helpers_1_1_password_helper" prot="public">HKSupply::Helpers::PasswordHelper</innerclass>
+    <innernamespace refid="namespace_h_k_supply_1_1_helpers_1_1_currency_converter">HKSupply::Helpers::CurrencyConverter</innernamespace>
     <innernamespace refid="namespace_h_k_supply_1_1_helpers_1_1_mocking">HKSupply::Helpers::Mocking</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="HKSupply/Helpers/CustomExtensions.cs" line="11" column="1"/>
+    <location file="[generated]" line="1" column="1"/>
   </compounddef>
 </doxygen>

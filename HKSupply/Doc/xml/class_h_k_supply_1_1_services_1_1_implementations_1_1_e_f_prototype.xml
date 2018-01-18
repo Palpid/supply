@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_prototype" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFPrototype</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_prototype" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IPrototype</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_prototype_1a6fc11b359d97a00beb7e06eb5a8a0844" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFPrototype._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_prototype" kindref="compound">EFPrototype</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFPrototype.cs" line="24" column="1" bodyfile="HKSupply/Services/Implementations/EFPrototype.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_prototype_1ae9995497534eb0595d1096998528c4e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_prototype" kindref="compound">Prototype</ref> &gt;</type>
+        <definition>List&lt;Prototype&gt; HKSupply.Services.Implementations.EFPrototype.GetPrototypes</definition>
+        <argsstring>()</argsstring>
+        <name>GetPrototypes</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_prototype_1acfd1c25ec6852cbdf490f2109d9c9b7c">GetPrototypes</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFPrototype.cs" line="26" column="1" bodyfile="HKSupply/Services/Implementations/EFPrototype.cs" bodystart="26" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_prototype_1a39804a815f5e25167c05fb3fa0c6c18a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFPrototype.AddPrototypeDoc</definition>
+        <argsstring>(PrototypeDoc doc)</argsstring>
+        <name>AddPrototypeDoc</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_prototype_1ab24012da7fcdbdde66a56473be2160b5">AddPrototypeDoc</reimplements>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_prototype_doc" kindref="compound">PrototypeDoc</ref></type>
+          <declname>doc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFPrototype.cs" line="64" column="1" bodyfile="HKSupply/Services/Implementations/EFPrototype.cs" bodystart="64" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="522">
+        <label>IPrototype</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_prototype"/>
+      </node>
+      <node id="521">
+        <label>HKSupply.Services.Implementations.EFPrototype</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_prototype"/>
+        <childnode refid="522" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="524">
+        <label>IPrototype</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_prototype"/>
+      </node>
+      <node id="523">
+        <label>HKSupply.Services.Implementations.EFPrototype</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_prototype"/>
+        <childnode refid="524" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFPrototype.cs" line="23" column="1" bodyfile="HKSupply/Services/Implementations/EFPrototype.cs" bodystart="22" bodyend="128"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_prototype_1a6fc11b359d97a00beb7e06eb5a8a0844" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFPrototype</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_prototype_1a39804a815f5e25167c05fb3fa0c6c18a" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFPrototype</scope><name>AddPrototypeDoc</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_prototype_1ae9995497534eb0595d1096998528c4e8" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFPrototype</scope><name>GetPrototypes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

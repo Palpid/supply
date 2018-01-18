@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_h_k_supply_1_1_styles_1_1_app_styles" kind="class" language="C#" prot="public">
     <compoundname>HKSupply::Styles::AppStyles</compoundname>
       <sectiondef kind="public-static-attrib">
@@ -15,16 +15,317 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Styles/AppStyles.cs" line="12" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="12" bodyend="-1"/>
+        <location file="HKSupply/Styles/AppStyles.cs" line="14" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_styles_1_1_app_styles_1a1b44112b1fddc50d59d1f54518c33205" prot="public" static="yes" mutable="no">
+        <type>Color</type>
+        <definition>Color HKSupply.Styles.AppStyles.BackColorAlternative</definition>
+        <argsstring></argsstring>
+        <name>BackColorAlternative</name>
+        <initializer>= Color.FromArgb(204, 204, 204)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="15" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_styles_1_1_app_styles_1aba58704f3b71bbea6481378cd3d5b473" prot="public" static="yes" mutable="no">
+        <type>Color</type>
+        <definition>Color HKSupply.Styles.AppStyles.SupplyStatusCnlBKGD1</definition>
+        <argsstring></argsstring>
+        <name>SupplyStatusCnlBKGD1</name>
+        <initializer>= Color.IndianRed</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="19" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_styles_1_1_app_styles_1a43460200b8c4e0b9596f475108b7e660" prot="public" static="yes" mutable="no">
+        <type>Color</type>
+        <definition>Color HKSupply.Styles.AppStyles.SupplyStatusCnlBKGD2</definition>
+        <argsstring></argsstring>
+        <name>SupplyStatusCnlBKGD2</name>
+        <initializer>= Color.IndianRed</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="20" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_styles_1_1_app_styles_1a20bbb1c1935138a1d3ee960c7b487aef" prot="public" static="yes" mutable="no">
+        <type>Color</type>
+        <definition>Color HKSupply.Styles.AppStyles.SupplyStatusOpdBKGD1</definition>
+        <argsstring></argsstring>
+        <name>SupplyStatusOpdBKGD1</name>
+        <initializer>= Color.DodgerBlue</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="22" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_styles_1_1_app_styles_1aad1db3150999420068afc8b4e6715a22" prot="public" static="yes" mutable="no">
+        <type>Color</type>
+        <definition>Color HKSupply.Styles.AppStyles.SupplyStatusOpdBKGD2</definition>
+        <argsstring></argsstring>
+        <name>SupplyStatusOpdBKGD2</name>
+        <initializer>= Color.LightBlue</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="23" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_styles_1_1_app_styles_1ad0f7c6e1e9fd5f38f708a50586eb07be" prot="public" static="yes" mutable="no">
+        <type>Color</type>
+        <definition>Color HKSupply.Styles.AppStyles.SupplyStatusOpnBKGD1</definition>
+        <argsstring></argsstring>
+        <name>SupplyStatusOpnBKGD1</name>
+        <initializer>= Color.Green</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="25" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_styles_1_1_app_styles_1a29a0fc8d85f8db8070741fd382c8a68d" prot="public" static="yes" mutable="no">
+        <type>Color</type>
+        <definition>Color HKSupply.Styles.AppStyles.SupplyStatusOpnBKGD2</definition>
+        <argsstring></argsstring>
+        <name>SupplyStatusOpnBKGD2</name>
+        <initializer>= Color.LightGreen</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="26" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_styles_1_1_app_styles_1a7ae3097b1b8042b7dce0b87a5c334595" prot="public" static="yes" mutable="no">
+        <type>Color</type>
+        <definition>Color HKSupply.Styles.AppStyles.SupplyStatusClsBKGD1</definition>
+        <argsstring></argsstring>
+        <name>SupplyStatusClsBKGD1</name>
+        <initializer>= Color.LightSlateGray</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="28" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_styles_1_1_app_styles_1aba45b2113144d1527b925686deb2f3e1" prot="public" static="yes" mutable="no">
+        <type>Color</type>
+        <definition>Color HKSupply.Styles.AppStyles.SupplyStatusClsBKGD2</definition>
+        <argsstring></argsstring>
+        <name>SupplyStatusClsBKGD2</name>
+        <initializer>= Color.LightSlateGray</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="29" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_styles_1_1_app_styles_1a770cf23120a098984d62d110784cdaa4" prot="public" static="yes" mutable="no">
+        <type>Font</type>
+        <definition>Font HKSupply.Styles.AppStyles.LabelDefaultFontBold</definition>
+        <argsstring></argsstring>
+        <name>LabelDefaultFontBold</name>
+        <initializer>= new Font(&quot;SourceSansProRegular&quot;, 8, FontStyle.Bold)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="33" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_styles_1_1_app_styles_1a579db7232ea3adecce4223edf54323ad" prot="public" static="yes" mutable="no">
+        <type>Font</type>
+        <definition>Font HKSupply.Styles.AppStyles.LabelDefaultFont</definition>
+        <argsstring></argsstring>
+        <name>LabelDefaultFont</name>
+        <initializer>= new Font(&quot;SourceSansProRegular&quot;, 8, FontStyle.Regular)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="34" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_styles_1_1_app_styles_1a7f70d0d49b2412d349cde8c3ba06ab9d" prot="private" static="yes" mutable="no">
+        <type>Color</type>
+        <definition>Color HKSupply.Styles.AppStyles._colorHighlight</definition>
+        <argsstring></argsstring>
+        <name>_colorHighlight</name>
+        <initializer>= Color.FromArgb(246, 229, 229)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="39" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_styles_1_1_app_styles_1a9239d2ae8701520f9c46ca7b1a33e79d" prot="private" static="yes" mutable="no">
+        <type>Color</type>
+        <definition>Color HKSupply.Styles.AppStyles._colorControl</definition>
+        <argsstring></argsstring>
+        <name>_colorControl</name>
+        <initializer>= Color.White</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="40" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_styles_1_1_app_styles_1a02436202ed2e14663857f51b9d5fa70a" prot="private" static="yes" mutable="no">
+        <type>Color</type>
+        <definition>Color HKSupply.Styles.AppStyles._colorGridOddRow</definition>
+        <argsstring></argsstring>
+        <name>_colorGridOddRow</name>
+        <initializer>= Color.FromArgb(244, 244, 244)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="41" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_styles_1_1_app_styles_1a6bacf2771aa4157e2de575ad36cc6adb" prot="private" static="yes" mutable="no">
+        <type>Color</type>
+        <definition>Color HKSupply.Styles.AppStyles._colorGridEvenRow</definition>
+        <argsstring></argsstring>
+        <name>_colorGridEvenRow</name>
+        <initializer>= Color.White</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="42" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_styles_1_1_app_styles_1ab19a662ac2ca2bfa8115506c436e2bb5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Styles.AppStyles.SetEtniaSkinStyles</definition>
+        <argsstring>()</argsstring>
+        <name>SetEtniaSkinStyles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="47" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="47" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_styles_1_1_app_styles_1a6d6805965eb261016203c7a9038e90ac" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Styles.AppStyles.SetRibbonStyles</definition>
+        <argsstring>()</argsstring>
+        <name>SetRibbonStyles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="91" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="91" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_styles_1_1_app_styles_1a3308a0ef4a9b1207d63d909219589aaf" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Styles.AppStyles.SetCommonStyles</definition>
+        <argsstring>()</argsstring>
+        <name>SetCommonStyles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="113" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="113" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_styles_1_1_app_styles_1aa12cbbad63fe966aaee6a22451da5044" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Styles.AppStyles.SetTabStyles</definition>
+        <argsstring>()</argsstring>
+        <name>SetTabStyles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="130" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="130" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_styles_1_1_app_styles_1ad2ba6eeecacdb9bfb0b4eb1b6e252313" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Styles.AppStyles.SetGridStyles</definition>
+        <argsstring>()</argsstring>
+        <name>SetGridStyles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Styles/AppStyles.cs" line="146" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="146" bodyend="165"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="HKSupply/Styles/AppStyles.cs" line="11" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="10" bodyend="13"/>
+    <location file="HKSupply/Styles/AppStyles.cs" line="13" column="1" bodyfile="HKSupply/Styles/AppStyles.cs" bodystart="12" bodyend="169"/>
     <listofallmembers>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1a9239d2ae8701520f9c46ca7b1a33e79d" prot="private" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>_colorControl</name></member>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1a6bacf2771aa4157e2de575ad36cc6adb" prot="private" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>_colorGridEvenRow</name></member>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1a02436202ed2e14663857f51b9d5fa70a" prot="private" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>_colorGridOddRow</name></member>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1a7f70d0d49b2412d349cde8c3ba06ab9d" prot="private" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>_colorHighlight</name></member>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1a1b44112b1fddc50d59d1f54518c33205" prot="public" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>BackColorAlternative</name></member>
       <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1a347df759e923b18b0a13e31df07dd301" prot="public" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>EtniaRed</name></member>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1a579db7232ea3adecce4223edf54323ad" prot="public" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>LabelDefaultFont</name></member>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1a770cf23120a098984d62d110784cdaa4" prot="public" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>LabelDefaultFontBold</name></member>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1a3308a0ef4a9b1207d63d909219589aaf" prot="private" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>SetCommonStyles</name></member>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1ab19a662ac2ca2bfa8115506c436e2bb5" prot="public" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>SetEtniaSkinStyles</name></member>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1ad2ba6eeecacdb9bfb0b4eb1b6e252313" prot="private" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>SetGridStyles</name></member>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1a6d6805965eb261016203c7a9038e90ac" prot="private" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>SetRibbonStyles</name></member>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1aa12cbbad63fe966aaee6a22451da5044" prot="private" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>SetTabStyles</name></member>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1a7ae3097b1b8042b7dce0b87a5c334595" prot="public" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>SupplyStatusClsBKGD1</name></member>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1aba45b2113144d1527b925686deb2f3e1" prot="public" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>SupplyStatusClsBKGD2</name></member>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1aba58704f3b71bbea6481378cd3d5b473" prot="public" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>SupplyStatusCnlBKGD1</name></member>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1a43460200b8c4e0b9596f475108b7e660" prot="public" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>SupplyStatusCnlBKGD2</name></member>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1a20bbb1c1935138a1d3ee960c7b487aef" prot="public" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>SupplyStatusOpdBKGD1</name></member>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1aad1db3150999420068afc8b4e6715a22" prot="public" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>SupplyStatusOpdBKGD2</name></member>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1ad0f7c6e1e9fd5f38f708a50586eb07be" prot="public" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>SupplyStatusOpnBKGD1</name></member>
+      <member refid="class_h_k_supply_1_1_styles_1_1_app_styles_1a29a0fc8d85f8db8070741fd382c8a68d" prot="public" virt="non-virtual"><scope>HKSupply::Styles::AppStyles</scope><name>SupplyStatusOpnBKGD2</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

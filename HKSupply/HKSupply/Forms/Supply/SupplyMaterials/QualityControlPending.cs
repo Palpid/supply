@@ -82,6 +82,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
 
                 ConfigureRibbonActions();
                 LoadAuxList();
+                SetUpTabs();
                 SetUpLabels();
                 SetObjectsReadOnly();
                 SetUpSearchLookUpEdit();
@@ -89,6 +90,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 SetUpGrdLinesQCP();
                 SetupGrdItemsBatch();
                 SetVisiblePropertyByState();
+
             }
             catch (Exception ex)
             {
@@ -170,6 +172,41 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
         public override void bbiSave_ItemClick(object sender, ItemClickEventArgs e)
         {
             base.bbiSave_ItemClick(sender, e);
+
+            try
+            {
+                bool res = false;
+
+                if (ValidateQCP() == false)
+                    return;
+
+                DialogResult result = MessageBox.Show(GlobalSetting.ResManager.GetString("SaveChanges"), "", MessageBoxButtons.YesNo);
+
+                if (result != DialogResult.Yes)
+                    return;
+
+                Cursor = Cursors.WaitCursor;
+
+                if (CurrentState == ActionsStates.Edit)
+                {
+                    res = UpdateQCP();
+                }
+
+                if (res == true)
+                {
+                    MessageBox.Show(GlobalSetting.ResManager.GetString("SaveSuccessfully"));
+                    ActionsAfterCU();
+                }
+
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
         }
 
         public override void bbiExportCsv_ItemClick(object sender, ItemClickEventArgs e)
@@ -720,6 +757,20 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
 
         #region Setup Form Objects
 
+        private void SetUpTabs()
+        {
+            try
+            {
+                xtpQualityControlPending.AutoScroll = true;
+                xtpQualityControlPending.AutoScrollMargin = new Size(20, 20);
+                xtpQualityControlPending.AutoScrollMinSize = new Size(xtpQualityControlPending.Width, xtpQualityControlPending.Height);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         private void SetUpLabels()
         {
             try
@@ -1005,7 +1056,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                     default:
                         sbFinishQCP.Visible = false;
                         sbSearch.Visible = true;
-                        lbltxtStatus.Visible = false;
+                        lbltxtStatus.Visible = (_docHeadQCP != null);
                         break;
                 }
             }
@@ -1117,6 +1168,11 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 }
 
                 SetVisiblePropertyByState();
+
+                //forzamos situamos en la línea 0 y forzamos el evento (si sólo hay una al no cambiar no lo lanza)
+                gridViewLinesQCP.FocusedRowHandle = 0;
+                GridViewLinesQCP_FocusedRowChanged(gridViewLinesQCP, new FocusedRowChangedEventArgs(-1,0));
+
             }
             catch
             {
@@ -1202,6 +1258,13 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
 
                 foreach (var line in _docLinesList)
                 {
+
+                    if ((line.Quantity + line.RejectedQuantity) != line.QuantityOriginal)
+                    {
+                        MessageBox.Show($"{line.IdItemBcn} ({line.IdDocRelated}): Accepted/Rejected Quantity error", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false; 
+                    }
+
                     decimal qtyItemBatch = _itemsBatchList
                         .Where(a => a.IdDocRelated.Equals(line.IdDocRelated) && a.IdItemBcn.Equals(line.IdItemBcn) && a.IdItemGroup.Equals(line.IdItemGroup))
                         .Sum(b => b.Quantity);
@@ -1231,11 +1294,13 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 
                 List<DocLine> sortedLines = _docLinesList.ToList();
 
-                //Si se finaliza cerramos todos las líneas también
+                //Si se finaliza cerramos todos las líneas también y copiamos la cantidad en cantidad entrega 
+                //(por facilidad, así se reaprovechan métodos del packing para hacer los movimientos y cerrar PO)
                 if (finishQCP)
                 {
                     //The ToList is needed in order to evaluate the select immediately due to lazy evaluation.
                     sortedLines.Select(a => { a.IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE; return a; }).ToList();
+                    sortedLines.Select(a => { a.DeliveredQuantity = a.Quantity; return a; }).ToList();
                 }
 
                 DocHead packingList = new DocHead()

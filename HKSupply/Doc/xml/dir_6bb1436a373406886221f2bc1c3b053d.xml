@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="dir_6bb1436a373406886221f2bc1c3b053d" kind="dir">
     <compoundname>HKSupply/Exceptions</compoundname>
     <innerfile refid="_d_b_server_connection_exception_8cs">DBServerConnectionException.cs</innerfile>

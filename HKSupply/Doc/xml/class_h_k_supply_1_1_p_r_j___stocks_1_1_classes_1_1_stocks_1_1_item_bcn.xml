@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_bcn" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::PRJ_Stocks::Classes::Stocks::ItemBcn</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_bcn_1aa849acf60928aa4ba303fe4bf3b189ac" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HKSupply.PRJ_Stocks.Classes.Stocks.ItemBcn._Id</definition>
+        <argsstring></argsstring>
+        <name>_Id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="39" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_bcn_1a00a1912dcc9c94b1b68765a7a0c7b701" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HKSupply.PRJ_Stocks.Classes.Stocks.ItemBcn._Descr</definition>
+        <argsstring></argsstring>
+        <name>_Descr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="40" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_bcn_1a0832017e8fc5a570e969a439ed6930fc" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HKSupply.PRJ_Stocks.Classes.Stocks.ItemBcn._Group</definition>
+        <argsstring></argsstring>
+        <name>_Group</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="41" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_bcn_1a112ca9f14c195f41bfd51daf5969aa45" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.PRJ_Stocks.Classes.Stocks.ItemBcn.ID_ITEM_BCN</definition>
+        <argsstring></argsstring>
+        <name>ID_ITEM_BCN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="43" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_bcn_1a21e5cc1e442cc6747133940a259d5c7e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.PRJ_Stocks.Classes.Stocks.ItemBcn.ITEM_DESCRIPTION</definition>
+        <argsstring></argsstring>
+        <name>ITEM_DESCRIPTION</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="44" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_bcn_1a41e1ce86c8b4ab443a1ebe9ee1299b44" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.PRJ_Stocks.Classes.Stocks.ItemBcn.ID_ITEM_GROUP</definition>
+        <argsstring></argsstring>
+        <name>ID_ITEM_GROUP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="45" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="45" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="38" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="37" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_bcn_1a00a1912dcc9c94b1b68765a7a0c7b701" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::ItemBcn</scope><name>_Descr</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_bcn_1a0832017e8fc5a570e969a439ed6930fc" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::ItemBcn</scope><name>_Group</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_bcn_1aa849acf60928aa4ba303fe4bf3b189ac" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::ItemBcn</scope><name>_Id</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_bcn_1a112ca9f14c195f41bfd51daf5969aa45" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::ItemBcn</scope><name>ID_ITEM_BCN</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_bcn_1a41e1ce86c8b4ab443a1ebe9ee1299b44" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::ItemBcn</scope><name>ID_ITEM_GROUP</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_bcn_1a21e5cc1e442cc6747133940a259d5c7e" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::ItemBcn</scope><name>ITEM_DESCRIPTION</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

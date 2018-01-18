@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_classes_1_1_row_info" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Classes::RowInfo</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_classes_1_1_row_info_1a0636e6e0272971a7d0b46b8f0ab03389" prot="public" static="no" mutable="no">
+        <type>GridView</type>
+        <definition>GridView HKSupply.Classes.RowInfo.View</definition>
+        <argsstring></argsstring>
+        <name>View</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/RowInfo.cs" line="20" column="1" bodyfile="HKSupply/Classes/RowInfo.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_classes_1_1_row_info_1ade87f409f42147d2e9d918a46b4a9898" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HKSupply.Classes.RowInfo.RowHandle</definition>
+        <argsstring></argsstring>
+        <name>RowHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/RowInfo.cs" line="21" column="1" bodyfile="HKSupply/Classes/RowInfo.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_classes_1_1_row_info_1a4a5213a80808716e97c62e2f59803982" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Classes.RowInfo.RowInfo</definition>
+        <argsstring>(GridView view, int rowHandle)</argsstring>
+        <name>RowInfo</name>
+        <param>
+          <type>GridView</type>
+          <declname>view</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rowHandle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/RowInfo.cs" line="15" column="1" bodyfile="HKSupply/Classes/RowInfo.cs" bodystart="15" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class to store menu specific information </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Classes/RowInfo.cs" line="14" column="1" bodyfile="HKSupply/Classes/RowInfo.cs" bodystart="13" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_classes_1_1_row_info_1ade87f409f42147d2e9d918a46b4a9898" prot="public" virt="non-virtual"><scope>HKSupply::Classes::RowInfo</scope><name>RowHandle</name></member>
+      <member refid="class_h_k_supply_1_1_classes_1_1_row_info_1a4a5213a80808716e97c62e2f59803982" prot="public" virt="non-virtual"><scope>HKSupply::Classes::RowInfo</scope><name>RowInfo</name></member>
+      <member refid="class_h_k_supply_1_1_classes_1_1_row_info_1a0636e6e0272971a7d0b46b8f0ab03389" prot="public" virt="non-virtual"><scope>HKSupply::Classes::RowInfo</scope><name>View</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

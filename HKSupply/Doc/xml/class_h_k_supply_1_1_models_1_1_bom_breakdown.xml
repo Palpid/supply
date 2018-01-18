@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_bom_breakdown" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::BomBreakdown</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_bom_breakdown_1a3a28d18b0de8d1de3fa2d19e59dca840" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.BomBreakdown.IdBomBreakdown</definition>
+        <argsstring></argsstring>
+        <name>IdBomBreakdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/BomBreakdown.cs" line="11" column="1" bodyfile="HKSupply/Models/BomBreakdown.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_bom_breakdown_1ae5c31b7c0f256340254b5d87f23efd4f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.BomBreakdown.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/BomBreakdown.cs" line="14" column="1" bodyfile="HKSupply/Models/BomBreakdown.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_bom_breakdown_1ab6b68b2fb615227d7d2965225238cff4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.BomBreakdown.SubGroup</definition>
+        <argsstring></argsstring>
+        <name>SubGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/BomBreakdown.cs" line="17" column="1" bodyfile="HKSupply/Models/BomBreakdown.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_bom_breakdown_1a1602b18eb008dca3a5da45234893e503" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.BomBreakdown.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/BomBreakdown.cs" line="20" column="1" bodyfile="HKSupply/Models/BomBreakdown.cs" bodystart="20" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_bom_breakdown_1a9d65c8e248867ca3438d90f75aa85f7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.BomBreakdown.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/BomBreakdown.cs" line="34" column="1" bodyfile="HKSupply/Models/BomBreakdown.cs" bodystart="34" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/BomBreakdown.cs" line="9" column="1" bodyfile="HKSupply/Models/BomBreakdown.cs" bodystart="8" bodyend="44"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_bom_breakdown_1ae5c31b7c0f256340254b5d87f23efd4f" prot="public" virt="non-virtual"><scope>HKSupply::Models::BomBreakdown</scope><name>Description</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_bom_breakdown_1a1602b18eb008dca3a5da45234893e503" prot="public" virt="non-virtual"><scope>HKSupply::Models::BomBreakdown</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_bom_breakdown_1a9d65c8e248867ca3438d90f75aa85f7f" prot="public" virt="non-virtual"><scope>HKSupply::Models::BomBreakdown</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_bom_breakdown_1a3a28d18b0de8d1de3fa2d19e59dca840" prot="public" virt="non-virtual"><scope>HKSupply::Models::BomBreakdown</scope><name>IdBomBreakdown</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_bom_breakdown_1ab6b68b2fb615227d7d2965225238cff4" prot="public" virt="non-virtual"><scope>HKSupply::Models::BomBreakdown</scope><name>SubGroup</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

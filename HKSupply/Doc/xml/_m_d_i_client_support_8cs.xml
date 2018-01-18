@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="_m_d_i_client_support_8cs" kind="file" language="C#">
     <compoundname>MDIClientSupport.cs</compoundname>
     <innerclass refid="class_h_k_supply_1_1_helpers_1_1_m_d_i_client_support" prot="public">HKSupply::Helpers::MDIClientSupport</innerclass>

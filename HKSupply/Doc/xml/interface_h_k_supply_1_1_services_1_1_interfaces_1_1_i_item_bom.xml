@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom" kind="interface" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Interfaces::IItemBom</compoundname>
+    <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFItemBom</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom_1ab4f73cd313c20fa31a6ca6c4f2f8331a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref></type>
+        <definition>ItemBom HKSupply.Services.Interfaces.IItemBom.GetItemSupplierBom</definition>
+        <argsstring>(int IdBom, string idSupplier, bool getPoco=false)</argsstring>
+        <name>GetItemSupplierBom</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1aa82900565abed0109b8ecd45d8c3c1d9">GetItemSupplierBom</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>IdBom</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>getPoco</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IItemBom.cs" line="8" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom_1a1568c6b62fe6356b70e99149376eb3f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref></type>
+        <definition>ItemBom HKSupply.Services.Interfaces.IItemBom.GetItemSupplierBom</definition>
+        <argsstring>(string IdItemBcn, string idSupplier, bool getPoco=false)</argsstring>
+        <name>GetItemSupplierBom</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1a07dec38f619eac3d606e1511c912cc9e">GetItemSupplierBom</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>IdItemBcn</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>getPoco</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IItemBom.cs" line="9" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom_1a14c5bde641578f9e8b1ebad500093c84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref> &gt;</type>
+        <definition>List&lt;ItemBom&gt; HKSupply.Services.Interfaces.IItemBom.GetItemBom</definition>
+        <argsstring>(string idItemBcn)</argsstring>
+        <name>GetItemBom</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1a5a962745957fb57c7b2f4a4b6bfc67de">GetItemBom</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>idItemBcn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IItemBom.cs" line="10" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom_1a9814e49dce27daa392533c07a25b8fe1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref> &gt;</type>
+        <definition>List&lt;ItemBom&gt; HKSupply.Services.Interfaces.IItemBom.GetItemBom</definition>
+        <argsstring>(string idItemBcn, string idSupplier)</argsstring>
+        <name>GetItemBom</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1a11dbd453a2f553e3e00e163a846397e6">GetItemBom</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>idItemBcn</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IItemBom.cs" line="11" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom_1a2d4249a00371f575e85bbade36d4897a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.IItemBom.EditItemSuppliersBom</definition>
+        <argsstring>(List&lt; ItemBom &gt; itemSuppliersBom)</argsstring>
+        <name>EditItemSuppliersBom</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1a66d0c1f604104f7e54d059db6423ceb3">EditItemSuppliersBom</reimplementedby>
+        <param>
+          <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref> &gt;</type>
+          <declname>itemSuppliersBom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IItemBom.cs" line="14" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom_1aa3a75a076f313752949c7e4cb1b61ac1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref> &gt;</type>
+        <definition>List&lt;ItemBom&gt; HKSupply.Services.Interfaces.IItemBom.GetRelatedItemBom</definition>
+        <argsstring>(int idBomn)</argsstring>
+        <name>GetRelatedItemBom</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1a7987eb32318d435127baa58f74af72d9">GetRelatedItemBom</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>idBomn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IItemBom.cs" line="16" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="767">
+        <label>HKSupply.Services.Implementations.EFItemBom</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom"/>
+        <childnode refid="766" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="766">
+        <label>HKSupply.Services.Interfaces.IItemBom</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom"/>
+      </node>
+    </inheritancegraph>
+    <location file="HKSupply/Services/Interfaces/IItemBom.cs" line="7" column="1" bodyfile="HKSupply/Services/Interfaces/IItemBom.cs" bodystart="6" bodyend="17"/>
+    <listofallmembers>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom_1a2d4249a00371f575e85bbade36d4897a" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IItemBom</scope><name>EditItemSuppliersBom</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom_1a14c5bde641578f9e8b1ebad500093c84" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IItemBom</scope><name>GetItemBom</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom_1a9814e49dce27daa392533c07a25b8fe1" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IItemBom</scope><name>GetItemBom</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom_1ab4f73cd313c20fa31a6ca6c4f2f8331a" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IItemBom</scope><name>GetItemSupplierBom</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom_1a1568c6b62fe6356b70e99149376eb3f7" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IItemBom</scope><name>GetItemSupplierBom</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom_1aa3a75a076f313752949c7e4cb1b61ac1" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IItemBom</scope><name>GetRelatedItemBom</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

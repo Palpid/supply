@@ -1,0 +1,615 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_item_hw_history" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::ItemHwHistory</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a556042d385565c42bbff606361f92587" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.ItemHwHistory.IdVer</definition>
+        <argsstring></argsstring>
+        <name>IdVer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="16" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a8884a8a786da4660b11706b841524ccf" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.ItemHwHistory.IdSubVer</definition>
+        <argsstring></argsstring>
+        <name>IdSubVer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="19" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1af6708f113ec35b1ec73d472abd311ace" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime HKSupply.Models.ItemHwHistory.Timestamp</definition>
+        <argsstring></argsstring>
+        <name>Timestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="22" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a36d346f37b2064b734705cddf10dbeef" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.IdItemBcn</definition>
+        <argsstring></argsstring>
+        <name>IdItemBcn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="25" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a5e1f72899326670d5b4622a7f2be81c4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.IdHwTypeL1</definition>
+        <argsstring></argsstring>
+        <name>IdHwTypeL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="29" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1ad227b457076c9c03947e04f645652070" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.IdHwTypeL2</definition>
+        <argsstring></argsstring>
+        <name>IdHwTypeL2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="31" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a224a7364c8d9c889f9add794cef1a3f8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.IdHwTypeL3</definition>
+        <argsstring></argsstring>
+        <name>IdHwTypeL3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="33" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a873f8193618c0421ee7ae618f4a7a1f8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_hw_type_l1" kindref="compound">HwTypeL1</ref></type>
+        <definition>HwTypeL1 HKSupply.Models.ItemHwHistory.HwTypeL1</definition>
+        <argsstring></argsstring>
+        <name>HwTypeL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="36" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a669f641db3090ed67107683a8980a96b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_hw_type_l2" kindref="compound">HwTypeL2</ref></type>
+        <definition>HwTypeL2 HKSupply.Models.ItemHwHistory.HwTypeL2</definition>
+        <argsstring></argsstring>
+        <name>HwTypeL2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="38" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a83e0a300f2388971a5bbbf95df10dae0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_hw_type_l3" kindref="compound">HwTypeL3</ref></type>
+        <definition>HwTypeL3 HKSupply.Models.ItemHwHistory.HwTypeL3</definition>
+        <argsstring></argsstring>
+        <name>HwTypeL3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="40" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a5e62cb441c6866f6de288388418b003a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>String</type>
+        <definition>String HKSupply.Models.ItemHwHistory.IdDefaultSupplier</definition>
+        <argsstring></argsstring>
+        <name>IdDefaultSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="43" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1acc75db38e47ae347e75444188b637cee" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supplier" kindref="compound">Supplier</ref></type>
+        <definition>Supplier HKSupply.Models.ItemHwHistory.DefaultSupplier</definition>
+        <argsstring></argsstring>
+        <name>DefaultSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="45" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a323407f4d149afa455d973a0ce9a86af" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.IdPrototype</definition>
+        <argsstring></argsstring>
+        <name>IdPrototype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="48" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1abf24811aeeece8bab9d037f68bca29fc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_prototype" kindref="compound">Prototype</ref></type>
+        <definition>Prototype HKSupply.Models.ItemHwHistory.Prototype</definition>
+        <argsstring></argsstring>
+        <name>Prototype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="50" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1aba769c01005e25c8d68dc2f1ef6e611a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.IdModel</definition>
+        <argsstring></argsstring>
+        <name>IdModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="53" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1ac52fe96b25e9382f0b51e6536b0fe576" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_model" kindref="compound">Model</ref></type>
+        <definition>Model HKSupply.Models.ItemHwHistory.Model</definition>
+        <argsstring></argsstring>
+        <name>Model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="55" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a276a4c7ad4e2db0c8fd9462987b3f46a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.IdFamilyHK</definition>
+        <argsstring></argsstring>
+        <name>IdFamilyHK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="58" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a4cff4525d6a4d6e5b6dbdb1dcbb076cc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_family_h_k" kindref="compound">FamilyHK</ref></type>
+        <definition>FamilyHK HKSupply.Models.ItemHwHistory.FamilyHK</definition>
+        <argsstring></argsstring>
+        <name>FamilyHK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="60" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1ac6b54a625b0f24a6c5f06dc158a2572e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.IdColor1</definition>
+        <argsstring></argsstring>
+        <name>IdColor1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="63" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1ae68719f932949ed72e0ee52bd1ab5d69" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.IdColor2</definition>
+        <argsstring></argsstring>
+        <name>IdColor2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="65" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1adb8b66e6a947ac45b1a6fb353201ab12" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.IdItemHK</definition>
+        <argsstring></argsstring>
+        <name>IdItemHK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="68" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1afa4d964deb64804b647168f3fd4d8999" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.ItemDescription</definition>
+        <argsstring></argsstring>
+        <name>ItemDescription</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="71" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a45458c323f6e553ed0e9d64d5f382e22" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.Comments</definition>
+        <argsstring></argsstring>
+        <name>Comments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="74" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1afbbb15cc20bc1d05573456d2a7522569" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime HKSupply.Models.ItemHwHistory.LaunchDate</definition>
+        <argsstring></argsstring>
+        <name>LaunchDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="78" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a2ce5fadc04037446726fc86a2d5b550a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime HKSupply.Models.ItemHwHistory.RemovalDate</definition>
+        <argsstring></argsstring>
+        <name>RemovalDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="81" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a597653cbdb7715da71ca391d1326dd79" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.ItemHwHistory.IdStatusCial</definition>
+        <argsstring></argsstring>
+        <name>IdStatusCial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="84" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a7cfe6e31b330b8141a4bcde4fb1b9afe" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_status_cial" kindref="compound">StatusCial</ref></type>
+        <definition>StatusCial HKSupply.Models.ItemHwHistory.StatusCial</definition>
+        <argsstring></argsstring>
+        <name>StatusCial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="86" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="86" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a0865c8053caf18b25de3eccbc3bb841b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.ItemHwHistory.IdStatusProd</definition>
+        <argsstring></argsstring>
+        <name>IdStatusProd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="89" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="89" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a457de36ddd36caf2972f66f2e5a885ee" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_status_h_k" kindref="compound">StatusHK</ref></type>
+        <definition>StatusHK HKSupply.Models.ItemHwHistory.StatusProd</definition>
+        <argsstring></argsstring>
+        <name>StatusProd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="91" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="91" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a4b316f170d4bf49d228fc90a3df857cd" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.IdUserAttri1</definition>
+        <argsstring></argsstring>
+        <name>IdUserAttri1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="94" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="94" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a5b321af7070483e75a069facefe0019a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.IdUserAttri2</definition>
+        <argsstring></argsstring>
+        <name>IdUserAttri2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="96" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1acffe8a2684116e58c7aa11b489600969" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.IdUserAttri3</definition>
+        <argsstring></argsstring>
+        <name>IdUserAttri3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="98" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1abc5848c2c08d1d176404eb93116e5e24" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.Unit</definition>
+        <argsstring></argsstring>
+        <name>Unit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="101" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="101" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a68498910f3d7741e1a0d0c1ccc60ba0d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.UnitSupply</definition>
+        <argsstring></argsstring>
+        <name>UnitSupply</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="104" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a5188c88a80aa43796a07f4bdcbb25ebf" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.DocsLink</definition>
+        <argsstring></argsstring>
+        <name>DocsLink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="107" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1ad9a36ca1f92835b26c442e9ff78f3f52" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime HKSupply.Models.ItemHwHistory.CreateDate</definition>
+        <argsstring></argsstring>
+        <name>CreateDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="110" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="110" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1ad06dde696576334f5c01d2d0c8941c55" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.PhotoUrl</definition>
+        <argsstring></argsstring>
+        <name>PhotoUrl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="113" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="113" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a78bd0fe3bf5f6b730be8eb4f4c50c493" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.IdGroupType</definition>
+        <argsstring></argsstring>
+        <name>IdGroupType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="116" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="116" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1aff16ca8bf3fb94d42b491ace56cdfe71" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemHwHistory.User</definition>
+        <argsstring></argsstring>
+        <name>User</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="119" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="119" bodyend="119"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1a67d6f9ed1a5509bbef05b38e3978eaab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.ItemHwHistory.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="124" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="124" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1aaad805958d10dec3eb6bbf83a9a1259c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.ItemHwHistory.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="167" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="167" bodyend="202"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_item_hw_history_1abd152148540941ecfd2387128c95ecbc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>implicit</type>
+        <definition>static implicit HKSupply.Models.ItemHwHistory.operator ItemHwHistory</definition>
+        <argsstring>(ItemHw i)</argsstring>
+        <name>operator ItemHwHistory</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_item_hw" kindref="compound">ItemHw</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemHwHistory.cs" line="206" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="206" bodyend="241"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/ItemHwHistory.cs" line="14" column="1" bodyfile="HKSupply/Models/ItemHwHistory.cs" bodystart="13" bodyend="242"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a45458c323f6e553ed0e9d64d5f382e22" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>Comments</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1ad9a36ca1f92835b26c442e9ff78f3f52" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>CreateDate</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1acc75db38e47ae347e75444188b637cee" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>DefaultSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a5188c88a80aa43796a07f4bdcbb25ebf" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>DocsLink</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a67d6f9ed1a5509bbef05b38e3978eaab" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a4cff4525d6a4d6e5b6dbdb1dcbb076cc" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>FamilyHK</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1aaad805958d10dec3eb6bbf83a9a1259c" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a873f8193618c0421ee7ae618f4a7a1f8" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>HwTypeL1</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a669f641db3090ed67107683a8980a96b" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>HwTypeL2</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a83e0a300f2388971a5bbbf95df10dae0" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>HwTypeL3</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1ac6b54a625b0f24a6c5f06dc158a2572e" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>IdColor1</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1ae68719f932949ed72e0ee52bd1ab5d69" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>IdColor2</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a5e62cb441c6866f6de288388418b003a" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>IdDefaultSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a276a4c7ad4e2db0c8fd9462987b3f46a" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>IdFamilyHK</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a78bd0fe3bf5f6b730be8eb4f4c50c493" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>IdGroupType</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a5e1f72899326670d5b4622a7f2be81c4" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>IdHwTypeL1</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1ad227b457076c9c03947e04f645652070" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>IdHwTypeL2</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a224a7364c8d9c889f9add794cef1a3f8" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>IdHwTypeL3</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a36d346f37b2064b734705cddf10dbeef" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>IdItemBcn</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1adb8b66e6a947ac45b1a6fb353201ab12" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>IdItemHK</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1aba769c01005e25c8d68dc2f1ef6e611a" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>IdModel</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a323407f4d149afa455d973a0ce9a86af" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>IdPrototype</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a597653cbdb7715da71ca391d1326dd79" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>IdStatusCial</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a0865c8053caf18b25de3eccbc3bb841b" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>IdStatusProd</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a8884a8a786da4660b11706b841524ccf" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>IdSubVer</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a4b316f170d4bf49d228fc90a3df857cd" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>IdUserAttri1</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a5b321af7070483e75a069facefe0019a" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>IdUserAttri2</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1acffe8a2684116e58c7aa11b489600969" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>IdUserAttri3</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a556042d385565c42bbff606361f92587" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>IdVer</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1afa4d964deb64804b647168f3fd4d8999" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>ItemDescription</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1afbbb15cc20bc1d05573456d2a7522569" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>LaunchDate</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1ac52fe96b25e9382f0b51e6536b0fe576" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>Model</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1abd152148540941ecfd2387128c95ecbc" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>operator ItemHwHistory</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1ad06dde696576334f5c01d2d0c8941c55" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>PhotoUrl</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1abf24811aeeece8bab9d037f68bca29fc" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>Prototype</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a2ce5fadc04037446726fc86a2d5b550a" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>RemovalDate</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a7cfe6e31b330b8141a4bcde4fb1b9afe" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>StatusCial</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a457de36ddd36caf2972f66f2e5a885ee" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>StatusProd</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1af6708f113ec35b1ec73d472abd311ace" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>Timestamp</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1abc5848c2c08d1d176404eb93116e5e24" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>Unit</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1a68498910f3d7741e1a0d0c1ccc60ba0d" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>UnitSupply</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_hw_history_1aff16ca8bf3fb94d42b491ace56cdfe71" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemHwHistory</scope><name>User</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

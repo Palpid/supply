@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['changepassword',['ChangePassword',['../class_h_k_supply_1_1_forms_1_1_master_1_1_change_password.html',1,'HKSupply.Forms.Master.ChangePassword'],['../class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_user.html#ada8f9352d6fed7594d449aed92f452a0',1,'HKSupply.Services.Implementations.EFUser.ChangePassword()']]],
-  ['customcontrols',['CustomControls',['../namespace_custom_controls.html',1,'']]],
-  ['customer',['Customer',['../class_h_k_supply_1_1_migrations_1_1_customer.html',1,'HKSupply.Migrations.Customer'],['../class_h_k_supply_1_1_models_1_1_customer.html',1,'HKSupply.Models.Customer']]],
-  ['customerhistory',['CustomerHistory',['../class_h_k_supply_1_1_models_1_1_customer_history.html',1,'HKSupply::Models']]],
-  ['customermanagement',['CustomerManagement',['../class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management.html',1,'HKSupply::Forms::Master']]],
-  ['customformat',['CustomFormat',['../class_custom_controls_1_1_nullable_date_time_picker.html#a1be4007c2054e1d58ee0c211aa2d4d12',1,'CustomControls::NullableDateTimePicker']]],
-  ['customtoolstripmenuitem',['CustomToolStripMenuItem',['../class_custom_controls_1_1_custom_tool_strip_menu_item.html',1,'CustomControls']]]
+  ['address2',['address2',['../class_h_k_supply_1_1_migrations_1_1address2.html',1,'HKSupply::Migrations']]],
+  ['addsockitem',['AddSockItem',['../class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks.html#a8d5d9d499ae9b864319d1abf46ac7705',1,'HKSupply::PRJ_Stocks::Classes::Stocks']]],
+  ['addstk',['AddStk',['../class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item.html#aaf3e2edf25336af385d1b82d05cf49df',1,'HKSupply::PRJ_Stocks::Classes::Stocks::Item']]],
+  ['auxdashboardqpstored',['AuxDashboardQPStored',['../class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored.html',1,'HKSupply::Forms::Supply::Dashboard']]],
+  ['auxdashboardqpstored2',['AuxDashboardQPStored2',['../class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored2.html',1,'HKSupply::Forms::Supply::Dashboard']]],
+  ['auxdashboardqpstoredprocedure',['AuxDashboardQPStoredProcedure',['../class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure.html',1,'HKSupply::Forms::Supply::Dashboard']]]
 ];

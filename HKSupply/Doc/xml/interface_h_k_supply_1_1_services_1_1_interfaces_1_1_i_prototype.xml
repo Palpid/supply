@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_prototype" kind="interface" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Interfaces::IPrototype</compoundname>
+    <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_prototype" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFPrototype</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_prototype_1acfd1c25ec6852cbdf490f2109d9c9b7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_prototype" kindref="compound">Prototype</ref> &gt;</type>
+        <definition>List&lt;Prototype&gt; HKSupply.Services.Interfaces.IPrototype.GetPrototypes</definition>
+        <argsstring>()</argsstring>
+        <name>GetPrototypes</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_prototype_1ae9995497534eb0595d1096998528c4e8">GetPrototypes</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IPrototype.cs" line="15" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_prototype_1ab24012da7fcdbdde66a56473be2160b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.IPrototype.AddPrototypeDoc</definition>
+        <argsstring>(PrototypeDoc doc)</argsstring>
+        <name>AddPrototypeDoc</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_prototype_1a39804a815f5e25167c05fb3fa0c6c18a">AddPrototypeDoc</reimplementedby>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_prototype_doc" kindref="compound">PrototypeDoc</ref></type>
+          <declname>doc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IPrototype.cs" line="16" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface para el servicio de Prototypes </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="822">
+        <label>HKSupply.Services.Interfaces.IPrototype</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_prototype"/>
+      </node>
+      <node id="823">
+        <label>HKSupply.Services.Implementations.EFPrototype</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_prototype"/>
+        <childnode refid="822" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="HKSupply/Services/Interfaces/IPrototype.cs" line="14" column="1" bodyfile="HKSupply/Services/Interfaces/IPrototype.cs" bodystart="13" bodyend="17"/>
+    <listofallmembers>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_prototype_1ab24012da7fcdbdde66a56473be2160b5" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IPrototype</scope><name>AddPrototypeDoc</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_prototype_1acfd1c25ec6852cbdf490f2109d9c9b7c" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IPrototype</scope><name>GetPrototypes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

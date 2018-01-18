@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_fdc7cc7522145e0bd69931f76b965deb" kind="dir">
+    <compoundname>HKSupply/PRJ_Stocks</compoundname>
+    <innerdir refid="dir_e7a72889619d313f995bcff483acd89a">HKSupply/PRJ_Stocks/Classes</innerdir>
+    <innerdir refid="dir_ce66a80421b8c664fdfd4ee040ed6e30">HKSupply/PRJ_Stocks/DB</innerdir>
+    <innerdir refid="dir_e4bb2e8f82383e75f6cfb617e1a22e7d">HKSupply/PRJ_Stocks/Forms</innerdir>
+    <innerdir refid="dir_5329ee340c4b018924ee96ef20fdeb42">HKSupply/PRJ_Stocks/Helpers</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/PRJ_Stocks/"/>
+  </compounddef>
+</doxygen>

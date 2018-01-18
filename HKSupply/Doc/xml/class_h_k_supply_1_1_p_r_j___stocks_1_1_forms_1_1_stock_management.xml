@@ -1,0 +1,1550 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::PRJ_Stocks::Forms::StockManagement</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a95e68cb833654b359bb1f41ea48c5b4f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks" kindref="compound">Stocks</ref></type>
+        <definition>Stocks HKSupply.PRJ_Stocks.Forms.StockManagement.gSTKAct</definition>
+        <argsstring></argsstring>
+        <name>gSTKAct</name>
+        <initializer>= new <ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks" kindref="compound">Stocks</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="27" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a09feae5dab7d26ce15b8909ad2c8ba56" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item" kindref="compound">Stocks.StockItem</ref></type>
+        <definition>Stocks.StockItem HKSupply.PRJ_Stocks.Forms.StockManagement.gSIAct</definition>
+        <argsstring></argsstring>
+        <name>gSIAct</name>
+        <initializer>= new <ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item" kindref="compound">Stocks.StockItem</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="28" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1aa05dbddaa59bb187919da004ba76fb4e" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_move" kindref="compound">Stocks.StockMove</ref> &gt;</type>
+        <definition>List&lt;Stocks.StockMove&gt; HKSupply.PRJ_Stocks.Forms.StockManagement.gDataImport</definition>
+        <argsstring></argsstring>
+        <name>gDataImport</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_move" kindref="compound">Stocks.StockMove</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="29" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a8cb09369e5393ec400c6182cd8780c06" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.PRJ_Stocks.Forms.StockManagement.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="8" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a7fdaaeeb57e6ec3300f90fa7533ea4f8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.PRJ_Stocks.Forms.StockManagement.GC_Stocks</definition>
+        <argsstring></argsstring>
+        <name>GC_Stocks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="728" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="728" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1aca80d2642c2ff826561aa12a7a491a5e" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.PRJ_Stocks.Forms.StockManagement.gridView1</definition>
+        <argsstring></argsstring>
+        <name>gridView1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="729" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="729" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ad60c8ee2225725df5120f815df154cb4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.PRJ_Stocks.Forms.StockManagement.label3</definition>
+        <argsstring></argsstring>
+        <name>label3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="730" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="730" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a0d2214f6be9c24f6a2de2c1cbf5bcca9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.PRJ_Stocks.Forms.StockManagement.label2</definition>
+        <argsstring></argsstring>
+        <name>label2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="731" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="731" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ad201e4728103dbb2bf2539dd5f6a636d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.PRJ_Stocks.Forms.StockManagement.txtWare</definition>
+        <argsstring></argsstring>
+        <name>txtWare</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="732" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="732" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a7fad73ed9fb3dbbb0184249fa3af5ce7" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.PRJ_Stocks.Forms.StockManagement.txtWareType</definition>
+        <argsstring></argsstring>
+        <name>txtWareType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="733" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="733" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ae10f282706b0ac69a8b2dc2aef44fd2e" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.PRJ_Stocks.Forms.StockManagement.txtItem</definition>
+        <argsstring></argsstring>
+        <name>txtItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="734" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="734" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a2a3dd5fb7ae2859b4ee8c8d4cb01a1b3" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.PRJ_Stocks.Forms.StockManagement.label5</definition>
+        <argsstring></argsstring>
+        <name>label5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="735" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="735" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a51a78bcd6e87c60957b436660a2351cb" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ComboBox</type>
+        <definition>System.Windows.Forms.ComboBox HKSupply.PRJ_Stocks.Forms.StockManagement.CB_Owner</definition>
+        <argsstring></argsstring>
+        <name>CB_Owner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="736" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="736" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a95e194a3e3336f9d88fae6376f583ac8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.PRJ_Stocks.Forms.StockManagement.txtFreeStk</definition>
+        <argsstring></argsstring>
+        <name>txtFreeStk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="737" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="737" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a6b3a687a165c1b41828566230cd5055c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.PRJ_Stocks.Forms.StockManagement.label7</definition>
+        <argsstring></argsstring>
+        <name>label7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="738" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="738" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1add9451cb97fd46330ab693e14a997306" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.PRJ_Stocks.Forms.StockManagement.label8</definition>
+        <argsstring></argsstring>
+        <name>label8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="739" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="739" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ac1f19102aee4fe47a3bbeb93aaa8cc88" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.PRJ_Stocks.Forms.StockManagement.label9</definition>
+        <argsstring></argsstring>
+        <name>label9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="740" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="740" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a06afb30ff04899965106b797086e77f2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.PRJ_Stocks.Forms.StockManagement.txtTotalStk</definition>
+        <argsstring></argsstring>
+        <name>txtTotalStk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="741" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="741" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a8d16910052a7256c9b18b937f9deabf9" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.PRJ_Stocks.Forms.StockManagement.txtAsgStk</definition>
+        <argsstring></argsstring>
+        <name>txtAsgStk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="742" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="742" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a80596ae13e615dafa4a2b6b23e3c9ea7" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.PRJ_Stocks.Forms.StockManagement.txtOnwStk</definition>
+        <argsstring></argsstring>
+        <name>txtOnwStk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="743" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="743" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1aecba5a361c62875a3413c02f1bb3581a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HKSupply.PRJ_Stocks.Forms.StockManagement.button2</definition>
+        <argsstring></argsstring>
+        <name>button2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="744" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="744" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1adba92bb45d558fca7969180d162e96c6" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ComboBox</type>
+        <definition>System.Windows.Forms.ComboBox HKSupply.PRJ_Stocks.Forms.StockManagement.CB_OwnDEST</definition>
+        <argsstring></argsstring>
+        <name>CB_OwnDEST</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="745" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="745" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1aff663638900e0aa178eaf0f0bd894adf" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.PRJ_Stocks.Forms.StockManagement.label11</definition>
+        <argsstring></argsstring>
+        <name>label11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="746" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="746" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1add669f323a67c08399d8cb8ff195b895" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.PRJ_Stocks.Forms.StockManagement.label12</definition>
+        <argsstring></argsstring>
+        <name>label12</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="747" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="747" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a400cd9e04a8e61b59a8ca3856380a45e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HKSupply.PRJ_Stocks.Forms.StockManagement.BtnMoveStk</definition>
+        <argsstring></argsstring>
+        <name>BtnMoveStk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="748" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="748" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a6266e64f952f67e095cc012781e4dd0d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ComboBox</type>
+        <definition>System.Windows.Forms.ComboBox HKSupply.PRJ_Stocks.Forms.StockManagement.CB_WareDEST</definition>
+        <argsstring></argsstring>
+        <name>CB_WareDEST</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="749" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="749" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1aa70cac592386cdb22fac0579b39287f9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HKSupply.PRJ_Stocks.Forms.StockManagement.BtnFreeOwner</definition>
+        <argsstring></argsstring>
+        <name>BtnFreeOwner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="750" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="750" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a14974ec83609afe9df96de931f92365c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox HKSupply.PRJ_Stocks.Forms.StockManagement.groupBox1</definition>
+        <argsstring></argsstring>
+        <name>groupBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="751" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="751" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a0abb34fd327a42733f31ee4031156497" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TabControl</type>
+        <definition>System.Windows.Forms.TabControl HKSupply.PRJ_Stocks.Forms.StockManagement.tabStk</definition>
+        <argsstring></argsstring>
+        <name>tabStk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="752" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="752" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ab0950defde02ec743c5c67c7b2abee69" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TabPage</type>
+        <definition>System.Windows.Forms.TabPage HKSupply.PRJ_Stocks.Forms.StockManagement.tabPage1</definition>
+        <argsstring></argsstring>
+        <name>tabPage1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="753" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="753" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a0d4813a9ec623ccf5cc89e2d38c583e5" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TabPage</type>
+        <definition>System.Windows.Forms.TabPage HKSupply.PRJ_Stocks.Forms.StockManagement.tabPage2</definition>
+        <argsstring></argsstring>
+        <name>tabPage2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="754" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="754" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1add174d9d4662c481e7106a958f9800b8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.PRJ_Stocks.Forms.StockManagement.GC_Movs</definition>
+        <argsstring></argsstring>
+        <name>GC_Movs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="755" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="755" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a665ecc49c3592439c30885fb11974ddf" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.PRJ_Stocks.Forms.StockManagement.gridView2</definition>
+        <argsstring></argsstring>
+        <name>gridView2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="756" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="756" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a74e0f84843bfd69564325a2a07e7fc88" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HKSupply.PRJ_Stocks.Forms.StockManagement.BtnSave</definition>
+        <argsstring></argsstring>
+        <name>BtnSave</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="757" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="757" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a3bdfdddfbcf3252dcc4def0af0c9a686" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HKSupply.PRJ_Stocks.Forms.StockManagement.BtnAdjustFree</definition>
+        <argsstring></argsstring>
+        <name>BtnAdjustFree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="758" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="758" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a312689126d4f7a4da84c0fb14704af3b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HKSupply.PRJ_Stocks.Forms.StockManagement.BtnImportExcel</definition>
+        <argsstring></argsstring>
+        <name>BtnImportExcel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="759" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="759" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a01a2c3ca3070a3ce39d07ea16fe2459a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TabPage</type>
+        <definition>System.Windows.Forms.TabPage HKSupply.PRJ_Stocks.Forms.StockManagement.tabPage3</definition>
+        <argsstring></argsstring>
+        <name>tabPage3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="760" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="760" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a1e94bddf5d620b8bd48aad1971f30a6a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.PRJ_Stocks.Forms.StockManagement.GC_ImportExcel</definition>
+        <argsstring></argsstring>
+        <name>GC_ImportExcel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="761" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="761" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a82fb514a44ec51168996ccaf6d30d570" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.PRJ_Stocks.Forms.StockManagement.gridView3</definition>
+        <argsstring></argsstring>
+        <name>gridView3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="762" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="762" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ab74ee63e3c659873dce59a0e0b8a4653" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HKSupply.PRJ_Stocks.Forms.StockManagement.BtnExecuteImport</definition>
+        <argsstring></argsstring>
+        <name>BtnExecuteImport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="763" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="763" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a8132d5cc9304b63de1c8b660b5992d73" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HKSupply.PRJ_Stocks.Forms.StockManagement.btnCerateXLTemplate</definition>
+        <argsstring></argsstring>
+        <name>btnCerateXLTemplate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="764" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="764" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a81580b60a16e0e7c5070ed2546781fb7" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HKSupply.PRJ_Stocks.Forms.StockManagement.btnAssignLot</definition>
+        <argsstring></argsstring>
+        <name>btnAssignLot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="765" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="765" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1aa4434f2a14b3a768de417d020e6cd75f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HKSupply.PRJ_Stocks.Forms.StockManagement.btnAssignOwner</definition>
+        <argsstring></argsstring>
+        <name>btnAssignOwner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="766" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="766" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a3bb3e2cc8708596eae55c56fc42b70f8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.PRJ_Stocks.Forms.StockManagement.label6</definition>
+        <argsstring></argsstring>
+        <name>label6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="767" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="767" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ac07aeb3c38b07663cf99a3f47dfd8a33" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.PRJ_Stocks.Forms.StockManagement.txtQttAssignLot</definition>
+        <argsstring></argsstring>
+        <name>txtQttAssignLot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="768" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="768" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a5d79bc36d2a18de6aedd3e28428dab16" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.PRJ_Stocks.Forms.StockManagement.txtQttAssignOwn</definition>
+        <argsstring></argsstring>
+        <name>txtQttAssignOwn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="769" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="769" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a1f7b9f46eb0ef9b0c3b9954696dc9665" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.PRJ_Stocks.Forms.StockManagement.label10</definition>
+        <argsstring></argsstring>
+        <name>label10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="770" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="770" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a49b50b4a3d349a9cbf024dc0b1f2064c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.PRJ_Stocks.Forms.StockManagement.label4</definition>
+        <argsstring></argsstring>
+        <name>label4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="771" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="771" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a0487781b5202461f355e09046ce654bc" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HKSupply.PRJ_Stocks.Forms.StockManagement.BtnFreeLot</definition>
+        <argsstring></argsstring>
+        <name>BtnFreeLot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="772" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="772" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a87cc42cbc9a1f399b5dd4ede9b60988b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.PRJ_Stocks.Forms.StockManagement.txtLotStk</definition>
+        <argsstring></argsstring>
+        <name>txtLotStk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="773" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="773" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a8be971f8a664f25c9d89adff0d7be7b0" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.PRJ_Stocks.Forms.StockManagement.txtAsgLot</definition>
+        <argsstring></argsstring>
+        <name>txtAsgLot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="774" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="774" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a3c91ec907e4c82f8c6415ba7da81dbab" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.PRJ_Stocks.Forms.StockManagement.txtFreeLot</definition>
+        <argsstring></argsstring>
+        <name>txtFreeLot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="775" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="775" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1abe9a0723e6a8c6ba19897a8009874d67" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ComboBox</type>
+        <definition>System.Windows.Forms.ComboBox HKSupply.PRJ_Stocks.Forms.StockManagement.CB_Lots</definition>
+        <argsstring></argsstring>
+        <name>CB_Lots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="776" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="776" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a4befb15ab1711d7e5a54516e7f38174b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HKSupply.PRJ_Stocks.Forms.StockManagement.label1</definition>
+        <argsstring></argsstring>
+        <name>label1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="777" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="777" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a8d6df1fda42d04d79090f7d17958723f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.PRJ_Stocks.Forms.StockManagement.txtAdjustFreeStk</definition>
+        <argsstring></argsstring>
+        <name>txtAdjustFreeStk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="778" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="778" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a0da50ef4777e8173af3bb50a08eb6992" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.PRJ_Stocks.Forms.StockManagement.txtIAsgnLot</definition>
+        <argsstring></argsstring>
+        <name>txtIAsgnLot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="779" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="779" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a2a8841bccb3e2428dca6b7306e71af56" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HKSupply.PRJ_Stocks.Forms.StockManagement.textBox1</definition>
+        <argsstring></argsstring>
+        <name>textBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="780" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="780" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a3218c49acd0c35bb8b4c177fdf71ab09" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.PRJ_Stocks.Forms.StockManagement.txtQttMov</definition>
+        <argsstring></argsstring>
+        <name>txtQttMov</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="781" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="781" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a681127b2a62a79b69559ec5144dfd9b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.PRJ_Stocks.Forms.StockManagement.StockManagement</definition>
+        <argsstring>()</argsstring>
+        <name>StockManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="31" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="31" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a7c3edcf18f52def92b1f2e6857ae694a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.StockManagement_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>StockManagement_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="38" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="38" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1af1e58eb007c9d6257574ad9509b23778" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.FormatejaGridStk</definition>
+        <argsstring>(DevExpress.XtraGrid.GridControl GC)</argsstring>
+        <name>FormatejaGridStk</name>
+        <param>
+          <type>DevExpress.XtraGrid.GridControl</type>
+          <declname>GC</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="86" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="86" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1aa092e50566bc06f20abd7aa3619ce8f4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.FormatejaGridMovs</definition>
+        <argsstring>(DevExpress.XtraGrid.GridControl GC)</argsstring>
+        <name>FormatejaGridMovs</name>
+        <param>
+          <type>DevExpress.XtraGrid.GridControl</type>
+          <declname>GC</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="198" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="198" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ab8e027a6a283940dab550122a8e98f21" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.FormatejaGridLots</definition>
+        <argsstring>(DevExpress.XtraGrid.GridControl GC)</argsstring>
+        <name>FormatejaGridLots</name>
+        <param>
+          <type>DevExpress.XtraGrid.GridControl</type>
+          <declname>GC</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="342" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="342" bodyend="401"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1af7b7fac457e9a16ca1f7dc51fa6ed90a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.FormatejaGridMovsLots</definition>
+        <argsstring>(DevExpress.XtraGrid.GridControl GC)</argsstring>
+        <name>FormatejaGridMovsLots</name>
+        <param>
+          <type>DevExpress.XtraGrid.GridControl</type>
+          <declname>GC</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="403" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="403" bodyend="516"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a13b0aae1c8448b096f77bc0a6592c0d2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.FormatejaGridMovsImport</definition>
+        <argsstring>(DevExpress.XtraGrid.GridControl GC)</argsstring>
+        <name>FormatejaGridMovsImport</name>
+        <param>
+          <type>DevExpress.XtraGrid.GridControl</type>
+          <declname>GC</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="518" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="518" bodyend="623"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a815bfadf9e6afc47454349c3107a3577" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.GC_Stocks_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>GC_Stocks_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="626" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="626" bodyend="640"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a94c11b0c927bfaff8a5e8f93fc3dac7c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.UpdateCombo</definition>
+        <argsstring>(ComboBox CB, List&lt; string &gt; LstItems)</argsstring>
+        <name>UpdateCombo</name>
+        <param>
+          <type>ComboBox</type>
+          <declname>CB</declname>
+        </param>
+        <param>
+          <type>List&lt; string &gt;</type>
+          <declname>LstItems</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="642" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="642" bodyend="665"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a9fec0a42a3dfe8f6e6394b0dd6abcea6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.ActulitzaPanel</definition>
+        <argsstring>(Stocks.StockItem SI)</argsstring>
+        <name>ActulitzaPanel</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_stock_item" kindref="compound">Stocks.StockItem</ref></type>
+          <declname>SI</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="667" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="667" bodyend="706"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1afcd40e616184bcf86e88d136c71b4045" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.BtnFreeOwner_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BtnFreeOwner_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="708" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="708" bodyend="733"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a856b0111198ee9c18b5a31b32d5a188a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.CB_Owner_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>CB_Owner_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="735" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="735" bodyend="742"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ae90955abc46b994adbf570ba48e00e6c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.CB_OwnDEST_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>CB_OwnDEST_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="745" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="745" bodyend="749"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ae2365b8d84e406ea4c251b6a183fb95e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.CB_WareDEST_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>CB_WareDEST_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="752" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="752" bodyend="755"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a172c32cdd2e881c82d51bd0bbfe53524" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.BtnMoveStk_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BtnMoveStk_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="757" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="757" bodyend="800"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a0d64703b881aee186d550512d2cc0e36" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.BtnSave_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BtnSave_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="802" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="802" bodyend="825"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a95a6e6047d5c37deadc02665a2877baa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.BtnClearOwner_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BtnClearOwner_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="827" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="827" bodyend="831"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a19f7d745029f6391ab133ddfe6c7c561" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.BtnAdjustOwner_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BtnAdjustOwner_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="833" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="833" bodyend="856"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1aaea8dd6f4b976b2a41ee10b324abdb58" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.BtnImportExcel_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BtnImportExcel_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="858" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="858" bodyend="931"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a3ebd9a0765d0edc7387a4dc6159b9673" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.btnCerateXLTemplate_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnCerateXLTemplate_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="934" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="934" bodyend="951"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a305570c8acd696379353b55ba2b24d37" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.BtnExecuteImport_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BtnExecuteImport_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="953" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="953" bodyend="968"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a53cf3d340a8af0fc5d12d5acf6322f30" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.btnAssignOwner_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnAssignOwner_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="970" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="970" bodyend="993"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ac21d5c19e16141e5f87e509bf0f952be" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.txtIAsgnLot_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>txtIAsgnLot_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="995" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="995" bodyend="1001"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a178119ed034474fb71f303ecce7d4b2b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.btnAssignLot_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>btnAssignLot_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="1003" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="1003" bodyend="1019"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1aebee0edb24512c7b53970c26b1fbb0ab" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.txtQttAssignLot_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>txtQttAssignLot_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="1021" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="1021" bodyend="1026"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a60b2053fbdb49e0364663790e4c0985b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.BtnFreeLot_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BtnFreeLot_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="1029" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="1029" bodyend="1054"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1aa92e2720ca5613e41428719773b93d3b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.txtAdjustFreeStk_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>txtAdjustFreeStk_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="1056" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="1056" bodyend="1061"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a57c43b541a8aee7a52c72064cbe17e89" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.txtQttMov_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>txtQttMov_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="1063" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="1063" bodyend="1068"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a67645cabc86d6a7fa26cd11937391f53" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.CB_Lots_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>CB_Lots_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="1070" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="1070" bodyend="1077"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a12d5bac67c556163386c92c99edcfa38" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.txtLotStk_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>txtLotStk_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="1079" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="1079" bodyend="1084"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ae46bc6001c7e545d128d0207f3c75ad8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.txtQttAssignOwn_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>txtQttAssignOwn_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="1086" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="1086" bodyend="1091"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1afc3645500a3415ab72c6fbd29eebab5f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.PRJ_Stocks.Forms.StockManagement.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="29" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="29" bodyend="725"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a1932bec07ffecc0d95fa8ef402b66166" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.PRJ_Stocks.Forms.StockManagement.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" line="14" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1557">
+        <label>Form</label>
+      </node>
+      <node id="1556">
+        <label>HKSupply.PRJ_Stocks.Forms.StockManagement</label>
+        <link refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management"/>
+        <childnode refid="1557" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1559">
+        <label>Form</label>
+      </node>
+      <node id="1558">
+        <label>HKSupply.PRJ_Stocks.Forms.StockManagement</label>
+        <link refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management"/>
+        <childnode refid="1559" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" line="25" column="1" bodyfile="HKSupply/PRJ_Stocks/Forms/StockManagement.cs" bodystart="24" bodyend="1092"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a9fec0a42a3dfe8f6e6394b0dd6abcea6" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>ActulitzaPanel</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a3bdfdddfbcf3252dcc4def0af0c9a686" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>BtnAdjustFree</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a19f7d745029f6391ab133ddfe6c7c561" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>BtnAdjustOwner_Click</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a81580b60a16e0e7c5070ed2546781fb7" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>btnAssignLot</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a178119ed034474fb71f303ecce7d4b2b" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>btnAssignLot_Click</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1aa4434f2a14b3a768de417d020e6cd75f" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>btnAssignOwner</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a53cf3d340a8af0fc5d12d5acf6322f30" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>btnAssignOwner_Click</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a8132d5cc9304b63de1c8b660b5992d73" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>btnCerateXLTemplate</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a3ebd9a0765d0edc7387a4dc6159b9673" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>btnCerateXLTemplate_Click</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a95a6e6047d5c37deadc02665a2877baa" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>BtnClearOwner_Click</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ab74ee63e3c659873dce59a0e0b8a4653" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>BtnExecuteImport</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a305570c8acd696379353b55ba2b24d37" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>BtnExecuteImport_Click</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a0487781b5202461f355e09046ce654bc" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>BtnFreeLot</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a60b2053fbdb49e0364663790e4c0985b" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>BtnFreeLot_Click</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1aa70cac592386cdb22fac0579b39287f9" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>BtnFreeOwner</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1afcd40e616184bcf86e88d136c71b4045" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>BtnFreeOwner_Click</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a312689126d4f7a4da84c0fb14704af3b" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>BtnImportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1aaea8dd6f4b976b2a41ee10b324abdb58" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>BtnImportExcel_Click</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a400cd9e04a8e61b59a8ca3856380a45e" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>BtnMoveStk</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a172c32cdd2e881c82d51bd0bbfe53524" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>BtnMoveStk_Click</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a74e0f84843bfd69564325a2a07e7fc88" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>BtnSave</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a0d64703b881aee186d550512d2cc0e36" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>BtnSave_Click</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1aecba5a361c62875a3413c02f1bb3581a" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>button2</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1abe9a0723e6a8c6ba19897a8009874d67" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>CB_Lots</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a67645cabc86d6a7fa26cd11937391f53" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>CB_Lots_SelectedIndexChanged</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1adba92bb45d558fca7969180d162e96c6" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>CB_OwnDEST</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ae90955abc46b994adbf570ba48e00e6c" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>CB_OwnDEST_SelectedIndexChanged</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a51a78bcd6e87c60957b436660a2351cb" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>CB_Owner</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a856b0111198ee9c18b5a31b32d5a188a" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>CB_Owner_SelectedIndexChanged</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a6266e64f952f67e095cc012781e4dd0d" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>CB_WareDEST</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ae2365b8d84e406ea4c251b6a183fb95e" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>CB_WareDEST_SelectedIndexChanged</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a8cb09369e5393ec400c6182cd8780c06" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a1932bec07ffecc0d95fa8ef402b66166" prot="protected" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ab8e027a6a283940dab550122a8e98f21" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>FormatejaGridLots</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1aa092e50566bc06f20abd7aa3619ce8f4" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>FormatejaGridMovs</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a13b0aae1c8448b096f77bc0a6592c0d2" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>FormatejaGridMovsImport</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1af7b7fac457e9a16ca1f7dc51fa6ed90a" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>FormatejaGridMovsLots</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1af1e58eb007c9d6257574ad9509b23778" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>FormatejaGridStk</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a1e94bddf5d620b8bd48aad1971f30a6a" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>GC_ImportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1add174d9d4662c481e7106a958f9800b8" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>GC_Movs</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a7fdaaeeb57e6ec3300f90fa7533ea4f8" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>GC_Stocks</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a815bfadf9e6afc47454349c3107a3577" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>GC_Stocks_Click</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1aa05dbddaa59bb187919da004ba76fb4e" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>gDataImport</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1aca80d2642c2ff826561aa12a7a491a5e" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>gridView1</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a665ecc49c3592439c30885fb11974ddf" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>gridView2</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a82fb514a44ec51168996ccaf6d30d570" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>gridView3</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a14974ec83609afe9df96de931f92365c" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>groupBox1</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a09feae5dab7d26ce15b8909ad2c8ba56" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>gSIAct</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a95e68cb833654b359bb1f41ea48c5b4f" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>gSTKAct</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1afc3645500a3415ab72c6fbd29eebab5f" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a4befb15ab1711d7e5a54516e7f38174b" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>label1</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a1f7b9f46eb0ef9b0c3b9954696dc9665" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>label10</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1aff663638900e0aa178eaf0f0bd894adf" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>label11</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1add669f323a67c08399d8cb8ff195b895" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>label12</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a0d2214f6be9c24f6a2de2c1cbf5bcca9" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>label2</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ad60c8ee2225725df5120f815df154cb4" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>label3</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a49b50b4a3d349a9cbf024dc0b1f2064c" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>label4</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a2a3dd5fb7ae2859b4ee8c8d4cb01a1b3" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>label5</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a3bb3e2cc8708596eae55c56fc42b70f8" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>label6</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a6b3a687a165c1b41828566230cd5055c" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>label7</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1add9451cb97fd46330ab693e14a997306" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>label8</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ac1f19102aee4fe47a3bbeb93aaa8cc88" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>label9</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a681127b2a62a79b69559ec5144dfd9b0" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>StockManagement</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a7c3edcf18f52def92b1f2e6857ae694a" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>StockManagement_Load</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ab0950defde02ec743c5c67c7b2abee69" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>tabPage1</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a0d4813a9ec623ccf5cc89e2d38c583e5" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>tabPage2</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a01a2c3ca3070a3ce39d07ea16fe2459a" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>tabPage3</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a0abb34fd327a42733f31ee4031156497" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>tabStk</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a2a8841bccb3e2428dca6b7306e71af56" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>textBox1</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a8d6df1fda42d04d79090f7d17958723f" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtAdjustFreeStk</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1aa92e2720ca5613e41428719773b93d3b" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtAdjustFreeStk_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a8be971f8a664f25c9d89adff0d7be7b0" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtAsgLot</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a8d16910052a7256c9b18b937f9deabf9" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtAsgStk</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a3c91ec907e4c82f8c6415ba7da81dbab" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtFreeLot</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a95e194a3e3336f9d88fae6376f583ac8" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtFreeStk</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a0da50ef4777e8173af3bb50a08eb6992" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtIAsgnLot</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ac21d5c19e16141e5f87e509bf0f952be" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtIAsgnLot_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ae10f282706b0ac69a8b2dc2aef44fd2e" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtItem</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a87cc42cbc9a1f399b5dd4ede9b60988b" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtLotStk</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a12d5bac67c556163386c92c99edcfa38" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtLotStk_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a80596ae13e615dafa4a2b6b23e3c9ea7" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtOnwStk</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ac07aeb3c38b07663cf99a3f47dfd8a33" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtQttAssignLot</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1aebee0edb24512c7b53970c26b1fbb0ab" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtQttAssignLot_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a5d79bc36d2a18de6aedd3e28428dab16" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtQttAssignOwn</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ae46bc6001c7e545d128d0207f3c75ad8" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtQttAssignOwn_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a3218c49acd0c35bb8b4c177fdf71ab09" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtQttMov</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a57c43b541a8aee7a52c72064cbe17e89" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtQttMov_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a06afb30ff04899965106b797086e77f2" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtTotalStk</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1ad201e4728103dbb2bf2539dd5f6a636d" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtWare</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a7fad73ed9fb3dbbb0184249fa3af5ce7" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>txtWareType</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_forms_1_1_stock_management_1a94c11b0c927bfaff8a5e8f93fc3dac7c" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Forms::StockManagement</scope><name>UpdateCombo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

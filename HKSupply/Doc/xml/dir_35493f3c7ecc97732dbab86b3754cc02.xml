@@ -1,18 +1,70 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="dir_35493f3c7ecc97732dbab86b3754cc02" kind="dir">
     <compoundname>HKSupply/Models</compoundname>
+    <innerdir refid="dir_cd7e229c1075ad00fcf3378b2252435a">HKSupply/Models/Supply</innerdir>
+    <innerfile refid="_bom_breakdown_8cs">BomBreakdown.cs</innerfile>
+    <innerfile refid="_currency_8cs">Currency.cs</innerfile>
     <innerfile refid="_customer_8cs">Customer.cs</innerfile>
     <innerfile refid="_customer_history_8cs">CustomerHistory.cs</innerfile>
+    <innerfile refid="_customer_price_list_8cs">CustomerPriceList.cs</innerfile>
+    <innerfile refid="_customer_price_list_history_8cs">CustomerPriceListHistory.cs</innerfile>
+    <innerfile refid="_delivery_terms_8cs">DeliveryTerms.cs</innerfile>
+    <innerfile refid="_detail_bom_hf_8cs">DetailBomHf.cs</innerfile>
+    <innerfile refid="_detail_bom_hf_history_8cs">DetailBomHfHistory.cs</innerfile>
+    <innerfile refid="_detail_bom_hw_8cs">DetailBomHw.cs</innerfile>
+    <innerfile refid="_detail_bom_hw_history_8cs">DetailBomHwHistory.cs</innerfile>
+    <innerfile refid="_detail_bom_mt_8cs">DetailBomMt.cs</innerfile>
+    <innerfile refid="_detail_bom_mt_history_8cs">DetailBomMtHistory.cs</innerfile>
+    <innerfile refid="_doc_type_8cs">DocType.cs</innerfile>
+    <innerfile refid="_etn_color_8cs">EtnColor.cs</innerfile>
+    <innerfile refid="_exchange_rate_8cs">ExchangeRate.cs</innerfile>
+    <innerfile refid="_family_h_k_8cs">FamilyHK.cs</innerfile>
     <innerfile refid="_functionality_8cs">Functionality.cs</innerfile>
+    <innerfile refid="_functionality_report_8cs">FunctionalityReport.cs</innerfile>
     <innerfile refid="_functionality_role_8cs">FunctionalityRole.cs</innerfile>
-    <innerfile refid="_item_8cs">Item.cs</innerfile>
-    <innerfile refid="_item_history_8cs">ItemHistory.cs</innerfile>
+    <innerfile refid="_hw_type_l1_8cs">HwTypeL1.cs</innerfile>
+    <innerfile refid="_hw_type_l2_8cs">HwTypeL2.cs</innerfile>
+    <innerfile refid="_hw_type_l3_8cs">HwTypeL3.cs</innerfile>
+    <innerfile refid="_incoterm_8cs">Incoterm.cs</innerfile>
+    <innerfile refid="_item_bcn_8cs">ItemBcn.cs</innerfile>
+    <innerfile refid="_item_bom_8cs">ItemBom.cs</innerfile>
+    <innerfile refid="_item_doc_8cs">ItemDoc.cs</innerfile>
+    <innerfile refid="_item_ey_8cs">ItemEy.cs</innerfile>
+    <innerfile refid="_item_ey_history_8cs">ItemEyHistory.cs</innerfile>
+    <innerfile refid="_item_group_8cs">ItemGroup.cs</innerfile>
+    <innerfile refid="_item_h_f_8cs">ItemHF.cs</innerfile>
+    <innerfile refid="_item_hf_history_8cs">ItemHfHistory.cs</innerfile>
+    <innerfile refid="_item_hw_8cs">ItemHw.cs</innerfile>
+    <innerfile refid="_item_hw_history_8cs">ItemHwHistory.cs</innerfile>
+    <innerfile refid="_item_mt_8cs">ItemMt.cs</innerfile>
+    <innerfile refid="_item_mt_history_8cs">ItemMtHistory.cs</innerfile>
+    <innerfile refid="_item_type_8cs">ItemType.cs</innerfile>
+    <innerfile refid="_layout_8cs">Layout.cs</innerfile>
+    <innerfile refid="_material_l1_8cs">MaterialL1.cs</innerfile>
+    <innerfile refid="_material_l2_8cs">MaterialL2.cs</innerfile>
+    <innerfile refid="_material_l3_8cs">MaterialL3.cs</innerfile>
+    <innerfile refid="_mat_type_l1_8cs">MatTypeL1.cs</innerfile>
+    <innerfile refid="_mat_type_l2_8cs">MatTypeL2.cs</innerfile>
+    <innerfile refid="_mat_type_l3_8cs">MatTypeL3.cs</innerfile>
+    <innerfile refid="_model_8cs">Model.cs</innerfile>
+    <innerfile refid="_my_company_8cs">MyCompany.cs</innerfile>
+    <innerfile refid="_payment_terms_8cs">PaymentTerms.cs</innerfile>
+    <innerfile refid="_prototype_8cs">Prototype.cs</innerfile>
+    <innerfile refid="_prototype_doc_8cs">PrototypeDoc.cs</innerfile>
     <innerfile refid="_role_8cs">Role.cs</innerfile>
+    <innerfile refid="_status_cial_8cs">StatusCial.cs</innerfile>
+    <innerfile refid="_status_h_k_8cs">StatusHK.cs</innerfile>
+    <innerfile refid="_status_prototype_8cs">StatusPrototype.cs</innerfile>
     <innerfile refid="_store_8cs">Store.cs</innerfile>
     <innerfile refid="_supplier_8cs">Supplier.cs</innerfile>
+    <innerfile refid="_supplier_factory_coeff_8cs">SupplierFactoryCoeff.cs</innerfile>
     <innerfile refid="_supplier_history_8cs">SupplierHistory.cs</innerfile>
+    <innerfile refid="_supplier_price_list_8cs">SupplierPriceList.cs</innerfile>
+    <innerfile refid="_supplier_price_list_history_8cs">SupplierPriceListHistory.cs</innerfile>
+    <innerfile refid="_unit_8cs">Unit.cs</innerfile>
     <innerfile refid="_user_8cs">User.cs</innerfile>
+    <innerfile refid="_user_attr_description_8cs">UserAttrDescription.cs</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

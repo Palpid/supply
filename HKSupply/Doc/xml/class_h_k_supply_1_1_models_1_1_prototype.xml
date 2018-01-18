@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_prototype" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::Prototype</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_prototype_1aaac25ed1f8014547259e95d4dc00ae1c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Prototype.IdPrototype</definition>
+        <argsstring></argsstring>
+        <name>IdPrototype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Prototype.cs" line="17" column="1" bodyfile="HKSupply/Models/Prototype.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_prototype_1a451e905cb4f84c9297e2c56b09c330c5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Prototype.PrototypeName</definition>
+        <argsstring></argsstring>
+        <name>PrototypeName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Prototype.cs" line="19" column="1" bodyfile="HKSupply/Models/Prototype.cs" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_prototype_1a9af235544df7c18bc997a3c82cf624a3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Prototype.PrototypeDescription</definition>
+        <argsstring></argsstring>
+        <name>PrototypeDescription</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Prototype.cs" line="21" column="1" bodyfile="HKSupply/Models/Prototype.cs" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_prototype_1aac883fb837937dbd7346b2a2bb2a4b3e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.Prototype.PrototypeStatus</definition>
+        <argsstring></argsstring>
+        <name>PrototypeStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Prototype.cs" line="23" column="1" bodyfile="HKSupply/Models/Prototype.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_prototype_1a63897a889137dd45ea39a986673ffa1d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>String</type>
+        <definition>String HKSupply.Models.Prototype.IdDefaultSupplier</definition>
+        <argsstring></argsstring>
+        <name>IdDefaultSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Prototype.cs" line="26" column="1" bodyfile="HKSupply/Models/Prototype.cs" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_prototype_1ace972a508e54f826bea558a016e676d1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supplier" kindref="compound">Supplier</ref></type>
+        <definition>Supplier HKSupply.Models.Prototype.DefaultSupplier</definition>
+        <argsstring></argsstring>
+        <name>DefaultSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Prototype.cs" line="28" column="1" bodyfile="HKSupply/Models/Prototype.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_prototype_1ac30e128f76b82cf92570234690b8260e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.Prototype.Caliber</definition>
+        <argsstring></argsstring>
+        <name>Caliber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Prototype.cs" line="31" column="1" bodyfile="HKSupply/Models/Prototype.cs" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_prototype_1ac9b2874af48c4e253f3ac8d61a5d8858" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime HKSupply.Models.Prototype.LaunchDate</definition>
+        <argsstring></argsstring>
+        <name>LaunchDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Prototype.cs" line="34" column="1" bodyfile="HKSupply/Models/Prototype.cs" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_prototype_1a2b7eb7aac1ef312d0282085dc6039d5b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Models.Prototype.Active</definition>
+        <argsstring></argsstring>
+        <name>Active</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Prototype.cs" line="37" column="1" bodyfile="HKSupply/Models/Prototype.cs" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_prototype_1a8ca999b1ba2ff4975ccfd3bfc5faf470" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime HKSupply.Models.Prototype.CreateDate</definition>
+        <argsstring></argsstring>
+        <name>CreateDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Prototype.cs" line="40" column="1" bodyfile="HKSupply/Models/Prototype.cs" bodystart="40" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_prototype_1ac83e059c81033516bf1b7173c73a2947" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.Prototype.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Prototype.cs" line="43" column="1" bodyfile="HKSupply/Models/Prototype.cs" bodystart="43" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_prototype_1a6e4439839a55764c2eadc7ea2304186d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.Prototype.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Prototype.cs" line="64" column="1" bodyfile="HKSupply/Models/Prototype.cs" bodystart="64" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/Prototype.cs" line="15" column="1" bodyfile="HKSupply/Models/Prototype.cs" bodystart="14" bodyend="80"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_prototype_1a2b7eb7aac1ef312d0282085dc6039d5b" prot="public" virt="non-virtual"><scope>HKSupply::Models::Prototype</scope><name>Active</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_prototype_1ac30e128f76b82cf92570234690b8260e" prot="public" virt="non-virtual"><scope>HKSupply::Models::Prototype</scope><name>Caliber</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_prototype_1a8ca999b1ba2ff4975ccfd3bfc5faf470" prot="public" virt="non-virtual"><scope>HKSupply::Models::Prototype</scope><name>CreateDate</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_prototype_1ace972a508e54f826bea558a016e676d1" prot="public" virt="non-virtual"><scope>HKSupply::Models::Prototype</scope><name>DefaultSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_prototype_1ac83e059c81033516bf1b7173c73a2947" prot="public" virt="non-virtual"><scope>HKSupply::Models::Prototype</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_prototype_1a6e4439839a55764c2eadc7ea2304186d" prot="public" virt="non-virtual"><scope>HKSupply::Models::Prototype</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_prototype_1a63897a889137dd45ea39a986673ffa1d" prot="public" virt="non-virtual"><scope>HKSupply::Models::Prototype</scope><name>IdDefaultSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_prototype_1aaac25ed1f8014547259e95d4dc00ae1c" prot="public" virt="non-virtual"><scope>HKSupply::Models::Prototype</scope><name>IdPrototype</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_prototype_1ac9b2874af48c4e253f3ac8d61a5d8858" prot="public" virt="non-virtual"><scope>HKSupply::Models::Prototype</scope><name>LaunchDate</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_prototype_1a9af235544df7c18bc997a3c82cf624a3" prot="public" virt="non-virtual"><scope>HKSupply::Models::Prototype</scope><name>PrototypeDescription</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_prototype_1a451e905cb4f84c9297e2c56b09c330c5" prot="public" virt="non-virtual"><scope>HKSupply::Models::Prototype</scope><name>PrototypeName</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_prototype_1aac883fb837937dbd7346b2a2bb2a4b3e" prot="public" virt="non-virtual"><scope>HKSupply::Models::Prototype</scope><name>PrototypeStatus</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

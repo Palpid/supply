@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_payment_terms" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::PaymentTerms</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_payment_terms_1ac8538b2245e189a57b206e205d9d27c8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.PaymentTerms.IdPaymentTerms</definition>
+        <argsstring></argsstring>
+        <name>IdPaymentTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/PaymentTerms.cs" line="16" column="1" bodyfile="HKSupply/Models/PaymentTerms.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_payment_terms_1a43198b6d614f87a52890630d22f9ee20" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.PaymentTerms.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/PaymentTerms.cs" line="18" column="1" bodyfile="HKSupply/Models/PaymentTerms.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_payment_terms_1a503d35f8f8a8d2853ce141714a463fda" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.PaymentTerms.DescriptionZh</definition>
+        <argsstring></argsstring>
+        <name>DescriptionZh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/PaymentTerms.cs" line="20" column="1" bodyfile="HKSupply/Models/PaymentTerms.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_payment_terms_1a6a4a6c14601b1191183297299a34d2b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.PaymentTerms.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/PaymentTerms.cs" line="22" column="1" bodyfile="HKSupply/Models/PaymentTerms.cs" bodystart="22" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_payment_terms_1a356d38d5706d1d603c49108fda2bc25c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.PaymentTerms.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/PaymentTerms.cs" line="33" column="1" bodyfile="HKSupply/Models/PaymentTerms.cs" bodystart="33" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/PaymentTerms.cs" line="14" column="1" bodyfile="HKSupply/Models/PaymentTerms.cs" bodystart="13" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_payment_terms_1a43198b6d614f87a52890630d22f9ee20" prot="public" virt="non-virtual"><scope>HKSupply::Models::PaymentTerms</scope><name>Description</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_payment_terms_1a503d35f8f8a8d2853ce141714a463fda" prot="public" virt="non-virtual"><scope>HKSupply::Models::PaymentTerms</scope><name>DescriptionZh</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_payment_terms_1a6a4a6c14601b1191183297299a34d2b7" prot="public" virt="non-virtual"><scope>HKSupply::Models::PaymentTerms</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_payment_terms_1a356d38d5706d1d603c49108fda2bc25c" prot="public" virt="non-virtual"><scope>HKSupply::Models::PaymentTerms</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_payment_terms_1ac8538b2245e189a57b206e205d9d27c8" prot="public" virt="non-virtual"><scope>HKSupply::Models::PaymentTerms</scope><name>IdPaymentTerms</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

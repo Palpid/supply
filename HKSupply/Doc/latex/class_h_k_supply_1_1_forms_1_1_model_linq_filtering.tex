@@ -8,9 +8,9 @@ Clase que representa una filtro dynámico de linq sobre una propiedad de un mode
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-string \hyperlink{class_h_k_supply_1_1_forms_1_1_model_linq_filtering_acae6326ecf09c74070e6d5155c7eb067}{Get\+Linq\+Filter\+String} ()
+string \mbox{\hyperlink{class_h_k_supply_1_1_forms_1_1_model_linq_filtering_acae6326ecf09c74070e6d5155c7eb067}{Get\+Linq\+Filter\+String}} ()
 \begin{DoxyCompactList}\small\item\em Obtener el string del where de linq \end{DoxyCompactList}\item 
-bool \hyperlink{class_h_k_supply_1_1_forms_1_1_model_linq_filtering_a66694e21272523c30da7198388f59b0f}{Is\+Valid\+Data} ()
+bool \mbox{\hyperlink{class_h_k_supply_1_1_forms_1_1_model_linq_filtering_a66694e21272523c30da7198388f59b0f}{Is\+Valid\+Data}} ()
 \begin{DoxyCompactList}\small\item\em Validar los datos que ha indicado el usuario para filtrar. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
@@ -68,6 +68,8 @@ Validar los datos que ha indicado el usuario para filtrar.
 
 \end{DoxyReturn}
 
+
+Con los números con decimales tengo un \char`\"{}problema\char`\"{}, si los parseo desde un string el decimal lo marca el caracter \char`\"{},\char`\"{} pero en el teclado numérico es el \char`\"{}.\char`\"{} Al parsear tengo que cambiar el punt (\char`\"{}.\char`\"{}) por coma(\char`\"{},\char`\"{}), pero después para que lo coja el linq tiene que ser punto (\char`\"{}.\char`\"{}), así que hay que hacer el juego de reemplazar dos veces mientras no encuentre algo mejor. El separador decimal varía entre punto (\char`\"{}.\char`\"{}) y coma(\char`\"{},\char`\"{}) según la cultura. Para trabajar con ello usaremos Invariant\+Culture 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

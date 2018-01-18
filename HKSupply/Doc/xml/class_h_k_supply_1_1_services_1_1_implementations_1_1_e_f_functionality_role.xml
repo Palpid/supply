@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role" kind="class" language="C#" prot="public">
     <compoundname>HKSupply::Services::Implementations::EFFunctionalityRole</compoundname>
     <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_role" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IFunctionalityRole</basecompoundref>
@@ -89,7 +89,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="118" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="118" bodyend="167"/>
+        <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="118" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="118" bodyend="170"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a1625ffb6313337132a446f831d357453" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>IEnumerable&lt; string &gt;</type>
@@ -116,7 +116,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="174" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="174" bodyend="227"/>
+        <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="177" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="177" bodyend="231"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a07805a2c9809f3771b7ae34deb15b94b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_h_k_supply_1_1_models_1_1_functionality_role" kindref="compound">FunctionalityRole</ref></type>
@@ -143,7 +143,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="234" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="234" bodyend="291"/>
+        <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="238" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="238" bodyend="295"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a69bbb7f8593ea4e0e70ce96625cf80e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_h_k_supply_1_1_models_1_1_functionality_role" kindref="compound">FunctionalityRole</ref></type>
@@ -172,7 +172,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="304" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="304" bodyend="373"/>
+        <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="308" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="308" bodyend="377"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a298798bba5c1a7e5a1db34803e3e4707" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -199,7 +199,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="381" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="381" bodyend="457"/>
+        <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="385" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="385" bodyend="461"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -207,30 +207,30 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="57">
+      <node id="458">
         <label>IFunctionalityRole</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_role"/>
       </node>
-      <node id="56">
+      <node id="457">
         <label>HKSupply.Services.Implementations.EFFunctionalityRole</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role"/>
-        <childnode refid="57" relation="public-inheritance">
+        <childnode refid="458" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="59">
+      <node id="460">
         <label>IFunctionalityRole</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_functionality_role"/>
       </node>
-      <node id="58">
+      <node id="459">
         <label>HKSupply.Services.Implementations.EFFunctionalityRole</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role"/>
-        <childnode refid="59" relation="public-inheritance">
+        <childnode refid="460" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="21" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="20" bodyend="458"/>
+    <location file="HKSupply/Services/Implementations/EFFunctionalityRole.cs" line="21" column="1" bodyfile="HKSupply/Services/Implementations/EFFunctionalityRole.cs" bodystart="20" bodyend="462"/>
     <listofallmembers>
       <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a64c0c993649c1a25576825cf8069a6f5" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFFunctionalityRole</scope><name>_log</name></member>
       <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_functionality_role_1a6c0fd4aad39788ef597f701f47032a85" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFFunctionalityRole</scope><name>GetAllFunctionalitiesRole</name></member>

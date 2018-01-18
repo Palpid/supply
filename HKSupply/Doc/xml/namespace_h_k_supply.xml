@@ -1,17 +1,21 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="namespace_h_k_supply" kind="namespace" language="C#">
     <compoundname>HKSupply</compoundname>
     <innerclass refid="class_h_k_supply_1_1_form1" prot="public">HKSupply::Form1</innerclass>
     <innerclass refid="class_h_k_supply_1_1_program" prot="public">HKSupply::Program</innerclass>
+    <innernamespace refid="namespace_h_k_supply_1_1_classes">HKSupply::Classes</innernamespace>
     <innernamespace refid="namespace_h_k_supply_1_1_d_b">HKSupply::DB</innernamespace>
     <innernamespace refid="namespace_h_k_supply_1_1_exceptions">HKSupply::Exceptions</innernamespace>
     <innernamespace refid="namespace_h_k_supply_1_1_forms">HKSupply::Forms</innernamespace>
     <innernamespace refid="namespace_h_k_supply_1_1_general">HKSupply::General</innernamespace>
     <innernamespace refid="namespace_h_k_supply_1_1_helpers">HKSupply::Helpers</innernamespace>
     <innernamespace refid="namespace_h_k_supply_1_1_migrations">HKSupply::Migrations</innernamespace>
+    <innernamespace refid="namespace_h_k_supply_1_1_mocking">HKSupply::Mocking</innernamespace>
     <innernamespace refid="namespace_h_k_supply_1_1_models">HKSupply::Models</innernamespace>
+    <innernamespace refid="namespace_h_k_supply_1_1_p_r_j___stocks">HKSupply::PRJ_Stocks</innernamespace>
     <innernamespace refid="namespace_h_k_supply_1_1_properties">HKSupply::Properties</innernamespace>
+    <innernamespace refid="namespace_h_k_supply_1_1_reports">HKSupply::Reports</innernamespace>
     <innernamespace refid="namespace_h_k_supply_1_1_resources">HKSupply::Resources</innernamespace>
     <innernamespace refid="namespace_h_k_supply_1_1_services">HKSupply::Services</innernamespace>
     <innernamespace refid="namespace_h_k_supply_1_1_styles">HKSupply::Styles</innernamespace>

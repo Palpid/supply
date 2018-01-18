@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer" kind="class" language="C#" prot="public">
     <compoundname>HKSupply::Services::Implementations::EFCustomer</compoundname>
     <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.ICustomer</basecompoundref>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Implementations/EFCustomer.cs" line="95" column="1" bodyfile="HKSupply/Services/Implementations/EFCustomer.cs" bodystart="95" bodyend="167"/>
+        <location file="HKSupply/Services/Implementations/EFCustomer.cs" line="95" column="1" bodyfile="HKSupply/Services/Implementations/EFCustomer.cs" bodystart="95" bodyend="184"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1a88c703ed6108d30abbed42876d524fb3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_h_k_supply_1_1_models_1_1_customer" kindref="compound">Customer</ref></type>
@@ -77,21 +77,44 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Implementations/EFCustomer.cs" line="169" column="1" bodyfile="HKSupply/Services/Implementations/EFCustomer.cs" bodystart="169" bodyend="212"/>
+        <location file="HKSupply/Services/Implementations/EFCustomer.cs" line="186" column="1" bodyfile="HKSupply/Services/Implementations/EFCustomer.cs" bodystart="186" bodyend="229"/>
       </memberdef>
-      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1a2688e050817d243a2c424293b2922005" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1a46dcd4d00e35c397796283e099675547" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_customer" kindref="compound">Customer</ref> &gt;</type>
         <definition>List&lt;Customer&gt; HKSupply.Services.Implementations.EFCustomer.GetCustomers</definition>
-        <argsstring>()</argsstring>
+        <argsstring>(bool withEtniaHk=false)</argsstring>
         <name>GetCustomers</name>
-        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a9191f24189f44e76aad505edfdf7e057">GetCustomers</reimplements>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a38deeb756609f096eb6fcbd9561d2d97">GetCustomers</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>withEtniaHk</declname>
+          <defval>false</defval>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Services/Implementations/EFCustomer.cs" line="214" column="1" bodyfile="HKSupply/Services/Implementations/EFCustomer.cs" bodystart="214" bodyend="248"/>
+        <location file="HKSupply/Services/Implementations/EFCustomer.cs" line="231" column="1" bodyfile="HKSupply/Services/Implementations/EFCustomer.cs" bodystart="231" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1abf8c1b2099630d5ca64afb2fb773699e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_customer_history" kindref="compound">CustomerHistory</ref> &gt;</type>
+        <definition>List&lt;CustomerHistory&gt; HKSupply.Services.Implementations.EFCustomer.GetCustomerHistory</definition>
+        <argsstring>(string idCustomer)</argsstring>
+        <name>GetCustomerHistory</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_1a2bfc5dd11d443814660429003b9db42c">GetCustomerHistory</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idCustomer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFCustomer.cs" line="271" column="1" bodyfile="HKSupply/Services/Implementations/EFCustomer.cs" bodystart="271" bodyend="311"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -99,34 +122,35 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="49">
+      <node id="418">
         <label>ICustomer</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer"/>
       </node>
-      <node id="48">
+      <node id="417">
         <label>HKSupply.Services.Implementations.EFCustomer</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer"/>
-        <childnode refid="49" relation="public-inheritance">
+        <childnode refid="418" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="51">
+      <node id="420">
         <label>ICustomer</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer"/>
       </node>
-      <node id="50">
+      <node id="419">
         <label>HKSupply.Services.Implementations.EFCustomer</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer"/>
-        <childnode refid="51" relation="public-inheritance">
+        <childnode refid="420" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="HKSupply/Services/Implementations/EFCustomer.cs" line="21" column="1" bodyfile="HKSupply/Services/Implementations/EFCustomer.cs" bodystart="20" bodyend="249"/>
+    <location file="HKSupply/Services/Implementations/EFCustomer.cs" line="21" column="1" bodyfile="HKSupply/Services/Implementations/EFCustomer.cs" bodystart="20" bodyend="312"/>
     <listofallmembers>
       <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1ad2554c4f7f433e8c784264323ac45077" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFCustomer</scope><name>_log</name></member>
       <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1a88c703ed6108d30abbed42876d524fb3" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFCustomer</scope><name>GetCustomerById</name></member>
-      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1a2688e050817d243a2c424293b2922005" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFCustomer</scope><name>GetCustomers</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1abf8c1b2099630d5ca64afb2fb773699e" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFCustomer</scope><name>GetCustomerHistory</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1a46dcd4d00e35c397796283e099675547" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFCustomer</scope><name>GetCustomers</name></member>
       <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1a8caba8c3706d212709d73ff4e2e94e1e" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFCustomer</scope><name>NewCustomer</name></member>
       <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_1af7bd47be2eff71310dd5ad5e4157bfa4" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFCustomer</scope><name>UpdateCustomer</name></member>
     </listofallmembers>

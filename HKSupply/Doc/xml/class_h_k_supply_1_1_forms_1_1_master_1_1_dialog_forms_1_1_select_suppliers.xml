@@ -1,0 +1,360 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Master::DialogForms::SelectSuppliers</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a93528ef55e3a9ec592e08e20040110fd" prot="private" static="no" mutable="no">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; HKSupply.Forms.Master.DialogForms.SelectSuppliers._suppliers</definition>
+        <argsstring></argsstring>
+        <name>_suppliers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" line="20" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a53d496dc75a898d8e38fdb26a91431dd" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Master.DialogForms.SelectSuppliers.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1aeab9a0df9c7d849a86fa5908ff0afad1" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.CheckedListBox</type>
+        <definition>System.Windows.Forms.CheckedListBox HKSupply.Forms.Master.DialogForms.SelectSuppliers.checkedListBoxSuppliersSource</definition>
+        <argsstring></argsstring>
+        <name>checkedListBoxSuppliersSource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.Designer.cs" line="108" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.Designer.cs" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a626f35e6b5479a8e9d1c830a3ebf99de" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Master.DialogForms.SelectSuppliers.sbCancel</definition>
+        <argsstring></argsstring>
+        <name>sbCancel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.Designer.cs" line="109" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.Designer.cs" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a557617fe7d612f5b98d2ac0c91a3b24e" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Master.DialogForms.SelectSuppliers.sbOk</definition>
+        <argsstring></argsstring>
+        <name>sbOk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.Designer.cs" line="110" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.Designer.cs" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a07f321eec4895e76679316664eabc449" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.CheckedListBox</type>
+        <definition>System.Windows.Forms.CheckedListBox HKSupply.Forms.Master.DialogForms.SelectSuppliers.checkedListBoxSuppliersDestination</definition>
+        <argsstring></argsstring>
+        <name>checkedListBoxSuppliersDestination</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.Designer.cs" line="111" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.Designer.cs" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a90de68387f5111745ca3a79b52425da8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.DialogForms.SelectSuppliers.lblSource</definition>
+        <argsstring></argsstring>
+        <name>lblSource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.Designer.cs" line="112" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.Designer.cs" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a493ed8cc3d21d406708f05ba5bc085e4" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.DialogForms.SelectSuppliers.lblDestination</definition>
+        <argsstring></argsstring>
+        <name>lblDestination</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.Designer.cs" line="113" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.Designer.cs" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1ae4970c2f8b411d2c84cc7146a9943b1f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; HKSupply.Forms.Master.DialogForms.SelectSuppliers.SelectedSuppliersSource</definition>
+        <argsstring></argsstring>
+        <name>SelectedSuppliersSource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" line="24" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a0cac21378de823a71f08e02e7bfba3f7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; HKSupply.Forms.Master.DialogForms.SelectSuppliers.SelectedSuppliersDestination</definition>
+        <argsstring></argsstring>
+        <name>SelectedSuppliersDestination</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" line="25" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" bodystart="25" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a7d5a9581fd1b5319b5ed41a2120a9337" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Master.DialogForms.SelectSuppliers.SelectSuppliers</definition>
+        <argsstring>()</argsstring>
+        <name>SelectSuppliers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" bodystart="29" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a0d05cf33d5cf1ab7ebaa8061ab873e37" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.SelectSuppliers.InitData</definition>
+        <argsstring>(List&lt; string &gt; suppliers)</argsstring>
+        <name>InitData</name>
+        <param>
+          <type>List&lt; string &gt;</type>
+          <declname>suppliers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" line="72" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" bodystart="72" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1aa0653618fb2d5a78a51d7745de3135ed" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.SelectSuppliers.SelectSupplirs_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SelectSupplirs_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" line="46" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1aab5dfcfd1c17733044706ceca4ea9277" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.SelectSuppliers.CheckedListBoxSuppliersSource_ItemCheck</definition>
+        <argsstring>(object sender, System.Windows.Forms.ItemCheckEventArgs e)</argsstring>
+        <name>CheckedListBoxSuppliersSource_ItemCheck</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.Windows.Forms.ItemCheckEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" line="51" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" bodystart="51" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1af3a5a612a23c36b04623ad81ad52a3f9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.SelectSuppliers.SetEvents</definition>
+        <argsstring>()</argsstring>
+        <name>SetEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" line="88" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" bodystart="88" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a02f8ce8b3e22b246476a0bf08bf5a5af" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.SelectSuppliers.SetFormStyle</definition>
+        <argsstring>()</argsstring>
+        <name>SetFormStyle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" line="122" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" bodystart="122" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a1490ce4aacec16761272f4a2dd76931c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.SelectSuppliers.LoadCheckedListBoxSuppliers</definition>
+        <argsstring>()</argsstring>
+        <name>LoadCheckedListBoxSuppliers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" line="142" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" bodystart="142" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a8778d5b221cbd08f6f021f4973eb98af" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.DialogForms.SelectSuppliers.ValidateSuppliers</definition>
+        <argsstring>()</argsstring>
+        <name>ValidateSuppliers</name>
+        <briefdescription>
+<para>Validar si hemos escogido el mismo supplier como Source y Destination </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" line="167" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" bodystart="167" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a068c6e345b830603601e4ad1da29a3e2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.DialogForms.SelectSuppliers.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.Designer.cs" bodystart="29" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a60ceecfaa31be0fd59019125bb62d133" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.DialogForms.SelectSuppliers.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1514">
+        <label>Form</label>
+      </node>
+      <node id="1513">
+        <label>HKSupply.Forms.Master.DialogForms.SelectSuppliers</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers"/>
+        <childnode refid="1514" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1516">
+        <label>Form</label>
+      </node>
+      <node id="1515">
+        <label>HKSupply.Forms.Master.DialogForms.SelectSuppliers</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers"/>
+        <childnode refid="1516" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" line="17" column="1" bodyfile="HKSupply/Forms/Master/DialogForms/SelectSuppliers.cs" bodystart="16" bodyend="184"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a93528ef55e3a9ec592e08e20040110fd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectSuppliers</scope><name>_suppliers</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a07f321eec4895e76679316664eabc449" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectSuppliers</scope><name>checkedListBoxSuppliersDestination</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1aeab9a0df9c7d849a86fa5908ff0afad1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectSuppliers</scope><name>checkedListBoxSuppliersSource</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1aab5dfcfd1c17733044706ceca4ea9277" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectSuppliers</scope><name>CheckedListBoxSuppliersSource_ItemCheck</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a53d496dc75a898d8e38fdb26a91431dd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectSuppliers</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a60ceecfaa31be0fd59019125bb62d133" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectSuppliers</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a0d05cf33d5cf1ab7ebaa8061ab873e37" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectSuppliers</scope><name>InitData</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a068c6e345b830603601e4ad1da29a3e2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectSuppliers</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a493ed8cc3d21d406708f05ba5bc085e4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectSuppliers</scope><name>lblDestination</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a90de68387f5111745ca3a79b52425da8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectSuppliers</scope><name>lblSource</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a1490ce4aacec16761272f4a2dd76931c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectSuppliers</scope><name>LoadCheckedListBoxSuppliers</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a626f35e6b5479a8e9d1c830a3ebf99de" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectSuppliers</scope><name>sbCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a557617fe7d612f5b98d2ac0c91a3b24e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectSuppliers</scope><name>sbOk</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a0cac21378de823a71f08e02e7bfba3f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectSuppliers</scope><name>SelectedSuppliersDestination</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1ae4970c2f8b411d2c84cc7146a9943b1f" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectSuppliers</scope><name>SelectedSuppliersSource</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a7d5a9581fd1b5319b5ed41a2120a9337" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectSuppliers</scope><name>SelectSuppliers</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1aa0653618fb2d5a78a51d7745de3135ed" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectSuppliers</scope><name>SelectSupplirs_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1af3a5a612a23c36b04623ad81ad52a3f9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectSuppliers</scope><name>SetEvents</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a02f8ce8b3e22b246476a0bf08bf5a5af" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectSuppliers</scope><name>SetFormStyle</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms_1_1_select_suppliers_1a8778d5b221cbd08f6f021f4973eb98af" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::DialogForms::SelectSuppliers</scope><name>ValidateSuppliers</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

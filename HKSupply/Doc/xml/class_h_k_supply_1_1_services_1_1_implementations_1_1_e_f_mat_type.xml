@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_mat_type" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFMatType</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_mat_type" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IMatType</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_mat_type_1a431e0b7826c8713d8c42491ce50d0909" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFMatType._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_currency" kindref="compound">EFCurrency</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFMatType.cs" line="20" column="1" bodyfile="HKSupply/Services/Implementations/EFMatType.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_mat_type_1a6db8e353508756947b63227544b746de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_mat_type_l1" kindref="compound">MatTypeL1</ref> &gt;</type>
+        <definition>List&lt;MatTypeL1&gt; HKSupply.Services.Implementations.EFMatType.GetMatsTypeL1</definition>
+        <argsstring>()</argsstring>
+        <name>GetMatsTypeL1</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_mat_type_1aa526cced0fdf846540d19ca9e0f8d9a1">GetMatsTypeL1</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFMatType.cs" line="22" column="1" bodyfile="HKSupply/Services/Implementations/EFMatType.cs" bodystart="22" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_mat_type_1aa0d45453abf2ef7385620d181a0e75d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_mat_type_l2" kindref="compound">MatTypeL2</ref> &gt;</type>
+        <definition>List&lt;MatTypeL2&gt; HKSupply.Services.Implementations.EFMatType.GetMatsTypeL2</definition>
+        <argsstring>()</argsstring>
+        <name>GetMatsTypeL2</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_mat_type_1a70e1e4e6c190e3e1d5d6eafab173e99f">GetMatsTypeL2</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFMatType.cs" line="59" column="1" bodyfile="HKSupply/Services/Implementations/EFMatType.cs" bodystart="59" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_mat_type_1a221586b968f1d7a536d195c1de062d75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_mat_type_l3" kindref="compound">MatTypeL3</ref> &gt;</type>
+        <definition>List&lt;MatTypeL3&gt; HKSupply.Services.Implementations.EFMatType.GetMatsTypeL3</definition>
+        <argsstring>()</argsstring>
+        <name>GetMatsTypeL3</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_mat_type_1af89dc604c2d2c6dbdb9184013d77b601">GetMatsTypeL3</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFMatType.cs" line="98" column="1" bodyfile="HKSupply/Services/Implementations/EFMatType.cs" bodystart="98" bodyend="136"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="505">
+        <label>HKSupply.Services.Implementations.EFMatType</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_mat_type"/>
+        <childnode refid="506" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="506">
+        <label>IMatType</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_mat_type"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="507">
+        <label>HKSupply.Services.Implementations.EFMatType</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_mat_type"/>
+        <childnode refid="508" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="508">
+        <label>IMatType</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_mat_type"/>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFMatType.cs" line="19" column="1" bodyfile="HKSupply/Services/Implementations/EFMatType.cs" bodystart="18" bodyend="137"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_mat_type_1a431e0b7826c8713d8c42491ce50d0909" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFMatType</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_mat_type_1a6db8e353508756947b63227544b746de" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFMatType</scope><name>GetMatsTypeL1</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_mat_type_1aa0d45453abf2ef7385620d181a0e75d8" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFMatType</scope><name>GetMatsTypeL2</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_mat_type_1a221586b968f1d7a536d195c1de062d75" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFMatType</scope><name>GetMatsTypeL3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

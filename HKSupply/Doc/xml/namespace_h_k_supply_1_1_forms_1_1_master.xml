@@ -1,20 +1,41 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="namespace_h_k_supply_1_1_forms_1_1_master" kind="namespace" language="C#">
     <compoundname>HKSupply::Forms::Master</compoundname>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_breakdown_management" prot="public">HKSupply::Forms::Master::BomBreakdownManagement</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management" prot="public">HKSupply::Forms::Master::BomManagement</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_box_management" prot="public">HKSupply::Forms::Master::BoxManagement</innerclass>
     <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_change_password" prot="public">HKSupply::Forms::Master::ChangePassword</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management" prot="public">HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</innerclass>
     <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management" prot="public">HKSupply::Forms::Master::CustomerManagement</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_management__v1" prot="public">HKSupply::Forms::Master::CustomerManagement_v1</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_customer_price_list_management" prot="public">HKSupply::Forms::Master::CustomerPriceListManagement</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_exchange_rate_update" prot="public">HKSupply::Forms::Master::ExchangeRateUpdate</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_families_hk_management" prot="public">HKSupply::Forms::Master::FamiliesHkManagement</innerclass>
     <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_management" prot="public">HKSupply::Forms::Master::FunctionalityManagement</innerclass>
     <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_functionality_role_management" prot="public">HKSupply::Forms::Master::FunctionalityRoleManagement</innerclass>
-    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management" prot="public">HKSupply::Forms::Master::ItemManagement</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_incoterms_management" prot="public">HKSupply::Forms::Master::IncotermsManagement</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_docs" prot="public">HKSupply::Forms::Master::ItemDocs</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_e_y" prot="public">HKSupply::Forms::Master::ItemManagementEY</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_h_f" prot="public">HKSupply::Forms::Master::ItemManagementHF</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_h_w" prot="public">HKSupply::Forms::Master::ItemManagementHW</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_item_management_m_t" prot="public">HKSupply::Forms::Master::ItemManagementMT</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_items_levels_management" prot="public">HKSupply::Forms::Master::ItemsLevelsManagement</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management" prot="public">HKSupply::Forms::Master::MyCompanyManagement</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management" prot="public">HKSupply::Forms::Master::PaymentTermsManagement</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_prototype_management" prot="public">HKSupply::Forms::Master::PrototypeManagement</innerclass>
     <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_role_management" prot="public">HKSupply::Forms::Master::RoleManagement</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management" prot="public">HKSupply::Forms::Master::StatusManagement</innerclass>
     <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_store_management" prot="public">HKSupply::Forms::Master::StoreManagement</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_factory_coeff_management" prot="public">HKSupply::Forms::Master::SupplierFactoryCoeffManagement</innerclass>
     <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_management" prot="public">HKSupply::Forms::Master::SupplierManagement</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_supplier_price_list_management" prot="public">HKSupply::Forms::Master::SupplierPriceListManagement</innerclass>
     <innerclass refid="class_h_k_supply_1_1_forms_1_1_master_1_1_user_management" prot="public">HKSupply::Forms::Master::UserManagement</innerclass>
+    <innernamespace refid="namespace_h_k_supply_1_1_forms_1_1_master_1_1_dialog_forms">HKSupply::Forms::Master::DialogForms</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="HKSupply/Forms/Master/ChangePassword.cs" line="18" column="1"/>
+    <location file="HKSupply/Forms/Master/BomBreakdownManagement.cs" line="21" column="1"/>
   </compounddef>
 </doxygen>

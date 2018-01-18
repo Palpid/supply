@@ -1,24 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_h_k_supply_1_1_forms_1_1_custom_professional_colors" kind="class" language="C#" prot="package">
     <compoundname>HKSupply::Forms::CustomProfessionalColors</compoundname>
     <basecompoundref prot="public" virt="non-virtual">ProfessionalColorTable</basecompoundref>
-      <sectiondef kind="private-static-attrib">
-      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a3ac0fd08492a9b59edbc720a3cd55279" prot="private" static="yes" mutable="no">
-        <type>Color</type>
-        <definition>Color HKSupply.Forms.CustomProfessionalColors.ETNIA_RED</definition>
-        <argsstring></argsstring>
-        <name>ETNIA_RED</name>
-        <initializer>= Color.FromArgb(221, 34, 29)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="HKSupply/Forms/Main.cs" line="221" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="221" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
       <sectiondef kind="property">
       <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a9c76810b2e0a7d40ddaf24a29c96195a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>override Color</type>
@@ -31,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Main.cs" line="223" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="223" bodyend="-1"/>
+        <location file="HKSupply/Forms/Main.cs" line="331" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="331" bodyend="331"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a8055e98884e1afe24a6b6e91dcc79b5a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>override Color</type>
@@ -44,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Main.cs" line="225" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="225" bodyend="-1"/>
+        <location file="HKSupply/Forms/Main.cs" line="332" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="332" bodyend="332"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a6ab0c92c054750031dad80baf2e4f43c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>override Color</type>
@@ -57,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Main.cs" line="227" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="227" bodyend="-1"/>
+        <location file="HKSupply/Forms/Main.cs" line="333" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="333" bodyend="333"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1ae181b8c469ce04d67b1e85801d2eed5b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>override Color</type>
@@ -70,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Main.cs" line="229" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="229" bodyend="-1"/>
+        <location file="HKSupply/Forms/Main.cs" line="334" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="334" bodyend="334"/>
       </memberdef>
       <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a9e1d38633881d20d3c527111a14927a3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>override Color</type>
@@ -83,7 +67,87 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Main.cs" line="231" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="231" bodyend="-1"/>
+        <location file="HKSupply/Forms/Main.cs" line="335" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="335" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a27da7dc6d89605ed7df7829ff7325741" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>override Color</type>
+        <definition>override Color HKSupply.Forms.CustomProfessionalColors.MenuBorder</definition>
+        <argsstring></argsstring>
+        <name>MenuBorder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.cs" line="338" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="338" bodyend="338"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1af45e943e0d2f80d804d210e7f25bfb50" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>override Color</type>
+        <definition>override Color HKSupply.Forms.CustomProfessionalColors.MenuItemBorder</definition>
+        <argsstring></argsstring>
+        <name>MenuItemBorder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.cs" line="339" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="339" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a82e84d61331da2bfb81a1ea63fd8a8f8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>override Color</type>
+        <definition>override Color HKSupply.Forms.CustomProfessionalColors.MenuItemSelected</definition>
+        <argsstring></argsstring>
+        <name>MenuItemSelected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.cs" line="340" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="340" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a7fa1042ed33e9b69e52c5bdee5a22740" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>override Color</type>
+        <definition>override Color HKSupply.Forms.CustomProfessionalColors.MenuItemSelectedGradientBegin</definition>
+        <argsstring></argsstring>
+        <name>MenuItemSelectedGradientBegin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.cs" line="341" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="341" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1ad1488e89f3ff6198014800836bd2dd18" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>override Color</type>
+        <definition>override Color HKSupply.Forms.CustomProfessionalColors.MenuItemSelectedGradientEnd</definition>
+        <argsstring></argsstring>
+        <name>MenuItemSelectedGradientEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.cs" line="342" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="342" bodyend="342"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a70ad5f25c155ed3e6d956b603f6b78f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.CustomProfessionalColors.CustomProfessionalColors</definition>
+        <argsstring>()</argsstring>
+        <name>CustomProfessionalColors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.cs" line="326" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="326" bodyend="329"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -91,28 +155,33 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="33">
+      <node id="216">
         <label>ProfessionalColorTable</label>
       </node>
-      <node id="32">
+      <node id="215">
         <label>HKSupply.Forms.CustomProfessionalColors</label>
-        <childnode refid="33" relation="public-inheritance">
+        <childnode refid="216" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="35">
+      <node id="218">
         <label>ProfessionalColorTable</label>
       </node>
-      <node id="34">
+      <node id="217">
         <label>HKSupply.Forms.CustomProfessionalColors</label>
-        <childnode refid="35" relation="public-inheritance">
+        <childnode refid="218" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="HKSupply/Forms/Main.cs" line="220" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="219" bodyend="232"/>
+    <location file="HKSupply/Forms/Main.cs" line="325" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="324" bodyend="344"/>
     <listofallmembers>
-      <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a3ac0fd08492a9b59edbc720a3cd55279" prot="private" virt="non-virtual"><scope>HKSupply::Forms::CustomProfessionalColors</scope><name>ETNIA_RED</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a70ad5f25c155ed3e6d956b603f6b78f2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::CustomProfessionalColors</scope><name>CustomProfessionalColors</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a27da7dc6d89605ed7df7829ff7325741" prot="public" virt="non-virtual"><scope>HKSupply::Forms::CustomProfessionalColors</scope><name>MenuBorder</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1af45e943e0d2f80d804d210e7f25bfb50" prot="public" virt="non-virtual"><scope>HKSupply::Forms::CustomProfessionalColors</scope><name>MenuItemBorder</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a82e84d61331da2bfb81a1ea63fd8a8f8" prot="public" virt="non-virtual"><scope>HKSupply::Forms::CustomProfessionalColors</scope><name>MenuItemSelected</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a7fa1042ed33e9b69e52c5bdee5a22740" prot="public" virt="non-virtual"><scope>HKSupply::Forms::CustomProfessionalColors</scope><name>MenuItemSelectedGradientBegin</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1ad1488e89f3ff6198014800836bd2dd18" prot="public" virt="non-virtual"><scope>HKSupply::Forms::CustomProfessionalColors</scope><name>MenuItemSelectedGradientEnd</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1ae181b8c469ce04d67b1e85801d2eed5b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::CustomProfessionalColors</scope><name>MenuStripGradientBegin</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a9e1d38633881d20d3c527111a14927a3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::CustomProfessionalColors</scope><name>MenuStripGradientEnd</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_custom_professional_colors_1a9c76810b2e0a7d40ddaf24a29c96195a" prot="public" virt="non-virtual"><scope>HKSupply::Forms::CustomProfessionalColors</scope><name>ToolStripGradientBegin</name></member>

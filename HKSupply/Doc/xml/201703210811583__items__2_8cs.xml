@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="201703210811583__items__2_8cs" kind="file" language="C#">
     <compoundname>201703210811583_items_2.cs</compoundname>
     <innerclass refid="class_h_k_supply_1_1_migrations_1_1items__2" prot="public">HKSupply::Migrations::items_2</innerclass>
@@ -12,7 +12,7 @@
 <codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_h_k_supply" kindref="compound">HKSupply</ref>.Migrations</highlight></codeline>
 <codeline lineno="2"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_system" kindref="compound">System</ref>;</highlight></codeline>
-<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Data.Entity.Migrations;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_system" kindref="compound">System</ref>.Data.Entity.Migrations;</highlight></codeline>
 <codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="6" refid="class_h_k_supply_1_1_migrations_1_1items__2" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">partial<sp/>class<sp/></highlight><highlight class="normal"><ref refid="class_h_k_supply_1_1_migrations_1_1items__2" kindref="compound">items_2</ref><sp/>:<sp/>DbMigration</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>

@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_custom_controls_1_1_stack_view" kind="class" language="C#" prot="public">
     <compoundname>CustomControls::StackView</compoundname>
     <basecompoundref prot="public" virt="non-virtual">UserControl</basecompoundref>
       <sectiondef kind="public-type">
-      <memberdef kind="enum" id="class_custom_controls_1_1_stack_view_1ad33a71dff7cc2c25851d7cd5d75fb3c8" prot="public" static="no">
+      <memberdef kind="enum" id="class_custom_controls_1_1_stack_view_1ad33a71dff7cc2c25851d7cd5d75fb3c8" prot="public" static="no" strong="yes">
+        <type></type>
         <name>ToolbarStates</name>
         <enumvalue id="class_custom_controls_1_1_stack_view_1ad33a71dff7cc2c25851d7cd5d75fb3c8a94e0b3cd0db6a39fad24d0ff351d84b3" prot="public">
           <name>OnlyRead</name>
@@ -410,7 +411,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="363" column="1" bodyfile="CustomControls/StackView.cs" bodystart="364" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="363" column="1" bodyfile="CustomControls/StackView.cs" bodystart="364" bodyend="366"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-func">
@@ -753,24 +754,24 @@
 <listitem><para>Editar</para></listitem><listitem><para>Nuevo</para></listitem><listitem><para>Guardar</para></listitem><listitem><para>Cancelar</para></listitem></itemizedlist>
 </para><para>En función de los permisos que tenga el usuario en cada pantalla mostrará las acciones correspondientess </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="266">
+      <node id="1525">
         <label>CustomControls.StackView</label>
         <link refid="class_custom_controls_1_1_stack_view"/>
-        <childnode refid="267" relation="public-inheritance">
+        <childnode refid="1526" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="267">
+      <node id="1526">
         <label>UserControl</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="268">
+      <node id="1527">
         <label>CustomControls.StackView</label>
         <link refid="class_custom_controls_1_1_stack_view"/>
-        <childnode refid="269" relation="public-inheritance">
+        <childnode refid="1528" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="269">
+      <node id="1528">
         <label>UserControl</label>
       </node>
     </collaborationgraph>

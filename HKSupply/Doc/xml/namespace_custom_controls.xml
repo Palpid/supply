@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="namespace_custom_controls" kind="namespace" language="C#">
     <compoundname>CustomControls</compoundname>
     <innerclass refid="class_custom_controls_1_1_custom_professional_colors" prot="package">CustomControls::CustomProfessionalColors</innerclass>

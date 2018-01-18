@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_migrations_1_1delete_cascade_remove__01" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Migrations::deleteCascadeRemove_01</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IMigrationMetadata</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">DbMigration</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_migrations_1_1delete_cascade_remove__01_1a4ff223f8a538432d5770af86f130eca7" prot="private" static="no" mutable="no">
+        <type>readonly ResourceManager</type>
+        <definition>readonly ResourceManager HKSupply.Migrations.deleteCascadeRemove_01.Resources</definition>
+        <argsstring></argsstring>
+        <name>Resources</name>
+        <initializer>= new ResourceManager(typeof(<ref refid="class_h_k_supply_1_1_migrations_1_1delete_cascade_remove__01" kindref="compound">deleteCascadeRemove_01</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201705040832324_deleteCascadeRemove_01.Designer.cs" line="12" column="1" bodyfile="HKSupply/Migrations/201705040832324_deleteCascadeRemove_01.Designer.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_migrations_1_1delete_cascade_remove__01_1aece751af2d7c17358b1107fea70bafa2" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string IMigrationMetadata.</type>
+        <definition>string IMigrationMetadata. HKSupply.Migrations.deleteCascadeRemove_01.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201705040832324_deleteCascadeRemove_01.Designer.cs" line="14" column="1" bodyfile="HKSupply/Migrations/201705040832324_deleteCascadeRemove_01.Designer.cs" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_migrations_1_1delete_cascade_remove__01_1a99ccae156005268b84133f6b1c7b630e" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string IMigrationMetadata.</type>
+        <definition>string IMigrationMetadata. HKSupply.Migrations.deleteCascadeRemove_01.Source</definition>
+        <argsstring></argsstring>
+        <name>Source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201705040832324_deleteCascadeRemove_01.Designer.cs" line="19" column="1" bodyfile="HKSupply/Migrations/201705040832324_deleteCascadeRemove_01.Designer.cs" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_migrations_1_1delete_cascade_remove__01_1a2c0a3de3e1a5994480e336a0dd6b5b12" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string IMigrationMetadata.</type>
+        <definition>string IMigrationMetadata. HKSupply.Migrations.deleteCascadeRemove_01.Target</definition>
+        <argsstring></argsstring>
+        <name>Target</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201705040832324_deleteCascadeRemove_01.Designer.cs" line="24" column="1" bodyfile="HKSupply/Migrations/201705040832324_deleteCascadeRemove_01.Designer.cs" bodystart="25" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_migrations_1_1delete_cascade_remove__01_1a4219c2f4694e983617ffe6799c9a0251" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Migrations.deleteCascadeRemove_01.Up</definition>
+        <argsstring>()</argsstring>
+        <name>Up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201705040832324_deleteCascadeRemove_01.cs" line="8" column="1" bodyfile="HKSupply/Migrations/201705040832324_deleteCascadeRemove_01.cs" bodystart="8" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_migrations_1_1delete_cascade_remove__01_1a8f5f7bb884d5a4e0bf773257b11689c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Migrations.deleteCascadeRemove_01.Down</definition>
+        <argsstring>()</argsstring>
+        <name>Down</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201705040832324_deleteCascadeRemove_01.cs" line="12" column="1" bodyfile="HKSupply/Migrations/201705040832324_deleteCascadeRemove_01.cs" bodystart="12" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="251">
+        <label>HKSupply.Migrations.deleteCascadeRemove_01</label>
+        <link refid="class_h_k_supply_1_1_migrations_1_1delete_cascade_remove__01"/>
+        <childnode refid="252" relation="public-inheritance">
+        </childnode>
+        <childnode refid="253" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="253">
+        <label>DbMigration</label>
+      </node>
+      <node id="252">
+        <label>IMigrationMetadata</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="254">
+        <label>HKSupply.Migrations.deleteCascadeRemove_01</label>
+        <link refid="class_h_k_supply_1_1_migrations_1_1delete_cascade_remove__01"/>
+        <childnode refid="255" relation="public-inheritance">
+        </childnode>
+        <childnode refid="256" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="256">
+        <label>DbMigration</label>
+      </node>
+      <node id="255">
+        <label>IMigrationMetadata</label>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Migrations/201705040832324_deleteCascadeRemove_01.cs" line="7" column="1" bodyfile="HKSupply/Migrations/201705040832324_deleteCascadeRemove_01.cs" bodystart="6" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_migrations_1_1delete_cascade_remove__01_1a8f5f7bb884d5a4e0bf773257b11689c9" prot="public" virt="non-virtual"><scope>HKSupply::Migrations::deleteCascadeRemove_01</scope><name>Down</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1delete_cascade_remove__01_1aece751af2d7c17358b1107fea70bafa2" prot="private" virt="non-virtual"><scope>HKSupply::Migrations::deleteCascadeRemove_01</scope><name>Id</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1delete_cascade_remove__01_1a4ff223f8a538432d5770af86f130eca7" prot="private" virt="non-virtual"><scope>HKSupply::Migrations::deleteCascadeRemove_01</scope><name>Resources</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1delete_cascade_remove__01_1a99ccae156005268b84133f6b1c7b630e" prot="private" virt="non-virtual"><scope>HKSupply::Migrations::deleteCascadeRemove_01</scope><name>Source</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1delete_cascade_remove__01_1a2c0a3de3e1a5994480e336a0dd6b5b12" prot="private" virt="non-virtual"><scope>HKSupply::Migrations::deleteCascadeRemove_01</scope><name>Target</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1delete_cascade_remove__01_1a4219c2f4694e983617ffe6799c9a0251" prot="public" virt="non-virtual"><scope>HKSupply::Migrations::deleteCascadeRemove_01</scope><name>Up</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,12 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="namespace_h_k_supply_1_1_general" kind="namespace" language="C#">
     <compoundname>HKSupply::General</compoundname>
+    <innerclass refid="class_h_k_supply_1_1_general_1_1_constants" prot="public">HKSupply::General::Constants</innerclass>
     <innerclass refid="class_h_k_supply_1_1_general_1_1_global_setting" prot="public">HKSupply::General::GlobalSetting</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="HKSupply/General/GlobalSetting.cs" line="12" column="1"/>
+    <location file="HKSupply/General/Constants.cs" line="8" column="1"/>
   </compounddef>
 </doxygen>

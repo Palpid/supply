@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_hw_type_l1" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::HwTypeL1</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_hw_type_l1_1ad29992f4ed14f2af0a600078becdf04a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.HwTypeL1.IdHwTypeL1</definition>
+        <argsstring></argsstring>
+        <name>IdHwTypeL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/HwTypeL1.cs" line="16" column="1" bodyfile="HKSupply/Models/HwTypeL1.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_hw_type_l1_1a1ab1fe9872d4c41399f6e255262bdbf3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.HwTypeL1.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/HwTypeL1.cs" line="18" column="1" bodyfile="HKSupply/Models/HwTypeL1.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_hw_type_l1_1ad3e6dc233ad35eb0a3dcb46071aa76f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.HwTypeL1.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/HwTypeL1.cs" line="20" column="1" bodyfile="HKSupply/Models/HwTypeL1.cs" bodystart="20" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_hw_type_l1_1a542b564e68f2afa648622ef06bb9074b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.HwTypeL1.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/HwTypeL1.cs" line="30" column="1" bodyfile="HKSupply/Models/HwTypeL1.cs" bodystart="30" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/HwTypeL1.cs" line="14" column="1" bodyfile="HKSupply/Models/HwTypeL1.cs" bodystart="13" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_hw_type_l1_1a1ab1fe9872d4c41399f6e255262bdbf3" prot="public" virt="non-virtual"><scope>HKSupply::Models::HwTypeL1</scope><name>Description</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_hw_type_l1_1ad3e6dc233ad35eb0a3dcb46071aa76f0" prot="public" virt="non-virtual"><scope>HKSupply::Models::HwTypeL1</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_hw_type_l1_1a542b564e68f2afa648622ef06bb9074b" prot="public" virt="non-virtual"><scope>HKSupply::Models::HwTypeL1</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_hw_type_l1_1ad29992f4ed14f2af0a600078becdf04a" prot="public" virt="non-virtual"><scope>HKSupply::Models::HwTypeL1</scope><name>IdHwTypeL1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

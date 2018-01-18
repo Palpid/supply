@@ -1,4 +1,4 @@
-﻿using HKSupply.DB;
+using HKSupply.DB;
 using HKSupply.Exceptions;
 using HKSupply.General;
 using HKSupply.Helpers;
@@ -19,6 +19,35 @@ namespace HKSupply.PRJ_Stocks.DB
 {
     class BD_Stocks
     {
+        private class LotItemDB
+        {
+            public LotItemDB(string idItem, string idLot, string idWare, int idWareType, string wareName, decimal qtt)
+            {
+                IdItem = idItem;
+                IdLot = idLot;
+                IdWare = idWare;
+                IdWareType = idWareType;
+                WareName = wareName;
+                Qtt = qtt;
+            }
+            public LotItemDB()
+            {
+                IdItem = "";
+                IdLot = "";
+                IdWare = "";
+                IdWareType = 0;
+                WareName = "";
+                Qtt = 0;
+            }
+
+            public string IdItem { get; set; }
+            public string IdLot { get; set; }
+            public string IdWare { get; set; }
+            public int IdWareType { get; set; }
+            public string WareName { get; set; }
+            public decimal Qtt { get; set; }
+        }
+
         ILog _log = LogManager.GetLogger(typeof(BD_Stocks)); //variable para gestión del log de error
         /// <summary>
         ///  Carrega les dades de Stock desde la BD. 
@@ -26,7 +55,9 @@ namespace HKSupply.PRJ_Stocks.DB
         /// <param name="db">La conexió de la BD gestionda per el EF</param>
         /// <param name="idwarehouse">Filtre opcional. Si s'indica es carrega només el magatzem indicat</param>
         /// <returns></returns>
-        public Classes.Stocks GetCurrentStock(HKSupplyContext db, string idwarehouse = "")
+        public Classes.Stocks GetCurrentStock(
+                     HKSupplyContext db, 
+                     string idwarehouse = "" )
         {
             //ResposeTest res1 = db.Database.SqlQuery<ResposeTest>(query).FirstOrDefault();
             //List<ResposeTest> res2 = db.Database.SqlQuery<ResposeTest>(query2).ToList();
@@ -56,8 +87,8 @@ namespace HKSupply.PRJ_Stocks.DB
                 sSQL += " Order By idOwner";
                 STK.LstOwners = db.Database.SqlQuery<Stocks.Owner>(sSQL).ToList();
 
-                // SOTCKS
-                sSQL = $"SELECT STK.idWarehouse,STK.idWareHouseType,SW.Descr as WareHouseName, idItem, Lot as idLot, STK.idOwner as idOwner,QTT as QttMove";
+                // STOCKS
+                sSQL = $"SELECT STK.idWarehouse,STK.idWareHouseType,SW.Descr as WareHouseName, idItem, STK.idOwner as idOwner,QTT as QttMove";
                 sSQL += " FROM STK_STOCK STK";
                 sSQL += " left join STK_WAREHOUSES SW on STK.idWarehouse = SW.idWarehouse and STK.idWareHouseType = SW.idWareHouseType";
                 if (idwarehouse != "") sSQL += " Where idWarehouse='" + idwarehouse.Trim() + "'";
@@ -70,32 +101,45 @@ namespace HKSupply.PRJ_Stocks.DB
                     int idWareType = rec.Ware.idWareHouseType;
                     string WaraName = rec.Ware.Descr;
                     string IdIt = rec.idItem;
-                    string IdLt = rec.idLot;
                     string Ow = rec.idOwner;
                     decimal QTT = rec.QttMove;
-
                     Classes.Stocks.StockItem STKi = new Stocks.StockItem(idWare, idWareType, WaraName, IdIt, Ow, QTT);
                     STK.CargaSockItem(STKi);
                 }
 
+
+                
                 // LOTS
-                sSQL = $"SELECT idItem, Lot as idlot,QTT";
-                sSQL += " FROM STK_LOTS ";
+                sSQL = $"SELECT idItem as IdItem, STK.idWarehouse as IdWare, STK.idWareHouseType as IdWareType, SW.Descr as WareName, Lot as IdLot, QTT as Qtt";
+                sSQL += " FROM STK_LOTS STK";
+                sSQL += " left join STK_WAREHOUSES SW on STK.idWarehouse = SW.idWarehouse and STK.idWareHouseType = SW.idWareHouseType";
+                if (idwarehouse != "") sSQL += " Where STK.idWarehouse='" + idwarehouse.Trim() + "'";
                 sSQL += " ORDER BY idItem,Lot";
-                List<Stocks.LotItem> DTRows2 = db.Database.SqlQuery<Stocks.LotItem>(sSQL).ToList();
+                List<LotItemDB> DTRows2 = db.Database.SqlQuery<LotItemDB>(sSQL).ToList();
 
-                foreach (Stocks.LotItem rec in DTRows2)
+                // inicializamos Asignacion Lote Vacio al valor del STK
+                //foreach (Stocks.StockItem stki in STK.LstStocks)
+                //{
+                //   stki.item._Lots.Add("", stki.TotalStock);
+                //}
+
+                foreach (LotItemDB rec in DTRows2)
                 {
-                    string IdIt = rec.iditem;
-                    string IdLt = rec.idlot;
-                    decimal QTT = rec.qtt;
-
-                    Classes.Stocks.LotItem LTM = new Stocks.LotItem(IdLt, IdIt, QTT);
-                    STK.LstLots.Add(LTM);
+                    Stocks.Warehouse WR = new Stocks.Warehouse();
+                    WR.idWareHouse = rec.IdWare;
+                    WR.idWareHouseType = rec.IdWareType;
+                    WR.Descr = rec.WareName;
+                    STK.AsgnLotItemCarga(
+                        WareORIG: WR,
+                        idItem: rec.IdItem,
+                        Qtt: rec.Qtt,
+                        idLot: rec.IdLot);
                 }
+
 
                 //- Copiem el stock actual a la llsita StockBase per establir el punt base on es guarda.
                 STK.SetStockBase();
+                
 
                 return STK;
             }
@@ -144,9 +188,10 @@ namespace HKSupply.PRJ_Stocks.DB
                     string WaraName = SM.Ware.Descr;
                     string IdIt = SM.idItem;
                     string Ow = SM.idOwner;
+                    string Lot = SM.idLot;
                     decimal QTT = SM.QttMove;
                     Stocks.StockMovementsType MType = SM.MoveType;
-                    Stocks.StockMove STKm = new Stocks.StockMove(MType, idWareO, WaraName, idWareTypeO, IdIt, Ow, QTT);
+                    Stocks.StockMove STKm = new Stocks.StockMove(MType, idWareO, WaraName, idWareTypeO, IdIt, Ow,Lot, QTT);
                     StkAVerificar.Add(STKm);
                 }
 
@@ -193,6 +238,7 @@ namespace HKSupply.PRJ_Stocks.DB
                     int idWareTypeO = SM.Ware.idWareHouseType;
                     string IdIt = SM.idItem;
                     string Ow = SM.idOwner;
+                    string Lt = SM.idLot;
                     decimal QTT = SM.QttMove;
                     string Rem = SM.Remarks;
                     string Usr = SM.idUser;
@@ -200,8 +246,7 @@ namespace HKSupply.PRJ_Stocks.DB
 
                     DateTime DA = SM.DTArrival;
                     Stocks.StockMovementsType TypeM = SM.MoveType;
-
-
+                    
                     // -- REGISTRE MOVIMENTS ASOCIATS
                     sSQL = $"INSERT INTO STK_MOVEMENTS (";
                     sSQL += $"idMoveType,idWareHouse,idWareHouseType,idItem,idOwner,Lot,QTT,MovDate,ArrivalDate,Remarks,idUser,TimeStamp,GUID";
@@ -209,14 +254,17 @@ namespace HKSupply.PRJ_Stocks.DB
                     sSQL += $"{SM.idMovementType},'{idWareO}',{idWareTypeO},'{IdIt}','{Ow}','',{QTT.ToString(System.Globalization.CultureInfo.InvariantCulture)},";
                     sSQL += $"GETDATE(),convert(datetime,'{DA.ToString("yyyy-MM-dd")}',111),'{Rem}','{Usr}',GETDATE(),'{G.ToString()}'";
                     sSQL += $")";
-                    db.Database.ExecuteSqlCommand(sSQL);
-
+                    sSQL += "; SELECT @@IDENTITY;";
+                    //db.Databas e.ExecuteSqlCommand(sSQL);
+                    decimal idMov = db.Database.SqlQuery<decimal>(sSQL).First();
+                    
+                    int NumRegs = 0;
                     // -- REGITRE STOCKS
                     // Si Existeix update, si no es crea
                     // existeix si count<>0
                     sSQL = $"SELECT COUNT(*) FROM STK_STOCK ";
                     sSQL += $"WHERE idWareHouse ='{idWareO}' AND idWareHouseType ={idWareTypeO} AND idItem ='{IdIt}' AND idOwner='{Ow}'";
-                    int NumRegs = db.Database.SqlQuery<int>(sSQL).First();
+                    NumRegs = db.Database.SqlQuery<int>(sSQL).First();
                     if (NumRegs > 0)
                     {
                         sSQL = $"UPDATE STK_STOCK SET QTT=QTT+({QTT.ToString(System.Globalization.CultureInfo.InvariantCulture)}) ";
@@ -225,67 +273,57 @@ namespace HKSupply.PRJ_Stocks.DB
                     else
                     {
                         sSQL = $"INSERT INTO STK_STOCK (";
-                        sSQL += $"idWareHouse,idWareHouseType,idItem,Lot,idOwner,QTT";
+                        sSQL += $"idWareHouse,idWareHouseType,idItem,idOwner,QTT";
                         sSQL += $") VALUES (";
-                        sSQL += $"'{idWareO}',{idWareTypeO},'{IdIt}','','{Ow}',{QTT.ToString(System.Globalization.CultureInfo.InvariantCulture)}";
+                        sSQL += $"'{idWareO}',{idWareTypeO},'{IdIt}','{Ow}',{QTT.ToString(System.Globalization.CultureInfo.InvariantCulture)}";
                         sSQL += $")";
                     }
                     db.Database.ExecuteSqlCommand(sSQL);
 
-                    // -- LLISTA DOCS ASOCIATS
-
-                }
-
-                // ***** LOTES *****************************************************************************
-
-                foreach (Stocks.LotMove LM in STK.LstLotsMove)
-                {
-                    string IdLot = LM.idLot;
-                    string IdIt = LM.idItem;
-                    decimal QTT = LM.QttMove;
-                    string Rem = LM.Remarks;
-                    string Usr = LM.idUser;
-                    List<string> Ldocs = LM.LstIdDocs;
-
-                    DateTime DA = LM.DTArrival;
-                    Stocks.StockMovementsType TypeM = LM.MoveType;
-
-
-                    // -- REGISTRE MOVIMENTS LOTS ASOCIATS
-                    sSQL = $"INSERT INTO STK_LOT_MOVEMENTS (";
-                    sSQL += $"idMoveType,idItem,Lot,QTT,MovDate,ArrivalDate,Remarks,idUser,TimeStamp,GUID";
-                    sSQL += $") VALUES (";
-                    sSQL += $"{LM.idMovementType},'{IdIt}','{IdLot}',{QTT.ToString(System.Globalization.CultureInfo.InvariantCulture)},";
-                    sSQL += $"GETDATE(),convert(datetime,'{DA.ToString("yyyy-MM-dd")}',111),'{Rem}','{Usr}',GETDATE(),'{G.ToString()}'";
-                    sSQL += $")";
-                    db.Database.ExecuteSqlCommand(sSQL);
-
-                    // -- REGITRE LOTS STOCKS
+                    // -- REGITRE LOTS
                     // Si Existeix update, si no es crea
                     // existeix si count<>0
                     sSQL = $"SELECT COUNT(*) FROM STK_LOTS ";
-                    sSQL += $"WHERE idItem ='{IdIt}' AND Lot='{IdLot}'";
-                    int NumRegs = db.Database.SqlQuery<int>(sSQL).First();
+                    sSQL += $"WHERE idWareHouse ='{idWareO}' AND idWareHouseType ={idWareTypeO} AND idItem ='{IdIt}' AND LOt='{Lt}'";
+                    NumRegs = db.Database.SqlQuery<int>(sSQL).First();
                     if (NumRegs > 0)
                     {
                         sSQL = $"UPDATE STK_LOTS SET QTT=QTT+({QTT.ToString(System.Globalization.CultureInfo.InvariantCulture)}) ";
-                        sSQL += $"WHERE idItem ='{IdIt}' AND Lot='{IdLot}'";
+                        sSQL += $"WHERE idWareHouse ='{idWareO}' AND idWareHouseType ={idWareTypeO} AND idItem ='{IdIt}' AND Lot='{Lt}'";
                     }
                     else
                     {
                         sSQL = $"INSERT INTO STK_LOTS (";
-                        sSQL += $"idItem,Lot,QTT";
+                        sSQL += $"idWareHouse,idWareHouseType,idItem,Lot,QTT";
                         sSQL += $") VALUES (";
-                        sSQL += $"'{IdIt}','{IdLot}',{QTT.ToString(System.Globalization.CultureInfo.InvariantCulture)}";
+                        sSQL += $"'{idWareO}',{idWareTypeO},'{IdIt}','{Lt}',{QTT.ToString(System.Globalization.CultureInfo.InvariantCulture)}";
                         sSQL += $")";
                     }
                     db.Database.ExecuteSqlCommand(sSQL);
 
-                    // -- LLISTA DOCS ASOCIATS
-
+                    // -- LLISTA DOCS ASOCIATS                     
+                    //G es el GUID del moviment
+                    if(Ldocs!=null && Ldocs.Count>0)
+                    {
+                        // revisem la llista per a que no tingui repetits
+                        List<string> LstDocsNoRepes = new List<string>();
+                        foreach (string iddoc in Ldocs)
+                        {
+                            if (!LstDocsNoRepes.Contains(iddoc)) LstDocsNoRepes.Add(iddoc);
+                        }
+                        sSQL = $"DELETE FROM STK_MOVEMENTS_DOCS WHERE GUID_Move={G.ToString()}";
+                        foreach(string iddoc in LstDocsNoRepes)
+                        {
+                            sSQL = $"INSERT INTO STK_MOVEMENTS_DOCS (";
+                            sSQL += $"idMove,idDoc";
+                            sSQL += $") VALUES (";
+                            sSQL += $"{idMov},'{iddoc}'";
+                            sSQL += $")";
+                            db.Database.ExecuteSqlCommand(sSQL);
+                        }
+                    }
                 }
-
-
+                                
                 // Purga STK = 0;
                 sSQL = $"DELETE FROM STK_STOCK WHERE QTT<=0";
                 db.Database.ExecuteSqlCommand(sSQL);
@@ -294,19 +332,17 @@ namespace HKSupply.PRJ_Stocks.DB
 
                 // Esborrem els moviemnts.  
                 STK.LstStockMove.Clear();
-                STK.LstLotsMove.Clear();
-
-
+                                
                 // NO CARREGUEM STOKS DE NOU PERQUE HI HA UNA TRANSACCIO OBERTA. Ho farem despres de guardar.
                 //STK = GetCurrentStock(db);
                 STK.SetStockBase();
-
+                
                 return true; // si arriba aqui es que tot es ok. Si no ha petat el SQL i ha sortit per el catch
 
             }
             catch (Exception ex)
             {
-                _log.Error(ex.Message, ex);
+                _log.Error(ex.Message, ex);                
                 throw ex;
             }
         }

@@ -73,6 +73,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
 
                 ConfigureRibbonActions();
                 LoadAuxList();
+                SetUpTabs();
                 SetUpLabels();
                 SetObjectsReadOnly();
                 SetUpButtons();
@@ -974,10 +975,42 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 throw;
             }
         }
-        
+
         #endregion
 
         #region Setup Form Objects
+
+        private void SetUpTabs()
+        {
+            try
+            {
+
+                xtpPakingList.AutoScroll = true;
+                xtpPakingList.AutoScrollMargin = new Size(20, 20);
+                xtpPakingList.AutoScrollMinSize = new Size(xtpPakingList.Width, xtpPakingList.Height);
+
+                xtpPOSelection.AutoScroll = true;
+                xtpPOSelection.AutoScrollMargin = new Size(20, 20);
+                xtpPOSelection.AutoScrollMinSize = new Size(xtpPOSelection.Width, xtpPOSelection.Height);
+
+                xtpDeliveredGoods.AutoScroll = true;
+                xtpDeliveredGoods.AutoScrollMargin = new Size(20, 20);
+                xtpDeliveredGoods.AutoScrollMinSize = new Size(xtpDeliveredGoods.Width, xtpDeliveredGoods.Height);
+
+                xtpTerms.AutoScroll = true;
+                xtpTerms.AutoScrollMargin = new Size(20, 20);
+                xtpTerms.AutoScrollMinSize = new Size(xtpTerms.Width, xtpTerms.Height);
+
+                xtpFiles.AutoScroll = true;
+                xtpFiles.AutoScrollMargin = new Size(20, 20);
+                xtpFiles.AutoScrollMinSize = new Size(xtpFiles.Width, xtpFiles.Height);
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
 
         private void SetUpLabels()
         {
@@ -1183,7 +1216,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
             {
                 slueDeliveryTerms.Properties.DataSource = _deliveryTermList;
                 slueDeliveryTerms.Properties.ValueMember = nameof(DeliveryTerm.IdDeliveryTerm);
-                slueDeliveryTerms.Properties.DisplayMember = nameof(DeliveryTerm.IdDeliveryTerm);
+                slueDeliveryTerms.Properties.DisplayMember = nameof(DeliveryTerm.Description);
                 slueDeliveryTerms.Properties.View.Columns.AddField(nameof(DeliveryTerm.IdDeliveryTerm)).Visible = true;
                 slueDeliveryTerms.Properties.View.Columns.AddField(nameof(DeliveryTerm.Description)).Visible = true;
                 slueDeliveryTerms.Properties.NullText = "Select Delivery Term...";
@@ -1201,7 +1234,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
             {
                 sluePaymentTerm.Properties.DataSource = _paymentTermsList;
                 sluePaymentTerm.Properties.ValueMember = nameof(PaymentTerms.IdPaymentTerms);
-                sluePaymentTerm.Properties.DisplayMember = nameof(PaymentTerms.IdPaymentTerms);
+                sluePaymentTerm.Properties.DisplayMember = nameof(PaymentTerms.Description);
                 sluePaymentTerm.Properties.View.Columns.AddField(nameof(PaymentTerms.IdPaymentTerms)).Visible = true;
                 sluePaymentTerm.Properties.View.Columns.AddField(nameof(PaymentTerms.Description)).Visible = true;
                 sluePaymentTerm.Properties.NullText = "Select Payment Term...";
@@ -1283,6 +1316,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
 
                 //Events
                 gridViewPoSelection.SelectionChanged += GridViewPoSelection_SelectionChanged;
+
 
             }
             catch
@@ -1405,10 +1439,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 xgrdLinesPoSelection.ToolTipController = toolTipController1;
 
                 gridViewLinesPoSelection.OptionsLayout.StoreAppearance = true;
-                gridViewLinesPoSelection.OptionsLayout.StoreVisualOptions = true;
-                gridViewLinesPoSelection.SaveLayoutToStream(_gridviewPoLinesDefaultLayputStr);
-                _gridviewPoLinesDefaultLayputStr.Seek(0, SeekOrigin.Begin);
-                gridViewLinesPoSelection.Tag = _gridviewPoLinesDefaultLayputStr;
+                gridViewLinesPoSelection.OptionsLayout.StoreAllOptions = true;
 
             }
             catch
@@ -1580,7 +1611,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                     default:
                         sbFinishPK.Visible = false;
                         sbSearch.Visible = true;
-                        lbltxtStatus.Visible = false;
+                        lbltxtStatus.Visible = (_docHeadPK != null);
                         xtpFiles.PageVisible = false;
                         break;
                 }
@@ -1832,7 +1863,6 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 RestoreInitState();
                 SetVisiblePropertyByState();
 
-                gridViewLinesPoSelection.SetEditingStyles(); //aki
             }
             catch
             {
@@ -1871,8 +1901,6 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 SetGridsEnabled();
 
                 SetVisiblePropertyByState();
-
-                gridViewLinesPoSelection.SetEditingStyles(); //aki
 
             }
             catch

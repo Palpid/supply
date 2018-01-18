@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_supply_1_1_supply_doc_type" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::Supply::SupplyDocType</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_supply_doc_type_1a147e8304a292b1f4ddc8b79167578b61" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.SupplyDocType.IdSupplyDocType</definition>
+        <argsstring></argsstring>
+        <name>IdSupplyDocType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/SupplyDocType.cs" line="11" column="1" bodyfile="HKSupply/Models/Supply/SupplyDocType.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_supply_doc_type_1ab8e7804c0cf19e3f8863eeef3ce9f345" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.SupplyDocType.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/SupplyDocType.cs" line="14" column="1" bodyfile="HKSupply/Models/Supply/SupplyDocType.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_supply_1_1_supply_doc_type_1a5f3f91277e5df3b192f307ddc574f654" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.Supply.SupplyDocType.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/SupplyDocType.cs" line="17" column="1" bodyfile="HKSupply/Models/Supply/SupplyDocType.cs" bodystart="17" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_supply_1_1_supply_doc_type_1acbb3903bae38e911d366c141f5c1b1b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.Supply.SupplyDocType.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/SupplyDocType.cs" line="27" column="1" bodyfile="HKSupply/Models/Supply/SupplyDocType.cs" bodystart="27" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/Supply/SupplyDocType.cs" line="9" column="1" bodyfile="HKSupply/Models/Supply/SupplyDocType.cs" bodystart="8" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_supply_doc_type_1ab8e7804c0cf19e3f8863eeef3ce9f345" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::SupplyDocType</scope><name>Description</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_supply_doc_type_1a5f3f91277e5df3b192f307ddc574f654" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::SupplyDocType</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_supply_doc_type_1acbb3903bae38e911d366c141f5c1b1b9" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::SupplyDocType</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_supply_doc_type_1a147e8304a292b1f4ddc8b79167578b61" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::SupplyDocType</scope><name>IdSupplyDocType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

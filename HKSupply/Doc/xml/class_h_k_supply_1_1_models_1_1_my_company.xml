@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_my_company" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::MyCompany</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_my_company_1ae5992e60fbc5f7a96c06735d93cba601" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.MyCompany.IdMyCompany</definition>
+        <argsstring></argsstring>
+        <name>IdMyCompany</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MyCompany.cs" line="15" column="1" bodyfile="HKSupply/Models/MyCompany.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_my_company_1a15ef5cc4bbc3334eeb0bdca355c53e34" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.MyCompany.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MyCompany.cs" line="18" column="1" bodyfile="HKSupply/Models/MyCompany.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_my_company_1a81cdb6926c8c2f2ee22391f690da08df" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.MyCompany.VATNum</definition>
+        <argsstring></argsstring>
+        <name>VATNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MyCompany.cs" line="21" column="1" bodyfile="HKSupply/Models/MyCompany.cs" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_my_company_1ac0b7e2a2955efda5f8ad8769ba883ec0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.MyCompany.ShippingAddress</definition>
+        <argsstring></argsstring>
+        <name>ShippingAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MyCompany.cs" line="24" column="1" bodyfile="HKSupply/Models/MyCompany.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_my_company_1a3676c19090db5f2c0117bfe658e0d277" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.MyCompany.ShippingAddressZh</definition>
+        <argsstring></argsstring>
+        <name>ShippingAddressZh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MyCompany.cs" line="27" column="1" bodyfile="HKSupply/Models/MyCompany.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_my_company_1a13bb80483572b093ca8158f6143cdfbb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.MyCompany.BillingAddress</definition>
+        <argsstring></argsstring>
+        <name>BillingAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MyCompany.cs" line="30" column="1" bodyfile="HKSupply/Models/MyCompany.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_my_company_1a6e36230d62b636e28bb21250dfc56138" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.MyCompany.BillingAddressZh</definition>
+        <argsstring></argsstring>
+        <name>BillingAddressZh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MyCompany.cs" line="33" column="1" bodyfile="HKSupply/Models/MyCompany.cs" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_my_company_1af181cfa6887b6ebf0dcc0b4d35cd0a69" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.MyCompany.ContactName</definition>
+        <argsstring></argsstring>
+        <name>ContactName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MyCompany.cs" line="36" column="1" bodyfile="HKSupply/Models/MyCompany.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_my_company_1add8edc45cdd5e2ae72aad60d32b66263" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.MyCompany.ContactNameZh</definition>
+        <argsstring></argsstring>
+        <name>ContactNameZh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MyCompany.cs" line="39" column="1" bodyfile="HKSupply/Models/MyCompany.cs" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_my_company_1af23f651f6f41697e2da6a56c02379baf" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.MyCompany.ContactPhone</definition>
+        <argsstring></argsstring>
+        <name>ContactPhone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MyCompany.cs" line="42" column="1" bodyfile="HKSupply/Models/MyCompany.cs" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_my_company_1ab06fad031086ae867c4a1c770572e4a0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.MyCompany.Comments</definition>
+        <argsstring></argsstring>
+        <name>Comments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MyCompany.cs" line="45" column="1" bodyfile="HKSupply/Models/MyCompany.cs" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_my_company_1a248ca9b754a31e23da0bef2bd517436f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.MyCompany.IdDefaultCurrency</definition>
+        <argsstring></argsstring>
+        <name>IdDefaultCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MyCompany.cs" line="48" column="1" bodyfile="HKSupply/Models/MyCompany.cs" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_my_company_1aef2e2820c2f56fd976356821eefee4a6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_currency" kindref="compound">Currency</ref></type>
+        <definition>Currency HKSupply.Models.MyCompany.DefaultCurrency</definition>
+        <argsstring></argsstring>
+        <name>DefaultCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MyCompany.cs" line="52" column="1" bodyfile="HKSupply/Models/MyCompany.cs" bodystart="52" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_my_company_1a25b7f23d1503812b5c1dba3864dd9a01" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.MyCompany.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MyCompany.cs" line="56" column="1" bodyfile="HKSupply/Models/MyCompany.cs" bodystart="56" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_my_company_1aad6926d15e84c92fbba9b7a36aed5d3e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.MyCompany.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MyCompany.cs" line="81" column="1" bodyfile="HKSupply/Models/MyCompany.cs" bodystart="81" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/MyCompany.cs" line="13" column="1" bodyfile="HKSupply/Models/MyCompany.cs" bodystart="12" bodyend="100"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_my_company_1a13bb80483572b093ca8158f6143cdfbb" prot="public" virt="non-virtual"><scope>HKSupply::Models::MyCompany</scope><name>BillingAddress</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_my_company_1a6e36230d62b636e28bb21250dfc56138" prot="public" virt="non-virtual"><scope>HKSupply::Models::MyCompany</scope><name>BillingAddressZh</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_my_company_1ab06fad031086ae867c4a1c770572e4a0" prot="public" virt="non-virtual"><scope>HKSupply::Models::MyCompany</scope><name>Comments</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_my_company_1af181cfa6887b6ebf0dcc0b4d35cd0a69" prot="public" virt="non-virtual"><scope>HKSupply::Models::MyCompany</scope><name>ContactName</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_my_company_1add8edc45cdd5e2ae72aad60d32b66263" prot="public" virt="non-virtual"><scope>HKSupply::Models::MyCompany</scope><name>ContactNameZh</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_my_company_1af23f651f6f41697e2da6a56c02379baf" prot="public" virt="non-virtual"><scope>HKSupply::Models::MyCompany</scope><name>ContactPhone</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_my_company_1aef2e2820c2f56fd976356821eefee4a6" prot="public" virt="non-virtual"><scope>HKSupply::Models::MyCompany</scope><name>DefaultCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_my_company_1a25b7f23d1503812b5c1dba3864dd9a01" prot="public" virt="non-virtual"><scope>HKSupply::Models::MyCompany</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_my_company_1aad6926d15e84c92fbba9b7a36aed5d3e" prot="public" virt="non-virtual"><scope>HKSupply::Models::MyCompany</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_my_company_1a248ca9b754a31e23da0bef2bd517436f" prot="public" virt="non-virtual"><scope>HKSupply::Models::MyCompany</scope><name>IdDefaultCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_my_company_1ae5992e60fbc5f7a96c06735d93cba601" prot="public" virt="non-virtual"><scope>HKSupply::Models::MyCompany</scope><name>IdMyCompany</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_my_company_1a15ef5cc4bbc3334eeb0bdca355c53e34" prot="public" virt="non-virtual"><scope>HKSupply::Models::MyCompany</scope><name>Name</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_my_company_1ac0b7e2a2955efda5f8ad8769ba883ec0" prot="public" virt="non-virtual"><scope>HKSupply::Models::MyCompany</scope><name>ShippingAddress</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_my_company_1a3676c19090db5f2c0117bfe658e0d277" prot="public" virt="non-virtual"><scope>HKSupply::Models::MyCompany</scope><name>ShippingAddressZh</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_my_company_1a81cdb6926c8c2f2ee22391f690da08df" prot="public" virt="non-virtual"><scope>HKSupply::Models::MyCompany</scope><name>VATNum</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_item_bcn" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::ItemBcn</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_bcn_1a16a297c0d57caf8a448a96332d96df63" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemBcn.IdItemBcn</definition>
+        <argsstring></argsstring>
+        <name>IdItemBcn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemBcn.cs" line="16" column="1" bodyfile="HKSupply/Models/ItemBcn.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_item_bcn_1a45b15ea75ba5967bebb7ab19a3e6e63f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.ItemBcn.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemBcn.cs" line="18" column="1" bodyfile="HKSupply/Models/ItemBcn.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_item_bcn_1a5d8ad845f4192525ae3fa58d927ebf17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.ItemBcn.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemBcn.cs" line="21" column="1" bodyfile="HKSupply/Models/ItemBcn.cs" bodystart="21" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_item_bcn_1aa6a044fe0a79fa969404d235b84846da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.ItemBcn.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/ItemBcn.cs" line="31" column="1" bodyfile="HKSupply/Models/ItemBcn.cs" bodystart="31" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/ItemBcn.cs" line="14" column="1" bodyfile="HKSupply/Models/ItemBcn.cs" bodystart="13" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_bcn_1a45b15ea75ba5967bebb7ab19a3e6e63f" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemBcn</scope><name>Description</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_bcn_1a5d8ad845f4192525ae3fa58d927ebf17" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemBcn</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_bcn_1aa6a044fe0a79fa969404d235b84846da" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemBcn</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_item_bcn_1a16a297c0d57caf8a448a96332d96df63" prot="public" virt="non-virtual"><scope>HKSupply::Models::ItemBcn</scope><name>IdItemBcn</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

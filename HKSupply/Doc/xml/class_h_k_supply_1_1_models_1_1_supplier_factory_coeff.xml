@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::SupplierFactoryCoeff</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1af65bbe9dfa2784f686b5e8842508f989" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.SupplierFactoryCoeff.IdSupplier</definition>
+        <argsstring></argsstring>
+        <name>IdSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierFactoryCoeff.cs" line="17" column="1" bodyfile="HKSupply/Models/SupplierFactoryCoeff.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1a097e12a8751d8f15c4d63e35156c9bd8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.SupplierFactoryCoeff.IdFactory</definition>
+        <argsstring></argsstring>
+        <name>IdFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierFactoryCoeff.cs" line="20" column="1" bodyfile="HKSupply/Models/SupplierFactoryCoeff.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1a3f6e8d7a4f1545a503f03400d4898cf7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.SupplierFactoryCoeff.IdItemGroup</definition>
+        <argsstring></argsstring>
+        <name>IdItemGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierFactoryCoeff.cs" line="23" column="1" bodyfile="HKSupply/Models/SupplierFactoryCoeff.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1a3af361924c24153b249c907fe3a1cd2d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.SupplierFactoryCoeff.Density</definition>
+        <argsstring></argsstring>
+        <name>Density</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierFactoryCoeff.cs" line="26" column="1" bodyfile="HKSupply/Models/SupplierFactoryCoeff.cs" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1a53d6336334bc723f9f094b98611fc582" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.SupplierFactoryCoeff.Coefficient1</definition>
+        <argsstring></argsstring>
+        <name>Coefficient1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierFactoryCoeff.cs" line="29" column="1" bodyfile="HKSupply/Models/SupplierFactoryCoeff.cs" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1aa427c3afa97d8adcfb72eee91a33d056" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.SupplierFactoryCoeff.Coefficient2</definition>
+        <argsstring></argsstring>
+        <name>Coefficient2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierFactoryCoeff.cs" line="32" column="1" bodyfile="HKSupply/Models/SupplierFactoryCoeff.cs" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1aaad07db01ac26e5e675618e029e38f37" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.SupplierFactoryCoeff.Scrap</definition>
+        <argsstring></argsstring>
+        <name>Scrap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierFactoryCoeff.cs" line="35" column="1" bodyfile="HKSupply/Models/SupplierFactoryCoeff.cs" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1a9e0516d7e0e1567072a11fb092d98aba" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_item_group" kindref="compound">ItemGroup</ref></type>
+        <definition>ItemGroup HKSupply.Models.SupplierFactoryCoeff.ItemGroup</definition>
+        <argsstring></argsstring>
+        <name>ItemGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierFactoryCoeff.cs" line="39" column="1" bodyfile="HKSupply/Models/SupplierFactoryCoeff.cs" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1a03e5e4fcfc019106ea4fa53cacc5f49e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supplier" kindref="compound">Supplier</ref></type>
+        <definition>Supplier HKSupply.Models.SupplierFactoryCoeff.Supplier</definition>
+        <argsstring></argsstring>
+        <name>Supplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierFactoryCoeff.cs" line="42" column="1" bodyfile="HKSupply/Models/SupplierFactoryCoeff.cs" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1a1f5b04cce00d4df785b33c5c36e2f087" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supplier" kindref="compound">Supplier</ref></type>
+        <definition>Supplier HKSupply.Models.SupplierFactoryCoeff.Factory</definition>
+        <argsstring></argsstring>
+        <name>Factory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierFactoryCoeff.cs" line="45" column="1" bodyfile="HKSupply/Models/SupplierFactoryCoeff.cs" bodystart="45" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1a9e907ce43832bba327bec0225354c0ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.SupplierFactoryCoeff.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierFactoryCoeff.cs" line="49" column="1" bodyfile="HKSupply/Models/SupplierFactoryCoeff.cs" bodystart="49" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1a4ca1059dfecff56ecdc689eda674e623" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.SupplierFactoryCoeff.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/SupplierFactoryCoeff.cs" line="69" column="1" bodyfile="HKSupply/Models/SupplierFactoryCoeff.cs" bodystart="69" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/SupplierFactoryCoeff.cs" line="15" column="1" bodyfile="HKSupply/Models/SupplierFactoryCoeff.cs" bodystart="14" bodyend="84"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1a53d6336334bc723f9f094b98611fc582" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierFactoryCoeff</scope><name>Coefficient1</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1aa427c3afa97d8adcfb72eee91a33d056" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierFactoryCoeff</scope><name>Coefficient2</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1a3af361924c24153b249c907fe3a1cd2d" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierFactoryCoeff</scope><name>Density</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1a9e907ce43832bba327bec0225354c0ae" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierFactoryCoeff</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1a1f5b04cce00d4df785b33c5c36e2f087" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierFactoryCoeff</scope><name>Factory</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1a4ca1059dfecff56ecdc689eda674e623" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierFactoryCoeff</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1a097e12a8751d8f15c4d63e35156c9bd8" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierFactoryCoeff</scope><name>IdFactory</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1a3f6e8d7a4f1545a503f03400d4898cf7" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierFactoryCoeff</scope><name>IdItemGroup</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1af65bbe9dfa2784f686b5e8842508f989" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierFactoryCoeff</scope><name>IdSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1a9e0516d7e0e1567072a11fb092d98aba" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierFactoryCoeff</scope><name>ItemGroup</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1aaad07db01ac26e5e675618e029e38f37" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierFactoryCoeff</scope><name>Scrap</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff_1a03e5e4fcfc019106ea4fa53cacc5f49e" prot="public" virt="non-virtual"><scope>HKSupply::Models::SupplierFactoryCoeff</scope><name>Supplier</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier" kind="interface" language="C#" prot="public">
     <compoundname>HKSupply::Services::Interfaces::ISupplier</compoundname>
     <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFSupplier</derivedcompoundref>
@@ -63,12 +63,17 @@
         </inbodydescription>
         <location file="HKSupply/Services/Interfaces/ISupplier.cs" line="17" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_1a39b55b5abacb7c7b44418dc5974b3c64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_1a5c32c72848f4188dc21a8e7cab52a55e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier" kindref="compound">Supplier</ref> &gt;</type>
         <definition>List&lt;Supplier&gt; HKSupply.Services.Interfaces.ISupplier.GetSuppliers</definition>
-        <argsstring>()</argsstring>
+        <argsstring>(bool withEtniaHk=false)</argsstring>
         <name>GetSuppliers</name>
-        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_1a9881ab8326a00f150795c812b0d909db">GetSuppliers</reimplementedby>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_1ab6fe5acb35fa05ed5717c94d196c44a9">GetSuppliers</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>withEtniaHk</declname>
+          <defval>false</defval>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -77,27 +82,46 @@
         </inbodydescription>
         <location file="HKSupply/Services/Interfaces/ISupplier.cs" line="18" column="1"/>
       </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_1a2e8cb084e806d42f9540cb95ff8dedb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier_history" kindref="compound">SupplierHistory</ref> &gt;</type>
+        <definition>List&lt;SupplierHistory&gt; HKSupply.Services.Interfaces.ISupplier.GetSupplierHistory</definition>
+        <argsstring>(string idSupplier)</argsstring>
+        <name>GetSupplierHistory</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier_1a9c2d4b8e1223daaf655aabf512672e27">GetSupplierHistory</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/ISupplier.cs" line="19" column="1"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Interface para el sevice de Supplier </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="144">
+      <node id="840">
         <label>HKSupply.Services.Interfaces.ISupplier</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier"/>
       </node>
-      <node id="145">
+      <node id="841">
         <label>HKSupply.Services.Implementations.EFSupplier</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_supplier"/>
-        <childnode refid="144" relation="public-inheritance">
+        <childnode refid="840" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="HKSupply/Services/Interfaces/ISupplier.cs" line="14" column="1" bodyfile="HKSupply/Services/Interfaces/ISupplier.cs" bodystart="13" bodyend="19"/>
+    <location file="HKSupply/Services/Interfaces/ISupplier.cs" line="14" column="1" bodyfile="HKSupply/Services/Interfaces/ISupplier.cs" bodystart="13" bodyend="20"/>
     <listofallmembers>
       <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_1accc763010890f2acb72ff29919752b78" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ISupplier</scope><name>GetSupplierById</name></member>
-      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_1a39b55b5abacb7c7b44418dc5974b3c64" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ISupplier</scope><name>GetSuppliers</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_1a2e8cb084e806d42f9540cb95ff8dedb3" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ISupplier</scope><name>GetSupplierHistory</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_1a5c32c72848f4188dc21a8e7cab52a55e" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ISupplier</scope><name>GetSuppliers</name></member>
       <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_1a7019d71be0f8ed67ccc25b2904742792" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ISupplier</scope><name>NewSupplier</name></member>
       <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_supplier_1a7a1efffc5b5a474eb28b018c769e744b" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ISupplier</scope><name>UpdateSupplier</name></member>
     </listofallmembers>

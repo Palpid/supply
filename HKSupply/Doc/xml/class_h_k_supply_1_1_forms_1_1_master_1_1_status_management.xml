@@ -1,0 +1,453 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Master::StatusManagement</compoundname>
+    <basecompoundref refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" prot="public" virt="non-virtual">HKSupply.Forms.RibbonFormBase</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1ae47a0a0557453fee8ff338f6c0abe77d" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>eStatusHkColumns</name>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1ae47a0a0557453fee8ff338f6c0abe77da27631c4c03e5301aaad9e45b9d102e26" prot="private">
+          <name>IdStatusProd</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1ae47a0a0557453fee8ff338f6c0abe77dab5a7adde1af5c87d7fd797b6245c2a39" prot="private">
+          <name>Description</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.cs" line="24" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.cs" bodystart="23" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1af6813d2afb69979548a42efa3a2caceb" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>eStatusCialColumns</name>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1af6813d2afb69979548a42efa3a2caceba4dad065ac3fe042220e0cabd7d0e2304" prot="private">
+          <name>IdStatusCial</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1af6813d2afb69979548a42efa3a2cacebab5a7adde1af5c87d7fd797b6245c2a39" prot="private">
+          <name>Description</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.cs" line="30" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.cs" bodystart="29" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a57be0d8dc4cbbec280d2afbb4352e030" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_status_h_k" kindref="compound">StatusHK</ref> &gt;</type>
+        <definition>List&lt;StatusHK&gt; HKSupply.Forms.Master.StatusManagement._statusHkList</definition>
+        <argsstring></argsstring>
+        <name>_statusHkList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.cs" line="37" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1aef0fa94f323eeb64749849a152513af4" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_status_cial" kindref="compound">StatusCial</ref> &gt;</type>
+        <definition>List&lt;StatusCial&gt; HKSupply.Forms.Master.StatusManagement._statusCialList</definition>
+        <argsstring></argsstring>
+        <name>_statusCialList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.cs" line="38" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a24312f6ec04393bf0310ef0b6a41794f" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Master.StatusManagement.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a39e5d3d6eabd793462bd80872b506bba" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Master.StatusManagement.xtraTabControlGeneral</definition>
+        <argsstring></argsstring>
+        <name>xtraTabControlGeneral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.Designer.cs" line="141" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.Designer.cs" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1aaae7eb43bc34fc5ab7040d868e94e06e" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.StatusManagement.xtraTabPageStatusHK</definition>
+        <argsstring></argsstring>
+        <name>xtraTabPageStatusHK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.Designer.cs" line="142" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.Designer.cs" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a5ee5995c567a16f05e6b655da9802a4b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.StatusManagement.xgrdStatusHK</definition>
+        <argsstring></argsstring>
+        <name>xgrdStatusHK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.Designer.cs" line="143" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.Designer.cs" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a022eb72e04906c93753a306fdac5c0db" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.StatusManagement.gridViewStatusHK</definition>
+        <argsstring></argsstring>
+        <name>gridViewStatusHK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.Designer.cs" line="144" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.Designer.cs" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a70c2478a367591e7ac1955a29d48f9e0" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.StatusManagement.xtraTabPageStatusCial</definition>
+        <argsstring></argsstring>
+        <name>xtraTabPageStatusCial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.Designer.cs" line="145" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.Designer.cs" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a501d7a8374942cb7058d6220080903c4" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.StatusManagement.xgrdStatusCial</definition>
+        <argsstring></argsstring>
+        <name>xgrdStatusCial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.Designer.cs" line="146" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.Designer.cs" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a6cfb287d3955e66b8d9db0598ec5aff3" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.StatusManagement.gridViewStatusCial</definition>
+        <argsstring></argsstring>
+        <name>gridViewStatusCial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.Designer.cs" line="147" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.Designer.cs" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a41c06b8423d3748dafab760cd065f4d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Master.StatusManagement.StatusManagement</definition>
+        <argsstring>()</argsstring>
+        <name>StatusManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.cs" line="42" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.cs" bodystart="42" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a5c5224308acd9bee1ddd980655a10eda" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StatusManagement.ConfigureRibbonActions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.cs" line="60" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.cs" bodystart="60" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1ab37604e9b17cd91d081339a0a19e1b19" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StatusManagement.StatusManagement_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>StatusManagement_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.cs" line="76" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.cs" bodystart="76" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a4e2607cff1ebfc014319994fbe248d23" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StatusManagement.SetUpGrdStatusHk</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdStatusHk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.cs" line="91" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.cs" bodystart="91" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1af9555b58b1602faab91da9d50ba3f95a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StatusManagement.SetUpGrdStatusCial</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdStatusCial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.cs" line="122" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.cs" bodystart="122" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a970c7916078a179acc1ac916c1f75a8b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StatusManagement.LoadAllStatusHk</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAllStatusHk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.cs" line="152" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.cs" bodystart="152" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a692a189e1562aa2e6527d24964898a30" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StatusManagement.LoadAllStatusCial</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAllStatusCial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.cs" line="165" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.cs" bodystart="165" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a523c719c86139b70f1617b6285ea1dfe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.StatusManagement.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.Designer.cs" bodystart="29" bodyend="137"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1ae5ab8bea31355024f1714ca2c6230185" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.StatusManagement.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/StatusManagement.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1539">
+        <label>HKSupply.Forms.Master.StatusManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management"/>
+        <childnode refid="1540" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1541">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1540">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1541" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1542">
+        <label>HKSupply.Forms.Master.StatusManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management"/>
+        <childnode refid="1543" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1544">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1545">
+        <label>XtraBars</label>
+      </node>
+      <node id="1543">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1544" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1545" relation="usage">
+          <edgelabel>bbiCancel</edgelabel>
+          <edgelabel>ribbonStatusBar</edgelabel>
+          <edgelabel>bbiPrintPreview</edgelabel>
+          <edgelabel>bbiSave</edgelabel>
+          <edgelabel>bbiNew</edgelabel>
+          <edgelabel>bbiEdit</edgelabel>
+          <edgelabel>ribbonControl</edgelabel>
+          <edgelabel>ribbonPageGroup1</edgelabel>
+          <edgelabel>ribbonPage1</edgelabel>
+          <edgelabel>ribbonPageGroup2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Master/StatusManagement.cs" line="21" column="1" bodyfile="HKSupply/Forms/Master/StatusManagement.cs" bodystart="20" bodyend="179"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1aef0fa94f323eeb64749849a152513af4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>_statusCialList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a57be0d8dc4cbbec280d2afbb4352e030" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>_statusHkList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>ActionsStates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>AddRestoreLayoutItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>BarButtonItemReport_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>bbiCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>bbiEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>bbiExportCsv_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>bbiExportExcel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>bbiNew</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>bbiPrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>bbiPrintPreview_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>bbiSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>BbiSaveLayout_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a24312f6ec04393bf0310ef0b6a41794f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>ConfigureLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>ConfigurePrintExportOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a5c5224308acd9bee1ddd980655a10eda" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>ConfigureRibbonActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>CurrentLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>CurrentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1ae5ab8bea31355024f1714ca2c6230185" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>EnableExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>EnableExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>EnableLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>EnablePrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1af6813d2afb69979548a42efa3a2caceb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>eStatusCialColumns</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1ae47a0a0557453fee8ff338f6c0abe77d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>eStatusHkColumns</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>ExportCsvFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>ExportExcelFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a6cfb287d3955e66b8d9db0598ec5aff3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>gridViewStatusCial</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a022eb72e04906c93753a306fdac5c0db" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>gridViewStatusHK</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a523c719c86139b70f1617b6285ea1dfe" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>LayoutButton_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a692a189e1562aa2e6527d24964898a30" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>LoadAllStatusCial</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a970c7916078a179acc1ac916c1f75a8b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>LoadAllStatusHk</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>Modify</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>New</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>ProcessCmdKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>Read</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>RestoreInitState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>ribbonControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>RibbonFormBase</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>ribbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>ribbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>ribbonPageGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>ribbonStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>SetActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>SetRibbonText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1af9555b58b1602faab91da9d50ba3f95a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>SetUpGrdStatusCial</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a4e2607cff1ebfc014319994fbe248d23" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>SetUpGrdStatusHk</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a41c06b8423d3748dafab760cd065f4d8" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>StatusManagement</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1ab37604e9b17cd91d081339a0a19e1b19" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>StatusManagement_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a501d7a8374942cb7058d6220080903c4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>xgrdStatusCial</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a5ee5995c567a16f05e6b655da9802a4b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>xgrdStatusHK</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a39e5d3d6eabd793462bd80872b506bba" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>xtraTabControlGeneral</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1a70c2478a367591e7ac1955a29d48f9e0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>xtraTabPageStatusCial</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_status_management_1aaae7eb43bc34fc5ab7040d868e94e06e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::StatusManagement</scope><name>xtraTabPageStatusHK</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

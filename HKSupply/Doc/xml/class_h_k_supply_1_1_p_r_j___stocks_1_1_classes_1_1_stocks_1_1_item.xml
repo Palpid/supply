@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::PRJ_Stocks::Classes::Stocks::Item</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1afcc42fc748f9fe2a5c1c241e4882b304" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.PRJ_Stocks.Classes.Stocks.Item.idItem</definition>
+        <argsstring></argsstring>
+        <name>idItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="153" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="153" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a76abf0f349a59b2de193fb77c600a8a5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.PRJ_Stocks.Classes.Stocks.Item.TotalQTT</definition>
+        <argsstring></argsstring>
+        <name>TotalQTT</name>
+        <briefdescription>
+<para>Retorna el total stock de tots el lots del item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="188" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="189" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a8ccbe83cc666b87e18013c1097b84b13" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.PRJ_Stocks.Classes.Stocks.Item.TotalAssignedQTT</definition>
+        <argsstring></argsstring>
+        <name>TotalAssignedQTT</name>
+        <briefdescription>
+<para>Retorna el stock reservat </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="202" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="203" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a552fb47c225ce03aa591ae1a45eca555" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.PRJ_Stocks.Classes.Stocks.Item.TotalAssignedLotQTT</definition>
+        <argsstring></argsstring>
+        <name>TotalAssignedLotQTT</name>
+        <briefdescription>
+<para>Retorna el stock reservat </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="216" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="217" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a1a432d2bb23094b014fc92b915ebb27d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.PRJ_Stocks.Classes.Stocks.Item.TotalFreeLotQTT</definition>
+        <argsstring></argsstring>
+        <name>TotalFreeLotQTT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="227" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="228" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a2bee7e18e2b400093383e5531b4aa53f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.PRJ_Stocks.Classes.Stocks.Item.TotalFreeQTT</definition>
+        <argsstring></argsstring>
+        <name>TotalFreeQTT</name>
+        <briefdescription>
+<para>Retorna el stock reservat </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="239" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="240" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1acd1d1ba5729e8d3223cded0caec408dd" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_det_asg" kindref="compound">DetAsg</ref> &gt;</type>
+        <definition>List&lt;DetAsg&gt; HKSupply.PRJ_Stocks.Classes.Stocks.Item.LstAsigs</definition>
+        <argsstring></argsstring>
+        <name>LstAsigs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="248" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="249" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a0595882b94550a901bff84b9789be59a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_det_lot" kindref="compound">DetLot</ref> &gt;</type>
+        <definition>List&lt;DetLot&gt; HKSupply.PRJ_Stocks.Classes.Stocks.Item.LstLots</definition>
+        <argsstring></argsstring>
+        <name>LstLots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="265" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="266" bodyend="280"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a66f320d48d90233fdacbd290a55cb467" prot="public" static="no" mutable="no">
+        <type>Dictionary&lt; String, decimal &gt;</type>
+        <definition>Dictionary&lt;String, decimal&gt; HKSupply.PRJ_Stocks.Classes.Stocks.Item._Resr</definition>
+        <argsstring></argsstring>
+        <name>_Resr</name>
+        <initializer>= new Dictionary&lt;String, decimal&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="154" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a771fc2d71e86d30d1697bec48a88ea81" prot="public" static="no" mutable="no">
+        <type>Dictionary&lt; String, decimal &gt;</type>
+        <definition>Dictionary&lt;String, decimal&gt; HKSupply.PRJ_Stocks.Classes.Stocks.Item._Lots</definition>
+        <argsstring></argsstring>
+        <name>_Lots</name>
+        <initializer>= new Dictionary&lt;String, decimal&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="155" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1aaf3e2edf25336af385d1b82d05cf49df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decimal</type>
+        <definition>decimal HKSupply.PRJ_Stocks.Classes.Stocks.Item.AddStk</definition>
+        <argsstring>(decimal QttAfegir, string idOwner)</argsstring>
+        <name>AddStk</name>
+        <param>
+          <type>decimal</type>
+          <declname>QttAfegir</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idOwner</declname>
+        </param>
+        <briefdescription>
+<para>Modifica la QTT del stock. Si QttAfegir positiva incrementa, si negativa resta. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="158" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="158" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a33427d6dd0eddd6bbb1f9321cad9b25c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decimal</type>
+        <definition>decimal HKSupply.PRJ_Stocks.Classes.Stocks.Item.AddLot</definition>
+        <argsstring>(decimal QttAfegir, string idLot)</argsstring>
+        <name>AddLot</name>
+        <param>
+          <type>decimal</type>
+          <declname>QttAfegir</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idLot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="171" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="171" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a9ff5d936d515998434e4dd40d9dac833" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decimal</type>
+        <definition>decimal HKSupply.PRJ_Stocks.Classes.Stocks.Item.StkOwner</definition>
+        <argsstring>(string idOwner)</argsstring>
+        <name>StkOwner</name>
+        <param>
+          <type>string</type>
+          <declname>idOwner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="282" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="282" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a49584d4ec9731ab9258331081d9be238" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decimal</type>
+        <definition>decimal HKSupply.PRJ_Stocks.Classes.Stocks.Item.StkLot</definition>
+        <argsstring>(string idLot)</argsstring>
+        <name>StkLot</name>
+        <param>
+          <type>string</type>
+          <declname>idLot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="290" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="290" bodyend="296"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Guarda les dades del stock de un item i els seus lots. Es crea sempre un lot NULL per a les qtt que no tenen lot. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>System.InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>No existeix el lot indicat;"</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="152" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="151" bodyend="298"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a771fc2d71e86d30d1697bec48a88ea81" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::Item</scope><name>_Lots</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a66f320d48d90233fdacbd290a55cb467" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::Item</scope><name>_Resr</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a33427d6dd0eddd6bbb1f9321cad9b25c" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::Item</scope><name>AddLot</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1aaf3e2edf25336af385d1b82d05cf49df" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::Item</scope><name>AddStk</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1afcc42fc748f9fe2a5c1c241e4882b304" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::Item</scope><name>idItem</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1acd1d1ba5729e8d3223cded0caec408dd" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::Item</scope><name>LstAsigs</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a0595882b94550a901bff84b9789be59a" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::Item</scope><name>LstLots</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a49584d4ec9731ab9258331081d9be238" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::Item</scope><name>StkLot</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a9ff5d936d515998434e4dd40d9dac833" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::Item</scope><name>StkOwner</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a552fb47c225ce03aa591ae1a45eca555" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::Item</scope><name>TotalAssignedLotQTT</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a8ccbe83cc666b87e18013c1097b84b13" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::Item</scope><name>TotalAssignedQTT</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a1a432d2bb23094b014fc92b915ebb27d" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::Item</scope><name>TotalFreeLotQTT</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a2bee7e18e2b400093383e5531b4aa53f" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::Item</scope><name>TotalFreeQTT</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_item_1a76abf0f349a59b2de193fb77c600a8a5" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::Item</scope><name>TotalQTT</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

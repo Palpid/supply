@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_functionality_report" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::FunctionalityReport</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_functionality_report_1a3749af96c16893323617cb8e9ab60d72" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.FunctionalityReport.FunctionalityReportId</definition>
+        <argsstring></argsstring>
+        <name>FunctionalityReportId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/FunctionalityReport.cs" line="17" column="1" bodyfile="HKSupply/Models/FunctionalityReport.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_functionality_report_1a1428aa5e04ac22ebd52710f58cbb8cd1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.FunctionalityReport.FunctionalityId</definition>
+        <argsstring></argsstring>
+        <name>FunctionalityId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/FunctionalityReport.cs" line="20" column="1" bodyfile="HKSupply/Models/FunctionalityReport.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_functionality_report_1a80fb8760005bcd322d5b2ea3aec7da1b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.FunctionalityReport.ReportNameEn</definition>
+        <argsstring></argsstring>
+        <name>ReportNameEn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/FunctionalityReport.cs" line="23" column="1" bodyfile="HKSupply/Models/FunctionalityReport.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_functionality_report_1aa1b253d493b593787b2971b8a2e9b5cf" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.FunctionalityReport.ReportFile</definition>
+        <argsstring></argsstring>
+        <name>ReportFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/FunctionalityReport.cs" line="26" column="1" bodyfile="HKSupply/Models/FunctionalityReport.cs" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_functionality_report_1a262b775e8d457562b885c58a55fca3ea" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.FunctionalityReport.Code</definition>
+        <argsstring></argsstring>
+        <name>Code</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/FunctionalityReport.cs" line="29" column="1" bodyfile="HKSupply/Models/FunctionalityReport.cs" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_functionality_report_1ac3f6ad2d1d67c5f54ccd56a762c0f4df" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_functionality" kindref="compound">Functionality</ref></type>
+        <definition>Functionality HKSupply.Models.FunctionalityReport.Functionality</definition>
+        <argsstring></argsstring>
+        <name>Functionality</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/FunctionalityReport.cs" line="32" column="1" bodyfile="HKSupply/Models/FunctionalityReport.cs" bodystart="32" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_functionality_report_1ae22f954f935f7598fd1b8d529242b347" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.FunctionalityReport.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/FunctionalityReport.cs" line="36" column="1" bodyfile="HKSupply/Models/FunctionalityReport.cs" bodystart="36" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_functionality_report_1a8e623f1d574d33102729155dc7766ebe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.FunctionalityReport.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/FunctionalityReport.cs" line="46" column="1" bodyfile="HKSupply/Models/FunctionalityReport.cs" bodystart="46" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/FunctionalityReport.cs" line="14" column="1" bodyfile="HKSupply/Models/FunctionalityReport.cs" bodystart="13" bodyend="52"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_functionality_report_1a262b775e8d457562b885c58a55fca3ea" prot="public" virt="non-virtual"><scope>HKSupply::Models::FunctionalityReport</scope><name>Code</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_functionality_report_1ae22f954f935f7598fd1b8d529242b347" prot="public" virt="non-virtual"><scope>HKSupply::Models::FunctionalityReport</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_functionality_report_1ac3f6ad2d1d67c5f54ccd56a762c0f4df" prot="public" virt="non-virtual"><scope>HKSupply::Models::FunctionalityReport</scope><name>Functionality</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_functionality_report_1a1428aa5e04ac22ebd52710f58cbb8cd1" prot="public" virt="non-virtual"><scope>HKSupply::Models::FunctionalityReport</scope><name>FunctionalityId</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_functionality_report_1a3749af96c16893323617cb8e9ab60d72" prot="public" virt="non-virtual"><scope>HKSupply::Models::FunctionalityReport</scope><name>FunctionalityReportId</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_functionality_report_1a8e623f1d574d33102729155dc7766ebe" prot="public" virt="non-virtual"><scope>HKSupply::Models::FunctionalityReport</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_functionality_report_1aa1b253d493b593787b2971b8a2e9b5cf" prot="public" virt="non-virtual"><scope>HKSupply::Models::FunctionalityReport</scope><name>ReportFile</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_functionality_report_1a80fb8760005bcd322d5b2ea3aec7da1b" prot="public" virt="non-virtual"><scope>HKSupply::Models::FunctionalityReport</scope><name>ReportNameEn</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,511 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_reports_1_1_b1_report" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Reports::B1Report</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_reports_1_1_b1_report_1a7a382cbf429982f3af4f0a348e702e53" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HKSupply.Reports.B1Report.m_ReportFileName</definition>
+        <argsstring></argsstring>
+        <name>m_ReportFileName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="15" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_reports_1_1_b1_report_1a52278a9176c66f1a7c970b9fa8eff156" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HKSupply.Reports.B1Report.m_SelectionFormula</definition>
+        <argsstring></argsstring>
+        <name>m_SelectionFormula</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="16" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_reports_1_1_b1_report_1a3eef0858a5c3375a2aa640392c4fc26e" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HKSupply.Reports.B1Report.m_Title</definition>
+        <argsstring></argsstring>
+        <name>m_Title</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="17" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_reports_1_1_b1_report_1adf3bdd3a7a23ec9874edca1eb78920db" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Reports.B1Report.m_Maximized</definition>
+        <argsstring></argsstring>
+        <name>m_Maximized</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="18" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_reports_1_1_b1_report_1abf47fb305d69955dd6781808d837ffc0" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HKSupply.Reports.B1Report.m_PrinterName</definition>
+        <argsstring></argsstring>
+        <name>m_PrinterName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="19" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_reports_1_1_b1_report_1a5ced53256dc10b41ca0e3787b1502491" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HKSupply.Reports.B1Report.m_Copies</definition>
+        <argsstring></argsstring>
+        <name>m_Copies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="20" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_reports_1_1_b1_report_1ac10f8c99b92487c6ddece4bd33c0dd8c" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HKSupply.Reports.B1Report.m_ExportFileName</definition>
+        <argsstring></argsstring>
+        <name>m_ExportFileName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="21" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_reports_1_1_b1_report_1a0e964fc29b120edc3e665d64e59ab975" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HKSupply.Reports.B1Report.m_serverdb</definition>
+        <argsstring></argsstring>
+        <name>m_serverdb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="22" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_reports_1_1_b1_report_1a29cca68cccaf20b8e9afee747ac6a79d" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HKSupply.Reports.B1Report.m_databasedb</definition>
+        <argsstring></argsstring>
+        <name>m_databasedb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="23" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_reports_1_1_b1_report_1af82bd0676a46efaf383ad40deea5f682" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HKSupply.Reports.B1Report.m_usuariordb</definition>
+        <argsstring></argsstring>
+        <name>m_usuariordb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="24" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_reports_1_1_b1_report_1af60db55d3692e1d386de86317e96f7c1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Reports.B1Report.m_integratedSecuritydb</definition>
+        <argsstring></argsstring>
+        <name>m_integratedSecuritydb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="25" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_reports_1_1_b1_report_1a70cacbe164dacb0ed81dcf83be4cf27c" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HKSupply.Reports.B1Report.m_usuariopassword</definition>
+        <argsstring></argsstring>
+        <name>m_usuariopassword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="26" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_reports_1_1_b1_report_1a55c262df59abb5f4e4abc08c570aaa0d" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; string, string &gt;</type>
+        <definition>Dictionary&lt;string, string&gt; HKSupply.Reports.B1Report.m_Parametros</definition>
+        <argsstring></argsstring>
+        <name>m_Parametros</name>
+        <initializer>= new Dictionary&lt;string, string&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="27" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_reports_1_1_b1_report_1a60e1102aa784f923eebac1e84a1c35ac" prot="private" static="yes" mutable="no">
+        <type>readonly ILog</type>
+        <definition>readonly ILog HKSupply.Reports.B1Report._Debug</definition>
+        <argsstring></argsstring>
+        <name>_Debug</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_reports_1_1_b1_report" kindref="compound">B1Report</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="28" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_reports_1_1_b1_report_1a300e48b29b28cbcdce905c946f3d9e66" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Dictionary&lt; string, string &gt;</type>
+        <definition>Dictionary&lt;string, string&gt; HKSupply.Reports.B1Report.Parametros</definition>
+        <argsstring></argsstring>
+        <name>Parametros</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="31" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_reports_1_1_b1_report_1a8d1bad703e299a7a3fcbea12ac9dcc68" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Reports.B1Report.ReportFileName</definition>
+        <argsstring></argsstring>
+        <name>ReportFileName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="37" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_reports_1_1_b1_report_1aff33084e412d5df825931ae2db2f2761" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Reports.B1Report.PrinterName</definition>
+        <argsstring></argsstring>
+        <name>PrinterName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="43" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_reports_1_1_b1_report_1ab9c1cc61ab4f72c0d116b3241aa06b06" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Reports.B1Report.ExportFileName</definition>
+        <argsstring></argsstring>
+        <name>ExportFileName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="49" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_reports_1_1_b1_report_1ad3972bbf39f6ea7c194793a995253065" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Reports.B1Report.SelectionFormula</definition>
+        <argsstring></argsstring>
+        <name>SelectionFormula</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="55" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="56" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_reports_1_1_b1_report_1ac9ae0cc083c234b9ddc667db6b134b1c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Reports.B1Report.Title</definition>
+        <argsstring></argsstring>
+        <name>Title</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="61" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_reports_1_1_b1_report_1ab187bdcb46e8e6b6c9a160fd5c344bd7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Reports.B1Report.Copies</definition>
+        <argsstring></argsstring>
+        <name>Copies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="67" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_reports_1_1_b1_report_1a5c4037d6a85a3f9904481867bb826d15" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Reports.B1Report.Maximized</definition>
+        <argsstring></argsstring>
+        <name>Maximized</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="73" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="74" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_reports_1_1_b1_report_1a9d759216f20bc69a35c9380ad542cafd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Reports.B1Report.ExisteFichero</definition>
+        <argsstring>(string Fichero)</argsstring>
+        <name>ExisteFichero</name>
+        <param>
+          <type>string</type>
+          <declname>Fichero</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="78" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="78" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_reports_1_1_b1_report_1a0dc4c6d40cc3f0ddf2c441cc4989ffc6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Reports.B1Report.PrintReport</definition>
+        <argsstring>()</argsstring>
+        <name>PrintReport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="85" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="85" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_reports_1_1_b1_report_1a42c46212dfd8e0b4959c4e74fa317b1b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Reports.B1Report.PrintLabel</definition>
+        <argsstring>()</argsstring>
+        <name>PrintLabel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="131" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="131" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_reports_1_1_b1_report_1aa904d91869b039a37884b30d0f4cbab7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Reports.B1Report.PreviewReport</definition>
+        <argsstring>()</argsstring>
+        <name>PreviewReport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="172" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="172" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_reports_1_1_b1_report_1a43a8ca800f3162c6f1954c578dd72049" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Reports.B1Report.ExportReport</definition>
+        <argsstring>()</argsstring>
+        <name>ExportReport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="240" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="240" bodyend="275"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_reports_1_1_b1_report_1a180ce2aa04a654305ed58b86dd8c24f5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Reports.B1Report.RecuperarDatosConexion</definition>
+        <argsstring>()</argsstring>
+        <name>RecuperarDatosConexion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="280" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="280" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_reports_1_1_b1_report_1ad8088f9f571ba48e4182cc9eb03d66a2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Reports.B1Report.SetConnectionInfo</definition>
+        <argsstring>(ReportDocument oDoc)</argsstring>
+        <name>SetConnectionInfo</name>
+        <param>
+          <type>ReportDocument</type>
+          <declname>oDoc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="300" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="300" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_reports_1_1_b1_report_1a471e3289d252539a467a186849e203d8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Reports.B1Report.SetDBLogonForReport</definition>
+        <argsstring>(ConnectionInfo connectionInfo, ReportDocument reportdocument)</argsstring>
+        <name>SetDBLogonForReport</name>
+        <param>
+          <type>ConnectionInfo</type>
+          <declname>connectionInfo</declname>
+        </param>
+        <param>
+          <type>ReportDocument</type>
+          <declname>reportdocument</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="336" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="336" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_reports_1_1_b1_report_1a7762711c3de1b15ed5b54d8dfbb41a9a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Reports.B1Report.SetDBLogonForSubreports</definition>
+        <argsstring>(ConnectionInfo connectionInfo, ReportDocument reportdocument)</argsstring>
+        <name>SetDBLogonForSubreports</name>
+        <param>
+          <type>ConnectionInfo</type>
+          <declname>connectionInfo</declname>
+        </param>
+        <param>
+          <type>ReportDocument</type>
+          <declname>reportdocument</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="356" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="356" bodyend="383"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_reports_1_1_b1_report_1aaa3735e88af09242ce4618e47552f3c3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Reports.B1Report.SetReportParameters</definition>
+        <argsstring>(ReportDocument oDoc, string name, string value)</argsstring>
+        <name>SetReportParameters</name>
+        <param>
+          <type>ReportDocument</type>
+          <declname>oDoc</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Classes/B1Report.cs" line="385" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="385" bodyend="439"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Classes/B1Report.cs" line="14" column="1" bodyfile="HKSupply/Classes/B1Report.cs" bodystart="13" bodyend="441"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1a60e1102aa784f923eebac1e84a1c35ac" prot="private" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>_Debug</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1ab187bdcb46e8e6b6c9a160fd5c344bd7" prot="public" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>Copies</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1a9d759216f20bc69a35c9380ad542cafd" prot="public" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>ExisteFichero</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1ab9c1cc61ab4f72c0d116b3241aa06b06" prot="public" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>ExportFileName</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1a43a8ca800f3162c6f1954c578dd72049" prot="public" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>ExportReport</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1a5ced53256dc10b41ca0e3787b1502491" prot="private" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>m_Copies</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1a29cca68cccaf20b8e9afee747ac6a79d" prot="private" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>m_databasedb</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1ac10f8c99b92487c6ddece4bd33c0dd8c" prot="private" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>m_ExportFileName</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1af60db55d3692e1d386de86317e96f7c1" prot="private" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>m_integratedSecuritydb</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1adf3bdd3a7a23ec9874edca1eb78920db" prot="private" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>m_Maximized</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1a55c262df59abb5f4e4abc08c570aaa0d" prot="private" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>m_Parametros</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1abf47fb305d69955dd6781808d837ffc0" prot="private" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>m_PrinterName</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1a7a382cbf429982f3af4f0a348e702e53" prot="private" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>m_ReportFileName</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1a52278a9176c66f1a7c970b9fa8eff156" prot="private" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>m_SelectionFormula</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1a0e964fc29b120edc3e665d64e59ab975" prot="private" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>m_serverdb</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1a3eef0858a5c3375a2aa640392c4fc26e" prot="private" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>m_Title</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1a70cacbe164dacb0ed81dcf83be4cf27c" prot="private" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>m_usuariopassword</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1af82bd0676a46efaf383ad40deea5f682" prot="private" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>m_usuariordb</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1a5c4037d6a85a3f9904481867bb826d15" prot="public" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>Maximized</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1a300e48b29b28cbcdce905c946f3d9e66" prot="public" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>Parametros</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1aa904d91869b039a37884b30d0f4cbab7" prot="public" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>PreviewReport</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1aff33084e412d5df825931ae2db2f2761" prot="public" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>PrinterName</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1a42c46212dfd8e0b4959c4e74fa317b1b" prot="public" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>PrintLabel</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1a0dc4c6d40cc3f0ddf2c441cc4989ffc6" prot="public" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>PrintReport</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1a180ce2aa04a654305ed58b86dd8c24f5" prot="private" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>RecuperarDatosConexion</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1a8d1bad703e299a7a3fcbea12ac9dcc68" prot="public" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>ReportFileName</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1ad3972bbf39f6ea7c194793a995253065" prot="public" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>SelectionFormula</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1ad8088f9f571ba48e4182cc9eb03d66a2" prot="private" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>SetConnectionInfo</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1a471e3289d252539a467a186849e203d8" prot="private" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>SetDBLogonForReport</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1a7762711c3de1b15ed5b54d8dfbb41a9a" prot="private" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>SetDBLogonForSubreports</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1aaa3735e88af09242ce4618e47552f3c3" prot="protected" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>SetReportParameters</name></member>
+      <member refid="class_h_k_supply_1_1_reports_1_1_b1_report_1ac9ae0cc083c234b9ddc667db6b134b1c" prot="public" virt="non-virtual"><scope>HKSupply::Reports::B1Report</scope><name>Title</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_material_l2" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::MaterialL2</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_material_l2_1afeea9bd516c2823bd810ea65e0a582d1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.MaterialL2.IdMaterialL2</definition>
+        <argsstring></argsstring>
+        <name>IdMaterialL2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MaterialL2.cs" line="16" column="1" bodyfile="HKSupply/Models/MaterialL2.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_material_l2_1aba7b95b73c402850de857c875c772932" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.MaterialL2.IdMaterialL1</definition>
+        <argsstring></argsstring>
+        <name>IdMaterialL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MaterialL2.cs" line="18" column="1" bodyfile="HKSupply/Models/MaterialL2.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_material_l2_1af84454c867c0ca4c0f364fa22f91ce18" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.MaterialL2.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MaterialL2.cs" line="20" column="1" bodyfile="HKSupply/Models/MaterialL2.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_material_l2_1a43ca047ae261e4b84541e0c6bb46f4c1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_material_l1" kindref="compound">MaterialL1</ref></type>
+        <definition>MaterialL1 HKSupply.Models.MaterialL2.MaterialL1</definition>
+        <argsstring></argsstring>
+        <name>MaterialL1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MaterialL2.cs" line="23" column="1" bodyfile="HKSupply/Models/MaterialL2.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_material_l2_1ab2c903ca8d2e2c699bc98a5a19f1761e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.MaterialL2.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MaterialL2.cs" line="25" column="1" bodyfile="HKSupply/Models/MaterialL2.cs" bodystart="25" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_material_l2_1a778bab6427405f2c413b63e6e1246029" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.MaterialL2.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/MaterialL2.cs" line="35" column="1" bodyfile="HKSupply/Models/MaterialL2.cs" bodystart="35" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/MaterialL2.cs" line="14" column="1" bodyfile="HKSupply/Models/MaterialL2.cs" bodystart="13" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_material_l2_1af84454c867c0ca4c0f364fa22f91ce18" prot="public" virt="non-virtual"><scope>HKSupply::Models::MaterialL2</scope><name>Description</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_material_l2_1ab2c903ca8d2e2c699bc98a5a19f1761e" prot="public" virt="non-virtual"><scope>HKSupply::Models::MaterialL2</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_material_l2_1a778bab6427405f2c413b63e6e1246029" prot="public" virt="non-virtual"><scope>HKSupply::Models::MaterialL2</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_material_l2_1aba7b95b73c402850de857c875c772932" prot="public" virt="non-virtual"><scope>HKSupply::Models::MaterialL2</scope><name>IdMaterialL1</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_material_l2_1afeea9bd516c2823bd810ea65e0a582d1" prot="public" virt="non-virtual"><scope>HKSupply::Models::MaterialL2</scope><name>IdMaterialL2</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_material_l2_1a43ca047ae261e4b84541e0c6bb46f4c1" prot="public" virt="non-virtual"><scope>HKSupply::Models::MaterialL2</scope><name>MaterialL1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

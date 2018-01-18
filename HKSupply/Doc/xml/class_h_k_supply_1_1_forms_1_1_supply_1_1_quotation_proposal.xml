@@ -1,0 +1,2210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Supply::QuotationProposal</compoundname>
+    <basecompoundref refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" prot="public" virt="non-virtual">HKSupply.Forms.RibbonFormBase</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a5728b92ec53f101bed6bbe71fa0328d9" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>eGridSummaries</name>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a5728b92ec53f101bed6bbe71fa0328d9a880afe45876a0a2f39f25895b8ea9a11" prot="private">
+          <name>totalQuantityBomMt</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a5728b92ec53f101bed6bbe71fa0328d9abd6a677b221d1961ff85120842e0b6ae" prot="private">
+          <name>totalQuantityBomHw</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a5728b92ec53f101bed6bbe71fa0328d9a318ea9f3f23edc9a55c7d8ef7d600bda" prot="private">
+          <name>totalQuantityMt</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a5728b92ec53f101bed6bbe71fa0328d9ad313b43ee4b93a0d53957137dbecc1f9" prot="private">
+          <name>totalQuantityHw</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a5728b92ec53f101bed6bbe71fa0328d9ab13842fa6c627d1bab2c8f93296cb5eb" prot="private">
+          <name>totalRequestedQuantityMt</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a5728b92ec53f101bed6bbe71fa0328d9a1103bf147e925cbe89682cb013c86094" prot="private">
+          <name>totalRequestedQuantityHw</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="58" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="57" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1af5825a2616032c61749384bfb9d3b478" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks" kindref="compound">Stocks</ref></type>
+        <definition>Stocks HKSupply.Forms.Supply.QuotationProposal._STKAct</definition>
+        <argsstring></argsstring>
+        <name>_STKAct</name>
+        <initializer>= new <ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks" kindref="compound">Stocks</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="39" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1aa8431e50bf4b9f6dc2f0306ff204e652" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse" kindref="compound">Stocks.Warehouse</ref></type>
+        <definition>Stocks.Warehouse HKSupply.Forms.Supply.QuotationProposal._whEtniaHkOnHand</definition>
+        <argsstring></argsstring>
+        <name>_whEtniaHkOnHand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="40" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ade601f680d2365c0209b310899514def" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse" kindref="compound">Stocks.Warehouse</ref></type>
+        <definition>Stocks.Warehouse HKSupply.Forms.Supply.QuotationProposal._whEtniaHkAssigned</definition>
+        <argsstring></argsstring>
+        <name>_whEtniaHkAssigned</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="41" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ac29b13140704c305161f715d30d413fe" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_warehouse" kindref="compound">Stocks.Warehouse</ref></type>
+        <definition>Stocks.Warehouse HKSupply.Forms.Supply.QuotationProposal._whEtniaHkTransit</definition>
+        <argsstring></argsstring>
+        <name>_whEtniaHkTransit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="42" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1abbd10cfe80226907a972b761eb04e0b2" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.Forms.Supply.QuotationProposal.VIEW_COLUMN</definition>
+        <argsstring></argsstring>
+        <name>VIEW_COLUMN</name>
+        <initializer>= &quot;View&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="46" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1aa13c8df7ee98465fcfef284be1a88ecb" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.Forms.Supply.QuotationProposal.TOTAL_AMOUNT_COLUMN</definition>
+        <argsstring></argsstring>
+        <name>TOTAL_AMOUNT_COLUMN</name>
+        <initializer>= &quot;TotalAmount&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="50" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a589733e6bf90ac235ad5db70da68465f" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.Forms.Supply.QuotationProposal.COL_STOCK_ONHAND</definition>
+        <argsstring></argsstring>
+        <name>COL_STOCK_ONHAND</name>
+        <initializer>= &quot;StockOnHand&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="51" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a00c4ac5c87963257111ce5e96dbd986a" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.Forms.Supply.QuotationProposal.COL_STOCK_ASSIGNED</definition>
+        <argsstring></argsstring>
+        <name>COL_STOCK_ASSIGNED</name>
+        <initializer>= &quot;Assigned&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="52" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a1bef57f7871422cfa771b32b8797d55d" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.Forms.Supply.QuotationProposal.COL_STOCK_TRANSIT</definition>
+        <argsstring></argsstring>
+        <name>COL_STOCK_TRANSIT</name>
+        <initializer>= &quot;Transit&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="53" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a86484d8d625cf180e022409b843df39c" prot="private" static="no" mutable="no">
+        <type>Font</type>
+        <definition>Font HKSupply.Forms.Supply.QuotationProposal._labelDefaultFontBold</definition>
+        <argsstring></argsstring>
+        <name>_labelDefaultFontBold</name>
+        <initializer>= AppStyles.LabelDefaultFontBold</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="70" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1af09de2b96e104444db75a80d881552d3" prot="private" static="no" mutable="no">
+        <type>Font</type>
+        <definition>Font HKSupply.Forms.Supply.QuotationProposal._labelDefaultFont</definition>
+        <argsstring></argsstring>
+        <name>_labelDefaultFont</name>
+        <initializer>= AppStyles.LabelDefaultFont</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="71" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1adf5371e4d49e94c005c7ec36947b98c6" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_customer" kindref="compound">Customer</ref> &gt;</type>
+        <definition>List&lt;Customer&gt; HKSupply.Forms.Supply.QuotationProposal._customersList</definition>
+        <argsstring></argsstring>
+        <name>_customersList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="73" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ac718d34810e8e672ee664e2758b9c858" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_group" kindref="compound">ItemGroup</ref> &gt;</type>
+        <definition>List&lt;ItemGroup&gt; HKSupply.Forms.Supply.QuotationProposal._itemGroupList</definition>
+        <argsstring></argsstring>
+        <name>_itemGroupList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="74" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a7d3e0ebc0f243b80519dd2e89fa991a1" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_mt" kindref="compound">ItemMt</ref> &gt;</type>
+        <definition>List&lt;ItemMt&gt; HKSupply.Forms.Supply.QuotationProposal._itemsMtList</definition>
+        <argsstring></argsstring>
+        <name>_itemsMtList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="76" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1acba300272355ed1fc608d9a654502f3d" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_hw" kindref="compound">ItemHw</ref> &gt;</type>
+        <definition>List&lt;ItemHw&gt; HKSupply.Forms.Supply.QuotationProposal._itemsHwList</definition>
+        <argsstring></argsstring>
+        <name>_itemsHwList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="77" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ac064a7a273aa0fa97cbb61a42ac24f01" prot="private" static="no" mutable="no">
+        <type>BindingList&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line" kindref="compound">DocLine</ref> &gt;</type>
+        <definition>BindingList&lt;DocLine&gt; HKSupply.Forms.Supply.QuotationProposal._docLinesList</definition>
+        <argsstring></argsstring>
+        <name>_docLinesList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="79" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ae08a2061a7b11e7c5b031d397a9086a2" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Forms.Supply.QuotationProposal._docHeadQP</definition>
+        <argsstring></argsstring>
+        <name>_docHeadQP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="80" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a149d8af1dbec9278173a2807626ea266" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Forms.Supply.QuotationProposal._docHeadAssociatedPO</definition>
+        <argsstring></argsstring>
+        <name>_docHeadAssociatedPO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="81" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ae168f4ebd9a3ad973619335fece7e5e6" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Forms.Supply.QuotationProposal._docHeadAssociatedSO</definition>
+        <argsstring></argsstring>
+        <name>_docHeadAssociatedSO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="82" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a7e90df68d8f4b315bdc3c0fddfc2ef06" prot="private" static="no" mutable="no">
+        <type>BindingList&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head_attach_file" kindref="compound">DocHeadAttachFile</ref> &gt;</type>
+        <definition>BindingList&lt;DocHeadAttachFile&gt; HKSupply.Forms.Supply.QuotationProposal._docHeadAttachFileList</definition>
+        <argsstring></argsstring>
+        <name>_docHeadAttachFileList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="83" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a0404c5e8f0ec97c19769539e2e13743a" prot="private" static="no" mutable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Forms.Supply.QuotationProposal._totalQuantityBomMt</definition>
+        <argsstring></argsstring>
+        <name>_totalQuantityBomMt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="85" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a68897cd0dc8ef054f253ec7187b678b6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HKSupply.Forms.Supply.QuotationProposal._totalQuantityBomHw</definition>
+        <argsstring></argsstring>
+        <name>_totalQuantityBomHw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="86" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1aa4b91960926c2a4c73b79da021c59c2e" prot="private" static="no" mutable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Forms.Supply.QuotationProposal._totalQuantityMt</definition>
+        <argsstring></argsstring>
+        <name>_totalQuantityMt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="87" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ac72911ce69734e0c624f8d5f66e0a494" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HKSupply.Forms.Supply.QuotationProposal._totalQuantityHw</definition>
+        <argsstring></argsstring>
+        <name>_totalQuantityHw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="88" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ae57ca8e049e745312ec6c00b28993efe" prot="private" static="no" mutable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Forms.Supply.QuotationProposal._totalRequestedQuantityMt</definition>
+        <argsstring></argsstring>
+        <name>_totalRequestedQuantityMt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="89" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9982b8bdb5259bcb56a1d906682fb37a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HKSupply.Forms.Supply.QuotationProposal._totalRequestedQuantityHw</definition>
+        <argsstring></argsstring>
+        <name>_totalRequestedQuantityHw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="90" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ae3f3376619aa11521bfd5cdd19e5bb1d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.QuotationProposal._isLoadingQP</definition>
+        <argsstring></argsstring>
+        <name>_isLoadingQP</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="92" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a00df02376d6df9a7a21cabe1168215cc" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Supply.QuotationProposal.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a190250ea9b42060006baea8445a2ec4a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Supply.QuotationProposal.xtcGeneral</definition>
+        <argsstring></argsstring>
+        <name>xtcGeneral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="664" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="664" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a5c35928d2346b101f6b9993a7f9905d2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.QuotationProposal.xtpQP</definition>
+        <argsstring></argsstring>
+        <name>xtpQP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="665" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="665" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9039753ab335480eaacba4b93c26ce42" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Supply.QuotationProposal.xtcPO</definition>
+        <argsstring></argsstring>
+        <name>xtcPO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="666" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="666" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a0dec15a0aed34c34c1489746fd25db91" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.QuotationProposal.xtpProposal</definition>
+        <argsstring></argsstring>
+        <name>xtpProposal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="667" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="667" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ab82b9fb702f3db6c83579a0681c1f154" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Supply.QuotationProposal.xgrdLines</definition>
+        <argsstring></argsstring>
+        <name>xgrdLines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="668" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="668" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a69da66ef815dc1785cc96635fb8a9826" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.QuotationProposal.gridViewLines</definition>
+        <argsstring></argsstring>
+        <name>gridViewLines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="669" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="669" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9e225d50526c043613205996e43e715f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.QuotationProposal.xtpTerms</definition>
+        <argsstring></argsstring>
+        <name>xtpTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="670" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="670" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1aaf15c5df8eaeb8dc6ed3f29f4f194805" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.QuotationProposal.lblTxtContact</definition>
+        <argsstring></argsstring>
+        <name>lblTxtContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="671" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="671" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ae565e495482f3d1751bd88037ae39c14" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.QuotationProposal.lblTxtAddress</definition>
+        <argsstring></argsstring>
+        <name>lblTxtAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="672" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="672" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9a70b552592d9ba14e7b6085bf189342" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.QuotationProposal.lblTxtCompany</definition>
+        <argsstring></argsstring>
+        <name>lblTxtCompany</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="673" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="673" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a03c0a6ee70148b440427531009c503dd" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.QuotationProposal.lblContact</definition>
+        <argsstring></argsstring>
+        <name>lblContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="674" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="674" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ade40836fe62850561926b1ff8f2eb1e6" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.QuotationProposal.lblAddress</definition>
+        <argsstring></argsstring>
+        <name>lblAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="675" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="675" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a73b98acc052da888e1a152f76df6abe4" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.QuotationProposal.lblCompany</definition>
+        <argsstring></argsstring>
+        <name>lblCompany</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="676" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="676" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ae923334d662a039a6b67f7a34e3aa768" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Supply.QuotationProposal.sbFinishQP</definition>
+        <argsstring></argsstring>
+        <name>sbFinishQP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="677" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="677" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9bf53b98e18edf46b3988b826957c983" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Supply.QuotationProposal.sbOrder</definition>
+        <argsstring></argsstring>
+        <name>sbOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="678" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="678" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a0d628f1467956429775ebc6f3a275bd8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Supply.QuotationProposal.sbSearch</definition>
+        <argsstring></argsstring>
+        <name>sbSearch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="679" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="679" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a11b616cd45cbb400f4a1b2a870c48565" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Supply.QuotationProposal.slueCustomer</definition>
+        <argsstring></argsstring>
+        <name>slueCustomer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="680" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="680" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1af57dea4d2a9bb7f540f882145d2e8cd1" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.QuotationProposal.searchLookUpEdit1View</definition>
+        <argsstring></argsstring>
+        <name>searchLookUpEdit1View</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="681" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="681" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a65a9437378cbe212932478443c1c482a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.QuotationProposal.lblCustomer</definition>
+        <argsstring></argsstring>
+        <name>lblCustomer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="682" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="682" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a55800532e57ab6eb2e070dfcd177b42c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.QuotationProposal.lblWeek</definition>
+        <argsstring></argsstring>
+        <name>lblWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="683" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="683" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a5804d42b41d3eb1935b1336bc70d5cdd" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.QuotationProposal.lblQPCreationDateWeek</definition>
+        <argsstring></argsstring>
+        <name>lblQPCreationDateWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="684" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="684" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a733df64652556c0fb119b151a36c38db" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.QuotationProposal.lblPODateWeek</definition>
+        <argsstring></argsstring>
+        <name>lblPODateWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="685" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="685" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a6f8d89ff18ce6c1f26b9a12f2b4bcdb0" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.QuotationProposal.lblDate</definition>
+        <argsstring></argsstring>
+        <name>lblDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="686" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="686" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a46c1e7056e66c3defce333f34857d7aa" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.DateEdit</type>
+        <definition>DevExpress.XtraEditors.DateEdit HKSupply.Forms.Supply.QuotationProposal.dateEditQPCreationDate</definition>
+        <argsstring></argsstring>
+        <name>dateEditQPCreationDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="687" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="687" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ae30a9e97e82fb94a28873d552adc0e7a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.DateEdit</type>
+        <definition>DevExpress.XtraEditors.DateEdit HKSupply.Forms.Supply.QuotationProposal.dateEditPODate</definition>
+        <argsstring></argsstring>
+        <name>dateEditPODate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="688" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="688" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a3eb61ac120c2cdec89665de9ea1ff0dc" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.QuotationProposal.lblQPCreationDate</definition>
+        <argsstring></argsstring>
+        <name>lblQPCreationDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="689" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="689" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a6fbcd815d1e415a10bfacf70ed545f32" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.QuotationProposal.lblPODate</definition>
+        <argsstring></argsstring>
+        <name>lblPODate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="690" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="690" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a3b2708aa58c7310f283bbdc2af22c9bc" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.QuotationProposal.lblPONumber</definition>
+        <argsstring></argsstring>
+        <name>lblPONumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="691" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="691" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a2d7655b9ef2657f50a4fa1893be0fba5" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Supply.QuotationProposal.txtPONumber</definition>
+        <argsstring></argsstring>
+        <name>txtPONumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="692" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="692" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a20f86732de2d5a7bab9e49d1b592bfb4" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.QuotationProposal.lblQPNumber</definition>
+        <argsstring></argsstring>
+        <name>lblQPNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="693" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="693" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a792ab1404a4635b030d11dc26dc0a7d9" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Supply.QuotationProposal.txtQPNumber</definition>
+        <argsstring></argsstring>
+        <name>txtQPNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="694" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="694" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a078f5d146522dfca4c8a909dd69eb0a4" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.MemoEdit</type>
+        <definition>DevExpress.XtraEditors.MemoEdit HKSupply.Forms.Supply.QuotationProposal.memoEditRemarks</definition>
+        <argsstring></argsstring>
+        <name>memoEditRemarks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="695" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="695" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9cf81812e2da1c0959dd756e97cdc2e1" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.QuotationProposal.lblRemarks</definition>
+        <argsstring></argsstring>
+        <name>lblRemarks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="696" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="696" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a127f81bceaf59a57d6d3eae73fdbe4f7" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.PanelControl</type>
+        <definition>DevExpress.XtraEditors.PanelControl HKSupply.Forms.Supply.QuotationProposal.pcFilter</definition>
+        <argsstring></argsstring>
+        <name>pcFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="697" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="697" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a5208ce647f0c262e98e15f46a3d566dd" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.PictureEdit</type>
+        <definition>DevExpress.XtraEditors.PictureEdit HKSupply.Forms.Supply.QuotationProposal.peRm</definition>
+        <argsstring></argsstring>
+        <name>peRm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="698" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="698" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a518e1d197cba3dd2ff139b8d14a7a234" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.QuotationProposal.xtpFiles</definition>
+        <argsstring></argsstring>
+        <name>xtpFiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="699" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="699" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1afe8a7cb7e846b3bcb775009826cd6660" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.PanelControl</type>
+        <definition>DevExpress.XtraEditors.PanelControl HKSupply.Forms.Supply.QuotationProposal.pcFiles</definition>
+        <argsstring></argsstring>
+        <name>pcFiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="700" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="700" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a5f5e457ec7235551a0c0dadc5d989ab8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Supply.QuotationProposal.xgrdFiles</definition>
+        <argsstring></argsstring>
+        <name>xgrdFiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="701" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="701" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ab7a958b9acdab50fad04a2ced51c48e3" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.QuotationProposal.gridViewFiles</definition>
+        <argsstring></argsstring>
+        <name>gridViewFiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="702" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="702" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a57758885e01d9f5d1474158d6f307c1b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControl</type>
+        <definition>DevExpress.XtraLayout.LayoutControl HKSupply.Forms.Supply.QuotationProposal.layoutControlNewFile</definition>
+        <argsstring></argsstring>
+        <name>layoutControlNewFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="703" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="703" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a494a544cd8c205db9fc244d0d89d2a79" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Supply.QuotationProposal.sbViewNewFile</definition>
+        <argsstring></argsstring>
+        <name>sbViewNewFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="704" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="704" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a062a3e45874bd16862e826e983aad53e" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Supply.QuotationProposal.sbOpenFile</definition>
+        <argsstring></argsstring>
+        <name>sbOpenFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="705" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="705" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a3844c6b6ae4474d6aaf876d5637a2ef5" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Supply.QuotationProposal.txtPathNewFile</definition>
+        <argsstring></argsstring>
+        <name>txtPathNewFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="706" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="706" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ab099161cf6ed692ad65d68d834519665" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlGroup</type>
+        <definition>DevExpress.XtraLayout.LayoutControlGroup HKSupply.Forms.Supply.QuotationProposal.layoutControlGroup3</definition>
+        <argsstring></argsstring>
+        <name>layoutControlGroup3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="707" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="707" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a7892f275c812849ccd99df9fe27a2aa6" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Supply.QuotationProposal.layoutControlItem34</definition>
+        <argsstring></argsstring>
+        <name>layoutControlItem34</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="708" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="708" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a74ffd28576cc29f1155d8158811687c7" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Supply.QuotationProposal.layoutControlItem35</definition>
+        <argsstring></argsstring>
+        <name>layoutControlItem35</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="709" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="709" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a330a48e80ac5b1bc89ad7d14986049d7" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraLayout.LayoutControlItem</type>
+        <definition>DevExpress.XtraLayout.LayoutControlItem HKSupply.Forms.Supply.QuotationProposal.layoutControlItem36</definition>
+        <argsstring></argsstring>
+        <name>layoutControlItem36</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="710" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="710" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a3a0095b00253e12385bf98ad4252dd49" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Supply.QuotationProposal.sbAttachFile</definition>
+        <argsstring></argsstring>
+        <name>sbAttachFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="711" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="711" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a0aa9f1771cfbdb5db1e926ab0d95ef21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Supply.QuotationProposal.QuotationProposal</definition>
+        <argsstring>()</argsstring>
+        <name>QuotationProposal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="96" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="96" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9eb2a03f288c2b87bf8d2e05c98eb636" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.QuotationProposal.bbiCancel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiCancel_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318">bbiCancel_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="155" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="155" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a23e27c6099bba45e2000219646eaf314" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.QuotationProposal.bbiEdit_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiEdit_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3">bbiEdit_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="169" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="169" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a8f67d5dd75c2106c5f5b85fcef22f800" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.QuotationProposal.bbiSave_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiSave_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9">bbiSave_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="189" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="189" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ad9ab8964536ed7add5e5530fb13cc46b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.QuotationProposal.bbiExportCsv_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportCsv_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a">bbiExportCsv_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="230" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="230" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1aaba39df0aa7642a380a4304d00ba111e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.QuotationProposal.bbiExportExcel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportExcel_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811">bbiExportExcel_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="261" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="261" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1acc763a67e187272b52ddd6d91c43e1ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.InitData</definition>
+        <argsstring>(string idDoc)</argsstring>
+        <name>InitData</name>
+        <param>
+          <type>string</type>
+          <declname>idDoc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="820" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="820" bodyend="831"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ad43516e281ce4df46c19a1880e87b3a3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.ConfigureRibbonActions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="133" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="133" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ad8f643e2f408141f9c47b96c521b9112" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.QuotationProposal_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>QuotationProposal_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="307" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="307" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ad26c2f816740ce23b0c0f61c8d02d7fc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.SbSearch_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbSearch_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="312" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="312" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a0b89be189eeecf9b2fe5f208205eec9a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.TxtQPNumber_KeyDown</definition>
+        <argsstring>(object sender, KeyEventArgs e)</argsstring>
+        <name>TxtQPNumber_KeyDown</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="331" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="331" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1aa2a593aec571b7f4de786c2281c49266" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.TxtQPNumber_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>TxtQPNumber_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="339" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="339" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ae21483430851d99e5d9bc61ce628a783" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.SbFinishQP_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbFinishQP_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="355" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="355" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9b156c9ca60b2f93c00bdb04b4cacfb9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.SlueCustomer_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SlueCustomer_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="395" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="395" bodyend="409"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a472e3710901c0f7bb5ce61ac986e79d8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.DateEditQPCreationDate_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DateEditQPCreationDate_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="411" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="411" bodyend="425"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ad18dc1466f03b76d598d7932494a8dc0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.GridViewLines_ShowingEditor</definition>
+        <argsstring>(object sender, CancelEventArgs e)</argsstring>
+        <name>GridViewLines_ShowingEditor</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CancelEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="427" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="427" bodyend="451"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a1164e0f094f1d4494988373b9c4af271" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.GridViewLines_CustomRowCellEdit</definition>
+        <argsstring>(object sender, CustomRowCellEditEventArgs e)</argsstring>
+        <name>GridViewLines_CustomRowCellEdit</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CustomRowCellEditEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="453" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="453" bodyend="502"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1afda8772324509e071a78992c173d2c6b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.GridViewLines_ValidatingEditor</definition>
+        <argsstring>(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)</argsstring>
+        <name>GridViewLines_ValidatingEditor</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="504" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="504" bodyend="603"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1afd809566cc34a55809cf5bf499645dc2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.GridViewLines_CustomSummaryCalculate</definition>
+        <argsstring>(object sender, CustomSummaryEventArgs e)</argsstring>
+        <name>GridViewLines_CustomSummaryCalculate</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CustomSummaryEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="605" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="605" bodyend="698"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a819eeaea89774ea5afb321ac93c19374" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.GridViewLines_CustomUnboundColumnData</definition>
+        <argsstring>(object sender, CustomColumnDataEventArgs e)</argsstring>
+        <name>GridViewLines_CustomUnboundColumnData</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CustomColumnDataEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="700" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="700" bodyend="738"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a6b0733248c6a66a95a18ed3b73684e4c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.SbViewNewFile_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbViewNewFile_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="740" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="740" bodyend="758"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a982950781b5b26e6f27f41f0f8cc279c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.SbOpenFile_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbOpenFile_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="760" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="760" bodyend="781"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ad057d958f99d14a9e99f32e788d61f32" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.SbAttachFile_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbAttachFile_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="783" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="783" bodyend="797"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ae9971238061d66c6e3041c0cc09c78cf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.RepoButton_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>RepoButton_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="799" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="799" bodyend="814"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1abc7376ca244075867efaabc6e92dc168" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.SetUpLabels</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpLabels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="839" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="839" bodyend="911"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a2252f34ee7cce4e1a1874dba0b3c92e7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.SetUpButtons</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpButtons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="913" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="913" bodyend="926"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a726057482235cf865644860bf9305605" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.SetUpEvents</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="928" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="928" bodyend="946"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a82b493584b7300d1f96cb45c8851b078" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.SetUpSearchLookUpEdit</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSearchLookUpEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="948" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="948" bodyend="958"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a19c78d9a54a0f7fc8b2e77f4868fdab7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.SetUpSlueCustomer</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSlueCustomer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="960" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="960" bodyend="975"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a7193edb55eb9b3b6bc5ec88b84cd5814" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.SetUpGrdLines</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdLines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="977" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="977" bodyend="1119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1abfe30f0cc12356e9afd9cf4f67952c2f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.SetUpGrdFiles</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdFiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1121" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1121" bodyend="1167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a0284492217391c7b1adb1ac4bca97766" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.SetupPanelControl</definition>
+        <argsstring>()</argsstring>
+        <name>SetupPanelControl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1169" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1169" bodyend="1182"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a5994deca8d0dda56f21f59266c9f4fb3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.SetUpPictureEdit</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpPictureEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1184" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1184" bodyend="1196"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ad3eb33ecff6551fb822173cfd0e0e757" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.LoadAuxList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAuxList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1201" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1201" bodyend="1218"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1adac9696d1edb2f14bd725abf424f7c1e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.ResetQP</definition>
+        <argsstring>()</argsstring>
+        <name>ResetQP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1220" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1220" bodyend="1236"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9877cec57a9d6282ef7d28b4a4a83032" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.LoadQP</definition>
+        <argsstring>()</argsstring>
+        <name>LoadQP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1238" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1238" bodyend="1281"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1af4f3f860f8996a1a961fe488c7885d10" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.SetVisiblePropertyByState</definition>
+        <argsstring>()</argsstring>
+        <name>SetVisiblePropertyByState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1287" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1287" bodyend="1311"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1aa88e7fcd61edc17d01fd4611c6d00370" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.SetObjectsReadOnly</definition>
+        <argsstring>()</argsstring>
+        <name>SetObjectsReadOnly</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1313" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1313" bodyend="1324"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a1a795d4d5b7e07cd88ce8a7c5c4cb957" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.SearchQP</definition>
+        <argsstring>()</argsstring>
+        <name>SearchQP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1326" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1326" bodyend="1388"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ac1fae71ccd8a5c9b10856946fc5778e0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.ShowMessageDocsGenerated</definition>
+        <argsstring>()</argsstring>
+        <name>ShowMessageDocsGenerated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1390" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1390" bodyend="1413"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a31bfe018c4d3d8e243f9471207095991" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.ResetForm</definition>
+        <argsstring>(bool resetQpNumber=true, bool resetQpDate=true, bool resetCustomer=true)</argsstring>
+        <name>ResetForm</name>
+        <param>
+          <type>bool</type>
+          <declname>resetQpNumber</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>resetQpDate</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>resetCustomer</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1415" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1415" bodyend="1453"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a27fdfb8ba6c39c4a396b6a6453c3e1ad" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.ConfigureRibbonActionsEditing</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActionsEditing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1459" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1459" bodyend="1522"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1aa42e8773ada46860f4e25af5b9caa434" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.QuotationProposal.ValidateQP</definition>
+        <argsstring>()</argsstring>
+        <name>ValidateQP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1527" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1527" bodyend="1538"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ab74353fed125df1f4ba454919c92660e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.QuotationProposal.UpdateQP</definition>
+        <argsstring>(bool finishQP=false)</argsstring>
+        <name>UpdateQP</name>
+        <param>
+          <type>bool</type>
+          <declname>finishQP</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1540" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1540" bodyend="1581"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9aea6f181a3e880f7d3a0dddcefa74e1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.ActionsAfterCU</definition>
+        <argsstring>()</argsstring>
+        <name>ActionsAfterCU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1583" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1583" bodyend="1613"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a4f632147a5733a5a80254447bfe7f4d5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.AttachFile</definition>
+        <argsstring>()</argsstring>
+        <name>AttachFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1615" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1615" bodyend="1658"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ab1c8bb9202a193e32c68a82da7973726" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.GetAllStock</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllStock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1663" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1663" bodyend="1680"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a1106a5268520fe841fa7e07001553c95" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.Op_CustomizeSheetHeader</definition>
+        <argsstring>(ContextEventArgs e)</argsstring>
+        <name>Op_CustomizeSheetHeader</name>
+        <param>
+          <type>ContextEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1686" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1686" bodyend="1756"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ada45e6263c43171fff91a7fa35fe1442" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.Op_CustomizeSheetFooter</definition>
+        <argsstring>(ContextEventArgs e)</argsstring>
+        <name>Op_CustomizeSheetFooter</name>
+        <param>
+          <type>ContextEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1758" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1758" bodyend="1808"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a720406e6a7c2bd841c7c5dc6f948fb73" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.Op_CustomizeCell</definition>
+        <argsstring>(CustomizeCellEventArgs e)</argsstring>
+        <name>Op_CustomizeCell</name>
+        <param>
+          <type>CustomizeCellEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1810" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1810" bodyend="1831"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1af2b9dc2e757aa8a4fbd78d171e3f7c24" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.QuotationProposal.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="29" bodyend="660"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a472d1a910cf3cf1144f6dca242ab4065" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>XlFormattingObject</type>
+        <definition>static XlFormattingObject HKSupply.Forms.Supply.QuotationProposal.CreateXlFormattingObject</definition>
+        <argsstring>(bool bold, double size)</argsstring>
+        <name>CreateXlFormattingObject</name>
+        <param>
+          <type>bool</type>
+          <declname>bold</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="1833" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="1833" bodyend="1850"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a0f33f4fea55f3aeaced58d29f0005019" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.QuotationProposal.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1408">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1407">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1408" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1406">
+        <label>HKSupply.Forms.Supply.QuotationProposal</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal"/>
+        <childnode refid="1407" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1411">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1412">
+        <label>XtraBars</label>
+      </node>
+      <node id="1410">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1411" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1412" relation="usage">
+          <edgelabel>bbiCancel</edgelabel>
+          <edgelabel>ribbonStatusBar</edgelabel>
+          <edgelabel>bbiPrintPreview</edgelabel>
+          <edgelabel>bbiSave</edgelabel>
+          <edgelabel>bbiNew</edgelabel>
+          <edgelabel>bbiEdit</edgelabel>
+          <edgelabel>ribbonControl</edgelabel>
+          <edgelabel>ribbonPageGroup1</edgelabel>
+          <edgelabel>ribbonPage1</edgelabel>
+          <edgelabel>ribbonPageGroup2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="1409">
+        <label>HKSupply.Forms.Supply.QuotationProposal</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal"/>
+        <childnode refid="1410" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Supply/QuotationProposal.cs" line="37" column="1" bodyfile="HKSupply/Forms/Supply/QuotationProposal.cs" bodystart="36" bodyend="1855"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1adf5371e4d49e94c005c7ec36947b98c6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_customersList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a149d8af1dbec9278173a2807626ea266" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_docHeadAssociatedPO</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ae168f4ebd9a3ad973619335fece7e5e6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_docHeadAssociatedSO</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a7e90df68d8f4b315bdc3c0fddfc2ef06" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_docHeadAttachFileList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ae08a2061a7b11e7c5b031d397a9086a2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_docHeadQP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ac064a7a273aa0fa97cbb61a42ac24f01" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_docLinesList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ae3f3376619aa11521bfd5cdd19e5bb1d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_isLoadingQP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ac718d34810e8e672ee664e2758b9c858" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_itemGroupList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1acba300272355ed1fc608d9a654502f3d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_itemsHwList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a7d3e0ebc0f243b80519dd2e89fa991a1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_itemsMtList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1af09de2b96e104444db75a80d881552d3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_labelDefaultFont</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a86484d8d625cf180e022409b843df39c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_labelDefaultFontBold</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1af5825a2616032c61749384bfb9d3b478" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_STKAct</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a68897cd0dc8ef054f253ec7187b678b6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_totalQuantityBomHw</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a0404c5e8f0ec97c19769539e2e13743a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_totalQuantityBomMt</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ac72911ce69734e0c624f8d5f66e0a494" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_totalQuantityHw</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1aa4b91960926c2a4c73b79da021c59c2e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_totalQuantityMt</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9982b8bdb5259bcb56a1d906682fb37a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_totalRequestedQuantityHw</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ae57ca8e049e745312ec6c00b28993efe" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_totalRequestedQuantityMt</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ade601f680d2365c0209b310899514def" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_whEtniaHkAssigned</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1aa8431e50bf4b9f6dc2f0306ff204e652" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_whEtniaHkOnHand</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ac29b13140704c305161f715d30d413fe" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>_whEtniaHkTransit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9aea6f181a3e880f7d3a0dddcefa74e1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>ActionsAfterCU</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>ActionsStates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>AddRestoreLayoutItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a4f632147a5733a5a80254447bfe7f4d5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>AttachFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>BarButtonItemReport_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>bbiCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9eb2a03f288c2b87bf8d2e05c98eb636" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>bbiEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a23e27c6099bba45e2000219646eaf314" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ad9ab8964536ed7add5e5530fb13cc46b" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>bbiExportCsv_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1aaba39df0aa7642a380a4304d00ba111e" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>bbiExportExcel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>bbiNew</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>bbiPrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>bbiPrintPreview_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>bbiSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a8f67d5dd75c2106c5f5b85fcef22f800" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>BbiSaveLayout_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a00c4ac5c87963257111ce5e96dbd986a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>COL_STOCK_ASSIGNED</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a589733e6bf90ac235ad5db70da68465f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>COL_STOCK_ONHAND</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a1bef57f7871422cfa771b32b8797d55d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>COL_STOCK_TRANSIT</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a00df02376d6df9a7a21cabe1168215cc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>ConfigureLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>ConfigurePrintExportOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ad43516e281ce4df46c19a1880e87b3a3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>ConfigureRibbonActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a27fdfb8ba6c39c4a396b6a6453c3e1ad" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>ConfigureRibbonActionsEditing</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a472d1a910cf3cf1144f6dca242ab4065" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>CreateXlFormattingObject</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>CurrentLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>CurrentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ae30a9e97e82fb94a28873d552adc0e7a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>dateEditPODate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a46c1e7056e66c3defce333f34857d7aa" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>dateEditQPCreationDate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a472e3710901c0f7bb5ce61ac986e79d8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>DateEditQPCreationDate_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a0f33f4fea55f3aeaced58d29f0005019" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a5728b92ec53f101bed6bbe71fa0328d9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>eGridSummaries</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>EnableExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>EnableExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>EnableLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>EnablePrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>ExportCsvFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>ExportExcelFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ab1c8bb9202a193e32c68a82da7973726" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>GetAllStock</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ab7a958b9acdab50fad04a2ced51c48e3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>gridViewFiles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a69da66ef815dc1785cc96635fb8a9826" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>gridViewLines</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a1164e0f094f1d4494988373b9c4af271" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>GridViewLines_CustomRowCellEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1afd809566cc34a55809cf5bf499645dc2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>GridViewLines_CustomSummaryCalculate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a819eeaea89774ea5afb321ac93c19374" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>GridViewLines_CustomUnboundColumnData</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ad18dc1466f03b76d598d7932494a8dc0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>GridViewLines_ShowingEditor</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1afda8772324509e071a78992c173d2c6b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>GridViewLines_ValidatingEditor</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1acc763a67e187272b52ddd6d91c43e1ae" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>InitData</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1af2b9dc2e757aa8a4fbd78d171e3f7c24" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>LayoutButton_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ab099161cf6ed692ad65d68d834519665" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>layoutControlGroup3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a7892f275c812849ccd99df9fe27a2aa6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>layoutControlItem34</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a74ffd28576cc29f1155d8158811687c7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>layoutControlItem35</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a330a48e80ac5b1bc89ad7d14986049d7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>layoutControlItem36</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a57758885e01d9f5d1474158d6f307c1b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>layoutControlNewFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ade40836fe62850561926b1ff8f2eb1e6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>lblAddress</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a73b98acc052da888e1a152f76df6abe4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>lblCompany</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a03c0a6ee70148b440427531009c503dd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>lblContact</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a65a9437378cbe212932478443c1c482a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>lblCustomer</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a6f8d89ff18ce6c1f26b9a12f2b4bcdb0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>lblDate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a6fbcd815d1e415a10bfacf70ed545f32" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>lblPODate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a733df64652556c0fb119b151a36c38db" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>lblPODateWeek</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a3b2708aa58c7310f283bbdc2af22c9bc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>lblPONumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a3eb61ac120c2cdec89665de9ea1ff0dc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>lblQPCreationDate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a5804d42b41d3eb1935b1336bc70d5cdd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>lblQPCreationDateWeek</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a20f86732de2d5a7bab9e49d1b592bfb4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>lblQPNumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9cf81812e2da1c0959dd756e97cdc2e1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>lblRemarks</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ae565e495482f3d1751bd88037ae39c14" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>lblTxtAddress</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9a70b552592d9ba14e7b6085bf189342" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>lblTxtCompany</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1aaf15c5df8eaeb8dc6ed3f29f4f194805" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>lblTxtContact</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a55800532e57ab6eb2e070dfcd177b42c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>lblWeek</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ad3eb33ecff6551fb822173cfd0e0e757" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>LoadAuxList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9877cec57a9d6282ef7d28b4a4a83032" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>LoadQP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a078f5d146522dfca4c8a909dd69eb0a4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>memoEditRemarks</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>Modify</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>New</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a720406e6a7c2bd841c7c5dc6f948fb73" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>Op_CustomizeCell</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ada45e6263c43171fff91a7fa35fe1442" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>Op_CustomizeSheetFooter</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a1106a5268520fe841fa7e07001553c95" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>Op_CustomizeSheetHeader</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1afe8a7cb7e846b3bcb775009826cd6660" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>pcFiles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a127f81bceaf59a57d6d3eae73fdbe4f7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>pcFilter</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a5208ce647f0c262e98e15f46a3d566dd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>peRm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>ProcessCmdKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a0aa9f1771cfbdb5db1e926ab0d95ef21" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>QuotationProposal</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ad8f643e2f408141f9c47b96c521b9112" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>QuotationProposal_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>Read</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ae9971238061d66c6e3041c0cc09c78cf" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>RepoButton_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a31bfe018c4d3d8e243f9471207095991" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>ResetForm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1adac9696d1edb2f14bd725abf424f7c1e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>ResetQP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>RestoreInitState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>ribbonControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>RibbonFormBase</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>ribbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>ribbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>ribbonPageGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>ribbonStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a3a0095b00253e12385bf98ad4252dd49" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>sbAttachFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ad057d958f99d14a9e99f32e788d61f32" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>SbAttachFile_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ae923334d662a039a6b67f7a34e3aa768" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>sbFinishQP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ae21483430851d99e5d9bc61ce628a783" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>SbFinishQP_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a062a3e45874bd16862e826e983aad53e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>sbOpenFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a982950781b5b26e6f27f41f0f8cc279c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>SbOpenFile_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9bf53b98e18edf46b3988b826957c983" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>sbOrder</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a0d628f1467956429775ebc6f3a275bd8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>sbSearch</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ad26c2f816740ce23b0c0f61c8d02d7fc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>SbSearch_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a494a544cd8c205db9fc244d0d89d2a79" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>sbViewNewFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a6b0733248c6a66a95a18ed3b73684e4c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>SbViewNewFile_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1af57dea4d2a9bb7f540f882145d2e8cd1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>searchLookUpEdit1View</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a1a795d4d5b7e07cd88ce8a7c5c4cb957" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>SearchQP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>SetActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1aa88e7fcd61edc17d01fd4611c6d00370" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>SetObjectsReadOnly</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>SetRibbonText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a2252f34ee7cce4e1a1874dba0b3c92e7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>SetUpButtons</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a726057482235cf865644860bf9305605" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>SetUpEvents</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1abfe30f0cc12356e9afd9cf4f67952c2f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>SetUpGrdFiles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a7193edb55eb9b3b6bc5ec88b84cd5814" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>SetUpGrdLines</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1abc7376ca244075867efaabc6e92dc168" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>SetUpLabels</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a0284492217391c7b1adb1ac4bca97766" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>SetupPanelControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a5994deca8d0dda56f21f59266c9f4fb3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>SetUpPictureEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a82b493584b7300d1f96cb45c8851b078" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>SetUpSearchLookUpEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a19c78d9a54a0f7fc8b2e77f4868fdab7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>SetUpSlueCustomer</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1af4f3f860f8996a1a961fe488c7885d10" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>SetVisiblePropertyByState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ac1fae71ccd8a5c9b10856946fc5778e0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>ShowMessageDocsGenerated</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a11b616cd45cbb400f4a1b2a870c48565" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>slueCustomer</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9b156c9ca60b2f93c00bdb04b4cacfb9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>SlueCustomer_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1aa13c8df7ee98465fcfef284be1a88ecb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>TOTAL_AMOUNT_COLUMN</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a3844c6b6ae4474d6aaf876d5637a2ef5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>txtPathNewFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a2d7655b9ef2657f50a4fa1893be0fba5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>txtPONumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a792ab1404a4635b030d11dc26dc0a7d9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>txtQPNumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1aa2a593aec571b7f4de786c2281c49266" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>TxtQPNumber_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a0b89be189eeecf9b2fe5f208205eec9a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>TxtQPNumber_KeyDown</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ab74353fed125df1f4ba454919c92660e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>UpdateQP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1aa42e8773ada46860f4e25af5b9caa434" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>ValidateQP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1abbd10cfe80226907a972b761eb04e0b2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>VIEW_COLUMN</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a5f5e457ec7235551a0c0dadc5d989ab8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>xgrdFiles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1ab82b9fb702f3db6c83579a0681c1f154" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>xgrdLines</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a190250ea9b42060006baea8445a2ec4a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>xtcGeneral</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9039753ab335480eaacba4b93c26ce42" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>xtcPO</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a518e1d197cba3dd2ff139b8d14a7a234" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>xtpFiles</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a0dec15a0aed34c34c1489746fd25db91" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>xtpProposal</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a5c35928d2346b101f6b9993a7f9905d2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>xtpQP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_quotation_proposal_1a9e225d50526c043613205996e43e715f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::QuotationProposal</scope><name>xtpTerms</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

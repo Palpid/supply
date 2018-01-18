@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::DetailBomHfHistory</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1a852b6ec909a7315ac4f096b9fe8f3016" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.DetailBomHfHistory.IdBom</definition>
+        <argsstring></argsstring>
+        <name>IdBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomHfHistory.cs" line="11" column="1" bodyfile="HKSupply/Models/DetailBomHfHistory.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1a334e0e86c46c3130f1c692f1d7ad05a0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref></type>
+        <definition>ItemBom HKSupply.Models.DetailBomHfHistory.ItemBom</definition>
+        <argsstring></argsstring>
+        <name>ItemBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomHfHistory.cs" line="14" column="1" bodyfile="HKSupply/Models/DetailBomHfHistory.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1a65fc518ba26f54c9cf83395766b633dc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.DetailBomHfHistory.IdBomDetail</definition>
+        <argsstring></argsstring>
+        <name>IdBomDetail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomHfHistory.cs" line="17" column="1" bodyfile="HKSupply/Models/DetailBomHfHistory.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1ae2495e5d263e3a395b677513dc09dff2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref></type>
+        <definition>ItemBom HKSupply.Models.DetailBomHfHistory.DetailItemBom</definition>
+        <argsstring></argsstring>
+        <name>DetailItemBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomHfHistory.cs" line="20" column="1" bodyfile="HKSupply/Models/DetailBomHfHistory.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1a821a46ab9025d44dfec8a9c732d9070d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.DetailBomHfHistory.IdVerBom</definition>
+        <argsstring></argsstring>
+        <name>IdVerBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomHfHistory.cs" line="23" column="1" bodyfile="HKSupply/Models/DetailBomHfHistory.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1a365840b2802403ffcc9dab46eb2198e3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.DetailBomHfHistory.IdSubVerBom</definition>
+        <argsstring></argsstring>
+        <name>IdSubVerBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomHfHistory.cs" line="26" column="1" bodyfile="HKSupply/Models/DetailBomHfHistory.cs" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1ac28382e0a4640730b035c6af9d80420c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime HKSupply.Models.DetailBomHfHistory.TimestampBom</definition>
+        <argsstring></argsstring>
+        <name>TimestampBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomHfHistory.cs" line="29" column="1" bodyfile="HKSupply/Models/DetailBomHfHistory.cs" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1ae31b6a284809ae533902af5eb7b9e246" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.DetailBomHfHistory.IdVerBomDetail</definition>
+        <argsstring></argsstring>
+        <name>IdVerBomDetail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomHfHistory.cs" line="32" column="1" bodyfile="HKSupply/Models/DetailBomHfHistory.cs" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1aed250dd17adbd7628ea24fc54646fb2f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.DetailBomHfHistory.IdSubVerBomDetail</definition>
+        <argsstring></argsstring>
+        <name>IdSubVerBomDetail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomHfHistory.cs" line="35" column="1" bodyfile="HKSupply/Models/DetailBomHfHistory.cs" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1a17aac9178f619126d57b8556b3e7e2de" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime HKSupply.Models.DetailBomHfHistory.TimestampBomDetail</definition>
+        <argsstring></argsstring>
+        <name>TimestampBomDetail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomHfHistory.cs" line="38" column="1" bodyfile="HKSupply/Models/DetailBomHfHistory.cs" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1a709a5b22e891da049e05be4f1d91822f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.DetailBomHfHistory.Quantity</definition>
+        <argsstring></argsstring>
+        <name>Quantity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomHfHistory.cs" line="41" column="1" bodyfile="HKSupply/Models/DetailBomHfHistory.cs" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1a0fb5704663537e0fde2d4337776d0a71" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.DetailBomHfHistory.User</definition>
+        <argsstring></argsstring>
+        <name>User</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomHfHistory.cs" line="44" column="1" bodyfile="HKSupply/Models/DetailBomHfHistory.cs" bodystart="44" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1a8035c04f71f629eb68487c3b733d2e9f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.DetailBomHfHistory.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomHfHistory.cs" line="47" column="1" bodyfile="HKSupply/Models/DetailBomHfHistory.cs" bodystart="47" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1a93b9ba5ac81ae41dda70a6d51c1c922c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.DetailBomHfHistory.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomHfHistory.cs" line="70" column="1" bodyfile="HKSupply/Models/DetailBomHfHistory.cs" bodystart="70" bodyend="87"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1ab260911141a048ba7672e9e44ac38066" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>implicit</type>
+        <definition>static implicit HKSupply.Models.DetailBomHfHistory.operator DetailBomHfHistory</definition>
+        <argsstring>(DetailBomHf dbhf)</argsstring>
+        <name>operator DetailBomHfHistory</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_detail_bom_hf" kindref="compound">DetailBomHf</ref></type>
+          <declname>dbhf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/DetailBomHfHistory.cs" line="90" column="1" bodyfile="HKSupply/Models/DetailBomHfHistory.cs" bodystart="90" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/DetailBomHfHistory.cs" line="9" column="1" bodyfile="HKSupply/Models/DetailBomHfHistory.cs" bodystart="8" bodyend="100"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1ae2495e5d263e3a395b677513dc09dff2" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomHfHistory</scope><name>DetailItemBom</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1a8035c04f71f629eb68487c3b733d2e9f" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomHfHistory</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1a93b9ba5ac81ae41dda70a6d51c1c922c" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomHfHistory</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1a852b6ec909a7315ac4f096b9fe8f3016" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomHfHistory</scope><name>IdBom</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1a65fc518ba26f54c9cf83395766b633dc" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomHfHistory</scope><name>IdBomDetail</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1a365840b2802403ffcc9dab46eb2198e3" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomHfHistory</scope><name>IdSubVerBom</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1aed250dd17adbd7628ea24fc54646fb2f" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomHfHistory</scope><name>IdSubVerBomDetail</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1a821a46ab9025d44dfec8a9c732d9070d" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomHfHistory</scope><name>IdVerBom</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1ae31b6a284809ae533902af5eb7b9e246" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomHfHistory</scope><name>IdVerBomDetail</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1a334e0e86c46c3130f1c692f1d7ad05a0" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomHfHistory</scope><name>ItemBom</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1ab260911141a048ba7672e9e44ac38066" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomHfHistory</scope><name>operator DetailBomHfHistory</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1a709a5b22e891da049e05be4f1d91822f" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomHfHistory</scope><name>Quantity</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1ac28382e0a4640730b035c6af9d80420c" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomHfHistory</scope><name>TimestampBom</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1a17aac9178f619126d57b8556b3e7e2de" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomHfHistory</scope><name>TimestampBomDetail</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_detail_bom_hf_history_1a0fb5704663537e0fde2d4337776d0a71" prot="public" virt="non-virtual"><scope>HKSupply::Models::DetailBomHfHistory</scope><name>User</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

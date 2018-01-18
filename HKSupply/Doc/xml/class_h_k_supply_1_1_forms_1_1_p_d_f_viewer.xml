@@ -1,0 +1,669 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::PDFViewer</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1aa2e435c21c56568602d56d22befbfb8d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Forms.PDFViewer.pdfFile</definition>
+        <argsstring></argsstring>
+        <name>pdfFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.cs" line="21" column="1" bodyfile="HKSupply/Forms/PDFViewer.cs" bodystart="21" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a989928c5d0877e283f5ab7292b8a4c11" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.PDFViewer.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a10b09a329b63491c81c362540cacb538" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.PdfViewer</type>
+        <definition>DevExpress.XtraPdfViewer.PdfViewer HKSupply.Forms.PDFViewer.pdfViewer1</definition>
+        <argsstring></argsstring>
+        <name>pdfViewer1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="397" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a218bcf6d45c5bf8f57944233f974eff9" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Ribbon.RibbonControl</type>
+        <definition>DevExpress.XtraBars.Ribbon.RibbonControl HKSupply.Forms.PDFViewer.ribbonControl1</definition>
+        <argsstring></argsstring>
+        <name>ribbonControl1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="398" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="398" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a0c6040ed74c6ba3870f011a5f98894ee" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfFileOpenBarItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfFileOpenBarItem HKSupply.Forms.PDFViewer.pdfFileOpenBarItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfFileOpenBarItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="399" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a2e11321712ddc735f389a72bfecd3f02" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfFileSaveAsBarItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfFileSaveAsBarItem HKSupply.Forms.PDFViewer.pdfFileSaveAsBarItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfFileSaveAsBarItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="400" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="400" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ad1c749f32c6ab2ea487de57ef605e29b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfFilePrintBarItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfFilePrintBarItem HKSupply.Forms.PDFViewer.pdfFilePrintBarItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfFilePrintBarItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="401" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ac1fbb6486075c43172f97c1450e93d94" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfFindTextBarItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfFindTextBarItem HKSupply.Forms.PDFViewer.pdfFindTextBarItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfFindTextBarItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="402" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="402" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ad96effb409c06c3e6c5f297321c00f0a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfPreviousPageBarItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfPreviousPageBarItem HKSupply.Forms.PDFViewer.pdfPreviousPageBarItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfPreviousPageBarItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="403" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a427d2535862cdcd53c3cad2623f972b8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfNextPageBarItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfNextPageBarItem HKSupply.Forms.PDFViewer.pdfNextPageBarItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfNextPageBarItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="404" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a65260918d1dd2157fb55f6f377849ad3" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfSetPageNumberBarItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfSetPageNumberBarItem HKSupply.Forms.PDFViewer.pdfSetPageNumberBarItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfSetPageNumberBarItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="405" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a8691b38a0ff5e6902bcb1a76f1cba80e" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.Repository.RepositoryItemPageNumberEdit</type>
+        <definition>DevExpress.XtraEditors.Repository.RepositoryItemPageNumberEdit HKSupply.Forms.PDFViewer.repositoryItemPageNumberEdit1</definition>
+        <argsstring></argsstring>
+        <name>repositoryItemPageNumberEdit1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="406" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1aa1a6e8c6f7f809905417b221e79502b2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfZoomOutBarItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfZoomOutBarItem HKSupply.Forms.PDFViewer.pdfZoomOutBarItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfZoomOutBarItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="407" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a8f49eed30342aaac068c9adb5d04b587" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfZoomInBarItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfZoomInBarItem HKSupply.Forms.PDFViewer.pdfZoomInBarItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfZoomInBarItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="408" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a93522c0a267b870e4c44db8d402a902e" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfExactZoomListBarSubItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfExactZoomListBarSubItem HKSupply.Forms.PDFViewer.pdfExactZoomListBarSubItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfExactZoomListBarSubItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="409" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a7690ad6860f2bdc6192f5fb95851e93a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfZoom10CheckItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfZoom10CheckItem HKSupply.Forms.PDFViewer.pdfZoom10CheckItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfZoom10CheckItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="410" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ad7b353274d04f4978dc098fc9d29817e" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfZoom25CheckItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfZoom25CheckItem HKSupply.Forms.PDFViewer.pdfZoom25CheckItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfZoom25CheckItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="411" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a016c3b2a77457ae6d400d2f2cae49d22" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfZoom50CheckItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfZoom50CheckItem HKSupply.Forms.PDFViewer.pdfZoom50CheckItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfZoom50CheckItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="412" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a5b303f0a9aec759cbbf6920ed790ac1c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfZoom75CheckItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfZoom75CheckItem HKSupply.Forms.PDFViewer.pdfZoom75CheckItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfZoom75CheckItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="413" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ad1e534727e57a97913dce5a1553aef1b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfZoom100CheckItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfZoom100CheckItem HKSupply.Forms.PDFViewer.pdfZoom100CheckItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfZoom100CheckItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="414" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a874c6d105f5096fffb752eef6a41e340" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfZoom125CheckItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfZoom125CheckItem HKSupply.Forms.PDFViewer.pdfZoom125CheckItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfZoom125CheckItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="415" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ae168bc7cca08eaa79f864a74658922e3" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfZoom150CheckItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfZoom150CheckItem HKSupply.Forms.PDFViewer.pdfZoom150CheckItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfZoom150CheckItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="416" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a0b17d4f3543ac4ce25cd38c435f784e5" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfZoom200CheckItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfZoom200CheckItem HKSupply.Forms.PDFViewer.pdfZoom200CheckItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfZoom200CheckItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="417" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a895dc7929be9249b08cd199a3b056aeb" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfZoom400CheckItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfZoom400CheckItem HKSupply.Forms.PDFViewer.pdfZoom400CheckItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfZoom400CheckItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="418" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a99ba1304d61140af389818053dfa9602" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfZoom500CheckItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfZoom500CheckItem HKSupply.Forms.PDFViewer.pdfZoom500CheckItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfZoom500CheckItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="419" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a468ec7c899eb5dd57a63da123274a5bc" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfSetActualSizeZoomModeCheckItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfSetActualSizeZoomModeCheckItem HKSupply.Forms.PDFViewer.pdfSetActualSizeZoomModeCheckItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfSetActualSizeZoomModeCheckItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="420" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="420" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ad801283b7d763fc61ee3a6b4b7e60bcc" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfSetPageLevelZoomModeCheckItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfSetPageLevelZoomModeCheckItem HKSupply.Forms.PDFViewer.pdfSetPageLevelZoomModeCheckItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfSetPageLevelZoomModeCheckItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="421" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="421" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ae6c472446b0c53542df7ae51ecd3a18b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfSetFitWidthZoomModeCheckItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfSetFitWidthZoomModeCheckItem HKSupply.Forms.PDFViewer.pdfSetFitWidthZoomModeCheckItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfSetFitWidthZoomModeCheckItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="422" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ab77635bc43d3daa5cdce28c0ea2c87b5" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfSetFitVisibleZoomModeCheckItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfSetFitVisibleZoomModeCheckItem HKSupply.Forms.PDFViewer.pdfSetFitVisibleZoomModeCheckItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfSetFitVisibleZoomModeCheckItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="423" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a4e0389e928443403ae332644fe3d993d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfExportFormDataBarItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfExportFormDataBarItem HKSupply.Forms.PDFViewer.pdfExportFormDataBarItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfExportFormDataBarItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="424" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="424" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a04e3f0f9ce1bd0fb5af1f4ab84257b71" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfImportFormDataBarItem</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfImportFormDataBarItem HKSupply.Forms.PDFViewer.pdfImportFormDataBarItem1</definition>
+        <argsstring></argsstring>
+        <name>pdfImportFormDataBarItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="425" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a64542c6205951a9f5508d4ed70818315" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfRibbonPage</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfRibbonPage HKSupply.Forms.PDFViewer.pdfRibbonPage1</definition>
+        <argsstring></argsstring>
+        <name>pdfRibbonPage1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="426" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a840e07e5d6cf2b5a634496bf250fdf52" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfFileRibbonPageGroup</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfFileRibbonPageGroup HKSupply.Forms.PDFViewer.pdfFileRibbonPageGroup1</definition>
+        <argsstring></argsstring>
+        <name>pdfFileRibbonPageGroup1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="427" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="427" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1acd913a609b15018c6cc472339b51701b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfFindRibbonPageGroup</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfFindRibbonPageGroup HKSupply.Forms.PDFViewer.pdfFindRibbonPageGroup1</definition>
+        <argsstring></argsstring>
+        <name>pdfFindRibbonPageGroup1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="428" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="428" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a48bb65612ff272f2c714957ae2794a3c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfNavigationRibbonPageGroup</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfNavigationRibbonPageGroup HKSupply.Forms.PDFViewer.pdfNavigationRibbonPageGroup1</definition>
+        <argsstring></argsstring>
+        <name>pdfNavigationRibbonPageGroup1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="429" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="429" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ae29765713e80ee45480d1ef253d262e6" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfZoomRibbonPageGroup</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfZoomRibbonPageGroup HKSupply.Forms.PDFViewer.pdfZoomRibbonPageGroup1</definition>
+        <argsstring></argsstring>
+        <name>pdfZoomRibbonPageGroup1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="430" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="430" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a4f08aa887418d68907c93d5be6bc2c1d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfFormDataRibbonPage</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfFormDataRibbonPage HKSupply.Forms.PDFViewer.pdfFormDataRibbonPage1</definition>
+        <argsstring></argsstring>
+        <name>pdfFormDataRibbonPage1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="431" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="431" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a8a8096a70461c0085ca40e48218e0a7f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfFormDataBarPageGroup</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfFormDataBarPageGroup HKSupply.Forms.PDFViewer.pdfFormDataBarPageGroup1</definition>
+        <argsstring></argsstring>
+        <name>pdfFormDataBarPageGroup1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="432" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="432" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a3dc24c4bf04c32716801d0ae128959e6" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPdfViewer.Bars.PdfBarController</type>
+        <definition>DevExpress.XtraPdfViewer.Bars.PdfBarController HKSupply.Forms.PDFViewer.pdfBarController1</definition>
+        <argsstring></argsstring>
+        <name>pdfBarController1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="433" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="433" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a9dc48f1a27ac91ea6ff858e8a8026626" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.PDFViewer.PDFViewer</definition>
+        <argsstring>()</argsstring>
+        <name>PDFViewer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.cs" line="25" column="1" bodyfile="HKSupply/Forms/PDFViewer.cs" bodystart="25" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a73e8934f33f84780a3679f3c0d310c85" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.PDFViewer.PDFViewer_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>PDFViewer_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.cs" line="32" column="1" bodyfile="HKSupply/Forms/PDFViewer.cs" bodystart="32" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a26eba8793a70aeb3f94f5ebdbe20a7a7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.PDFViewer.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="29" bodyend="393"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ad9b7bf418e85b167b39f97a319e1d561" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.PDFViewer.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/PDFViewer.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/PDFViewer.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Visor de pdf integrado en la aplicación. No permitimos guardar/abrir, pero dejo los botones por si en el futuro se quiere dar esta funcionalidad en algunos casos </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1327">
+        <label>Form</label>
+      </node>
+      <node id="1326">
+        <label>HKSupply.Forms.PDFViewer</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer"/>
+        <childnode refid="1327" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1329">
+        <label>Form</label>
+      </node>
+      <node id="1328">
+        <label>HKSupply.Forms.PDFViewer</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer"/>
+        <childnode refid="1329" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/PDFViewer.cs" line="19" column="1" bodyfile="HKSupply/Forms/PDFViewer.cs" bodystart="18" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a989928c5d0877e283f5ab7292b8a4c11" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ad9b7bf418e85b167b39f97a319e1d561" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a26eba8793a70aeb3f94f5ebdbe20a7a7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a3dc24c4bf04c32716801d0ae128959e6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfBarController1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a93522c0a267b870e4c44db8d402a902e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfExactZoomListBarSubItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a4e0389e928443403ae332644fe3d993d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfExportFormDataBarItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1aa2e435c21c56568602d56d22befbfb8d" prot="public" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a0c6040ed74c6ba3870f011a5f98894ee" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfFileOpenBarItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ad1c749f32c6ab2ea487de57ef605e29b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfFilePrintBarItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a840e07e5d6cf2b5a634496bf250fdf52" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfFileRibbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a2e11321712ddc735f389a72bfecd3f02" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfFileSaveAsBarItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1acd913a609b15018c6cc472339b51701b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfFindRibbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ac1fbb6486075c43172f97c1450e93d94" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfFindTextBarItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a8a8096a70461c0085ca40e48218e0a7f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfFormDataBarPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a4f08aa887418d68907c93d5be6bc2c1d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfFormDataRibbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a04e3f0f9ce1bd0fb5af1f4ab84257b71" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfImportFormDataBarItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a48bb65612ff272f2c714957ae2794a3c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfNavigationRibbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a427d2535862cdcd53c3cad2623f972b8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfNextPageBarItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ad96effb409c06c3e6c5f297321c00f0a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfPreviousPageBarItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a64542c6205951a9f5508d4ed70818315" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfRibbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a468ec7c899eb5dd57a63da123274a5bc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfSetActualSizeZoomModeCheckItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ab77635bc43d3daa5cdce28c0ea2c87b5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfSetFitVisibleZoomModeCheckItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ae6c472446b0c53542df7ae51ecd3a18b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfSetFitWidthZoomModeCheckItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ad801283b7d763fc61ee3a6b4b7e60bcc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfSetPageLevelZoomModeCheckItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a65260918d1dd2157fb55f6f377849ad3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfSetPageNumberBarItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a9dc48f1a27ac91ea6ff858e8a8026626" prot="public" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>PDFViewer</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a10b09a329b63491c81c362540cacb538" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfViewer1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a73e8934f33f84780a3679f3c0d310c85" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>PDFViewer_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ad1e534727e57a97913dce5a1553aef1b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfZoom100CheckItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a7690ad6860f2bdc6192f5fb95851e93a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfZoom10CheckItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a874c6d105f5096fffb752eef6a41e340" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfZoom125CheckItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ae168bc7cca08eaa79f864a74658922e3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfZoom150CheckItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a0b17d4f3543ac4ce25cd38c435f784e5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfZoom200CheckItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ad7b353274d04f4978dc098fc9d29817e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfZoom25CheckItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a895dc7929be9249b08cd199a3b056aeb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfZoom400CheckItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a99ba1304d61140af389818053dfa9602" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfZoom500CheckItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a016c3b2a77457ae6d400d2f2cae49d22" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfZoom50CheckItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a5b303f0a9aec759cbbf6920ed790ac1c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfZoom75CheckItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a8f49eed30342aaac068c9adb5d04b587" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfZoomInBarItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1aa1a6e8c6f7f809905417b221e79502b2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfZoomOutBarItem1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1ae29765713e80ee45480d1ef253d262e6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>pdfZoomRibbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a8691b38a0ff5e6902bcb1a76f1cba80e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>repositoryItemPageNumberEdit1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_p_d_f_viewer_1a218bcf6d45c5bf8f57944233f974eff9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::PDFViewer</scope><name>ribbonControl1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

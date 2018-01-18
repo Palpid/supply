@@ -1,0 +1,173 @@
+\hypertarget{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter}{}\section{H\+K\+Supply.\+Helpers.\+Currency\+Converter.\+Currency\+Converter Class Reference}
+\label{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter}\index{H\+K\+Supply.\+Helpers.\+Currency\+Converter.\+Currency\+Converter@{H\+K\+Supply.\+Helpers.\+Currency\+Converter.\+Currency\+Converter}}
+
+
+Helper Class for Currencies conversions. Connect to European Central Bank to get a X\+ML with rates. Options to update \mbox{\hyperlink{namespace_h_k_supply_1_1_d_b}{DB}} with rates  
+
+
+Inheritance diagram for H\+K\+Supply.\+Helpers.\+Currency\+Converter.\+Currency\+Converter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override string \mbox{\hyperlink{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_a1a4ceafe9630b15bd2eabd7783175087}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Converts Exchange Rate Table to String \end{DoxyCompactList}\item 
+decimal \mbox{\hyperlink{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_af9501a149c0ed63c5cdd2faaac3b5e44}{Exchange}} (decimal amount, string from, string to=null)
+\begin{DoxyCompactList}\small\item\em Exchanges the givven amount from one currency to the other \end{DoxyCompactList}\item 
+I\+Enumerable$<$ \mbox{\hyperlink{struct_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_rates}{Rates}} $>$ \mbox{\hyperlink{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_a9b5ebe58cdabdaec1f1053574a7d792a}{Get\+Rates\+Table}} (string currency\+List=null)
+\begin{DoxyCompactList}\small\item\em Gets the rates table based on Base currency \end{DoxyCompactList}\item 
+I\+Enumerable$<$ string $>$ \mbox{\hyperlink{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_a5aee715203b5d6854d21aae80d4aa577}{Get\+Currency\+List}} (bool sorted=false)
+\begin{DoxyCompactList}\small\item\em Gets the list of currencies. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_ab81665e2cf99100e2358d8e1e27dec35}{Update\+Db\+Exchange\+Rates}} ()
+\begin{DoxyCompactList}\small\item\em Update echange rates on data base \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Date\+Time \mbox{\hyperlink{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_a12acac379c89eb42f7dd164e5a5a56a2}{Date}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Use this readonly property to check the actual date for the rates \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_a0ae9bc9af8a7d08f47cd3ad12030f48c}{Base\+Currency}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Use this property to get or set base currency Base currency is used for displaying rates table and convertions. All calculations are performed according to base currency! E\+UR by default Throws Application\+Exception if value is not in currency list \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper Class for Currencies conversions. Connect to European Central Bank to get a X\+ML with rates. Options to update \mbox{\hyperlink{namespace_h_k_supply_1_1_d_b}{DB}} with rates 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_af9501a149c0ed63c5cdd2faaac3b5e44}\label{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_af9501a149c0ed63c5cdd2faaac3b5e44}} 
+\index{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter@{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter}!Exchange@{Exchange}}
+\index{Exchange@{Exchange}!H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter@{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter}}
+\subsubsection{\texorpdfstring{Exchange()}{Exchange()}}
+{\footnotesize\ttfamily decimal H\+K\+Supply.\+Helpers.\+Currency\+Converter.\+Currency\+Converter.\+Exchange (\begin{DoxyParamCaption}\item[{decimal}]{amount,  }\item[{string}]{from,  }\item[{string}]{to = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Exchanges the givven amount from one currency to the other 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The amount to be exchanged\\
+\hline
+{\em from} & Currency of the amount (three letter code)\\
+\hline
+{\em to} & Currency to witch we wish to exchange. Base currency if not specified.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the exchanged amount on success
+\end{DoxyReturn}
+
+
+Throws Application\+Exception if currency is not in currency list
+
+Implements \mbox{\hyperlink{interface_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_i_currency_converter_afc064d13f2989af64d7887d3b3aa8767}{H\+K\+Supply.\+Helpers.\+Currency\+Converter.\+I\+Currency\+Converter}}.
+
+\mbox{\Hypertarget{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_a5aee715203b5d6854d21aae80d4aa577}\label{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_a5aee715203b5d6854d21aae80d4aa577}} 
+\index{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter@{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter}!Get\+Currency\+List@{Get\+Currency\+List}}
+\index{Get\+Currency\+List@{Get\+Currency\+List}!H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter@{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter}}
+\subsubsection{\texorpdfstring{Get\+Currency\+List()}{GetCurrencyList()}}
+{\footnotesize\ttfamily I\+Enumerable$<$string$>$ H\+K\+Supply.\+Helpers.\+Currency\+Converter.\+Currency\+Converter.\+Get\+Currency\+List (\begin{DoxyParamCaption}\item[{bool}]{sorted = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Gets the list of currencies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sorted} & If sorted is true, the returned list is sorted. False by default\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+I\+Enumerable$<$string$>$ of all available currencies 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_i_currency_converter_af9f4bce7c890c7d5fb61575a641cd5ec}{H\+K\+Supply.\+Helpers.\+Currency\+Converter.\+I\+Currency\+Converter}}.
+
+\mbox{\Hypertarget{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_a9b5ebe58cdabdaec1f1053574a7d792a}\label{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_a9b5ebe58cdabdaec1f1053574a7d792a}} 
+\index{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter@{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter}!Get\+Rates\+Table@{Get\+Rates\+Table}}
+\index{Get\+Rates\+Table@{Get\+Rates\+Table}!H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter@{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter}}
+\subsubsection{\texorpdfstring{Get\+Rates\+Table()}{GetRatesTable()}}
+{\footnotesize\ttfamily I\+Enumerable$<$\mbox{\hyperlink{struct_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_rates}{Rates}}$>$ H\+K\+Supply.\+Helpers.\+Currency\+Converter.\+Currency\+Converter.\+Get\+Rates\+Table (\begin{DoxyParamCaption}\item[{string}]{currency\+List = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Gets the rates table based on Base currency 
+
+
+\begin{DoxyParams}{Parameters}
+{\em currency\+List} & List of comma separated Currencies to be included in the table. All currencies by default\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+I\+Enumerable$<$\+Rates$>$ containing desired currencies and rates
+\end{DoxyReturn}
+
+
+Throws Application\+Exception if currency is not in currency list
+
+Implements \mbox{\hyperlink{interface_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_i_currency_converter_a3b1e96fafb375bda812c9d7a6e9fc983}{H\+K\+Supply.\+Helpers.\+Currency\+Converter.\+I\+Currency\+Converter}}.
+
+\mbox{\Hypertarget{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_a1a4ceafe9630b15bd2eabd7783175087}\label{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_a1a4ceafe9630b15bd2eabd7783175087}} 
+\index{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter@{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter@{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter}}
+\subsubsection{\texorpdfstring{To\+String()}{ToString()}}
+{\footnotesize\ttfamily override string H\+K\+Supply.\+Helpers.\+Currency\+Converter.\+Currency\+Converter.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Converts Exchange Rate Table to String 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_ab81665e2cf99100e2358d8e1e27dec35}\label{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_ab81665e2cf99100e2358d8e1e27dec35}} 
+\index{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter@{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter}!Update\+Db\+Exchange\+Rates@{Update\+Db\+Exchange\+Rates}}
+\index{Update\+Db\+Exchange\+Rates@{Update\+Db\+Exchange\+Rates}!H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter@{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter}}
+\subsubsection{\texorpdfstring{Update\+Db\+Exchange\+Rates()}{UpdateDbExchangeRates()}}
+{\footnotesize\ttfamily bool H\+K\+Supply.\+Helpers.\+Currency\+Converter.\+Currency\+Converter.\+Update\+Db\+Exchange\+Rates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update echange rates on data base 
+
+\begin{DoxyReturn}{Returns}
+True if update is success
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_i_currency_converter_a6f4f245fc08bd5af0703c73a0c7ff001}{H\+K\+Supply.\+Helpers.\+Currency\+Converter.\+I\+Currency\+Converter}}.
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_a0ae9bc9af8a7d08f47cd3ad12030f48c}\label{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_a0ae9bc9af8a7d08f47cd3ad12030f48c}} 
+\index{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter@{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter}!Base\+Currency@{Base\+Currency}}
+\index{Base\+Currency@{Base\+Currency}!H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter@{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter}}
+\subsubsection{\texorpdfstring{Base\+Currency}{BaseCurrency}}
+{\footnotesize\ttfamily string H\+K\+Supply.\+Helpers.\+Currency\+Converter.\+Currency\+Converter.\+Base\+Currency\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Use this property to get or set base currency Base currency is used for displaying rates table and convertions. All calculations are performed according to base currency! E\+UR by default Throws Application\+Exception if value is not in currency list 
+
+\mbox{\Hypertarget{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_a12acac379c89eb42f7dd164e5a5a56a2}\label{class_h_k_supply_1_1_helpers_1_1_currency_converter_1_1_currency_converter_a12acac379c89eb42f7dd164e5a5a56a2}} 
+\index{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter@{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter}!Date@{Date}}
+\index{Date@{Date}!H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter@{H\+K\+Supply\+::\+Helpers\+::\+Currency\+Converter\+::\+Currency\+Converter}}
+\subsubsection{\texorpdfstring{Date}{Date}}
+{\footnotesize\ttfamily Date\+Time H\+K\+Supply.\+Helpers.\+Currency\+Converter.\+Currency\+Converter.\+Date\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Use this readonly property to check the actual date for the rates 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+H\+K\+Supply/\+Helpers/\+Currency\+Converter/Currency\+Converter.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,956 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Helpers::DeepCopyByExpressionTrees</compoundname>
+    <innerclass refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1_1_reference_equality_comparer" prot="public">HKSupply::Helpers::DeepCopyByExpressionTrees::ReferenceEqualityComparer</innerclass>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a7aa0591b6d843d97289ae17b6f0b059b" prot="private" static="yes" mutable="no">
+        <type>readonly object</type>
+        <definition>readonly object HKSupply.Helpers.DeepCopyByExpressionTrees.IsStructTypeToDeepCopyDictionaryLocker</definition>
+        <argsstring></argsstring>
+        <name>IsStructTypeToDeepCopyDictionaryLocker</name>
+        <initializer>= new object()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="16" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a753908dcda8c658ccf36b16f604ac749" prot="private" static="yes" mutable="no">
+        <type>Dictionary&lt; Type, bool &gt;</type>
+        <definition>Dictionary&lt;Type, bool&gt; HKSupply.Helpers.DeepCopyByExpressionTrees.IsStructTypeToDeepCopyDictionary</definition>
+        <argsstring></argsstring>
+        <name>IsStructTypeToDeepCopyDictionary</name>
+        <initializer>= new Dictionary&lt;Type, bool&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="17" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1acc6b826182dc92b0025e60a874d2d62a" prot="private" static="yes" mutable="no">
+        <type>readonly object</type>
+        <definition>readonly object HKSupply.Helpers.DeepCopyByExpressionTrees.CompiledCopyFunctionsDictionaryLocker</definition>
+        <argsstring></argsstring>
+        <name>CompiledCopyFunctionsDictionaryLocker</name>
+        <initializer>= new object()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="19" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a6245dfedbe2697f058ee56580cac5922" prot="private" static="yes" mutable="no">
+        <type>Dictionary&lt; Type, Func&lt; object, Dictionary&lt; object, object &gt;, object &gt; &gt;</type>
+        <definition>Dictionary&lt;Type, Func&lt;object, Dictionary&lt;object, object&gt;, object&gt; &gt; HKSupply.Helpers.DeepCopyByExpressionTrees.CompiledCopyFunctionsDictionary</definition>
+        <argsstring></argsstring>
+        <name>CompiledCopyFunctionsDictionary</name>
+        <initializer>=
+            new Dictionary&lt;Type, Func&lt;object, Dictionary&lt;object, object&gt;, object&gt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="20" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a51b2e661235e94441213bf2e458e1737" prot="private" static="yes" mutable="no">
+        <type>readonly Type</type>
+        <definition>readonly Type HKSupply.Helpers.DeepCopyByExpressionTrees.ObjectType</definition>
+        <argsstring></argsstring>
+        <name>ObjectType</name>
+        <initializer>= typeof(Object)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="23" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1ad8579c0411f069e43c220766dbd87f6f" prot="private" static="yes" mutable="no">
+        <type>readonly Type</type>
+        <definition>readonly Type HKSupply.Helpers.DeepCopyByExpressionTrees.ObjectDictionaryType</definition>
+        <argsstring></argsstring>
+        <name>ObjectDictionaryType</name>
+        <initializer>= typeof(Dictionary&lt;object, object&gt;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="24" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a58cfa7e11f43d22d702fa30115c904da" prot="private" static="yes" mutable="no">
+        <type>readonly Type</type>
+        <definition>readonly Type HKSupply.Helpers.DeepCopyByExpressionTrees.FieldInfoType</definition>
+        <argsstring></argsstring>
+        <name>FieldInfoType</name>
+        <initializer>= typeof(FieldInfo)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="568" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="568" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a3b506f288d156f06428bfddde4973dca" prot="private" static="yes" mutable="no">
+        <type>readonly MethodInfo</type>
+        <definition>readonly MethodInfo HKSupply.Helpers.DeepCopyByExpressionTrees.SetValueMethod</definition>
+        <argsstring></argsstring>
+        <name>SetValueMethod</name>
+        <initializer>= FieldInfoType.GetMethod(&quot;SetValue&quot;, new[] { ObjectType, ObjectType })</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="569" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="569" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a8fb6a2d4edd800ab2d38cc30a6ab8501" prot="private" static="yes" mutable="no">
+        <type>readonly Type</type>
+        <definition>readonly Type HKSupply.Helpers.DeepCopyByExpressionTrees.ThisType</definition>
+        <argsstring></argsstring>
+        <name>ThisType</name>
+        <initializer>= typeof(DeepCopyByExpressionTrees)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="590" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="590" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a2460ecbcf9e5b895d18a9884bdb0431a" prot="private" static="yes" mutable="no">
+        <type>readonly MethodInfo</type>
+        <definition>readonly MethodInfo HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObjMethod</definition>
+        <argsstring></argsstring>
+        <name>DeepCopyByExpressionTreeObjMethod</name>
+        <initializer>= ThisType.GetMethod(&quot;DeepCopyByExpressionTreeObj&quot;, BindingFlags.NonPublic | BindingFlags.Static)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="591" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="591" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a3267357700bb48b751766a24b208de36" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>static T HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTree&lt; T &gt;</definition>
+        <argsstring>(this T original, Dictionary&lt; object, object &gt; copiedReferencesDict=null)</argsstring>
+        <name>DeepCopyByExpressionTree&lt; T &gt;</name>
+        <param>
+          <type>this T</type>
+          <declname>original</declname>
+        </param>
+        <param>
+          <type>Dictionary&lt; object, object &gt;</type>
+          <declname>copiedReferencesDict</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Creates a deep copy of an object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object type.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>original</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object to copy.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>copiedReferencesDict</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dictionary of already copied objects (Keys: original objects, Values: their copies).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="33" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="33" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a082ef9dac0f51c9569253d0d4f6496bc" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>object</type>
+        <definition>static object HKSupply.Helpers.DeepCopyByExpressionTrees.DeepCopyByExpressionTreeObj</definition>
+        <argsstring>(object original, bool forceDeepCopy, Dictionary&lt; object, object &gt; copiedReferencesDict)</argsstring>
+        <name>DeepCopyByExpressionTreeObj</name>
+        <param>
+          <type>object</type>
+          <declname>original</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>forceDeepCopy</declname>
+        </param>
+        <param>
+          <type>Dictionary&lt; object, object &gt;</type>
+          <declname>copiedReferencesDict</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="38" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="38" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1afde0dd281f516dfdd3264ba8bda8e90e" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Func&lt; object, Dictionary&lt; object, object &gt;, object &gt;</type>
+        <definition>static Func&lt;object, Dictionary&lt;object, object&gt;, object&gt; HKSupply.Helpers.DeepCopyByExpressionTrees.GetOrCreateCompiledLambdaCopyFunction</definition>
+        <argsstring>(Type type)</argsstring>
+        <name>GetOrCreateCompiledLambdaCopyFunction</name>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="76" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="76" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1af7ca06c28cc1a3c2922ceb597a3d4e85" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Expression&lt; Func&lt; object, Dictionary&lt; object, object &gt;, object &gt; &gt;</type>
+        <definition>static Expression&lt;Func&lt;object, Dictionary&lt;object, object&gt;, object&gt; &gt; HKSupply.Helpers.DeepCopyByExpressionTrees.CreateCompiledLambdaCopyFunctionForType</definition>
+        <argsstring>(Type type)</argsstring>
+        <name>CreateCompiledLambdaCopyFunctionForType</name>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="107" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="107" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a40e7c977b9861261610f72df5349a29c" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Helpers.DeepCopyByExpressionTrees.InitializeExpressions</definition>
+        <argsstring>(Type type, out ParameterExpression inputParameter, out ParameterExpression inputDictionary, out ParameterExpression outputVariable, out ParameterExpression boxingVariable, out LabelTarget endLabel, out List&lt; ParameterExpression &gt; variables, out List&lt; Expression &gt; expressions)</argsstring>
+        <name>InitializeExpressions</name>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>out ParameterExpression</type>
+          <declname>inputParameter</declname>
+        </param>
+        <param>
+          <type>out ParameterExpression</type>
+          <declname>inputDictionary</declname>
+        </param>
+        <param>
+          <type>out ParameterExpression</type>
+          <declname>outputVariable</declname>
+        </param>
+        <param>
+          <type>out ParameterExpression</type>
+          <declname>boxingVariable</declname>
+        </param>
+        <param>
+          <type>out LabelTarget</type>
+          <declname>endLabel</declname>
+        </param>
+        <param>
+          <type>out List&lt; ParameterExpression &gt;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>out List&lt; Expression &gt;</type>
+          <declname>expressions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="171" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="171" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a04cd4aeb4a82278799dea2a1a96653c6" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Helpers.DeepCopyByExpressionTrees.IfNullThenReturnNullExpression</definition>
+        <argsstring>(ParameterExpression inputParameter, LabelTarget endLabel, List&lt; Expression &gt; expressions)</argsstring>
+        <name>IfNullThenReturnNullExpression</name>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>inputParameter</declname>
+        </param>
+        <param>
+          <type>LabelTarget</type>
+          <declname>endLabel</declname>
+        </param>
+        <param>
+          <type>List&lt; Expression &gt;</type>
+          <declname>expressions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="199" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="199" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1af1d4fdf6164db2f434f60d5c23b67601" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Helpers.DeepCopyByExpressionTrees.MemberwiseCloneInputToOutputExpression</definition>
+        <argsstring>(Type type, ParameterExpression inputParameter, ParameterExpression outputVariable, List&lt; Expression &gt; expressions)</argsstring>
+        <name>MemberwiseCloneInputToOutputExpression</name>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>inputParameter</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>outputVariable</declname>
+        </param>
+        <param>
+          <type>List&lt; Expression &gt;</type>
+          <declname>expressions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="218" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="218" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1ad8bf4f80ce61adcf08acd1f496ae6fc2" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Helpers.DeepCopyByExpressionTrees.StoreReferencesIntoDictionaryExpression</definition>
+        <argsstring>(ParameterExpression inputParameter, ParameterExpression inputDictionary, ParameterExpression outputVariable, List&lt; Expression &gt; expressions)</argsstring>
+        <name>StoreReferencesIntoDictionaryExpression</name>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>inputParameter</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>inputDictionary</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>outputVariable</declname>
+        </param>
+        <param>
+          <type>List&lt; Expression &gt;</type>
+          <declname>expressions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="242" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="242" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1af7e93a2e84bdb824e7a0ee9f6a110aa7" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Expression&lt; Func&lt; object, Dictionary&lt; object, object &gt;, object &gt; &gt;</type>
+        <definition>static Expression&lt;Func&lt;object, Dictionary&lt;object, object&gt;, object&gt; &gt; HKSupply.Helpers.DeepCopyByExpressionTrees.CombineAllIntoLambdaFunctionExpression</definition>
+        <argsstring>(ParameterExpression inputParameter, ParameterExpression inputDictionary, ParameterExpression outputVariable, LabelTarget endLabel, List&lt; ParameterExpression &gt; variables, List&lt; Expression &gt; expressions)</argsstring>
+        <name>CombineAllIntoLambdaFunctionExpression</name>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>inputParameter</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>inputDictionary</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>outputVariable</declname>
+        </param>
+        <param>
+          <type>LabelTarget</type>
+          <declname>endLabel</declname>
+        </param>
+        <param>
+          <type>List&lt; ParameterExpression &gt;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>List&lt; Expression &gt;</type>
+          <declname>expressions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="262" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="262" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a271ea6c0e6b51c3e4b6c3b0e9a548146" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Helpers.DeepCopyByExpressionTrees.CreateArrayCopyLoopExpression</definition>
+        <argsstring>(Type type, ParameterExpression inputParameter, ParameterExpression inputDictionary, ParameterExpression outputVariable, List&lt; ParameterExpression &gt; variables, List&lt; Expression &gt; expressions)</argsstring>
+        <name>CreateArrayCopyLoopExpression</name>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>inputParameter</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>inputDictionary</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>outputVariable</declname>
+        </param>
+        <param>
+          <type>List&lt; ParameterExpression &gt;</type>
+          <declname>variables</declname>
+        </param>
+        <param>
+          <type>List&lt; Expression &gt;</type>
+          <declname>expressions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="281" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="281" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a8f34744bf567d9e8334e883cd84fdbaf" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; ParameterExpression &gt;</type>
+        <definition>static List&lt;ParameterExpression&gt; HKSupply.Helpers.DeepCopyByExpressionTrees.GenerateIndices</definition>
+        <argsstring>(int arrayRank)</argsstring>
+        <name>GenerateIndices</name>
+        <param>
+          <type>int</type>
+          <declname>arrayRank</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="357" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="357" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a019f96cb6f96af8e5eb69569166b337e" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BinaryExpression</type>
+        <definition>static BinaryExpression HKSupply.Helpers.DeepCopyByExpressionTrees.ArrayFieldToArrayFieldAssignExpression</definition>
+        <argsstring>(ParameterExpression inputParameter, ParameterExpression inputDictionary, ParameterExpression outputVariable, Type elementType, Type arrayType, List&lt; ParameterExpression &gt; indices)</argsstring>
+        <name>ArrayFieldToArrayFieldAssignExpression</name>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>inputParameter</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>inputDictionary</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>outputVariable</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>elementType</declname>
+        </param>
+        <param>
+          <type>Type</type>
+          <declname>arrayType</declname>
+        </param>
+        <param>
+          <type>List&lt; ParameterExpression &gt;</type>
+          <declname>indices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="375" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="375" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a6f08fca08d8fb795d02d64019f618bf3" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BlockExpression</type>
+        <definition>static BlockExpression HKSupply.Helpers.DeepCopyByExpressionTrees.LoopIntoLoopExpression</definition>
+        <argsstring>(ParameterExpression inputParameter, ParameterExpression indexVariable, Expression loopToEncapsulate, int dimension)</argsstring>
+        <name>LoopIntoLoopExpression</name>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>inputParameter</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>indexVariable</declname>
+        </param>
+        <param>
+          <type>Expression</type>
+          <declname>loopToEncapsulate</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dimension</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="409" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="409" bodyend="454"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1ab350accc58c71e5859e43c353e41b985" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BinaryExpression</type>
+        <definition>static BinaryExpression HKSupply.Helpers.DeepCopyByExpressionTrees.GetLengthForDimensionExpression</definition>
+        <argsstring>(ParameterExpression lengthVariable, ParameterExpression inputParameter, int i)</argsstring>
+        <name>GetLengthForDimensionExpression</name>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>lengthVariable</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>inputParameter</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="456" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="456" bodyend="475"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a419319a7852a8154432b4a2a112619ff" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Helpers.DeepCopyByExpressionTrees.FieldsCopyExpressions</definition>
+        <argsstring>(Type type, ParameterExpression inputParameter, ParameterExpression inputDictionary, ParameterExpression outputVariable, ParameterExpression boxingVariable, List&lt; Expression &gt; expressions)</argsstring>
+        <name>FieldsCopyExpressions</name>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>inputParameter</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>inputDictionary</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>outputVariable</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>boxingVariable</declname>
+        </param>
+        <param>
+          <type>List&lt; Expression &gt;</type>
+          <declname>expressions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="477" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="477" bodyend="542"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a9b5a80cf9bbfc410cbf44b18b4644393" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>FieldInfo []</type>
+        <definition>static FieldInfo [] HKSupply.Helpers.DeepCopyByExpressionTrees.GetAllRelevantFields</definition>
+        <argsstring>(Type type, bool forceAllFields=false)</argsstring>
+        <name>GetAllRelevantFields</name>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>forceAllFields</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="544" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="544" bodyend="561"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1aeac52e953953d9cb2fa6f2991869ffc3" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>FieldInfo []</type>
+        <definition>static FieldInfo [] HKSupply.Helpers.DeepCopyByExpressionTrees.GetAllFields</definition>
+        <argsstring>(Type type)</argsstring>
+        <name>GetAllFields</name>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="563" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="563" bodyend="566"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a41039d1fc3e02eac0aa42363db773df1" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Helpers.DeepCopyByExpressionTrees.ReadonlyFieldToNullExpression</definition>
+        <argsstring>(FieldInfo field, ParameterExpression boxingVariable, List&lt; Expression &gt; expressions)</argsstring>
+        <name>ReadonlyFieldToNullExpression</name>
+        <param>
+          <type>FieldInfo</type>
+          <declname>field</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>boxingVariable</declname>
+        </param>
+        <param>
+          <type>List&lt; Expression &gt;</type>
+          <declname>expressions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="571" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="571" bodyend="588"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a709f5bbf84f460f8c66dd5a99e960480" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Helpers.DeepCopyByExpressionTrees.ReadonlyFieldCopyExpression</definition>
+        <argsstring>(Type type, FieldInfo field, ParameterExpression inputParameter, ParameterExpression inputDictionary, ParameterExpression boxingVariable, List&lt; Expression &gt; expressions)</argsstring>
+        <name>ReadonlyFieldCopyExpression</name>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>FieldInfo</type>
+          <declname>field</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>inputParameter</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>inputDictionary</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>boxingVariable</declname>
+        </param>
+        <param>
+          <type>List&lt; Expression &gt;</type>
+          <declname>expressions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="593" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="593" bodyend="623"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a18e6e831cc1dd0572cf6042eb64464bd" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Helpers.DeepCopyByExpressionTrees.WritableFieldToNullExpression</definition>
+        <argsstring>(FieldInfo field, ParameterExpression outputVariable, List&lt; Expression &gt; expressions)</argsstring>
+        <name>WritableFieldToNullExpression</name>
+        <param>
+          <type>FieldInfo</type>
+          <declname>field</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>outputVariable</declname>
+        </param>
+        <param>
+          <type>List&lt; Expression &gt;</type>
+          <declname>expressions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="625" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="625" bodyend="639"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a1016f83d9f49e1850dd14fb7b3777c90" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HKSupply.Helpers.DeepCopyByExpressionTrees.WritableFieldCopyExpression</definition>
+        <argsstring>(Type type, FieldInfo field, ParameterExpression inputParameter, ParameterExpression inputDictionary, ParameterExpression outputVariable, List&lt; Expression &gt; expressions)</argsstring>
+        <name>WritableFieldCopyExpression</name>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>FieldInfo</type>
+          <declname>field</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>inputParameter</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>inputDictionary</declname>
+        </param>
+        <param>
+          <type>ParameterExpression</type>
+          <declname>outputVariable</declname>
+        </param>
+        <param>
+          <type>List&lt; Expression &gt;</type>
+          <declname>expressions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="641" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="641" bodyend="672"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1ad6f5841ec0856f1d854e455185e6222f" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool HKSupply.Helpers.DeepCopyByExpressionTrees.IsArray</definition>
+        <argsstring>(Type type)</argsstring>
+        <name>IsArray</name>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="674" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="674" bodyend="677"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a56e427fa1693b6680065fe6332872df1" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool HKSupply.Helpers.DeepCopyByExpressionTrees.IsDelegate</definition>
+        <argsstring>(Type type)</argsstring>
+        <name>IsDelegate</name>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="679" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="679" bodyend="682"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1adf67b1bd723ac2e56fa84076b271ab41" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool HKSupply.Helpers.DeepCopyByExpressionTrees.IsTypeToDeepCopy</definition>
+        <argsstring>(Type type)</argsstring>
+        <name>IsTypeToDeepCopy</name>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="684" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="684" bodyend="688"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a8fbd0ed304d8e4db966f09a25859cd81" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool HKSupply.Helpers.DeepCopyByExpressionTrees.IsClassOtherThanString</definition>
+        <argsstring>(Type type)</argsstring>
+        <name>IsClassOtherThanString</name>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="690" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="690" bodyend="693"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a9b40a8296b5b37273c9a1df7ea2e0a58" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool HKSupply.Helpers.DeepCopyByExpressionTrees.IsStructWhichNeedsDeepCopy</definition>
+        <argsstring>(Type type)</argsstring>
+        <name>IsStructWhichNeedsDeepCopy</name>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="695" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="695" bodyend="722"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a7f8bad72ce94eefb3a5bcf3035b988ee" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool HKSupply.Helpers.DeepCopyByExpressionTrees.IsStructWhichNeedsDeepCopy_NoDictionaryUsed</definition>
+        <argsstring>(Type type)</argsstring>
+        <name>IsStructWhichNeedsDeepCopy_NoDictionaryUsed</name>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="724" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="724" bodyend="728"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1adc51fb3072070747d6c6477627ffd873" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool HKSupply.Helpers.DeepCopyByExpressionTrees.IsStructOtherThanBasicValueTypes</definition>
+        <argsstring>(Type type)</argsstring>
+        <name>IsStructOtherThanBasicValueTypes</name>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="730" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="730" bodyend="736"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a7c974d9bc6b131898016e87c6ac2702a" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool HKSupply.Helpers.DeepCopyByExpressionTrees.HasInItsHierarchyFieldsWithClasses</definition>
+        <argsstring>(Type type, HashSet&lt; Type &gt; alreadyCheckedTypes=null)</argsstring>
+        <name>HasInItsHierarchyFieldsWithClasses</name>
+        <param>
+          <type>Type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>HashSet&lt; Type &gt;</type>
+          <declname>alreadyCheckedTypes</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="738" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="738" bodyend="768"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="15" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="14" bodyend="784"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a019f96cb6f96af8e5eb69569166b337e" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>ArrayFieldToArrayFieldAssignExpression</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1af7e93a2e84bdb824e7a0ee9f6a110aa7" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>CombineAllIntoLambdaFunctionExpression</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a6245dfedbe2697f058ee56580cac5922" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>CompiledCopyFunctionsDictionary</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1acc6b826182dc92b0025e60a874d2d62a" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>CompiledCopyFunctionsDictionaryLocker</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a271ea6c0e6b51c3e4b6c3b0e9a548146" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>CreateArrayCopyLoopExpression</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1af7ca06c28cc1a3c2922ceb597a3d4e85" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>CreateCompiledLambdaCopyFunctionForType</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a3267357700bb48b751766a24b208de36" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>DeepCopyByExpressionTree&lt; T &gt;</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a082ef9dac0f51c9569253d0d4f6496bc" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>DeepCopyByExpressionTreeObj</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a2460ecbcf9e5b895d18a9884bdb0431a" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>DeepCopyByExpressionTreeObjMethod</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a58cfa7e11f43d22d702fa30115c904da" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>FieldInfoType</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a419319a7852a8154432b4a2a112619ff" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>FieldsCopyExpressions</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a8f34744bf567d9e8334e883cd84fdbaf" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>GenerateIndices</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1aeac52e953953d9cb2fa6f2991869ffc3" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>GetAllFields</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a9b5a80cf9bbfc410cbf44b18b4644393" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>GetAllRelevantFields</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1ab350accc58c71e5859e43c353e41b985" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>GetLengthForDimensionExpression</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1afde0dd281f516dfdd3264ba8bda8e90e" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>GetOrCreateCompiledLambdaCopyFunction</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a7c974d9bc6b131898016e87c6ac2702a" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>HasInItsHierarchyFieldsWithClasses</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a04cd4aeb4a82278799dea2a1a96653c6" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>IfNullThenReturnNullExpression</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a40e7c977b9861261610f72df5349a29c" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>InitializeExpressions</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1ad6f5841ec0856f1d854e455185e6222f" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>IsArray</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a8fbd0ed304d8e4db966f09a25859cd81" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>IsClassOtherThanString</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a56e427fa1693b6680065fe6332872df1" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>IsDelegate</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1adc51fb3072070747d6c6477627ffd873" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>IsStructOtherThanBasicValueTypes</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a753908dcda8c658ccf36b16f604ac749" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>IsStructTypeToDeepCopyDictionary</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a7aa0591b6d843d97289ae17b6f0b059b" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>IsStructTypeToDeepCopyDictionaryLocker</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a9b40a8296b5b37273c9a1df7ea2e0a58" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>IsStructWhichNeedsDeepCopy</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a7f8bad72ce94eefb3a5bcf3035b988ee" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>IsStructWhichNeedsDeepCopy_NoDictionaryUsed</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1adf67b1bd723ac2e56fa84076b271ab41" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>IsTypeToDeepCopy</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a6f08fca08d8fb795d02d64019f618bf3" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>LoopIntoLoopExpression</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1af1d4fdf6164db2f434f60d5c23b67601" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>MemberwiseCloneInputToOutputExpression</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1ad8579c0411f069e43c220766dbd87f6f" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>ObjectDictionaryType</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a51b2e661235e94441213bf2e458e1737" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>ObjectType</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a709f5bbf84f460f8c66dd5a99e960480" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>ReadonlyFieldCopyExpression</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a41039d1fc3e02eac0aa42363db773df1" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>ReadonlyFieldToNullExpression</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a3b506f288d156f06428bfddde4973dca" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>SetValueMethod</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1ad8bf4f80ce61adcf08acd1f496ae6fc2" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>StoreReferencesIntoDictionaryExpression</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a8fb6a2d4edd800ab2d38cc30a6ab8501" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>ThisType</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a1016f83d9f49e1850dd14fb7b3777c90" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>WritableFieldCopyExpression</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1a18e6e831cc1dd0572cf6042eb64464bd" prot="private" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees</scope><name>WritableFieldToNullExpression</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_ebf37b264fa34e378b60c79d88b99019" kind="dir">
+    <compoundname>HKSupply/Helpers/CurrencyConverter</compoundname>
+    <innerfile refid="_currency_converter_8cs">CurrencyConverter.cs</innerfile>
+    <innerfile refid="_i_currency_converter_8cs">ICurrencyConverter.cs</innerfile>
+    <innerfile refid="_rates_8cs">Rates.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Helpers/CurrencyConverter/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_det_asg" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::PRJ_Stocks::Classes::Stocks::DetAsg</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_det_asg_1a56567021522a2edc730fc9c662a87b5d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.PRJ_Stocks.Classes.Stocks.DetAsg.idOwner</definition>
+        <argsstring></argsstring>
+        <name>idOwner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="134" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="134" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_det_asg_1a997de6a031f05fcddd2341945eb7e29f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.PRJ_Stocks.Classes.Stocks.DetAsg.Qtt</definition>
+        <argsstring></argsstring>
+        <name>Qtt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="135" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="135" bodyend="135"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/PRJ_Stocks/Classes/Stocks.cs" line="133" column="1" bodyfile="HKSupply/PRJ_Stocks/Classes/Stocks.cs" bodystart="132" bodyend="136"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_det_asg_1a56567021522a2edc730fc9c662a87b5d" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::DetAsg</scope><name>idOwner</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks_1_1_det_asg_1a997de6a031f05fcddd2341945eb7e29f" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::Classes::Stocks::DetAsg</scope><name>Qtt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

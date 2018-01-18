@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_p_r_j___stocks_1_1_d_b_1_1_b_d___stocks" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::PRJ_Stocks::DB::BD_Stocks</compoundname>
+    <innerclass refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_d_b_1_1_b_d___stocks_1_1_lot_item_d_b" prot="private">HKSupply::PRJ_Stocks::DB::BD_Stocks::LotItemDB</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_d_b_1_1_b_d___stocks_1a5539e4833cd08bf7518b5284eaeb4a79" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.PRJ_Stocks.DB.BD_Stocks._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_d_b_1_1_b_d___stocks" kindref="compound">BD_Stocks</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/DB/BD_Stocks.cs" line="51" column="1" bodyfile="HKSupply/PRJ_Stocks/DB/BD_Stocks.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_d_b_1_1_b_d___stocks_1a918727d0820627dd4a4f6facf54eb7da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks" kindref="compound">Classes.Stocks</ref></type>
+        <definition>Classes.Stocks HKSupply.PRJ_Stocks.DB.BD_Stocks.GetCurrentStock</definition>
+        <argsstring>(HKSupplyContext db, string idwarehouse=&quot;&quot;)</argsstring>
+        <name>GetCurrentStock</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idwarehouse</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Carrega les dades de Stock desde la BD. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>db</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>La conexió de la BD gestionda per el EF</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idwarehouse</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Filtre opcional. Si s&apos;indica es carrega només el magatzem indicat</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/DB/BD_Stocks.cs" line="58" column="1" bodyfile="HKSupply/PRJ_Stocks/DB/BD_Stocks.cs" bodystart="58" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_p_r_j___stocks_1_1_d_b_1_1_b_d___stocks_1aad524df723c1bbed8fbf2343492b9489" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.PRJ_Stocks.DB.BD_Stocks.SaveCurrentStockMovs</definition>
+        <argsstring>(HKSupplyContext db, Stocks STK)</argsstring>
+        <name>SaveCurrentStockMovs</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_classes_1_1_stocks" kindref="compound">Stocks</ref></type>
+          <declname>STK</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/PRJ_Stocks/DB/BD_Stocks.cs" line="156" column="1" bodyfile="HKSupply/PRJ_Stocks/DB/BD_Stocks.cs" bodystart="156" bodyend="331"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/PRJ_Stocks/DB/BD_Stocks.cs" line="21" column="1" bodyfile="HKSupply/PRJ_Stocks/DB/BD_Stocks.cs" bodystart="20" bodyend="332"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_d_b_1_1_b_d___stocks_1a5539e4833cd08bf7518b5284eaeb4a79" prot="private" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::DB::BD_Stocks</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_d_b_1_1_b_d___stocks_1a918727d0820627dd4a4f6facf54eb7da" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::DB::BD_Stocks</scope><name>GetCurrentStock</name></member>
+      <member refid="class_h_k_supply_1_1_p_r_j___stocks_1_1_d_b_1_1_b_d___stocks_1aad524df723c1bbed8fbf2343492b9489" prot="public" virt="non-virtual"><scope>HKSupply::PRJ_Stocks::DB::BD_Stocks</scope><name>SaveCurrentStockMovs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

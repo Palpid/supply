@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_currency" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFCurrency</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_currency" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.ICurrency</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_currency_1a2198ca2f8c4f22ed65b307d85fdfc50f" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFCurrency._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_currency" kindref="compound">EFCurrency</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFCurrency.cs" line="18" column="1" bodyfile="HKSupply/Services/Implementations/EFCurrency.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_currency_1a0ccba73a596c248bf16649b861394389" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_currency" kindref="compound">Models.Currency</ref> &gt;</type>
+        <definition>List&lt;Models.Currency&gt; HKSupply.Services.Implementations.EFCurrency.GetCurrencies</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurrencies</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_currency_1a37f43c962bdc73bea846c56025261cda">GetCurrencies</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFCurrency.cs" line="20" column="1" bodyfile="HKSupply/Services/Implementations/EFCurrency.cs" bodystart="20" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_currency_1a37d248dd256b7310f19b0d9c8f011129" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_currency" kindref="compound">Currency</ref></type>
+        <definition>Currency HKSupply.Services.Implementations.EFCurrency.GetCurrency</definition>
+        <argsstring>(string idCurrency)</argsstring>
+        <name>GetCurrency</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_currency_1a7f6b03b3591e08e38432f45b9293a24a">GetCurrency</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idCurrency</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFCurrency.cs" line="57" column="1" bodyfile="HKSupply/Services/Implementations/EFCurrency.cs" bodystart="57" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="413">
+        <label>HKSupply.Services.Implementations.EFCurrency</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_currency"/>
+        <childnode refid="414" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="414">
+        <label>ICurrency</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_currency"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="415">
+        <label>HKSupply.Services.Implementations.EFCurrency</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_currency"/>
+        <childnode refid="416" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="416">
+        <label>ICurrency</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_currency"/>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFCurrency.cs" line="17" column="1" bodyfile="HKSupply/Services/Implementations/EFCurrency.cs" bodystart="16" bodyend="92"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_currency_1a2198ca2f8c4f22ed65b307d85fdfc50f" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFCurrency</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_currency_1a0ccba73a596c248bf16649b861394389" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFCurrency</scope><name>GetCurrencies</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_currency_1a37d248dd256b7310f19b0d9c8f011129" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFCurrency</scope><name>GetCurrency</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

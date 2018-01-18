@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_price_list" kind="interface" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Interfaces::ICustomerPriceList</compoundname>
+    <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_price_list" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFCustomerPriceList</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_price_list_1a4c67c5a454eb65869cc9b1604cfedf84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.ICustomerPriceList.NewCustomerPriceList</definition>
+        <argsstring>(CustomerPriceList newCustomerPriceList)</argsstring>
+        <name>NewCustomerPriceList</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_price_list_1a6fd8de1f0b5de2c06272d336b61491ea">NewCustomerPriceList</reimplementedby>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_customer_price_list" kindref="compound">CustomerPriceList</ref></type>
+          <declname>newCustomerPriceList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/ICustomerPriceList.cs" line="12" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_price_list_1a395e4f8f1da8a06513643561399ee28f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.ICustomerPriceList.UpdateCustomerPriceList</definition>
+        <argsstring>(CustomerPriceList updateCustomerPriceList, bool newVer=false)</argsstring>
+        <name>UpdateCustomerPriceList</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_price_list_1af9739836c9d89438515569574ea5bfc7">UpdateCustomerPriceList</reimplementedby>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_customer_price_list" kindref="compound">CustomerPriceList</ref></type>
+          <declname>updateCustomerPriceList</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>newVer</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/ICustomerPriceList.cs" line="13" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_price_list_1a6004f90912be6a6cabfd56a5aaa50f48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Interfaces.ICustomerPriceList.UpdateCustomersPricesList</definition>
+        <argsstring>(IEnumerable&lt; CustomerPriceList &gt; pricesListToUpdate)</argsstring>
+        <name>UpdateCustomersPricesList</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_price_list_1a6e1450708f6e20c0ec943734d066a06d">UpdateCustomersPricesList</reimplementedby>
+        <param>
+          <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_customer_price_list" kindref="compound">CustomerPriceList</ref> &gt;</type>
+          <declname>pricesListToUpdate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/ICustomerPriceList.cs" line="14" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_price_list_1aa2f56c0e7912edca0d505907d1428d90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_customer_price_list" kindref="compound">CustomerPriceList</ref></type>
+        <definition>CustomerPriceList HKSupply.Services.Interfaces.ICustomerPriceList.GetCustomerPriceList</definition>
+        <argsstring>(string idItemBcn, string idCustomer)</argsstring>
+        <name>GetCustomerPriceList</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_price_list_1a5f6b7a05f17a57c41c5db1fa3352d728">GetCustomerPriceList</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>idItemBcn</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idCustomer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/ICustomerPriceList.cs" line="15" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_price_list_1aa4aa73743bae6e0ae09a87b54d8db983" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_customer_price_list" kindref="compound">CustomerPriceList</ref> &gt;</type>
+        <definition>List&lt;CustomerPriceList&gt; HKSupply.Services.Interfaces.ICustomerPriceList.GetCustomersPriceList</definition>
+        <argsstring>(string idItemBcn=null, string idCustomer=null)</argsstring>
+        <name>GetCustomersPriceList</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_price_list_1a9961acfeff2d8645b4136b806207f7c5">GetCustomersPriceList</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>idItemBcn</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idCustomer</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/ICustomerPriceList.cs" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_price_list_1a56442fcbbb8372b723cf23f73e9463ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_customer_price_list_history" kindref="compound">CustomerPriceListHistory</ref> &gt;</type>
+        <definition>List&lt;CustomerPriceListHistory&gt; HKSupply.Services.Interfaces.ICustomerPriceList.GetCustomerPriceListHistory</definition>
+        <argsstring>(string idItemBcn, string idCustomer)</argsstring>
+        <name>GetCustomerPriceListHistory</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_price_list_1ac946aa65cb30e40586122049a48293c7">GetCustomerPriceListHistory</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>idItemBcn</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idCustomer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/ICustomerPriceList.cs" line="17" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="721">
+        <label>HKSupply.Services.Interfaces.ICustomerPriceList</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_price_list"/>
+      </node>
+      <node id="722">
+        <label>HKSupply.Services.Implementations.EFCustomerPriceList</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_customer_price_list"/>
+        <childnode refid="721" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="HKSupply/Services/Interfaces/ICustomerPriceList.cs" line="11" column="1" bodyfile="HKSupply/Services/Interfaces/ICustomerPriceList.cs" bodystart="10" bodyend="18"/>
+    <listofallmembers>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_price_list_1aa2f56c0e7912edca0d505907d1428d90" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ICustomerPriceList</scope><name>GetCustomerPriceList</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_price_list_1a56442fcbbb8372b723cf23f73e9463ee" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ICustomerPriceList</scope><name>GetCustomerPriceListHistory</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_price_list_1aa4aa73743bae6e0ae09a87b54d8db983" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ICustomerPriceList</scope><name>GetCustomersPriceList</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_price_list_1a4c67c5a454eb65869cc9b1604cfedf84" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ICustomerPriceList</scope><name>NewCustomerPriceList</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_price_list_1a395e4f8f1da8a06513643561399ee28f" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ICustomerPriceList</scope><name>UpdateCustomerPriceList</name></member>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_customer_price_list_1a6004f90912be6a6cabfd56a5aaa50f48" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::ICustomerPriceList</scope><name>UpdateCustomersPricesList</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

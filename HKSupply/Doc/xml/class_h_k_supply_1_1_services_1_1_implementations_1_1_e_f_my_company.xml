@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_my_company" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFMyCompany</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_my_company" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IMyCompany</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_my_company_1a7c652399c67996e593341d0526f6cd37" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFMyCompany._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_my_company" kindref="compound">EFMyCompany</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFMyCompany.cs" line="23" column="1" bodyfile="HKSupply/Services/Implementations/EFMyCompany.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_my_company_1a3c25540aef1e67e820e6dae4c4434b12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_my_company" kindref="compound">MyCompany</ref></type>
+        <definition>MyCompany HKSupply.Services.Implementations.EFMyCompany.GetMyCompany</definition>
+        <argsstring>()</argsstring>
+        <name>GetMyCompany</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_my_company_1a2771b31985723c012068502824f6a544">GetMyCompany</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFMyCompany.cs" line="25" column="1" bodyfile="HKSupply/Services/Implementations/EFMyCompany.cs" bodystart="25" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_my_company_1aa9abd8a86d91700c1a58c10cf5535178" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFMyCompany.UpdateMyCompany</definition>
+        <argsstring>(MyCompany myCompany)</argsstring>
+        <name>UpdateMyCompany</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_my_company_1aa69c927f920655aa86dabdd479ab9662">UpdateMyCompany</reimplements>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_my_company" kindref="compound">MyCompany</ref></type>
+          <declname>myCompany</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFMyCompany.cs" line="61" column="1" bodyfile="HKSupply/Services/Implementations/EFMyCompany.cs" bodystart="61" bodyend="171"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="513">
+        <label>HKSupply.Services.Implementations.EFMyCompany</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_my_company"/>
+        <childnode refid="514" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="514">
+        <label>IMyCompany</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_my_company"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="515">
+        <label>HKSupply.Services.Implementations.EFMyCompany</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_my_company"/>
+        <childnode refid="516" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="516">
+        <label>IMyCompany</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_my_company"/>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFMyCompany.cs" line="22" column="1" bodyfile="HKSupply/Services/Implementations/EFMyCompany.cs" bodystart="21" bodyend="172"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_my_company_1a7c652399c67996e593341d0526f6cd37" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFMyCompany</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_my_company_1a3c25540aef1e67e820e6dae4c4434b12" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFMyCompany</scope><name>GetMyCompany</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_my_company_1aa9abd8a86d91700c1a58c10cf5535178" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFMyCompany</scope><name>UpdateMyCompany</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

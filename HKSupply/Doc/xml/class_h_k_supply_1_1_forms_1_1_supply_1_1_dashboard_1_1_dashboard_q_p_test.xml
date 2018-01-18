@@ -1,0 +1,583 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</compoundname>
+    <basecompoundref refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" prot="public" virt="non-virtual">HKSupply.Forms.RibbonFormBase</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1ac29d83bbe1aa05fa9828d230de202dca" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.Forms.Supply.Dashboard.DashboardQPTest.FIELD_PORCENTUAL_DEVIATION</definition>
+        <argsstring></argsstring>
+        <name>FIELD_PORCENTUAL_DEVIATION</name>
+        <initializer>= &quot;UnboundFieldPorcentualDeviation&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="24" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a058303f968751e8de2c14cf3388641c4" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored" kindref="compound">AuxDashboardQPStored</ref> &gt;</type>
+        <definition>List&lt;AuxDashboardQPStored&gt; HKSupply.Forms.Supply.Dashboard.DashboardQPTest._auxDboardQPStoredList</definition>
+        <argsstring></argsstring>
+        <name>_auxDboardQPStoredList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="28" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a19a89e2838a8d82d2bc2a3d3e8815bf6" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored2" kindref="compound">AuxDashboardQPStored2</ref> &gt;</type>
+        <definition>List&lt;AuxDashboardQPStored2&gt; HKSupply.Forms.Supply.Dashboard.DashboardQPTest._auxDboardQPStoredList2</definition>
+        <argsstring></argsstring>
+        <name>_auxDboardQPStoredList2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="29" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1af7de06b242b169a82b421f7e5943f231" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Supply.Dashboard.DashboardQPTest.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1acdb7681b14dc5bfc968ef773ff50a5c4" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPivotGrid.PivotGridControl</type>
+        <definition>DevExpress.XtraPivotGrid.PivotGridControl HKSupply.Forms.Supply.Dashboard.DashboardQPTest.pivotGridControl1</definition>
+        <argsstring></argsstring>
+        <name>pivotGridControl1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.Designer.cs" line="94" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.Designer.cs" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a10f76621683896036209ed49de14be2b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraCharts.ChartControl</type>
+        <definition>DevExpress.XtraCharts.ChartControl HKSupply.Forms.Supply.Dashboard.DashboardQPTest.chartControl1</definition>
+        <argsstring></argsstring>
+        <name>chartControl1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.Designer.cs" line="95" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.Designer.cs" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a69348e2688301235f4996282298767c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Supply.Dashboard.DashboardQPTest.DashboardQPTest</definition>
+        <argsstring>()</argsstring>
+        <name>DashboardQPTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="33" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="33" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a3e857cdf65cf457dec662e6a3dddbcdf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQPTest.DashboardQPTest_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DashboardQPTest_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="49" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="49" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a4d6d329af351adbcd409d430018aa957" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQPTest.SetUpPivotGrid</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpPivotGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="69" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="69" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1acb3764d0e55b68c13256e797fca7d8c4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQPTest.PivotGridControl1_CustomUnboundFieldData</definition>
+        <argsstring>(object sender, CustomFieldDataEventArgs e)</argsstring>
+        <name>PivotGridControl1_CustomUnboundFieldData</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CustomFieldDataEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="178" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="178" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a9c90cdc295b2416caf815bd3835ba5ee" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQPTest.PivotGridControl1_CustomAppearance</definition>
+        <argsstring>(object sender, PivotCustomAppearanceEventArgs e)</argsstring>
+        <name>PivotGridControl1_CustomAppearance</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>PivotCustomAppearanceEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="196" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="196" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a317091d269464ac6ea8e14edfe02b7a8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQPTest.PivotGridControl1_CustomCellValue</definition>
+        <argsstring>(object sender, PivotCellValueEventArgs e)</argsstring>
+        <name>PivotGridControl1_CustomCellValue</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>PivotCellValueEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="223" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="223" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a9a0ae550203fb4c177f8c94770b2c94e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList</type>
+        <definition>ArrayList HKSupply.Forms.Supply.Dashboard.DashboardQPTest.GetSummaryValues</definition>
+        <argsstring>(PivotCellValueEventArgs e)</argsstring>
+        <name>GetSummaryValues</name>
+        <param>
+          <type>PivotCellValueEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Returns a list of summary values against which a Custom Total will be calculated. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="253" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="253" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a4fcf2d2dbc6b723adf61bc213ebc13e2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string HKSupply.Forms.Supply.Dashboard.DashboardQPTest.GetCustomTotalName</definition>
+        <argsstring>(PivotCellValueEventArgs e)</argsstring>
+        <name>GetCustomTotalName</name>
+        <param>
+          <type>PivotCellValueEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Returns the Custom Total name. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="283" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="283" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1aaad18c7185fb53237692f20096ec9401" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>object</type>
+        <definition>object HKSupply.Forms.Supply.Dashboard.DashboardQPTest.GetCustomTotalValue</definition>
+        <argsstring>(ArrayList values, string customTotalName, string fieldName)</argsstring>
+        <name>GetCustomTotalValue</name>
+        <param>
+          <type>ArrayList</type>
+          <declname>values</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>customTotalName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>fieldName</declname>
+        </param>
+        <briefdescription>
+<para>Returns the Custom Total value by an array of summary values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>values</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>customTotalName</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="296" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="296" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a1a520896c8c293c5a9085335754acc02" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQPTest.LoadAuxDboardQPStoredList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAuxDboardQPStoredList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="362" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="362" bodyend="416"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a5929afbfa86f207e5130040c084991b8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string HKSupply.Forms.Supply.Dashboard.DashboardQPTest.GetQuery</definition>
+        <argsstring>(string week)</argsstring>
+        <name>GetQuery</name>
+        <param>
+          <type>string</type>
+          <declname>week</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="418" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="418" bodyend="454"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1af1781d4272e9c72198fff4607d3288a3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string HKSupply.Forms.Supply.Dashboard.DashboardQPTest.GetQuery2</definition>
+        <argsstring>(string week)</argsstring>
+        <name>GetQuery2</name>
+        <param>
+          <type>string</type>
+          <declname>week</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="456" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="456" bodyend="489"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a7825ad3a0edafa60596271273f766aee" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQPTest.TestSimpleChart</definition>
+        <argsstring>()</argsstring>
+        <name>TestSimpleChart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="492" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="492" bodyend="531"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1ae914b9ea48a88d70d79a953457563af1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQPTest.DummyChart</definition>
+        <argsstring>()</argsstring>
+        <name>DummyChart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="533" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="533" bodyend="607"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1abe4c774554acdac2049cbd1870884388" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQPTest.TestChart</definition>
+        <argsstring>(List&lt; AuxDashboardQPStored &gt; summary4Chart)</argsstring>
+        <name>TestChart</name>
+        <param>
+          <type>List&lt; <ref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored" kindref="compound">AuxDashboardQPStored</ref> &gt;</type>
+          <declname>summary4Chart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="609" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="609" bodyend="690"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1ade5ed43371b8d96f923a544763c36708" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQPTest.ChartControl1_CustomDrawAxisLabel</definition>
+        <argsstring>(object sender, CustomDrawAxisLabelEventArgs e)</argsstring>
+        <name>ChartControl1_CustomDrawAxisLabel</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CustomDrawAxisLabelEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>En el eje de las X pintamos las semanas, pero queremos sólo la parte entera, no tiene sentido que el char genere los decimales entre semanas 50 -&gt; 50.1 -&gt; 50.2 .... -&gt; 51 </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="698" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="698" bodyend="713"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a0f9f2448084405ca5df51c971f06bd6f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQPTest.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.Designer.cs" bodystart="29" bodyend="90"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a216468de04747bec11d0cf504da06b04" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.Dashboard.DashboardQPTest.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="236">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="234">
+        <label>HKSupply.Forms.Supply.Dashboard.DashboardQPTest</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test"/>
+        <childnode refid="235" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="235">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="236" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="239">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="237">
+        <label>HKSupply.Forms.Supply.Dashboard.DashboardQPTest</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test"/>
+        <childnode refid="238" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="240">
+        <label>XtraBars</label>
+      </node>
+      <node id="238">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="239" relation="public-inheritance">
+        </childnode>
+        <childnode refid="240" relation="usage">
+          <edgelabel>bbiCancel</edgelabel>
+          <edgelabel>ribbonStatusBar</edgelabel>
+          <edgelabel>bbiPrintPreview</edgelabel>
+          <edgelabel>bbiSave</edgelabel>
+          <edgelabel>bbiNew</edgelabel>
+          <edgelabel>bbiEdit</edgelabel>
+          <edgelabel>ribbonControl</edgelabel>
+          <edgelabel>ribbonPageGroup1</edgelabel>
+          <edgelabel>ribbonPage1</edgelabel>
+          <edgelabel>ribbonPageGroup2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" line="22" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQPTest.cs" bodystart="21" bodyend="718"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a058303f968751e8de2c14cf3388641c4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>_auxDboardQPStoredList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a19a89e2838a8d82d2bc2a3d3e8815bf6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>_auxDboardQPStoredList2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>ActionsStates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>AddRestoreLayoutItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>BarButtonItemReport_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>bbiCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>bbiEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>bbiExportCsv_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>bbiExportExcel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>bbiNew</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>bbiPrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>bbiPrintPreview_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>bbiSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>BbiSaveLayout_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a10f76621683896036209ed49de14be2b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>chartControl1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1ade5ed43371b8d96f923a544763c36708" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>ChartControl1_CustomDrawAxisLabel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1af7de06b242b169a82b421f7e5943f231" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>ConfigureLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>ConfigurePrintExportOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>CurrentLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>CurrentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a69348e2688301235f4996282298767c3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>DashboardQPTest</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a3e857cdf65cf457dec662e6a3dddbcdf" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>DashboardQPTest_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a216468de04747bec11d0cf504da06b04" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1ae914b9ea48a88d70d79a953457563af1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>DummyChart</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>EnableExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>EnableExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>EnableLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>EnablePrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>ExportCsvFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>ExportExcelFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1ac29d83bbe1aa05fa9828d230de202dca" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>FIELD_PORCENTUAL_DEVIATION</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a4fcf2d2dbc6b723adf61bc213ebc13e2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>GetCustomTotalName</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1aaad18c7185fb53237692f20096ec9401" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>GetCustomTotalValue</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a5929afbfa86f207e5130040c084991b8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>GetQuery</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1af1781d4272e9c72198fff4607d3288a3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>GetQuery2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a9a0ae550203fb4c177f8c94770b2c94e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>GetSummaryValues</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a0f9f2448084405ca5df51c971f06bd6f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>LayoutButton_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a1a520896c8c293c5a9085335754acc02" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>LoadAuxDboardQPStoredList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>Modify</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>New</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1acdb7681b14dc5bfc968ef773ff50a5c4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>pivotGridControl1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a9c90cdc295b2416caf815bd3835ba5ee" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>PivotGridControl1_CustomAppearance</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a317091d269464ac6ea8e14edfe02b7a8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>PivotGridControl1_CustomCellValue</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1acb3764d0e55b68c13256e797fca7d8c4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>PivotGridControl1_CustomUnboundFieldData</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>ProcessCmdKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>Read</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>RestoreInitState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>ribbonControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>RibbonFormBase</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>ribbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>ribbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>ribbonPageGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>ribbonStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>SetActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>SetRibbonText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a4d6d329af351adbcd409d430018aa957" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>SetUpPivotGrid</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1abe4c774554acdac2049cbd1870884388" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>TestChart</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_test_1a7825ad3a0edafa60596271273f766aee" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQPTest</scope><name>TestSimpleChart</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

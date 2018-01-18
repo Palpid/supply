@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_cd7e229c1075ad00fcf3378b2252435a" kind="dir">
+    <compoundname>HKSupply/Models/Supply</compoundname>
+    <innerfile refid="_box_8cs">Box.cs</innerfile>
+    <innerfile refid="_doc_box_8cs">DocBox.cs</innerfile>
+    <innerfile refid="_doc_head_8cs">DocHead.cs</innerfile>
+    <innerfile refid="_doc_head_attach_file_8cs">DocHeadAttachFile.cs</innerfile>
+    <innerfile refid="_doc_lines_8cs">DocLines.cs</innerfile>
+    <innerfile refid="_packing_list_item_batch_8cs">PackingListItemBatch.cs</innerfile>
+    <innerfile refid="_supply_doc_type_8cs">SupplyDocType.cs</innerfile>
+    <innerfile refid="_supply_status_8cs">SupplyStatus.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/Supply/"/>
+  </compounddef>
+</doxygen>

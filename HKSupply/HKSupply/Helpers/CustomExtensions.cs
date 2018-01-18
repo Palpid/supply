@@ -455,29 +455,31 @@ namespace HKSupply.Helpers
             return (T)property.GetCustomAttributes(attrType, false).First();
         }
 
+        // No he conseguido restaurar la configuración original del grid antes de cambiar los colores, sobretodo si se tiene activo el colorear las filas
+        //para/impares diferentes (opción que puedes activar en el grid)
         /// <summary>
         /// Para poner los colores de las celdas que son editables o no. 
         /// </summary>
         /// <param name="view"></param>
         /// <returns></returns>
         /// <remarks>No es realmente una extensión, porque no uso para nada lo devuelto, es un método, pero asi me ahorro hacer la clase que hereda etc</remarks>
-        public static DevExpress.XtraGrid.Views.Grid.GridView SetEditingStyles(this DevExpress.XtraGrid.Views.Grid.GridView view)
-        {
-            var x = view.OptionsBehavior.Editable;
+        //public static DevExpress.XtraGrid.Views.Grid.GridView SetEditingStyles(this DevExpress.XtraGrid.Views.Grid.GridView view)
+        //{
+        //    var x = view.OptionsBehavior.Editable;
 
-            if (view.OptionsBehavior.Editable)
-            {
-                foreach (DevExpress.XtraGrid.Columns.GridColumn col in view.Columns)
-                    col.AppearanceCell.BackColor = (col.OptionsColumn.AllowEdit ? System.Drawing.Color.White : System.Drawing.Color.GhostWhite);
-            }
-            else
-            {
-                //En el tag hemos guardado el layout original del grid para restaurarlo cuando no se edita
-                System.IO.Stream str = view.Tag as System.IO.MemoryStream;
-                view.RestoreLayoutFromStream(str);
-                str.Seek(0, System.IO.SeekOrigin.Begin);
-            }
-                return view;
-        }
+        //    if (view.OptionsBehavior.Editable)
+        //    {
+        //        foreach (DevExpress.XtraGrid.Columns.GridColumn col in view.Columns)
+        //            col.AppearanceCell.BackColor = (col.OptionsColumn.AllowEdit ? System.Drawing.Color.White : System.Drawing.Color.GhostWhite);
+        //    }
+        //    else
+        //    {
+        //        //En el tag hemos guardado el layout original del grid para restaurarlo cuando no se edita
+        //        System.IO.Stream str = view.Tag as System.IO.MemoryStream;
+        //        view.RestoreLayoutFromStream(str);
+        //        str.Seek(0, System.IO.SeekOrigin.Begin);
+        //    }
+        //    return view;
+        //}
     }
 }

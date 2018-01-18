@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_h_k_supply_1_1_exceptions_1_1_new_existing_role_exception" kind="class" language="C#" prot="public">
     <compoundname>HKSupply::Exceptions::NewExistingRoleException</compoundname>
     <basecompoundref prot="public" virt="non-virtual">Exception</basecompoundref>
@@ -84,24 +84,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="194">
+      <node id="1229">
         <label>HKSupply.Exceptions.NewExistingRoleException</label>
         <link refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_role_exception"/>
-        <childnode refid="195" relation="public-inheritance">
+        <childnode refid="1230" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="195">
+      <node id="1230">
         <label>System::Exception</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="196">
+      <node id="1231">
         <label>HKSupply.Exceptions.NewExistingRoleException</label>
         <link refid="class_h_k_supply_1_1_exceptions_1_1_new_existing_role_exception"/>
-        <childnode refid="197" relation="public-inheritance">
+        <childnode refid="1232" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="197">
+      <node id="1232">
         <label>System::Exception</label>
       </node>
     </collaborationgraph>

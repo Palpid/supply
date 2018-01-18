@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_layout" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::Layout</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_layout_1aa94d2c594f8a96302e427e4d9d03bcc3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.Layout.IdLayout</definition>
+        <argsstring></argsstring>
+        <name>IdLayout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Layout.cs" line="15" column="1" bodyfile="HKSupply/Models/Layout.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_layout_1a196e69f3e2a4071f2baaba9ae85be02b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.Layout.FunctionalityId</definition>
+        <argsstring></argsstring>
+        <name>FunctionalityId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Layout.cs" line="18" column="1" bodyfile="HKSupply/Models/Layout.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_layout_1a29096b667ccaf97e64099b1b66555a6d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_functionality" kindref="compound">Functionality</ref></type>
+        <definition>Functionality HKSupply.Models.Layout.Functionality</definition>
+        <argsstring></argsstring>
+        <name>Functionality</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Layout.cs" line="20" column="1" bodyfile="HKSupply/Models/Layout.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_layout_1aea96f9f82a44edeffb5eb00f1a94854e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Layout.UserLogin</definition>
+        <argsstring></argsstring>
+        <name>UserLogin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Layout.cs" line="23" column="1" bodyfile="HKSupply/Models/Layout.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_layout_1afdc3d1fdb808e4be195c7bf541941bc2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Layout.ObjectName</definition>
+        <argsstring></argsstring>
+        <name>ObjectName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Layout.cs" line="26" column="1" bodyfile="HKSupply/Models/Layout.cs" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_layout_1a9cf8b5e3c667e1b770293ab0ae3d1ea8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Layout.LayoutString</definition>
+        <argsstring></argsstring>
+        <name>LayoutString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Layout.cs" line="29" column="1" bodyfile="HKSupply/Models/Layout.cs" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_layout_1a2ab461d2f6cf980e81db76e987d979c3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Layout.LayoutName</definition>
+        <argsstring></argsstring>
+        <name>LayoutName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Layout.cs" line="32" column="1" bodyfile="HKSupply/Models/Layout.cs" bodystart="32" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/Layout.cs" line="13" column="1" bodyfile="HKSupply/Models/Layout.cs" bodystart="12" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_layout_1a29096b667ccaf97e64099b1b66555a6d" prot="public" virt="non-virtual"><scope>HKSupply::Models::Layout</scope><name>Functionality</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_layout_1a196e69f3e2a4071f2baaba9ae85be02b" prot="public" virt="non-virtual"><scope>HKSupply::Models::Layout</scope><name>FunctionalityId</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_layout_1aa94d2c594f8a96302e427e4d9d03bcc3" prot="public" virt="non-virtual"><scope>HKSupply::Models::Layout</scope><name>IdLayout</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_layout_1a2ab461d2f6cf980e81db76e987d979c3" prot="public" virt="non-virtual"><scope>HKSupply::Models::Layout</scope><name>LayoutName</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_layout_1a9cf8b5e3c667e1b770293ab0ae3d1ea8" prot="public" virt="non-virtual"><scope>HKSupply::Models::Layout</scope><name>LayoutString</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_layout_1afdc3d1fdb808e4be195c7bf541941bc2" prot="public" virt="non-virtual"><scope>HKSupply::Models::Layout</scope><name>ObjectName</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_layout_1aea96f9f82a44edeffb5eb00f1a94854e" prot="public" virt="non-virtual"><scope>HKSupply::Models::Layout</scope><name>UserLogin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

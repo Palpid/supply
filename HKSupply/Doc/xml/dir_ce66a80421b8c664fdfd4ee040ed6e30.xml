@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_ce66a80421b8c664fdfd4ee040ed6e30" kind="dir">
+    <compoundname>HKSupply/PRJ_Stocks/DB</compoundname>
+    <innerfile refid="_b_d___stocks_8cs">BD_Stocks.cs</innerfile>
+    <innerfile refid="_call___d_b___stocks_8cs">Call_DB_Stocks.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/PRJ_Stocks/DB/"/>
+  </compounddef>
+</doxygen>

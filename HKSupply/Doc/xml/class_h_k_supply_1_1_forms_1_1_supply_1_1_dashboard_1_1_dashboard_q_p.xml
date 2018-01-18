@@ -1,0 +1,1351 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Supply::Dashboard::DashboardQP</compoundname>
+    <basecompoundref refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" prot="public" virt="non-virtual">HKSupply.Forms.RibbonFormBase</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ad7e3fe3854a9a4438e0c7324ee9de4d8" prot="private" static="no" mutable="no">
+        <type>Font</type>
+        <definition>Font HKSupply.Forms.Supply.Dashboard.DashboardQP._labelDefaultFontBold</definition>
+        <argsstring></argsstring>
+        <name>_labelDefaultFontBold</name>
+        <initializer>= new Font(&quot;SourceSansProRegular&quot;, 8, FontStyle.Bold)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="31" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1aa71cea01ff2ca296bf27b02f8014cbc2" prot="private" static="no" mutable="no">
+        <type>Font</type>
+        <definition>Font HKSupply.Forms.Supply.Dashboard.DashboardQP._labelDefaultFont</definition>
+        <argsstring></argsstring>
+        <name>_labelDefaultFont</name>
+        <initializer>= new Font(&quot;SourceSansProRegular&quot;, 8, FontStyle.Regular)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="32" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1adc932736f95e4a58494a201f9188bc1e" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_customer" kindref="compound">Customer</ref> &gt;</type>
+        <definition>List&lt;Customer&gt; HKSupply.Forms.Supply.Dashboard.DashboardQP._customersList</definition>
+        <argsstring></argsstring>
+        <name>_customersList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="34" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a3e27ac092aa3f2aca57efc0ffa7829c4" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_group" kindref="compound">ItemGroup</ref> &gt;</type>
+        <definition>List&lt;ItemGroup&gt; HKSupply.Forms.Supply.Dashboard.DashboardQP._itemGroupList</definition>
+        <argsstring></argsstring>
+        <name>_itemGroupList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="35" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ad9c9e9bab3d3dbab98737428f4cbfcde" prot="private" static="no" mutable="no">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; HKSupply.Forms.Supply.Dashboard.DashboardQP._typeList</definition>
+        <argsstring></argsstring>
+        <name>_typeList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="36" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a2ebdf314d14420157ff1f0fb77c66c69" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Supply.Dashboard.DashboardQP.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a4b62bbc95df71278b902380d1588c43b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Supply.Dashboard.DashboardQP.xtcGeneral</definition>
+        <argsstring></argsstring>
+        <name>xtcGeneral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="422" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a97fc66b46a3d4ffc9dd2cd1fe7c1e721" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.Dashboard.DashboardQP.xtpDashboard</definition>
+        <argsstring></argsstring>
+        <name>xtpDashboard</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="423" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1aa90335e9604f9d102b417feeb2abd4f8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.PanelControl</type>
+        <definition>DevExpress.XtraEditors.PanelControl HKSupply.Forms.Supply.Dashboard.DashboardQP.pcFilter</definition>
+        <argsstring></argsstring>
+        <name>pcFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="424" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="424" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1af4cad9c1360d25161c3c0a4dc0dc89af" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Supply.Dashboard.DashboardQP.sbGenerate</definition>
+        <argsstring></argsstring>
+        <name>sbGenerate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="425" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1afad3b99a9303c2cac5360e384b5ceaa2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Dashboard.DashboardQP.lblDateIni</definition>
+        <argsstring></argsstring>
+        <name>lblDateIni</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="426" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a0a08e0802425a3c49dfb39d80d7ee1f3" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Dashboard.DashboardQP.lblDateEnd</definition>
+        <argsstring></argsstring>
+        <name>lblDateEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="427" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="427" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a2a8d70924907484206f8255a6115b367" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.DateEdit</type>
+        <definition>DevExpress.XtraEditors.DateEdit HKSupply.Forms.Supply.Dashboard.DashboardQP.dateEditDateIni</definition>
+        <argsstring></argsstring>
+        <name>dateEditDateIni</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="428" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="428" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a9eb0473550ecbeb48e92b1566c25fd6c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.DateEdit</type>
+        <definition>DevExpress.XtraEditors.DateEdit HKSupply.Forms.Supply.Dashboard.DashboardQP.dateEditDateEnd</definition>
+        <argsstring></argsstring>
+        <name>dateEditDateEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="429" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="429" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a1c79f1dd388840c27272d5b06d7cb3af" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Dashboard.DashboardQP.lblDate</definition>
+        <argsstring></argsstring>
+        <name>lblDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="430" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="430" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a8d7dc56225708e3c56e29aea3c35679d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Dashboard.DashboardQP.lblWeek</definition>
+        <argsstring></argsstring>
+        <name>lblWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="431" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="431" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1abaaadc007cc6f2b2d61492bf5e3f2c59" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Dashboard.DashboardQP.lblCustomer</definition>
+        <argsstring></argsstring>
+        <name>lblCustomer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="432" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="432" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1abceeb5a319f2880c431215d06d1acf08" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Supply.Dashboard.DashboardQP.xtcDashboard</definition>
+        <argsstring></argsstring>
+        <name>xtcDashboard</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="433" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="433" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a5b2b5be7c1188f6eef4debc12fc0c808" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.Dashboard.DashboardQP.xtpGrid</definition>
+        <argsstring></argsstring>
+        <name>xtpGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="434" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="434" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a3ac49d381ad8b93ac51f9e0524861dc1" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.Dashboard.DashboardQP.xtpLineChart</definition>
+        <argsstring></argsstring>
+        <name>xtpLineChart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="435" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="435" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a41f1faa38c7dffe2d775c33480b937b3" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Dashboard.DashboardQP.lblItemGroup</definition>
+        <argsstring></argsstring>
+        <name>lblItemGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="436" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="436" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1acb99fc53b994d00370db493b07e2e65e" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.CheckedComboBoxEdit</type>
+        <definition>DevExpress.XtraEditors.CheckedComboBoxEdit HKSupply.Forms.Supply.Dashboard.DashboardQP.ccbeCustomer</definition>
+        <argsstring></argsstring>
+        <name>ccbeCustomer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="437" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="437" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1aaf4641c63d6ffb7fcfb2d311db5b6913" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.CheckedComboBoxEdit</type>
+        <definition>DevExpress.XtraEditors.CheckedComboBoxEdit HKSupply.Forms.Supply.Dashboard.DashboardQP.ccbeItemGroup</definition>
+        <argsstring></argsstring>
+        <name>ccbeItemGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="438" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="438" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1aeb5431d1fa14b1284e171c71ae891e69" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraPivotGrid.PivotGridControl</type>
+        <definition>DevExpress.XtraPivotGrid.PivotGridControl HKSupply.Forms.Supply.Dashboard.DashboardQP.pivotGridDashboardQP</definition>
+        <argsstring></argsstring>
+        <name>pivotGridDashboardQP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="439" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="439" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1abcdde4585dfcdb5dcba765ee73180891" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SplitContainerControl</type>
+        <definition>DevExpress.XtraEditors.SplitContainerControl HKSupply.Forms.Supply.Dashboard.DashboardQP.splitContainerControlChart</definition>
+        <argsstring></argsstring>
+        <name>splitContainerControlChart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="440" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="440" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ac5ea606908d39255e8d1823a6c534d28" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraCharts.ChartControl</type>
+        <definition>DevExpress.XtraCharts.ChartControl HKSupply.Forms.Supply.Dashboard.DashboardQP.chartControlMT</definition>
+        <argsstring></argsstring>
+        <name>chartControlMT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="441" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="441" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ab08cceae01091ca1d0affddbc96231d0" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraCharts.ChartControl</type>
+        <definition>DevExpress.XtraCharts.ChartControl HKSupply.Forms.Supply.Dashboard.DashboardQP.chartControlHW</definition>
+        <argsstring></argsstring>
+        <name>chartControlHW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="442" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="442" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a4e39d70e68d2bd1ed7feafec0044a8df" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.Dashboard.DashboardQP.lblType</definition>
+        <argsstring></argsstring>
+        <name>lblType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="443" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="443" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a4367c8470fc42a763ff781d4c6c19f44" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LookUpEdit</type>
+        <definition>DevExpress.XtraEditors.LookUpEdit HKSupply.Forms.Supply.Dashboard.DashboardQP.lueType</definition>
+        <argsstring></argsstring>
+        <name>lueType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="444" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="444" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a02c8247243f2423b7c7cde13006d8954" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.Dashboard.DashboardQP.xtpBarChart</definition>
+        <argsstring></argsstring>
+        <name>xtpBarChart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="445" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="445" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1af808af7856418742a07986c1c05d965d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraCharts.ChartControl</type>
+        <definition>DevExpress.XtraCharts.ChartControl HKSupply.Forms.Supply.Dashboard.DashboardQP.chartControlPercDesv</definition>
+        <argsstring></argsstring>
+        <name>chartControlPercDesv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="446" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="446" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ab18e364e46175411f46e50b9330f86e3" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Supply.Dashboard.DashboardQP.txtDateIniWeek</definition>
+        <argsstring></argsstring>
+        <name>txtDateIniWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="447" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="447" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1abb914182418df6c299c0505fe9515709" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Supply.Dashboard.DashboardQP.txtDateEndWeek</definition>
+        <argsstring></argsstring>
+        <name>txtDateEndWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="448" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="448" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ad7bbd899ea0737cb507ae50f016480a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Supply.Dashboard.DashboardQP.DashboardQP</definition>
+        <argsstring>()</argsstring>
+        <name>DashboardQP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="40" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="40" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a639021caf4c7c42056b3557f5feb1f55" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.Dashboard.DashboardQP.bbiPrintPreview_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiPrintPreview_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61">bbiPrintPreview_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="93" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="93" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a840ebdb92f22e16c3e002fb40e8d130d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.Dashboard.DashboardQP.bbiExportExcel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportExcel_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811">bbiExportExcel_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="105" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="105" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1affe9daf7e4ad5c5df5d4e6cfa2bf295e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.ConfigureRibbonActions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="71" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="71" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a3a985bac5562cec647bd287f16f186de" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.DashboardQP_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DashboardQP_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="135" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="135" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a4d2ce3aceb5c84fa8c1ed7978b4ba925" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.DateEditDateIni_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DateEditDateIni_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="140" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="140" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1aa8eca1a4290a33da447d51bb3386bbcc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.DateEditDateEnd_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DateEditDateEnd_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="152" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="152" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ab930ee2137e736d0428a4369e607bbef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.SbGenerate_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbGenerate_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="164" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="164" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a2cfd6df879a7a1273fdb6bb3a1cee5c9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.PivotGridDashboardQP_CustomAppearance</definition>
+        <argsstring>(object sender, PivotCustomAppearanceEventArgs e)</argsstring>
+        <name>PivotGridDashboardQP_CustomAppearance</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>PivotCustomAppearanceEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="200" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="200" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a82f20723ad994c855964f38911fdde2c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.PivotGridDashboardQP_CustomCellValue</definition>
+        <argsstring>(object sender, PivotCellValueEventArgs e)</argsstring>
+        <name>PivotGridDashboardQP_CustomCellValue</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>PivotCellValueEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="227" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="227" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1af17fef2bdc5c30839cce234f0238af30" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.PivotGridDashboardQP_FieldValueDisplayText</definition>
+        <argsstring>(object sender, PivotFieldDisplayTextEventArgs e)</argsstring>
+        <name>PivotGridDashboardQP_FieldValueDisplayText</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>PivotFieldDisplayTextEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="259" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="259" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1afef9fcc4a8d1ec08319d9ada3b7a0e6e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.PivotGridDashboardQP_CellDoubleClick</definition>
+        <argsstring>(object sender, PivotCellEventArgs e)</argsstring>
+        <name>PivotGridDashboardQP_CellDoubleClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>PivotCellEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="275" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="275" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a8f73b24425afc41a79baa4683ec99a97" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.PivotGridDashboardQP_CustomDrawFieldValue</definition>
+        <argsstring>(object sender, PivotCustomDrawFieldValueEventArgs e)</argsstring>
+        <name>PivotGridDashboardQP_CustomDrawFieldValue</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>PivotCustomDrawFieldValueEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="287" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="287" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a950e9b59608e8d9ab358f806e1527100" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.LoadAuxList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAuxList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="344" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="344" bodyend="363"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a2aaca14b37f8b65834770e31ac96f671" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.LoadDashboard</definition>
+        <argsstring>()</argsstring>
+        <name>LoadDashboard</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="365" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="365" bodyend="376"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1af2ebd29e4461eba809d0b8511e0aa7b6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.LoadDashboardData</definition>
+        <argsstring>()</argsstring>
+        <name>LoadDashboardData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="378" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="378" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a2475245d2beed5326b85286ad29e06cb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.LoadDashboardChart</definition>
+        <argsstring>()</argsstring>
+        <name>LoadDashboardChart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="410" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="410" bodyend="437"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a25c73fb5964ab99c8f61b3d29b34782a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.SetUpLabels</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpLabels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="443" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="443" bodyend="477"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1adba036cff9a001dabfb03a91633ea634" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.SetUpEditText</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpEditText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="479" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="479" bodyend="508"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a276b37e2de384d820abe2476c0a4e812" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.TxtDateIniWeek_Validated</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>TxtDateIniWeek_Validated</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="510" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="510" bodyend="530"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a67d5c54748b95dc73153d83a0d680c02" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.TxtDateEndWeek_Validated</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>TxtDateEndWeek_Validated</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="532" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="532" bodyend="552"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ade96f206e10f0ff42c5f84ed2c26e066" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.TxtDateWeek_Validating</definition>
+        <argsstring>(object sender, CancelEventArgs e)</argsstring>
+        <name>TxtDateWeek_Validating</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CancelEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="554" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="554" bodyend="572"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a789d67abd3b0bf46daf6f5f8acf30bb2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.SetUpCheckedComboBoxEdit</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpCheckedComboBoxEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="574" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="574" bodyend="585"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ad1fa38631f862847e54402e93d1b5741" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.SetUpLookUpEdit</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpLookUpEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="587" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="587" bodyend="598"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a224ee5548e3f5584e70c8a5536dcc456" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.SetUpCcbeCustomer</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpCcbeCustomer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="600" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="600" bodyend="612"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a49292ecbc1fb9df599f0d91ff9dc0dbd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.SetUpCcbeItemGroup</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpCcbeItemGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="614" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="614" bodyend="626"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a4aa59e3e06f64debc6eb61b47409737f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.SetUpEvents</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="628" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="628" bodyend="640"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1af5184de365fc5252cd8afcb743e0358b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.SetupPivotGrid</definition>
+        <argsstring>()</argsstring>
+        <name>SetupPivotGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="642" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="642" bodyend="759"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ad760291c4500dfe97056f55862c29aa3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.SetUpSplitContainer</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSplitContainer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="761" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="761" bodyend="772"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a6bb0d024b3707a24f873de1565faa486" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList</type>
+        <definition>ArrayList HKSupply.Forms.Supply.Dashboard.DashboardQP.GetSummaryValues</definition>
+        <argsstring>(PivotCellValueEventArgs e)</argsstring>
+        <name>GetSummaryValues</name>
+        <param>
+          <type>PivotCellValueEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Returns a list of summary values against which a Custom Total will be calculated. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="782" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="782" bodyend="805"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1afc30aceb3da5f6f4114df28d6c329b91" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string HKSupply.Forms.Supply.Dashboard.DashboardQP.GetCustomTotalName</definition>
+        <argsstring>(PivotCellValueEventArgs e)</argsstring>
+        <name>GetCustomTotalName</name>
+        <param>
+          <type>PivotCellValueEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Returns the Custom Total name. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="812" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="812" bodyend="817"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a4195daa55eeafcf9fd599a94fe5b970c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>object</type>
+        <definition>object HKSupply.Forms.Supply.Dashboard.DashboardQP.GetCustomTotalValue</definition>
+        <argsstring>(ArrayList values, string customTotalName, string fieldName)</argsstring>
+        <name>GetCustomTotalValue</name>
+        <param>
+          <type>ArrayList</type>
+          <declname>values</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>customTotalName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>fieldName</declname>
+        </param>
+        <briefdescription>
+<para>Returns the Custom Total value by an array of summary values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>values</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>customTotalName</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="825" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="825" bodyend="886"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a705f36e518dfd8de8f7419ab09476790" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>object</type>
+        <definition>object HKSupply.Forms.Supply.Dashboard.DashboardQP.GetCustomSummaryPorcentualDeviation</definition>
+        <argsstring>(PivotCellValueEventArgs e)</argsstring>
+        <name>GetCustomSummaryPorcentualDeviation</name>
+        <param>
+          <type>PivotCellValueEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="889" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="889" bodyend="942"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1afc266a01cc1caedabd79774112bc7d23" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.Dashboard.DashboardQP.ValidateFilters</definition>
+        <argsstring>()</argsstring>
+        <name>ValidateFilters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="947" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="947" bodyend="994"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1aee57c8e7bfc5221235083a881f17b4f0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.GenerateChartRawMaterialHardware</definition>
+        <argsstring>(List&lt; AuxDashboardQPStoredProcedure &gt; charData)</argsstring>
+        <name>GenerateChartRawMaterialHardware</name>
+        <param>
+          <type>List&lt; <ref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure" kindref="compound">AuxDashboardQPStoredProcedure</ref> &gt;</type>
+          <declname>charData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="996" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="996" bodyend="1008"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a4658ec168366a864572fba4a8f108bb3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.GenerateLineChartDashboard</definition>
+        <argsstring>(List&lt; AuxDashboardQPStoredProcedure &gt; charData, ChartControl chartObject, string chartTitle)</argsstring>
+        <name>GenerateLineChartDashboard</name>
+        <param>
+          <type>List&lt; <ref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure" kindref="compound">AuxDashboardQPStoredProcedure</ref> &gt;</type>
+          <declname>charData</declname>
+        </param>
+        <param>
+          <type>ChartControl</type>
+          <declname>chartObject</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>chartTitle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="1010" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="1010" bodyend="1094"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a94c6dfbbaf394548f49096a4e7c64e91" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.GenerateBarChartDashboard</definition>
+        <argsstring>(List&lt; AuxDashboardQPStoredProcedure &gt; charData, ChartControl chartObject, string chartTitle)</argsstring>
+        <name>GenerateBarChartDashboard</name>
+        <param>
+          <type>List&lt; <ref refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_aux_dashboard_q_p_stored_procedure" kindref="compound">AuxDashboardQPStoredProcedure</ref> &gt;</type>
+          <declname>charData</declname>
+        </param>
+        <param>
+          <type>ChartControl</type>
+          <declname>chartObject</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>chartTitle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="1096" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="1096" bodyend="1153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ae1738b1cbf2cdd8c7aa627cd865a7287" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.ShowDrilldown</definition>
+        <argsstring>(PivotDrillDownDataSource ds)</argsstring>
+        <name>ShowDrilldown</name>
+        <param>
+          <type>PivotDrillDownDataSource</type>
+          <declname>ds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="1155" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="1155" bodyend="1176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a45529516080465ce6a0624d91ec65072" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.Dashboard.DashboardQP.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="29" bodyend="418"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ae3aa524d36c9c7f15f57a32890c076c3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.Dashboard.DashboardQP.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="229">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="228">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="229" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="227">
+        <label>HKSupply.Forms.Supply.Dashboard.DashboardQP</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p"/>
+        <childnode refid="228" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="232">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="233">
+        <label>XtraBars</label>
+      </node>
+      <node id="231">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="232" relation="public-inheritance">
+        </childnode>
+        <childnode refid="233" relation="usage">
+          <edgelabel>bbiCancel</edgelabel>
+          <edgelabel>ribbonStatusBar</edgelabel>
+          <edgelabel>bbiPrintPreview</edgelabel>
+          <edgelabel>bbiSave</edgelabel>
+          <edgelabel>bbiNew</edgelabel>
+          <edgelabel>bbiEdit</edgelabel>
+          <edgelabel>ribbonControl</edgelabel>
+          <edgelabel>ribbonPageGroup1</edgelabel>
+          <edgelabel>ribbonPage1</edgelabel>
+          <edgelabel>ribbonPageGroup2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="230">
+        <label>HKSupply.Forms.Supply.Dashboard.DashboardQP</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p"/>
+        <childnode refid="231" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" line="24" column="1" bodyfile="HKSupply/Forms/Supply/Dashboard/DashboardQP.cs" bodystart="23" bodyend="1182"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1adc932736f95e4a58494a201f9188bc1e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>_customersList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a3e27ac092aa3f2aca57efc0ffa7829c4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>_itemGroupList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1aa71cea01ff2ca296bf27b02f8014cbc2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>_labelDefaultFont</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ad7e3fe3854a9a4438e0c7324ee9de4d8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>_labelDefaultFontBold</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ad9c9e9bab3d3dbab98737428f4cbfcde" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>_typeList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>ActionsStates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>AddRestoreLayoutItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>BarButtonItemReport_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>bbiCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>bbiEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>bbiExportCsv_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a840ebdb92f22e16c3e002fb40e8d130d" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>bbiExportExcel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>bbiNew</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>bbiPrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a639021caf4c7c42056b3557f5feb1f55" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>bbiPrintPreview_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>bbiSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>BbiSaveLayout_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1acb99fc53b994d00370db493b07e2e65e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>ccbeCustomer</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1aaf4641c63d6ffb7fcfb2d311db5b6913" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>ccbeItemGroup</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ab08cceae01091ca1d0affddbc96231d0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>chartControlHW</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ac5ea606908d39255e8d1823a6c534d28" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>chartControlMT</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1af808af7856418742a07986c1c05d965d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>chartControlPercDesv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a2ebdf314d14420157ff1f0fb77c66c69" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>ConfigureLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>ConfigurePrintExportOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1affe9daf7e4ad5c5df5d4e6cfa2bf295e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>ConfigureRibbonActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>CurrentLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>CurrentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ad7bbd899ea0737cb507ae50f016480a9" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>DashboardQP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a3a985bac5562cec647bd287f16f186de" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>DashboardQP_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a9eb0473550ecbeb48e92b1566c25fd6c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>dateEditDateEnd</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1aa8eca1a4290a33da447d51bb3386bbcc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>DateEditDateEnd_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a2a8d70924907484206f8255a6115b367" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>dateEditDateIni</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a4d2ce3aceb5c84fa8c1ed7978b4ba925" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>DateEditDateIni_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ae3aa524d36c9c7f15f57a32890c076c3" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>EnableExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>EnableExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>EnableLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>EnablePrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>ExportCsvFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>ExportExcelFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a94c6dfbbaf394548f49096a4e7c64e91" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>GenerateBarChartDashboard</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1aee57c8e7bfc5221235083a881f17b4f0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>GenerateChartRawMaterialHardware</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a4658ec168366a864572fba4a8f108bb3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>GenerateLineChartDashboard</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a705f36e518dfd8de8f7419ab09476790" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>GetCustomSummaryPorcentualDeviation</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1afc30aceb3da5f6f4114df28d6c329b91" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>GetCustomTotalName</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a4195daa55eeafcf9fd599a94fe5b970c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>GetCustomTotalValue</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a6bb0d024b3707a24f873de1565faa486" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>GetSummaryValues</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a45529516080465ce6a0624d91ec65072" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>LayoutButton_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1abaaadc007cc6f2b2d61492bf5e3f2c59" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>lblCustomer</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a1c79f1dd388840c27272d5b06d7cb3af" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>lblDate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a0a08e0802425a3c49dfb39d80d7ee1f3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>lblDateEnd</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1afad3b99a9303c2cac5360e384b5ceaa2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>lblDateIni</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a41f1faa38c7dffe2d775c33480b937b3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>lblItemGroup</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a4e39d70e68d2bd1ed7feafec0044a8df" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>lblType</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a8d7dc56225708e3c56e29aea3c35679d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>lblWeek</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a950e9b59608e8d9ab358f806e1527100" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>LoadAuxList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a2aaca14b37f8b65834770e31ac96f671" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>LoadDashboard</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a2475245d2beed5326b85286ad29e06cb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>LoadDashboardChart</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1af2ebd29e4461eba809d0b8511e0aa7b6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>LoadDashboardData</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a4367c8470fc42a763ff781d4c6c19f44" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>lueType</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>Modify</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>New</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1aa90335e9604f9d102b417feeb2abd4f8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>pcFilter</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1aeb5431d1fa14b1284e171c71ae891e69" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>pivotGridDashboardQP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1afef9fcc4a8d1ec08319d9ada3b7a0e6e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>PivotGridDashboardQP_CellDoubleClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a2cfd6df879a7a1273fdb6bb3a1cee5c9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>PivotGridDashboardQP_CustomAppearance</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a82f20723ad994c855964f38911fdde2c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>PivotGridDashboardQP_CustomCellValue</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a8f73b24425afc41a79baa4683ec99a97" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>PivotGridDashboardQP_CustomDrawFieldValue</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1af17fef2bdc5c30839cce234f0238af30" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>PivotGridDashboardQP_FieldValueDisplayText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>ProcessCmdKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>Read</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>RestoreInitState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>ribbonControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>RibbonFormBase</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>ribbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>ribbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>ribbonPageGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>ribbonStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1af4cad9c1360d25161c3c0a4dc0dc89af" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>sbGenerate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ab930ee2137e736d0428a4369e607bbef" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>SbGenerate_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>SetActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>SetRibbonText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a224ee5548e3f5584e70c8a5536dcc456" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>SetUpCcbeCustomer</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a49292ecbc1fb9df599f0d91ff9dc0dbd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>SetUpCcbeItemGroup</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a789d67abd3b0bf46daf6f5f8acf30bb2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>SetUpCheckedComboBoxEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1adba036cff9a001dabfb03a91633ea634" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>SetUpEditText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a4aa59e3e06f64debc6eb61b47409737f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>SetUpEvents</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a25c73fb5964ab99c8f61b3d29b34782a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>SetUpLabels</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ad1fa38631f862847e54402e93d1b5741" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>SetUpLookUpEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1af5184de365fc5252cd8afcb743e0358b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>SetupPivotGrid</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ad760291c4500dfe97056f55862c29aa3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>SetUpSplitContainer</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ae1738b1cbf2cdd8c7aa627cd865a7287" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>ShowDrilldown</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1abcdde4585dfcdb5dcba765ee73180891" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>splitContainerControlChart</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1abb914182418df6c299c0505fe9515709" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>txtDateEndWeek</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a67d5c54748b95dc73153d83a0d680c02" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>TxtDateEndWeek_Validated</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ab18e364e46175411f46e50b9330f86e3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>txtDateIniWeek</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a276b37e2de384d820abe2476c0a4e812" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>TxtDateIniWeek_Validated</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1ade96f206e10f0ff42c5f84ed2c26e066" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>TxtDateWeek_Validating</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1afc266a01cc1caedabd79774112bc7d23" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>ValidateFilters</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1abceeb5a319f2880c431215d06d1acf08" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>xtcDashboard</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a4b62bbc95df71278b902380d1588c43b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>xtcGeneral</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a02c8247243f2423b7c7cde13006d8954" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>xtpBarChart</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a97fc66b46a3d4ffc9dd2cd1fe7c1e721" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>xtpDashboard</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a5b2b5be7c1188f6eef4debc12fc0c808" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>xtpGrid</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_dashboard_1_1_dashboard_q_p_1a3ac49d381ad8b93ac51f9e0524861dc1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::Dashboard::DashboardQP</scope><name>xtpLineChart</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

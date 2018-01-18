@@ -1,0 +1,2801 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Master::BomManagement</compoundname>
+    <basecompoundref refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" prot="public" virt="non-virtual">HKSupply.Forms.RibbonFormBase</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5000918f8f7be06ff4e7faa9f2a6970f" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.Forms.Master.BomManagement.EDIT_COLUMN</definition>
+        <argsstring></argsstring>
+        <name>EDIT_COLUMN</name>
+        <initializer>= &quot;EditHf&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aedfc4811ef72bdc6dc73e91d802fa254" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string HKSupply.Forms.Master.BomManagement.DYNAMIC_PANEL_DRAWING</definition>
+        <argsstring></argsstring>
+        <name>DYNAMIC_PANEL_DRAWING</name>
+        <initializer>= &quot;DynamicPanelDrawing&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="30" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aa0cff773d342838d26389f5c846435c4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.BomManagement._isFactory</definition>
+        <argsstring></argsstring>
+        <name>_isFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="36" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a989598d8b6d9b32e9e1f22e44ef27779" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_ey" kindref="compound">ItemEy</ref> &gt;</type>
+        <definition>List&lt;ItemEy&gt; HKSupply.Forms.Master.BomManagement._itemsEyList</definition>
+        <argsstring></argsstring>
+        <name>_itemsEyList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="38" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a27637b1f3a66a6a13b64d13e2515cfec" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_hf" kindref="compound">ItemHf</ref> &gt;</type>
+        <definition>List&lt;ItemHf&gt; HKSupply.Forms.Master.BomManagement._itemsHfList</definition>
+        <argsstring></argsstring>
+        <name>_itemsHfList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="39" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aefc41a24e0cb25fab4d46331e02715c8" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_hf" kindref="compound">ItemHf</ref> &gt;</type>
+        <definition>List&lt;ItemHf&gt; HKSupply.Forms.Master.BomManagement._itemsHfDetailBomList</definition>
+        <argsstring></argsstring>
+        <name>_itemsHfDetailBomList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="40" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a68d94fc29fbc29401f4e6061b0bcb410" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_mt" kindref="compound">ItemMt</ref> &gt;</type>
+        <definition>List&lt;ItemMt&gt; HKSupply.Forms.Master.BomManagement._itemsMtList</definition>
+        <argsstring></argsstring>
+        <name>_itemsMtList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="41" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ad43db335d646b7a335ffa66281f5b1b6" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_hw" kindref="compound">ItemHw</ref> &gt;</type>
+        <definition>List&lt;ItemHw&gt; HKSupply.Forms.Master.BomManagement._itemsHwList</definition>
+        <argsstring></argsstring>
+        <name>_itemsHwList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="42" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a14373d2ef3fc910b66891c55961b7a65" prot="private" static="no" mutable="no">
+        <type>object</type>
+        <definition>object HKSupply.Forms.Master.BomManagement._currentItem</definition>
+        <argsstring></argsstring>
+        <name>_currentItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="44" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a467546139c084573a22c3146db06e741" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref> &gt;</type>
+        <definition>List&lt;ItemBom&gt; HKSupply.Forms.Master.BomManagement._itemBomList</definition>
+        <argsstring></argsstring>
+        <name>_itemBomList</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="45" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ad80e4f5cc82a3e44e1cb3e97a12825b0" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_doc" kindref="compound">ItemDoc</ref> &gt;</type>
+        <definition>List&lt;ItemDoc&gt; HKSupply.Forms.Master.BomManagement._itemLastDocsList</definition>
+        <argsstring></argsstring>
+        <name>_itemLastDocsList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="46" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ab2e5b0cdd8215e1eeac8b20a30d08bf5" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier" kindref="compound">Supplier</ref> &gt;</type>
+        <definition>List&lt;Supplier&gt; HKSupply.Forms.Master.BomManagement._suppliersList</definition>
+        <argsstring></argsstring>
+        <name>_suppliersList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="48" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a32dcb57b03be90624ff89845ef30dbfa" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_bom_breakdown" kindref="compound">BomBreakdown</ref> &gt;</type>
+        <definition>List&lt;BomBreakdown&gt; HKSupply.Forms.Master.BomManagement._bomBreakdownList</definition>
+        <argsstring></argsstring>
+        <name>_bomBreakdownList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="49" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5547a5aa11c1b2e8d0f761b866607cda" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier_factory_coeff" kindref="compound">SupplierFactoryCoeff</ref> &gt;</type>
+        <definition>List&lt;SupplierFactoryCoeff&gt; HKSupply.Forms.Master.BomManagement._supplierFactoryCoeffList</definition>
+        <argsstring></argsstring>
+        <name>_supplierFactoryCoeffList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="50" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ae164266ddbf0284be9905bdf68f15439" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_layout" kindref="compound">Models.Layout</ref> &gt;</type>
+        <definition>List&lt;Models.Layout&gt; HKSupply.Forms.Master.BomManagement._formLayouts</definition>
+        <argsstring></argsstring>
+        <name>_formLayouts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="52" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a697ce2cc77bb76f65d18b49b8bd72692" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HKSupply.Forms.Master.BomManagement.totalQuantityMt</definition>
+        <argsstring></argsstring>
+        <name>totalQuantityMt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="54" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aea62c1bd3d286a2acf58b1e549bd7e48" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HKSupply.Forms.Master.BomManagement.totalQuantityHw</definition>
+        <argsstring></argsstring>
+        <name>totalQuantityHw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="55" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a6f41c162290b182d33bd14d763d5214e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HKSupply.Forms.Master.BomManagement.totalScrapMt</definition>
+        <argsstring></argsstring>
+        <name>totalScrapMt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="56" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aad703a4cb22a1907375e80e2a0bdcfbd" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HKSupply.Forms.Master.BomManagement.totalScrapHw</definition>
+        <argsstring></argsstring>
+        <name>totalScrapHw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="57" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a287f50272a822f84f87798026ce48c5d" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Master.BomManagement.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a53908b76fdd5f4d988e936b1b2692926" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.DockManager</type>
+        <definition>DevExpress.XtraBars.Docking.DockManager HKSupply.Forms.Master.BomManagement.dockManagerItemBom</definition>
+        <argsstring></argsstring>
+        <name>dockManagerItemBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="840" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="840" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a75c8732e6db4268a2e4ac669dd3acc54" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.DockPanel</type>
+        <definition>DevExpress.XtraBars.Docking.DockPanel HKSupply.Forms.Master.BomManagement.dockPanelItemsEy</definition>
+        <argsstring></argsstring>
+        <name>dockPanelItemsEy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="841" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="841" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a29c423c69381899bd753013cd8d031c2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.ControlContainer</type>
+        <definition>DevExpress.XtraBars.Docking.ControlContainer HKSupply.Forms.Master.BomManagement.dockPanel1_Container</definition>
+        <argsstring></argsstring>
+        <name>dockPanel1_Container</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="842" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="842" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a125fe1504e40a9a9e70d575c4a89eed1" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.DockPanel</type>
+        <definition>DevExpress.XtraBars.Docking.DockPanel HKSupply.Forms.Master.BomManagement.dockPanelGrdBom</definition>
+        <argsstring></argsstring>
+        <name>dockPanelGrdBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="843" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="843" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a7ac113453b119644fafdeeec6a48240c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.ControlContainer</type>
+        <definition>DevExpress.XtraBars.Docking.ControlContainer HKSupply.Forms.Master.BomManagement.dockPanel4_Container</definition>
+        <argsstring></argsstring>
+        <name>dockPanel4_Container</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="844" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="844" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a952a8cd9282f76395d558d8c3fb95a46" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.DockPanel</type>
+        <definition>DevExpress.XtraBars.Docking.DockPanel HKSupply.Forms.Master.BomManagement.dockPanelPlainBom</definition>
+        <argsstring></argsstring>
+        <name>dockPanelPlainBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="845" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="845" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a63abb2b0e6d04c3ad2f0f848ae36754b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.ControlContainer</type>
+        <definition>DevExpress.XtraBars.Docking.ControlContainer HKSupply.Forms.Master.BomManagement.dockPanel6_Container</definition>
+        <argsstring></argsstring>
+        <name>dockPanel6_Container</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="846" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="846" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a01f4dc1f1420f0d86559b456e00a7bb2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.DockPanel</type>
+        <definition>DevExpress.XtraBars.Docking.DockPanel HKSupply.Forms.Master.BomManagement.dockPanelTreeBom</definition>
+        <argsstring></argsstring>
+        <name>dockPanelTreeBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="847" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="847" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a2473ae327e2780c7d31a8b1ade110d1b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.ControlContainer</type>
+        <definition>DevExpress.XtraBars.Docking.ControlContainer HKSupply.Forms.Master.BomManagement.dockPanel5_Container</definition>
+        <argsstring></argsstring>
+        <name>dockPanel5_Container</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="848" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="848" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1af3f03ec3367f530cc96f0dfce49fe888" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document</type>
+        <definition>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document HKSupply.Forms.Master.BomManagement.document3</definition>
+        <argsstring></argsstring>
+        <name>document3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="849" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="849" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a1beb20576744f2fb0d75b567eeb7ba9c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.BomManagement.xgrdItemsEy</definition>
+        <argsstring></argsstring>
+        <name>xgrdItemsEy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="850" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="850" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a6b18cea480d3159e8897eeda113bbe4e" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.BomManagement.gridViewItemsEy</definition>
+        <argsstring></argsstring>
+        <name>gridViewItemsEy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="851" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="851" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1add1be3a5157a0deed57c1ce3509bac07" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking2010.DocumentManager</type>
+        <definition>DevExpress.XtraBars.Docking2010.DocumentManager HKSupply.Forms.Master.BomManagement.documentManagerBom</definition>
+        <argsstring></argsstring>
+        <name>documentManagerBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="852" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="852" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a103bd5801cae4af6edcc2c1ed9c72520" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView</type>
+        <definition>DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView HKSupply.Forms.Master.BomManagement.tabbedView1</definition>
+        <argsstring></argsstring>
+        <name>tabbedView1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="853" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="853" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a082d3e540a02be37b4e791b74659ea6d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document</type>
+        <definition>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document HKSupply.Forms.Master.BomManagement.document1</definition>
+        <argsstring></argsstring>
+        <name>document1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="854" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="854" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a391c2508b1ea0c314ac22a21425378ba" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document</type>
+        <definition>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document HKSupply.Forms.Master.BomManagement.document5</definition>
+        <argsstring></argsstring>
+        <name>document5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="855" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="855" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a39ef61f4aac8bf228337a923d890bb52" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TreeView</type>
+        <definition>System.Windows.Forms.TreeView HKSupply.Forms.Master.BomManagement.treeViewBom</definition>
+        <argsstring></argsstring>
+        <name>treeViewBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="856" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="856" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3303883c91ed2308ca0237d13390eb0a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.BomManagement.xgrdSummaryBom</definition>
+        <argsstring></argsstring>
+        <name>xgrdSummaryBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="857" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="857" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3ec4caf4b81f0f53e320ec0c2b7ab2a3" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.BomManagement.gridViewSummaryBom</definition>
+        <argsstring></argsstring>
+        <name>gridViewSummaryBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="858" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="858" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a416afb12fa198406b238b3fa0f0a28ae" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Master.BomManagement.sbAddBomSupplier</definition>
+        <argsstring></argsstring>
+        <name>sbAddBomSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="859" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="859" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5a0d226b67d2de890bbb3a86e49cb155" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.BomManagement.lblSupplier</definition>
+        <argsstring></argsstring>
+        <name>lblSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="860" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="860" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a048d4f1f7a9b877d965886d888e7cfa8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Master.BomManagement.slueSupplier</definition>
+        <argsstring></argsstring>
+        <name>slueSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="861" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="861" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a8a75dd3636df48d7a42dbb2dcfc2ec85" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.BomManagement.searchLookUpEdit1View</definition>
+        <argsstring></argsstring>
+        <name>searchLookUpEdit1View</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="862" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="862" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a4f184f0eb547e9d6a869d86da82ee169" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document</type>
+        <definition>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document HKSupply.Forms.Master.BomManagement.document2</definition>
+        <argsstring></argsstring>
+        <name>document2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="863" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="863" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a601aad1ac7cb5f65e3b382359e620bf8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document</type>
+        <definition>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document HKSupply.Forms.Master.BomManagement.document4</definition>
+        <argsstring></argsstring>
+        <name>document4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="864" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="864" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3767cb4d8a04e3b55a9b26f45fb0dea4" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document</type>
+        <definition>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document HKSupply.Forms.Master.BomManagement.document6</definition>
+        <argsstring></argsstring>
+        <name>document6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="865" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="865" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aa583d1e7b5d13bda907a65f92e6f0a6c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document</type>
+        <definition>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document HKSupply.Forms.Master.BomManagement.document7</definition>
+        <argsstring></argsstring>
+        <name>document7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="866" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="866" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a46c8934323f456fd186781cc437449a6" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup</type>
+        <definition>DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup HKSupply.Forms.Master.BomManagement.documentGroup1</definition>
+        <argsstring></argsstring>
+        <name>documentGroup1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="867" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="867" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ab04c641d2f7a2e774b2fa2e070a62fc3" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document</type>
+        <definition>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document HKSupply.Forms.Master.BomManagement.document8</definition>
+        <argsstring></argsstring>
+        <name>document8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="868" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="868" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1af7809286a2c26da1061c623c22ed5e4d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.DockPanel</type>
+        <definition>DevExpress.XtraBars.Docking.DockPanel HKSupply.Forms.Master.BomManagement.dockPanelItemsHf</definition>
+        <argsstring></argsstring>
+        <name>dockPanelItemsHf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="869" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="869" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a4f441b813b0465e728003bcea9d2b47b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.ControlContainer</type>
+        <definition>DevExpress.XtraBars.Docking.ControlContainer HKSupply.Forms.Master.BomManagement.controlContainer1</definition>
+        <argsstring></argsstring>
+        <name>controlContainer1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="870" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="870" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1af8afb35e873bc48aee70d13494658b35" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.BomManagement.xgrdItemsHf</definition>
+        <argsstring></argsstring>
+        <name>xgrdItemsHf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="871" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="871" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1abd38978492b87965db2da5bd658dd0e1" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.BomManagement.gridViewItemsHf</definition>
+        <argsstring></argsstring>
+        <name>gridViewItemsHf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="872" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="872" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a33328c15a54e6b82d82c7900430dc09d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.DockPanel</type>
+        <definition>DevExpress.XtraBars.Docking.DockPanel HKSupply.Forms.Master.BomManagement.panelContainer2</definition>
+        <argsstring></argsstring>
+        <name>panelContainer2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="873" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="873" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5af3c190222e7398644b60626772e1f8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.BomManagement.xgrdItemBom</definition>
+        <argsstring></argsstring>
+        <name>xgrdItemBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="874" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="874" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aa0d0d472af8aaf5a6825cc48bad9e3ec" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.BomManagement.gridViewItemBom</definition>
+        <argsstring></argsstring>
+        <name>gridViewItemBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="875" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="875" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a42fb686725418ddbb5dbb0fd937db9d7" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup</type>
+        <definition>DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup HKSupply.Forms.Master.BomManagement.documentGroup2</definition>
+        <argsstring></argsstring>
+        <name>documentGroup2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="876" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="876" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ac442ab3fd865b66e4421f5cd21c1b567" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document</type>
+        <definition>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document HKSupply.Forms.Master.BomManagement.document9</definition>
+        <argsstring></argsstring>
+        <name>document9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="877" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="877" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3fd79da1e4dfa394eed8874e1d3b8033" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document</type>
+        <definition>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document HKSupply.Forms.Master.BomManagement.document10</definition>
+        <argsstring></argsstring>
+        <name>document10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="878" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="878" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1abe0572aac7dd4a46d76ebdbc4ac1fb8b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document</type>
+        <definition>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document HKSupply.Forms.Master.BomManagement.document12</definition>
+        <argsstring></argsstring>
+        <name>document12</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="879" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="879" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a8086468cb780e9df4c19085aaf32a9dd" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.BomManagement.lblCopyBom</definition>
+        <argsstring></argsstring>
+        <name>lblCopyBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="880" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="880" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ae6255c925448ad5c444e068042ac83c2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Master.BomManagement.sbCopyBom</definition>
+        <argsstring></argsstring>
+        <name>sbCopyBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="881" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="881" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1afd5bb4937e10f1a3179987c4b63a62d3" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.BomManagement.xgrdSummaryUnitBom</definition>
+        <argsstring></argsstring>
+        <name>xgrdSummaryUnitBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="882" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="882" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a93aa4e02da8c6904f7f4943b30a59629" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.BomManagement.gridViewSummaryUnitBom</definition>
+        <argsstring></argsstring>
+        <name>gridViewSummaryUnitBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="883" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="883" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ab8d432fd055cc38807db74f730032351" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document</type>
+        <definition>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document HKSupply.Forms.Master.BomManagement.document11</definition>
+        <argsstring></argsstring>
+        <name>document11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="884" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="884" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aeeb653f63718db89e1d39dbf7267a87c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document</type>
+        <definition>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document HKSupply.Forms.Master.BomManagement.document13</definition>
+        <argsstring></argsstring>
+        <name>document13</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="885" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="885" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1abbc472f063e91a285f001ba351f72785" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document</type>
+        <definition>DevExpress.XtraBars.Docking2010.Views.Tabbed.Document HKSupply.Forms.Master.BomManagement.document14</definition>
+        <argsstring></argsstring>
+        <name>document14</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="886" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="886" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a9ec0c765f49f5408994a490e8c23de4d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.DockPanel</type>
+        <definition>DevExpress.XtraBars.Docking.DockPanel HKSupply.Forms.Master.BomManagement.dockPanelDrawing</definition>
+        <argsstring></argsstring>
+        <name>dockPanelDrawing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="887" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="887" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a03c9a946a2d47911591fedb8b0464403" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.ControlContainer</type>
+        <definition>DevExpress.XtraBars.Docking.ControlContainer HKSupply.Forms.Master.BomManagement.controlContainer2</definition>
+        <argsstring></argsstring>
+        <name>controlContainer2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="888" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="888" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a6228dfa8c1ab348ca0e38d6badaf59c1" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.DockPanel</type>
+        <definition>DevExpress.XtraBars.Docking.DockPanel HKSupply.Forms.Master.BomManagement.dockPanelPdfColor</definition>
+        <argsstring></argsstring>
+        <name>dockPanelPdfColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="889" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="889" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a4ea3268fb074bc70b7cfdec6e2e4107b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.ControlContainer</type>
+        <definition>DevExpress.XtraBars.Docking.ControlContainer HKSupply.Forms.Master.BomManagement.controlContainer3</definition>
+        <argsstring></argsstring>
+        <name>controlContainer3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="890" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="890" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a76e9e26c4bb863bd070ace5b105ab26c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.DockPanel</type>
+        <definition>DevExpress.XtraBars.Docking.DockPanel HKSupply.Forms.Master.BomManagement.dockPanelPhoto</definition>
+        <argsstring></argsstring>
+        <name>dockPanelPhoto</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="891" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="891" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ac770f16ce5c2dddf171eead08fc8e4da" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.ControlContainer</type>
+        <definition>DevExpress.XtraBars.Docking.ControlContainer HKSupply.Forms.Master.BomManagement.controlContainer4</definition>
+        <argsstring></argsstring>
+        <name>controlContainer4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="892" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="892" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a84dd6e2a1bbb8cfe278a51d9faae720d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.DockPanel</type>
+        <definition>DevExpress.XtraBars.Docking.DockPanel HKSupply.Forms.Master.BomManagement.dockPanelDrawingCV</definition>
+        <argsstring></argsstring>
+        <name>dockPanelDrawingCV</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="893" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="893" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ac5012dc6c30db684d4f37c81c4fc873f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.ControlContainer</type>
+        <definition>DevExpress.XtraBars.Docking.ControlContainer HKSupply.Forms.Master.BomManagement.controlContainer8</definition>
+        <argsstring></argsstring>
+        <name>controlContainer8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="894" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="894" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a0dd542a3bd491fcca49acd1be4a10c15" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.DockPanel</type>
+        <definition>DevExpress.XtraBars.Docking.DockPanel HKSupply.Forms.Master.BomManagement.dockPanelDrawingCR</definition>
+        <argsstring></argsstring>
+        <name>dockPanelDrawingCR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="895" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="895" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a131256cc7f7bcff990b616f29c9f6f24" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.ControlContainer</type>
+        <definition>DevExpress.XtraBars.Docking.ControlContainer HKSupply.Forms.Master.BomManagement.controlContainer7</definition>
+        <argsstring></argsstring>
+        <name>controlContainer7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="896" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="896" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a94f3d1235395908692aa82e79ce15c3f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.DockPanel</type>
+        <definition>DevExpress.XtraBars.Docking.DockPanel HKSupply.Forms.Master.BomManagement.dockPanelDrawingGB</definition>
+        <argsstring></argsstring>
+        <name>dockPanelDrawingGB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="897" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="897" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a737a7fb92a2ab5474f292a60214553fa" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.ControlContainer</type>
+        <definition>DevExpress.XtraBars.Docking.ControlContainer HKSupply.Forms.Master.BomManagement.controlContainer6</definition>
+        <argsstring></argsstring>
+        <name>controlContainer6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="898" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="898" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5ff690c2e68f08ed8854416fa3e58af0" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.DockPanel</type>
+        <definition>DevExpress.XtraBars.Docking.DockPanel HKSupply.Forms.Master.BomManagement.dockPanelDrawingFA</definition>
+        <argsstring></argsstring>
+        <name>dockPanelDrawingFA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="899" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="899" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5ccf70460afcd2bf9bd9265a5f2bd83f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraBars.Docking.ControlContainer</type>
+        <definition>DevExpress.XtraBars.Docking.ControlContainer HKSupply.Forms.Master.BomManagement.controlContainer5</definition>
+        <argsstring></argsstring>
+        <name>controlContainer5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="900" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="900" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ad689d41505cc9f6453bffbcd4e8ae800" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Master.BomManagement.BomManagement</definition>
+        <argsstring>()</argsstring>
+        <name>BomManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="61" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="61" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a83d6aecc7ddd4f198b53998ed75da16c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.BomManagement.bbiCancel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiCancel_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318">bbiCancel_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="125" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="125" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a968d0043e7f099cacec265b58d29aa4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.BomManagement.bbiEdit_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiEdit_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3">bbiEdit_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="140" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="140" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5be15ec8e02d12d776fff1eee75708c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.BomManagement.bbiSave_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiSave_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9">bbiSave_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="168" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="168" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a0081b5bd9372bf7d3048f408f1670376" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.BomManagement.BbiSaveLayout_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>BbiSaveLayout_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58">BbiSaveLayout_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="212" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="212" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3e33bc3261e99113b5afaf9115120627" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.BomManagement.LayoutButton_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>LayoutButton_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d">LayoutButton_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="231" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="231" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a2394e9e649ae35cc0c387860f8c5e379" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.BomManagement.bbiExportCsv_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportCsv_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a">bbiExportCsv_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="245" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="245" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a881d07707b884fc97bff4d886c2e43ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.BomManagement.bbiExportExcel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportExcel_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811">bbiExportExcel_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="274" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="274" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1acef30e27dc811984ec2d2c539f5b0bea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.NavigateDetails</definition>
+        <argsstring>(ColumnView inspectedView)</argsstring>
+        <name>NavigateDetails</name>
+        <param>
+          <type>ColumnView</type>
+          <declname>inspectedView</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="4251" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="4251" bodyend="4307"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a6cf7c49c167697373de0236338001326" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.ConfigureRibbonActions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="101" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="101" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1af246c70897acf0eac03bcdf1d6cd7e77" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.BomManagement_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BomManagement_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="310" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="310" bodyend="330"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a246f08a1125c87c21479e93a8feba8af" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.SbAddBomSupplier_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbAddBomSupplier_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="332" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="332" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a65143f67407da19370e4a59303eceacc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.SbCopyBom_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbCopyBom_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="345" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="345" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3d38ef3f939d86f4eb6d2d6d00cbd233" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.GridViewItemsEy_DoubleClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>GridViewItemsEy_DoubleClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="358" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="358" bodyend="380"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a0a9e8efff48162c985892ef5e17b853b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.GridViewItemsHf_DoubleClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>GridViewItemsHf_DoubleClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="382" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="382" bodyend="404"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ada05603995a9a0964ed0109f366a5bb2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.XgrdItemBom_ViewRegistered</definition>
+        <argsstring>(object sender, ViewOperationEventArgs e)</argsstring>
+        <name>XgrdItemBom_ViewRegistered</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ViewOperationEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="643" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="643" bodyend="1014"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a2ab8f8cd01109eb95464fec2384e20d0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.BomManagementHalfFinished_ShowingEditor</definition>
+        <argsstring>(object sender, CancelEventArgs e)</argsstring>
+        <name>BomManagementHalfFinished_ShowingEditor</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CancelEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1016" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1016" bodyend="1040"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a2a1fafe803781360b01b63aa88efb7f5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.BomManagementHardwares_ShowingEditor</definition>
+        <argsstring>(object sender, CancelEventArgs e)</argsstring>
+        <name>BomManagementHardwares_ShowingEditor</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CancelEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1042" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1042" bodyend="1066"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a9b953a7832a02d42629c6cb20b454872" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.BomManagementMaterials_ShowingEditor</definition>
+        <argsstring>(object sender, CancelEventArgs e)</argsstring>
+        <name>BomManagementMaterials_ShowingEditor</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CancelEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1068" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1068" bodyend="1092"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a9106ad6971e7d8cc9e01d249686d0e3f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.GrdBomView_CellValueChanged</definition>
+        <argsstring>(object sender, CellValueChangedEventArgs e)</argsstring>
+        <name>GrdBomView_CellValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CellValueChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1094" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1094" bodyend="1109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5bc1c8f2d37c490ecf324015114abc84" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.GridViewPlainBom_CustomSummaryCalculate</definition>
+        <argsstring>(object sender, CustomSummaryEventArgs e)</argsstring>
+        <name>GridViewPlainBom_CustomSummaryCalculate</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CustomSummaryEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1111" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1111" bodyend="1178"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a4bcfafc6f73506d71f3710752e702d81" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.RepEditHf_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>RepEditHf_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1180" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1180" bodyend="1202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3c9260cae7a803aaf7ca0077cddc75aa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.SetBasicEvents</definition>
+        <argsstring>()</argsstring>
+        <name>SetBasicEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1211" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1211" bodyend="1222"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a112d9e371104e32da7ce22246c4d79c4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.SetUpDockPanels</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpDockPanels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1224" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1224" bodyend="1246"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a9b00bc6a8fea54e64d8efdd470e470e9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.SetDockPanelsVisibility</definition>
+        <argsstring>()</argsstring>
+        <name>SetDockPanelsVisibility</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1248" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1248" bodyend="1300"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a41e78e2ab0dab38c58308547061cce54" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.SetUpSearchLueSupplier</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSearchLueSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1302" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1302" bodyend="1320"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ac54465c9c0ff66f19f6076ca4fe8e998" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.SetUpGrdItemsEy</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdItemsEy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1322" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1322" bodyend="1362"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a88307093fae7e62d58600b1a7c17e010" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.SetUpGrdItemsHf</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdItemsHf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1364" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1364" bodyend="1404"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a1e04508371952b72d025b7eb89a7eb11" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.SetUpGrdItemBom</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdItemBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1531" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1531" bodyend="1568"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aaae91a45b1017489479bab4e89b0091b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.SetUpGrdSummaryBom</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdSummaryBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1570" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1570" bodyend="1589"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a0325e0578ad7a7d2f2d48d9e21734d51" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.SetUpGrdSummaryUnitBom</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdSummaryUnitBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1591" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1591" bodyend="1610"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1af5c8bacddde3b8ff737d3bf577bc7d0e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.XgrdItemBom_ProcessGridKey</definition>
+        <argsstring>(object sender, KeyEventArgs e)</argsstring>
+        <name>XgrdItemBom_ProcessGridKey</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1612" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1612" bodyend="1795"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ae2203c6f1395d077e9805f9fb137e7f9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.LoadAuxList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAuxList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1801" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1801" bodyend="1816"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a03c7f1faa02aab05a03b2409cd48792e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.LoadFormLayouts</definition>
+        <argsstring>()</argsstring>
+        <name>LoadFormLayouts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1818" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1818" bodyend="1829"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ab88f94b783b3c3b26e4df8ad5702d68f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.LoadItemsListEy</definition>
+        <argsstring>()</argsstring>
+        <name>LoadItemsListEy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1831" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1831" bodyend="1846"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aa4f4ca239808c5c93626d46c3afc3757" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.LoadItemsListHf</definition>
+        <argsstring>()</argsstring>
+        <name>LoadItemsListHf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1848" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1848" bodyend="1873"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1af67d2d5637faaca3e62da73e047ffe47" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.LoadItemGridBom</definition>
+        <argsstring>(object item)</argsstring>
+        <name>LoadItemGridBom</name>
+        <param>
+          <type>object</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1900" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1900" bodyend="1977"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a2180605918fa83ca20747766c29a0f9c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.LoadSummaryBom</definition>
+        <argsstring>()</argsstring>
+        <name>LoadSummaryBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="1980" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="1980" bodyend="2063"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a1ece36dacb266532d53132a17585e6e7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.LoadDrawingPanels</definition>
+        <argsstring>()</argsstring>
+        <name>LoadDrawingPanels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="2065" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="2065" bodyend="2231"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1adb9645451d32238253443b4c282b48dd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.LoadDrawingPanel</definition>
+        <argsstring>(DevExpress.XtraBars.Docking.DockPanel dockPanel, string drawingPath)</argsstring>
+        <name>LoadDrawingPanel</name>
+        <param>
+          <type>DevExpress.XtraBars.Docking.DockPanel</type>
+          <declname>dockPanel</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>drawingPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="2233" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="2233" bodyend="2256"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a367eb73e94bfd181c25cbd21e4dbb10c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.LoadPdfColorgPanel</definition>
+        <argsstring>()</argsstring>
+        <name>LoadPdfColorgPanel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="2258" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="2258" bodyend="2298"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ad845c9fe5d6b5eebaf088d58525ee3a1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.LoadPhotoPanel</definition>
+        <argsstring>(string photo)</argsstring>
+        <name>LoadPhotoPanel</name>
+        <param>
+          <type>string</type>
+          <declname>photo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="2300" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="2300" bodyend="2343"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1acafa14c39c7481d9b335706354ed20f3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.ClearPdfPanels</definition>
+        <argsstring>(DevExpress.XtraBars.Docking.DockPanel panelPdf)</argsstring>
+        <name>ClearPdfPanels</name>
+        <param>
+          <type>DevExpress.XtraBars.Docking.DockPanel</type>
+          <declname>panelPdf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="2345" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="2345" bodyend="2364"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ad5a53ab5085a92ce928fcd37f01b7358" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.FillDtHfSummary</definition>
+        <argsstring>(DataTable tableSummary, DataTable tableSummaryUnit, List&lt; string &gt; suppliers, ItemBom bom)</argsstring>
+        <name>FillDtHfSummary</name>
+        <param>
+          <type>DataTable</type>
+          <declname>tableSummary</declname>
+        </param>
+        <param>
+          <type>DataTable</type>
+          <declname>tableSummaryUnit</declname>
+        </param>
+        <param>
+          <type>List&lt; string &gt;</type>
+          <declname>suppliers</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref></type>
+          <declname>bom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="2366" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="2366" bodyend="2471"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a1792c06e78ce26fbafe3783813f39c0f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.AddRawMaterial</definition>
+        <argsstring>(ItemMt itemMt, string supplier)</argsstring>
+        <name>AddRawMaterial</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_item_mt" kindref="compound">ItemMt</ref></type>
+          <declname>itemMt</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>supplier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="2477" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="2477" bodyend="2508"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a00ea0ade60e6023b4d2677dcc398d8ec" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.AddHardware</definition>
+        <argsstring>(ItemHw itemHw, string supplier)</argsstring>
+        <name>AddHardware</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_item_hw" kindref="compound">ItemHw</ref></type>
+          <declname>itemHw</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>supplier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="2510" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="2510" bodyend="2540"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a2c2c8ff09df88d205bd40e8a052d546c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.SetGrdBomEditColumns</definition>
+        <argsstring>()</argsstring>
+        <name>SetGrdBomEditColumns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="2543" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="2543" bodyend="2691"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a279a17c07ac7f51fda009f34dd7bc560" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.SetGrdBomDetailsNonEdit</definition>
+        <argsstring>()</argsstring>
+        <name>SetGrdBomDetailsNonEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="2694" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="2694" bodyend="2707"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1adf20330d05986442d401dd448e23bf42" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.GrdBomRefreshAndExpand</definition>
+        <argsstring>()</argsstring>
+        <name>GrdBomRefreshAndExpand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="2713" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="2713" bodyend="2717"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a983331d685e3677041502266c714bd2b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.ExpandAllRows</definition>
+        <argsstring>(GridView view)</argsstring>
+        <name>ExpandAllRows</name>
+        <param>
+          <type>GridView</type>
+          <declname>view</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="2719" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="2719" bodyend="2745"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a91c580e8af17a19d58a33be7348f4673" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.LoadBomTreeView</definition>
+        <argsstring>()</argsstring>
+        <name>LoadBomTreeView</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="2750" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="2750" bodyend="2779"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a6067ba59d9a2565317f0aaf0def7ee18" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TreeNode</type>
+        <definition>TreeNode HKSupply.Forms.Master.BomManagement.GetComponentNode</definition>
+        <argsstring>(ItemBom item)</argsstring>
+        <name>GetComponentNode</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Generar el arbol de un BOM </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para><para>v2. SKU -&gt; Factory -&gt; Raw Material/Hardware -&gt; breakdown</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="2787" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="2787" bodyend="2852"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aec16519f3bd36e90978ced5f99875127" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.AddSupplierBom</definition>
+        <argsstring>()</argsstring>
+        <name>AddSupplierBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="2923" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="2923" bodyend="2981"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a402204c6fd658855abb281f7099a65da" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; HKSupply.Forms.Master.BomManagement.OpenSelectSuppliersForm</definition>
+        <argsstring>()</argsstring>
+        <name>OpenSelectSuppliersForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="2986" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="2986" bodyend="3013"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aacc9314f4f9ee96afdb752df964d0ed7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.BomManagement.OpenSelectSuppliersForm2Copy</definition>
+        <argsstring>()</argsstring>
+        <name>OpenSelectSuppliersForm2Copy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3015" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3015" bodyend="3046"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a8a94967406a12c87e38d545acbe671a6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.OpenEditHfBom</definition>
+        <argsstring>(ItemBom bom)</argsstring>
+        <name>OpenEditHfBom</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref></type>
+          <declname>bom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3048" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3048" bodyend="3102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a223f5f797d47e298cc81062bbc902c25" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref></type>
+        <definition>ItemBom HKSupply.Forms.Master.BomManagement.OpenSelectItem2CopyBomForm</definition>
+        <argsstring>(string idItemDestination, string model, string supplier)</argsstring>
+        <name>OpenSelectItem2CopyBomForm</name>
+        <param>
+          <type>string</type>
+          <declname>idItemDestination</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>supplier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3104" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3104" bodyend="3127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a2ceb9a32de3bb0f63647864140bcbf3c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.ConfigureRibbonActionsEditing</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActionsEditing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3133" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3133" bodyend="3158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5d351734bd2c7848883983d24fd48568" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.SaveLayout</definition>
+        <argsstring>(string name)</argsstring>
+        <name>SaveLayout</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3164" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3164" bodyend="3204"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a7c554e323cae9bd64dddc658628fc39d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.RestoreLayaout</definition>
+        <argsstring>()</argsstring>
+        <name>RestoreLayaout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3206" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3206" bodyend="3226"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3ef3f82912f5774281b351cea93566bb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.BomManagement.IsValidBom</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3231" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3231" bodyend="3304"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3abd752f1ddcccb902b3803ddd5dd9f8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.DeleteLastRowIfEmpty</definition>
+        <argsstring>()</argsstring>
+        <name>DeleteLastRowIfEmpty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3306" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3306" bodyend="3344"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ac852477c8c5e6992a4b3bab7d87f12b1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.BomManagement.ShowHalfFinishedMessageInfo</definition>
+        <argsstring>()</argsstring>
+        <name>ShowHalfFinishedMessageInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3346" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3346" bodyend="3384"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a94b1273432a2de1f678cac8459b08bcb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.BomManagement.EditBom</definition>
+        <argsstring>()</argsstring>
+        <name>EditBom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3398" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3398" bodyend="3408"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a4797a4be1d561faf8f932b97ba2b66ad" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.ActionsAfterCU</definition>
+        <argsstring>()</argsstring>
+        <name>ActionsAfterCU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3410" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3410" bodyend="3441"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ab9dfbab1053d252df0c42622c228bef6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.ShowAddBomSupplierAndCopyBom</definition>
+        <argsstring>(bool show)</argsstring>
+        <name>ShowAddBomSupplierAndCopyBom</name>
+        <param>
+          <type>bool</type>
+          <declname>show</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3447" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3447" bodyend="3457"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a6b7287c5f66c1e3cfe39844302e1f2dd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.GridViewItemBom_PopupMenuShowing</definition>
+        <argsstring>(object sender, PopupMenuShowingEventArgs e)</argsstring>
+        <name>GridViewItemBom_PopupMenuShowing</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>PopupMenuShowingEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3463" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3463" bodyend="3521"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a8efa5db1a54fcf814a1eaa19e9f65209" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DevExpress.Utils.Menu.DXMenuItem</type>
+        <definition>DevExpress.Utils.Menu.DXMenuItem HKSupply.Forms.Master.BomManagement.CreateMenuItemCopyBomFromItem</definition>
+        <argsstring>(GridView view, int rowHandle)</argsstring>
+        <name>CreateMenuItemCopyBomFromItem</name>
+        <param>
+          <type>GridView</type>
+          <declname>view</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rowHandle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3523" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3523" bodyend="3529"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a8e424d2c1af22cb2c1fd20af48828c28" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DevExpress.Utils.Menu.DXMenuItem</type>
+        <definition>DevExpress.Utils.Menu.DXMenuItem HKSupply.Forms.Master.BomManagement.CreateMenuItemAddINewLineMaterial</definition>
+        <argsstring>(GridView view, int rowHandle)</argsstring>
+        <name>CreateMenuItemAddINewLineMaterial</name>
+        <param>
+          <type>GridView</type>
+          <declname>view</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rowHandle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3531" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3531" bodyend="3537"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5cdf813c163714513bbc02236632051c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DevExpress.Utils.Menu.DXMenuItem</type>
+        <definition>DevExpress.Utils.Menu.DXMenuItem HKSupply.Forms.Master.BomManagement.CreateMenuItemAddINewLineHardware</definition>
+        <argsstring>(GridView view, int rowHandle)</argsstring>
+        <name>CreateMenuItemAddINewLineHardware</name>
+        <param>
+          <type>GridView</type>
+          <declname>view</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rowHandle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3539" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3539" bodyend="3545"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ac474141bf624e06c30413720e5acbbcc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DevExpress.Utils.Menu.DXMenuItem</type>
+        <definition>DevExpress.Utils.Menu.DXMenuItem HKSupply.Forms.Master.BomManagement.CreateMenuItemAddINewLineHalfFinished</definition>
+        <argsstring>(GridView view, int rowHandle)</argsstring>
+        <name>CreateMenuItemAddINewLineHalfFinished</name>
+        <param>
+          <type>GridView</type>
+          <declname>view</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rowHandle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3547" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3547" bodyend="3553"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ae56bd9e7195c95e09d3b007354319d19" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.OnMenuItemAddnewLineMaterialClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>OnMenuItemAddnewLineMaterialClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3555" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3555" bodyend="3571"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3706e00293327aeeae534344b4c8e842" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.OnMenuItemAddnewLineHardwareClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>OnMenuItemAddnewLineHardwareClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3573" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3573" bodyend="3589"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ad42a17eb90ff4309652487f1e3841379" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.OnMenuItemAddnewLineHalfFinishedClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>OnMenuItemAddnewLineHalfFinishedClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3591" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3591" bodyend="3611"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a32e374d0c640e5e549632d70755c8331" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.OnMenuItemCopyBomFromItemClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>OnMenuItemCopyBomFromItemClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3613" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3613" bodyend="3639"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a20dfa870e84ee88c2a5f67a05ed374c4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.BomManagement.CopySupplierBom2SupplierBom</definition>
+        <argsstring>(string selectedSupplierSource, List&lt; string &gt; selectedSuppliersDestination)</argsstring>
+        <name>CopySupplierBom2SupplierBom</name>
+        <param>
+          <type>string</type>
+          <declname>selectedSupplierSource</declname>
+        </param>
+        <param>
+          <type>List&lt; string &gt;</type>
+          <declname>selectedSuppliersDestination</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3645" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3645" bodyend="3723"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a9726f7275e5373464d805e96e7b04c7f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.BomManagement.CopyBomFromModelItem</definition>
+        <argsstring>(ItemBom itemBomOri, ItemBom bomCopy)</argsstring>
+        <name>CopyBomFromModelItem</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref></type>
+          <declname>itemBomOri</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref></type>
+          <declname>bomCopy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3727" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3727" bodyend="3776"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1af571ca808021fff5ba47cfb5a3dc9f8b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.BomManagementMaterials_ValidatingEditor</definition>
+        <argsstring>(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)</argsstring>
+        <name>BomManagementMaterials_ValidatingEditor</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="3787" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="3787" bodyend="4053"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a4b3d8e93d8bce581f7cce62a7fdd99fe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.BomManagementHardwares_ValidatingEditor</definition>
+        <argsstring>(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)</argsstring>
+        <name>BomManagementHardwares_ValidatingEditor</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="4055" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="4055" bodyend="4149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a379da56b87da3d4f6a9803795bea6617" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.BomManagementHalfFinished_ValidatingEditor</definition>
+        <argsstring>(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)</argsstring>
+        <name>BomManagementHalfFinished_ValidatingEditor</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="4152" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="4152" bodyend="4212"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ab2a316e0bf3e1ff54b90661ca6c6269d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.BomManagementHalfFinished_ShownEditor</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BomManagementHalfFinished_ShownEditor</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.cs" line="4214" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="4214" bodyend="4246"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a8a84f3f150b4d16ca5e953c2db9f6726" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.BomManagement.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="29" bodyend="836"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a9e3b98419ea709301213557e1ae996cc" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.BomManagement.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/BomManagement.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="67">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="66">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="67" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>HKSupply.Forms.Master.BomManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management"/>
+        <childnode refid="66" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="70">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="71">
+        <label>XtraBars</label>
+      </node>
+      <node id="69">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="70" relation="public-inheritance">
+        </childnode>
+        <childnode refid="71" relation="usage">
+          <edgelabel>bbiCancel</edgelabel>
+          <edgelabel>ribbonStatusBar</edgelabel>
+          <edgelabel>bbiPrintPreview</edgelabel>
+          <edgelabel>bbiSave</edgelabel>
+          <edgelabel>bbiNew</edgelabel>
+          <edgelabel>bbiEdit</edgelabel>
+          <edgelabel>ribbonControl</edgelabel>
+          <edgelabel>ribbonPageGroup1</edgelabel>
+          <edgelabel>ribbonPage1</edgelabel>
+          <edgelabel>ribbonPageGroup2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="68">
+        <label>HKSupply.Forms.Master.BomManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management"/>
+        <childnode refid="69" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Master/BomManagement.cs" line="26" column="1" bodyfile="HKSupply/Forms/Master/BomManagement.cs" bodystart="25" bodyend="4312"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a32dcb57b03be90624ff89845ef30dbfa" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>_bomBreakdownList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a14373d2ef3fc910b66891c55961b7a65" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>_currentItem</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ae164266ddbf0284be9905bdf68f15439" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>_formLayouts</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aa0cff773d342838d26389f5c846435c4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>_isFactory</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a467546139c084573a22c3146db06e741" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>_itemBomList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ad80e4f5cc82a3e44e1cb3e97a12825b0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>_itemLastDocsList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a989598d8b6d9b32e9e1f22e44ef27779" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>_itemsEyList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aefc41a24e0cb25fab4d46331e02715c8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>_itemsHfDetailBomList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a27637b1f3a66a6a13b64d13e2515cfec" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>_itemsHfList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ad43db335d646b7a335ffa66281f5b1b6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>_itemsHwList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a68d94fc29fbc29401f4e6061b0bcb410" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>_itemsMtList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5547a5aa11c1b2e8d0f761b866607cda" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>_supplierFactoryCoeffList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ab2e5b0cdd8215e1eeac8b20a30d08bf5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>_suppliersList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a4797a4be1d561faf8f932b97ba2b66ad" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>ActionsAfterCU</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>ActionsStates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a00ea0ade60e6023b4d2677dcc398d8ec" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>AddHardware</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a1792c06e78ce26fbafe3783813f39c0f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>AddRawMaterial</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>AddRestoreLayoutItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aec16519f3bd36e90978ced5f99875127" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>AddSupplierBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>BarButtonItemReport_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>bbiCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a83d6aecc7ddd4f198b53998ed75da16c" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>bbiEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a968d0043e7f099cacec265b58d29aa4a" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a2394e9e649ae35cc0c387860f8c5e379" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>bbiExportCsv_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a881d07707b884fc97bff4d886c2e43ba" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>bbiExportExcel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>bbiNew</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>bbiPrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>bbiPrintPreview_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>bbiSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5be15ec8e02d12d776fff1eee75708c9" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a0081b5bd9372bf7d3048f408f1670376" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>BbiSaveLayout_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ad689d41505cc9f6453bffbcd4e8ae800" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>BomManagement</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1af246c70897acf0eac03bcdf1d6cd7e77" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>BomManagement_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a2ab8f8cd01109eb95464fec2384e20d0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>BomManagementHalfFinished_ShowingEditor</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ab2a316e0bf3e1ff54b90661ca6c6269d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>BomManagementHalfFinished_ShownEditor</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a379da56b87da3d4f6a9803795bea6617" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>BomManagementHalfFinished_ValidatingEditor</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a2a1fafe803781360b01b63aa88efb7f5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>BomManagementHardwares_ShowingEditor</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a4b3d8e93d8bce581f7cce62a7fdd99fe" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>BomManagementHardwares_ValidatingEditor</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a9b953a7832a02d42629c6cb20b454872" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>BomManagementMaterials_ShowingEditor</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1af571ca808021fff5ba47cfb5a3dc9f8b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>BomManagementMaterials_ValidatingEditor</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1acafa14c39c7481d9b335706354ed20f3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>ClearPdfPanels</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a287f50272a822f84f87798026ce48c5d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>ConfigureLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>ConfigurePrintExportOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a6cf7c49c167697373de0236338001326" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>ConfigureRibbonActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a2ceb9a32de3bb0f63647864140bcbf3c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>ConfigureRibbonActionsEditing</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a4f441b813b0465e728003bcea9d2b47b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>controlContainer1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a03c9a946a2d47911591fedb8b0464403" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>controlContainer2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a4ea3268fb074bc70b7cfdec6e2e4107b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>controlContainer3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ac770f16ce5c2dddf171eead08fc8e4da" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>controlContainer4</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5ccf70460afcd2bf9bd9265a5f2bd83f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>controlContainer5</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a737a7fb92a2ab5474f292a60214553fa" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>controlContainer6</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a131256cc7f7bcff990b616f29c9f6f24" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>controlContainer7</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ac5012dc6c30db684d4f37c81c4fc873f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>controlContainer8</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a9726f7275e5373464d805e96e7b04c7f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>CopyBomFromModelItem</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a20dfa870e84ee88c2a5f67a05ed374c4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>CopySupplierBom2SupplierBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ac474141bf624e06c30413720e5acbbcc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>CreateMenuItemAddINewLineHalfFinished</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5cdf813c163714513bbc02236632051c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>CreateMenuItemAddINewLineHardware</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a8e424d2c1af22cb2c1fd20af48828c28" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>CreateMenuItemAddINewLineMaterial</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a8efa5db1a54fcf814a1eaa19e9f65209" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>CreateMenuItemCopyBomFromItem</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>CurrentLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>CurrentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3abd752f1ddcccb902b3803ddd5dd9f8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>DeleteLastRowIfEmpty</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a9e3b98419ea709301213557e1ae996cc" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a53908b76fdd5f4d988e936b1b2692926" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>dockManagerItemBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a29c423c69381899bd753013cd8d031c2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>dockPanel1_Container</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a7ac113453b119644fafdeeec6a48240c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>dockPanel4_Container</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a2473ae327e2780c7d31a8b1ade110d1b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>dockPanel5_Container</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a63abb2b0e6d04c3ad2f0f848ae36754b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>dockPanel6_Container</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a9ec0c765f49f5408994a490e8c23de4d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>dockPanelDrawing</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a0dd542a3bd491fcca49acd1be4a10c15" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>dockPanelDrawingCR</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a84dd6e2a1bbb8cfe278a51d9faae720d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>dockPanelDrawingCV</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5ff690c2e68f08ed8854416fa3e58af0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>dockPanelDrawingFA</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a94f3d1235395908692aa82e79ce15c3f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>dockPanelDrawingGB</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a125fe1504e40a9a9e70d575c4a89eed1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>dockPanelGrdBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a75c8732e6db4268a2e4ac669dd3acc54" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>dockPanelItemsEy</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1af7809286a2c26da1061c623c22ed5e4d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>dockPanelItemsHf</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a6228dfa8c1ab348ca0e38d6badaf59c1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>dockPanelPdfColor</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a76e9e26c4bb863bd070ace5b105ab26c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>dockPanelPhoto</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a952a8cd9282f76395d558d8c3fb95a46" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>dockPanelPlainBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a01f4dc1f1420f0d86559b456e00a7bb2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>dockPanelTreeBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a082d3e540a02be37b4e791b74659ea6d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>document1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3fd79da1e4dfa394eed8874e1d3b8033" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>document10</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ab8d432fd055cc38807db74f730032351" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>document11</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1abe0572aac7dd4a46d76ebdbc4ac1fb8b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>document12</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aeeb653f63718db89e1d39dbf7267a87c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>document13</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1abbc472f063e91a285f001ba351f72785" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>document14</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a4f184f0eb547e9d6a869d86da82ee169" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>document2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1af3f03ec3367f530cc96f0dfce49fe888" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>document3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a601aad1ac7cb5f65e3b382359e620bf8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>document4</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a391c2508b1ea0c314ac22a21425378ba" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>document5</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3767cb4d8a04e3b55a9b26f45fb0dea4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>document6</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aa583d1e7b5d13bda907a65f92e6f0a6c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>document7</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ab04c641d2f7a2e774b2fa2e070a62fc3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>document8</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ac442ab3fd865b66e4421f5cd21c1b567" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>document9</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a46c8934323f456fd186781cc437449a6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>documentGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a42fb686725418ddbb5dbb0fd937db9d7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>documentGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1add1be3a5157a0deed57c1ce3509bac07" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>documentManagerBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aedfc4811ef72bdc6dc73e91d802fa254" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>DYNAMIC_PANEL_DRAWING</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5000918f8f7be06ff4e7faa9f2a6970f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>EDIT_COLUMN</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a94b1273432a2de1f678cac8459b08bcb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>EditBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>EnableExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>EnableExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>EnableLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>EnablePrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a983331d685e3677041502266c714bd2b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>ExpandAllRows</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>ExportCsvFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>ExportExcelFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ad5a53ab5085a92ce928fcd37f01b7358" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>FillDtHfSummary</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a6067ba59d9a2565317f0aaf0def7ee18" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>GetComponentNode</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1adf20330d05986442d401dd448e23bf42" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>GrdBomRefreshAndExpand</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a9106ad6971e7d8cc9e01d249686d0e3f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>GrdBomView_CellValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aa0d0d472af8aaf5a6825cc48bad9e3ec" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>gridViewItemBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a6b7287c5f66c1e3cfe39844302e1f2dd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>GridViewItemBom_PopupMenuShowing</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a6b18cea480d3159e8897eeda113bbe4e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>gridViewItemsEy</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3d38ef3f939d86f4eb6d2d6d00cbd233" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>GridViewItemsEy_DoubleClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1abd38978492b87965db2da5bd658dd0e1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>gridViewItemsHf</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a0a9e8efff48162c985892ef5e17b853b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>GridViewItemsHf_DoubleClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5bc1c8f2d37c490ecf324015114abc84" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>GridViewPlainBom_CustomSummaryCalculate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3ec4caf4b81f0f53e320ec0c2b7ab2a3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>gridViewSummaryBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a93aa4e02da8c6904f7f4943b30a59629" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>gridViewSummaryUnitBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a8a84f3f150b4d16ca5e953c2db9f6726" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3ef3f82912f5774281b351cea93566bb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>IsValidBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3e33bc3261e99113b5afaf9115120627" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>LayoutButton_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a8086468cb780e9df4c19085aaf32a9dd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>lblCopyBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5a0d226b67d2de890bbb3a86e49cb155" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>lblSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ae2203c6f1395d077e9805f9fb137e7f9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>LoadAuxList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a91c580e8af17a19d58a33be7348f4673" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>LoadBomTreeView</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1adb9645451d32238253443b4c282b48dd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>LoadDrawingPanel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a1ece36dacb266532d53132a17585e6e7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>LoadDrawingPanels</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a03c7f1faa02aab05a03b2409cd48792e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>LoadFormLayouts</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1af67d2d5637faaca3e62da73e047ffe47" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>LoadItemGridBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ab88f94b783b3c3b26e4df8ad5702d68f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>LoadItemsListEy</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aa4f4ca239808c5c93626d46c3afc3757" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>LoadItemsListHf</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a367eb73e94bfd181c25cbd21e4dbb10c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>LoadPdfColorgPanel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ad845c9fe5d6b5eebaf088d58525ee3a1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>LoadPhotoPanel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a2180605918fa83ca20747766c29a0f9c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>LoadSummaryBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>Modify</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1acef30e27dc811984ec2d2c539f5b0bea" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>NavigateDetails</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>New</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ad42a17eb90ff4309652487f1e3841379" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>OnMenuItemAddnewLineHalfFinishedClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3706e00293327aeeae534344b4c8e842" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>OnMenuItemAddnewLineHardwareClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ae56bd9e7195c95e09d3b007354319d19" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>OnMenuItemAddnewLineMaterialClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a32e374d0c640e5e549632d70755c8331" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>OnMenuItemCopyBomFromItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a8a94967406a12c87e38d545acbe671a6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>OpenEditHfBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a223f5f797d47e298cc81062bbc902c25" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>OpenSelectItem2CopyBomForm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a402204c6fd658855abb281f7099a65da" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>OpenSelectSuppliersForm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aacc9314f4f9ee96afdb752df964d0ed7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>OpenSelectSuppliersForm2Copy</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a33328c15a54e6b82d82c7900430dc09d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>panelContainer2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>ProcessCmdKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>Read</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a4bcfafc6f73506d71f3710752e702d81" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>RepEditHf_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>RestoreInitState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a7c554e323cae9bd64dddc658628fc39d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>RestoreLayaout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>ribbonControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>RibbonFormBase</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>ribbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>ribbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>ribbonPageGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>ribbonStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5d351734bd2c7848883983d24fd48568" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>SaveLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a416afb12fa198406b238b3fa0f0a28ae" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>sbAddBomSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a246f08a1125c87c21479e93a8feba8af" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>SbAddBomSupplier_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ae6255c925448ad5c444e068042ac83c2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>sbCopyBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a65143f67407da19370e4a59303eceacc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>SbCopyBom_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a8a75dd3636df48d7a42dbb2dcfc2ec85" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>searchLookUpEdit1View</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>SetActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3c9260cae7a803aaf7ca0077cddc75aa" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>SetBasicEvents</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a9b00bc6a8fea54e64d8efdd470e470e9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>SetDockPanelsVisibility</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a279a17c07ac7f51fda009f34dd7bc560" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>SetGrdBomDetailsNonEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a2c2c8ff09df88d205bd40e8a052d546c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>SetGrdBomEditColumns</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>SetRibbonText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a112d9e371104e32da7ce22246c4d79c4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>SetUpDockPanels</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a1e04508371952b72d025b7eb89a7eb11" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>SetUpGrdItemBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ac54465c9c0ff66f19f6076ca4fe8e998" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>SetUpGrdItemsEy</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a88307093fae7e62d58600b1a7c17e010" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>SetUpGrdItemsHf</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aaae91a45b1017489479bab4e89b0091b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>SetUpGrdSummaryBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a0325e0578ad7a7d2f2d48d9e21734d51" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>SetUpGrdSummaryUnitBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a41e78e2ab0dab38c58308547061cce54" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>SetUpSearchLueSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ab9dfbab1053d252df0c42622c228bef6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>ShowAddBomSupplierAndCopyBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ac852477c8c5e6992a4b3bab7d87f12b1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>ShowHalfFinishedMessageInfo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a048d4f1f7a9b877d965886d888e7cfa8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>slueSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a103bd5801cae4af6edcc2c1ed9c72520" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>tabbedView1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aea62c1bd3d286a2acf58b1e549bd7e48" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>totalQuantityHw</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a697ce2cc77bb76f65d18b49b8bd72692" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>totalQuantityMt</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1aad703a4cb22a1907375e80e2a0bdcfbd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>totalScrapHw</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a6f41c162290b182d33bd14d763d5214e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>totalScrapMt</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a39ef61f4aac8bf228337a923d890bb52" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>treeViewBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a5af3c190222e7398644b60626772e1f8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>xgrdItemBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1af5c8bacddde3b8ff737d3bf577bc7d0e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>XgrdItemBom_ProcessGridKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1ada05603995a9a0964ed0109f366a5bb2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>XgrdItemBom_ViewRegistered</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a1beb20576744f2fb0d75b567eeb7ba9c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>xgrdItemsEy</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1af8afb35e873bc48aee70d13494658b35" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>xgrdItemsHf</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1a3303883c91ed2308ca0237d13390eb0a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>xgrdSummaryBom</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_bom_management_1afd5bb4937e10f1a3179987c4b63a62d3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::BomManagement</scope><name>xgrdSummaryUnitBom</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

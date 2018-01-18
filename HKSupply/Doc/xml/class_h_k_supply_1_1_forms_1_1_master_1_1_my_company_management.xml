@@ -1,0 +1,895 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Master::MyCompanyManagement</compoundname>
+    <basecompoundref refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" prot="public" virt="non-virtual">HKSupply.Forms.RibbonFormBase</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1afaa927aacc99a471020c99d83189e030" prot="private" static="no" mutable="no">
+        <type>Font</type>
+        <definition>Font HKSupply.Forms.Master.MyCompanyManagement._labelDefaultFontBold</definition>
+        <argsstring></argsstring>
+        <name>_labelDefaultFontBold</name>
+        <initializer>= new Font(&quot;SourceSansProRegular&quot;, 8, FontStyle.Bold)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="22" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a95becbcfc3c77fd3afb00276f9f420bd" prot="private" static="no" mutable="no">
+        <type>Font</type>
+        <definition>Font HKSupply.Forms.Master.MyCompanyManagement._labelDefaultFont</definition>
+        <argsstring></argsstring>
+        <name>_labelDefaultFont</name>
+        <initializer>= new Font(&quot;SourceSansProRegular&quot;, 8, FontStyle.Regular)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="23" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a2dcdc99fb104cc3b3ffdb45bc2782837" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_currency" kindref="compound">Currency</ref> &gt;</type>
+        <definition>List&lt;Currency&gt; HKSupply.Forms.Master.MyCompanyManagement._currenciesList</definition>
+        <argsstring></argsstring>
+        <name>_currenciesList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="25" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a14bdc0f96c828ab1c260cae6828eddbe" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_my_company" kindref="compound">MyCompany</ref></type>
+        <definition>MyCompany HKSupply.Forms.Master.MyCompanyManagement._myCompany</definition>
+        <argsstring></argsstring>
+        <name>_myCompany</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="26" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a0df7c24bbb5c5cc0e057a98451fe2c9a" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Master.MyCompanyManagement.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a0281461b5cf3c5ec3c3e57679fd1a9d7" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Master.MyCompanyManagement.xtcGeneral</definition>
+        <argsstring></argsstring>
+        <name>xtcGeneral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="401" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a8d4fde82559e9b10408e5bb6dbfdff68" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.MyCompanyManagement.xtpMyCompany</definition>
+        <argsstring></argsstring>
+        <name>xtpMyCompany</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="402" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="402" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a872a835d9a3f66c6b790514c6edd0984" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox HKSupply.Forms.Master.MyCompanyManagement.gbMainInfo</definition>
+        <argsstring></argsstring>
+        <name>gbMainInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="403" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a841627262f18af2fcb3b3d4e348651ba" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox HKSupply.Forms.Master.MyCompanyManagement.gbContactInfo</definition>
+        <argsstring></argsstring>
+        <name>gbContactInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="404" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1ab4962f528f6a79f86d338a5c762ee874" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.MyCompanyManagement.txtVatNumber</definition>
+        <argsstring></argsstring>
+        <name>txtVatNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="405" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1ac05f3a524001250be5011e4867774c34" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.MyCompanyManagement.txtName</definition>
+        <argsstring></argsstring>
+        <name>txtName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="406" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1ac437e4ea053bfcbb6d6618bb25b6ef00" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.MyCompanyManagement.txtId</definition>
+        <argsstring></argsstring>
+        <name>txtId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="407" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a08afd5b955df1edf170151a76782db80" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.MyCompanyManagement.lblVatNumber</definition>
+        <argsstring></argsstring>
+        <name>lblVatNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="408" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1af60472edf32359c558289a89e4f45e12" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.MyCompanyManagement.lblName</definition>
+        <argsstring></argsstring>
+        <name>lblName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="409" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1aacaca8653577830a7f47b890d43d499f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.MyCompanyManagement.lblId</definition>
+        <argsstring></argsstring>
+        <name>lblId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="410" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a6d9893757b75d8d1f3cfd49ee6359cd6" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.MyCompanyManagement.txtShippingAddressZh</definition>
+        <argsstring></argsstring>
+        <name>txtShippingAddressZh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="411" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a395c47291fdf5492bb0efa641fd4da96" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.MyCompanyManagement.lblShippingAddressZh</definition>
+        <argsstring></argsstring>
+        <name>lblShippingAddressZh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="412" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1aac0568f068d75197753a82aa0983fe52" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.MyCompanyManagement.txtShippingAddress</definition>
+        <argsstring></argsstring>
+        <name>txtShippingAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="413" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a28a868e4daa2d71a87527f98eec0fd2d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.MyCompanyManagement.lblShippingAddress</definition>
+        <argsstring></argsstring>
+        <name>lblShippingAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="414" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1aef5fe007969cf1310ee69227ac0bdbf8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.MyCompanyManagement.txtBillingAddressZh</definition>
+        <argsstring></argsstring>
+        <name>txtBillingAddressZh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="415" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a44ab92d07267b76de8fb227f54b72d9a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.MyCompanyManagement.lblBillingAddressZh</definition>
+        <argsstring></argsstring>
+        <name>lblBillingAddressZh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="416" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a2ec62f720cd59c1407de1f7861d9f85e" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.MyCompanyManagement.txtBillingAddress</definition>
+        <argsstring></argsstring>
+        <name>txtBillingAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="417" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a38ef6160c6e249046a7cd4be017988a2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.MyCompanyManagement.lblBillingAddress</definition>
+        <argsstring></argsstring>
+        <name>lblBillingAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="418" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1af37bb6e969fead956f54d50442cfaaaa" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox HKSupply.Forms.Master.MyCompanyManagement.gbComments</definition>
+        <argsstring></argsstring>
+        <name>gbComments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="419" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1ab91a50bc61e72ae5b76477f6bb215832" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.MyCompanyManagement.txtContactPhone</definition>
+        <argsstring></argsstring>
+        <name>txtContactPhone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="420" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="420" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a8718265b0899c82325def000aa64c653" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.MyCompanyManagement.lblContactPhone</definition>
+        <argsstring></argsstring>
+        <name>lblContactPhone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="421" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="421" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a230bd235cdd310ffd45d570de7505ac9" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.MyCompanyManagement.txtContactNameZh</definition>
+        <argsstring></argsstring>
+        <name>txtContactNameZh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="422" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a3ea5d61ec9b20971dce9c4df3564841b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.MyCompanyManagement.lblContactNameZh</definition>
+        <argsstring></argsstring>
+        <name>lblContactNameZh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="423" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a0b9c2888c84107b01a296644e647f966" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Master.MyCompanyManagement.txtContactName</definition>
+        <argsstring></argsstring>
+        <name>txtContactName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="424" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="424" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1aad62bdd74d9157b8eb4112097d16fcf3" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.MyCompanyManagement.lblContactName</definition>
+        <argsstring></argsstring>
+        <name>lblContactName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="425" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a97abf7a16c5fddd8f895d105a1daf161" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Master.MyCompanyManagement.lblIdCurrency</definition>
+        <argsstring></argsstring>
+        <name>lblIdCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="426" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a55422e971ffb373d7a5f098c40802f75" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LookUpEdit</type>
+        <definition>DevExpress.XtraEditors.LookUpEdit HKSupply.Forms.Master.MyCompanyManagement.lueCurrency</definition>
+        <argsstring></argsstring>
+        <name>lueCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="427" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="427" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1aee87e6d3337546cd8efa6384b6742cb9" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.MemoEdit</type>
+        <definition>DevExpress.XtraEditors.MemoEdit HKSupply.Forms.Master.MyCompanyManagement.memoEditComments</definition>
+        <argsstring></argsstring>
+        <name>memoEditComments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="428" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="428" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a97712e0de6dc58db7514496858fb2567" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Master.MyCompanyManagement.MyCompanyManagement</definition>
+        <argsstring>()</argsstring>
+        <name>MyCompanyManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="30" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="30" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a05f42f6e060e08dae31ccc1a9c864f02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.MyCompanyManagement.bbiCancel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiCancel_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318">bbiCancel_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="80" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a2f30331fde9444efdd733d592cbd5a20" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.MyCompanyManagement.bbiEdit_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiEdit_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3">bbiEdit_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="85" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="85" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1ad8ea4ef203c7a13ab3c3714a4f4f256f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.MyCompanyManagement.bbiSave_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiSave_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9">bbiSave_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="99" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="99" bodyend="130"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a4d3f00eaf038cc7947af90159b3f4c86" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.MyCompanyManagement.ConfigureRibbonActions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="58" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="58" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1ac05f238d1e0a4df17b9cbc6c4eea0558" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.MyCompanyManagement.MyCompanyManagement_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>MyCompanyManagement_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="135" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="135" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a90869af093cdd31d083e1acda507632b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.MyCompanyManagement.SetUpLabels</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpLabels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="145" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="145" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1ab5f9557511442ddd023cde303f996337" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.MyCompanyManagement.SetUpLookUpEdit</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpLookUpEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="181" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="181" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a992528cd192cecfdc43e4c2ba7222983" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.MyCompanyManagement.SetFormBinding</definition>
+        <argsstring>()</argsstring>
+        <name>SetFormBinding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="195" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="195" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1ae5da1c0251b992f79bc5acfe715df10b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.MyCompanyManagement.LoadAuxList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAuxList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="228" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="228" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a8213a9dc578aa49a783b818e9c5585a2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.MyCompanyManagement.LoadMyCompany</definition>
+        <argsstring>()</argsstring>
+        <name>LoadMyCompany</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="240" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="240" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1aabb0a4bc5cc76b5d350368e8ef70ed51" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.MyCompanyManagement.ConfigureRibbonActionsEditing</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActionsEditing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="254" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="254" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a99d014db5628d2faee304343ce70cd41" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.MyCompanyManagement.ResetBinding</definition>
+        <argsstring>(Control.ControlCollection controls)</argsstring>
+        <name>ResetBinding</name>
+        <param>
+          <type>Control.ControlCollection</type>
+          <declname>controls</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="268" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="268" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1afc20a4b3c539da08cbb9e01a5da603bf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.MyCompanyManagement.SetEditingFieldsEnabled</definition>
+        <argsstring>()</argsstring>
+        <name>SetEditingFieldsEnabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="301" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="301" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1ac4dd8a30829183e8aa4e3281df0522d5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.MyCompanyManagement.EnableFields</definition>
+        <argsstring>(Control.ControlCollection controls)</argsstring>
+        <name>EnableFields</name>
+        <param>
+          <type>Control.ControlCollection</type>
+          <declname>controls</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="313" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="313" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a1c4d62b0b201a37fba49b4cc1f69ba1d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.MyCompanyManagement.UpdateMyCompany</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateMyCompany</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="348" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="348" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a46f3f575c97f175395829ef0ac9f2365" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.MyCompanyManagement.ActionsAfterUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>ActionsAfterUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="360" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="360" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1aa3e7c0e3e1c19dd609df965300b6acc2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.MyCompanyManagement.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="29" bodyend="397"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1af08f8dea55be30bd9da69c48f053bc6b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.MyCompanyManagement.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1216">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1214">
+        <label>HKSupply.Forms.Master.MyCompanyManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management"/>
+        <childnode refid="1215" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1215">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1216" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1219">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1217">
+        <label>HKSupply.Forms.Master.MyCompanyManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management"/>
+        <childnode refid="1218" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1220">
+        <label>XtraBars</label>
+      </node>
+      <node id="1218">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1219" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1220" relation="usage">
+          <edgelabel>bbiCancel</edgelabel>
+          <edgelabel>ribbonStatusBar</edgelabel>
+          <edgelabel>bbiPrintPreview</edgelabel>
+          <edgelabel>bbiSave</edgelabel>
+          <edgelabel>bbiNew</edgelabel>
+          <edgelabel>bbiEdit</edgelabel>
+          <edgelabel>ribbonControl</edgelabel>
+          <edgelabel>ribbonPageGroup1</edgelabel>
+          <edgelabel>ribbonPage1</edgelabel>
+          <edgelabel>ribbonPageGroup2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Master/MyCompanyManagement.cs" line="19" column="1" bodyfile="HKSupply/Forms/Master/MyCompanyManagement.cs" bodystart="18" bodyend="377"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a2dcdc99fb104cc3b3ffdb45bc2782837" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>_currenciesList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a95becbcfc3c77fd3afb00276f9f420bd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>_labelDefaultFont</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1afaa927aacc99a471020c99d83189e030" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>_labelDefaultFontBold</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a14bdc0f96c828ab1c260cae6828eddbe" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>_myCompany</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a46f3f575c97f175395829ef0ac9f2365" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>ActionsAfterUpdate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>ActionsStates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>AddRestoreLayoutItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>BarButtonItemReport_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>bbiCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a05f42f6e060e08dae31ccc1a9c864f02" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>bbiEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a2f30331fde9444efdd733d592cbd5a20" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>bbiExportCsv_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>bbiExportExcel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>bbiNew</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>bbiPrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>bbiPrintPreview_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>bbiSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1ad8ea4ef203c7a13ab3c3714a4f4f256f" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>BbiSaveLayout_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a0df7c24bbb5c5cc0e057a98451fe2c9a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>ConfigureLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>ConfigurePrintExportOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a4d3f00eaf038cc7947af90159b3f4c86" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>ConfigureRibbonActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1aabb0a4bc5cc76b5d350368e8ef70ed51" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>ConfigureRibbonActionsEditing</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>CurrentLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>CurrentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1af08f8dea55be30bd9da69c48f053bc6b" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>EnableExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>EnableExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1ac4dd8a30829183e8aa4e3281df0522d5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>EnableFields</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>EnableLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>EnablePrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>ExportCsvFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>ExportExcelFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1af37bb6e969fead956f54d50442cfaaaa" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>gbComments</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a841627262f18af2fcb3b3d4e348651ba" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>gbContactInfo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a872a835d9a3f66c6b790514c6edd0984" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>gbMainInfo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1aa3e7c0e3e1c19dd609df965300b6acc2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>LayoutButton_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a38ef6160c6e249046a7cd4be017988a2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>lblBillingAddress</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a44ab92d07267b76de8fb227f54b72d9a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>lblBillingAddressZh</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1aad62bdd74d9157b8eb4112097d16fcf3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>lblContactName</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a3ea5d61ec9b20971dce9c4df3564841b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>lblContactNameZh</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a8718265b0899c82325def000aa64c653" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>lblContactPhone</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1aacaca8653577830a7f47b890d43d499f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>lblId</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a97abf7a16c5fddd8f895d105a1daf161" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>lblIdCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1af60472edf32359c558289a89e4f45e12" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>lblName</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a28a868e4daa2d71a87527f98eec0fd2d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>lblShippingAddress</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a395c47291fdf5492bb0efa641fd4da96" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>lblShippingAddressZh</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a08afd5b955df1edf170151a76782db80" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>lblVatNumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1ae5da1c0251b992f79bc5acfe715df10b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>LoadAuxList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a8213a9dc578aa49a783b818e9c5585a2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>LoadMyCompany</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a55422e971ffb373d7a5f098c40802f75" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>lueCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1aee87e6d3337546cd8efa6384b6742cb9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>memoEditComments</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>Modify</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a97712e0de6dc58db7514496858fb2567" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>MyCompanyManagement</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1ac05f238d1e0a4df17b9cbc6c4eea0558" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>MyCompanyManagement_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>New</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>ProcessCmdKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>Read</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a99d014db5628d2faee304343ce70cd41" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>ResetBinding</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>RestoreInitState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>ribbonControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>RibbonFormBase</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>ribbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>ribbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>ribbonPageGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>ribbonStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>SetActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1afc20a4b3c539da08cbb9e01a5da603bf" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>SetEditingFieldsEnabled</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a992528cd192cecfdc43e4c2ba7222983" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>SetFormBinding</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>SetRibbonText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a90869af093cdd31d083e1acda507632b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>SetUpLabels</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1ab5f9557511442ddd023cde303f996337" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>SetUpLookUpEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a2ec62f720cd59c1407de1f7861d9f85e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>txtBillingAddress</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1aef5fe007969cf1310ee69227ac0bdbf8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>txtBillingAddressZh</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a0b9c2888c84107b01a296644e647f966" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>txtContactName</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a230bd235cdd310ffd45d570de7505ac9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>txtContactNameZh</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1ab91a50bc61e72ae5b76477f6bb215832" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>txtContactPhone</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1ac437e4ea053bfcbb6d6618bb25b6ef00" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>txtId</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1ac05f3a524001250be5011e4867774c34" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>txtName</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1aac0568f068d75197753a82aa0983fe52" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>txtShippingAddress</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a6d9893757b75d8d1f3cfd49ee6359cd6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>txtShippingAddressZh</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1ab4962f528f6a79f86d338a5c762ee874" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>txtVatNumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a1c4d62b0b201a37fba49b4cc1f69ba1d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>UpdateMyCompany</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a0281461b5cf3c5ec3c3e57679fd1a9d7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>xtcGeneral</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_my_company_management_1a8d4fde82559e9b10408e5bb6dbfdff68" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::MyCompanyManagement</scope><name>xtpMyCompany</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

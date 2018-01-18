@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_h_k_supply_1_1_exceptions_1_1_nonexistent_user_exception" kind="class" language="C#" prot="public">
     <compoundname>HKSupply::Exceptions::NonexistentUserException</compoundname>
     <basecompoundref prot="public" virt="non-virtual">Exception</basecompoundref>
@@ -84,24 +84,24 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="222">
+      <node id="1257">
         <label>HKSupply.Exceptions.NonexistentUserException</label>
         <link refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_user_exception"/>
-        <childnode refid="223" relation="public-inheritance">
+        <childnode refid="1258" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="223">
+      <node id="1258">
         <label>System::Exception</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="224">
+      <node id="1259">
         <label>HKSupply.Exceptions.NonexistentUserException</label>
         <link refid="class_h_k_supply_1_1_exceptions_1_1_nonexistent_user_exception"/>
-        <childnode refid="225" relation="public-inheritance">
+        <childnode refid="1260" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="225">
+      <node id="1260">
         <label>System::Exception</label>
       </node>
     </collaborationgraph>

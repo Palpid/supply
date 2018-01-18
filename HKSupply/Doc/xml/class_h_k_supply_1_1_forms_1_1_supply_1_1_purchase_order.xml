@@ -1,0 +1,2063 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Supply::PurchaseOrder</compoundname>
+    <basecompoundref refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" prot="public" virt="non-virtual">HKSupply.Forms.RibbonFormBase</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a64e7dee016b9932c37c065b1346321f2" prot="private" static="no" mutable="no">
+        <type>Font</type>
+        <definition>Font HKSupply.Forms.Supply.PurchaseOrder._labelDefaultFontBold</definition>
+        <argsstring></argsstring>
+        <name>_labelDefaultFontBold</name>
+        <initializer>= AppStyles.LabelDefaultFontBold</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="33" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ac97886cf5e9bb4f015b1ae65d127c579" prot="private" static="no" mutable="no">
+        <type>Font</type>
+        <definition>Font HKSupply.Forms.Supply.PurchaseOrder._labelDefaultFont</definition>
+        <argsstring></argsstring>
+        <name>_labelDefaultFont</name>
+        <initializer>= AppStyles.LabelDefaultFont</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="34" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a104045678827aabfaafe63d8b582fdcb" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier" kindref="compound">Supplier</ref> &gt;</type>
+        <definition>List&lt;Supplier&gt; HKSupply.Forms.Supply.PurchaseOrder._suppliersList</definition>
+        <argsstring></argsstring>
+        <name>_suppliersList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="36" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ab3ed432d0884600270b47a1f468040e3" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_currency" kindref="compound">Currency</ref> &gt;</type>
+        <definition>List&lt;Currency&gt; HKSupply.Forms.Supply.PurchaseOrder._currenciesList</definition>
+        <argsstring></argsstring>
+        <name>_currenciesList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="37" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1acc1c923c951c8afd30cf0e84c860d9c6" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_supply_status" kindref="compound">SupplyStatus</ref> &gt;</type>
+        <definition>List&lt;SupplyStatus&gt; HKSupply.Forms.Supply.PurchaseOrder._supplyStatusList</definition>
+        <argsstring></argsstring>
+        <name>_supplyStatusList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="38" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a443e1b36fed5e8209ffd871b31c7c795" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_payment_terms" kindref="compound">PaymentTerms</ref> &gt;</type>
+        <definition>List&lt;PaymentTerms&gt; HKSupply.Forms.Supply.PurchaseOrder._paymentTermsList</definition>
+        <argsstring></argsstring>
+        <name>_paymentTermsList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="39" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a3b82d4679c2a3d5810af03f1c35b2ca7" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_delivery_term" kindref="compound">DeliveryTerm</ref> &gt;</type>
+        <definition>List&lt;DeliveryTerm&gt; HKSupply.Forms.Supply.PurchaseOrder._deliveryTermList</definition>
+        <argsstring></argsstring>
+        <name>_deliveryTermList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="40" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a007ad2963f340532a1c9861516a084e1" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier_price_list" kindref="compound">SupplierPriceList</ref> &gt;</type>
+        <definition>List&lt;SupplierPriceList&gt; HKSupply.Forms.Supply.PurchaseOrder._selectedSupplierPriceList</definition>
+        <argsstring></argsstring>
+        <name>_selectedSupplierPriceList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="41" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a61c560009b1cc4b7caba939449f4bffc" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_ey" kindref="compound">ItemEy</ref> &gt;</type>
+        <definition>List&lt;ItemEy&gt; HKSupply.Forms.Supply.PurchaseOrder._itemsEyList</definition>
+        <argsstring></argsstring>
+        <name>_itemsEyList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="42" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aed0bb4c7bb8667884df187ae5f7a1256" prot="private" static="no" mutable="no">
+        <type>BindingList&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_line" kindref="compound">DocLine</ref> &gt;</type>
+        <definition>BindingList&lt;DocLine&gt; HKSupply.Forms.Supply.PurchaseOrder._docLinesList</definition>
+        <argsstring></argsstring>
+        <name>_docLinesList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="44" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a2c064bcb7edded165ad3792a96246899" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_head" kindref="compound">DocHead</ref></type>
+        <definition>DocHead HKSupply.Forms.Supply.PurchaseOrder._docHeadPO</definition>
+        <argsstring></argsstring>
+        <name>_docHeadPO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="45" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ae891ea417f1d9057aefa111ac36b07b4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HKSupply.Forms.Supply.PurchaseOrder._batchCont</definition>
+        <argsstring></argsstring>
+        <name>_batchCont</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="47" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a21117f92103f04aae903550b9f4815ab" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.PurchaseOrder._existQP</definition>
+        <argsstring></argsstring>
+        <name>_existQP</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="49" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ab79a0d0c6d5399f9301ba3dcce5cf899" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.PurchaseOrder._isLoadingPO</definition>
+        <argsstring></argsstring>
+        <name>_isLoadingPO</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="51" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1accf4120d42212dd9d3e1e83ed2aa3f1f" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Supply.PurchaseOrder.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ae1e9dd213ee370d9c45370566633e39f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Supply.PurchaseOrder.xtcGeneral</definition>
+        <argsstring></argsstring>
+        <name>xtcGeneral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="635" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="635" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a93e159cf0ce3b4079fc8a1a3794a4fd6" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.PurchaseOrder.xtpPO</definition>
+        <argsstring></argsstring>
+        <name>xtpPO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="636" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="636" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a7b160c9bb75ba3a209abfa136e8dc1f2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblWeek</definition>
+        <argsstring></argsstring>
+        <name>lblWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="637" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="637" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a8c643bd4f19268a52a4519a9a25872c1" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblDeliveryWeek</definition>
+        <argsstring></argsstring>
+        <name>lblDeliveryWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="638" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="638" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ac5f395dbdc2920e2214bd740b078e68f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblDocDateWeek</definition>
+        <argsstring></argsstring>
+        <name>lblDocDateWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="639" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="639" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1afa06c370b110c13cc898d99e1a1786ad" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblDate</definition>
+        <argsstring></argsstring>
+        <name>lblDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="640" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="640" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1acbe0ec081758ccfa71220e48d74ff852" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.DateEdit</type>
+        <definition>DevExpress.XtraEditors.DateEdit HKSupply.Forms.Supply.PurchaseOrder.dateEditDelivery</definition>
+        <argsstring></argsstring>
+        <name>dateEditDelivery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="641" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="641" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1acf6092386cda2e41794c359517b36f4b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.DateEdit</type>
+        <definition>DevExpress.XtraEditors.DateEdit HKSupply.Forms.Supply.PurchaseOrder.dateEditDocDate</definition>
+        <argsstring></argsstring>
+        <name>dateEditDocDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="642" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="642" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1af46261ec2545da73fa8445b9dccbb7a4" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblDelivery</definition>
+        <argsstring></argsstring>
+        <name>lblDelivery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="643" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="643" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1af773593b458ac05c1cbdfec5b7934c1d" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblDocDate</definition>
+        <argsstring></argsstring>
+        <name>lblDocDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="644" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="644" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a079042a9d18eefd6e22f0a07830516f2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblPONumber</definition>
+        <argsstring></argsstring>
+        <name>lblPONumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="645" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="645" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ada9d548c162f24dc0586da5036267c75" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.TextEdit</type>
+        <definition>DevExpress.XtraEditors.TextEdit HKSupply.Forms.Supply.PurchaseOrder.txtPONumber</definition>
+        <argsstring></argsstring>
+        <name>txtPONumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="646" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="646" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a93a72c3f7b8faef031f3c5cfe1ebde9f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblCurrency</definition>
+        <argsstring></argsstring>
+        <name>lblCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="647" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="647" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a5c402245336af435e8226cf82fc179b0" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblTermsOfDelivery</definition>
+        <argsstring></argsstring>
+        <name>lblTermsOfDelivery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="648" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="648" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a8d7fc32a84ff920ddd6c481dc71da3ea" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblSupplier</definition>
+        <argsstring></argsstring>
+        <name>lblSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="649" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="649" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a3a9f11f4b31c99d017ab27f9ca81e376" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Supply.PurchaseOrder.slueCurrency</definition>
+        <argsstring></argsstring>
+        <name>slueCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="650" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="650" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a28427fee13f32063ba02cd17b810028b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.PurchaseOrder.gridView2</definition>
+        <argsstring></argsstring>
+        <name>gridView2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="651" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="651" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a733469ef02c539843ff79cd8408470fd" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Supply.PurchaseOrder.slueDeliveryTerms</definition>
+        <argsstring></argsstring>
+        <name>slueDeliveryTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="652" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="652" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1af817077e2bee3e7e06c1e48be525f2ca" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.PurchaseOrder.gridView1</definition>
+        <argsstring></argsstring>
+        <name>gridView1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="653" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="653" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a5637159b83418a573fff5757c32667b7" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Supply.PurchaseOrder.slueSupplier</definition>
+        <argsstring></argsstring>
+        <name>slueSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="654" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="654" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aa34c207baf3f59446db02c0a229e8176" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.PurchaseOrder.searchLookUpEdit1View</definition>
+        <argsstring></argsstring>
+        <name>searchLookUpEdit1View</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="655" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="655" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ab10e613037e701e632d7acffe273b0d6" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Supply.PurchaseOrder.xtcPO</definition>
+        <argsstring></argsstring>
+        <name>xtcPO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="656" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="656" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a0e2d20b82be763bfdc61609eb7e49810" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.PurchaseOrder.xtpOrderedGoods</definition>
+        <argsstring></argsstring>
+        <name>xtpOrderedGoods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="657" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="657" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a630d73e12715836b36934bd412bb3f2a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Supply.PurchaseOrder.xtpTerms</definition>
+        <argsstring></argsstring>
+        <name>xtpTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="658" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="658" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1adaf2683fa0f751ba49379b1eac1f8d85" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Supply.PurchaseOrder.xgrdLines</definition>
+        <argsstring></argsstring>
+        <name>xgrdLines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="659" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="659" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aa23fd46c4a3d3e2c3e6dcc3c456f9bbf" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.PurchaseOrder.gridViewLines</definition>
+        <argsstring></argsstring>
+        <name>gridViewLines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="660" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="660" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a0f98b046eb7d26337cadb3eedff89659" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Supply.PurchaseOrder.sluePaymentTerm</definition>
+        <argsstring></argsstring>
+        <name>sluePaymentTerm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="661" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="661" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ae4db26ac585df039a1958e503e8749af" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Supply.PurchaseOrder.gridView3</definition>
+        <argsstring></argsstring>
+        <name>gridView3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="662" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="662" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a0dfb926dc559252a3a2c918c5497affc" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblTxtInvoiceTo</definition>
+        <argsstring></argsstring>
+        <name>lblTxtInvoiceTo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="663" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="663" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a624af2630b9f5ce7e0a78339a3f05992" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblTxtShipTo</definition>
+        <argsstring></argsstring>
+        <name>lblTxtShipTo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="664" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="664" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a315c30470d7dcb22cb89f52d536dc775" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblTxtContact</definition>
+        <argsstring></argsstring>
+        <name>lblTxtContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="665" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="665" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1acd6eada6d2fb081b6aa86e0ad3cfa271" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblTxtAddress</definition>
+        <argsstring></argsstring>
+        <name>lblTxtAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="666" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="666" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a7c78f1e4ca6c795226918104ca17100b" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblTxtCompany</definition>
+        <argsstring></argsstring>
+        <name>lblTxtCompany</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="667" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="667" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a2841e1971471171fbade35a6ac11b417" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblInvoiceTo</definition>
+        <argsstring></argsstring>
+        <name>lblInvoiceTo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="668" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="668" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a9116ebae24050efcdb69d3bdfa463955" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblTermPayment</definition>
+        <argsstring></argsstring>
+        <name>lblTermPayment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="669" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="669" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a4cc7e01611d79bce77027faceaa98ea2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblShipTo</definition>
+        <argsstring></argsstring>
+        <name>lblShipTo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="670" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="670" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ace59e5e8e111c811d3aea9e4b6f7ce24" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblContact</definition>
+        <argsstring></argsstring>
+        <name>lblContact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="671" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="671" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ad723ef726b1edaa8190e7d689a745045" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblAddress</definition>
+        <argsstring></argsstring>
+        <name>lblAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="672" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="672" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a9e74bd8f6c5bfa98e72d34a8aa31ef9e" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblCompany</definition>
+        <argsstring></argsstring>
+        <name>lblCompany</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="673" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="673" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a72e9f1e9c13eb0ddf6cd06561b8e1229" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Supply.PurchaseOrder.sbSearch</definition>
+        <argsstring></argsstring>
+        <name>sbSearch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="674" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="674" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ae5aecf1339015b18e2d0f18455bef417" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Supply.PurchaseOrder.sbOrder</definition>
+        <argsstring></argsstring>
+        <name>sbOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="675" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="675" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a8f5667dab1f8b001f729fb6beffe36e2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Supply.PurchaseOrder.sbFinishPO</definition>
+        <argsstring></argsstring>
+        <name>sbFinishPO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="676" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="676" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1af01198abb622d1b844aaf493b922387c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Supply.PurchaseOrder.sbImportExcel</definition>
+        <argsstring></argsstring>
+        <name>sbImportExcel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="677" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="677" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aa77a483c82d575a89204a930be80512a" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.MemoEdit</type>
+        <definition>DevExpress.XtraEditors.MemoEdit HKSupply.Forms.Supply.PurchaseOrder.memoEditRemarks</definition>
+        <argsstring></argsstring>
+        <name>memoEditRemarks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="678" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="678" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a1e0397feb7911dd2b6ee82be04ce0919" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Supply.PurchaseOrder.lblRemarks</definition>
+        <argsstring></argsstring>
+        <name>lblRemarks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="679" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="679" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a828bd76a0ced0c4ddf5e92943f9b6bef" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.PanelControl</type>
+        <definition>DevExpress.XtraEditors.PanelControl HKSupply.Forms.Supply.PurchaseOrder.pcFilter</definition>
+        <argsstring></argsstring>
+        <name>pcFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="680" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="680" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a376cc88ea359c841be27b23f38a1de20" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.PictureEdit</type>
+        <definition>DevExpress.XtraEditors.PictureEdit HKSupply.Forms.Supply.PurchaseOrder.peEy</definition>
+        <argsstring></argsstring>
+        <name>peEy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="681" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="681" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1acd08a48b49103bfcdcbae25f4273c824" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Supply.PurchaseOrder.PurchaseOrder</definition>
+        <argsstring>()</argsstring>
+        <name>PurchaseOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="55" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="55" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a8d43fe9a3464454e6a4815c3ee878fed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.PurchaseOrder.bbiCancel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiCancel_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318">bbiCancel_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="110" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="110" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a4f11eef669d90908dc4016330068d6ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.PurchaseOrder.bbiEdit_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiEdit_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3">bbiEdit_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="124" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="124" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a55a053868a8a27b002a67d0c6c821ae7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.PurchaseOrder.bbiNew_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiNew_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a">bbiNew_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="152" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="152" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a00a943e19de89cbdffc33d387085cedf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.PurchaseOrder.bbiSave_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiSave_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9">bbiSave_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="166" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="166" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aa130202d283caf79f3854ebc27965af5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.PurchaseOrder.bbiExportCsv_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportCsv_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a">bbiExportCsv_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="210" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="210" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1acb2989469ba865f565c6d7555d65d565" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.PurchaseOrder.bbiExportExcel_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>bbiExportExcel_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811">bbiExportExcel_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="240" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="240" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a6d4eae0844f1635706cc7edab3086186" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.PurchaseOrder.BarButtonItemReport_ItemClick</definition>
+        <argsstring>(object sender, ItemClickEventArgs e)</argsstring>
+        <name>BarButtonItemReport_ItemClick</name>
+        <reimplements refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f">BarButtonItemReport_ItemClick</reimplements>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="270" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="270" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ae7a32f3968641a71aedec24274cfbee1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.InitData</definition>
+        <argsstring>(string idDocPo)</argsstring>
+        <name>InitData</name>
+        <param>
+          <type>string</type>
+          <declname>idDocPo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="488" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="488" bodyend="499"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a84e316f2f3a9b0df8e8a2c90d958f341" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.ConfigureRibbonActions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="88" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="88" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ad17859e728e5e471efa983142ab2ebd1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.PurchaseOrder_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>PurchaseOrder_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="295" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="295" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a72276b749226855f24670551ca2a102d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.DateEditDocDate_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DateEditDocDate_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="307" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="307" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ae9bb16e630e275caa0bf33044278a985" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.DateEditDelivery_EditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DateEditDelivery_EditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="337" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="337" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aa3ae2b635b1272b4ab6bfcd0ce918579" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SlueSupplierEditValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SlueSupplierEditValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="353" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="353" bodyend="388"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ac4eca5f8d62f157a0893d94db6ee1051" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SbSearch_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbSearch_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="390" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="390" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1af11a5cd364c294683d325f61c0a29a55" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SbOrder_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbOrder_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="409" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="409" bodyend="426"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a26bdca41bd7d2be064fd7babd9bb2f4e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SbImportExcel_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbImportExcel_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="428" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="428" bodyend="438"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aba9db20e7f740420ced5dce45c5d4e12" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SbFinishPO_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SbFinishPO_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="440" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="440" bodyend="483"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a8670b3635be210a9b031273a1c63a0db" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SetUpLabels</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpLabels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="506" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="506" bodyend="591"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a525b571885a0febb0e79e7d1d87c56f3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SetUpButtons</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpButtons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="593" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="593" bodyend="604"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a256400a776d5cc8e8f7a78b7cf0d47a0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SetUpEvents</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="606" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="606" bodyend="622"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aedcfbdd965c8a079bcf97c254b036039" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SetUpSearchLookUpEdit</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSearchLookUpEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="636" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="636" bodyend="649"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a21828a475c6476a75ba7d63fd7ddaa3b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SetUpSlueSupplier</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSlueSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="651" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="651" bodyend="666"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1afc9aa2a3713db2b62d87812c30f34dc0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SetUpSlueCurrency</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSlueCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="668" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="668" bodyend="683"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a6a72f009d17505677a5aa5d04c5b3c9a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SetUpSluePaymentTerms</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSluePaymentTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="685" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="685" bodyend="701"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a636880c5f8b3a64df3384b586ab2ae03" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SetUpSlueDeliveryTerms</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSlueDeliveryTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="703" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="703" bodyend="719"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a64c7642e5df89ce40360ba3236e9f688" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SetUpGrdLines</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdLines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="721" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="721" bodyend="834"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a5ef95da895022ce3c41d2d27cb36beae" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.GridViewLines_RowCellStyle</definition>
+        <argsstring>(object sender, RowCellStyleEventArgs e)</argsstring>
+        <name>GridViewLines_RowCellStyle</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RowCellStyleEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="836" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="836" bodyend="872"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a252e18db041d395d57fe9b27832c9e4f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.GridViewLines_ValidatingEditor</definition>
+        <argsstring>(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)</argsstring>
+        <name>GridViewLines_ValidatingEditor</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="887" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="887" bodyend="998"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a0bd04901ad536772701660eb0ece4e73" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.GridViewLines_CellValueChanged</definition>
+        <argsstring>(object sender, CellValueChangedEventArgs e)</argsstring>
+        <name>GridViewLines_CellValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>CellValueChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1000" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1000" bodyend="1016"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a4d4f52882fc2aea0a72bb991578700a0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.XgrdLines_ProcessGridKey</definition>
+        <argsstring>(object sender, KeyEventArgs e)</argsstring>
+        <name>XgrdLines_ProcessGridKey</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>KeyEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1018" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1018" bodyend="1057"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ab17a93bd6428455cc8054aff7b3d698d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SetupPanelControl</definition>
+        <argsstring>()</argsstring>
+        <name>SetupPanelControl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1059" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1059" bodyend="1072"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a0da9e7f1dc7b9dbd2117b6eb2cd1ef9c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SetUpPictureEdit</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpPictureEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1074" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1074" bodyend="1086"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1af06b1250b74476623d8676dcb7d39680" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.LoadAuxList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAuxList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1091" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1091" bodyend="1106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ad169a14bac7da3b65cba5094d53f60ba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.LoadPO</definition>
+        <argsstring>()</argsstring>
+        <name>LoadPO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1108" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1108" bodyend="1147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aa7346313387664ab8e8d0fc2757770fb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.LoadSelectedSupplierPriceList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadSelectedSupplierPriceList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1149" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1149" bodyend="1159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a77d643772c1e836ab6a59ff057738bba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.ResetPO</definition>
+        <argsstring>()</argsstring>
+        <name>ResetPO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1161" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1161" bodyend="1209"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a4d952058e485419bcc56e13be9583830" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SearchPO</definition>
+        <argsstring>()</argsstring>
+        <name>SearchPO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1215" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1215" bodyend="1252"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1acedc9abd4724efd954af710bded812d6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.CreatePoNumber</definition>
+        <argsstring>()</argsstring>
+        <name>CreatePoNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1254" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1254" bodyend="1293"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aafdbdce029adfe3bbf36a8b2031049df" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SetSupplierInfo</definition>
+        <argsstring>()</argsstring>
+        <name>SetSupplierInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1295" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1295" bodyend="1314"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a31da60601774fa4acbe6e4b916a75cb5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.UpdateBatch</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateBatch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1316" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1316" bodyend="1352"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a1c2534accb11795cb6512fde5ef1dfb4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.UpdateItemsPrice</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateItemsPrice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1354" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1354" bodyend="1383"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1afd1477301e47678255b7c39d2ecd06c8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SetVisiblePropertyByState</definition>
+        <argsstring>()</argsstring>
+        <name>SetVisiblePropertyByState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1385" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1385" bodyend="1437"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ad53716a9a3ffcf3b29eb384f8dc8eb2d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.OrderDocLines</definition>
+        <argsstring>()</argsstring>
+        <name>OrderDocLines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1439" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1439" bodyend="1460"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a12b0ddf81775c0259dbb7faa38b099ec" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.ImportExcel</definition>
+        <argsstring>()</argsstring>
+        <name>ImportExcel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1462" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1462" bodyend="1483"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a7501e77f7108dfcfebdd94a1f0d4409e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Dictionary&lt; string, int &gt;</type>
+        <definition>Dictionary&lt;string, int&gt; HKSupply.Forms.Supply.PurchaseOrder.GetExcelImportData</definition>
+        <argsstring>()</argsstring>
+        <name>GetExcelImportData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1485" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1485" bodyend="1563"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a137181ba543e80d67a29c03b8eaca5b2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.ImportDataToGrid</definition>
+        <argsstring>(Dictionary&lt; string, int &gt; importData)</argsstring>
+        <name>ImportDataToGrid</name>
+        <param>
+          <type>Dictionary&lt; string, int &gt;</type>
+          <declname>importData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1565" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1565" bodyend="1618"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a5ee1b6357da4723fa4849c42cc2418d2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.CancelEdit</definition>
+        <argsstring>()</argsstring>
+        <name>CancelEdit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1620" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1620" bodyend="1650"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a78234e6074be55c99518be5825fa05d3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.ResetForm</definition>
+        <argsstring>(bool resetSupplier=true, bool resetDate=true)</argsstring>
+        <name>ResetForm</name>
+        <param>
+          <type>bool</type>
+          <declname>resetSupplier</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>resetDate</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1652" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1652" bodyend="1681"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a9c3099b0ed3ad30e2731b5be9264ccba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.ShowMessageDocsGenerated</definition>
+        <argsstring>()</argsstring>
+        <name>ShowMessageDocsGenerated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1683" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1683" bodyend="1706"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a51dc18db20485351e48dcea5dcaa78c9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.GetDeliveryDate</definition>
+        <argsstring>()</argsstring>
+        <name>GetDeliveryDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1708" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1708" bodyend="1725"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ad5dd01774a689a8ffc41df47f35608c6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SetObjectsReadOnly</definition>
+        <argsstring>()</argsstring>
+        <name>SetObjectsReadOnly</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1727" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1727" bodyend="1742"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aeb7be206eb292ebee390a40c37bf7608" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.SetObjectsEnableToCreate</definition>
+        <argsstring>()</argsstring>
+        <name>SetObjectsEnableToCreate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1744" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1744" bodyend="1760"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1adf3ee035bb438be4df8d05d608a87384" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.ConfigureActionsStackViewCreating</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackViewCreating</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1765" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1765" bodyend="1813"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a2566f2dc7cb86518d67d43571061681f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.ConfigureRibbonActionsEditing</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActionsEditing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1815" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1815" bodyend="1870"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a25d593fa3e0cb6854a8986134419f528" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.PurchaseOrder.ValidatePO</definition>
+        <argsstring>()</argsstring>
+        <name>ValidatePO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1875" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1875" bodyend="1957"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ad1e453c7f629171789f574df5cbf9a50" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.PurchaseOrder.ValidateLines</definition>
+        <argsstring>()</argsstring>
+        <name>ValidateLines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1959" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1959" bodyend="1971"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a5ff547a32c120bff969e304b8f3286dc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.PurchaseOrder.CreatePO</definition>
+        <argsstring>()</argsstring>
+        <name>CreatePO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="1973" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="1973" bodyend="2011"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a761eb8144e9fb7cfab14a7b8324a6387" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Supply.PurchaseOrder.UpdatePO</definition>
+        <argsstring>(bool finishPO=false)</argsstring>
+        <name>UpdatePO</name>
+        <param>
+          <type>bool</type>
+          <declname>finishPO</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="2013" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="2013" bodyend="2052"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a7d7d873f0a547e0a5e580cd4ca53677b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.ActionsAfterCU</definition>
+        <argsstring>()</argsstring>
+        <name>ActionsAfterCU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="2054" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="2054" bodyend="2076"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a313d0ef2a48ddc15a7c3fb04a2a25f1b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.OpenReport</definition>
+        <argsstring>(string idDoc, string reportFile)</argsstring>
+        <name>OpenReport</name>
+        <param>
+          <type>string</type>
+          <declname>idDoc</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>reportFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="2081" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="2081" bodyend="2103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a01d1e6445176fc0c6acb06a57b1668c3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Supply.PurchaseOrder.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="29" bodyend="631"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1af6011dd3093ad12fee6ce29498e77fb3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Supply.PurchaseOrder.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1373">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1372">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1373" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1371">
+        <label>HKSupply.Forms.Supply.PurchaseOrder</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order"/>
+        <childnode refid="1372" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1376">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1377">
+        <label>XtraBars</label>
+      </node>
+      <node id="1375">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1376" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1377" relation="usage">
+          <edgelabel>bbiCancel</edgelabel>
+          <edgelabel>ribbonStatusBar</edgelabel>
+          <edgelabel>bbiPrintPreview</edgelabel>
+          <edgelabel>bbiSave</edgelabel>
+          <edgelabel>bbiNew</edgelabel>
+          <edgelabel>bbiEdit</edgelabel>
+          <edgelabel>ribbonControl</edgelabel>
+          <edgelabel>ribbonPageGroup1</edgelabel>
+          <edgelabel>ribbonPage1</edgelabel>
+          <edgelabel>ribbonPageGroup2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="1374">
+        <label>HKSupply.Forms.Supply.PurchaseOrder</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order"/>
+        <childnode refid="1375" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Supply/PurchaseOrder.cs" line="29" column="1" bodyfile="HKSupply/Forms/Supply/PurchaseOrder.cs" bodystart="28" bodyend="2109"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ae891ea417f1d9057aefa111ac36b07b4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>_batchCont</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ab3ed432d0884600270b47a1f468040e3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>_currenciesList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a3b82d4679c2a3d5810af03f1c35b2ca7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>_deliveryTermList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a2c064bcb7edded165ad3792a96246899" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>_docHeadPO</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aed0bb4c7bb8667884df187ae5f7a1256" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>_docLinesList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a21117f92103f04aae903550b9f4815ab" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>_existQP</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ab79a0d0c6d5399f9301ba3dcce5cf899" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>_isLoadingPO</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a61c560009b1cc4b7caba939449f4bffc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>_itemsEyList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ac97886cf5e9bb4f015b1ae65d127c579" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>_labelDefaultFont</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a64e7dee016b9932c37c065b1346321f2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>_labelDefaultFontBold</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a443e1b36fed5e8209ffd871b31c7c795" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>_paymentTermsList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a007ad2963f340532a1c9861516a084e1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>_selectedSupplierPriceList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a104045678827aabfaafe63d8b582fdcb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>_suppliersList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1acc1c923c951c8afd30cf0e84c860d9c6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>_supplyStatusList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a7d7d873f0a547e0a5e580cd4ca53677b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ActionsAfterCU</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ActionsStates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>AddRestoreLayoutItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a6d4eae0844f1635706cc7edab3086186" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>BarButtonItemReport_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>bbiCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a8d43fe9a3464454e6a4815c3ee878fed" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>bbiEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a4f11eef669d90908dc4016330068d6ae" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aa130202d283caf79f3854ebc27965af5" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>bbiExportCsv_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1acb2989469ba865f565c6d7555d65d565" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>bbiExportExcel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>bbiNew</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a55a053868a8a27b002a67d0c6c821ae7" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>bbiPrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>bbiPrintPreview_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>bbiSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a00a943e19de89cbdffc33d387085cedf" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>BbiSaveLayout_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a5ee1b6357da4723fa4849c42cc2418d2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>CancelEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1accf4120d42212dd9d3e1e83ed2aa3f1f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1adf3ee035bb438be4df8d05d608a87384" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ConfigureActionsStackViewCreating</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ConfigureLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ConfigurePrintExportOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a84e316f2f3a9b0df8e8a2c90d958f341" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ConfigureRibbonActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a2566f2dc7cb86518d67d43571061681f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ConfigureRibbonActionsEditing</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a5ff547a32c120bff969e304b8f3286dc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>CreatePO</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1acedc9abd4724efd954af710bded812d6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>CreatePoNumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>CurrentLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>CurrentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1acbe0ec081758ccfa71220e48d74ff852" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>dateEditDelivery</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ae9bb16e630e275caa0bf33044278a985" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>DateEditDelivery_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1acf6092386cda2e41794c359517b36f4b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>dateEditDocDate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a72276b749226855f24670551ca2a102d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>DateEditDocDate_EditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1af6011dd3093ad12fee6ce29498e77fb3" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>EnableExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>EnableExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>EnableLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>EnablePrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ExportCsvFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ExportExcelFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a51dc18db20485351e48dcea5dcaa78c9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>GetDeliveryDate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a7501e77f7108dfcfebdd94a1f0d4409e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>GetExcelImportData</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1af817077e2bee3e7e06c1e48be525f2ca" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>gridView1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a28427fee13f32063ba02cd17b810028b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>gridView2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ae4db26ac585df039a1958e503e8749af" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>gridView3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aa23fd46c4a3d3e2c3e6dcc3c456f9bbf" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>gridViewLines</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a0bd04901ad536772701660eb0ece4e73" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>GridViewLines_CellValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a5ef95da895022ce3c41d2d27cb36beae" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>GridViewLines_RowCellStyle</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a252e18db041d395d57fe9b27832c9e4f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>GridViewLines_ValidatingEditor</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a137181ba543e80d67a29c03b8eaca5b2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ImportDataToGrid</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a12b0ddf81775c0259dbb7faa38b099ec" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ImportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ae7a32f3968641a71aedec24274cfbee1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>InitData</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a01d1e6445176fc0c6acb06a57b1668c3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d" prot="public" virt="virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>LayoutButton_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ad723ef726b1edaa8190e7d689a745045" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblAddress</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a9e74bd8f6c5bfa98e72d34a8aa31ef9e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblCompany</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ace59e5e8e111c811d3aea9e4b6f7ce24" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblContact</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a93a72c3f7b8faef031f3c5cfe1ebde9f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1afa06c370b110c13cc898d99e1a1786ad" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblDate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1af46261ec2545da73fa8445b9dccbb7a4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblDelivery</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a8c643bd4f19268a52a4519a9a25872c1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblDeliveryWeek</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1af773593b458ac05c1cbdfec5b7934c1d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblDocDate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ac5f395dbdc2920e2214bd740b078e68f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblDocDateWeek</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a2841e1971471171fbade35a6ac11b417" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblInvoiceTo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a079042a9d18eefd6e22f0a07830516f2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblPONumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a1e0397feb7911dd2b6ee82be04ce0919" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblRemarks</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a4cc7e01611d79bce77027faceaa98ea2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblShipTo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a8d7fc32a84ff920ddd6c481dc71da3ea" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a9116ebae24050efcdb69d3bdfa463955" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblTermPayment</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a5c402245336af435e8226cf82fc179b0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblTermsOfDelivery</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1acd6eada6d2fb081b6aa86e0ad3cfa271" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblTxtAddress</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a7c78f1e4ca6c795226918104ca17100b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblTxtCompany</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a315c30470d7dcb22cb89f52d536dc775" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblTxtContact</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a0dfb926dc559252a3a2c918c5497affc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblTxtInvoiceTo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a624af2630b9f5ce7e0a78339a3f05992" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblTxtShipTo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a7b160c9bb75ba3a209abfa136e8dc1f2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>lblWeek</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1af06b1250b74476623d8676dcb7d39680" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>LoadAuxList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ad169a14bac7da3b65cba5094d53f60ba" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>LoadPO</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aa7346313387664ab8e8d0fc2757770fb" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>LoadSelectedSupplierPriceList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aa77a483c82d575a89204a930be80512a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>memoEditRemarks</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>Modify</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>New</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a313d0ef2a48ddc15a7c3fb04a2a25f1b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>OpenReport</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ad53716a9a3ffcf3b29eb384f8dc8eb2d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>OrderDocLines</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a828bd76a0ced0c4ddf5e92943f9b6bef" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>pcFilter</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a376cc88ea359c841be27b23f38a1de20" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>peEy</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ProcessCmdKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1acd08a48b49103bfcdcbae25f4273c824" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>PurchaseOrder</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ad17859e728e5e471efa983142ab2ebd1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>PurchaseOrder_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>Read</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a78234e6074be55c99518be5825fa05d3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ResetForm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a77d643772c1e836ab6a59ff057738bba" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ResetPO</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>RestoreInitState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ribbonControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>RibbonFormBase</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ribbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ribbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ribbonPageGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ribbonStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a8f5667dab1f8b001f729fb6beffe36e2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>sbFinishPO</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aba9db20e7f740420ced5dce45c5d4e12" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SbFinishPO_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1af01198abb622d1b844aaf493b922387c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>sbImportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a26bdca41bd7d2be064fd7babd9bb2f4e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SbImportExcel_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ae5aecf1339015b18e2d0f18455bef417" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>sbOrder</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1af11a5cd364c294683d325f61c0a29a55" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SbOrder_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a72e9f1e9c13eb0ddf6cd06561b8e1229" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>sbSearch</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ac4eca5f8d62f157a0893d94db6ee1051" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SbSearch_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aa34c207baf3f59446db02c0a229e8176" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>searchLookUpEdit1View</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a4d952058e485419bcc56e13be9583830" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SearchPO</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SetActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aeb7be206eb292ebee390a40c37bf7608" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SetObjectsEnableToCreate</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ad5dd01774a689a8ffc41df47f35608c6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SetObjectsReadOnly</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SetRibbonText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aafdbdce029adfe3bbf36a8b2031049df" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SetSupplierInfo</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a525b571885a0febb0e79e7d1d87c56f3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SetUpButtons</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a256400a776d5cc8e8f7a78b7cf0d47a0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SetUpEvents</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a64c7642e5df89ce40360ba3236e9f688" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SetUpGrdLines</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a8670b3635be210a9b031273a1c63a0db" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SetUpLabels</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ab17a93bd6428455cc8054aff7b3d698d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SetupPanelControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a0da9e7f1dc7b9dbd2117b6eb2cd1ef9c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SetUpPictureEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aedcfbdd965c8a079bcf97c254b036039" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SetUpSearchLookUpEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1afc9aa2a3713db2b62d87812c30f34dc0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SetUpSlueCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a636880c5f8b3a64df3384b586ab2ae03" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SetUpSlueDeliveryTerms</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a6a72f009d17505677a5aa5d04c5b3c9a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SetUpSluePaymentTerms</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a21828a475c6476a75ba7d63fd7ddaa3b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SetUpSlueSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1afd1477301e47678255b7c39d2ecd06c8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SetVisiblePropertyByState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a9c3099b0ed3ad30e2731b5be9264ccba" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ShowMessageDocsGenerated</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a3a9f11f4b31c99d017ab27f9ca81e376" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>slueCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a733469ef02c539843ff79cd8408470fd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>slueDeliveryTerms</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a0f98b046eb7d26337cadb3eedff89659" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>sluePaymentTerm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a5637159b83418a573fff5757c32667b7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>slueSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1aa3ae2b635b1272b4ab6bfcd0ce918579" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>SlueSupplierEditValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ada9d548c162f24dc0586da5036267c75" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>txtPONumber</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a31da60601774fa4acbe6e4b916a75cb5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>UpdateBatch</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a1c2534accb11795cb6512fde5ef1dfb4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>UpdateItemsPrice</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a761eb8144e9fb7cfab14a7b8324a6387" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>UpdatePO</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ad1e453c7f629171789f574df5cbf9a50" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ValidateLines</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a25d593fa3e0cb6854a8986134419f528" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>ValidatePO</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1adaf2683fa0f751ba49379b1eac1f8d85" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>xgrdLines</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a4d4f52882fc2aea0a72bb991578700a0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>XgrdLines_ProcessGridKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ae1e9dd213ee370d9c45370566633e39f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>xtcGeneral</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1ab10e613037e701e632d7acffe273b0d6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>xtcPO</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a0e2d20b82be763bfdc61609eb7e49810" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>xtpOrderedGoods</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a93e159cf0ce3b4079fc8a1a3794a4fd6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>xtpPO</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_supply_1_1_purchase_order_1a630d73e12715836b36934bd412bb3f2a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Supply::PurchaseOrder</scope><name>xtpTerms</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

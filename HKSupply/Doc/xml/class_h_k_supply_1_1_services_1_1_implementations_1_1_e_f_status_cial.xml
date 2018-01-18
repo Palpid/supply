@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_status_cial" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFStatusCial</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_status_cial" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IStatusCial</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_status_cial_1a70c4fcf0a94936c9dca269c1fb71fbac" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFStatusCial._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_status_prod" kindref="compound">EFStatusProd</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFStatusCial.cs" line="18" column="1" bodyfile="HKSupply/Services/Implementations/EFStatusCial.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_status_cial_1aadcffc9c57a266d260b7f5a0e465e7dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_status_cial" kindref="compound">StatusCial</ref> &gt;</type>
+        <definition>List&lt;StatusCial&gt; HKSupply.Services.Implementations.EFStatusCial.GetStatusCial</definition>
+        <argsstring>()</argsstring>
+        <name>GetStatusCial</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_status_cial_1a06a9e935da453310543465c7f09e0b6e">GetStatusCial</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFStatusCial.cs" line="20" column="1" bodyfile="HKSupply/Services/Implementations/EFStatusCial.cs" bodystart="20" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="534">
+        <label>IStatusCial</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_status_cial"/>
+      </node>
+      <node id="533">
+        <label>HKSupply.Services.Implementations.EFStatusCial</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_status_cial"/>
+        <childnode refid="534" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="536">
+        <label>IStatusCial</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_status_cial"/>
+      </node>
+      <node id="535">
+        <label>HKSupply.Services.Implementations.EFStatusCial</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_status_cial"/>
+        <childnode refid="536" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFStatusCial.cs" line="17" column="1" bodyfile="HKSupply/Services/Implementations/EFStatusCial.cs" bodystart="16" bodyend="55"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_status_cial_1a70c4fcf0a94936c9dca269c1fb71fbac" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFStatusCial</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_status_cial_1aadcffc9c57a266d260b7f5a0e465e7dd" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFStatusCial</scope><name>GetStatusCial</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_migrations_1_1_d_o_c___h_e_a_d___a_t_t_a_c_h___f_i_l_e_s__01" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Migrations::DOC_HEAD_ATTACH_FILES_01</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IMigrationMetadata</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">DbMigration</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_migrations_1_1_d_o_c___h_e_a_d___a_t_t_a_c_h___f_i_l_e_s__01_1a469d4203b28fe4f5c06d4745915c2d0b" prot="private" static="no" mutable="no">
+        <type>readonly ResourceManager</type>
+        <definition>readonly ResourceManager HKSupply.Migrations.DOC_HEAD_ATTACH_FILES_01.Resources</definition>
+        <argsstring></argsstring>
+        <name>Resources</name>
+        <initializer>= new ResourceManager(typeof(<ref refid="class_h_k_supply_1_1_migrations_1_1_d_o_c___h_e_a_d___a_t_t_a_c_h___f_i_l_e_s__01" kindref="compound">DOC_HEAD_ATTACH_FILES_01</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201711141337575_DOC_HEAD_ATTACH_FILES_01.Designer.cs" line="12" column="1" bodyfile="HKSupply/Migrations/201711141337575_DOC_HEAD_ATTACH_FILES_01.Designer.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_migrations_1_1_d_o_c___h_e_a_d___a_t_t_a_c_h___f_i_l_e_s__01_1aab70fa398a1ab73f92a881589146717a" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string IMigrationMetadata.</type>
+        <definition>string IMigrationMetadata. HKSupply.Migrations.DOC_HEAD_ATTACH_FILES_01.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201711141337575_DOC_HEAD_ATTACH_FILES_01.Designer.cs" line="14" column="1" bodyfile="HKSupply/Migrations/201711141337575_DOC_HEAD_ATTACH_FILES_01.Designer.cs" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_migrations_1_1_d_o_c___h_e_a_d___a_t_t_a_c_h___f_i_l_e_s__01_1a476dd00e0266738b5fe93bd502bbc10c" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string IMigrationMetadata.</type>
+        <definition>string IMigrationMetadata. HKSupply.Migrations.DOC_HEAD_ATTACH_FILES_01.Source</definition>
+        <argsstring></argsstring>
+        <name>Source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201711141337575_DOC_HEAD_ATTACH_FILES_01.Designer.cs" line="19" column="1" bodyfile="HKSupply/Migrations/201711141337575_DOC_HEAD_ATTACH_FILES_01.Designer.cs" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_migrations_1_1_d_o_c___h_e_a_d___a_t_t_a_c_h___f_i_l_e_s__01_1a0c7ef90175857f9f9d9b59005658da6f" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string IMigrationMetadata.</type>
+        <definition>string IMigrationMetadata. HKSupply.Migrations.DOC_HEAD_ATTACH_FILES_01.Target</definition>
+        <argsstring></argsstring>
+        <name>Target</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201711141337575_DOC_HEAD_ATTACH_FILES_01.Designer.cs" line="24" column="1" bodyfile="HKSupply/Migrations/201711141337575_DOC_HEAD_ATTACH_FILES_01.Designer.cs" bodystart="25" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_migrations_1_1_d_o_c___h_e_a_d___a_t_t_a_c_h___f_i_l_e_s__01_1a8e15ece9f82e8fad34f1e860bebae0fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Migrations.DOC_HEAD_ATTACH_FILES_01.Up</definition>
+        <argsstring>()</argsstring>
+        <name>Up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201711141337575_DOC_HEAD_ATTACH_FILES_01.cs" line="8" column="1" bodyfile="HKSupply/Migrations/201711141337575_DOC_HEAD_ATTACH_FILES_01.cs" bodystart="8" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_migrations_1_1_d_o_c___h_e_a_d___a_t_t_a_c_h___f_i_l_e_s__01_1ac1bcc82200cb26fde6b860f16bca311d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Migrations.DOC_HEAD_ATTACH_FILES_01.Down</definition>
+        <argsstring>()</argsstring>
+        <name>Down</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201711141337575_DOC_HEAD_ATTACH_FILES_01.cs" line="26" column="1" bodyfile="HKSupply/Migrations/201711141337575_DOC_HEAD_ATTACH_FILES_01.cs" bodystart="26" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="318">
+        <label>HKSupply.Migrations.DOC_HEAD_ATTACH_FILES_01</label>
+        <link refid="class_h_k_supply_1_1_migrations_1_1_d_o_c___h_e_a_d___a_t_t_a_c_h___f_i_l_e_s__01"/>
+        <childnode refid="319" relation="public-inheritance">
+        </childnode>
+        <childnode refid="320" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="320">
+        <label>DbMigration</label>
+      </node>
+      <node id="319">
+        <label>IMigrationMetadata</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="321">
+        <label>HKSupply.Migrations.DOC_HEAD_ATTACH_FILES_01</label>
+        <link refid="class_h_k_supply_1_1_migrations_1_1_d_o_c___h_e_a_d___a_t_t_a_c_h___f_i_l_e_s__01"/>
+        <childnode refid="322" relation="public-inheritance">
+        </childnode>
+        <childnode refid="323" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="323">
+        <label>DbMigration</label>
+      </node>
+      <node id="322">
+        <label>IMigrationMetadata</label>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Migrations/201711141337575_DOC_HEAD_ATTACH_FILES_01.cs" line="7" column="1" bodyfile="HKSupply/Migrations/201711141337575_DOC_HEAD_ATTACH_FILES_01.cs" bodystart="6" bodyend="30"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_migrations_1_1_d_o_c___h_e_a_d___a_t_t_a_c_h___f_i_l_e_s__01_1ac1bcc82200cb26fde6b860f16bca311d" prot="public" virt="non-virtual"><scope>HKSupply::Migrations::DOC_HEAD_ATTACH_FILES_01</scope><name>Down</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1_d_o_c___h_e_a_d___a_t_t_a_c_h___f_i_l_e_s__01_1aab70fa398a1ab73f92a881589146717a" prot="private" virt="non-virtual"><scope>HKSupply::Migrations::DOC_HEAD_ATTACH_FILES_01</scope><name>Id</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1_d_o_c___h_e_a_d___a_t_t_a_c_h___f_i_l_e_s__01_1a469d4203b28fe4f5c06d4745915c2d0b" prot="private" virt="non-virtual"><scope>HKSupply::Migrations::DOC_HEAD_ATTACH_FILES_01</scope><name>Resources</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1_d_o_c___h_e_a_d___a_t_t_a_c_h___f_i_l_e_s__01_1a476dd00e0266738b5fe93bd502bbc10c" prot="private" virt="non-virtual"><scope>HKSupply::Migrations::DOC_HEAD_ATTACH_FILES_01</scope><name>Source</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1_d_o_c___h_e_a_d___a_t_t_a_c_h___f_i_l_e_s__01_1a0c7ef90175857f9f9d9b59005658da6f" prot="private" virt="non-virtual"><scope>HKSupply::Migrations::DOC_HEAD_ATTACH_FILES_01</scope><name>Target</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1_d_o_c___h_e_a_d___a_t_t_a_c_h___f_i_l_e_s__01_1a8e15ece9f82e8fad34f1e860bebae0fa" prot="public" virt="non-virtual"><scope>HKSupply::Migrations::DOC_HEAD_ATTACH_FILES_01</scope><name>Up</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

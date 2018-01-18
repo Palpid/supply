@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_type" kind="interface" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Interfaces::IDocType</compoundname>
+    <derivedcompoundref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_type" prot="public" virt="non-virtual">HKSupply.Services.Implementations.EFDocType</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_type_1a2794563a2246ea84d2af7caff9150aee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_doc_type" kindref="compound">DocType</ref> &gt;</type>
+        <definition>List&lt;DocType&gt; HKSupply.Services.Interfaces.IDocType.GetDocsType</definition>
+        <argsstring>(string idItemGroup)</argsstring>
+        <name>GetDocsType</name>
+        <reimplementedby refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_type_1a83b9c517bfc1f39bd3d3ca8089418a06">GetDocsType</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>idItemGroup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Interfaces/IDocType.cs" line="12" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="737">
+        <label>HKSupply.Services.Implementations.EFDocType</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_type"/>
+        <childnode refid="736" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="736">
+        <label>HKSupply.Services.Interfaces.IDocType</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_type"/>
+      </node>
+    </inheritancegraph>
+    <location file="HKSupply/Services/Interfaces/IDocType.cs" line="11" column="1" bodyfile="HKSupply/Services/Interfaces/IDocType.cs" bodystart="10" bodyend="13"/>
+    <listofallmembers>
+      <member refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_type_1a2794563a2246ea84d2af7caff9150aee" prot="public" virt="non-virtual"><scope>HKSupply::Services::Interfaces::IDocType</scope><name>GetDocsType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

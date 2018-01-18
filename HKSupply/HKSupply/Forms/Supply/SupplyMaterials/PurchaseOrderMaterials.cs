@@ -63,6 +63,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
 
                 ConfigureRibbonActions();
                 LoadAuxList();
+                SetUpTabs();
                 SetUpLabels();
                 SetUpButtons();
                 SetUpSearchLookUpEdit();
@@ -341,6 +342,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
             {
                 if (lueItemGroup.EditValue != null)
                 {
+                    Cursor = Cursors.WaitCursor;
                     ImportExcel();
                 }
                 else
@@ -353,6 +355,10 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
             catch (Exception ex)
             {
                 XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
             }
         }
 
@@ -518,6 +524,20 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
         #region Private Methods
 
         #region SetUps Form Objects
+
+        private void SetUpTabs()
+        {
+            try
+            {
+                xtpPO.AutoScroll = true;
+                xtpPO.AutoScrollMargin = new Size(20, 20);
+                xtpPO.AutoScrollMinSize = new Size(xtpPO.Width, xtpPO.Height);
+            }
+            catch
+            {
+                throw;
+            }
+        }
 
         private void SetUpLabels()
         {
@@ -696,7 +716,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
             {
                 sluePaymentTerm.Properties.DataSource = _paymentTermsList;
                 sluePaymentTerm.Properties.ValueMember = nameof(PaymentTerms.IdPaymentTerms);
-                sluePaymentTerm.Properties.DisplayMember = nameof(PaymentTerms.IdPaymentTerms);
+                sluePaymentTerm.Properties.DisplayMember = nameof(PaymentTerms.Description);
                 sluePaymentTerm.Properties.View.Columns.AddField(nameof(PaymentTerms.IdPaymentTerms)).Visible = true;
                 sluePaymentTerm.Properties.View.Columns.AddField(nameof(PaymentTerms.Description)).Visible = true;
                 sluePaymentTerm.Properties.NullText = "Select Payment Term...";
@@ -714,7 +734,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
             {
                 slueDeliveryTerms.Properties.DataSource = _deliveryTermList;
                 slueDeliveryTerms.Properties.ValueMember = nameof(DeliveryTerm.IdDeliveryTerm);
-                slueDeliveryTerms.Properties.DisplayMember = nameof(DeliveryTerm.IdDeliveryTerm);
+                slueDeliveryTerms.Properties.DisplayMember = nameof(DeliveryTerm.Description);
                 slueDeliveryTerms.Properties.View.Columns.AddField(nameof(DeliveryTerm.IdDeliveryTerm)).Visible = true;
                 slueDeliveryTerms.Properties.View.Columns.AddField(nameof(DeliveryTerm.Description)).Visible = true;
                 slueDeliveryTerms.Properties.NullText = "Select Delivery Term...";

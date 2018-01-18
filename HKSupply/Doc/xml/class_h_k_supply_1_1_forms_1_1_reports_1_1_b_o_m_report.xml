@@ -1,0 +1,746 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Reports::BOMReport</compoundname>
+    <basecompoundref refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" prot="public" virt="non-virtual">HKSupply.Forms.RibbonFormBase</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ad969c325a8723cc9591ec4f52561a42e" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>eGridColumns</name>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ad969c325a8723cc9591ec4f52561a42ea9110cea0f9939547d0890c0a72882ae1" prot="private">
+          <name>ID_BOM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ad969c325a8723cc9591ec4f52561a42ea35ba4a2677442e210c23a00a5601aba3" prot="private">
+          <name>DESCRIPTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ad969c325a8723cc9591ec4f52561a42ea255db59fb968307d4f98b610c18e7f33" prot="private">
+          <name>ID_ITEM_BCN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ad969c325a8723cc9591ec4f52561a42ea5821f26ac9b519ddcef883236abddffb" prot="private">
+          <name>ID_SUPPLIER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ad969c325a8723cc9591ec4f52561a42ea35755a26dab6d63e0608cf329f599a76" prot="private">
+          <name>PHOTO_URL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.cs" line="28" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.cs" bodystart="27" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a09d088965e7c70d4dca82d0a5ad360ae" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_ey" kindref="compound">ItemEy</ref> &gt;</type>
+        <definition>List&lt;ItemEy&gt; HKSupply.Forms.Reports.BOMReport._itemBcnList</definition>
+        <argsstring></argsstring>
+        <name>_itemBcnList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.cs" line="40" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a28d6277ad6e35bb73229ce88ec09f080" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_model" kindref="compound">Model</ref> &gt;</type>
+        <definition>List&lt;Model&gt; HKSupply.Forms.Reports.BOMReport._modelList</definition>
+        <argsstring></argsstring>
+        <name>_modelList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.cs" line="41" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1aa42babce9417820ef8c7bb4c82080e39" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_supplier" kindref="compound">Supplier</ref> &gt;</type>
+        <definition>List&lt;Supplier&gt; HKSupply.Forms.Reports.BOMReport._suppliersList</definition>
+        <argsstring></argsstring>
+        <name>_suppliersList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.cs" line="42" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a5af180324f0117b598b3d27de01a7e1b" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_status_cial" kindref="compound">StatusCial</ref> &gt;</type>
+        <definition>List&lt;StatusCial&gt; HKSupply.Forms.Reports.BOMReport._statusCialList</definition>
+        <argsstring></argsstring>
+        <name>_statusCialList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.cs" line="43" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1abaa7972ebd2ed44bfa67b1d74b23261b" prot="private" static="no" mutable="no">
+        <type>DataTable</type>
+        <definition>DataTable HKSupply.Forms.Reports.BOMReport._dtGrid</definition>
+        <argsstring></argsstring>
+        <name>_dtGrid</name>
+        <initializer>= new DataTable()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.cs" line="45" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a638f059c37f5d37b8006d4e90a44bad7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Reports.BOMReport._clearingSlue</definition>
+        <argsstring></argsstring>
+        <name>_clearingSlue</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.cs" line="47" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a26de8b26f04e0ab49e294f6250da9c76" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Reports.BOMReport.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1aca26cf0477a2f64ac2c7ec0649a6573c" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Reports.BOMReport.xtcGeneral</definition>
+        <argsstring></argsstring>
+        <name>xtcGeneral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="282" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a13dcfc9afee5f3aec869292e757d1de8" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Reports.BOMReport.xtpList</definition>
+        <argsstring></argsstring>
+        <name>xtpList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="283" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a4d99f9f7b5a33fc0c57de21591f90edc" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Reports.BOMReport.lblModel</definition>
+        <argsstring></argsstring>
+        <name>lblModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="284" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a622c875ffa35d6957058418a0e0a8a23" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Reports.BOMReport.slueModel</definition>
+        <argsstring></argsstring>
+        <name>slueModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="285" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ad64f55ab2437529a0d3984e2696847ac" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Reports.BOMReport.gridView2</definition>
+        <argsstring></argsstring>
+        <name>gridView2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="286" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a91183b53091247b05294ceb922f9d584" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Reports.BOMReport.lblItemBcn</definition>
+        <argsstring></argsstring>
+        <name>lblItemBcn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="287" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ae9f30d29800f014c948abd33f4ad0864" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Reports.BOMReport.lblSupplier</definition>
+        <argsstring></argsstring>
+        <name>lblSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="288" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a8b6829b3aecd67068e3cad29ee09c0db" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Reports.BOMReport.slueItem</definition>
+        <argsstring></argsstring>
+        <name>slueItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="289" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a740ffdd776a039ed80f872e2e64088f4" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Reports.BOMReport.gridView1</definition>
+        <argsstring></argsstring>
+        <name>gridView1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="290" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a618bfc031bf6fd8f46ba4ab69e0521d3" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Reports.BOMReport.slueSupplier</definition>
+        <argsstring></argsstring>
+        <name>slueSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="291" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ad11e669cc99da214aeeff7408396bc23" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Reports.BOMReport.searchLookUpEdit1View</definition>
+        <argsstring></argsstring>
+        <name>searchLookUpEdit1View</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="292" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a2654a0977395d5ef0788ad85b695b2a4" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Reports.BOMReport.xgrdList</definition>
+        <argsstring></argsstring>
+        <name>xgrdList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="293" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ab511736f3ae564f5db80d3424f2528e7" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Reports.BOMReport.gridViewList</definition>
+        <argsstring></argsstring>
+        <name>gridViewList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="294" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ab86f027df0be0fc21c706b692b0ab507" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Reports.BOMReport.sbFilter</definition>
+        <argsstring></argsstring>
+        <name>sbFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="295" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a26cb6dd8671b5550cfe7cef05488ec38" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SimpleButton</type>
+        <definition>DevExpress.XtraEditors.SimpleButton HKSupply.Forms.Reports.BOMReport.sbShowReport</definition>
+        <argsstring></argsstring>
+        <name>sbShowReport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="296" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ad117fb24bf17cccd42025956484b04ec" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.LabelControl</type>
+        <definition>DevExpress.XtraEditors.LabelControl HKSupply.Forms.Reports.BOMReport.lblStatusCial</definition>
+        <argsstring></argsstring>
+        <name>lblStatusCial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="297" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a7ecb90e6f97c9701eacb4c7335700cc2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraEditors.SearchLookUpEdit</type>
+        <definition>DevExpress.XtraEditors.SearchLookUpEdit HKSupply.Forms.Reports.BOMReport.slueStatusCial</definition>
+        <argsstring></argsstring>
+        <name>slueStatusCial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="298" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a2ce5ead9337cd5efe7273451f4316398" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Reports.BOMReport.gridView3</definition>
+        <argsstring></argsstring>
+        <name>gridView3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="299" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1af33b6f284de1bf363c9f247b9ba98595" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Reports.BOMReport.BOMReport</definition>
+        <argsstring>()</argsstring>
+        <name>BOMReport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.cs" line="51" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.cs" bodystart="51" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a9a0c08042c13f67978ed48fa45ae116e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Reports.BOMReport.BOMReport_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BOMReport_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.cs" line="76" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.cs" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a6623d4548b8ec011a1ce89df04d9c829" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Reports.BOMReport.sbFilter_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>sbFilter_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.cs" line="81" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.cs" bodystart="81" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a355f1f9613e805940508dbe5ca52a419" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Reports.BOMReport.sbShowReport_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>sbShowReport_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.cs" line="96" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.cs" bodystart="96" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1af337f23517953e78eec7ac69071ad03d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Reports.BOMReport.LoadAuxList</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAuxList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.cs" line="115" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.cs" bodystart="115" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a6e325561b400b93cfe948f39a58de43a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Reports.BOMReport.LoadGrid</definition>
+        <argsstring>()</argsstring>
+        <name>LoadGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.cs" line="130" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.cs" bodystart="130" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1affcbc957fcd4eb3194321cae619c3e91" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Reports.BOMReport.SetUpSlueSupplier</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSlueSupplier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.cs" line="159" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.cs" bodystart="159" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a4723af7cc982941cc61f9c08d306ba24" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Reports.BOMReport.SetUpSlueModel</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSlueModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.cs" line="176" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.cs" bodystart="176" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a1a2d5a261ec6e5ebb5e934fde2850ade" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Reports.BOMReport.SetUpSlueItemEy</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSlueItemEy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.cs" line="205" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.cs" bodystart="205" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a2937d98605cb2a2d66d45d4c5ab79559" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Reports.BOMReport.SetUpSlueStatusCial</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpSlueStatusCial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.cs" line="236" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.cs" bodystart="236" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ad7784e413d31c90059bb924dca9ff5f9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Reports.BOMReport.SetupGrdList</definition>
+        <argsstring>()</argsstring>
+        <name>SetupGrdList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.cs" line="250" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.cs" bodystart="250" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a15113cde10367d940e092f86b3f87642" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Reports.BOMReport.OpenReport</definition>
+        <argsstring>()</argsstring>
+        <name>OpenReport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.cs" line="287" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.cs" bodystart="287" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a98e510299600de7583be49135e40fb75" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Reports.BOMReport.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="29" bodyend="278"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a89d9a55cd574e447d1489a8b4f438dfa" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Reports.BOMReport.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Reports/BOMReport.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="74">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="72">
+        <label>HKSupply.Forms.Reports.BOMReport</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report"/>
+        <childnode refid="73" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="74" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="77">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="75">
+        <label>HKSupply.Forms.Reports.BOMReport</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report"/>
+        <childnode refid="76" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>XtraBars</label>
+      </node>
+      <node id="76">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="77" relation="public-inheritance">
+        </childnode>
+        <childnode refid="78" relation="usage">
+          <edgelabel>bbiCancel</edgelabel>
+          <edgelabel>ribbonStatusBar</edgelabel>
+          <edgelabel>bbiPrintPreview</edgelabel>
+          <edgelabel>bbiSave</edgelabel>
+          <edgelabel>bbiNew</edgelabel>
+          <edgelabel>bbiEdit</edgelabel>
+          <edgelabel>ribbonControl</edgelabel>
+          <edgelabel>ribbonPageGroup1</edgelabel>
+          <edgelabel>ribbonPage1</edgelabel>
+          <edgelabel>ribbonPageGroup2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Reports/BOMReport.cs" line="23" column="1" bodyfile="HKSupply/Forms/Reports/BOMReport.cs" bodystart="22" bodyend="316"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a638f059c37f5d37b8006d4e90a44bad7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>_clearingSlue</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1abaa7972ebd2ed44bfa67b1d74b23261b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>_dtGrid</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a09d088965e7c70d4dca82d0a5ad360ae" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>_itemBcnList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a28d6277ad6e35bb73229ce88ec09f080" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>_modelList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a5af180324f0117b598b3d27de01a7e1b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>_statusCialList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1aa42babce9417820ef8c7bb4c82080e39" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>_suppliersList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>ActionsStates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>AddRestoreLayoutItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f" prot="public" virt="virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>BarButtonItemReport_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>bbiCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318" prot="public" virt="virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>bbiEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3" prot="public" virt="virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a" prot="public" virt="virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>bbiExportCsv_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811" prot="public" virt="virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>bbiExportExcel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>bbiNew</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a" prot="public" virt="virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>bbiPrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61" prot="public" virt="virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>bbiPrintPreview_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>bbiSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9" prot="public" virt="virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58" prot="public" virt="virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>BbiSaveLayout_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1af33b6f284de1bf363c9f247b9ba98595" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>BOMReport</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a9a0c08042c13f67978ed48fa45ae116e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>BOMReport_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a26de8b26f04e0ab49e294f6250da9c76" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>ConfigureLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>ConfigurePrintExportOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>CurrentLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>CurrentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a89d9a55cd574e447d1489a8b4f438dfa" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ad969c325a8723cc9591ec4f52561a42e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>eGridColumns</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>EnableExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>EnableExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>EnableLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>EnablePrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>ExportCsvFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>ExportExcelFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a740ffdd776a039ed80f872e2e64088f4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>gridView1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ad64f55ab2437529a0d3984e2696847ac" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>gridView2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a2ce5ead9337cd5efe7273451f4316398" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>gridView3</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ab511736f3ae564f5db80d3424f2528e7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>gridViewList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a98e510299600de7583be49135e40fb75" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d" prot="public" virt="virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>LayoutButton_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a91183b53091247b05294ceb922f9d584" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>lblItemBcn</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a4d99f9f7b5a33fc0c57de21591f90edc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>lblModel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ad117fb24bf17cccd42025956484b04ec" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>lblStatusCial</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ae9f30d29800f014c948abd33f4ad0864" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>lblSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1af337f23517953e78eec7ac69071ad03d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>LoadAuxList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a6e325561b400b93cfe948f39a58de43a" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>LoadGrid</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>Modify</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>New</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a15113cde10367d940e092f86b3f87642" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>OpenReport</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>ProcessCmdKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>Read</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>RestoreInitState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>ribbonControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>RibbonFormBase</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>ribbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>ribbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>ribbonPageGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>ribbonStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ab86f027df0be0fc21c706b692b0ab507" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>sbFilter</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a6623d4548b8ec011a1ce89df04d9c829" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>sbFilter_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a26cb6dd8671b5550cfe7cef05488ec38" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>sbShowReport</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a355f1f9613e805940508dbe5ca52a419" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>sbShowReport_Click</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ad11e669cc99da214aeeff7408396bc23" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>searchLookUpEdit1View</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>SetActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>SetRibbonText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1ad7784e413d31c90059bb924dca9ff5f9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>SetupGrdList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a1a2d5a261ec6e5ebb5e934fde2850ade" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>SetUpSlueItemEy</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a4723af7cc982941cc61f9c08d306ba24" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>SetUpSlueModel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a2937d98605cb2a2d66d45d4c5ab79559" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>SetUpSlueStatusCial</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1affcbc957fcd4eb3194321cae619c3e91" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>SetUpSlueSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a8b6829b3aecd67068e3cad29ee09c0db" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>slueItem</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a622c875ffa35d6957058418a0e0a8a23" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>slueModel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a7ecb90e6f97c9701eacb4c7335700cc2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>slueStatusCial</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a618bfc031bf6fd8f46ba4ab69e0521d3" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>slueSupplier</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a2654a0977395d5ef0788ad85b695b2a4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>xgrdList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1aca26cf0477a2f64ac2c7ec0649a6573c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>xtcGeneral</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report_1a13dcfc9afee5f3aec869292e757d1de8" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Reports::BOMReport</scope><name>xtpList</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

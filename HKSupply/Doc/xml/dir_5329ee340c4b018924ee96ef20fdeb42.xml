@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_5329ee340c4b018924ee96ef20fdeb42" kind="dir">
+    <compoundname>HKSupply/PRJ_Stocks/Helpers</compoundname>
+    <innerfile refid="_excel_8cs">Excel.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/PRJ_Stocks/Helpers/"/>
+  </compounddef>
+</doxygen>

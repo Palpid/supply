@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</compoundname>
+    <basecompoundref refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" prot="public" virt="non-virtual">HKSupply.Forms.RibbonFormBase</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1a8125875aee56520264908ba444465e18" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_currency" kindref="compound">Currency</ref> &gt;</type>
+        <definition>List&lt;Currency&gt; HKSupply.Forms.Master.CurrenciesEchangeRatesManagement._currenciesList</definition>
+        <argsstring></argsstring>
+        <name>_currenciesList</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_models_1_1_currency" kindref="compound">Currency</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.cs" line="40" column="1" bodyfile="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1a54b5a9e172311195fc7e95bbe658944c" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_exchange_rate" kindref="compound">ExchangeRate</ref> &gt;</type>
+        <definition>List&lt;ExchangeRate&gt; HKSupply.Forms.Master.CurrenciesEchangeRatesManagement._echangeRatesList</definition>
+        <argsstring></argsstring>
+        <name>_echangeRatesList</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_models_1_1_exchange_rate" kindref="compound">ExchangeRate</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.cs" line="41" column="1" bodyfile="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1a4292dc7845e51de4fb38e5531e39856e" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Master.CurrenciesEchangeRatesManagement.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1afbc54c6103c4ecd2f3870973048067ed" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabControl</type>
+        <definition>DevExpress.XtraTab.XtraTabControl HKSupply.Forms.Master.CurrenciesEchangeRatesManagement.xtraTabControlGeneral</definition>
+        <argsstring></argsstring>
+        <name>xtraTabControlGeneral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.Designer.cs" line="151" column="1" bodyfile="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.Designer.cs" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1afffc4a15063e64c54629072e56e194c7" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.CurrenciesEchangeRatesManagement.xtraTabPageCurrency</definition>
+        <argsstring></argsstring>
+        <name>xtraTabPageCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.Designer.cs" line="152" column="1" bodyfile="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.Designer.cs" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1a61fdc85512e2ad683d3454fdb6d26785" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraTab.XtraTabPage</type>
+        <definition>DevExpress.XtraTab.XtraTabPage HKSupply.Forms.Master.CurrenciesEchangeRatesManagement.xtraTabPageEchangeRates</definition>
+        <argsstring></argsstring>
+        <name>xtraTabPageEchangeRates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.Designer.cs" line="153" column="1" bodyfile="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.Designer.cs" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1af7dd071698440fefe97a515c0c344d76" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.CurrenciesEchangeRatesManagement.xgrdCurrencies</definition>
+        <argsstring></argsstring>
+        <name>xgrdCurrencies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.Designer.cs" line="154" column="1" bodyfile="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.Designer.cs" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1ab3b4e58b4d563844c5883f454f6ea876" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.CurrenciesEchangeRatesManagement.gridViewCurrencies</definition>
+        <argsstring></argsstring>
+        <name>gridViewCurrencies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.Designer.cs" line="155" column="1" bodyfile="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.Designer.cs" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1a021ae2debc5d84b33570237125e5a8f2" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.CurrenciesEchangeRatesManagement.xgrdEchangeRates</definition>
+        <argsstring></argsstring>
+        <name>xgrdEchangeRates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.Designer.cs" line="156" column="1" bodyfile="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.Designer.cs" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1aae961136e49c2031847330228a65b6d6" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.CurrenciesEchangeRatesManagement.gridViewEchangeRates</definition>
+        <argsstring></argsstring>
+        <name>gridViewEchangeRates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.Designer.cs" line="157" column="1" bodyfile="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.Designer.cs" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1a3d3f09c4a68bd1a7da268c6ee35bbdd4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Master.CurrenciesEchangeRatesManagement.CurrenciesEchangeRatesManagement</definition>
+        <argsstring>()</argsstring>
+        <name>CurrenciesEchangeRatesManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.cs" line="45" column="1" bodyfile="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.cs" bodystart="45" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1a0236a0285eaf8ff4ccf4f1ec2c421a33" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CurrenciesEchangeRatesManagement.ConfigureRibbonActions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.cs" line="63" column="1" bodyfile="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.cs" bodystart="63" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1ade37aa607ed44ee62d3360b981f3e0f5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CurrenciesEchangeRatesManagement.CurrenciesEchangeRatesManagement_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>CurrenciesEchangeRatesManagement_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.cs" line="79" column="1" bodyfile="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.cs" bodystart="79" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1ae25492a50dd557982dd46c409c70d2bd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CurrenciesEchangeRatesManagement.SetUpGrdCurrencies</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdCurrencies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.cs" line="95" column="1" bodyfile="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.cs" bodystart="95" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1a0eeff49cdc055a7cf462532f5d394b4f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CurrenciesEchangeRatesManagement.SetUpGrdEchangeRates</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdEchangeRates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.cs" line="128" column="1" bodyfile="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.cs" bodystart="128" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1ab7946b9881324f21eac5375183154ff1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CurrenciesEchangeRatesManagement.LoadAllCurrencies</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAllCurrencies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.cs" line="168" column="1" bodyfile="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.cs" bodystart="168" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1ade3920d2355b5b53d284ee0efc99769d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CurrenciesEchangeRatesManagement.LoadAllEchangeRates</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAllEchangeRates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.cs" line="181" column="1" bodyfile="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.cs" bodystart="181" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1aec66d187f998bb19426a635254ade806" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.CurrenciesEchangeRatesManagement.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.Designer.cs" bodystart="29" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1abad34f59c7b089f1a5a2df80fa66ba07" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.CurrenciesEchangeRatesManagement.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="150">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="149">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="150" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="148">
+        <label>HKSupply.Forms.Master.CurrenciesEchangeRatesManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management"/>
+        <childnode refid="149" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="153">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="154">
+        <label>XtraBars</label>
+      </node>
+      <node id="152">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="153" relation="public-inheritance">
+        </childnode>
+        <childnode refid="154" relation="usage">
+          <edgelabel>bbiCancel</edgelabel>
+          <edgelabel>ribbonStatusBar</edgelabel>
+          <edgelabel>bbiPrintPreview</edgelabel>
+          <edgelabel>bbiSave</edgelabel>
+          <edgelabel>bbiNew</edgelabel>
+          <edgelabel>bbiEdit</edgelabel>
+          <edgelabel>ribbonControl</edgelabel>
+          <edgelabel>ribbonPageGroup1</edgelabel>
+          <edgelabel>ribbonPage1</edgelabel>
+          <edgelabel>ribbonPageGroup2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="151">
+        <label>HKSupply.Forms.Master.CurrenciesEchangeRatesManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management"/>
+        <childnode refid="152" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.cs" line="21" column="1" bodyfile="HKSupply/Forms/Master/CurrenciesEchangeRatesManagement.cs" bodystart="20" bodyend="195"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1a8125875aee56520264908ba444465e18" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>_currenciesList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1a54b5a9e172311195fc7e95bbe658944c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>_echangeRatesList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>ActionsStates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>AddRestoreLayoutItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>BarButtonItemReport_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>bbiCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>bbiEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>bbiExportCsv_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>bbiExportExcel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>bbiNew</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>bbiPrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>bbiPrintPreview_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>bbiSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>BbiSaveLayout_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1a4292dc7845e51de4fb38e5531e39856e" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>ConfigureLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>ConfigurePrintExportOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1a0236a0285eaf8ff4ccf4f1ec2c421a33" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>ConfigureRibbonActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1a3d3f09c4a68bd1a7da268c6ee35bbdd4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>CurrenciesEchangeRatesManagement</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1ade37aa607ed44ee62d3360b981f3e0f5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>CurrenciesEchangeRatesManagement_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>CurrentLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>CurrentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1abad34f59c7b089f1a5a2df80fa66ba07" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>EnableExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>EnableExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>EnableLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>EnablePrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>ExportCsvFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>ExportExcelFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1ab3b4e58b4d563844c5883f454f6ea876" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>gridViewCurrencies</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1aae961136e49c2031847330228a65b6d6" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>gridViewEchangeRates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1aec66d187f998bb19426a635254ade806" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>LayoutButton_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1ab7946b9881324f21eac5375183154ff1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>LoadAllCurrencies</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1ade3920d2355b5b53d284ee0efc99769d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>LoadAllEchangeRates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>Modify</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>New</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>ProcessCmdKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>Read</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>RestoreInitState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>ribbonControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>RibbonFormBase</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>ribbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>ribbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>ribbonPageGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>ribbonStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>SetActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>SetRibbonText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1ae25492a50dd557982dd46c409c70d2bd" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>SetUpGrdCurrencies</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1a0eeff49cdc055a7cf462532f5d394b4f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>SetUpGrdEchangeRates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1af7dd071698440fefe97a515c0c344d76" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>xgrdCurrencies</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1a021ae2debc5d84b33570237125e5a8f2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>xgrdEchangeRates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1afbc54c6103c4ecd2f3870973048067ed" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>xtraTabControlGeneral</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1afffc4a15063e64c54629072e56e194c7" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>xtraTabPageCurrency</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_currencies_echange_rates_management_1a61fdc85512e2ad683d3454fdb6d26785" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::CurrenciesEchangeRatesManagement</scope><name>xtraTabPageEchangeRates</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

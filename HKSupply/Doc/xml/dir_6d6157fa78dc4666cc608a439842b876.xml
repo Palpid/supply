@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_6d6157fa78dc4666cc608a439842b876" kind="dir">
+    <compoundname>HKSupply/Forms/Master/DialogForms</compoundname>
+    <innerfile refid="_edit_hf_bom_8cs">EditHfBom.cs</innerfile>
+    <innerfile refid="_edit_hf_bom_8_designer_8cs">EditHfBom.Designer.cs</innerfile>
+    <innerfile refid="_select_item2_copy_bom_8cs">SelectItem2CopyBom.cs</innerfile>
+    <innerfile refid="_select_item2_copy_bom_8_designer_8cs">SelectItem2CopyBom.Designer.cs</innerfile>
+    <innerfile refid="_select_suppliers_8cs">SelectSuppliers.cs</innerfile>
+    <innerfile refid="_select_suppliers_8_designer_8cs">SelectSuppliers.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Forms/Master/DialogForms/"/>
+  </compounddef>
+</doxygen>

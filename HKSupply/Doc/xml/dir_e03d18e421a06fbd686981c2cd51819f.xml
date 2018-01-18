@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="dir_e03d18e421a06fbd686981c2cd51819f" kind="dir">
     <compoundname>HKSupply/General</compoundname>
+    <innerfile refid="_constants_8cs">Constants.cs</innerfile>
     <innerfile refid="_global_setting_8cs">GlobalSetting.cs</innerfile>
     <briefdescription>
     </briefdescription>

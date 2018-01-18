@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_box" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::Supply::DocBox</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_box_1aa8be88709727edceadb07481e5366da5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.DocBox.IdDoc</definition>
+        <argsstring></argsstring>
+        <name>IdDoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocBox.cs" line="11" column="1" bodyfile="HKSupply/Models/Supply/DocBox.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_box_1a5f2f25c63e0c5f29a4ac204b39aa79a2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HKSupply.Models.Supply.DocBox.BoxNumber</definition>
+        <argsstring></argsstring>
+        <name>BoxNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocBox.cs" line="14" column="1" bodyfile="HKSupply/Models/Supply/DocBox.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_box_1ae2c109666473a1e90945b83b4c7923b8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.DocBox.IdBox</definition>
+        <argsstring></argsstring>
+        <name>IdBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocBox.cs" line="17" column="1" bodyfile="HKSupply/Models/Supply/DocBox.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_box_1a69643d77c2cbbd342700bfee99ae20a5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.Supply.DocBox.NetWeight</definition>
+        <argsstring></argsstring>
+        <name>NetWeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocBox.cs" line="20" column="1" bodyfile="HKSupply/Models/Supply/DocBox.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_box_1ac7713ae22c9e59ba04b26e69dc3abb98" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.Supply.DocBox.GrossWeight</definition>
+        <argsstring></argsstring>
+        <name>GrossWeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocBox.cs" line="23" column="1" bodyfile="HKSupply/Models/Supply/DocBox.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_box_1a8e7b05421add2ee665e17907884b0318" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_supply_1_1_box" kindref="compound">Box</ref></type>
+        <definition>Box HKSupply.Models.Supply.DocBox.Box</definition>
+        <argsstring></argsstring>
+        <name>Box</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocBox.cs" line="28" column="1" bodyfile="HKSupply/Models/Supply/DocBox.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_box_1ab7672c250081466820debb79087992aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.Supply.DocBox.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocBox.cs" line="33" column="1" bodyfile="HKSupply/Models/Supply/DocBox.cs" bodystart="33" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_box_1affca84d3b78b9f852967db941e013263" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.Supply.DocBox.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/DocBox.cs" line="50" column="1" bodyfile="HKSupply/Models/Supply/DocBox.cs" bodystart="50" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/Supply/DocBox.cs" line="9" column="1" bodyfile="HKSupply/Models/Supply/DocBox.cs" bodystart="8" bodyend="62"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_box_1a8e7b05421add2ee665e17907884b0318" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocBox</scope><name>Box</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_box_1a5f2f25c63e0c5f29a4ac204b39aa79a2" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocBox</scope><name>BoxNumber</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_box_1ab7672c250081466820debb79087992aa" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocBox</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_box_1affca84d3b78b9f852967db941e013263" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocBox</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_box_1ac7713ae22c9e59ba04b26e69dc3abb98" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocBox</scope><name>GrossWeight</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_box_1ae2c109666473a1e90945b83b4c7923b8" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocBox</scope><name>IdBox</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_box_1aa8be88709727edceadb07481e5366da5" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocBox</scope><name>IdDoc</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_doc_box_1a69643d77c2cbbd342700bfee99ae20a5" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::DocBox</scope><name>NetWeight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

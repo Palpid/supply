@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_migrations_1_1items__delete_f_k_colors__01" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Migrations::items_deleteFKColors_01</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IMigrationMetadata</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">DbMigration</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_migrations_1_1items__delete_f_k_colors__01_1a277812f43da3aa445c4f8b52dda4ba75" prot="private" static="no" mutable="no">
+        <type>readonly ResourceManager</type>
+        <definition>readonly ResourceManager HKSupply.Migrations.items_deleteFKColors_01.Resources</definition>
+        <argsstring></argsstring>
+        <name>Resources</name>
+        <initializer>= new ResourceManager(typeof(<ref refid="class_h_k_supply_1_1_migrations_1_1items__delete_f_k_colors__01" kindref="compound">items_deleteFKColors_01</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201705100824273_items_deleteFKColors_01.Designer.cs" line="12" column="1" bodyfile="HKSupply/Migrations/201705100824273_items_deleteFKColors_01.Designer.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_migrations_1_1items__delete_f_k_colors__01_1a42461cb52376302b5a2d921eca735bfd" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string IMigrationMetadata.</type>
+        <definition>string IMigrationMetadata. HKSupply.Migrations.items_deleteFKColors_01.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201705100824273_items_deleteFKColors_01.Designer.cs" line="14" column="1" bodyfile="HKSupply/Migrations/201705100824273_items_deleteFKColors_01.Designer.cs" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_migrations_1_1items__delete_f_k_colors__01_1a61c586faa50dd4b39baedd26f4850f4c" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string IMigrationMetadata.</type>
+        <definition>string IMigrationMetadata. HKSupply.Migrations.items_deleteFKColors_01.Source</definition>
+        <argsstring></argsstring>
+        <name>Source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201705100824273_items_deleteFKColors_01.Designer.cs" line="19" column="1" bodyfile="HKSupply/Migrations/201705100824273_items_deleteFKColors_01.Designer.cs" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_migrations_1_1items__delete_f_k_colors__01_1a1a70624056d70c39d996580a2bd47a61" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string IMigrationMetadata.</type>
+        <definition>string IMigrationMetadata. HKSupply.Migrations.items_deleteFKColors_01.Target</definition>
+        <argsstring></argsstring>
+        <name>Target</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201705100824273_items_deleteFKColors_01.Designer.cs" line="24" column="1" bodyfile="HKSupply/Migrations/201705100824273_items_deleteFKColors_01.Designer.cs" bodystart="25" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_migrations_1_1items__delete_f_k_colors__01_1afb31f7c17afe71a704389ef5f420e1cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Migrations.items_deleteFKColors_01.Up</definition>
+        <argsstring>()</argsstring>
+        <name>Up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201705100824273_items_deleteFKColors_01.cs" line="8" column="1" bodyfile="HKSupply/Migrations/201705100824273_items_deleteFKColors_01.cs" bodystart="8" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_migrations_1_1items__delete_f_k_colors__01_1a49851d0020d2b83a670a3691efa71fff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Migrations.items_deleteFKColors_01.Down</definition>
+        <argsstring>()</argsstring>
+        <name>Down</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201705100824273_items_deleteFKColors_01.cs" line="24" column="1" bodyfile="HKSupply/Migrations/201705100824273_items_deleteFKColors_01.cs" bodystart="24" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1078">
+        <label>DbMigration</label>
+      </node>
+      <node id="1076">
+        <label>HKSupply.Migrations.items_deleteFKColors_01</label>
+        <link refid="class_h_k_supply_1_1_migrations_1_1items__delete_f_k_colors__01"/>
+        <childnode refid="1077" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1078" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1077">
+        <label>IMigrationMetadata</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1081">
+        <label>DbMigration</label>
+      </node>
+      <node id="1079">
+        <label>HKSupply.Migrations.items_deleteFKColors_01</label>
+        <link refid="class_h_k_supply_1_1_migrations_1_1items__delete_f_k_colors__01"/>
+        <childnode refid="1080" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1081" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1080">
+        <label>IMigrationMetadata</label>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Migrations/201705100824273_items_deleteFKColors_01.cs" line="7" column="1" bodyfile="HKSupply/Migrations/201705100824273_items_deleteFKColors_01.cs" bodystart="6" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_migrations_1_1items__delete_f_k_colors__01_1a49851d0020d2b83a670a3691efa71fff" prot="public" virt="non-virtual"><scope>HKSupply::Migrations::items_deleteFKColors_01</scope><name>Down</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1items__delete_f_k_colors__01_1a42461cb52376302b5a2d921eca735bfd" prot="private" virt="non-virtual"><scope>HKSupply::Migrations::items_deleteFKColors_01</scope><name>Id</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1items__delete_f_k_colors__01_1a277812f43da3aa445c4f8b52dda4ba75" prot="private" virt="non-virtual"><scope>HKSupply::Migrations::items_deleteFKColors_01</scope><name>Resources</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1items__delete_f_k_colors__01_1a61c586faa50dd4b39baedd26f4850f4c" prot="private" virt="non-virtual"><scope>HKSupply::Migrations::items_deleteFKColors_01</scope><name>Source</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1items__delete_f_k_colors__01_1a1a70624056d70c39d996580a2bd47a61" prot="private" virt="non-virtual"><scope>HKSupply::Migrations::items_deleteFKColors_01</scope><name>Target</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1items__delete_f_k_colors__01_1afb31f7c17afe71a704389ef5f420e1cf" prot="public" virt="non-virtual"><scope>HKSupply::Migrations::items_deleteFKColors_01</scope><name>Up</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

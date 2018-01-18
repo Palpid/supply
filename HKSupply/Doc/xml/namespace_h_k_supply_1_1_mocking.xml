@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_h_k_supply_1_1_mocking" kind="namespace" language="C#">
+    <compoundname>HKSupply::Mocking</compoundname>
+    <innerclass refid="class_h_k_supply_1_1_mocking_1_1_respose_test" prot="public">HKSupply::Mocking::ResposeTest</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_mocking_1_1_test_db" prot="public">HKSupply::Mocking::TestDb</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Mocking/TestDb.cs" line="15" column="1"/>
+  </compounddef>
+</doxygen>

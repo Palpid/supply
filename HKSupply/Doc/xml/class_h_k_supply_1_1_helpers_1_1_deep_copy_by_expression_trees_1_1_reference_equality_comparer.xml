@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1_1_reference_equality_comparer" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Helpers::DeepCopyByExpressionTrees::ReferenceEqualityComparer</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">EqualityComparer&lt; Object &gt;</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1_1_reference_equality_comparer_1a1715959527fc6e02a5cd4e098f3e9566" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Helpers.DeepCopyByExpressionTrees.ReferenceEqualityComparer.Equals</definition>
+        <argsstring>(object x, object y)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="772" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="772" bodyend="775"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1_1_reference_equality_comparer_1af54d8e96f3f95c4bae172c80f13f5cf9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Helpers.DeepCopyByExpressionTrees.ReferenceEqualityComparer.GetHashCode</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>GetHashCode</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="777" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="777" bodyend="782"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1423">
+        <label>EqualityComparer&lt; Object &gt;</label>
+      </node>
+      <node id="1422">
+        <label>HKSupply.Helpers.DeepCopyByExpressionTrees.ReferenceEqualityComparer</label>
+        <link refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1_1_reference_equality_comparer"/>
+        <childnode refid="1423" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1425">
+        <label>EqualityComparer&lt; Object &gt;</label>
+      </node>
+      <node id="1424">
+        <label>HKSupply.Helpers.DeepCopyByExpressionTrees.ReferenceEqualityComparer</label>
+        <link refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1_1_reference_equality_comparer"/>
+        <childnode refid="1425" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" line="771" column="1" bodyfile="HKSupply/Helpers/DeepCopyByExpressionTrees.cs" bodystart="770" bodyend="783"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1_1_reference_equality_comparer_1a1715959527fc6e02a5cd4e098f3e9566" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees::ReferenceEqualityComparer</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_deep_copy_by_expression_trees_1_1_reference_equality_comparer_1af54d8e96f3f95c4bae172c80f13f5cf9" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::DeepCopyByExpressionTrees::ReferenceEqualityComparer</scope><name>GetHashCode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

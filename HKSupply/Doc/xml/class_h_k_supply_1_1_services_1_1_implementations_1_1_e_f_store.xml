@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_store" kind="class" language="C#" prot="public">
     <compoundname>HKSupply::Services::Implementations::EFStore</compoundname>
     <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_store" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IStore</basecompoundref>
@@ -92,26 +92,26 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="69">
+      <node id="542">
         <label>IStore</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_store"/>
       </node>
-      <node id="68">
+      <node id="541">
         <label>HKSupply.Services.Implementations.EFStore</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_store"/>
-        <childnode refid="69" relation="public-inheritance">
+        <childnode refid="542" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="71">
+      <node id="544">
         <label>IStore</label>
         <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_store"/>
       </node>
-      <node id="70">
+      <node id="543">
         <label>HKSupply.Services.Implementations.EFStore</label>
         <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_store"/>
-        <childnode refid="71" relation="public-inheritance">
+        <childnode refid="544" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_mocking_1_1_test_db" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Mocking::TestDb</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_mocking_1_1_test_db_1a3686e744ede0b1b415ad639c3328b834" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Mocking.TestDb._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_mocking_1_1_test_db" kindref="compound">TestDb</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Mocking/TestDb.cs" line="25" column="1" bodyfile="HKSupply/Mocking/TestDb.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_mocking_1_1_test_db_1a6a4ffbdd9da7bbb2afaf8ce91931781c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Mocking.TestDb.CallTestQuery</definition>
+        <argsstring>()</argsstring>
+        <name>CallTestQuery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Mocking/TestDb.cs" line="27" column="1" bodyfile="HKSupply/Mocking/TestDb.cs" bodystart="27" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_mocking_1_1_test_db_1a0fee0e427aae0bb4f4e5022e32483901" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Mocking.TestDb.TestQuery</definition>
+        <argsstring>(HKSupplyContext db, string idDoc, string idDocType)</argsstring>
+        <name>TestQuery</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idDoc</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idDocType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Mocking/TestDb.cs" line="56" column="1" bodyfile="HKSupply/Mocking/TestDb.cs" bodystart="56" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Mocking/TestDb.cs" line="24" column="1" bodyfile="HKSupply/Mocking/TestDb.cs" bodystart="23" bodyend="95"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_mocking_1_1_test_db_1a3686e744ede0b1b415ad639c3328b834" prot="private" virt="non-virtual"><scope>HKSupply::Mocking::TestDb</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_mocking_1_1_test_db_1a6a4ffbdd9da7bbb2afaf8ce91931781c" prot="public" virt="non-virtual"><scope>HKSupply::Mocking::TestDb</scope><name>CallTestQuery</name></member>
+      <member refid="class_h_k_supply_1_1_mocking_1_1_test_db_1a0fee0e427aae0bb4f4e5022e32483901" prot="public" virt="non-virtual"><scope>HKSupply::Mocking::TestDb</scope><name>TestQuery</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_6dcdcdb03a9cf771dfb94497bfc1cc7b" kind="dir">
+    <compoundname>HKSupply/Forms/Supply/SupplyMaterials</compoundname>
+    <innerfile refid="_packing_list_materials_8cs">PackingListMaterials.cs</innerfile>
+    <innerfile refid="_packing_list_materials_8_designer_8cs">PackingListMaterials.Designer.cs</innerfile>
+    <innerfile refid="_purchase_order_materials_8cs">PurchaseOrderMaterials.cs</innerfile>
+    <innerfile refid="_purchase_order_materials_8_designer_8cs">PurchaseOrderMaterials.Designer.cs</innerfile>
+    <innerfile refid="_purchase_order_materials_selection_8cs">PurchaseOrderMaterialsSelection.cs</innerfile>
+    <innerfile refid="_purchase_ordermaterials_selection_8_designer_8cs">PurchaseOrdermaterialsSelection.Designer.cs</innerfile>
+    <innerfile refid="_quality_control_pending_8cs">QualityControlPending.cs</innerfile>
+    <innerfile refid="_quality_control_pending_8_designer_8cs">QualityControlPending.Designer.cs</innerfile>
+    <innerfile refid="_receipt_and_quality_8cs">ReceiptAndQuality.cs</innerfile>
+    <innerfile refid="_receipt_and_quality_8_designer_8cs">ReceiptAndQuality.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Forms/Supply/SupplyMaterials/"/>
+  </compounddef>
+</doxygen>

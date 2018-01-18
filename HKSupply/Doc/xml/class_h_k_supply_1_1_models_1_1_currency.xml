@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_currency" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::Currency</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_currency_1a6bc39edf2b040617017733909e48031a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Currency.IdCurrency</definition>
+        <argsstring></argsstring>
+        <name>IdCurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Currency.cs" line="16" column="1" bodyfile="HKSupply/Models/Currency.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_currency_1aec25256c73bb4f718688cba19febcb5c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Currency.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Currency.cs" line="18" column="1" bodyfile="HKSupply/Models/Currency.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_currency_1ac97c2ef20b77e0a737bf08117babe1f4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Currency.DescriptionZh</definition>
+        <argsstring></argsstring>
+        <name>DescriptionZh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Currency.cs" line="20" column="1" bodyfile="HKSupply/Models/Currency.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_currency_1a30afba9ddba7a1577ebfb6a7187b42ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.Currency.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Currency.cs" line="22" column="1" bodyfile="HKSupply/Models/Currency.cs" bodystart="22" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_currency_1acdddcab9581d6b539aee29a5dc3433c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.Currency.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Currency.cs" line="32" column="1" bodyfile="HKSupply/Models/Currency.cs" bodystart="32" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/Currency.cs" line="14" column="1" bodyfile="HKSupply/Models/Currency.cs" bodystart="13" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_currency_1aec25256c73bb4f718688cba19febcb5c" prot="public" virt="non-virtual"><scope>HKSupply::Models::Currency</scope><name>Description</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_currency_1ac97c2ef20b77e0a737bf08117babe1f4" prot="public" virt="non-virtual"><scope>HKSupply::Models::Currency</scope><name>DescriptionZh</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_currency_1a30afba9ddba7a1577ebfb6a7187b42ad" prot="public" virt="non-virtual"><scope>HKSupply::Models::Currency</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_currency_1acdddcab9581d6b539aee29a5dc3433c0" prot="public" virt="non-virtual"><scope>HKSupply::Models::Currency</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_currency_1a6bc39edf2b040617017733909e48031a" prot="public" virt="non-virtual"><scope>HKSupply::Models::Currency</scope><name>IdCurrency</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

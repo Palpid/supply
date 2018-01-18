@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_h_k_supply_1_1_forms_1_1_login" kind="class" language="C#" prot="public">
     <compoundname>HKSupply::Forms::Login</compoundname>
     <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Login.cs" line="20" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="20" bodyend="-1"/>
+        <location file="HKSupply/Forms/Login.cs" line="23" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_login_1a1aa36f8af2efb7235bc1722f72ba18c4" prot="private" static="no" mutable="no">
         <type>System.ComponentModel.IContainer</type>
@@ -136,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Login.cs" line="24" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="24" bodyend="27"/>
+        <location file="HKSupply/Forms/Login.cs" line="27" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="27" bodyend="30"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -159,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Login.cs" line="32" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="32" bodyend="45"/>
+        <location file="HKSupply/Forms/Login.cs" line="35" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="35" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_login_1a58a0386690bbe15bc0db3a2d3d39c4fb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -172,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Login.cs" line="47" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="47" bodyend="70"/>
+        <location file="HKSupply/Forms/Login.cs" line="53" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="53" bodyend="76"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_login_1ad0eee1e18ba4e6e421099b65007fb98d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -185,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Login.cs" line="72" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="72" bodyend="88"/>
+        <location file="HKSupply/Forms/Login.cs" line="78" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="78" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_login_1a56e897e5aed24b516f633fc4a182da3b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>async void</type>
@@ -202,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Login.cs" line="90" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="90" bodyend="103"/>
+        <location file="HKSupply/Forms/Login.cs" line="96" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="96" bodyend="109"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_login_1a4855300f252aa90c8693ca2a708b7ad0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -215,7 +215,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Login.cs" line="105" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="105" bodyend="127"/>
+        <location file="HKSupply/Forms/Login.cs" line="111" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="111" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_login_1a61494e3bb26e9a01be457ef1ff6836c1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Login.LoginWithWindowsUser</definition>
+        <argsstring>()</argsstring>
+        <name>LoginWithWindowsUser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Login.cs" line="135" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="135" bodyend="203"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_login_1a863e4c2fea19bad6401a41144aa2d853" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -236,7 +249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Login.cs" line="132" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="132" bodyend="138"/>
+        <location file="HKSupply/Forms/Login.cs" line="208" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="208" bodyend="214"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_login_1a3b40d6bd633de59f8918244d783e7fe0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -257,7 +270,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Login.cs" line="140" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="140" bodyend="159"/>
+        <location file="HKSupply/Forms/Login.cs" line="216" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="216" bodyend="235"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_login_1ad400fb751e97b0b67ae2130beca7521f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -305,28 +318,28 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="173">
+      <node id="1153">
         <label>Form</label>
       </node>
-      <node id="172">
+      <node id="1152">
         <label>HKSupply.Forms.Login</label>
         <link refid="class_h_k_supply_1_1_forms_1_1_login"/>
-        <childnode refid="173" relation="public-inheritance">
+        <childnode refid="1153" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="175">
+      <node id="1155">
         <label>Form</label>
       </node>
-      <node id="174">
+      <node id="1154">
         <label>HKSupply.Forms.Login</label>
         <link refid="class_h_k_supply_1_1_forms_1_1_login"/>
-        <childnode refid="175" relation="public-inheritance">
+        <childnode refid="1155" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="HKSupply/Forms/Login.cs" line="18" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="17" bodyend="161"/>
+    <location file="HKSupply/Forms/Login.cs" line="21" column="1" bodyfile="HKSupply/Forms/Login.cs" bodystart="20" bodyend="237"/>
     <listofallmembers>
       <member refid="class_h_k_supply_1_1_forms_1_1_login_1a7ddafe51ff0ccb02f7fe74f2e689b9df" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>btnSignIn</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_login_1a3b40d6bd633de59f8918244d783e7fe0" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>btnSignIn_Click</name></member>
@@ -341,6 +354,7 @@
       <member refid="class_h_k_supply_1_1_forms_1_1_login_1a00a9276b39c8c9b40c598c0925b033b4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>lblPassword</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_login_1a33626de2bec03b4dfb7f667f42798e3a" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>Login</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_login_1aa0578919fe391b57f95d3f740ca922bc" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>Login_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_login_1a61494e3bb26e9a01be457ef1ff6836c1" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>LoginWithWindowsUser</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_login_1ae859ece7eaa65739968d374f7d7946f4" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>MSG_TIME</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_login_1ad499da74bd0cbf31f3aafa5963b5a0e5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>pbLogo</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_login_1a56e897e5aed24b516f633fc4a182da3b" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Login</scope><name>ShowMessage</name></member>

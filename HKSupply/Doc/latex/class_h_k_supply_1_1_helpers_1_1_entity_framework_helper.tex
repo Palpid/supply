@@ -1,0 +1,56 @@
+\hypertarget{class_h_k_supply_1_1_helpers_1_1_entity_framework_helper}{}\section{H\+K\+Supply.\+Helpers.\+Entity\+Framework\+Helper Class Reference}
+\label{class_h_k_supply_1_1_helpers_1_1_entity_framework_helper}\index{H\+K\+Supply.\+Helpers.\+Entity\+Framework\+Helper@{H\+K\+Supply.\+Helpers.\+Entity\+Framework\+Helper}}
+
+
+\mbox{\hyperlink{namespace_h_k_supply_1_1_helpers}{Helpers}} para Entity Framework  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static T \mbox{\hyperlink{class_h_k_supply_1_1_helpers_1_1_entity_framework_helper_ad8b45e38c95a70d5c33b8a4a90ce50ae}{Un\+Proxy$<$ T $>$}} (Db\+Context context, T proxy\+Object)
+\begin{DoxyCompactList}\small\item\em Devuelve el objeto P\+O\+CO de un proxy generado por EF \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{namespace_h_k_supply_1_1_helpers}{Helpers}} para Entity Framework 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_h_k_supply_1_1_helpers_1_1_entity_framework_helper_ad8b45e38c95a70d5c33b8a4a90ce50ae}\label{class_h_k_supply_1_1_helpers_1_1_entity_framework_helper_ad8b45e38c95a70d5c33b8a4a90ce50ae}} 
+\index{H\+K\+Supply\+::\+Helpers\+::\+Entity\+Framework\+Helper@{H\+K\+Supply\+::\+Helpers\+::\+Entity\+Framework\+Helper}!Un\+Proxy$<$ T $>$@{Un\+Proxy$<$ T $>$}}
+\index{Un\+Proxy$<$ T $>$@{Un\+Proxy$<$ T $>$}!H\+K\+Supply\+::\+Helpers\+::\+Entity\+Framework\+Helper@{H\+K\+Supply\+::\+Helpers\+::\+Entity\+Framework\+Helper}}
+\subsubsection{\texorpdfstring{Un\+Proxy$<$ T $>$()}{UnProxy< T >()}}
+{\footnotesize\ttfamily static T H\+K\+Supply.\+Helpers.\+Entity\+Framework\+Helper.\+Un\+Proxy$<$ T $>$ (\begin{DoxyParamCaption}\item[{Db\+Context}]{context,  }\item[{T}]{proxy\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Devuelve el objeto P\+O\+CO de un proxy generado por EF 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em context} & \\
+\hline
+{\em proxy\+Object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Cuando se hace una consulta de EF, realmente no se devuelve el objeto \char`\"{}model\char`\"{}, sino uno heredado de este que aparte incluye todas las funcionalidades de EF (tracking de los cambios del objeto por si queremos modificarlo en la db, lazy loading, etc. \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em class}]\end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+H\+K\+Supply/\+Helpers/Entity\+Framework\+Helper.\+cs\end{DoxyCompactItemize}

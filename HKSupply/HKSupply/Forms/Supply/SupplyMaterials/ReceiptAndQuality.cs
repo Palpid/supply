@@ -53,6 +53,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
 
                 ConfigureRibbonActions();
                 LoadAuxList();
+                SetUpTabs();
                 SetUpLabels();
                 SetObjectsReadOnly();
                 SetUpSearchLookUpEdit();
@@ -226,6 +227,22 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                     ActionsAfterCU();
                 }
 
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
+        }
+
+        private void SbAddItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ShowAddItem();
             }
             catch (Exception ex)
             {
@@ -573,9 +590,57 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
             }
         }
 
+        private void ShowAddItem()
+        {
+            try
+            {
+                using(DialogForms.AddReceiptItem form = new DialogForms.AddReceiptItem())
+                {
+                    form.InitData(_docHeadPK.IdSupplier, _docHeadPK.IdDoc);
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        var newItems = form.SelectedDocLinesList;
+                        if (newItems.Count > 0)
+                        {
+                            foreach(var itemLine in newItems)
+                            {
+                                //antes de insertar hay que ver que no exista ya en el packing
+                                var line = _docLinesList.Where(a => a.IdDocRelated.Equals(itemLine.IdDocRelated) && a.IdItemBcn.Equals(itemLine.IdItemBcn)).FirstOrDefault();
+
+                                if (line == null)
+                                {
+                                    var tmp = itemLine.DeepCopyByExpressionTree();
+                                    tmp.LineState = DocLine.LineStates.New;
+                                    _docLinesList.Add(tmp);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         #endregion
 
         #region Setup Form Objects
+
+        private void SetUpTabs()
+        {
+            try
+            {
+                xtpReceiptAndQuality.AutoScroll = true;
+                xtpReceiptAndQuality.AutoScrollMargin = new Size(20, 20);
+                xtpReceiptAndQuality.AutoScrollMinSize = new Size(xtpReceiptAndQuality.Width, xtpReceiptAndQuality.Height);
+            }
+            catch
+            {
+                throw;
+            }
+        }
 
         private void SetUpLabels()
         {
@@ -679,6 +744,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
             {
                 sbSearch.Click += SbSearch_Click;
                 sbFinishQC.Click += SbFinishQC_Click;
+                sbAddItem.Click += SbAddItem_Click;
                 dateEditPKDocDate.EditValueChanged += DateEditPKDocDate_EditValueChanged;
                 dateEditPKDelivery.EditValueChanged += DateEditPKDelivery_EditValueChanged;
                 txtPKNumber.KeyDown += TxtPKNumber_KeyDown;
@@ -840,14 +906,16 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
 
                     case ActionsStates.Edit:
                         sbFinishQC.Visible = true;
+                        sbAddItem.Visible = true;
                         sbSearch.Visible = false;
                         lbltxtStatus.Visible = true;
                         break;
 
                     default:
                         sbFinishQC.Visible = false;
+                        sbAddItem.Visible = false;
                         sbSearch.Visible = true;
-                        lbltxtStatus.Visible = false;
+                        lbltxtStatus.Visible = (_docHeadPK != null);
                         break;
                 }
             }
@@ -1056,6 +1124,11 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 }
 
                 SetVisiblePropertyByState();
+
+                //forzamos situamos en la línea 0 y forzamos el evento (si sólo hay una al no cambiar no lo lanza)
+                gridViewLinesPL.FocusedRowHandle = 0;
+                GridViewLinesPL_FocusedRowChanged(gridViewLinesPL, new FocusedRowChangedEventArgs(-1, 0));
+
             }
             catch
             {

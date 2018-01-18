@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_h_k_supply_1_1_forms_1_1_reports" kind="namespace" language="C#">
+    <compoundname>HKSupply::Forms::Reports</compoundname>
+    <innerclass refid="class_h_k_supply_1_1_forms_1_1_reports_1_1_b_o_m_report" prot="public">HKSupply::Forms::Reports::BOMReport</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Forms/Reports/BOMReport.cs" line="21" column="1"/>
+  </compounddef>
+</doxygen>

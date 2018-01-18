@@ -1,15 +1,118 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="namespace_h_k_supply_1_1_migrations" kind="namespace" language="C#">
     <compoundname>HKSupply::Migrations</compoundname>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1address2" prot="public">HKSupply::Migrations::address2</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1bom__20170522__01" prot="public">HKSupply::Migrations::bom_20170522_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1bom__20170522__02" prot="public">HKSupply::Migrations::bom_20170522_02</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1bom__item__supplier__20170525__01" prot="public">HKSupply::Migrations::bom_item_supplier_20170525_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_bom_breakdown__20170616__01" prot="public">HKSupply::Migrations::BomBreakdown_20170616_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_bom_breakdown__20170616__02" prot="public">HKSupply::Migrations::BomBreakdown_20170616_02</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_bom_breakdown__20170616__03" prot="public">HKSupply::Migrations::BomBreakdown_20170616_03</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1boxes__01" prot="public">HKSupply::Migrations::boxes_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1breakdown_sub_groups__01" prot="public">HKSupply::Migrations::breakdownSubGroups_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos" prot="public">HKSupply::Migrations::ColorModelStatusCial_DefincionCampos</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__2" prot="public">HKSupply::Migrations::ColorModelStatusCial_DefincionCampos_2</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__21" prot="public">HKSupply::Migrations::ColorModelStatusCial_DefincionCampos_21</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__22" prot="public">HKSupply::Migrations::ColorModelStatusCial_DefincionCampos_22</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__23" prot="public">HKSupply::Migrations::ColorModelStatusCial_DefincionCampos_23</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__24" prot="public">HKSupply::Migrations::ColorModelStatusCial_DefincionCampos_24</innerclass>
     <innerclass refid="class_h_k_supply_1_1_migrations_1_1_configuration" prot="package">HKSupply::Migrations::Configuration</innerclass>
     <innerclass refid="class_h_k_supply_1_1_migrations_1_1_customer" prot="public">HKSupply::Migrations::Customer</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_customer_h___supplier_h___user__01" prot="public">HKSupply::Migrations::CustomerH_SupplierH_User_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_customers__12042017__1" prot="public">HKSupply::Migrations::Customers_12042017_1</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_customers__12042017__2" prot="public">HKSupply::Migrations::Customers_12042017_2</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1delete_cascade_remove__01" prot="public">HKSupply::Migrations::deleteCascadeRemove_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_delivery_terms__20170725__01" prot="public">HKSupply::Migrations::DeliveryTerms_20170725_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1detail_b_o_m___user__20170606__01" prot="public">HKSupply::Migrations::detailBOM_User_20170606_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1detail_b_o_m_hf__20170606__01" prot="public">HKSupply::Migrations::detailBOMHf_20170606_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1detail_bom_hw__scrap__20170530__01" prot="public">HKSupply::Migrations::detailBomHw_scrap_20170530_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1detail_bom_mt__20170526__01" prot="public">HKSupply::Migrations::detailBomMt_20170526_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1detail_bom_mt__20170526__02" prot="public">HKSupply::Migrations::detailBomMt_20170526_02</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_d_o_c___h_e_a_d___a_t_t_a_c_h___f_i_l_e_s__01" prot="public">HKSupply::Migrations::DOC_HEAD_ATTACH_FILES_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_d_o_c___l_i_n_e_s___i_d___d_o_c___r_e_l_a_t_e_d__01" prot="public">HKSupply::Migrations::DOC_LINES_ID_DOC_RELATED_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1doc_boxes__01" prot="public">HKSupply::Migrations::docBoxes_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1doc_head__doc_related__01" prot="public">HKSupply::Migrations::docHead_docRelated_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1doc_head__remarks__manual_reference__01" prot="public">HKSupply::Migrations::docHead_remarks_manualReference_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_doc_head_user__01" prot="public">HKSupply::Migrations::DocHeadUser_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_doc_line_box_numer__01" prot="public">HKSupply::Migrations::DocLineBoxNumer_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1doc_line_rejected_qty__01" prot="public">HKSupply::Migrations::docLineRejectedQty_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_doc_lines_requested_quantity__01" prot="public">HKSupply::Migrations::DocLinesRequestedQuantity_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_doc_type___item_mt_hw__01" prot="public">HKSupply::Migrations::DocType_ItemMtHw_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1factory_supplier_customer" prot="public">HKSupply::Migrations::factorySupplierCustomer</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1family_h_k__2" prot="public">HKSupply::Migrations::familyHK_2</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_f_k__detail_item_hf__20170607__01" prot="public">HKSupply::Migrations::FK_detailItemHf_20170607_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_funcionality_group__01" prot="public">HKSupply::Migrations::FuncionalityGroup_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_funcionality_order__01" prot="public">HKSupply::Migrations::FuncionalityOrder_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1functionality_report__01" prot="public">HKSupply::Migrations::functionalityReport_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1functionality_report__02" prot="public">HKSupply::Migrations::functionalityReport_02</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_hw_type" prot="public">HKSupply::Migrations::HwType</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1hw_type__25042014__01" prot="public">HKSupply::Migrations::hwType_25042014_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_id_item_bcn___id_item_hk__change_length__011" prot="public">HKSupply::Migrations::IdItemBcn_IdItemHk_changeLength_011</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_item__11042017" prot="public">HKSupply::Migrations::Item_11042017</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_item__11042017__2" prot="public">HKSupply::Migrations::Item_11042017_2</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_item__11042017__3" prot="public">HKSupply::Migrations::Item_11042017_3</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_item_bcn___prices_list__1" prot="public">HKSupply::Migrations::ItemBcn_PricesList_1</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1item_h_f__01" prot="public">HKSupply::Migrations::itemHF_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_item_hw_group_type__01" prot="public">HKSupply::Migrations::ItemHwGroupType_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1item_hw_mt__idmodel__01" prot="public">HKSupply::Migrations::itemHwMt_idmodel_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1item_photo__20160418__1" prot="public">HKSupply::Migrations::itemPhoto_20160418_1</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1item_photo__20160418__2" prot="public">HKSupply::Migrations::itemPhoto_20160418_2</innerclass>
     <innerclass refid="class_h_k_supply_1_1_migrations_1_1items" prot="public">HKSupply::Migrations::items</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_items__12042017__1" prot="public">HKSupply::Migrations::Items_12042017_1</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_items__12042017__2" prot="public">HKSupply::Migrations::Items_12042017_2</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_items__12042017__3" prot="public">HKSupply::Migrations::Items_12042017_3</innerclass>
     <innerclass refid="class_h_k_supply_1_1_migrations_1_1items__2" prot="public">HKSupply::Migrations::items_2</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1items__20170413__1" prot="public">HKSupply::Migrations::items_20170413_1</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1items__20170426__01" prot="public">HKSupply::Migrations::items_20170426_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1items__20170426__02" prot="public">HKSupply::Migrations::items_20170426_02</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1items__20170426__03" prot="public">HKSupply::Migrations::items_20170426_03</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1items__20170426__04" prot="public">HKSupply::Migrations::items_20170426_04</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1items__20170426__05" prot="public">HKSupply::Migrations::items_20170426_05</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1items__20170426__06" prot="public">HKSupply::Migrations::items_20170426_06</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_items__3" prot="public">HKSupply::Migrations::Items_3</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_items__31" prot="public">HKSupply::Migrations::Items_31</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_items__32___item_history" prot="public">HKSupply::Migrations::Items_32_ItemHistory</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_items__33" prot="public">HKSupply::Migrations::Items_33</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_items__34" prot="public">HKSupply::Migrations::Items_34</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1items__delete_f_k_colors__01" prot="public">HKSupply::Migrations::items_deleteFKColors_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1item_type__01" prot="public">HKSupply::Migrations::itemType_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1item_type__02" prot="public">HKSupply::Migrations::itemType_02</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1item_type__03" prot="public">HKSupply::Migrations::itemType_03</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1key___material__levels__01" prot="public">HKSupply::Migrations::key_Material_levels_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1layout__01" prot="public">HKSupply::Migrations::layout_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1layout__02" prot="public">HKSupply::Migrations::layout_02</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1layout__03" prot="public">HKSupply::Migrations::layout_03</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1layout__04" prot="public">HKSupply::Migrations::layout_04</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_materials" prot="public">HKSupply::Migrations::Materials</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_mat_type" prot="public">HKSupply::Migrations::MatType</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_mat_type2" prot="public">HKSupply::Migrations::MatType2</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_mat_type__20170524__01" prot="public">HKSupply::Migrations::MatType_20170524_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_my_company__01" prot="public">HKSupply::Migrations::MyCompany_01</innerclass>
     <innerclass refid="class_h_k_supply_1_1_migrations_1_1_object_version" prot="public">HKSupply::Migrations::ObjectVersion</innerclass>
     <innerclass refid="class_h_k_supply_1_1_migrations_1_1_object_version__2" prot="public">HKSupply::Migrations::ObjectVersion_2</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_packing_list_items_batch___mod_doc_head__01" prot="public">HKSupply::Migrations::PackingListItemsBatch_ModDocHead_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_prices_list__precision__1" prot="public">HKSupply::Migrations::PricesList_precision_1</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_prices_list_histoty__user__1" prot="public">HKSupply::Migrations::PricesListHistoty_user_1</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1proto_docs__01" prot="public">HKSupply::Migrations::protoDocs_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1protos_active__01" prot="public">HKSupply::Migrations::protosActive_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1scrap_n_ull__20170612__01" prot="public">HKSupply::Migrations::scrapNUll_20170612_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1status_h_k" prot="public">HKSupply::Migrations::statusHK</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_status_prototype__01" prot="public">HKSupply::Migrations::StatusPrototype_01</innerclass>
     <innerclass refid="class_h_k_supply_1_1_migrations_1_1_store" prot="public">HKSupply::Migrations::Store</innerclass>
     <innerclass refid="class_h_k_supply_1_1_migrations_1_1_supplier" prot="public">HKSupply::Migrations::Supplier</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_supplier_factory_coeff__20170719__01" prot="public">HKSupply::Migrations::SupplierFactoryCoeff_20170719_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1supplier_factory_coeff__20170720__01" prot="public">HKSupply::Migrations::supplierFactoryCoeff_20170720_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_supplier_in_docs__01" prot="public">HKSupply::Migrations::SupplierInDocs_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_supplu_qtty_decimal" prot="public">HKSupply::Migrations::SuppluQttyDecimal</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_supply_docs__20170725__01" prot="public">HKSupply::Migrations::SupplyDocs_20170725_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_supply_doc_type__20170725__01" prot="public">HKSupply::Migrations::SupplyDocType_20170725_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_supply_status__20170724__01" prot="public">HKSupply::Migrations::SupplyStatus_20170724_01</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_units_on_price_list_tables" prot="public">HKSupply::Migrations::UnitsOnPriceListTables</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_units_supply_on_items" prot="public">HKSupply::Migrations::UnitsSupplyOnItems</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1_units_table" prot="public">HKSupply::Migrations::UnitsTable</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1user_att__20170413__1" prot="public">HKSupply::Migrations::userAtt_20170413_1</innerclass>
+    <innerclass refid="class_h_k_supply_1_1_migrations_1_1user_attr___incotems___payment_terms___currency___echange_rate" prot="public">HKSupply::Migrations::userAttr_Incotems_PaymentTerms_Currency_EchangeRate</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

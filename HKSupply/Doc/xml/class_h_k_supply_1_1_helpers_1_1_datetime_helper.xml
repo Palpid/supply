@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_helpers_1_1_datetime_helper" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Helpers::DatetimeHelper</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_helpers_1_1_datetime_helper_1a6d8cc384238541e6a70dc0ce12a21b49" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DateTime</type>
+        <definition>static DateTime HKSupply.Helpers.DatetimeHelper.FirtDateOfWeek</definition>
+        <argsstring>(int year, int weekOfYear, System.Globalization.CultureInfo ci=null)</argsstring>
+        <name>FirtDateOfWeek</name>
+        <param>
+          <type>int</type>
+          <declname>year</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>weekOfYear</declname>
+        </param>
+        <param>
+          <type>System.Globalization.CultureInfo</type>
+          <declname>ci</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Helpers/DatetimeHelper.cs" line="11" column="1" bodyfile="HKSupply/Helpers/DatetimeHelper.cs" bodystart="11" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Helpers/DatetimeHelper.cs" line="10" column="1" bodyfile="HKSupply/Helpers/DatetimeHelper.cs" bodystart="9" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_helpers_1_1_datetime_helper_1a6d8cc384238541e6a70dc0ce12a21b49" prot="public" virt="non-virtual"><scope>HKSupply::Helpers::DatetimeHelper</scope><name>FirtDateOfWeek</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

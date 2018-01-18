@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_custom_controls_1_1_custom_professional_colors" kind="class" language="C#" prot="package">
     <compoundname>CustomControls::CustomProfessionalColors</compoundname>
     <basecompoundref prot="public" virt="non-virtual">ProfessionalColorTable</basecompoundref>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="638" column="1" bodyfile="CustomControls/StackView.cs" bodystart="638" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="638" column="1" bodyfile="CustomControls/StackView.cs" bodystart="638" bodyend="638"/>
       </memberdef>
       <memberdef kind="property" id="class_custom_controls_1_1_custom_professional_colors_1ab456d5c56deb8bbb7145a3535e1b9d51" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>override Color</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="640" column="1" bodyfile="CustomControls/StackView.cs" bodystart="640" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="640" column="1" bodyfile="CustomControls/StackView.cs" bodystart="640" bodyend="640"/>
       </memberdef>
       <memberdef kind="property" id="class_custom_controls_1_1_custom_professional_colors_1a4e1903b0ccf36313d3518fb88bd6a388" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>override Color</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="642" column="1" bodyfile="CustomControls/StackView.cs" bodystart="642" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="642" column="1" bodyfile="CustomControls/StackView.cs" bodystart="642" bodyend="642"/>
       </memberdef>
       <memberdef kind="property" id="class_custom_controls_1_1_custom_professional_colors_1ab38d57b72fe2baf734e10dadd980aaea" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>override Color</type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="644" column="1" bodyfile="CustomControls/StackView.cs" bodystart="644" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="644" column="1" bodyfile="CustomControls/StackView.cs" bodystart="644" bodyend="644"/>
       </memberdef>
       <memberdef kind="property" id="class_custom_controls_1_1_custom_professional_colors_1ab4939afbf92547c8101b45356197ac1a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>override Color</type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="CustomControls/StackView.cs" line="646" column="1" bodyfile="CustomControls/StackView.cs" bodystart="646" bodyend="-1"/>
+        <location file="CustomControls/StackView.cs" line="646" column="1" bodyfile="CustomControls/StackView.cs" bodystart="646" bodyend="646"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -91,22 +91,22 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="28">
+      <node id="219">
         <label>CustomControls.CustomProfessionalColors</label>
-        <childnode refid="29" relation="public-inheritance">
+        <childnode refid="220" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="29">
+      <node id="220">
         <label>ProfessionalColorTable</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="30">
+      <node id="221">
         <label>CustomControls.CustomProfessionalColors</label>
-        <childnode refid="31" relation="public-inheritance">
+        <childnode refid="222" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="31">
+      <node id="222">
         <label>ProfessionalColorTable</label>
       </node>
     </collaborationgraph>

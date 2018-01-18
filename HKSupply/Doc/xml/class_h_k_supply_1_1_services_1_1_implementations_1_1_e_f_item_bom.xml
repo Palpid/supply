@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFItemBom</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IItemBom</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1abc69a4679107cfd1cc1d4fc4ed8931d0" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFItemBom._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom" kindref="compound">EFItemBom</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFItemBom.cs" line="21" column="1" bodyfile="HKSupply/Services/Implementations/EFItemBom.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1aa82900565abed0109b8ecd45d8c3c1d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref></type>
+        <definition>ItemBom HKSupply.Services.Implementations.EFItemBom.GetItemSupplierBom</definition>
+        <argsstring>(int IdBom, string idSupplier, bool getPoco=false)</argsstring>
+        <name>GetItemSupplierBom</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom_1ab4f73cd313c20fa31a6ca6c4f2f8331a">GetItemSupplierBom</reimplements>
+        <param>
+          <type>int</type>
+          <declname>IdBom</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>getPoco</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFItemBom.cs" line="23" column="1" bodyfile="HKSupply/Services/Implementations/EFItemBom.cs" bodystart="23" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1a07dec38f619eac3d606e1511c912cc9e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref></type>
+        <definition>ItemBom HKSupply.Services.Implementations.EFItemBom.GetItemSupplierBom</definition>
+        <argsstring>(string IdItemBcn, string idSupplier, bool getPoco=false)</argsstring>
+        <name>GetItemSupplierBom</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom_1a1568c6b62fe6356b70e99149376eb3f7">GetItemSupplierBom</reimplements>
+        <param>
+          <type>string</type>
+          <declname>IdItemBcn</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>getPoco</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFItemBom.cs" line="111" column="1" bodyfile="HKSupply/Services/Implementations/EFItemBom.cs" bodystart="111" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1a5a962745957fb57c7b2f4a4b6bfc67de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref> &gt;</type>
+        <definition>List&lt;ItemBom&gt; HKSupply.Services.Implementations.EFItemBom.GetItemBom</definition>
+        <argsstring>(string idItemBcn)</argsstring>
+        <name>GetItemBom</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom_1a14c5bde641578f9e8b1ebad500093c84">GetItemBom</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idItemBcn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFItemBom.cs" line="198" column="1" bodyfile="HKSupply/Services/Implementations/EFItemBom.cs" bodystart="198" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1a11dbd453a2f553e3e00e163a846397e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref> &gt;</type>
+        <definition>List&lt;ItemBom&gt; HKSupply.Services.Implementations.EFItemBom.GetItemBom</definition>
+        <argsstring>(string idItemBcn, string idSupplier)</argsstring>
+        <name>GetItemBom</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom_1a9814e49dce27daa392533c07a25b8fe1">GetItemBom</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idItemBcn</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <briefdescription>
+<para>Load item bom for a supplier + intranet (design) BOM </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idItemBcn</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idSupplier</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFItemBom.cs" line="286" column="1" bodyfile="HKSupply/Services/Implementations/EFItemBom.cs" bodystart="286" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1a66d0c1f604104f7e54d059db6423ceb3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFItemBom.EditItemSuppliersBom</definition>
+        <argsstring>(List&lt; ItemBom &gt; itemSuppliersBom)</argsstring>
+        <name>EditItemSuppliersBom</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom_1a2d4249a00371f575e85bbade36d4897a">EditItemSuppliersBom</reimplements>
+        <param>
+          <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref> &gt;</type>
+          <declname>itemSuppliersBom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>itemSuppliersBom</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para><para>Como con el Entity no he conseguido hacer bien la relacíón entre ITEM_BOM y DETAIL_BOM_HF, ya que la ha cogido desde ITEM_BOM.ID_BOM -&gt; DETAIL_BOM_HF.ID_DETAIL_BOM tengo que ir limpiando las nested propoerties para que no intente hacer los insert/update anidados y de error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFItemBom.cs" line="519" column="1" bodyfile="HKSupply/Services/Implementations/EFItemBom.cs" bodystart="519" bodyend="756"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1a7987eb32318d435127baa58f74af72d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref> &gt;</type>
+        <definition>List&lt;ItemBom&gt; HKSupply.Services.Implementations.EFItemBom.GetRelatedItemBom</definition>
+        <argsstring>(int idBomn)</argsstring>
+        <name>GetRelatedItemBom</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom_1aa3a75a076f313752949c7e4cb1b61ac1">GetRelatedItemBom</reimplements>
+        <param>
+          <type>int</type>
+          <declname>idBomn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFItemBom.cs" line="758" column="1" bodyfile="HKSupply/Services/Implementations/EFItemBom.cs" bodystart="758" bodyend="810"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1a0fadc8a142af1f298464b193424b81f3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref></type>
+        <definition>ItemBom HKSupply.Services.Implementations.EFItemBom.GetItemSupplierBom</definition>
+        <argsstring>(HKSupplyContext db, int IdBom, string idSupplier, bool getPoco=false)</argsstring>
+        <name>GetItemSupplierBom</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>IdBom</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>idSupplier</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>getPoco</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Setear a null los propiedades que con clases complejas </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bom</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para><para>Al hacer un add por ejemplo, EF agrega al contexto del inset todas las nested properties y también intenta hacerles un insert (familias, item...) Las seteo a null para que las ignore, no sé si es muy correcto, pero es la única manera que he encontrado ahora. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFItemBom.cs" line="903" column="1" bodyfile="HKSupply/Services/Implementations/EFItemBom.cs" bodystart="903" bodyend="988"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1ad9e8aebd0b006f8c64be50e123e2628b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Services.Implementations.EFItemBom.UpdateVersionRelatedItems</definition>
+        <argsstring>(HKSupplyContext db, ItemBom itemBom)</argsstring>
+        <name>UpdateVersionRelatedItems</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref></type>
+          <declname>itemBom</declname>
+        </param>
+        <briefdescription>
+<para>Actualizar la versión de los items que incluyen un semielaborado que ha sido modificado </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFItemBom.cs" line="993" column="1" bodyfile="HKSupply/Services/Implementations/EFItemBom.cs" bodystart="993" bodyend="1088"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1ae2cb4d0668f8eb0eae815141ffcec943" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Services.Implementations.EFItemBom.CreateFrontTempleBom</definition>
+        <argsstring>(HKSupplyContext db, ItemBom eyBomSupplier)</argsstring>
+        <name>CreateFrontTempleBom</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref></type>
+          <declname>eyBomSupplier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFItemBom.cs" line="1091" column="1" bodyfile="HKSupply/Services/Implementations/EFItemBom.cs" bodystart="1091" bodyend="1368"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1acd6cabdc76cb6e27b56981c440340d0b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Services.Implementations.EFItemBom.EditBomFrontTemple</definition>
+        <argsstring>(HKSupplyContext db, ItemBom bom)</argsstring>
+        <name>EditBomFrontTemple</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_d_b_1_1_h_k_supply_context" kindref="compound">HKSupplyContext</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_item_bom" kindref="compound">ItemBom</ref></type>
+          <declname>bom</declname>
+        </param>
+        <briefdescription>
+<para>Crear/Modificar el BOM del frontal y las varillas. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>db</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bom</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para><para>Es la versíón &quot;simplificada&quot; sin los semielaborados (HF), ya que actualmente no se van a usar y complican el proceso.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFItemBom.cs" line="1376" column="1" bodyfile="HKSupply/Services/Implementations/EFItemBom.cs" bodystart="1376" bodyend="1459"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="473">
+        <label>HKSupply.Services.Implementations.EFItemBom</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom"/>
+        <childnode refid="474" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="474">
+        <label>IItemBom</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="475">
+        <label>HKSupply.Services.Implementations.EFItemBom</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom"/>
+        <childnode refid="476" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="476">
+        <label>IItemBom</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_item_bom"/>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFItemBom.cs" line="20" column="1" bodyfile="HKSupply/Services/Implementations/EFItemBom.cs" bodystart="19" bodyend="1465"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1abc69a4679107cfd1cc1d4fc4ed8931d0" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFItemBom</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1ae2cb4d0668f8eb0eae815141ffcec943" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFItemBom</scope><name>CreateFrontTempleBom</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1acd6cabdc76cb6e27b56981c440340d0b" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFItemBom</scope><name>EditBomFrontTemple</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1a66d0c1f604104f7e54d059db6423ceb3" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFItemBom</scope><name>EditItemSuppliersBom</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1a5a962745957fb57c7b2f4a4b6bfc67de" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFItemBom</scope><name>GetItemBom</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1a11dbd453a2f553e3e00e163a846397e6" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFItemBom</scope><name>GetItemBom</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1aa82900565abed0109b8ecd45d8c3c1d9" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFItemBom</scope><name>GetItemSupplierBom</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1a07dec38f619eac3d606e1511c912cc9e" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFItemBom</scope><name>GetItemSupplierBom</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1a0fadc8a142af1f298464b193424b81f3" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFItemBom</scope><name>GetItemSupplierBom</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1a7987eb32318d435127baa58f74af72d9" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFItemBom</scope><name>GetRelatedItemBom</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_item_bom_1ad9e8aebd0b006f8c64be50e123e2628b" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFItemBom</scope><name>UpdateVersionRelatedItems</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Models::Supply::PackingListItemBatch</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch_1ab555b71d5d3fa612cc6d0d6adbb716a2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.PackingListItemBatch.IdDoc</definition>
+        <argsstring></argsstring>
+        <name>IdDoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/PackingListItemBatch.cs" line="11" column="1" bodyfile="HKSupply/Models/Supply/PackingListItemBatch.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch_1a0e1bf06eee24e0e78143261b8236c757" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.PackingListItemBatch.IdDocRelated</definition>
+        <argsstring></argsstring>
+        <name>IdDocRelated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/PackingListItemBatch.cs" line="14" column="1" bodyfile="HKSupply/Models/Supply/PackingListItemBatch.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch_1a9d6013b20d22563cba2f039af2e9e339" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.PackingListItemBatch.IdItemBcn</definition>
+        <argsstring></argsstring>
+        <name>IdItemBcn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/PackingListItemBatch.cs" line="17" column="1" bodyfile="HKSupply/Models/Supply/PackingListItemBatch.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch_1a772eacdcacf8943effe8b183466553a1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>object</type>
+        <definition>object HKSupply.Models.Supply.PackingListItemBatch.Item</definition>
+        <argsstring></argsstring>
+        <name>Item</name>
+        <briefdescription>
+<para>Debido a que el item puede ser de diferentes clases, lo defino como object y desde la aplicación ya controlaremos el casteo al tipo correspondiente según su item group </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/PackingListItemBatch.cs" line="24" column="1" bodyfile="HKSupply/Models/Supply/PackingListItemBatch.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch_1ab358cde8bb0a9dcc7a998d3322fccbdb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.PackingListItemBatch.IdItemGroup</definition>
+        <argsstring></argsstring>
+        <name>IdItemGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/PackingListItemBatch.cs" line="27" column="1" bodyfile="HKSupply/Models/Supply/PackingListItemBatch.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch_1ad88dcd6dfff227043ece4fc629ce997a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HKSupply.Models.Supply.PackingListItemBatch.Batch</definition>
+        <argsstring></argsstring>
+        <name>Batch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/PackingListItemBatch.cs" line="30" column="1" bodyfile="HKSupply/Models/Supply/PackingListItemBatch.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch_1afd564e1755b6ffd50b0effbeba96c67c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>decimal</type>
+        <definition>decimal HKSupply.Models.Supply.PackingListItemBatch.Quantity</definition>
+        <argsstring></argsstring>
+        <name>Quantity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/PackingListItemBatch.cs" line="33" column="1" bodyfile="HKSupply/Models/Supply/PackingListItemBatch.cs" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch_1a15bf9799f71633ea5c8901d0904f7abe" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_item_group" kindref="compound">ItemGroup</ref></type>
+        <definition>ItemGroup HKSupply.Models.Supply.PackingListItemBatch.ItemGroup</definition>
+        <argsstring></argsstring>
+        <name>ItemGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/PackingListItemBatch.cs" line="38" column="1" bodyfile="HKSupply/Models/Supply/PackingListItemBatch.cs" bodystart="38" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch_1aa46a4bb43eba4652abe4a38a53cd6e7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool HKSupply.Models.Supply.PackingListItemBatch.Equals</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/PackingListItemBatch.cs" line="44" column="1" bodyfile="HKSupply/Models/Supply/PackingListItemBatch.cs" bodystart="44" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch_1a788b4548a74ed1d21afc68bdd7789606" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int HKSupply.Models.Supply.PackingListItemBatch.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Models/Supply/PackingListItemBatch.cs" line="62" column="1" bodyfile="HKSupply/Models/Supply/PackingListItemBatch.cs" bodystart="62" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HKSupply/Models/Supply/PackingListItemBatch.cs" line="9" column="1" bodyfile="HKSupply/Models/Supply/PackingListItemBatch.cs" bodystart="8" bodyend="76"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch_1ad88dcd6dfff227043ece4fc629ce997a" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::PackingListItemBatch</scope><name>Batch</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch_1aa46a4bb43eba4652abe4a38a53cd6e7b" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::PackingListItemBatch</scope><name>Equals</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch_1a788b4548a74ed1d21afc68bdd7789606" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::PackingListItemBatch</scope><name>GetHashCode</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch_1ab555b71d5d3fa612cc6d0d6adbb716a2" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::PackingListItemBatch</scope><name>IdDoc</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch_1a0e1bf06eee24e0e78143261b8236c757" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::PackingListItemBatch</scope><name>IdDocRelated</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch_1a9d6013b20d22563cba2f039af2e9e339" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::PackingListItemBatch</scope><name>IdItemBcn</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch_1ab358cde8bb0a9dcc7a998d3322fccbdb" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::PackingListItemBatch</scope><name>IdItemGroup</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch_1a772eacdcacf8943effe8b183466553a1" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::PackingListItemBatch</scope><name>Item</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch_1a15bf9799f71633ea5c8901d0904f7abe" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::PackingListItemBatch</scope><name>ItemGroup</name></member>
+      <member refid="class_h_k_supply_1_1_models_1_1_supply_1_1_packing_list_item_batch_1afd564e1755b6ffd50b0effbeba96c67c" prot="public" virt="non-virtual"><scope>HKSupply::Models::Supply::PackingListItemBatch</scope><name>Quantity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

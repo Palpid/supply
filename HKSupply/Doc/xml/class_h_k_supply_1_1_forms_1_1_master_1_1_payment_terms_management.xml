@@ -1,0 +1,551 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::Master::PaymentTermsManagement</compoundname>
+    <basecompoundref refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base" prot="public" virt="non-virtual">HKSupply.Forms.RibbonFormBase</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1ae5646084d9d34309533da4be6c070557" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_payment_terms" kindref="compound">PaymentTerms</ref> &gt;</type>
+        <definition>List&lt;PaymentTerms&gt; HKSupply.Forms.Master.PaymentTermsManagement._modifiedPaymentTerms</definition>
+        <argsstring></argsstring>
+        <name>_modifiedPaymentTerms</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_models_1_1_payment_terms" kindref="compound">PaymentTerms</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="31" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a61bc636d5075ab6355ab03e05fedc855" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_payment_terms" kindref="compound">PaymentTerms</ref> &gt;</type>
+        <definition>List&lt;PaymentTerms&gt; HKSupply.Forms.Master.PaymentTermsManagement._createdPaymentTerms</definition>
+        <argsstring></argsstring>
+        <name>_createdPaymentTerms</name>
+        <initializer>= new List&lt;<ref refid="class_h_k_supply_1_1_models_1_1_payment_terms" kindref="compound">PaymentTerms</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="32" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a4064eb14ec5c2fcbf38577c84d002170" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.Master.PaymentTermsManagement.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a8a7046e6dc2897bed1675d323d1d6a89" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.GridControl</type>
+        <definition>DevExpress.XtraGrid.GridControl HKSupply.Forms.Master.PaymentTermsManagement.xgrdPaymentTerms</definition>
+        <argsstring></argsstring>
+        <name>xgrdPaymentTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.Designer.cs" line="81" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.Designer.cs" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1ac9c39e0ab14a1011efcd183f0ef2713f" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraGrid.Views.Grid.GridView</type>
+        <definition>DevExpress.XtraGrid.Views.Grid.GridView HKSupply.Forms.Master.PaymentTermsManagement.rootgridViewPaymentTerms</definition>
+        <argsstring></argsstring>
+        <name>rootgridViewPaymentTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.Designer.cs" line="82" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.Designer.cs" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a778939a38e295a811cf6eef5ba8ea8d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.Master.PaymentTermsManagement.PaymentTermsManagement</definition>
+        <argsstring>()</argsstring>
+        <name>PaymentTermsManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="36" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="36" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a7ce42f24479504395e47edbebe599a8d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.PaymentTermsManagement.bbiCancel_ItemClick</definition>
+        <argsstring>(object sender, DevExpress.XtraBars.ItemClickEventArgs e)</argsstring>
+        <name>bbiCancel_ItemClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraBars.ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="67" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="67" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a9755990625d038588bc3484c9d6447fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.PaymentTermsManagement.bbiEdit_ItemClick</definition>
+        <argsstring>(object sender, DevExpress.XtraBars.ItemClickEventArgs e)</argsstring>
+        <name>bbiEdit_ItemClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraBars.ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="81" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="81" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a449cf3e6515cf8bb358b4c51c998b98e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.PaymentTermsManagement.bbiNew_ItemClick</definition>
+        <argsstring>(object sender, DevExpress.XtraBars.ItemClickEventArgs e)</argsstring>
+        <name>bbiNew_ItemClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraBars.ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="95" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="95" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1aa149776fe83451d1f24e19792d9f556e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.PaymentTermsManagement.bbiSave_ItemClick</definition>
+        <argsstring>(object sender, DevExpress.XtraBars.ItemClickEventArgs e)</argsstring>
+        <name>bbiSave_ItemClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraBars.ItemClickEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="109" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="109" bodyend="159"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a9114438aaecc59ae000486b920494f12" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PaymentTermsManagement.ConfigureRibbonActions</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="53" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="53" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a74ed1095cd72165a3d1f1c2d0683e2e9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PaymentTermsManagement.PaymentTermsManagement_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>PaymentTermsManagement_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="163" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="163" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a97de1b9fd8895408c2904f18850ac11c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PaymentTermsManagement.rootgridViewPaymentTerms_CellValueChanged</definition>
+        <argsstring>(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)</argsstring>
+        <name>rootgridViewPaymentTerms_CellValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="177" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="177" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1ab7f18b965ebaf1d08fb2acedc21777b2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PaymentTermsManagement.rootgridViewPaymentTerms_ValidatingEditor</definition>
+        <argsstring>(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)</argsstring>
+        <name>rootgridViewPaymentTerms_ValidatingEditor</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="205" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="205" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a5a618e4cd7faaa7f992a771f6d46a5c2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PaymentTermsManagement.SetUpGrdPaymentTerms</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpGrdPaymentTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="234" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="234" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1abc7ab9d1416720321faf7fbf40604749" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PaymentTermsManagement.LoadAllPaymentTerms</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAllPaymentTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="269" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="269" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a6a89addc4cdc3aa852d288659e05332d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PaymentTermsManagement.ConfigureRibbonActionsEditing</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureRibbonActionsEditing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="292" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="292" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a69a00a1c90d0698332fbc5c913b5b906" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PaymentTermsManagement.ConfigureActionsStackViewCreating</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureActionsStackViewCreating</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="312" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="312" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1afe0f4c3ee56eb25f93a0b346608030ca" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PaymentTermsManagement.AddModifiedPaymentTermToList</definition>
+        <argsstring>(PaymentTerms modifiedPaymentTerm)</argsstring>
+        <name>AddModifiedPaymentTermToList</name>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_payment_terms" kindref="compound">PaymentTerms</ref></type>
+          <declname>modifiedPaymentTerm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="330" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="330" bodyend="349"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a300020812d58170e11dece1a5d6d6e76" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.PaymentTermsManagement.IsValidPaymentTerms</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidPaymentTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="351" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="351" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1ab415727b96f231d656cf7cab9a24acca" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.PaymentTermsManagement.IsValidModifiedPaymentTerms</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidModifiedPaymentTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="368" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="368" bodyend="386"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a7fb21949d254f14581d7a15fcdb65a98" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.PaymentTermsManagement.IsValidCreatedPaymentTerms</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidCreatedPaymentTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="388" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="388" bodyend="406"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1ac6c23149e6128c4ee1c7d24ce0eb5c2d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.PaymentTermsManagement.UpdatePaymentTerms</definition>
+        <argsstring>()</argsstring>
+        <name>UpdatePaymentTerms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="408" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="408" bodyend="418"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a0ec688ec8658087efb6554c130785df9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Forms.Master.PaymentTermsManagement.CreatePaymentTerm</definition>
+        <argsstring>()</argsstring>
+        <name>CreatePaymentTerm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="420" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="420" bodyend="431"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a1897020248c589fcd6df58fb45e3eec2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Master.PaymentTermsManagement.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.Designer.cs" bodystart="29" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a135009650e2c1aa0781b3703dbd05c20" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.Master.PaymentTermsManagement.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Master/PaymentTermsManagement.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1321">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1320">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1321" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1319">
+        <label>HKSupply.Forms.Master.PaymentTermsManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management"/>
+        <childnode refid="1320" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1324">
+        <label>DevExpress::XtraBars::Ribbon::RibbonForm</label>
+      </node>
+      <node id="1325">
+        <label>XtraBars</label>
+      </node>
+      <node id="1323">
+        <label>RibbonFormBase</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base"/>
+        <childnode refid="1324" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1325" relation="usage">
+          <edgelabel>bbiCancel</edgelabel>
+          <edgelabel>ribbonStatusBar</edgelabel>
+          <edgelabel>bbiPrintPreview</edgelabel>
+          <edgelabel>bbiSave</edgelabel>
+          <edgelabel>bbiNew</edgelabel>
+          <edgelabel>bbiEdit</edgelabel>
+          <edgelabel>ribbonControl</edgelabel>
+          <edgelabel>ribbonPageGroup1</edgelabel>
+          <edgelabel>ribbonPage1</edgelabel>
+          <edgelabel>ribbonPageGroup2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="1322">
+        <label>HKSupply.Forms.Master.PaymentTermsManagement</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management"/>
+        <childnode refid="1323" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/Master/PaymentTermsManagement.cs" line="20" column="1" bodyfile="HKSupply/Forms/Master/PaymentTermsManagement.cs" bodystart="19" bodyend="434"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a61bc636d5075ab6355ab03e05fedc855" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>_createdPaymentTerms</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1ae5646084d9d34309533da4be6c070557" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>_modifiedPaymentTerms</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a19b5d159bbd49a901457982a3ccae61c" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>ActionsStates</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1afe0f4c3ee56eb25f93a0b346608030ca" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>AddModifiedPaymentTermToList</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a14d5ff785c8dd3e468ae9d598e2b202b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>AddRestoreLayoutItems</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afc105d49fb2be36f7ecaac564c71c34f" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>BarButtonItemReport_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a761c21a5b057fb7024f0cabb5db7d3e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>bbiCancel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a7ce42f24479504395e47edbebe599a8d" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1acf595abe27b25dc339e95176b840d318" prot="public" virt="virtual" ambiguityscope="HKSupply::Forms::RibbonFormBase."><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>bbiCancel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1f152497f1ed4ab950f1efc905cf9855" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>bbiEdit</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a9755990625d038588bc3484c9d6447fc" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af810662672614a80a41f09f0dadcbee3" prot="public" virt="virtual" ambiguityscope="HKSupply::Forms::RibbonFormBase."><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>bbiEdit_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1cb63ed00f841e9a3ad90de4bf48912a" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>bbiExportCsv_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac5b520f58dbca59a2bffb6cb7ca51811" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>bbiExportExcel_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1afe282e9cf1935592ab30454a8cb007f7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>bbiNew</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a449cf3e6515cf8bb358b4c51c998b98e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad57212705cc492e7a8b25c1ee65de37a" prot="public" virt="virtual" ambiguityscope="HKSupply::Forms::RibbonFormBase."><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>bbiNew_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a1a497488427f08eac431ef74c5fa4ebd" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>bbiPrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3261a304d32dac9f2d658eb430528f61" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>bbiPrintPreview_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab7dea0c7ad75ee898b48d3e87799a295" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>bbiSave</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1aa149776fe83451d1f24e19792d9f556e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a2b9ece8fa41398d9d23e6d0dcb7c1ba9" prot="public" virt="virtual" ambiguityscope="HKSupply::Forms::RibbonFormBase."><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>bbiSave_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a0d67163f46c55b3dd2203591b18f1e58" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>BbiSaveLayout_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a4064eb14ec5c2fcbf38577c84d002170" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a69a00a1c90d0698332fbc5c913b5b906" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>ConfigureActionsStackViewCreating</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a52752c5a289899abff7185220b7d966b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>ConfigureLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a96c09cd86882c5b71cc60345943d4b2b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>ConfigurePrintExportOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a9114438aaecc59ae000486b920494f12" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>ConfigureRibbonActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a6a89addc4cdc3aa852d288659e05332d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>ConfigureRibbonActionsEditing</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a0ec688ec8658087efb6554c130785df9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>CreatePaymentTerm</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab9d07b216d885241427a38a34ac0e63e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>CurrentLayout</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac278443a5e6b29829ff8c5744f202471" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>CurrentState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a135009650e2c1aa0781b3703dbd05c20" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aff9ab2ae4cd1f4af498a2e15da4fbfed" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>EnableExportCsv</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6f8de6655c2d81c207b48a01daabed7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>EnableExportExcel</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a6063d840bd6d815d0ded970a4f692335" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>EnableLayoutOptions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1b3526d9b979c58143e8bf6168ee9c2" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>EnablePrintPreview</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a4c49d0366a5aefcbfeb9ffc8a73d7eee" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>ExportCsvFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae1067b098f733b9d83a196950c033965" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>ExportExcelFile</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a1897020248c589fcd6df58fb45e3eec2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a7fb21949d254f14581d7a15fcdb65a98" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>IsValidCreatedPaymentTerms</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1ab415727b96f231d656cf7cab9a24acca" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>IsValidModifiedPaymentTerms</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a300020812d58170e11dece1a5d6d6e76" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>IsValidPaymentTerms</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af6655859725d01e608331026f38a160d" prot="public" virt="virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>LayoutButton_ItemClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1abc7ab9d1416720321faf7fbf40604749" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>LoadAllPaymentTerms</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a98c58ab1bbba3cdca52218ee2654e56b" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>Modify</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3708233c73e4213ad662a497dd910dff" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>New</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a778939a38e295a811cf6eef5ba8ea8d5" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>PaymentTermsManagement</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a74ed1095cd72165a3d1f1c2d0683e2e9" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>PaymentTermsManagement_Load</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1af86b4cc87ab6354fa29f481044ffc9c9" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>ProcessCmdKey</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad7e0b8936df83d7b543b80f7c952d4f4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>Read</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ab1d3918d11343c8e8e953cc1ec84fe28" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>RestoreInitState</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a580f0ead3ebf8727b9b18718b5fb52e6" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>ribbonControl</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ac95fb284eba10d3b2af40755cbe1b4b1" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>RibbonFormBase</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1aa2fd598d8dce0cf3ade5f2e4286b1a63" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>ribbonPage1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ae7e0b8e80346713b6f0924eac3b90244" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>ribbonPageGroup1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a56392f3fb3ffe03c6056226f7a4e9cc4" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>ribbonPageGroup2</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a17f7eab51489ad84d039270fdadd94e3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>ribbonStatusBar</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1ac9c39e0ab14a1011efcd183f0ef2713f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>rootgridViewPaymentTerms</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a97de1b9fd8895408c2904f18850ac11c" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>rootgridViewPaymentTerms_CellValueChanged</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1ab7f18b965ebaf1d08fb2acedc21777b2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>rootgridViewPaymentTerms_ValidatingEditor</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1a3e00a9c3ea88e57573dd6cfb730f0906" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>SetActions</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_ribbon_form_base_1ad291a5222a82a2bf33637f8dd0f5e0ac" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>SetRibbonText</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a5a618e4cd7faaa7f992a771f6d46a5c2" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>SetUpGrdPaymentTerms</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1ac6c23149e6128c4ee1c7d24ce0eb5c2d" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>UpdatePaymentTerms</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_master_1_1_payment_terms_management_1a8a7046e6dc2897bed1675d323d1d6a89" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Master::PaymentTermsManagement</scope><name>xgrdPaymentTerms</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

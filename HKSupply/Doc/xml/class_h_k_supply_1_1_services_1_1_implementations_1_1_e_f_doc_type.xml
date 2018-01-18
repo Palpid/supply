@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_type" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFDocType</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_type" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IDocType</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_type_1ade28dca9126b2cbeeb3d76485c826cd0" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFDocType._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_type" kindref="compound">EFDocType</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFDocType.cs" line="17" column="1" bodyfile="HKSupply/Services/Implementations/EFDocType.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_type_1a83b9c517bfc1f39bd3d3ca8089418a06" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_doc_type" kindref="compound">Models.DocType</ref> &gt;</type>
+        <definition>List&lt;Models.DocType&gt; HKSupply.Services.Implementations.EFDocType.GetDocsType</definition>
+        <argsstring>(string idItemGroup)</argsstring>
+        <name>GetDocsType</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_type_1a2794563a2246ea84d2af7caff9150aee">GetDocsType</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idItemGroup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFDocType.cs" line="19" column="1" bodyfile="HKSupply/Services/Implementations/EFDocType.cs" bodystart="19" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="433">
+        <label>HKSupply.Services.Implementations.EFDocType</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_type"/>
+        <childnode refid="434" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="434">
+        <label>IDocType</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_type"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="435">
+        <label>HKSupply.Services.Implementations.EFDocType</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_type"/>
+        <childnode refid="436" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="436">
+        <label>IDocType</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_doc_type"/>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFDocType.cs" line="16" column="1" bodyfile="HKSupply/Services/Implementations/EFDocType.cs" bodystart="15" bodyend="54"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_type_1ade28dca9126b2cbeeb3d76485c826cd0" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFDocType</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_doc_type_1a83b9c517bfc1f39bd3d3ca8089418a06" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFDocType</scope><name>GetDocsType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_forms_1_1_wait_form1" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Forms::WaitForm1</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">WaitForm</basecompoundref>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_h_k_supply_1_1_forms_1_1_wait_form1_1a5eac150298fb445e34587c3fc2e63669" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>WaitFormCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/WaitForm1.cs" line="34" column="1" bodyfile="HKSupply/Forms/WaitForm1.cs" bodystart="33" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_wait_form1_1a274ded872eaf78de8edb8c4a56947960" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HKSupply.Forms.WaitForm1.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/WaitForm1.Designer.cs" line="8" column="1" bodyfile="HKSupply/Forms/WaitForm1.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_wait_form1_1a02043c207abd0388c03b6a2f2f670186" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TableLayoutPanel</type>
+        <definition>System.Windows.Forms.TableLayoutPanel HKSupply.Forms.WaitForm1.tableLayoutPanel1</definition>
+        <argsstring></argsstring>
+        <name>tableLayoutPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/WaitForm1.Designer.cs" line="89" column="1" bodyfile="HKSupply/Forms/WaitForm1.Designer.cs" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_wait_form1_1a58604ced6e38603877d85f5ad27886fa" prot="private" static="no" mutable="no">
+        <type>DevExpress.XtraWaitForm.ProgressPanel</type>
+        <definition>DevExpress.XtraWaitForm.ProgressPanel HKSupply.Forms.WaitForm1.progressPanel1</definition>
+        <argsstring></argsstring>
+        <name>progressPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/WaitForm1.Designer.cs" line="90" column="1" bodyfile="HKSupply/Forms/WaitForm1.Designer.cs" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_wait_form1_1a811c45c9cbf76ab457d6c29ebc7ac043" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HKSupply.Forms.WaitForm1.WaitForm1</definition>
+        <argsstring>()</argsstring>
+        <name>WaitForm1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/WaitForm1.cs" line="8" column="1" bodyfile="HKSupply/Forms/WaitForm1.cs" bodystart="8" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_wait_form1_1a1efd8f41355f398a5b28c83ca3401f66" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.WaitForm1.SetCaption</definition>
+        <argsstring>(string caption)</argsstring>
+        <name>SetCaption</name>
+        <param>
+          <type>string</type>
+          <declname>caption</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/WaitForm1.cs" line="16" column="1" bodyfile="HKSupply/Forms/WaitForm1.cs" bodystart="16" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_wait_form1_1afde999574fad6f39b6a43b659ba7877e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.WaitForm1.SetDescription</definition>
+        <argsstring>(string description)</argsstring>
+        <name>SetDescription</name>
+        <param>
+          <type>string</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/WaitForm1.cs" line="21" column="1" bodyfile="HKSupply/Forms/WaitForm1.cs" bodystart="21" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_wait_form1_1a5cb2f7511f206451e9c42c5e69636758" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.WaitForm1.ProcessCommand</definition>
+        <argsstring>(Enum cmd, object arg)</argsstring>
+        <name>ProcessCommand</name>
+        <param>
+          <type>Enum</type>
+          <declname>cmd</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/WaitForm1.cs" line="26" column="1" bodyfile="HKSupply/Forms/WaitForm1.cs" bodystart="26" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_wait_form1_1a027bddb5e3b1ce651dea8c558f5a0732" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Forms.WaitForm1.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/WaitForm1.Designer.cs" line="14" column="1" bodyfile="HKSupply/Forms/WaitForm1.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_wait_form1_1abeeeda9dd995b52aa4f25f53e5fed816" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.WaitForm1.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/WaitForm1.Designer.cs" line="29" column="1" bodyfile="HKSupply/Forms/WaitForm1.Designer.cs" bodystart="29" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1711">
+        <label>HKSupply.Forms.WaitForm1</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_wait_form1"/>
+        <childnode refid="1712" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1712">
+        <label>WaitForm</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1713">
+        <label>HKSupply.Forms.WaitForm1</label>
+        <link refid="class_h_k_supply_1_1_forms_1_1_wait_form1"/>
+        <childnode refid="1714" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1714">
+        <label>WaitForm</label>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Forms/WaitForm1.cs" line="7" column="1" bodyfile="HKSupply/Forms/WaitForm1.cs" bodystart="6" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_forms_1_1_wait_form1_1a274ded872eaf78de8edb8c4a56947960" prot="private" virt="non-virtual"><scope>HKSupply::Forms::WaitForm1</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_wait_form1_1a027bddb5e3b1ce651dea8c558f5a0732" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::WaitForm1</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_wait_form1_1abeeeda9dd995b52aa4f25f53e5fed816" prot="private" virt="non-virtual"><scope>HKSupply::Forms::WaitForm1</scope><name>InitializeComponent</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_wait_form1_1a5cb2f7511f206451e9c42c5e69636758" prot="public" virt="non-virtual"><scope>HKSupply::Forms::WaitForm1</scope><name>ProcessCommand</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_wait_form1_1a58604ced6e38603877d85f5ad27886fa" prot="private" virt="non-virtual"><scope>HKSupply::Forms::WaitForm1</scope><name>progressPanel1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_wait_form1_1a1efd8f41355f398a5b28c83ca3401f66" prot="public" virt="non-virtual"><scope>HKSupply::Forms::WaitForm1</scope><name>SetCaption</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_wait_form1_1afde999574fad6f39b6a43b659ba7877e" prot="public" virt="non-virtual"><scope>HKSupply::Forms::WaitForm1</scope><name>SetDescription</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_wait_form1_1a02043c207abd0388c03b6a2f2f670186" prot="private" virt="non-virtual"><scope>HKSupply::Forms::WaitForm1</scope><name>tableLayoutPanel1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_wait_form1_1a811c45c9cbf76ab457d6c29ebc7ac043" prot="public" virt="non-virtual"><scope>HKSupply::Forms::WaitForm1</scope><name>WaitForm1</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_wait_form1_1a5eac150298fb445e34587c3fc2e63669" prot="public" virt="non-virtual"><scope>HKSupply::Forms::WaitForm1</scope><name>WaitFormCommand</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

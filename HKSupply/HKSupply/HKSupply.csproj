@@ -409,6 +409,12 @@
     <Compile Include="Forms\Supply\DeliveryNote.Designer.cs">
       <DependentUpon>DeliveryNote.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Supply\DialogForms\AddReceiptItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Supply\DialogForms\AddReceiptItem.Designer.cs">
+      <DependentUpon>AddReceiptItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Supply\DialogForms\SelectDocs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1301,6 +1307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\DeliveryNote.resx">
       <DependentUpon>DeliveryNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Supply\DialogForms\AddReceiptItem.resx">
+      <DependentUpon>AddReceiptItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Supply\DialogForms\SelectDocs.resx">
       <DependentUpon>SelectDocs.cs</DependentUpon>

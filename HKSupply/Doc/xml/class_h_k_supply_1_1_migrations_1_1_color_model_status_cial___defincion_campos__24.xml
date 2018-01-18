@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__24" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Migrations::ColorModelStatusCial_DefincionCampos_24</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IMigrationMetadata</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">DbMigration</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__24_1a41b5704ca4504d478364b880bf19283e" prot="private" static="no" mutable="no">
+        <type>readonly ResourceManager</type>
+        <definition>readonly ResourceManager HKSupply.Migrations.ColorModelStatusCial_DefincionCampos_24.Resources</definition>
+        <argsstring></argsstring>
+        <name>Resources</name>
+        <initializer>= new ResourceManager(typeof(<ref refid="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__24" kindref="compound">ColorModelStatusCial_DefincionCampos_24</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201704111046282_ColorModelStatusCial_DefincionCampos_2.4.Designer.cs" line="12" column="1" bodyfile="HKSupply/Migrations/201704111046282_ColorModelStatusCial_DefincionCampos_2.4.Designer.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__24_1aca767c6a2e02c7968f32b1c00b549123" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string IMigrationMetadata.</type>
+        <definition>string IMigrationMetadata. HKSupply.Migrations.ColorModelStatusCial_DefincionCampos_24.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201704111046282_ColorModelStatusCial_DefincionCampos_2.4.Designer.cs" line="14" column="1" bodyfile="HKSupply/Migrations/201704111046282_ColorModelStatusCial_DefincionCampos_2.4.Designer.cs" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__24_1a5cbfb06e1c85af2d761eb6da4af2b960" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string IMigrationMetadata.</type>
+        <definition>string IMigrationMetadata. HKSupply.Migrations.ColorModelStatusCial_DefincionCampos_24.Source</definition>
+        <argsstring></argsstring>
+        <name>Source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201704111046282_ColorModelStatusCial_DefincionCampos_2.4.Designer.cs" line="19" column="1" bodyfile="HKSupply/Migrations/201704111046282_ColorModelStatusCial_DefincionCampos_2.4.Designer.cs" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="property" id="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__24_1af31c360d7062701fe1fa87782fd9d6e2" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string IMigrationMetadata.</type>
+        <definition>string IMigrationMetadata. HKSupply.Migrations.ColorModelStatusCial_DefincionCampos_24.Target</definition>
+        <argsstring></argsstring>
+        <name>Target</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201704111046282_ColorModelStatusCial_DefincionCampos_2.4.Designer.cs" line="24" column="1" bodyfile="HKSupply/Migrations/201704111046282_ColorModelStatusCial_DefincionCampos_2.4.Designer.cs" bodystart="25" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__24_1a64a34fcb6380d4e9bd6f73a98037b203" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Migrations.ColorModelStatusCial_DefincionCampos_24.Up</definition>
+        <argsstring>()</argsstring>
+        <name>Up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201704111046282_ColorModelStatusCial_DefincionCampos_2.4.cs" line="8" column="1" bodyfile="HKSupply/Migrations/201704111046282_ColorModelStatusCial_DefincionCampos_2.4.cs" bodystart="8" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__24_1a40a65d9a5d6cc884de375ef06736c5fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HKSupply.Migrations.ColorModelStatusCial_DefincionCampos_24.Down</definition>
+        <argsstring>()</argsstring>
+        <name>Down</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Migrations/201704111046282_ColorModelStatusCial_DefincionCampos_2.4.cs" line="18" column="1" bodyfile="HKSupply/Migrations/201704111046282_ColorModelStatusCial_DefincionCampos_2.4.cs" bodystart="18" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="136">
+        <label>HKSupply.Migrations.ColorModelStatusCial_DefincionCampos_24</label>
+        <link refid="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__24"/>
+        <childnode refid="137" relation="public-inheritance">
+        </childnode>
+        <childnode refid="138" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="138">
+        <label>DbMigration</label>
+      </node>
+      <node id="137">
+        <label>IMigrationMetadata</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="139">
+        <label>HKSupply.Migrations.ColorModelStatusCial_DefincionCampos_24</label>
+        <link refid="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__24"/>
+        <childnode refid="140" relation="public-inheritance">
+        </childnode>
+        <childnode refid="141" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="141">
+        <label>DbMigration</label>
+      </node>
+      <node id="140">
+        <label>IMigrationMetadata</label>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Migrations/201704111046282_ColorModelStatusCial_DefincionCampos_2.4.cs" line="7" column="1" bodyfile="HKSupply/Migrations/201704111046282_ColorModelStatusCial_DefincionCampos_2.4.cs" bodystart="6" bodyend="27"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__24_1a40a65d9a5d6cc884de375ef06736c5fe" prot="public" virt="non-virtual"><scope>HKSupply::Migrations::ColorModelStatusCial_DefincionCampos_24</scope><name>Down</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__24_1aca767c6a2e02c7968f32b1c00b549123" prot="private" virt="non-virtual"><scope>HKSupply::Migrations::ColorModelStatusCial_DefincionCampos_24</scope><name>Id</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__24_1a41b5704ca4504d478364b880bf19283e" prot="private" virt="non-virtual"><scope>HKSupply::Migrations::ColorModelStatusCial_DefincionCampos_24</scope><name>Resources</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__24_1a5cbfb06e1c85af2d761eb6da4af2b960" prot="private" virt="non-virtual"><scope>HKSupply::Migrations::ColorModelStatusCial_DefincionCampos_24</scope><name>Source</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__24_1af31c360d7062701fe1fa87782fd9d6e2" prot="private" virt="non-virtual"><scope>HKSupply::Migrations::ColorModelStatusCial_DefincionCampos_24</scope><name>Target</name></member>
+      <member refid="class_h_k_supply_1_1_migrations_1_1_color_model_status_cial___defincion_campos__24_1a64a34fcb6380d4e9bd6f73a98037b203" prot="public" virt="non-virtual"><scope>HKSupply::Migrations::ColorModelStatusCial_DefincionCampos_24</scope><name>Up</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

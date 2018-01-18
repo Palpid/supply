@@ -31,6 +31,7 @@
             this.xtcGeneral = new DevExpress.XtraTab.XtraTabControl();
             this.xtpReceiptAndQuality = new DevExpress.XtraTab.XtraTabPage();
             this.pcFilter = new DevExpress.XtraEditors.PanelControl();
+            this.sbAddItem = new DevExpress.XtraEditors.SimpleButton();
             this.memoEditRemarks = new DevExpress.XtraEditors.MemoEdit();
             this.sbSearch = new DevExpress.XtraEditors.SimpleButton();
             this.lblRemarks = new DevExpress.XtraEditors.LabelControl();
@@ -84,7 +85,8 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Size = new System.Drawing.Size(1338, 125);
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(6);
+            this.ribbonControl.Size = new System.Drawing.Size(2007, 192);
             // 
             // ribbonPage1
             // 
@@ -93,16 +95,18 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 684);
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1338, 31);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 997);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(6);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(2007, 48);
             // 
             // xtcGeneral
             // 
             this.xtcGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtcGeneral.Location = new System.Drawing.Point(0, 125);
+            this.xtcGeneral.Location = new System.Drawing.Point(0, 192);
+            this.xtcGeneral.Margin = new System.Windows.Forms.Padding(4);
             this.xtcGeneral.Name = "xtcGeneral";
             this.xtcGeneral.SelectedTabPage = this.xtpReceiptAndQuality;
-            this.xtcGeneral.Size = new System.Drawing.Size(1338, 559);
+            this.xtcGeneral.Size = new System.Drawing.Size(2007, 805);
             this.xtcGeneral.TabIndex = 7;
             this.xtcGeneral.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpReceiptAndQuality});
@@ -111,14 +115,16 @@
             // 
             this.xtpReceiptAndQuality.Controls.Add(this.pcFilter);
             this.xtpReceiptAndQuality.Controls.Add(this.xtcPK);
+            this.xtpReceiptAndQuality.Margin = new System.Windows.Forms.Padding(4);
             this.xtpReceiptAndQuality.Name = "xtpReceiptAndQuality";
-            this.xtpReceiptAndQuality.Size = new System.Drawing.Size(1332, 531);
+            this.xtpReceiptAndQuality.Size = new System.Drawing.Size(1997, 763);
             this.xtpReceiptAndQuality.Text = "Counting, Receipt of Goods & Quality";
             // 
             // pcFilter
             // 
             this.pcFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pcFilter.Controls.Add(this.sbAddItem);
             this.pcFilter.Controls.Add(this.memoEditRemarks);
             this.pcFilter.Controls.Add(this.sbSearch);
             this.pcFilter.Controls.Add(this.lblRemarks);
@@ -138,72 +144,90 @@
             this.pcFilter.Controls.Add(this.lblWeek);
             this.pcFilter.Controls.Add(this.slueSupplier);
             this.pcFilter.Controls.Add(this.lblSupplier);
-            this.pcFilter.Location = new System.Drawing.Point(11, 13);
+            this.pcFilter.Location = new System.Drawing.Point(16, 19);
+            this.pcFilter.Margin = new System.Windows.Forms.Padding(4);
             this.pcFilter.Name = "pcFilter";
-            this.pcFilter.Size = new System.Drawing.Size(1314, 142);
+            this.pcFilter.Size = new System.Drawing.Size(1971, 208);
             this.pcFilter.TabIndex = 5;
+            // 
+            // sbAddItem
+            // 
+            this.sbAddItem.Location = new System.Drawing.Point(314, 145);
+            this.sbAddItem.Margin = new System.Windows.Forms.Padding(4);
+            this.sbAddItem.Name = "sbAddItem";
+            this.sbAddItem.Size = new System.Drawing.Size(282, 47);
+            this.sbAddItem.TabIndex = 33;
+            this.sbAddItem.Text = "Add Item";
             // 
             // memoEditRemarks
             // 
-            this.memoEditRemarks.Location = new System.Drawing.Point(642, 61);
+            this.memoEditRemarks.Location = new System.Drawing.Point(963, 89);
+            this.memoEditRemarks.Margin = new System.Windows.Forms.Padding(4);
             this.memoEditRemarks.MenuManager = this.ribbonControl;
             this.memoEditRemarks.Name = "memoEditRemarks";
-            this.memoEditRemarks.Size = new System.Drawing.Size(389, 32);
+            this.memoEditRemarks.Size = new System.Drawing.Size(584, 47);
             this.memoEditRemarks.TabIndex = 32;
             // 
             // sbSearch
             // 
-            this.sbSearch.Location = new System.Drawing.Point(949, 14);
+            this.sbSearch.Location = new System.Drawing.Point(1424, 20);
+            this.sbSearch.Margin = new System.Windows.Forms.Padding(4);
             this.sbSearch.Name = "sbSearch";
-            this.sbSearch.Size = new System.Drawing.Size(82, 38);
+            this.sbSearch.Size = new System.Drawing.Size(123, 56);
             this.sbSearch.TabIndex = 16;
             this.sbSearch.Text = "Search";
             // 
             // lblRemarks
             // 
-            this.lblRemarks.Location = new System.Drawing.Point(535, 62);
+            this.lblRemarks.Location = new System.Drawing.Point(802, 91);
+            this.lblRemarks.Margin = new System.Windows.Forms.Padding(4);
             this.lblRemarks.Name = "lblRemarks";
-            this.lblRemarks.Size = new System.Drawing.Size(41, 13);
+            this.lblRemarks.Size = new System.Drawing.Size(61, 19);
             this.lblRemarks.TabIndex = 31;
             this.lblRemarks.Text = "Remarks";
             // 
             // txtPKNumber
             // 
-            this.txtPKNumber.Location = new System.Drawing.Point(7, 33);
+            this.txtPKNumber.Location = new System.Drawing.Point(10, 48);
+            this.txtPKNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtPKNumber.MenuManager = this.ribbonControl;
             this.txtPKNumber.Name = "txtPKNumber";
-            this.txtPKNumber.Size = new System.Drawing.Size(120, 20);
+            this.txtPKNumber.Size = new System.Drawing.Size(180, 26);
             this.txtPKNumber.TabIndex = 1;
             // 
             // txtSupplierReference
             // 
-            this.txtSupplierReference.Location = new System.Drawing.Point(7, 73);
+            this.txtSupplierReference.Location = new System.Drawing.Point(10, 107);
+            this.txtSupplierReference.Margin = new System.Windows.Forms.Padding(4);
             this.txtSupplierReference.MenuManager = this.ribbonControl;
             this.txtSupplierReference.Name = "txtSupplierReference";
-            this.txtSupplierReference.Size = new System.Drawing.Size(120, 20);
+            this.txtSupplierReference.Size = new System.Drawing.Size(180, 26);
             this.txtSupplierReference.TabIndex = 30;
             // 
             // lblPKNumber
             // 
-            this.lblPKNumber.Location = new System.Drawing.Point(40, 14);
+            this.lblPKNumber.Location = new System.Drawing.Point(60, 20);
+            this.lblPKNumber.Margin = new System.Windows.Forms.Padding(4);
             this.lblPKNumber.Name = "lblPKNumber";
-            this.lblPKNumber.Size = new System.Drawing.Size(52, 13);
+            this.lblPKNumber.Size = new System.Drawing.Size(80, 19);
             this.lblPKNumber.TabIndex = 0;
             this.lblPKNumber.Text = "PK Number";
             // 
             // lblSupplierReference
             // 
-            this.lblSupplierReference.Location = new System.Drawing.Point(20, 56);
+            this.lblSupplierReference.Location = new System.Drawing.Point(30, 82);
+            this.lblSupplierReference.Margin = new System.Windows.Forms.Padding(4);
             this.lblSupplierReference.Name = "lblSupplierReference";
-            this.lblSupplierReference.Size = new System.Drawing.Size(91, 13);
+            this.lblSupplierReference.Size = new System.Drawing.Size(132, 19);
             this.lblSupplierReference.TabIndex = 29;
             this.lblSupplierReference.Text = "Supplier Reference";
             // 
             // lblPKDocDate
             // 
-            this.lblPKDocDate.Location = new System.Drawing.Point(249, 34);
+            this.lblPKDocDate.Location = new System.Drawing.Point(374, 50);
+            this.lblPKDocDate.Margin = new System.Windows.Forms.Padding(4);
             this.lblPKDocDate.Name = "lblPKDocDate";
-            this.lblPKDocDate.Size = new System.Drawing.Size(52, 13);
+            this.lblPKDocDate.Size = new System.Drawing.Size(79, 19);
             this.lblPKDocDate.TabIndex = 2;
             this.lblPKDocDate.Text = "CREATION";
             // 
@@ -211,60 +235,66 @@
             // 
             this.lbltxtStatus.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lbltxtStatus.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lbltxtStatus.Location = new System.Drawing.Point(131, 33);
+            this.lbltxtStatus.Location = new System.Drawing.Point(196, 48);
+            this.lbltxtStatus.Margin = new System.Windows.Forms.Padding(4);
             this.lbltxtStatus.Name = "lbltxtStatus";
-            this.lbltxtStatus.Size = new System.Drawing.Size(65, 20);
+            this.lbltxtStatus.Size = new System.Drawing.Size(98, 29);
             this.lbltxtStatus.TabIndex = 22;
             this.lbltxtStatus.Text = "XX";
             // 
             // lblPKDelivery
             // 
-            this.lblPKDelivery.Location = new System.Drawing.Point(249, 53);
+            this.lblPKDelivery.Location = new System.Drawing.Point(374, 77);
+            this.lblPKDelivery.Margin = new System.Windows.Forms.Padding(4);
             this.lblPKDelivery.Name = "lblPKDelivery";
-            this.lblPKDelivery.Size = new System.Drawing.Size(47, 13);
+            this.lblPKDelivery.Size = new System.Drawing.Size(73, 19);
             this.lblPKDelivery.TabIndex = 3;
             this.lblPKDelivery.Text = "DELIVERY";
             // 
             // sbFinishQC
             // 
             this.sbFinishQC.ImageOptions.ImageUri.Uri = "Apply";
-            this.sbFinishQC.Location = new System.Drawing.Point(8, 99);
+            this.sbFinishQC.Location = new System.Drawing.Point(12, 145);
+            this.sbFinishQC.Margin = new System.Windows.Forms.Padding(4);
             this.sbFinishQC.Name = "sbFinishQC";
-            this.sbFinishQC.Size = new System.Drawing.Size(188, 32);
+            this.sbFinishQC.Size = new System.Drawing.Size(282, 47);
             this.sbFinishQC.TabIndex = 21;
             this.sbFinishQC.Text = "Close QC";
             // 
             // dateEditPKDocDate
             // 
             this.dateEditPKDocDate.EditValue = null;
-            this.dateEditPKDocDate.Location = new System.Drawing.Point(324, 33);
+            this.dateEditPKDocDate.Location = new System.Drawing.Point(486, 48);
+            this.dateEditPKDocDate.Margin = new System.Windows.Forms.Padding(4);
             this.dateEditPKDocDate.MenuManager = this.ribbonControl;
             this.dateEditPKDocDate.Name = "dateEditPKDocDate";
             this.dateEditPKDocDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditPKDocDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditPKDocDate.Size = new System.Drawing.Size(106, 20);
+            this.dateEditPKDocDate.Size = new System.Drawing.Size(159, 26);
             this.dateEditPKDocDate.TabIndex = 4;
             // 
             // dateEditPKDelivery
             // 
             this.dateEditPKDelivery.EditValue = null;
-            this.dateEditPKDelivery.Location = new System.Drawing.Point(324, 52);
+            this.dateEditPKDelivery.Location = new System.Drawing.Point(486, 76);
+            this.dateEditPKDelivery.Margin = new System.Windows.Forms.Padding(4);
             this.dateEditPKDelivery.MenuManager = this.ribbonControl;
             this.dateEditPKDelivery.Name = "dateEditPKDelivery";
             this.dateEditPKDelivery.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditPKDelivery.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditPKDelivery.Size = new System.Drawing.Size(106, 20);
+            this.dateEditPKDelivery.Size = new System.Drawing.Size(159, 26);
             this.dateEditPKDelivery.TabIndex = 5;
             // 
             // lblDate
             // 
-            this.lblDate.Location = new System.Drawing.Point(364, 14);
+            this.lblDate.Location = new System.Drawing.Point(546, 20);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(4);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(23, 13);
+            this.lblDate.Size = new System.Drawing.Size(32, 19);
             this.lblDate.TabIndex = 6;
             this.lblDate.Text = "Date";
             // 
@@ -273,9 +303,10 @@
             this.lblPKDocDateWeek.AccessibleRole = System.Windows.Forms.AccessibleRole.Animation;
             this.lblPKDocDateWeek.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblPKDocDateWeek.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lblPKDocDateWeek.Location = new System.Drawing.Point(436, 33);
+            this.lblPKDocDateWeek.Location = new System.Drawing.Point(654, 48);
+            this.lblPKDocDateWeek.Margin = new System.Windows.Forms.Padding(4);
             this.lblPKDocDateWeek.Name = "lblPKDocDateWeek";
-            this.lblPKDocDateWeek.Size = new System.Drawing.Size(65, 20);
+            this.lblPKDocDateWeek.Size = new System.Drawing.Size(98, 29);
             this.lblPKDocDateWeek.TabIndex = 7;
             this.lblPKDocDateWeek.Text = "XX";
             // 
@@ -283,29 +314,32 @@
             // 
             this.lblPKDeliveryWeek.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblPKDeliveryWeek.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lblPKDeliveryWeek.Location = new System.Drawing.Point(436, 53);
+            this.lblPKDeliveryWeek.Location = new System.Drawing.Point(654, 77);
+            this.lblPKDeliveryWeek.Margin = new System.Windows.Forms.Padding(4);
             this.lblPKDeliveryWeek.Name = "lblPKDeliveryWeek";
-            this.lblPKDeliveryWeek.Size = new System.Drawing.Size(65, 19);
+            this.lblPKDeliveryWeek.Size = new System.Drawing.Size(98, 28);
             this.lblPKDeliveryWeek.TabIndex = 8;
             this.lblPKDeliveryWeek.Text = "XX";
             // 
             // lblWeek
             // 
-            this.lblWeek.Location = new System.Drawing.Point(452, 14);
+            this.lblWeek.Location = new System.Drawing.Point(678, 20);
+            this.lblWeek.Margin = new System.Windows.Forms.Padding(4);
             this.lblWeek.Name = "lblWeek";
-            this.lblWeek.Size = new System.Drawing.Size(27, 13);
+            this.lblWeek.Size = new System.Drawing.Size(39, 19);
             this.lblWeek.TabIndex = 9;
             this.lblWeek.Text = "Week";
             // 
             // slueSupplier
             // 
-            this.slueSupplier.Location = new System.Drawing.Point(642, 33);
+            this.slueSupplier.Location = new System.Drawing.Point(963, 48);
+            this.slueSupplier.Margin = new System.Windows.Forms.Padding(4);
             this.slueSupplier.MenuManager = this.ribbonControl;
             this.slueSupplier.Name = "slueSupplier";
             this.slueSupplier.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.slueSupplier.Properties.View = this.searchLookUpEdit1View;
-            this.slueSupplier.Size = new System.Drawing.Size(219, 20);
+            this.slueSupplier.Size = new System.Drawing.Size(328, 26);
             this.slueSupplier.TabIndex = 13;
             // 
             // searchLookUpEdit1View
@@ -318,9 +352,10 @@
             // lblSupplier
             // 
             this.lblSupplier.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblSupplier.Location = new System.Drawing.Point(535, 36);
+            this.lblSupplier.Location = new System.Drawing.Point(802, 53);
+            this.lblSupplier.Margin = new System.Windows.Forms.Padding(4);
             this.lblSupplier.Name = "lblSupplier";
-            this.lblSupplier.Size = new System.Drawing.Size(84, 13);
+            this.lblSupplier.Size = new System.Drawing.Size(126, 19);
             this.lblSupplier.TabIndex = 10;
             this.lblSupplier.Text = "SUPPLIER";
             // 
@@ -329,10 +364,11 @@
             this.xtcPK.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.xtcPK.Location = new System.Drawing.Point(11, 161);
+            this.xtcPK.Location = new System.Drawing.Point(16, 235);
+            this.xtcPK.Margin = new System.Windows.Forms.Padding(4);
             this.xtcPK.Name = "xtcPK";
             this.xtcPK.SelectedTabPage = this.xtpPLDetail;
-            this.xtcPK.Size = new System.Drawing.Size(1314, 367);
+            this.xtcPK.Size = new System.Drawing.Size(1971, 524);
             this.xtcPK.TabIndex = 4;
             this.xtcPK.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpPLDetail});
@@ -341,18 +377,21 @@
             // 
             this.xtpPLDetail.Controls.Add(this.xgrdItemsBatch);
             this.xtpPLDetail.Controls.Add(this.xgrdLinesPL);
+            this.xtpPLDetail.Margin = new System.Windows.Forms.Padding(4);
             this.xtpPLDetail.Name = "xtpPLDetail";
-            this.xtpPLDetail.Size = new System.Drawing.Size(1308, 339);
+            this.xtpPLDetail.Size = new System.Drawing.Size(1961, 482);
             this.xtpPLDetail.Text = "Packing Detail";
             // 
             // xgrdItemsBatch
             // 
             this.xgrdItemsBatch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.xgrdItemsBatch.Location = new System.Drawing.Point(3, 223);
+            this.xgrdItemsBatch.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.xgrdItemsBatch.Location = new System.Drawing.Point(4, 314);
             this.xgrdItemsBatch.MainView = this.gridViewItemsBatch;
+            this.xgrdItemsBatch.Margin = new System.Windows.Forms.Padding(4);
             this.xgrdItemsBatch.MenuManager = this.ribbonControl;
             this.xgrdItemsBatch.Name = "xgrdItemsBatch";
-            this.xgrdItemsBatch.Size = new System.Drawing.Size(500, 113);
+            this.xgrdItemsBatch.Size = new System.Drawing.Size(750, 165);
             this.xgrdItemsBatch.TabIndex = 4;
             this.xgrdItemsBatch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewItemsBatch});
@@ -367,11 +406,13 @@
             this.xgrdLinesPL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.xgrdLinesPL.Location = new System.Drawing.Point(3, 3);
+            this.xgrdLinesPL.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.xgrdLinesPL.Location = new System.Drawing.Point(4, 4);
             this.xgrdLinesPL.MainView = this.gridViewLinesPL;
+            this.xgrdLinesPL.Margin = new System.Windows.Forms.Padding(4);
             this.xgrdLinesPL.MenuManager = this.ribbonControl;
             this.xgrdLinesPL.Name = "xgrdLinesPL";
-            this.xgrdLinesPL.Size = new System.Drawing.Size(1302, 214);
+            this.xgrdLinesPL.Size = new System.Drawing.Size(1953, 301);
             this.xgrdLinesPL.TabIndex = 0;
             this.xgrdLinesPL.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewLinesPL});
@@ -383,10 +424,11 @@
             // 
             // ReceiptAndQuality
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1338, 715);
+            this.ClientSize = new System.Drawing.Size(2007, 1045);
             this.Controls.Add(this.xtcGeneral);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ReceiptAndQuality";
             this.Text = "ReceiptAndQuality";
             this.Load += new System.EventHandler(this.ReceiptAndQuality_Load);
@@ -452,5 +494,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewLinesPL;
         private DevExpress.XtraGrid.GridControl xgrdItemsBatch;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewItemsBatch;
+        private DevExpress.XtraEditors.SimpleButton sbAddItem;
     }
 }

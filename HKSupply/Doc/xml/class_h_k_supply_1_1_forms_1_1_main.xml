@@ -1,8 +1,35 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_h_k_supply_1_1_forms_1_1_main" kind="class" language="C#" prot="public">
     <compoundname>HKSupply::Forms::Main</compoundname>
     <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_h_k_supply_1_1_forms_1_1_main_1a81cd96d2edce58e272605498f38b86f5" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>ePdfDocsHelp</name>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_main_1a81cd96d2edce58e272605498f38b86f5a341a449e7ffa513c997844d5ba49eb2a" prot="private">
+          <name>Bom</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_h_k_supply_1_1_forms_1_1_main_1a81cd96d2edce58e272605498f38b86f5a4288e091a848e12c896ef09f489affec" prot="private">
+          <name>Supply</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.cs" line="26" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="25" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_main_1a562e8e25a153146af83a94ae8843f464" prot="private" static="no" mutable="no">
         <type>System.Drawing.Icon</type>
@@ -16,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Main.cs" line="24" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="24" bodyend="-1"/>
+        <location file="HKSupply/Forms/Main.cs" line="33" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_h_k_supply_1_1_forms_1_1_main_1a5b0e3037bf3c9d073a56a835b7eaba18" prot="private" static="no" mutable="no">
         <type>System.ComponentModel.IContainer</type>
@@ -58,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Main.cs" line="28" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="28" bodyend="31"/>
+        <location file="HKSupply/Forms/Main.cs" line="37" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="37" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_main_1ae322c78605a4993241d8cf837cc2e6fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -79,7 +106,28 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Main.cs" line="69" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="69" bodyend="128"/>
+        <location file="HKSupply/Forms/Main.cs" line="78" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="78" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_main_1addabcc6880d05211cf957130edb2bbe3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Main.ChildPdfClick</definition>
+        <argsstring>(object sender, System.EventArgs e)</argsstring>
+        <name>ChildPdfClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.cs" line="144" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="144" bodyend="172"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -102,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Main.cs" line="37" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="37" bodyend="54"/>
+        <location file="HKSupply/Forms/Main.cs" line="46" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="46" bodyend="63"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_main_1a4e3789bd4796daf339c27f603c5f0487" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -138,7 +186,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Main.cs" line="61" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="61" bodyend="67"/>
+        <location file="HKSupply/Forms/Main.cs" line="70" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="70" bodyend="76"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_main_1a26dcfed0701edf835698f329dc3175ce" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -151,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Main.cs" line="134" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="134" bodyend="166"/>
+        <location file="HKSupply/Forms/Main.cs" line="178" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="178" bodyend="224"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_main_1a36fe2fb3cc78caaf3b14e9eb9f9e482f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -164,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Main.cs" line="171" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="171" bodyend="182"/>
+        <location file="HKSupply/Forms/Main.cs" line="229" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="229" bodyend="246"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_main_1a2bb372b69a7ae0b9a973768112cb7d91" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -177,7 +225,20 @@
 <para>Al ser un mdi parent parece ser que se tiene que hacer así, no se puede directamente</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="HKSupply/Forms/Main.cs" line="188" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="188" bodyend="210"/>
+        <location file="HKSupply/Forms/Main.cs" line="252" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="252" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_main_1a2c7cc6212b42b77273a616b3294111ee" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HKSupply.Forms.Main.CreatePdfDocsHelpMenu</definition>
+        <argsstring>()</argsstring>
+        <name>CreatePdfDocsHelpMenu</name>
+        <briefdescription>
+<para>Método para agregar las entradas de menú relacionadas con los pdf de ayuda </para>        </briefdescription>
+        <detaileddescription>
+<para>Es bastante manual, de momento no está bien decido como se quiere la ayuda</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Forms/Main.cs" line="283" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="283" bodyend="315"/>
       </memberdef>
       <memberdef kind="function" id="class_h_k_supply_1_1_forms_1_1_main_1a35ed58dcbd1a313e381734c0bde9cc1f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -225,33 +286,36 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="176">
+      <node id="1158">
         <label>HKSupply.Forms.Main</label>
         <link refid="class_h_k_supply_1_1_forms_1_1_main"/>
-        <childnode refid="177" relation="public-inheritance">
+        <childnode refid="1159" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="177">
+      <node id="1159">
         <label>Form</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="178">
+      <node id="1160">
         <label>HKSupply.Forms.Main</label>
         <link refid="class_h_k_supply_1_1_forms_1_1_main"/>
-        <childnode refid="179" relation="public-inheritance">
+        <childnode refid="1161" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="179">
+      <node id="1161">
         <label>Form</label>
       </node>
     </collaborationgraph>
-    <location file="HKSupply/Forms/Main.cs" line="22" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="21" bodyend="214"/>
+    <location file="HKSupply/Forms/Main.cs" line="23" column="1" bodyfile="HKSupply/Forms/Main.cs" bodystart="22" bodyend="319"/>
     <listofallmembers>
       <member refid="class_h_k_supply_1_1_forms_1_1_main_1a562e8e25a153146af83a94ae8843f464" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Main</scope><name>_gIcon</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_main_1ae322c78605a4993241d8cf837cc2e6fc" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Main</scope><name>ChildClick</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_main_1addabcc6880d05211cf957130edb2bbe3" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Main</scope><name>ChildPdfClick</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_main_1a5b0e3037bf3c9d073a56a835b7eaba18" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Main</scope><name>components</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_main_1a2c7cc6212b42b77273a616b3294111ee" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Main</scope><name>CreatePdfDocsHelpMenu</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_main_1a99fe43d79c789818b37bb46db1dfa795" prot="protected" virt="non-virtual"><scope>HKSupply::Forms::Main</scope><name>Dispose</name></member>
+      <member refid="class_h_k_supply_1_1_forms_1_1_main_1a81cd96d2edce58e272605498f38b86f5" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Main</scope><name>ePdfDocsHelp</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_main_1a35ed58dcbd1a313e381734c0bde9cc1f" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Main</scope><name>InitializeComponent</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_main_1a26dcfed0701edf835698f329dc3175ce" prot="private" virt="non-virtual"><scope>HKSupply::Forms::Main</scope><name>InitializeMainMenu</name></member>
       <member refid="class_h_k_supply_1_1_forms_1_1_main_1a8fc09b23fbe14bc676f790d28bb0e9c7" prot="public" virt="non-virtual"><scope>HKSupply::Forms::Main</scope><name>Main</name></member>

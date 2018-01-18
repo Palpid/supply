@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_payment_terms" kind="class" language="C#" prot="public">
+    <compoundname>HKSupply::Services::Implementations::EFPaymentTerms</compoundname>
+    <basecompoundref refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_payment_terms" prot="public" virt="non-virtual">HKSupply.Services.Interfaces.IPaymentTerms</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_payment_terms_1a958704adb0ace220dd7b964040a31081" prot="private" static="no" mutable="no">
+        <type>ILog</type>
+        <definition>ILog HKSupply.Services.Implementations.EFPaymentTerms._log</definition>
+        <argsstring></argsstring>
+        <name>_log</name>
+        <initializer>= LogManager.GetLogger(typeof(<ref refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_currency" kindref="compound">EFCurrency</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFPaymentTerms.cs" line="19" column="1" bodyfile="HKSupply/Services/Implementations/EFPaymentTerms.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_payment_terms_1ac25676f756c8f74fcfaae9917acab9dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_h_k_supply_1_1_models_1_1_payment_terms" kindref="compound">PaymentTerms</ref> &gt;</type>
+        <definition>List&lt;PaymentTerms&gt; HKSupply.Services.Implementations.EFPaymentTerms.GetPaymentTerms</definition>
+        <argsstring>()</argsstring>
+        <name>GetPaymentTerms</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_payment_terms_1a8eb6a1a8485ddfd2b07975eddcb1a517">GetPaymentTerms</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFPaymentTerms.cs" line="21" column="1" bodyfile="HKSupply/Services/Implementations/EFPaymentTerms.cs" bodystart="21" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_payment_terms_1aad97ca4467044afefc6ee643d583262f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_payment_terms" kindref="compound">PaymentTerms</ref></type>
+        <definition>PaymentTerms HKSupply.Services.Implementations.EFPaymentTerms.NewPaymentTerm</definition>
+        <argsstring>(PaymentTerms newPaymentTerm)</argsstring>
+        <name>NewPaymentTerm</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_payment_terms_1aa8652a013c7dc1a653e365b298e59a4c">NewPaymentTerm</reimplements>
+        <param>
+          <type><ref refid="class_h_k_supply_1_1_models_1_1_payment_terms" kindref="compound">PaymentTerms</ref></type>
+          <declname>newPaymentTerm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFPaymentTerms.cs" line="59" column="1" bodyfile="HKSupply/Services/Implementations/EFPaymentTerms.cs" bodystart="59" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_payment_terms_1af21a7a268b3e0c7a8b87822818241369" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HKSupply.Services.Implementations.EFPaymentTerms.UpdatePaymentTerms</definition>
+        <argsstring>(IEnumerable&lt; PaymentTerms &gt; paymentTermsToUpdate)</argsstring>
+        <name>UpdatePaymentTerms</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_payment_terms_1ab88f26d82eb00b791a6c0f1bcaa148ec">UpdatePaymentTerms</reimplements>
+        <param>
+          <type>IEnumerable&lt; <ref refid="class_h_k_supply_1_1_models_1_1_payment_terms" kindref="compound">PaymentTerms</ref> &gt;</type>
+          <declname>paymentTermsToUpdate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFPaymentTerms.cs" line="130" column="1" bodyfile="HKSupply/Services/Implementations/EFPaymentTerms.cs" bodystart="130" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_payment_terms_1a998150727aba381a2c76a36d232c54c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_h_k_supply_1_1_models_1_1_payment_terms" kindref="compound">PaymentTerms</ref></type>
+        <definition>PaymentTerms HKSupply.Services.Implementations.EFPaymentTerms.GetPaymentTermById</definition>
+        <argsstring>(string idPaymentTerm)</argsstring>
+        <name>GetPaymentTermById</name>
+        <reimplements refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_payment_terms_1aee071ca2afca623ebb6ae3716c4cbd74">GetPaymentTermById</reimplements>
+        <param>
+          <type>string</type>
+          <declname>idPaymentTerm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HKSupply/Services/Implementations/EFPaymentTerms.cs" line="204" column="1" bodyfile="HKSupply/Services/Implementations/EFPaymentTerms.cs" bodystart="204" bodyend="258"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="517">
+        <label>HKSupply.Services.Implementations.EFPaymentTerms</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_payment_terms"/>
+        <childnode refid="518" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="518">
+        <label>IPaymentTerms</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_payment_terms"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="519">
+        <label>HKSupply.Services.Implementations.EFPaymentTerms</label>
+        <link refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_payment_terms"/>
+        <childnode refid="520" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="520">
+        <label>IPaymentTerms</label>
+        <link refid="interface_h_k_supply_1_1_services_1_1_interfaces_1_1_i_payment_terms"/>
+      </node>
+    </collaborationgraph>
+    <location file="HKSupply/Services/Implementations/EFPaymentTerms.cs" line="18" column="1" bodyfile="HKSupply/Services/Implementations/EFPaymentTerms.cs" bodystart="17" bodyend="259"/>
+    <listofallmembers>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_payment_terms_1a958704adb0ace220dd7b964040a31081" prot="private" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFPaymentTerms</scope><name>_log</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_payment_terms_1a998150727aba381a2c76a36d232c54c0" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFPaymentTerms</scope><name>GetPaymentTermById</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_payment_terms_1ac25676f756c8f74fcfaae9917acab9dc" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFPaymentTerms</scope><name>GetPaymentTerms</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_payment_terms_1aad97ca4467044afefc6ee643d583262f" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFPaymentTerms</scope><name>NewPaymentTerm</name></member>
+      <member refid="class_h_k_supply_1_1_services_1_1_implementations_1_1_e_f_payment_terms_1af21a7a268b3e0c7a8b87822818241369" prot="public" virt="non-virtual"><scope>HKSupply::Services::Implementations::EFPaymentTerms</scope><name>UpdatePaymentTerms</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
