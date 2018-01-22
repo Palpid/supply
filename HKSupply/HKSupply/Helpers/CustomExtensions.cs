@@ -455,6 +455,25 @@ namespace HKSupply.Helpers
             return (T)property.GetCustomAttributes(attrType, false).First();
         }
 
+        /// <summary>
+        /// para ver si un valor se encuentra entre un conjunto de valores
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="value"></param>
+        /// <param name="items"></param>
+        /// <returns></returns>
+        /// <remarks>
+        /// string value = "AA";
+        /// var exist = value.IsOneOf("AA", "BB", "CC") //true
+        /// </remarks>
+        public static bool IsOneOf<T>(this T value, params T[] items)
+        {
+            if (items.Where(a => a.Equals(value)).Count() > 0)
+                return true;
+
+            return false;
+        }
+
         // No he conseguido restaurar la configuración original del grid antes de cambiar los colores, sobretodo si se tiene activo el colorear las filas
         //para/impares diferentes (opción que puedes activar en el grid)
         /// <summary>

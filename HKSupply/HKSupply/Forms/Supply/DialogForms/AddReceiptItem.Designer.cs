@@ -70,7 +70,7 @@
             // 
             this.sbOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.sbOk.Location = new System.Drawing.Point(701, 446);
-            this.sbOk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sbOk.Margin = new System.Windows.Forms.Padding(2);
             this.sbOk.Name = "sbOk";
             this.sbOk.Size = new System.Drawing.Size(124, 21);
             this.sbOk.TabIndex = 3;
@@ -80,7 +80,7 @@
             // 
             this.sbCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.sbCancel.Location = new System.Drawing.Point(829, 446);
-            this.sbCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sbCancel.Margin = new System.Windows.Forms.Padding(2);
             this.sbCancel.Name = "sbCancel";
             this.sbCancel.Size = new System.Drawing.Size(124, 21);
             this.sbCancel.TabIndex = 2;
@@ -124,7 +124,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1017, 541);
             this.Controls.Add(this.xtcPK);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddReceiptItem";
             this.Text = "AddReceiptItem";
             this.Load += new System.EventHandler(this.AddReceiptItem_Load);

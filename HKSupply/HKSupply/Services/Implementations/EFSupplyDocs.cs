@@ -865,9 +865,6 @@ namespace HKSupply.Services.Implementations
                     {
                         try
                         {
-                            //DocHead docToUpdate = GetDoc(doc.IdDoc);
-                            //DocHead docDataBeforeUpdate = GetDoc(doc.IdDoc);
-
                             DocHead docToUpdate = null;
                             DocHead docDataBeforeUpdate = null;
 
@@ -1095,8 +1092,16 @@ namespace HKSupply.Services.Implementations
                                 DocHead ivHkFactory = GetInvoiceHk2Factory(dnHkFactory);
                                 db.DocsHead.Add(ivHkFactory);
 
-                                //Hacer los movimientos de stock
-                                MoveStockForDoc(db, docToUpdate);
+                                if (docToUpdate.IdCustomer != Constants.ETNIA_BCN_COMPANY_CODE)
+                                { 
+                                    //Hacer los movimientos de stock para el material vendido a las fábricas
+                                    MoveStockForDoc(db, docToUpdate);
+                                }
+                                else
+                                {
+                                    //insertamos las gafas en el stock de on hand de Etnia Bcn
+                                    DirectEntryToWareHouse(db, docToUpdate, Constants.ETNIA_BCN_COMPANY_CODE, PRJ_Stocks.Classes.Stocks.StockWareHousesType.OnHand);
+                                }
 
                             }
 
@@ -2631,8 +2636,6 @@ namespace HKSupply.Services.Implementations
         {
             try
             {
-                //PRJ_Stocks.DB.Call_DB_Stocks CallDBS = new PRJ_Stocks.DB.Call_DB_Stocks();
-                //PRJ_Stocks.Classes.Stocks STKAct = CallDBS.CallCargaStocks();
                 var BDSTK = new PRJ_Stocks.DB.BD_Stocks();
                 PRJ_Stocks.Classes.Stocks STKAct = BDSTK.GetCurrentStock(db);
 
@@ -2651,7 +2654,6 @@ namespace HKSupply.Services.Implementations
                     STKAct.AsgnSockItem(
                        WareORIG: whEtniaHkOnHand,
                        idItem: line.IdItemBcn,
-                       //Qtt: Decimal.ToInt32(variationQty),//TODO. CAMBIAR!!
                        Qtt: variationQty,
                        idOwner: docHead.IdCustomer,
                        remarks: string.Empty,
@@ -2672,8 +2674,6 @@ namespace HKSupply.Services.Implementations
         {
             try
             {
-                //PRJ_Stocks.DB.Call_DB_Stocks CallDBS = new PRJ_Stocks.DB.Call_DB_Stocks();
-                //PRJ_Stocks.Classes.Stocks STKAct = CallDBS.CallCargaStocks();
                 var BDSTK = new PRJ_Stocks.DB.BD_Stocks();
                 PRJ_Stocks.Classes.Stocks STKAct = BDSTK.GetCurrentStock(db);
 
@@ -2683,29 +2683,68 @@ namespace HKSupply.Services.Implementations
 
                 var whDestinationOnHand = STKAct.GetWareHouse(
                     docHead.IdCustomer,
-                    PRJ_Stocks.Classes.Stocks.StockWareHousesType.OnHand); //origen on hand de Etnia HK
+                    PRJ_Stocks.Classes.Stocks.StockWareHousesType.OnHand); //destino on hand del cliente
 
                 List<string> docs = new List<string>();
                 docs.Add(docHead.IdDoc);
 
-                //TODO!! Nuevo API STOCKS con LOTES
-                //foreach (var line in docHead.Lines)
-                //{
-                //    //STKAct.MoveSockItem(PRJ_Stocks.Classes.Stocks.StockMovementsType.Movement, whEtniaHkOnHand, whDestinationOnHand ,)
-                //    STKAct.MoveSockItem(MoveType: PRJ_Stocks.Classes.Stocks.StockMovementsType.Movement,
-                //        WareORIG: whEtniaHkOnHand,
-                //        WareDEST: whDestinationOnHand,
-                //        //Qtt: Decimal.ToInt32(line.Quantity), //TODO.CAMBIAR!!
-                //        Qtt: line.Quantity, //TODO.CAMBIAR!!
-                //        idItem: line.IdItemBcn,
-                //        idOwner: docHead.IdCustomer,
-                //        remarks: string.Empty,
-                //        LstidDoc: docs,
-                //        IdUser: GlobalSetting.LoggedUser.UserLogin);
-                //}
+                foreach (var line in docHead.Lines)
+                {
+                    var batches = docHead.PackingListItemBatches.Where(a => a.IdItemBcn.Equals(line.IdItemBcn) && a.IdDocRelated.Equals(line.IdDocRelated)).ToList();
+                    foreach (var batch in batches)
+                    {
+                        STKAct.MoveSockItem(
+                            MoveType: PRJ_Stocks.Classes.Stocks.StockMovementsType.Movement,
+                            WareORIG: whEtniaHkOnHand,
+                            WareDEST: whDestinationOnHand,
+                            Qtt: batch.Quantity,
+                            idItem: line.IdItemBcn,
+                            idOwner: docHead.IdCustomer,
+                            idlot: batch.Batch,
+                            remarks: line.Remarks,
+                            LstidDoc: docs,
+                            IdUser: GlobalSetting.LoggedUser.UserLogin.ToUpper());
+                    }
+                }
 
                 BDSTK.SaveCurrentStockMovs(db, STKAct);
 
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void DirectEntryToWareHouse(HKSupplyContext db, DocHead docHead, string idWareHouse, PRJ_Stocks.Classes.Stocks.StockWareHousesType wareType)
+        {
+            try
+            {
+                var BDSTK = new PRJ_Stocks.DB.BD_Stocks();
+                PRJ_Stocks.Classes.Stocks STKAct = BDSTK.GetCurrentStock(db);
+
+                var wareHouseDest = STKAct.GetWareHouse(
+                    idWareHouse: idWareHouse, 
+                    WareTYpe: wareType);
+
+                List<string> docs = new List<string>();
+                docs.Add(docHead.IdDoc);
+
+                foreach(var line in docHead.Lines)
+                {
+                    STKAct.AddSockItem(
+                        MoveType: PRJ_Stocks.Classes.Stocks.StockMovementsType.Entry,
+                        ware: wareHouseDest, 
+                        Qtt: line.Quantity, 
+                        idItem: line.IdItemBcn, 
+                        idLot: string.Empty, 
+                        idOwner: string.Empty, 
+                        Remarks: line.Remarks, 
+                        LstidDoc: docs, 
+                        IdUser: GlobalSetting.LoggedUser.UserLogin.ToUpper()
+                        );
+                }
+                BDSTK.SaveCurrentStockMovs(db, STKAct);
             }
             catch
             {

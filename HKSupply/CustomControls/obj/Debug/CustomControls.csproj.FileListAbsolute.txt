@@ -12,3 +12,4 @@ C:\Git\Supply\HKSupply\CustomControls\obj\Debug\CustomControls.csproj.GenerateRe
 C:\Git\Supply\HKSupply\CustomControls\obj\Debug\CustomControls.csproj.CoreCompileInputs.cache
 C:\Git\Supply\HKSupply\CustomControls\obj\Debug\CustomControls.dll
 C:\Git\Supply\HKSupply\CustomControls\obj\Debug\CustomControls.pdb
+C:\Git\Supply\HKSupply\CustomControls\obj\Debug\CustomControls.csprojResolveAssemblyReference.cache

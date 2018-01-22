@@ -385,6 +385,37 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
             }
         }
 
+        private void XgrdLinesPL_ProcessGridKey(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                GridView view = xgrdLinesPL.FocusedView as GridView;
+                DocLine line = view.GetRow(view.FocusedRowHandle) as DocLine;
+
+                if (line == null)
+                    return;
+
+                if (e.KeyCode == Keys.F4)
+                {
+                    DialogResult result = XtraMessageBox.Show("Delete row?", "Confirmation", MessageBoxButtons.YesNo);
+                    if (result != DialogResult.Yes)
+                        return;
+                    
+                    if (line.LineState != DocLine.LineStates.New)
+                    {
+                        XtraMessageBox.Show("Only new lines can be deleted.");
+                        return;
+                    }
+
+                    _docLinesList.Remove(line);
+                }
+            }
+            catch( Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void XgrdItemsBatch_ProcessGridKey(object sender, KeyEventArgs e)
         {
             try
@@ -831,6 +862,7 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
 
                 //Events
                 gridViewLinesPL.FocusedRowChanged += GridViewLinesPL_FocusedRowChanged;
+                xgrdLinesPL.ProcessGridKey += XgrdLinesPL_ProcessGridKey;
 
             }
             catch

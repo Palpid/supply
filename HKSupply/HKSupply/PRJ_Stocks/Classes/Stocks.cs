@@ -750,7 +750,7 @@ namespace HKSupply.PRJ_Stocks.Classes
             if (QAct < Qtt) throw new System.InvalidOperationException("Stock quantity to move (" + Qtt + ") is greather than existing quantity (" + QAct + ")");
 
             decimal QActL = SIO.item.StkLot(idlot);
-            if (QActL < Qtt) throw new System.InvalidOperationException("Lot quantity to move (" + Qtt + ") is greather than existing quantity (" + QActL + ")");
+            if (QActL < Qtt) throw new System.InvalidOperationException("Batch quantity to move (" + Qtt + ") is greather than existing quantity (" + QActL + ") in batch (" + idlot + ")");
 
             // -- LOCALITZA STOCK DESTI ----------------------------------------------------------------------------------------
             StockItem SID = GetStockItem(WareDEST, idItem);

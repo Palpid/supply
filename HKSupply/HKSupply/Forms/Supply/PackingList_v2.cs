@@ -984,7 +984,7 @@ namespace HKSupply.Forms.Supply
                 {
                     XtraMessageBox.Show("Document is not a Packing List", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else if (_docHeadPK.IdCustomer == Constants.ETNIA_BCN_COMPANY_CODE)
+                else if (_docHeadPK.IdCustomer.IsOneOf(Constants.ETNIA_BCN_COMPANY_CODE, Constants.ETNIA_HK_COMPANY_CODE))
                 {
                     XtraMessageBox.Show("Packing List is not to a Factory", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
