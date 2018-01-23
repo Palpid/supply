@@ -17,6 +17,7 @@ using DevExpress.XtraBars;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraEditors.Repository;
 using HKSupply.Styles;
+using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 
 namespace HKSupply.Forms.Supply
 {
@@ -188,12 +189,16 @@ namespace HKSupply.Forms.Supply
             try
             {
                 GridView view = sender as GridView;
-                DocHead doc = view.GetRow(view.FocusedRowHandle) as DocHead;
+                GridHitInfo hitInfo = view.CalcHitInfo((e as MouseEventArgs).Location);
 
-                if (doc != null)
+                if (hitInfo.InRowCell)
                 {
-                    OpenDocForm(doc);
+                    DocHead doc = view.GetRow(view.FocusedRowHandle) as DocHead;
+                    if (doc != null)
+                        OpenDocForm(doc);
                 }
+
+
             }
             catch (Exception ex)
             {
@@ -230,6 +235,11 @@ namespace HKSupply.Forms.Supply
                             case Constants.SUPPLY_STATUS_CANCEL:
                                 e.Appearance.BackColor = AppStyles.SupplyStatusCnlBKGD1;
                                 e.Appearance.BackColor2 = AppStyles.SupplyStatusCnlBKGD2;
+                                break;
+
+                            case Constants.SUPPLY_STATUS_TRANSIT:
+                                e.Appearance.BackColor = AppStyles.SupplyStatusTrnBKGD1;
+                                e.Appearance.BackColor2 = AppStyles.SupplyStatusTrnBKGD2;
                                 break;
                         }
 
@@ -336,6 +346,7 @@ namespace HKSupply.Forms.Supply
                 //else
                 //    xgrdLines.DataSource = _docsList;
                 xgrdLines.DataSource = _docsList;
+                gridViewLines.BestFitColumns();
             }
             catch
             {
@@ -527,7 +538,6 @@ namespace HKSupply.Forms.Supply
                 //Events
                 gridViewLines.DoubleClick += GridViewLines_DoubleClick;
                 gridViewLines.RowCellStyle += GridViewLines_RowCellStyle;
-                //gridViewLines.CustomDrawEmptyForeground += GridViewLines_CustomDrawEmptyForeground;
             }
             catch
             {
@@ -588,22 +598,45 @@ namespace HKSupply.Forms.Supply
                 {
                     case Constants.SUPPLY_DOCTYPE_PO:
 
-                        //Check if is already open
-                        PurchaseOrder purchaseOrderForm =
-                            Application.OpenForms.OfType<PurchaseOrder>()
-                            .Where(pre => pre.Name == nameof(PurchaseOrder))
-                            .SingleOrDefault();
+                        if(doc.Supplier.Factory == true)
+                        {
+                            //Check if is already open
+                            PurchaseOrder purchaseOrderForm =
+                                Application.OpenForms.OfType<PurchaseOrder>()
+                                .Where(pre => pre.Name == nameof(PurchaseOrder))
+                                .SingleOrDefault();
 
-                        if (purchaseOrderForm != null)
-                            purchaseOrderForm.Close();
+                            if (purchaseOrderForm != null)
+                                purchaseOrderForm.Close();
 
-                        purchaseOrderForm = new PurchaseOrder();
-                        purchaseOrderForm.InitData(doc.IdDoc);
+                            purchaseOrderForm = new PurchaseOrder();
+                            purchaseOrderForm.InitData(doc.IdDoc);
 
-                        purchaseOrderForm.MdiParent = MdiParent;
-                        purchaseOrderForm.ShowIcon = false;
-                        purchaseOrderForm.Show();
-                        purchaseOrderForm.WindowState = FormWindowState.Maximized;
+                            purchaseOrderForm.MdiParent = MdiParent;
+                            purchaseOrderForm.ShowIcon = false;
+                            purchaseOrderForm.Show();
+                            purchaseOrderForm.WindowState = FormWindowState.Maximized;
+                        }
+                        else
+                        {
+                            SupplyMaterials.PurchaseOrderMaterials purchaseOrderMaterialsForm =
+                                Application.OpenForms.OfType<SupplyMaterials.PurchaseOrderMaterials>()
+                                .Where(pre => pre.Name == nameof(SupplyMaterials.PurchaseOrderMaterials))
+                                .SingleOrDefault();
+
+                            if (purchaseOrderMaterialsForm != null)
+                                purchaseOrderMaterialsForm.Close();
+
+                            purchaseOrderMaterialsForm = new SupplyMaterials.PurchaseOrderMaterials();
+                            purchaseOrderMaterialsForm.InitData(doc.IdDoc);
+
+                            purchaseOrderMaterialsForm.MdiParent = MdiParent;
+                            purchaseOrderMaterialsForm.ShowIcon = false;
+                            purchaseOrderMaterialsForm.Show();
+                            purchaseOrderMaterialsForm.WindowState = FormWindowState.Maximized;
+                        }
+
+                        
 
                         break;
 
@@ -688,6 +721,46 @@ namespace HKSupply.Forms.Supply
                             packingListBcnForm.Show();
                             packingListBcnForm.WindowState = FormWindowState.Maximized;
                         }
+                        else if (doc.IdCustomer == Constants.ETNIA_HK_COMPANY_CODE)
+                        {
+                            if (doc.IdSupplyStatus == Constants.SUPPLY_STATUS_TRANSIT)
+                            {
+                                SupplyMaterials.ReceiptAndQuality receiptAndQualityForm =
+                                    Application.OpenForms.OfType<SupplyMaterials.ReceiptAndQuality>()
+                                    .Where(pre => pre.Name == nameof(SupplyMaterials.ReceiptAndQuality))
+                                    .SingleOrDefault();
+
+                                if (receiptAndQualityForm != null)
+                                    receiptAndQualityForm.Close();
+
+                                receiptAndQualityForm = new SupplyMaterials.ReceiptAndQuality();
+                                receiptAndQualityForm.InitData(doc.IdDoc);
+
+                                receiptAndQualityForm.MdiParent = MdiParent;
+                                receiptAndQualityForm.ShowIcon = false;
+                                receiptAndQualityForm.Show();
+                                receiptAndQualityForm.WindowState = FormWindowState.Maximized;
+
+                            }
+                            else
+                            {
+                                SupplyMaterials.PackingListMaterials packingListMaterialsForm =
+                                    Application.OpenForms.OfType<SupplyMaterials.PackingListMaterials>()
+                                    .Where(pre => pre.Name == nameof(SupplyMaterials.PackingListMaterials))
+                                    .SingleOrDefault();
+
+                                if (packingListMaterialsForm != null)
+                                    packingListMaterialsForm.Close();
+
+                                packingListMaterialsForm = new SupplyMaterials.PackingListMaterials();
+                                packingListMaterialsForm.InitData(doc.IdDoc);
+
+                                packingListMaterialsForm.MdiParent = MdiParent;
+                                packingListMaterialsForm.ShowIcon = false;
+                                packingListMaterialsForm.Show();
+                                packingListMaterialsForm.WindowState = FormWindowState.Maximized;
+                            }
+                        }
                         else
                         {
                             PackingList packingListForm =
@@ -727,6 +800,24 @@ namespace HKSupply.Forms.Supply
                         invoiceForm.ShowIcon = false;
                         invoiceForm.Show();
                         invoiceForm.WindowState = FormWindowState.Maximized;
+
+                        break;
+
+                    case Constants.SUPPLY_DOCTYPE_QCP:
+                        SupplyMaterials.QualityControlPending qualityControlPendingForm =
+                            Application.OpenForms.OfType<SupplyMaterials.QualityControlPending>()
+                            .Where(pre => pre.Name == nameof(SupplyMaterials.QualityControlPending))
+                            .SingleOrDefault();
+
+                        if (qualityControlPendingForm != null)
+                            qualityControlPendingForm.Close();
+
+                        qualityControlPendingForm = new SupplyMaterials.QualityControlPending();
+                        qualityControlPendingForm.InitData(doc.IdDoc);
+                        qualityControlPendingForm.MdiParent = MdiParent;
+                        qualityControlPendingForm.ShowIcon = false;
+                        qualityControlPendingForm.Show();
+                        qualityControlPendingForm.WindowState = FormWindowState.Maximized;
 
                         break;
                 }

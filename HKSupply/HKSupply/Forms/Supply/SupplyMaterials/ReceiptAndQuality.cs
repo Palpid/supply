@@ -487,6 +487,21 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
 
         #endregion
 
+        #region Public Methods
+        public void InitData(string idDoc)
+        {
+            try
+            {
+                txtPKNumber.Text = idDoc;
+                SearchPK();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        #endregion
+
         #region Private Methods
 
         #region Load/Resets

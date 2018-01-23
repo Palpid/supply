@@ -19,6 +19,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
+using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 
 namespace HKSupply.Forms.Supply
 {
@@ -183,11 +184,13 @@ namespace HKSupply.Forms.Supply
             try
             {
                 GridView view = sender as GridView;
-                POSelection po = view.GetRow(view.FocusedRowHandle) as POSelection;
+                GridHitInfo hitInfo = view.CalcHitInfo((e as MouseEventArgs).Location);
 
-                if (po != null)
+                if (hitInfo.InRowCell)
                 {
-                    OpenPoForm(po);
+                    POSelection po = view.GetRow(view.FocusedRowHandle) as POSelection;
+                    if (po != null)
+                        OpenPoForm(po);
                 }
             }
             catch (Exception ex)
@@ -258,6 +261,47 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void GridViewLines_CustomDrawEmptyForeground(object sender, CustomDrawEventArgs e)
+        {
+            try
+            {
+                // Initialize variables used to paint View's empty space in a custom manner
+                Font noMatchesFoundTextFont = new Font("Source Sans Pro", 10);
+                Font trySearchingAgainTextFont = new Font("Source Sans Pro", 15, FontStyle.Underline);
+                Font trySearchingAgainTextFontBold = new Font(trySearchingAgainTextFont, FontStyle.Underline | FontStyle.Bold);
+                SolidBrush linkBrush = new SolidBrush(AppStyles.EtniaRed);
+                string noMatchesFoundText = "No records match the current filter criteria";
+                string trySearchingAgainText = "Try searching again";
+                Rectangle noMatchesFoundBounds = Rectangle.Empty;
+                Rectangle trySearchingAgainBounds = Rectangle.Empty;
+                bool trySearchingAgainBoundsContainCursor = false;
+                int offset = 10;
+
+                //----------------------------------------------------
+                e.DefaultDraw();
+                e.Appearance.Font = noMatchesFoundTextFont;
+                e.Appearance.Options.UseFont = true;
+                //Draw the noMatchesFoundText string
+                Size size = e.Graphics.MeasureString(noMatchesFoundText, e.Appearance.Font).ToSize();
+                int x = (e.Bounds.Width - size.Width) / 2;
+                int y = e.Bounds.Y + offset;
+                noMatchesFoundBounds = new Rectangle(new Point(x, y), size);
+                e.Appearance.DrawString(e.Cache, noMatchesFoundText, noMatchesFoundBounds);
+                //Draw the trySearchingAgain link
+                Font fnt = trySearchingAgainBoundsContainCursor ? trySearchingAgainTextFontBold : trySearchingAgainTextFont;
+                size = e.Graphics.MeasureString(trySearchingAgainText, fnt).ToSize();
+                x = noMatchesFoundBounds.X - (size.Width - noMatchesFoundBounds.Width) / 2;
+                y = noMatchesFoundBounds.Bottom + offset;
+                size.Width += offset;
+                trySearchingAgainBounds = new Rectangle(new Point(x, y), size);
+                e.Graphics.DrawString(trySearchingAgainText, fnt, linkBrush, trySearchingAgainBounds);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         #endregion
 
         #region Private Methods
@@ -267,7 +311,9 @@ namespace HKSupply.Forms.Supply
         {
             try
             {
-                _suppliersList = GlobalSetting.SupplierService.GetSuppliers(withEtniaHk: true).Where(a => a.Factory == true).ToList();
+                _suppliersList = GlobalSetting.SupplierService.GetSuppliers(withEtniaHk: true)
+                    .Where(a => a.Factory == true || a.IdSupplier.Equals(Constants.ETNIA_HK_COMPANY_CODE))
+                    .ToList();
                 _supplyStatusList = GlobalSetting.SupplyDocsService.GetSupplyStatus();
             }
             catch
@@ -287,6 +333,10 @@ namespace HKSupply.Forms.Supply
                 DateTime PODateEnd = dateEditPODateEnd.DateTime;
 
                 _poSelectionList = GlobalSetting.SupplyDocsService.GetPOSelection(idDocPo, idSupplyStatus, idSupplier, PODateIni, PODateEnd);
+
+                //Nos suscribimos aquí para evitar que al abrir el formulario sin carga aparezca el mensaje de que no se han encontrado datos
+                gridViewLines.CustomDrawEmptyForeground -= GridViewLines_CustomDrawEmptyForeground;
+                gridViewLines.CustomDrawEmptyForeground += GridViewLines_CustomDrawEmptyForeground;
 
                 xgrdLines.DataSource = null;
                 xgrdLines.DataSource = _poSelectionList;
@@ -405,15 +455,15 @@ namespace HKSupply.Forms.Supply
 
                 //Column Definition
                 GridColumn colPoNumber = new GridColumn() { Caption = "PO Number", Visible = true, FieldName = nameof(POSelection.PoNumber), Width = 100 };
-                GridColumn colSupplier = new GridColumn() { Caption = "Supplier", Visible = true, FieldName = nameof(POSelection.Supplier), Width = 100 };
+                GridColumn colSupplier = new GridColumn() { Caption = "Supplier", Visible = true, FieldName = nameof(POSelection.Supplier), Width = 200 };
                 GridColumn colOrderDate = new GridColumn() { Caption = "Order Date", Visible = true, FieldName = nameof(POSelection.OrderDate), Width = 100 };
                 GridColumn colDeliveryStart = new GridColumn() { Caption = "Delivery Start", Visible = true, FieldName = nameof(POSelection.DeliveryStart), Width = 100 };
                 GridColumn colDeleveryEnd = new GridColumn() { Caption = "Delevery End", Visible = true, FieldName = nameof(POSelection.DeleveryEnd), Width = 100 };
-                GridColumn colOriginalQuantity = new GridColumn() { Caption = "Original Quantity", Visible = true, FieldName = nameof(POSelection.OriginalQuantity), Width = 150 };
-                GridColumn colTotalQuantity = new GridColumn() { Caption = "Total Quantity", Visible = true, FieldName = nameof(POSelection.TotalQuantity), Width = 150 };
-                GridColumn colDeliveredQuantity = new GridColumn() { Caption = "Delivered Quantity", Visible = true, FieldName = nameof(POSelection.DeliveredQuantity), Width = 150 };
-                GridColumn colCanceledQuantity = new GridColumn() { Caption = "Canceled Quantity", Visible = true, FieldName = nameof(POSelection.CanceledQuantity), Width = 150 };
-                GridColumn colPendingQuantity = new GridColumn() { Caption = "Pending Quantity", Visible = true, FieldName = nameof(POSelection.PendingQuantity), Width = 150 };
+                GridColumn colOriginalQuantity = new GridColumn() { Caption = "Original Quantity", Visible = true, FieldName = nameof(POSelection.OriginalQuantity), Width = 120 };
+                GridColumn colTotalQuantity = new GridColumn() { Caption = "Total Quantity", Visible = true, FieldName = nameof(POSelection.TotalQuantity), Width = 120 };
+                GridColumn colDeliveredQuantity = new GridColumn() { Caption = "Delivered Quantity", Visible = true, FieldName = nameof(POSelection.DeliveredQuantity), Width = 120 };
+                GridColumn colCanceledQuantity = new GridColumn() { Caption = "Canceled Quantity", Visible = true, FieldName = nameof(POSelection.CanceledQuantity), Width = 120 };
+                GridColumn colPendingQuantity = new GridColumn() { Caption = "Pending Quantity", Visible = true, FieldName = nameof(POSelection.PendingQuantity), Width = 120 };
                 GridColumn colDocStatus = new GridColumn() { Caption = "Status", Visible = true, FieldName = nameof(POSelection.DocStatus), Width = 100 };
                 GridColumn colTotalAmount = new GridColumn() { Caption = "Total Amount", Visible = true, FieldName = nameof(POSelection.TotalAmount), Width = 100 };
                 GridColumn colFulfillment = new GridColumn() { Caption = "% Fulfillment", Visible = true, FieldName = nameof(POSelection.Fulfillment), Width = 100 };

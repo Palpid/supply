@@ -16,8 +16,8 @@ namespace HKSupply.Styles
 
         //***** Supply Status *****//
         //Cancel
-        public static Color SupplyStatusCnlBKGD1 = Color.IndianRed;  //Color.Salmon;
-        public static Color SupplyStatusCnlBKGD2 = Color.IndianRed;  //Color.SeaShell;
+        public static Color SupplyStatusCnlBKGD1 = Color.IndianRed;
+        public static Color SupplyStatusCnlBKGD2 = Color.IndianRed;
         //??
         public static Color SupplyStatusOpdBKGD1 = Color.DodgerBlue;
         public static Color SupplyStatusOpdBKGD2 = Color.LightBlue;
@@ -26,7 +26,10 @@ namespace HKSupply.Styles
         public static Color SupplyStatusOpnBKGD2 = Color.LightGreen;
         //Close
         public static Color SupplyStatusClsBKGD1 = Color.LightSlateGray;
-        public static Color SupplyStatusClsBKGD2 = Color.LightSlateGray; //Color.LightGray;
+        public static Color SupplyStatusClsBKGD2 = Color.LightSlateGray;
+        //Transit
+        public static Color SupplyStatusTrnBKGD1 = Color.DarkOrange;
+        public static Color SupplyStatusTrnBKGD2 = Color.Orange;
 
 
         //***** Fonts *****//

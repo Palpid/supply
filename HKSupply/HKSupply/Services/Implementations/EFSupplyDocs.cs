@@ -511,6 +511,7 @@ namespace HKSupply.Services.Implementations
                         .Include(l => l.Lines)
                         .Include(s => s.SupplyDocType)
                         .Include(c => c.Customer)
+                        .Include(su => su.Supplier)
                         .OrderBy(o => o.DocDate)
                         .ToList();
 
@@ -1933,6 +1934,8 @@ namespace HKSupply.Services.Implementations
         {
             try
             {
+                List<string> originalPurchaseOrderList = new List<string>();
+
                 //******* Tenemos que actualizar los datos de la/s Purchase orders de Barcelona asociadas a cada línea del packing *******//
                 foreach (var line in packingList.Lines)
                 {
@@ -1944,6 +1947,19 @@ namespace HKSupply.Services.Implementations
                         if (doclinePo.DeliveredQuantity >= doclinePo.Quantity)
                             doclinePo.IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE;
 
+                        //Actualizamos también la línea de la PO orginal de HK a fábrica
+                        var docLineOriginalPO = db.DocsLines.Where(a => a.IdDoc.Equals(doclinePo.IdDocRelated) && a.IdItemBcn.Equals(doclinePo.IdItemBcn)).FirstOrDefault();
+                        if (docLineOriginalPO != null)
+                        {
+                            docLineOriginalPO.DeliveredQuantity += line.Quantity;
+                            originalPurchaseOrderList.Add(docLineOriginalPO.IdDoc); //nos guardamos el id del documento por comprobar después si hay que cerrarlo
+
+                            if (docLineOriginalPO.DeliveredQuantity >= docLineOriginalPO.Quantity)
+                                docLineOriginalPO.IdSupplyStatus = Constants.SUPPLY_STATUS_CLOSE;
+
+                        }
+
+                        //Salvamos todo
                         db.SaveChanges();
                     }
                 }
@@ -1951,6 +1967,8 @@ namespace HKSupply.Services.Implementations
                 //******* Hay que comprobar si se ha entregado todo para cerrar la/s purchase order/s asociadas al packing *******//
                 // Obtenemos el listado de Sales Order
                 List<string> purchaseOrderList = packingList.Lines.Select(a => a.IdDocRelated).Distinct().ToList();
+                //lo fusionamos con el listodo de PO originales
+                purchaseOrderList = purchaseOrderList.Union(originalPurchaseOrderList).ToList();
 
                 foreach (var purchaseOrder in purchaseOrderList)
                 {
@@ -2756,8 +2774,6 @@ namespace HKSupply.Services.Implementations
         {
             try
             {
-                //PRJ_Stocks.DB.Call_DB_Stocks CallDBS = new PRJ_Stocks.DB.Call_DB_Stocks();
-                //PRJ_Stocks.Classes.Stocks STKAct = CallDBS.CallCargaStocks();
                 var BDSTK = new PRJ_Stocks.DB.BD_Stocks();
                 PRJ_Stocks.Classes.Stocks STKAct = BDSTK.GetCurrentStock(db);
 

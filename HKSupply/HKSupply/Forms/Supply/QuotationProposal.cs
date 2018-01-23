@@ -737,6 +737,37 @@ namespace HKSupply.Forms.Supply
             }
         }
 
+        private void XgrdLines_ProcessGridKey(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.F4)
+                {
+                    GridView view = xgrdLines.FocusedView as GridView;
+                    DocLine line = view.GetRow(view.FocusedRowHandle) as DocLine;
+
+                    if (line == null)
+                        return;
+
+                    DialogResult result = XtraMessageBox.Show("Delete row?", "Confirmation", MessageBoxButtons.YesNo);
+                    if (result != DialogResult.Yes)
+                        return;
+
+                    if (line.LineState != DocLine.LineStates.New)
+                    {
+                        XtraMessageBox.Show("Only new lines can be deleted.");
+                        return;
+                    }
+
+                    _docLinesList.Remove(line);
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void SbViewNewFile_Click(object sender, EventArgs e)
         {
             try
@@ -1110,6 +1141,7 @@ namespace HKSupply.Forms.Supply
                 gridViewLines.ValidatingEditor += GridViewLines_ValidatingEditor;
                 gridViewLines.CustomSummaryCalculate += GridViewLines_CustomSummaryCalculate;
                 gridViewLines.CustomUnboundColumnData += GridViewLines_CustomUnboundColumnData;
+                xgrdLines.ProcessGridKey += XgrdLines_ProcessGridKey;
 
             }
             catch

@@ -534,6 +534,30 @@ namespace HKSupply.Forms.Supply
                         gridViewLinesSoSelection.UpdateSummary();
                         DeleteFromItemsBatchList(line.IdDocRelated, line.IdItemBcn, line.IdItemGroup); //Test Item Batch
                     }
+                    //------------------------------ TEST INI ------------------------------//
+                    else if (e.Action == CollectionChangeAction.Refresh)
+                    {
+                        view.BeginSelection();
+
+                        //si ha utilizado el marcar/desmarcar todo
+                        List<int> selectedList = new List<int>();
+                        for (Int32 i = view.SelectedRowsCount - 1; i >= 0; i--)
+                        {
+                            var currentRowIndex = view.GetSelectedRows()[i];
+                            selectedList.Add(currentRowIndex);
+
+                            DocLine selLine = view.GetRow(currentRowIndex) as DocLine;
+                            if (selLine.IdSupplyStatus == Constants.SUPPLY_STATUS_OPEN)
+                                CopyToDeliveredGood(selLine);
+                            else
+                                view.UnselectRow(currentRowIndex);
+
+                        }
+                        view.EndSelection();
+                        gridViewLinesSoSelection.UpdateSummary();
+
+                    }
+                    //------------------------------ TEST FIN ------------------------------//
                 }
                 else
                 {
@@ -1404,7 +1428,7 @@ namespace HKSupply.Forms.Supply
                 //select with checbox
                 gridViewLinesSoSelection.OptionsSelection.MultiSelect = true;
                 gridViewLinesSoSelection.OptionsSelection.MultiSelectMode = GridMultiSelectMode.CheckBoxRowSelect;
-                gridViewLinesSoSelection.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DefaultBoolean.False;
+                //gridViewLinesSoSelection.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DefaultBoolean.False;
 
                 //Column Definition
                 GridColumn colIdItemBcn = new GridColumn() { Caption = "Item Code", Visible = true, FieldName = nameof(DocLine.IdItemBcn), Width = 200 };

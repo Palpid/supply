@@ -612,6 +612,21 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
 
         #endregion
 
+        #region Public Methods
+        public void InitData(string idDoc)
+        {
+            try
+            {
+                txtQCPNumber.Text = idDoc;
+                SearchQCP();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        #endregion
+
         #region Private Members
 
         #region Loads/Resets

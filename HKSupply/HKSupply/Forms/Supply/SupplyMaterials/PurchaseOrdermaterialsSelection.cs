@@ -260,6 +260,48 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
             }
         }
 
+        private void GridViewLines_CustomDrawEmptyForeground(object sender, CustomDrawEventArgs e)
+        {
+            try
+            {
+                // Initialize variables used to paint View's empty space in a custom manner
+                Font noMatchesFoundTextFont = new Font("Source Sans Pro", 10);
+                Font trySearchingAgainTextFont = new Font("Source Sans Pro", 15, FontStyle.Underline);
+                Font trySearchingAgainTextFontBold = new Font(trySearchingAgainTextFont, FontStyle.Underline | FontStyle.Bold);
+                SolidBrush linkBrush = new SolidBrush(AppStyles.EtniaRed);
+                string noMatchesFoundText = "No records match the current filter criteria";
+                string trySearchingAgainText = "Try searching again";
+                Rectangle noMatchesFoundBounds = Rectangle.Empty;
+                Rectangle trySearchingAgainBounds = Rectangle.Empty;
+                bool trySearchingAgainBoundsContainCursor = false;
+                int offset = 10;
+
+                //----------------------------------------------------
+                e.DefaultDraw();
+                e.Appearance.Font = noMatchesFoundTextFont;
+                e.Appearance.Options.UseFont = true;
+                //Draw the noMatchesFoundText string
+                Size size = e.Graphics.MeasureString(noMatchesFoundText, e.Appearance.Font).ToSize();
+                int x = (e.Bounds.Width - size.Width) / 2;
+                int y = e.Bounds.Y + offset;
+                noMatchesFoundBounds = new Rectangle(new Point(x, y), size);
+                e.Appearance.DrawString(e.Cache, noMatchesFoundText, noMatchesFoundBounds);
+                //Draw the trySearchingAgain link
+                Font fnt = trySearchingAgainBoundsContainCursor ? trySearchingAgainTextFontBold : trySearchingAgainTextFont;
+                size = e.Graphics.MeasureString(trySearchingAgainText, fnt).ToSize();
+                x = noMatchesFoundBounds.X - (size.Width - noMatchesFoundBounds.Width) / 2;
+                y = noMatchesFoundBounds.Bottom + offset;
+                size.Width += offset;
+                trySearchingAgainBounds = new Rectangle(new Point(x, y), size);
+                e.Graphics.DrawString(trySearchingAgainText, fnt, linkBrush, trySearchingAgainBounds);
+
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         #endregion
 
         #region Private Methods
@@ -289,6 +331,9 @@ namespace HKSupply.Forms.Supply.SupplyMaterials
                 DateTime PODateEnd = dateEditPODateEnd.DateTime;
 
                 _poSelectionList = GlobalSetting.SupplyDocsService.GetPOSelection(idDocPo, idSupplyStatus, idSupplier, PODateIni, PODateEnd, false);
+
+                gridViewLines.CustomDrawEmptyForeground -= GridViewLines_CustomDrawEmptyForeground;
+                gridViewLines.CustomDrawEmptyForeground += GridViewLines_CustomDrawEmptyForeground;
 
                 xgrdLines.DataSource = null;
                 xgrdLines.DataSource = _poSelectionList;
